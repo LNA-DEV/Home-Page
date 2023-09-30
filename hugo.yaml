@@ -56,7 +56,8 @@ languages:
     params: 
       homeInfoParams:
         Title: Hallo 👋
-        Content: Willkommen auf meiner Website
+        Content: |
+          Willkommen auf meiner Website.
     menu:
       main:
         - name: Archiv
@@ -72,6 +73,32 @@ languages:
           url: /tags/
           weight: 20
         - name: Fotografie
+          url: https://photo.lna-dev.net
+          weight: 30
+  sv:
+    languageCode: sv-Sv
+    weight: 3
+    params: 
+      homeInfoParams:
+        Title: Hej du 👋
+        Content: |
+          Välkommen till min webbplats.  
+          Jag håller för närvarande på att lära mig svenska så förhoppningsvis kommer det att finnas översättningar i framtiden.
+    menu:
+      main:
+        - name: Arkiv
+          url: archives/
+          weight: 5
+        - name: Sökning
+          url: /search/
+          weight: 5
+        - name: Kategorier
+          url: /categories/
+          weight: 10
+        - name: Tags
+          url: /tags/
+          weight: 20
+        - name: Fotografi
           url: https://photo.lna-dev.net
           weight: 30
 
