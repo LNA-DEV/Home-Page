@@ -1,0 +1,128 @@
+baseURL: https://lna-dev.net
+title: LNA-DEV
+theme: github.com/adityatelange/hugo-PaperMod
+enableEmoji: true
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+enableRobotsTXT: true
+buildDrafts: true
+buildFuture: false
+buildExpired: false
+
+# pygmentsUseClasses: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+# markup:
+#   highlight:
+#     noClasses: false
+
+languages:
+  en:
+    languageCode: en-US
+    weight: 1
+    params:
+      homeInfoParams:
+        Title: Hello 👋
+        Content: Welcome to my website
+    menu:
+      main:
+        - name: Archives
+          url: archives/
+          weight: 5
+        - name: Search
+          url: /search/
+          weight: 5
+        - name: Categories
+          url: /categories/
+          weight: 10
+        - name: Tags
+          url: /tags/
+          weight: 20
+        - name: Photography
+          url: https://photo.lna-dev.net
+          weight: 30
+  de:
+    languageCode: de-DE
+    weight: 2
+    params: 
+      homeInfoParams:
+        Title: Hallo 👋
+        Content: Willkommen auf meiner Website
+    menu:
+      main:
+        - name: Archiv
+          url: archives/
+          weight: 5
+        - name: Suche
+          url: /search/
+          weight: 5
+        - name: Kategorien
+          url: /categories/
+          weight: 10
+        - name: Tags
+          url: /tags/
+          weight: 20
+        - name: Fotografie
+          url: https://photo.lna-dev.net
+          weight: 30
+
+params:
+  title: ExampleSite
+  description: ExampleSite description
+  keywords:
+    - Blog
+    - Portfolio
+    - PaperMod
+  author: Lukas Nagel
+  images:
+    - <link or path of image for opengraph, twitter-cards>
+  DateFormat: January 2, 2006
+  defaultTheme: dark
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+  assets:
+    favicon: <link / abs url>
+    favicon16x16: <link / abs url>
+    favicon32x32: <link / abs url>
+    apple_touch_icon: <link / abs url>
+    safari_pinned_tab: <link / abs url>
+  label:
+    text: Home
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+  socialIcons:
+    - name: github
+      url: https://github.com/LNA-DEV
+    - name: rss
+      url: /index.xml
+  cover:
+    hidden: true
+    hiddenInList: true
+    hiddenInSingle: true
+  editPost:
+    URL: https://github.com/LNA-DEV/Home-Page/content
+    Text: Suggest Changes
+    appendFilePath: true
