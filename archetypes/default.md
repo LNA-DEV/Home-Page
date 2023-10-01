@@ -1,6 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
+# expiryDate: 2023-09-01
 draft: false
 # weight: 1
 # aliases: ["/first"]
