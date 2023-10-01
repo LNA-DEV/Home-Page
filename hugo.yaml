@@ -34,7 +34,11 @@ languages:
       homeInfoParams:
         Title: Hello World 👋
         Content: |
-          Welcome to my website. 
+          Welcome to my website.  
+          I am a software engineer from Bavaria, Germany. I am interested in cool technology especially OpenSource.
+          I am working with Linux, .NET, Kubernetes, Docker and a lot of other cool technologies.
+          This webpage acts as an "home base" for all the stuff I do on the internet.  
+          I will post here about all the different things I am interested in. Hopefully I can share a thought here and there with you.
     menu:
       main:
         - name: Archive
