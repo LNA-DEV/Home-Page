@@ -39,7 +39,7 @@ languages:
       main:
         - name: Archive
           url: archives/
-          weight: 5
+          weight: 1
         - name: Search
           url: /search/
           weight: 5
@@ -49,6 +49,12 @@ languages:
         - name: Tags
           url: /tags/
           weight: 20
+        - name: Tools
+          url: /tools/
+          weight: 22
+        - name: Links
+          url: /links/
+          weight: 26
         - name: Photography
           url: https://photo.lna-dev.net
           weight: 30
@@ -74,6 +80,12 @@ languages:
         - name: Tags
           url: /tags/
           weight: 20
+        - name: Tools
+          url: /tools/
+          weight: 22
+        - name: Links
+          url: /links/
+          weight: 26
         - name: Fotografie
           url: https://photo.lna-dev.net
           weight: 30
@@ -100,6 +112,12 @@ languages:
         - name: Tags
           url: /tags/
           weight: 20
+        - name: Verktyg
+          url: /tools/
+          weight: 22
+        - name: Länkar
+          url: /links/
+          weight: 26
         - name: Fotografi
           url: https://photo.lna-dev.net
           weight: 30
@@ -145,8 +163,10 @@ params:
   socialIcons:
     - name: github
       url: https://github.com/LNA-DEV
+    - name: email
+      url: mailto:info@lna-dev.net
     - name: rss
-      url: /index.xml
+      url: index.xml
   cover:
     hidden: true
     hiddenInList: true
