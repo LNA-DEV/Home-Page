@@ -2,8 +2,8 @@
 title: "How to create and host a Blog with Hugo for free"
 date: 2022-08-19T15:59:48+02:00
 draft: false
-tags: ["Hugo", "Tutorial", "Blog"]
-# author: ["Lukas Nagel", "You"] # multiple authors
+tags: ["Tutorial", "Hugo", "Blog"]
+categories: ["Tutorial"]
 showToc: true
 TocOpen: false
 description: "In this blog post we will discuss how to build and deploy your own blog with Hugo."

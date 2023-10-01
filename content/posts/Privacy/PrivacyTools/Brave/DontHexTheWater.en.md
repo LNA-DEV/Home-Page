@@ -2,23 +2,14 @@
 title: "Brave"
 date: 2022-10-09T13:12:12+02:00
 draft: false
-# weight: 1
-# aliases: ["/first"]
-tags: ["first"]
-# author: ["Lukas Nagel", "You"] # multiple authors
+tags: [Privacy, Privacy Tools, Brave, Browser]
+categories: [Privacy, Privacy Tools]
 showToc: true
 TocOpen: false
 description: Brave is one of the most private browsers and has many additional features. It is also called Brave-Browser.
-canonicalURL: "https://canonical.url/to/page"
 disableShare: true
 disableHLJS: false
 searchHidden: false
-# cover:
-#     image: "<image path/url>" # image path/url
-#     alt: "<alt text>" # alt text
-#     caption: "<text>" # display caption under cover
-#     relative: false # when using page bundles set this to true
-#     hidden: true # only hide on current single page
 ---
 
 

@@ -5,6 +5,7 @@ draft: false
 # weight: 1
 # aliases: ["/first"]
 tags: ["first"]
+categories: ["first"]
 # author: ["Lukas Nagel", "You"] # multiple authors
 showToc: true
 TocOpen: false
