@@ -35,10 +35,10 @@ languages:
         Title: Hello World 👋
         Content: |
           Welcome to my website.  
-          I am a software engineer from Bavaria, Germany. I am interested in cool technology especially OpenSource.
+          I am a software engineer from Bavaria, Germany. I am interested in cool technology especially Open Source.
           I am working with Linux, .NET, Kubernetes, Docker and a lot of other cool technologies.
-          This webpage acts as an "home base" for all the stuff I do on the internet.  
-          I will post here about all the different things I am interested in. Hopefully I can share a thought here and there with you.
+          This webpage acts as a "home base" for all the stuff I do on the internet.
+          I will post here about all the different things I am interested in.
     menu:
       main:
         - name: Archive
@@ -127,15 +127,16 @@ languages:
           weight: 30
 
 params:
-  title: ExampleSite
-  description: ExampleSite description
+  description: This is the home page and blog of LNA-DEV (Lukas Nagel)
   keywords:
     - Blog
-    - Portfolio
-    - PaperMod
+    - LNA-DEV
+    - Lukas Nagel
+    - Privacy
+    - Open Source
   author: Lukas Nagel
   images:
-    - <link or path of image for opengraph, twitter-cards>
+    - /assets/images/Pingüino-Square.png
   DateFormat: January 2, 2006
   defaultTheme: dark
   disableThemeToggle: false
@@ -155,14 +156,14 @@ params:
   showtoc: false
   tocopen: false
   assets:
-    favicon: <link / abs url>
-    favicon16x16: <link / abs url>
-    favicon32x32: <link / abs url>
-    apple_touch_icon: <link / abs url>
-    safari_pinned_tab: <link / abs url>
+    favicon: /assets/Pingüino/Pingüino.svg
+    favicon16x16: /assets/Pingüino/Pingüino.svg
+    favicon32x32: /assets/Pingüino/Pingüino.svg
+    apple_touch_icon: /assets/Pingüino/Pingüino.svg
+    safari_pinned_tab: /assets/Pingüino/Pingüino.svg
   label:
     text: Home
-    icon: /apple-touch-icon.png
+    icon: /assets/Pingüino/Pingüino.svg
     iconHeight: 35
   socialIcons:
     - name: github
