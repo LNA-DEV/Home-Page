@@ -37,8 +37,14 @@ As my mail service I am using Tutanota. They have encryption and seem like a ver
 
 My VPN is Mullvad and I really like them. They are awesome. They are located in Sweden which is very good for an VPN provider. This is because the law there does not allow the police to confiscate something that is not there. In this case this is data about the user of the VPN. Mullvad does not collect personal data of their users. You do not even use an E-Mail address to identify your account. Instead you get a unique identifier digit. It also would be possible to pay for the VPN in cash. Of course they have a zero log policy. In addition to that they now have no disks in their VPN servers so even by accident no logs can be created.
 
+## Hardware Security Key
+
+I am using a hardware security key by Yubico: The Yubikey. It supports a lot of 2FA protocols.
+
 ## Mobile Phone
 
 I actively decided to use an Open Source operating system on my phone. In my opinion I can not trust a proprietary project. And for a operating systems I need a lot of trust. So there is no other option for me than using custom Android ROMs. Linux phones would be nice but I do not think they are ready yet. Custom Android ROMs are really good nowadays and can be used nearly as easily as stock Android. Currently I am using an Pixel 7 Pro with Graphene OS installed. Previously I used LineageOS on an One Plus 9 Pro. It now feels like haven. Graphene is **so much better** than Lineage. It is even more secure and has hardening against zero days. The installation was pretty straight forward and could be done by anyone who can read and press a view buttons.
 
 ## Cloud / Hosting
+
+I am using the Hetzner cloud provider to host all of my stuff. Hetzner offers IaaS (Infrastructure as a Service). Everything is deployed in a Kubernetes-Cluster which was set up by the Kube-Hetzner Terraform provider. All of my deployments are open source. They can be found here.

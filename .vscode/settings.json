@@ -5,6 +5,8 @@
         "Graphene",
         "Mullvad",
         "Nextcloud",
-        "Tutanota"
+        "Tutanota",
+        "Yubico",
+        "Yubikey"
     ]
 }
