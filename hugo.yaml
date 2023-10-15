@@ -59,6 +59,9 @@ languages:
         - name: Links
           url: /links/
           weight: 26
+        - name: Projects
+          url: /projects/
+          weight: 28
         - name: Photography
           url: https://photo.lna-dev.net
           weight: 30

@@ -7,9 +7,9 @@
    width="720"
    height="720"
    viewBox="0 0 720 720"
-   sodipodi:docname="Pingüino.svg"
+   sodipodi:docname="Pingüino-Blush"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09, custom)"
-   inkscape:export-filename="Pingüino.png"
+   inkscape:export-filename="Pingüino-Plain.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -233,7 +233,7 @@
      inkscape:deskcolor="#505050"
      showgrid="false"
      inkscape:zoom="0.48617458"
-     inkscape:cx="336.29895"
+     inkscape:cx="365.09519"
      inkscape:cy="345.55488"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
@@ -246,8 +246,7 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="Pingüino"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <path
        id="path3986"
        style="display:inline;fill:#000000;fill-opacity:1;filter:url(#filter7329)"
@@ -271,7 +270,7 @@
          inkscape:groupmode="layer"
          id="layer7"
          inkscape:label="Blush"
-         style="display:none">
+         style="display:inline">
         <ellipse
            style="mix-blend-mode:normal;fill:#fcadad;fill-opacity:1;stroke-width:0.918335;filter:url(#filter946)"
            id="path159"
