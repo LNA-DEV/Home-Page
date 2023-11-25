@@ -6,7 +6,7 @@ tags: ["Projekte", "Fedodo", "ActivityPub", "Social Media", "Coding", "Open Sour
 categories: ["Projekte"]
 showToc: true
 TocOpen: false
-description: "Ich habe für ein halbes Jahr eine Social-Media-Plattform namens Fedodo entwickelt. Nach dieser doch recht langen Zeit habe ich die Entwicklung pausiert / gestoppt. Aber warum?"
+description: "Ich habe für ein halbes Jahr einer Social-Media-Plattform namens Fedodo entwickelt. Nach dieser doch recht langen Zeit habe ich die Entwicklung pausiert / gestoppt. Aber warum?"
 disableShare: true
 disableHLJS: false
 searchHidden: false
@@ -31,7 +31,7 @@ Als Teil von Fedodo wollte ich nicht nur den Server entwickeln, sondern auch ein
 
 ## Die Entwicklung
 
-Ich habe im Dezember 2022 mit der Entwicklung von Fedodo begonnen und bis August 20233 intensiv daran gearbeitet. Insgesamt habe ich also etwa acht Monate in das Projekt investiert.
+Ich habe im Dezember 2022 mit der Entwicklung von Fedodo begonnen und bis August 2023 intensiv daran gearbeitet. Insgesamt habe ich also etwa acht Monate in das Projekt investiert.
 
 Während dieser Zeit habe ich erfolgreich einen ActivityPub Server entwickelt. Obwohl es vielleicht notwendig wäre, ihm etwas mehr Aufmerksamkeit zu schenken, hier und da einige Tests zu schreiben und ein paar Dinge zu beheben, funktioniert er insgesamt trotzdem gut. Zusätzlich dazu hatte ich eine grundlegende [Mastodon](https://joinmastodon.org/) ähnliche App nahezu fertig und habe erhebliche Fortschritte bei der Entwicklung der [Pixelfed](https://pixelfed.org/) Alternative gemacht.
 
@@ -55,7 +55,7 @@ Eine andere Option wäre, sich einer vergleichbar großen Community anzuschließ
 
 Dieses Gefühl der Arbeit und persönlichen Probleme während dieser Zeit führte dazu, dass ich die Entwicklung von Fedodo pausierte und generell eine Pause vom Coden in meiner Freizeit gemacht habe.
 
-Jetzt, einige Monate später, fange ich langsam wieder an diesen Drang zu verspüren, etwas zu erschaffen. Also denke ich, dass es die richtige Entscheidung war weniger zu tun.
+Jetzt, einige Monate später, fange ich langsam wieder an diesen Drang zu verspüren, etwas zu erschaffen. Daher denke ich, dass es die richtige Entscheidung war weniger zu tun.
 
 Allerdings werde ich in Zukunft nicht mehr so intensiv an Fedodo arbeiten. Angesichts der Größe des Projekts bedeutet dies wahrscheinlich, dass ich es nicht fertigstellen kann. Leider.
 
