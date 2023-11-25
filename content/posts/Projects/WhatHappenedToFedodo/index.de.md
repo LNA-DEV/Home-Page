@@ -1,7 +1,7 @@
 ---
 title: "Warum habe ich aufgehört an Fedodo zu arbeiten?"
-date: 2023-11-23T20:23:22+01:00
-draft: true
+date: 2023-11-25T11:03:00+01:00
+draft: false
 tags: ["Projekte", "Fedodo", "ActivityPub", "Social Media", "Coding", "Open Source", "Überarbeiten"]
 categories: ["Projekte"]
 showToc: true
