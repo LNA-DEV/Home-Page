@@ -1,8 +1,8 @@
 ---
 title: "Why did I stop working on Fedodo?"
-date: 2023-11-23T20:23:22+01:00
-draft: true
-tags: ["Projects", "Fedodo"]
+date: 2023-11-25T09:12:00+01:00
+draft: false
+tags: ["Projects", "Fedodo", "ActivityPub", "Social Media", "Coding", "Open Source", "Overwork"]
 categories: ["Projects"]
 showToc: true
 TocOpen: false
@@ -18,7 +18,7 @@ First of all, to get everyone on the same page, I need to explain what Fedodo is
   
 With the rise of [Mastodon](https://joinmastodon.org/), I became more and more interested in the [ActivityPub](https://www.w3.org/TR/activitypub/) protocol. I really like the idea of having a big decentralized platform that can compete with the walled gardens of big tech. The [ActivityPub](https://www.w3.org/TR/activitypub/) protocol seemed to be just right to achieve that.  
   
-Until now, everyone developed a platform for an specific use case:  
+Until now, everyone developed a platform for a specific use case:  
   
 - [Mastodon](https://joinmastodon.org/) as an alternative to Twitter.
 - [Pixelfed](https://pixelfed.org/) as an alternative to Instagram.
