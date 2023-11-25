@@ -133,7 +133,7 @@ languages:
           weight: 30
 
 params:
-  displayFullLangName: true
+  displayFullLangName: false
   description: This is the home page and blog of LNA-DEV (Lukas Nagel)
   keywords:
     - Blog
