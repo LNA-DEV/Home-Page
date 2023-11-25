@@ -28,6 +28,7 @@ minify:
 
 languages:
   en:
+    languageName: "🇺🇸 En"
     languageCode: en-US
     weight: 1
     params:
@@ -66,6 +67,7 @@ languages:
           url: https://photo.lna-dev.net
           weight: 30
   de:
+    languageName: "🇩🇪 De"
     languageCode: de-DE
     weight: 2
     params: 
@@ -97,6 +99,7 @@ languages:
           url: https://photo.lna-dev.net
           weight: 30
   sv:
+    languageName: "🇸🇪 Sv"
     languageCode: sv-Sv
     weight: 3
     params: 
@@ -130,6 +133,7 @@ languages:
           weight: 30
 
 params:
+  displayFullLangName: true
   description: This is the home page and blog of LNA-DEV (Lukas Nagel)
   keywords:
     - Blog
