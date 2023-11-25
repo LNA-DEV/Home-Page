@@ -31,7 +31,7 @@ As part of Fedodo, I wanted to develop not only the server but also a set of fro
 
 ## The development
 
-I started developing Fedodo in December 2022 and worked on it extensively until August 2023. Dedicating around 8 months to the project.  
+I started developing Fedodo in December 2022 and worked on it extensively until August 2023. Dedicating around eight months to the project.  
   
 During this time, I successfully developed a functional server. While it might be beneficial to give it a bit more attention, write a few tests here and there, and fix a few things, overall, it is working great. In addition to that I had a basic [Mastodon](https://joinmastodon.org/)-like app kind of finished and made significant progress developing the [Pixelfed](https://pixelfed.org/) alternative.  
   
