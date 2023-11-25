@@ -1,6 +1,5 @@
 ---
 title: "Projects"
-date: 2023-10-03T18:30:54+02:00
 draft: false
 showToc: true
 TocOpen: false
@@ -8,7 +7,9 @@ description: "My hobby projects"
 disableShare: true
 disableHLJS: false
 searchHidden: false
-hideMeta: true
+hidemeta: false
+ShowReadingTime: false
+ShowWordCount: false
 ---
 
 ## This Website

@@ -72,9 +72,13 @@ languages:
     weight: 2
     params: 
       homeInfoParams:
-        Title: Hallo 👋
+        Title: Hallo Welt 👋
         Content: |
           Willkommen auf meiner Website.
+          Ich bin ein Software-Entwickler aus Bayern und interessiere mich besonders für moderne Technologien, insbesondere Open Source. 
+          Ich arbeite mit Linux, .NET, Kubernetes, Docker und vielen anderen spannenden Technologien. 
+          Diese Webseite dient als meine "Home Base" für alles, was ich im Internet mache. 
+          Hier werde ich über all die verschiedenen Dinge posten, die mich interessieren.
     menu:
       main:
         - name: Archiv
@@ -89,12 +93,12 @@ languages:
         - name: Tags
           url: /tags/
           weight: 20
-        - name: Tools
-          url: /tools/
-          weight: 22
         - name: Links
           url: /links/
           weight: 26
+        - name: Meine Projekte
+          url: /projects/
+          weight: 28
         - name: Fotografie
           url: https://photo.lna-dev.net
           weight: 30
@@ -110,24 +114,24 @@ languages:
           Jag håller för närvarande på att lära mig svenska så förhoppningsvis kommer det att finnas översättningar i framtiden.
     menu:
       main:
-        - name: Arkiv
-          url: archives/
-          weight: 5
-        - name: Sökning
-          url: /search/
-          weight: 5
-        - name: Kategorier
-          url: /categories/
-          weight: 10
-        - name: Tags
-          url: /tags/
-          weight: 20
-        - name: Verktyg
-          url: /tools/
-          weight: 22
-        - name: Länkar
-          url: /links/
-          weight: 26
+        # - name: Arkiv
+        #   url: archives/
+        #   weight: 5
+        # - name: Sökning
+        #   url: /search/
+        #   weight: 5
+        # - name: Kategorier
+        #   url: /categories/
+        #   weight: 10
+        # - name: Tags
+        #   url: /tags/
+        #   weight: 20
+        # - name: Verktyg
+        #   url: /tools/
+        #   weight: 22
+        # - name: Länkar
+        #   url: /links/
+        #   weight: 26
         - name: Fotografi
           url: https://photo.lna-dev.net
           weight: 30
