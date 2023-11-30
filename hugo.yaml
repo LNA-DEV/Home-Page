@@ -1,5 +1,5 @@
 baseURL: https://lna-dev.net
-title: LNA-DEV
+title: LNA-DEV ~ Lukas Nagel
 theme: github.com/adityatelange/hugo-PaperMod
 enableEmoji: true
 defaultContentLanguage: en
@@ -32,6 +32,7 @@ languages:
     languageCode: en-US
     weight: 1
     params:
+      description: I'm Lukas Nagel (LNA-DEV), sharing insights on development, tech, photography, and more on this page which serves as my digital hub.
       homeInfoParams:
         Title: Hello World 👋
         Content: |
@@ -71,6 +72,7 @@ languages:
     languageCode: de-DE
     weight: 2
     params: 
+      description: Ich bin Lukas Nagel (LNA-DEV) und teile hier Einblicke in die Software-Entwicklung, IT im Allgemeinen, Fotografie und mehr.
       homeInfoParams:
         Title: Hallo Welt 👋
         Content: |
@@ -107,6 +109,7 @@ languages:
     languageCode: sv-Sv
     weight: 3
     params: 
+      description: Jag är Lukas Nagel (LNA-DEV) och delar insikter om programutveckling, teknik, fotografi och mer på denna sida, som fungerar som mitt digitala nav.
       homeInfoParams:
         Title: Hej du 👋
         Content: |
@@ -138,11 +141,10 @@ languages:
 
 params:
   displayFullLangName: true
-  description: This is the home page and blog of LNA-DEV (Lukas Nagel)
   keywords:
-    - Blog
     - LNA-DEV
     - Lukas Nagel
+    - Blog
     - Privacy
     - Open Source
   author: Lukas Nagel
