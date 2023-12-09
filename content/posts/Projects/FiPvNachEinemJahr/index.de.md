@@ -12,7 +12,7 @@ disableHLJS: false
 searchHidden: false
 ---
 
-## Was ist die Fachinformatiker Prüfungsvorbereitungs Website?
+## Was ist das Fachinformatiker Prüfungsvorbereitungs Projekt?
 
 Um mich auf die Prüfung zum Fachinformatiker Anwendungsentwicklung vorzubereiten, habe ich einige Notizen verfasst. Aufgrund der schnellen Erstellung und Flexibilität habe ich diese direkt in Markdown festgehalten.
 
@@ -58,4 +58,4 @@ Sicher kann man sagen, dass wir zum jetzigen Zeitpunkt **51 Stars** haben. Zudem
 
 In den letzten 12 Monaten hat sich [Fachinformatiker Prüfungsvorbereitung](https://fachinformatikerpruefungsvorbereitung.de) für meine Verhältnisse zu einer Website mit beachtlicher Reichweite entwickelt. Ich hoffe, dass sie vielen Leuten auch wirklich nützlich ist und zu einem besseren Prüfungsergebnis beiträgt. Um weiterhin einen solchen Impact zu leisten wäre neuer Content und eine intensive Pflege der Seite von Nutzen. Dafür bräuchte es einige Freiwillige, welche einander helfen möchten.  
 
-Also wenn du ein bisschen Zeit über hast, überlege doch mal, ob du die ein oder andere Kleinigkeit [hier](https://github.com/Fachinformatiker-Prufungsvorbereitung/Fachinformatiker-Pruefungsvorbereitung) auf GitHub beitragen kannst.
+Also wenn du ein bisschen Zeit über hast, überlege doch mal, ob du die ein oder andere Kleinigkeit [hier](https://github.com/Fachinformatiker-Prufungsvorbereitung/Fachinformatiker-Pruefungsvorbereitung) auf GitHub beitragen kannst. Dem einen oder anderen wirst du sicher helfen können. ❤️
