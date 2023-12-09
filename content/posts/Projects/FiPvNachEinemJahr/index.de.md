@@ -1,12 +1,12 @@
 ---
-title: "Fachinformatiker Prüfungsvorbereitung nach einem Jahr"
+title: "Ein Jahr Fachinformatiker Prüfungsvorbereitung: Rückblick und Statistiken"
 date: 2023-12-09T08:55:24+01:00
 draft: true
 tags: ["Projekte", "Fachinformatiker Prüfungsvorbereitung", "Fachinformatiker", "Hugo", "Website", "Stats"]
 categories: ["Projekte"]
 showToc: true
 TocOpen: false
-description: "Vor einem Jahr habe ich die Seite Fachinformatiker Prüfungsvorbereitung erstellt. Jetzt möchte ich Einblicke in die Entwicklung und Stats der Seite geben."
+description: "Vor einem Jahr habe ich das Projekt Fachinformatiker Prüfungsvorbereitung ins Leben gerufen. Jetzt möchte ich Einblicke in den Entstehungsprozess und die Statistiken der Seite geben."
 disableShare: true
 disableHLJS: false
 searchHidden: false
@@ -14,19 +14,19 @@ searchHidden: false
 
 ## Was ist die Fachinformatiker Prüfungsvorbereitungs Website?
 
-Zur Vorbereitung auf die Prüfung zum Fachinformatiker Anwendungsentwicklung habe ich mir damals einige Notizen gemacht. Aufgrund des schnellen Erstellens und der Möglichkeiten habe ich diese direkt in Markdown aufgeschrieben.  
+Um mich auf die Prüfung zum Fachinformatiker Anwendungsentwicklung vorzubereiten, habe ich einige Notizen verfasst. Aufgrund der schnellen Erstellung und Flexibilität habe ich diese direkt in Markdown festgehalten.
 
-Später dachte ich mir das dies Notizen eventuell auch anderen helfen können und habe sie in Form der [Fachinformatiker Prüfungsvorbereitung](https://fachinformatikerpruefungsvorbereitung.de) Open Source zu Verfügung gestellt. Dadurch das die Seite aus einfachem Markdown mit Hugo generiert wird kann nahezu jeder daran mitwirken. Es ist nicht mehr als ein bisschen Markdown-Wissen notwendig.  
+Später kam mir der Gedanke, dass diese Notizen eventuell auch anderen helfen könnten und habe sie deswegen in Form der [Fachinformatiker Prüfungsvorbereitung](https://fachinformatikerpruefungsvorbereitung.de)-Seite als Open Source Projekt zur Verfügung gestellt. Dadurch das die Seite aus einfachem Markdown mit [Hugo](https://gohugo.io/) generiert wird, kann praktisch jeder daran mitwirken. Es erfordert lediglich ein grundlegendes Verständnis von Markdown.  
 
-Dies haben im letzten Jahr auch schon einige getan. GitHub zählt 11 Contributors wobei das warscheinlich nicht exakt stimmt da hier nur Accounts gezählt werden die noch aktiv sind. (Keine gelöschten Accounts!)
+Im vergangenen Jahr haben bereits einige Personen dazu beigetragen. Laut GitHub sind es 11 Contributors, wobei dies wahrscheinlich nicht exakt ist, da hier nur aktive Accounts gezählt werden. (Keine gelöschten Accounts!)  
 
 ## Contributing
 
-Meiner Rolle für diese Seite ist inzwischen hauptsächlich Instandhaltung und das Managen von Pull Requests. Ich habe meine Prüfung lange hinter mir und möchte meine Zeit gern anderen Projekten intensiver widmen. Nichtsdestotrotz werde ich mich um die Seite kümmern und sie am Laufen halten.  
+Meine Rolle für diese Seite ist inzwischen hauptsächlich Instandhaltung und das Mergen von Pull Requests. Ich habe meine Prüfung lange hinter mir und möchte meine Zeit gerne anderen Projekten intensiver widmen. Dennoch werde ich mich um die Seite kümmern und sie am Laufen halten.  
 
-Deshalb wäre es sehr gut wenn sich Leute finden die den Content weiter verbessern und auch neuen Content erstellen. Wie wir gleich im Stats-Part sehen werden haben wir mit dem Projekt zumindest eine kleine Reichweite und können Menschen helfen.  
+Deshalb wäre es sehr gut, wenn sich Leute finden würden die den Content weiter verbessern und auch neuen Content erstellen. Wie wir gleich im Stats-Part sehen werden, haben wir mit dem Projekt zumindest eine gewisse Reichweite und können somit einige Lernende unterstützen.  
 
-Inzwischen habe ich das Projekt auch von meinem Account gelöst und in eine Organisation transferiert. Damit kann es als allgemeines Community-Projekt weiterbetrieben werden ohne das es so wirkt als wäre es **mein** Projekt.
+Inzwischen habe ich das Projekt auch von meinem persönlichen Account entfernt und in eine Organisation verschoben. Dadurch kann es nun als allgemeines Community-Projekt weitergeführt werden, ohne den Eindruck zu erwecken, dass es ausschließlich **mein** Projekt ist.  
 
 ## Stats
 
@@ -36,26 +36,26 @@ In diesem Kapitel möchte ich die Statistiken des letzten Jahres für [Fachinfor
 
 ![Google Suche Statistiken für Fachinformatiker Prüfungsvorbereitung](GoogleSearchStatsFiPv.png)
 
-In dieser Grafik sehen wir die Stats aus der Google Suche. Die zwei wichtigsten Zahlen werden im Grafen abgebildet. Zum einen die Klicks auf die Website in Blau und zum anderen die Anzahl wie oft jemand in der Google-Suche die Website angezeigt bekommen hat. Letzteres nennt man auch Impressionen. Wir haben also **18.825 Klicks** auf die Seite und **440.607 Impressionen** in den letzten 12 Monaten gehabt. Und das nur in der Google Suche! Diese ist zwar die eindeutig am meisten genutzte Suchmaschine allerdings werden inzwischen immer mehr mit anderen Suchmaschinen gesucht.  
+In dieser Grafik werden die Statistiken aus der Google-Suche dargestellt. Die beiden wichtigsten Kennzahlen werden im Diagramm visualisiert: Zum einen die Klicks auf die Website in Blau und zum anderen die Anzahl der Impressionen, also wie oft die Website in den Suchergebnissen angezeigt wurde, in Lila. In den letzten 12 Monaten verzeichneten wir **18.825 Klicks** auf die Seite bei insgesamt **440.607 Impressionen**. Und das nur durch die Google Suche! Obwohl Google die meistgenutzte Suchmaschine ist, wird zunehmend auch mit anderen Suchmaschinen recherchiert.  
 
 (Die Informationen hier stammen aus der Google Search-Console. Ich benutze **kein Google Analytics** oder andere Privacy missachtende Software!)
 
 ### Analytics
 
-Ich nutze ein nicht Privacy invasives Tool namens [GoatCounter](goatcounter.com) zur Gewinnung meiner Analytics Daten. Dieses Tool kann leider deswegen nicht ganz so gute Analytics liefern wie zum Beispiel Google Analytics aber genug Daten hat man auf jeden Fall.
+Ich verwende ein datenschutzfreundliches Tool namens [GoatCounter](https://goatcounter.com) zur Erfassung meiner Analytics-Daten. Obwohl dieses Tool nicht so umfassende Analytics wie beispielsweise Google Analytics bietet, liefert es dennoch einige Daten.
 
 ![GoatCounter Statistiken für Fachinformatiker Prüfungsvorbereitung](GoatCounterStats.png)
 
-Hier sehen wir zum Beispiel alle Website-Besuche in den letzten 12 Monaten. Diese haben **176.438 Visits** betragen. Wobei man beachten muss das ein Visit für jede Unterseite zählt. Das heist die User sowie die Session Anzahl ist ein gutes Stück unter der Visit Anzahl. Diese können allerdings leider nicht richtig erfasst werden.
+Hier sehen wir zum Beispiel alle Website-Besuche in den letzten 12 Monaten. Diese haben **176.438 Visits** betragen. Wobei man hierbei beachten muss das ein Visit für jede Unterseite gezählt wird. Das bedeutet die User, sowie die Session-Anzahl, ist ein gutes Stück kleiner als die Visit-Anzahl. Diese können allerdings leider nicht richtig erfasst werden.
 
 ### GitHub
 
-Die GitHub Stats sind schwer zu bestimmen da sie im default nur die letzten zwei Wochen wiederspiegeln.  
+Die GitHub Stats sind schwer zu bestimmen da sie im default nur die letzten zwei Wochen widerspiegeln.  
 
-Sicher kann man sagen das wir zum jetzigen Zeitpunkt **51 Stars** haben. Zudem ist sicher das wir mindestens einige tausend Views von einigen hunderten Accounts hatten.
+Sicher kann man sagen, dass wir zum jetzigen Zeitpunkt **51 Stars** haben. Zudem ist sicher, dass wir mindestens einige tausend Views von einigen hundert Accounts hatten.
 
 ## Fazit
 
-In den letzten 12 Monaten hat sich die [Fachinformatiker Prüfungsvorbereitung](https://fachinformatikerpruefungsvorbereitung.de) für meine Verhältnisse zu einer Website mit beachtlicher Reichweite aufgebaut. Ich hoffe das sie vielen Leuten auch wirklich nützlich ist und zu einem besseren Prüfungsergebnis beiträgt. Um weiterhin einen solchen Impact zu leisten wäre neuer Content und eine intensive Pflege der Seite von Nutzen. Dafür bräuchte es einige Freiwillige die einander helfen möchten.  
+In den letzten 12 Monaten hat sich [Fachinformatiker Prüfungsvorbereitung](https://fachinformatikerpruefungsvorbereitung.de) für meine Verhältnisse zu einer Website mit beachtlicher Reichweite entwickelt. Ich hoffe das sie vielen Leuten auch wirklich nützlich ist und zu einem besseren Prüfungsergebnis beiträgt. Um weiterhin einen solchen Impact zu leisten wäre neuer Content und eine intensive Pflege der Seite von Nutzen. Dafür bräuchte es einige Freiwillige, welche einander helfen möchten.  
 
-Also wenn du ein bisschen Zeit über hast überleg doch mal ob du die ein oder andere Kleinigkeit [hier](https://github.com/Fachinformatiker-Prufungsvorbereitung/Fachinformatiker-Pruefungsvorbereitung) auf GitHub Beitragen kannst.
+Also wenn du ein bisschen Zeit über hast, überlege doch mal, ob du die ein oder andere Kleinigkeit [hier](https://github.com/Fachinformatiker-Prufungsvorbereitung/Fachinformatiker-Pruefungsvorbereitung) auf GitHub beitragen kannst.
