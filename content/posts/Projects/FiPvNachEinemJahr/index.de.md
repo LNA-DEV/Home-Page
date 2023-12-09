@@ -16,9 +16,9 @@ searchHidden: false
 
 Um mich auf die Prüfung zum Fachinformatiker Anwendungsentwicklung vorzubereiten, habe ich einige Notizen verfasst. Aufgrund der schnellen Erstellung und Flexibilität habe ich diese direkt in Markdown festgehalten.
 
-Später kam mir der Gedanke, dass diese Notizen eventuell auch anderen helfen könnten und habe sie deswegen in Form der [Fachinformatiker Prüfungsvorbereitung](https://fachinformatikerpruefungsvorbereitung.de)-Seite als Open Source Projekt zur Verfügung gestellt. Dadurch das die Seite aus einfachem Markdown mit [Hugo](https://gohugo.io/) generiert wird, kann praktisch jeder daran mitwirken. Es erfordert lediglich ein grundlegendes Verständnis von Markdown.  
+Später kam mir der Gedanke, dass diese Notizen eventuell auch anderen helfen könnten und habe sie deswegen in Form der [Fachinformatiker Prüfungsvorbereitung](https://fachinformatikerpruefungsvorbereitung.de)-Seite als Open Source Projekt zur Verfügung gestellt. Da die Seite aus einfachem Markdown mit [Hugo](https://gohugo.io/) generiert wird, kann praktisch jeder daran mitwirken. Es erfordert lediglich ein grundlegendes Verständnis von Markdown.  
 
-Im vergangenen Jahr haben bereits einige Personen dazu beigetragen. Laut GitHub sind es 11 Contributors, wobei dies wahrscheinlich nicht exakt ist, da hier nur aktive Accounts gezählt werden. (Keine gelöschten Accounts!)  
+Im vergangenen Jahr haben bereits einige Personen zu dem Projekt beigetragen. Laut GitHub sind es 11 Contributors, wobei dies wahrscheinlich nicht exakt ist, da hier nur aktive Accounts gezählt werden. (Keine gelöschten Accounts!)  
 
 ## Contributing
 
@@ -46,16 +46,16 @@ Ich verwende ein datenschutzfreundliches Tool namens [GoatCounter](https://goatc
 
 ![GoatCounter Statistiken für Fachinformatiker Prüfungsvorbereitung](GoatCounterStats.png)
 
-Hier sehen wir zum Beispiel alle Website-Besuche in den letzten 12 Monaten. Diese haben **176.438 Visits** betragen. Wobei man hierbei beachten muss das ein Visit für jede Unterseite gezählt wird. Das bedeutet die User, sowie die Session-Anzahl, ist ein gutes Stück kleiner als die Visit-Anzahl. Diese können allerdings leider nicht richtig erfasst werden.
+Hier sehen wir zum Beispiel alle Website-Besuche in den letzten 12 Monaten. Diese haben **176.438 Visits** betragen. Wobei man hierbei beachten muss, dass ein Visit für jede Unterseite gezählt wird. Das bedeutet die User, sowie die Session-Anzahl, sind ein gutes Stück kleiner als die Visit-Anzahl. Diese können allerdings leider nicht richtig erfasst werden.
 
 ### GitHub
 
-Die GitHub Stats sind schwer zu bestimmen da sie im default nur die letzten zwei Wochen widerspiegeln.  
+Die GitHub Stats sind schwer zu bestimmen, da sie im default nur die letzten zwei Wochen widerspiegeln.  
 
 Sicher kann man sagen, dass wir zum jetzigen Zeitpunkt **51 Stars** haben. Zudem ist sicher, dass wir mindestens einige tausend Views von einigen hundert Accounts hatten.
 
 ## Fazit
 
-In den letzten 12 Monaten hat sich [Fachinformatiker Prüfungsvorbereitung](https://fachinformatikerpruefungsvorbereitung.de) für meine Verhältnisse zu einer Website mit beachtlicher Reichweite entwickelt. Ich hoffe das sie vielen Leuten auch wirklich nützlich ist und zu einem besseren Prüfungsergebnis beiträgt. Um weiterhin einen solchen Impact zu leisten wäre neuer Content und eine intensive Pflege der Seite von Nutzen. Dafür bräuchte es einige Freiwillige, welche einander helfen möchten.  
+In den letzten 12 Monaten hat sich [Fachinformatiker Prüfungsvorbereitung](https://fachinformatikerpruefungsvorbereitung.de) für meine Verhältnisse zu einer Website mit beachtlicher Reichweite entwickelt. Ich hoffe, dass sie vielen Leuten auch wirklich nützlich ist und zu einem besseren Prüfungsergebnis beiträgt. Um weiterhin einen solchen Impact zu leisten wäre neuer Content und eine intensive Pflege der Seite von Nutzen. Dafür bräuchte es einige Freiwillige, welche einander helfen möchten.  
 
 Also wenn du ein bisschen Zeit über hast, überlege doch mal, ob du die ein oder andere Kleinigkeit [hier](https://github.com/Fachinformatiker-Prufungsvorbereitung/Fachinformatiker-Pruefungsvorbereitung) auf GitHub beitragen kannst.
