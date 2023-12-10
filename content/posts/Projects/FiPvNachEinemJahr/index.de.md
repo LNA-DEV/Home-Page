@@ -1,7 +1,7 @@
 ---
 title: "Ein Jahr Fachinformatiker Prüfungsvorbereitung: Rückblick und Statistiken"
-date: 2023-12-09T08:55:24+01:00
-draft: true
+date: 2023-12-10T11:29:00+01:00
+draft: false
 tags: ["Projekte", "Fachinformatiker Prüfungsvorbereitung", "Fachinformatiker", "Hugo", "Website", "Stats"]
 categories: ["Projekte"]
 showToc: true
@@ -18,7 +18,7 @@ Um mich auf die Prüfung zum Fachinformatiker Anwendungsentwicklung vorzubereite
 
 Später kam mir der Gedanke, dass diese Notizen eventuell auch anderen helfen könnten und habe sie deswegen in Form der [Fachinformatiker Prüfungsvorbereitung](https://fachinformatikerpruefungsvorbereitung.de)-Seite als Open Source Projekt zur Verfügung gestellt. Da die Seite aus einfachem Markdown mit [Hugo](https://gohugo.io/) generiert wird, kann praktisch jeder daran mitwirken. Es erfordert lediglich ein grundlegendes Verständnis von Markdown.  
 
-Im vergangenen Jahr haben bereits einige Personen zu dem Projekt beigetragen. Laut GitHub sind es 11 Contributors, wobei dies wahrscheinlich nicht exakt ist, da hier nur aktive Accounts gezählt werden. (Keine gelöschten Accounts!)  
+Im vergangenen Jahr haben bereits einige Personen zu dem Projekt beigetragen. Laut GitHub sind es 11 Contributor, wobei dies wahrscheinlich nicht exakt ist, da hier nur aktive Accounts gezählt werden. (Keine gelöschten Accounts!)  
 
 ## Contributing
 
@@ -46,7 +46,7 @@ Ich verwende ein datenschutzfreundliches Tool namens [GoatCounter](https://goatc
 
 ![GoatCounter Statistiken für Fachinformatiker Prüfungsvorbereitung](GoatCounterStats.png)
 
-Hier sehen wir zum Beispiel alle Website-Besuche in den letzten 12 Monaten. Diese haben **176.438 Visits** betragen. Wobei man hierbei beachten muss, dass ein Visit für jede Unterseite gezählt wird. Das bedeutet die User, sowie die Session-Anzahl, sind ein gutes Stück kleiner als die Visit-Anzahl. Diese können allerdings leider nicht richtig erfasst werden.
+Hier sehen wir zum Beispiel alle Website-Besuche in den letzten 12 Monaten. Diese haben **176.438 Visits** betragen. Wobei man hierbei beachten muss, dass ein Visit für jede Unterseite gezählt wird. Das bedeutet die User, sowie die Session-Anzahl, sind ein gutes Stück kleiner als die Visit-Anzahl. Diese können allerdings nicht besonders gut erfasst werden, ohne zu tief in die Privatsphäre der User einzugreifen.
 
 ### GitHub
 
