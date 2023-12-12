@@ -1,6 +1,6 @@
 baseURL: https://lna-dev.net
 title: LNA-DEV ~ Lukas Nagel
-theme: github.com/adityatelange/hugo-PaperMod
+theme: github.com/LNA-DEV/hugo-PaperMod
 enableEmoji: true
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: true
@@ -140,6 +140,7 @@ languages:
           weight: 30
 
 params:
+  font: Cantarell
   displayFullLangName: true
   keywords:
     - LNA-DEV
