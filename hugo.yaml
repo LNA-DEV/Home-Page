@@ -140,7 +140,7 @@ languages:
           weight: 30
 
 params:
-  font: Cantarell #, NotoColorEmoji
+  font: Cantarell, NotoSansSymbols
   displayFullLangName: true
   keywords:
     - LNA-DEV
