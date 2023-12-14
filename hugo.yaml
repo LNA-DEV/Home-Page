@@ -141,7 +141,6 @@ languages:
 
 params:
   ShowFullTextinRSS: true
-  font: Cantarell, NotoSansSymbols
   displayFullLangName: true
   keywords:
     - LNA-DEV
