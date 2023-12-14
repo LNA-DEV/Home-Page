@@ -10,6 +10,13 @@ description: Brave is one of the most private browsers and has many additional f
 disableShare: true
 disableHLJS: false
 searchHidden: false
+cover:
+    image: Untitled.png
+    alt: "<alt text>" 
+    caption: asdfasdf
+    relative: true
+    hidden: false 
+    hiddenInList: false
 ---
 
 

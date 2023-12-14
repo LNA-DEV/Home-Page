@@ -10,6 +10,13 @@ description: "I developed a social media platform called Fedodo for half a year.
 disableShare: true
 disableHLJS: false
 searchHidden: false
+cover:
+    image: Untitled.png
+    alt: "<alt text>" 
+    caption: asdfasdf
+    relative: true
+    hidden: false 
+    hiddenInList: false
 ---
 
 ## What is Fedodo?
