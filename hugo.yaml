@@ -140,6 +140,7 @@ languages:
           weight: 30
 
 params:
+  ShowFullTextinRSS: true
   font: Cantarell, NotoSansSymbols
   displayFullLangName: true
   keywords:
