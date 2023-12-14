@@ -151,7 +151,7 @@ params:
     - Open Source
   author: Lukas Nagel
   images:
-    - /assets/images/Pingüino-Square.png
+    - /assets/Pingüino/Pingüino.png
   DateFormat: January 2, 2006
   defaultTheme: dark
   disableThemeToggle: false
