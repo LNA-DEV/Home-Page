@@ -182,6 +182,8 @@ params:
   socialIcons:
     - name: github
       url: https://github.com/LNA-DEV
+    - name: mastodon
+      url: https://mastodon.online/@lna_dev
     - name: email
       url: mailto:info@lna-dev.net
     - name: rss
