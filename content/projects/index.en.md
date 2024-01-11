@@ -18,8 +18,8 @@ I am working on a personal website since march 2021. First I made a custom imple
 
 ## Fedodo
 
-Fedodo is a decentral social network implementing the ActivityPub standard. It is kind working but in an unstable state. It is a pretty big project and currently I am not working on it. But I think the whole project is pretty cool. Sadly I just don't have the time... The project is Open Source on [GitHub](https://github.com/Fedodo).
+[Fedodo](https://fedodo.org) is a decentral social network implementing the ActivityPub standard. It is kind working but in an unstable state. It is a pretty big project and currently I am not working on it. But I think the whole project is pretty cool. Sadly I just don't have the time... The project is Open Source on [GitHub](https://github.com/Fedodo). In [this](/en/posts/projects/whathappenedtofedodo) post I described everything in detail if you are interested.
 
 ## Preparation for a german IT certificate
 
-While preparing for the german *Fachinformatiker Prüfungsvorbereitung* (*computer science expert*) certificate I published my notes in form of a website. Since than I am maintaining this webpage as an Open Source project on [GitHub](https://github.com/Fachinformatiker-Prufungsvorbereitung). The certificate is german and so is the website.
+While preparing for the german *Fachinformatiker* (*computer science expert*) certificate I published my notes in form of a website. Since than I am maintaining this webpage as an Open Source project on [GitHub](https://github.com/Fachinformatiker-Prufungsvorbereitung). The certificate is german and so is the website. It is called [Fachinformatiker Prüfungsvorbereitung](https://fachinformatikerpruefungsvorbereitung.de/)
