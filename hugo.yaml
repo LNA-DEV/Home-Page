@@ -28,7 +28,7 @@ minify:
 
 languages:
   en:
-    languageName: "🇺🇸 En"
+    languageName: "🇬🇧 En"
     languageCode: en-US
     weight: 1
     params:
