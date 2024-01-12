@@ -193,6 +193,6 @@ params:
     hiddenInList: true
     hiddenInSingle: true
   editPost:
-    URL: https://github.com/LNA-DEV/Home-Page/content
+    URL: https://github.com/LNA-DEV/Home-Page/tree/main/content
     Text: Suggest Changes
     appendFilePath: true
