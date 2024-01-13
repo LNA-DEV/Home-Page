@@ -22,8 +22,16 @@ Jag började lära mig svenska för ett halvår sedan. Jag använde först Duoli
 
 Jag har redan sagt vad jag heter. Jag kommer från södra Tyskland. Vi har berg och pretzels.
 
-Jag älskar datorer och arbetar som programmerare. I min fritid programmerar jag också, men jag arbetar bara på öppen källkod för datorapplikationer.
+Jag älskar datorer och arbetar som programmerare. I min fritid programmerar jag också, men jag arbetar bara på öppen källkod datorapplikationer.
 
 ## Min nivå
 
 Jag har gjort ett online-test vid Folkuniversitet och jag har nivå A2 i skrivning och nivå A1 i tal. Jag ska berätta hur nivån förändras över tid.
+
+## Varför jag lär mig Svenska
+
+Jag tycker verkligen om de nordiska länderna. Så jag tänkte på att lära mig ett av de nordiska språken. Det finns isländska, norska, danska, finska och svenska. Island är långt bort och språket är ganska unikt. Därför har jag valt ett annat språk. Danmark är mig lite för nära till Tyskland, så danska var inte mitt val heller. Så det finns fortfarande norska, svenska och finska. Det sistnämnda är verkligen utmärkt. För personer som talar tyska eller engelska är finska ett av de svåraste språken. Också väldigt få förstå finska i Norden. Så jag fick välja mellan norska och svenska. Jag valde Svenska eftersom jag tror att Svenska är förstått i flesta länder i norden.
+
+## Vad jag vill skriver här i framtiden
+
+TODO
