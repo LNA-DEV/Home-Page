@@ -111,24 +111,24 @@ languages:
     params: 
       description: Jag är Lukas Nagel (LNA-DEV) och delar insikter om programutveckling, teknik, fotografi och mer på denna sida, som fungerar som mitt digitala nav.
       homeInfoParams:
-        Title: Hej du 👋
+        Title: Hallå värld 👋
         Content: |
           Välkommen till min webbplats.  
-          Jag håller för närvarande på att lära mig svenska så förhoppningsvis kommer det att finnas översättningar i framtiden.
+          Jag är programmerare från Tyskland och jag pratar om att lära mig svenska här. Jag är nybörjare så förvänta dig inte för mycket.
     menu:
       main:
-        # - name: Arkiv
-        #   url: archives/
-        #   weight: 5
-        # - name: Sökning
-        #   url: /search/
-        #   weight: 5
-        # - name: Kategorier
-        #   url: /categories/
-        #   weight: 10
-        # - name: Tags
-        #   url: /tags/
-        #   weight: 20
+        - name: Arkiv
+          url: archives/
+          weight: 5
+        - name: Sökning
+          url: /search/
+          weight: 5
+        - name: Kategorier
+          url: /categories/
+          weight: 10
+        - name: Taggar
+          url: /tags/
+          weight: 20
         # - name: Verktyg
         #   url: /tools/
         #   weight: 22
