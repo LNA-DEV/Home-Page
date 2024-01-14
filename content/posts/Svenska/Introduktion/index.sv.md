@@ -1,8 +1,8 @@
 ---
 title: "Hur jag började lära mig svenska"
-date: 2024-01-11T19:06:52+01:00
-draft: true
-tags: ["Svenska", "Språk"]
+date: 2024-01-14T12:30:52+01:00
+draft: false
+tags: ["Svenska", "Språk", "Norden", "Om mig"]
 categories: ["Svenska"]
 showToc: true
 TocOpen: false
@@ -34,4 +34,8 @@ Jag tycker verkligen om de nordiska länderna. Så jag tänkte på att lära mig
 
 ## Vad jag vill skriver här i framtiden
 
-TODO
+Jag vill skriva här första gången om mig och hur jag lär mig svenska. Så jag vill skriver hur några metoder fungerar eller vad jag tycker är speciellt med det svenska språk.
+
+Men kanske i framtiden vill jag skriver om mer avancerade ämnen. För exempel över tekniska ämnen.
+
+Det här är min dokumentation om hur min svenska förbättras, så jag hoppas att man kan se en förbättring från blogginlägg till blogginlägg.
