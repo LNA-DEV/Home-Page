@@ -184,6 +184,8 @@ params:
       url: https://github.com/LNA-DEV
     - name: mastodon
       url: https://mastodon.online/@lna_dev
+    - name: pixelfed
+      url: https://pixelfed.de/LNA-DEV
     - name: email
       url: mailto:info@lna-dev.net
     - name: rss
