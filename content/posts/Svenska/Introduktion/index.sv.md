@@ -6,7 +6,7 @@ tags: ["Svenska", "Språk", "Norden", "Om mig"]
 categories: ["Svenska"]
 showToc: true
 TocOpen: false
-description: "Jag heter Lukas Nagel, och det här är mitt första blogginlägg i svenska och min introduktion till er."
+description: "Jag heter Lukas Nagel, och det här är mitt först blogginlägg i svenska och min introduktion till er."
 disableShare: true
 disableHLJS: false
 searchHidden: false
