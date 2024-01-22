@@ -6,7 +6,7 @@ tags: ["Media", "Privacy", "Open Source", "Fediverse", "ActivityPub", "Social Me
 categories: ["Media", "Privacy"]
 showToc: true
 TocOpen: false
-description: "Deep dive into the really social networks."
+description: "Deep dive into the really social network."
 disableShare: true
 disableHLJS: false
 searchHidden: false
@@ -50,7 +50,29 @@ This is extremely important when it comes to messangers. There not using the spe
 
 ## Current culture in the Fediverse
 
+The current culture in the Fediverse is a big plus. The people there are extraordinary friendly compared to the classical social networks. In addition to that the Fediverse is really including. For example if you post an image without an alt text (so blind people know what is in the image) someone will remind you to add it. This is really important to the people here. Everyone should be able to participate.
+
+There is good amount of instances for LGBTQ+ to create safespaces for the people. I see different instances with this target constantly. There is a lot of this people here. Of course this depends on what edge of the Fediverse you are at. But after all I think there are a lot of minorities in the Fediverse which are not as represented elsewhere. I remember a poll someone made with around 11000 votes. Where the question was how many queer people there are in the Fediverse. And the result was 60% not queer and 40% queer. This are solid numbers. Of course this result is biased in some way because of who the poll makes and who reposts it. But with this number of votes it definitely gives a good hint.
+
+But after all the Fediverse is a big home for people which are interested in technologie. It is rather new tech and because of that there are a lot of nerds.
+
+If someone wants to create artistic content which goes a bit over the guidelines of for example Instagram this is ok in the Fediverse. You can choose a instance where the rules are as you wish and create your content there. Most instances require a content warning for specific content but you are free to do what you like.
+
+Also there is no need to upload regularly or do not use specific words to pleace the algorithm. There is nothing like that here. There are no ads no adivitsors which do not want you to say something "bad". You can handle stuff how you and your instance want it to.
+
+Another thing which is immensely better here is that the moderator count per user is relatively high. This is because each instance needs to moderate. So every instances handles its part and overall the count of moderators gets really high this way. And if a instance gets to unmoderated others will block them so there is always a relatively clean network.
+
+Of course this are not all groups of people but I hope I could get you a bit of an overview what kind of people are currently in the Fediverse. This changes when new people come and join us but at the moment this is how I think the Fediverse is. Let's hope we can keep that for the future.
+
 ### Who is in the Fediverse?
+
+I already mentionend states creating instances but who does it and what of popular channels are there already?
+
+For example nearly all German institutions have a account on a own server of the state. Also the public broadcasting providers ARD and ZDF have a own instance.
+
+In addition Mozilla created it's own instance available to the public. But there are another 26,000 servers waiting for you to explore them. 
+
+A good overview of instances and the biggest users you can get at [FediDB](https://fedidb.org).
 
 ## Platforms
 
@@ -69,27 +91,33 @@ After this events on the "freed" platform are even more extreme right wing peopl
 
 {{< figure src="./twitter-x.jpg" caption="[🄯 CC-BY 4.0 by David Revoy](https://www.davidrevoy.com/)" alt="This image shows a dead bird which should represent the Twitter bird. This bird is crossed with a iron beam. No they represent the new logo X." >}}
 
-<!-- TODO Stats and say its open source -->
-
 ### Pixelfed
 
 Instagram is really big platform run by Meta which is known for its extremely bad privacy and also had few scandals. For example they helped manipulating elections. See Cambridge Analytica.
 
 Pixelfed is the pardon from the Fediverse for Instagram. It is developed by a Canadian software engineer and the community.
 
-In my opintion it is not as widely developed as Mastodon. But its almost on a perfect level. It has many features. Even some the classical Instagram does not have. But most important it is part of the Fediverse and therefore you could also consume the great photography available on Pixelfed from your Mastodon feed or which other service you like the most.
+In my opinion it is not as widely developed as Mastodon. But its almost on a perfect level. It has many features. Even some the classical Instagram does not have. But most important it is part of the Fediverse and therefore you could also consume the great photography available on Pixelfed from your Mastodon feed or which other service you like the most.
 
-And of course Pixelfed is devloped as **Free and Open Source Software / FOSS!**
-
-<!-- TODO Stats and say its open source -->
-
-### Peertube
-
-<!-- TODO Stats and say its open source -->
+And of course Pixelfed is developed as **Free and Open Source Software / FOSS!**
 
 ### Lemmy
 
-<!-- TODO Stats and say its open source -->
+Lemmy is Reddit for the Fediverse. It seems to have a really active community. I personally did not try it out that much yet but it seems pretty good.
+
+After all the decision to use Lemmy is not that difficult if Reddit is the current choice. Reddit did screw up hard this year. Same as Twitter. They banned every third party app and also did a couple of other bad decisions. On the image below you see a Reddit event where the collective of Reddit users has written Fuck spez! which is the CEO of Reddit.
+
+This is a great example that the community can not do anything on a platform like Reddit or Twitter. They are monopolies exploiting their power of having all the users. Lets break that! Lets make a real change and go to the Fediverse!
+
+{{< figure src="./fuck-spez.png" alt="There is written Fuck spez! on the r/place canvas." >}}
+
+### Peertube
+
+Peertube is a pardon for YouTube. Because video streaming is quite expensive and in a decentral network there are many smaller communities with less money Peertube decided to use *peer* to *peer*. This means if you watch a video you help someone else watching because your computer sends bits of the video to other persons. So the server does need less bandwidth and therfore are small communities able to operate a video streaming platform. This approach comes with downsides but after all it makes something possible which would be really hard to achieve in another way. A really free video platform.
+
+In terms of content this platform is still a bit niche. There are really good channels especially in the privacy, tech and Linux community. But for more mainstream content there is not that much content. This of course is not a problem of the platform but a problem of the creators which are not feeding the platform. I hope this will change in the future!
+
+Because of the Fediverse you can of course watch and subscribe to Peertube channels from Mastodon and other platforms.
 
 ### What about Threads (Meta)?
 
@@ -111,16 +139,24 @@ If a server does not block a specific other server the user still hast the power
   </div>
 {{< /rawhtml >}}
 
+And of course Meta will not provide a platform that i nearly as free and open as the other ones I mentioned aboth. The only good they are is that they bring a lot of users with them. That's it. But this also may open the Fediverse to a lot of people which would be great.
+
+Meta joining is like a dance with the devil. But we may provoke from it.
+
+## Also worth mentioning
+
+You are not stuck with your account on a server. Of course you have the freedom to choose another one and take all you followers with you. No problem here. Free software doesn't lock you in place.
+
+Another thing getting weired in the old networks is the account verification. You know need to pay in both Instagram and Twitter to be verified. This is rather stupid and confusing. Here you do not need to pay anyone. You can just link yourself from another platform / website you own and you get a sign that this account / page is verified to be owned by you. A much better way of verification.
+
+## The technical stuff
+
+I decided to not put the really technical stuff in this post. This would have made this blog post even longer than it is now. I have a bit of expeirence in creating servers for the Fediverse because of [Fedodo](../../projects/whathappenedtofedodo). I want to share this expeirence in a future post and talk about the details of ActivityPub. This is the protocol powering most of the Fediverse.
+
 ## Appreciations
 
 Thanks for the amazing artists providing their work under Creative Commons licenses. They help me so much illustrating this post. Links are available under each image. Go and check them out!
 
-
-
-<!-- TODO this -->
-
-## ActivityPub Protocol
+Also thanks to you reading this until the end. I hope I could give you a bit of an overview over the topic. And maybe I even convinced you in joing us to fight for a better web. But don't pressure yourself. Have fun ❤️
 
 ![todo](./fediverse.svg)
-
-fedidb
