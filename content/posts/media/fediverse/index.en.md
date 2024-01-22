@@ -12,7 +12,11 @@ disableHLJS: false
 searchHidden: false
 ---
 
-In this post I want to explain what the Fediverse is and why you should join it. I talk a bit about the technical stuff but this post is intended to be understood by anyone.
+{{< figure src="./fediverse.svg" alt="todo" class="img-right" >}}
+
+In this post I want to explain what the Fediverse is and why you should join it. I talk a very little bit about the technical stuff but this post is intended to be understood by anyone.
+
+Another post for the really technical topics is planned for the future.
 
 ## Where does the name come from?
 
@@ -158,5 +162,3 @@ I decided to not put the really technical stuff in this post. This would have ma
 Thanks for the amazing artists providing their work under Creative Commons licenses. They help me so much illustrating this post. Links are available under each image. Go and check them out!
 
 Also thanks to you reading this until the end. I hope I could give you a bit of an overview over the topic. And maybe I even convinced you in joing us to fight for a better web. But don't pressure yourself. Have fun ❤️
-
-![todo](./fediverse.svg)
