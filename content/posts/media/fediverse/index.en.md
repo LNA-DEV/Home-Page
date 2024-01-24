@@ -85,7 +85,7 @@ For example, nearly all German institutions have an account on their own [server
 
 In addition, Mozilla created its own instance available to the public: [Mozilla Social](https://mozilla.social/about). However, there are another 26,000 servers waiting for you to explore them.
 
-<!-- TODO Add statistics about user count -->
+Currently there are around 10,000,000 users in the Fediverse with a total of about 1,200,000 of them being active in the last month. So you hopefully you find someone to connect with.
 
 A good overview of instances and the biggest users can be found at [FediDB](https://fedidb.org).
 
@@ -108,68 +108,68 @@ After these events, the "freed" platform attracted even more extreme right-wing 
 
 ### Pixelfed
 
-Instagram is really big platform run by Meta which is known for its extremely bad privacy and they also had few scandals. For example they helped manipulating elections. See [Cambridge Analytica](https://www.theguardian.com/news/2018/mar/17/cambridge-analytica-facebook-influence-us-election).
+Instagram is a really big platform run by Meta, which is known for its extremely bad privacy, and they also had a few scandals. For example, they helped manipulate elections. See [Cambridge Analytica](https://www.theguardian.com/news/2018/mar/17/cambridge-analytica-facebook-influence-us-election).
 
 Pixelfed is the pardon from the Fediverse for Instagram. It is developed by a Canadian software engineer and the community.
 
-In my opinion it is not as widely developed as Mastodon. But its almost on a perfect level. It has many features. Even some the classical Instagram does not have. But most important it is part of the Fediverse and therefore you could also consume the great photography available on Pixelfed from your Mastodon feed or which other service you like the most.
+In my opinion, it is not as widely developed as Mastodon. But it's almost on a perfect level. It has many features, even some that classical Instagram does not have. But most importantly, it is part of the Fediverse, and therefore, you could also consume the great photography available on Pixelfed from your Mastodon feed or whichever service you like the most.
 
-And of course Pixelfed is developed as **Free and Open Source Software / FOSS!**
+And of course, Pixelfed is developed as **Free and Open Source Software / FOSS!**
 
 ### Lemmy
 
 Lemmy is Reddit for the Fediverse and it is also **FOSS**. It seems to have a really active community. I personally did not try it out that much yet but it seems pretty good.
 
-After all the decision to use Lemmy is not that difficult if Reddit is the current choice. Reddit did screw up hard this year. Same as Twitter. They banned every third party app and also did a couple of other bad decisions. On the image below you see a Reddit event where the collective of Reddit users has written Fuck spez! which is the CEO of Reddit.
+After all, the decision to use Lemmy is not that difficult if Reddit is the current choice. Reddit did screw up hard this year. Same as Twitter. They banned every third-party app and also made a couple of other bad decisions. On the image below, you see a Reddit event where the collective of Reddit users has written "Fuck spez!" which is the CEO of Reddit.
 
-This is a great example that the community can not do anything on a platform like Reddit, Twitter, Instagram, TikTok... They are monopolies exploiting their power of having all the users. Lets break that! Lets make a real change and go to the Fediverse!
+This is a great example that the community cannot do anything on a platform like Reddit, Twitter, Instagram, TikTok... They are monopolies exploiting their power of having all the users. Let's break that! Let's make a real change and go to the Fediverse!
 
 {{< figure src="./fuck-spez.png" alt="There is written Fuck spez! on the r/place canvas." >}}
 
 ### Peertube
 
-Peertube is a pardon for YouTube. Because video streaming is quite expensive and in a decentral network there are many smaller communities with less money. Peertube decided to use *peer* to *peer*. This means if you watch a video you help someone else watching because your computer sends bits of the video to other persons. So the server does need less bandwidth and therefore are small communities able to operate a video streaming platform. This approach comes with downsides but after all it makes something possible which would be really hard to achieve in another way. **A really free video platform.**
+Peertube is a pardon for YouTube. Because video streaming is quite expensive, and in a decentralized network, there are many smaller communities with less money. Peertube decided to use *peer* to *peer*. This means if you watch a video, you help someone else watch because your computer sends bits of the video to other persons. So the server does need less bandwidth, and therefore, small communities are able to operate a video streaming platform. This approach comes with downsides, but after all, it makes something possible, which would be really hard to achieve in another way. **A really free video platform.**
 
-In terms of content this platform is still a bit niche. There are really good channels especially in the privacy, tech and Linux community. But for more mainstream content there is not that much to offer. This of course is not a problem of the platform but a problem of the creators which are not feeding the platform. I hope this will change in the future!
+In terms of content, this platform is still a bit niche. There are really good channels, especially in the privacy, tech, and Linux community. But for more mainstream content, there is not that much to offer. This, of course, is not a problem of the platform but a problem of the creators who are not feeding the platform. I hope this will change in the future!
 
-Because of the Fediverse you can of course watch and subscribe to Peertube channels from Mastodon and other platforms.
+Because of the Fediverse, you can, of course, watch and subscribe to Peertube channels from Mastodon and other platforms.
 
-Peertube is developed by the french non profit association [Framasoft](https://framasoft.org/en/) as **FOSS**.
+Peertube is developed by the French non-profit association [Framasoft](https://framasoft.org/en/) as **FOSS**.
 
 ### What about Threads (Meta)?
 
 {{< figure src="./meta-red-carpet.jpg" caption="[🄯 CC-BY 4.0 by David Revoy](https://www.davidrevoy.com/)" alt="A little Mastodon is rolling out a red carpet for Meta represented as death / a reaper." >}}
 
-Now bigger companies are starting joining the Fediverse. The biggest is Threads made by Meta.
+Now, bigger companies are starting to join the Fediverse. The biggest is Threads made by Meta.
 
-Currently threads is implementing the required ActivityPub logic to join the network. You can already follow the CEO of Instagram and few of the team. But it seems like the full connection will take a while to implement.
+Currently, Threads is implementing the required ActivityPub logic to join the network. You can already follow the CEO of Instagram and a few of the team. But it seems like the full connection will take a while to implement.
 
-This topic is a controversy in the Fediverse. On one side stands that Meta is bringing a lot of users to the network but on the other side is Meta also well known for incredible bad privacy and being part of the surveillance capitalism. Hurting millions of users.
+This topic is a controversy in the Fediverse. On one side stands that Meta is bringing a lot of users to the network, but on the other side, Meta is also well-known for incredibly bad privacy and being part of surveillance capitalism, hurting millions of users.
 
-A few instances even have made the ["Fedi-Pact"](https://fedidb.org/current-events/anti-meta-fedi-pact) and therefore will block Meta on the server side when they are joining. This has an impact of about 7% of active users on the open side of the Fediverse. (Of course only Meta will not see them. The rest of the network can still interact with them normally.)
+A few instances have even made the ["Fedi-Pact"](https://fedidb.org/current-events/anti-meta-fedi-pact), and therefore will block Meta on the server side when they are joining. This has an impact of about 7% of active users on the open side of the Fediverse. (Of course, only Meta will not see them. The rest of the network can still interact with them normally.)
 
-If a server does not block a specific other server the user still has the power to do that. Here the founder of Mastodon explains his audience how it is done.
+If a server does not block a specific other server, the user still has the power to do that. Here, the founder of Mastodon explains his audience how it is done.
 
 {{< rawhtml >}}
     <iframe src="https://mastodon.social/@Gargron/111587088958531028/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="100%" allowfullscreen="allowfullscreen"></iframe><script src="https://mastodon.social/embed.js" async="async"></script>
 {{< /rawhtml >}}
 
-And of course Meta will not provide a platform that is nearly as free and open as the other ones I mentioned above. They are only trying money and hopefully are not destroying the Fediverse while doing that. The only good they are is that they bring a lot of users with them. That's it. But this also may open the Fediverse to a lot of people which would be great.
+And, of course, Meta will not provide a platform that is nearly as free and open as the other ones I mentioned above. They are only trying to make money and hopefully are not destroying the Fediverse while doing that. The only good they do is that they bring a lot of users with them. That's it. But this also may open the Fediverse to a lot of people, which would be great.
 
-Meta joining is like a dance with the devil. But we may provoke from it.
+Meta joining is like a dance with the devil. But we may benefit from it.
 
 ## Also worth mentioning
 
-You are not stuck with your account on a server. Of course you have the freedom to choose another one and take all you followers with you. No problem here. Free software doesn't lock you in place.
+You are not stuck with your account on a server. Of course, you have the freedom to choose another one and take all your followers with you. No problem here. Free software doesn't lock you in place.
 
-Another thing getting weird in the old networks is the account verification. You know need to pay in both Instagram and Twitter to be verified. Even if you are not a big creator or other person of interest. This is rather stupid and confusing. In the Fediverse you do not need to pay anyone. You can just link yourself from another platform / website you own and you get a sign that this account / page is verified to be owned by you. A much better way of verification.
+Another thing getting weird in the old networks is the account verification. You now need to pay in both Instagram and Twitter to be verified, even if you are not a big creator or another person of interest. This is rather stupid and confusing. In the Fediverse, you do not need to pay anyone. You can just link yourself from another platform/website you own, and you get a sign that this account/page is verified to be owned by you. A much better way of verification.
 
 ## The technical stuff
 
-I decided to not put the really technical stuff in this post. This would have made this blog post even longer than it is now. I have a bit of experience in creating servers for the Fediverse because of [Fedodo](../../projects/whathappenedtofedodo). I want to share this experience in a future post and talk about the details of ActivityPub. This is the protocol powering most of the Fediverse.
+I decided not to put the really technical stuff in this post. This would have made this blog post even longer than it is now. I have a bit of experience in creating servers for the Fediverse because of [Fedodo](../../projects/whathappenedtofedodo). I want to share this experience in a future post and talk about the details of ActivityPub. This is the protocol powering most of the Fediverse.
 
 ## Appreciations
 
-Thanks for the amazing artists providing their work under Creative Commons licenses. They help me so much illustrating this post. Links are available under each image. Go and check them out!
+Thanks to the amazing artists providing their work under Creative Commons licenses. They help me so much in illustrating this post. Links are available under each image. Go and check them out!
 
-Also thanks to you reading this until the end. I hope I could give you a bit of an overview over the topic. And maybe I even convinced you to join us to fight for a better web. But don't pressure yourself. Have fun ❤️
+Also, thanks to you for reading this until the end. I hope I could give you a bit of an overview of the topic. And maybe I even convinced you to join us to fight for a better web. But don't pressure yourself. Have fun ❤️
