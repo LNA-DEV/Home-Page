@@ -64,5 +64,5 @@ jobs:
           regex: false
 
       # Deploy Kubernetes YAML
-      - run: kubectl apply -n home-page-dev -f ./deployment/Kubernetes.yaml --kubeconfig ${{ steps.write_file.outputs.filePath }}
+      - run: kubectl apply -n home-page-dev -f ./deployment/Kubernetes.dev.yaml --kubeconfig ${{ steps.write_file.outputs.filePath }}
       
