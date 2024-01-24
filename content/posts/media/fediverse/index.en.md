@@ -63,7 +63,7 @@ There's also a good amount of instances for LGBTQ+ to create safe spaces for tho
 Of course, this depends on which edge of the Fediverse you are at. But overall, I think there are many minorities in the Fediverse who are not as represented elsewhere. I recall a poll someone conducted with around 11,000 votes, asking how many queer people there are in the Fediverse. The result was 60% not queer and 40% queer. These are solid numbers. Of course, this result is biased in some way because of who the poll maker is and who reposts it. But with this number of votes, it definitely gives a good hint.
 
 {{< rawhtml >}}
-    <iframe src="https://fosstodon.org/@writeblankspace/111744426795021145/embed" class="mastodon-embed" style="max-width: 100%; border: 0;" width="100%" allowfullscreen="allowfullscreen"></iframe><script src="https://fosstodon.org/embed.js" async="async"></script>
+    <iframe title="Hypothesis: queers make up roughly or more than 50% of the active people on Fedi." src="https://fosstodon.org/@writeblankspace/111744426795021145/embed" class="mastodon-embed" style="max-width: 100%; border: 0;" width="100%" allowfullscreen="allowfullscreen"></iframe><script src="https://fosstodon.org/embed.js" async="async"></script>
 
     <br>
     <br>
@@ -157,7 +157,7 @@ A few instances have even made the ["Fedi-Pact"](https://fedidb.org/current-even
 If a server does not block a specific other server, the user still has the power to do that. Here, the founder of Mastodon explains his audience how it is done.
 
 {{< rawhtml >}}
-    <iframe src="https://mastodon.social/@Gargron/111587088958531028/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="100%" allowfullscreen="allowfullscreen"></iframe><script src="https://mastodon.social/embed.js" async="async"></script>
+    <iframe title="Block Threads" src="https://mastodon.social/@Gargron/111587088958531028/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="100%" allowfullscreen="allowfullscreen"></iframe><script src="https://mastodon.social/embed.js" async="async"></script>
 {{< /rawhtml >}}
 
 And, of course, Meta will not provide a platform that is nearly as free and open as the other ones I mentioned above. They are only trying to make money and hopefully are not destroying the Fediverse while doing that. The only good they do is that they bring a lot of users with them. That's it. But this also may open the Fediverse to a lot of people, which would be great.
