@@ -25,7 +25,7 @@ jobs:
       - run: sudo snap install hugo
 
       # Build the hugo repository
-      - run: hugo -e development --baseURL ""
+      - run: hugo -e development --baseURL "/"
         working-directory: ./${{ env.NAME }}/
 
       - name: Login to Docker Hub
