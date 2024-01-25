@@ -38,7 +38,7 @@ The creators of the Fediverse platform Peertube explained it in a straightforwar
 
 ### Free and Open Source
 
-But even the producers of Fediverse software are very different. It mainly consists of FOSS (Free and Open Source Software), which means the software is genuinely free and developers can modify it and help to improve it. FOSS is incredibly important and I will cover its numerous advantages in a future post.
+But even the producers of Fediverse software are very different. It mainly consists of FOSS (Free and Open Source Software), which means the software is genuinely free and independent developers can modify it and help to improve it. FOSS is incredibly important and I will cover its numerous advantages in a future post.
 
 Because of this freedom, making money is more challenging. However, the user doesn't get treated like trash, as the user contributes to the Fediverse through donations. Also, there are no ads because of that.
 
