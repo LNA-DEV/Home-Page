@@ -83,6 +83,8 @@ Of course, these are not all groups of people, but I hope I could provide you wi
 
 For example, nearly all German institutions have an account on their own [server of the state](https://social.bund.de/about). Additionally, the public broadcasting providers [ARD](https://ard.social/about) and [ZDF](https://zdf.social/about) have their own instances.
 
+I just saw that the [Netherlands](https://social.overheid.nl/about) also have a state owned Mastodon instance. I really like the idea of nations backing the network and hopefully the values, this network comes with.
+
 Mozilla also created its own instance available to the public: [Mozilla Social](https://mozilla.social/about). However, there are another 26,000 servers waiting for you to explore them.
 
 Currently there are around 10,000,000 users in the Fediverse with a total of about 1,200,000 of them being active in the last month. So you hopefully you find someone to connect with.
