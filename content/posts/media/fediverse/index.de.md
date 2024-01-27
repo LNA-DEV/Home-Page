@@ -40,7 +40,7 @@ Die Entwickler der Fediverse-Plattform Peertube haben es auf einfache Weise erkl
 
 Aber auch die Entwickler von Fediverse-Software unterscheiden sich stark zu denen der klassischen sozialen Netzwerke. Das Fediverse besteht hauptsächlich aus FOSS (Free and Open Source Software), was bedeutet, dass die Software wirklich frei ist und unabhängige Entwickler sie modifizieren und zu ihrer Entwicklung beitragen können. FOSS ist unglaublich wichtig und ich werde die zahlreichen Vorteile in einem zukünftigen Post näher beschreiben.
 
-Aufgrund dieser Freiheit ist das Geldverdienen schwieriger. Der Benutzer wird jedoch auch nicht wie ein Rohstoff behandelt, da er durch Spenden aktiv zum Kunden wird. Dadurch gibt es hier übrigens auch keine Werbung.
+Aufgrund dieser Freiheit ist die Sache mit dem Geldverdienen schwieriger. Der Benutzer wird jedoch auch nicht wie ein Rohstoff behandelt, da er durch Spenden aktiv zum Kunden wird. Dadurch gibt es hier übrigens auch keine Werbung.
 
 Daher sind die Softwareproduzenten des Fediverse hauptsächlich Freiwillige oder gemeinnützige Organisationen. Beide dieser Gruppen wollen das Internet zu einem besseren Ort machen und nicht nur sich selbst bereichern.
 
@@ -50,7 +50,7 @@ Außerdem handeln nicht nur die Softwareproduzenten fair, sondern auch die Leute
 
 Da du im Fediverse frei einen beliebigen Dienst wählen kannst, wird niemand mehr aufgrund dessen aus der Gesellschaft ausgeschlossen. Ich empfinde das als ein großes Problem bei den klassischen Social-Media-Plattformen. Ich nutze beispielsweise keine dieser Plattformen mehr. Ich möchte all die schlechten Dinge die dies Plattformen tun nicht unterstützen. Deswegen fühle ich mich manchmal in bestimmten Kontexten etwas ausgeschlossen.
 
-Das ist vorallem wichtig, wenn es um Messenger geht. Das Nichtbenutzen des spezifischen Dienstes, welcher in deiner Region am beliebtesten ist, kann erhebliche Auswirkungen haben. Persönlich habe ich ungefähr ein Jahr kein WhatsApp benutzt. Einige Leute haben Signal oder Threema, aber das war's. Das Nichtbenutzen von WhatsApp hatte erhebliche Auswirkungen auf meinen Alltag. Während ich dachte, dass die Nutzung anderer Dienste einige Leute dazu bringen könnte, umzusteigen, tat es das nur in gewissem Maße. Nicht jeder hat sich eine zusätzliche App heruntergeladen. So bleiben einige Freunde oder Familienmitglieder ausschließlich bei WhatsApp. Neben der Herausforderung, mit denen, die man kennt, mag und liebt, zu kommunizieren, gibt es Schwierigkeiten, neue Leute kennenzulernen. Ich habe die Erfahrung gemacht das Menschen weil du dich anders verhältst als die Meisten ein negatives Bild von dir aufbauen. Außerdem ist die Hürde, jemanden zu kontaktieren, viel höher, wenn man eine neue App installieren muss und du selber die Person nicht kontaktieren kannst, weil du nicht den richtigen Messenger hast.
+Das ist vorallem wichtig, wenn es um Messenger geht. Das Nichtbenutzen des spezifischen Dienstes, welcher in deiner Region am beliebtesten ist, kann erhebliche Auswirkungen haben. Persönlich habe ich ungefähr ein Jahr kein WhatsApp benutzt. Einige Leute haben Signal oder Threema, aber das war's. Das Nichtbenutzen von WhatsApp hatte erhebliche Auswirkungen auf meinen Alltag. Während ich dachte, dass die Nutzung anderer Dienste einige Leute dazu bringen könnte, umzusteigen, tat es das nur in gewissem Maße. Nicht jeder hat sich eine zusätzliche App heruntergeladen. So bleiben einige Freunde oder Familienmitglieder ausschließlich bei WhatsApp. Neben der Herausforderung, mit denen, die man kennt, mag und liebt, zu kommunizieren, gibt es Schwierigkeiten, neue Leute kennenzulernen. Ich habe die Erfahrung gemacht das Menschen, weil du dich anders verhältst als die Meisten, ein negatives Bild von dir aufbauen. Außerdem ist die Hürde, jemanden zu kontaktieren, viel höher, wenn man eine neue App installieren muss. Du selber hast zudem gar nicht erst die Möglichkeit die andere Person zu kontaktieren, weil du nicht den richtigen Messenger hast.
 
 Während eine Social-Media-Plattform kein Messenger ist, sind die Auswirkungen recht ähnlich: **Die Leute, die den großen Dienst verwenden, zwingen dich im Grunde, ihn auch zu benutzen!**
 
@@ -60,7 +60,7 @@ Die aktuelle Kultur im Fediverse ist ein großer Pluspunkt. Die Menschen in dies
 
 Es gibt zum Beispiel auch einige LGBTQ+ Instanzen, welche sichere Räume für diese Personen schaffen. Ich sehe regelmäßig [verschiedene Instanzen](https://www.fediverse.to/search/?category=lgbt) mit diesem Ziel.
 
-Natürlich hängt das davon ab, in welcher Ecke des Fediverse man sich gerade befindet. Aber insgesamt denke ich, dass es im Fediverse viele Minderheiten gibt, die anderswo nicht so gut repräsentiert werden. Ich erinnere mich an eine Umfrage, die jemand mit rund 11.000 Stimmen durchgeführt hat und in welcher gefragt wurde, wie viele queere Menschen es im Fediverse gibt. Das Ergebnis war 60 % nicht queere und 40 % queere. Natürlich ist dieses Ergebnis in gewisser Weise voreingenommen, wegen des Umfrageerstellers und der Personen welche diesen Post teilen. Aber bei der Anzahl der Abstimmungen gibt es auf jeden Fall die grobe Richtung vor.
+Natürlich hängt das davon ab, in welcher Ecke des Fediverse man sich gerade befindet. Aber insgesamt denke ich, dass es im Fediverse viele Minderheiten gibt, die anderswo nicht so gut repräsentiert werden. Ich erinnere mich an eine Umfrage, die jemand mit rund 11.000 Stimmen durchgeführt hat und in welcher gefragt wurde, wie viele queere Menschen es im Fediverse gibt. Das Ergebnis war 60 % nicht queere und 40 % queere. Natürlich ist dieses Ergebnis in gewisser Weise voreingenommen, wegen des Umfrageerstellers und der Personen welche diesen Post teilen. Aber bei der Anzahl an Abstimmungen gibt es auf jeden Fall die grobe Richtung vor.
 
 {{< rawhtml >}}
     <iframe title="Hypothese: Queere machen etwa oder mehr als 50% der aktiven Personen im Fediverse aus." src="https://fosstodon.org/@writeblankspace/111744426795021145/embed" class="mastodon-embed" style="max-width: 100%; border: 0;" width="100%" allowfullscreen="allowfullscreen"></iframe><script src="https://fosstodon.org/embed.js" async="async"></script>
@@ -77,11 +77,11 @@ Ein weiterer äußerst vorteilhafter Aspekt hier ist, dass die Anzahl der Modera
 
 Aber letztendlich ist das Fediverse derzeit ein Zuhause für viele Menschen, die sich für Technologie interessieren. Es ist eine relativ neue Technologie und deshalb gibt es viele Nerds. Was super ist!
 
-Natürlich sind das nicht alle Gruppen an Menschen, aber ich hoffe, ich konnte einen kleinen Überblick über die aktuelle Kultur des Fediverse geben. Natürlich kann sich das ändern wenn viele neue Leute dem Fediverse beitreten, aber das ist meine Momentane Wahrnehmung. Hoffen wir, dass wir diese Vielfalt für die Zukunft erhalten können.
+Natürlich sind das nicht alle Gruppen an Menschen, aber ich hoffe, ich konnte einen kleinen Überblick über die aktuelle Kultur des Fediverse geben. Natürlich kann sich das ändern wenn viele neue Leute dem Fediverse beitreten, aber das ist meine momentane Wahrnehmung. Hoffen wir, dass wir diese Vielfalt für die Zukunft erhalten können.
 
 ### Wer ist im Fediverse?
 
-Zum Beispiel haben fast alle deutschen Institutionen ein eigenes Konto auf einem eigenen [staatlichen Server](https://social.bund.de/about). Zusätzlich haben die öffentlich-rechtlichen Rundfunkanstalten [ARD](https://ard.social/about) und [ZDF](https://zdf.social/about) ihre eigenen Instanzen.
+Zum Beispiel haben fast alle deutschen Institutionen einen Account auf einem eigenen [staatlichen Server](https://social.bund.de/about). Zusätzlich haben die öffentlich-rechtlichen Rundfunkanstalten [ARD](https://ard.social/about) und [ZDF](https://zdf.social/about) ihre eigenen Instanzen.
 
 Gerade das [NeoMagazin](https://edi.social/@zdfmagazin) war hier lange Zeit ein Vorreiter.
 
@@ -126,7 +126,7 @@ Hier kannst du mehr erfahren und Pixelfed beitreten: <https://pixelfed.org/>
 
 Lemmy ist Reddit für das Fediverse und es ist natürlich auch **FOSS**. Die Community auf dieser Plattform wirkt sehr aktiv. Ich persönlich habe es noch nicht so viel ausprobiert, aber es scheint ziemlich gut zu sein.
 
-Letztendlich ist die Entscheidung, Lemmy zu verwenden, nicht so schwer, wenn Reddit die Alternative ist. Reddit hat dieses Jahr wirklich ziemlich daneben gegriffen. Fast so schlimm wie Twitter. Sie haben [alle Drittanbieter-Apps verboten](https://www.pbs.org/newshour/economy/despite-widespread-user-protest-reddit-ceo-says-company-is-not-negotiating-on-3rd-party-app-charges) und auch ein paar andere schlechte Entscheidungen getroffen. Auf dem Bild unten siehst du ein Reddit-Ereignis, bei dem die Gemeinschaft der Reddit-Benutzer "Fuck spez!" geschrieben hat, was der CEO von Reddit ist.
+Letztendlich ist die Entscheidung, Lemmy zu verwenden, nicht so schwer, wenn Reddit die Alternative ist. Reddit hat dieses Jahr wirklich ziemlich daneben gegriffen. Fast so schlimm wie Twitter. Sie haben [alle Drittanbieter-Apps verboten](https://www.pbs.org/newshour/economy/despite-widespread-user-protest-reddit-ceo-says-company-is-not-negotiating-on-3rd-party-app-charges) und auch ein paar andere schlechte Entscheidungen getroffen. Auf dem Bild unten siehst du ein Reddit-Ereignis, bei dem die Community der Reddit-Benutzer "Fuck spez!" geschrieben hat, was der CEO von Reddit ist.
 
 {{< figure src="./fuck-spez.png" alt="Es steht Fuck spez! auf der r/place-Leinwand." >}}
 
@@ -178,7 +178,7 @@ Eine weitere seltsame Sache in den alten Netzwerken ist die Kontoverifizierung. 
 
 Ich habe mich entschieden, die wirklich technischen Details nicht in diesen Beitrag aufzunehmen. Das hätte diesen Blogbeitrag noch länger gemacht, als er jetzt schon ist. Ich habe etwas Erfahrung darin, Server für das Fediverse zu erstellen, aufgrund von [Fedodo](../../projects/whathappenedtofedodo). Ich möchte diese Erfahrung in einem zukünftigen Beitrag teilen und über die Details von [ActivityPub](../../../tags/activitypub) sprechen. Das ist das Protokoll, das die meisten im Fediverse betriebenen Dienste zusammenführt.
 
-## Anerkennungen
+## Danke
 
 Vielen Dank an die tollen Künstler, die ihre Werke unter Creative Commons-Lizenzen zur Verfügung stellen. Sie haben mir sehr geholfen, diesen Beitrag zu illustrieren. Links sind unter jedem Bild verfügbar. Schau sie dir gerne an!
 
