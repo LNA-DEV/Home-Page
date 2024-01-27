@@ -1,6 +1,6 @@
 ---
 title: "What is the Fediverse?"
-date: 2024-01-24T18:00:02+01:00
+date: 2024-01-27T20:45:02+01:00
 draft: false
 tags: ["Media", "Privacy", "Open Source", "Fediverse", "ActivityPub", "Social Media"]
 categories: ["Media", "Privacy"]

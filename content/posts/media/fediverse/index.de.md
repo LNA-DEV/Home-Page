@@ -1,6 +1,6 @@
 ---
 title: "Was ist das Fediverse?"
-date: 2024-01-24T18:00:02+01:00
+date: 2024-01-27T20:30:02+01:00
 draft: false
 tags: ["Medien", "Privacy", "Open Source", "Fediverse", "ActivityPub", "Social Media"]
 categories: ["Medien", "Privacy"]
@@ -48,9 +48,9 @@ Außerdem handeln nicht nur die Softwareproduzenten fair, sondern auch die Leute
 
 ### Der Druck der Massen
 
-Da du im Fediverse frei einen beliebigen Dienst wählen kannst, wird niemand mehr aufgrund dessen aus der Gesellschaft ausgeschlossen. Ich empfinde das als ein großes Problem bei den klassischen Social-Media-Plattformen. Ich nutze beispielsweise keine dieser Plattformen mehr. Ich möchte all die schlechten Dinge die dies Plattformen tun nicht unterstützen. Deswegen fühle ich mich manchmal in bestimmten Kontexten etwas ausgeschlossen.
+Da du im Fediverse frei einen beliebigen Dienst wählen kannst, wird niemand mehr aufgrund dessen aus der Gesellschaft ausgeschlossen. Ich empfinde das als ein großes Problem bei den klassischen Social-Media-Plattformen. Ich nutze beispielsweise keine dieser Plattformen mehr. Ich möchte all die schlechten Dinge die diese Plattformen tun nicht unterstützen. Deswegen fühle ich mich manchmal in bestimmten Kontexten etwas ausgeschlossen.
 
-Das ist vorallem wichtig, wenn es um Messenger geht. Das Nichtbenutzen des spezifischen Dienstes, welcher in deiner Region am beliebtesten ist, kann erhebliche Auswirkungen haben. Persönlich habe ich ungefähr ein Jahr kein WhatsApp benutzt. Einige Leute haben Signal oder Threema, aber das war's. Das Nichtbenutzen von WhatsApp hatte erhebliche Auswirkungen auf meinen Alltag. Während ich dachte, dass die Nutzung anderer Dienste einige Leute dazu bringen könnte, umzusteigen, tat es das nur in gewissem Maße. Nicht jeder hat sich eine zusätzliche App heruntergeladen. So bleiben einige Freunde oder Familienmitglieder ausschließlich bei WhatsApp. Neben der Herausforderung, mit denen, die man kennt, mag und liebt, zu kommunizieren, gibt es Schwierigkeiten, neue Leute kennenzulernen. Ich habe die Erfahrung gemacht das Menschen, weil du dich anders verhältst als die Meisten, ein negatives Bild von dir aufbauen. Außerdem ist die Hürde, jemanden zu kontaktieren, viel höher, wenn man eine neue App installieren muss. Du selber hast zudem gar nicht erst die Möglichkeit die andere Person zu kontaktieren, weil du nicht den richtigen Messenger hast.
+Das ist vorallem wichtig, wenn es um Messenger geht. Das Nichtbenutzen des spezifischen Dienstes, welcher in deiner Region am beliebtesten ist, kann erhebliche Auswirkungen haben. Persönlich habe ich ungefähr ein Jahr kein WhatsApp benutzt. Einige Leute haben Signal oder Threema, aber das war's. Das Nichtbenutzen von WhatsApp hatte erhebliche Auswirkungen auf meinen Alltag. Während ich dachte, dass die Nutzung anderer Dienste einige Leute dazu bringen könnte, umzusteigen, tat es das nur in gewissem Maße. Nicht jeder hat sich eine zusätzliche App heruntergeladen. So bleiben einige Freunde oder Familienmitglieder ausschließlich bei WhatsApp. Neben der Herausforderung, mit denen, die man kennt, mag und liebt, zu kommunizieren, gibt es Schwierigkeiten, neue Leute kennenzulernen. Ich habe die Erfahrung gemacht, dass Menschen, weil du dich anders verhältst als die Meisten, ein negatives Bild von dir aufbauen. Außerdem ist die Hürde, jemanden zu kontaktieren, viel höher, wenn man eine neue App installieren muss. Du selber hast zudem gar nicht erst die Möglichkeit die andere Person zu kontaktieren, weil du nicht den richtigen Messenger hast.
 
 Während eine Social-Media-Plattform kein Messenger ist, sind die Auswirkungen recht ähnlich: **Die Leute, die den großen Dienst verwenden, zwingen dich im Grunde, ihn auch zu benutzen!**
 
@@ -85,7 +85,7 @@ Zum Beispiel haben fast alle deutschen Institutionen einen Account auf einem eig
 
 Gerade das [NeoMagazin](https://edi.social/@zdfmagazin) war hier lange Zeit ein Vorreiter.
 
-Gerade erst habe ich gesehen das die [Niederlande](https://social.overheid.nl/about) auch eine staatliche Mastodon Instanz haben. Mir gefällt der Gedanke, dass einige Nationen das Netzwerk unterstützen und hoffentlich auch dessen Werte stützen werden.
+Gerade erst habe ich gesehen, dass die [Niederlande](https://social.overheid.nl/about) auch eine staatliche Mastodon Instanz haben. Mir gefällt der Gedanke, dass einige Nationen das Netzwerk unterstützen und hoffentlich auch dessen Werte stützen werden.
 
 Mozilla hat auch seine eigene Instanz für die Öffentlichkeit erstellt: [Mozilla Social](https://mozilla.social/about). Es gibt jedoch noch weitere 26.000 Server, die darauf warten, von einem erkundet zu werden.
 
@@ -105,14 +105,14 @@ Dieses Bild bietet einen schnellen Überblick über die verschiedenen Kategorien
 
 Mastodon ist die größte und auch die am weitesten entwickelte Plattform des Fediverse. Es handelt sich um einen Microblogging-Dienst. Das Unternehmen dahinter ist eine deutsche gemeinnützige GmbH (gGmbH). Es ist vergleichbar mit Twitter und gewann während [der katastrophalen Übernahme durch Elon Musk](https://www.theguardian.com/technology/2023/oct/27/elon-musk-x-twitter-takeover-revenue-users-advertising) viel Aufmerksamkeit. Zu dieser Zeit wechselte eine große Masse von Menschen von Twitter zu Mastodon.
 
-Nach diesen Ereignissen zog die "befreite" Plattform [noch mehr extrem rechte Personen an](https://www.theguardian.com/world/2023/jun/03/twitter-conservative-media-elon-musk-ron-desantis). Darüber hinaus werden viele [Journalisten gelegentlich blockiert](https://www.theguardian.com/technology/2022/dec/16/twitter-elon-musk-suspension-journalists-sets-dangerous-precedent-un-warns). Wenn man wirklich eine freie Plattform such, sollte man in Betracht ziehen, Mastodon beizutreten: [https://joinmastodon.org](https://joinmastodon.org).
+Nach diesen Ereignissen zog die "befreite" Plattform [noch mehr extrem rechte Personen an](https://www.theguardian.com/world/2023/jun/03/twitter-conservative-media-elon-musk-ron-desantis). Darüber hinaus werden viele [Journalisten gelegentlich blockiert](https://www.theguardian.com/technology/2022/dec/16/twitter-elon-musk-suspension-journalists-sets-dangerous-precedent-un-warns). Wenn man wirklich eine freie Plattform sucht, sollte man in Betracht ziehen, Mastodon beizutreten: [https://joinmastodon.org](https://joinmastodon.org).
 (Sie haben übrigens auch eine fancy Website: Schau mal vorbei!)
 
 {{< figure src="./twitter-x.jpg" caption="[🄯 CC-BY 4.0 von David Revoy](https://www.davidrevoy.com/)" alt="Dieses Bild zeigt einen toten Vogel, der den Twitter-Vogel darstellen soll. Dieser Vogel ist mit einem Eisenträger durchgestrichen. Nun repräsentiert er das neue Logo X." >}}
 
 ### Pixelfed
 
-Instagram ist eine der größten Plattform, (welche außerdem von Meta betrieben wird) und für ihre [extrem schlechte Privatsphäre](https://tuta.com/blog/posts/google-facebook-free) bekannt ist. Mittlerweile hatten sie auch schon einige Skandale. Zum Beispiel haben sie bei der Manipulation von Wahlen geholfen. Siehe [Cambridge Analytica](https://www.theguardian.com/news/2018/mar/17/cambridge-analytica-facebook-influence-us-election).
+Instagram ist eine der größten Plattformen, (welche außerdem von Meta betrieben wird) und für ihre [extrem schlechte Privatsphäre](https://tuta.com/blog/posts/google-facebook-free) bekannt ist. Mittlerweile hatten sie auch schon einige Skandale. Zum Beispiel haben sie bei der Manipulation von Wahlen geholfen. Siehe [Cambridge Analytica](https://www.theguardian.com/news/2018/mar/17/cambridge-analytica-facebook-influence-us-election).
 
 Pixelfed ist Instagram für das Fediverse. Es wird von einem kanadischen Softwareentwickler und der Community entwickelt.
 
