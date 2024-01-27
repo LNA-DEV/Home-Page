@@ -1,0 +1,12 @@
+.img-right {
+  width: 75%;
+  margin: auto;
+}
+
+@media screen and (min-width: 550px) {
+  .img-right {
+    width: 25%;
+    float: right;
+    margin-top: -5%;
+  }
+}
