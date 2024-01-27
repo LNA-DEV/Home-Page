@@ -126,15 +126,15 @@ Lemmy is Reddit for the Fediverse and it is also **FOSS**. It seems to have a re
 
 After all, the decision to use Lemmy is not that difficult if Reddit is the current choice. Reddit did screw up hard this year. Same as Twitter. They [banned every third-party app](https://www.pbs.org/newshour/economy/despite-widespread-user-protest-reddit-ceo-says-company-is-not-negotiating-on-3rd-party-app-charges) and also made a couple of other bad decisions. On the image below, you see a Reddit event where the collective of Reddit users has written "Fuck spez!" which is the CEO of Reddit.
 
+{{< figure src="./fuck-spez.png" alt="There is written Fuck spez! on the r/place canvas." >}}
+
 This is a great example that the community cannot do anything against the will of a platform like Reddit, Twitter, Instagram, TikTok... They are extremely powerful companies, maybe monopolies, exploiting their power of having all the users. Let's break that! Let's make a real change and go to the Fediverse!
 
 If you are interested in Lemmy: <https://join-lemmy.org/>
 
-{{< figure src="./fuck-spez.png" alt="There is written Fuck spez! on the r/place canvas." >}}
-
 ### Peertube
 
-Peertube is a pardon for YouTube. Because video streaming is quite expensive and in a decentralized network, there are many smaller communities with less money. Peertube decided to use *peer* to *peer*. This means if you watch a video, you help someone else watching because your computer sends bits of the video to other persons. So the server does need less bandwidth and therefore, small communities are able to operate a video streaming platform. This approach comes with downsides, but after all, it makes something possible, which would be really hard to achieve in another way. **A really free video platform.**
+Peertube is an alternative to YouTube. Because video streaming is quite expensive and in a decentralized network, there are many smaller communities with less money. Peertube decided to use *peer* to *peer*. This means if you watch a video, you help someone else watching because your computer sends bits of the video to other persons. So the server does need less bandwidth and therefore, small communities are able to operate a video streaming platform. This approach comes with downsides, but after all, it makes something possible, which would be really hard to achieve in another way. **A really free video platform.**
 
 In terms of content, this platform is still a bit niche. There are really good channels, especially in the privacy, tech and Linux community. But for more mainstream content, there is not that much to offer. This, of course, is not a problem of the platform but a problem of the creators who are not feeding the platform. I hope this will change in the future!
 

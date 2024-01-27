@@ -24,7 +24,7 @@ Der Name ist ein Kofferwort aus dem englischen Wort für Föderation "Federation
 
 Dieser Name repräsentiert es ziemlich gut. Das Fediverse ist ein dezentralisiertes Netzwerk von sozialen Medienplattformen, die alle miteinander verbunden sind. Jeder kann sich mit jedem verbinden, auch wenn man völlig verschiedene Dienste verwendet. Man kann es sich wie bei der E-Mail vorstellen. Jeder Benutzer hat eine E-Mail-Adresse von einem bestimmten Anbieter, aber er kann mit jedem beliebigen anderem Nutzer schreiben, nicht nur mit Benutzern desselben Dienstes.
 
-Für diejenigen, die mit den klassischen sozialen Netzwerken vertraut sind: Stell dir vor, du benutzt Twitter und siehst Instagram- oder Facebook-Beiträge in deiner Timeline, so als würden sie alle Twitter verwenden. Aber das ist noch nicht alles. Es könnten auch YouTube-Videos oder anderer Content deiner wal sein. Du entscheidest. Das ist die Schönheit des Fediverse.
+Für diejenigen, die mit den klassischen sozialen Netzwerken vertraut sind: Stell dir vor, du benutzt Twitter und siehst Instagram- oder Facebook-Beiträge in deiner Timeline, so als würden sie alle Twitter verwenden. Aber das ist noch nicht alles. Es könnten auch YouTube-Videos oder anderer Content deiner Wahl sein. Du entscheidest. Das ist die Schönheit des Fediverse.
 
 ## Warum ist das Fediverse so wichtig?
 
@@ -40,9 +40,9 @@ Die Entwickler der Fediverse-Plattform Peertube haben es auf einfache Weise erkl
 
 Aber auch die Entwickler von Fediverse-Software unterscheiden sich stark zu denen der klassischen sozialen Netzwerke. Das Fediverse besteht hauptsächlich aus FOSS (Free and Open Source Software), was bedeutet, dass die Software wirklich frei ist und unabhängige Entwickler sie modifizieren und zu ihrer Entwicklung beitragen können. FOSS ist unglaublich wichtig und ich werde die zahlreichen Vorteile in einem zukünftigen Post näher beschreiben.
 
-Aufgrund dieser Freiheit ist das Geldverdienen schwieriger. Der Benutzer wird jedoch auch nicht wie Müll behandelt, da er durch Spenden aktiv zum Kunden wird. Dadurch gibt es hier übrigens auch keine Werbung.
+Aufgrund dieser Freiheit ist das Geldverdienen schwieriger. Der Benutzer wird jedoch auch nicht wie ein Rohstoff behandelt, da er durch Spenden aktiv zum Kunden wird. Dadurch gibt es hier übrigens auch keine Werbung.
 
-Daher sind die Softwareproduzenten des Fediverse hauptsächlich Freiwillige oder gemeinnützige Organisationen. Beide wollen das Internet zu einem besseren Ort machen und wollen nicht nur sich selbst bereichern.
+Daher sind die Softwareproduzenten des Fediverse hauptsächlich Freiwillige oder gemeinnützige Organisationen. Beide dieser Gruppen wollen das Internet zu einem besseren Ort machen und nicht nur sich selbst bereichern.
 
 Außerdem handeln nicht nur die Softwareproduzenten fair, sondern auch die Leute, die die Server betreiben, sind hauptsächlich Freiwillige, Organisationen oder sogar Staaten!
 
@@ -60,7 +60,7 @@ Die aktuelle Kultur im Fediverse ist ein großer Pluspunkt. Die Menschen in dies
 
 Es gibt zum Beispiel auch einige LGBTQ+ Instanzen, welche sichere Räume für diese Personen schaffen. Ich sehe regelmäßig [verschiedene Instanzen](https://www.fediverse.to/search/?category=lgbt) mit diesem Ziel.
 
-Natürlich hängt das davon ab, in welcher Ecke des Fediverse man sich gerade befindet. Aber insgesamt denke ich, dass es im Fediverse viele Minderheiten gibt, die anderswo nicht so gut repräsentiert werden. Ich erinnere mich an eine Umfrage, die jemand mit rund 11.000 Stimmen durchgeführt hat und in welcher gefragt wurde, wie viele queere Menschen es im Fediverse gibt. Das Ergebnis war 60 % nicht queere und 40 % queere. Das sind solide Zahlen. Natürlich ist dieses Ergebnis in gewisser Weise voreingenommen, wegen des Umfrageerstellers und der Personen welche diesen Post teilen. Aber bei der Anzahl der Abstimmungen gibt es auf jeden Fall die grobe Richtung vor.
+Natürlich hängt das davon ab, in welcher Ecke des Fediverse man sich gerade befindet. Aber insgesamt denke ich, dass es im Fediverse viele Minderheiten gibt, die anderswo nicht so gut repräsentiert werden. Ich erinnere mich an eine Umfrage, die jemand mit rund 11.000 Stimmen durchgeführt hat und in welcher gefragt wurde, wie viele queere Menschen es im Fediverse gibt. Das Ergebnis war 60 % nicht queere und 40 % queere. Natürlich ist dieses Ergebnis in gewisser Weise voreingenommen, wegen des Umfrageerstellers und der Personen welche diesen Post teilen. Aber bei der Anzahl der Abstimmungen gibt es auf jeden Fall die grobe Richtung vor.
 
 {{< rawhtml >}}
     <iframe title="Hypothese: Queere machen etwa oder mehr als 50% der aktiven Personen im Fediverse aus." src="https://fosstodon.org/@writeblankspace/111744426795021145/embed" class="mastodon-embed" style="max-width: 100%; border: 0;" width="100%" allowfullscreen="allowfullscreen"></iframe><script src="https://fosstodon.org/embed.js" async="async"></script>
@@ -77,7 +77,7 @@ Ein weiterer äußerst vorteilhafter Aspekt hier ist, dass die Anzahl der Modera
 
 Aber letztendlich ist das Fediverse derzeit ein Zuhause für viele Menschen, die sich für Technologie interessieren. Es ist eine relativ neue Technologie und deshalb gibt es viele Nerds. Was super ist!
 
-Natürlich sind das nicht alle Gruppen an Menschen, aber ich hoffe, ich konnte einen kleinen Überblick über die aktuelle Kultur des Fediverse geben. DNatürlich kann sich das ändern wenn viele neue Leute dem Fediverse beitreten, aber das ist meine Momentane Wahrnehmung. Hoffen wir, dass wir diese Vielfalt für die Zukunft erhalten können.
+Natürlich sind das nicht alle Gruppen an Menschen, aber ich hoffe, ich konnte einen kleinen Überblick über die aktuelle Kultur des Fediverse geben. Natürlich kann sich das ändern wenn viele neue Leute dem Fediverse beitreten, aber das ist meine Momentane Wahrnehmung. Hoffen wir, dass wir diese Vielfalt für die Zukunft erhalten können.
 
 ### Wer ist im Fediverse?
 
@@ -112,7 +112,7 @@ Nach diesen Ereignissen zog die "befreite" Plattform [noch mehr extrem rechte Pe
 
 ### Pixelfed
 
-Instagram ist eine sehr große Plattform, die von Meta betrieben wird und für ihre [extrem schlechte Privatsphäre](https://tuta.com/blog/posts/google-facebook-free) bekannt ist und mittlerweile auch schon einige Skandale hatte. Zum Beispiel haben sie bei der Manipulation von Wahlen geholfen. Siehe [Cambridge Analytica](https://www.theguardian.com/news/2018/mar/17/cambridge-analytica-facebook-influence-us-election).
+Instagram ist eine der größten Plattform, (welche außerdem von Meta betrieben wird) und für ihre [extrem schlechte Privatsphäre](https://tuta.com/blog/posts/google-facebook-free) bekannt ist. Mittlerweile hatten sie auch schon einige Skandale. Zum Beispiel haben sie bei der Manipulation von Wahlen geholfen. Siehe [Cambridge Analytica](https://www.theguardian.com/news/2018/mar/17/cambridge-analytica-facebook-influence-us-election).
 
 Pixelfed ist Instagram für das Fediverse. Es wird von einem kanadischen Softwareentwickler und der Community entwickelt.
 
@@ -124,21 +124,21 @@ Hier kannst du mehr erfahren und Pixelfed beitreten: <https://pixelfed.org/>
 
 ### Lemmy
 
-Lemmy ist Reddit für das Fediverse und es ist auch **FOSS**. Es scheint eine wirklich aktive Community zu haben. Ich persönlich habe es noch nicht so viel ausprobiert, aber es scheint ziemlich gut zu sein.
+Lemmy ist Reddit für das Fediverse und es ist natürlich auch **FOSS**. Die Community auf dieser Plattform wirkt sehr aktiv. Ich persönlich habe es noch nicht so viel ausprobiert, aber es scheint ziemlich gut zu sein.
 
-Letztendlich ist die Entscheidung, Lemmy zu verwenden, nicht so schwer, wenn Reddit die aktuelle Wahl ist. Reddit hat dieses Jahr wirklich Mist gebaut. Genau wie Twitter. Sie haben [alle Drittanbieter-Apps verboten](https://www.pbs.org/newshour/economy/despite-widespread-user-protest-reddit-ceo-says-company-is-not-negotiating-on-3rd-party-app-charges) und auch ein paar andere schlechte Entscheidungen getroffen. Auf dem Bild unten siehst du ein Reddit-Ereignis, bei dem die Gemeinschaft der Reddit-Benutzer "Fuck spez!" geschrieben hat, was der CEO von Reddit ist.
-
-Dies ist ein großartiges Beispiel dafür, dass die Community nichts gegen den Willen einer Plattform wie Reddit, Twitter, Instagram, TikTok... unternehmen kann. Sie sind extrem mächtige Unternehmen, vielleicht Monopole, die ihre Macht ausnutzen, indem sie alle Benutzer haben. Lasst uns das brechen! Lasst uns eine echte Veränderung bewirken und zum Fediverse gehen!
-
-Wenn du an Lemmy interessiert bist: <https://join-lemmy.org/>
+Letztendlich ist die Entscheidung, Lemmy zu verwenden, nicht so schwer, wenn Reddit die Alternative ist. Reddit hat dieses Jahr wirklich ziemlich daneben gegriffen. Fast so schlimm wie Twitter. Sie haben [alle Drittanbieter-Apps verboten](https://www.pbs.org/newshour/economy/despite-widespread-user-protest-reddit-ceo-says-company-is-not-negotiating-on-3rd-party-app-charges) und auch ein paar andere schlechte Entscheidungen getroffen. Auf dem Bild unten siehst du ein Reddit-Ereignis, bei dem die Gemeinschaft der Reddit-Benutzer "Fuck spez!" geschrieben hat, was der CEO von Reddit ist.
 
 {{< figure src="./fuck-spez.png" alt="Es steht Fuck spez! auf der r/place-Leinwand." >}}
 
+Es ist ein großartiges Beispiel dafür, dass die Community nichts gegen den Willen einer Plattform wie Reddit, Twitter, Instagram, TikTok... unternehmen kann. Sie sind extrem mächtige Unternehmen, vielleicht Monopole, die ihre Macht ausnutzen, fast alle Benutzer zu haben. Lasst uns damit brechen! Lasst uns eine echte Veränderung bewirken und das Fediverse stärken!
+
+Wenn du an Lemmy interessiert bist: <https://join-lemmy.org/>
+
 ### Peertube
 
-Peertube ist die Vergebung für YouTube. Da das Streamen von Videos ziemlich teuer ist und in einem dezentralen Netzwerk viele kleinere Communities mit weniger Geld existieren, hat sich Peertube entschieden, *peer* to *peer* zu nutzen. Das bedeutet, wenn du ein Video ansiehst, hilfst du anderen, es anzusehen, indem dein Computer Bits des Videos an andere Personen sendet. So benötigt der Server weniger Bandbreite und daher können kleine Communities eine Video-Streaming-Plattform betreiben. Dieser Ansatz hat Nachteile, aber letztendlich macht er etwas möglich, was auf andere Weise sehr schwer zu erreichen wäre. **Eine wirklich freie Video-Plattform.**
+Peertube ist eine Alternative zu YouTube. Da das Streamen von Videos ziemlich teuer / ressourcenintensiv ist und in einem dezentralen Netzwerk viele kleinere Communities mit weniger Geld existieren, hat sich Peertube entschieden, *peer* to *peer* zu nutzen. Das bedeutet, wenn du ein Video ansiehst, hilfst du anderen, es anzusehen, indem dein Computer Teile des Videos an andere Personen sendet. So benötigt der Server weniger Bandbreite und daher können kleine Communities eine Video-Streaming-Plattform betreiben. Dieser Ansatz hat Nachteile, aber letztendlich macht er etwas möglich, was auf andere Weise sehr schwer zu erreichen wäre. **Eine wirklich freie Video-Plattform.**
 
-In Bezug auf den Inhalt ist diese Plattform noch etwas speziell. Es gibt wirklich gute Kanäle, insbesondere in der Datenschutz-, Tech- und Linux-Community. Aber für Mainstream-Inhalte gibt es nicht so viel zu bieten. Dies ist natürlich kein Problem der Plattform, sondern ein Problem der Ersteller, die die Plattform nicht mit Inhalten versorgen. Ich hoffe, dass sich das in Zukunft ändern wird!
+In Bezug auf den Inhalt ist diese Plattform noch etwas speziell. Es gibt wirklich gute Kanäle, insbesondere in der Datenschutz-, Tech- und Linux-Community. Aber für Mainstream-Inhalte hat sie nicht so viel zu bieten. Das ist natürlich kein Problem der Plattform perse, sondern ein Problem der Content-Creator, die die Plattform nicht mit Inhalten versorgen. Ich hoffe, dass sich das in Zukunft ändern wird!
 
 Dank des Fediverse kannst du natürlich auch Peertube-Kanäle von Mastodon und anderen Plattformen aus ansehen und abonnieren.
 
@@ -150,36 +150,36 @@ Hier findest du weitere Informationen: <https://joinpeertube.org/>
 
 {{< figure src="./meta-red-carpet.jpg" caption="[🄯 CC-BY 4.0 von David Revoy](https://www.davidrevoy.com/)" alt="Ein kleines Mastodon rollt einen roten Teppich für Meta aus, das als Tod / Sensenmann dargestellt wird." >}}
 
-Jetzt fangen größere Unternehmen an, dem Fediverse beizutreten. Das größte ist Threads, das von Meta erstellt wurde.
+Inzwischen fangen größere Unternehmen an, dem Fediverse beizutreten. Das größte ist Threads, welches ebenfalls von Meta betrieben wird.
 
-Threads implementiert derzeit die erforderliche [ActivityPub](../../../tags/activitypub)-Logik, um sich dem Netzwerk anzuschließen. Du kannst bereits dem CEO von Instagram und einigen aus dem Team folgen. Aber es scheint, dass die vollständige Verbindung eine Weile dauern wird, um implementiert zu werden.
+Threads implementiert derzeit die erforderliche [ActivityPub](../../../tags/activitypub)-Logik, um sich dem Netzwerk anzuschließen. Du kannst bereits dem CEO von Instagram und einigen aus dem Team folgen. Aber es wirkt so, als ob sie noch eine Weile brauchen würden die Verbindung zu programmieren.
 
 Dieses Thema ist umstritten im Fediverse. Auf der einen Seite steht, dass Meta eine Menge Benutzer ins Netzwerk bringt, aber auf der anderen Seite ist Meta auch für unglaublich schlechte Privatsphäre und Teil des Überwachungskapitalismus bekannt, der Millionen von Benutzern schadet.
 
-Einige Instanzen haben sogar den ["Fedi-Pakt"](https://fedidb.org/current-events/anti-meta-fedi-pact) geschlossen und werden Meta daher auf der Serverseite blockieren, wenn sie beitreten. Dies hat einen Einfluss von etwa 7 % der aktiven Benutzer auf der offenen Seite des Fediverse. (Natürlich wird Meta sie nur nicht sehen. Der Rest des Netzwerks kann weiterhin normal mit ihnen interagieren.)
+Einige Instanzen haben sogar den ["Fedi-Pakt"](https://fedidb.org/current-events/anti-meta-fedi-pact) geschlossen und werden Meta daher auf der Serverseite blockieren, wenn sie beitreten. Dies hat einen Einfluss von etwa 7% der aktiven Benutzer auf der offenen Seite des Fediverse. (Natürlich wird diese 7% nur Meta nicht sehen. Der Rest des Netzwerks kann weiterhin normal mit ihnen interagieren.)
 
-Wenn ein Server einen bestimmten anderen Server nicht blockiert, hat der Benutzer immer noch die Möglichkeit dazu. Hier erklärt der Gründer von Mastodon seinem Publikum, wie das gemacht wird.
+Wenn ein Server einen bestimmten anderen Server nicht blockiert, hat der Benutzer immer noch die Möglichkeit dazu. Hier erklärt der Gründer von Mastodon seinem Followern, wie man das machen kann.
 
 {{< rawhtml >}}
     <iframe title="Threads blockieren" src="https://mastodon.social/@Gargron/111587088958531028/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="100%" allowfullscreen="allowfullscreen"></iframe><script src="https://mastodon.social/embed.js" async="async"></script>
 {{< /rawhtml >}}
 
-Und natürlich wird Meta keine Plattform bereitstellen, die annähernd so frei und offen ist wie die anderen, die ich oben erwähnt habe. Sie versuchen nur Geld zu verdienen und hoffentlich zerstören sie dabei nicht das Fediverse. Das Einzige Gute, das sie tun, ist, dass sie viele Benutzer mitbringen. Das ist es. Aber das könnte das Fediverse auch für viele Menschen öffnen, was großartig wäre.
+Und natürlich wird Meta keine Plattform bereitstellen, die annähernd so frei und offen ist wie die anderen, die ich oben erwähnt habe. Sie versuchen nur Geld zu verdienen und hoffentlich zerstören sie dabei nicht das Fediverse. Das Einzige Gute, das sie tun ist, dass sie viele Benutzer mitbringen. Das ist alles. Aber es könnte das Fediverse auch für viele Menschen öffnen, was großartig wäre.
 
-Die Teilnahme von Meta ist wie ein Tanz mit dem Teufel. Aber wir könnten davon profitieren.
+Die Teilnahme von Meta ist wie ein Tanz mit dem Teufel. Aber wir könnten auch davon profitieren.
 
 ## Auch erwähnenswert
 
-Du bist nicht an deinen Account auf einem Server gebunden. Natürlich hast du die Freiheit, einen anderen zu wählen und all deine Follower mitzunehmen. Kein Problem hier. Freie Software sperrt dich nicht an Ort und Stelle.
+Du bist nicht mit deinem Account an einen Server gebunden. Natürlich hast du die Freiheit, einen anderen zu wählen und all deine Follower mitzunehmen. Kein Problem im Fediverse. Freie Software versucht dich nicht an einen Dienst zu binden.
 
-Eine weitere seltsame Sache in den alten Netzwerken ist die Kontoverifizierung. Du musst jetzt sowohl bei [Instagram](https://www.pcmag.com/news/paid-verification-for-facebook-instagram-starts-rolling-out-in-us) als auch bei [Twitter](https://www.businessinsider.com/twitter-verification-abuse-trolls-parody-george-bush-oj-simpson-confession-2022-11?IR=T) bezahlen, um verifiziert zu werden, auch wenn du kein großer Creator oder eine andere interessante Person bist. Das ist ziemlich dumm und verwirrend. Im Fediverse musst du niemandem etwas bezahlen. Du kannst dich einfach von einer anderen Plattform/Website verlinken, die du besitzt und du erhältst ein Zeichen dafür, dass dieses Konto/diese Seite verifiziert ist und dir gehört. Eine viel bessere Art der Verifizierung.
+Eine weitere seltsame Sache in den alten Netzwerken ist die Kontoverifizierung. Du musst jetzt sowohl bei [Instagram](https://www.pcmag.com/news/paid-verification-for-facebook-instagram-starts-rolling-out-in-us) als auch bei [Twitter](https://www.businessinsider.com/twitter-verification-abuse-trolls-parody-george-bush-oj-simpson-confession-2022-11?IR=T) bezahlen, um verifiziert zu werden. Auch wenn du kein großer Creator oder eine andere berühmte Person bist, bekommst du einfach einen blauen Haken. Das ist ziemlich dumm und verwirrend. Im Fediverse musst du niemandem etwas bezahlen. Du kannst ein Profil einfach von einer anderen Plattform/Website verlinken und du erhältst ein Zeichen dafür, dass dieses Konto/diese Seite verifiziert ist und dir gehört. Eine viel bessere Art der Verifizierung.
 
 ## Die technischen Details
 
-Ich habe mich entschieden, die wirklich technischen Details nicht in diesen Beitrag aufzunehmen. Das hätte diesen Blogbeitrag noch länger gemacht, als er jetzt schon ist. Ich habe etwas Erfahrung darin, Server für das Fediverse zu erstellen, aufgrund von [Fedodo](../../projects/whathappenedtofedodo). Ich möchte diese Erfahrung in einem zukünftigen Beitrag teilen und über die Details von [ActivityPub](../../../tags/activitypub) sprechen. Dies ist das Protokoll, das die meisten im Fediverse betriebenen Dienste antreibt.
+Ich habe mich entschieden, die wirklich technischen Details nicht in diesen Beitrag aufzunehmen. Das hätte diesen Blogbeitrag noch länger gemacht, als er jetzt schon ist. Ich habe etwas Erfahrung darin, Server für das Fediverse zu erstellen, aufgrund von [Fedodo](../../projects/whathappenedtofedodo). Ich möchte diese Erfahrung in einem zukünftigen Beitrag teilen und über die Details von [ActivityPub](../../../tags/activitypub) sprechen. Das ist das Protokoll, das die meisten im Fediverse betriebenen Dienste zusammenführt.
 
 ## Anerkennungen
 
-Vielen Dank an die fantastischen Künstler, die ihre Werke unter Creative Commons-Lizenzen zur Verfügung stellen. Sie haben mir sehr geholfen, diesen Beitrag zu illustrieren. Links sind unter jedem Bild verfügbar. Schau sie dir an!
+Vielen Dank an die tollen Künstler, die ihre Werke unter Creative Commons-Lizenzen zur Verfügung stellen. Sie haben mir sehr geholfen, diesen Beitrag zu illustrieren. Links sind unter jedem Bild verfügbar. Schau sie dir gerne an!
 
-Auch vielen Dank an dich, dass du dies bis zum Ende gelesen hast. Ich hoffe, ich konnte dir einen kleinen Überblick über das Thema geben. Und vielleicht habe ich dich sogar überzeugt, dich uns im Kampf für ein besseres Web anzuschließen. Aber mach dir keinen Druck. Hab Spaß ❤️
+Auch vielen Dank an dich, dass du diesen doch recht langen Post bis zum Ende gelesen hast. Ich hoffe, ich konnte dir einen kleinen Überblick über das Thema geben. Und vielleicht habe ich dich sogar überzeugt, dich uns im Kampf für ein besseres Web anzuschließen. Aber mach dir keinen Druck. Hab Spaß ❤️
