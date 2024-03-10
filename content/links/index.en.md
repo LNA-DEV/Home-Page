@@ -20,7 +20,7 @@ ShowWordCount: false
 
 - [Privacy Tools IO](https://www.privacytools.io/) ~ This is a site to compare and find new cool tools which are respecting your privacy.
 
-- [Molly White](https://www.mollywhite.net/feed) ~ Molly White writes about Web3 (critically), Wikipedia, the Indie-Web and tech in general.
+- [Molly White](https://www.mollywhite.net/feed) ~ Molly White writes about Web3 (critically), Wikipedia, the Indie-Web and tech in general. She is the creator of [Web3 Is Going Just Create](https://www.web3isgoinggreat.com/) and [Citation Needed](https://www.citationneeded.news/).
 
 ### Others
 
