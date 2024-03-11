@@ -6,7 +6,9 @@
 <link rel="stylesheet" href="/css/noto.css">
 
 {{/*  PWA  */}}
-<link rel="manifest" href="./manifest.webmanifest">
+{{ $manifestTemplate := resources.Get "manifest.webmanifest" }}
+{{ $manifest := $manifestTemplate | resources.ExecuteAsTemplate "manifest.webmanifest" . }}
+<link rel="manifest" href="{{ $manifest.Permalink }}">
 <meta name="pwa-capable" content="yes">
 
 <!-- Get the file in "assets/service-worker.js" -->
