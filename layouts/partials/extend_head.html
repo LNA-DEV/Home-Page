@@ -14,7 +14,7 @@
 <!-- We are making a new file called "sw.js" -->
 {{ $js := $jsTemplate | resources.ExecuteAsTemplate "service-worker.js" . }}
 
-{{/*  <script>
+<script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register(
         '{{ $js.Permalink }}', {
@@ -22,4 +22,4 @@
         }
       )
     }
-</script>  */}}
+</script>
