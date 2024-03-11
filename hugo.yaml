@@ -17,6 +17,7 @@ outputs:
     - HTML
     - RSS
     - JSON
+    - WEBAPPMANIFEST
 
 minify:
   disableXML: true
@@ -140,6 +141,7 @@ languages:
           weight: 30
 
 params:
+  ShortTitle: "LNA-DEV"
   ShowFullTextinRSS: true
   displayFullLangName: true
   keywords:

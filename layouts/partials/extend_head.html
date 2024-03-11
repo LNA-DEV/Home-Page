@@ -1,3 +1,25 @@
+{{/*  ANALYTICS  */}}
 <script data-goatcounter="https://lna-dev.goatcounter.com/count" async src="/js/goat.js"></script>
+
+{{/*  FONTS  */}}
 <link rel="stylesheet" href="/css/cantarell.css">
 <link rel="stylesheet" href="/css/noto.css">
+
+{{/*  PWA  */}}
+<link rel="manifest" href="./manifest.webmanifest">
+<meta name="pwa-capable" content="yes">
+
+<!-- Get the file in "assets/service-worker.js" -->
+{{ $jsTemplate := resources.Get "service-worker.js" }}
+<!-- We are making a new file called "sw.js" -->
+{{ $js := $jsTemplate | resources.ExecuteAsTemplate "service-worker.js" . }}
+
+<script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register(
+        '{{ $js.Permalink }}', {
+          scope: '/'
+        }
+      )
+    }
+</script>
