@@ -17,7 +17,6 @@ outputs:
     - HTML
     - RSS
     - JSON
-    - WEBAPPMANIFEST
 
 minify:
   disableXML: true
