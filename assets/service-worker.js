@@ -1,12 +1,5 @@
 const APP_PREFIX = '{{ .Site.Params.ShortTitle }}_';
-const VERSION = 'version_02';
-
-// Define the base URLs for different languages
-const BASE_URLS = [
-  '/',
-  '/en/',
-  '/de/',
-];
+const VERSION = 'version_{{ .Date.Format "2006-01-02_15-04-05" }}'; // Use Hugo's date format to get the build timestamp
 
 // Array to store generated URLs
 let URLS = [
@@ -27,10 +20,6 @@ let URLS = [
     {{ end }}
   {{ end }}
 ];
-
-URLS.forEach(element => {
-  console.log(element)
-});
 
 const CACHE_NAME = APP_PREFIX + VERSION;
 
