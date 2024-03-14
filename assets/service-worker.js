@@ -1,25 +1,39 @@
-const APP_PREFIX = '{{ .Site.Params.ShortTitle }}_';
-const VERSION = 'version_{{ .Date.Format "2006-01-02_15-04-05" }}'; // Use Hugo's date format to get the build timestamp
+const APP_PREFIX = '{{- .Site.Params.ShortTitle -}}_';
+const VERSION = 'version_{{- .Date.Format "2006-01-02_15-04-05" -}}'; // Use Hugo's date format to get the build timestamp
 
 // Array to store generated URLs
 let URLS = [
-  {{ range (readDir "public") }}
-    '{{ .Name }}',
-    {{ if .IsDir }}
-      {{ $dir := .Name }}
-      {{ $baseDir := print "public/" $dir }}
-      {{ range $file := readDir $baseDir }}
-        {{ if $file.IsDir }}
-          {{ range (readDir (print $baseDir "/" $file.Name)) }}
-            '{{ print $dir "/" $file.Name "/" .Name }}',
-          {{ end }}
-        {{ else }}
-          '{{ print $dir "/" $file.Name }}',
-        {{ end }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
+  {{- $publicDir := readDir "public" -}}
+  {{- range $i, $dir := $publicDir -}}
+    {{- if $dir.IsDir -}}
+      {{- $dirName := $dir.Name -}}
+      {{- $files := readDir (printf "public/%s" $dirName) -}}
+      {{- range $j, $file := $files -}}
+        {{- if not $file.IsDir -}}
+          '{{- printf "%s/%s" $dirName $file.Name -}}',
+        {{- end -}}
+      {{- end -}}
+      {{- template "listSubDirectories" (slice $dirName) -}}
+    {{- end -}}
+  {{- end -}}
 ];
+
+{{- define "listSubDirectories" -}}
+  {{- $dirName := index . 0 -}}
+  {{- $subDirs := readDir (printf "public/%s" $dirName) -}}
+  {{- range $subDir := $subDirs -}}
+    {{- if $subDir.IsDir -}}
+      {{- $subDirName := $subDir.Name -}}
+      {{- $subFiles := readDir (printf "public/%s/%s" $dirName $subDirName) -}}
+      {{- range $k, $subFile := $subFiles -}}
+        {{- if not $subFile.IsDir -}}
+          '{{- printf "%s/%s/%s" $dirName $subDirName $subFile.Name -}}',
+        {{- end -}}
+      {{- end -}}
+      {{- template "listSubDirectories" (slice (printf "%s/%s" $dirName $subDirName)) -}}
+    {{- end -}}
+  {{- end -}}
+{{ end }}
 
 const CACHE_NAME = APP_PREFIX + VERSION;
 
