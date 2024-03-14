@@ -1,5 +1,5 @@
 const APP_PREFIX = '{{- .Site.Params.ShortTitle -}}_';
-const VERSION = 'version_{{- .Date.Format "2006-01-02_15-04-05" -}}'; // Use Hugo's date format to get the build timestamp
+const VERSION = 'version_{{ now.Unix }}'; // Use Hugo's date format to get the build timestamp
 
 // Array to store generated URLs
 let URLS = [
@@ -9,9 +9,7 @@ let URLS = [
       {{- $dirName := $dir.Name -}}
       {{- $files := readDir (printf "public/%s" $dirName) -}}
       {{- range $j, $file := $files -}}
-        {{- if not $file.IsDir -}}
-          '{{- printf "%s/%s" $dirName $file.Name -}}',
-        {{- end -}}
+        '{{- printf "%s/%s" $dirName $file.Name -}}',
       {{- end -}}
       {{- template "listSubDirectories" (slice $dirName) -}}
     {{- end -}}
@@ -56,6 +54,7 @@ self.addEventListener('install', function (e) {
   e.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
       console.log('Installing cache : ' + CACHE_NAME);
+
       return cache.addAll(URLS);
     })
   );
