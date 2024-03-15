@@ -6,29 +6,34 @@ let URLS = [
   {{- $publicDir := readDir "public" -}}
   {{- range $i, $dir := $publicDir -}}
     {{- if $dir.IsDir -}}
-      {{- $dirName := $dir.Name -}}
-      {{- $files := readDir (printf "public/%s" $dirName) -}}
+      {{- $files := readDir (printf "public/%s" $dir.Name) -}}
       {{- range $j, $file := $files -}}
-        '{{- printf "%s/%s" $dirName $file.Name -}}',
+        '{{- printf "%s/%s" $dir.Name $file.Name -}}',
       {{- end -}}
-      {{- template "listSubDirectories" (slice $dirName) -}}
+      {{- template "listSubDirectories" (slice $dir.Name) -}}
+    {{- else -}}
+      '{{- printf "%s" $dir.Name -}}',
     {{- end -}}
   {{- end -}}
 ];
 
 {{- define "listSubDirectories" -}}
   {{- $dirName := index . 0 -}}
+  '{{- print $dirName -}}',
   {{- $subDirs := readDir (printf "public/%s" $dirName) -}}
   {{- range $subDir := $subDirs -}}
     {{- if $subDir.IsDir -}}
       {{- $subDirName := $subDir.Name -}}
       {{- $subFiles := readDir (printf "public/%s/%s" $dirName $subDirName) -}}
+      '{{- printf "%s/%s" $dirName $subDirName -}}',
       {{- range $k, $subFile := $subFiles -}}
         {{- if not $subFile.IsDir -}}
           '{{- printf "%s/%s/%s" $dirName $subDirName $subFile.Name -}}',
         {{- end -}}
       {{- end -}}
       {{- template "listSubDirectories" (slice (printf "%s/%s" $dirName $subDirName)) -}}
+    {{- else -}}
+      '{{- printf "%s/%s" $dirName $subDir.Name -}}',
     {{- end -}}
   {{- end -}}
 {{ end }}
