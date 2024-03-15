@@ -1,3 +1,11 @@
+{{/*  ANALYTICS  */}}
 <script data-goatcounter="https://lna-dev.goatcounter.com/count" async src="/js/goat.js"></script>
+
+{{/*  FONTS  */}}
 <link rel="stylesheet" href="/css/cantarell.css">
 <link rel="stylesheet" href="/css/noto.css">
+
+{{/*  PWA  */}}
+{{ $manifestTemplate := resources.Get "manifest.webmanifest" }}
+{{ $manifest := $manifestTemplate | resources.ExecuteAsTemplate "manifest.webmanifest" . }}
+<link rel="manifest" href="{{ $manifest.Permalink }}">

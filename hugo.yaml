@@ -140,6 +140,7 @@ languages:
           weight: 30
 
 params:
+  ShortTitle: "LNA-DEV"
   ShowFullTextinRSS: true
   displayFullLangName: true
   keywords:
