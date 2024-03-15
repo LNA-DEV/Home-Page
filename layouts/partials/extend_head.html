@@ -9,19 +9,3 @@
 {{ $manifestTemplate := resources.Get "manifest.webmanifest" }}
 {{ $manifest := $manifestTemplate | resources.ExecuteAsTemplate "manifest.webmanifest" . }}
 <link rel="manifest" href="{{ $manifest.Permalink }}">
-<meta name="pwa-capable" content="yes">
-
-<!-- Get the file in "assets/service-worker.js" -->
-{{ $jsTemplate := resources.Get "service-worker.js" }}
-<!-- We are making a new file called "sw.js" -->
-{{ $js := $jsTemplate | resources.ExecuteAsTemplate "service-worker.js" . }}
-
-<script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register(
-        '{{ $js.Permalink }}', {
-          scope: '/'
-        }
-      )
-    }
-</script>
