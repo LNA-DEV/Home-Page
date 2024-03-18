@@ -37,10 +37,14 @@ languages:
         Title: Hello World 👋
         Content: |
           Welcome to my website.  
+
           I am a software engineer from Bavaria, Germany. I am interested in cool technology especially Open Source.
           I am working with Linux, .NET, Kubernetes, Docker and a lot of other cool technologies.
+          Besides that I am also interested in [photography](https://photo.lna-dev.net).
+          
           This webpage acts as a "home base" for all the stuff I do on the internet.
           I will post here about all the different things I am interested in.
+          Keep in mind that I post **different content** in **different languages**. So if you can, check out the other languages.
     menu:
       main:
         - name: Archive
