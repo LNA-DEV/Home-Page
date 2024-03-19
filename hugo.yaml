@@ -191,6 +191,8 @@ params:
       url: https://mastodon.online/@lna_dev
     - name: pixelfed
       url: https://pixelfed.de/LNA-DEV
+    - name: matrix
+      url: "https://matrix.to/#/@lna-dev:matrix.org"
     - name: email
       url: mailto:info@lna-dev.net
     - name: rss
