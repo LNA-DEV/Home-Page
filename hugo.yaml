@@ -47,28 +47,25 @@ languages:
           Keep in mind that I post **different content** in **different languages**. So if you can, check out the other languages.
     menu:
       main:
-        - name: Archive
+        - name: 🗃️ Archive
           url: archives/
           weight: 1
-        - name: Search
+        - name: 🔎 Search
           url: /search/
           weight: 5
-        - name: Categories
+        - name: 🔖 Categories
           url: /categories/
           weight: 10
-        - name: Tags
+        - name: 🏷️ Tags
           url: /tags/
           weight: 20
-        - name: Tools
-          url: /tools/
-          weight: 22
-        - name: Links
+        - name: 🔗 Links
           url: /links/
           weight: 26
-        - name: Projects
+        - name: 🛠️ Projects
           url: /projects/
           weight: 28
-        - name: Photography
+        - name: 📷 Photography
           url: https://photo.lna-dev.net
           weight: 30
   de:
