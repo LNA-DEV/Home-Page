@@ -10,8 +10,6 @@ buildFuture: false
 buildExpired: true
 copyright: "🄯 CC-BY-ND Lukas Nagel"
 
-# pygmentsUseClasses: true
-
 outputs:
   home:
     - HTML
@@ -20,11 +18,7 @@ outputs:
 
 minify:
   disableXML: true
-  minifyOutput: true
-
-# markup:
-#   highlight:
-#     noClasses: false
+  minifyOutput: false
 
 languages:
   en:
@@ -38,7 +32,7 @@ languages:
         Content: |
           Welcome to my website.  
 
-          I am a software engineer from Bavaria, Germany. I am interested in cool technology especially Open Source.
+          I am a software engineer from Bavaria, Germany. I am interested in cool technology especially [Open Source](/en/tags/open-source/).
           I am working with Linux, .NET, Kubernetes, containers and a lot of other cool technologies.
           Besides that I am also interested in [photography](https://photo.lna-dev.net).
           
