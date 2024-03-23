@@ -18,8 +18,16 @@ Ich arbeite seit März 2021 an einer eigenen Website. Zuerst habe ich eine eigen
 
 ## Fedodo
 
-Fedodo ist ein dezentrales soziales Netzwerk, das den ActivityPub-Standard umsetzt. Es funktioniert irgendwie, aber es ist in einem instabilen Zustand. Es handelt sich um ein ziemlich großes Projekt, und derzeit arbeite ich nicht daran. Aber ich finde das gesamte Projekt ziemlich cool. Leider habe ich im Moment einfach nicht die Zeit dafür. Das Projekt ist Open Source auf [GitHub](https://github.com/Fedodo).
+Fedodo ist ein dezentrales soziales Netzwerk, das den ActivityPub-Standard umsetzt. Es funktioniert, allerdings nur in einem instabilen Zustand. Es handelt sich um ein ziemlich großes Projekt und derzeit arbeite ich nicht daran. Aber ich finde das gesamte Projekt ziemlich cool. Leider habe ich im Moment einfach nicht die Zeit dafür.
+
+In [diesem](/de/posts/projects/whathappenedtofedodo/) Post habe ich darüber geschrieben wieso ich die Entwicklung bis auf weiteres pausiert habe.
+
+Das Projekt ist Open Source auf [GitHub](https://github.com/Fedodo). 
 
 ## Fachinformatiker Prüfungsvorbereitung
 
 Während der Vorbereitung auf die Abschlussprüfung für den Ausbildungsberuf Fachinformatiker habe ich meine Notizen in Form einer Website veröffentlicht. Seitdem pflege ich diese Webseite als Open Source-Projekt auf [GitHub](https://github.com/Fachinformatiker-Prufungsvorbereitung).
+
+Inzwischen haben bereits einige (angehende) Fachinformatiker bei der Weiterentwicklung der Website geholfen. Updates über dieses Thema findest du unter dem Tag [Fachinformatiker Prüfungsvorbereitung](/de/tags/fachinformatiker-prüfungsvorbereitung/).
+
+Die Website ist unter [fachinformatikerpruefungsvorbereitung.de](https://fachinformatikerpruefungsvorbereitung.de/) erreichbar.
