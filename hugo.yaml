@@ -10,8 +10,6 @@ buildFuture: false
 buildExpired: true
 copyright: "🄯 CC-BY-ND Lukas Nagel"
 
-# pygmentsUseClasses: true
-
 outputs:
   home:
     - HTML
@@ -20,11 +18,7 @@ outputs:
 
 minify:
   disableXML: true
-  minifyOutput: true
-
-# markup:
-#   highlight:
-#     noClasses: false
+  minifyOutput: false
 
 languages:
   en:
@@ -36,35 +30,36 @@ languages:
       homeInfoParams:
         Title: Hello World 👋
         Content: |
-          Welcome to my website.  
-          I am a software engineer from Bavaria, Germany. I am interested in cool technology especially Open Source.
-          I am working with Linux, .NET, Kubernetes, Docker and a lot of other cool technologies.
+          Welcome to my website.
+
+          I am a software engineer from Bavaria, Germany. I am interested in cool technology, especially [Open Source](/en/tags/open-source/).
+          I work with Linux, .NET, Kubernetes, containers, and many other cool technologies. 
+          Besides that, I am also interested in [photography](https://photo.lna-dev.net).
+
           This webpage acts as a "home base" for all the stuff I do on the internet.
           I will post here about all the different things I am interested in.
+          Keep in mind that I post **different content** in **different languages**. So if you can, check out the other languages.
     menu:
       main:
-        - name: Archive
+        - name: 🗃️ Archive
           url: archives/
           weight: 1
-        - name: Search
+        - name: 🔎 Search
           url: /search/
           weight: 5
-        - name: Categories
+        - name: 🔖 Categories
           url: /categories/
           weight: 10
-        - name: Tags
+        - name: 🏷️ Tags
           url: /tags/
           weight: 20
-        - name: Tools
-          url: /tools/
-          weight: 22
-        - name: Links
+        - name: 🔗 Links
           url: /links/
           weight: 26
-        - name: Projects
+        - name: 🛠️ Projects
           url: /projects/
           weight: 28
-        - name: Photography
+        - name: 📷 Photography
           url: https://photo.lna-dev.net
           weight: 30
   de:
@@ -77,31 +72,34 @@ languages:
         Title: Hallo Welt 👋
         Content: |
           Willkommen auf meiner Website.
-          Ich bin ein Software-Entwickler aus Bayern und interessiere mich besonders für moderne Technologien, insbesondere Open Source. 
-          Ich arbeite mit Linux, .NET, Kubernetes, Docker und vielen anderen spannenden Technologien. 
-          Diese Webseite dient als meine "Home Base" für alles, was ich im Internet mache. 
-          Hier werde ich über all die verschiedenen Dinge posten, die mich interessieren.
+          
+          Ich bin ein Software-Entwickler aus Bayern und interessiere mich besonders für moderne Technologien, insbesondere [Open Source](/de/tags/open-source). 
+          Ich arbeite mit Linux, .NET, Kubernetes, Containern und vielen anderen coolen Technologien. Ansonsten interessiere ich mich noch für [Fotografie](https://photo.lna-dev.net).
+
+          Diese Webseite dient als meine art "Home Base" für alles, was ich im Internet mache. 
+          Hier werde ich über all die verschiedenen Dinge posten, die mich interessieren. Ich erstelle **verschiedenen Content** für **verschiedene Sprachen**.
+          Schau also gerne in den anderen Sprachen vorbei.
     menu:
       main:
-        - name: Archiv
+        - name: 🗃️ Archiv
           url: archives/
           weight: 5
-        - name: Suche
+        - name: 🔎 Suche
           url: /search/
           weight: 5
-        - name: Kategorien
+        - name: 🔖 Kategorien
           url: /categories/
           weight: 10
-        - name: Tags
+        - name: 🏷️ Tags
           url: /tags/
           weight: 20
-        - name: Links
+        - name: 🔗 Links
           url: /links/
           weight: 26
-        - name: Meine Projekte
+        - name: 🛠️ Projekte
           url: /projects/
           weight: 28
-        - name: Fotografie
+        - name: 📷 Fotografie
           url: https://photo.lna-dev.net
           weight: 30
   sv:
@@ -113,29 +111,26 @@ languages:
       homeInfoParams:
         Title: Hallå värld 👋
         Content: |
-          Välkommen till min webbplats.  
+          Välkommen till min webbplats.
+
           Jag är programmerare från Tyskland och jag pratar om att lära mig svenska här. Jag är nybörjare så förvänta dig inte för mycket.
+
+          Jag har olika innehåll på olika språk. Så om du är intresserad, kolla på det.
     menu:
       main:
-        - name: Arkiv
+        - name: 🗃️ Arkiv
           url: archives/
           weight: 5
-        - name: Sökning
+        - name: 🔎 Sökning
           url: /search/
-          weight: 5
-        - name: Kategorier
+          weight: 7
+        - name: 🔖 Kategorier
           url: /categories/
           weight: 10
-        - name: Taggar
+        - name: 🏷️ Taggar
           url: /tags/
           weight: 20
-        # - name: Verktyg
-        #   url: /tools/
-        #   weight: 22
-        # - name: Länkar
-        #   url: /links/
-        #   weight: 26
-        - name: Fotografi
+        - name: 📷 Fotografi
           url: https://photo.lna-dev.net
           weight: 30
 
@@ -187,6 +182,8 @@ params:
       url: https://mastodon.online/@lna_dev
     - name: pixelfed
       url: https://pixelfed.de/LNA-DEV
+    - name: matrix
+      url: "https://matrix.to/#/@lna-dev:matrix.org"
     - name: email
       url: mailto:info@lna-dev.net
     - name: rss
