@@ -1,9 +1,9 @@
 ---
-title: "Links (Deutsch)"
+title: "Links"
 draft: false
 showToc: true
 TocOpen: false
-description: "Hier befinden Links zu interessanten Dingen im Internet."
+description: "Hier verlinke ich Dinge und Personen welche ich wertschätze."
 disableShare: true
 disableHLJS: false
 searchHidden: false
@@ -12,9 +12,11 @@ ShowReadingTime: false
 ShowWordCount: false
 ---
 
+Die Links hier sind zu deutschsprachigen Seiten. Für andere Sprachen habe ich eigene Auflistungen gemacht.
+
 ## Websites
 
-- [netzpolitik.org](https://netzpolitik.org/) ~ Netzpolitik.org ist ein gemeinnütziges Medium welches sich für digitale Freiheitsrechte einsetzt und vorallem darüber berichtet. Es ist völlig spenden-finanziert und ohne Werbung, Trackern oder ähnlichem.
+- [netzpolitik.org](https://netzpolitik.org/) ~ Netzpolitik.org ist ein gemeinnütziges Medium, welches sich für digitale Freiheitsrechte einsetzt und vorallem darüber berichtet. Es ist völlig spenden-finanziert und ohne Werbung, Trackern oder ähnlichem.
 
 ## YouTube-Channels
 
