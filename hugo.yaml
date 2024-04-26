@@ -8,7 +8,7 @@ enableRobotsTXT: true
 buildDrafts: true
 buildFuture: false
 buildExpired: true
-copyright: "🄯 CC-BY-ND Lukas Nagel"
+copyright: "🄯 CC-BY-ND [Lukas Nagel](./me)"
 
 outputs:
   home:
