@@ -1,0 +1,18 @@
+{{- $img := (.Get "url") }}
+{{- $alt := (.Get "alt") }}
+{{- $caption := (.Get "caption") }}
+{{- $link := (.Get "link") }}
+
+<figure>
+{{- if $link -}}
+  <a href="{{$link}}">
+    <img src="{{$img}}" alt="{{$alt}}">
+  </a>
+{{- else -}}
+  <img src="{{$img}}" alt="{{$alt}}">
+{{- end -}}
+  <figcaption class="img-caption-center">{{ $caption | default $alt }}</figcaption>
+</figure>
+
+
+
