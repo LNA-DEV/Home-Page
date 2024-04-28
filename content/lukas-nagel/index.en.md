@@ -7,6 +7,8 @@ description: "I am Lukas Nagel (LNA-DEV) and on this subpage I talk a bit about 
 disableShare: true
 disableHLJS: false
 searchHidden: false
+aliases: 
+  - /me
 ---
 
 ## A bit about me
