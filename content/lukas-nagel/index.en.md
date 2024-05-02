@@ -8,7 +8,7 @@ disableShare: true
 disableHLJS: false
 searchHidden: false
 aliases: 
-  - /me
+  - me
 ---
 
 ## A bit about me
@@ -18,7 +18,7 @@ My name is Lukas Nagel and I am a software engineer from Bavaria, Germany. I als
 
 {{< img url="https://photo.lna-dev.net/landscape/InnValley_huacd5c8d29a003dfed3d4495417f49183_7619711_filter_10933573887768330671.JPG" alt="Image of a valley in Bavaria, Germany. I took the photo near my village / home town. Taken by me / Lukas Nagel." caption="Image of a valley in Bavaria, Germany. I took the photo near my village / home town." link="https://photo.lna-dev.net/landscape/#3216840989" >}}
 
-### FOSS
+### FOSS (Free and open source software)
 
 I am involved in a few [FOSS projects](../projects/) in my free time here and there. This is one of my main interests: building free and open-source software.
 
