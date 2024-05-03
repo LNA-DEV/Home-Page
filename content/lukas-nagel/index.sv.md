@@ -24,13 +24,19 @@ Jag är involverad i några FOSS-projekt här och där på min fritid. Det är e
 
 Jag tror på den öppna modellen och anser att öppna källkodsprojekt kan lösa många problem som företag inte kan. Jag använder Linux på alla mina enheter och använder också enbart FOSS. Jag vill göra några inlägg om den programvara jag använder, hur man använder den och varför det är så viktigt.
 
-<!-- ### Privacy
-
-Jag tycka att 
-
 ### Indie Web
 
-### Fotografi -->
+Jag börjar lära mig principerna för Indie Web. Jag är verkligen i början av processen, men jag gillar det ändå och tror att det utgör en solid grund för framtiden.
+
+### Fotografi
+
+En annan hobby för mig är fotografi. Jag har en webbplats enbart för detta ändamål: [LNA-DEV Gallery](https://photo.lna-dev.net). Om du är intresserad, ta en titt på mina bilder. Mina fotografier är publicerade under en Creative Commons-licens, så om du uppfyller villkoren kan du kanske använda dem om du vill. (Du kan hitta licensinformationen på botten av min [fotosida](https://photo.lna-dev.net).)
+
+Jag tar foton inom många olika kategorier, som landskap, djur och växter. Men jag vill lära mig mer om andra kategorier, som porträttfotografi.
+
+Jag redigerar mina fotografier med [Darktable](https://www.darktable.org/), ett fritt och öppen källkodsprogram för foto-redigering och hantering. Det liknar Lightroom men är helt fri både vad gäller pengar och frihet.
+
+{{< img url="https://photo.lna-dev.net/animals/Seagull%20flying%20over%20the%20sea_hu9e65c07a9c3920ed46f65c1e6ac93b22_1938801_filter_10933573887768330671.JPG" alt="Bild av en mås som flyger över havet. Skapad av mig / Lukas Nagel." caption="Ett av de fotografier jag har tagit. Men det finns många fler." link="https://photo.lna-dev.net/animals/#3204286083" >}}
 
 ### Norden 🇸🇪 🇳🇴 🇩🇰 🇫🇮 🇮🇸
 

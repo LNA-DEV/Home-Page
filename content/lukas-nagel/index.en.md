@@ -36,7 +36,7 @@ I am increasingly getting into the Indie Web. I am at the beginning of this jour
 
 Another hobby of mine is photography. I have a page solely for that: [LNA-DEV Gallery](https://photo.lna-dev.net). If you are interested, go and check it out. My photography is published under a permissive license, so if you want to use them, you can if you fulfill the license. (You can find the license information at the bottom of my [photography site](https://photo.lna-dev.net).)
 
-I take photographs in many different categories (like landscapes, animals, and plants). But I also want to get into a few more areas like portrait photography.
+I take photographs in many different categories (like landscapes, animals and plants). But I also want to get into a few more areas like portrait photography.
 
 I edit my photography using [Darktable](https://www.darktable.org/), a free and open-source photo editing and management program. It is a bit like Lightroom but completely free in terms of money but also in terms of freedom.
 
