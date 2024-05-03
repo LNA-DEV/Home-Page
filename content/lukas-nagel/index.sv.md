@@ -22,7 +22,7 @@ Jag heter Lukas Nagel och jag är en programmerare från Bayern, Tyskland. Jag k
 
 Jag är involverad i några FOSS-projekt här och där på min fritid. Det är ett av mina stora intressen: Att skapa fri och öppen källkod program.
 
-Jag tror på den öppna modellen och anser att öppna källkodsprojekt kan lösa många problem som företag inte kan. Jag använder Linux på alla mina enheter och använder också enbart FOSS. Jag vill göra några inlägg om den programvara jag använder, hur man använder den och varför det är så viktigt.
+Jag tror på den öppna modellen och anser att öppna källkodsprojekt kan lösa många problem som företag inte kan. Jag använder Linux på alla mina enheter och använder också nära enbart FOSS. Jag vill göra några inlägg om den programvara jag använder, hur man använder den och varför det är så viktigt.
 
 ### Indie Web
 
