@@ -8,7 +8,7 @@ disableShare: true
 disableHLJS: false
 searchHidden: false
 aliases: 
-  - /me
+  - me
 ---
 
 ## A bit about me
@@ -18,7 +18,7 @@ My name is Lukas Nagel and I am a software engineer from Bavaria, Germany. I als
 
 {{< img url="https://photo.lna-dev.net/landscape/InnValley_huacd5c8d29a003dfed3d4495417f49183_7619711_filter_10933573887768330671.JPG" alt="Image of a valley in Bavaria, Germany. I took the photo near my village / home town. Taken by me / Lukas Nagel." caption="Image of a valley in Bavaria, Germany. I took the photo near my village / home town." link="https://photo.lna-dev.net/landscape/#3216840989" >}}
 
-### FOSS
+### FOSS (Free and open source software)
 
 I am involved in a few [FOSS projects](../projects/) in my free time here and there. This is one of my main interests: building free and open-source software.
 
@@ -36,7 +36,7 @@ I am increasingly getting into the Indie Web. I am at the beginning of this jour
 
 Another hobby of mine is photography. I have a page solely for that: [LNA-DEV Gallery](https://photo.lna-dev.net). If you are interested, go and check it out. My photography is published under a permissive license, so if you want to use them, you can if you fulfill the license. (You can find the license information at the bottom of my [photography site](https://photo.lna-dev.net).)
 
-I take photographs in many different categories (like landscapes, animals, and plants). But I also want to get into a few more areas like portrait photography.
+I take photographs in many different categories (like landscapes, animals and plants). But I also want to get into a few more areas like portrait photography.
 
 I edit my photography using [Darktable](https://www.darktable.org/), a free and open-source photo editing and management program. It is a bit like Lightroom but completely free in terms of money but also in terms of freedom.
 
