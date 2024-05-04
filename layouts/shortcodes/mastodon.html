@@ -1,0 +1,10 @@
+{{- $url := urls.Parse (.Get "url") }}
+
+<iframe
+  src="{{$url.String}}"
+  class="mastodon-embed"
+  style="max-width: 100%; border: 0; margin-top: 15px; margin-bottom: 10px"
+  width="100%"
+  allowfullscreen="allowfullscreen"
+></iframe>
+<script src="https://{{$url.Host}}/embed.js" async="async"></script>
