@@ -1,12 +1,12 @@
 ---
-title: "How I automated my Pixelfed posts"
+title: "How to automate Pixelfed posts"
 date: 2024-05-05T17:52:45+02:00
 draft: false
-tags: ["Pixelfed", "Fediverse", "Mastodon", "Python", "Kubernetes", "go", "Automation"]
-categories: ["first"] # TODO
+tags: ["Pixelfed", "Fediverse", "Mastodon", "Python", "Kubernetes", "go", "Automation", "Projects", "Tutorial", "Media", "Coding"]
+categories: ["Projects", "Tutorial", "Media"]
 showToc: true
 TocOpen: false
-description: "I needed to automate my posts to Pixelfed. In this post I discuss how I achieved that."
+description: "I needed to automate my posts to Pixelfed. In this post I describe how I achieved that."
 disableShare: true
 disableHLJS: false
 searchHidden: false
@@ -14,12 +14,12 @@ searchHidden: false
 
 ## My problem with posting to Pixelfed
 
-I started with Mastodon as my first account in the [Fediverse](). After a while I found out about Pixelfed and created my account there. I kept using it for a while and even posted from time to time. My problem with posting to Pixelfed was the lack of an scheduler. I want to post regularly but I do not want to login every day and make a post manually. This feature was even announced but never finished. Even today this is not implemented. There is also an [GitHub issue](https://github.com/pixelfed/pixelfed/issues/2872) discussing this if your interest goes deeper. In the following post by Pixelfed you can see the announcement.
+I started with Mastodon as my first account in the [Fediverse](posts/media/fediverse/). After a while I found out about Pixelfed and created my account there. I kept using it for a while and even posted from time to time. My problem with posting to Pixelfed was the lack of an scheduler. I want to post regularly but I do not want to login every day and make a post manually. This feature was even announced but never finished. Even today this is not implemented. There is also an [GitHub issue](https://github.com/pixelfed/pixelfed/issues/2872) discussing this if your interest goes deeper. In the following post by Pixelfed you can see the announcement.
 {{< mastodon url="https://mastodon.social/@pixelfed/107574719894032457/embed" >}}
 
-There are some post scheduler for Mastodon out there. I tried using them with Pixelfed but nothing worked properly. I even tried the client side automatic upload feature of [Fedilab]() which posted immediately instead of at the given time. This surely was a bug I could have reported or fixed it myself. (Because Fedilab is [FOSS]())
+There are some post scheduler for Mastodon out there. I tried using them with Pixelfed but nothing worked properly. I even tried the client side automatic upload feature of [Fedilab](https://fedilab.app/) which posted immediately instead of at the given time. This surely was a bug I could have reported or fixed it myself. (Because Fedilab is [FOSS](tags/open-source/))
 
-I do not want to complain about this. It is totally fine. There are a lot of other things which need to be done in Pixelfed and the [Fediverse]() as a whole. But for me it meant I needed to implement something on my own.
+I do not want to complain about this. It is totally fine. There are a lot of other things which need to be done in Pixelfed and the Fediverse as a whole. But for me it meant I needed to implement something on my own.
 
 ## Requirements
 
@@ -358,7 +358,7 @@ That done I made a final API request to my personal API noting that I uploaded t
 
 ### The schedule
 
-This part was fairly easy because I was already using a [Kubernetes]() cluster. I just needed to create a cronjob running each day and that's it.
+This part was fairly easy because I was already using a [Kubernetes](/tags/Kubernetes) cluster. I just needed to create a cronjob running each day and that's it.
 
 ```yaml
 apiVersion: batch/v1
@@ -393,3 +393,5 @@ spec:
           restartPolicy: Never
       backoffLimit: 0
 ```
+
+A thing I had to learn here is the following. Setting the `restartPolicy` to `never` will not prevent the cronjob from retrying anyway. You need to also set the `backoffLimit` to `0` to achieve the desired behavior. (This is because those two settings change different retry mechanisms you both want to disable.)
