@@ -1,12 +1,12 @@
 ---
 title: "How I automated my Pixelfed posts"
-date: 2024-05-04T17:52:45+02:00
+date: 2024-05-05T17:52:45+02:00
 draft: false
-tags: ["first"] # TODO
+tags: ["Pixelfed", "Fediverse", "Mastodon", "Python", "Kubernetes", "go", "Automation"]
 categories: ["first"] # TODO
 showToc: true
 TocOpen: false
-description: "Desc Text." # TODO
+description: "I needed to automate my posts to Pixelfed. In this post I discuss how I achieved that."
 disableShare: true
 disableHLJS: false
 searchHidden: false
@@ -104,4 +104,292 @@ Now having an API which knows which images have already bin posted I could conti
 
 ### The Pixelfed script
 
+For writing the script I went with Python. I am having mixed feelings about Python. On the one side I really dislike the way it is handling types (it doesn't lol) but on the other hand you can quickly make basic things work. So I went the (for me) experimenthus way and chose Python as my way to go.
+
+I created this basic script which is handling all the stuff needed to create the post and make all the API and RSS handling. I go into detail on some of the methods and bits of code I find most important but I have the full code provided below if you are interested.
+
+{{<collapse summary="The full code" >}}
+Alternatively to this code block there is a up to date [Repo](https://github.com/LNA-DEV/Autouploader) on GitHub.
+
+```python
+from io import BytesIO
+import os
+import re
+import sys
+import feedparser
+from datetime import datetime
+import time
+import random
+import requests
+
+PIXELFED_INSTANCE_URL = 'https://pixelfed.de'
+PAT = os.environ.get('PIXELFED_PAT')
+API_KEY = os.environ.get('API_KEY')
+
+# Function to filter entries based on the name list
+def filter_entries(entries, name_list):
+
+    # Temp skips (for example if this image does not fit currently)
+    name_list.append("P1002496.JPG")
+
+    return [entry for entry in entries if entry.title not in name_list]
+
+def get_already_uploaded_items():
+    try:
+        response = requests.get("https://api.lna-dev.net/autouploader/pixelfed")
+        if response.status_code == 200:
+            string_list = response.json()
+            return string_list
+        else:
+            print(f"Failed to fetch data from API. Status code: {response.status_code}")
+            sys.exit(1)
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        sys.exit(1)
+
+def published_entry(entry_name):
+    requests.post(f"https://api.lna-dev.net/autouploader/pixelfed?item={entry_name}", headers={"Authorization": f"ApiKey {API_KEY}"})
+
+def download_image(image_url):
+    response = requests.get(image_url)
+    if response.status_code == 200:
+        return BytesIO(response.content)
+    else:
+        print("Failed to download image!")
+        sys.exit(1)
+
+def publish_entry(entry):
+    caption = "More at https://photo.lna-dev.net\n\n"
+
+    for element in entry.tags:
+        caption += '#' + element.term + " "
+
+    mediaResponse = upload_media(entry)
+    publish_post(caption, mediaResponse)
+
+    published_entry(entry.title)
+
+def upload_media(entry):
+    media_url = f'{PIXELFED_INSTANCE_URL}/api/v1/media'
+    headers = {
+        'Authorization': f'Bearer {PAT}',
+        'Accept': 'application/json'
+    }
+    files = {
+        'file': download_image(entry.link)
+    }
+    data = {
+        'description': re.search('alt="(.*?)"', entry.summary).group(1)
+    }
+    response = requests.post(media_url, headers=headers, files=files, data=data)
+    if response.status_code == 200:
+        return response.json()['id']
+    else:
+        print("Failed to upload media.")
+        sys.exit(1)
+
+def publish_post(caption, media_id):
+    if caption.strip():
+        post_url = f'{PIXELFED_INSTANCE_URL}/api/v1/statuses'
+        headers = {
+            'Authorization': f'Bearer {PAT}',
+            'Accept': 'application/json'
+        }
+        data = {
+            'status': caption,
+            'media_ids[]': media_id
+        }
+        response = requests.post(post_url, headers=headers, data=data)
+        if response.status_code == 200:
+            print("Post published successfully!")
+        else:
+            print("Failed to publish post!")
+            sys.exit(1)
+    else:
+        print("Caption cannot be empty.")
+        sys.exit(1)
+
+# Parse the RSS feed
+feed_url = 'https://photo.lna-dev.net/index.xml'
+feed = feedparser.parse(feed_url)
+
+# Filter out entries with specific names
+specific_names = get_already_uploaded_items()
+filtered_entries = filter_entries(feed.entries, specific_names)
+
+if not filtered_entries:
+    print("No entries available after filtering.")
+else:
+    # Calculate time differences considering only month, day, hour, minute, and second
+    current_time = datetime.now()
+    closest_entry = None
+    skipped_entries = []
+    min_difference = None
+    for entry in filtered_entries:
+        if entry.published_parsed.tm_year == 0 or entry.published_parsed.tm_year == 1:
+            skipped_entries.append(entry)
+            continue  # Skip entries with invalid year
+        temp = time.mktime(entry.published_parsed)
+        published_time = datetime.fromtimestamp(temp)
+        difference = abs(current_time.replace(year=published_time.year, tzinfo=None) - published_time)
+        if min_difference is None or difference < min_difference:
+            min_difference = difference
+            closest_entry = entry
+
+    if closest_entry is None:
+        print("No valid entries available after filtering.")
+    else:
+        # Get all entries published at the same time as the closest entry
+        closest_entries = [entry for entry in filtered_entries if entry.published == closest_entry.published]
+        for element in skipped_entries:
+            closest_entries.append(element)
+
+        # Select a random entry from the closest entries
+        random_entry = random.choice(closest_entries)
+
+        # Print the selected entry
+        print("Random entry closest to the current date/time (ignoring year):")
+        print("Title:", random_entry.title)
+        print("URL:", random_entry.link)
+        print("Published Date:", random_entry.published)
+
+        publish_entry(random_entry)
+```
+{{</collapse>}}
+
+So lets start with the retrieval of the RSS data. To simplify this for me I used the `feedparser` library here. With that I have access to all the data of the RSS feed in a better structured way.
+
+With this simple API call I retrieve the already uploaded posts from my personal API I mentioned above. With this data I can filter any entries in the RSS feed which I don't need to upload anymore.
+
+```python
+def get_already_uploaded_items():
+    try:
+        response = requests.get("https://api.lna-dev.net/autouploader/pixelfed")
+        if response.status_code == 200:
+            string_list = response.json()
+            return string_list
+        else:
+            print(f"Failed to fetch data from API. Status code: {response.status_code}")
+            sys.exit(1)
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        sys.exit(1)
+```
+
+After having a list of possible posts I need the script to decide which post to post next. For that I am calculating which posts are nearest to the current day and month without taking the year into the calculation.
+
+```python
+    for entry in filtered_entries:
+        if entry.published_parsed.tm_year == 0 or entry.published_parsed.tm_year == 1:
+            skipped_entries.append(entry)
+            continue  # Skip entries with invalid year
+        temp = time.mktime(entry.published_parsed)
+        published_time = datetime.fromtimestamp(temp)
+        difference = abs(current_time.replace(year=published_time.year, tzinfo=None) - published_time)
+        if min_difference is None or difference < min_difference:
+            min_difference = difference
+            closest_entry = entry
+```
+
+I than select one of the closest entries randomly. I need to do this because if I would have taken many photos on one day there could be multiple items close to the current date.
+
+Now we are ready for creating the post. Therefore I am now preparing the caption which is included in the post.
+
+```python
+def publish_entry(entry):
+    caption = "More at https://photo.lna-dev.net\n\n"
+
+    for element in entry.tags:
+        caption += '#' + element.term + " "
+
+    mediaResponse = upload_media(entry)
+    publish_post(caption, mediaResponse)
+
+    published_entry(entry.title)
+```
+
+Now to the trickiest bit: The actual posting. This was especially interesting because at the time I created this script there was a lack of documentation and I needed to somehow figure this out on my own. I also didn't find many examples searching the internet. The best I could do was looking into the Mastodon documentation (because Pixelfeds API is similar) and figuring it out on my own.
+
+There are two important things here. First you have to upload the media first before you can make the post which than simply contains the id of the media you uploaded beforehand. And second you need to create a PAT (personal access token) and provide it via the bearer syntax to the API.
+
+```python
+def upload_media(entry):
+    media_url = f'{PIXELFED_INSTANCE_URL}/api/v1/media'
+    headers = {
+        'Authorization': f'Bearer {PAT}',
+        'Accept': 'application/json'
+    }
+    files = {
+        'file': download_image(entry.link)
+    }
+    data = {
+        'description': re.search('alt="(.*?)"', entry.summary).group(1)
+    }
+    response = requests.post(media_url, headers=headers, files=files, data=data)
+    if response.status_code == 200:
+        return response.json()['id']
+    else:
+        print("Failed to upload media.")
+        sys.exit(1)
+
+def publish_post(caption, media_id):
+    if caption.strip():
+        post_url = f'{PIXELFED_INSTANCE_URL}/api/v1/statuses'
+        headers = {
+            'Authorization': f'Bearer {PAT}',
+            'Accept': 'application/json'
+        }
+        data = {
+            'status': caption,
+            'media_ids[]': media_id
+        }
+        response = requests.post(post_url, headers=headers, data=data)
+        if response.status_code == 200:
+            print("Post published successfully!")
+        else:
+            print("Failed to publish post!")
+            sys.exit(1)
+    else:
+        print("Caption cannot be empty.")
+        sys.exit(1)
+```
+
+That done I made a final API request to my personal API noting that I uploaded the image.
+
 ### The schedule
+
+This part was fairly easy because I was already using a [Kubernetes]() cluster. I just needed to create a cronjob running each day and that's it.
+
+```yaml
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: pixelfed-autoupload
+spec:
+  schedule: "0 16 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: pixelfed-autoupload
+              image: lnadev/pixelfed-autoupload:{{ .Values.autoupload.pixelfed.version }}
+              imagePullPolicy: Always
+              resources:
+                limits:
+                  memory: "128Mi" 
+                  cpu: "500m" # Don't use CPU limits in K8s but that is another topic...
+              env:
+                - name: PIXELFED_PAT
+                  valueFrom:
+                    secretKeyRef:
+                      name: pixelfed
+                      key: pat
+                - name: API_KEY
+                  valueFrom:
+                    secretKeyRef:
+                      name: personal-api-secret
+                      key: apikey
+          restartPolicy: Never
+      backoffLimit: 0
+```
