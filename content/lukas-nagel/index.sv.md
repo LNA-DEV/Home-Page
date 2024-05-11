@@ -24,6 +24,10 @@ Jag är involverad i några FOSS-projekt här och där på min fritid. Det är e
 
 Jag tror på den öppna modellen och anser att öppna källkodsprojekt kan lösa många problem som företag inte kan. Jag använder Linux på alla mina enheter och använder också nära enbart FOSS. Jag vill göra några inlägg om den programvara jag använder, hur man använder den och varför det är så viktigt.
 
+### Integrität / Privacy
+
+Jag tycker att ämnet går hand i hand med FOSS. Allmän skola har rätt att välja vilka data man delar med vem och ingen annan. Och ett företag, särskilt från utanför Europa, har inte makten att göra vad de vill. Jag försöker använda programvara som respekterar integriteten och försöker uppmuntra andra att göra detsamma.
+
 ### Indie Web
 
 Jag börjar lära mig principerna för Indie Web. Jag är verkligen i början av processen, men jag gillar det ändå och tror att det utgör en solid grund för framtiden.
