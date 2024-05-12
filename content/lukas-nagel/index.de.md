@@ -3,7 +3,7 @@ title: "Über mich (Lukas Nagel / LNA-DEV)"
 draft: false
 showToc: true
 TocOpen: false
-description: "Ich bin Lukas Nagel (LNA-DEV) und auf dieser Unterseite möchte ich kurz erzählen wer ich bin."
+description: "Ich bin Lukas Nagel (LNA-DEV) und auf dieser Unterseite möchte ich mich kurz vorstellen."
 disableShare: true
 disableHLJS: false
 searchHidden: false
@@ -22,7 +22,7 @@ Ich heiße Lukas Nagel und bin ein Software Entwickler aus Bayern. Hier und da i
 
 In meiner Freizeit arbeite ich hier und da an [FOSS-Projekten](../projects/). Dies ist eines meiner Hauptinteressen: Das erschaffen von freier und offener Software.
 
-Ich glaube an das offene und transparente Modell und denke das Open-Source-Projekte viele Probleme lösen welche ein kommerzieller Anbieter so nur schwierig lösen könnte. Ich nutze auf nahezu jedem Gerät eine Art von Linux und auch sonst generell fast ausschließlich freie Software. Ich werde von Zeit zu Zeit Posts über die Software die ich benutze machen.
+Ich glaube an das offene und transparente Modell und denke das Open-Source-Projekte viele Probleme lösen, welche ein kommerzieller Anbieter so nur schwierig lösen könnte. Ich nutze auf nahezu jedem Gerät eine Art von Linux und auch sonst generell fast ausschließlich freie Software. Ich werde von Zeit zu Zeit Posts über die Software die ich benutze machen und wie man sie verwendet.
 
 ### Privacy
 
@@ -34,7 +34,14 @@ Ich beschäftige mich mehr und mehr mit dem Indie Web. Ich bin hier definitiv am
 
 ### Fotografie
 
-Ein weiteres Hobby von mir ist Fotografie. Dafür habe ich eine weitere Seite: [LNA-DEV Photography](https://photo.lna-dev.net).
+Ein weiteres Hobby von mir ist Fotografie. Dafür habe ich eine weitere Seite: [LNA-DEV Photography](https://photo.lna-dev.net). Falls du interessiert bist schau doch mal vorbei. Meine Bilder sind unter einer Creative Commons Lizenz veröffentlicht. Wenn du sie benutzen möchtest findest du die genauen Lizenzinformation im Footer der [Fotografie-Seite](https://photo.lna-dev.net.)
+
+Ich nehme Photos in verschiedenen Genres auf (zum Beispiel Landscape, Tiere und Pflanzen). Aber ich möchte mich auch in ein paar weiteren Kategorien wie der Porträtfotografie ausprobieren.
+
+Editieren tue ich meine Fotografie in [Darktable](https://www.darktable.org/), einem FOSS Tool zur Fotobearbeitung und Management. Es ähnelt Lightroom ist aber komplett Frei.
+
+{{< img url="https://photo.lna-dev.net/animals/Seagull%20flying%20over%20the%20sea_hu9e65c07a9c3920ed46f65c1e6ac93b22_1938801_filter_10933573887768330671.JPG" alt="Bild einer Möwe die über das Meer fliegt. Aufgenommen von mir / Lukas Nagel" caption="Eines meiner Bilder aber das sind noch deutlich mehr." link="https://photo.lna-dev.net/animals/#3204286083" >}}
+
 
 ## Domains unter meiner Kontrolle
 
