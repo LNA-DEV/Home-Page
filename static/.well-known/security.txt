@@ -1,0 +1,4 @@
+Contact: mailto:security@lna-dev.net
+Expires: 2026-05-14T00:00:00.000Z
+Preferred-Languages: de, en, sv
+Canonical: https://lna-dev.net/.well-known/security.txt
