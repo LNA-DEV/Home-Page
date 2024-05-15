@@ -10,6 +10,8 @@ description: "Einen Einblick in das wirklich soziale Netzwerk."
 disableShare: true
 disableHLJS: false
 searchHidden: false
+sitemap:
+  priority: 0.8
 ---
 
 {{< figure src="./fediverse.svg" alt="Das Fediverse-Logo" class="img-right" >}}

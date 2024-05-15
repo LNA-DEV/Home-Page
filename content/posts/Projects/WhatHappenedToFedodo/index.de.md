@@ -10,6 +10,8 @@ description: "Ich habe für ein halbes Jahr einer Social-Media-Plattform namens 
 disableShare: true
 disableHLJS: false
 searchHidden: false
+sitemap:
+  priority: 0.8
 ---
 
 ## Was ist Fedodo?

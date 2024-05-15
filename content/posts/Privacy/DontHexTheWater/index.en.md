@@ -10,6 +10,8 @@ description: "Joining exurb1a on a topic of privacy."
 disableShare: true
 disableHLJS: false
 searchHidden: false
+sitemap:
+  priority: 0.8
 ---
 
 ## General

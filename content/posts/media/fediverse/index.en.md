@@ -10,6 +10,8 @@ description: "Deep dive into the really social network."
 disableShare: true
 disableHLJS: false
 searchHidden: false
+sitemap:
+  priority: 0.8
 ---
 
 {{< figure src="./fediverse.svg" alt="The Fediverse-Logo" class="img-right" >}}

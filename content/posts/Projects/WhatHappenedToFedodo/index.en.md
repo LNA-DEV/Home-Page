@@ -10,6 +10,8 @@ description: "I developed a social media platform called Fedodo for half a year.
 disableShare: true
 disableHLJS: false
 searchHidden: false
+sitemap:
+  priority: 0.8
 ---
 
 ## What is Fedodo?
