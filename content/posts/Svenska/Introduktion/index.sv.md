@@ -10,6 +10,8 @@ description: "Jag heter Lukas Nagel, och det här är mitt först blogginlägg i
 disableShare: true
 disableHLJS: false
 searchHidden: false
+sitemap:
+  priority: 0.8
 ---
 
 ## Hallå värld!

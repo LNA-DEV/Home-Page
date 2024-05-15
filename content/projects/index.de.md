@@ -10,6 +10,8 @@ searchHidden: false
 hidemeta: false
 ShowReadingTime: false
 ShowWordCount: false
+sitemap:
+  priority: 0.8
 ---
 
 ## Diese Webseite

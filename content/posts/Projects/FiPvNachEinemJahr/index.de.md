@@ -10,6 +10,8 @@ description: "Vor einem Jahr habe ich das Projekt Fachinformatiker Prüfungsvorb
 disableShare: true
 disableHLJS: false
 searchHidden: false
+sitemap:
+  priority: 0.8
 ---
 
 ## Was ist das Fachinformatiker Prüfungsvorbereitungs Projekt?

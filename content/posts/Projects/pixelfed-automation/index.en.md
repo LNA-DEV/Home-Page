@@ -10,6 +10,8 @@ description: "I needed to automate my posts to Pixelfed. In this post, I describ
 disableShare: true
 disableHLJS: false
 searchHidden: false
+sitemap:
+  priority: 0.8
 ---
 
 ## My problem with posting to Pixelfed

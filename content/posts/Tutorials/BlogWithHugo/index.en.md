@@ -10,6 +10,8 @@ description: "In this blog post we will discuss how to build and deploy your own
 disableShare: true
 disableHLJS: false
 searchHidden: false
+sitemap:
+  priority: 0.8
 ---
 
 
