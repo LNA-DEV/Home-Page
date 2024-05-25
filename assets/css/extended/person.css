@@ -6,6 +6,7 @@
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  background-color: #222224;
 }
 
 .card img {
