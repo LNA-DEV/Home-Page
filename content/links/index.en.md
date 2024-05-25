@@ -53,10 +53,12 @@ I want to give an overview on some things I like. This can be persons, projects 
 
 All the links below are to English sites. I also have links for other languages. Check them out if you speak them.
 
-## Persons
-
 {{< person >}}
 
-## Projects
+## Others
 
 - [Privacy Tools IO](https://www.privacytools.io/) ~ This is a site to compare and find new cool tools that respect your privacy.
+- <https://www.natashabergen.com/>
+- <https://major.io/>
+- <https://maddy.one/>
+- <https://amelia.andersdotter.cc/index.html>
