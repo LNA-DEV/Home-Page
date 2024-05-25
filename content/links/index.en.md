@@ -19,7 +19,7 @@ persons:
         url: "https://www.mollywhite.net/feed"
   - name: Eric Murphy
     description: "A web developer writing about Linux, Privacy, and the web in general. And especially how it should be."
-    img: "https://ericmurphy.xyz/images/avatar_hu765c692e74efb6fcb95a9e723e39e164_34735_255x0_resize_q90_h2_box.webp"
+    img: "Eric Murphy.webp"
     links:
       - name: website
         url: "https://ericmurphy.xyz/"
@@ -27,7 +27,7 @@ persons:
         url: "https://www.youtube.com/@EricMurphyxyz"
   - name: Jonna Jinton
     description: "Jonna Jinton is a Swedish artist, musician, and filmmaker who lives in the North of Sweden. She writes about her life in the North and displays some of her incredible photography."
-    img: "https://yt3.googleusercontent.com/ytc/AIdro_m5KThYlo1YfHE89z7Z7CsFrWzbJ6zTQ0SScltX_GyVxXk=s176-c-k-c0x00ffffff-no-rj-mo"
+    img: "Jonna Jinton.jpg"
     links:
       - name: website
         url: "https://jonnajintonsweden.com/"
@@ -37,13 +37,13 @@ persons:
         url: "https://www.youtube.com/@jonnajinton"
   - name: Techlore
     description: "Techlore wants to spread privacy and security to the masses."
-    img: "https://yt3.googleusercontent.com/lwHqZYuTM3v0oBB_RevOFbD_cHL7AWUfYID_iv8trv6_4u4r7Go_t4qFJplYiJNQVC-14Tb8=s176-c-k-c0x00ffffff-no-rj"
+    img: "Techlore.jpg"
     links:
       - name: youtube
         url: "https://www.youtube.com/@techlore"
   - name: The Linux Experiment
     description: "The Linux Experiment talks about switching to and using Linux. In addition, he has weekly Linux and Open Source news."
-    img: "https://yt3.googleusercontent.com/ytc/AIdro_lAKf-vZLoTI-gZUoP5Y3gbdGd07E4eDHUhTee6aOzDCnU=s176-c-k-c0x00ffffff-no-rj"
+    img: "The linux experiment.jpg"
     links:
       - name: youtube
         url: "https://www.youtube.com/@TheLinuxEXP"
