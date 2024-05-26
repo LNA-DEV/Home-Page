@@ -10,14 +10,29 @@ searchHidden: false
 hidemeta: false
 ShowReadingTime: false
 ShowWordCount: false
+persons:
+  - name: Netzpolitik.org
+    description: "Netzpolitik.org ist ein gemeinnütziges Medium, welches sich für digitale Freiheitsrechte einsetzt und vorallem darüber berichtet. Es ist völlig spenden-finanziert und ohne Werbung, Trackern oder ähnlichem."
+    img: "Netzpolitik.png"
+    links:
+      - name: website
+        url: "https://netzpolitik.org/"
+  - name: Morpheus
+    description: "Über all seine Kanäle hinweg informiert er über die Informatik. Teils auf sehr technischer Ebene, aber auch teils für jeden verständlich. Je nach Kanal."
+    img: "Morpheus.jpg"
+    links:
+      - name: website
+        url: "https://www.the-morpheus.de/"
+      - name: mastodon
+        url: "https://mastodon.social/@TheMorpheus"
+      - name: youtube
+        url: "https://www.youtube.com/@TheMorpheusVlogs"
 ---
 
 Die Links hier sind zu deutschsprachigen Seiten. Für andere Sprachen habe ich eigene Auflistungen gemacht.
 
-## Websites
+{{< person >}}
 
-- [netzpolitik.org](https://netzpolitik.org/) ~ Netzpolitik.org ist ein gemeinnütziges Medium, welches sich für digitale Freiheitsrechte einsetzt und vorallem darüber berichtet. Es ist völlig spenden-finanziert und ohne Werbung, Trackern oder ähnlichem.
+## Others
 
-## YouTube-Channels
-
-- [Morpheus](https://www.youtube.com/@TheMorpheusVlogs) ~ Über all seine Kanäle hinweg informiert er über die Informatik. Teils auf sehr technischer Ebene, aber auch teils für jeden verständlich. Je nach Kanal.
+Noch leer 😞
