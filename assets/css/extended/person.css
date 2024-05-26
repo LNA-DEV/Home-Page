@@ -27,6 +27,8 @@
 
 .social-icons a {
   box-shadow: none;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 /* Grid */
