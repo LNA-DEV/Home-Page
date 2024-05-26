@@ -17,6 +17,10 @@ persons:
     links:
       - name: website
         url: "https://www.mollywhite.net/feed"
+      - name: mastodon
+        url: "https://hachyderm.io/@molly0xfff"
+      - name: youtube
+        url: "https://www.youtube.com/@molly0xfff"
   - name: Eric Murphy
     description: "A web developer writing about Linux, Privacy, and the web in general. And especially how it should be."
     img: "Eric Murphy.webp"
@@ -26,25 +30,25 @@ persons:
       - name: youtube
         url: "https://www.youtube.com/@EricMurphyxyz"
   - name: Jonna Jinton
-    description: "Jonna Jinton is a Swedish artist, musician, and filmmaker who lives in the North of Sweden. She writes about her life in the North and displays some of her incredible photography."
+    description: "Jonna Jinton is a Swedish artist, musician, and filmmaker who lives in the North of Sweden. She writes about her life in the North and displays some of her incredible photography. I especially like her open and heartful style."
     img: "Jonna Jinton.jpg"
     links:
       - name: website
         url: "https://jonnajintonsweden.com/"
-      - name: blog
+      - name: rss
         url: "https://jonnajintonsweden.com/blog/"
       - name: youtube
         url: "https://www.youtube.com/@jonnajinton"
-  - name: Techlore
-    description: "Techlore wants to spread privacy and security to the masses."
-    img: "Techlore.jpg"
-    links:
-      - name: youtube
-        url: "https://www.youtube.com/@techlore"
+      - name: instagram
+        url: "https://www.instagram.com/jonnajinton/"
   - name: The Linux Experiment
     description: "The Linux Experiment talks about switching to and using Linux. In addition, he has weekly Linux and Open Source news."
     img: "The linux experiment.jpg"
     links:
+      - name: website
+        url: "https://thelinuxexp.com/"
+      - name: mastodon
+        url: "https://mastodon.social/@thelinuxEXP"
       - name: youtube
         url: "https://www.youtube.com/@TheLinuxEXP"
 ---
@@ -58,7 +62,8 @@ All the links below are to English sites. I also have links for other languages.
 ## Others
 
 - [Privacy Tools IO](https://www.privacytools.io/) ~ This is a site to compare and find new cool tools that respect your privacy.
-- <https://www.natashabergen.com/>
-- <https://major.io/>
-- <https://maddy.one/>
-- <https://amelia.andersdotter.cc/index.html>
+- [Natasha Bergen](https://www.natashabergen.com/) ~ Natasha Bergen has pretty nice traveling content and a mission to climb the biggest mountain in every European country.
+- [Techlore](https://www.techlore.tech/) ~ Techlore wants to spread privacy and security to the masses.
+- [Major Hayden](https://major.io/) ~ Tech nerd writing about techy things.
+- [Maddy Wilcox](https://maddy.one/) ~ Pretty cool minimalist personal webpage. Has created a tool to remove all the ugly advertising from Windows.
+- [Amelia Andersdotter](https://amelia.andersdotter.cc/index.html) ~ Former Swedish politician for the Pirateparty.
