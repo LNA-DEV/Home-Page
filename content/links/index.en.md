@@ -10,34 +10,60 @@ searchHidden: false
 hidemeta: false
 ShowReadingTime: false
 ShowWordCount: false
+persons:
+  - name: Molly White
+    description: "Molly White writes about Web3 (critically), Wikipedia, the Indie-Web, and tech in general. She is the creator of [Web3 Is Going Just Create](https://www.web3isgoinggreat.com/) and [Citation Needed](https://www.citationneeded.news/)."
+    img: "Molly White.webp"
+    links:
+      - name: website
+        url: "https://www.mollywhite.net/feed"
+      - name: mastodon
+        url: "https://hachyderm.io/@molly0xfff"
+      - name: youtube
+        url: "https://www.youtube.com/@molly0xfff"
+  - name: Eric Murphy
+    description: "A web developer writing about Linux, Privacy, and the web in general. And especially how it should be."
+    img: "Eric Murphy.webp"
+    links:
+      - name: website
+        url: "https://ericmurphy.xyz/"
+      - name: youtube
+        url: "https://www.youtube.com/@EricMurphyxyz"
+  - name: Jonna Jinton
+    description: "Jonna Jinton is a Swedish artist, musician, and filmmaker who lives in the North of Sweden. She writes about her life in the North and displays some of her incredible photography. I especially like her open and heartful style."
+    img: "Jonna Jinton.jpg"
+    links:
+      - name: website
+        url: "https://jonnajintonsweden.com/"
+      - name: rss
+        url: "https://jonnajintonsweden.com/blog/"
+      - name: youtube
+        url: "https://www.youtube.com/@jonnajinton"
+      - name: instagram
+        url: "https://www.instagram.com/jonnajinton/"
+  - name: The Linux Experiment
+    description: "The Linux Experiment talks about switching to and using Linux. In addition, he has weekly Linux and Open Source news."
+    img: "The linux experiment.jpg"
+    links:
+      - name: website
+        url: "https://thelinuxexp.com/"
+      - name: mastodon
+        url: "https://mastodon.social/@thelinuxEXP"
+      - name: youtube
+        url: "https://www.youtube.com/@TheLinuxEXP"
 ---
+
+I want to give an overview on some things I like. This can be persons, projects or anything else I enjoy.
 
 All the links below are to English sites. I also have links for other languages. Check them out if you speak them.
 
-## Websites
+{{< person >}}
 
-### Tech
-
-- [Eric Murphy](https://ericmurphy.xyz/) ~ A web developer writing about Linux, Privacy, and the web in general. And especially how it should be.
+## Others
 
 - [Privacy Tools IO](https://www.privacytools.io/) ~ This is a site to compare and find new cool tools that respect your privacy.
-
-- [Molly White](https://www.mollywhite.net/feed) ~ Molly White writes about Web3 (critically), Wikipedia, the Indie-Web, and tech in general. She is the creator of [Web3 Is Going Just Create](https://www.web3isgoinggreat.com/) and [Citation Needed](https://www.citationneeded.news/).
-
-### Others
-
-- [Jonna Jinton](https://jonnajintonsweden.com/blog/) ~ Jonna Jinton is a Swedish artist, musician, and filmmaker who lives in the North of Sweden. She writes about her life in the North and displays some of her incredible photography.
-
-## YouTube Channels
-
-### Tech
-
-- [Techlore](https://www.youtube.com/@techlore) ~ Techlore wants to spread privacy and security to the masses.
-
-- [The Linux Experiment](https://www.youtube.com/@TheLinuxEXP) ~ The Linux Experiment talks about switching to and using Linux. In addition, he has weekly Linux and Open Source news.
-
-- [Eric Murphy](https://www.youtube.com/@EricMurphyxyz) ~ A web developer making videos about Linux, Privacy, and the web in general. And especially how it should be.
-
-### Others
-
-- [Jonna Jinton](https://www.youtube.com/@jonnajinton) ~ Jonna Jinton is a Swedish artist, musician, and filmmaker who lives in the North of Sweden. She showcases her life in the North in a really calming and heart-opening way.
+- [Natasha Bergen](https://www.natashabergen.com/) ~ Natasha Bergen has pretty nice traveling content and a mission to climb the biggest mountain in every European country.
+- [Techlore](https://www.techlore.tech/) ~ Techlore wants to spread privacy and security to the masses.
+- [Major Hayden](https://major.io/) ~ Tech nerd writing about techy things.
+- [Maddy Wilcox](https://maddy.one/) ~ Pretty cool minimalist personal webpage. Has created a tool to remove all the ugly advertising from Windows.
+- [Amelia Andersdotter](https://amelia.andersdotter.cc/index.html) ~ Former Swedish politician for the Pirateparty.

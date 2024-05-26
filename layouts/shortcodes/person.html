@@ -1,0 +1,21 @@
+<div class="person-grid">
+
+  {{ range $.Page.Params.persons }}
+
+  <div class="card">
+    <img src="{{ .img }}" alt="Image / logo of {{ .name }}" style="width: 100%"/>
+    <div class="container">
+      <h3><b>{{ .name }}</b></h3>
+      <p>{{ markdownify .description }}</p>
+
+      <div class="social-icons">
+      {{ range .links }}
+        <a href="{{ .url }}"> {{ partial "svg.html" . }} </a>
+      {{ end }}
+      </div>
+    </div>
+  </div>
+
+  {{ end }}
+
+</div>

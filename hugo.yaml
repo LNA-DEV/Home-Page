@@ -10,6 +10,11 @@ buildFuture: false
 buildExpired: true
 copyright: "🄯 CC-BY-ND [Lukas Nagel](./lukas-nagel)"
 
+markup:
+  goldmark:
+    # TODO Remove this to improve performance
+    duplicateResourceFiles: true # https://gohugo.io/content-management/page-resources/#multilingual
+
 outputs:
   home:
     - HTML
