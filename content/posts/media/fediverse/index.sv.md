@@ -1,12 +1,12 @@
 ---
-title: "Vad är det Fediversum?"
+title: "Vad är Fediversum?"
 date: 2024-06-05T21:30:02+02:00
 draft: false
 tags: ["Media", "Privacy", "Open Source", "Fediverse", "ActivityPub", "Social Media"]
 categories: ["Media", "Privacy"]
 showToc: true
 TocOpen: false
-description: "En enblik på en verklig sozial nätverk."
+description: "En insikt i ett verkligt socialt nätverk."
 disableShare: true
 disableHLJS: false
 searchHidden: false
@@ -14,17 +14,17 @@ sitemap:
   priority: 0.8
 ---
 
-{{< figure src="./fediverse.svg" alt="Das Fediverse-Logo" class="img-right" >}}
+{{< figure src="./fediverse.svg" alt="Fediversum-logotypen" class="img-right" >}}
 
-In diesem Post möchte ich darüber sprechen, was das Fediverse ist und warum du ihm beitreten solltest. Ich gehe nahezu gar nicht auf technische Details ein. Dieser Post ist dafür gemacht, von jedem verstanden zu werden.
+I detta inlägg vill jag prata om vad Fediversum är och varför du ska gå med i det. Jag vill inte prata mycket om tekniska detaljer. Detta inlägg ska kunna förstås av alla.
 
-Ein weiterer Post, zu den wirklich technischen Themen, ist für die Zukunft geplant.
+I framtiden vill jag göra ett annat inlägg där jag vill berätta om tekniska ämnen.
 
-## Wie setzt sich der Name zusammen?
+## Hur är orden sammansatt?
 
-Der Name ist ein Kofferwort aus dem englischen Wort für Föderation "Federation" und dem englischen Wort für Universum "Universe". Das Fediverse ist also ein föderiertes Universum.
+Namnet är en kontamination av orden 'federerad' och 'universum'. Så Fediversum är ett federerat universum.
 
-Dieser Name repräsentiert es ziemlich gut. Das Fediverse ist ein dezentralisiertes Netzwerk von sozialen Medienplattformen, die alle miteinander verbunden sind. Jeder kann sich mit jedem verbinden, auch wenn man völlig verschiedene Dienste verwendet. Man kann es sich wie bei der E-Mail vorstellen. Jeder Benutzer hat eine E-Mail-Adresse von einem bestimmten Anbieter, aber er kann mit jedem beliebigen anderem Nutzer schreiben, nicht nur mit Benutzern desselben Dienstes.
+Namnet är bra på att representera Fediversum. Det är ett decentraliserat nätverk av plattformar för sociala medier som är anslutna till varandra. Man kan kommunicera med varandra även om man använder en helt annan tjänst. Man kan se det som e-post. Varje användare har ett e-postkonto på en tjänst men kan skriva mejl till alla andra användare av olika tjänster.
 
 Für diejenigen, die mit den klassischen sozialen Netzwerken vertraut sind: Stell dir vor, du benutzt Twitter und siehst Instagram- oder Facebook-Beiträge in deiner Timeline, so als würden sie alle Twitter verwenden. Aber das ist noch nicht alles. Es könnten auch YouTube-Videos oder anderer Content deiner Wahl sein. Du entscheidest. Das ist die Schönheit des Fediverse.
 
