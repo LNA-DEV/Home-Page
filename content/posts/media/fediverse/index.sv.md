@@ -22,25 +22,25 @@ I framtiden vill jag göra ett annat inlägg där jag vill berätta om tekniska 
 
 ## Hur är orden sammansatt?
 
-Namnet är en kontamination av orden 'federerad' och 'universum'. Så Fediversum är ett federerat universum.
+Namnet är en kontamination av orden **federerad** och **universum**. Så Fediversum är ett federerat universum.
 
 Namnet är bra på att representera Fediversum. Det är ett decentraliserat nätverk av plattformar för sociala medier som är anslutna till varandra. Man kan kommunicera med varandra även om man använder en helt annan tjänst. Man kan se det som e-post. Varje användare har ett e-postkonto på en tjänst men kan skriva mejl till alla andra användare av olika tjänster.
 
-Für diejenigen, die mit den klassischen sozialen Netzwerken vertraut sind: Stell dir vor, du benutzt Twitter und siehst Instagram- oder Facebook-Beiträge in deiner Timeline, so als würden sie alle Twitter verwenden. Aber das ist noch nicht alles. Es könnten auch YouTube-Videos oder anderer Content deiner Wahl sein. Du entscheidest. Das ist die Schönheit des Fediverse.
+För dem av er som känner till de klassiska sociala medierna: Föreställ er att ni använder Twitter och ser Instagram-inlägg bredvid Twitter-inlägg i ert flöde. Det verkar som att alla använder Twitter, även om det inte stämmer. Men det är inte allt. Bredvid inläggen kan också vara YouTube-videor och andra typer av inlägg som du gillar. Det är ditt val. Därför är Fediversum så vackert.
 
-## Warum ist das Fediverse so wichtig?
+## Varför är Fediversum så viktigt?
 
-### Dezentralisierung
+### Decentralisering
 
-Die alten sozialen Medienplattformen gehören sehr großen Unternehmen. Nicht so ist es beim Fediverse. Zunächst gibt es viele Dienste im Fediverse, sodass das Ganze nicht im Besitz einer einzelnen Organisation oder Person sein kann. So ähnlich wie das Internet. Daher kann niemand die Benutzer zu etwas zwingen oder ihre Marktdominanz ausnutzen, wie es die aktuell großen Anbieter tun.
+De gamla sociala medierna ägs av verkligen stora företag. Så är det inte med Fediversum. För det första finns det många tjänster i Fediversum, så att ingen person eller företag kan äga hela nätverket. Liksom internet. Därför ingen kan tvinga sina användare till någonting eller missbruka sin dominerande ställning på marknaden, som stora tjänster gör.
 
-Die Entwickler der Fediverse-Plattform Peertube haben es auf einfache Weise erklärt. Hier ist eine deutsche Version ihres englischen Videos. (Das Video wird übrigens auf Peertube gehostet)
+Skaparna av tjänsten PeerTube i det fediversumet har en lättförståelig förklaring av ämnena. Videon är tyvärr endast på engelska. (För övrigt erbjuds videon av PeerTube)
 
-{{< peertube peertube.rlp.schule 0c8da8e8-0ee4-4431-93b4-7d5308fe5f27 >}}
+{{< peertube framatube.org 9dRFC6Ya11NCVeYKn8ZhiD >}}
 
-### Freie und offene Software (FOSS)
+### Fri och öppen programvara
 
-Aber auch die Entwickler von Fediverse-Software unterscheiden sich stark zu denen der klassischen sozialen Netzwerke. Das Fediverse besteht hauptsächlich aus FOSS (Free and Open Source Software), was bedeutet, dass die Software wirklich frei ist und unabhängige Entwickler sie modifizieren und zu ihrer Entwicklung beitragen können. FOSS ist unglaublich wichtig und ich werde die zahlreichen Vorteile in einem zukünftigen Post näher beschreiben.
+Men också skaparna av Fediversum programvara är helt annorlunda jämfört med de klassiska sociala nätverken. Fediversum är främst skapat med fri och öppen programvara. Det innebär att programvaran verkligen är fri och att varje programmerare kan förändra och utveckla den. Öppen programvara är verkligen viktigt, och jag vill prata om dess många fördelar i ett annat inlägg.
 
 Aufgrund dieser Freiheit ist die Sache mit dem Geldverdienen schwieriger. Der Benutzer wird jedoch auch nicht wie ein Rohstoff behandelt, da er durch Spenden aktiv zum Kunden wird. Dadurch gibt es hier übrigens auch keine Werbung.
 
@@ -180,7 +180,7 @@ Eine weitere seltsame Sache in den alten Netzwerken ist die Kontoverifizierung. 
 
 Ich habe mich entschieden, die wirklich technischen Details nicht in diesen Beitrag aufzunehmen. Das hätte diesen Blogbeitrag noch länger gemacht, als er jetzt schon ist. Ich habe etwas Erfahrung darin, Server für das Fediverse zu erstellen, aufgrund von [Fedodo](../../projects/whathappenedtofedodo). Ich möchte diese Erfahrung in einem zukünftigen Beitrag teilen und über die Details von [ActivityPub](../../../tags/activitypub) sprechen. Das ist das Protokoll, das die meisten im Fediverse betriebenen Dienste zusammenführt.
 
-## Danke
+## Tack
 
 Vielen Dank an die tollen Künstler, die ihre Werke unter Creative Commons-Lizenzen zur Verfügung stellen. Sie haben mir sehr geholfen, diesen Beitrag zu illustrieren. Links sind unter jedem Bild verfügbar. Schau sie dir gerne an!
 
