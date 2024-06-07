@@ -42,7 +42,7 @@ Skaparna av tjänsten PeerTube i det fediversumet har en lättförståelig förk
 
 Men också skaparna av Fediversum programvara är helt annorlunda jämfört med de klassiska sociala nätverken. Fediversum är främst skapat med fri och öppen programvara. Det innebär att programvaran verkligen är fri och att varje programmerare kan förändra och utveckla den. Öppen programvara är verkligen viktigt, och jag vill prata om dess många fördelar i ett annat inlägg.
 
-Aufgrund dieser Freiheit ist die Sache mit dem Geldverdienen schwieriger. Der Benutzer wird jedoch auch nicht wie ein Rohstoff behandelt, da er durch Spenden aktiv zum Kunden wird. Dadurch gibt es hier übrigens auch keine Werbung.
+Eftersom användarna är så fria är det svårt att tjäna pengar. Men det är bra för dem eftersom de inte missbrukas som råvara. Fediversum finansieras genom donationer och därför är användarna riktiga kunder. Det finns förresten inga annonser i nätverket.
 
 Daher sind die Softwareproduzenten des Fediverse hauptsächlich Freiwillige oder gemeinnützige Organisationen. Beide dieser Gruppen wollen das Internet zu einem besseren Ort machen und nicht nur sich selbst bereichern.
 
