@@ -44,7 +44,7 @@ Men också skaparna av Fediversum programvara är helt annorlunda jämfört med 
 
 Eftersom användarna är så fria är det svårt att tjäna pengar. Men det är bra för dem eftersom de inte missbrukas som råvara. Fediversum finansieras genom donationer och därför är användarna riktiga kunder. Det finns förresten inga annonser i nätverket.
 
-Daher sind die Softwareproduzenten des Fediverse hauptsächlich Freiwillige oder gemeinnützige Organisationen. Beide dieser Gruppen wollen das Internet zu einem besseren Ort machen und nicht nur sich selbst bereichern.
+Därför är skaparna av Fediversum-programvara huvudsakligen frivilliga och ideella organisationer. Båda grupperna vill skapa ett nytt och öppet internet och inte berika sig själva.
 
 Außerdem handeln nicht nur die Softwareproduzenten fair, sondern auch die Leute, die die Server betreiben, sind hauptsächlich Freiwillige, Organisationen oder sogar Staaten!
 
