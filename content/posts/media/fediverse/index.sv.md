@@ -46,9 +46,9 @@ Eftersom användarna är så fria är det svårt att tjäna pengar. Men det är 
 
 Därför är skaparna av Fediversum-programvara huvudsakligen frivilliga och ideella organisationer. Båda grupperna vill skapa ett nytt och öppet internet och inte berika sig själva.
 
-Außerdem handeln nicht nur die Softwareproduzenten fair, sondern auch die Leute, die die Server betreiben, sind hauptsächlich Freiwillige, Organisationen oder sogar Staaten!
+Dessutom handlar det inte bara om skaparna, utan även de som driver servrarna är volontärer, organisationer och till och med stater!
 
-### Der Druck der Massen
+### Massornas tryck
 
 Da du im Fediverse frei einen beliebigen Dienst wählen kannst, wird niemand mehr aufgrund dessen aus der Gesellschaft ausgeschlossen. Ich empfinde das als ein großes Problem bei den klassischen Social-Media-Plattformen. Ich nutze beispielsweise keine dieser Plattformen mehr. Ich möchte all die schlechten Dinge die diese Plattformen tun nicht unterstützen. Deswegen fühle ich mich manchmal in bestimmten Kontexten etwas ausgeschlossen.
 
