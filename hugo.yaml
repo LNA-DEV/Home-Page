@@ -8,7 +8,7 @@ enableRobotsTXT: true
 buildDrafts: true
 buildFuture: false
 buildExpired: true
-copyright: "🄯 CC-BY-ND [Lukas Nagel](./lukas-nagel)"
+copyright: "🄯 CC-BY-ND [Lukas Nagel]({{< ref \"lukas-nagel\" >}})"
 
 markup:
   goldmark:
