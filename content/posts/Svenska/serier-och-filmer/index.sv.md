@@ -20,11 +20,13 @@ Eftersom det är inte många Serier och filmar som är översättas till Svenska
 
 ## Barracuda Queens
 
-<!-- Netflix -->
-
 ![Omslag av serien Barracuda Queens](./BarracudaQueens.jpg)
 
+Barracuda Queens spela i året 1995 och är namnet av en tjejgäng. Det handlar om dem fem tjejer. Dem är vänner och behöva pengar eftersom olika skäl. De bryta in på rika människor som några av dem de känner till. Det spela i Djursholm nära Stockholm som är en av de rikaste miljöer i Sverige. De är jagad av polisen och måste titta på varandra så dem inte enda upp i fängelse.
 
+Jag måste säga att jag gillade serien gärna. Det är en verkligen fin brott serie in en gammal sätt. Jag har tittat det två gånger sedan och jag är fascinerad hur man kan se att man bli bättre den ända gången. Den första gången jag förstått bara två tredjedelar och nu några månader sedan det är mycket bättre så att jag förstå nästan alla. Jag skulle säga 80% till 90%.
+
+Du kan titta på denna serier på Netflix. Det bestå av sex avsnitt.
 
 ## Kärlek & anarki
 
