@@ -30,24 +30,40 @@ Du kan titta på denna serier på Netflix. Det bestå av sex avsnitt.
 
 ## Kärlek & anarki
 
-<!-- Netflix -->
-
 ![Omslag av serien Kärlek & Anarki](KärlekOchAnarki.jpg)
+
+Kärlek och anarki spela i det modernt Stockholm. Det handla om den unga it tekniker kallas Max och en gift kvinnor Sofie som är expert på framtidsutveckling och en mor av två. På början är hon en verkliga affärsmän. De möta på jobbet på en forellägare. Serien handlar om deras svårt förhållande och deras ut av norm flirta spel. 
+
+Genren är samtidigt komedi och drama men jag tycka att även om situationen är rolig serien inneboende är seriös. Jag verkligen gilla att hon har det "anarkistisk" sida och växlas mellan seriöst och rolig. Jag tänka att man kan se hur hon finnas mer och mer sin sanna jaget och lösa sig av hennes vanlig liv för att göra vad hon verkligen vill.
+
+Det är två säsonger med varje åtta episoder på Netflix.
 
 ## Historien om Sverige
 
-<!-- SVT -->
-
 ![Omslag av serien Historien om Sverige](HistorienOmSverige.jpg)
+
+Historien om Sverige är en dokumentär serie som handla om hela Historien av Sverige från dem första människa till vikingar tiden till i dag. Närmare bestämt handla det om stenåldern, metallernas tid, vikingarnas tid, hur kristen religionen har kommit till Sverige, den kampen om tronen, stormakten Sverige, häxor och mer krig, det nya tider, demokratisering och slutligen i dag som säga SVT att Sverige är det modernst land på världen.
+
+Jag verkligen tycka om hela serien men jag har favorit episoder. Jag särskilt gillade den sista tre episoden eftersom de handla om hur Sverige har blivit ett modernt land med en verkligen bra demokrati, välfärdssystem och frihet i allmänhatten. Men dem andra episoder är verkligen bra också. Till exempel jag gillade stormakten Sverige också verkligen gärna. Hela serien har en bra kvalitet och är rolig att titta.
+
+Denna serien var det första jag har tittat på Svenska så jag har inte förstått allt. Men några jag har förstått ändå. Jag tänka att det vill bli bra att titta på det igen i framtiden.
+
+Det finns tio episoder på [SVT](https://www.svtplay.se/historien-om-sverige) den Svenska TV bolag i allmänhetens tjänst. Jag kann verkligen rekommendera SVT eftersom de har många gratis innehåll och jag tycka att det är en verkligen god kvalitet. En tipp för att titta på SVT från utanför Sverige är använda en VPN tjänst så man kan låtsas vara i Sverige.
 
 ## Vinterviken
 
-<!-- Netflix -->
-
 ![Omslag av filmen Vinterviken](Vinterviken.jpg)
+
+Det är den första film i denna lista. Vinterviken spela i modernt Stockholm igen. Det handla om en kille namnat Joe Joe (JJ) och en tjej namnat Elisabeth. JJ är av arabsikt ursprung och levas i en fattig del av Stockholm. Elisabeth däremot är dotter av en rika Svensk familj. En dag Joe Joe räddar syster av Elisabeth av drunkning så dem möta efter det. Filmen är berättelse av deras kärlek och förhållande vilken är svår eftersom omständligheten. Till exempel är brott vanlig in JJ dagligt liv även om han är en fin kille.
+
+Jag gillade filmen men inte som de andra på lista. Det var en lugnt film tänka jag men det är inget problem. Jag tänka att målgrupp av filmen är ungdomar så det kan förklara det.
+
+Du kan titta det film på Netflix.
 
 ## En helt vanlig familj
 
-<!-- Netflix -->
-
 ![Omslag av serien En helt vanlig familj](EnHeltVanligFamilj.jpg)
+
+En helt vanlig familj är en kort brott serie. Den här gången spela serien på Lund en liten stan nära Malmö. Det handla om en tjej som blev våldtagen när hon var yngre. Nu hon träffas en äldre kille som är rik.
+
+Det finns sex episoder på Netflix.
