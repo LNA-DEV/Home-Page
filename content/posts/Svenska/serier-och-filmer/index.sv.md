@@ -12,7 +12,7 @@ disableHLJS: false
 searchHidden: false
 ---
 
-Jag lär mig Svenska själv sedan cirka tio månader. Jag började titta på filmar och serier tidigare i året. I denna inlägg jag vill berätta om vad jag har tittat, om vad det handlade och om jag tyckte det om. (Det här är inte allt jag har set. Men det är det jag tänka att är intressant.)
+Jag lär mig Svenska själv sedan cirka tio månader. Jag började titta på filmar och serier tidigare i året. I den inlägg jag vill berätta om vad jag har tittat, om vad det handlade och om jag tyckte det om. (Det här är inte allt jag har set. Men det är det jag tänka att är intressant.)
 
 Eftersom det är inte många Serier och filmar som är översättas till Svenska all av dem är Svensk produktioner. 
 
@@ -22,9 +22,9 @@ Eftersom det är inte många Serier och filmar som är översättas till Svenska
 
 ![Omslag av serien Barracuda Queens](./BarracudaQueens.jpg)
 
-Barracuda Queens spela i året 1995 och är namnet av en tjejgäng. Det handlar om dem fem tjejer. Dem är vänner och behöva pengar eftersom olika skäl. De bryta in på rika människor som några av dem de känner till. Det spela i Djursholm nära Stockholm som är en av de rikaste miljöer i Sverige. De är jagad av polisen och måste titta på varandra så dem inte enda upp i fängelse.
+Barracuda Queens spela i året 1995 och är namnet av en tjejgäng. Det handlar om dem fem tjejer. De är vänner och behöva pengar eftersom olika skäl. De bryta in på rika människor som några av dem de känner till. Det spela i Djursholm nära Stockholm som är en av de rikaste miljöer i Sverige. De är jagad av polisen och måste titta på varandra så de inte enda upp i fängelse.
 
-Jag måste säga att jag gillade serien gärna. Det är en verkligen fin brott serie in en gammal sätt. Jag har tittat det två gånger sedan och jag är fascinerad hur man kan se att man bli bättre den ända gången. Den första gången jag förstått bara två tredjedelar och nu några månader sedan det är mycket bättre så att jag förstå nästan alla. Jag skulle säga 80% till 90%.
+Jag måste säga att jag gillade serien gärna. Det är en verkligen fin brott serie i en gammal sätt. Jag har tittat på den två gånger sedan och jag är fascinerad hur man kan se att man bli bättre den ända gången. Den första gången jag förstått bara två tredjedelar och nu några månader sedan det är mycket bättre så att jag förstå nästan allt. Jag skulle säga 80% till 90%.
 
 Du kan titta på denna serier på Netflix. Det bestå av sex avsnitt.
 
@@ -64,6 +64,8 @@ Du kan titta det film på Netflix.
 
 ![Omslag av serien En helt vanlig familj](EnHeltVanligFamilj.jpg)
 
-En helt vanlig familj är en kort brott serie. Den här gången spela serien på Lund en liten stan nära Malmö. Det handla om en tjej som blev våldtagen när hon var yngre. Nu hon träffas en äldre kille som är rik.
+En helt vanlig familj är en kort brott serie. Den här gången spela serien på Lund en liten stan nära Malmö. Det handla om en tjej som blev våldtagen när hon var yngre. Nu hon träffas en äldre kille som är rik. De gå på några dejtar men det är någonting konstigt med han.
+
+Det var rolig att titta serien men jag gilla de först tre serier på listan mer än den. Men jag njöt serien och det var bra att se lite av Lund, Malmö och Köpenhamn. Om du tycka om brott serier med mord, våldtäkt och andra mörka saker du vill gilla om den här.
 
 Det finns sex episoder på Netflix.
