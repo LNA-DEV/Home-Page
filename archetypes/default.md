@@ -11,4 +11,6 @@ description: "Desc Text."
 disableShare: true
 disableHLJS: false
 searchHidden: false
+sitemap:
+  priority: 0.8
 ---
