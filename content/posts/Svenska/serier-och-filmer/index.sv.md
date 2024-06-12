@@ -1,6 +1,6 @@
 ---
 title: "Serier och filmer för att lära sig Svenska själv"
-date: 2024-06-09T20:09:20+02:00
+date: 2024-06-12T20:09:20+02:00
 draft: false
 tags: ["Svenska", "Språk", "Film och serier"]
 categories: ["Svenska"]
@@ -10,62 +10,64 @@ description: "I denna inlägg jag berätta om filmar och serier jag har sett fö
 disableShare: true
 disableHLJS: false
 searchHidden: false
+sitemap:
+  priority: 0.8
 ---
 
-Jag lär mig Svenska själv sedan cirka tio månader. Jag började titta på filmar och serier tidigare i året. I den inlägg jag vill berätta om vad jag har tittat, om vad det handlade och om jag tyckte det om. (Det här är inte allt jag har set. Men det är det jag tänka att är intressant.)
+Jag lär mig svenska själv sedan cirka tio månader. Jag började titta på filmer och serier tidigare i år. I det här inlägget vill jag berätta om vad jag har tittat på, vad det handlade om och om jag tyckte om det. (Det här är inte allt jag har sett, men det är det jag tänker är intressant.)
 
-Eftersom det är inte många Serier och filmar som är översättas till Svenska all av dem är Svensk produktioner. 
+Eftersom det inte finns många serier och filmer som är översatta till svenska, är alla av dem svenska produktioner.
 
-> Jag försöka att berätta utan att spoiler filmen eller serien. Men det kan bli mindre spoilers. Så var varnad!
+> Jag ska försöka berätta utan att spoila filmen eller serien. Men det kan bli mindre spoilers. Så var varnad!
 
 ## Barracuda Queens
 
 ![Omslag av serien Barracuda Queens](./BarracudaQueens.jpg)
 
-Barracuda Queens spela i året 1995 och är namnet av en tjejgäng. Det handlar om dem fem tjejer. De är vänner och behöva pengar eftersom olika skäl. De bryta in på rika människor som några av dem de känner till. Det spela i Djursholm nära Stockholm som är en av de rikaste miljöer i Sverige. De är jagad av polisen och måste titta på varandra så de inte enda upp i fängelse.
+Barracuda Queens utspelar sig år 1995 och är namnet på ett tjejgäng. Det handlar om fem tjejer. De är vänner och behöver pengar av olika skäl. De bryter in hos rika människor, några av dem de känner. Det utspelar sig i Djursholm nära Stockholm, som är en av de rikaste områdena i Sverige. De jagas av polisen och måste se upp för varandra så att de inte hamnar i fängelse.
 
-Jag måste säga att jag gillade serien gärna. Det är en verkligen fin brott serie i en gammal sätt. Jag har tittat på den två gånger sedan och jag är fascinerad hur man kan se att man bli bättre den ända gången. Den första gången jag förstått bara två tredjedelar och nu några månader sedan det är mycket bättre så att jag förstå nästan allt. Jag skulle säga 80% till 90%.
+Jag måste säga att jag gillade serien. Det är en riktigt bra brottsserie på ett gammaldags sätt. Jag har tittat på den två gånger och jag är fascinerad av hur man kan märka att man blir bättre varje gång. Första gången förstod jag bara två tredjedelar, men nu några månader senare är det mycket bättre och jag förstår nästan allt. Jag skulle säga 80% till 90%.
 
-Du kan titta på denna serier på Netflix. Det bestå av sex avsnitt.
+Du kan titta på denna serie på Netflix. Den består av sex avsnitt.
 
 ## Kärlek & anarki
 
 ![Omslag av serien Kärlek & Anarki](KärlekOchAnarki.jpg)
 
-Kärlek och anarki spela i det modernt Stockholm. Det handla om den unga it tekniker kallas Max och en gift kvinnor Sofie som är expert på framtidsutveckling och en mor av två. På början är hon en verkliga affärsmän. De möta på jobbet på en forellägare. Serien handlar om deras svårt förhållande och deras ut av norm flirta spel. 
+Kärlek & anarki utspelar sig i det moderna Stockholm. Det handlar om den unga IT-teknikern Max och en gift kvinna, Sofie, som är expert på framtidsutveckling och mor till två barn. I början är hon en riktig affärskvinna. De möts på jobbet på ett förlag. Serien handlar om deras svåra förhållande och deras utmanande flirtspel.
 
-Genren är samtidigt komedi och drama men jag tycka att även om situationen är rolig serien inneboende är seriös. Jag verkligen gilla att hon har det "anarkistisk" sida och växlas mellan seriöst och rolig. Jag tänka att man kan se hur hon finnas mer och mer sin sanna jaget och lösa sig av hennes vanlig liv för att göra vad hon verkligen vill.
+Genren är både komedi och drama, men jag tycker att även om situationerna är roliga, är serien i grunden seriös. Jag gillar verkligen att hon har en "anarkistisk" sida och växlar mellan att vara seriös och rolig. Jag tänker att man kan se hur hon hittar mer och mer av sitt sanna jag och frigör sig från sitt vanliga liv för att göra vad hon verkligen vill.
 
-Det är två säsonger med varje åtta episoder på Netflix.
+Det finns två säsonger med åtta avsnitt vardera på Netflix.
 
 ## Historien om Sverige
 
 ![Omslag av serien Historien om Sverige](HistorienOmSverige.jpg)
 
-Historien om Sverige är en dokumentär serie som handla om hela Historien av Sverige från dem första människa till vikingar tiden till i dag. Närmare bestämt handla det om stenåldern, metallernas tid, vikingarnas tid, hur kristen religionen har kommit till Sverige, den kampen om tronen, stormakten Sverige, häxor och mer krig, det nya tider, demokratisering och slutligen i dag som säga SVT att Sverige är det modernst land på världen.
+Historien om Sverige är en dokumentärserie som handlar om hela Sveriges historia, från de första människorna till vikingatiden och fram till idag. Närmare bestämt handlar det om stenåldern, metallernas tid, vikingarnas tid, hur kristendomen kom till Sverige, kampen om tronen, stormakten Sverige, häxor och fler krig, de nya tiderna, demokratiseringen och slutligen idag, då SVT säger att Sverige är det modernaste landet i världen.
 
-Jag verkligen tycka om hela serien men jag har favorit episoder. Jag särskilt gillade den sista tre episoden eftersom de handla om hur Sverige har blivit ett modernt land med en verkligen bra demokrati, välfärdssystem och frihet i allmänhatten. Men dem andra episoder är verkligen bra också. Till exempel jag gillade stormakten Sverige också verkligen gärna. Hela serien har en bra kvalitet och är rolig att titta.
+Jag tyckte verkligen om hela serien men jag har favoritepisoder. Jag särskilt gillade de sista tre episoderna eftersom de handlar om hur Sverige har blivit ett modernt land med en riktigt bra demokrati, välfärdssystem och frihet i allmänhet. Men de andra episoderna är också riktigt bra. Till exempel gillade jag verkligen stormakten Sverige. Hela serien har bra kvalitet och är rolig att titta på.
 
-Denna serien var det första jag har tittat på Svenska så jag har inte förstått allt. Men några jag har förstått ändå. Jag tänka att det vill bli bra att titta på det igen i framtiden.
+Denna serie var den första jag tittade på på svenska så jag förstod inte allt. Men jag förstod ändå en del. Jag tänker att det kan vara bra att titta på den igen i framtiden.
 
-Det finns tio episoder på [SVT](https://www.svtplay.se/historien-om-sverige) den Svenska TV bolag i allmänhetens tjänst. Jag kann verkligen rekommendera SVT eftersom de har många gratis innehåll och jag tycka att det är en verkligen god kvalitet. En tipp för att titta på SVT från utanför Sverige är använda en VPN tjänst så man kan låtsas vara i Sverige.
+Det finns tio episoder på [SVT](https://www.svtplay.se/historien-om-sverige), Sveriges Television i allmänhetens tjänst. Jag kan verkligen rekommendera SVT eftersom de har mycket gratis innehåll och jag tycker att det är av riktigt god kvalitet. Ett tips för att titta på SVT från utanför Sverige är att använda en VPN-tjänst så man kan låtsas vara i Sverige.
 
 ## Vinterviken
 
 ![Omslag av filmen Vinterviken](Vinterviken.jpg)
 
-Det är den första film i denna lista. Vinterviken spela i modernt Stockholm igen. Det handla om en kille namnat Joe Joe (JJ) och en tjej namnat Elisabeth. JJ är av arabsikt ursprung och levas i en fattig del av Stockholm. Elisabeth däremot är dotter av en rika Svensk familj. En dag Joe Joe räddar syster av Elisabeth av drunkning så dem möta efter det. Filmen är berättelse av deras kärlek och förhållande vilken är svår eftersom omständligheten. Till exempel är brott vanlig in JJ dagligt liv även om han är en fin kille.
+Det är den första filmen på denna lista. Vinterviken utspelar sig i moderna Stockholm igen. Det handlar om en kille som heter John John (JJ) och en tjej som heter Elisabeth. JJ är av arabiskt ursprung och lever i en fattig del av Stockholm. Elisabeth däremot är dotter till en rik svensk familj. En dag räddar John John Elisabeths syster från att drunkna, så de möts efter det. Filmen är berättelsen om deras kärlek och förhållande, vilket är svårt på grund av omständigheterna. Till exempel är brott vanligt i JJs dagliga liv även om han är en fin kille.
 
-Jag gillade filmen men inte som de andra på lista. Det var en lugnt film tänka jag men det är inget problem. Jag tänka att målgrupp av filmen är ungdomar så det kan förklara det.
+Jag gillade filmen men inte lika mycket som de andra på listan. Det var en lugn film tycker jag men det är inget problem. Jag tänker att målgruppen för filmen är ungdomar, så det kan förklara det.
 
-Du kan titta det film på Netflix.
+Du kan titta på filmen på Netflix.
 
 ## En helt vanlig familj
 
 ![Omslag av serien En helt vanlig familj](EnHeltVanligFamilj.jpg)
 
-En helt vanlig familj är en kort brott serie. Den här gången spela serien på Lund en liten stan nära Malmö. Det handla om en tjej som blev våldtagen när hon var yngre. Nu hon träffas en äldre kille som är rik. De gå på några dejtar men det är någonting konstigt med han.
+En helt vanlig familj är en kort brottserie. Den här gången utspelar sig serien i Lund, en liten stad nära Malmö. Det handlar om en tjej som blev våldtagen när hon var yngre. Nu träffar hon en äldre kille som är rik. De går på några dejter men det är något konstigt med honom.
 
-Det var rolig att titta serien men jag gilla de först tre serier på listan mer än den. Men jag njöt serien och det var bra att se lite av Lund, Malmö och Köpenhamn. Om du tycka om brott serier med mord, våldtäkt och andra mörka saker du vill gilla om den här.
+Det var roligt att titta på serien, men jag gillade de första tre serierna på listan mer än denna. Men jag njöt av serien och det var bra att se lite av Lund, Malmö och Köpenhamn. Om du tycker om brottserier med mord, våldtäkt och andra mörka teman kommer du att gilla den här.
 
 Det finns sex episoder på Netflix.
