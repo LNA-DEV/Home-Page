@@ -1,18 +1,20 @@
 ---
 title: "Why I need a home server and you might too"
-date: 2024-07-21T21:40:21+02:00
+date: 2024-07-21T16:40:21+02:00
 draft: false
-tags: ["first"]
-categories: ["first"]
+tags: ["Privacy", "Home Server", "NAS", "Open Source", "Selfhosting", "Home-Server Project"]
+categories: ["Privacy", "Projects"]
 showToc: true
 TocOpen: false
-description: "Desc Text."
+description: "In this post i discuss the reasons why I decided to build a home server and talk about the advantages and disadvantages."
 disableShare: true
 disableHLJS: false
 searchHidden: false
 sitemap:
   priority: 0.8
 ---
+
+First of all this post is the first post of a bigger series of blog post I will dedicate to building my home server. You can find all of them under the tag [Home-Server Project](../../../tags/home-server-project/).
 
 There are many reasons someone would want to have a home server. In this post I want to explain my reasons and how I build / setup everything.
 
