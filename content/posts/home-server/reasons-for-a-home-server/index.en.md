@@ -52,7 +52,8 @@ This knowledge can also payback in your job as you gain experience you maybe wou
 
 Last but not least I want to mention a small point I think is notable. If you are building all of this for you it is really easy to give a few other people access to the services you are running. So you can help out your friends and family to have a better privacy and generally speaking all of the benefits I was talking about. [^liabilityFriends]
 
-## Footnotes
+
+<!-- Footnotes -->
 
 [^shouldHaveCloudService]: Of course you should not use services that are not end to end encrypted or run by one of the big tech companies. But a service like that provides great value. Especially if you selfhost it!
 [^oneDrivePrice]: Data from <https://www.microsoft.com/en-us/microsoft-365/onedrive/compare-onedrive-plans> retrieved on July 24.
