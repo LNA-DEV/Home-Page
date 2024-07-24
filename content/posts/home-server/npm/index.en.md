@@ -15,7 +15,6 @@ sitemap:
   priority: 0.8
 ---
 
-
 ### Nginx proxy manager
 
 Accessing your apps by such a weird port and without a proper domain isn't cutting it. Is it? Therfore I also have a reverse proxy running which manages TLS encryption and sends traffic for each subdomain to its own app without having a special port in the URL. In this part I want to show you how you can set this up to.
@@ -28,12 +27,13 @@ First of all we can not install this app how we would normaly install a app. It 
 
 So to start go to the app catalog and press `Custom APP` in the top right corner. There you can setup everything. I will provide the required configuration below.
 
-| Configuration name | Value                                                                                                   |
-| ------------------ | ------------------------------------------------------------------------------------------------------- |
-| Image repository   | `jc21/nginx-proxy-manager`                                                                              |
-| Image tag          | `latest`                                                                                                |
-| External interface | Choose your interface and use an IP address which is not used by any device including your server. [^1] |
-| DNS policy         | Prioritize Kubernetes DNS [^2]                                                                          |
+| Configuration name | Value                                                                                                                          |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| Image repository   | `jc21/nginx-proxy-manager`                                                                                                     |
+| Image tag          | `latest`                                                                                                                       |
+| External interface | Choose your interface and use an IP address which is not used by any device including your server. [^1]                        |
+| DNS policy         | Prioritize Kubernetes DNS [^2]                                                                                                 |
+| Storage            | Here you have to setup two storages. One for `/etc/letsencrypt` and one for `/data`. I would recommend using Host Path Volumes |
 
 After installing the app you can access it on its ip address on port `81` and the username is `admin@example.com` while the password is `changeme`. Change them immediately!
 
