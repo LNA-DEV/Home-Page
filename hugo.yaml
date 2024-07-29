@@ -5,7 +5,7 @@ enableEmoji: true
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: true
 enableRobotsTXT: true
-buildDrafts: true
+buildDrafts: false
 buildFuture: false
 buildExpired: true
 copyright: "🄯 CC-BY-ND [Lukas Nagel]({{< ref \"lukas-nagel\" >}})"
