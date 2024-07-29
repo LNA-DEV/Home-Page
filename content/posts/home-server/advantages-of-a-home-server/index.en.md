@@ -1,12 +1,12 @@
 ---
 title: "Why I need a home server and you might too"
-date: 2024-07-24T22:10:00+02:00
+date: 2024-07-29T21:34:00+02:00
 draft: false
 tags: ["Privacy", "Home Server", "NAS", "Open Source", "Selfhosting", "Home-Server Project"]
 categories: ["Privacy", "Projects"]
 showToc: true
 TocOpen: false
-description: "In this post, I discuss the reasons why I decided to build a home server and talk about the advantages and disadvantages."
+description: "In this post, I discuss the reasons why I decided to build a home server and talk about the advantages of having one."
 disableShare: true
 disableHLJS: false
 searchHidden: false
@@ -20,7 +20,7 @@ There are many reasons someone would want to have a home server. In this post, I
 
 ## Privacy and Independence
 
-For me, there are a few main reasons why I wanted to get started with self-hosting. I think my journey began about two years ago in 2022 when I first played around with a Synology NAS. This helped me a bit with some of the goals I had. Having a Synology NAS improved my independence, especially from the big tech nightmares and therefore also improved my privacy. But after a while, I felt that something wasn't quite right with this setup. First, the Synology software is not **Open Source** and therefore there are still **privacy** concerns. Also, Synology is a Taiwanese company and the situation with China was worrying me. (There would be a lot of bigger problems in tech, but it was still concerning.)
+For me, there are a few main reasons why I wanted to get started with self-hosting. I think my journey began about two years ago in 2022 when I first played around with a Synology NAS. This helped me a bit with some of the goals I had. Having a Synology NAS improved my independence, especially from the big tech nightmares and therefore also improved my privacy. But after a while, I felt that something wasn't quite right with this setup. First, the Synology software is not **Open Source** and therefore there are still **privacy** concerns. (I will cover why this is so important to me in a future post.) Also, Synology is a Taiwanese company and the situation with China was worrying me. (There would be a lot of bigger problems in tech, but it was still concerning.)
 
 So the next step was building my own NAS / home server with custom **Open Source** software. I explain this in another post of this series. For now, let's just say I built my own server about a year ago in 2023 and now I have all my data at home in an environment I trust and am able to control fully. So I achieved a lot of independence from the shady big tech companies.
 
