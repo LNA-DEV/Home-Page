@@ -1,8 +1,16 @@
 ---
 title: "How I built my home server using TrueNAS Scale"
-date: 2024-08-13T19:04:10+02:00
+date: 2024-08-13T22:02:10+02:00
 draft: false
-tags: ["Privacy", "Home Server", "Open Source", "Selfhosting", "Home-Server Project", "TrueNAS"]
+tags:
+  [
+    "Privacy",
+    "Home Server",
+    "Open Source",
+    "Selfhosting",
+    "Home-Server Project",
+    "TrueNAS",
+  ]
 categories: ["Privacy", "Projects"]
 showToc: true
 TocOpen: false
@@ -14,7 +22,7 @@ sitemap:
   priority: 0.8
 ---
 
-This post is part two of a bigger series of blog posts about my home server and how you can make your own. In [the first post](../advantages-of-a-home-server/), I describe why I wanted to have a home server and the next one will be about how to set up the Nginx Proxy Manager (NPM) without TrueCharts. You can find all posts under the [Home-Server Project](../../../tags/home-server-project/) tag.
+This post is part two of a bigger series of blog posts about my home server and how you can make your own. In [the first post](../advantages-of-a-home-server/) I describe why I wanted to have a home server and the next one will be about how to set up the Nginx Proxy Manager (NPM) without TrueCharts. You can find all posts under the [Home-Server Project](../../../tags/home-server-project/) tag.
 
 ## Hardware
 
@@ -22,7 +30,17 @@ This post is part two of a bigger series of blog posts about my home server and 
 
 (Looks a bit messy, I know 😅 But I somehow like it 😜)
 
-As you can see, I am using an old PC as my server. This has the advantage that I only needed to buy the hard drives to support my storage needs, but the downside is that electricity consumption is rather high. Last time I measured, with all my apps running, it consumed about 60W. A fresh build could be optimized for electricity consumption, which can save you a lot of money if you want the server to run 24/7. [^alwaysRunning]
+{{<collapse summary="Full specs">}}
+| Type | Hardware                                  |
+| ---- | ----------------------------------------- |
+| CPU  | Intel i7                                  |
+| RAM  | 32 GB DDR3                                |
+| HDD  | 5 x 6TB Seagate Ironwolf (For storage)    |
+| SSD  | 128 GB Samsung (For the OS)               |
+| GPU  | NVIDIA GTX 970 (Can be used in some apps) |
+{{</collapse>}}
+
+As you can see, I am using an old PC as my server. This has the advantage that I only needed to buy the hard drives to support my storage needs, but the downside is that electricity consumption is rather high. Last time I measured with all my apps running, it consumed about 60W. A fresh build could be optimized for electricity consumption, which can save you a lot of money if you want the server to run 24/7. [^alwaysRunning]
 
 I chose not to do a hardware RAID because I am using the ZFS file system. I will explain this in detail in [a dedicated part](#openzfs).
 
@@ -32,26 +50,17 @@ I unfortunately do not have ECC RAM, but if you can get it, I would recommend it
 
 ### Uninterrupted Power Supply (UPS)
 
-I bought a UPS to support my server in case of power outages. The UPS has a battery that can keep my server alive for about 15 minutes, then it gives a signal to the server, which is configured to shut down before the UPS battery runs out. This ensures that most power outages never cause a problem, as they are shorter than the battery time and if the power is out for a while, the server shuts down gracefully.
-
-<!-- TODO Add those? -->
-<!-- ### Full specs
-
-CPU: TODO  
-RAM: 32 GB TODO  
-HDD: 6 x   
-SSD: TODO  
-GPU: NVIDIA GTX 970 -->
+I bought a UPS to support my server in case of power outages. The UPS has a battery that can keep my server alive for about 15 minutes, then it gives a signal to the server, which is configured to shut down before the UPS battery runs out. This ensures that most power outages never cause a problem, as they are shorter than the battery time and if the power is out for a while the server shuts down gracefully.
 
 ## Why I chose TrueNAS Scale
 
-Now to, in my opinion, the most important part: the operating system. I chose TrueNAS Scale for a couple of reasons. First of all, I wanted something that is **Open Source**. I also wanted to run apps on the system and definitely needed some sort of RAID / software RAID. TrueNAS Scale has it all. It is based on Linux and led by the company [iXsystems](https://www.ixsystems.com/). [^iXsystems] For applications, it supports Docker and Kubernetes, as well as its own VMs. I am actually not really using the VMs yet, but I really like Kubernetes and also Docker. So this was great news for me. These technologies allow you to run basically any app you like on it because most apps are or can be containerized. In addition to this, the system uses OpenZFS as the file system, which is pretty cool in my opinion. We will take a look at it in the next part.
+Now to, in my opinion, the most important part: The operating system. I chose TrueNAS Scale for a couple of reasons. First of all I wanted something that is **Open Source**. I also wanted to run apps on the system and definitely needed some sort of RAID / software RAID. TrueNAS Scale has it all. It is based on Linux and led by the company [iXsystems](https://www.ixsystems.com/). [^iXsystems] For applications, it supports Docker and Kubernetes, as well as its own VMs. I am actually not really using the VMs yet, but I really like Kubernetes and also Docker. So this was great news for me. These technologies allow you to run basically any app you like on it because most apps are or can be containerized. In addition to this, the system uses OpenZFS as the file system, which is pretty cool in my opinion. We will take a look at it in the next part.
 
 ### RAID
 
-As I previously mentioned, I am not using a classical RAID system. Instead the ZFS file system, which is used by TrueNAS Scale, has something similar to a software RAID built into it.
+As I previously mentioned, I am not using a classical RAID system. Instead the ZFS file system which is used by TrueNAS Scale, has something similar to a software RAID built into it.
 
-But first of all, to bring everyone on the same level, I want to explain what RAID actually is. RAID stands for Redundant Array of Independent Disks and as the name suggests brings redundancy into data storage. There are several versions of RAID (0, 1, 5, 6 are the most important ones). RAID 0 just stripes the data across multiple disks and does not provide any redundancy. RAID 1 mirrors every disk on another one so half of the disks could fail without losing any data. The last two versions are the important ones for this blog post. They both work similarly: First, the data gets striped like in RAID 0, but a parity part is also calculated, which can be used to recover the data if a drive fails. With RAID 5 you can lose one disk without losing data and with RAID 6 you can lose two disks without an issue. The disadvantage of RAID is that you need more disks because of the redundancy.
+But first of all, to bring everyone on the same level, I want to explain what RAID actually is. RAID stands for Redundant Array of Independent Disks and as the name suggests brings redundancy into data storage. There are several versions of RAID (0, 1, 5, 6 are the most important ones). RAID 0 just stripes the data across multiple disks and does not provide any redundancy. RAID 1 mirrors every disk on another one so half of the disks could fail without losing any data. The last two versions are the important ones for this blog post. They both work similarly: First the data gets striped like in RAID 0, but a parity part is also calculated, which can be used to recover the data if a drive fails. With RAID 5 you can lose one disk without losing data and with RAID 6 you can lose two disks without an issue. The disadvantage of RAID is that you need more disks because of the redundancy.
 
 ### OpenZFS
 
@@ -91,7 +100,7 @@ I also want to mention that I had a few problems using charts from TrueCharts. I
 
 ### Install an app
 
-I do not want to use file shares for everything. That is not very convenient. I want to use an app that works like all the other file cloud providers. This is why I host Nextcloud on my NAS. This is a really cool private cloud software that manages everything like files, contacts, calendars and the list goes on and on. I will talk a bit more about it in a future post. But for now, let's take a look at how to install an app like that.
+I do not want to use file shares for everything. That is not very convenient. I want to use an app that works like all the other file cloud providers. This is why I host Nextcloud on my NAS. This is a really cool private cloud software that manages everything like files, contacts, calendars and the list goes on and on. I will talk a bit more about it in a future post. [^apps] But for now, let's take a look at how to install an app like that.
 
 ![Screenshot of the TrueNAS Scale apps window](apps.png)
 
@@ -111,5 +120,6 @@ You now know the basics of TrueNAS Scale. I hope you took a little bit of inform
 
 <!-- Footnotes -->
 
-[^alwaysRunning]: I thought about a couple of solutions that do not require the system to run all the time, but those are mostly hacks and not real solutions for me. For example, you could shut down the server overnight or wake it up using wake on LAN, but this is not a great fit for me.  
+[^alwaysRunning]: I thought about a couple of solutions that do not require the system to run all the time, but those are mostly hacks and not real solutions for me. For example, you could shut down the server overnight or wake it up using wake on LAN, but this is not a great fit for me.
 [^iXsystems]: For those who are interested, iXsystems is a company based in the US and therefore a bit suboptimal because they are liable to US law, which is not ideal. But as I see it, they are not affected negatively at the moment.
+[^apps]: There are many apps I want to talk about. Examples are: Nextcloud, Jellyfin and Home Assistant. But I will do this another time in another post.
