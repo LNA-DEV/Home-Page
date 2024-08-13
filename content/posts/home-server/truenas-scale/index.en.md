@@ -1,12 +1,12 @@
 ---
-title: "How I built my home server"
-date: 2024-08-12T19:04:10+02:00
+title: "How I built my home server using TrueNAS Scale"
+date: 2024-08-13T19:04:10+02:00
 draft: false
-tags: ["first"]
-categories: ["first"]
+tags: ["Privacy", "Home Server", "Open Source", "Selfhosting", "Home-Server Project", "TrueNAS"]
+categories: ["Privacy", "Projects"]
 showToc: true
 TocOpen: false
-description: "Desc Text."
+description: "Here you learn how to setup a home server using TrueNAS Scale and I show you how I did it."
 disableShare: true
 disableHLJS: false
 searchHidden: false
@@ -28,7 +28,7 @@ I chose not to do a hardware RAID because I am using the ZFS file system. I will
 
 ### ECC memory?
 
-I, unfortunately, do not have ECC RAM, but if you can get it, I would recommend it. Error Correction Code (ECC) RAM is able to correct wrong bits, which makes the system more secure against some hardware attacks and especially more reliable. It is not a complete dealbreaker not having it, (especially because it's kind of rare in the consumer world at the moment) but having it is a nice addon.
+I unfortunately do not have ECC RAM, but if you can get it, I would recommend it. Error Correction Code (ECC) RAM is able to correct wrong bits, which makes the system more secure against some hardware attacks and especially more reliable. It is not a complete dealbreaker not having it, (especially because it's kind of rare in the consumer world at the moment) but having it is a nice addon.
 
 ### Uninterrupted Power Supply (UPS)
 
@@ -111,5 +111,5 @@ You now know the basics of TrueNAS Scale. I hope you took a little bit of inform
 
 <!-- Footnotes -->
 
-[^alwaysRunning]: I thought about a couple of solutions that do not require the system to run all the time, but those are mostly hacks and not real solutions for me. For example, you could shut down the server overnight or wake it up using Wake on LAN, but this is not a great fit for me.  
+[^alwaysRunning]: I thought about a couple of solutions that do not require the system to run all the time, but those are mostly hacks and not real solutions for me. For example, you could shut down the server overnight or wake it up using wake on LAN, but this is not a great fit for me.  
 [^iXsystems]: For those who are interested, iXsystems is a company based in the US and therefore a bit suboptimal because they are liable to US law, which is not ideal. But as I see it, they are not affected negatively at the moment.
