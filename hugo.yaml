@@ -155,7 +155,8 @@ params:
     - Blog
     - Privacy
     - Open Source
-  author: Lukas Nagel
+  author: "Lukas Nagel"
+  authorLink: "https://lna-dev.net/en/lukas-nagel"
   images:
     - /assets/Pingüino/Pingüino.png
   DateFormat: January 2, 2006
