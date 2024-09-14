@@ -35,8 +35,7 @@
 
   <div class="responsive">
     <div class="gallery">
-      {{/*  TODO Fix the URL  */}}
-      <a target="_blank" href="{{ index .content "-url" }}"> 
+      <a target="_blank" href="{{ .link }}"> 
         <img
           src="{{ index .content "-url" }}"
           alt="{{ index .description.img "-alt" }}"
