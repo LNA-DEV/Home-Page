@@ -24,10 +24,13 @@ div.gallery img {
 .more{
   height: auto;
   text-align: center;
-  background-color: rgb(52, 50, 50);
+  background-color: var(--primary);
+  color: var(--theme);
+  font-size: 20px;
+  font-weight: 700;
   border-radius: 5px;
-  padding-bottom: 31%;
-  padding-top: 32%;
+  padding-bottom: 30%;
+  padding-top: 31%;
 }
 
 @media only screen and (max-width: 700px) {
