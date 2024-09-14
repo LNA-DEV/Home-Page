@@ -18,7 +18,7 @@ aliases:
 Hej👋  
 Jag heter Lukas Nagel och jag är en programmerare från Bayern, Tyskland. Jag kallar mig också LNA-DEV här och där på webben. På denna sida vill jag presentera mig lite.
 
-{{< img url="https://photo.lna-dev.net/landscape/InnValley_huacd5c8d29a003dfed3d4495417f49183_7619711_filter_10933573887768330671.JPG" alt="Det är en bild av en dal i Bayern, Tyskland. Jag gjorde den nära min kommun/hemstad. Skapad av mig / Lukas Nagel." caption="Det är en bild av en dal i Bayern, Tyskland. Jag gjorde den nära min kommun/hemstad." link="https://photo.lna-dev.net/landscape/#3216840989" >}}
+{{< img url="https://photo.lna-dev.net/landscape/InnValley_hu14551940002057000403.JPG" alt="Det är en bild av en dal i Bayern, Tyskland. Jag gjorde den nära min kommun/hemstad. Skapad av mig / Lukas Nagel." caption="Det är en bild av en dal i Bayern, Tyskland. Jag gjorde den nära min kommun/hemstad." link="https://photo.lna-dev.net/landscape/#3216840989" >}}
 
 ### FOSS (Free and open source software)
 
@@ -42,7 +42,7 @@ Jag tar foton inom många olika kategorier, som landskap, djur och växter. Men 
 
 Jag redigerar mina fotografier med [Darktable](https://www.darktable.org/), ett fritt och öppen källkodsprogram för foto-redigering och hantering. Det liknar Lightroom men är helt fri både vad gäller pengar och frihet.
 
-{{< img url="https://photo.lna-dev.net/animals/Seagull%20flying%20over%20the%20sea_hu9e65c07a9c3920ed46f65c1e6ac93b22_1938801_filter_10933573887768330671.JPG" alt="Bild av en mås som flyger över havet. Skapad av mig / Lukas Nagel." caption="Ett av de fotografier jag har tagit. Men det finns många fler." link="https://photo.lna-dev.net/animals/#3204286083" >}}
+{{< img url="https://photo.lna-dev.net/animals/Seagull%20flying%20over%20the%20sea_hu10507767195317673003.JPG" alt="Bild av en mås som flyger över havet. Skapad av mig / Lukas Nagel." caption="Ett av de fotografier jag har tagit. Men det finns många fler." link="https://photo.lna-dev.net/animals/#3204286083" >}}
 
 ### Norden 🇸🇪 🇳🇴 🇩🇰 🇫🇮 🇮🇸
 
