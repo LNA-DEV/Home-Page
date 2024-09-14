@@ -1,0 +1,50 @@
+.gallery-view {
+  margin-top: 16px;
+}
+
+div.gallery {
+  margin: 5px;
+}
+
+div.gallery:hover {
+  opacity: 0.7;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.responsive {
+  float: left;
+  width: 33.3333333%;
+}
+
+.more{
+  height: auto;
+  text-align: center;
+  background-color: rgb(52, 50, 50);
+  border-radius: 5px;
+  padding-bottom: 31%;
+  padding-top: 32%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
