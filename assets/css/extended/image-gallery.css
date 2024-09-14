@@ -10,12 +10,6 @@ div.gallery:hover {
   opacity: 0.7;
 }
 
-div.gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
 .responsive {
   float: left;
   width: 33.3333333%;
@@ -33,16 +27,35 @@ div.gallery img {
   padding-top: 31%;
 }
 
+@media only screen and (min-width: 701px) {
+  div.gallery img {
+    width: 100%;
+    height: 172.3px;
+    border-radius: 5px;
+    object-fit: cover ;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .responsive {
     width: 49.99999%;
     margin: 6px 0;
+  }
+
+  div.gallery img {
+    width: 100%;
+    border-radius: 5px;
   }
 }
 
 @media only screen and (max-width: 500px) {
   .responsive {
     width: 100%;
+  }
+
+  div.gallery img {
+    width: 100%;
+    border-radius: 5px;
   }
 }
 
