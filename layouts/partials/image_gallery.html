@@ -1,0 +1,58 @@
+<div class="gallery-view">
+  <h2 class="home-header">Latest photography</h2>
+
+  {{ $url := "https://photo.lna-dev.net/index.xml" }}
+  {{ $data := dict }}
+
+  {{ with resources.GetRemote $url }}
+    {{ with .Err }}
+      {{ errorf "%s" . }}
+    {{ else }}
+      {{ $data = . | transform.Unmarshal }}
+    {{ end }}
+  {{ else }}
+    {{ errorf "Unable to get remote resource %q" $url }}
+  {{ end }}
+
+  {{ $items := slice }}
+  {{ range $data.channel.item }}
+  {{ $item := . }}
+  {{ $parsedItem := dict }}
+  {{ range $k, $v := $item }}
+  {{ if eq $k "pubDate" }}
+  {{ $parsedItem = merge $parsedItem (dict $k (time $v)) }}
+  {{ else }}
+  {{ $parsedItem = merge $parsedItem (dict $k $v) }}
+  {{ end }}
+  {{ end }}
+  {{ $items = $items | append $parsedItem }}
+  {{ end }}
+  
+  {{ $sorted := collections.Sort $items "pubDate" "desc" }}
+  {{ $finalItems := collections.First 8 $sorted }}
+
+  {{ range $finalItems }}
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="{{ .link }}"> 
+        <img
+          src="{{ index .content "-url" }}"
+          alt="{{ index .description.img "-alt" }}"
+        />
+      </a>
+    </div>
+  </div>
+
+  {{ end }}
+  
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="https://photo.lna-dev.net">
+        <p class="more">All photos</p>
+      </a>
+    </div>
+  </div> 
+
+  <div class="clearfix"></div>
+</div>

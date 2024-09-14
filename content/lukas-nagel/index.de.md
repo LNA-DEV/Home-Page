@@ -18,7 +18,7 @@ aliases:
 Hej👋  
 Ich heiße Lukas Nagel und bin ein Softwareentwickler aus Bayern. Hier und da im Internet nenne ich mich auch LNA-DEV. Auf dieser Seite möchte ich mich kurz vorstellen.
 
-{{< img url="https://photo.lna-dev.net/landscape/InnValley_huacd5c8d29a003dfed3d4495417f49183_7619711_filter_10933573887768330671.JPG" alt="Bild von einem Tal in Bayern. Aufgenommen habe ich es in der Nähe meines Heimatdorfes. Aufgenommen von mir / Lukas Nagel." caption="Bild von einem Tal in Bayern. Aufgenommen in der Nähe meines Heimatdorfes." link="https://photo.lna-dev.net/landscape/#3216840989" >}}
+{{< img url="https://photo.lna-dev.net/landscape/InnValley_hu14551940002057000403.JPG" alt="Bild von einem Tal in Bayern. Aufgenommen habe ich es in der Nähe meines Heimatdorfes. Aufgenommen von mir / Lukas Nagel." caption="Bild von einem Tal in Bayern. Aufgenommen in der Nähe meines Heimatdorfes." link="https://photo.lna-dev.net/landscape/#3216840989" >}}
 
 ### FOSS (Free and open source software)
 
@@ -42,7 +42,7 @@ Ich nehme Fotos in verschiedenen Genres auf (zum Beispiel Landschaft, Tiere und 
 
 Editieren tue ich meine Fotografie in [Darktable](https://www.darktable.org/), einem FOSS-Tool zur Fotobearbeitung und Management. Es ähnelt Lightroom, ist aber komplett frei.
 
-{{< img url="https://photo.lna-dev.net/animals/Seagull%20flying%20over%20the%20sea_hu9e65c07a9c3920ed46f65c1e6ac93b22_1938801_filter_10933573887768330671.JPG" alt="Bild einer Möwe, die über das Meer fliegt. Aufgenommen von mir / Lukas Nagel" caption="Eines meiner Bilder, aber da sind noch deutlich mehr." link="https://photo.lna-dev.net/animals/#3204286083" >}}
+{{< img url="https://photo.lna-dev.net/animals/Seagull%20flying%20over%20the%20sea_hu10507767195317673003.JPG" alt="Bild einer Möwe, die über das Meer fliegt. Aufgenommen von mir / Lukas Nagel" caption="Eines meiner Bilder, aber da sind noch deutlich mehr." link="https://photo.lna-dev.net/animals/#3204286083" >}}
 
 ## Domains unter meiner Kontrolle
 
