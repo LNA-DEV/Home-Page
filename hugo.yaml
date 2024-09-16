@@ -9,7 +9,7 @@ buildDrafts: false
 buildFuture: false
 buildExpired: true
 copyright: "🄯 CC-BY-ND [Lukas Nagel]({{< ref \"lukas-nagel\" >}})"
-paginate: 3
+# paginate: 3
 
 markup:
   goldmark:
