@@ -158,7 +158,7 @@
 
 {{/*  Photos  */}}
 {{ $css := resources.Get "/css/main.scss" | toCSS | minify | fingerprint }}
-{{/*  <link rel="stylesheet" href="{{ $css.RelPermalink }}" />  */}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" />
   {{ $params := dict
     "closeTitle" (i18n "closeTitle")
     "zoomTitle" (i18n "zoomTitle")

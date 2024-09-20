@@ -9,6 +9,7 @@
   {{ end }}
 </section>
 {{- else if eq .Params.Theme "gallery-page"}}
+{{ partial "title.html" . }}
 {{ partial "gallery.html" . }}
 {{- else }}
 <article class="post-single">
