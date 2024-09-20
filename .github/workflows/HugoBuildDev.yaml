@@ -20,6 +20,8 @@ jobs:
     steps:
       # Checkout the repository
       - uses: actions/checkout@v3
+      - run: git submodule init
+      - run: git submodule upgrade
 
       # Install Hugo
       - run: sudo snap install hugo

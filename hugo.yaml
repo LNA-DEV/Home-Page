@@ -10,6 +10,7 @@ enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: true
+timeout: 600s
 copyright: "🄯 CC-BY-ND [Lukas Nagel]({{< ref \"lukas-nagel\" >}})"
 # paginate: 3
 
