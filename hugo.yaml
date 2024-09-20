@@ -153,6 +153,7 @@ params:
   ShortTitle: "LNA-DEV"
   ShowFullTextinRSS: true
   displayFullLangName: true
+  mainSections: "posts"
   keywords:
     - LNA-DEV
     - Lukas Nagel
