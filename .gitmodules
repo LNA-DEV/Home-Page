@@ -1,0 +1,3 @@
+[submodule "content/gallery"]
+	path = content/gallery
+	url = https://github.com/LNA-DEV/PhotoSub.git
