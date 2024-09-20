@@ -1,3 +1,6 @@
 [submodule "example"]
     path = example
     url = https://github.com/LNA-DEV/Photo.git
+[submodule "test"]
+	path = test
+	url = https://github.com/LNA-DEV/PhotoSub.git
