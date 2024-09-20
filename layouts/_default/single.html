@@ -1,14 +1,6 @@
 {{- define "main" }}
 
-{{- if eq .Params.Theme "test" }}
-{{- $site := site }}
-{{/* TODO  {{ partial "featured.html" $site }}   */}}
-<section class="galleries">
-  {{ range where $site.Pages "Params.theme" "eq" "gallery-page" }}
-    {{ partial "album-card.html" . }}
-  {{ end }}
-</section>
-{{- else if eq .Params.Theme "gallery-page"}}
+{{- if eq .Params.Theme "gallery-page"}}
 {{ partial "title.html" . }}
 {{ partial "gallery.html" . }}
 {{- else }}

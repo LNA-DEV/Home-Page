@@ -70,7 +70,7 @@ languages:
           url: /projects/
           weight: 28
         - name: 📷 Photography
-          url: https://photo.lna-dev.net
+          url: /gallery/
           weight: 30
   de:
     languageName: "🇩🇪 De"

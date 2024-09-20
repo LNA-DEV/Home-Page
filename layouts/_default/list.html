@@ -1,10 +1,14 @@
-{{/*  Probably not needed anymore  */}}
-
 {{- define "main" }}
 
-{{- if (and site.Params.profileMode.enabled .IsHome) }}
-{{- partial "index_profile.html" . }}
-{{- else }} {{/* if not profileMode */}}
+{{- if eq .Params.Theme "gallery-home" }}
+{{- $site := site }}
+{{/* TODO  {{ partial "featured.html" $site }}   */}}
+<section class="galleries">
+  {{ range where $site.Pages "Params.theme" "eq" "gallery-page" }}
+    {{ partial "album-card.html" . }}
+  {{ end }}
+</section>
+{{- else }}
 
 {{- if not .IsHome | and .Title }}
 <header class="page-header">
@@ -42,24 +46,10 @@
 
 {{- $pages := union .RegularPages .Sections }}
 
-{{- if .IsHome }}
-{{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
-{{- end }}
 
 {{ $paginator := dict }}
 
-{{- if .IsHome }}
-{{- $paginator = .Paginate $pages 3 }}
-{{ else}}
 {{- $paginator = .Paginate $pages }}
-{{- end }}
-
-{{- if and .IsHome site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
-{{- partial "home_info.html" . }}
-
-<h2 class="home-header" id="latest-posts">{{ i18n "posts_title" }}</h2>
-{{- end }}
 
 {{- $term := .Data.Term }}
 {{- range $index, $page := $paginator.Pages }}
@@ -67,9 +57,7 @@
 {{- $class := "post-entry" }}
 
 {{- $user_preferred := or site.Params.disableSpecial1stPost site.Params.homeInfoParams }}
-{{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not $user_preferred)) }}
-{{- $class = "first-entry" }}
-{{- else if $term }}
+{{- if $term }}
 {{- $class = "post-entry tag-entry" }}
 {{- end }}
 
@@ -133,10 +121,6 @@
 </footer>
 {{- end }}
 
-{{- if .IsHome}}
-{{- partial "image_gallery.html" . }}
 {{- end }}
-
-{{- end }}{{/* end profileMode */}}
 
 {{- end }}{{- /* end main */ -}}
