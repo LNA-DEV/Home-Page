@@ -1,2 +1,4 @@
 github.com/LNA-DEV/hugo-PaperMod v0.0.0-20240526104008-eb14201a6869 h1:xTVHy8XaNmz0YC9cWVffbJ8nDksHhupn31g9anGviLo=
 github.com/LNA-DEV/hugo-PaperMod v0.0.0-20240526104008-eb14201a6869/go.mod h1:9P6iQzshNKgiiALy2L5LH9u2hrg0E5quQyhO8UR7NA0=
+github.com/nicokaiser/hugo-theme-gallery/v4 v4.2.5 h1:oWQpYYQLiGX+aTL214rapfKehHEJ+TAgWLTZQmBPBzY=
+github.com/nicokaiser/hugo-theme-gallery/v4 v4.2.5/go.mod h1:oVtY67dE9NbaJw9jM4G5moHAcgT/UXxdcIQhs52KPoU=

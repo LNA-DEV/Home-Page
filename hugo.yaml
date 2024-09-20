@@ -1,6 +1,8 @@
 baseURL: https://lna-dev.net
 title: LNA-DEV ~ Lukas Nagel
-theme: github.com/LNA-DEV/hugo-PaperMod
+theme: 
+  - github.com/LNA-DEV/hugo-PaperMod
+  - github.com/nicokaiser/hugo-theme-gallery/v4
 enableEmoji: true
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: true
