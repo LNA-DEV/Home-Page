@@ -113,7 +113,7 @@ languages:
           url: /projects/
           weight: 28
         - name: 📷 Fotografie
-          url: https://photo.lna-dev.net
+          url: ../en/gallery/
           weight: 30
   sv:
     languageName: "🇸🇪 Sv"
@@ -146,7 +146,7 @@ languages:
           url: /tags/
           weight: 20
         - name: 📷 Fotografi
-          url: https://photo.lna-dev.net
+          url: ../en/gallery/
           weight: 30
 
 params:
