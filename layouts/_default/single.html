@@ -1,6 +1,6 @@
 {{- define "main" }}
 
-{{- if eq .Params.Theme "gallery-page"}}
+{{- if or (eq .Params.Theme "gallery-page") (eq .Params.Theme "gallery-page-hidden") }}
 {{ partial "title.html" . }}
 {{ partial "gallery.html" . }}
 {{- else }}

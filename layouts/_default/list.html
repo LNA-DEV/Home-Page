@@ -8,8 +8,14 @@
     {{ partial "album-card.html" . }}
   {{ end }}
 </section>
+{{- else if eq .Params.Theme "gallery-home-hidden" }}
+{{- $site := site }}
+{{/* TODO  {{ partial "featured.html" $site }}   */}}
+<section class="galleries">
+  {{ range where $site.Pages "Params.theme" "eq" "gallery-page-hidden" }}
+    {{ partial "album-card.html" . }}
+  {{ end }}
 {{- else }}
-
 {{- if not .IsHome | and .Title }}
 <header class="page-header">
   {{- partial "breadcrumbs.html" . }}
