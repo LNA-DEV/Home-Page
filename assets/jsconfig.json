@@ -3,6 +3,7 @@
   "baseUrl": ".",
   "paths": {
    "*": [
+    "*",
     "../../../../.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/nicokaiser/hugo-theme-gallery/v4@v4.2.5/assets/*"
    ]
   }
