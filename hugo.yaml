@@ -1,6 +1,8 @@
 baseURL: https://lna-dev.net
 title: LNA-DEV ~ Lukas Nagel
-theme: github.com/LNA-DEV/hugo-PaperMod
+theme: 
+  - github.com/LNA-DEV/hugo-PaperMod
+  - github.com/nicokaiser/hugo-theme-gallery/v4
 enableEmoji: true
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: true
@@ -8,6 +10,7 @@ enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: true
+timeout: 600s
 copyright: "🄯 CC-BY-ND [Lukas Nagel]({{< ref \"lukas-nagel\" >}})"
 # paginate: 3
 
@@ -68,7 +71,7 @@ languages:
           url: /projects/
           weight: 28
         - name: 📷 Photography
-          url: https://photo.lna-dev.net
+          url: /gallery/
           weight: 30
   de:
     languageName: "🇩🇪 De"
@@ -110,7 +113,7 @@ languages:
           url: /projects/
           weight: 28
         - name: 📷 Fotografie
-          url: https://photo.lna-dev.net
+          url: ../en/gallery/
           weight: 30
   sv:
     languageName: "🇸🇪 Sv"
@@ -143,13 +146,14 @@ languages:
           url: /tags/
           weight: 20
         - name: 📷 Fotografi
-          url: https://photo.lna-dev.net
+          url: ../en/gallery/
           weight: 30
 
 params:
   ShortTitle: "LNA-DEV"
   ShowFullTextinRSS: true
   displayFullLangName: true
+  mainSections: "posts"
   keywords:
     - LNA-DEV
     - Lukas Nagel
