@@ -31,7 +31,7 @@ So to solve this, I needed something which can somehow talk with my Pixelfed ser
 
 ### RSS feed
 
-So first of all, I have a [photography page](https://photo.lna-dev.net) which has an RSS feed. I modified the feed of the page to contain an entry per image I have uploaded there. I am also using Hugo there. Therefore I wrote this little Hugo `rss.xml`.
+So first of all, I have a [photography page](https://lna-dev.net/en/gallery) which has an RSS feed. I modified the feed of the page to contain an entry per image I have uploaded there. I am also using Hugo there. Therefore I wrote this little Hugo `rss.xml`.
 
 ```xml
 {{- $authorEmail := site.Params.author.email -}}
@@ -161,7 +161,7 @@ def download_image(image_url):
         sys.exit(1)
 
 def publish_entry(entry):
-    caption = "More at https://photo.lna-dev.net\n\n"
+    caption = "More at https://lna-dev.net/en/gallery\n\n"
 
     for element in entry.tags:
         caption += '#' + element.term + " "
@@ -212,7 +212,7 @@ def publish_post(caption, media_id):
         sys.exit(1)
 
 # Parse the RSS feed
-feed_url = 'https://photo.lna-dev.net/index.xml'
+feed_url = 'https://lna-dev.net/en/gallery/index.xml'
 feed = feedparser.parse(feed_url)
 
 # Filter out entries with specific names
@@ -299,7 +299,7 @@ Now we are ready for creating the post. Therefore, I am now preparing the captio
 
 ```python
 def publish_entry(entry):
-    caption = "More at https://photo.lna-dev.net\n\n"
+    caption = "More at https://lna-dev.net/en/gallery\n\n"
 
     for element in entry.tags:
         caption += '#' + element.term + " "
