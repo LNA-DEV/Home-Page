@@ -35,7 +35,7 @@
           <meta itemprop="contentUrl" content="{{ $image.RelPermalink }}" />
           {{ with site.Params.Author }}
             <span itemprop="creator" itemtype="https://schema.org/Person" itemscope>
-              <meta itemprop="name" content="{{ site.Params.Author }}" />
+              <meta itemprop="name" content="{{ site.Params.Author.Name }}" />
             </span>
           {{ end }}
         </a>
