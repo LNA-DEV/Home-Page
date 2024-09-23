@@ -1,6 +1,11 @@
 {{- define "main" }}
 
 {{- if eq .Params.Theme "gallery-home" }}
+
+<hgroup>
+  <h1>Photography</h1>
+</hgroup>
+
 {{- $site := site }}
 {{/* TODO  {{ partial "featured.html" $site }}   */}}
 <section class="galleries">
