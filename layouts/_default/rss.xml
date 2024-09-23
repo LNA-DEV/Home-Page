@@ -43,6 +43,53 @@
 {{- $pages = $pages | first $limit }}
 {{- end }}
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+{{- if eq .Section "gallery" }}
+
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>Recent content {{ if ne  .Title  .Site.Title }}{{ with .Title }}in {{.}} {{ end }}{{ end }}on {{ .Site.Title }}</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>{{ site.Language.LanguageCode }}</language>{{ with site.Params.author.email }}
+    <managingEditor>{{.}}{{ with $authorName }} ({{ . }}){{ end }}</managingEditor>{{ end }}{{ with $authorEmail }}
+    <webMaster>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</webMaster>{{ end }}{{ with .Site.Copyright }}
+    <copyright>{{.}}</copyright>{{end}}{{ if not .Date.IsZero }}
+    <lastBuildDate>{{ (index $pages.ByLastmod.Reverse 0).Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+    {{- with .OutputFormats.Get "RSS" -}}
+    {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{- end -}}
+
+    {{- range $pages }}
+    {{- if not (in .Path "/archive/") -}}
+    {{ range .Resources.ByType "image" }}
+
+    <item>
+      <title>{{ .Name }}</title>
+      <link>{{ strings.Replace .Permalink ( replace .Name " " "%20") "" }}/#{{ .RelPermalink | crypto.FNV32a }}</link>
+      <pubDate>{{ .Exif.Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      {{- with $authorEmail }}<author>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</author>{{ end }}
+      <guid>{{ .Permalink }}</guid>
+      {{ $full := .Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) }}
+      <media:content url="{{ $full.Permalink }}" type="image/jpeg"/>
+      <description>
+        <img src="{{ $full.Permalink }}" alt="{{ .Params.Alt }}"/>          
+        {{- if ne .Title .Name -}}
+        <p> {{ .Title }} </p>
+        {{ end }}
+      </description>
+      {{ range .Params.Tags }}
+      <category>{{ . }}</category>        
+      {{- end }}
+    </item>
+    {{- end -}}
+    {{- end -}}
+    {{ end }}
+    
+  </channel>
+</rss>
+
+{{- else }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>{{ if eq .Title site.Title }}{{ site.Title }}{{ else }}{{ with .Title }}{{ . }} on {{ end }}{{ site.Title }}{{ end }}</title>
@@ -81,3 +128,4 @@
     {{- end }}
   </channel>
 </rss>
+{{- end }}
