@@ -18,7 +18,7 @@ aliases:
 Hej👋  
 Jag heter Lukas Nagel och jag är en programmerare från Bayern, Tyskland. Jag kallar mig också LNA-DEV här och där på webben. På denna sida vill jag presentera mig lite.
 
-{{< img url="https://photo.lna-dev.net/landscape/InnValley_hu14551940002057000403.JPG" alt="Det är en bild av en dal i Bayern, Tyskland. Jag gjorde den nära min kommun/hemstad. Skapad av mig / Lukas Nagel." caption="Det är en bild av en dal i Bayern, Tyskland. Jag gjorde den nära min kommun/hemstad." link="https://photo.lna-dev.net/landscape/#3216840989" >}}
+{{< img url="./InnValley.JPG" alt="Det är en bild av en dal i Bayern, Tyskland. Jag gjorde den nära min kommun/hemstad. Skapad av mig / Lukas Nagel." caption="Det är en bild av en dal i Bayern, Tyskland. Jag gjorde den nära min kommun/hemstad." link="/en/gallery/landscape/#2391675672" >}}
 
 ### FOSS (Free and open source software)
 
@@ -36,13 +36,13 @@ Jag börjar lära mig principerna för Indie Web. Jag är verkligen i början av
 
 ### Fotografi
 
-En annan hobby för mig är fotografi. Jag har en webbplats enbart för detta ändamål: [LNA-DEV Gallery](https://photo.lna-dev.net). Om du är intresserad, ta en titt på mina bilder. Mina fotografier är publicerade under en Creative Commons-licens, så om du uppfyller villkoren kan du kanske använda dem om du vill. (Du kan hitta licensinformationen på botten av min [fotosida](https://photo.lna-dev.net).)
+En annan hobby för mig är fotografi. Jag har en webbplats enbart för detta ändamål: [LNA-DEV Gallery](https://lna-dev.net/en/gallery). Om du är intresserad, ta en titt på mina bilder. Mina fotografier är publicerade under en Creative Commons-licens, så om du uppfyller villkoren kan du kanske använda dem om du vill. (Du kan hitta licensinformationen på botten av min [fotosida](https://lna-dev.net/en/gallery).)
 
 Jag tar foton inom många olika kategorier, som landskap, djur och växter. Men jag vill lära mig mer om andra kategorier, som porträttfotografi.
 
 Jag redigerar mina fotografier med [Darktable](https://www.darktable.org/), ett fritt och öppen källkodsprogram för foto-redigering och hantering. Det liknar Lightroom men är helt fri både vad gäller pengar och frihet.
 
-{{< img url="https://photo.lna-dev.net/animals/Seagull%20flying%20over%20the%20sea_hu10507767195317673003.JPG" alt="Bild av en mås som flyger över havet. Skapad av mig / Lukas Nagel." caption="Ett av de fotografier jag har tagit. Men det finns många fler." link="https://photo.lna-dev.net/animals/#3204286083" >}}
+{{< img url="./Seagull flying over the sea.JPG" alt="Bild av en mås som flyger över havet. Skapad av mig / Lukas Nagel." caption="Ett av de fotografier jag har tagit. Men det finns många fler." link="/en/gallery/animals/#2681282402" >}}
 
 ### Norden 🇸🇪 🇳🇴 🇩🇰 🇫🇮 🇮🇸
 
@@ -51,7 +51,7 @@ Jag är fascinerad av de nordiska länderna. Därför är jag intresserad av spr
 ## Domäner jag kontrollera
 
 - [lna-dev.net](https://lna-dev.net) (Hemsida)
-- [photo.lna-dev.net](https://photo.lna-dev.net) (Fotografi)
+- [lna-dev.net/en/gallery](https://lna-dev.net/en/gallery) (Fotografi)
 - [lna-dev.de](https://lna-dev.de) (Backup)
 - [lna-dev.com](https://lna-dev.com) (Backup)
 - [fachinformatikerpruefungsvorbereitung.de](https://fachinformatikerpruefungsvorbereitung.de) (Projekt)
