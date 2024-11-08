@@ -1,0 +1,33 @@
+{{- $cor1x := (.Get "cor1x") }}
+{{- $cor1y := (.Get "cor1y") }}
+{{- $cor2x := (.Get "cor2x") }}
+{{- $cor2y := (.Get "cor2y") }}
+
+
+<div id="map" class="map"></div>
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+
+<script>
+    // JavaScript function to run when page loads
+    function onPageLoad() {
+        var map = L.map('map');
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+        
+        L.Routing.control({
+            show: false,
+            collapsible: true,
+            waypoints: [
+                L.latLng({{ $cor1x }}, {{ $cor1y }}),
+                L.latLng({{ $cor2x }}, {{ $cor2y }}),
+            ],
+            routeWhileDragging: false
+        }).addTo(map);
+    }
+
+    // Assign the function to run when the window finishes loading
+    window.onload = onPageLoad;
+</script>

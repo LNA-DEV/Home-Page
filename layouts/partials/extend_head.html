@@ -9,3 +9,7 @@
 {{ $manifestTemplate := resources.Get "manifest.webmanifest" }}
 {{ $manifest := $manifestTemplate | resources.ExecuteAsTemplate "manifest.webmanifest" . }}
 <link rel="manifest" href="{{ $manifest.Permalink }}">
+
+{{/*  Map  */}}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
