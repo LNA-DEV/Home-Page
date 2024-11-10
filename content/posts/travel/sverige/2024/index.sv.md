@@ -56,6 +56,8 @@ Jag hade parkerad min bil i närheten av hotellet. Där jag har gjort en stor fe
 
 ## Öland
 
+{{< map coordinates="[{\"x\": 55.5980171, \"y\": 13.0220953 }]" >}}
+
 ### Cyklar på Öland
 
 ### Strand
