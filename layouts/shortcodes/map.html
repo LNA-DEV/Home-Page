@@ -1,0 +1,33 @@
+{{- $coordinatesJson := .Get "coordinates" }}
+{{- $coordinates := $coordinatesJson | transform.Unmarshal }} <!-- Parse JSON string to an array -->
+
+<div id="map" class="map"></div>
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+
+<script>
+    function onPageLoad() {
+        var map = L.map('map').setView([0, 0], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        var waypoints = [
+            {{- range $coordinates }}
+                L.latLng({{ .x }}, {{ .y }}),
+            {{- end }}
+        ];
+
+        L.Routing.control({
+            show: false,
+            collapsible: true,
+            waypoints: waypoints,
+            routeWhileDragging: false
+        }).addTo(map);
+
+        map.fitBounds(waypoints.map(function(wp) { return wp; }));
+    }
+
+    window.onload = onPageLoad;
+</script>
