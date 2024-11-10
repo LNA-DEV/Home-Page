@@ -56,7 +56,7 @@ Jag hade parkerad min bil i närheten av hotellet. Där jag har gjort en stor fe
 
 ## Öland
 
-{{< map coordinates="[{\"x\": 55.5980171, \"y\": 13.0220953 }]" >}}
+{{< map coordinates="[{\"x\": 55.5980171, \"y\": 13.0220953 }, {\"x\": 57.174311, \"y\": 17.035819 }]" >}}
 
 ### Cyklar på Öland
 
@@ -64,10 +64,16 @@ Jag hade parkerad min bil i närheten av hotellet. Där jag har gjort en stor fe
 
 ## Kalmar
 
+{{< map coordinates="[{\"x\": 57.174311, \"y\": 17.035819 }, {\"x\": 56.671736, \"y\": 16.367111 }]" >}}
+
 ### Fest med studenter
 
 ## Stockholm
 
+{{< map coordinates="[{\"x\": 56.671736, \"y\": 16.367111 }, {\"x\": 59.302125, \"y\": 18.094136 }]" >}}
+
 ## Göteborg
+
+{{< map coordinates="[{\"x\": 59.302125, \"y\": 18.094136 }, {\"x\": 57.688636, \"y\": 11.987281 }]" >}}
 
 ## Tillbaka hem
