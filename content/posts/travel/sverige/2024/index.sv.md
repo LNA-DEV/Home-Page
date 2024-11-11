@@ -48,9 +48,27 @@ Jag hade parkerad min bil i närheten av hotellet. Där jag har gjort en stor fe
 
 ### Twisting Torso
 
+När jag var i Malmö jag har sett många sevärdheter lika som Twisting Torso. Jag tycka om byggnaden eftersom det är någonting unik och i närheten av tornen är flera fin parker. Jag tänka att särskilt Malmö har många fina parker i allmänhet. Det var särskilt interessant när det var som dimma in staden och tornen försvinn inom den.
+
+![Bild of Twisting Torso på dimma](twisting_torso_fog.jpg)
+
 ### Parks och trädgårdar
 
+Som jag har satt innan jag tänker att Malmö hade dem bästa parkerna av städerna som jag har besökt. Till exempel det var flera parker i närheten av Twisting Torso. En av dem även had mycket vatten och om du hade tur där var ankorna. Jag gilla ankorna så det var jätte fint at bli där och njuta lite naturen.
+
+![Twisting Torso och en liten park nedan den](twisting_torso.jpg)
+
+Men det var inte den ända parken jag har sett många av dem. Vad jag tänker är interessant är att jag har sett många kaniner i Svenska städer. Till exempel i Malmö i en kyrkogården och i en park lite utanför staden i närheten av Öresundsbron. Men om jag minnas riktig jag har också sett någon kaniner i Göteborg och kanske även Stockholm.
+
+{{<collapse summary="Bild av kanin">}}
+![Bild av en kanin i en park](bunny.jpg)
+{{</collapse>}}
+
 ### Museer och gallerier
+
+Jag var i olika museer och gallerier när jag var i Malmö och också hela Sverige. Till exempel jag var i Malmöhus / Malmömuseum och Teknikens och Sjöfartens hus. 
+
+![Bild av en text i en galleri: Foreigners, please don't let us alone with the Danes!](gallery.jpg)
 
 ### Strandpromenad
 
@@ -77,3 +95,9 @@ Jag hade parkerad min bil i närheten av hotellet. Där jag har gjort en stor fe
 {{< map coordinates="[{\"x\": 59.302125, \"y\": 18.094136 }, {\"x\": 57.688636, \"y\": 11.987281 }]" >}}
 
 ## Tillbaka hem
+
+## Tack för läsa
+
+Tack för läsa den här texten. Jag vet inte om någon interessera sig för vad jag skriver här men det är en stor möjlighet för att förbättra min Svenska så jag gjör det ändå.
+
+Om du vill ser mer bilderna (jag har gjort mycket mer) du kann tar en tit på [Fotografi](/en/gallery) var du kann hitta alla mina fotografier. Jag har inte publicerad någon bilder ännu men jag vill gjöra det någonstans!
