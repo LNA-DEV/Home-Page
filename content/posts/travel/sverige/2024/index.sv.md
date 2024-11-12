@@ -66,19 +66,73 @@ Men det var inte den ända parken jag har sett många av dem. Vad jag tänker ä
 
 ### Museer och gallerier
 
-Jag var i olika museer och gallerier när jag var i Malmö och också hela Sverige. Till exempel jag var i Malmöhus / Malmömuseum och Teknikens och Sjöfartens hus. 
+Jag var i olika museer och gallerier när jag var i Malmö och också hela Sverige. Till exempel jag var i Malmöhus / Malmömuseum och Teknikens och Sjöfartens hus. Det var interessant att ser gammal teknologi där. Det var den huvudskalig andledning for att går där men den konstgallerien var också interessant för mig eftersom jag har aldrig varit till en. Jag tyckte om många fotografier och ritar men en av dem var jätte rolig. Du kan ser bilder av den nedan. 
+
+Jag tycka att det är rolig och en god beskrivning av Malmö i allmänheten. Malmö verkar att bli an väldigt vänster orienterad stad med mycket olika kulturer och också migranter. Men denna många kulturer som träffa här på varandra är också ett problem här. Krimminalitäten och mordraten i Malmö är en av dem högsta i hela Europa. Men jag tänka att det är eftersom integrationen av dem flyktlingar har gått fel. Och jag också verkligen gilla Malmös öppen kultur för flyklingar och också HBTQ personer som verkar är mycket hög i Malmö.
+
+Vad jag måste säga till det: Jag har inte felt en gång osäkert i min hela resa genom Sverige och även om Malmö är statistisk väldigt kriminell det känns inte så och jag har sett ingen typ av brott när jag var där. Jag har inte ens sett mer än ett eller två hemlösa. Det är helt annat i Tyskland även i mindre städer. Sverige har felt väldigt varmt ock välkomst.
+
+Denn konst också visa den liten syskongräl mellan Sverige och Danmark. Jag tänka att det är lite rolig och jag gilla sammanhållning i hela Norden.
 
 ![Bild av en text i en galleri: Foreigners, please don't let us alone with the Danes!](gallery.jpg)
 
-### Strandpromenad
+### Strandpromenaden
+
+Jag tänker att den stora strandpromenaden der är min favoritplats i hela Malmö. Det är verkligen vackert där. Man kan sitta på stora bänker i trä, spelar volleyboll, går för en promenad i en park haven eller går simmar. Där är också många personer där så jag har inte felt ensam även om jag resade ensam. En gång där även var en mås bredvid mig på bänken. Det var verkligen söt.
+
+Utsikten är också vackert. Man har blick på Öresundsbron och kann titta på båtar som kör igenom bron eller man kann titta på Köpenhamn om siktet är god. Man även kan ser planer landa och starta i Köpenhamn flygplats.
+
+![Strandpromenaden i Malmö](beach_promenade.jpg)
+
+### En liten kulturchock
+
+Vag jag tyckte var komiskt är att fönster i Malmö öppnades annars än i Tyskland. När jag vred handtaget i sidled så vinklade fönstret och om jag har vred upp it öppnades helt. Det var jätte konstigt. Men jag tänker att alla andra fönster som jag har sett i Sverige öppnade lika som dem Tyska.
+
+{{<collapse summary="Bild av fönstret">}}
+![Fönster som är öppnad lite](window.jpg)
+{{</collapse>}}
 
 ## Öland
 
+> Öland är den andra största ön i Sverige landet med den mesta ön i hela världen. Det är det ön av sol och vind.
+
+Efter några dagar i Malmö som jag har felt en samband med jag har kört till min nästa stopp: Öland. Men eftersom jag hade plannerad tälta på Öland jag måste köpa en kudde. 
+
+Så jag körde till Ikea i Kalmar och har köpt en väldigt fin kudde som är svart med olika mönster som älgar, blommor och frukt i vit. Väldigt fint och även producerad i Estland. Jag har också beställd köttbullar på Svenska även om jag har av misstag sagt att jag vill ha någon dryck istället för ingen dryck. Men det var först gång som jag har pratat med någon helt på Svenska så det var en stor sak för mig.
+
+{{<collapse summary="Bild av kudde">}}
+![Min kul kudde jar har köpt](cushion.jpg)
+{{</collapse>}}
+
 {{< map coordinates="[{\"x\": 55.5980171, \"y\": 13.0220953 }, {\"x\": 57.174311, \"y\": 17.035819 }]" >}}
+
+På Öland har jag sökt efter en campingplats som vill ha personer under 23 år men det var svårt. Efter en stund jag har tänkt att ha hittat en och har kört till den. Efter jag har checkat in och ställde upp min tält jag har lägt märke till att också den campingplatsen är enda för över 23-årika. Men det var absolut ingen problem så jag tänka att på denna andra campingplatser det också skulle inte ha varit en problem.
+
+### Resa ensam och ensamhet
+
+En annan sak som jag inte har pratat om mycket innan är hur det är att resa ensam. Och jag måste säga att på början jag har tänkt att det är inte möjligt. Men i den städerna jag inte har felt så mycket ensam. På en campingplats på Öland det var en annan sak. Det är verkligen vackert där men jag var ensam och det kännde sig inte bra. Jag har hört mycket podder på grund av detta som hjälper men jag vett inte om det är verkligen bra.
+
+På andra sidan har en ensam resa bra möjligheter. Du kann gjöra vad du vill och chansen att träffa nya personer är högre jag tänker. Som du kan ser den kapitel om [Kalmar](#kalmar) även jag som är inåtvänd / blyg har träffat någon.
+
+### Strand
+
+Den viktigast sak på sommar semester är simmar och stranden jag tänker. Saker som jag har otroligt int gjort mycket. Men på Öland var en undantag. Stranden där var verkligen vackert och i regal har Öland kännt sig som en ön i medelhavet och inte i Östersjön. Det var varm och sol var upp hela tiden.
+
+![Strand på Öland](beach.jpg)
+
+### Lammburgare
+
+En dag jag har ätit en väldigt bra lammburgare som är en specialitet på ön. Det urgott och jag har även beställd helt på Svenska. Jar så mycket lättad att jag kunde kommunicera och att ingen har försökt att växla till Engelska. (Det gäller för nästa hela tiden i Sverige utom en gång på en bensinstation.)
 
 ### Cyklar på Öland
 
-### Strand
+En av dem bra saker att resa ensam var att jag kunde tar med mig min cykel. Så jag användade den när jag var på Öland och har kört mycket runt med den. En gång jag var mitt i en strand bara för kon och jag måste hitta än väg tillbaka till vägen. Det var en liten äventyr.
+
+### Köra runt Öland med bilen
+
+En andra dag jag kört runt hela Öland med min bil och tog en titt här eller där. Det var jätte spännande och jag har sett mycket interessanter orter. Till exempel är där en stor kalksten öken mitt och söder på öen. Det verka verkligen lik en ön i Medelhavet. Fascinerande!
+
+![Bild av den öken i centrum av Öland](./desert.jpg)
 
 ## Kalmar
 
