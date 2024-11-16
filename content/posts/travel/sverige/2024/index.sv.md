@@ -136,9 +136,21 @@ En andra dag jag kört runt hela Öland med min bil och tog en titt här eller d
 
 ## Kalmar
 
+Jag var inte långt i Kalmar men jag tänkte att gå dör åtminstone för en dag. Och jag gjörde det.
+
 {{< map coordinates="[{\"x\": 57.174311, \"y\": 17.035819 }, {\"x\": 56.671736, \"y\": 16.367111 }]" >}}
 
+Jag har kört ner till Kalmar och gått genom stan. Tog en tit på universiteten, haven och till en museum. Det var väldigt interessant. Museumet är kallat Kalmar Slott och det var väldigt kul. I denna slot på kusten är olika utställningar med visningar på Svenska och Engelska. Jag har användad både så att jag måste inte vänta. Där var även personer som prinsessa och hovdamen som agerade som dem var dem på riktigt. Det var fin att titta på den historien och lära sig något om Kalmarer Unionen. När jag var där där även var en [Häxor Utställning](https://kalmarslott.se/nyheter/haxor-ny-utstallning/) som var min först infomation om Häxor i Sverige. Också väldigt fint. Jag har försökt att läsa allt på Svenska men jag har inte förstått allting på hundra procent.
+
 ### Fest med studenter
+
+Nu komma vi till den best del av mina resa. Till att börja med du måste förstå att jag är en blyg / inåtvänd person. Jag arbetar som programmerare och har inte många kontakt med främlingar. Jag tycka att det är jätte svår att gjöra en steg fram och börja med en konversation till exempel. Men efter liten tid det är ingen problem längre.
+
+Jag var på väg genom Kalmar promenera genom stan. Efter en stund jag hör musik från någonstans så jag går dit. Det var en liten hippie / alternativ festival. Där var mycket studenter och andra ung personer som var färsk från skolan. Jag har tittat på det från en distants för en lång tid. Jag tänker en eller två timmar men efter det jag har gått ner till den plats var människa har dansat och bredvid dem andra sittar på ängen. Jag har bara sättat mig någonstans och försökt att vara normal. Jag även har pratat med en kille som var en eller två år yngre en mig. Det var redan mycket för mig att ta initiativ och börja prata med någon. Men konversationen har slutat rellativt snabbt. Efter ungefär ton minuter efter att jag har gått ner har jag kommit in i en studentgrupp efter dem mer eller mindre föll på mig. Dem har frågat mig om jag ville komma med dom. Det var en väldigt bra erfarenhet för mig att det var så lätt att komm in någonstans men jag också tänka att jag hade mycket tur.
+
+Efter festivalen var slut vi har gått till en liten bar och har dränkt en öl, pratat mycket och dansat lite. Det var väldigt fint och jag hade skoj. Det var interessant att hör var dem var från och vad dem studerar. Nästan alla var inte från Sverige så vi pratade på Engelska. Men när att komma till slut med denna kapiteln jag var väldigt nöjd och om ni ändå läser det här: Tack för kvällen!
+
+Efter det jag har sovt i en liten vandrarshem som jag hade bokat in på helt på Svenska. Jag var jätte stolt på det när jag har gjort det.
 
 ## Stockholm
 
