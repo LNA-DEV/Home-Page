@@ -150,11 +150,23 @@ Jag var på väg genom Kalmar promenera genom stan. Efter en stund jag hör musi
 
 Efter festivalen var slut vi har gått till en liten bar och har dränkt en öl, pratat mycket och dansat lite. Det var väldigt fint och jag hade skoj. Det var interessant att hör var dem var från och vad dem studerar. Nästan alla var inte från Sverige så vi pratade på Engelska. Men när att komma till slut med denna kapiteln jag var väldigt nöjd och om ni ändå läser det här: Tack för kvällen!
 
-Efter det jag har sovt i en liten vandrarshem som jag hade bokat in på helt på Svenska. Jag var jätte stolt på det när jag har gjort det.
+Efter det jag har sovt i en liten vandrarshem som jag hade bokat in helt på Svenska. Jag var jätte stolt på det när jag har gjort det.
 
 ## Stockholm
 
+Den nästa morgonen jag måste stiga upp tidigt eftersom jag hade bara bokat en natt och måste ta en dusch i morgonen. Också jag ville inte missa frukosten 😉 Jag har tänkt lite om jag vill stanna lite längre i Kalmar eftersom jag hade mötat nya människa den först gång på denna resan men jag har beslutat att det var en bra avslut igår och körde till Stockholm.
+
 {{< map coordinates="[{\"x\": 56.671736, \"y\": 16.367111 }, {\"x\": 59.302125, \"y\": 18.094136 }]" >}}
+
+Det faktiskt var en ganska långt väg till Stockholm. Men jag körde mest av tiden med bara en eller två pauser så jag var där efter några timmar.
+
+### Storstad
+
+### Bokhandeln
+
+### Rundtur i skärgården
+
+### Museer
 
 ## Göteborg
 
