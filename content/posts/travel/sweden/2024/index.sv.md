@@ -12,6 +12,13 @@ disableHLJS: false
 searchHidden: false
 sitemap:
   priority: 0.8
+cover:
+  image: cover2.JPG
+  alt: "Flagga av en båt med Stockholm i bakgrund" 
+  # caption: Mina resa genom Sverige
+  relative: true
+  hidden: false
+  hiddenInList: false
 ---
 
 ## Resa genom Tyskland och Danmark
