@@ -158,24 +158,74 @@ Den nästa morgonen jag måste stiga upp tidigt eftersom jag hade bara bokat en 
 
 {{< map coordinates="[{\"x\": 56.671736, \"y\": 16.367111 }, {\"x\": 59.302125, \"y\": 18.094136 }]" >}}
 
-Det faktiskt var en ganska långt väg till Stockholm. Men jag körde mest av tiden med bara en eller två pauser så jag var där efter några timmar.
+Det faktiskt var en ganska långt väg till Stockholm. Men jag körde mest av tiden med bara en eller två pauser så jag var där efter några timmar. Jag har väljat en hotell i Södra Hammarbyn som jag tänka är en god miljö.
 
 ### Storstad
 
+En sak som var snabbt klar är att Stockholm är en helt annan liga än Malmö. Det är mycket större och också infrastrukturen och bygnadder verka mer som storstad än Malmö. Men det har också nackdelar till exempel tänka jag att Malmö är mer ren än Stockholm.
+
+Jag kommer från en byn in södra Tyskland och har aldrig blivit längre i en stor stad än några timmar så det var en helt ny erfarenhet för mig. Och jag måste säga att det var kul i alla städer och också Stockholm. Det är några fin platser runt om städerna och jag tänker att leva där kunde också bli fin.
+
+Jag tänka att Stockholm är särkskillt vacker för en så stor stad. Där är några parker som jag har promenarad genom och ocksår är där väldigt mycket vatten som jag vet inte varför har en magisk effekt på mig.
+
 ### Bokhandeln
 
-### Rundtur i skärgården
+En sak som jag har blivit mycket till var flera bokhandlar. Jag vet inte men det var fin att går där och titta för böcker som låtar intressant. Särskillt mycket var jag till [Science Fiction Bokhandeln](https://www.sfbok.se/) inte bara i Stockholm men i all stora städer.
+
+![Bild av en bok och vatten i bakgrund. Jag tog bilden i Stockholm.](book.jpg)
+
+Jag har köpt några böcker. En bok var [Balladen om sångfåglar och ormar](https://www.svt.se/kultur/bokrecension-balladen-om-sangfaglar-och-ormar) som jag har läst på Tyska tidigare men skulle läsa det igen på Svenska. Också jag har köpt [Krigarhjärta](https://www.norstedts.se/bok/9789113135373/krigarhjarta), Blå och det Svensk version av 1984. Hungerspelen och Krigarhjärta har jag läst redan när jag skriver den här texten och dem andra böcker vill jag läser i framtiden när jag har liten tid.
+
+Blå har jag köpt eftersom jag har sett boken redan på en [video](https://www.youtube.com/watch?v=uWQYqcFX8JE) av Ilys om hur man kan lära sig Norsk eller ett språk allmänt. (Videon är verkligen recommendable för alla som vill lära sig en annan språk!) Hon pratade om boken Blå och att hon har läst denn så när jag har sett den jag har läst baksiden av boken som var intressant och jag har köpt den.
 
 ### Museer
 
+Vädret var inte bara bra medan jag var i Stockholm som några inomhusaktiviteter var bra. Till exempel var jag till den en eller andra museum. Till exempel [Nobelmuseum](https://sv.wikipedia.org/wiki/Nobelmuseet) och [Nordiska Museet](https://www.nordiskamuseet.se/).
+
+![En bild med texten Arbetarpartiet Socialdemokraterna](museum.jpg)
+
+Jag tänka att Nobelmuseum var okej men Nordiska Museet var mycket bättre. Det också var mycket större och man hade mer plats. Också det var den först Museum sedan den början av mina resa som var politisk som jag tänka är också väldigt intressant.
+
+En sak som jag hade missat är en visning genom Riksdagen som jag hade älskat. Men kanske jag kan gjöra det en annan gång.
+
+### Rundtur i skärgården
+
+Stockholm är kännt för den stora skärgården och det är en stor turistatraktion att köra med en båt ut på havet genom öen. Jag är inte en stor vän av turista men denna gång jag visste inte hur jag skulle komma ut där utan den turistbåten så jag gjörde den båtstur denna gången.
+
+Det var verkligen vackert ut där. Men skärgården är så stor att båtstur vilken varar några timmar bara visar innre skärgården så det mycket större än som vad jag har sett. Ändå var det en fin tur och jag kunde tar den en eller andra bild av naturen och bygnaddar.
+
+![Bild av öenar i Stockholms innra Skärgård](archipelago.JPG)
+
 ## Göteborg
+
+Nu komma vi till den sista stan jag har bin på mina resan. Efter några dagar i Stockholm har jag kört bak till söder och mot Göteborg. På vägen har jag kört lite genom skogen och vägar som har sett inressant ut någonting jag nu tänka jag skull ha gjort mer. Men efter nästa en hela dag av köra runt var jag där i Göteborg.
 
 {{< map coordinates="[{\"x\": 59.302125, \"y\": 18.094136 }, {\"x\": 57.688636, \"y\": 11.987281 }]" >}}
 
+Jag måste säga att när jag var i Göteborg mina energie var lite låg och vädret var också inte best så jag har gjort lite mindre än innan. Men det är också okej eftersom jag var på resan sedan två fulla veckor. Men jag har gjort ändå den en eller andra sak.
+
+### Försvarsmuseet
+
+Till exempel var jag i en gammal bunker som nu fungera som än sätt försvarsmuseet. Det var intressant att seer flygplan och andra saker på närheten. Men jag har alltid en liten kännsla när jag ser vapen och flygplan som kan fungera som vapen. De är fascinerande men det väldigt viktigt att de bara förvändas för försvar och inte attack eller säljas till andra länderna som använder dem till gjöra attacker. Men ändå är de flyplan vacker och teknisk intressant. 
+
+![En flygplan i en bunker / museet](plane.jpg)
+
+Också hade museet en slag kultur och tidningar från tiden av första världskriget. Det var intressant och lite skrämmande att ser. Också andra saker som en svensk atombomb var beskrivit ner där.
+
+![Några svensk tidningar som visar den andra världskrig](board%20of%20newspapers%20from%20the%20second%20world%20war.jpg)
+
+### Staden
+
+Jag faktiskt vet inte vad jag skulle säga om Göteborg. Jag hade inte bästa förutsättningar eftersom vädret var dålig och jag hade ingen kraft längre men jag hade kännslan att Göteborg är lite tråkig. Men jag tänka att jag måste komma dit en gång till och ta en titt på staden igen för att kunna säga någonting bättre.
+
 ## Tillbaka hem
+
+Efter mina dagerna i Göteborg var det tid för att köra hem. Först jag körde ner till Malmö när jag har köpt lite souvenir för mina nära ock kära och den körde jag när till Kolding i Danmark. Där jag har sovt en natt i närheten av Koldingarenan och på nästa dagen har jag kört ner bak till Tyskland.
+
+{{< map coordinates="[{\"x\": 57.688636, \"y\": 11.987281 }, {\"x\": 55.464744, \"y\": 9.476542 }, {\"x\": 48.70354 , \"y\": 9.65209 }, {\"x\": 47.85, \"y\": 12.12}]" >}}
 
 ## Tack för läsa
 
-Tack för läsa den här texten. Jag vet inte om någon interessera sig för vad jag skriver här men det är en stor möjlighet för att förbättra min Svenska så jag gjör det ändå.
+Tack för läsa den här texten. Jag uppskatter det mycket ❤️ Jag vet inte om någon interessera sig för vad jag skriver här men det är en stor möjlighet för att förbättra min Svenska så jag gjör det ändå.
 
 Om du vill ser mer bilderna (jag har gjort mycket mer) du kann tar en tit på [Fotografi](/en/gallery) var du kann hitta alla mina fotografier. Jag har inte publicerad någon bilder ännu men jag vill gjöra det någonstans!
