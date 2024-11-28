@@ -36,12 +36,12 @@ jobs:
         id: write_file
         uses: timheuer/base64-to-file@v1.1
         with:
-          fileName: "custom-config"
+          fileName: "~/.kube/config"
           encodedString: ${{ secrets.KUBECTL_CONFIG }}
 
       # Deploy Kubernetes YAML
-      - run: |
-          POD_NAME=$(kubectl get pods -n personal-dev -l app=personal-website -o jsonpath='{.items[0].metadata.name}' --kubeconfig ${{ steps.write_file.outputs.filePath }})
-          kubectl cp ./${{ env.NAME }}/ $POD_NAME:/usr/share/nginx/html/ -n personal-dev --kubeconfig ${{ steps.write_file.outputs.filePath }}
-
+      - name: Deploy script
+        run: |
+          chmod +x ./script.sh 
+          ./.github/workflows/deploy-dev.sh           
       
