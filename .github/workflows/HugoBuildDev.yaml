@@ -31,41 +31,17 @@ jobs:
       - run: hugo -e development --baseURL "https://dev.lna-dev.net"
         working-directory: ./${{ env.NAME }}/
 
-      - name: Login to Docker Hub
-        uses: docker/login-action@v1
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Build the Docker image
-        run: docker build . --file ./${{ env.NAME }}/deployment/Dockerfile --tag lnadev/${{ env.CONTAINER-NAME }}:dev_${{ github.run_number }}
-
-      - name: Push the image to dockerhub
-        run: docker push lnadev/${{ env.CONTAINER-NAME }}:dev_${{ github.run_number }}
-
-  DeployContainer:
-    needs: ReleaseDev
-    runs-on: ubuntu-latest
-
-    steps:
       # Download Secure-File
       - name: base64-to-file
         id: write_file
         uses: timheuer/base64-to-file@v1.1
         with:
-          fileName: "custom-config"
+          fileName: "config"
           encodedString: ${{ secrets.KUBECTL_CONFIG }}
 
-      # Checkout the repository
-      - uses: actions/checkout@v3
-
-      - name: Find and Replace
-        uses: jacobtomlinson/gha-find-replace@v3
-        with:
-          find: "{{RUN_NUMBER}}"
-          replace: ${{ github.run_number }}
-          regex: false
-
       # Deploy Kubernetes YAML
-      - run: kubectl apply -n home-page-dev -f ./deployment/Kubernetes.dev.yaml --kubeconfig ${{ steps.write_file.outputs.filePath }}
+      - name: Deploy script
+        run: |
+          chmod +x ./.github/workflows/deploy-dev.sh
+          ./.github/workflows/deploy-dev.sh           
       
