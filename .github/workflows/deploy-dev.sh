@@ -64,4 +64,4 @@ kubectl --kubeconfig=$KUBECONFIG_PATH delete pod $POD_NAME -n personal-dev
 # Optional: Deploy using Helm to bind this PVC to a long-term deployment
 helm --kubeconfig=$KUBECONFIG_PATH upgrade --install charts.personal oci://registry-1.docker.io/lnadev/charts.personal --set homePage.dev.pvcName=$PVC_NAME --reuse-values --namespace default --wait
 
-kubectl delete pvc $PVC_NAME_OLD
+kubectl --kubeconfig=$KUBECONFIG_PATH delete pvc $PVC_NAME_OLD
