@@ -42,6 +42,6 @@ jobs:
       # Deploy Kubernetes YAML
       - name: Deploy script
         run: |
-          chmod +x ./script.sh 
+          chmod +x ./.github/workflows/deploy-dev.sh
           ./.github/workflows/deploy-dev.sh           
       
