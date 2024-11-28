@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Config
-KUBECONFIG_PATH="config"
+KUBECONFIG_PATH="/home/runner/work/_temp/config"
 
 # Get old pvc
 PVC_NAME_OLD=$(kubectl get pvc -n personal-dev -o jsonpath='{.items[0].metadata.name}' --kubeconfig $KUBECONFIG_PATH)
