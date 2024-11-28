@@ -25,11 +25,11 @@ jobs:
           token: ${{ secrets.PAT_TOKEN }}
 
       # Install Hugo
-      - run: sudo snap install hugo
+      # - run: sudo snap install hugo
 
-      # Build the hugo repository
-      - run: hugo -e development --baseURL "https://dev.lna-dev.net"
-        working-directory: ./${{ env.NAME }}/
+      # # Build the hugo repository
+      # - run: hugo -e development --baseURL "https://dev.lna-dev.net"
+      #   working-directory: ./${{ env.NAME }}/
 
       # Download Secure-File
       - name: base64-to-file
@@ -42,6 +42,7 @@ jobs:
       # Deploy Kubernetes YAML
       - name: Deploy script
         run: |
+          echo ${{ steps.write_file.outputs.filePath }}
           chmod +x ./.github/workflows/deploy-dev.sh
           ./.github/workflows/deploy-dev.sh           
       
