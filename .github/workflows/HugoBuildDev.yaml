@@ -36,7 +36,7 @@ jobs:
         id: write_file
         uses: timheuer/base64-to-file@v1.1
         with:
-          fileName: "~/.kube/config"
+          fileName: "config"
           encodedString: ${{ secrets.KUBECTL_CONFIG }}
 
       # Deploy Kubernetes YAML
