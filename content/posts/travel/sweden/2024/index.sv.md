@@ -1,71 +1,72 @@
 ---
-title: "Min första gång i Sverige 🇸🇪"
-date: 2024-11-08T23:00:52+01:00
-draft: false
-tags: ["Svenska", "Språk", "Norden", "Om mig", "Sverige"]
-categories: ["Svenska", "Resa"]
-showToc: true
-TocOpen: false
-description: "I denna inlägg jag vill berätta om min först resa till och genom södra Sverige."
-disableShare: true
-disableHLJS: false
-searchHidden: false
-sitemap:
-  priority: 0.8
-cover:
-  image: cover2.JPG
-  alt: "Flagga av en båt med Stockholm i bakgrund" 
-  # caption: Mina resa genom Sverige
-  relative: true
-  hidden: false
+title: "Min första gång i Sverige 🇸🇪"  
+date: 2024-11-08T23:00:52+01:00  
+draft: false  
+tags: ["Svenska", "Språk", "Norden", "Om mig", "Sverige"]  
+categories: ["Svenska", "Resa", "Sverige"]  
+showToc: true  
+TocOpen: false  
+description: "I detta inlägg vill jag berätta om min första resa till och genom södra Sverige."  
+disableShare: true  
+disableHLJS: false  
+searchHidden: false  
+sitemap:  
+  priority: 0.8  
+cover:  
+  image: cover2.JPG  
+  alt: "Flagga på en båt med Stockholm i bakgrunden"  
+  relative: true  
+  hidden: false  
   hiddenInList: false
 ---
 
 ## Resa genom Tyskland och Danmark
 
-I denn inlägg vill jag berätta om mina först resa till och genom södra Sverige. Jag har börjat den ungefär på Midsommar i Juni och resan tog slut tre veckor efter i Juli.
+I detta inlägg vill jag berätta om min första resa till och genom södra Sverige. Jag började den ungefär vid midsommar i juni och resan tog slut tre veckor senare i juli.
 
-Jag har börjat mina resa i södra Tyskland tidigt i morgonen. Men den första dagen av mina resa var helt ospektakulärt eftersom jag kört nästan hela dagen upp till en liten campingplats nära Hamburg. Du kan ser precis ställe i kartan nedan. Det var ungefär halv sex när jag var där. Det var en fin liten campingplats nära en sjö och personalen var väldigt fin. Det äre väldigt interessant hur annars det är även i en andra del av Tyskland. Dialekten, mentalitäten och särskilt landskapen är väldigt annars jämförd med den bergigt landskap i södra Tyskland.
+Jag började min resa i södra Tyskland tidigt på morgonen. Men den första dagen av min resa var helt ospektakulär eftersom jag körde nästan hela dagen upp till en liten campingplats nära Hamburg. Du kan se den exakta platsen på kartan nedan. Det var ungefär halv sex när jag kom fram. Det var en fin liten campingplats nära en sjö, och personalen var väldigt trevlig. Det är väldigt intressant hur annorlunda det är även i en annan del av Tyskland. Dialekten, mentaliteten och särskilt landskapet är väldigt annorlunda jämfört med det bergiga landskapet i södra Tyskland.
 
 ![Solnedgång på en campingplats i norra Tyskland nära Hamburg.](sunset_camping_germany.jpg)
 
-På nästa dagen har jag vaknat upp tidigt eftersom solen var upp och grodorna var så jävla högljudda. Jag hade frukost på campingplatsen och har bokad en billjet för Öresundsbron online. Det var midsommardagen förresten. Så min plan var att köra till Malmö så snabbt som möjligt och hittar någon midsommar fest där på stan.
+Nästa dag vaknade jag tidigt eftersom solen var uppe och grodorna var så jävla högljudda. Jag åt frukost på campingplatsen och bokade en biljett för Öresundsbron online. Det var midsommardagen, förresten. Så min plan var att köra till Malmö så snabbt som möjligt och hitta någon midsommarfest där i stan.
 
-Köra genom Danmark var fin och lite mindre stressig som köra så snabb på den tyska Autobahn. På vägen är flera stor bron som har imponerad mig som jag kört på dem och blicken på haven här och där var jättefint.
+Att köra genom Danmark var fint och lite mindre stressigt än att köra så snabbt på den tyska ***Autobahn***. På vägen finns flera stora broar som imponerade på mig när jag körde över dem och utsikten över havet här och där var jättefin.
 
 ![Öresundsbron fotograferad från Sverige med en titt på Köpenhamn](./oerseundsbron_landscape.JPG)
 
-När jag har kommit till Öresundsbron var det jättekul att köra över den och kom ut från under haven. Utsikten var jättekul jag tycka. I Sverige var dem gatorna nästan tomt eftersom det var midsommar. Men jag hade en känsla av eviga vidder när jag körde mina första metrar genom Skåne.
+När jag kom till Öresundsbron var det jättekul att köra över den och komma upp från under havet. Utsikten var fantastisk, tyckte jag. I Sverige var gatorna nästan tomma eftersom det var midsommar. Men jag hade en känsla av eviga vidder när jag körde mina första meter genom Skåne.
 
-Eftersom det har tog en långt tid köra upp from norra Tyskland har jag kört direkt till min hotell för dem nästa några dagarna. Jag har väljat en hotell i Sorgenfri, Malmö eftersom min natt i tält var inte bra. Jag hade ingen riktigt kudde och jag också tänka att campingplatser är inte nära centrumet.
+Eftersom det tog lång tid att köra upp från norra Tyskland körde jag direkt till mitt hotell för de kommande dagarna. Jag hade valt ett hotell i Sorgenfri, Malmö, eftersom natten i tältet inte var bra. Jag hade ingen riktig kudde och jag tänkte också att campingplatser inte ligger nära centrum.
 
 {{< map coordinates="[{\"x\": 47.85, \"y\": 12.12}, {\"x\": 53.408508, \"y\": 10.595831}, {\"x\": 55.5980171, \"y\": 13.0220953 }]" >}}
 
 ## Malmö
 
-Först jag har checkad in i min hotell. Jag försökte prata lite Svenska men jag pratade mest Engelska. Eftersom jag frågade efter midsommar festar på reception jag visste att det är någonting på Folketspark. Men när jag var där jag har lagt märke till att det är inte en riktigt midsommar fest och bara en liten händelse för familjer med barn. Så jag bar gott genom stan och tar en titt här och där. Men bara i närheten var jag kunde går utan en busbiljet.
+Först checkade jag in på mitt hotell. Jag försökte prata lite svenska, men jag pratade mest engelska. Eftersom jag frågade efter midsommarfester i receptionen fick jag veta att det fanns något på Folkets Park. Men när jag var där lade jag märke till att det inte var en riktig midsommarfest, bara en liten händelse för familjer med barn. Så jag gick bara runt genom stan och tittade lite här och där, men bara i närheten dit jag kunde gå utan bussbiljett.
 
-Jag är lite ledsna att jag har mer eller mindre missad midsommar men kanske jag kan uppleva det på en andra gång.
+Jag är lite ledsen att jag mer eller mindre missade midsommar, men kanske kan jag uppleva det en annan gång.
 
 ![Malmö bokstäver i Malmö](./malmoe.jpg)
 
-På den nästa dagen har jar forskat hur jag kan använda bus i Skåne och hade användat appen som billjet den först gång. Som en programmerare jag har delade meningar um denna biljettar. Först av all är dem jätte enkel och bekväm men de kann också bli användat för att övervaka var någon är. Jag hoppas att daterna är bemött ansvarsfullt. Men nu jag hade mölighet att utforska hela stand och jag gjörde det. Det jättefint att sätta sig i bussen och körar runt stan och tar tit här eller där.
+### Nästa dag
 
-Jag hade parkerad min bil i närheten av hotellet. Där jag har gjort en stor fel. Jag har parkerad på den andra sidan av gatorna jag hade betalt... Så jag hag måste betala 800 SEK för parkering ytterligare till som jag hade betalt för parkering på andra sidan.
+Nästa dag forskade jag i hur man använder bussarna i Skåne och använde appen för biljetten för första gången. Som programmerare har jag delade meningar om dessa biljetter. Först och främst är de jätteenkla och bekväma, men de kan också användas för att övervaka var någon är. Jag hoppas att datan hanteras ansvarsfullt. Men nu hade jag möjlighet att utforska hela staden, och det gjorde jag. Det var jättefint att sätta sig på bussen, åka runt i stan och ta en titt här och där.
+
+Jag hade parkerat min bil i närheten av hotellet. Där gjorde jag ett stort misstag. Jag parkerade på andra sidan av gatan än där jag hade betalat för parkering... Så jag var tvungen att betala 800 SEK för parkering, utöver vad jag redan betalat på den andra sidan.
 
 ### Twisting Torso
 
-När jag var i Malmö jag har sett många sevärdheter lika som Twisting Torso. Jag tycka om byggnaden eftersom det är någonting unik och i närheten av tornen är flera fin parker. Jag tänka att särskilt Malmö har många fina parker i allmänhet. Det var särskilt interessant när det var som dimma in staden och tornen försvinn inom den.
+När jag var i Malmö såg jag många sevärdheter, till exempel Twisting Torso. Jag tyckte om byggnaden eftersom den är något unikt, och i närheten av tornet finns flera fina parker. Jag tänker att Malmö särskilt har många fina parker i allmänhet. Det var särskilt intressant när det var dimmigt i staden och tornet försvann i dimman.
 
-![Bild of Twisting Torso på dimma](twisting_torso_fog.jpg)
+![Bild av Twisting Torso i dimma](twisting_torso_fog.jpg)
 
-### Parks och trädgårdar
+### Parker och trädgårdar
 
-Som jag har satt innan jag tänker att Malmö hade dem bästa parkerna av städerna som jag har besökt. Till exempel det var flera parker i närheten av Twisting Torso. En av dem även had mycket vatten och om du hade tur där var ankorna. Jag gilla ankorna så det var jätte fint at bli där och njuta lite naturen.
+Som jag nämnde tidigare tycker jag att Malmö hade de bästa parkerna av de städer jag har besökt. Till exempel fanns det flera parker i närheten av Twisting Torso. En av dem hade till och med mycket vatten, och om du hade tur kunde du se ankor. Jag gillar ankor, så det var jättefint att vara där och njuta av lite natur.
 
-![Twisting Torso och en liten park nedan den](twisting_torso.jpg)
+![Twisting Torso och en liten park nedanför den](twisting_torso.jpg)
 
-Men det var inte den ända parken jag har sett många av dem. Vad jag tänker är interessant är att jag har sett många kaniner i Svenska städer. Till exempel i Malmö i en kyrkogården och i en park lite utanför staden i närheten av Öresundsbron. Men om jag minnas riktig jag har också sett någon kaniner i Göteborg och kanske även Stockholm.
+Men det var inte den enda parken, jag såg många av dem. Det jag tycker är intressant är att jag har sett många kaniner i svenska städer. Till exempel i Malmö, både på en kyrkogård och i en park lite utanför staden, nära Öresundsbron. Om jag minns rätt såg jag också några kaniner i Göteborg och kanske till och med i Stockholm.
 
 {{<collapse summary="Bild av kanin">}}
 ![Bild av en kanin i en park](bunny.jpg)
@@ -73,73 +74,73 @@ Men det var inte den ända parken jag har sett många av dem. Vad jag tänker ä
 
 ### Museer och gallerier
 
-Jag var i olika museer och gallerier när jag var i Malmö och också hela Sverige. Till exempel jag var i Malmöhus / Malmömuseum och Teknikens och Sjöfartens hus. Det var interessant att ser gammal teknologi där. Det var den huvudskalig andledning for att går där men den konstgallerien var också interessant för mig eftersom jag har aldrig varit till en. Jag tyckte om många fotografier och ritar men en av dem var jätte rolig. Du kan ser bilder av den nedan. 
+Jag besökte olika museer och gallerier när jag var i Malmö och också i hela Sverige. Till exempel var jag på Malmöhus / Malmömuseum och Teknikens och Sjöfartens hus. Det var intressant att se gammal teknologi där. Det var den huvudsakliga anledningen till att gå dit, men konstgalleriet var också intressant för mig eftersom jag aldrig hade varit på ett tidigare. Jag tyckte om många fotografier och teckningar, men en av dem var jätterolig. Du kan se en bild av den nedan. 
 
-Jag tycka att det är rolig och en god beskrivning av Malmö i allmänheten. Malmö verkar att bli an väldigt vänster orienterad stad med mycket olika kulturer och också migranter. Men denna många kulturer som träffa här på varandra är också ett problem här. Krimminalitäten och mordraten i Malmö är en av dem högsta i hela Europa. Men jag tänka att det är eftersom integrationen av dem flyktlingar har gått fel. Och jag också verkligen gilla Malmös öppen kultur för flyklingar och också HBTQ personer som verkar är mycket hög i Malmö.
+Jag tycker att den är rolig och en bra beskrivning av Malmö i allmänhet. Malmö verkar vara en väldigt vänsterorienterad stad med många olika kulturer och också många migranter. Men de många kulturer som möts här kan också skapa problem. Kriminaliteten och mordraten i Malmö är bland de högsta i hela Europa. Men jag tänker att det beror på att integrationen av flyktingarna har misslyckats. Samtidigt gillar jag verkligen Malmös öppna kultur för flyktingar och också HBTQ-personer, som verkar vara stark i Malmö.
 
-Vad jag måste säga till det: Jag har inte felt en gång osäkert i min hela resa genom Sverige och även om Malmö är statistisk väldigt kriminell det känns inte så och jag har sett ingen typ av brott när jag var där. Jag har inte ens sett mer än ett eller två hemlösa. Det är helt annat i Tyskland även i mindre städer. Sverige har felt väldigt varmt ock välkomst.
+Vad jag måste säga om detta: Jag kände mig aldrig osäker under hela min resa genom Sverige. Även om Malmö är statistiskt sett en väldigt kriminell stad känns det inte så, och jag såg ingen typ av brott när jag var där. Jag såg inte ens mer än en eller två hemlösa. Det är helt annorlunda i Tyskland, även i mindre städer. Sverige kändes väldigt varmt och välkomnande!
 
-Denn konst också visa den liten syskongräl mellan Sverige och Danmark. Jag tänka att det är lite rolig och jag gilla sammanhållning i hela Norden.
+Denna konst visar också den lilla syskongräl mellan Sverige och Danmark. Jag tycker att det är lite roligt, och jag gillar sammanhållningen i hela Norden.
 
 ![Bild av en text i en galleri: Foreigners, please don't let us alone with the Danes!](gallery.jpg)
 
 ### Strandpromenaden
 
-Jag tänker att den stora strandpromenaden der är min favoritplats i hela Malmö. Det är verkligen vackert där. Man kan sitta på stora bänker i trä, spelar volleyboll, går för en promenad i en park haven eller går simmar. Där är också många personer där så jag har inte felt ensam även om jag resade ensam. En gång där även var en mås bredvid mig på bänken. Det var verkligen söt.
+Jag tycker att den stora strandpromenaden är min favoritplats i hela Malmö. Det är verkligen vackert där. Man kan sitta på stora bänkar i trä, spela volleyboll, gå på en promenad i parken vid havet eller bada. Det är också många personer där, så jag kände mig inte ensam, även om jag reste ensam. En gång var det till och med en mås bredvid mig på bänken. Den var verkligen söt.
 
-Utsikten är också vackert. Man har blick på Öresundsbron och kann titta på båtar som kör igenom bron eller man kann titta på Köpenhamn om siktet är god. Man även kan ser planer landa och starta i Köpenhamn flygplats.
+Utsikten är också vacker. Man har en vy över Öresundsbron och kan titta på båtar som kör under bron eller man kan titta på Köpenhamn om sikten är bra. Man kan till och med se plan landa och starta vid Köpenhamns flygplats.
 
 ![Strandpromenaden i Malmö](beach_promenade.jpg)
 
 ### En liten kulturchock
 
-Vag jag tyckte var komiskt är att fönster i Malmö öppnades annars än i Tyskland. När jag vred handtaget i sidled så vinklade fönstret och om jag har vred upp it öppnades helt. Det var jätte konstigt. Men jag tänker att alla andra fönster som jag har sett i Sverige öppnade lika som dem Tyska.
+Vad jag tyckte var komiskt är att fönstren i Malmö öppnades annorlunda än i Tyskland. När jag vred handtaget i sidled vinklade fönstret och om jag vred uppåt öppnades det helt. Det var jättekonstigt. Men jag tänker att alla andra fönster som jag har sett i Sverige öppnade likadant som de tyska.
 
 {{<collapse summary="Bild av fönstret">}}
-![Fönster som är öppnad lite](window.jpg)
+![Fönster som är öppnat lite](window.jpg)
 {{</collapse>}}
 
 ## Öland
 
-> Öland är den andra största ön i Sverige landet med den mesta ön i hela världen. Det är det ön av sol och vind.
+> Öland är Sveriges näst största ö, landet med den mesta ön i hela världen. Det är solen och vindens ö.
 
-Efter några dagar i Malmö som jag har felt en samband med jag har kört till min nästa stopp: Öland. Men eftersom jag hade plannerad tälta på Öland jag måste köpa en kudde. 
+Efter några dagar i Malmö, som jag verkligen kände en koppling till, körde jag vidare till mitt nästa stopp: Öland. Men eftersom jag hade planerat att tälta på Öland, behövde jag köpa en kudde. 
 
-Så jag körde till Ikea i Kalmar och har köpt en väldigt fin kudde som är svart med olika mönster som älgar, blommor och frukt i vit. Väldigt fint och även producerad i Estland. Jag har också beställd köttbullar på Svenska även om jag har av misstag sagt att jag vill ha någon dryck istället för ingen dryck. Men det var först gång som jag har pratat med någon helt på Svenska så det var en stor sak för mig.
+Så jag körde till Ikea i Kalmar och köpte en väldigt fin kudde som är svart med olika mönster av älgar, blommor och frukter i vitt. Väldigt fin och även producerad i Estland. Jag beställde också köttbullar på svenska, även om jag av misstag sa att jag ville ha "någonting" för dryck istället för "ingenting". Men det var första gången jag pratade med någon helt på svenska, så det var stort för mig.
 
 {{<collapse summary="Bild av kudde">}}
-![Min kul kudde jar har köpt](cushion.jpg)
+![Min coola kudde jag köpte](cushion.jpg)
 {{</collapse>}}
 
 {{< map coordinates="[{\"x\": 55.5980171, \"y\": 13.0220953 }, {\"x\": 57.174311, \"y\": 17.035819 }]" >}}
 
-På Öland har jag sökt efter en campingplats som vill ha personer under 23 år men det var svårt. Efter en stund jag har tänkt att ha hittat en och har kört till den. Efter jag har checkat in och ställde upp min tält jag har lägt märke till att också den campingplatsen är enda för över 23-årika. Men det var absolut ingen problem så jag tänka att på denna andra campingplatser det också skulle inte ha varit en problem.
+På Öland letade jag efter en campingplats som tar emot personer under 23 år, men det var svårt. Efter ett tag trodde jag att jag hade hittat en och körde dit. Efter att jag checkat in och satt upp mitt tält märkte jag att också denna campingplats endast var för personer över 23 år. Men det var absolut inget problem, så jag tänkte att det inte skulle ha varit ett problem på de andra campingplatserna heller.
 
 ### Resa ensam och ensamhet
 
-En annan sak som jag inte har pratat om mycket innan är hur det är att resa ensam. Och jag måste säga att på början jag har tänkt att det är inte möjligt. Men i den städerna jag inte har felt så mycket ensam. På en campingplats på Öland det var en annan sak. Det är verkligen vackert där men jag var ensam och det kännde sig inte bra. Jag har hört mycket podder på grund av detta som hjälper men jag vett inte om det är verkligen bra.
+En annan sak som jag inte har pratat så mycket om tidigare är hur det är att resa ensam. Jag måste säga att i början trodde jag inte att det skulle vara möjligt. Men i städerna kände jag mig inte så ensam. På en campingplats på Öland var det en annan sak. Det är verkligen vackert där, men jag var ensam, och det kändes inte bra. Jag lyssnade mycket på poddar på grund av detta, vilket hjälpte, men jag vet inte om det är en bra lösning.
 
-På andra sidan har en ensam resa bra möjligheter. Du kann gjöra vad du vill och chansen att träffa nya personer är högre jag tänker. Som du kan ser den kapitel om [Kalmar](#kalmar) även jag som är inåtvänd / blyg har träffat någon.
+Å andra sidan har en ensam resa sina fördelar. Du kan göra vad du vill, och chansen att träffa nya personer är högre, tror jag. Som du kan se i kapitlet om [Kalmar](#kalmar), träffade jag någon, även jag som är inåtvänd och blyg.
 
 ### Strand
 
-Den viktigast sak på sommar semester är simmar och stranden jag tänker. Saker som jag har otroligt int gjort mycket. Men på Öland var en undantag. Stranden där var verkligen vackert och i regal har Öland kännt sig som en ön i medelhavet och inte i Östersjön. Det var varm och sol var upp hela tiden.
+Den viktigaste saken på en sommarsemester är att bada och vara på stranden, tycker jag. Saker som jag otroligt nog inte gjort mycket av. Men Öland var ett undantag. Stranden där var verkligen vacker, och generellt kändes Öland mer som en ö i Medelhavet än i Östersjön. Det var varmt och solen var framme hela tiden.
 
 ![Strand på Öland](beach.jpg)
 
 ### Lammburgare
 
-En dag jag har ätit en väldigt bra lammburgare som är en specialitet på ön. Det urgott och jag har även beställd helt på Svenska. Jar så mycket lättad att jag kunde kommunicera och att ingen har försökt att växla till Engelska. (Det gäller för nästa hela tiden i Sverige utom en gång på en bensinstation.)
+En dag åt jag en väldigt god lammburgare, som är en specialitet på ön. Den var urgod, och jag beställde den helt på svenska. Jag var så lättad över att jag kunde kommunicera och att ingen försökte växla till engelska. (Det gällde nästan hela tiden i Sverige, förutom en gång på en bensinstation.)
 
-### Cyklar på Öland
+### Cykla på Öland
 
-En av dem bra saker att resa ensam var att jag kunde tar med mig min cykel. Så jag användade den när jag var på Öland och har kört mycket runt med den. En gång jag var mitt i en strand bara för kon och jag måste hitta än väg tillbaka till vägen. Det var en liten äventyr.
+En av de bra sakerna med att resa ensam var att jag kunde ta med mig min cykel. Jag använde den när jag var på Öland och cyklade runt lite. En gång hamnade jag mitt på en strand omgiven av kor och jag behövde hitta en väg tillbaka till vägen. Det blev ett litet äventyr.
 
 ### Köra runt Öland med bilen
 
-En andra dag jag kört runt hela Öland med min bil och tog en titt här eller där. Det var jätte spännande och jag har sett mycket interessanter orter. Till exempel är där en stor kalksten öken mitt och söder på öen. Det verka verkligen lik en ön i Medelhavet. Fascinerande!
+En annan dag körde jag runt hela Öland med bilen och stannade till här och där. Det var jättespännande och jag såg många intressanta platser. Till exempel finns det en stor kalkstensöken i mitten och södra delen av ön. Den liknade verkligen en ö i Medelhavet. Fascinerande!
 
-![Bild av den öken i centrum av Öland](./desert.jpg)
+![Bild av öknen i centrum av Öland](./desert.jpg)
 
 ## Kalmar
 
