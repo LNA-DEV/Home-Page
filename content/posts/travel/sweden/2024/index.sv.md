@@ -144,96 +144,100 @@ En annan dag körde jag runt hela Öland med bilen och stannade till här och d�
 
 ## Kalmar
 
-Jag var inte långt i Kalmar men jag tänkte att gå dör åtminstone för en dag. Och jag gjörde det.
+Jag var inte länge i Kalmar, men jag tänkte att jag åtminstone skulle besöka staden för en dag. Och det gjorde jag.
 
 {{< map coordinates="[{\"x\": 57.174311, \"y\": 17.035819 }, {\"x\": 56.671736, \"y\": 16.367111 }]" >}}
 
-Jag har kört ner till Kalmar och gått genom stan. Tog en tit på universiteten, haven och till en museum. Det var väldigt interessant. Museumet är kallat Kalmar Slott och det var väldigt kul. I denna slot på kusten är olika utställningar med visningar på Svenska och Engelska. Jag har användad både så att jag måste inte vänta. Där var även personer som prinsessa och hovdamen som agerade som dem var dem på riktigt. Det var fin att titta på den historien och lära sig något om Kalmarer Unionen. När jag var där där även var en [Häxor Utställning](https://kalmarslott.se/nyheter/haxor-ny-utstallning/) som var min först infomation om Häxor i Sverige. Också väldigt fint. Jag har försökt att läsa allt på Svenska men jag har inte förstått allting på hundra procent.
+Jag körde ner till Kalmar och promenerade genom staden. Jag tog en titt på universitetet, hamnen och ett museum. Det var väldigt intressant. Museet, kallat Kalmar Slott, var riktigt roligt att besöka. I slottet, som ligger vid kusten, fanns olika utställningar med information på både svenska och engelska. Jag använde båda språken så att jag inte behövde vänta. Det fanns även personer utklädda till prinsessor, hovdamer och riddare som agerade som om de verkligen levde på den tiden. Det var fint att se historien komma till liv och lära sig något om Kalmarunionen. När jag var där hade de även en [häxutställning](https://kalmarslott.se/nyheter/haxor-ny-utstallning/), vilket var min första introduktion till häxor i Sverige. Också väldigt spännande. Jag försökte läsa all information på svenska, men jag förstod inte riktigt allt till hundra procent.
 
 ### Fest med studenter
 
-Nu komma vi till den best del av mina resa. Till att börja med du måste förstå att jag är en blyg / inåtvänd person. Jag arbetar som programmerare och har inte många kontakt med främlingar. Jag tycka att det är jätte svår att gjöra en steg fram och börja med en konversation till exempel. Men efter liten tid det är ingen problem längre.
+Nu kommer vi till den bästa delen av min resa. Först måste jag förklara att jag är en blyg och inåtvänd person. Jag arbetar som programmerare och har inte mycket kontakt med främlingar. Jag tycker att det är väldigt svårt att ta initiativ och börja prata med någon, men när jag väl kommer igång är det inga problem längre.
 
-Jag var på väg genom Kalmar promenera genom stan. Efter en stund jag hör musik från någonstans så jag går dit. Det var en liten hippie / alternativ festival. Där var mycket studenter och andra ung personer som var färsk från skolan. Jag har tittat på det från en distants för en lång tid. Jag tänker en eller två timmar men efter det jag har gått ner till den plats var människa har dansat och bredvid dem andra sittar på ängen. Jag har bara sättat mig någonstans och försökt att vara normal. Jag även har pratat med en kille som var en eller två år yngre en mig. Det var redan mycket för mig att ta initiativ och börja prata med någon. Men konversationen har slutat rellativt snabbt. Efter ungefär ton minuter efter att jag har gått ner har jag kommit in i en studentgrupp efter dem mer eller mindre föll på mig. Dem har frågat mig om jag ville komma med dom. Det var en väldigt bra erfarenhet för mig att det var så lätt att komm in någonstans men jag också tänka att jag hade mycket tur.
+Jag promenerade genom Kalmar och hörde plötsligt musik från någonstans. Så jag gick dit. Det visade sig vara en liten hippie-/alternativfestival. Där var det många studenter och andra unga personer som nyligen slutat skolan. Jag stod och tittade på allt från avstånd under en lång tid, kanske en eller två timmar. Till slut gick jag ner till platsen där människor dansade, medan andra satt på gräset bredvid. Jag satte mig bara ner någonstans och försökte vara avslappnad. Jag pratade till och med med en kille som var ett eller två år yngre än jag. Det var redan ett stort steg för mig att ta initiativ och börja en konversation. Men samtalet tog slut ganska snabbt.
 
-Efter festivalen var slut vi har gått till en liten bar och har dränkt en öl, pratat mycket och dansat lite. Det var väldigt fint och jag hade skoj. Det var interessant att hör var dem var från och vad dem studerar. Nästan alla var inte från Sverige så vi pratade på Engelska. Men när att komma till slut med denna kapiteln jag var väldigt nöjd och om ni ändå läser det här: Tack för kvällen!
+Ungefär tio minuter efter att jag satt mig kom jag in i en grupp studenter, eftersom de mer eller mindre "föll över mig." De frågade om jag ville hänga med dem. Det var en fantastisk upplevelse för mig att se hur enkelt det kunde vara att komma in i en grupp, även om jag tror att jag hade mycket tur.
 
-Efter det jag har sovt i en liten vandrarshem som jag hade bokat in helt på Svenska. Jag var jätte stolt på det när jag har gjort det.
+Efter festivalen gick vi till en liten bar, där vi drack öl, pratade mycket och dansade lite. Det var verkligen roligt, och jag hade en väldigt fin kväll. Det var intressant att höra var alla kom ifrån och vad de studerade. Nästan alla var inte från Sverige, så vi pratade engelska. 
+
+Till sist, om någon av er läser det här: Tack för kvällen!
+
+Efteråt sov jag på ett litet vandrarhem som jag hade bokat helt på svenska. Jag var väldigt stolt över mig själv när jag lyckades med det!
 
 ## Stockholm
 
-Den nästa morgonen jag måste stiga upp tidigt eftersom jag hade bara bokat en natt och måste ta en dusch i morgonen. Också jag ville inte missa frukosten 😉 Jag har tänkt lite om jag vill stanna lite längre i Kalmar eftersom jag hade mötat nya människa den först gång på denna resan men jag har beslutat att det var en bra avslut igår och körde till Stockholm.
+Nästa morgon behövde jag stiga upp tidigt eftersom jag bara hade bokat en natt på vandrarhemmet och ville hinna duscha innan jag checkade ut. Jag ville inte heller missa frukosten 😉 Jag övervägde om jag skulle stanna längre i Kalmar eftersom jag hade träffat nya människor för första gången under resan, men jag bestämde att kvällen innan var en bra avslutning. Så jag körde vidare mot Stockholm.
 
 {{< map coordinates="[{\"x\": 56.671736, \"y\": 16.367111 }, {\"x\": 59.302125, \"y\": 18.094136 }]" >}}
 
-Det faktiskt var en ganska långt väg till Stockholm. Men jag körde mest av tiden med bara en eller två pauser så jag var där efter några timmar. Jag har väljat en hotell i Södra Hammarbyn som jag tänka är en god miljö.
+Det var faktiskt en ganska lång resa till Stockholm. Men jag körde det mesta av sträckan med bara en eller två pauser, så jag var framme efter några timmar. Jag hade valt ett hotell i Södra Hammarbyn som jag tänka är en god miljö.
 
 ### Storstad
 
-En sak som var snabbt klar är att Stockholm är en helt annan liga än Malmö. Det är mycket större och också infrastrukturen och bygnadder verka mer som storstad än Malmö. Men det har också nackdelar till exempel tänka jag att Malmö är mer ren än Stockholm.
+En sak som blev tydlig direkt var att Stockholm spelar i en helt annan liga jämfört med Malmö. Stockholm är mycket större och både infrastrukturen och byggnaderna känns mer som en riktig storstad. Men det har också sina nackdelar. Till exempel tycker jag att Malmö är renare än Stockholm.
 
-Jag kommer från en byn in södra Tyskland och har aldrig blivit längre i en stor stad än några timmar så det var en helt ny erfarenhet för mig. Och jag måste säga att det var kul i alla städer och också Stockholm. Det är några fin platser runt om städerna och jag tänker att leva där kunde också bli fin.
+Jag kommer från en liten by i södra Tyskland och har aldrig tillbringat längre tid i en storstad än några timmar, så det var en helt ny upplevelse för mig. Och jag måste säga att det var roligt att utforska städer, inklusive Stockholm. Det finns många fina platser runt om i städerna och jag kan tänka mig att det också kan vara trevligt att bo där.
 
-Jag tänka att Stockholm är särkskillt vacker för en så stor stad. Där är några parker som jag har promenarad genom och ocksår är där väldigt mycket vatten som jag vet inte varför har en magisk effekt på mig.
+Jag tycker att Stockholm är särskilt vackert för att vara en så stor stad. Det finns många parker att promenera i och det stora antalet vattenområden har en magisk effekt på mig.
 
 ### Bokhandeln
 
-En sak som jag har blivit mycket till var flera bokhandlar. Jag vet inte men det var fin att går där och titta för böcker som låtar intressant. Särskillt mycket var jag till [Science Fiction Bokhandeln](https://www.sfbok.se/) inte bara i Stockholm men i all stora städer.
+En av mina favoritaktiviteter var att besöka flera bokhandlar. Jag vet inte varför, men det var mysigt att gå runt och leta efter böcker som verkade intressanta. Särskilt fascinerad var jag av [Science Fiction Bokhandeln](https://www.sfbok.se/), inte bara i Stockholm utan också i den andra stora städerna.
 
-![Bild av en bok och vatten i bakgrund. Jag tog bilden i Stockholm.](book.jpg)
+![Bild av en bok och vatten i bakgrunden, tagen i Stockholm](book.jpg)
 
-Jag har köpt några böcker. En bok var [Balladen om sångfåglar och ormar](https://www.svt.se/kultur/bokrecension-balladen-om-sangfaglar-och-ormar) som jag har läst på Tyska tidigare men skulle läsa det igen på Svenska. Också jag har köpt [Krigarhjärta](https://www.norstedts.se/bok/9789113135373/krigarhjarta), Blå och det Svensk version av 1984. Hungerspelen och Krigarhjärta har jag läst redan när jag skriver den här texten och dem andra böcker vill jag läser i framtiden när jag har liten tid.
+Jag köpte flera böcker. En av dem var [*Balladen om sångfåglar och ormar*](https://www.svt.se/kultur/bokrecension-balladen-om-sangfaglar-och-ormar), som jag tidigare hade läst på tyska, men nu ville läsa på svenska. Jag köpte också [*Krigarhjärta*](https://www.norstedts.se/bok/9789113135373/krigarhjarta), *Blå* och den svenska versionen av *1984*. Jag har redan hunnit läsa *Hungerspelen* och *Krigarhjärta* när jag skriver detta, och jag ser fram emot att läsa de andra när jag har lite tid.
 
-Blå har jag köpt eftersom jag har sett boken redan på en [video](https://www.youtube.com/watch?v=uWQYqcFX8JE) av Ilys om hur man kan lära sig Norsk eller ett språk allmänt. (Videon är verkligen recommendable för alla som vill lära sig en annan språk!) Hon pratade om boken Blå och att hon har läst denn så när jag har sett den jag har läst baksiden av boken som var intressant och jag har köpt den.
+Jag köpte *Blå* eftersom jag hade sett den rekommenderas i en [video](https://www.youtube.com/watch?v=uWQYqcFX8JE) av Ilys, där hon pratade om hur man kan lära sig norska eller andra språk. Videon är verkligen sevärd för alla som vill lära sig ett nytt språk! När jag såg boken läste jag baksidestexten, som verkade intressant, så jag bestämde mig för att köpa den.
 
 ### Museer
 
-Vädret var inte bara bra medan jag var i Stockholm som några inomhusaktiviteter var bra. Till exempel var jag till den en eller andra museum. Till exempel [Nobelmuseum](https://sv.wikipedia.org/wiki/Nobelmuseet) och [Nordiska Museet](https://www.nordiskamuseet.se/).
+Vädret var inte alltid på min sida under min vistelse i Stockholm, så det var perfekt att besöka några museer. Jag gick till [Nobelmuseet](https://sv.wikipedia.org/wiki/Nobelmuseet) och [Nordiska museet](https://www.nordiskamuseet.se/).
 
-![En bild med texten Arbetarpartiet Socialdemokraterna](museum.jpg)
+![En bild med texten "Arbetarpartiet Socialdemokraterna" på ett museum](museum.jpg)
 
-Jag tänka att Nobelmuseum var okej men Nordiska Museet var mycket bättre. Det också var mycket större och man hade mer plats. Också det var den först Museum sedan den början av mina resa som var politisk som jag tänka är också väldigt intressant.
+Jag tyckte att Nobelmuseet var okej, men Nordiska museet var mycket bättre. Det var också mycket större, med mer utrymme att utforska. Det var dessutom det första museet under min resa som hade en tydlig politisk dimension, vilket jag tyckte var väldigt intressant.
 
-En sak som jag hade missat är en visning genom Riksdagen som jag hade älskat. Men kanske jag kan gjöra det en annan gång.
+Tyvärr missade jag möjligheten att få en guidad visning i riksdagen, vilket jag verkligen hade uppskattat. Men kanske jag kan göra det nästa gång.
 
 ### Rundtur i skärgården
 
-Stockholm är kännt för den stora skärgården och det är en stor turistatraktion att köra med en båt ut på havet genom öen. Jag är inte en stor vän av turista men denna gång jag visste inte hur jag skulle komma ut där utan den turistbåten så jag gjörde den båtstur denna gången.
+Stockholm är känt för sin stora skärgård och en populär turistattraktion är att ta en båttur ut på havet och runt öarna. Jag är vanligtvis inte en stor vän av turistaktiviteter, men den här gången visste jag inte hur jag annars skulle kunna ta mig ut till skärgården, så jag valde att åka på en turistbåttur.
 
-Det var verkligen vackert ut där. Men skärgården är så stor att båtstur vilken varar några timmar bara visar innre skärgården så det mycket större än som vad jag har sett. Ändå var det en fin tur och jag kunde tar den en eller andra bild av naturen och bygnaddar.
+Det var verkligen vackert där ute. Men skärgården är så stor att en båttur på några timmar bara täcker den inre delen. Ändå var det en fin upplevelse och jag kunde ta några bilder av både naturen och byggnaderna.
 
-![Bild av öenar i Stockholms innra Skärgård](archipelago.JPG)
+![Bild av öar i Stockholms inre skärgård](archipelago.JPG)
 
 ## Göteborg
 
-Nu komma vi till den sista stan jag har bin på mina resan. Efter några dagar i Stockholm har jag kört bak till söder och mot Göteborg. På vägen har jag kört lite genom skogen och vägar som har sett inressant ut någonting jag nu tänka jag skull ha gjort mer. Men efter nästa en hela dag av köra runt var jag där i Göteborg.
+Nu kommer vi till den sista staden på min resa. Efter några dagar i Stockholm körde jag söderut mot Göteborg. På vägen tog jag omvägar genom skogar och mindre vägar som verkade intressanta – något jag nu ångrar att jag inte gjorde oftare under resan. Efter nästan en hel dag bakom ratten nådde jag Göteborg.
 
 {{< map coordinates="[{\"x\": 59.302125, \"y\": 18.094136 }, {\"x\": 57.688636, \"y\": 11.987281 }]" >}}
 
-Jag måste säga att när jag var i Göteborg mina energie var lite låg och vädret var också inte best så jag har gjort lite mindre än innan. Men det är också okej eftersom jag var på resan sedan två fulla veckor. Men jag har gjort ändå den en eller andra sak.
+Jag måste erkänna att jag var ganska trött när jag kom hit. Efter två veckors resande började energin ta slut och vädret var inte heller det bästa. Därför blev det färre aktiviteter här än i tidigare städer, vilket ändå kändes okej – jag behövde verkligen lite lugnare tempo.
 
 ### Försvarsmuseet
 
-Till exempel var jag i en gammal bunker som nu fungera som än sätt försvarsmuseet. Det var intressant att seer flygplan och andra saker på närheten. Men jag har alltid en liten kännsla när jag ser vapen och flygplan som kan fungera som vapen. De är fascinerande men det väldigt viktigt att de bara förvändas för försvar och inte attack eller säljas till andra länderna som använder dem till gjöra attacker. Men ändå är de flyplan vacker och teknisk intressant. 
+En av de saker jag faktiskt gjorde var att besöka en gammal bunker som idag fungerar som försvarsmuseum. Det var spännande att komma nära olika flygplan och andra militära objekt. Men jag kan inte låta bli att känna en viss ambivalens när jag ser sådana saker. De är tekniskt imponerande och ofta vackra i sitt utförande, men deras potentiella användning är skrämmande. Det är viktigt att de enbart används i försvarssyfte – aldrig för attacker eller säljas till andra länderna som använder dem till gjöra attacker.
 
-![En flygplan i en bunker / museet](plane.jpg)
+![Ett flygplan i en bunker/museum](plane.jpg)
 
-Också hade museet en slag kultur och tidningar från tiden av första världskriget. Det var intressant och lite skrämmande att ser. Också andra saker som en svensk atombomb var beskrivit ner där.
+Museet visade också kultur och tidningar från tiden kring andra världskriget. Det var intressant, men samtidigt lite skrämmande. Också andra saker som en svensk atombomb var beskrivit ner där.
 
-![Några svensk tidningar som visar den andra världskrig](board%20of%20newspapers%20from%20the%20second%20world%20war.jpg)
+![Tidningsurklipp från andra världskriget](board%20of%20newspapers%20from%20the%20second%20world%20war.jpg)
 
 ### Staden
 
-Jag faktiskt vet inte vad jag skulle säga om Göteborg. Jag hade inte bästa förutsättningar eftersom vädret var dålig och jag hade ingen kraft längre men jag hade kännslan att Göteborg är lite tråkig. Men jag tänka att jag måste komma dit en gång till och ta en titt på staden igen för att kunna säga någonting bättre.
+Jag vet faktiskt inte riktigt vad jag ska säga om Göteborg. Kanske berodde det på vädret, kanske på min brist på energi, men jag fick intrycket av att Göteborg var lite tråkigt. Samtidigt känns det inte rättvist att döma staden utifrån detta enda besök. Jag tror jag måste återvända någon gång i framtiden och ge staden en ny chans – förmodligen under bättre förhållanden.
 
 ## Tillbaka hem
 
-Efter mina dagerna i Göteborg var det tid för att köra hem. Först jag körde ner till Malmö när jag har köpt lite souvenir för mina nära ock kära och den körde jag när till Kolding i Danmark. Där jag har sovt en natt i närheten av Koldingarenan och på nästa dagen har jag kört ner bak till Tyskland.
+Efter några dagar i Göteborg var det dags att avsluta resan och köra hemåt. Första etappen tog mig tillbaka till Malmö, där jag köpte några souvenirer till mina nära och kära. Därefter körde jag vidare till Kolding i Danmark, där jag övernattade nära Koldingarenan. Nästa dag gick resan tillbaka genom Tyskland och till slut hem.
 
 {{< map coordinates="[{\"x\": 57.688636, \"y\": 11.987281 }, {\"x\": 55.464744, \"y\": 9.476542 }, {\"x\": 48.70354 , \"y\": 9.65209 }, {\"x\": 47.85, \"y\": 12.12}]" >}}
 
-## Tack för läsa
+## Tack för att du läste
 
-Tack för läsa den här texten. Jag uppskatter det mycket ❤️ Jag vet inte om någon interessera sig för vad jag skriver här men det är en stor möjlighet för att förbättra min Svenska så jag gjör det ändå.
+Tack för att du läste den här texten! Jag uppskattar det verkligen ❤️ Jag vet inte om någon faktiskt är intresserad av vad jag skriver, men att skriva hjälper mig att förbättra min svenska, så det känns värdefullt för mig oavsett.
 
-Om du vill ser mer bilderna (jag har gjort mycket mer) du kann tar en tit på [Fotografi](/en/gallery) var du kann hitta alla mina fotografier. Jag har inte publicerad någon bilder ännu men jag vill gjöra det någonstans!
+Om du vill se fler bilder från resan (jag tog många fler!), kan du ta en titt på [Fotografi](/en/gallery). Jag har inte publicerat något där ännu, men jag planerar att göra det snart!
