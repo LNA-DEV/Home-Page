@@ -1,6 +1,6 @@
 ---
 title: "Min första gång i Sverige 🇸🇪"  
-date: 2024-11-08T23:00:52+01:00  
+date: 2024-12-04T22:00:52+01:00  
 draft: false  
 tags: ["Svenska", "Språk", "Norden", "Om mig", "Sverige"]  
 categories: ["Svenska", "Resa", "Sverige"]  
@@ -13,7 +13,7 @@ searchHidden: false
 sitemap:  
   priority: 0.8  
 cover:  
-  image: cover2.JPG  
+  image: cover.JPG  
   alt: "Flagga på en båt med Stockholm i bakgrunden"  
   relative: true  
   hidden: false  
@@ -26,13 +26,13 @@ I detta inlägg vill jag berätta om min första resa till och genom södra Sver
 
 Jag började min resa i södra Tyskland tidigt på morgonen. Men den första dagen av min resa var helt ospektakulär eftersom jag körde nästan hela dagen upp till en liten campingplats nära Hamburg. Du kan se den exakta platsen på kartan nedan. Det var ungefär halv sex när jag kom fram. Det var en fin liten campingplats nära en sjö och personalen var väldigt trevlig. Det är väldigt intressant hur annorlunda det är även i en annan del av Tyskland. Dialekten, mentaliteten och särskilt landskapet är väldigt annorlunda jämfört med det bergiga landskapet i södra Tyskland.
 
-![Solnedgång på en campingplats i norra Tyskland nära Hamburg.](sunset_camping_germany.jpg)
+![Solnedgång på en campingplats i norra Tyskland nära Hamburg.](solnedgang_tyskland.jpg)
 
 Nästa dag vaknade jag tidigt eftersom solen var uppe och grodorna var så jävla högljudda. Jag åt frukost på campingplatsen och bokade en biljett för [Öresundsbron](https://sv.wikipedia.org/wiki/%C3%96resundsf%C3%B6rbindelsen) online. Det var midsommardagen, förresten. Så min plan var att köra till Malmö så snabbt som möjligt och hitta någon midsommarfest där i stan.
 
 Att köra genom Danmark var fint och lite mindre stressigt än att köra så snabbt på den tyska ***Autobahn***. På vägen finns flera stora broar som imponerade på mig när jag körde över dem och utsikten över havet här och där var jättefin.
 
-![Öresundsbron fotograferad från Sverige med en titt på Köpenhamn](./oerseundsbron_landscape.JPG)
+![Öresundsbron fotograferad från Sverige med en titt på Köpenhamn](./oerseundsbron_landskap.JPG)
 
 När jag kom till Öresundsbron var det jättekul att köra över den och komma upp från under havet. Utsikten var fantastisk, tyckte jag. I Sverige var gatorna nästan tomma eftersom det var midsommar. Men jag hade en känsla av eviga vidder när jag körde mina första meter genom Skåne.
 
@@ -58,7 +58,7 @@ Jag hade parkerat min bil i närheten av hotellet. Där gjorde jag ett stort mis
 
 När jag var i Malmö såg jag många sevärdheter, till exempel [Twisting Torso](https://visitskane.com/classic-attractions/turning-torso). Jag tyckte om byggnaden eftersom den är något unikt och i närheten av tornet finns flera fina parker. Jag tänker att Malmö särskilt har många fina parker i allmänhet. Det var särskilt intressant när det var dimmigt i staden och tornet försvann i dimman.
 
-![Bild av Twisting Torso i dimma](twisting_torso_fog.jpg)
+![Bild av Twisting Torso i dimma](./twisting_torso_dimma.jpg)
 
 ### Parker och trädgårdar
 
@@ -69,7 +69,7 @@ Som jag nämnde tidigare tycker jag att Malmö hade de bästa parkerna av de st�
 Det jag tycker är intressant är att jag har sett många kaniner i svenska städer. Till exempel i Malmö, både på en kyrkogård och i en park lite utanför staden, nära Öresundsbron. Om jag minns rätt såg jag också några kaniner i Göteborg och kanske till och med i Stockholm.
 
 {{<collapse summary="Bild av kanin">}}
-![Bild av en kanin i en park](bunny.jpg)
+![Bild av en kanin i en park](./kanin.jpg)
 {{</collapse>}}
 
 ### Museer och gallerier
@@ -82,7 +82,7 @@ Jag har hört några gånger att Sverige och i synnerhet Malmö har en hög brot
 
 Denna konst visar också den lilla syskongräl mellan Sverige och Danmark. Jag tycker att det är lite roligt och jag gillar sammanhållningen i hela Norden.
 
-![Bild av en text i en galleri: Foreigners, please don't let us alone with the Danes!](gallery.jpg)
+![Bild av en text i en galleri: Foreigners, please don't let us alone with the Danes!](./galleri.jpg)
 
 ### Strandpromenaden
 
@@ -90,14 +90,14 @@ Jag tycker att den stora strandpromenaden är min favoritplats i hela Malmö. De
 
 Utsikten är också vacker. Man har en vy över Öresundsbron och kan titta på båtar som kör under bron eller man kan titta på Köpenhamn om sikten är bra. Man kan till och med se plan landa och starta vid Köpenhamns flygplats.
 
-![Strandpromenaden i Malmö](beach_promenade.jpg)
+![Strandpromenaden i Malmö](./strandpromenad.jpg)
 
 ### En liten kulturchock
 
 Vad jag tyckte var komiskt är att fönstren i Malmö öppnades annorlunda än i Tyskland. När jag vred handtaget i sidled vinklade fönstret och om jag vred uppåt öppnades det helt. Det var jättekonstigt. Men jag tänker att alla andra fönster som jag har sett i Sverige öppnade likadant som de tyska. [^fönster]
 
 {{<collapse summary="Bild av fönstret">}}
-![Fönster som är öppnat lite](window.jpg)
+![Fönster som är öppnat lite](./foenster.jpg)
 {{</collapse>}}
 
 ## Öland
@@ -107,7 +107,7 @@ Efter några dagar i Malmö, som jag verkligen kände en koppling till, körde j
 Så jag körde till Ikea i Kalmar och köpte en väldigt fin kudde som är svart med olika mönster av älgar, blommor och frukter i vitt. Väldigt fin och även producerad i Estland. Jag beställde också köttbullar på svenska, även om jag av misstag sa att jag ville ha "någonting" för dryck istället för "ingenting". Men det var första gången jag pratade med någon helt på svenska, så det var stort för mig.
 
 {{<collapse summary="Bild av kudde">}}
-![Min coola kudde jag köpte](cushion.jpg)
+![Min coola kudde jag köpte](./kudde.jpg)
 {{</collapse>}}
 
 {{< map coordinates="[{\"x\": 55.5980171, \"y\": 13.0220953 }, {\"x\": 57.174311, \"y\": 17.035819 }]" >}}
@@ -124,7 +124,7 @@ En annan sak som jag inte har pratat så mycket om tidigare är hur det är att 
 
 Den viktigaste saken på en sommarsemester är att bada och vara på stranden, tycker jag. Saker som jag otroligt nog inte gjort mycket av. Men Öland var ett undantag. Stranden där var verkligen vacker och generellt kändes Öland mer som en ö i Medelhavet än i Östersjön. Det var varmt och solen var framme hela tiden.
 
-![Strand på Öland](beach.jpg)
+![Strand på Öland](./strand.jpg)
 
 ### Lammburgare
 
@@ -138,7 +138,7 @@ En av de bra sakerna med att resa ensam var att jag kunde ta med mig min cykel. 
 
 En annan dag körde jag runt hela Öland med bilen och stannade till här och där. Det var jättespännande och jag såg många intressanta platser. Till exempel finns det en stor kalkstensöken i mitten och södra delen av ön. Den liknade verkligen en ö i Medelhavet. Fascinerande!
 
-![Bild av öknen i centrum av Öland](./desert.jpg)
+![Bild av öknen i centrum av Öland](./oeken.jpg)
 
 ## Kalmar
 
@@ -182,7 +182,7 @@ Jag tycker att Stockholm är särskilt vackert för att vara en så stor stad. D
 
 En av mina favoritaktiviteter var att besöka flera bokhandlar. Jag vet inte varför, men det var mysigt att gå runt och leta efter böcker som verkade intressanta. Särskilt fascinerad var jag av [Science Fiction Bokhandeln](https://www.sfbok.se/), inte bara i Stockholm utan också i den andra stora städerna.
 
-![Bild av en bok och vatten i bakgrunden, tagen i Stockholm](book.jpg)
+![Bild av en bok och vatten i bakgrunden, tagen i Stockholm](./bok.jpg)
 
 Jag köpte flera böcker. En av dem var [*Balladen om sångfåglar och ormar*](https://www.svt.se/kultur/bokrecension-balladen-om-sangfaglar-och-ormar), som jag tidigare hade läst på tyska, men nu ville läsa på svenska. Jag köpte också [*Krigarhjärta*](https://www.norstedts.se/bok/9789113135373/krigarhjarta), *Blå* och den svenska versionen av *1984*. Jag har redan hunnit läsa *Hungerspelen* och *Krigarhjärta* när jag skriver detta och jag ser fram emot att läsa de andra när jag har lite tid.
 
@@ -204,7 +204,7 @@ Stockholm är känt för sin stora skärgård och en populär turistattraktion �
 
 Det var verkligen vackert där ute. Men skärgården är så stor att en båttur på några timmar bara täcker den inre delen. Ändå var det en fin upplevelse och jag kunde ta några bilder av både naturen och byggnaderna.
 
-![Bild av öar i Stockholms inre skärgård](archipelago.JPG)
+![Bild av öar i Stockholms inre skärgård](./skaergaard.JPG)
 
 ## Göteborg
 
@@ -218,11 +218,11 @@ Jag måste erkänna att jag var ganska trött när jag kom hit. Efter två vecko
 
 En av de saker jag faktiskt gjorde var att besöka en gammal bunker som idag fungerar som försvarsmuseum. Det var spännande att komma nära olika flygplan och andra militära objekt. Men jag kan inte låta bli att känna en viss ambivalens när jag ser sådana saker. De är tekniskt imponerande och ofta vackra i sitt utförande, men deras potentiella användning är skrämmande. Det är viktigt att de enbart används i försvarssyfte – aldrig för attacker eller säljas till andra länderna som använder dem till gjöra attacker.
 
-![Ett flygplan i en bunker/museum](plane.jpg)
+![Ett flygplan i en bunker/museum](./plan.jpg)
 
 Museet visade också kultur och tidningar från tiden kring andra världskriget. Det var intressant, men samtidigt lite skrämmande. Också andra saker som en svensk atombomb var beskrivit ner där.
 
-![Tidningsurklipp från andra världskriget](board%20of%20newspapers%20from%20the%20second%20world%20war.jpg)
+![Tidningsurklipp från andra världskriget](./tidningar_andra_vaerldskrig.jpg)
 
 ### Staden
 
