@@ -3,8 +3,8 @@
 {{ $random := math.Rand }}
 
 <div id="map{{ $random }}" class="map"></div>
-<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
-<script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+<script src="/packages/leaflet/leaflet.js"></script>
+<script src="/packages/leaflet-routing-machine/leaflet-routing-machine.min.js"></script>
 
 <script>
     function initializeMap(mapId, coordinates) {
