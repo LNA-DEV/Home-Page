@@ -206,10 +206,6 @@ params:
       url: mailto:info@lna-dev.net
     - name: rss
       url: index.xml
-  cover:
-    hidden: true
-    hiddenInList: true
-    hiddenInSingle: true
   editPost:
     URL: https://github.com/LNA-DEV/Home-Page/tree/main/content
     Text: Suggest Changes
