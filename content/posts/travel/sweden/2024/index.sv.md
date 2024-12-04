@@ -102,9 +102,7 @@ Vad jag tyckte var komiskt är att fönstren i Malmö öppnades annorlunda än i
 
 ## Öland
 
-> Öland är Sveriges näst största ö, landet med den mesta ön i hela världen. Det är solen och vindens ö.
-
-Efter några dagar i Malmö, som jag verkligen kände en koppling till, körde jag vidare till mitt nästa stopp: Öland. Men eftersom jag hade planerat att tälta på Öland, behövde jag köpa en kudde. 
+Efter några dagar i Malmö, som jag verkligen kände en koppling till, körde jag vidare till mitt nästa stopp: [Öland](https://www.oland.se/en). Men eftersom jag hade planerat att tälta på Öland, behövde jag köpa en kudde. 
 
 Så jag körde till Ikea i Kalmar och köpte en väldigt fin kudde som är svart med olika mönster av älgar, blommor och frukter i vitt. Väldigt fin och även producerad i Estland. Jag beställde också köttbullar på svenska, även om jag av misstag sa att jag ville ha "någonting" för dryck istället för "ingenting". Men det var första gången jag pratade med någon helt på svenska, så det var stort för mig.
 
@@ -144,11 +142,11 @@ En annan dag körde jag runt hela Öland med bilen och stannade till här och d�
 
 ## Kalmar
 
-Jag var inte länge i Kalmar, men jag tänkte att jag åtminstone skulle besöka staden för en dag. Och det gjorde jag.
+Jag var inte länge i [Kalmar](https://kalmar.com/), men jag tänkte att jag åtminstone skulle besöka staden för en dag. Och det gjorde jag.
 
 {{< map coordinates="[{\"x\": 57.174311, \"y\": 17.035819 }, {\"x\": 56.671736, \"y\": 16.367111 }]" >}}
 
-Jag körde ner till Kalmar och promenerade genom staden. Jag tog en titt på universitetet, hamnen och ett museum. Det var väldigt intressant. Museet, kallat Kalmar Slott, var riktigt roligt att besöka. I slottet, som ligger vid kusten, fanns olika utställningar med information på både svenska och engelska. Jag använde båda språken så att jag inte behövde vänta. Det fanns även personer utklädda till prinsessor, hovdamer och riddare som agerade som om de verkligen levde på den tiden. Det var fint att se historien komma till liv och lära sig något om Kalmarunionen. När jag var där hade de även en [häxutställning](https://kalmarslott.se/nyheter/haxor-ny-utstallning/), vilket var min första introduktion till häxor i Sverige. Också väldigt spännande. Jag försökte läsa all information på svenska, men jag förstod inte riktigt allt till hundra procent.
+Jag körde ner till Kalmar och promenerade genom staden. Jag tog en titt på universitetet, hamnen och ett museum. Det var väldigt intressant. Museet, kallat [Kalmar Slott](https://kalmarslott.se/), var riktigt roligt att besöka. I slottet, som ligger vid kusten, fanns olika utställningar med information på både svenska och engelska. Jag använde båda språken så att jag inte behövde vänta. Det fanns även personer utklädda till prinsessor, hovdamer och riddare som agerade som om de verkligen levde på den tiden. Det var fint att se historien komma till liv och lära sig något om Kalmarunionen. När jag var där hade de även en [häxutställning](https://kalmarslott.se/nyheter/haxor-ny-utstallning/), vilket var min första introduktion till häxor i Sverige. Också väldigt spännande. Jag försökte läsa all information på svenska, men jag förstod inte riktigt allt till hundra procent.
 
 ### Fest med studenter
 
@@ -166,7 +164,7 @@ Efteråt sov jag på ett litet vandrarhem som jag hade bokat helt på svenska. J
 
 ## Stockholm
 
-Nästa morgon behövde jag stiga upp tidigt eftersom jag bara hade bokat en natt på vandrarhemmet och ville hinna duscha innan jag checkade ut. Jag ville inte heller missa frukosten 😉 Jag övervägde om jag skulle stanna längre i Kalmar eftersom jag hade träffat nya människor för första gången under resan, men jag bestämde att kvällen innan var en bra avslutning. Så jag körde vidare mot Stockholm.
+Nästa morgon behövde jag stiga upp tidigt eftersom jag bara hade bokat en natt på vandrarhemmet och ville hinna duscha innan jag checkade ut. Jag ville inte heller missa frukosten 😉 Jag övervägde om jag skulle stanna längre i Kalmar eftersom jag hade träffat nya människor för första gången under resan, men jag bestämde att kvällen innan var en bra avslutning. Så jag körde vidare mot [Stockholm](https://www.visitstockholm.se/).
 
 {{< map coordinates="[{\"x\": 56.671736, \"y\": 16.367111 }, {\"x\": 59.302125, \"y\": 18.094136 }]" >}}
 
@@ -210,7 +208,7 @@ Det var verkligen vackert där ute. Men skärgården är så stor att en båttur
 
 ## Göteborg
 
-Nu kommer vi till den sista staden på min resa. Efter några dagar i Stockholm körde jag söderut mot Göteborg. På vägen tog jag omvägar genom skogar och mindre vägar som verkade intressanta – något jag nu ångrar att jag inte gjorde oftare under resan. Efter nästan en hel dag bakom ratten nådde jag Göteborg.
+Nu kommer vi till den sista staden på min resa. Efter några dagar i Stockholm körde jag söderut mot [Göteborg](https://www.goteborg.com/). På vägen tog jag omvägar genom skogar och mindre vägar som verkade intressanta – något jag nu ångrar att jag inte gjorde oftare under resan. Efter nästan en hel dag bakom ratten nådde jag Göteborg.
 
 {{< map coordinates="[{\"x\": 59.302125, \"y\": 18.094136 }, {\"x\": 57.688636, \"y\": 11.987281 }]" >}}
 
@@ -238,9 +236,9 @@ Efter några dagar i Göteborg var det dags att avsluta resan och köra hemåt. 
 
 ## Tack för att du läste
 
-Tack för att du läste den här texten! Jag uppskattar det verkligen ❤️ Jag vet inte om någon faktiskt är intresserad av vad jag skriver, men att skriva hjälper mig att förbättra min svenska, så det känns värdefullt för mig oavsett.
+Tack för att du läste den här texten! Jag uppskattar det verkligen ❤️ Jag vet inte om någon faktiskt är intresserad av vad jag skriver här, men att skriva hjälper mig att förbättra min svenska, så det känns värdefullt för mig oavsett.
 
-Om du vill se fler bilder från resan (jag tog många fler!), kan du ta en titt på [Fotografi](/en/gallery). Jag har inte publicerat något där ännu, men jag planerar att göra det snart!
+Om du vill se fler bilder från resan (jag tog många fler!), kan du ta en titt på [Fotografi](/en/gallery). Jag har inte publicerat något där ännu, men jag planerar att göra det!
 
 ## Fotnoter
 

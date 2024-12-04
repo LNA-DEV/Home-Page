@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # Config
 KUBECONFIG_PATH="/home/runner/work/_temp/config"
 
