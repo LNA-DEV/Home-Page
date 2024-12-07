@@ -6,7 +6,7 @@ set -e
 KUBECONFIG_PATH="/home/runner/work/_temp/config"
 
 # Get old pvc
-# PVC_NAME_OLD=$(kubectl get pvc -n personal -o jsonpath='{.items[0].metadata.name}' --kubeconfig $KUBECONFIG_PATH)
+PVC_NAME_OLD=$(kubectl get pvc -n personal -o jsonpath='{.items[0].metadata.name}' --kubeconfig $KUBECONFIG_PATH)
 
 # Generate a unique name for the PVC
 PVC_NAME="personal-website-pvc-$(head /dev/urandom | tr -dc a-z0-9 | head -c 6)"
@@ -66,4 +66,4 @@ kubectl --kubeconfig=$KUBECONFIG_PATH delete pod $POD_NAME -n personal
 # Optional: Deploy using Helm to bind this PVC to a long-term deployment
 helm --kubeconfig=$KUBECONFIG_PATH upgrade --install charts.personal oci://registry-1.docker.io/lnadev/charts.personal --set homePage.pvcName=$PVC_NAME --reuse-values --namespace default --wait
 
-# kubectl --kubeconfig=$KUBECONFIG_PATH delete pvc $PVC_NAME_OLD -n personal
+kubectl --kubeconfig=$KUBECONFIG_PATH delete pvc $PVC_NAME_OLD -n personal
