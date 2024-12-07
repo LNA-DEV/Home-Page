@@ -1,23 +1,22 @@
 {{- $coordinatesJson := .Get "coordinates" }}
-{{- $coordinates := $coordinatesJson | transform.Unmarshal }} <!-- Parse JSON string to an array -->
+{{- $coordinates := $coordinatesJson | transform.Unmarshal }}
+{{ $random := math.Rand }}
 
-<div id="map" class="map"></div>
-<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
-<script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+<div id="map{{ $random }}" class="map"></div>
+<script src="/packages/leaflet/leaflet.js"></script>
+<script src="/packages/leaflet-routing-machine/leaflet-routing-machine.min.js"></script>
 
 <script>
-    function onPageLoad() {
-        var map = L.map('map').setView([0, 0], 13);
+    function initializeMap(mapId, coordinates) {
+        var map = L.map(mapId).setView([0, 0], 13);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap contributors'
         }).addTo(map);
 
-        var waypoints = [
-            {{- range $coordinates }}
-                L.latLng({{ .x }}, {{ .y }}),
-            {{- end }}
-        ];
+        var waypoints = coordinates.map(function(coord) {
+            return L.latLng(coord.x, coord.y);
+        });
 
         L.Routing.control({
             show: false,
@@ -26,8 +25,15 @@
             routeWhileDragging: false
         }).addTo(map);
 
-        map.fitBounds(waypoints.map(function(wp) { return wp; }));
+        map.fitBounds(waypoints);
     }
 
-    window.onload = onPageLoad;
+    document.addEventListener('DOMContentLoaded', function() {
+        const coordinates = [
+            {{- range $coordinates }}
+                { x: {{ .x }}, y: {{ .y }} },
+            {{- end }}
+        ];
+        initializeMap('map{{ $random }}', coordinates);
+    });
 </script>
