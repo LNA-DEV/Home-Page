@@ -25,7 +25,7 @@ spec:
   storageClassName: longhorn
   resources:
     requests:
-      storage: 10Gi
+      storage: 4Gi
 EOF
 
 # Create a pod that mounts the PVC
