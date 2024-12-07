@@ -24,7 +24,7 @@
 
   {{ range $finalItems }}
 
-  {{- $link := strings.Replace .Permalink ( print "/" .Name ) (print "#" (.RelPermalink | crypto.FNV32a)) }}
+  {{- $link := strings.Replace .Permalink ( print "/" .Name ) (print "#" (.RelPermalink | hash.FNV32a)) }}
   {{- $image := .Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
 
   <div class="responsive">
