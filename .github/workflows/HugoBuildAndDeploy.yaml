@@ -25,7 +25,7 @@ jobs:
       - run: sudo snap install hugo
 
       # Build the hugo repository
-      - run: hugo -e development --baseURL "https://dev.lna-dev.net"
+      - run: hugo
         working-directory: ./${{ env.NAME }}/
 
       # Download Secure-File
