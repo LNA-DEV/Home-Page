@@ -13,7 +13,6 @@ env:
   CONTAINER-NAME: home-page
 
 jobs:
-
   ReleaseDev:
     runs-on: ubuntu-latest
 

@@ -1,6 +1,6 @@
 ---
 title: "Min första gång i Sverige 🇸🇪"  
-date: 2024-12-04T22:00:52+01:00  
+date: 2024-12-07T11:00:52+01:00  
 draft: false  
 tags: ["Svenska", "Språk", "Norden", "Om mig", "Sverige"]  
 categories: ["Svenska", "Resa", "Sverige"]  
