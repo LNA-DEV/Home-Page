@@ -194,12 +194,14 @@ params:
     icon: /assets/Pingüino/Pingüino.svg
     iconHeight: 35
   socialIcons:
-    - name: github
-      url: https://github.com/LNA-DEV
     - name: mastodon
       url: https://mastodon.online/@lna_dev
     - name: pixelfed
       url: https://pixelfed.de/LNA-DEV
+    - name: bluesky
+      url: https://bsky.app/profile/lna-dev.net
+    - name: github
+      url: https://github.com/LNA-DEV
     - name: matrix
       url: "https://matrix.to/#/@lna-dev:matrix.org"
     - name: email
