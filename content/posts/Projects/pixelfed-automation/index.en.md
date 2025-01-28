@@ -2,8 +2,8 @@
 title: "How to automate Pixelfed posts"
 date: 2024-05-05T22:30:45+02:00
 draft: false
-tags: ["Pixelfed", "Fediverse", "Mastodon", "Python", "Kubernetes", "Go", "Automation", "Projects", "Tutorial", "Media", "Coding"]
-categories: ["Projects", "Tutorial", "Media"]
+tags: ["Pixelfed", "Fediverse", "Mastodon", "Python", "Kubernetes", "Go", "Automation", "Projects", "Tutorial", "Media", "Coding", "POSSE"]
+categories: ["Projects", "Tutorial", "Media", "IndieWeb"]
 showToc: true
 TocOpen: false
 description: "I needed to automate my posts to Pixelfed. In this post, I describe how I achieved that."
