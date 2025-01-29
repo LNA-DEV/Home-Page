@@ -1,12 +1,12 @@
 ---
 title: "How to automate Bluesky posts"
-date: 2025-01-29T18:00:00+02:00
+date: 2025-01-29T18:50:00+02:00
 draft: false
 tags: ["Bluesky", "Python", "Automation", "Projects", "Tutorial", "Media", "Coding", "POSSE"]
 categories: ["Projects", "Tutorial", "Media", "IndieWeb"]
 showToc: true
 TocOpen: false
-description: "I recently created my Bluesky account now I need to automate my posts to it."
+description: "I recently created my Bluesky account and in this post, I’ll show you how I automate my posts to it."
 disableShare: true
 disableHLJS: false
 searchHidden: false
@@ -20,7 +20,7 @@ cover:
   hiddenInList: false
 ---
 
-I had Bluesky on my radar for quite a while but never liked the way the platform was built. [^atProtoDisadvantages] But recently, I decided to give it a try. With this post, I want to share my experience automating my posts to Bluesky with you.
+I had Bluesky on my radar for quite a while but never liked the way the platform was built. [^atProtoDisadvantages] But recently, I decided to give it a try. With this post, I want to share my experience automating my posts to Bluesky with you. (You can find [my profile](https://bsky.app/profile/lna-dev.net) here.)
 
 I also wrote [a post](../pixelfed-automation/) in which I explained how to automate posts to [Pixelfed](../../media/fediverse/#pixelfed) (a [Fediverse](../../media/fediverse/) platform), which is quite similar to this one. I might refer to that post from time to time because the process is quite similar.
 
@@ -28,11 +28,11 @@ I also wrote [a post](../pixelfed-automation/) in which I explained how to autom
 
 ## POSSE
 
-So, first of all, why do all this? For me, the answer is simple: I have been getting into the IndieWeb bubble for a while. As part of it, you want to build your own website, which you control and have full power over. Your website is your little garden where you put all your stuff. But because most people won’t just visit your website directly, you need a way to get your content to them. For this, automation is key.
+So, first of all, why do all this? For me, the answer is simple: I have been getting into the [IndieWeb](https://indieweb.org/) bubble for a while. As part of it, you want to build your own website, which you control and have full power over. Your website is your little garden where you put all your stuff. But because most people won’t just visit your website directly, you need a way to get your content to them. For this, automation is key.
 
 You host all your content on your page and then build scripts and little bots that take the content from your webpage and **syndicate** it wherever you want. Whether it's the walled gardens of big tech, the [Fediverse](../../media/fediverse/) or Bluesky doesn’t matter. You just post to your website and your bots do the rest. This principle is called *Post On your Own Site Syndicate Elsewhere* or **POSSE** for short.
 
-I might write a detailed post about the IndieWeb and POSSE in the future, so stay tuned!
+I might write a detailed post about the IndieWeb and [POSSE](https://www.citationneeded.news/posse/) in the future, so stay tuned!
 
 ## My data source - RSS Feed
 
