@@ -1,6 +1,6 @@
 ---
 title: "How to automate Bluesky posts"
-date: 2025-01-28T19:00:00+02:00
+date: 2025-01-29T18:00:00+02:00
 draft: false
 tags: ["Bluesky", "Python", "Automation", "Projects", "Tutorial", "Media", "Coding", "POSSE"]
 categories: ["Projects", "Tutorial", "Media", "IndieWeb"]
@@ -20,45 +20,45 @@ cover:
   hiddenInList: false
 ---
 
-I had Bluesky on my radar for quite a while but always did not like the way the platform was build like. [^atProtoDisadvantages] But recently I decided to give it a try. With this post I want to share my experience automating my posts to Bluesky with you.
+I had Bluesky on my radar for quite a while but never liked the way the platform was built. [^atProtoDisadvantages] But recently, I decided to give it a try. With this post, I want to share my experience automating my posts to Bluesky with you.
 
-I also did [a post](../pixelfed-automation/) in which I explained how to automate posts to [Pixelfed](../../media/fediverse/#pixelfed) (a [Fediverse](../../media/fediverse/) platform) which is quite similar to this one. I might refer to this post one or the other time because the process is quite similar.
+I also wrote [a post](../pixelfed-automation/) in which I explained how to automate posts to [Pixelfed](../../media/fediverse/#pixelfed) (a [Fediverse](../../media/fediverse/) platform), which is quite similar to this one. I might refer to that post from time to time because the process is quite similar.
 
 > This post might be a bit technical if you have no previous experience with coding / tech.
 
 ## POSSE
 
-So first of all why do all this? For me this question is simply answered: I am getting into the IndieWeb bubble since a while. As a part of it you want to build your own website which you control and have full power over. You website is your little garden where you put all you stuff. But because most of the people won't just go on you website you want to get your content to them in another way. For this automation is key.
+So, first of all, why do all this? For me, the answer is simple: I have been getting into the IndieWeb bubble for a while. As part of it, you want to build your own website, which you control and have full power over. Your website is your little garden where you put all your stuff. But because most people won’t just visit your website directly, you need a way to get your content to them. For this, automation is key.
 
-You host all you content on your page and than build scripts and little bots which take the content of you webpage and **syndicate** it to where you want to. If it's the walled garden of big tech, the [Fediverse](../../media/fediverse/) or Bluesky does not matter. You just post to your website and your bots do the rest. This principle is called *Post On your Own Site Syndicate Elsewhere* or short **POSSE**.
+You host all your content on your page and then build scripts and little bots that take the content from your webpage and **syndicate** it wherever you want. Whether it's the walled gardens of big tech, the [Fediverse](../../media/fediverse/) or Bluesky doesn’t matter. You just post to your website and your bots do the rest. This principle is called *Post On your Own Site Syndicate Elsewhere* or **POSSE** for short.
 
-I will maybe make a detailed post about the IndieWeb and POSSE in the future so stay tuned!
+I might write a detailed post about the IndieWeb and POSSE in the future, so stay tuned!
 
 ## My data source - RSS Feed
 
-As I already have explained in my [Pixelfed Automation](../pixelfed-automation/#rss-feed) post I have an RSS feed which contains all the data I need for publishing my images. In detail this is something like the URL to the image itself, the description, the alt description and hashtags.
+As I already explained in my [Pixelfed Automation](../pixelfed-automation/#rss-feed) post, I have an RSS feed that contains all the data I need for publishing my images. Specifically, this includes the image URL, description, alt text and hashtags.
 
-Your data source may wary if you have a API or something similar where you can access the required data. I personally like the idea of having such sort of RSS feed because a user of my webpage can just follow the same feed and use an RSS reader to consume my content.
+Your data source may vary if you have an API or something similar to access the required data. Personally, I like the idea of having an RSS feed because users of my webpage can follow the same feed and use an RSS reader to consume my content.
 
-## The python script
+## The Python script
 
-Now to the actual automation. I used Python because I already had my Pixelfed script which I could reuse a lot from.
+Now, onto the actual automation. I used Python because I already had my Pixelfed script, which I could reuse a lot from.
 
-There are a couple of code blocks which I did not really touch for example the whole part of getting the image of my website, determining which image to choose to publish and sending to my API which images are now online.
+There are a couple of code blocks that I didn’t really touch. For example, the parts responsible for retrieving the image from my website, selecting which image to publish and notifying my API about the images that are now online.
 
-I do not want to go over these steps again and come right to the interesting part: How to publish to Bluesky. (If you want to know the details about the other steps you can read them [here](#the-pixelfed-script).)
+Since I’ve covered these steps before, I’ll jump straight to the interesting part: how to publish to Bluesky. (If you want to know the details about the other steps, you can read them [here](../pixelfed-automation/#the-pixelfed-script).)
 
 ### Publish to Bluesky
 
-Here it gets interesting because we are doing the actual publishing. First of all there is a good Python library for Bluesky / ATproto called `atproto`. You can install it with the following command.
+This is where it gets interesting because we’re doing the actual publishing. First of all, there is a good Python library for Bluesky / ATproto called `atproto`. You can install it with the following command:
 
 ```sh
 pip install atproto
 ```
 
-After having the right package installed we can take a look at the code itself. First of all we need a client in which we can pass our mail and PAT. (I explain how to generate one in the next section.) This is enough to authenticate us to Bluesky.
+After installing the right package, we can look at the code itself. First, we need a client where we pass our email and PAT (I explain how to generate one in the next section). This is enough to authenticate with Bluesky.
 
-In the next step we prepare our post. For this I use the TextBuilder provided by the package to format links and hashtags correctly. After preparing our text / caption we can use the `send_image` or `send_post` method respectively. And thats quite it. Quite easy if using the library.
+Next, we prepare our post. For this, I use the `TextBuilder` provided by the package to format links and hashtags correctly. After preparing our text/caption, we can use the `send_image` or `send_post` method, respectively. And that’s pretty much it! Quite easy when using the library.
 
 ```python
 from atproto import Client
@@ -99,9 +99,9 @@ def publish_entry(entry):
 
 ### How to get your Bluesky PAT
 
-To generate a *Personal Access Token* (**PAT**) also called *App password* you need to go into `Settings => Privacy and Security => App passwords` or click [here](https://bsky.app/settings/privacy-and-security).
+To generate a *Personal Access Token* (**PAT**), also called an *App password*, go to `Settings => Privacy and Security => App passwords` or click [here](https://bsky.app/settings/privacy-and-security).
 
-Now you can just click `Add App Password` and copy the text. That's it. You can now add this to your script / environment variables.
+Now you can just click `Add App Password` and copy the text. That’s it! You can now add this to your script or environment variables.
 
 ### Full code
 
@@ -234,10 +234,10 @@ else:
 
 ## Schedule the script
 
-After creating such a script you have to trigger it somehow. If you are using [Kubernetes](../../../tags/kubernetes/) you may want to take a look at the [Pixelfed post](../pixelfed-automation/#the-schedule) which explains how to setup a Kubernetes CronJob.
+After creating such a script, you need to trigger it somehow. If you are using [Kubernetes](../../../tags/kubernetes/), you may want to check out the [Pixelfed post](../pixelfed-automation/#the-schedule), which explains how to set up a Kubernetes CronJob.
 
-For the rest who just have a simple server I would recommend setting up a Linux CronJob which triggers the script periodically.
+For those who just have a simple server, I recommend setting up a Linux CronJob to trigger the script periodically.
 
 <!-- Footnotes -->
 
-[^atProtoDisadvantages]: I mainly have two big problems with Bluesky. The first one is that there already is a good protocol for decentralized social networks. So why reinvent the wheel? And not only reinvent it the did it worse. The AT protocol relies much more on centralized services controlled by Bluesky which is completely different with [ActivityPub](../../../tags/activitypub/). The second thing is that Bluesky is a for profit company instead of a non profit which is the standard in the [Fediverse](../../media/fediverse/). And what is really alarming is that this company does not know yet how they want to make their money. So it's realistic that the platform will get worse in the future so it can make money.
+[^atProtoDisadvantages]: I mainly have two big problems with Bluesky. The first is that there is already a good protocol for decentralized social networks. So why reinvent the wheel? And not only did they reinvent it, but they also made it worse. The AT protocol relies much more on centralized services controlled by Bluesky, which is completely different from [ActivityPub](../../../tags/activitypub/). The second issue is that Bluesky is a for-profit company instead of a nonprofit, which is the standard in the [Fediverse](../../media/fediverse/). What’s really alarming is that this company doesn’t yet know how it wants to make money. So, it’s realistic that the platform will get worse in the future to generate revenue.
