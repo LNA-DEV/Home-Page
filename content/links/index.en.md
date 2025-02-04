@@ -63,6 +63,14 @@ persons:
         url: "https://bsky.app/profile/davidrevoy.com"
       - name: youtube
         url: "https://www.youtube.com/user/DeevadRevoy"
+  - name: Frills
+    description: "Frills is a Senior Frontend Developer and Accessibility Specialist with one of the most beautiful webpages I have ever seen."
+    img: "Frills.png"
+    links:
+      - name: website
+        url: "https://frills.dev/"
+      - name: mastodon
+        url: "https://indieweb.social/@frills"
 ---
 
 I want to give an overview on some things I like. This can be persons, projects or anything else I enjoy.
