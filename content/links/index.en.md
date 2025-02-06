@@ -51,6 +51,26 @@ persons:
         url: "https://mastodon.social/@thelinuxEXP"
       - name: youtube
         url: "https://www.youtube.com/@TheLinuxEXP"
+  - name: David Revoy
+    description: "David Revoy is an artist from France. He has made the awesome illustrations for Framasoft and the webcomic Pepper and Carrot. A lot of his work is released under a Creative Commons license."
+    img: "David Revoy.jpg"
+    links:
+      - name: website
+        url: "https://www.davidrevoy.com/"
+      - name: mastodon
+        url: "https://framapiaf.org/@davidrevoy"
+      - name: bluesky
+        url: "https://bsky.app/profile/davidrevoy.com"
+      - name: youtube
+        url: "https://www.youtube.com/user/DeevadRevoy"
+  - name: Frills
+    description: "Frills is a Senior Frontend Developer and Accessibility Specialist with one of the most beautiful webpages I have ever seen."
+    img: "Frills.png"
+    links:
+      - name: website
+        url: "https://frills.dev/"
+      - name: mastodon
+        url: "https://indieweb.social/@frills"
 ---
 
 I want to give an overview on some things I like. This can be persons, projects or anything else I enjoy.
@@ -66,4 +86,3 @@ All the links below are to English sites. I also have links for other languages.
 - [Techlore](https://www.techlore.tech/) ~ Techlore wants to spread privacy and security to the masses.
 - [Major Hayden](https://major.io/) ~ Tech nerd writing about techy things.
 - [Maddy Wilcox](https://maddy.one/) ~ Pretty cool minimalist personal webpage. Has created a tool to remove all the ugly advertising from Windows.
-- [Amelia Andersdotter](https://amelia.andersdotter.cc/index.html) ~ Former Swedish politician for the Pirateparty.
