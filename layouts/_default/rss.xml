@@ -73,7 +73,7 @@
       {{ $full := .Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) }}
       <media:content url="{{ $full.Permalink }}" type="image/jpeg"/>
       <description>
-        <img src="{{ $full.Permalink }}" alt="{{ .Params.Alt }}"/>          
+        <img src="{{ $full.Permalink }}" alt="{{ .Params.Alt | default .Exif.Xmp.notes }}"/>          
         {{- if ne .Title .Name -}}
         <p> {{ .Title }} </p>
         {{ end }}
@@ -81,6 +81,13 @@
       {{ range .Params.Tags }}
       <category>{{ . }}</category>        
       {{- end }}
+{{- with .Exif.Xmp.subject }}
+  {{- range split . ", " }}
+    {{- if . }}
+      <category>{{ . }}</category>
+    {{- end }}
+  {{- end }}
+{{- end }}
     </item>
     {{- end -}}
     {{- end -}}
