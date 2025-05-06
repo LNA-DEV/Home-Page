@@ -1,1 +1,2 @@
 hugo && rsync -avz --delete public/ root@lna-dev.net:/home/lnadev/services/homepage/site
+hugo -b http://lnadevwj2vzomixiunv7i4lahwpoxh6zw56cxbce3uui5ijmwt4czpyd.onion && rsync -avz --delete public/ root@lna-dev.net:/home/lnadev/services/homepage-tor/site
