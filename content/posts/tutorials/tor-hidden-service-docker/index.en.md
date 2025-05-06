@@ -56,3 +56,27 @@ CMD ["tor"]
 ```
 
 kubectl create secret generic tor-service-secret --from-file=private-key=private-key-file -n {{ .Values.namespace }}
+
+
+
+
+
+
+
+
+
+<!-- New -->
+
+
+
+# Tor website
+
+## Get the domain
+
+https://github.com/cathugger/mkp224o
+
+
+docker run --rm -it -v $PWD:/keys ghcr.io/cathugger/mkp224o:master -d /keys as
+
+
+throw files into tor-data
