@@ -11,7 +11,7 @@ buildDrafts: false
 buildFuture: false
 buildExpired: true
 timeout: 600s
-copyright: "🄯 CC-BY-ND [Lukas Nagel]({{< ref \"lukas-nagel\" >}})"
+copyright: "🄯 CC-BY-ND"
 # paginate: 3
 
 markup:
@@ -165,6 +165,8 @@ params:
     email: me@lna-dev.net
   images:
     - /assets/Pingüino/Pingüino.png
+  footer:
+    text: "Made with ❤️ by [Lukas Nagel]({{< ref \"lukas-nagel\" >}})"
   DateFormat: January 2, 2006
   defaultTheme: dark
   disableThemeToggle: false
