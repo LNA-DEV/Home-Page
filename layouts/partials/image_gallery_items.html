@@ -1,0 +1,17 @@
+{{ range . }}
+
+{{- $link := strings.Replace .Permalink ( print "/" .Name ) (print "#" (.RelPermalink | hash.FNV32a)) }}
+{{- $image := .Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
+
+<div class="responsive">
+  <div class="gallery">
+    <a href="{{ $link }}"> 
+      <img
+        src="{{ $image.Permalink }}"
+        alt="{{ .Params.alt }}"
+      />
+    </a>
+  </div>
+</div>
+
+{{ end }}

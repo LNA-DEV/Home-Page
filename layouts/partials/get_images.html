@@ -1,0 +1,21 @@
+{{- $images := slice }}
+
+{{- $unfilteredPages := site.RegularPages }}
+
+{{ range .Site.Home.Translations }}
+{{ $unfilteredPages = $unfilteredPages | lang.Merge .Site.RegularPages }}
+{{ end }}
+
+{{- $pages := where $unfilteredPages "Section" "=" "gallery" }}
+
+{{- range $pages }}
+  {{- range (.Resources.ByType "image") }}
+    {{ $image := . }} 
+    {{- with .Exif }}
+    {{- $images = collections.Append $image $images }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+
+{{- return $images}}

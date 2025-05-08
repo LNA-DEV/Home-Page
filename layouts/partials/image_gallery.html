@@ -1,44 +1,14 @@
+{{/*  The full image gallery you can see on the home page for example  */}}
+
 <div class="gallery-view">
   <h2 class="home-header">{{ i18n "photography_title" }}</h2>
 
-  {{- $images := slice }}
-  {{- $unfilteredPages := site.RegularPages }}
-
-  {{ range .Site.Home.Translations }}
-  {{ $unfilteredPages = $unfilteredPages | lang.Merge .Site.RegularPages }}
-  {{ end }}
-
-  {{- $pages := where $unfilteredPages "Section" "=" "gallery" }}
-
-  {{- range $pages }}
-    {{- range (.Resources.ByType "image") }}
-      {{ $image := . }} 
-      {{- with .Exif }}
-      {{- $images = collections.Append $image $images }}
-      {{- end }}
-    {{- end }}
-  {{- end }}
+  {{ $images := partial "get_images.html" . }}
 
   {{ $sorted := collections.Sort $images ".Exif.Date" "desc" }}
   {{ $finalItems := collections.First 8 $sorted }}
 
-  {{ range $finalItems }}
-
-  {{- $link := strings.Replace .Permalink ( print "/" .Name ) (print "#" (.RelPermalink | hash.FNV32a)) }}
-  {{- $image := .Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
-
-  <div class="responsive">
-    <div class="gallery">
-      <a href="{{ $link }}"> 
-        <img
-          src="{{ $image.Permalink }}"
-          alt="{{ .Params.alt }}"
-        />
-      </a>
-    </div>
-  </div>
-
-  {{ end }}
+  {{- partial "image_gallery_items.html" $finalItems }}
   
   <div class="responsive">
     <div class="gallery">
