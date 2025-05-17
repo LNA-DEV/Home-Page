@@ -1,0 +1,370 @@
+- title: The Hunger Games
+  series: Hunger Games
+  author: "Suzanne Collins"
+  year: 2008
+  link: "https://www.goodreads.com/book/show/2767052-the-hunger-games/"
+  cover: "images/books/covers/The Hunger Games.jpg"
+  pages: 374
+  originalLanguage: en
+  languagesListened:
+    - de
+  languagesRead: 
+    - de
+
+- title: "Catching Fire"
+  series: Hunger Games
+  author: "Suzanne Collins"
+  year: 2009
+  link: "https://www.goodreads.com/book/show/6148028-catching-fire"
+  cover: "images/books/covers/Catching Fire.jpg"
+  pages: 391
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "Mockingjay"
+  series: Hunger Games
+  author: "Suzanne Collins"
+  year: 2010
+  link: "https://www.goodreads.com/book/show/7260188-mockingjay"
+  cover: "images/books/covers/Mockingjay.jpg"
+  pages: 390
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "The Ballad of Songbirds and Snakes"
+  series: Hunger Games
+  author: "Suzanne Collins"
+  year: 2020
+  link: "https://www.goodreads.com/book/show/51901147-the-ballad-of-songbirds-and-snakes"
+  cover: "images/books/covers/The Ballad of Songbirds and Snakes.jpg"
+  pages: 541
+  languagesRead: 
+    - de
+    - sv
+
+- title: "The Maze Runner"
+  series: Maze Runner
+  author: "James Dashner"
+  year: 2009
+  link: "https://www.goodreads.com/book/show/6186357-the-maze-runner"
+  cover: "images/books/covers/The Maze Runner.jpg"
+  pages: 384
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "The Scorch Trials"
+  series: Maze Runner
+  author: "James Dashner"
+  year: 2010
+  link: "https://www.goodreads.com/book/show/7631105-the-scorch-trials"
+  cover: "images/books/covers/The Scorch Trials.jpg"
+  pages: 362
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "The Death Cure"
+  series: Maze Runner
+  author: "James Dashner"
+  year: 2011
+  link: "https://www.goodreads.com/book/show/7864437-the-death-cure"
+  cover: "images/books/covers/The Death Cure.jpg"
+  pages: 325
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "The Kill Order"
+  series: Maze Runner
+  author: "James Dashner"
+  year: 2012
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "The Fever Code"
+  series: Maze Runner
+  author: "James Dashner"
+  year: 2016
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "Divergent 1"
+  author: "Veronica Roth"
+  year: 2011
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "Divergent 2"
+  author: "Veronica Roth"
+  year: 2012
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "Divergent 3"
+  author: "Veronica Roth"
+  year: 2013
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "The 5th Wave 1"
+  author: "Rick Yancey"
+  year: 2013
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "The 5th Wave 2"
+  author: "Rick Yancey"
+  year: 2014
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "The 5th Wave 3"
+  author: "Rick Yancey"
+  year: 2016
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "The 100 1"
+  author: "Kass Morgan"
+  year: 2013
+  link: ""
+  originalLanguage: en
+  cover: ""
+  pages: 0
+
+- title: "The 100 2"
+  author: "Kass Morgan"
+  year: 2014
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "The 100 3"
+  author: "Kass Morgan"
+  year: 2015
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "The Testing 1"
+  author: "Joelle Charbonneau"
+  year: 2013
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "The Testing 2"
+  author: "Joelle Charbonneau"
+  year: 2013
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "The Testing 3"
+  author: "Joelle Charbonneau"
+  year: 2014
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "Slated"
+  author: "Teri Terry"
+  year: 2012
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "Fractured"
+  author: "Teri Terry"
+  year: 2013
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "Shattered"
+  author: "Teri Terry"
+  year: 2014
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "Legend"
+  author: "Marie Lu"
+  year: 2011
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "Prodigy"
+  author: "Marie Lu"
+  year: 2013
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "Champion"
+  author: "Marie Lu"
+  year: 2013
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "Cyberpunk 2077: No Coincidence"
+  author: Rafał Kosik
+  year: 2023
+  link: "https://www.goodreads.com/book/show/62966999-cyberpunk-2077"
+  cover: "images/books/covers/Cyberpunk No Coincidence.jpg"
+  pages: 416
+  originalLanguage: pl
+  languagesRead: 
+    - de
+
+- title: "Herr Sonneborn geht nach Brüssel"
+  author: "Martin Sonneborn"
+  year: 2016
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: de
+  languagesRead: 
+    - de
+
+- title: "Herr Sonneborn bleibt in Brüssel"
+  author: "Martin Sonneborn"
+  year: 2020
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: de
+  languagesRead: 
+    - de
+
+- title: "Krigarhjärta"
+  author: "Eli Levén"
+  year: 2023
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: sv
+  languagesRead: 
+    - sv
+
+- title: "The Last Wish"
+  author: "Andrzej Sapkowski"
+  year: 1993
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: pl
+  languagesListened:
+    - sv
+  languagesRead: 
+    - en
+
+- title: "Sword Of Destiny"
+  author: "Andrzej Sapkowski"
+  year: 1992
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: pl
+  languagesRead: 
+    - en
+
+- title: "Blood Of Elves"
+  author: "Andrzej Sapkowski"
+  year: 1994
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: pl
+  languagesRead: 
+    - en
+
+- title: "Time Of Contempt"
+  author: "Andrzej Sapkowski"
+  year: 1995
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: pl
+  languagesRead: 
+    - en
+
+- title: "Baptism Of Fire"
+  author: "Andrzej Sapkowski"
+  year: 1996
+  link: ""
+  cover: ""
+  pages: 0
+  originalLanguage: pl
+  languagesRead: 
+    - en

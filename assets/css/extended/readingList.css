@@ -1,0 +1,34 @@
+.reading-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.book-entry {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.book-cover img {
+  width: 80px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.book-title {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.book-meta {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0.3rem 0;
+}
+
+.book-notes {
+  font-size: 0.95rem;
+  margin: 0.3rem 0;
+}

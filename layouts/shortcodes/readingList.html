@@ -1,0 +1,29 @@
+<div class="reading-list">
+  {{ range .Site.Data.reading }}
+  {{ $book := . }}
+  <div class="book-entry">
+    {{ if .cover }}
+    <div class="book-cover">
+      {{ with .cover }}
+        {{ $img := resources.Get . }}
+        {{ with $img }}
+          {{ $resized := .Fit "200x300" }}
+          <img src="{{ $resized.RelPermalink }}" alt="Cover of {{ $book.title }}" loading="lazy">
+        {{ end }}
+      {{ end }}
+    </div>
+    {{ end }}
+    <div class="book-details">
+      <h3 class="book-title">
+        {{ if .link }}
+        <a href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>
+        {{ else }} {{ .title }} {{ end }}
+      </h3>
+      <p class="book-meta"><strong>{{ .author }}</strong> • {{ .year }}</p>
+      {{ if .notes }}
+      <p class="book-notes">{{ .notes }}</p>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+</div>
