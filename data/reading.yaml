@@ -132,150 +132,165 @@
   languagesRead: 
     - de
 
-- title: "The 5th Wave 1"
+- title: "The 5th Wave"
+  series: The 5th Wave 
   author: "Rick Yancey"
   year: 2013
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/16101128-the-5th-wave"
+  cover: "images/books/covers/The 5th wave.jpg"
+  pages: 457
   originalLanguage: en
   languagesRead: 
     - de
 
-- title: "The 5th Wave 2"
+- title: "The Infinite Sea"
+  series: The 5th Wave 
   author: "Rick Yancey"
   year: 2014
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/16131484-the-infinite-sea"
+  cover: "images/books/covers/The Infinite Sea.jpg"
+  pages: 320
   originalLanguage: en
   languagesRead: 
     - de
 
-- title: "The 5th Wave 3"
+- title: "The Last Star"
+  series: The 5th Wave 
   author: "Rick Yancey"
   year: 2016
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/16131489-the-last-star"
+  cover: "images/books/covers/The Last Star.jpg"
+  pages: 338
   originalLanguage: en
   languagesRead: 
     - de
 
-- title: "The 100 1"
+- title: "The 100"
+  series: The 100 
   author: "Kass Morgan"
   year: 2013
-  link: ""
+  link: "https://www.goodreads.com/book/show/17332969-the-100"
   originalLanguage: en
-  cover: ""
-  pages: 0
+  cover: "images/books/covers/The 100.jpg"
+  pages: 323
 
-- title: "The 100 2"
+- title: "Day 21"
+  series: The 100 
   author: "Kass Morgan"
   year: 2014
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/20454076-day-21"
+  cover: "images/books/covers/Day 21.jpg"
+  pages: 320
   originalLanguage: en
   languagesRead: 
     - de
 
-- title: "The 100 3"
+- title: "Homecoming"
+  series: The 100 
   author: "Kass Morgan"
   year: 2015
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/23264825-homecoming"
+  cover: "images/books/covers/Homecoming.jpg"
+  pages: 345
   originalLanguage: en
   languagesRead: 
     - de
 
-- title: "The Testing 1"
+- title: "The Testing"
+  series: The Testing 
   author: "Joelle Charbonneau"
   year: 2013
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/13326831-the-testing"
+  cover: "images/books/covers/The Testing.jpg"
+  pages: 325
   originalLanguage: en
   languagesRead: 
     - de
 
-- title: "The Testing 2"
-  author: "Joelle Charbonneau"
-  year: 2013
-  link: ""
-  cover: ""
-  pages: 0
-  originalLanguage: en
-  languagesRead: 
-    - de
-
-- title: "The Testing 3"
+- title: "Independent Study"
+  series: The Testing 
   author: "Joelle Charbonneau"
   year: 2014
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/17165932-independent-study"
+  cover: "images/books/covers/Independent Study.jpg"
+  pages: 320
+  originalLanguage: en
+  languagesRead: 
+    - de
+
+- title: "Graduation Day"
+  series: The Testing 
+  author: "Joelle Charbonneau"
+  year: 2014
+  link: "https://www.goodreads.com/book/show/18222699-graduation-day"
+  cover: "images/books/covers/Graduation Day.jpg"
+  pages: 304
   originalLanguage: en
   languagesRead: 
     - de
 
 - title: "Slated"
+  series: Slated
   author: "Teri Terry"
   year: 2012
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/12743472-slated"
+  cover: "images/books/covers/Slated.jpg"
+  pages: 439
   originalLanguage: en
   languagesRead: 
     - de
 
 - title: "Fractured"
+  series: Slated
   author: "Teri Terry"
   year: 2013
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/13490543-fractured"
+  cover: "images/books/covers/Fractured.jpg"
+  pages: 421
   originalLanguage: en
   languagesRead: 
     - de
 
 - title: "Shattered"
+  series: Slated
   author: "Teri Terry"
   year: 2014
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/17901410-shattered"
+  cover: "images/books/covers/Shattered.jpg"
+  pages: 402
   originalLanguage: en
   languagesRead: 
     - de
 
 - title: "Legend"
+  series: Legend
   author: "Marie Lu"
   year: 2011
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/29863662-legend"
+  cover: "images/books/covers/Legend.jpg"
+  pages: 318
   originalLanguage: en
   languagesRead: 
     - de
 
 - title: "Prodigy"
+  series: Legend
   author: "Marie Lu"
   year: 2013
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/16287469-prodigy"
+  cover: "images/books/covers/Prodigy.jpg"
+  pages: 522
   originalLanguage: en
   languagesRead: 
     - de
 
 - title: "Champion"
+  series: Legend
   author: "Marie Lu"
   year: 2013
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/18291576-champion"
+  cover: "images/books/covers/Champion.jpg"
+  pages: 483
   originalLanguage: en
   languagesRead: 
     - de
@@ -290,42 +305,46 @@
   languagesRead: 
     - de
 
-- title: "Herr Sonneborn geht nach Brüssel"
+- title: "Herr Sonneborn geht nach Brüssel - Abenteuer im Europaparlament"
+  series: Herr Sonneborn in Brüssel
   author: "Martin Sonneborn"
-  year: 2016
-  link: ""
-  cover: ""
-  pages: 0
+  year: 2019
+  link: "https://www.goodreads.com/book/show/44290242-herr-sonneborn-geht-nach-br-ssel---abenteuer-im-europaparlament"
+  cover: "images/books/covers/Herr Sonneborn geht nach Brüssel - Abenteuer im Europaparlament.jpg"
+  pages: 427
   originalLanguage: de
   languagesRead: 
     - de
 
-- title: "Herr Sonneborn bleibt in Brüssel"
+- title: "Herr Sonneborn bleibt in Brüssel: Neue Abenteuer im Europaparlament"
+  series: Herr Sonneborn in Brüssel
   author: "Martin Sonneborn"
-  year: 2020
-  link: ""
-  cover: ""
-  pages: 0
+  year: 2024
+  link: "https://www.goodreads.com/book/show/199429978-herr-sonneborn-bleibt-in-br-ssel"
+  cover: "images/books/covers/Herr Sonneborn bleibt in Brüssel_ Neue Abenteuer im Europaparlament.jpg"
+  pages: 432
   originalLanguage: de
   languagesRead: 
     - de
 
 - title: "Krigarhjärta"
-  author: "Eli Levén"
-  year: 2023
-  link: ""
-  cover: ""
-  pages: 0
+  series: Hjärta-serien
+  author: "Lars Wilderäng"
+  year: 2024
+  link: "https://www.goodreads.com/book/show/206735457-krigarhj-rta"
+  cover: "images/books/covers/Krigarhjärta.webp"
+  pages: 450
   originalLanguage: sv
   languagesRead: 
     - sv
 
 - title: "The Last Wish"
+  series: The Witcher
   author: "Andrzej Sapkowski"
   year: 1993
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/40603587-the-last-wish"
+  cover: "images/books/covers/The Last Wish.jpg"
+  pages: 400
   originalLanguage: pl
   languagesListened:
     - sv
@@ -333,41 +352,45 @@
     - en
 
 - title: "Sword Of Destiny"
+  series: The Witcher
   author: "Andrzej Sapkowski"
   year: 1992
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/25454056-sword-of-destiny"
+  cover: "images/books/covers/Sword of Destiny.jpg"
+  pages: 405
   originalLanguage: pl
   languagesRead: 
     - en
 
 - title: "Blood Of Elves"
+  series: The Witcher
   author: "Andrzej Sapkowski"
   year: 1994
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/6043781-blood-of-elves"
+  cover: "images/books/covers/Blood of Elves.jpg"
+  pages: 398
   originalLanguage: pl
   languagesRead: 
     - en
 
-- title: "Time Of Contempt"
+- title: "The Time of Contempt"
+  series: The Witcher
   author: "Andrzej Sapkowski"
   year: 1995
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/14781491-the-time-of-contempt"
+  cover: "images/books/covers/The Time of Contempt.jpg"
+  pages: 331
   originalLanguage: pl
   languagesRead: 
     - en
 
 - title: "Baptism Of Fire"
+  series: The Witcher
   author: "Andrzej Sapkowski"
   year: 1996
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/18656031-baptism-of-fire"
+  cover: "images/books/covers/Baptism of Fire.jpg"
+  pages: 349
   originalLanguage: pl
   languagesRead: 
     - en
