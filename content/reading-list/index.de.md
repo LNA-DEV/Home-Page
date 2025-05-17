@@ -1,5 +1,5 @@
 ---
-title: "Lese liste"
+title: "Leseliste"
 draft: false
 showToc: false
 TocOpen: false
