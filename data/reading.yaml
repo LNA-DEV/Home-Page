@@ -121,13 +121,13 @@
   languagesRead: 
     - de
 
-- title: "Divergent 3"
+- title: "Allegiant"
   series: Divergent
   author: "Veronica Roth"
   year: 2013
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/18710190-allegiant"
+  cover: "images/books/covers/Allegiant.jpg"
+  pages: 531
   originalLanguage: en
   languagesRead: 
     - de
