@@ -1,6 +1,7 @@
 - title: The Hunger Games
   series: Hunger Games
   author: "Suzanne Collins"
+  genres: ["dystopian", "science fiction"]
   year: 2008
   link: "https://www.goodreads.com/book/show/2767052-the-hunger-games/"
   cover: "images/books/covers/The Hunger Games.jpg"
@@ -14,6 +15,7 @@
 - title: "Catching Fire"
   series: Hunger Games
   author: "Suzanne Collins"
+  genres: ["dystopian", "science fiction"]
   year: 2009
   link: "https://www.goodreads.com/book/show/6148028-catching-fire"
   cover: "images/books/covers/Catching Fire.jpg"
@@ -25,6 +27,7 @@
 - title: "Mockingjay"
   series: Hunger Games
   author: "Suzanne Collins"
+  genres: ["dystopian", "science fiction"]
   year: 2010
   link: "https://www.goodreads.com/book/show/7260188-mockingjay"
   cover: "images/books/covers/Mockingjay.jpg"
@@ -36,6 +39,7 @@
 - title: "The Ballad of Songbirds and Snakes"
   series: Hunger Games
   author: "Suzanne Collins"
+  genres: ["dystopian", "science fiction"]
   year: 2020
   link: "https://www.goodreads.com/book/show/51901147-the-ballad-of-songbirds-and-snakes"
   cover: "images/books/covers/The Ballad of Songbirds and Snakes.jpg"
@@ -47,6 +51,7 @@
 - title: "The Maze Runner"
   series: Maze Runner
   author: "James Dashner"
+  genres: ["dystopian", "science fiction", "post-apocalyptic"]
   year: 2009
   link: "https://www.goodreads.com/book/show/6186357-the-maze-runner"
   cover: "images/books/covers/The Maze Runner.jpg"
@@ -58,6 +63,7 @@
 - title: "The Scorch Trials"
   series: Maze Runner
   author: "James Dashner"
+  genres: ["dystopian", "science fiction", "post-apocalyptic"]
   year: 2010
   link: "https://www.goodreads.com/book/show/7631105-the-scorch-trials"
   cover: "images/books/covers/The Scorch Trials.jpg"
@@ -69,6 +75,7 @@
 - title: "The Death Cure"
   series: Maze Runner
   author: "James Dashner"
+  genres: ["dystopian", "science fiction", "post-apocalyptic"]
   year: 2011
   link: "https://www.goodreads.com/book/show/7864437-the-death-cure"
   cover: "images/books/covers/The Death Cure.jpg"
@@ -80,6 +87,7 @@
 - title: "The Kill Order"
   series: Maze Runner
   author: "James Dashner"
+  genres: ["dystopian", "science fiction", "post-apocalyptic"]
   year: 2012
   link: "https://www.goodreads.com/book/show/13089710-the-kill-order"
   cover: "images/books/covers/The Kill Order.jpg"
@@ -91,6 +99,7 @@
 - title: "The Fever Code"
   series: Maze Runner
   author: "James Dashner"
+  genres: ["dystopian", "science fiction", "post-apocalyptic"]
   year: 2016
   link: "https://www.goodreads.com/book/show/23267628-the-fever-code"
   cover: "images/books/covers/The Fever Code.jpg"
@@ -102,6 +111,7 @@
 - title: "Divergent"
   series: Divergent
   author: "Veronica Roth"
+  genres: ["dystopian", "science fiction", "romance"]
   year: 2011
   link: "https://www.goodreads.com/book/show/13335037-divergent"
   cover: "images/books/covers/Divergent.jpg"
@@ -113,6 +123,7 @@
 - title: "Insurgent"
   series: Divergent
   author: "Veronica Roth"
+  genres: ["dystopian", "science fiction", "romance"]
   year: 2012
   link: "https://www.goodreads.com/book/show/11735983-insurgent"
   cover: "images/books/covers/Insurgent.jpg"
@@ -124,6 +135,7 @@
 - title: "Allegiant"
   series: Divergent
   author: "Veronica Roth"
+  genres: ["dystopian", "science fiction", "romance"]
   year: 2013
   link: "https://www.goodreads.com/book/show/18710190-allegiant"
   cover: "images/books/covers/Allegiant.jpg"
@@ -135,6 +147,7 @@
 - title: "The 5th Wave"
   series: The 5th Wave 
   author: "Rick Yancey"
+  genres: ["dystopian", "science fiction"]
   year: 2013
   link: "https://www.goodreads.com/book/show/16101128-the-5th-wave"
   cover: "images/books/covers/The 5th wave.jpg"
@@ -146,6 +159,7 @@
 - title: "The Infinite Sea"
   series: The 5th Wave 
   author: "Rick Yancey"
+  genres: ["dystopian", "science fiction"]
   year: 2014
   link: "https://www.goodreads.com/book/show/16131484-the-infinite-sea"
   cover: "images/books/covers/The Infinite Sea.jpg"
@@ -157,6 +171,7 @@
 - title: "The Last Star"
   series: The 5th Wave 
   author: "Rick Yancey"
+  genres: ["dystopian", "science fiction"]
   year: 2016
   link: "https://www.goodreads.com/book/show/16131489-the-last-star"
   cover: "images/books/covers/The Last Star.jpg"
@@ -168,6 +183,7 @@
 - title: "The 100"
   series: The 100 
   author: "Kass Morgan"
+  genres: ["dystopian", "science fiction", "post-apocalyptic"]
   year: 2013
   link: "https://www.goodreads.com/book/show/17332969-the-100"
   originalLanguage: en
@@ -177,6 +193,7 @@
 - title: "Day 21"
   series: The 100 
   author: "Kass Morgan"
+  genres: ["dystopian", "science fiction", "post-apocalyptic"]
   year: 2014
   link: "https://www.goodreads.com/book/show/20454076-day-21"
   cover: "images/books/covers/Day 21.jpg"
@@ -188,6 +205,7 @@
 - title: "Homecoming"
   series: The 100 
   author: "Kass Morgan"
+  genres: ["dystopian", "science fiction", "post-apocalyptic"]
   year: 2015
   link: "https://www.goodreads.com/book/show/23264825-homecoming"
   cover: "images/books/covers/Homecoming.jpg"
@@ -199,6 +217,7 @@
 - title: "The Testing"
   series: The Testing 
   author: "Joelle Charbonneau"
+  genres: ["dystopian", "science fiction"]
   year: 2013
   link: "https://www.goodreads.com/book/show/13326831-the-testing"
   cover: "images/books/covers/The Testing.jpg"
@@ -210,6 +229,7 @@
 - title: "Independent Study"
   series: The Testing 
   author: "Joelle Charbonneau"
+  genres: ["dystopian", "science fiction"]
   year: 2014
   link: "https://www.goodreads.com/book/show/17165932-independent-study"
   cover: "images/books/covers/Independent Study.jpg"
@@ -221,6 +241,7 @@
 - title: "Graduation Day"
   series: The Testing 
   author: "Joelle Charbonneau"
+  genres: ["dystopian", "science fiction"]
   year: 2014
   link: "https://www.goodreads.com/book/show/18222699-graduation-day"
   cover: "images/books/covers/Graduation Day.jpg"
@@ -232,6 +253,7 @@
 - title: "Slated"
   series: Slated
   author: "Teri Terry"
+  genres: ["dystopian", "science fiction"]
   year: 2012
   link: "https://www.goodreads.com/book/show/12743472-slated"
   cover: "images/books/covers/Slated.jpg"
@@ -243,6 +265,7 @@
 - title: "Fractured"
   series: Slated
   author: "Teri Terry"
+  genres: ["dystopian", "science fiction"]
   year: 2013
   link: "https://www.goodreads.com/book/show/13490543-fractured"
   cover: "images/books/covers/Fractured.jpg"
@@ -254,6 +277,7 @@
 - title: "Shattered"
   series: Slated
   author: "Teri Terry"
+  genres: ["dystopian", "science fiction"]
   year: 2014
   link: "https://www.goodreads.com/book/show/17901410-shattered"
   cover: "images/books/covers/Shattered.jpg"
@@ -265,6 +289,7 @@
 - title: "Legend"
   series: Legend
   author: "Marie Lu"
+  genres: ["dystopian", "science fiction", "romance"]
   year: 2011
   link: "https://www.goodreads.com/book/show/29863662-legend"
   cover: "images/books/covers/Legend.jpg"
@@ -276,6 +301,7 @@
 - title: "Prodigy"
   series: Legend
   author: "Marie Lu"
+  genres: ["dystopian", "science fiction", "romance"]
   year: 2013
   link: "https://www.goodreads.com/book/show/16287469-prodigy"
   cover: "images/books/covers/Prodigy.jpg"
@@ -287,6 +313,7 @@
 - title: "Champion"
   series: Legend
   author: "Marie Lu"
+  genres: ["dystopian", "science fiction", "romance"]
   year: 2013
   link: "https://www.goodreads.com/book/show/18291576-champion"
   cover: "images/books/covers/Champion.jpg"
@@ -297,6 +324,7 @@
 
 - title: "Cyberpunk 2077: No Coincidence"
   author: Rafał Kosik
+  genres: ["dystopian", "science fiction", "cyberpunk"]
   year: 2023
   link: "https://www.goodreads.com/book/show/62966999-cyberpunk-2077"
   cover: "images/books/covers/Cyberpunk No Coincidence.jpg"
@@ -308,6 +336,7 @@
 - title: "Herr Sonneborn geht nach Brüssel - Abenteuer im Europaparlament"
   series: Herr Sonneborn in Brüssel
   author: "Martin Sonneborn"
+  genres: ["politics", "humor"]
   year: 2019
   link: "https://www.goodreads.com/book/show/44290242-herr-sonneborn-geht-nach-br-ssel---abenteuer-im-europaparlament"
   cover: "images/books/covers/Herr Sonneborn geht nach Brüssel - Abenteuer im Europaparlament.jpg"
@@ -319,6 +348,7 @@
 - title: "Herr Sonneborn bleibt in Brüssel: Neue Abenteuer im Europaparlament"
   series: Herr Sonneborn in Brüssel
   author: "Martin Sonneborn"
+  genres: ["politics", "humor"]
   year: 2024
   link: "https://www.goodreads.com/book/show/199429978-herr-sonneborn-bleibt-in-br-ssel"
   cover: "images/books/covers/Herr Sonneborn bleibt in Brüssel_ Neue Abenteuer im Europaparlament.jpg"
@@ -330,6 +360,7 @@
 - title: "Krigarhjärta"
   series: Hjärta-serien
   author: "Lars Wilderäng"
+  genres: ["fiction", "war"]
   year: 2024
   link: "https://www.goodreads.com/book/show/206735457-krigarhj-rta"
   cover: "images/books/covers/Krigarhjärta.webp"
@@ -341,6 +372,7 @@
 - title: "The Last Wish"
   series: The Witcher
   author: "Andrzej Sapkowski"
+  genres: ["fantasy"]
   year: 1993
   link: "https://www.goodreads.com/book/show/40603587-the-last-wish"
   cover: "images/books/covers/The Last Wish.jpg"
@@ -354,6 +386,7 @@
 - title: "Sword Of Destiny"
   series: The Witcher
   author: "Andrzej Sapkowski"
+  genres: ["fantasy"]
   year: 1992
   link: "https://www.goodreads.com/book/show/25454056-sword-of-destiny"
   cover: "images/books/covers/Sword of Destiny.jpg"
@@ -365,6 +398,7 @@
 - title: "Blood Of Elves"
   series: The Witcher
   author: "Andrzej Sapkowski"
+  genres: ["fantasy"]
   year: 1994
   link: "https://www.goodreads.com/book/show/6043781-blood-of-elves"
   cover: "images/books/covers/Blood of Elves.jpg"
@@ -376,6 +410,7 @@
 - title: "The Time of Contempt"
   series: The Witcher
   author: "Andrzej Sapkowski"
+  genres: ["fantasy"]
   year: 1995
   link: "https://www.goodreads.com/book/show/14781491-the-time-of-contempt"
   cover: "images/books/covers/The Time of Contempt.jpg"
@@ -387,6 +422,7 @@
 - title: "Baptism Of Fire"
   series: The Witcher
   author: "Andrzej Sapkowski"
+  genres: ["fantasy"]
   year: 1996
   link: "https://www.goodreads.com/book/show/18656031-baptism-of-fire"
   cover: "images/books/covers/Baptism of Fire.jpg"
@@ -398,6 +434,7 @@
 - title: "Die Känguru-Chroniken"
   series: Die Känguru-Chroniken
   author: Marc-Uwe Kling
+  genres: ["comedy"]
   year: 2009
   link: "https://www.goodreads.com/book/show/6392654-die-k-nguru-chroniken"
   cover: "images/books/covers/Die Känguru-Chroniken.jpg"
@@ -409,6 +446,7 @@
 - title: "Das Känguru-Manifest"
   series: Die Känguru-Chroniken
   author: Marc-Uwe Kling
+  genres: ["comedy"]
   year: 2011
   link: "https://www.goodreads.com/book/show/10452269-das-k-nguru-manifest"
   cover: "images/books/covers/Das Känguru-Manifest.jpg"
@@ -420,6 +458,7 @@
 - title: "Die Känguru-Offenbarung"
   series: Die Känguru-Chroniken
   author: Marc-Uwe Kling
+  genres: ["comedy"]
   year: 2014
   link: "https://die-kaenguru-chroniken.fandom.com/wiki/Die_K%C3%A4nguru-Offenbarung"
   cover: "images/books/covers/Die Känguru-Offenbarung.jpg"
@@ -431,6 +470,7 @@
 - title: "Die Känguru-Apokryphen"
   series: Die Känguru-Chroniken
   author: Marc-Uwe Kling
+  genres: ["comedy"]
   year: 2018
   link: "https://www.goodreads.com/book/show/40136903-die-k-nguru-apokryphen"
   cover: "images/books/covers/Die Känguru-Apokryphen.jpg"
@@ -442,6 +482,7 @@
 - title: "QualityLand"
   series: QualityLand
   author: Marc-Uwe Kling
+  genres: ["dystopian", "science fiction", "humor"]
   year: 2017
   link: "https://www.goodreads.com/book/show/36216607-qualityland"
   cover: "images/books/covers/QualityLand.jpg"
@@ -453,6 +494,7 @@
 - title: "QualityLand 2.0"
   series: QualityLand
   author: Marc-Uwe Kling
+  genres: ["dystopian", "science fiction", "humor"]
   year: 2020
   link: "https://www.goodreads.com/book/show/53416865-qualityland-2-0"
   cover: "images/books/covers/QualityLand 2.0.jpg"
@@ -464,6 +506,7 @@
 - title: "Hatchet"
   series: Brian's Saga  
   author: Gary Paulsen
+  genres: ["survival"]
   year: 1987
   link: "https://www.goodreads.com/book/show/50.Hatchet"
   cover: "images/books/covers/Hatchet.jpg"
@@ -475,6 +518,7 @@
 - title: "The River"
   series: Brian's Saga  
   author: Gary Paulsen
+  genres: ["survival", "classics"]
   year: 1991
   link: "https://www.goodreads.com/book/show/2915.The_River"
   cover: "images/books/covers/The River.jpg"
@@ -485,6 +529,7 @@
 
 - title: "Krabat"
   author: Otfried Preußler
+  genres: ["fantasy", "classics"]
   year: 1971
   link: "https://www.goodreads.com/book/show/472626.Krabat"
   cover: "images/books/covers/Krabat.jpg"

@@ -29,6 +29,14 @@
         {{ if .pages }} • {{ .pages }} {{ i18n "pages" }}{{ end }}
       </p>
 
+      {{ if .genres }}
+      <p>Genres:
+        {{ range $i, $genre := .genres }}
+          {{ if $i }}, {{ end }}{{ $genre }}
+        {{ end }}
+      </p>
+      {{ end }}
+
       {{ if .originalLanguage }}
       <p>{{ i18n "originalLanguage" }}: {{ index $langFlags .originalLanguage | default .originalLanguage }}</p>
       {{ end }}
