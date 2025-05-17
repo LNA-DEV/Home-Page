@@ -1,4 +1,7 @@
 <div class="reading-list">
+  {{/* Helper map to convert language codes to flag emojis */}}
+  {{ $langFlags := dict "en" "🇬🇧" "de" "🇩🇪" "sv" "🇸🇪" "pl" "🇵🇱" }}
+
   {{ range .Site.Data.reading }}
   {{ $book := . }}
   <div class="book-entry">
@@ -13,13 +16,39 @@
       {{ end }}
     </div>
     {{ end }}
+
     <div class="book-details">
       <h3 class="book-title">
         {{ if .link }}
-        <a href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>
+        <a href="{{ .link }}" target="_blank" rel="noopener" class="book-title-link">{{ .title }}</a>
         {{ else }} {{ .title }} {{ end }}
       </h3>
-      <p class="book-meta"><strong>{{ .author }}</strong> • {{ .year }}</p>
+      <p class="book-meta">
+        {{ .author }} • {{ .year }}
+        {{ if .series }} • <em>{{ .series }}</em>{{ end }}
+        {{ if .pages }} • {{ .pages }} pages{{ end }}
+      </p>
+
+      {{ if .originalLanguage }}
+      <p>Original language: {{ index $langFlags .originalLanguage | default .originalLanguage }}</p>
+      {{ end }}
+
+      {{ if .languagesRead }}
+      <p>Read in:
+        {{ range $i, $lang := .languagesRead }}
+          {{ if $i }}, {{ end }}{{ index $langFlags $lang | default $lang }}
+        {{ end }}
+      </p>
+      {{ end }}
+
+      {{ if .languagesListened }}
+      <p>Listened in:
+        {{ range $i, $lang := .languagesListened }}
+          {{ if $i }}, {{ end }}{{ index $langFlags $lang | default $lang }}
+        {{ end }}
+      </p>
+      {{ end }}
+
       {{ if .notes }}
       <p class="book-notes">{{ .notes }}</p>
       {{ end }}
