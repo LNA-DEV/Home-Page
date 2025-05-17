@@ -81,9 +81,9 @@
   series: Maze Runner
   author: "James Dashner"
   year: 2012
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/13089710-the-kill-order"
+  cover: "images/books/covers/The Kill Order.jpg"
+  pages: 327
   originalLanguage: en
   languagesRead: 
     - de
@@ -92,34 +92,37 @@
   series: Maze Runner
   author: "James Dashner"
   year: 2016
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/23267628-the-fever-code"
+  cover: "images/books/covers/The Fever Code.jpg"
+  pages: 347
   originalLanguage: en
   languagesRead: 
     - de
 
-- title: "Divergent 1"
+- title: "Divergent"
+  series: Divergent
   author: "Veronica Roth"
   year: 2011
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/13335037-divergent"
+  cover: "images/books/covers/Divergent.jpg"
+  pages: 487
   originalLanguage: en
   languagesRead: 
     - de
 
-- title: "Divergent 2"
+- title: "Insurgent"
+  series: Divergent
   author: "Veronica Roth"
   year: 2012
-  link: ""
-  cover: ""
-  pages: 0
+  link: "https://www.goodreads.com/book/show/11735983-insurgent"
+  cover: "images/books/covers/Insurgent.jpg"
+  pages: 525
   originalLanguage: en
   languagesRead: 
     - de
 
 - title: "Divergent 3"
+  series: Divergent
   author: "Veronica Roth"
   year: 2013
   link: ""
