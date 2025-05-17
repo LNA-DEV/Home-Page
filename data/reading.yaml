@@ -537,3 +537,51 @@
   originalLanguage: de
   languagesRead:
     - de
+
+- title: "The Enceladus Mission"
+  series: Ice Moon
+  author: Brandon Q. Morris
+  genres: ["science fiction", "space", "hard science fiction"]
+  year: 2017
+  link: "https://www.goodreads.com/book/show/41583173-the-enceladus-mission"
+  cover: "images/books/covers/The Enceladus Mission.jpg"
+  pages: 448
+  originalLanguage: en
+  languagesRead:
+    - de
+
+- title: The Titan Probe
+  series: Ice Moon
+  author: Brandon Q. Morris
+  genres: ["science fiction", "space", "hard science fiction"]
+  year: 2017
+  link: "https://www.goodreads.com/book/show/42395794-the-titan-probe"
+  cover: "images/books/covers/The Titan Probe.jpg"
+  pages: 332
+  originalLanguage: en
+  languagesRead:
+    - de
+
+- title: The Io Encounter
+  series: Ice Moon
+  author: Brandon Q. Morris
+  genres: ["science fiction", "space", "hard science fiction"]
+  year: 2017
+  link: "https://www.goodreads.com/book/show/42595605-the-io-encounter"
+  cover: "images/books/covers/The Io Encounter.jpg"
+  pages: 380
+  originalLanguage: en
+  languagesRead:
+    - de
+
+- title: Return to Enceladus
+  series: Ice Moon
+  author: Brandon Q. Morris
+  genres: ["science fiction", "space", "hard science fiction"]
+  year: 2017
+  link: "https://www.goodreads.com/book/show/43180133-return-to-enceladus"
+  cover: "images/books/covers/Return to Enceladus.jpg"
+  pages: 412
+  originalLanguage: en
+  languagesRead:
+    - de
