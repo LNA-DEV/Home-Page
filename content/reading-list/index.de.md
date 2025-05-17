@@ -1,9 +1,9 @@
 ---
-title: "Reading list"
+title: "Lese liste"
 draft: false
 showToc: false
 TocOpen: false
-description: "A list of books I have read."
+description: "Eine Liste an Büchern die ich gelesen habe."
 disableShare: true
 disableHLJS: false
 searchHidden: false

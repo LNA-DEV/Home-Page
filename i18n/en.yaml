@@ -37,3 +37,16 @@
 
 - id: posts_title
   translation: "Latest posts"
+
+
+# Reading list
+- id: pages
+  translation: "pages"
+- id: originalLanguage
+  translation: "Original language"
+- id: readIn
+  translation: "Read in"
+- id: listenedIn
+  translation: "Listened in"
+- id: coverAlt
+  translation: "Cover of {{ . }}"

@@ -32,3 +32,15 @@
 
 - id: posts_title
   translation: "Nyaste inläggen"
+
+# Reading list
+- id: pages
+  translation: "sidor"
+- id: originalLanguage
+  translation: "Originalspråk"
+- id: readIn
+  translation: "Läst på"
+- id: listenedIn
+  translation: "Lyssnat på"
+- id: coverAlt
+  translation: "Omslag till {{ . }}"

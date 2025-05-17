@@ -11,7 +11,7 @@
         {{ $img := resources.Get . }}
         {{ with $img }}
           {{ $resized := .Fit "200x300" }}
-          <img src="{{ $resized.RelPermalink }}" alt="Cover of {{ $book.title }}" loading="lazy">
+          <img src="{{ $resized.RelPermalink }}" alt="{{ i18n "coverAlt" $book.title }}" loading="lazy">
         {{ end }}
       {{ end }}
     </div>
@@ -26,15 +26,15 @@
       <p class="book-meta">
         {{ .author }} • {{ .year }}
         {{ if .series }} • <em>{{ .series }}</em>{{ end }}
-        {{ if .pages }} • {{ .pages }} pages{{ end }}
+        {{ if .pages }} • {{ .pages }} {{ i18n "pages" }}{{ end }}
       </p>
 
       {{ if .originalLanguage }}
-      <p>Original language: {{ index $langFlags .originalLanguage | default .originalLanguage }}</p>
+      <p>{{ i18n "originalLanguage" }}: {{ index $langFlags .originalLanguage | default .originalLanguage }}</p>
       {{ end }}
 
       {{ if .languagesRead }}
-      <p>Read in:
+      <p>{{ i18n "readIn" }}:
         {{ range $i, $lang := .languagesRead }}
           {{ if $i }}, {{ end }}{{ index $langFlags $lang | default $lang }}
         {{ end }}
@@ -42,7 +42,7 @@
       {{ end }}
 
       {{ if .languagesListened }}
-      <p>Listened in:
+      <p>{{ i18n "listenedIn" }}:
         {{ range $i, $lang := .languagesListened }}
           {{ if $i }}, {{ end }}{{ index $langFlags $lang | default $lang }}
         {{ end }}

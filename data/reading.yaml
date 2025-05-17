@@ -460,3 +460,35 @@
   originalLanguage: de
   languagesListened: 
     - de
+
+- title: "Hatchet"
+  series: Brian's Saga  
+  author: Gary Paulsen
+  year: 1987
+  link: "https://www.goodreads.com/book/show/50.Hatchet"
+  cover: "images/books/covers/Hatchet.jpg"
+  pages: 208
+  originalLanguage: en
+  languagesRead:
+    - de
+
+- title: "The River"
+  series: Brian's Saga  
+  author: Gary Paulsen
+  year: 1991
+  link: "https://www.goodreads.com/book/show/2915.The_River"
+  cover: "images/books/covers/The River.jpg"
+  pages: 160
+  originalLanguage: en
+  languagesRead:
+    - de
+
+- title: "Krabat"
+  author: Otfried Preußler
+  year: 1971
+  link: "https://www.goodreads.com/book/show/472626.Krabat"
+  cover: "images/books/covers/Krabat.jpg"
+  pages: 296
+  originalLanguage: de
+  languagesRead:
+    - de

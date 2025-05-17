@@ -37,3 +37,15 @@
 
 - id: posts_title
   translation: "Neueste Blogeinträge"
+
+# Reading list
+- id: pages
+  translation: "Seiten"
+- id: originalLanguage
+  translation: "Originalsprache"
+- id: readIn
+  translation: "Gelesen in"
+- id: listenedIn
+  translation: "Gehört in"
+- id: coverAlt
+  translation: "Cover von {{ . }}"
