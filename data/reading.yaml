@@ -394,3 +394,69 @@
   originalLanguage: pl
   languagesRead: 
     - en
+
+- title: "Die Känguru-Chroniken"
+  series: Die Känguru-Chroniken
+  author: Marc-Uwe Kling
+  year: 2009
+  link: "https://www.goodreads.com/book/show/6392654-die-k-nguru-chroniken"
+  cover: "images/books/covers/Die Känguru-Chroniken.jpg"
+  pages: 271
+  originalLanguage: de
+  languagesListened: 
+    - de
+
+- title: "Das Känguru-Manifest"
+  series: Die Känguru-Chroniken
+  author: Marc-Uwe Kling
+  year: 2011
+  link: "https://www.goodreads.com/book/show/10452269-das-k-nguru-manifest"
+  cover: "images/books/covers/Das Känguru-Manifest.jpg"
+  pages: 302
+  originalLanguage: de
+  languagesListened: 
+    - de
+    
+- title: "Die Känguru-Offenbarung"
+  series: Die Känguru-Chroniken
+  author: Marc-Uwe Kling
+  year: 2014
+  link: "https://die-kaenguru-chroniken.fandom.com/wiki/Die_K%C3%A4nguru-Offenbarung"
+  cover: "images/books/covers/Die Känguru-Offenbarung.jpg"
+  pages: 365
+  originalLanguage: de
+  languagesListened: 
+    - de
+
+- title: "Die Känguru-Apokryphen"
+  series: Die Känguru-Chroniken
+  author: Marc-Uwe Kling
+  year: 2018
+  link: "https://www.goodreads.com/book/show/40136903-die-k-nguru-apokryphen"
+  cover: "images/books/covers/Die Känguru-Apokryphen.jpg"
+  pages: 208
+  originalLanguage: de
+  languagesListened: 
+    - de
+
+- title: "QualityLand"
+  series: QualityLand
+  author: Marc-Uwe Kling
+  year: 2017
+  link: "https://www.goodreads.com/book/show/36216607-qualityland"
+  cover: "images/books/covers/QualityLand.jpg"
+  pages: 384
+  originalLanguage: de
+  languagesListened: 
+    - de
+
+- title: "QualityLand 2.0"
+  series: QualityLand
+  author: Marc-Uwe Kling
+  year: 2020
+  link: "https://www.goodreads.com/book/show/53416865-qualityland-2-0"
+  cover: "images/books/covers/QualityLand 2.0.jpg"
+  pages: 427
+  originalLanguage: de
+  languagesListened: 
+    - de
