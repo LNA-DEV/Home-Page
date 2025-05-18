@@ -585,3 +585,14 @@
   originalLanguage: en
   languagesRead:
     - de
+
+- title: Blackout
+  author: Marc Elsberg
+  genres: ["fiction", "thriller", "crime"]
+  year: 2012
+  link: "https://www.goodreads.com/book/show/59023013-blackout"
+  cover: "images/books/covers/Blackout.jpg"
+  pages: 396
+  originalLanguage: de
+  languagesListened:
+    - de
