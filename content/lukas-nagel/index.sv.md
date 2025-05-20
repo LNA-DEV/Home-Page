@@ -36,7 +36,7 @@ Jag börjar lära mig principerna för Indie Web. Jag är verkligen i början av
 
 ### Fotografi
 
-En annan hobby för mig är fotografi. Jag har en webbplats enbart för detta ändamål: [LNA-DEV Gallery](https://lna-dev.net/en/gallery). Om du är intresserad, ta en titt på mina bilder. Mina fotografier är publicerade under en Creative Commons-licens, så om du uppfyller villkoren kan du kanske använda dem om du vill. (Du kan hitta licensinformationen på botten av min [fotosida](https://lna-dev.net/en/gallery).)
+En annan hobby för mig är fotografi. Jag har en webbplats enbart för detta ändamål: [Fotografie](https://lna-dev.net/en/gallery). Om du är intresserad, ta en titt på mina bilder. Mina fotografier är publicerade under en Creative Commons-licens, så om du uppfyller villkoren kan du kanske använda dem om du vill. (Du kan hitta licensinformationen på metadata av bilderna.)
 
 Jag tar foton inom många olika kategorier, som landskap, djur och växter. Men jag vill lära mig mer om andra kategorier, som porträttfotografi.
 
@@ -51,7 +51,6 @@ Jag är fascinerad av de nordiska länderna. Därför är jag intresserad av spr
 ## Domäner jag kontrollera
 
 - [lna-dev.net](https://lna-dev.net) (Hemsida)
-- [lna-dev.net/en/gallery](https://lna-dev.net/en/gallery) (Fotografi)
 - [lna-dev.de](https://lna-dev.de) (Backup)
 - [lna-dev.com](https://lna-dev.com) (Backup)
 - [fachinformatikerpruefungsvorbereitung.de](https://fachinformatikerpruefungsvorbereitung.de) (Projekt)
@@ -65,4 +64,4 @@ Jag är fascinerad av de nordiska länderna. Därför är jag intresserad av spr
 - [Mastodon](https://mastodon.online/@lna_dev)
 - [Pixelfed](https://pixelfed.de/i/web/profile/482439783472092612)
 - [Matrix](https://matrix.to/#/@lna-dev:matrix.org)
-- [Instagram](https://www.instagram.com/lnadev/) (Inte aktiv. Endast för behålla mitt användernamn.)
+- [Instagram](https://www.instagram.com/lnadev/)

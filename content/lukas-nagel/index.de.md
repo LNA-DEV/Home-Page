@@ -36,9 +36,9 @@ Ich beschäftige mich mehr und mehr mit dem Indie Web. Ich bin hier definitiv am
 
 ### Fotografie
 
-Ein weiteres Hobby von mir ist Fotografie. Dafür habe ich eine weitere Seite: [LNA-DEV Photography](https://lna-dev.net/en/gallery). Falls du interessiert bist, schau doch mal vorbei. Meine Bilder sind unter einer Creative Commons Lizenz veröffentlicht. Wenn du sie benutzen möchtest, findest du die genauen Lizenzinformationen im Footer der [Fotografie-Seite](https://lna-dev.net/en/gallery).
+Ein weiteres Hobby von mir ist Fotografie. Dafür habe ich eine weitere Unterseite: [Fotografie](https://lna-dev.net/en/gallery). Falls du interessiert bist, schau doch mal vorbei. Meine Bilder sind unter einer Creative Commons Lizenz veröffentlicht. Genauere Informationen findest du in den Metadaten der Bilder.
 
-Ich nehme Fotos in verschiedenen Genres auf (zum Beispiel Landschaft, Tiere und Pflanzen). Aber ich möchte mich auch in ein paar weiteren Kategorien wie der Porträtfotografie ausprobieren.
+Ich nehme Fotos in verschiedenen Kategorien auf (zum Beispiel Landschaft, Tiere und Pflanzen). Aber ich möchte mich auch in ein paar weiteren Kategorien wie der Porträtfotografie ausprobieren.
 
 Editieren tue ich meine Fotografie in [Darktable](https://www.darktable.org/), einem FOSS-Tool zur Fotobearbeitung und Management. Es ähnelt Lightroom, ist aber komplett frei.
 
@@ -47,7 +47,6 @@ Editieren tue ich meine Fotografie in [Darktable](https://www.darktable.org/), e
 ## Domains unter meiner Kontrolle
 
 - [lna-dev.net](https://lna-dev.net) (Homepage)
-- [lna-dev.net/en/gallery](https://lna-dev.net/en/gallery) (Fotografie)
 - [lna-dev.de](https://lna-dev.de) (Backup)
 - [lna-dev.com](https://lna-dev.com) (Backup)
 - [fachinformatikerpruefungsvorbereitung.de](https://fachinformatikerpruefungsvorbereitung.de) (Projekt)
@@ -61,4 +60,4 @@ Editieren tue ich meine Fotografie in [Darktable](https://www.darktable.org/), e
 - [Mastodon](https://mastodon.online/@lna_dev)
 - [Pixelfed](https://pixelfed.de/i/web/profile/482439783472092612)
 - [Matrix](https://matrix.to/#/@lna-dev:matrix.org)
-- [Instagram](https://www.instagram.com/lnadev/) (Nicht aktiv. Dient nur als Platzhalter.)
+- [Instagram](https://www.instagram.com/lnadev/)

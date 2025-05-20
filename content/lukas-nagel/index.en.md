@@ -36,7 +36,7 @@ I am increasingly getting into the Indie Web. I am at the beginning of this jour
 
 ### Photography
 
-Another hobby of mine is photography. I have a page solely for that: [LNA-DEV Gallery](https://lna-dev.net/en/gallery). If you are interested, go and check it out. My photography is published under a permissive license, so if you want to use them, you can if you fulfill the license. (You can find the license information at the bottom of my [photography site](/en/gallery).)
+Another hobby of mine is photography. I have a sub-page solely for that: [Photography](https://lna-dev.net/en/gallery). If you are interested, go and check it out. My photography is published under a permissive license, so if you want to use them, you can if you fulfill the license. (You can find the license information in the metadata of the images.)
 
 I take photographs in many different categories (like landscapes, animals and plants). But I also want to get into a few more areas like portrait photography.
 
@@ -47,7 +47,6 @@ I edit my photography using [Darktable](https://www.darktable.org/), a free and 
 ## Domains I control
 
 - [lna-dev.net](https://lna-dev.net) (Homepage)
-- [lna-dev.net/en/gallery](https://lna-dev.net/en/gallery) (Photography)
 - [lna-dev.de](https://lna-dev.de) (Backup)
 - [lna-dev.com](https://lna-dev.com) (Backup)
 - [fachinformatikerpruefungsvorbereitung.de](https://fachinformatikerpruefungsvorbereitung.de) (Project)
@@ -61,4 +60,4 @@ I edit my photography using [Darktable](https://www.darktable.org/), a free and 
 - [Mastodon](https://mastodon.online/@lna_dev)
 - [Pixelfed](https://pixelfed.de/i/web/profile/482439783472092612)
 - [Matrix](https://matrix.to/#/@lna-dev:matrix.org)
-- [Instagram](https://www.instagram.com/lnadev/) (not active. just as a name saver.)
+- [Instagram](https://www.instagram.com/lnadev/)
