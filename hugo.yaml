@@ -168,7 +168,7 @@ params:
   footer:
     text: "Made with ❤️ by [Lukas Nagel]({{< ref \"lukas-nagel\" >}})"
   DateFormat: January 2, 2006
-  defaultTheme: dark
+  defaultTheme: auto
   disableThemeToggle: false
   ShowReadingTime: true
   ShowShareButtons: true
