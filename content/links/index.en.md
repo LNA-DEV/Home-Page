@@ -21,14 +21,6 @@ persons:
         url: "https://hachyderm.io/@molly0xfff"
       - name: youtube
         url: "https://www.youtube.com/@molly0xfff"
-  - name: Eric Murphy
-    description: "A web developer writing about Linux, Privacy, and the web in general. And especially how it should be."
-    img: "Eric Murphy.webp"
-    links:
-      - name: website
-        url: "https://ericmurphy.xyz/"
-      - name: youtube
-        url: "https://www.youtube.com/@EricMurphyxyz"
   - name: Jonna Jinton
     description: "Jonna Jinton is a Swedish artist, musician, and filmmaker who lives in the North of Sweden. She writes about her life in the North and displays some of her incredible photography. I especially like her open and heartful style."
     img: "Jonna Jinton.jpg"
@@ -85,4 +77,3 @@ All the links below are to English sites. I also have links for other languages.
 - [Natasha Bergen](https://www.natashabergen.com/) ~ Natasha Bergen has pretty nice traveling content and a mission to climb the biggest mountain in every European country.
 - [Techlore](https://www.techlore.tech/) ~ Techlore wants to spread privacy and security to the masses.
 - [Major Hayden](https://major.io/) ~ Tech nerd writing about techy things.
-- [Maddy Wilcox](https://maddy.one/) ~ Pretty cool minimalist personal webpage. Has created a tool to remove all the ugly advertising from Windows.
