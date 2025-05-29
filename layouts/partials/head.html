@@ -74,6 +74,11 @@
 <link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" rel="preload stylesheet" as="style">
 {{- end }}
 
+{{/*  Scripts  */}}
+{{ $script := resources.Get "js/notification.js"| resources.ExecuteAsTemplate "js/notification.js" . | fingerprint }}
+{{/*  {{ $script := resources.Get "js/notification.js"| resources.ExecuteAsTemplate "js/notification.js" . | minify | fingerprint }}  */}}
+<script src="{{ $script.RelPermalink }}"></script>
+
 {{- /* Search */}}
 {{- if (eq .Layout `search`) -}}
 <link crossorigin="anonymous" rel="preload" as="fetch" href="../index.json">
