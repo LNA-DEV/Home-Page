@@ -23,11 +23,21 @@
         <a href="{{ .link }}" target="_blank" rel="noopener" class="book-title-link">{{ .title }}</a>
         {{ else }} {{ .title }} {{ end }}
       </h3>
+
       <p class="book-meta">
         {{ .author }} • {{ .year }}
         {{ if .series }} • <em>{{ .series }}</em>{{ end }}
         {{ if .pages }} • {{ .pages }} {{ i18n "pages" }}{{ end }}
       </p>
+
+      {{/*  {{ if .rating }}
+        <p class="book-rating">
+          Rating: 
+          {{ range seq 1 5 }}
+            {{ if le . $book.rating }}⭐{{ else }}☆{{ end }}
+          {{ end }}
+        </p>
+      {{ end }}  */}}
 
       {{ if .genres }}
       <p>Genres:
