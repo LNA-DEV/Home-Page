@@ -189,6 +189,7 @@
   originalLanguage: en
   cover: "images/books/covers/The 100.jpg"
   pages: 323
+  rating: 3
 
 - title: "Day 21"
   series: The 100 
@@ -198,6 +199,7 @@
   link: "https://www.goodreads.com/book/show/20454076-day-21"
   cover: "images/books/covers/Day 21.jpg"
   pages: 320
+  rating: 3
   originalLanguage: en
   languagesRead: 
     - de
@@ -210,6 +212,7 @@
   link: "https://www.goodreads.com/book/show/23264825-homecoming"
   cover: "images/books/covers/Homecoming.jpg"
   pages: 345
+  rating: 3
   originalLanguage: en
   languagesRead: 
     - de
@@ -331,7 +334,7 @@
   pages: 416
   originalLanguage: pl
   languagesRead: 
-    - de
+    - en
 
 - title: "Herr Sonneborn geht nach Brüssel - Abenteuer im Europaparlament"
   series: Herr Sonneborn in Brüssel
@@ -511,6 +514,7 @@
   link: "https://www.goodreads.com/book/show/50.Hatchet"
   cover: "images/books/covers/Hatchet.jpg"
   pages: 208
+  rating: 3
   originalLanguage: en
   languagesRead:
     - de
