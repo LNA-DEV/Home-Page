@@ -395,6 +395,8 @@
   cover: "images/books/covers/Sword of Destiny.jpg"
   pages: 405
   originalLanguage: pl
+  languagesListened:
+    - sv
   languagesRead: 
     - en
 
@@ -430,6 +432,30 @@
   link: "https://www.goodreads.com/book/show/18656031-baptism-of-fire"
   cover: "images/books/covers/Baptism of Fire.jpg"
   pages: 349
+  originalLanguage: pl
+  languagesRead: 
+    - en
+
+- title: "The Tower of the Swallow"
+  series: The Witcher
+  author: "Andrzej Sapkowski"
+  genres: ["fantasy"]
+  year: 1997 
+  link: "https://www.goodreads.com/book/show/29340636-the-tower-of-swallows"
+  cover: "images/books/covers/Tower of the Swallow.jpg"
+  pages: 436
+  originalLanguage: pl
+  languagesRead: 
+    - en
+
+- title: "The Lady of the Lake"
+  series: The Witcher
+  author: "Andrzej Sapkowski"
+  genres: ["fantasy"]
+  year: 1999 
+  link: "https://www.goodreads.com/book/show/31933977-lady-of-the-lake"
+  cover: "images/books/covers/Lady of the Lake.jpg"
+  pages: 531
   originalLanguage: pl
   languagesRead: 
     - en
