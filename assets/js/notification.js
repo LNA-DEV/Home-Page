@@ -5,42 +5,39 @@ if ("serviceWorker" in navigator) {
     .catch((err) => console.error("Service Worker registration failed", err));
 }
 
-askPermission();
+document.addEventListener("DOMContentLoaded", () => {
+  const notifyLink = document.getElementById("enable-notifications-link");
 
-document.addEventListener("DOMContentLoaded", async () => {
-  try {
-    const permission = await Notification.requestPermission();
-    if (permission === "granted") {
-      await subscribeUser();
-    } else {
-      console.log("Notification permission denied or dismissed.");
-    }
-  } catch (err) {
-    console.error("Subscription failed:", err);
+  if (notifyLink) {
+    notifyLink.addEventListener("click", async (event) => {
+      event.preventDefault(); // Prevent link navigation
+
+      try {
+        const permission = await Notification.requestPermission();
+        if (permission === "granted") {
+          await subscribeUser();
+        } else {
+          console.log("Notification permission denied or dismissed.");
+        }
+      } catch (err) {
+        console.error("Error during subscription:", err);
+      }
+    });
   }
 });
-
-async function askPermission() {
-  const permission = await Notification.requestPermission();
-  if (permission !== "granted") {
-    throw new Error("Permission not granted");
-  }
-}
 
 async function subscribeUser() {
   const reg = await navigator.serviceWorker.ready;
 
-  let response = await fetch("http://localhost:8080/api/webpush/vapidkey");
-  let key = await response.text();
+  const response = await fetch("{{ .Site.Params.CompanionUrl }}/api/webpush/vapidkey");
+  const key = await response.text();
 
   const subscription = await reg.pushManager.subscribe({
     userVisibleOnly: true,
     applicationServerKey: urlBase64ToUint8Array(key),
   });
 
-  const userId = "test"; // getUserId(); // Get from auth or localStorage
-
-  await fetch("http://localhost:8080/api/webpush/subscribe", {
+  await fetch("{{ .Site.Params.CompanionUrl }}/api/webpush/subscribe", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -49,7 +46,6 @@ async function subscribeUser() {
       endpoint: subscription.endpoint,
       expirationTime: subscription.expirationTime,
       keys: subscription.toJSON().keys,
-      userId: userId,
     }),
   });
 

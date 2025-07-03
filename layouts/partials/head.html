@@ -75,8 +75,7 @@
 {{- end }}
 
 {{/*  Scripts  */}}
-{{ $script := resources.Get "js/notification.js"| resources.ExecuteAsTemplate "js/notification.js" . | fingerprint }}
-{{/*  {{ $script := resources.Get "js/notification.js"| resources.ExecuteAsTemplate "js/notification.js" . | minify | fingerprint }}  */}}
+{{ $script := resources.Get "js/notification.js"| resources.ExecuteAsTemplate "js/notification.js" . | minify | fingerprint }}
 <script src="{{ $script.RelPermalink }}"></script>
 
 {{- /* Search */}}

@@ -1,0 +1,16 @@
+<div class="social-icons" {{ with .align}}align="{{.}}" {{- end }}>
+    {{- range site.Params.socialIcons -}}
+
+    {{- if eq .name "notification"}}
+    <a href="#" id="enable-notifications-link" title="Enable Notifications">
+        {{ partial "svg.html" (dict "name" "notification") }}
+    </a>    
+    {{- else }}
+    <a href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
+        title="{{ (.title | default .name) | title }}">
+        {{ partial "svg.html" . }}
+    </a>
+    {{- end -}}
+    {{- end -}}
+
+</div>
