@@ -151,6 +151,7 @@ languages:
 
 params:
   ShortTitle: "LNA-DEV"
+  CompanionUrl: "https://companion.lna-dev.net"
   ShowFullTextinRSS: true
   displayFullLangName: true
   mainSections: "posts"
@@ -208,6 +209,7 @@ params:
       url: "https://matrix.to/#/@lna-dev:matrix.org"
     - name: email
       url: mailto:info@lna-dev.net
+    - name: notification
     - name: rss
       url: index.xml
   editPost:
