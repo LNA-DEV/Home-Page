@@ -9,10 +9,12 @@
 {{- $pages := where $unfilteredPages "Section" "=" "gallery" }}
 
 {{- range $pages }}
-  {{- range (.Resources.ByType "image") }}
-    {{ $image := . }} 
-    {{- with .Exif }}
-    {{- $images = collections.Append $image $images }}
+  {{- if not (in .Path "/archive/") -}}
+    {{- range (.Resources.ByType "image") }}
+      {{ $image := . }} 
+      {{- with .Exif }}
+      {{- $images = collections.Append $image $images }}
+      {{- end }}
     {{- end }}
   {{- end }}
 {{- end }}
