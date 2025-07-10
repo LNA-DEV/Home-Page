@@ -409,6 +409,8 @@
   cover: "images/books/covers/Blood of Elves.jpg"
   pages: 398
   originalLanguage: pl
+  languagesListened:
+    - sv
   languagesRead: 
     - en
 
