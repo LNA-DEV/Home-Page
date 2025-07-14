@@ -462,6 +462,18 @@
   languagesRead: 
     - en
 
+- title: "Season of Storms"
+  series: The Witcher
+  author: "Andrzej Sapkowski"
+  genres: ["fantasy"]
+  year: 2013 
+  link: "https://www.goodreads.com/book/show/36099978-season-of-storms"
+  cover: "images/books/covers/Season of Storms.jpg"
+  pages: 419
+  originalLanguage: pl
+  languagesRead: 
+    - en
+
 - title: "Die Känguru-Chroniken"
   series: Die Känguru-Chroniken
   author: Marc-Uwe Kling
