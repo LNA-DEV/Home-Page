@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tab Notes</title>
+
+    <link rel="icon" href="/assets/Ping%C3%BCino/Ping%C3%BCino.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/Ping%C3%BCino/Ping%C3%BCino.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/Ping%C3%BCino/Ping%C3%BCino.svg">
+    <link rel="apple-touch-icon" href="/assets/Ping%C3%BCino/Ping%C3%BCino.svg">
+    <link rel="mask-icon" href="/assets/Ping%C3%BCino/Ping%C3%BCino.svg">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <script defer data-domain="lna-dev.net" src="https://muninn.lna-dev.net/js/script.file-downloads.outbound-links.js"></script>
+    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+  </head>
+  <body>
+    <div id="toolbar">
+      <button onclick="saveFile()">💾 Save</button>
+      <button onclick="loadFile()">📂 Load</button>
+      <button onclick="toggleDarkMode()">🌓 Mode</button>
+      <input type="file" id="fileInput" style="display: none" />
+    </div>
+    <textarea id="editor" placeholder="Start typing..."></textarea>
+
+    <script src="script.js"></script>
+  </body>
+</html>
