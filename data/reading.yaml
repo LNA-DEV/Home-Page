@@ -640,3 +640,15 @@
   originalLanguage: de
   languagesListened:
     - de
+
+- title: Blå
+  series: Klimakvartetten
+  author: Maja Lunde
+  genres: ["fiction", "dystopian", "science fiction"]
+  year: 2017
+  link: "https://www.goodreads.com/book/show/41433544-bl"
+  cover: "images/books/covers/Blå.jpg"
+  pages: 359
+  originalLanguage: "no"
+  languagesRead:
+    - sv
