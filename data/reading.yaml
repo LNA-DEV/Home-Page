@@ -652,3 +652,15 @@
   originalLanguage: "no"
   languagesRead:
     - sv
+
+- title: "The Hunger Games: Sunrise on the Reaping"
+  series: Hunger Games
+  author: "Suzanne Collins"
+  genres: ["dystopian", "science fiction"]
+  year: 2025
+  link: "https://www.goodreads.com/book/show/214331246-sunrise-on-the-reaping"
+  cover: "images/books/covers/The Hunger Games: Sunrise on the Reaping.jpg"
+  pages: 387
+  originalLanguage: "en"
+  languagesRead:
+    - de
