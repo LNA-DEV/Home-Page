@@ -44,6 +44,7 @@
   link: "https://www.goodreads.com/book/show/51901147-the-ballad-of-songbirds-and-snakes"
   cover: "images/books/covers/The Ballad of Songbirds and Snakes.jpg"
   pages: 541
+  originalLanguage: en
   languagesRead: 
     - de
     - sv
