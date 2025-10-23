@@ -665,3 +665,14 @@
   originalLanguage: "en"
   languagesRead:
     - de
+
+- title: "1984"
+  author: "George Orwell"
+  genres: ["dystopian", "science fiction", "classics"]
+  year: 1949
+  link: "https://www.goodreads.com/book/show/61439040-1984"
+  cover: "images/books/covers/1984.jpg"
+  pages: 368
+  originalLanguage: "en"
+  languagesRead:
+    - sv
