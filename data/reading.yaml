@@ -676,3 +676,15 @@
   originalLanguage: "en"
   languagesRead:
     - sv
+
+- title: "Crossroads of Ravens"
+  series: The Witcher
+  author: "Andrzej Sapkowski"
+  genres: ["fantasy"]
+  year: 2025
+  link: "https://en.wikipedia.org/wiki/Crossroads_of_Ravens"
+  cover: "images/books/covers/Crossroads of Ravens.jpg"
+  pages: 292
+  originalLanguage: pl
+  languagesRead: 
+    - en
