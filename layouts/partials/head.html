@@ -171,6 +171,7 @@
 "arrowNextTitle" (i18n "arrowNextTitle")
 "errorMsg" (i18n "errorMsg")
 "downloadTitle" (i18n "downloadTitle")
+"companionUrl" site.Params.CompanionUrl
 }}
 {{ $js := resources.Get "js/main.js" | js.Build (dict "minify" true "params" $params) | resources.Fingerprint }}
 <script src="{{ $js.RelPermalink }}" defer></script>

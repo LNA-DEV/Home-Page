@@ -17,3 +17,54 @@
 img.lazyload:not([src]) {
   visibility: hidden;
 }
+
+// Like count display in PhotoSwipe lightbox
+.pswp__like-count {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 150ms;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  svg {
+    color: #ef4444;
+    transition: transform 150ms;
+  }
+
+  &.liked svg {
+    animation: like-pop 300ms ease-out;
+  }
+
+  .like-tooltip {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 6px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.9);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 150ms, visibility 150ms;
+  }
+
+  &:hover .like-tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+}
