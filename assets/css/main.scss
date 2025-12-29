@@ -18,6 +18,20 @@ img.lazyload:not([src]) {
   visibility: hidden;
 }
 
+// Hide lazyload placeholder when JS is disabled (noscript image will show instead)
+#gallery figure {
+  position: relative;
+
+  noscript img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 // Like count display in PhotoSwipe lightbox
 .pswp__like-count {
   position: relative;
@@ -66,6 +80,44 @@ img.lazyload:not([src]) {
   &:hover .like-tooltip {
     opacity: 1;
     visibility: visible;
+  }
+}
+
+// Gallery grid layout (visible by default for SEO, enhanced by PhotoSwipe)
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.5rem;
+  padding: 0.5rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .gallery-item {
+    display: block;
+    overflow: hidden;
+    border-radius: 0.5rem;
+
+    figure {
+      margin: 0;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0.5rem;
+      transition: transform 200ms ease;
+    }
+
+    &:hover img {
+      transform: scale(1.02);
+    }
   }
 }
 
