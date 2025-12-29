@@ -242,6 +242,12 @@ img.lazyload:not([src]) {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.pswp-info-empty {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
 .pswp-info-value {
   font-size: 1rem;
   font-weight: 500;

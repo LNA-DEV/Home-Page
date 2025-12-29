@@ -262,6 +262,10 @@ if (gallery) {
           let content = '<div class="pswp-info-popup-content">';
           content += '<button class="pswp-info-popup-close" aria-label="Close">&times;</button>';
 
+          if (exifItems.length === 0 && gearItems.length === 0) {
+            content += '<p class="pswp-info-empty">No data available</p>';
+          }
+
           if (exifItems.length > 0) {
             content += '<div class="pswp-info-section"><h4>Settings</h4><div class="pswp-info-grid">';
             const labels = ["Focal Length", "Aperture", "Shutter Speed", "ISO"];
