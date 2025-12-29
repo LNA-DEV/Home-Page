@@ -4,11 +4,58 @@
     {{ range $image := .Resources.ByType "image" }}
       {{ $title := "" }}
       {{ $date := "" }}
+      {{ $aperture := "" }}
+      {{ $shutterSpeed := "" }}
+      {{ $iso := "" }}
+      {{ $focalLength := "" }}
+      {{ $cameraModel := "" }}
+      {{ $lensModel := "" }}
       {{ with $image.Exif }}
         {{ $date = .Date }}
         {{ with .Tags.ImageDescription }}
           {{/* Title from EXIF ImageDescription */}}
           {{ $title = . }}
+        {{ end }}
+        {{/* Extract photographic EXIF data */}}
+        {{ with .Tags.FNumber }}
+          {{/* FNumber may be a fraction string like "14/5" or a number */}}
+          {{ $fStr := printf "%v" . }}
+          {{ if strings.Contains $fStr "/" }}
+            {{ $parts := split $fStr "/" }}
+            {{ $num := float (index $parts 0) }}
+            {{ $den := float (index $parts 1) }}
+            {{ $aperture = printf "f/%.1f" (div $num $den) }}
+          {{ else }}
+            {{ $aperture = printf "f/%.1f" (float .) }}
+          {{ end }}
+        {{ end }}
+        {{ with .Tags.ExposureTime }}
+          {{/* ExposureTime may be a fraction string like "1/1600" or a number */}}
+          {{ $expStr := printf "%v" . }}
+          {{ if strings.Contains $expStr "/" }}
+            {{ $shutterSpeed = $expStr }}
+          {{ else }}
+            {{ $exp := float . }}
+            {{ if gt $exp 0 }}
+              {{ if lt $exp 1.0 }}
+                {{ $shutterSpeed = printf "1/%ds" (int (math.Round (div 1.0 $exp))) }}
+              {{ else }}
+                {{ $shutterSpeed = printf "%.1fs" $exp }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        {{ with .Tags.ISO }}
+          {{ $iso = printf "ISO %v" . }}
+        {{ end }}
+        {{ with .Tags.FocalLength }}
+          {{ $focalLength = printf "%vmm" . }}
+        {{ end }}
+        {{ with .Tags.Model }}
+          {{ $cameraModel = . }}
+        {{ end }}
+        {{ with .Tags.LensModel }}
+          {{ $lensModel = . }}
         {{ end }}
       {{ end }}
       {{ if ne $image.Title $image.Name }}
@@ -19,6 +66,12 @@
         "Name" $image.Name
         "Title" $title
         "Date" $date
+        "Aperture" $aperture
+        "ShutterSpeed" $shutterSpeed
+        "ISO" $iso
+        "FocalLength" $focalLength
+        "CameraModel" $cameraModel
+        "LensModel" $lensModel
         "image" $image
         )
       }}
@@ -33,6 +86,23 @@
           <img class="lazyload" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" data-src="{{ $thumbnail.RelPermalink }}" alt="{{ .Title }}" />
         </figure>
         <div class="like-count" aria-label="Likes"></div>
+        <span class="pswp-caption-content">
+          {{ with .Title }}<span class="caption-title">{{ . }}</span>{{ end }}
+          {{ if or .Aperture .ShutterSpeed .ISO .FocalLength }}
+          <span class="caption-exif">
+            {{ with .FocalLength }}<span class="exif-item">{{ . }}</span>{{ end }}
+            {{ with .Aperture }}<span class="exif-item">{{ . }}</span>{{ end }}
+            {{ with .ShutterSpeed }}<span class="exif-item">{{ . }}</span>{{ end }}
+            {{ with .ISO }}<span class="exif-item">{{ . }}</span>{{ end }}
+          </span>
+          {{ end }}
+          {{ if or .CameraModel .LensModel }}
+          <span class="caption-gear">
+            {{ with .CameraModel }}<span class="gear-item">{{ . }}</span>{{ end }}
+            {{ with .LensModel }}<span class="gear-item">{{ . }}</span>{{ end }}
+          </span>
+          {{ end }}
+        </span>
         <meta itemprop="contentUrl" content="{{ $image.RelPermalink }}" />
         {{ with site.Params.Author }}
           <span itemprop="creator" itemtype="https://schema.org/Person" itemscope>

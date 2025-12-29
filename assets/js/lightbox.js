@@ -209,6 +209,94 @@ if (gallery) {
       },
     });
 
+    // Info button for EXIF details popup
+    lightbox.pswp.ui.registerElement({
+      name: "info-button",
+      order: 9,
+      isButton: false,
+      tagName: "button",
+      className: "pswp__button pswp__button--info",
+      html: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>',
+      onInit: (el) => {
+        el.setAttribute("title", params.infoTitle || "Photo info");
+        el.style.cursor = "pointer";
+
+        el.addEventListener("click", (e) => {
+          e.stopPropagation();
+
+          const currSlide = lightbox.pswp?.currSlide;
+          if (!currSlide) return;
+
+          const captionEl = currSlide.data?.element?.querySelector(".pswp-caption-content");
+          if (!captionEl) return;
+
+          // Get EXIF data from caption
+          const exifItems = captionEl.querySelectorAll(".exif-item");
+          const gearItems = captionEl.querySelectorAll(".gear-item");
+
+          // Create or get existing popup
+          let popup = document.querySelector(".pswp-info-popup");
+          if (!popup) {
+            popup = document.createElement("div");
+            popup.className = "pswp-info-popup";
+            document.body.appendChild(popup);
+
+            // Close on click outside or pressing Escape
+            popup.addEventListener("click", (evt) => {
+              if (evt.target === popup) {
+                popup.classList.remove("visible");
+                document.documentElement.style.overflow = "";
+                document.body.style.overflow = "";
+              }
+            });
+            document.addEventListener("keydown", (evt) => {
+              if (evt.key === "Escape" && popup.classList.contains("visible")) {
+                popup.classList.remove("visible");
+                document.documentElement.style.overflow = "";
+                document.body.style.overflow = "";
+              }
+            });
+          }
+
+          // Build popup content
+          let content = '<div class="pswp-info-popup-content">';
+          content += '<button class="pswp-info-popup-close" aria-label="Close">&times;</button>';
+
+          if (exifItems.length > 0) {
+            content += '<div class="pswp-info-section"><h4>Settings</h4><div class="pswp-info-grid">';
+            const labels = ["Focal Length", "Aperture", "Shutter Speed", "ISO"];
+            exifItems.forEach((item, i) => {
+              content += `<div class="pswp-info-item"><span class="pswp-info-label">${labels[i] || ""}</span><span class="pswp-info-value">${item.textContent}</span></div>`;
+            });
+            content += '</div></div>';
+          }
+
+          if (gearItems.length > 0) {
+            content += '<div class="pswp-info-section"><h4>Gear</h4><div class="pswp-info-gear">';
+            const gearLabels = ["Camera", "Lens"];
+            gearItems.forEach((item, i) => {
+              content += `<div class="pswp-info-item"><span class="pswp-info-label">${gearLabels[i] || ""}</span><span class="pswp-info-value">${item.textContent}</span></div>`;
+            });
+            content += '</div></div>';
+          }
+
+          content += '</div>';
+          popup.innerHTML = content;
+
+          // Add close button handler
+          popup.querySelector(".pswp-info-popup-close").addEventListener("click", () => {
+            popup.classList.remove("visible");
+            document.documentElement.style.overflow = "";
+            document.body.style.overflow = "";
+          });
+
+          popup.classList.add("visible");
+          document.documentElement.style.overflow = "hidden";
+          document.body.style.overflow = "hidden";
+        });
+      },
+    });
+
     // Like count display in lightbox
     lightbox.pswp.ui.registerElement({
       name: "like-count-display",
@@ -270,12 +358,24 @@ if (gallery) {
 
   lightbox.on("close", () => {
     history.replaceState("", document.title, window.location.pathname);
+    // Close info popup when lightbox closes
+    const popup = document.querySelector(".pswp-info-popup");
+    if (popup) {
+      popup.classList.remove("visible");
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    }
   });
 
+  // Caption only shows title now, EXIF details moved to info popup
   new PhotoSwipeDynamicCaption(lightbox, {
     mobileLayoutBreakpoint: 700,
     type: "auto",
     mobileCaptionOverlapRatio: 1,
+    captionContent: (slide) => {
+      const titleEl = slide.data.element?.querySelector(".caption-title");
+      return titleEl ? titleEl.textContent : "";
+    },
   });
 
   lightbox.init();
