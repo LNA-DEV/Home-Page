@@ -10,11 +10,41 @@
       {{ $focalLength := "" }}
       {{ $cameraModel := "" }}
       {{ $lensModel := "" }}
+      {{ $copyright := "" }}
+      {{ $artist := "" }}
+      {{ $keywords := "" }}
       {{ with $image.Exif }}
         {{ $date = .Date }}
         {{ with .Tags.ImageDescription }}
           {{/* Title from EXIF ImageDescription */}}
           {{ $title = . }}
+        {{ end }}
+        {{/* Copyright info */}}
+        {{ with .Tags.Copyright }}
+          {{ $copyright = . }}
+        {{ end }}
+        {{/* Artist info */}}
+        {{ with .Tags.Artist }}
+          {{ $artist = . }}
+        {{ end }}
+        {{/* Keywords/Tags - try multiple possible EXIF fields */}}
+        {{ with .Tags.subject }}
+          {{ $keywords = . }}
+        {{ end }}
+        {{ if not $keywords }}
+          {{ with .Tags.Subject }}
+            {{ $keywords = . }}
+          {{ end }}
+        {{ end }}
+        {{ if not $keywords }}
+          {{ with .Tags.XPKeywords }}
+            {{ $keywords = . }}
+          {{ end }}
+        {{ end }}
+        {{ if not $keywords }}
+          {{ with .Tags.Keywords }}
+            {{ $keywords = . }}
+          {{ end }}
         {{ end }}
         {{/* Extract photographic EXIF data */}}
         {{ with .Tags.FNumber }}
@@ -72,6 +102,9 @@
         "FocalLength" $focalLength
         "CameraModel" $cameraModel
         "LensModel" $lensModel
+        "Copyright" $copyright
+        "Artist" $artist
+        "Keywords" $keywords
         "image" $image
         )
       }}
@@ -102,6 +135,9 @@
             {{ with .LensModel }}<span class="gear-item">{{ . }}</span>{{ end }}
           </span>
           {{ end }}
+          {{ with .Copyright }}<span class="caption-copyright">{{ . }}</span>{{ end }}
+          {{ with .Artist }}<span class="caption-artist">{{ . }}</span>{{ end }}
+          {{ with .Keywords }}<span class="caption-keywords">{{ . }}</span>{{ end }}
         </span>
         <meta itemprop="contentUrl" content="{{ $image.RelPermalink }}" />
         {{ with site.Params.Author }}

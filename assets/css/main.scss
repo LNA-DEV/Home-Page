@@ -253,3 +253,27 @@ img.lazyload:not([src]) {
   font-weight: 500;
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 }
+
+.pswp-info-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pswp-info-tag {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 0.85rem;
+}
+
+.pswp-info-artist {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.pswp-info-copyright {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}

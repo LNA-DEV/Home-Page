@@ -233,6 +233,9 @@ if (gallery) {
           // Get EXIF data from caption
           const exifItems = captionEl.querySelectorAll(".exif-item");
           const gearItems = captionEl.querySelectorAll(".gear-item");
+          const copyright = captionEl.querySelector(".caption-copyright")?.textContent || "";
+          const artist = captionEl.querySelector(".caption-artist")?.textContent || "";
+          const keywords = captionEl.querySelector(".caption-keywords")?.textContent || "";
 
           // Create or get existing popup
           let popup = document.querySelector(".pswp-info-popup");
@@ -262,7 +265,7 @@ if (gallery) {
           let content = '<div class="pswp-info-popup-content">';
           content += '<button class="pswp-info-popup-close" aria-label="Close">&times;</button>';
 
-          if (exifItems.length === 0 && gearItems.length === 0) {
+          if (exifItems.length === 0 && gearItems.length === 0 && !copyright && !artist && !keywords) {
             content += '<p class="pswp-info-empty">No data available</p>';
           }
 
@@ -282,6 +285,26 @@ if (gallery) {
               content += `<div class="pswp-info-item"><span class="pswp-info-label">${gearLabels[i] || ""}</span><span class="pswp-info-value">${item.textContent}</span></div>`;
             });
             content += '</div></div>';
+          }
+
+          if (keywords) {
+            content += '<div class="pswp-info-section"><h4>Tags</h4><div class="pswp-info-tags">';
+            // Split by comma or semicolon
+            keywords.split(/[,;]/).map(k => k.trim()).filter(k => k).forEach((keyword) => {
+              content += `<span class="pswp-info-tag">${keyword}</span>`;
+            });
+            content += '</div></div>';
+          }
+
+          if (copyright || artist) {
+            content += '<div class="pswp-info-section"><h4>Copyright</h4>';
+            if (artist) {
+              content += `<p class="pswp-info-artist">${artist}</p>`;
+            }
+            if (copyright) {
+              content += `<p class="pswp-info-copyright">${copyright}</p>`;
+            }
+            content += '</div>';
           }
 
           content += '</div>';
