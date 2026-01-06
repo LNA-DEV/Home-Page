@@ -89,3 +89,18 @@
   margin-right: 0.3rem;
   font-size: 1.1rem;
 }
+
+.book-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.book-rating .star {
+  font-size: 1rem;
+  color: #444;
+}
+
+.book-rating .star.filled {
+  color: #f5c518;
+}

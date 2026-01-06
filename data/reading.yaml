@@ -381,6 +381,7 @@
   link: "https://www.goodreads.com/book/show/40603587-the-last-wish"
   cover: "images/books/covers/The Last Wish.jpg"
   pages: 400
+  rating: 5
   originalLanguage: pl
   languagesListened:
     - sv
@@ -395,6 +396,7 @@
   link: "https://www.goodreads.com/book/show/25454056-sword-of-destiny"
   cover: "images/books/covers/Sword of Destiny.jpg"
   pages: 405
+  rating: 5
   originalLanguage: pl
   languagesListened:
     - sv
@@ -409,6 +411,7 @@
   link: "https://www.goodreads.com/book/show/6043781-blood-of-elves"
   cover: "images/books/covers/Blood of Elves.jpg"
   pages: 398
+  rating: 5
   originalLanguage: pl
   languagesListened:
     - sv
@@ -423,6 +426,7 @@
   link: "https://www.goodreads.com/book/show/14781491-the-time-of-contempt"
   cover: "images/books/covers/The Time of Contempt.jpg"
   pages: 331
+  rating: 5
   originalLanguage: pl
   languagesRead: 
     - en
@@ -432,6 +436,7 @@
   author: "Andrzej Sapkowski"
   genres: ["fantasy"]
   year: 1996
+  rating: 5
   link: "https://www.goodreads.com/book/show/18656031-baptism-of-fire"
   cover: "images/books/covers/Baptism of Fire.jpg"
   pages: 349
@@ -444,6 +449,7 @@
   author: "Andrzej Sapkowski"
   genres: ["fantasy"]
   year: 1997 
+  rating: 5
   link: "https://www.goodreads.com/book/show/29340636-the-tower-of-swallows"
   cover: "images/books/covers/Tower of the Swallow.jpg"
   pages: 436
@@ -456,6 +462,7 @@
   author: "Andrzej Sapkowski"
   genres: ["fantasy"]
   year: 1999 
+  rating: 5
   link: "https://www.goodreads.com/book/show/31933977-lady-of-the-lake"
   cover: "images/books/covers/Lady of the Lake.jpg"
   pages: 531
@@ -471,6 +478,7 @@
   link: "https://www.goodreads.com/book/show/36099978-season-of-storms"
   cover: "images/books/covers/Season of Storms.jpg"
   pages: 419
+  rating: 5
   originalLanguage: pl
   languagesRead: 
     - en
@@ -673,6 +681,7 @@
   link: "https://www.goodreads.com/book/show/61439040-1984"
   cover: "images/books/covers/1984.jpg"
   pages: 368
+  rating: 4
   originalLanguage: "en"
   languagesRead:
     - sv
@@ -685,6 +694,7 @@
   link: "https://en.wikipedia.org/wiki/Crossroads_of_Ravens"
   cover: "images/books/covers/Crossroads of Ravens.jpg"
   pages: 292
+  rating: 4
   originalLanguage: pl
   languagesRead: 
     - en

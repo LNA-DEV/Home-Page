@@ -30,14 +30,13 @@
         {{ if .pages }} • {{ .pages }} {{ i18n "pages" }}{{ end }}
       </p>
 
-      {{/*  {{ if .rating }}
+      {{ if .rating }}
         <p class="book-rating">
-          Rating: 
           {{ range seq 1 5 }}
-            {{ if le . $book.rating }}⭐{{ else }}☆{{ end }}
+            <span class="star{{ if le . $book.rating }} filled{{ end }}">★</span>
           {{ end }}
         </p>
-      {{ end }}  */}}
+      {{ end }}
 
       {{ if .genres }}
       <p>Genres:
