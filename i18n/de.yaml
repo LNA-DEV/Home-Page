@@ -65,3 +65,5 @@
   translation: "Beiträge"
 - id: activity_filter_photos
   translation: "Fotos"
+- id: activity_filter_talks
+  translation: "Vorträge"

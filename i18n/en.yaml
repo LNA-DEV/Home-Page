@@ -66,3 +66,5 @@
   translation: "Posts"
 - id: activity_filter_photos
   translation: "Photos"
+- id: activity_filter_talks
+  translation: "Talks"

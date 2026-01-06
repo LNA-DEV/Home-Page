@@ -152,12 +152,67 @@
   color: var(--theme);
 }
 
+/* Talks */
+.activity-talks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.activity-talk {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  background: var(--code-bg);
+  border-left: 3px solid #e67e22;
+  transition: background 0.2s, transform 0.2s;
+}
+
+a.activity-talk:hover {
+  background: var(--border);
+  transform: translateX(4px);
+}
+
+.activity-talk-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.activity-talk-meta {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  margin-top: 0.3rem;
+}
+
+.activity-talk-event {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  font-style: italic;
+}
+
+.activity-talk-description {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  margin-top: 0.4rem;
+}
+
 /* Hide filtered content */
-.activity-timeline[data-filter="posts"] .activity-photos {
+.activity-timeline[data-filter="posts"] .activity-photos,
+.activity-timeline[data-filter="posts"] .activity-talks {
   display: none;
 }
 
-.activity-timeline[data-filter="photos"] .activity-posts {
+.activity-timeline[data-filter="photos"] .activity-posts,
+.activity-timeline[data-filter="photos"] .activity-talks {
+  display: none;
+}
+
+.activity-timeline[data-filter="talks"] .activity-posts,
+.activity-timeline[data-filter="talks"] .activity-photos {
   display: none;
 }
 

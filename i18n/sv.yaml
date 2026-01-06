@@ -60,3 +60,5 @@
   translation: "Inlägg"
 - id: activity_filter_photos
   translation: "Foton"
+- id: activity_filter_talks
+  translation: "Föredrag"

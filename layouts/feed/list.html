@@ -25,6 +25,19 @@
 {{- /* Build a unified list of activity items with normalized dates */ -}}
 {{- $activityItems := slice }}
 
+{{- /* Add talks from data file */ -}}
+{{- range site.Data.talks }}
+  {{- $date := time .date }}
+  {{- if gt $date.Year 2000 }}
+    {{- $langFlag := "" }}
+    {{- if eq .language "en" }}{{ $langFlag = "🇬🇧" }}{{ end }}
+    {{- if eq .language "de" }}{{ $langFlag = "🇩🇪" }}{{ end }}
+    {{- if eq .language "sv" }}{{ $langFlag = "🇸🇪" }}{{ end }}
+    {{- $item := dict "type" "talk" "title" .title "date" $date "permalink" (.link | default "") "event" .event "location" .location "language" .language "langFlag" $langFlag "description" (.description | default "") }}
+    {{- $activityItems = $activityItems | append $item }}
+  {{- end }}
+{{- end }}
+
 {{- range $allPages }}
   {{- $layout := .Layout }}
   {{- if and (ne $layout "search") (ne $layout "archives") (ne $layout "activity") (ne .Section "feed") }}
@@ -91,6 +104,7 @@
   <button class="activity-filter active" data-filter="all">{{ i18n "activity_filter_all" | default "All" }}</button>
   <button class="activity-filter" data-filter="posts">{{ i18n "activity_filter_posts" | default "Posts" }}</button>
   <button class="activity-filter" data-filter="photos">{{ i18n "activity_filter_photos" | default "Photos" }}</button>
+  <button class="activity-filter" data-filter="talks">{{ i18n "activity_filter_talks" | default "Talks" }}</button>
 </div>
 
 <div class="activity-timeline" data-filter="all">
@@ -110,18 +124,21 @@
       {{- $month := . }}
       {{- $items := index $yearData $month }}
       {{- if $items }}
-        {{- /* Separate posts and photos */ -}}
+        {{- /* Separate posts, photos, and talks */ -}}
         {{- $posts := slice }}
         {{- $photos := slice }}
+        {{- $talks := slice }}
         {{- range $items }}
           {{- if eq .type "photo" }}
             {{- $photos = $photos | append . }}
+          {{- else if eq .type "talk" }}
+            {{- $talks = $talks | append . }}
           {{- else }}
             {{- $posts = $posts | append . }}
           {{- end }}
         {{- end }}
 
-        <div class="activity-month" data-has-posts="{{ if $posts }}true{{ else }}false{{ end }}" data-has-photos="{{ if $photos }}true{{ else }}false{{ end }}">
+        <div class="activity-month" data-has-posts="{{ if $posts }}true{{ else }}false{{ end }}" data-has-photos="{{ if $photos }}true{{ else }}false{{ end }}" data-has-talks="{{ if $talks }}true{{ else }}false{{ end }}" data-posts-count="{{ len $posts }}" data-photos-count="{{ len $photos }}" data-talks-count="{{ len $talks }}" data-total-count="{{ len $items }}">
           <div class="activity-month-label">
             {{ $month }}<sup class="activity-month-count">{{ len $items }}</sup>
           </div>
@@ -147,6 +164,29 @@
                   <div class="activity-post-title">{{ .title }}</div>
                   <div class="activity-post-meta">{{ .date.Format "January 2, 2006" }} · {{ $typeIcon }} {{ $langFlag }}</div>
                 </a>
+              {{- end }}
+            </div>
+            {{- end }}
+
+            {{- if $talks }}
+            <div class="activity-talks">
+              {{- range $talks }}
+                {{- if .permalink }}
+                <a href="{{ .permalink }}" class="activity-talk" target="_blank" rel="noopener">
+                {{- else }}
+                <div class="activity-talk">
+                {{- end }}
+                  <div class="activity-talk-title">{{ .title }}</div>
+                  <div class="activity-talk-meta">{{ .date.Format "January 2, 2006" }} · 🎤 {{ .langFlag }}</div>
+                  <div class="activity-talk-event">{{ .event }}{{ with .location }} · {{ . }}{{ end }}</div>
+                  {{- with .description }}
+                  <div class="activity-talk-description">{{ . }}</div>
+                  {{- end }}
+                {{- if .permalink }}
+                </a>
+                {{- else }}
+                </div>
+                {{- end }}
               {{- end }}
             </div>
             {{- end }}
@@ -182,6 +222,48 @@
   const months = document.querySelectorAll('.activity-month');
   const years = document.querySelectorAll('.activity-year');
 
+  function getMonthCount(month, filterType) {
+    if (filterType === 'all') return parseInt(month.dataset.totalCount) || 0;
+    if (filterType === 'posts') return parseInt(month.dataset.postsCount) || 0;
+    if (filterType === 'photos') return parseInt(month.dataset.photosCount) || 0;
+    if (filterType === 'talks') return parseInt(month.dataset.talksCount) || 0;
+    return 0;
+  }
+
+  function updateCounts(filterType) {
+    // Update month counts
+    months.forEach(month => {
+      const countEl = month.querySelector('.activity-month-count');
+      if (countEl) {
+        countEl.textContent = getMonthCount(month, filterType);
+      }
+    });
+
+    // Update year counts
+    years.forEach(year => {
+      const yearSection = [];
+      let sibling = year.nextElementSibling;
+      while (sibling && !sibling.classList.contains('activity-year')) {
+        if (sibling.classList.contains('activity-month')) {
+          yearSection.push(sibling);
+        }
+        sibling = sibling.nextElementSibling;
+      }
+
+      const yearCount = yearSection.reduce((sum, month) => {
+        if (!month.classList.contains('hidden')) {
+          return sum + getMonthCount(month, filterType);
+        }
+        return sum;
+      }, 0);
+
+      const countEl = year.querySelector('.activity-year-count');
+      if (countEl) {
+        countEl.textContent = yearCount;
+      }
+    });
+  }
+
   filters.forEach(filter => {
     filter.addEventListener('click', () => {
       // Update active button
@@ -195,6 +277,7 @@
       months.forEach(month => {
         const hasPosts = month.dataset.hasPosts === 'true';
         const hasPhotos = month.dataset.hasPhotos === 'true';
+        const hasTalks = month.dataset.hasTalks === 'true';
 
         if (filterType === 'all') {
           month.classList.remove('hidden');
@@ -202,6 +285,8 @@
           month.classList.toggle('hidden', !hasPosts);
         } else if (filterType === 'photos') {
           month.classList.toggle('hidden', !hasPhotos);
+        } else if (filterType === 'talks') {
+          month.classList.toggle('hidden', !hasTalks);
         }
       });
 
@@ -218,6 +303,9 @@
         const hasVisibleMonths = yearSection.some(m => !m.classList.contains('hidden'));
         year.style.display = hasVisibleMonths ? '' : 'none';
       });
+
+      // Update counts
+      updateCounts(filterType);
     });
   });
 })();
