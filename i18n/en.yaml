@@ -50,3 +50,19 @@
   translation: "Listened in"
 - id: coverAlt
   translation: "Cover of {{ . }}"
+
+# Activity feed
+- id: activity_type_post
+  translation: "Post"
+- id: activity_type_photo
+  translation: "Photo"
+- id: activity_type_project
+  translation: "Project"
+- id: activity_type_book
+  translation: "Book"
+- id: activity_filter_all
+  translation: "All"
+- id: activity_filter_posts
+  translation: "Posts"
+- id: activity_filter_photos
+  translation: "Photos"

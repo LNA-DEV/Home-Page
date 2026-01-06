@@ -49,3 +49,19 @@
   translation: "Gehört in"
 - id: coverAlt
   translation: "Cover von {{ . }}"
+
+# Activity feed
+- id: activity_type_post
+  translation: "Beitrag"
+- id: activity_type_photo
+  translation: "Foto"
+- id: activity_type_project
+  translation: "Projekt"
+- id: activity_type_book
+  translation: "Buch"
+- id: activity_filter_all
+  translation: "Alle"
+- id: activity_filter_posts
+  translation: "Beiträge"
+- id: activity_filter_photos
+  translation: "Fotos"

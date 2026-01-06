@@ -1,0 +1,226 @@
+{{- define "main" }}
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description | markdownify }}
+  </div>
+  {{- end }}
+</header>
+
+{{- if .Content }}
+<div class="post-content">
+  {{ .Content }}
+</div>
+{{- end }}
+
+{{- /* Collect all pages across all languages */ -}}
+{{- $allPages := site.RegularPages }}
+
+{{ range .Site.Home.Translations }}
+  {{ $allPages = $allPages | lang.Merge .Site.RegularPages }}
+{{ end }}
+
+{{- /* Build a unified list of activity items with normalized dates */ -}}
+{{- $activityItems := slice }}
+
+{{- range $allPages }}
+  {{- $layout := .Layout }}
+  {{- if and (ne $layout "search") (ne $layout "archives") (ne $layout "activity") (ne .Section "feed") }}
+    {{- if eq .Section "gallery" }}
+      {{- /* For gallery pages, add each image as a separate item */ -}}
+      {{- if not (in .Path "/archive/") }}
+        {{- $page := . }}
+        {{- range .Resources.ByType "image" }}
+          {{- $image := . }}
+          {{- with .Exif }}
+            {{- /* Skip photos with invalid EXIF date (year <= 2000) */ -}}
+            {{- if gt .Date.Year 2000 }}
+              {{- $hash := $image.RelPermalink | hash.FNV32a }}
+              {{- $imageLink := printf "%s#%d" $page.Permalink $hash }}
+              {{- $item := dict "type" "photo" "title" $image.Name "date" .Date "permalink" $imageLink "page" $page "image" $image "description" "" }}
+              {{- $activityItems = $activityItems | append $item }}
+            {{- end }}
+          {{- end }}
+        {{- end }}
+      {{- end }}
+    {{- else if eq .Section "posts" }}
+      {{- /* Only show posts from the posts section */ -}}
+      {{- $year := .Date.Year }}
+      {{- if gt $year 2000 }}
+        {{- $item := dict "type" "page" "title" .Title "date" .Date "permalink" .Permalink "page" . "image" nil "description" (.Description | default .Summary) }}
+        {{- $activityItems = $activityItems | append $item }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+
+{{- /* Sort all items by date descending */ -}}
+{{- $sortedItems := sort $activityItems "date" "desc" }}
+
+{{- /* Group items by year and month */ -}}
+{{- $groupedByYear := dict }}
+{{- range $sortedItems }}
+  {{- $year := .date.Format "2006" }}
+  {{- $month := .date.Format "January" }}
+  {{- $yearMonth := printf "%s-%s" $year $month }}
+
+  {{- $yearData := index $groupedByYear $year | default dict }}
+  {{- $monthData := index $yearData $month | default slice }}
+  {{- $monthData = $monthData | append . }}
+  {{- $yearData = merge $yearData (dict $month $monthData) }}
+  {{- $groupedByYear = merge $groupedByYear (dict $year $yearData) }}
+{{- end }}
+
+{{- /* Get sorted years */ -}}
+{{- $years := slice }}
+{{- range $year, $_ := $groupedByYear }}
+  {{- $years = $years | append $year }}
+{{- end }}
+{{- $years = sort $years "value" "desc" }}
+
+{{- /* Month order for sorting */ -}}
+{{- $monthOrder := slice "December" "November" "October" "September" "August" "July" "June" "May" "April" "March" "February" "January" }}
+
+{{- /* Max photos to show per month */ -}}
+{{- $maxPhotosPerMonth := 8 }}
+
+<!-- Filter buttons -->
+<div class="activity-filters">
+  <button class="activity-filter active" data-filter="all">{{ i18n "activity_filter_all" | default "All" }}</button>
+  <button class="activity-filter" data-filter="posts">{{ i18n "activity_filter_posts" | default "Posts" }}</button>
+  <button class="activity-filter" data-filter="photos">{{ i18n "activity_filter_photos" | default "Photos" }}</button>
+</div>
+
+<div class="activity-timeline" data-filter="all">
+  {{- range $years }}
+    {{- $year := . }}
+    {{- $yearData := index $groupedByYear $year }}
+
+    {{- /* Count total items in year */ -}}
+    {{- $yearCount := 0 }}
+    {{- range $month, $items := $yearData }}
+      {{- $yearCount = add $yearCount (len $items) }}
+    {{- end }}
+
+    <h2 class="activity-year">{{ $year }}<sup class="activity-year-count">{{ $yearCount }}</sup></h2>
+
+    {{- range $monthOrder }}
+      {{- $month := . }}
+      {{- $items := index $yearData $month }}
+      {{- if $items }}
+        {{- /* Separate posts and photos */ -}}
+        {{- $posts := slice }}
+        {{- $photos := slice }}
+        {{- range $items }}
+          {{- if eq .type "photo" }}
+            {{- $photos = $photos | append . }}
+          {{- else }}
+            {{- $posts = $posts | append . }}
+          {{- end }}
+        {{- end }}
+
+        <div class="activity-month" data-has-posts="{{ if $posts }}true{{ else }}false{{ end }}" data-has-photos="{{ if $photos }}true{{ else }}false{{ end }}">
+          <div class="activity-month-label">
+            {{ $month }}<sup class="activity-month-count">{{ len $items }}</sup>
+          </div>
+          <div class="activity-month-content">
+            {{- if $posts }}
+            <div class="activity-posts">
+              {{- range $posts }}
+                {{- $page := .page }}
+                {{- $lang := $page.Language.Lang }}
+                {{- $langFlag := "" }}
+                {{- if eq $lang "en" }}{{ $langFlag = "🇬🇧" }}{{ end }}
+                {{- if eq $lang "de" }}{{ $langFlag = "🇩🇪" }}{{ end }}
+                {{- if eq $lang "sv" }}{{ $langFlag = "🇸🇪" }}{{ end }}
+
+                {{- $typeIcon := "📝" }}
+                {{- if eq $page.Section "projects" }}
+                  {{- $typeIcon = "🛠️" }}
+                {{- else if eq $page.Section "reading-list" }}
+                  {{- $typeIcon = "📚" }}
+                {{- end }}
+
+                <a href="{{ .permalink }}" class="activity-post">
+                  <div class="activity-post-title">{{ .title }}</div>
+                  <div class="activity-post-meta">{{ .date.Format "January 2, 2006" }} · {{ $typeIcon }} {{ $langFlag }}</div>
+                </a>
+              {{- end }}
+            </div>
+            {{- end }}
+
+            {{- if $photos }}
+            <div class="activity-photos">
+              {{- $photosToShow := first $maxPhotosPerMonth $photos }}
+              {{- $remainingPhotos := sub (len $photos) $maxPhotosPerMonth }}
+              {{- range $photosToShow }}
+                {{- $thumb := .image.Filter (slice images.AutoOrient (images.Process "fill 120x120")) }}
+                <a href="{{ .permalink }}" class="activity-photo" title="{{ .title }}">
+                  <img src="{{ $thumb.RelPermalink }}" alt="{{ .title }}" loading="lazy">
+                </a>
+              {{- end }}
+              {{- if gt $remainingPhotos 0 }}
+                <a href="/en/gallery/" class="activity-photos-more" title="View more photos">
+                  +{{ $remainingPhotos }}
+                </a>
+              {{- end }}
+            </div>
+            {{- end }}
+          </div>
+        </div>
+      {{- end }}
+    {{- end }}
+  {{- end }}
+</div>
+
+<script>
+(function() {
+  const filters = document.querySelectorAll('.activity-filter');
+  const timeline = document.querySelector('.activity-timeline');
+  const months = document.querySelectorAll('.activity-month');
+  const years = document.querySelectorAll('.activity-year');
+
+  filters.forEach(filter => {
+    filter.addEventListener('click', () => {
+      // Update active button
+      filters.forEach(f => f.classList.remove('active'));
+      filter.classList.add('active');
+
+      const filterType = filter.dataset.filter;
+      timeline.dataset.filter = filterType;
+
+      // Show/hide months based on filter
+      months.forEach(month => {
+        const hasPosts = month.dataset.hasPosts === 'true';
+        const hasPhotos = month.dataset.hasPhotos === 'true';
+
+        if (filterType === 'all') {
+          month.classList.remove('hidden');
+        } else if (filterType === 'posts') {
+          month.classList.toggle('hidden', !hasPosts);
+        } else if (filterType === 'photos') {
+          month.classList.toggle('hidden', !hasPhotos);
+        }
+      });
+
+      // Hide years that have no visible months
+      years.forEach(year => {
+        const yearSection = [];
+        let sibling = year.nextElementSibling;
+        while (sibling && !sibling.classList.contains('activity-year')) {
+          if (sibling.classList.contains('activity-month')) {
+            yearSection.push(sibling);
+          }
+          sibling = sibling.nextElementSibling;
+        }
+        const hasVisibleMonths = yearSection.some(m => !m.classList.contains('hidden'));
+        year.style.display = hasVisibleMonths ? '' : 'none';
+      });
+    });
+  });
+})();
+</script>
+
+{{- end }}

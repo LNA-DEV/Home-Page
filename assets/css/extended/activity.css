@@ -1,0 +1,189 @@
+/* Activity Timeline */
+.activity-timeline {
+  margin-top: 1.5rem;
+}
+
+.activity-year {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem 0;
+}
+
+.activity-year-count {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--secondary);
+  vertical-align: super;
+  margin-left: 0.3rem;
+}
+
+.activity-month {
+  display: flex;
+  gap: 1.5rem;
+  border-top: 1px solid var(--border);
+  padding: 1rem 0;
+}
+
+.activity-month-label {
+  min-width: 120px;
+  font-weight: 600;
+}
+
+.activity-month-count {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--secondary);
+  vertical-align: super;
+  margin-left: 0.2rem;
+}
+
+.activity-month-content {
+  flex: 1;
+}
+
+/* Posts */
+.activity-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.activity-post {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  background: var(--code-bg);
+  border-left: 3px solid var(--primary);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.activity-post:hover {
+  background: var(--border);
+  transform: translateX(4px);
+}
+
+.activity-post-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.activity-post-meta {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  margin-top: 0.3rem;
+}
+
+/* Photos */
+.activity-photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.activity-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.activity-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.activity-photo:hover img {
+  transform: scale(1.1);
+}
+
+.activity-photos-more {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  background: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.activity-photos-more:hover {
+  background: var(--tertiary);
+}
+
+/* Filter buttons */
+.activity-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.activity-filter {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--secondary);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.activity-filter:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.activity-filter.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--theme);
+}
+
+/* Hide filtered content */
+.activity-timeline[data-filter="posts"] .activity-photos {
+  display: none;
+}
+
+.activity-timeline[data-filter="photos"] .activity-posts {
+  display: none;
+}
+
+/* Hide empty months when filtered */
+.activity-month.hidden {
+  display: none;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .activity-month {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .activity-month-label {
+    min-width: auto;
+  }
+
+  .activity-photo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .activity-photos-more {
+    width: 50px;
+    height: 50px;
+  }
+}

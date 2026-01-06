@@ -55,9 +55,9 @@ languages:
         - name: 🙋🏻 About
           url: /lukas-nagel/
           weight: 1
-        - name: 🗃️ Archive
-          url: /archives/
-          weight: 3
+        - name: 📰 Feed
+          url: /feed/
+          weight: 2
         - name: 🔎 Search
           url: /search/
           weight: 5
@@ -97,9 +97,9 @@ languages:
         - name: 🙋🏻 Über mich
           url: /lukas-nagel/
           weight: 1
-        - name: 🗃️ Archiv
-          url: archives/
-          weight: 3
+        - name: 📰 Feed
+          url: /feed/
+          weight: 2
         - name: 🔎 Suche
           url: /search/
           weight: 5
@@ -136,9 +136,9 @@ languages:
         - name: 🙋🏻 Om mig
           url: /lukas-nagel/
           weight: 1
-        - name: 🗃️ Arkiv
-          url: archives/
-          weight: 3
+        - name: 📰 Flöde
+          url: /feed/
+          weight: 2
         - name: 🔎 Sökning
           url: /search/
           weight: 7
