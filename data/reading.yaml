@@ -698,3 +698,15 @@
   originalLanguage: pl
   languagesRead: 
     - en
+
+- title: "Read This if You Want to Take Great Photographs of People"
+  author: Henry Carroll
+  genres: ["photography"]
+  year: 2015
+  link: https://www.goodreads.com/book/show/27774980-read-this-if-you-want-to-take-great-photographs-of-people
+  cover: "images/books/covers/RTIYWTTGPOP.jpg"
+  pages: 129
+  rating: 2
+  originalLanguage: en
+  languagesRead: 
+    - en
