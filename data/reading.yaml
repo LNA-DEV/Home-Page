@@ -710,3 +710,15 @@
   originalLanguage: en
   languagesRead: 
     - en
+
+- title: "Etwas endet, etwas beginnt"
+  author: Andrzej Sapkowski
+  genres: ["fantasy", "shortStory"]
+  year: 2000
+  link: https://www.goodreads.com/book/show/19166013-etwas-endet-etwas-beginnt
+  cover: "images/books/covers/Etwas endet etwas beginnt.jpeg"
+  pages: 432
+  rating: 3
+  originalLanguage: pl
+  languagesRead: 
+    - de
