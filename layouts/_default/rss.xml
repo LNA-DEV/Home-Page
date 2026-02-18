@@ -67,27 +67,34 @@
     <item>
       <title>{{ .Name }}</title>
       <link>{{ strings.Replace .Permalink ( replace .Name " " "%20") "" }}#{{ .RelPermalink | hash.FNV32a }}</link>
-      <pubDate>{{ .Exif.Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      <pubDate>{{ .Meta.Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
       {{- with $authorEmail }}<author>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</author>{{ end }}
       <guid>{{ .Permalink }}</guid>
       {{ $full := .Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) }}
       <media:content url="{{ $full.Permalink }}" type="image/jpeg"/>
       <description>
-        <img src="{{ $full.Permalink }}" alt="{{ .Params.Alt | default .Exif.Xmp.notes }}"/>          
+        <img src="{{ $full.Permalink }}" alt="{{ .Params.Alt | default .Meta.Exif.ImageDescription | default .Meta.XMP.Notes }}"/>          
         {{- if ne .Title .Name -}}
         <p> {{ .Title }} </p>
         {{ end }}
       </description>
       {{ range .Params.Tags }}
-      <category>{{ . }}</category>        
-      {{- end }}
-{{- with .Exif.Xmp.subject }}
-  {{- range split . ", " }}
-    {{- if . }}
       <category>{{ . }}</category>
-    {{- end }}
-  {{- end }}
-{{- end }}
+      {{- end }}
+      {{- if not .Params.Tags }}
+      {{- $keywords := "" }}
+      {{- with .Meta.Exif.subject }}{{ $keywords = . }}{{ end }}
+      {{- if not $keywords }}{{ with .Meta.Exif.Subject }}{{ $keywords = . }}{{ end }}{{ end }}
+      {{- if not $keywords }}{{ with .Meta.Exif.Keywords }}{{ $keywords = . }}{{ end }}{{ end }}
+      {{- if not $keywords }}{{ with .Meta.XMP.Subject }}{{ $keywords = delimit . ", " }}{{ end }}{{ end }}
+      {{- with $keywords }}
+        {{- range split . ", " }}
+          {{- if . }}
+        <category>{{ . }}</category>
+          {{- end }}
+        {{- end }}
+      {{- end }}
+      {{- end }}
     </item>
     {{- end -}}
     {{- end -}}

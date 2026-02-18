@@ -47,7 +47,7 @@
         {{- $page := . }}
         {{- range .Resources.ByType "image" }}
           {{- $image := . }}
-          {{- with .Exif }}
+          {{- with .Meta }}
             {{- /* Skip photos with invalid EXIF date (year <= 2000) */ -}}
             {{- if gt .Date.Year 2000 }}
               {{- $hash := $image.RelPermalink | hash.FNV32a }}

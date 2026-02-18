@@ -5,7 +5,7 @@
 
   {{ $images := partial "get_images.html" . }}
 
-  {{ $sorted := collections.Sort $images ".Exif.Date" "desc" }}
+  {{ $sorted := collections.Sort $images ".Meta.Date" "desc" }}
   {{ $finalItems := collections.First 8 $sorted }}
 
   {{- partial "image_gallery_items.html" $finalItems }}

@@ -19,6 +19,13 @@ markup:
     # TODO Remove this to improve performance
     duplicateResourceFiles: true # https://gohugo.io/content-management/page-resources/#multilingual
 
+imaging:
+  meta:
+    sources:
+      - exif
+      - iptc
+      - xmp
+
 outputs:
   home:
     - HTML

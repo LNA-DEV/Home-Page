@@ -13,41 +13,41 @@
       {{ $copyright := "" }}
       {{ $artist := "" }}
       {{ $keywords := "" }}
-      {{ with $image.Exif }}
+      {{ with $image.Meta }}
         {{ $date = .Date }}
-        {{ with .Tags.ImageDescription }}
+        {{ with .Exif.ImageDescription }}
           {{/* Title from EXIF ImageDescription */}}
           {{ $title = . }}
         {{ end }}
         {{/* Copyright info */}}
-        {{ with .Tags.Copyright }}
+        {{ with .Exif.Copyright }}
           {{ $copyright = . }}
         {{ end }}
         {{/* Artist info */}}
-        {{ with .Tags.Artist }}
+        {{ with .Exif.Artist }}
           {{ $artist = . }}
         {{ end }}
         {{/* Keywords/Tags - try multiple possible EXIF fields */}}
-        {{ with .Tags.subject }}
+        {{ with .Exif.subject }}
           {{ $keywords = . }}
         {{ end }}
         {{ if not $keywords }}
-          {{ with .Tags.Subject }}
+          {{ with .Exif.Subject }}
             {{ $keywords = . }}
           {{ end }}
         {{ end }}
         {{ if not $keywords }}
-          {{ with .Tags.XPKeywords }}
+          {{ with .Exif.Keywords }}
             {{ $keywords = . }}
           {{ end }}
         {{ end }}
         {{ if not $keywords }}
-          {{ with .Tags.Keywords }}
-            {{ $keywords = . }}
+          {{ with .XMP.Subject }}
+            {{ $keywords = delimit . ", " }}
           {{ end }}
         {{ end }}
         {{/* Extract photographic EXIF data */}}
-        {{ with .Tags.FNumber }}
+        {{ with .Exif.FNumber }}
           {{/* FNumber may be a fraction string like "14/5" or a number */}}
           {{ $fStr := printf "%v" . }}
           {{ if strings.Contains $fStr "/" }}
@@ -59,7 +59,7 @@
             {{ $aperture = printf "f/%.1f" (float .) }}
           {{ end }}
         {{ end }}
-        {{ with .Tags.ExposureTime }}
+        {{ with .Exif.ExposureTime }}
           {{/* ExposureTime may be a fraction string like "1/1600" or a number */}}
           {{ $expStr := printf "%v" . }}
           {{ if strings.Contains $expStr "/" }}
@@ -75,16 +75,16 @@
             {{ end }}
           {{ end }}
         {{ end }}
-        {{ with .Tags.ISO }}
+        {{ with .Exif.ISO }}
           {{ $iso = printf "ISO %v" . }}
         {{ end }}
-        {{ with .Tags.FocalLength }}
+        {{ with .Exif.FocalLength }}
           {{ $focalLength = printf "%vmm" . }}
         {{ end }}
-        {{ with .Tags.Model }}
+        {{ with .Exif.Model }}
           {{ $cameraModel = . }}
         {{ end }}
-        {{ with .Tags.LensModel }}
+        {{ with .Exif.LensModel }}
           {{ $lensModel = . }}
         {{ end }}
       {{ end }}
