@@ -1,0 +1,197 @@
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-card {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-title {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--primary);
+}
+
+/* Status badge */
+.project-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.project-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.project-status--active {
+  background: rgba(34, 197, 94, 0.12);
+  color: #16a34a;
+}
+
+.project-status--active .project-status-dot {
+  background: #16a34a;
+}
+
+.project-status--stopped {
+  background: rgba(245, 158, 11, 0.12);
+  color: #d97706;
+}
+
+.project-status--stopped .project-status-dot {
+  background: #d97706;
+}
+
+.project-status--finished {
+  background: rgba(99, 102, 241, 0.1);
+  color: #4f46e5;
+}
+
+.project-status--finished .project-status-dot {
+  background: #4f46e5;
+}
+
+/* Body */
+.project-body {
+  color: var(--content);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.project-body p {
+  margin: 0;
+}
+
+/* Footer */
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.project-footer-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.project-github-link,
+.project-website-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--secondary);
+  text-decoration: none;
+  box-shadow: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.project-github-link:hover,
+.project-website-link:hover {
+  color: var(--primary);
+}
+
+.project-github-link svg,
+.project-website-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.project-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--secondary);
+  font-size: 0.9rem;
+}
+
+.project-star-icon {
+  color: #f5c518;
+  font-size: 1rem;
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] .project-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .project-status--active {
+  background: rgba(34, 197, 94, 0.12);
+  color: #4ade80;
+}
+
+[data-theme="dark"] .project-status--active .project-status-dot {
+  background: #4ade80;
+}
+
+[data-theme="dark"] .project-status--stopped {
+  background: rgba(245, 158, 11, 0.12);
+  color: #fbbf24;
+}
+
+[data-theme="dark"] .project-status--stopped .project-status-dot {
+  background: #fbbf24;
+}
+
+[data-theme="dark"] .project-status--finished {
+  background: rgba(99, 102, 241, 0.1);
+  color: #818cf8;
+}
+
+[data-theme="dark"] .project-status--finished .project-status-dot {
+  background: #818cf8;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .project-card {
+    padding: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

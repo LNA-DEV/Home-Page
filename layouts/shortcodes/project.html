@@ -1,0 +1,47 @@
+<div class="project-list">
+
+  {{ range $.Page.Params.projects }}
+
+  <div class="project-card">
+    <div class="project-header">
+      <h2 class="project-title">{{ .name }}</h2>
+      <span class="project-status project-status--{{ .status }}">
+        <span class="project-status-dot"></span>
+        {{ if eq .status "active" }}Active{{ else if eq .status "stopped" }}Stopped{{ else if eq .status "finished" }}Finished{{ end }}
+      </span>
+    </div>
+
+    <div class="project-body">
+      <p>{{ markdownify .description }}</p>
+    </div>
+
+    <div class="project-footer">
+      <div class="project-footer-left">
+        {{ with .github }}
+        <a href="https://github.com/{{ . }}" class="project-github-link" target="_blank" rel="noopener noreferrer">
+          {{ partial "svg.html" (dict "name" "github") }}
+          <span>{{ . }}</span>
+        </a>
+        {{ end }}
+        {{ with $.Page.Params }}{{ end }}
+        {{ if .github_stars }}
+        <span class="project-stars">
+          <span class="project-star-icon">&#9733;</span>
+          <span>{{ .github_stars }}</span>
+        </span>
+        {{ end }}
+      </div>
+      <div class="project-footer-right">
+        {{ with .website }}
+        <a href="{{ . }}" class="project-website-link" target="_blank" rel="noopener noreferrer">
+          {{ partial "svg.html" (dict "name" "website") }}
+          <span>Website</span>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  {{ end }}
+
+</div>
