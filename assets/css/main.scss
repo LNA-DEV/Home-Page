@@ -4,20 +4,6 @@
 @import "photoswipe/photoswipe";
 @import "photoswipe/photoswipe-dynamic-caption-plugin";
 
-.lazyload,
-.lazyloading {
-  opacity: 0;
-}
-
-.lazyloaded {
-  opacity: 1;
-  transition: opacity 300ms;
-}
-
-img.lazyload:not([src]) {
-  visibility: hidden;
-}
-
 // Like count display in PhotoSwipe lightbox
 .pswp__like-count {
   position: relative;

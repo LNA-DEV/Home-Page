@@ -1,5 +1,5 @@
 <section class="gallery">
-  <div id="gallery" style="visibility: hidden; height: 1px; overflow: hidden">
+  <div id="gallery">
     {{ $images := slice }}
     {{ range $image := .Resources.ByType "image" }}
       {{ $title := "" }}
@@ -114,9 +114,10 @@
       {{ $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
       {{ $full := $image.Filter (slice images.AutoOrient (images.Process "fit 4000x4000")) }}
       {{ $color := index $thumbnail.Colors 0 | default "transparent" }}
-      <a class="gallery-item" href="{{ $image.RelPermalink }}" data-id="{{ $image.RelPermalink | hash.FNV32a }}" data-image-name="{{ $image.Name }}" data-pswp-src="{{ $full.RelPermalink }}" data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}" title="{{ .Title }}" itemscope itemtype="https://schema.org/ImageObject" style="aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
-        <figure style="background-color: {{ $color }}; aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
-          <img class="lazyload" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" data-src="{{ $thumbnail.RelPermalink }}" alt="{{ .Title }}" />
+      {{ $ratio := div (mul $thumbnail.Width 1.0) $thumbnail.Height }}
+      <a class="gallery-item" href="{{ $image.RelPermalink }}" data-id="{{ $image.RelPermalink | hash.FNV32a }}" data-image-name="{{ $image.Name }}" data-pswp-src="{{ $full.RelPermalink }}" data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}" title="{{ .Title }}" itemscope itemtype="https://schema.org/ImageObject" style="flex-grow: {{ printf "%.4f" $ratio }}; --ratio: {{ printf "%.4f" $ratio }}">
+        <figure style="background-color: {{ $color }}">
+          <img loading="lazy" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" src="{{ $thumbnail.RelPermalink }}" alt="{{ .Title }}" />
         </figure>
         <div class="like-count" aria-label="Likes"></div>
         <span class="pswp-caption-content">

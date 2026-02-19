@@ -68,3 +68,25 @@
   translation: "Photos"
 - id: activity_filter_talks
   translation: "Talks"
+
+# Gallery / PhotoSwipe
+- id: closeTitle
+  translation: "Close"
+- id: zoomTitle
+  translation: "Zoom"
+- id: arrowPrevTitle
+  translation: "Previous"
+- id: arrowNextTitle
+  translation: "Next"
+- id: errorMsg
+  translation: "The photo cannot be loaded"
+- id: downloadTitle
+  translation: "Download"
+- id: photoCount
+  translation:
+    one: "1 photo"
+    other: "{{ . }} photos"
+- id: albumCount
+  translation:
+    one: "{{ .photoCount }} in {{ .count }} album"
+    other: "{{ .photoCount }} in {{ .count }} albums"
