@@ -405,6 +405,23 @@ if (gallery) {
     },
   });
 
+  lightbox.on('openingAnimationStart', () => {
+    const img = lightbox.pswp.currSlide.container.querySelector('.pswp__img');
+    if (img) {
+      img.style.clipPath = 'inset(0 round 4px)';
+      img.style.transition = 'clip-path 333ms cubic-bezier(.4,0,.22,1)';
+      requestAnimationFrame(() => { img.style.clipPath = 'inset(0 round 0)'; });
+    }
+  });
+
+  lightbox.on('closingAnimationStart', () => {
+    const img = lightbox.pswp.currSlide.container.querySelector('.pswp__img');
+    if (img) {
+      img.style.transition = 'clip-path 333ms cubic-bezier(.4,0,.22,1)';
+      img.style.clipPath = 'inset(0 round 4px)';
+    }
+  });
+
   lightbox.init();
 
   if (window.location.hash.substring(1).length > 0) {
