@@ -1,0 +1,155 @@
+{{- define "main" }}
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- if .IsTranslated }}
+  <div class="post-meta">
+    {{- i18n "translations" | default "Translations" }}:
+    <ul class="i18n_list">
+      {{- range .Translations }}
+      <li>
+        <a href="{{ .Permalink }}">
+          {{- if (and site.Params.displayFullLangName (.Language.LanguageName)) }}
+          {{- .Language.LanguageName | emojify -}}
+          {{- else }}
+          {{- .Lang | title -}}
+          {{- end -}}
+        </a>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+  {{- end }}
+</header>
+
+{{- $langColors := dict
+  "JavaScript" "#f1e05a" "TypeScript" "#3178c6" "Python" "#3572A5"
+  "Go" "#00ADD8" "Rust" "#dea584" "Java" "#b07219" "C#" "#178600"
+  "C" "#555555" "C++" "#f34b7d" "Ruby" "#701516" "PHP" "#4F5D95"
+  "Swift" "#F05138" "Kotlin" "#A97BFF" "Dart" "#00B4AB" "Shell" "#89e051"
+  "HTML" "#e34c26" "CSS" "#563d7c" "Lua" "#000080" "Zig" "#ec915c"
+  "Nix" "#7e7eff" "Vue" "#41b883" "Svelte" "#ff3e00" "SCSS" "#c6538c"
+-}}
+
+<div class="project-list">
+
+  {{ range .Params.projects }}
+
+  <div class="project-card">
+    <div class="project-header">
+      <h2 class="project-title">{{ .name }}</h2>
+      <span class="project-status project-status--{{ .status }}">
+        <span class="project-status-dot"></span>
+        {{ if eq .status "active" }}{{ i18n "project_status_active" }}{{ else if eq .status "maintained" }}{{ i18n "project_status_maintained" }}{{ else if eq .status "stopped" }}{{ i18n "project_status_stopped" }}{{ else if eq .status "finished" }}{{ i18n "project_status_finished" }}{{ end }}
+      </span>
+    </div>
+
+    {{ with .tagline }}
+    <p class="project-tagline">{{ . }}</p>
+    {{ end }}
+
+    <div class="project-body">
+      <p>{{ markdownify .description }}</p>
+    </div>
+
+    {{ with .tags }}
+    <div class="project-tags">
+      {{ range . }}
+      <span class="project-tag">{{ . }}</span>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <div class="project-stats">
+      {{- /* Repo-level stats */ -}}
+      {{ with .github }}
+        {{- $url := printf "https://api.github.com/repos/%s" . -}}
+        {{ with try (resources.GetRemote $url) }}
+          {{ with .Err }}
+          {{ else with .Value }}
+            {{- $data := . | transform.Unmarshal -}}
+            <div class="project-stats-row">
+              <span class="project-stat">
+                <span class="project-stat-icon">&#9733;</span>
+                {{ $data.stargazers_count }} {{ i18n "project_stars" }}
+              </span>
+              <span class="project-stat">
+                <span class="project-stat-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><path d="M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9"/><path d="M12 12v3"/></svg></span>
+                {{ $data.forks_count }} {{ i18n "project_forks" }}
+              </span>
+              {{ with $data.language }}
+              <span class="project-stat">
+                <span class="project-stat-icon"><span class="lang-dot"{{ with index $langColors . }} style="background: {{ . }}"{{ end }}></span></span>
+                {{ . }}
+              </span>
+              {{ end }}
+              {{ with $data.pushed_at }}
+              <span class="project-stat">
+                <span class="project-stat-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+                {{ (time .).Format "Jan 2006" }}
+              </span>
+              {{ end }}
+            </div>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      {{- /* Org-level stats */ -}}
+      {{ with .github_org }}
+        {{- $url := printf "https://api.github.com/orgs/%s/repos?per_page=100" . -}}
+        {{ with try (resources.GetRemote $url) }}
+          {{ with .Err }}
+          {{ else with .Value }}
+            {{- $repos := . | transform.Unmarshal -}}
+            {{- $totalStars := 0 -}}
+            {{- range $repos -}}
+              {{- $totalStars = add $totalStars .stargazers_count -}}
+            {{- end -}}
+            <div class="project-stats-row">
+              <span class="project-stat">
+                <span class="project-stat-icon">&#9733;</span>
+                {{ $totalStars }} {{ i18n "project_stars" }}
+              </span>
+              <span class="project-stat">
+                <span class="project-stat-icon"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></span>
+                {{ len $repos }} {{ i18n "project_repos" }}
+              </span>
+            </div>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </div>
+
+    <div class="project-footer">
+      <div class="project-actions">
+        {{ with .github }}
+        <a href="https://github.com/{{ . }}" class="project-btn project-btn--github" target="_blank" rel="noopener noreferrer">
+          {{ partial "svg.html" (dict "name" "github") }}
+          <span>GitHub</span>
+        </a>
+        {{ end }}
+        {{ with .github_org }}
+        <a href="https://github.com/{{ . }}" class="project-btn project-btn--github" target="_blank" rel="noopener noreferrer">
+          {{ partial "svg.html" (dict "name" "github") }}
+          <span>GitHub</span>
+        </a>
+        {{ end }}
+        {{ with .website }}
+        <a href="{{ . }}" class="project-btn project-btn--website" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span>Website</span>
+        </a>
+        {{ end }}
+      </div>
+      {{ with .started }}
+      <div class="project-started">
+        {{ i18n "project_started" }}: {{ . }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+  {{ end }}
+
+</div>
+
+{{- end }}{{/* end main */}}

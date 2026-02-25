@@ -1,3 +1,8 @@
+security:
+  http:
+    urls:
+      - "https://api.github.com/.*"
+
 baseURL: https://lna-dev.net
 title: LNA-DEV ~ Lukas Nagel
 theme:
