@@ -167,7 +167,9 @@ params:
     - Blog
     - Privacy
     - Open Source
-  author: 
+  defaultLicense: "Creative Commons Attribution-ShareAlike (CC BY-SA)" # TODO Maybe set per image basis and remove global override
+  licensingPage: "/en/licensing/"
+  author:
     name: Lukas Nagel
     email: me@lna-dev.net
   images:

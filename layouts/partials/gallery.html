@@ -88,9 +88,52 @@
           {{ $lensModel = . }}
         {{ end }}
       {{ end }}
+      {{/* License resolution: per-image frontmatter > EXIF > page default > site default */}}
+      {{ $licenseText := "" }}
+      {{ with $image.Params.license }}
+        {{ $licenseText = . }}
+      {{ else }}
+        {{ with $copyright }}
+          {{ $licenseText = . }}
+        {{ else }}
+          {{ with $.Params.defaultLicense }}
+            {{ $licenseText = . }}
+          {{ else }}
+            {{ with site.Params.defaultLicense }}
+              {{ $licenseText = . }}
+            {{ else }}
+              {{ errorf "No license found for image %s and no default license configured" $image.Name }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      {{ $licenseUrl := "" }}
+      {{ with index site.Data.licenseMap $licenseText }}
+        {{ $licenseUrl = . }}
+      {{ else }}
+        {{ errorf "License text %q for image %s not found in site.Data.licenseMap" $licenseText $image.Name }}
+      {{ end }}
+      {{/* Artist resolution: per-image frontmatter > EXIF > site author */}}
+      {{ $resolvedArtist := "" }}
+      {{ with $image.Params.artist }}
+        {{ $resolvedArtist = . }}
+      {{ else }}
+        {{ with $artist }}
+          {{ $resolvedArtist = . }}
+        {{ else }}
+          {{ with site.Params.author.name }}
+            {{ $resolvedArtist = . }}
+          {{ else }}
+            {{ errorf "No artist found for image %s and no site author configured" $image.Name }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
       {{ if ne $image.Title $image.Name }}
         {{/* Title from front matter */}}
         {{ $title = $image.Title }}
+      {{ end }}
+      {{ with $image.Params.Alt }}
+        {{ $title = . }}
       {{ end }}
       {{ $images = $images | append (dict
         "Name" $image.Name
@@ -104,6 +147,9 @@
         "LensModel" $lensModel
         "Copyright" $copyright
         "Artist" $artist
+        "LicenseText" $licenseText
+        "LicenseUrl" $licenseUrl
+        "ResolvedArtist" $resolvedArtist
         "Keywords" $keywords
         "image" $image
         )
@@ -141,11 +187,18 @@
           {{ with .Keywords }}<span class="caption-keywords">{{ . }}</span>{{ end }}
         </span>
         <meta itemprop="contentUrl" content="{{ $image.RelPermalink }}" />
-        {{ with site.Params.Author }}
-          <span itemprop="creator" itemtype="https://schema.org/Person" itemscope>
-            <meta itemprop="name" content="{{ site.Params.Author.Name }}" />
-          </span>
+        {{ with .LicenseUrl }}
+        <link itemprop="license" href="{{ . }}" />
         {{ end }}
+        {{ with site.Params.licensingPage }}
+        <link itemprop="acquireLicensePage" href="{{ . | absURL }}" />
+        {{ end }}
+        <span itemprop="creator" itemtype="https://schema.org/Person" itemscope>
+          <meta itemprop="name" content="{{ .ResolvedArtist }}" />
+        </span>
+        <meta itemprop="creditText" content="{{ .ResolvedArtist }}" />
+        <meta itemprop="copyrightNotice" content="{{ printf "© %s" .ResolvedArtist }}" />
+        {{ with .Title }}<meta itemprop="name" content="{{ . }}" />{{ end }}
       </a>
     {{ end }}
   </div>

@@ -2,13 +2,14 @@
 
 {{- $link := strings.Replace .Permalink ( print "/" .Name ) (print "#" (.RelPermalink | hash.FNV32a)) }}
 {{- $image := .Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
+{{- $alt := .Params.Alt | default .Meta.Exif.ImageDescription | default .Meta.XMP.Notes }}
 
 <div class="responsive">
   <div class="gallery">
-    <a href="{{ $link }}"> 
+    <a href="{{ $link }}">
       <img
         src="{{ $image.Permalink }}"
-        alt="{{ .Params.alt }}"
+        alt="{{ $alt }}"
       />
     </a>
   </div>
