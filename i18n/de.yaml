@@ -89,3 +89,21 @@
   translation:
     one: "{{ .photoCount }} in {{ .count }} Album"
     other: "{{ .photoCount }} in {{ .count }} Alben"
+
+# Projects
+- id: project_status_active
+  translation: "Aktiv"
+- id: project_status_maintained
+  translation: "Gewartet"
+- id: project_status_stopped
+  translation: "Pausiert"
+- id: project_status_finished
+  translation: "Abgeschlossen"
+- id: project_stars
+  translation: "Sterne"
+- id: project_forks
+  translation: "Forks"
+- id: project_repos
+  translation: "Repos"
+- id: project_started
+  translation: "Gestartet"

@@ -62,3 +62,21 @@
   translation: "Foton"
 - id: activity_filter_talks
   translation: "Föredrag"
+
+# Projects
+- id: project_status_active
+  translation: "Aktiv"
+- id: project_status_maintained
+  translation: "Underhållen"
+- id: project_status_stopped
+  translation: "Pausad"
+- id: project_status_finished
+  translation: "Avslutad"
+- id: project_stars
+  translation: "Stjärnor"
+- id: project_forks
+  translation: "Förgreningar"
+- id: project_repos
+  translation: "Repos"
+- id: project_started
+  translation: "Startad"
