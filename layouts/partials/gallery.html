@@ -165,7 +165,8 @@
         </figure>
         <div class="like-count" aria-label="Likes"></div>
         <span class="pswp-caption-content">
-          {{- with (.Title | default .Alt) }}<span class="caption-title">{{ . }}</span>{{ end -}}
+          <!-- Here we only use the title which is the description / the comment because we do not want the alt text to be displayed here. -->
+          {{- with .Title }}<span class="caption-title">{{ . }}</span>{{ end -}}
           {{- if or .Aperture .ShutterSpeed .ISO .FocalLength }}
           <span class="caption-exif">
             {{- with .FocalLength }}<span class="exif-item">{{ . }}</span>{{ end -}}
