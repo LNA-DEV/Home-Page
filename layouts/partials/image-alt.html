@@ -1,0 +1,2 @@
+{{- $alt := .Params.Alt | default .Meta.XMP.Notes | default .Meta.Exif.ImageDescription | default "" -}}
+{{- return $alt -}}

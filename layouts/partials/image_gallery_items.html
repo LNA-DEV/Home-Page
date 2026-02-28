@@ -1,9 +1,7 @@
-{{ range . }}
-
-{{- $link := strings.Replace .Permalink ( print "/" .Name ) (print "#" (.RelPermalink | hash.FNV32a)) }}
-{{- $image := .Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
-{{- $alt := .Params.Alt | default .Meta.Exif.ImageDescription | default .Meta.XMP.Notes }}
-
+{{- range . -}}
+{{- $link := strings.Replace .Permalink ( print "/" .Name ) (print "#" (.RelPermalink | hash.FNV32a)) -}}
+{{- $image := .Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
+{{- $alt := partial "image-alt.html" . }}
 <div class="responsive">
   <div class="gallery">
     <a href="{{ $link }}">
@@ -14,5 +12,4 @@
     </a>
   </div>
 </div>
-
-{{ end }}
+{{- end -}}
