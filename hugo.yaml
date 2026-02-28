@@ -156,6 +156,8 @@ languages:
           weight: 30
 
 params:
+  schema:
+    publisherType: Person
   ShortTitle: "LNA-DEV"
   CompanionUrl: "https://companion.lna-dev.net"
   ShowFullTextinRSS: true

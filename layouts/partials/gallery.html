@@ -184,7 +184,7 @@
           {{- with .Artist }}<span class="caption-artist">{{ . }}</span>{{ end -}}
           {{- with .Keywords }}<span class="caption-keywords">{{ . }}</span>{{ end -}}
         </span>
-        <meta itemprop="contentUrl" content="{{ $image.RelPermalink }}" />
+        <meta itemprop="contentUrl" content="{{ $image.Permalink }}" />
         {{- with .LicenseUrl }}
         <link itemprop="license" href="{{ . }}" />
         {{- end -}}
