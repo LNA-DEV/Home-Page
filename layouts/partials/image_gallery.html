@@ -1,22 +1,16 @@
 {{/*  The full image gallery you can see on the home page for example  */}}
-
 <div class="gallery-view">
   <h2 class="home-header">{{ i18n "photography_title" }}</h2>
-
-  {{ $images := partial "get_images.html" . }}
-
-  {{ $sorted := collections.Sort $images ".Meta.Date" "desc" }}
-  {{ $finalItems := collections.First 8 $sorted }}
-
+  {{- $images := partial "get_images.html" . -}}
+  {{- $sorted := collections.Sort $images ".Meta.Date" "desc" -}}
+  {{- $finalItems := collections.First 8 $sorted -}}
   {{- partial "image_gallery_items.html" $finalItems }}
-  
   <div class="responsive">
     <div class="gallery">
       <a href="/en/gallery">
         <p class="more">All photos</p>
       </a>
     </div>
-  </div> 
-
+  </div>
   <div class="clearfix"></div>
 </div>

@@ -73,7 +73,7 @@
       {{ $full := .Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) }}
       <media:content url="{{ $full.Permalink }}" type="image/jpeg"/>
       <description>
-        <img src="{{ $full.Permalink }}" alt="{{ .Params.Alt | default .Meta.Exif.ImageDescription | default .Meta.XMP.Notes }}"/>          
+        <img src="{{ $full.Permalink }}" alt="{{ partial "image-alt.html" . }}"/>          
         {{- if ne .Title .Name -}}
         <p> {{ .Title }} </p>
         {{ end }}

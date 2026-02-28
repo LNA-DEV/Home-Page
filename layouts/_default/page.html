@@ -1,8 +1,8 @@
 {{- define "main" }}
 
 {{- if or (eq .Params.Theme "gallery-page") (eq .Params.Theme "gallery-page-hidden") }}
-{{ partial "title.html" . }}
-{{ partial "gallery.html" . }}
+{{- partial "title.html" . }}
+{{- partial "gallery.html" . }}
 {{- else }}
 <article class="post-single">
     <header class="post-header">

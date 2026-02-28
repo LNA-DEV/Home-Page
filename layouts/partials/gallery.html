@@ -1,100 +1,141 @@
 <section class="gallery">
   <div id="gallery">
-    {{ $images := slice }}
-    {{ range $image := .Resources.ByType "image" }}
-      {{ $title := "" }}
-      {{ $date := "" }}
-      {{ $aperture := "" }}
-      {{ $shutterSpeed := "" }}
-      {{ $iso := "" }}
-      {{ $focalLength := "" }}
-      {{ $cameraModel := "" }}
-      {{ $lensModel := "" }}
-      {{ $copyright := "" }}
-      {{ $artist := "" }}
-      {{ $keywords := "" }}
-      {{ with $image.Meta }}
-        {{ $date = .Date }}
-        {{ with .Exif.ImageDescription }}
+    {{- $images := slice -}}
+    {{- range $image := .Resources.ByType "image" -}}
+      {{- $title := "" -}}
+      {{- $date := "" -}}
+      {{- $aperture := "" -}}
+      {{- $shutterSpeed := "" -}}
+      {{- $iso := "" -}}
+      {{- $focalLength := "" -}}
+      {{- $cameraModel := "" -}}
+      {{- $lensModel := "" -}}
+      {{- $copyright := "" -}}
+      {{- $artist := "" -}}
+      {{- $keywords := "" -}}
+      {{- with $image.Meta -}}
+        {{- $date = .Date -}}
+        {{- with .Exif.ImageDescription -}}
           {{/* Title from EXIF ImageDescription */}}
-          {{ $title = . }}
-        {{ end }}
+          {{- $title = . -}}
+        {{- end -}}
         {{/* Copyright info */}}
-        {{ with .Exif.Copyright }}
-          {{ $copyright = . }}
-        {{ end }}
+        {{- with .Exif.Copyright -}}
+          {{- $copyright = . -}}
+        {{- end -}}
         {{/* Artist info */}}
-        {{ with .Exif.Artist }}
-          {{ $artist = . }}
-        {{ end }}
+        {{- with .Exif.Artist -}}
+          {{- $artist = . -}}
+        {{- end -}}
         {{/* Keywords/Tags - try multiple possible EXIF fields */}}
-        {{ with .Exif.subject }}
-          {{ $keywords = . }}
-        {{ end }}
-        {{ if not $keywords }}
-          {{ with .Exif.Subject }}
-            {{ $keywords = . }}
-          {{ end }}
-        {{ end }}
-        {{ if not $keywords }}
-          {{ with .Exif.Keywords }}
-            {{ $keywords = . }}
-          {{ end }}
-        {{ end }}
-        {{ if not $keywords }}
-          {{ with .XMP.Subject }}
-            {{ $keywords = delimit . ", " }}
-          {{ end }}
-        {{ end }}
+        {{- with .Exif.subject -}}
+          {{- $keywords = . -}}
+        {{- end -}}
+        {{- if not $keywords -}}
+          {{- with .Exif.Subject -}}
+            {{- $keywords = . -}}
+          {{- end -}}
+        {{- end -}}
+        {{- if not $keywords -}}
+          {{- with .Exif.Keywords -}}
+            {{- $keywords = . -}}
+          {{- end -}}
+        {{- end -}}
+        {{- if not $keywords -}}
+          {{- with .XMP.Subject -}}
+            {{- $keywords = delimit . ", " -}}
+          {{- end -}}
+        {{- end -}}
         {{/* Extract photographic EXIF data */}}
-        {{ with .Exif.FNumber }}
+        {{- with .Exif.FNumber -}}
           {{/* FNumber may be a fraction string like "14/5" or a number */}}
-          {{ $fStr := printf "%v" . }}
-          {{ if strings.Contains $fStr "/" }}
-            {{ $parts := split $fStr "/" }}
-            {{ $num := float (index $parts 0) }}
-            {{ $den := float (index $parts 1) }}
-            {{ $aperture = printf "f/%.1f" (div $num $den) }}
-          {{ else }}
-            {{ $aperture = printf "f/%.1f" (float .) }}
-          {{ end }}
-        {{ end }}
-        {{ with .Exif.ExposureTime }}
+          {{- $fStr := printf "%v" . -}}
+          {{- if strings.Contains $fStr "/" -}}
+            {{- $parts := split $fStr "/" -}}
+            {{- $num := float (index $parts 0) -}}
+            {{- $den := float (index $parts 1) -}}
+            {{- $aperture = printf "f/%.1f" (div $num $den) -}}
+          {{- else -}}
+            {{- $aperture = printf "f/%.1f" (float .) -}}
+          {{- end -}}
+        {{- end -}}
+        {{- with .Exif.ExposureTime -}}
           {{/* ExposureTime may be a fraction string like "1/1600" or a number */}}
-          {{ $expStr := printf "%v" . }}
-          {{ if strings.Contains $expStr "/" }}
-            {{ $shutterSpeed = $expStr }}
-          {{ else }}
-            {{ $exp := float . }}
-            {{ if gt $exp 0 }}
-              {{ if lt $exp 1.0 }}
-                {{ $shutterSpeed = printf "1/%ds" (int (math.Round (div 1.0 $exp))) }}
-              {{ else }}
-                {{ $shutterSpeed = printf "%.1fs" $exp }}
-              {{ end }}
-            {{ end }}
-          {{ end }}
-        {{ end }}
-        {{ with .Exif.ISO }}
-          {{ $iso = printf "ISO %v" . }}
-        {{ end }}
-        {{ with .Exif.FocalLength }}
-          {{ $focalLength = printf "%vmm" . }}
-        {{ end }}
-        {{ with .Exif.Model }}
-          {{ $cameraModel = . }}
-        {{ end }}
-        {{ with .Exif.LensModel }}
-          {{ $lensModel = . }}
-        {{ end }}
-      {{ end }}
-      {{ if ne $image.Title $image.Name }}
-        {{/* Title from front matter */}}
-        {{ $title = $image.Title }}
-      {{ end }}
-      {{ $images = $images | append (dict
+          {{- $expStr := printf "%v" . -}}
+          {{- if strings.Contains $expStr "/" -}}
+            {{- $shutterSpeed = $expStr -}}
+          {{- else -}}
+            {{- $exp := float . -}}
+            {{- if gt $exp 0 -}}
+              {{- if lt $exp 1.0 -}}
+                {{- $shutterSpeed = printf "1/%ds" (int (math.Round (div 1.0 $exp))) -}}
+              {{- else -}}
+                {{- $shutterSpeed = printf "%.1fs" $exp -}}
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+        {{- with .Exif.ISO -}}
+          {{- $iso = printf "ISO %v" . -}}
+        {{- end -}}
+        {{- with .Exif.FocalLength -}}
+          {{- $focalLength = printf "%vmm" . -}}
+        {{- end -}}
+        {{- with .Exif.Model -}}
+          {{- $cameraModel = . -}}
+        {{- end -}}
+        {{- with .Exif.LensModel -}}
+          {{- $lensModel = . -}}
+        {{- end -}}
+      {{- end -}}
+      {{/* License resolution: per-image frontmatter > EXIF > page default > site default */}}
+      {{- $licenseText := "" -}}
+      {{- with $image.Params.license -}}
+        {{- $licenseText = . -}}
+      {{- else -}}
+        {{- with $copyright -}}
+          {{- $licenseText = . -}}
+        {{- else -}}
+          {{- with $.Params.defaultLicense -}}
+            {{- $licenseText = . -}}
+          {{- else -}}
+            {{- with site.Params.defaultLicense -}}
+              {{- $licenseText = . -}}
+            {{- else -}}
+              {{- errorf "No license found for image %s and no default license configured" $image.Name -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+      {{- $licenseUrl := "" -}}
+      {{- with index site.Data.licenseMap $licenseText -}}
+        {{- $licenseUrl = . -}}
+      {{- else -}}
+        {{- errorf "License text %q for image %s not found in site.Data.licenseMap" $licenseText $image.Name -}}
+      {{- end -}}
+      {{/* Artist resolution: per-image frontmatter > EXIF > site author */}}
+      {{- $resolvedArtist := "" -}}
+      {{- with $image.Params.artist -}}
+        {{- $resolvedArtist = . -}}
+      {{- else -}}
+        {{- with $artist -}}
+          {{- $resolvedArtist = . -}}
+        {{- else -}}
+          {{- with site.Params.author.name -}}
+            {{- $resolvedArtist = . -}}
+          {{- else -}}
+            {{- errorf "No artist found for image %s and no site author configured" $image.Name -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+      {{- $alt := partial "image-alt.html" $image -}}
+      {{- with $image.Params.title -}}
+        {{- $title = . -}}
+      {{- end -}}
+      {{- $images = $images | append (dict
         "Name" $image.Name
         "Title" $title
+        "Alt" $alt
         "Date" $date
         "Aperture" $aperture
         "ShutterSpeed" $shutterSpeed
@@ -104,49 +145,59 @@
         "LensModel" $lensModel
         "Copyright" $copyright
         "Artist" $artist
+        "LicenseText" $licenseText
+        "LicenseUrl" $licenseUrl
+        "ResolvedArtist" $resolvedArtist
         "Keywords" $keywords
         "image" $image
         )
-      }}
-    {{ end }}
-    {{ range sort $images (.Params.sort_by | default "Name") (.Params.sort_order | default "asc") }}
-      {{ $image := .image }}
-      {{ $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
-      {{ $full := $image.Filter (slice images.AutoOrient (images.Process "fit 4000x4000")) }}
-      {{ $color := index $thumbnail.Colors 0 | default "transparent" }}
-      {{ $ratio := div (mul $thumbnail.Width 1.0) $thumbnail.Height }}
-      <a class="gallery-item" href="{{ $image.RelPermalink }}" data-id="{{ $image.RelPermalink | hash.FNV32a }}" data-image-name="{{ $image.Name }}" data-pswp-src="{{ $full.RelPermalink }}" data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}" title="{{ .Title }}" itemscope itemtype="https://schema.org/ImageObject" style="flex-grow: {{ printf "%.4f" $ratio }}; --ratio: {{ printf "%.4f" $ratio }}">
+      -}}
+    {{- end -}}
+    {{- range sort $images (.Params.sort_by | default "Name") (.Params.sort_order | default "asc") -}}
+      {{- $image := .image -}}
+      {{- $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
+      {{- $full := $image.Filter (slice images.AutoOrient (images.Process "fit 4000x4000")) -}}
+      {{- $color := index $thumbnail.Colors 0 | default "transparent" -}}
+      {{- $ratio := div (mul $thumbnail.Width 1.0) $thumbnail.Height }}
+      <a class="gallery-item" href="{{ $image.RelPermalink }}" data-id="{{ $image.RelPermalink | hash.FNV32a }}" data-image-name="{{ $image.Name }}" data-pswp-src="{{ $full.RelPermalink }}" data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}" title="{{ .Title | default .Alt }}" itemscope itemtype="https://schema.org/ImageObject" style="flex-grow: {{ printf "%.4f" $ratio }}; --ratio: {{ printf "%.4f" $ratio }}">
         <figure style="background-color: {{ $color }}">
-          <img loading="lazy" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" src="{{ $thumbnail.RelPermalink }}" alt="{{ .Title }}" />
+          <img loading="lazy" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" src="{{ $thumbnail.RelPermalink }}" alt="{{ .Alt }}" />
         </figure>
         <div class="like-count" aria-label="Likes"></div>
         <span class="pswp-caption-content">
-          {{ with .Title }}<span class="caption-title">{{ . }}</span>{{ end }}
-          {{ if or .Aperture .ShutterSpeed .ISO .FocalLength }}
+          {{- with (.Title | default .Alt) }}<span class="caption-title">{{ . }}</span>{{ end -}}
+          {{- if or .Aperture .ShutterSpeed .ISO .FocalLength }}
           <span class="caption-exif">
-            {{ with .FocalLength }}<span class="exif-item">{{ . }}</span>{{ end }}
-            {{ with .Aperture }}<span class="exif-item">{{ . }}</span>{{ end }}
-            {{ with .ShutterSpeed }}<span class="exif-item">{{ . }}</span>{{ end }}
-            {{ with .ISO }}<span class="exif-item">{{ . }}</span>{{ end }}
+            {{- with .FocalLength }}<span class="exif-item">{{ . }}</span>{{ end -}}
+            {{- with .Aperture }}<span class="exif-item">{{ . }}</span>{{ end -}}
+            {{- with .ShutterSpeed }}<span class="exif-item">{{ . }}</span>{{ end -}}
+            {{- with .ISO }}<span class="exif-item">{{ . }}</span>{{ end -}}
           </span>
-          {{ end }}
-          {{ if or .CameraModel .LensModel }}
+          {{- end -}}
+          {{- if or .CameraModel .LensModel }}
           <span class="caption-gear">
-            {{ with .CameraModel }}<span class="gear-item">{{ . }}</span>{{ end }}
-            {{ with .LensModel }}<span class="gear-item">{{ . }}</span>{{ end }}
+            {{- with .CameraModel }}<span class="gear-item">{{ . }}</span>{{ end -}}
+            {{- with .LensModel }}<span class="gear-item">{{ . }}</span>{{ end -}}
           </span>
-          {{ end }}
-          {{ with .Copyright }}<span class="caption-copyright">{{ . }}</span>{{ end }}
-          {{ with .Artist }}<span class="caption-artist">{{ . }}</span>{{ end }}
-          {{ with .Keywords }}<span class="caption-keywords">{{ . }}</span>{{ end }}
+          {{- end -}}
+          {{- with .Copyright }}<span class="caption-copyright">{{ . }}</span>{{ end -}}
+          {{- with .Artist }}<span class="caption-artist">{{ . }}</span>{{ end -}}
+          {{- with .Keywords }}<span class="caption-keywords">{{ . }}</span>{{ end -}}
         </span>
-        <meta itemprop="contentUrl" content="{{ $image.RelPermalink }}" />
-        {{ with site.Params.Author }}
-          <span itemprop="creator" itemtype="https://schema.org/Person" itemscope>
-            <meta itemprop="name" content="{{ site.Params.Author.Name }}" />
-          </span>
-        {{ end }}
+        <meta itemprop="contentUrl" content="{{ $image.Permalink }}" />
+        {{- with .LicenseUrl }}
+        <link itemprop="license" href="{{ . }}" />
+        {{- end -}}
+        {{- with site.Params.licensingPage }}
+        <link itemprop="acquireLicensePage" href="{{ . | absURL }}" />
+        {{- end }}
+        <span itemprop="creator" itemtype="https://schema.org/Person" itemscope>
+          <meta itemprop="name" content="{{ .ResolvedArtist }}" />
+        </span>
+        <meta itemprop="creditText" content="{{ .ResolvedArtist }}" />
+        <meta itemprop="copyrightNotice" content="{{ printf "© %s" .ResolvedArtist }}" />
+        <meta itemprop="name" content="{{ .Name }}" />
       </a>
-    {{ end }}
+    {{- end }}
   </div>
 </section>
