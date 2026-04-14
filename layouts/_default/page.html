@@ -1,6 +1,19 @@
 {{- define "main" }}
 
-{{- if or (eq .Params.Theme "gallery-page") (eq .Params.Theme "gallery-page-hidden") }}
+{{- if eq .Params.Theme "gallery-portfolio" }}
+{{- partial "gallery-breadcrumb.html" . }}
+{{- partial "title.html" . }}
+{{- partial "gallery-portfolio.html" . }}
+{{- else if or (eq .Params.Theme "gallery-page") (eq .Params.Theme "gallery-page-hidden") }}
+{{- partial "gallery-breadcrumb.html" . }}
+{{- partial "title.html" . }}
+{{- partial "gallery.html" . }}
+{{- else if eq .Params.Theme "gallery-archive" }}
+{{- partial "gallery-breadcrumb.html" . }}
+{{- partial "title.html" . }}
+{{- partial "gallery.html" . }}
+{{- else if eq .Params.Theme "gallery-project" }}
+{{- partial "gallery-breadcrumb.html" . }}
 {{- partial "title.html" . }}
 {{- partial "gallery.html" . }}
 {{- else }}

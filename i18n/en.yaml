@@ -91,6 +91,18 @@
     one: "{{ .photoCount }} in {{ .count }} album"
     other: "{{ .photoCount }} in {{ .count }} albums"
 
+# Gallery navigation
+- id: gallery_portfolio
+  translation: "Portfolio"
+- id: gallery_projects
+  translation: "Projects"
+- id: gallery_general
+  translation: "All Photos"
+- id: gallery_archive
+  translation: "Archive"
+- id: gallery_filter_all
+  translation: "All"
+
 # Projects
 - id: project_status_active
   translation: "Active"

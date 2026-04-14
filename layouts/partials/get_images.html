@@ -1,23 +1,18 @@
-{{- $images := slice }}
-
-{{- $unfilteredPages := site.RegularPages }}
-
-{{ range .Site.Home.Translations }}
-{{ $unfilteredPages = $unfilteredPages | lang.Merge .Site.RegularPages }}
-{{ end }}
-
-{{- $pages := where $unfilteredPages "Section" "=" "gallery" }}
-
-{{- range $pages }}
-  {{- if not (in .Path "/archive/") -}}
-    {{- range (.Resources.ByType "image") }}
-      {{ $image := . }} 
-      {{- with .Meta }}
-      {{- $images = collections.Append $image $images }}
-      {{- end }}
-    {{- end }}
-  {{- end }}
-{{- end }}
-
-
-{{- return $images}}
+{{- $images := slice -}}
+{{- $bundle := partialCached "gallery-bundle.html" . -}}
+{{- if $bundle -}}
+  {{- $lookup := partialCached "gallery-meta.html" . -}}
+  {{- range $image := $bundle.Resources.ByType "image" -}}
+    {{- $meta := index $lookup $image.Name -}}
+    {{- if and $meta (ne ($meta.section | default "") "archive") -}}
+      {{- with $image.Meta -}}
+        {{- with .Date -}}
+          {{- if gt .Year 2000 -}}
+            {{- $images = $images | append (dict "image" $image "Date" .) -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $images -}}

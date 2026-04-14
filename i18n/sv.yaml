@@ -63,6 +63,18 @@
 - id: activity_filter_talks
   translation: "Föredrag"
 
+# Gallery navigation
+- id: gallery_portfolio
+  translation: "Portfolio"
+- id: gallery_projects
+  translation: "Projekt"
+- id: gallery_general
+  translation: "Alla Foton"
+- id: gallery_archive
+  translation: "Arkiv"
+- id: gallery_filter_all
+  translation: "Alla"
+
 # Projects
 - id: project_status_active
   translation: "Aktiv"

@@ -1,0 +1,14 @@
+{{- /* Filter bubbles — JS-only client-side filtering via data-category on .gallery-item */ -}}
+{{- $categories := slice -}}
+{{- range site.Data.gallery.images -}}
+  {{- if and .category (ne (.section | default "") "archive") -}}
+    {{- $categories = $categories | append .category -}}
+  {{- end -}}
+{{- end -}}
+{{- $categories = $categories | uniq | sort -}}
+<nav class="gallery-filters" aria-label="Filter by category">
+  <button class="filter-pill active" data-category="all">{{ i18n "gallery_filter_all" }}</button>
+  {{- range $categories -}}
+    <button class="filter-pill" data-category="{{ . }}">{{ . | humanize | title }}</button>
+  {{- end -}}
+</nav>

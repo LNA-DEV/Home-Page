@@ -60,7 +60,7 @@
 }
 </script>
 {{- if .IsPage }}
-{{- if (or (eq .Params.Theme "gallery-page") (eq .Params.Theme "gallery-page-hidden")) }}
+{{- if (or (eq .Params.Theme "gallery-page") (eq .Params.Theme "gallery-page-hidden") (eq .Params.Theme "gallery-portfolio") (eq .Params.Theme "gallery-general") (eq .Params.Theme "gallery-archive") (eq .Params.Theme "gallery-project")) }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

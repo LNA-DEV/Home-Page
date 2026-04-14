@@ -1,3 +1,6 @@
 node_modules
 /public
 /resources/_gen/
+content/gallery/images/**
+!content/gallery/images/index.**
+.inbox/**

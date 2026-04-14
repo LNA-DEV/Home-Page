@@ -1,0 +1,12 @@
+{{- /*
+  gallery-bundle.html
+  Returns the headless gallery images bundle, always from the default (English) site.
+  This ensures all languages share the same image resources.
+*/ -}}
+{{- $bundle := "" -}}
+{{- range site.Sites -}}
+  {{- if not $bundle -}}
+    {{- $bundle = .GetPage "/gallery/images" -}}
+  {{- end -}}
+{{- end -}}
+{{- return $bundle -}}

@@ -1,26 +1,50 @@
-{{ $gallery := "" }}
-{{ $images := .Resources.ByType "image" }}
-{{ if gt (len $images) 0 }}
-  {{ $featured := ($images.GetMatch (.Params.featured_image | default "*feature*")) | default (index $images 0) }}
-  {{ $thumbnail := $featured.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
-  {{ $color := index $thumbnail.Colors 0 | default "transparent" }}
-  {{ $imageCount := 0 }}
-  {{ $albumCount := 0 }}
-  {{ if .IsPage }}
-    {{ $imageCount = len $images }}
-  {{ else }}
-    {{ range where .RegularPagesRecursive "Params.private" "ne" true }}
-      {{ $albumCount = add $albumCount 1 }}
-      {{ $imageCount = add $imageCount (len (.Resources.ByType "image")) }}
-    {{ end }}
-  {{ end }}
-  {{ $gallery = dict
-    "page" $
-    "images" $images
-    "thumbnail" $thumbnail
-    "color" $color
-    "albumCount" $albumCount
-    "imageCount" $imageCount
-  }}
-{{ end }}
-{{ return $gallery }}
+{{- $gallery := "" -}}
+{{- $bundle := partialCached "gallery-bundle.html" . -}}
+{{- if $bundle -}}
+  {{- $allBundleImages := $bundle.Resources.ByType "image" -}}
+  {{- $lookup := partialCached "gallery-meta.html" . -}}
+
+  {{- /* Determine filter from page params */ -}}
+  {{- $filterCategory := .Params.filter_category | default "" -}}
+  {{- $filterProject := .Params.project_slug | default "" -}}
+  {{- $filterArchive := eq .Params.Theme "gallery-archive" -}}
+
+  {{- /* Count matching images */ -}}
+  {{- $imageCount := 0 -}}
+  {{- range $allBundleImages -}}
+    {{- $meta := index $lookup .Name -}}
+    {{- if $meta -}}
+      {{- $include := true -}}
+      {{- if and $filterCategory (ne ($meta.category | default "") $filterCategory) -}}{{ $include = false }}{{ end -}}
+      {{- if and $filterProject (ne ($meta.project | default "") $filterProject) -}}{{ $include = false }}{{ end -}}
+      {{- if and $filterArchive (ne ($meta.section | default "") "archive") -}}{{ $include = false }}{{ end -}}
+      {{- if and (not $filterArchive) (eq ($meta.section | default "") "archive") -}}{{ $include = false }}{{ end -}}
+      {{- if $include -}}
+        {{- $imageCount = add $imageCount 1 -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- /* Find featured image */ -}}
+  {{- $featuredName := .Params.featured_image | default "" -}}
+  {{- $featured := "" -}}
+  {{- if $featuredName -}}
+    {{- $featured = $allBundleImages.GetMatch $featuredName -}}
+  {{- end -}}
+  {{- if not $featured -}}
+    {{- $featured = index $allBundleImages 0 -}}
+  {{- end -}}
+
+  {{- if $featured -}}
+    {{- $thumbnail := $featured.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
+    {{- $color := index $thumbnail.Colors 0 | default "transparent" -}}
+    {{- $gallery = dict
+      "page" $
+      "thumbnail" $thumbnail
+      "color" $color
+      "albumCount" 0
+      "imageCount" $imageCount
+    -}}
+  {{- end -}}
+{{- end -}}
+{{- return $gallery -}}

@@ -14,13 +14,26 @@
 {{- if .IsHome }}
 {{ with site.Params.keywords -}}<meta name="keywords" content="{{- range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}">{{ end }}
 {{- else }}
-{{- if (or (eq .Params.Theme "gallery-page") (eq .Params.Theme "gallery-page-hidden")) -}}
+{{- if eq .Params.Theme "gallery-portfolio" -}}
+<meta name="keywords" content="{{ if .Params.keywords -}}
+    {{- range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- else }}portfolio, photography{{ end -}}">
+{{- else if (or (eq .Params.Theme "gallery-page") (eq .Params.Theme "gallery-page-hidden") (eq .Params.Theme "gallery-archive") (eq .Params.Theme "gallery-project")) -}}
 {{- $allTags := slice -}}
-{{- range .Resources.ByType "image" -}}
-  {{- with .Params.tags -}}
+{{- $filterCategory := .Params.filter_category | default "" -}}
+{{- $filterProject := .Params.project_slug | default "" -}}
+{{- $filterArchive := eq .Params.Theme "gallery-archive" -}}
+{{- range site.Data.gallery.images -}}
+  {{- $include := true -}}
+  {{- if and $filterCategory (ne (.category | default "") $filterCategory) }}{{ $include = false }}{{ end -}}
+  {{- if and $filterProject (ne (.project | default "") $filterProject) }}{{ $include = false }}{{ end -}}
+  {{- if and $filterArchive (ne (.section | default "") "archive") }}{{ $include = false }}{{ end -}}
+  {{- if and (not $filterArchive) (eq (.section | default "") "archive") }}{{ $include = false }}{{ end -}}
+  {{- if $include -}}
+  {{- with .tags -}}
     {{- range . -}}
       {{- $allTags = $allTags | append . -}}
     {{- end -}}
+  {{- end -}}
   {{- end -}}
 {{- end -}}
 <meta name="keywords" content="{{ delimit ($allTags | uniq) ", " }}">

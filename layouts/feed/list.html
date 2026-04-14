@@ -42,22 +42,7 @@
   {{- $layout := .Layout }}
   {{- if and (ne $layout "search") (ne $layout "archives") (ne $layout "activity") (ne .Section "feed") }}
     {{- if eq .Section "gallery" }}
-      {{- /* For gallery pages, add each image as a separate item */ -}}
-      {{- if not (in .Path "/archive/") }}
-        {{- $page := . }}
-        {{- range .Resources.ByType "image" }}
-          {{- $image := . }}
-          {{- with .Meta }}
-            {{- /* Skip photos with invalid EXIF date (year <= 2000) */ -}}
-            {{- if gt .Date.Year 2000 }}
-              {{- $hash := $image.RelPermalink | hash.FNV32a }}
-              {{- $imageLink := printf "%s#%d" $page.Permalink $hash }}
-              {{- $item := dict "type" "photo" "title" $image.Name "date" .Date "permalink" $imageLink "page" $page "image" $image "description" "" }}
-              {{- $activityItems = $activityItems | append $item }}
-            {{- end }}
-          {{- end }}
-        {{- end }}
-      {{- end }}
+      {{- /* Gallery images are now handled below via headless bundle */ -}}
     {{- else if eq .Section "posts" }}
       {{- /* Only show posts from the posts section */ -}}
       {{- $year := .Date.Year }}
@@ -68,6 +53,26 @@
     {{- end }}
   {{- end }}
 {{- end }}
+
+{{- /* Add gallery images from headless bundle */ -}}
+{{- $galleryBundle := partialCached "gallery-bundle.html" . -}}
+{{- if $galleryBundle -}}
+  {{- $galleryPage := site.GetPage "/gallery" -}}
+  {{- $lookup := partialCached "gallery-meta.html" . -}}
+  {{- range $image := $galleryBundle.Resources.ByType "image" -}}
+    {{- $meta := index $lookup $image.Name -}}
+    {{- if and $meta (ne ($meta.section | default "") "archive") -}}
+      {{- with $image.Meta -}}
+        {{- if gt .Date.Year 2000 -}}
+          {{- $hash := $image.RelPermalink | hash.FNV32a -}}
+          {{- $imageLink := printf "%s#%d" $galleryPage.Permalink $hash -}}
+          {{- $item := dict "type" "photo" "title" $image.Name "date" .Date "permalink" $imageLink "page" $galleryPage "image" $image "description" "" -}}
+          {{- $activityItems = $activityItems | append $item -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
 
 {{- /* Sort all items by date descending */ -}}
 {{- $sortedItems := sort $activityItems "date" "desc" }}

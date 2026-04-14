@@ -60,33 +60,42 @@
     {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{- end -}}
 
-    {{- range $pages }}
-    {{- if not (in .Path "/archive/") -}}
-    {{ range .Resources.ByType "image" }}
+    {{- $bundle := partialCached "gallery-bundle.html" . -}}
+    {{- if $bundle -}}
+    {{- $lookup := partialCached "gallery-meta.html" . -}}
+    {{- range $bundle.Resources.ByType "image" -}}
+    {{- $meta := index $lookup .Name -}}
+    {{- if and $meta (ne ($meta.section | default "") "archive") (not $meta.portfolio) -}}
 
     <item>
       <title>{{ .Name }}</title>
-      <link>{{ strings.Replace .Permalink ( replace .Name " " "%20") "" }}#{{ .RelPermalink | hash.FNV32a }}</link>
-      <pubDate>{{ .Meta.Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      <link>{{ $.Permalink }}#{{ .RelPermalink | hash.FNV32a }}</link>
+      {{- with .Meta }}{{- with .Date }}
+      <pubDate>{{ .Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      {{- end }}{{- end }}
       {{- with $authorEmail }}<author>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</author>{{ end }}
       <guid>{{ .Permalink }}</guid>
       {{ $full := .Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) }}
       <media:content url="{{ $full.Permalink }}" type="image/jpeg"/>
       <description>
-        <img src="{{ $full.Permalink }}" alt="{{ partial "image-alt.html" . }}"/>          
+        <img src="{{ $full.Permalink }}" alt="{{ with $meta.alt }}{{ . }}{{ else }}{{ partial "image-alt.html" . }}{{ end }}"/>
         {{- if ne .Title .Name -}}
         <p> {{ .Title }} </p>
         {{ end }}
       </description>
-      {{ range .Params.Tags }}
+      {{ range $meta.tags }}
       <category>{{ . }}</category>
       {{- end }}
-      {{- if not .Params.Tags }}
+      {{- if not $meta.tags }}
       {{- $keywords := "" }}
-      {{- with .Meta.Exif.subject }}{{ $keywords = . }}{{ end }}
-      {{- if not $keywords }}{{ with .Meta.Exif.Subject }}{{ $keywords = . }}{{ end }}{{ end }}
-      {{- if not $keywords }}{{ with .Meta.Exif.Keywords }}{{ $keywords = . }}{{ end }}{{ end }}
-      {{- if not $keywords }}{{ with .Meta.XMP.Subject }}{{ $keywords = delimit . ", " }}{{ end }}{{ end }}
+      {{- with .Meta }}
+      {{- with .Exif }}
+      {{- with .subject }}{{ $keywords = . }}{{ end }}
+      {{- if not $keywords }}{{ with .Subject }}{{ $keywords = . }}{{ end }}{{ end }}
+      {{- if not $keywords }}{{ with .Keywords }}{{ $keywords = . }}{{ end }}{{ end }}
+      {{- end }}
+      {{- if not $keywords }}{{ with .XMP }}{{ with .Subject }}{{ $keywords = delimit . ", " }}{{ end }}{{ end }}{{ end }}
+      {{- end }}
       {{- with $keywords }}
         {{- range split . ", " }}
           {{- if . }}
@@ -98,7 +107,7 @@
     </item>
     {{- end -}}
     {{- end -}}
-    {{ end }}
+    {{- end }}
     
   </channel>
 </rss>

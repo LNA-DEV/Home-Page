@@ -1,2 +1,20 @@
-{{- $alt := .Params.Alt | default .Meta.XMP.Notes | default .Meta.Exif.ImageDescription | default "" -}}
+{{- $alt := "" -}}
+{{- with .Params.Alt -}}
+  {{- $alt = . -}}
+{{- else -}}
+  {{- with .Meta -}}
+    {{- with .XMP -}}
+      {{- with .Notes -}}
+        {{- $alt = . -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if not $alt -}}
+      {{- with .Exif -}}
+        {{- with .ImageDescription -}}
+          {{- $alt = . -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
 {{- return $alt -}}

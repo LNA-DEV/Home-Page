@@ -1,0 +1,8 @@
+{{- $galleryPage := site.GetPage "/gallery" -}}
+{{- if $galleryPage -}}
+<nav class="gallery-breadcrumb" aria-label="Breadcrumb">
+  <a href="{{ $galleryPage.RelPermalink }}">{{ $galleryPage.Title }}</a>
+  <span>/</span>
+  <span>{{ .Title }}</span>
+</nav>
+{{- end -}}

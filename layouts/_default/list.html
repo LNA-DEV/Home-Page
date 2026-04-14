@@ -1,25 +1,81 @@
 {{- define "main" }}
 
 {{- if eq .Params.Theme "gallery-home" }}
+<div class="gallery-home-center">
+<header class="page-header gallery-page-header">
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}
+  <div class="post-description">{{ . }}</div>
+  {{- end }}
+</header>
+{{ partial "featured.html" . }}
+<nav class="gallery-nav">
+  {{- $bundle := partialCached "gallery-bundle.html" . -}}
+  {{- if $bundle -}}
+    {{- $allImages := $bundle.Resources.ByType "image" -}}
+    {{- $lookup := partialCached "gallery-meta.html" . -}}
 
+    {{- /* Projects card — use first project image */ -}}
+    {{- $projectImg := "" -}}
+    {{- range $allImages -}}
+      {{- $meta := index $lookup .Name -}}
+      {{- if and (not $projectImg) $meta $meta.project -}}
+        {{- $projectImg = . -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if not $projectImg }}{{ $projectImg = index $allImages 0 }}{{ end -}}
+    {{- $projectThumb := $projectImg.Filter (slice images.AutoOrient (images.Process "fill 600x400")) -}}
+
+    {{- /* General card — use a non-archive, non-portfolio image */ -}}
+    {{- $generalImg := "" -}}
+    {{- range $allImages -}}
+      {{- $meta := index $lookup .Name -}}
+      {{- if and (not $generalImg) $meta (ne ($meta.section | default "") "archive") (not $meta.portfolio) (not $meta.project) -}}
+        {{- $generalImg = . -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if not $generalImg }}{{ $generalImg = index $allImages 0 }}{{ end -}}
+    {{- $generalThumb := $generalImg.Filter (slice images.AutoOrient (images.Process "fill 600x400")) -}}
+
+    <a href="{{ .RelPermalink }}projects/" class="gallery-nav-card" style="background-image: url('{{ $projectThumb.RelPermalink }}')">
+      <span>{{ i18n "gallery_projects" }}</span>
+    </a>
+    <a href="{{ .RelPermalink }}general/" class="gallery-nav-card" style="background-image: url('{{ $generalThumb.RelPermalink }}')">
+      <span>{{ i18n "gallery_general" }}</span>
+    </a>
+  {{- end -}}
+</nav>
+<div class="gallery-archive-link">
+  <a href="{{ .RelPermalink }}archive/">{{ i18n "gallery_archive" }}</a>
+</div>
+</div>{{/* end gallery-home-center */}}
+
+{{- else if eq .Params.Theme "gallery-general-home" }}
+
+<header class="page-header gallery-page-header">
+  {{- partial "gallery-breadcrumb.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}
+  <div class="post-description">{{ . }}</div>
+  {{- end }}
+</header>
+
+{{- partial "gallery-filter-bubbles.html" . }}
+{{- partial "gallery.html" . }}
+
+{{- else if eq .Params.Theme "gallery-projects-list" }}
+
+{{- partial "gallery-breadcrumb.html" . }}
 <hgroup>
-  <h1>Photography</h1>
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}<p>{{ . }}</p>{{ end }}
 </hgroup>
 
-{{- $site := site }}
-{{/* TODO  {{ partial "featured.html" $site }}   */}}
 <section class="galleries">
-  {{- range where $site.Pages "Params.theme" "eq" "gallery-page" }}
+  {{- range .RegularPages.ByWeight }}
     {{- partial "album-card.html" . }}
   {{- end }}
 </section>
-{{- else if eq .Params.Theme "gallery-home-hidden" }}
-{{- $site := site }}
-{{/* TODO  {{ partial "featured.html" $site }}   */}}
-<section class="galleries">
-  {{- range where $site.Pages "Params.theme" "eq" "gallery-page-hidden" }}
-    {{- partial "album-card.html" . }}
-  {{- end }}
 {{- else }}
 {{- if not .IsHome | and .Title }}
 <header class="page-header">

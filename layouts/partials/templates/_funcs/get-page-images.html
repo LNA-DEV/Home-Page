@@ -12,12 +12,34 @@
       "Permalink" .Permalink) }}
   {{- end }}
 {{- end }}
-{{/* Gallery page fallback: pick a representative image when no featured/cover image exists. */}}
-{{- if and (not $imgParams) (not $imgs) (or (eq .Params.Theme "gallery-page") (eq .Params.Theme "gallery-page-hidden")) }}
-  {{- $images := $resources }}
-  {{- if gt (len $images) 0 }}
-    {{- $featured := ($images.GetMatch (.Params.featured_image | default "*feature*")) | default (index $images 0) }}
-    {{- $processed := $featured.Filter (slice images.AutoOrient (images.Process "fit 1200x630")) }}
+{{/* Gallery page fallback: pick a representative image from the headless bundle. */}}
+{{- if and (not $imgParams) (not $imgs) (or (eq .Params.Theme "gallery-page") (eq .Params.Theme "gallery-page-hidden") (eq .Params.Theme "gallery-general") (eq .Params.Theme "gallery-archive") (eq .Params.Theme "gallery-project")) }}
+  {{- $bundle := partialCached "gallery-bundle.html" . }}
+  {{- if $bundle }}
+    {{- $bundleImages := $bundle.Resources.ByType "image" }}
+    {{- $featuredName := .Params.featured_image | default "" }}
+    {{- $featured := "" }}
+    {{- if $featuredName }}
+      {{- $featured = $bundleImages.GetMatch $featuredName }}
+    {{- end }}
+    {{- if not $featured }}
+      {{- $featured = index $bundleImages 0 }}
+    {{- end }}
+    {{- with $featured }}
+      {{- $processed := .Filter (slice images.AutoOrient (images.Process "fit 1200x630")) }}
+      {{- $imgs = $imgs | append (dict
+        "Image" $processed
+        "RelPermalink" $processed.RelPermalink
+        "Permalink" $processed.Permalink) }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{/* Portfolio page fallback: pick first collected portfolio image. */}}
+{{- if and (not $imgParams) (not $imgs) (eq .Params.Theme "gallery-portfolio") }}
+  {{- $collected := partial "collect-portfolio.html" . }}
+  {{- with index $collected 0 }}
+    {{- $image := .image }}
+    {{- $processed := $image.Filter (slice images.AutoOrient (images.Process "fit 1200x630")) }}
     {{- $imgs = $imgs | append (dict
       "Image" $processed
       "RelPermalink" $processed.RelPermalink

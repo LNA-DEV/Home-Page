@@ -1,26 +1,13 @@
 <section class="gallery">
   <div id="gallery">
-    {{- /* Build filter from page params */ -}}
-    {{- $filter := dict -}}
-    {{- with .Params.filter_category -}}
-      {{- $filter = merge $filter (dict "category" .) -}}
-    {{- end -}}
-    {{- with .Params.project_slug -}}
-      {{- $filter = merge $filter (dict "project" .) -}}
-    {{- end -}}
-    {{- /* For archive pages, show only archive images */ -}}
-    {{- if eq .Params.Theme "gallery-archive" -}}
-      {{- $filter = merge $filter (dict "section" "archive") -}}
-    {{- end -}}
-
-    {{- $images := partial "collect-images.html" (dict "context" . "filter" $filter) -}}
+    {{- $images := partial "collect-portfolio.html" . -}}
     {{- range sort $images (.Params.sort_by | default "Name") (.Params.sort_order | default "asc") -}}
       {{- $image := .image -}}
       {{- $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
       {{- $full := $image.Filter (slice images.AutoOrient (images.Process "fit 4000x4000")) -}}
       {{- $color := index $thumbnail.Colors 0 | default "transparent" -}}
       {{- $ratio := div (mul $thumbnail.Width 1.0) $thumbnail.Height }}
-      <a class="gallery-item" href="{{ $image.RelPermalink }}" data-id="{{ $image.RelPermalink | hash.FNV32a }}" data-image-name="{{ $image.Name }}" data-category="{{ .Category }}" data-pswp-src="{{ $full.RelPermalink }}" data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}" title="{{ .Title | default .Alt }}" itemscope itemtype="https://schema.org/ImageObject" style="flex-grow: {{ printf "%.4f" $ratio }}; --ratio: {{ printf "%.4f" $ratio }}">
+      <a class="gallery-item" href="{{ $image.RelPermalink }}" data-id="{{ $image.RelPermalink | hash.FNV32a }}" data-image-name="{{ $image.Name }}" data-pswp-src="{{ $full.RelPermalink }}" data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}" title="{{ .Title | default .Alt }}" itemscope itemtype="https://schema.org/ImageObject" style="flex-grow: {{ printf "%.4f" $ratio }}; --ratio: {{ printf "%.4f" $ratio }}">
         <figure style="background-color: {{ $color }}">
           <img loading="lazy" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" src="{{ $thumbnail.RelPermalink }}" alt="{{ .Alt }}" />
         </figure>

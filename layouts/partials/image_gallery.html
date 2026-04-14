@@ -2,15 +2,22 @@
 <div class="gallery-view">
   <h2 class="home-header">{{ i18n "photography_title" }}</h2>
   {{- $images := partial "get_images.html" . -}}
-  {{- $sorted := collections.Sort $images ".Meta.Date" "desc" -}}
+  {{- $sorted := collections.Sort $images "Date" "desc" -}}
   {{- $finalItems := collections.First 8 $sorted -}}
-  {{- partial "image_gallery_items.html" $finalItems }}
+  {{- $imageResources := slice -}}
+  {{- range $finalItems -}}
+    {{- $imageResources = $imageResources | append .image -}}
+  {{- end -}}
+  {{- partial "image_gallery_items.html" $imageResources }}
+  {{- $galleryPage := site.GetPage "/gallery" -}}
+  {{- with $galleryPage }}
   <div class="responsive">
     <div class="gallery">
-      <a href="/en/gallery">
-        <p class="more">All photos</p>
+      <a href="{{ .RelPermalink }}">
+        <p class="more">{{ i18n "gallery_general" }}</p>
       </a>
     </div>
   </div>
+  {{- end }}
   <div class="clearfix"></div>
 </div>

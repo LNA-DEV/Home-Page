@@ -124,7 +124,7 @@ languages:
           url: /projects/
           weight: 28
         - name: 📷 Fotografie
-          url: ../en/gallery/
+          url: /gallery/
           weight: 30
   sv:
     languageName: "🇸🇪 Sv"
@@ -157,7 +157,7 @@ languages:
           url: /categories/
           weight: 10
         - name: 📷 Fotografi
-          url: ../en/gallery/
+          url: /gallery/
           weight: 30
 
 params:

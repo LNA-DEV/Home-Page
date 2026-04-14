@@ -1,0 +1,15 @@
+{{- /*
+  gallery-meta.html
+  Returns a dict keyed by image filename with metadata from data/gallery.yaml.
+  Use with partialCached for O(1) builds after first call.
+
+  Usage:
+    {{ $lookup := partialCached "gallery-meta.html" . }}
+    {{ $meta := index $lookup "My Image.JPG" }}
+    {{ $meta.category }} {{ $meta.tags }} {{ $meta.alt }} etc.
+*/ -}}
+{{- $lookup := dict -}}
+{{- range site.Data.gallery.images -}}
+  {{- $lookup = merge $lookup (dict .src .) -}}
+{{- end -}}
+{{- return $lookup -}}

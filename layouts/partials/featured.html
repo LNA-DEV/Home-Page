@@ -1,0 +1,19 @@
+{{- $portfolioPages := where site.Pages "Params.theme" "eq" "gallery-portfolio" -}}
+{{- with index $portfolioPages 0 -}}
+  {{- $portfolioPage := . -}}
+  {{- $images := partial "collect-portfolio.html" . -}}
+  {{- with index $images 0 -}}
+    {{- $image := .image -}}
+    {{- $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 1200x630")) -}}
+    <section class="featured">
+      <a class="featured-card" href="{{ $portfolioPage.RelPermalink }}"
+         style="background-image: url('{{ $thumbnail.RelPermalink }}')"
+         title="{{ $portfolioPage.Title }}">
+        <div>
+          <h2>{{ $portfolioPage.Title }}</h2>
+          <p>{{ $portfolioPage.Description }}</p>
+        </div>
+      </a>
+    </section>
+  {{- end -}}
+{{- end -}}

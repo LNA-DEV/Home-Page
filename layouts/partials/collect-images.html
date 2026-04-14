@@ -1,0 +1,227 @@
+{{- /*
+  collect-images.html
+  Central partial for fetching and filtering images from the headless gallery bundle.
+  Metadata is read from data/gallery.yaml via the gallery-meta.html lookup map.
+
+  Usage:
+    {{ $images := partial "collect-images.html" (dict "context" . "filter" (dict "category" "animals")) }}
+
+  Filter keys (all optional):
+    - category: filter by category (animals, landscape, city, plants, portrait, others)
+    - section: filter by section (general, archive) — if omitted, excludes archive
+    - portfolio: if true, only return portfolio images
+    - project: filter by project slug
+    - excludeArchive: if true (default), exclude archive images
+*/ -}}
+
+{{- $filter := .filter | default dict -}}
+{{- $collected := slice -}}
+
+{{- $bundle := partialCached "gallery-bundle.html" . -}}
+{{- if not $bundle -}}
+  {{- errorf "collect-images: headless bundle at /gallery/images not found" -}}
+{{- end -}}
+
+{{- /* Build lookup map from data/gallery.yaml (cached across calls) */ -}}
+{{- $lookup := partialCached "gallery-meta.html" . -}}
+
+{{- range $image := $bundle.Resources.ByType "image" -}}
+  {{- $meta := index $lookup $image.Name -}}
+  {{- if not $meta -}}
+    {{- continue -}}
+  {{- end -}}
+
+  {{- /* Apply filters */ -}}
+  {{- $include := true -}}
+
+  {{- with index $filter "category" -}}
+    {{- if ne ($meta.category | default "") . -}}
+      {{- $include = false -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with index $filter "section" -}}
+    {{- if ne ($meta.section | default "") . -}}
+      {{- $include = false -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $excludeArchive := index $filter "excludeArchive" | default true -}}
+    {{- if $excludeArchive -}}
+      {{- if eq ($meta.section | default "") "archive" -}}
+        {{- $include = false -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with index $filter "portfolio" -}}
+    {{- if not $meta.portfolio -}}
+      {{- $include = false -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with index $filter "project" -}}
+    {{- if ne ($meta.project | default "") . -}}
+      {{- $include = false -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- if $include -}}
+    {{- /* Extract EXIF metadata */ -}}
+    {{- $title := "" -}}
+    {{- $date := "" -}}
+    {{- $aperture := "" -}}
+    {{- $shutterSpeed := "" -}}
+    {{- $iso := "" -}}
+    {{- $focalLength := "" -}}
+    {{- $cameraModel := "" -}}
+    {{- $lensModel := "" -}}
+    {{- $copyright := "" -}}
+    {{- $artist := "" -}}
+    {{- $keywords := "" -}}
+
+    {{- with $image.Meta -}}
+      {{- $date = .Date -}}
+      {{- with .Exif.ImageDescription -}}
+        {{- $title = . -}}
+      {{- end -}}
+      {{- with .Exif.Copyright -}}
+        {{- $copyright = . -}}
+      {{- end -}}
+      {{- with .Exif.Artist -}}
+        {{- $artist = . -}}
+      {{- end -}}
+      {{- with .Exif.subject -}}
+        {{- $keywords = . -}}
+      {{- end -}}
+      {{- if not $keywords -}}
+        {{- with .Exif.Subject -}}
+          {{- $keywords = . -}}
+        {{- end -}}
+      {{- end -}}
+      {{- if not $keywords -}}
+        {{- with .Exif.Keywords -}}
+          {{- $keywords = . -}}
+        {{- end -}}
+      {{- end -}}
+      {{- if not $keywords -}}
+        {{- with .XMP.Subject -}}
+          {{- $keywords = delimit . ", " -}}
+        {{- end -}}
+      {{- end -}}
+      {{- with .Exif.FNumber -}}
+        {{- $fStr := printf "%v" . -}}
+        {{- if strings.Contains $fStr "/" -}}
+          {{- $parts := split $fStr "/" -}}
+          {{- $num := float (index $parts 0) -}}
+          {{- $den := float (index $parts 1) -}}
+          {{- $aperture = printf "f/%.1f" (div $num $den) -}}
+        {{- else -}}
+          {{- $aperture = printf "f/%.1f" (float .) -}}
+        {{- end -}}
+      {{- end -}}
+      {{- with .Exif.ExposureTime -}}
+        {{- $expStr := printf "%v" . -}}
+        {{- if strings.Contains $expStr "/" -}}
+          {{- $shutterSpeed = $expStr -}}
+        {{- else -}}
+          {{- $exp := float . -}}
+          {{- if gt $exp 0 -}}
+            {{- if lt $exp 1.0 -}}
+              {{- $shutterSpeed = printf "1/%ds" (int (math.Round (div 1.0 $exp))) -}}
+            {{- else -}}
+              {{- $shutterSpeed = printf "%.1fs" $exp -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+      {{- with .Exif.ISO -}}
+        {{- $iso = printf "ISO %v" . -}}
+      {{- end -}}
+      {{- with .Exif.FocalLength -}}
+        {{- $focalLength = printf "%vmm" . -}}
+      {{- end -}}
+      {{- with .Exif.Model -}}
+        {{- $cameraModel = . -}}
+      {{- end -}}
+      {{- with .Exif.LensModel -}}
+        {{- $lensModel = . -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- /* Override EXIF with data file values where available */ -}}
+    {{- with $meta.title -}}
+      {{- $title = . -}}
+    {{- end -}}
+
+    {{- /* Alt text: data file > EXIF */ -}}
+    {{- $alt := "" -}}
+    {{- with $meta.alt -}}
+      {{- $alt = . -}}
+    {{- else -}}
+      {{- $alt = partial "image-alt.html" $image -}}
+    {{- end -}}
+
+    {{- /* License resolution: data file > EXIF copyright > site default */ -}}
+    {{- $licenseText := "" -}}
+    {{- with $meta.license -}}
+      {{- $licenseText = . -}}
+    {{- else -}}
+      {{- with $copyright -}}
+        {{- $licenseText = . -}}
+      {{- else -}}
+        {{- with site.Params.defaultLicense -}}
+          {{- $licenseText = . -}}
+        {{- else -}}
+          {{- errorf "No license found for image %s and no default license configured" $image.Name -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- $licenseUrl := "" -}}
+    {{- with index site.Data.licenseMap $licenseText -}}
+      {{- $licenseUrl = . -}}
+    {{- else -}}
+      {{- errorf "License text %q for image %s not found in site.Data.licenseMap" $licenseText $image.Name -}}
+    {{- end -}}
+
+    {{- /* Artist resolution: data file > EXIF > site author */ -}}
+    {{- $resolvedArtist := "" -}}
+    {{- with $meta.artist -}}
+      {{- $resolvedArtist = . -}}
+    {{- else -}}
+      {{- with $artist -}}
+        {{- $resolvedArtist = . -}}
+      {{- else -}}
+        {{- with site.Params.author.name -}}
+          {{- $resolvedArtist = . -}}
+        {{- else -}}
+          {{- errorf "No artist found for image %s and no site author configured" $image.Name -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- $collected = $collected | append (dict
+      "Name" $image.Name
+      "Title" $title
+      "Alt" $alt
+      "Date" $date
+      "Aperture" $aperture
+      "ShutterSpeed" $shutterSpeed
+      "ISO" $iso
+      "FocalLength" $focalLength
+      "CameraModel" $cameraModel
+      "LensModel" $lensModel
+      "Copyright" $copyright
+      "Artist" $artist
+      "LicenseText" $licenseText
+      "LicenseUrl" $licenseUrl
+      "ResolvedArtist" $resolvedArtist
+      "Keywords" $keywords
+      "Category" ($meta.category | default "")
+      "image" $image
+      )
+    -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $collected -}}
