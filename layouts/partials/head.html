@@ -22,7 +22,7 @@
 {{- $filterCategory := .Params.filter_category | default "" -}}
 {{- $filterProject := .Params.project_slug | default "" -}}
 {{- $filterArchive := eq .Params.Theme "gallery-archive" -}}
-{{- range site.Data.gallery.images -}}
+{{- range hugo.Data.gallery.images -}}
   {{- $include := true -}}
   {{- if and $filterCategory (ne (.category | default "") $filterCategory) }}{{ $include = false }}{{ end -}}
   {{- if and $filterProject (ne (.project | default "") $filterProject) }}{{ $include = false }}{{ end -}}

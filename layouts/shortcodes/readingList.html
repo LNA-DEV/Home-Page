@@ -2,7 +2,7 @@
   {{/* Helper map to convert language codes to flag emojis */}}
   {{ $langFlags := dict "en" "🇬🇧" "de" "🇩🇪" "sv" "🇸🇪" "pl" "🇵🇱" "no" "🇳🇴" }}
 
-  {{ range .Site.Data.reading }}
+  {{ range hugo.Data.reading }}
   {{ $book := . }}
   <div class="book-entry">
     {{ if .cover }}

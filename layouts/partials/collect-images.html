@@ -179,10 +179,10 @@
     {{- end -}}
 
     {{- $licenseUrl := "" -}}
-    {{- with index site.Data.licenseMap $licenseText -}}
+    {{- with index hugo.Data.licenseMap $licenseText -}}
       {{- $licenseUrl = . -}}
     {{- else -}}
-      {{- errorf "License text %q for image %s not found in site.Data.licenseMap" $licenseText $image.Name -}}
+      {{- errorf "License text %q for image %s not found in hugo.Data.licenseMap" $licenseText $image.Name -}}
     {{- end -}}
 
     {{- /* Artist resolution: data file > EXIF > site author */ -}}

@@ -1,6 +1,6 @@
 {{- /* Filter bubbles — JS-only client-side filtering via data-category on .gallery-item */ -}}
 {{- $categories := slice -}}
-{{- range site.Data.gallery.images -}}
+{{- range hugo.Data.gallery.images -}}
   {{- if and .category (ne (.section | default "") "archive") -}}
     {{- $categories = $categories | append .category -}}
   {{- end -}}

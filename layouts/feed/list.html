@@ -26,7 +26,7 @@
 {{- $activityItems := slice }}
 
 {{- /* Add talks from data file */ -}}
-{{- range site.Data.talks }}
+{{- range hugo.Data.talks }}
   {{- $date := time .date }}
   {{- if gt $date.Year 2000 }}
     {{- $langFlag := "" }}

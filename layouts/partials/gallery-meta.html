@@ -14,7 +14,7 @@
 */ -}}
 {{- $bySrc := dict -}}
 {{- $byId  := dict -}}
-{{- range site.Data.gallery.images -}}
+{{- range hugo.Data.gallery.images -}}
   {{- if not .id -}}
     {{- errorf "data/gallery.yaml: entry %q has no id (run scripts/add-gallery-ids.py)" .src -}}
   {{- end -}}
