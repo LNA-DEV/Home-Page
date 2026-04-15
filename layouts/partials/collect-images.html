@@ -23,7 +23,8 @@
 {{- end -}}
 
 {{- /* Build lookup map from data/gallery.yaml (cached across calls) */ -}}
-{{- $lookup := partialCached "gallery-meta.html" . -}}
+{{- $metaAll := partialCached "gallery-meta.html" . -}}
+{{- $lookup  := $metaAll.bySrc -}}
 
 {{- range $image := $bundle.Resources.ByType "image" -}}
   {{- $meta := index $lookup $image.Name -}}
@@ -201,6 +202,7 @@
     {{- end -}}
 
     {{- $collected = $collected | append (dict
+      "Id" $meta.id
       "Name" $image.Name
       "Title" $title
       "Alt" $alt

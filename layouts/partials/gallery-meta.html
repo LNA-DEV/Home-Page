@@ -1,15 +1,24 @@
 {{- /*
   gallery-meta.html
-  Returns a dict keyed by image filename with metadata from data/gallery.yaml.
+  Returns metadata from data/gallery.yaml as two lookup dicts sharing the same entries:
+    .bySrc — keyed by filename (matches $image.Name from the headless bundle)
+    .byId  — keyed by UUID id (used by featured_image and other id-based lookups)
   Use with partialCached for O(1) builds after first call.
 
+  Hard-fails if any entry is missing an id — run scripts/add-gallery-ids.py to fix.
+
   Usage:
-    {{ $lookup := partialCached "gallery-meta.html" . }}
-    {{ $meta := index $lookup "My Image.JPG" }}
-    {{ $meta.category }} {{ $meta.tags }} {{ $meta.alt }} etc.
+    {{ $metaAll := partialCached "gallery-meta.html" . }}
+    {{ $bySrc   := $metaAll.bySrc }}
+    {{ $meta    := index $bySrc "My Image.JPG" }}
 */ -}}
-{{- $lookup := dict -}}
+{{- $bySrc := dict -}}
+{{- $byId  := dict -}}
 {{- range site.Data.gallery.images -}}
-  {{- $lookup = merge $lookup (dict .src .) -}}
+  {{- if not .id -}}
+    {{- errorf "data/gallery.yaml: entry %q has no id (run scripts/add-gallery-ids.py)" .src -}}
+  {{- end -}}
+  {{- $bySrc = merge $bySrc (dict .src .) -}}
+  {{- $byId  = merge $byId  (dict .id  .) -}}
 {{- end -}}
-{{- return $lookup -}}
+{{- return (dict "bySrc" $bySrc "byId" $byId) -}}

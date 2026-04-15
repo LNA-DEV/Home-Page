@@ -62,19 +62,20 @@
 
     {{- $bundle := partialCached "gallery-bundle.html" . -}}
     {{- if $bundle -}}
-    {{- $lookup := partialCached "gallery-meta.html" . -}}
+    {{- $metaAll := partialCached "gallery-meta.html" . -}}
+    {{- $lookup  := $metaAll.bySrc -}}
     {{- range $bundle.Resources.ByType "image" -}}
     {{- $meta := index $lookup .Name -}}
     {{- if and $meta (ne ($meta.section | default "") "archive") (not $meta.portfolio) -}}
 
     <item>
       <title>{{ .Name }}</title>
-      <link>{{ $.Permalink }}#{{ .RelPermalink | hash.FNV32a }}</link>
+      <link>{{ $.Permalink }}#{{ $meta.id }}</link>
       {{- with .Meta }}{{- with .Date }}
       <pubDate>{{ .Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
       {{- end }}{{- end }}
       {{- with $authorEmail }}<author>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</author>{{ end }}
-      <guid>{{ .Permalink }}</guid>
+      <guid isPermaLink="false">{{ $meta.id }}</guid>
       {{ $full := .Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) }}
       <media:content url="{{ $full.Permalink }}" type="image/jpeg"/>
       <description>

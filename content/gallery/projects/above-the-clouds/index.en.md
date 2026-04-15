@@ -7,6 +7,6 @@ sort_order: desc
 params:
   theme: gallery-project
   project_slug: above-the-clouds
-  featured_image: DJI_0915.jpg
+  featured_image: 1cd410f4-95c9-454d-acc8-5ff009f5825b
   category: landscape
 ---

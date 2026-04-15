@@ -1,0 +1,20 @@
+{{- /*
+  resolve-featured-image.html
+  Resolves a featured_image front-matter value (UUID or legacy filename) to a bundle resource.
+  Looks the value up in gallery-meta byId; if not found, falls back to a filename match.
+
+  Usage:
+    {{ $img := partial "resolve-featured-image.html" (dict "page" . "bundleImages" $bundleImages) }}
+*/ -}}
+{{- $featured := "" -}}
+{{- $val := .page.Params.featured_image | default "" -}}
+{{- if $val -}}
+  {{- $metaAll := partialCached "gallery-meta.html" .page -}}
+  {{- with index $metaAll.byId $val -}}
+    {{- $featured = $.bundleImages.GetMatch .src -}}
+  {{- else -}}
+    {{- /* legacy: filename in front-matter */ -}}
+    {{- $featured = .bundleImages.GetMatch $val -}}
+  {{- end -}}
+{{- end -}}
+{{- return $featured -}}

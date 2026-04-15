@@ -1,7 +1,8 @@
 {{- $images := slice -}}
 {{- $bundle := partialCached "gallery-bundle.html" . -}}
 {{- if $bundle -}}
-  {{- $lookup := partialCached "gallery-meta.html" . -}}
+  {{- $metaAll := partialCached "gallery-meta.html" . -}}
+  {{- $lookup  := $metaAll.bySrc -}}
   {{- range $image := $bundle.Resources.ByType "image" -}}
     {{- $meta := index $lookup $image.Name -}}
     {{- if and $meta (ne ($meta.section | default "") "archive") -}}

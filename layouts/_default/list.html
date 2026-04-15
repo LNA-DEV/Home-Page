@@ -13,7 +13,8 @@
   {{- $bundle := partialCached "gallery-bundle.html" . -}}
   {{- if $bundle -}}
     {{- $allImages := $bundle.Resources.ByType "image" -}}
-    {{- $lookup := partialCached "gallery-meta.html" . -}}
+    {{- $metaAll := partialCached "gallery-meta.html" . -}}
+    {{- $lookup  := $metaAll.bySrc -}}
 
     {{- /* Projects card — use first project image */ -}}
     {{- $projectImg := "" -}}

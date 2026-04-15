@@ -2,7 +2,8 @@
 {{- $bundle := partialCached "gallery-bundle.html" . -}}
 {{- if $bundle -}}
   {{- $allBundleImages := $bundle.Resources.ByType "image" -}}
-  {{- $lookup := partialCached "gallery-meta.html" . -}}
+  {{- $metaAll := partialCached "gallery-meta.html" . -}}
+  {{- $lookup  := $metaAll.bySrc -}}
 
   {{- /* Determine filter from page params */ -}}
   {{- $filterCategory := .Params.filter_category | default "" -}}
@@ -26,11 +27,7 @@
   {{- end -}}
 
   {{- /* Find featured image */ -}}
-  {{- $featuredName := .Params.featured_image | default "" -}}
-  {{- $featured := "" -}}
-  {{- if $featuredName -}}
-    {{- $featured = $allBundleImages.GetMatch $featuredName -}}
-  {{- end -}}
+  {{- $featured := partial "resolve-featured-image.html" (dict "page" $ "bundleImages" $allBundleImages) -}}
   {{- if not $featured -}}
     {{- $featured = index $allBundleImages 0 -}}
   {{- end -}}

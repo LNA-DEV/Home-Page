@@ -1,5 +1,9 @@
+{{- $metaAll := partialCached "gallery-meta.html" . -}}
+{{- $lookup  := $metaAll.bySrc -}}
 {{- range . -}}
-{{- $link := strings.Replace .Permalink ( print "/" .Name ) (print "#" (.RelPermalink | hash.FNV32a)) -}}
+{{- $meta := index $lookup .Name -}}
+{{- $id := "" -}}{{- with $meta }}{{ $id = .id }}{{ end -}}
+{{- $link := strings.Replace .Permalink ( print "/" .Name ) (print "#" $id) -}}
 {{- $image := .Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
 {{- $alt := partial "image-alt.html" . }}
 <div class="responsive">

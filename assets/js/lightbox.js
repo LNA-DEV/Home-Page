@@ -31,21 +31,21 @@ function getUserToken() {
 }
 
 // Check if user has liked an image
-async function getNativeLikeStatus(imageName) {
-  if (nativeLikeStatusCache.has(imageName)) {
-    return nativeLikeStatusCache.get(imageName);
+async function getNativeLikeStatus(imageId) {
+  if (nativeLikeStatusCache.has(imageId)) {
+    return nativeLikeStatusCache.get(imageId);
   }
 
   try {
     const token = getUserToken();
     const response = await fetch(
-      `${companionUrl}/api/interactions/native/${encodeURIComponent(imageName)}/status?token=${encodeURIComponent(token)}`
+      `${companionUrl}/api/interactions/native/${encodeURIComponent(imageId)}/status?token=${encodeURIComponent(token)}`
     );
     if (!response.ok) return false;
 
     const data = await response.json();
     const liked = data.has_liked || false;
-    nativeLikeStatusCache.set(imageName, liked);
+    nativeLikeStatusCache.set(imageId, liked);
     return liked;
   } catch (error) {
     return false;
@@ -53,13 +53,13 @@ async function getNativeLikeStatus(imageName) {
 }
 
 // Toggle native like for an image
-async function toggleNativeLike(imageName) {
+async function toggleNativeLike(imageId) {
   const token = getUserToken();
-  const currentlyLiked = nativeLikeStatusCache.get(imageName) || false;
+  const currentlyLiked = nativeLikeStatusCache.get(imageId) || false;
 
   try {
     const response = await fetch(
-      `${companionUrl}/api/interactions/native/${encodeURIComponent(imageName)}/like`,
+      `${companionUrl}/api/interactions/native/${encodeURIComponent(imageId)}/like`,
       {
         method: currentlyLiked ? "DELETE" : "POST",
         headers: { "Content-Type": "application/json" },
@@ -69,9 +69,9 @@ async function toggleNativeLike(imageName) {
 
     if (response.ok) {
       const newStatus = !currentlyLiked;
-      nativeLikeStatusCache.set(imageName, newStatus);
+      nativeLikeStatusCache.set(imageId, newStatus);
       // Invalidate like data cache to force refresh
-      likeDataCache.delete(imageName);
+      likeDataCache.delete(imageId);
       return newStatus;
     }
     return currentlyLiked;
@@ -81,20 +81,20 @@ async function toggleNativeLike(imageName) {
 }
 
 // Fetch like data for a single image
-async function fetchLikeData(imageName) {
-  if (likeDataCache.has(imageName)) {
-    return likeDataCache.get(imageName);
+async function fetchLikeData(imageId) {
+  if (likeDataCache.has(imageId)) {
+    return likeDataCache.get(imageId);
   }
 
   try {
-    const response = await fetch(`${companionUrl}/api/interactions/post/all/${encodeURIComponent(imageName)}`);
+    const response = await fetch(`${companionUrl}/api/interactions/post/all/${encodeURIComponent(imageId)}`);
     if (!response.ok) return { platforms: [], total: 0 };
 
     const data = await response.json();
     const platforms = data.filter((p) => p.likes > 0);
     const total = data.reduce((sum, platform) => sum + (platform.likes || 0), 0);
     const result = { platforms, total };
-    likeDataCache.set(imageName, result);
+    likeDataCache.set(imageId, result);
     return result;
   } catch (error) {
     return { platforms: [], total: 0 };
@@ -124,17 +124,17 @@ function renderLikeCount(el, total, platforms, liked, large = false) {
 
 // Fetch and display like counts for gallery images
 async function fetchLikeCounts() {
-  const galleryItems = document.querySelectorAll(".gallery-item[data-image-name]");
+  const galleryItems = document.querySelectorAll(".gallery-item[data-image-id]");
 
   for (const item of galleryItems) {
-    const imageName = item.dataset.imageName;
+    const imageId = item.dataset.imageId;
     const likeCountEl = item.querySelector(".like-count");
 
-    if (!imageName || !likeCountEl) continue;
+    if (!imageId || !likeCountEl) continue;
 
     const [{ platforms, total }, liked] = await Promise.all([
-      fetchLikeData(imageName),
-      getNativeLikeStatus(imageName),
+      fetchLikeData(imageId),
+      getNativeLikeStatus(imageId),
     ]);
 
     // Always show the like button (even with 0 likes) so users can like
@@ -146,8 +146,8 @@ async function fetchLikeCounts() {
       e.preventDefault();
       e.stopPropagation();
 
-      const newLiked = await toggleNativeLike(imageName);
-      const { platforms: newPlatforms, total: newTotal } = await fetchLikeData(imageName);
+      const newLiked = await toggleNativeLike(imageId);
+      const { platforms: newPlatforms, total: newTotal } = await fetchLikeData(imageId);
       renderLikeCount(likeCountEl, newTotal, newPlatforms, newLiked);
     });
   }
@@ -335,7 +335,7 @@ if (gallery) {
         let currentImageName = null;
 
         const updateLikeCount = async () => {
-          currentImageName = pswp.currSlide.data?.element?.dataset?.imageName;
+          currentImageName = pswp.currSlide.data?.element?.dataset?.imageId;
           if (!currentImageName) {
             el.style.display = "none";
             return;
@@ -362,7 +362,7 @@ if (gallery) {
           renderLikeCount(el, newTotal, newPlatforms, newLiked, true);
 
           // Also update the gallery thumbnail like count
-          const galleryItem = gallery.querySelector(`[data-image-name="${currentImageName}"]`);
+          const galleryItem = gallery.querySelector(`[data-image-id="${currentImageName}"]`);
           if (galleryItem) {
             const thumbLikeEl = galleryItem.querySelector(".like-count");
             if (thumbLikeEl) {

@@ -17,11 +17,7 @@
   {{- $bundle := partialCached "gallery-bundle.html" . }}
   {{- if $bundle }}
     {{- $bundleImages := $bundle.Resources.ByType "image" }}
-    {{- $featuredName := .Params.featured_image | default "" }}
-    {{- $featured := "" }}
-    {{- if $featuredName }}
-      {{- $featured = $bundleImages.GetMatch $featuredName }}
-    {{- end }}
+    {{- $featured := partial "resolve-featured-image.html" (dict "page" . "bundleImages" $bundleImages) }}
     {{- if not $featured }}
       {{- $featured = index $bundleImages 0 }}
     {{- end }}
