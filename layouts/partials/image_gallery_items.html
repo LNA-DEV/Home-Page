@@ -3,7 +3,8 @@
 {{- range . -}}
 {{- $meta := index $lookup .Name -}}
 {{- $id := "" -}}{{- with $meta }}{{ $id = .id }}{{ end -}}
-{{- $link := strings.Replace .Permalink ( print "/" .Name ) (print "#" $id) -}}
+{{- $galleryPage := site.GetPage "/gallery" -}}
+{{- $link := printf "%s#%s" $galleryPage.Permalink $id -}}
 {{- $image := .Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
 {{- $alt := partial "image-alt.html" . }}
 <div class="responsive">
