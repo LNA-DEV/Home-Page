@@ -109,6 +109,11 @@
           {{- $keywords = delimit . ", " -}}
         {{- end -}}
       {{- end -}}
+      {{- if not $keywords -}}
+        {{- with $meta.tags -}}
+          {{- $keywords = delimit . ", " -}}
+        {{- end -}}
+      {{- end -}}
       {{- with .Exif.FNumber -}}
         {{- $fStr := printf "%v" . -}}
         {{- if strings.Contains $fStr "/" -}}
