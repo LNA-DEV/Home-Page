@@ -8401,7 +8401,7 @@ images:
   license: ""
   artist: ""
 - id: e2809038-df5a-4bc4-af08-d69df91c400f
-  src: portrait--MaskMan.JPG
+  src: MaskMan.JPG
   category: portrait
   section: general
   project: ""
@@ -8411,7 +8411,6 @@ images:
   title: ""
   license: ""
   artist: ""
-  original_src: MaskMan.JPG
 - id: ecd783bd-ca5e-4038-8a5c-5bbd54a9a95c
   src: Fire.JPG
   category: others
