@@ -66,7 +66,7 @@
     {{- $lookup  := $metaAll.bySrc -}}
     {{- range $bundle.Resources.ByType "image" -}}
     {{- $meta := index $lookup .Name -}}
-    {{- if and $meta (ne ($meta.section | default "") "archive") (not $meta.portfolio) -}}
+    {{- if and $meta (ne ($meta.section | default "") "archive") -}}
 
     <item>
       <title>{{ .Name }}</title>
