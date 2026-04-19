@@ -208,7 +208,7 @@ images:
   category: animals
   section: general
   project: ""
-  portfolio: true
+  portfolio: false
   tags:
   - photo
   - dolphins
@@ -360,7 +360,7 @@ images:
   category: animals
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags:
   - photo
   - dragonfly
@@ -918,7 +918,7 @@ images:
   category: animals
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags:
   - photo
   - photography
@@ -954,7 +954,7 @@ images:
   category: animals
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags:
   - photo
   - photography
@@ -972,7 +972,7 @@ images:
   category: animals
   section: general
   project: ""
-  portfolio: true
+  portfolio: false
   tags:
   - photo
   - photography
@@ -1027,7 +1027,7 @@ images:
   category: animals
   section: general
   project: ""
-  portfolio: true
+  portfolio: false
   tags:
   - photo
   - photography
@@ -1045,7 +1045,7 @@ images:
   category: animals
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags:
   - photo
   - photography
@@ -1353,7 +1353,7 @@ images:
   category: animals
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags:
   - photo
   - photography
@@ -1442,7 +1442,7 @@ images:
   category: animals
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags:
   - photo
   - photography
@@ -1653,7 +1653,7 @@ images:
   category: animals
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags: []
   alt: ""
   title: ""
@@ -1675,7 +1675,7 @@ images:
   category: animals
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags: []
   alt: ""
   title: ""
@@ -1697,7 +1697,7 @@ images:
   category: animals
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags: []
   alt: ""
   title: ""
@@ -1763,7 +1763,7 @@ images:
   category: animals
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags: []
   alt: ""
   title: ""
@@ -2258,7 +2258,7 @@ images:
   category: landscape
   section: general
   project: ""
-  portfolio: true
+  portfolio: false
   tags:
   - photo
   - photography
@@ -2886,7 +2886,7 @@ images:
   category: landscape
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags:
   - photo
   - photography
@@ -3274,7 +3274,7 @@ images:
   category: landscape
   section: general
   project: ""
-  portfolio: true
+  portfolio: false
   tags:
   - photo
   - photography
@@ -3810,7 +3810,7 @@ images:
   category: landscape
   section: general
   project: above-the-clouds
-  portfolio: true
+  portfolio: false
   tags:
   - photo
   - photography
@@ -4853,7 +4853,7 @@ images:
   category: landscape
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags: []
   alt: ""
   title: ""
@@ -4996,7 +4996,7 @@ images:
   category: landscape
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags: []
   alt: ""
   title: ""
@@ -5117,7 +5117,7 @@ images:
   category: landscape
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags: []
   alt: ""
   title: ""
@@ -5458,7 +5458,7 @@ images:
   category: landscape
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags: []
   alt: ""
   title: ""
@@ -5753,7 +5753,7 @@ images:
   category: city
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags:
   - photo
   - photography
@@ -5785,7 +5785,7 @@ images:
   category: city
   section: general
   project: ""
-  portfolio: true
+  portfolio: false
   tags:
   - photo
   - photography
@@ -6048,7 +6048,7 @@ images:
   category: city
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags: []
   alt: ""
   title: ""
@@ -6389,7 +6389,7 @@ images:
   category: plants
   section: general
   project: ""
-  portfolio: true
+  portfolio: false
   tags:
   - photo
   - photography
@@ -6675,7 +6675,7 @@ images:
   category: plants
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags:
   - photo
   - photography
@@ -7270,7 +7270,7 @@ images:
 - id: 74cb229f-f2e5-4e8a-84bf-648c70d3a935
   src: P1013702.JPG
   category: plants
-  section: general
+  section: archive
   project: ""
   portfolio: false
   tags:
@@ -7381,7 +7381,7 @@ images:
   category: plants
   section: general
   project: ""
-  portfolio: true
+  portfolio: false
   tags:
   - photo
   - photography
@@ -7400,7 +7400,7 @@ images:
   category: plants
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags:
   - photo
   - nature
@@ -7468,7 +7468,7 @@ images:
   category: plants
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags:
   - photo
   - pond
@@ -7841,7 +7841,7 @@ images:
   category: plants
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags:
   - photo
   - photography
@@ -8489,7 +8489,7 @@ images:
   category: others
   section: general
   project: ""
-  portfolio: true
+  portfolio: false
   tags:
   - photo
   - photography
@@ -8590,7 +8590,7 @@ images:
 - id: 8708f074-6d11-40eb-9e7c-2fda995de1ee
   src: P1002141.jpg
   category: others
-  section: general
+  section: archive
   project: ""
   portfolio: false
   tags:
@@ -8605,7 +8605,7 @@ images:
 - id: ad525f16-da97-4b9a-874e-30e4c369aa37
   src: P1002142.jpg
   category: others
-  section: general
+  section: archive
   project: ""
   portfolio: false
   tags:
