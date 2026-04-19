@@ -385,6 +385,7 @@
   originalLanguage: pl
   languagesListened:
     - sv
+    - de
   languagesRead: 
     - en
 
@@ -400,6 +401,7 @@
   originalLanguage: pl
   languagesListened:
     - sv
+    - de
   languagesRead: 
     - en
 
@@ -415,6 +417,7 @@
   originalLanguage: pl
   languagesListened:
     - sv
+    - de
   languagesRead: 
     - en
 
@@ -428,6 +431,8 @@
   pages: 331
   rating: 5
   originalLanguage: pl
+  languagesListened:
+    - de
   languagesRead: 
     - en
 
@@ -441,6 +446,8 @@
   cover: "images/books/covers/Baptism of Fire.jpg"
   pages: 349
   originalLanguage: pl
+  languagesListened:
+    - de
   languagesRead: 
     - en
 
@@ -454,6 +461,8 @@
   cover: "images/books/covers/Tower of the Swallow.jpg"
   pages: 436
   originalLanguage: pl
+  languagesListened:
+    - de
   languagesRead: 
     - en
 
@@ -467,6 +476,8 @@
   cover: "images/books/covers/Lady of the Lake.jpg"
   pages: 531
   originalLanguage: pl
+  languagesListened:
+    - de
   languagesRead: 
     - en
 
@@ -480,6 +491,8 @@
   pages: 419
   rating: 5
   originalLanguage: pl
+  languagesListened:
+    - de
   languagesRead: 
     - en
 
@@ -529,6 +542,20 @@
   pages: 208
   originalLanguage: de
   languagesListened: 
+    - de
+
+- title: "Die Känguru Rebellion"
+  series: Die Känguru-Chroniken
+  author: Marc-Uwe Kling
+  genres: ["comedy"]
+  year: 2026
+  link: "https://die-kaenguru-chroniken.fandom.com/wiki/Die_K%C3%A4nguru-Rebellion"
+  cover: "images/books/covers/Die Känguru Rebellion.jpg"
+  pages: 224
+  originalLanguage: de
+  languagesListened: 
+    - de
+  languagesRead: 
     - de
 
 - title: "QualityLand"
@@ -696,6 +723,8 @@
   pages: 292
   rating: 4
   originalLanguage: pl
+  languagesListened:
+    - de
   languagesRead: 
     - en
 
