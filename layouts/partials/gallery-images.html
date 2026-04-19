@@ -1,0 +1,7 @@
+{{- /*
+  gallery-images.html
+  Returns all gallery image resources from assets/images/gallery/.
+  Global resources are inherently language-independent — no cross-site lookup needed.
+  Always call via partialCached.
+*/ -}}
+{{- return resources.Match "images/gallery/*" -}}

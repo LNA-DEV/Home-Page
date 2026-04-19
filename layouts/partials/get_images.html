@@ -1,10 +1,10 @@
 {{- $images := slice -}}
-{{- $bundle := partialCached "gallery-bundle.html" . -}}
-{{- if $bundle -}}
+{{- $allImages := partialCached "gallery-images.html" . -}}
+{{- if $allImages -}}
   {{- $metaAll := partialCached "gallery-meta.html" . -}}
   {{- $lookup  := $metaAll.bySrc -}}
-  {{- range $image := $bundle.Resources.ByType "image" -}}
-    {{- $meta := index $lookup $image.Name -}}
+  {{- range $image := $allImages -}}
+    {{- $meta := index $lookup (path.Base $image.Name) -}}
     {{- if and $meta (ne ($meta.section | default "") "archive") -}}
       {{- with $image.Meta -}}
         {{- with .Date -}}

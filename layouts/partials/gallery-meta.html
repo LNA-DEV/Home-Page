@@ -1,7 +1,7 @@
 {{- /*
   gallery-meta.html
   Returns metadata from data/gallery.yaml as two lookup dicts sharing the same entries:
-    .bySrc — keyed by filename (matches $image.Name from the headless bundle)
+    .bySrc — keyed by filename (matches path.Base of $image.Name from global resources)
     .byId  — keyed by UUID id (used by featured_image and other id-based lookups)
   Use with partialCached for O(1) builds after first call.
 

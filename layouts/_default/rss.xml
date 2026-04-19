@@ -60,16 +60,16 @@
     {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{- end -}}
 
-    {{- $bundle := partialCached "gallery-bundle.html" . -}}
-    {{- if $bundle -}}
+    {{- $allImages := partialCached "gallery-images.html" . -}}
+    {{- if $allImages -}}
     {{- $metaAll := partialCached "gallery-meta.html" . -}}
     {{- $lookup  := $metaAll.bySrc -}}
-    {{- range $bundle.Resources.ByType "image" -}}
-    {{- $meta := index $lookup .Name -}}
+    {{- range $allImages -}}
+    {{- $meta := index $lookup (path.Base .Name) -}}
     {{- if and $meta (ne ($meta.section | default "") "archive") -}}
 
     <item>
-      <title>{{ .Name }}</title>
+      <title>{{ path.Base .Name }}</title>
       <link>{{ $.Permalink }}#{{ $meta.id }}</link>
       {{- with .Meta }}{{- with .Date }}
       <pubDate>{{ .Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
@@ -80,7 +80,7 @@
       <media:content url="{{ $full.Permalink }}" type="image/jpeg"/>
       <description>
         <img src="{{ $full.Permalink }}" alt="{{ with $meta.alt }}{{ . }}{{ else }}{{ partial "image-alt.html" . }}{{ end }}"/>
-        {{- if ne .Title .Name -}}
+        {{- if ne .Title (path.Base .Name) -}}
         <p> {{ .Title }} </p>
         {{ end }}
       </description>

@@ -1,7 +1,6 @@
 {{- $gallery := "" -}}
-{{- $bundle := partialCached "gallery-bundle.html" . -}}
-{{- if $bundle -}}
-  {{- $allBundleImages := $bundle.Resources.ByType "image" -}}
+{{- $allImages := partialCached "gallery-images.html" . -}}
+{{- if $allImages -}}
   {{- $metaAll := partialCached "gallery-meta.html" . -}}
   {{- $lookup  := $metaAll.bySrc -}}
 
@@ -12,8 +11,8 @@
 
   {{- /* Count matching images */ -}}
   {{- $imageCount := 0 -}}
-  {{- range $allBundleImages -}}
-    {{- $meta := index $lookup .Name -}}
+  {{- range $allImages -}}
+    {{- $meta := index $lookup (path.Base .Name) -}}
     {{- if $meta -}}
       {{- $include := true -}}
       {{- if and $filterCategory (ne ($meta.category | default "") $filterCategory) -}}{{ $include = false }}{{ end -}}
@@ -27,9 +26,9 @@
   {{- end -}}
 
   {{- /* Find featured image */ -}}
-  {{- $featured := partial "resolve-featured-image.html" (dict "page" $ "bundleImages" $allBundleImages) -}}
+  {{- $featured := partial "resolve-featured-image.html" (dict "page" $ "bundleImages" $allImages) -}}
   {{- if not $featured -}}
-    {{- $featured = index $allBundleImages 0 -}}
+    {{- $featured = index $allImages 0 -}}
   {{- end -}}
 
   {{- if $featured -}}

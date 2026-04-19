@@ -12,7 +12,7 @@ Hugo static site for `lna-dev.net` (personal site of Lukas Nagel). Theme is `hug
 - Local server: `hugo server -D` (drafts on).
 - Deploy: `./deploy.sh` builds twice (clearnet + Tor onion `baseURL`) and rsyncs `public/` to the production server. **Do not run this without the user's say-so** — it pushes live.
 - Module bootstrap (only if `go.sum` is missing/broken): `go mod download`.
-- Image binaries are intentionally **not in git**: `.gitignore` excludes `content/gallery/images/**` except for the headless `index.*.md`. A clean checkout will build but render an empty gallery; assume the user has the images locally.
+- Image binaries are intentionally **not in git**: `.gitignore` excludes `assets/images/gallery/**`. A clean checkout will build but render an empty gallery; assume the user has the images locally.
 
 ## Architecture
 
@@ -20,11 +20,11 @@ Hugo static site for `lna-dev.net` (personal site of Lukas Nagel). Theme is `hug
 
 The gallery was recently restructured (see memory `project_gallery_overhaul.md`). The model is **one flat image folder + central YAML metadata + theme dispatch**. Understanding this is essential before touching any gallery template.
 
-- **Image source of truth**: `content/gallery/images/` is a Hugo headless page bundle (`index.en.md` has `headless: true`). All photos sit flat in this folder regardless of which view they appear in.
+- **Image source of truth**: `assets/images/gallery/` — all photos sit flat in this folder as global resources regardless of which view they appear in.
 - **Metadata source of truth**: `data/gallery.yaml` — one entry per image with `id` (UUID, stable across renames), `src` (current filename), `category`, `section` (`general` | `archive`), `project` (slug or empty), `portfolio` (bool), `tags`, `alt`, `title`, `license`, `artist`. The `src` field must exactly match the image filename. The `id` is the **stable identifier** used by deep links, the likes API, and `featured_image:` references — when a filename changes, only `src` is updated; `id` stays.
 - **Two cached partials underpin everything else**:
-  - `layouts/partials/gallery-bundle.html` — returns the headless bundle from the **English site** so all languages share image resources. Always call via `partialCached`.
-  - `layouts/partials/gallery-meta.html` — returns `{ bySrc, byId }`, two dicts sharing the same metadata entries. `bySrc` is the hot path (joining bundle resources by filename); `byId` is for UUID lookups (`featured_image`, etc.). Hard-fails the build if any entry lacks an `id` — run `scripts/add-gallery-ids.py` to populate one. Always call via `partialCached`.
+  - `layouts/partials/gallery-images.html` — returns all gallery image resources via `resources.Match "images/gallery/*"`. Global resources are inherently language-independent. Always call via `partialCached`. Note: `.Name` on these resources returns a full path like `images/gallery/photo.jpg` — use `path.Base` when looking up by bare filename.
+  - `layouts/partials/gallery-meta.html` — returns `{ bySrc, byId }`, two dicts sharing the same metadata entries. `bySrc` is keyed by bare filename (use `path.Base` on resource `.Name` to match); `byId` is for UUID lookups (`featured_image`, etc.). Hard-fails the build if any entry lacks an `id` — run `scripts/add-gallery-ids.py` to populate one. Always call via `partialCached`.
 - **`layouts/partials/collect-images.html`** is the single entry point for collecting+filtering images. It merges YAML metadata with EXIF/XMP, resolves license via `data/licenseMap.yaml` (errors hard if a license string isn't mapped), and resolves artist (data → EXIF → `site.Params.author.name`). Filter keys: `category`, `section`, `portfolio`, `project`, `excludeArchive` (default true). Each returned item exposes `.Id` (UUID from YAML) — use it as the stable identifier in any new template. Use this — do not iterate the bundle directly.
 - **`layouts/partials/resolve-featured-image.html`** resolves a `featured_image:` front-matter value (UUID, with legacy filename fallback) to a bundle resource. Used by `get-gallery.html` and `templates/_funcs/get-page-images.html`.
 - **Theme dispatch**: gallery pages select a renderer through their front-matter `params.theme`, branched in `layouts/_default/list.html` and `layouts/_default/single.html`. Themes:
@@ -61,7 +61,7 @@ UI strings in `i18n/{en,de,sv}.yaml`. Per-language menus, descriptions, and home
 ## Conventions worth knowing
 
 - Use Hugo image processing (`images.Process`, `images.AutoOrient`) — never reference raw image URLs directly, and always `AutoOrient` first so EXIF rotation is applied.
-- New gallery images: drop the file into `content/gallery/images/`, then add a matching entry to `data/gallery.yaml` **including a UUID `id`** (the build will hard-fail without one — `scripts/add-gallery-ids.py` populates missing ids in bulk).
-- Renaming an existing gallery image: rename the file on disk and update only the matching `src:` in `data/gallery.yaml`. Do not touch `id` — deep links, the likes API key, and any `featured_image:` referencing it all use the id.
+- New gallery images: drop the file into `assets/images/gallery/`, then add a matching entry to `data/gallery.yaml` **including a UUID `id`** (the build will hard-fail without one — `scripts/add-gallery-ids.py` populates missing ids in bulk).
+- Renaming an existing gallery image: rename the file in `assets/images/gallery/` and update only the matching `src:` in `data/gallery.yaml`. Do not touch `id` — deep links, the likes API key, and any `featured_image:` referencing it all use the id.
 - New license values must be added to `data/licenseMap.yaml` or the build will `errorf`.
 - Gallery scripting/migration helpers are written in Python (per project memory).

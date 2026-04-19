@@ -11,10 +11,10 @@
 {{- if $val -}}
   {{- $metaAll := partialCached "gallery-meta.html" .page -}}
   {{- with index $metaAll.byId $val -}}
-    {{- $featured = $.bundleImages.GetMatch .src -}}
+    {{- $featured = $.bundleImages.GetMatch (printf "images/gallery/%s" .src) -}}
   {{- else -}}
     {{- /* legacy: filename in front-matter */ -}}
-    {{- $featured = .bundleImages.GetMatch $val -}}
+    {{- $featured = .bundleImages.GetMatch (printf "images/gallery/%s" $val) -}}
   {{- end -}}
 {{- end -}}
 {{- return $featured -}}

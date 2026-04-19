@@ -10,9 +10,8 @@
 </header>
 {{ partial "featured.html" . }}
 <nav class="gallery-nav">
-  {{- $bundle := partialCached "gallery-bundle.html" . -}}
-  {{- if $bundle -}}
-    {{- $allImages := $bundle.Resources.ByType "image" -}}
+  {{- $allImages := partialCached "gallery-images.html" . -}}
+  {{- if $allImages -}}
     {{- $metaAll := partialCached "gallery-meta.html" . -}}
     {{- $lookup  := $metaAll.bySrc -}}
 
@@ -20,12 +19,12 @@
     {{- $projectImg := "" -}}
     {{- with $.Params.projects_cover -}}
       {{- with index $metaAll.byId . -}}
-        {{- $projectImg = $allImages.GetMatch .src -}}
+        {{- $projectImg = $allImages.GetMatch (printf "images/gallery/%s" .src) -}}
       {{- end -}}
     {{- end -}}
     {{- if not $projectImg -}}
       {{- range $allImages -}}
-        {{- $meta := index $lookup .Name -}}
+        {{- $meta := index $lookup (path.Base .Name) -}}
         {{- if and (not $projectImg) $meta $meta.project -}}
           {{- $projectImg = . -}}
         {{- end -}}
@@ -38,12 +37,12 @@
     {{- $generalImg := "" -}}
     {{- with $.Params.general_cover -}}
       {{- with index $metaAll.byId . -}}
-        {{- $generalImg = $allImages.GetMatch .src -}}
+        {{- $generalImg = $allImages.GetMatch (printf "images/gallery/%s" .src) -}}
       {{- end -}}
     {{- end -}}
     {{- if not $generalImg -}}
       {{- range $allImages -}}
-        {{- $meta := index $lookup .Name -}}
+        {{- $meta := index $lookup (path.Base .Name) -}}
         {{- if and (not $generalImg) $meta (ne ($meta.section | default "") "archive") (not $meta.portfolio) (not $meta.project) -}}
           {{- $generalImg = . -}}
         {{- end -}}

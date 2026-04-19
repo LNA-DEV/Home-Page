@@ -4,10 +4,10 @@
   {{- $coverImg := "" -}}
   {{- with .Params.featured_image -}}
     {{- $featId := . -}}
-    {{- $bundle := partialCached "gallery-bundle.html" $ -}}
+    {{- $allImages := partialCached "gallery-images.html" $ -}}
     {{- $metaAll := partialCached "gallery-meta.html" $ -}}
     {{- with index $metaAll.byId $featId -}}
-      {{- $coverImg = ($bundle.Resources.ByType "image").GetMatch .src -}}
+      {{- $coverImg = $allImages.GetMatch (printf "images/gallery/%s" .src) -}}
     {{- end -}}
   {{- end -}}
   {{- if not $coverImg -}}

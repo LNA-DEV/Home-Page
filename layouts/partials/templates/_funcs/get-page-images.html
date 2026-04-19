@@ -12,14 +12,13 @@
       "Permalink" .Permalink) }}
   {{- end }}
 {{- end }}
-{{/* Gallery page fallback: pick a representative image from the headless bundle. */}}
+{{/* Gallery page fallback: pick a representative image from global gallery resources. */}}
 {{- if and (not $imgParams) (not $imgs) (or (eq .Params.Theme "gallery-page") (eq .Params.Theme "gallery-page-hidden") (eq .Params.Theme "gallery-general") (eq .Params.Theme "gallery-archive") (eq .Params.Theme "gallery-project")) }}
-  {{- $bundle := partialCached "gallery-bundle.html" . }}
-  {{- if $bundle }}
-    {{- $bundleImages := $bundle.Resources.ByType "image" }}
-    {{- $featured := partial "resolve-featured-image.html" (dict "page" . "bundleImages" $bundleImages) }}
+  {{- $allImages := partialCached "gallery-images.html" . }}
+  {{- if $allImages }}
+    {{- $featured := partial "resolve-featured-image.html" (dict "page" . "bundleImages" $allImages) }}
     {{- if not $featured }}
-      {{- $featured = index $bundleImages 0 }}
+      {{- $featured = index $allImages 0 }}
     {{- end }}
     {{- with $featured }}
       {{- $processed := .Filter (slice images.AutoOrient (images.Process "fit 1200x630")) }}

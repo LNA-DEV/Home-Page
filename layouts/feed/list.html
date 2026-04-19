@@ -42,7 +42,7 @@
   {{- $layout := .Layout }}
   {{- if and (ne $layout "search") (ne $layout "archives") (ne $layout "activity") (ne .Section "feed") }}
     {{- if eq .Section "gallery" }}
-      {{- /* Gallery images are now handled below via headless bundle */ -}}
+      {{- /* Gallery images are now handled below via global resources */ -}}
     {{- else if eq .Section "posts" }}
       {{- /* Only show posts from the posts section */ -}}
       {{- $year := .Date.Year }}
@@ -54,19 +54,19 @@
   {{- end }}
 {{- end }}
 
-{{- /* Add gallery images from headless bundle */ -}}
-{{- $galleryBundle := partialCached "gallery-bundle.html" . -}}
-{{- if $galleryBundle -}}
+{{- /* Add gallery images from global resources */ -}}
+{{- $allGalleryImages := partialCached "gallery-images.html" . -}}
+{{- if $allGalleryImages -}}
   {{- $galleryPage := site.GetPage "/gallery" -}}
   {{- $metaAll := partialCached "gallery-meta.html" . -}}
   {{- $lookup  := $metaAll.bySrc -}}
-  {{- range $image := $galleryBundle.Resources.ByType "image" -}}
-    {{- $meta := index $lookup $image.Name -}}
+  {{- range $image := $allGalleryImages -}}
+    {{- $meta := index $lookup (path.Base $image.Name) -}}
     {{- if and $meta (ne ($meta.section | default "") "archive") -}}
       {{- with $image.Meta -}}
         {{- if gt .Date.Year 2000 -}}
           {{- $imageLink := printf "%s#%s" $galleryPage.Permalink $meta.id -}}
-          {{- $item := dict "type" "photo" "title" $image.Name "date" .Date "permalink" $imageLink "page" $galleryPage "image" $image "description" "" -}}
+          {{- $item := dict "type" "photo" "title" (path.Base $image.Name) "date" .Date "permalink" $imageLink "page" $galleryPage "image" $image "description" "" -}}
           {{- $activityItems = $activityItems | append $item -}}
         {{- end -}}
       {{- end -}}
