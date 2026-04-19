@@ -1,10 +1,23 @@
 {{- $portfolioPages := where site.Pages "Params.theme" "eq" "gallery-portfolio" -}}
 {{- with index $portfolioPages 0 -}}
   {{- $portfolioPage := . -}}
-  {{- $images := partial "collect-portfolio.html" . -}}
-  {{- with index $images 0 -}}
-    {{- $image := .image -}}
-    {{- $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 1200x630")) -}}
+  {{- $coverImg := "" -}}
+  {{- with .Params.featured_image -}}
+    {{- $featId := . -}}
+    {{- $bundle := partialCached "gallery-bundle.html" $ -}}
+    {{- $metaAll := partialCached "gallery-meta.html" $ -}}
+    {{- with index $metaAll.byId $featId -}}
+      {{- $coverImg = ($bundle.Resources.ByType "image").GetMatch .src -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not $coverImg -}}
+    {{- $images := partial "collect-portfolio.html" . -}}
+    {{- with index $images 0 -}}
+      {{- $coverImg = .image -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with $coverImg -}}
+    {{- $thumbnail := .Filter (slice images.AutoOrient (images.Process "fit 1200x630")) -}}
     <section class="featured">
       <a class="featured-card" href="{{ $portfolioPage.RelPermalink }}"
          style="background-image: url('{{ $thumbnail.RelPermalink }}')"

@@ -16,23 +16,37 @@
     {{- $metaAll := partialCached "gallery-meta.html" . -}}
     {{- $lookup  := $metaAll.bySrc -}}
 
-    {{- /* Projects card — use first project image */ -}}
+    {{- /* Projects card — use projects_cover UUID or first project image */ -}}
     {{- $projectImg := "" -}}
-    {{- range $allImages -}}
-      {{- $meta := index $lookup .Name -}}
-      {{- if and (not $projectImg) $meta $meta.project -}}
-        {{- $projectImg = . -}}
+    {{- with $.Params.projects_cover -}}
+      {{- with index $metaAll.byId . -}}
+        {{- $projectImg = $allImages.GetMatch .src -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if not $projectImg -}}
+      {{- range $allImages -}}
+        {{- $meta := index $lookup .Name -}}
+        {{- if and (not $projectImg) $meta $meta.project -}}
+          {{- $projectImg = . -}}
+        {{- end -}}
       {{- end -}}
     {{- end -}}
     {{- if not $projectImg }}{{ $projectImg = index $allImages 0 }}{{ end -}}
     {{- $projectThumb := $projectImg.Filter (slice images.AutoOrient (images.Process "fill 600x400")) -}}
 
-    {{- /* General card — use a non-archive, non-portfolio image */ -}}
+    {{- /* General card — use general_cover UUID or first non-archive, non-portfolio image */ -}}
     {{- $generalImg := "" -}}
-    {{- range $allImages -}}
-      {{- $meta := index $lookup .Name -}}
-      {{- if and (not $generalImg) $meta (ne ($meta.section | default "") "archive") (not $meta.portfolio) (not $meta.project) -}}
-        {{- $generalImg = . -}}
+    {{- with $.Params.general_cover -}}
+      {{- with index $metaAll.byId . -}}
+        {{- $generalImg = $allImages.GetMatch .src -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if not $generalImg -}}
+      {{- range $allImages -}}
+        {{- $meta := index $lookup .Name -}}
+        {{- if and (not $generalImg) $meta (ne ($meta.section | default "") "archive") (not $meta.portfolio) (not $meta.project) -}}
+          {{- $generalImg = . -}}
+        {{- end -}}
       {{- end -}}
     {{- end -}}
     {{- if not $generalImg }}{{ $generalImg = index $allImages 0 }}{{ end -}}
