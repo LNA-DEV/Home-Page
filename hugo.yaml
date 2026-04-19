@@ -15,7 +15,7 @@ buildDrafts: false
 buildFuture: false
 buildExpired: true
 timeout: 600s
-copyright: "🄯 CC-BY-ND"
+copyright: "🄯 [various licenses](/licensing/)"
 # paginate: 3
 
 markup:
