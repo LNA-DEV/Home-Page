@@ -167,7 +167,7 @@
       {{- $alt = partial "image-alt.html" $image -}}
     {{- end -}}
 
-    {{- /* License resolution: data file > EXIF copyright > site default */ -}}
+    {{- /* License resolution: data file > EXIF copyright > error */ -}}
     {{- $licenseText := "" -}}
     {{- with $meta.license -}}
       {{- $licenseText = . -}}
@@ -175,11 +175,7 @@
       {{- with $copyright -}}
         {{- $licenseText = . -}}
       {{- else -}}
-        {{- with site.Params.defaultLicense -}}
-          {{- $licenseText = . -}}
-        {{- else -}}
-          {{- errorf "No license found for image %s and no default license configured" $image.Name -}}
-        {{- end -}}
+        {{- errorf "No license found for image %s — set it in data/gallery.yaml" $image.Name -}}
       {{- end -}}
     {{- end -}}
 
