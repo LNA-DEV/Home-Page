@@ -1,0 +1,26 @@
+{{- /* Fully client-side: travel.js fetches the companion API, renders the trip
+       cards, and routes to a single trip on #<slug>. Centered, gallery-style header
+       with a "/" path; travel.js rebuilds the path/title per route (list →
+       "Home / Travel", trip → "Home / Travel / <trip>"). */ -}}
+<header class="trip-index-head" data-trip-head
+        data-home-url="{{ site.Home.RelPermalink }}"
+        data-home-label="{{ i18n "home" | default "Home" }}"
+        data-section="{{ .Title }}">
+  <nav class="trip-breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ site.Home.RelPermalink }}">{{ i18n "home" | default "Home" }}</a>
+    <span>/</span>
+    <span>{{ .Title }}</span>
+  </nav>
+  <h1 class="trip-index-title">{{ .Title }}</h1>
+  {{- with .Description }}
+  <p class="trip-index-sub">{{ . }}</p>
+  {{- end }}
+</header>
+
+{{- if .Content }}
+<div class="trip-index-intro">{{ .Content }}</div>
+{{- end }}
+
+<div class="trip-index" data-trip-index>
+  <div class="trip-loading">{{ i18n "trip_loading" | default "Loading…" }}</div>
+</div>

@@ -92,3 +92,38 @@
   translation: "Repos"
 - id: project_started
   translation: "Startad"
+
+- id: travel_empty
+  translation: "Inga resor än."
+- id: trip_not_found
+  translation: "Resan hittades inte."
+- id: trip_loading
+  translation: "Laddar resa…"
+- id: trip_badge_here
+  translation: "här nu"
+- id: trip_badge_upcoming
+  translation: "kommande"
+- id: trip_photos_pending
+  translation: "Foton när vi kommer fram"
+- id: trip_legend_train
+  translation: "tåg"
+- id: trip_legend_flight
+  translation: "flyg"
+- id: trip_legend_car
+  translation: "bil"
+- id: trip_legend_upcoming
+  translation: "kommande"
+- id: trip_now_in
+  translation: "Nu i"
+- id: trip_updated
+  translation: "uppdaterad"
+- id: trip_you_are_here
+  translation: "du är här"
+- id: trip_stat_cities
+  translation: "städer"
+- id: trip_stat_countries
+  translation: "länder"
+- id: trip_stat_days
+  translation: "dagar"
+- id: trip_stat_km
+  translation: "km"

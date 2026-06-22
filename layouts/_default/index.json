@@ -1,0 +1,15 @@
+{{- /* Overrides PaperMod's search index. Reproduces the theme's behavior (index
+       every RegularPage except search-hidden / archives / search) and then adds
+       the Travel landing page explicitly: it is a JS-driven section (branch) page
+       with no per-trip RegularPages, so site.RegularPages never includes it and it
+       would otherwise be unsearchable. */ -}}
+{{- $.Scratch.Add "index" slice -}}
+{{- range site.RegularPages -}}
+    {{- if and (not .Params.searchHidden) (ne .Layout `archives`) (ne .Layout `search`) }}
+    {{- $.Scratch.Add "index" (dict "title" .Title "content" .Plain "permalink" .Permalink "summary" .Summary) -}}
+    {{- end }}
+{{- end -}}
+{{- with site.GetPage "/travel" -}}
+    {{- $.Scratch.Add "index" (dict "title" .Title "content" (printf "%s. %s" .Title .Description) "permalink" .Permalink "summary" .Description) -}}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}

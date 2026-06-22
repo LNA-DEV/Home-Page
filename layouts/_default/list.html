@@ -90,6 +90,8 @@
     {{- partial "album-card.html" . }}
   {{- end }}
 </section>
+{{- else if eq .Params.Theme "travel-list" }}
+{{- partial "travel-list.html" . }}
 {{- else }}
 {{- if not .IsHome | and .Title }}
 <header class="page-header">

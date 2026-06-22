@@ -1,0 +1,8 @@
+{{- $slug := .Get "slug" | default (.Get 0) -}}
+{{- if $slug -}}
+<div class="trip-app trip-mode-embed" data-trip-slug="{{ $slug }}">
+  <div class="trip-loading">{{ i18n "trip_loading" | default "Loading trip…" }}</div>
+</div>
+{{- else -}}
+{{- warnf "trip shortcode in %q: missing slug — use {{< trip \"slug\" >}}" .Page.Path -}}
+{{- end -}}

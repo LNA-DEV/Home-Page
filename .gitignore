@@ -1,5 +1,7 @@
 node_modules
 /public
 /resources/_gen/
-assets/images/gallery/**
+# Gallery photos live outside the repo; mounted in via hugo.yaml module.mounts.
+# This symlink → the local photo store (see CLAUDE.md "Build / Deploy").
+/gallery-photos
 .inbox/**

@@ -12,7 +12,7 @@ Hugo static site for `lna-dev.net` (personal site of Lukas Nagel). Theme is `hug
 - Local server: `hugo server -D` (drafts on).
 - Deploy: `./deploy.sh` builds twice (clearnet + Tor onion `baseURL`) and rsyncs `public/` to the production server. **Do not run this without the user's say-so** — it pushes live.
 - Module bootstrap (only if `go.sum` is missing/broken): `go mod download`.
-- Image binaries are intentionally **not in git**: `.gitignore` excludes `assets/images/gallery/**`. A clean checkout will build but render an empty gallery; assume the user has the images locally.
+- Image binaries are intentionally **not in git** and live outside the repo. Hugo mounts them in via `module.mounts` in `hugo.yaml`: the gallery `source` is the repo-root **`gallery-photos`** symlink (gitignored) → the local photo store, mapped to the `assets/images/gallery/` virtual path. Per machine, create the symlink once: `ln -s <photo-store> gallery-photos`. A clean checkout without it builds fine but renders an empty gallery. (Hugo ignores symlinks during resource discovery — which is why the old `assets/images/gallery` directory symlink silently produced an empty gallery — but it *does* resolve one given explicitly as a mount `source`. See memory `project_gallery_mount.md`.)
 
 ## Architecture
 
@@ -20,7 +20,7 @@ Hugo static site for `lna-dev.net` (personal site of Lukas Nagel). Theme is `hug
 
 The gallery was recently restructured (see memory `project_gallery_overhaul.md`). The model is **one flat image folder + central YAML metadata + theme dispatch**. Understanding this is essential before touching any gallery template.
 
-- **Image source of truth**: `assets/images/gallery/` — all photos sit flat in this folder as global resources regardless of which view they appear in.
+- **Image source of truth**: the local photo store, mounted to the `assets/images/gallery/` virtual path (via the `gallery-photos` symlink + `module.mounts` — see Build / Deploy). All photos sit flat there as global resources regardless of which view they appear in; templates address them as `images/gallery/*`, unaffected by where the files physically live.
 - **Metadata source of truth**: `data/gallery.yaml` — one entry per image with `id` (UUID, stable across renames), `src` (current filename), `category`, `section` (`general` | `archive`), `project` (slug or empty), `portfolio` (bool), `tags`, `alt`, `title`, `license`, `artist`. The `src` field must exactly match the image filename. The `id` is the **stable identifier** used by deep links, the likes API, and `featured_image:` references — when a filename changes, only `src` is updated; `id` stays.
 - **Two cached partials underpin everything else**:
   - `layouts/partials/gallery-images.html` — returns all gallery image resources via `resources.Match "images/gallery/*"`. Global resources are inherently language-independent. Always call via `partialCached`. Note: `.Name` on these resources returns a full path like `images/gallery/photo.jpg` — use `path.Base` when looking up by bare filename.
@@ -61,7 +61,7 @@ UI strings in `i18n/{en,de,sv}.yaml`. Per-language menus, descriptions, and home
 ## Conventions worth knowing
 
 - Use Hugo image processing (`images.Process`, `images.AutoOrient`) — never reference raw image URLs directly, and always `AutoOrient` first so EXIF rotation is applied.
-- New gallery images: drop the file into `assets/images/gallery/`, then add a matching entry to `data/gallery.yaml` **including a UUID `id`** (the build will hard-fail without one — `scripts/add-gallery-ids.py` populates missing ids in bulk).
-- Renaming an existing gallery image: rename the file in `assets/images/gallery/` and update only the matching `src:` in `data/gallery.yaml`. Do not touch `id` — deep links, the likes API key, and any `featured_image:` referencing it all use the id.
+- New gallery images: drop the file into the photo store (the `gallery-photos` mount target), then add a matching entry to `data/gallery.yaml` **including a UUID `id`** (the build will hard-fail without one — `scripts/add-gallery-ids.py` populates missing ids in bulk).
+- Renaming an existing gallery image: rename the file in the photo store (`gallery-photos` target) and update only the matching `src:` in `data/gallery.yaml`. Do not touch `id` — deep links, the likes API key, and any `featured_image:` referencing it all use the id.
 - New license values must be added to `data/licenseMap.yaml` or the build will `errorf`.
 - Gallery scripting/migration helpers are written in Python (per project memory).

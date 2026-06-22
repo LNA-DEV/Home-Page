@@ -119,3 +119,38 @@
   translation: "Repos"
 - id: project_started
   translation: "Gestartet"
+
+- id: travel_empty
+  translation: "Noch keine Reisen."
+- id: trip_not_found
+  translation: "Reise nicht gefunden."
+- id: trip_loading
+  translation: "Reise wird geladen…"
+- id: trip_badge_here
+  translation: "gerade hier"
+- id: trip_badge_upcoming
+  translation: "geplant"
+- id: trip_photos_pending
+  translation: "Fotos, sobald wir da sind"
+- id: trip_legend_train
+  translation: "Zug"
+- id: trip_legend_flight
+  translation: "Flug"
+- id: trip_legend_car
+  translation: "Auto"
+- id: trip_legend_upcoming
+  translation: "geplant"
+- id: trip_now_in
+  translation: "Gerade in"
+- id: trip_updated
+  translation: "aktualisiert"
+- id: trip_you_are_here
+  translation: "du bist hier"
+- id: trip_stat_cities
+  translation: "Städte"
+- id: trip_stat_countries
+  translation: "Länder"
+- id: trip_stat_days
+  translation: "Tage"
+- id: trip_stat_km
+  translation: "km"
