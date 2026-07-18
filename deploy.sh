@@ -1,2 +1,2 @@
-/home/lna-dev/Documents/Repos/hugo/hugo && rsync -avz --delete public/ root@lna-dev.net:/mnt/homepage/homepage-site-data
-/home/lna-dev/Documents/Repos/hugo/hugo -b http://lnadevwj2vzomixiunv7i4lahwpoxh6zw56cxbce3uui5ijmwt4czpyd.onion && rsync -avz --delete public/ root@lna-dev.net:/mnt/homepage/homepage-tor-site-data
+hugo && rsync -avz --delete public/ root@lna-dev.net:/mnt/homepage/homepage-site-data
+hugo -b http://lnadevwj2vzomixiunv7i4lahwpoxh6zw56cxbce3uui5ijmwt4czpyd.onion && rsync -avz --delete public/ root@lna-dev.net:/mnt/homepage/homepage-tor-site-data
