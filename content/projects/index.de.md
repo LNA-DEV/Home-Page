@@ -38,7 +38,7 @@ projects:
   - name: "Open Media Station"
     tagline: "Selbstgehostete Medienverwaltung und Streaming"
     description: "Open Media Station ist mein neuestes Projekt mit welchem ich eine Plattform für das Verwalten und Streamen der eigenen Medien schaffen möchte. Zum Beispiel: Filme, Serien, Bücher, Hörbücher..."
-    status: "active"
+    status: "stopped"
     github_org: "OpenMediaStation"
     website: "https://openmediastation.org"
     tags: [C#, .NET, Flutter, Docker]

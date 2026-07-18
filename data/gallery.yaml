@@ -9431,6 +9431,26 @@ images:
   title: ""
   license: Creative Commons Attribution-ShareAlike (CC BY-SA)
   artist: Lukas Nagel
+- id: 7c7523ab-26f1-4f42-92a0-c5895c053397
+  src: CLAAS Jaguar 850 at work in the mountains.jpg
+  category: others
+  section: general
+- id: 9df3dcfe-590b-4011-ade7-c716d1f52784
+  src: First Taste of Spring — Lamb Grazing in the Fresh Green Grass.jpg
+  category: others
+  section: general
+- id: a41bc684-4816-4554-9316-067e3d77389f
+  src: It's Always Cozy in the Sun - Spring Lamb Curled Up in a Sunlit Meadow.jpg
+  category: others
+  section: general
+- id: 5af26f9a-1c14-42f4-af66-0cb0bd463004
+  src: Smiling Lamb - Spring Lamb Basking in the Afternoon Sun.jpg
+  category: others
+  section: general
+- id: 94c8d104-189a-4fad-8e12-995258ea0122
+  src: The Warmth Ahead - Spring Lamb in a Sunlit Meadow.jpg
+  category: others
+  section: general
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
