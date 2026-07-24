@@ -1,0 +1,60 @@
+{{/*
+  Renders a one-row preview of the most recently read books.
+  If any entries in data/reading.yaml have a `dateRead` field, those are shown
+  sorted by dateRead descending. Otherwise falls back to the tail of the list
+  in reverse (newest-added first). The trailing tile links to the reading list.
+*/}}
+{{ $lang := .Page.Site.Language.Lang }}
+{{ $readingListUrl := printf "/%s/reading-list/" $lang }}
+
+{{ $dated := slice }}
+{{ range hugo.Data.reading }}
+  {{ if .dateRead }}
+    {{ $dated = $dated | append . }}
+  {{ end }}
+{{ end }}
+
+{{ $books := slice }}
+{{ if gt (len $dated) 0 }}
+  {{ $books = first 6 (sort $dated "dateRead" "desc") }}
+{{ else }}
+  {{ $books = collections.Reverse (last 6 hugo.Data.reading) }}
+{{ end }}
+
+<div class="recent-reading">
+  {{ range $books }}
+  {{ $book := . }}
+  {{ $bookUrl := printf "%s#%s" $readingListUrl (urlize $book.title) }}
+  <div class="recent-reading__tile">
+    <div class="recent-reading__cover">
+      {{ if .cover }}
+        {{ $img := resources.Get .cover }}
+        {{ with $img }}
+          {{ $resized := .Fit "200x300" }}
+          <a href="{{ $bookUrl }}">
+            <img src="{{ $resized.RelPermalink }}" alt="{{ i18n "coverAlt" $book.title }}" loading="lazy">
+          </a>
+        {{ end }}
+      {{ end }}
+    </div>
+    <div class="recent-reading__meta">
+      <span class="recent-reading__title">
+        <a href="{{ $bookUrl }}">{{ .title }}</a>
+      </span>
+      <span class="recent-reading__author">{{ .author }}</span>
+    </div>
+  </div>
+  {{ end }}
+
+  <a class="recent-reading__tile recent-reading__more" href="{{ $readingListUrl }}">
+    <div class="recent-reading__cover recent-reading__more-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </div>
+    <div class="recent-reading__meta">
+      <span class="recent-reading__more-label">{{ i18n "moreBooks" }}</span>
+    </div>
+  </a>
+</div>

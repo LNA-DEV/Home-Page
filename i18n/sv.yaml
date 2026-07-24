@@ -44,6 +44,8 @@
   translation: "Lyssnat på"
 - id: coverAlt
   translation: "Omslag till {{ . }}"
+- id: moreBooks
+  translation: "Fler böcker"
 
 # Activity feed
 - id: activity_type_post

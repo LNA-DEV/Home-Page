@@ -44,6 +44,14 @@ I edit my photography using [Darktable](https://www.darktable.org/), a free and 
 
 {{< img url="./Seagull flying over the sea.JPG" alt="Image of a seagull flying over the sea. Taken by me / Lukas Nagel." caption="One of the images taken by me. But there are many more." link="/en/gallery/animals/#2681282402" >}}
 
+## Hobbies
+
+### Reading
+
+Reading is one of my hobbies. Here are the books I've read most recently:
+
+{{< recentReading >}}
+
 ## Domains I control
 
 - [lna-dev.net](https://lna-dev.net) (Homepage)

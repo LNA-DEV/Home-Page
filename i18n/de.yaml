@@ -49,6 +49,8 @@
   translation: "Gehört in"
 - id: coverAlt
   translation: "Cover von {{ . }}"
+- id: moreBooks
+  translation: "Mehr Bücher"
 
 # Activity feed
 - id: activity_type_post

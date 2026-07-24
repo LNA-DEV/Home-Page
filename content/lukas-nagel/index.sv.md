@@ -48,6 +48,14 @@ Jag redigerar mina fotografier med [Darktable](https://www.darktable.org/), ett 
 
 Jag är fascinerad av de nordiska länderna. Därför är jag intresserad av språk, naturen och kulturen där. Jag började lära mig svenska själv eftersom jag tycker att det är det mest talade språket i Norden. Jag kommer att skriva om min inlärningsresa på denna blogg.
 
+## Hobbyer
+
+### Läsning
+
+Läsning är en av mina hobbyer. Här är böckerna jag har läst senast:
+
+{{< recentReading >}}
+
 ## Domäner jag kontrollera
 
 - [lna-dev.net](https://lna-dev.net) (Hemsida)

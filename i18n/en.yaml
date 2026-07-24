@@ -50,6 +50,8 @@
   translation: "Listened in"
 - id: coverAlt
   translation: "Cover of {{ . }}"
+- id: moreBooks
+  translation: "More books"
 
 # Activity feed
 - id: activity_type_post
