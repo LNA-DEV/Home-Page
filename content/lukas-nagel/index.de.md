@@ -44,9 +44,7 @@ Editieren tue ich meine Fotografie in [Darktable](https://www.darktable.org/), e
 
 {{< img url="./Seagull flying over the sea.JPG" alt="Bild einer Möwe, die über das Meer fliegt. Aufgenommen von mir / Lukas Nagel" caption="Eines meiner Bilder, aber da sind noch deutlich mehr." link="/en/gallery/animals/#2681282402" >}}
 
-## Hobbys
-
-### Lesen
+## Lesen
 
 Lesen ist eines meiner Hobbys. Hier sind die zuletzt gelesenen Bücher:
 
