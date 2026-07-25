@@ -54,6 +54,12 @@ Items are grouped by year/month and filterable client-side. Photo permalinks use
 
 Custom `layouts/_default/rss.xml`. The gallery overhaul preserves RSS URL stability — when moving images around, generate redirects rather than breaking old item links.
 
+### Reading list
+
+Books the user has read. **Data**: `data/reading.yaml` — a flat list, one entry per book. Fields: `title`, `series` (optional), `author`, `genres[]`, `year`, `link`, `cover`, `pages`, `originalLanguage` (2-letter code), `languagesRead[]` / `languagesListened[]`, and optional `rating` (1–5), `dateRead` (`"YYYY-MM-DD"`, drives the `recentReading` preview order), `notes`. **Covers**: committed JPEG/WebP files in `assets/images/books/covers/`, referenced as `images/books/covers/<Title>.<ext>` and resized to a 200×300 fit by Hugo. Unlike gallery photos, these images *are* in git. Rendered by `layouts/shortcodes/readingList.html` (full list) and `layouts/shortcodes/recentReading.html` (profile-page preview).
+
+**Adding a book — use `scripts/add-book.py`** (stdlib only; see `AGENTS.md` for the full workflow). It looks the book up on Open Library (free, no key), downloads the cover into the covers folder, and appends a YAML entry (`--append`) or prints a paste-ready block. It auto-fills `title`/`author`/`year`/`pages`/`cover`, proposes a `link` (Wikipedia → Open Library → Goodreads-search, always verify), and suggests `genres` mapped onto the existing vocabulary. It **cannot** know `originalLanguage`, `rating`, `dateRead`, `languagesRead`/`languagesListened` — those are left as TODO/empty for a human. Always eyeball the link and genres before committing (subject mapping produces occasional false positives). Do **not** run `./deploy.sh` after adding — that is a separate, explicitly-authorized step.
+
 ### i18n
 
 UI strings in `i18n/{en,de,sv}.yaml`. Per-language menus, descriptions, and home content live under `languages.<lang>.params` in `hugo.yaml`. Content files use `index.<lang>.md` for branch bundles and `_index.<lang>.md` for sections.
