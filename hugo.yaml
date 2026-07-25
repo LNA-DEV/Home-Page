@@ -54,8 +54,8 @@ minify:
 
 languages:
   en:
-    languageName: "🇬🇧 En"
-    languageCode: en-US
+    label: "🇬🇧 En"
+    locale: en-US
     weight: 1
     params:
       description: I'm Lukas Nagel (LNA-DEV), sharing insights on development, tech, photography, and more on this page which serves as my digital hub.
@@ -97,8 +97,8 @@ languages:
           url: /gallery/
           weight: 30
   de:
-    languageName: "🇩🇪 De"
-    languageCode: de-DE
+    label: "🇩🇪 De"
+    locale: de-DE
     weight: 2
     params: 
       description: Ich bin Lukas Nagel (LNA-DEV) und teile hier Einblicke in die Software-Entwicklung, IT im Allgemeinen, Fotografie und mehr.
@@ -139,8 +139,8 @@ languages:
           url: /gallery/
           weight: 30
   sv:
-    languageName: "🇸🇪 Sv"
-    languageCode: sv-Sv
+    label: "🇸🇪 Sv"
+    locale: sv-Sv
     weight: 3
     params: 
       description: Jag är Lukas Nagel (LNA-DEV) och delar insikter om programutveckling, teknik, fotografi och mer på denna sida, som fungerar som mitt digitala nav.
