@@ -753,5 +753,57 @@
   pages: 432
   rating: 3
   originalLanguage: pl
-  languagesRead: 
+  languagesRead:
     - de
+
+- title: "A Court of Thorns and Roses"
+  series: A Court of Thorns and Roses
+  author: "Sarah J. Maas"
+  genres: ["fantasy", "romance"]
+  year: 2015
+  link: "https://en.wikipedia.org/wiki/A_Court_of_Thorns_and_Roses"
+  cover: "images/books/covers/A Court of Thorns and Roses.jpg"
+  pages: 419
+  rating: 4
+  originalLanguage: en
+  languagesRead:
+    - en
+
+- title: "A Court of Mist and Fury"
+  series: A Court of Thorns and Roses
+  author: "Sarah J. Maas"
+  genres: ["fantasy", "romance"]
+  year: 2016
+  link: "https://en.wikipedia.org/wiki/A_Court_of_Thorns_and_Roses"
+  cover: "images/books/covers/A Court of Mist and Fury.jpg"
+  pages: 624
+  rating: 4
+  originalLanguage: en
+  languagesRead:
+    - en
+
+- title: "A Court of Wings and Ruin"
+  series: A Court of Thorns and Roses
+  author: "Sarah J. Maas"
+  genres: ["fantasy", "romance"]
+  year: 2017
+  link: "https://en.wikipedia.org/wiki/A_Court_of_Thorns_and_Roses"
+  cover: "images/books/covers/A Court of Wings and Ruin.jpg"
+  pages: 705
+  rating: 4
+  originalLanguage: en
+  languagesRead:
+    - en
+
+- title: "A Court of Frost and Starlight"
+  series: A Court of Thorns and Roses
+  author: "Sarah J. Maas"
+  genres: ["fantasy", "romance"]
+  year: 2018
+  link: "https://en.wikipedia.org/wiki/A_Court_of_Thorns_and_Roses"
+  cover: "images/books/covers/A Court of Frost and Starlight.jpg"
+  pages: 229
+  rating: 4
+  originalLanguage: en
+  languagesRead:
+    - en
