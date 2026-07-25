@@ -50,6 +50,12 @@ Reading is one of my hobbies. Here are the books I've read most recently:
 
 {{< recentReading >}}
 
+## Gaming
+
+Gaming is another hobby of mine. Here are the games I've played most recently:
+
+{{< recentGaming >}}
+
 ## Domains I control
 
 - [lna-dev.net](https://lna-dev.net) (Homepage)

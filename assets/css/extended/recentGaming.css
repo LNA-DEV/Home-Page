@@ -1,0 +1,145 @@
+.recent-gaming {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+  overflow: hidden;
+}
+
+.recent-gaming__tile {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.recent-gaming__cover {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+}
+
+.recent-gaming__cover a {
+  display: block;
+  box-shadow: none;
+  width: 100%;
+  height: 100%;
+}
+
+.recent-gaming__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0;
+}
+
+.recent-gaming__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--secondary);
+  background: var(--tertiary);
+  border-radius: 6px;
+}
+
+.recent-gaming__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-top: 0.75rem;
+  min-width: 0;
+  min-height: 2.2em;
+}
+
+.recent-gaming__title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recent-gaming__title a {
+  color: inherit;
+  box-shadow: none;
+}
+
+.recent-gaming__title a:hover {
+  text-decoration: underline;
+}
+
+.recent-gaming__more-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--tertiary);
+  border-radius: 6px;
+  color: var(--secondary);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.recent-gaming__more-icon svg {
+  width: 40%;
+  height: 40%;
+  max-width: 48px;
+  max-height: 48px;
+}
+
+.recent-gaming__more:hover .recent-gaming__more-icon {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.recent-gaming__more-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--secondary);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recent-gaming__more:hover .recent-gaming__more-label {
+  color: var(--primary);
+}
+
+/*
+  Responsive: shed game tiles that don't fit, keep the "More games" tile visible.
+  Breakpoints mirror assets/css/extended/recentReading.css.
+*/
+@media (max-width: 999px) {
+  .recent-gaming > .recent-gaming__tile:nth-child(n+5):not(.recent-gaming__more) {
+    display: none;
+  }
+}
+
+@media (max-width: 699px) {
+  .recent-gaming > .recent-gaming__tile:nth-child(n+4):not(.recent-gaming__more) {
+    display: none;
+  }
+}
+
+@media (max-width: 499px) {
+  .recent-gaming > .recent-gaming__tile:nth-child(n+3):not(.recent-gaming__more) {
+    display: none;
+  }
+}
+
+@media (max-width: 399px) {
+  .recent-gaming > .recent-gaming__tile:nth-child(n+2):not(.recent-gaming__more) {
+    display: none;
+  }
+}

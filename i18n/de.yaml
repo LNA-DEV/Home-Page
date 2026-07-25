@@ -52,6 +52,28 @@
 - id: moreBooks
   translation: "Mehr Bücher"
 
+# Gaming
+- id: gamesCount
+  translation: "Spiele"
+- id: hoursPlayed
+  translation: "Std. gespielt"
+- id: achievementsWord
+  translation: "Erfolge"
+- id: playtimeLabel
+  translation: "Spielzeit"
+- id: lastPlayedLabel
+  translation: "Zuletzt gespielt"
+- id: sortPlaytime
+  translation: "Spielzeit"
+- id: sortRecent
+  translation: "Zuletzt gespielt"
+- id: sortAlpha
+  translation: "A–Z"
+- id: allPlatforms
+  translation: "Alle"
+- id: moreGames
+  translation: "Mehr Spiele"
+
 # Activity feed
 - id: activity_type_post
   translation: "Beitrag"

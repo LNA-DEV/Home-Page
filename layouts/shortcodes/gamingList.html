@@ -1,0 +1,135 @@
+<div class="gaming">
+  {{/* --- Aggregate stats + distinct platforms (single pass) --- */}}
+  {{ $totalMinutes := 0 }}
+  {{ $totalAch := 0 }}
+  {{ $platforms := slice }}
+  {{ range hugo.Data.gaming }}
+    {{ $totalMinutes = add $totalMinutes (.playtimeMinutes | default 0) }}
+    {{ $totalAch = add $totalAch (.achievementsUnlocked | default 0) }}
+    {{ $platforms = $platforms | append (.platform | default "other") }}
+  {{ end }}
+  {{ $totalHours := int (div $totalMinutes 60) }}
+  {{ $platforms = $platforms | uniq | sort }}
+
+  <div class="gaming-stats">
+    <span class="gaming-stats__item"><strong>{{ len hugo.Data.gaming }}</strong> {{ i18n "gamesCount" }}</span>
+    <span class="gaming-stats__item"><strong>{{ lang.FormatNumberCustom 0 $totalHours }}</strong> {{ i18n "hoursPlayed" }}</span>
+    {{ if gt $totalAch 0 }}
+    <span class="gaming-stats__item"><strong>{{ lang.FormatNumberCustom 0 $totalAch }}</strong> {{ i18n "achievementsWord" }}</span>
+    {{ end }}
+  </div>
+
+  <div class="gaming-controls">
+    <div class="gaming-sort">
+      <button type="button" class="gaming-btn is-active" data-sort="playtime">{{ i18n "sortPlaytime" }}</button>
+      <button type="button" class="gaming-btn" data-sort="recent">{{ i18n "sortRecent" }}</button>
+      <button type="button" class="gaming-btn" data-sort="alpha">{{ i18n "sortAlpha" }}</button>
+    </div>
+    {{ if gt (len $platforms) 1 }}
+    <div class="gaming-filter">
+      <button type="button" class="gaming-btn is-active" data-filter="all">{{ i18n "allPlatforms" }}</button>
+      {{ range $platforms }}
+      <button type="button" class="gaming-btn" data-filter="{{ . }}">{{ . | title }}</button>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+
+  {{/* Pre-sorted by playtime desc so the initial DOM matches the default active button. */}}
+  <div class="gaming-grid">
+    {{ range sort hugo.Data.gaming "playtimeMinutes" "desc" }}
+    {{ $game := . }}
+
+    {{/* Compact playtime badge: minutes below an hour, else hours (1 decimal under 10h). */}}
+    {{ $mins := .playtimeMinutes | default 0 }}
+    {{ $badge := "" }}
+    {{ if lt $mins 60 }}
+      {{ $badge = printf "%d min" $mins }}
+    {{ else }}
+      {{ $h := div (float $mins) 60.0 }}
+      {{ $badge = printf "%s h" (lang.FormatNumberCustom (cond (lt $h 10.0) 1 0) $h) }}
+    {{ end }}
+
+    <a class="game-card" id="{{ urlize .title }}"
+       {{ with .link }}href="{{ . }}" target="_blank" rel="noopener"{{ end }}
+       data-playtime="{{ $mins }}" data-lastplayed="{{ .lastPlayed }}"
+       data-title="{{ .title | lower }}" data-platform="{{ .platform | default "other" }}">
+      <div class="game-card__cover">
+        {{ with .cover }}
+          {{ $img := resources.Get . }}
+          {{ with $img }}
+            {{ $t := .Fill "300x450" }}
+            <img src="{{ $t.RelPermalink }}" alt="{{ i18n "coverAlt" $game.title }}" loading="lazy">
+          {{ end }}
+        {{ else }}
+          <div class="game-card__placeholder"><span>{{ .title }}</span></div>
+        {{ end }}
+        <span class="game-card__playtime" title="{{ i18n "playtimeLabel" }}">{{ $badge }}</span>
+      </div>
+
+      <div class="game-card__body">
+        <span class="game-card__title">{{ .title }}</span>
+
+        {{ if and .achievementsTotal (gt .achievementsTotal 0) }}
+        {{ $pct := mul (div (float .achievementsUnlocked) (float .achievementsTotal)) 100 }}
+        <div class="game-card__achv" title="{{ i18n "achievementsWord" }}">
+          <div class="game-card__achv-track"><span style="width: {{ printf "%.1f" $pct }}%"></span></div>
+          <span class="game-card__achv-label">{{ .achievementsUnlocked }}/{{ .achievementsTotal }}</span>
+        </div>
+        {{ end }}
+
+        {{ if .rating }}
+        <span class="game-card__rating">
+          {{ range seq 1 5 }}<span class="star{{ if le . $game.rating }} filled{{ end }}">★</span>{{ end }}
+        </span>
+        {{ end }}
+
+        {{ with .lastPlayed }}
+        <span class="game-card__last">{{ i18n "lastPlayedLabel" }}: {{ . }}</span>
+        {{ end }}
+      </div>
+    </a>
+    {{ end }}
+  </div>
+
+  <script>
+  (function () {
+    var script = document.currentScript;
+    var root = script.closest('.gaming');
+    if (!root) return;
+    var grid = root.querySelector('.gaming-grid');
+    if (!grid) return;
+    var cards = Array.prototype.slice.call(grid.querySelectorAll('.game-card'));
+
+    function setActive(group, btn) {
+      root.querySelectorAll('[data-' + group + ']').forEach(function (b) { b.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+    }
+
+    function sortBy(key) {
+      cards.slice().sort(function (a, b) {
+        if (key === 'alpha') {
+          return a.dataset.title.localeCompare(b.dataset.title);
+        }
+        if (key === 'recent') {
+          return (b.dataset.lastplayed || '').localeCompare(a.dataset.lastplayed || '');
+        }
+        return (parseInt(b.dataset.playtime, 10) || 0) - (parseInt(a.dataset.playtime, 10) || 0);
+      }).forEach(function (c) { grid.appendChild(c); });
+    }
+
+    function filterBy(platform) {
+      cards.forEach(function (c) {
+        c.style.display = (platform === 'all' || c.dataset.platform === platform) ? '' : 'none';
+      });
+    }
+
+    root.querySelectorAll('[data-sort]').forEach(function (btn) {
+      btn.addEventListener('click', function () { setActive('sort', btn); sortBy(btn.dataset.sort); });
+    });
+    root.querySelectorAll('[data-filter]').forEach(function (btn) {
+      btn.addEventListener('click', function () { setActive('filter', btn); filterBy(btn.dataset.filter); });
+    });
+  })();
+  </script>
+</div>

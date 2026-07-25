@@ -54,6 +54,12 @@ Läsning är en av mina hobbyer. Här är böckerna jag har läst senast:
 
 {{< recentReading >}}
 
+## Spel
+
+Att spela spel är en annan av mina hobbyer. Här är spelen jag har spelat senast:
+
+{{< recentGaming >}}
+
 ## Domäner jag kontrollera
 
 - [lna-dev.net](https://lna-dev.net) (Hemsida)

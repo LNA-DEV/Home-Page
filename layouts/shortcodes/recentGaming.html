@@ -1,0 +1,61 @@
+{{/*
+  Renders a one-row preview of the most recently played games.
+  Entries in data/gaming.yaml are sorted by `lastPlayed` descending and the top
+  six are shown. Falls back to the tail of the list (reversed) if none carry a
+  `lastPlayed`. The trailing tile links to the full gaming page.
+*/}}
+{{ $lang := .Page.Site.Language.Lang }}
+{{ $gamingUrl := printf "/%s/gaming/" $lang }}
+
+{{ $dated := slice }}
+{{ range hugo.Data.gaming }}
+  {{ if .lastPlayed }}
+    {{ $dated = $dated | append . }}
+  {{ end }}
+{{ end }}
+
+{{ $games := slice }}
+{{ if gt (len $dated) 0 }}
+  {{ $games = first 6 (sort $dated "lastPlayed" "desc") }}
+{{ else }}
+  {{ $games = collections.Reverse (last 6 hugo.Data.gaming) }}
+{{ end }}
+
+<div class="recent-gaming">
+  {{ range $games }}
+  {{ $game := . }}
+  {{ $gameUrl := printf "%s#%s" $gamingUrl (urlize $game.title) }}
+  <div class="recent-gaming__tile">
+    <div class="recent-gaming__cover">
+      <a href="{{ $gameUrl }}">
+        {{ with .cover }}
+          {{ $img := resources.Get . }}
+          {{ with $img }}
+            {{ $t := .Fill "300x450" }}
+            <img src="{{ $t.RelPermalink }}" alt="{{ i18n "coverAlt" $game.title }}" loading="lazy">
+          {{ end }}
+        {{ else }}
+          <div class="recent-gaming__placeholder"><span>{{ .title }}</span></div>
+        {{ end }}
+      </a>
+    </div>
+    <div class="recent-gaming__meta">
+      <span class="recent-gaming__title">
+        <a href="{{ $gameUrl }}">{{ .title }}</a>
+      </span>
+    </div>
+  </div>
+  {{ end }}
+
+  <a class="recent-gaming__tile recent-gaming__more" href="{{ $gamingUrl }}">
+    <div class="recent-gaming__cover recent-gaming__more-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </div>
+    <div class="recent-gaming__meta">
+      <span class="recent-gaming__more-label">{{ i18n "moreGames" }}</span>
+    </div>
+  </a>
+</div>

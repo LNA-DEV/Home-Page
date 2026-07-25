@@ -1,0 +1,201 @@
+.gaming {
+  margin: 1rem 0 2rem;
+}
+
+/* --- Stats header --- */
+.gaming-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0.9rem 1.1rem;
+  margin-bottom: 1.2rem;
+  background: var(--entry);
+  border-radius: var(--radius);
+}
+
+.gaming-stats__item {
+  font-size: 0.95rem;
+  color: var(--secondary);
+}
+
+.gaming-stats__item strong {
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-right: 0.2rem;
+}
+
+/* --- Sort / filter controls --- */
+.gaming-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.3rem;
+}
+
+.gaming-sort,
+.gaming-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.gaming-btn {
+  font: inherit;
+  font-size: 0.85rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--tertiary);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--secondary);
+  transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.gaming-btn:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.gaming-btn.is-active {
+  background: var(--primary);
+  color: var(--theme);
+  border-color: var(--primary);
+}
+
+/* --- Cover grid --- */
+.gaming-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1.1rem;
+}
+
+/* High specificity (`.gaming-grid .game-card`) so these beat PaperMod's
+   `.post-content a` link styling that the shortcode content otherwise inherits. */
+.gaming-grid .game-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--entry);
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.gaming-grid .game-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+}
+
+.game-card__cover {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  background: var(--tertiary);
+}
+
+.game-card__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  border-radius: 0;
+}
+
+.game-card__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.game-card__playtime {
+  position: absolute;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.game-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0.6rem 0.7rem 0.75rem;
+}
+
+.game-card__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.game-card__achv {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.game-card__achv-track {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--tertiary);
+  overflow: hidden;
+}
+
+.game-card__achv-track span {
+  display: block;
+  height: 100%;
+  background: #66c0f4; /* Steam-blue achievement fill */
+}
+
+.game-card__achv-label {
+  font-size: 0.72rem;
+  color: var(--secondary);
+  white-space: nowrap;
+}
+
+.game-card__last {
+  font-size: 0.72rem;
+  color: var(--secondary);
+}
+
+.game-card__rating .star {
+  font-size: 0.85rem;
+  color: var(--tertiary);
+}
+
+.game-card__rating .star.filled {
+  color: #f5c518;
+}
+
+@media (max-width: 500px) {
+  .gaming-grid {
+    grid-template-columns: repeat(auto-fill, minmax(108px, 1fr));
+    gap: 0.8rem;
+  }
+
+  .gaming-controls {
+    justify-content: flex-start;
+  }
+}

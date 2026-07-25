@@ -47,6 +47,28 @@
 - id: moreBooks
   translation: "Fler böcker"
 
+# Gaming
+- id: gamesCount
+  translation: "spel"
+- id: hoursPlayed
+  translation: "h spelat"
+- id: achievementsWord
+  translation: "prestationer"
+- id: playtimeLabel
+  translation: "Speltid"
+- id: lastPlayedLabel
+  translation: "Senast spelad"
+- id: sortPlaytime
+  translation: "Speltid"
+- id: sortRecent
+  translation: "Senast spelad"
+- id: sortAlpha
+  translation: "A–Z"
+- id: allPlatforms
+  translation: "Alla"
+- id: moreGames
+  translation: "Fler spel"
+
 # Activity feed
 - id: activity_type_post
   translation: "Inlägg"

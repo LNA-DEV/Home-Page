@@ -50,6 +50,12 @@ Lesen ist eines meiner Hobbys. Hier sind die zuletzt gelesenen Bücher:
 
 {{< recentReading >}}
 
+## Spiele
+
+Auch Gaming ist eines meiner Hobbys. Hier sind die zuletzt gespielten Spiele:
+
+{{< recentGaming >}}
+
 ## Domains unter meiner Kontrolle
 
 - [lna-dev.net](https://lna-dev.net) (Homepage)
