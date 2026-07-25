@@ -1,0 +1,40 @@
+# Games I've played — a flat, unordered list, one entry per game.
+# Modelled on data/reading.yaml. Multiple sources write here:
+#
+#   * hand-added entries — any `platform:` value OTHER than `steam`
+#     (e.g. gog / switch / playstation / manual).
+#   * Steam entries — auto-managed by scripts/sync-steam.py.
+#
+# The `platform` field is the discriminator. The Steam sync ONLY ever touches
+# entries with `platform: steam`: it rebuilds them from the live Steam library
+# (new games added, de-listed games pruned) and appends them below the marker
+# it emits. Everything else in this file is left byte-for-byte untouched, so
+# hand-added games are safe. Human-owned fields (rating, genres, tags, notes)
+# set on a Steam entry ARE preserved across syncs — the script merges them back
+# by `appid`. The auto-managed Steam block is always written LAST in the file.
+#
+# Fields (all optional except `title` + `platform`):
+#   title                 game name
+#   platform              steam | gog | switch | playstation | manual | ...
+#   appid                 Steam AppID — stable key the sync matches on (steam only)
+#   playtimeMinutes       total playtime in minutes (steam: playtime_forever)
+#   lastPlayed            "YYYY-MM-DD"
+#   achievementsUnlocked  number of unlocked achievements
+#   achievementsTotal     number of achievements the game has
+#   cover                 images/games/covers/<file> (committed, like book covers)
+#   link                  store / info URL
+#   rating                optional 1-5 (human)
+#   genres / tags         optional list (human)
+#   notes                 optional (human)
+#
+# Hand-added example (copy, uncomment, set platform to something != steam):
+#
+# - title: "The Legend of Zelda: Breath of the Wild"
+#   platform: switch
+#   playtimeMinutes: 12000
+#   lastPlayed: "2022-03-01"
+#   cover: "images/games/covers/breath-of-the-wild.jpg"
+#   link: "https://www.zelda.com/breath-of-the-wild/"
+#   rating: 5
+#   genres: ["action-adventure", "open-world"]
+#   notes: "First playthrough on launch."

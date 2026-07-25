@@ -79,3 +79,78 @@ book on Open Library, download the `-L` cover
 (`https://covers.openlibrary.org/b/id/<cover_i>-L.jpg`) into the covers folder,
 and add a matching entry to `data/reading.yaml` following the existing entries'
 shape. Keep the field order consistent with neighbouring entries.
+
+## Syncing games from Steam
+
+The gaming list lives in `data/gaming.yaml` (one entry per game) with cover
+images committed under `assets/images/games/covers/`. See the "Gaming" section
+of `CLAUDE.md` for the full data model. The file is written by **multiple
+sources**: hand-added entries (any `platform:` other than `steam`) and
+Steam-synced entries (`platform: steam`).
+
+Use **`scripts/sync-steam.py`** for the Steam half. It is standard-library only
+(no `pip install`), and edits `gaming.yaml` as raw text so hand-added entries
+stay byte-for-byte unchanged (same convention as `add-book.py` /
+`sync-gallery.py`).
+
+### What the script does
+
+- Fetches the owned-games library from the Steam Web API
+  (`IPlayerService/GetOwnedGames`) — needs an API key + your 64-bit SteamID.
+- Auto-fills `title`, `appid`, `playtimeMinutes`, `lastPlayed`, and (unless
+  `--no-achievements`) `achievementsUnlocked` / `achievementsTotal` via
+  `ISteamUserStats/GetPlayerAchievements` (silently skipped for games with no
+  stats or a private profile).
+- Downloads each game's portrait cover (`library_600x900`, falling back to
+  `header.jpg`) into `assets/images/games/covers/<appid>.jpg`, skipping files
+  that already exist (`--no-covers` to skip entirely).
+- **Reconciles only the `platform: steam` entries** against the live library:
+  newly-owned games are **added**, games no longer owned are **pruned**. It
+  writes them as the last block in the file, under a marker it emits. By
+  default 0-playtime games are excluded (`--include-unplayed` to keep them).
+
+### What it deliberately leaves for a human
+
+- `rating`, `genres`, `tags`, `notes` — subjective. Add them by hand to a Steam
+  entry and they are **preserved across future syncs** (re-emitted verbatim,
+  matched by `appid`). Keep each to a single line — that's how they're re-added.
+- Any non-Steam game — the sync never touches entries whose `platform` isn't
+  `steam`.
+
+### Workflow
+
+1. **Credentials** — get a key at <https://steamcommunity.com/dev/apikey>, then:
+   ```
+   export STEAM_API_KEY=...        # never commit this
+   export STEAM_ID=7656119...      # your 64-bit SteamID
+   ```
+   (Or pass `--api-key` / `--steam-id`.)
+
+2. **Preview** the reconcile (writes nothing):
+   ```
+   python3 scripts/sync-steam.py --dry-run
+   ```
+   It prints `+N added, ~M updated, -K pruned` and the pruned appids. Sanity-check
+   the counts before writing.
+
+3. **Sync**:
+   ```
+   python3 scripts/sync-steam.py
+   ```
+   (Add `--no-achievements` / `--no-covers` for a faster run.)
+
+4. **Eyeball the diff**: `git diff data/gaming.yaml` — confirm hand-added and
+   non-Steam entries are untouched and the covers under
+   `assets/images/games/covers/` look right.
+
+5. **Sanity-check the build**: `hugo` should succeed. (Nothing renders the data
+   yet, but the file must still parse.)
+
+Do **not** run `./deploy.sh` — deployment is a separate step the user authorizes
+explicitly.
+
+### Adding a non-Steam game by hand
+
+Copy the commented template at the top of `data/gaming.yaml`, uncomment it, and
+set `platform:` to something other than `steam` (e.g. `switch`, `gog`,
+`manual`). The Steam sync will leave it alone.
