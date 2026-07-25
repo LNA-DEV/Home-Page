@@ -46,6 +46,26 @@
   translation: "Omslag till {{ . }}"
 - id: moreBooks
   translation: "Fler böcker"
+- id: genresLabel
+  translation: "Genrer"
+- id: readingSearchPlaceholder
+  translation: "Sök titel eller författare…"
+- id: allGenres
+  translation: "Alla genrer"
+- id: anyRating
+  translation: "Alla betyg"
+- id: sortNewest
+  translation: "Senaste"
+- id: sortTitle
+  translation: "A–Ö"
+- id: sortYear
+  translation: "År"
+- id: sortRating
+  translation: "Betyg"
+- id: noResults
+  translation: "Inga böcker matchar dina filter."
+- id: booksLabel
+  translation: "böcker"
 
 # Gaming
 - id: gamesCount

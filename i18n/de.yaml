@@ -51,6 +51,26 @@
   translation: "Cover von {{ . }}"
 - id: moreBooks
   translation: "Mehr Bücher"
+- id: genresLabel
+  translation: "Genres"
+- id: readingSearchPlaceholder
+  translation: "Titel oder Autor suchen…"
+- id: allGenres
+  translation: "Alle Genres"
+- id: anyRating
+  translation: "Alle Bewertungen"
+- id: sortNewest
+  translation: "Neueste"
+- id: sortTitle
+  translation: "A–Z"
+- id: sortYear
+  translation: "Jahr"
+- id: sortRating
+  translation: "Bewertung"
+- id: noResults
+  translation: "Keine Bücher entsprechen den Filtern."
+- id: booksLabel
+  translation: "Bücher"
 
 # Gaming
 - id: gamesCount

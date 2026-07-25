@@ -1,0 +1,94 @@
+/* Reading-list filter/sort controls — progressive enhancement.
+   Hidden by default so a no-JS visitor never sees dead controls; the inline
+   script in readingList.html adds `.js-ready` to reveal them. Theme-variable
+   based (like gamingList.css) so it works in light and dark. */
+
+.reading-controls {
+  display: none;
+}
+
+.reading-list-wrap.js-ready .reading-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1rem;
+  margin-bottom: 1.6rem;
+}
+
+.reading-search,
+.reading-genre,
+.reading-rating {
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--tertiary);
+  border-radius: var(--radius);
+  background: var(--entry);
+  color: var(--primary);
+}
+
+.reading-search {
+  flex: 1 1 12rem;
+  min-width: 10rem;
+}
+
+.reading-search:focus,
+.reading-genre:focus,
+.reading-rating:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.reading-sort {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.reading-sort .reading-btn {
+  font: inherit;
+  font-size: 0.85rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--tertiary);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--secondary);
+  transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.reading-sort .reading-btn:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.reading-sort .reading-btn.is-active {
+  background: var(--primary);
+  color: var(--theme);
+  border-color: var(--primary);
+}
+
+.reading-count {
+  margin: 0 0 0 auto; /* push to the far right of the controls row */
+  font-size: 0.85rem;
+  color: var(--secondary);
+  white-space: nowrap;
+  text-align: right;
+}
+
+.reading-empty {
+  margin: 1.5rem 0;
+  font-size: 1rem;
+  color: var(--secondary);
+}
+
+@media (max-width: 500px) {
+  .reading-list-wrap.js-ready .reading-controls {
+    gap: 0.5rem;
+  }
+
+  .reading-search {
+    flex-basis: 100%;
+  }
+}
