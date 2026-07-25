@@ -1,7 +1,12 @@
 node_modules
+# Local credentials (e.g. STEAM_API_KEY / STEAM_ID for scripts/sync-steam.py).
+.env
+.env.*
 /public
 /resources/_gen/
 # Gallery photos live outside the repo; mounted in via hugo.yaml module.mounts.
 # This symlink → the local photo store (see CLAUDE.md "Build / Deploy").
 /gallery-photos
 .inbox/**
+.env
+scripts/__pycache__/**

@@ -119,12 +119,19 @@ stay byte-for-byte unchanged (same convention as `add-book.py` /
 
 ### Workflow
 
-1. **Credentials** — get a key at <https://steamcommunity.com/dev/apikey>, then:
-   ```
-   export STEAM_API_KEY=...        # never commit this
-   export STEAM_ID=7656119...      # your 64-bit SteamID
-   ```
-   (Or pass `--api-key` / `--steam-id`.)
+1. **Credentials** — get a key at <https://steamcommunity.com/dev/apikey>, then
+   supply `STEAM_API_KEY` and `STEAM_ID` (your 64-bit SteamID) in any of three
+   ways (precedence: flag > environment > `.env`):
+   - a **`.env`** file in the repo root (gitignored) — the easiest; the script
+     auto-loads it (or point at another file with `--env-file`):
+     ```
+     STEAM_API_KEY=...
+     STEAM_ID=7656119...
+     ```
+   - the **environment**: `export STEAM_API_KEY=...` / `export STEAM_ID=...`
+   - **flags**: `--api-key ...` / `--steam-id ...`
+
+   Never commit the key or SteamID.
 
 2. **Preview** the reconcile (writes nothing):
    ```

@@ -22,12 +22,16 @@ script re-emits them.)
 The YAML is edited as raw text — there is no YAML dependency, matching
 add-book.py / sync-gallery.py. Standard library only.
 
-Credentials (never printed, never committed):
+Credentials (never printed, never committed) — supplied via a CLI flag, the
+environment, or a .env file (repo-root or cwd, gitignored):
     STEAM_API_KEY   from https://steamcommunity.com/dev/apikey   (or --api-key)
     STEAM_ID        your 64-bit SteamID                          (or --steam-id)
+Precedence: --api-key / --steam-id  >  real environment variable  >  .env file.
 
 Usage:
-    STEAM_API_KEY=... STEAM_ID=... python3 scripts/sync-steam.py --dry-run
+    # with a .env file in the repo root holding STEAM_API_KEY / STEAM_ID:
+    python3 scripts/sync-steam.py --dry-run
+    # or inline / from the environment:
     STEAM_API_KEY=... STEAM_ID=... python3 scripts/sync-steam.py
 """
 
@@ -57,6 +61,46 @@ STEAM_MARKER = "# ==== STEAM: auto-managed by scripts/sync-steam.py (regenerated
 # Human-owned fields on a Steam entry that must survive a resync. Re-emitted
 # verbatim (single line each) after the script-owned mechanical fields.
 HUMAN_FIELDS = ("rating", "genres", "tags", "notes")
+
+
+# --------------------------------------------------------------------------- #
+# .env loading (stdlib only — no python-dotenv dependency)                      #
+# --------------------------------------------------------------------------- #
+def load_dotenv(path, *, override=False):
+    """Load KEY=VALUE pairs from a .env file into os.environ.
+
+    Ignores blank lines and `#` comments, tolerates a leading `export `, and
+    strips a matching pair of single/double quotes around the value (and an
+    inline `#` comment on unquoted values). A missing file is a no-op. Existing
+    environment variables win unless override=True. Returns the keys loaded."""
+    loaded = []
+    try:
+        text = Path(path).read_text(encoding="utf-8")
+    except OSError:
+        return loaded
+    for raw_line in text.splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.startswith("export "):
+            line = line[len("export "):].lstrip()
+        key, sep, value = line.partition("=")
+        if not sep:
+            continue
+        key = key.strip()
+        if not key:
+            continue
+        value = value.strip()
+        if len(value) >= 2 and value[0] == value[-1] and value[0] in ("'", '"'):
+            value = value[1:-1]
+        else:
+            hash_idx = value.find(" #")  # strip trailing inline comment
+            if hash_idx != -1:
+                value = value[:hash_idx].rstrip()
+        if override or key not in os.environ:
+            os.environ[key] = value
+            loaded.append(key)
+    return loaded
 
 
 # --------------------------------------------------------------------------- #
@@ -302,10 +346,13 @@ def fetch_games(api_key, steam_id, covers_dir, *, include_unplayed,
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Sync Steam games into data/gaming.yaml.")
-    parser.add_argument("--api-key", default=os.environ.get("STEAM_API_KEY"),
-                        help="Steam Web API key (or env STEAM_API_KEY).")
-    parser.add_argument("--steam-id", default=os.environ.get("STEAM_ID"),
-                        help="64-bit SteamID (or env STEAM_ID).")
+    parser.add_argument("--api-key", default=None,
+                        help="Steam Web API key (else env STEAM_API_KEY or a .env file).")
+    parser.add_argument("--steam-id", default=None,
+                        help="64-bit SteamID (else env STEAM_ID or a .env file).")
+    parser.add_argument("--env-file", type=Path, action="append", default=None,
+                        help="Load STEAM_API_KEY / STEAM_ID from this file (repeatable). "
+                             "Default: .env in the repo root and the current directory.")
     parser.add_argument("--include-unplayed", action="store_true",
                         help="Include owned games with 0 playtime (default: played only).")
     parser.add_argument("--no-achievements", action="store_true",
@@ -318,15 +365,26 @@ def main(argv=None):
     parser.add_argument("--covers", type=Path, default=DEFAULT_COVERS)
     args = parser.parse_args(argv)
 
-    if not args.api_key or not args.steam_id:
+    # Load .env before resolving credentials. Real environment variables win
+    # over .env values; an explicit --api-key / --steam-id flag wins over both.
+    env_files = args.env_file or [REPO / ".env", Path(".env")]
+    for env_path in env_files:
+        loaded = load_dotenv(env_path)
+        if loaded:
+            print(f"Loaded {', '.join(loaded)} from {env_path}", file=sys.stderr)
+
+    api_key = args.api_key or os.environ.get("STEAM_API_KEY")
+    steam_id = args.steam_id or os.environ.get("STEAM_ID")
+
+    if not api_key or not steam_id:
         print("! Need a Steam API key and SteamID. Set STEAM_API_KEY and STEAM_ID "
-              "(or pass --api-key / --steam-id). Get a key at "
-              "https://steamcommunity.com/dev/apikey", file=sys.stderr)
+              "(in the environment, a .env file, or via --api-key / --steam-id). "
+              "Get a key at https://steamcommunity.com/dev/apikey", file=sys.stderr)
         return 2
 
     try:
         games = fetch_games(
-            args.api_key, args.steam_id, args.covers,
+            api_key, steam_id, args.covers,
             include_unplayed=args.include_unplayed,
             do_achievements=not args.no_achievements,
             do_covers=not args.no_covers,
