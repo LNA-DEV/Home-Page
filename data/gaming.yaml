@@ -38,3 +38,586 @@
 #   rating: 5
 #   genres: ["action-adventure", "open-world"]
 #   notes: "First playthrough on launch."
+
+# ==== STEAM: auto-managed by scripts/sync-steam.py (regenerated each sync) ====
+
+- title: Portal 2
+  platform: steam
+  appid: 620
+  playtimeMinutes: 6
+  lastPlayed: "2026-07-17"
+  achievementsUnlocked: 0
+  achievementsTotal: 51
+  cover: images/games/covers/Portal 2.jpg
+  link: "https://store.steampowered.com/app/620/"
+
+- title: Terraria
+  platform: steam
+  appid: 105600
+  playtimeMinutes: 4931
+  lastPlayed: "2024-11-15"
+  achievementsUnlocked: 52
+  achievementsTotal: 137
+  cover: images/games/covers/Terraria.jpg
+  link: "https://store.steampowered.com/app/105600/"
+
+- title: Tomb Raider
+  platform: steam
+  appid: 203160
+  playtimeMinutes: 180
+  lastPlayed: "2021-04-23"
+  achievementsUnlocked: 3
+  achievementsTotal: 50
+  cover: images/games/covers/Tomb Raider.jpg
+  link: "https://store.steampowered.com/app/203160/"
+
+- title: Castle Crashers
+  platform: steam
+  appid: 204360
+  playtimeMinutes: 647
+  lastPlayed: "2023-11-04"
+  achievementsUnlocked: 5
+  achievementsTotal: 12
+  cover: images/games/covers/Castle Crashers.jpg
+  link: "https://store.steampowered.com/app/204360/"
+
+- title: SpeedRunners
+  platform: steam
+  appid: 207140
+  playtimeMinutes: 59
+  lastPlayed: "2022-04-12"
+  achievementsUnlocked: 2
+  achievementsTotal: 29
+  cover: images/games/covers/SpeedRunners.jpg
+  link: "https://store.steampowered.com/app/207140/"
+
+- title: "Beatbuddy: Tale of the Guardians"
+  platform: steam
+  appid: 231040
+  playtimeMinutes: 5
+  lastPlayed: "2020-09-12"
+  achievementsUnlocked: 0
+  achievementsTotal: 15
+  cover: "images/games/covers/Beatbuddy: Tale of the Guardians.jpg"
+  link: "https://store.steampowered.com/app/231040/"
+
+- title: The Forest
+  platform: steam
+  appid: 242760
+  playtimeMinutes: 540
+  lastPlayed: "2021-10-07"
+  achievementsUnlocked: 8
+  achievementsTotal: 45
+  cover: images/games/covers/The Forest.jpg
+  link: "https://store.steampowered.com/app/242760/"
+
+- title: "TRANSFORMERS: Rise of the Dark Spark"
+  platform: steam
+  appid: 245760
+  playtimeMinutes: 652
+  lastPlayed: "2020-07-16"
+  achievementsUnlocked: 10
+  achievementsTotal: 50
+  cover: "images/games/covers/TRANSFORMERS: Rise of the Dark Spark.jpg"
+  link: "https://store.steampowered.com/app/245760/"
+
+- title: "The Binding of Isaac: Rebirth"
+  platform: steam
+  appid: 250900
+  playtimeMinutes: 54
+  lastPlayed: "2025-03-23"
+  achievementsUnlocked: 1
+  achievementsTotal: 641
+  cover: "images/games/covers/The Binding of Isaac: Rebirth.jpg"
+  link: "https://store.steampowered.com/app/250900/"
+
+- title: Subnautica
+  platform: steam
+  appid: 264710
+  playtimeMinutes: 3673
+  lastPlayed: "2023-01-01"
+  achievementsUnlocked: 17
+  achievementsTotal: 17
+  cover: images/games/covers/Subnautica.jpg
+  link: "https://store.steampowered.com/app/264710/"
+
+- title: Goat Simulator
+  platform: steam
+  appid: 265930
+  playtimeMinutes: 62
+  lastPlayed: "2020-07-16"
+  achievementsUnlocked: 2
+  achievementsTotal: 127
+  cover: images/games/covers/Goat Simulator.jpg
+  link: "https://store.steampowered.com/app/265930/"
+
+- title: Brawlhalla
+  platform: steam
+  appid: 291550
+  playtimeMinutes: 87
+  lastPlayed: "2021-04-18"
+  achievementsUnlocked: 3
+  achievementsTotal: 65
+  cover: images/games/covers/Brawlhalla.jpg
+  link: "https://store.steampowered.com/app/291550/"
+
+- title: "The Witcher 3: Wild Hunt"
+  platform: steam
+  appid: 292030
+  playtimeMinutes: 5754
+  lastPlayed: "2026-07-19"
+  achievementsUnlocked: 26
+  achievementsTotal: 78
+  cover: "images/games/covers/The Witcher 3: Wild Hunt.jpg"
+  link: "https://store.steampowered.com/app/292030/"
+
+- title: Enter the Gungeon
+  platform: steam
+  appid: 311690
+  playtimeMinutes: 156
+  lastPlayed: "2025-03-23"
+  achievementsUnlocked: 1
+  achievementsTotal: 54
+  cover: images/games/covers/Enter the Gungeon.jpg
+  link: "https://store.steampowered.com/app/311690/"
+
+- title: Life is Strange™
+  platform: steam
+  appid: 319630
+  playtimeMinutes: 1024
+  lastPlayed: "2022-03-10"
+  achievementsUnlocked: 60
+  achievementsTotal: 60
+  cover: images/games/covers/Life is Strange™.jpg
+  link: "https://store.steampowered.com/app/319630/"
+
+- title: Move or Die
+  platform: steam
+  appid: 323850
+  playtimeMinutes: 59
+  lastPlayed: "2022-04-12"
+  achievementsUnlocked: 6
+  achievementsTotal: 66
+  cover: images/games/covers/Move or Die.jpg
+  link: "https://store.steampowered.com/app/323850/"
+
+- title: ShellShock Live
+  platform: steam
+  appid: 326460
+  playtimeMinutes: 248
+  lastPlayed: "2022-04-12"
+  achievementsUnlocked: 4
+  achievementsTotal: 63
+  cover: images/games/covers/ShellShock Live.jpg
+  link: "https://store.steampowered.com/app/326460/"
+
+- title: "ARK: Survival Evolved"
+  platform: steam
+  appid: 346110
+  playtimeMinutes: 38202
+  lastPlayed: "2025-12-27"
+  achievementsUnlocked: 28
+  achievementsTotal: 32
+  cover: "images/games/covers/ARK: Survival Evolved.jpg"
+  link: "https://store.steampowered.com/app/346110/"
+
+- title: Ultimate Chicken Horse
+  platform: steam
+  appid: 386940
+  playtimeMinutes: 446
+  lastPlayed: "2026-05-16"
+  achievementsUnlocked: 16
+  achievementsTotal: 31
+  cover: images/games/covers/Ultimate Chicken Horse.jpg
+  link: "https://store.steampowered.com/app/386940/"
+
+- title: Rise of the Tomb Raider
+  platform: steam
+  appid: 391220
+  playtimeMinutes: 1
+  lastPlayed: "2021-02-18"
+  achievementsUnlocked: 0
+  achievementsTotal: 143
+  cover: images/games/covers/Rise of the Tomb Raider.jpg
+  link: "https://store.steampowered.com/app/391220/"
+
+- title: Pony Island
+  platform: steam
+  appid: 405640
+  playtimeMinutes: 152
+  lastPlayed: "2022-04-12"
+  achievementsUnlocked: 10
+  achievementsTotal: 20
+  cover: images/games/covers/Pony Island.jpg
+  link: "https://store.steampowered.com/app/405640/"
+
+- title: "ARK: Survival Of The Fittest"
+  platform: steam
+  appid: 407530
+  playtimeMinutes: 38
+  lastPlayed: "2020-02-25"
+  cover: "images/games/covers/ARK: Survival Of The Fittest.jpg"
+  link: "https://store.steampowered.com/app/407530/"
+
+- title: Stardew Valley
+  platform: steam
+  appid: 413150
+  playtimeMinutes: 6029
+  lastPlayed: "2026-04-03"
+  achievementsUnlocked: 19
+  achievementsTotal: 49
+  cover: images/games/covers/Stardew Valley.jpg
+  link: "https://store.steampowered.com/app/413150/"
+
+- title: Grow Up
+  platform: steam
+  appid: 426790
+  playtimeMinutes: 448
+  lastPlayed: "2020-07-12"
+  achievementsUnlocked: 4
+  achievementsTotal: 18
+  cover: images/games/covers/Grow Up.jpg
+  link: "https://store.steampowered.com/app/426790/"
+
+- title: Aseprite
+  platform: steam
+  appid: 431730
+  playtimeMinutes: 1555
+  lastPlayed: "2023-04-30"
+  cover: images/games/covers/Aseprite.jpg
+  link: "https://store.steampowered.com/app/431730/"
+
+- title: Wallpaper Engine
+  platform: steam
+  appid: 431960
+  playtimeMinutes: 1555
+  lastPlayed: "2023-09-03"
+  achievementsUnlocked: 10
+  achievementsTotal: 17
+  cover: images/games/covers/Wallpaper Engine.jpg
+  link: "https://store.steampowered.com/app/431960/"
+
+- title: Paladins
+  platform: steam
+  appid: 444090
+  playtimeMinutes: 211
+  lastPlayed: "2021-05-20"
+  achievementsUnlocked: 11
+  achievementsTotal: 58
+  cover: images/games/covers/Paladins.jpg
+  link: "https://store.steampowered.com/app/444090/"
+
+- title: World of Tanks Blitz
+  platform: steam
+  appid: 444200
+  playtimeMinutes: 14
+  lastPlayed: "2020-10-24"
+  cover: images/games/covers/World of Tanks Blitz.jpg
+  link: "https://store.steampowered.com/app/444200/"
+
+- title: "The Elder Scrolls V: Skyrim Special Edition"
+  platform: steam
+  appid: 489830
+  playtimeMinutes: 914
+  lastPlayed: "2020-07-12"
+  achievementsUnlocked: 14
+  achievementsTotal: 75
+  cover: "images/games/covers/The Elder Scrolls V: Skyrim Special Edition.jpg"
+  link: "https://store.steampowered.com/app/489830/"
+
+- title: "theHunter: Call of the Wild™"
+  platform: steam
+  appid: 518790
+  playtimeMinutes: 2
+  lastPlayed: "2025-12-23"
+  achievementsUnlocked: 0
+  achievementsTotal: 160
+  cover: "images/games/covers/theHunter: Call of the Wild™.jpg"
+  link: "https://store.steampowered.com/app/518790/"
+
+- title: Darwin Project
+  platform: steam
+  appid: 544920
+  playtimeMinutes: 27
+  lastPlayed: "2020-07-11"
+  achievementsUnlocked: 0
+  achievementsTotal: 14
+  cover: images/games/covers/Darwin Project.jpg
+  link: "https://store.steampowered.com/app/544920/"
+
+- title: "Life is Strange: Before the Storm"
+  platform: steam
+  appid: 554620
+  playtimeMinutes: 984
+  lastPlayed: "2022-03-10"
+  achievementsUnlocked: 34
+  achievementsTotal: 34
+  cover: "images/games/covers/Life is Strange: Before the Storm.jpg"
+  link: "https://store.steampowered.com/app/554620/"
+
+- title: "Monster Hunter: World"
+  platform: steam
+  appid: 582010
+  playtimeMinutes: 119
+  lastPlayed: "2021-09-10"
+  achievementsUnlocked: 2
+  achievementsTotal: 100
+  cover: "images/games/covers/Monster Hunter: World.jpg"
+  link: "https://store.steampowered.com/app/582010/"
+
+- title: PixARK
+  platform: steam
+  appid: 593600
+  playtimeMinutes: 1889
+  lastPlayed: "2021-04-08"
+  achievementsUnlocked: 3
+  achievementsTotal: 36
+  cover: images/games/covers/PixARK.jpg
+  link: "https://store.steampowered.com/app/593600/"
+
+- title: "Stick Fight: The Game"
+  platform: steam
+  appid: 674940
+  playtimeMinutes: 1978
+  lastPlayed: "2026-03-14"
+  achievementsUnlocked: 24
+  achievementsTotal: 28
+  cover: "images/games/covers/Stick Fight: The Game.jpg"
+  link: "https://store.steampowered.com/app/674940/"
+
+- title: GRIS
+  platform: steam
+  appid: 683320
+  playtimeMinutes: 234
+  lastPlayed: "2023-11-25"
+  achievementsUnlocked: 8
+  achievementsTotal: 17
+  cover: images/games/covers/GRIS.jpg
+  link: "https://store.steampowered.com/app/683320/"
+
+- title: Generation Zero®
+  platform: steam
+  appid: 704270
+  playtimeMinutes: 3458
+  lastPlayed: "2026-05-12"
+  achievementsUnlocked: 54
+  achievementsTotal: 72
+  cover: images/games/covers/Generation Zero®.jpg
+  link: "https://store.steampowered.com/app/704270/"
+
+- title: Aimlabs
+  platform: steam
+  appid: 714010
+  playtimeMinutes: 99
+  lastPlayed: "2021-01-09"
+  achievementsUnlocked: 9
+  achievementsTotal: 100
+  cover: images/games/covers/Aimlabs.jpg
+  link: "https://store.steampowered.com/app/714010/"
+
+- title: Phasmophobia
+  platform: steam
+  appid: 739630
+  playtimeMinutes: 3239
+  lastPlayed: "2025-10-10"
+  achievementsUnlocked: 7
+  achievementsTotal: 54
+  cover: images/games/covers/Phasmophobia.jpg
+  link: "https://store.steampowered.com/app/739630/"
+
+- title: Realm Royale Reforged
+  platform: steam
+  appid: 813820
+  playtimeMinutes: 2308
+  lastPlayed: "2022-05-27"
+  achievementsUnlocked: 11
+  achievementsTotal: 22
+  cover: images/games/covers/Realm Royale Reforged.jpg
+  link: "https://store.steampowered.com/app/813820/"
+
+- title: "Subnautica: Below Zero"
+  platform: steam
+  appid: 848450
+  playtimeMinutes: 886
+  lastPlayed: "2026-02-26"
+  achievementsUnlocked: 4
+  achievementsTotal: 13
+  cover: "images/games/covers/Subnautica: Below Zero.jpg"
+  link: "https://store.steampowered.com/app/848450/"
+
+- title: Pummel Party
+  platform: steam
+  appid: 880940
+  playtimeMinutes: 444
+  lastPlayed: "2026-03-14"
+  achievementsUnlocked: 13
+  achievementsTotal: 31
+  cover: images/games/covers/Pummel Party.jpg
+  link: "https://store.steampowered.com/app/880940/"
+
+- title: Among Us
+  platform: steam
+  appid: 945360
+  playtimeMinutes: 2139
+  lastPlayed: "2021-06-08"
+  achievementsUnlocked: 0
+  achievementsTotal: 33
+  cover: images/games/covers/Among Us.jpg
+  link: "https://store.steampowered.com/app/945360/"
+
+- title: Ori and the Will of the Wisps
+  platform: steam
+  appid: 1057090
+  playtimeMinutes: 3
+  lastPlayed: "2022-12-04"
+  achievementsUnlocked: 0
+  achievementsTotal: 37
+  cover: images/games/covers/Ori and the Will of the Wisps.jpg
+  link: "https://store.steampowered.com/app/1057090/"
+
+- title: Fall Guys
+  platform: steam
+  appid: 1097150
+  playtimeMinutes: 1774
+  lastPlayed: "2021-04-18"
+  achievementsUnlocked: 22
+  achievementsTotal: 34
+  cover: images/games/covers/Fall Guys.jpg
+  link: "https://store.steampowered.com/app/1097150/"
+
+- title: Horizon Zero Dawn™ Complete Edition
+  platform: steam
+  appid: 1151640
+  playtimeMinutes: 8055
+  lastPlayed: "2024-02-16"
+  achievementsUnlocked: 79
+  achievementsTotal: 79
+  cover: images/games/covers/Horizon Zero Dawn™ Complete Edition.jpg
+  link: "https://store.steampowered.com/app/1151640/"
+
+- title: Apex Legends
+  platform: steam
+  appid: 1172470
+  playtimeMinutes: 1390
+  lastPlayed: "2021-10-08"
+  achievementsUnlocked: 4
+  achievementsTotal: 12
+  cover: images/games/covers/Apex Legends.jpg
+  link: "https://store.steampowered.com/app/1172470/"
+
+- title: Enshrouded
+  platform: steam
+  appid: 1203620
+  playtimeMinutes: 3232
+  lastPlayed: "2026-02-26"
+  achievementsUnlocked: 22
+  achievementsTotal: 52
+  cover: images/games/covers/Enshrouded.jpg
+  link: "https://store.steampowered.com/app/1203620/"
+
+- title: "Detroit: Become Human"
+  platform: steam
+  appid: 1222140
+  playtimeMinutes: 208
+  lastPlayed: "2025-08-03"
+  achievementsUnlocked: 9
+  achievementsTotal: 48
+  cover: "images/games/covers/Detroit: Become Human.jpg"
+  link: "https://store.steampowered.com/app/1222140/"
+
+- title: Unravel Two
+  platform: steam
+  appid: 1225570
+  playtimeMinutes: 476
+  lastPlayed: "2021-06-24"
+  achievementsUnlocked: 10
+  achievementsTotal: 28
+  cover: images/games/covers/Unravel Two.jpg
+  link: "https://store.steampowered.com/app/1225570/"
+
+- title: "There is no game: Jam Edition 2015"
+  platform: steam
+  appid: 1241700
+  playtimeMinutes: 19
+  lastPlayed: "2021-06-23"
+  achievementsUnlocked: 4
+  achievementsTotal: 7
+  cover: "images/games/covers/There is no game: Jam Edition 2015.jpg"
+  link: "https://store.steampowered.com/app/1241700/"
+
+- title: "GWENT: The Witcher Card Game"
+  platform: steam
+  appid: 1284410
+  playtimeMinutes: 57
+  lastPlayed: "2025-09-26"
+  achievementsUnlocked: 1
+  achievementsTotal: 46
+  cover: "images/games/covers/GWENT: The Witcher Card Game.jpg"
+  link: "https://store.steampowered.com/app/1284410/"
+
+- title: ROUNDS
+  platform: steam
+  appid: 1557740
+  playtimeMinutes: 1510
+  lastPlayed: "2026-05-16"
+  achievementsUnlocked: 12
+  achievementsTotal: 24
+  cover: images/games/covers/ROUNDS.jpg
+  link: "https://store.steampowered.com/app/1557740/"
+
+- title: Core Keeper
+  platform: steam
+  appid: 1621690
+  playtimeMinutes: 501
+  lastPlayed: "2026-07-25"
+  achievementsUnlocked: 6
+  achievementsTotal: 55
+  cover: images/games/covers/Core Keeper.jpg
+  link: "https://store.steampowered.com/app/1621690/"
+
+- title: Muck
+  platform: steam
+  appid: 1625450
+  playtimeMinutes: 77
+  lastPlayed: "2022-01-14"
+  achievementsUnlocked: 3
+  achievementsTotal: 49
+  cover: images/games/covers/Muck.jpg
+  link: "https://store.steampowered.com/app/1625450/"
+
+- title: Subnautica 2
+  platform: steam
+  appid: 1962700
+  playtimeMinutes: 261
+  lastPlayed: "2026-06-12"
+  cover: images/games/covers/Subnautica 2.jpg
+  link: "https://store.steampowered.com/app/1962700/"
+
+- title: "ARK: Survival Ascended"
+  platform: steam
+  appid: 2399830
+  playtimeMinutes: 3837
+  lastPlayed: "2026-07-18"
+  achievementsUnlocked: 9
+  achievementsTotal: 32
+  cover: "images/games/covers/ARK: Survival Ascended.jpg"
+  link: "https://store.steampowered.com/app/2399830/"
+
+- title: Horizon Forbidden West™ Complete Edition
+  platform: steam
+  appid: 2420110
+  playtimeMinutes: 2985
+  lastPlayed: "2024-10-25"
+  achievementsUnlocked: 26
+  achievementsTotal: 80
+  cover: images/games/covers/Horizon Forbidden West™ Complete Edition.jpg
+  link: "https://store.steampowered.com/app/2420110/"
+
+- title: GeoGuessr Steam Edition
+  platform: steam
+  appid: 3478870
+  playtimeMinutes: 4562
+  lastPlayed: "2026-03-14"
+  achievementsUnlocked: 14
+  achievementsTotal: 45
+  link: "https://store.steampowered.com/app/3478870/"

@@ -123,6 +123,12 @@ def yaml_quote(value):
     return text
 
 
+def safe_filename(title):
+    # Match add-book.py's convention: Linux allows almost everything in a
+    # filename, so only strip path separators (and surrounding whitespace).
+    return title.replace("/", "-").strip()
+
+
 # --------------------------------------------------------------------------- #
 # Steam Web API                                                               #
 # --------------------------------------------------------------------------- #
@@ -163,11 +169,14 @@ def steam_achievements(api_key, steam_id, appid):
     return unlocked, len(achs)
 
 
-def download_cover(appid, covers_dir):
-    """Download a portrait cover to <covers>/<appid>.jpg. Returns the repo ref
-    (or None). Skips the download when the file already exists."""
-    dest = covers_dir / f"{appid}.jpg"
-    ref = f"{COVER_REF_PREFIX}/{appid}.jpg"
+def download_cover(appid, title, covers_dir):
+    """Download a portrait cover to <covers>/<title>.jpg, named after the game
+    like the book covers. The Steam CDN is still addressed by appid — only the
+    saved filename and repo ref are title-based. Returns the repo ref (or None).
+    Skips the download when the file already exists."""
+    fname = safe_filename(title) + ".jpg"
+    dest = covers_dir / fname
+    ref = f"{COVER_REF_PREFIX}/{fname}"
     if dest.exists():
         return ref
     candidates = [
@@ -337,7 +346,7 @@ def fetch_games(api_key, steam_id, covers_dir, *, include_unplayed,
                 entry["achievementsUnlocked"], entry["achievementsTotal"] = ach
             time.sleep(0.3)  # be polite to the API
         if do_covers:
-            entry["cover"] = download_cover(appid, covers_dir)
+            entry["cover"] = download_cover(appid, entry["title"], covers_dir)
         games.append(entry)
     print(f"Kept {len(games)} played games "
           f"({'incl.' if include_unplayed else 'excl.'} unplayed).", file=sys.stderr)
