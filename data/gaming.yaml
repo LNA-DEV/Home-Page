@@ -371,7 +371,7 @@
   playtimeMinutes: 1889
   lastPlayed: "2021-04-08"
   achievementsUnlocked: 3
-  achievementsTotal: 36
+  achievementsTotal: 37
   cover: images/games/covers/PixARK.jpg
   link: "https://store.steampowered.com/app/593600/"
 
@@ -568,9 +568,9 @@
 - title: Core Keeper
   platform: steam
   appid: 1621690
-  playtimeMinutes: 501
-  lastPlayed: "2026-07-25"
-  achievementsUnlocked: 6
+  playtimeMinutes: 833
+  lastPlayed: "2026-07-31"
+  achievementsUnlocked: 9
   achievementsTotal: 55
   cover: images/games/covers/Core Keeper.jpg
   link: "https://store.steampowered.com/app/1621690/"
