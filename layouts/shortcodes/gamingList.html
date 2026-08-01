@@ -3,6 +3,10 @@
        single card; the data keeps them separate. See partials/gaming-merged.html. */}}
   {{ $games := partialCached "gaming-merged.html" . }}
 
+  {{/* Full platform names for the badge tooltips (brand names, not translated —
+       mirrors the $platformLabels dict used for the filter buttons). */}}
+  {{ $platformNames := dict "steam" "Steam" "switch" "Nintendo Switch" "3ds" "Nintendo 3DS" "ds" "Nintendo DS" "gog" "GOG" "playstation" "PlayStation" "manual" "Manual" "other" "Other" }}
+
   {{/* --- Aggregate stats + distinct platforms (single pass over merged games) --- */}}
   {{ $totalMinutes := 0 }}
   {{ $totalAch := 0 }}
@@ -71,6 +75,14 @@
           <div class="game-card__placeholder"><span>{{ .title }}</span></div>
         {{ end }}
         <span class="game-card__playtime" title="{{ i18n "playtimeLabel" }}">{{ $badge }}</span>
+        <div class="game-card__platforms">
+          {{ range .platforms }}
+          {{ $name := index $platformNames . | default (. | title) }}
+          <span class="game-card__platform" data-tooltip="{{ $name }}" aria-label="{{ $name }}">
+            {{ partial "platform-icon.html" . }}
+          </span>
+          {{ end }}
+        </div>
       </div>
 
       <div class="game-card__body">

@@ -131,6 +131,66 @@
   background: rgba(0, 0, 0, 0.72);
 }
 
+/* --- Platform badges (one round badge per platform, top-right of the cover) ---
+   Merged multi-platform cards show 1-2 badges. White brand glyph on a
+   translucent dark circle — theme-independent, like the playtime badge, since
+   it sits over arbitrary cover art. */
+.game-card__platforms {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  gap: 0.3rem;
+}
+
+.game-card__platform {
+  position: relative;
+  width: 23px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.72);
+  cursor: help;
+}
+
+.game-card__platform svg {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+/* Full-name tooltip. Rendered BELOW the badge so the card's `overflow: hidden`
+   (used for the rounded cover) doesn't clip it; right-aligned to keep long
+   names inside the card. */
+.game-card__platform[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.15s ease, visibility 0.15s ease;
+  z-index: 3;
+}
+
+.game-card__platform[data-tooltip]:hover::after,
+.game-card__platform[data-tooltip]:focus::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 .game-card__body {
   display: flex;
   flex-direction: column;
