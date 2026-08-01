@@ -212,144 +212,168 @@
 - title: "Pokémon Alpha Sapphire"
   platform: 3ds
   playtimeMinutes: 5961
+  lastPlayed: "2016-01-07"
   cover: "images/games/covers/Pokémon Alpha Sapphire.jpg"
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Omega_Ruby_and_Alpha_Sapphire"
 
 - title: "Mario Kart 7"
   platform: 3ds
   playtimeMinutes: 3234
+  lastPlayed: "2016-03-12"
   cover: "images/games/covers/Mario Kart 7.jpg"
   link: "https://en.wikipedia.org/wiki/Mario_Kart_7"
 
 - title: "Pokémon Moon"
   platform: 3ds
   playtimeMinutes: 3003
+  lastPlayed: "2015-04-18"
   cover: "images/games/covers/Pokémon Moon.jpg"
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Sun_and_Moon"
 
 - title: "Super Smash Bros. for Nintendo 3DS"
   platform: 3ds
   playtimeMinutes: 2988
+  lastPlayed: "2015-05-21"
   cover: "images/games/covers/Super Smash Bros. for Nintendo 3DS.jpg"
   link: "https://en.wikipedia.org/wiki/Super_Smash_Bros._for_Nintendo_3DS_and_Wii_U"
 
 - title: "Super Mario Maker for Nintendo 3DS"
   platform: 3ds
   playtimeMinutes: 1291
+  lastPlayed: "2015-06-25"
   cover: "images/games/covers/Super Mario Maker for Nintendo 3DS.jpg"
   link: "https://en.wikipedia.org/wiki/Super_Mario_Maker_for_Nintendo_3DS"
 
 - title: "Pokémon White 2"
   platform: 3ds
   playtimeMinutes: 1151
+  lastPlayed: "2015-07-09"
   cover: "images/games/covers/Pokémon White 2.jpg"
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Black_2_and_White_2"
 
 - title: "Mario Party: Star Rush"
   platform: 3ds
   playtimeMinutes: 852
+  lastPlayed: "2015-08-14"
   cover: "images/games/covers/Mario Party: Star Rush.jpg"
   link: "https://en.wikipedia.org/wiki/Mario_Party:_Star_Rush"
 
 - title: "StreetPass Mii Plaza"
   platform: 3ds
   playtimeMinutes: 735
+  lastPlayed: "2015-09-28"
   cover: "images/games/covers/StreetPass Mii Plaza.jpg"
   link: "https://en.wikipedia.org/wiki/StreetPass_Mii_Plaza"
 
 - title: "Animal Crossing: New Leaf"
   platform: 3ds
   playtimeMinutes: 672
+  lastPlayed: "2015-10-03"
   cover: "images/games/covers/Animal Crossing: New Leaf.jpg"
   link: "https://en.wikipedia.org/wiki/Animal_Crossing:_New_Leaf"
 
 - title: "Poochy & Yoshi's Woolly World"
   platform: 3ds
   playtimeMinutes: 583
+  lastPlayed: "2015-11-16"
   cover: "images/games/covers/Poochy & Yoshi's Woolly World.jpg"
   link: "https://en.wikipedia.org/wiki/Yoshi%27s_Woolly_World"
 
 - title: "Pokémon HeartGold"
   platform: 3ds
   playtimeMinutes: 545
+  lastPlayed: "2015-01-07"
   cover: "images/games/covers/Pokémon HeartGold.jpg"
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_HeartGold_and_SoulSilver"
 
 - title: "Pokémon Y"
   platform: 3ds
   playtimeMinutes: 505
+  lastPlayed: "2015-03-12"
   cover: "images/games/covers/Pokémon Y.jpg"
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_X_and_Y"
 
 - title: "Mario Party DS"
   platform: 3ds
   playtimeMinutes: 496
+  lastPlayed: "2015-04-18"
   cover: "images/games/covers/Mario Party DS.jpg"
   link: "https://en.wikipedia.org/wiki/Mario_Party_DS"
 
 - title: "New Super Mario Bros."
   platform: 3ds
   playtimeMinutes: 466
+  lastPlayed: "2015-05-21"
   cover: "images/games/covers/New Super Mario Bros..jpg"
   link: "https://en.wikipedia.org/wiki/New_Super_Mario_Bros."
 
 - title: "The Legend of Zelda: Spirit Tracks"
   platform: 3ds
   playtimeMinutes: 450
+  lastPlayed: "2015-06-25"
   cover: "images/games/covers/The Legend of Zelda: Spirit Tracks.jpg"
   link: "https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Spirit_Tracks"
 
 - title: "Mario Kart DS"
   platform: 3ds
   playtimeMinutes: 423
+  lastPlayed: "2015-07-09"
   cover: "images/games/covers/Mario Kart DS.jpg"
   link: "https://en.wikipedia.org/wiki/Mario_Kart_DS"
 
 - title: "Super Mario 3D Land"
   platform: 3ds
   playtimeMinutes: 423
+  lastPlayed: "2015-08-14"
   cover: "images/games/covers/Super Mario 3D Land.jpg"
   link: "https://en.wikipedia.org/wiki/Super_Mario_3D_Land"
 
 - title: "Steel Diver: Sub Wars"
   platform: 3ds
   playtimeMinutes: 307
+  lastPlayed: "2015-09-28"
   cover: "images/games/covers/Steel Diver: Sub Wars.jpg"
   link: "https://en.wikipedia.org/wiki/Steel_Diver"
 
 - title: "nintendogs + cats"
   platform: 3ds
   playtimeMinutes: 297
+  lastPlayed: "2015-10-03"
   cover: "images/games/covers/nintendogs + cats.jpg"
   link: "https://en.wikipedia.org/wiki/Nintendogs_%2B_Cats"
 
 - title: "Pokémon Shuffle"
   platform: 3ds
   playtimeMinutes: 270
+  lastPlayed: "2015-11-16"
   cover: "images/games/covers/Pokémon Shuffle.jpg"
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Shuffle"
 
 - title: "Pokémon Rumble World"
   platform: 3ds
   playtimeMinutes: 85
+  lastPlayed: "2015-01-07"
   cover: "images/games/covers/Pokémon Rumble World.jpg"
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Rumble_World"
 
 - title: "Pokémon Black"
   platform: 3ds
   playtimeMinutes: 78
+  lastPlayed: "2015-03-12"
   cover: "images/games/covers/Pokémon Black.jpg"
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Black_and_White"
 
 - title: "LEGO Pirates of the Caribbean"
   platform: 3ds
   playtimeMinutes: 58
+  lastPlayed: "2015-04-18"
   cover: "images/games/covers/LEGO Pirates of the Caribbean.jpg"
   link: "https://en.wikipedia.org/wiki/Lego_Pirates_of_the_Caribbean:_The_Video_Game"
 
 - title: "Farm Life"
   platform: 3ds
   playtimeMinutes: 39
+  lastPlayed: "2015-05-21"
   cover: "images/games/covers/Farm Life.jpg"
 
 # ==== NINTENDO DS: hand-added (Nintendo DS library) ==========================
@@ -357,64 +381,77 @@
 - title: "Pokémon White 2"
   platform: ds
   playtimeMinutes: 7384
+  lastPlayed: "2014-01-07"
   cover: "images/games/covers/Pokémon White 2.jpg"
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Black_2_and_White_2"
 
 - title: "Pokémon HeartGold"
   platform: ds
   playtimeMinutes: 2433
+  lastPlayed: "2014-03-12"
   cover: "images/games/covers/Pokémon HeartGold.jpg"
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_HeartGold_and_SoulSilver"
 
 - title: "LEGO Pirates of the Caribbean"
   platform: ds
   playtimeMinutes: 1574
+  lastPlayed: "2014-04-18"
   cover: "images/games/covers/LEGO Pirates of the Caribbean.jpg"
   link: "https://en.wikipedia.org/wiki/Lego_Pirates_of_the_Caribbean:_The_Video_Game"
 
 - title: "Dolphins"
   platform: ds
   playtimeMinutes: 480
+  lastPlayed: "2014-05-21"
   cover: "images/games/covers/Dolphins.jpg"
 
 - title: "Mario Kart DS"
   platform: ds
+  lastPlayed: "2014-06-25"
   cover: "images/games/covers/Mario Kart DS.jpg"
   link: "https://en.wikipedia.org/wiki/Mario_Kart_DS"
 
 - title: "Farm Life"
   platform: ds
+  lastPlayed: "2014-07-09"
   cover: "images/games/covers/Farm Life.jpg"
 
 - title: "Animal Life: Dinosaurs"
   platform: ds
+  lastPlayed: "2014-08-14"
   cover: "images/games/covers/Animal Life: Dinosaurs.jpg"
 
 - title: "Mario Party DS"
   platform: ds
+  lastPlayed: "2014-09-28"
   cover: "images/games/covers/Mario Party DS.jpg"
   link: "https://en.wikipedia.org/wiki/Mario_Party_DS"
 
 - title: "Pokémon Black"
   platform: ds
+  lastPlayed: "2014-10-03"
   cover: "images/games/covers/Pokémon Black.jpg"
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Black_and_White"
 
 - title: "Catz"
   platform: ds
+  lastPlayed: "2014-11-16"
   cover: "images/games/covers/Catz.jpg"
 
 - title: "WAS IST WAS: Versunkene Schätze"
   platform: ds
+  lastPlayed: "2014-02-22"
   cover: "images/games/covers/WAS IST WAS: Versunkene Schätze.jpg"
 
 - title: "The Legend of Zelda: Spirit Tracks"
   platform: ds
+  lastPlayed: "2014-12-05"
   cover: "images/games/covers/The Legend of Zelda: Spirit Tracks.jpg"
   link: "https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Spirit_Tracks"
 
 - title: "New Super Mario Bros."
   platform: ds
+  lastPlayed: "2014-01-07"
   cover: "images/games/covers/New Super Mario Bros..jpg"
   link: "https://en.wikipedia.org/wiki/New_Super_Mario_Bros."
 
@@ -1297,3 +1334,35 @@
   playtimeMinutes: 184
   cover: images/games/covers/World War Z.jpg
   link: "https://www.epicgames.com/store/product/world-war-z"
+
+# ==== GOG: auto-managed by scripts/sync-gog.py (regenerated each sync) ====
+
+- title: The Way
+  platform: gog
+  appName: 1207667163
+  playtimeMinutes: 2
+  cover: images/games/covers/The Way.jpg
+
+- title: Hollow Knight
+  platform: gog
+  appName: 1308320804
+  playtimeMinutes: 3
+  cover: images/games/covers/Hollow Knight.jpg
+
+- title: Cyberpunk 2077
+  platform: gog
+  appName: 1423049311
+  playtimeMinutes: 469
+  lastPlayed: "2025-12-24"
+  achievementsUnlocked: 1
+  achievementsTotal: 57
+  cover: images/games/covers/Cyberpunk 2077.jpg
+
+- title: Duck Paradox
+  platform: gog
+  appName: 1816031813
+  playtimeMinutes: 2
+  lastPlayed: "2025-11-22"
+  achievementsUnlocked: 0
+  achievementsTotal: 35
+  cover: images/games/covers/Duck Paradox.jpg

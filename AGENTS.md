@@ -249,3 +249,78 @@ the same thing Heroic / Legendary / Playnite do. It's your own data, one read pe
 run. Not a sanctioned public API; keep it to personal use. The OAuth client
 id/secret baked into the script is the well-known public "launcher" constant, not
 a secret.
+
+## Syncing games from GOG
+
+GOG has **no** Steam-style public API either. `scripts/sync-gog.py` is modelled on
+`sync-epic.py`: it reads what the **Heroic** launcher cached on disk and optionally
+reaches GOG's cloud with the token Heroic stored. Standard-library only, raw-text
+edits, owns only the `platform: gog` entries.
+
+### What the script does
+
+- **Heroic-local (always, no login):** owned library
+  (`store_cache/gog_library.json` → title, `appName` = numeric GOG product id,
+  portrait cover URL; skips DLC/redist) and Heroic-launched playtime + `lastPlayed`
+  (`store/timestamp.json`, minutes). Heroic config dir auto-detected (Flatpak first,
+  then `~/.config/heroic`; `--heroic-config` to override).
+- **GOG cloud (unless `--no-cloud`):** reuses the GOG OAuth refresh token Heroic
+  stored (`gog_store/auth.json`, under the Galaxy client id) — **no separate login**.
+  Refreshes it (GOG's token endpoint is a GET), then per owned game GETs the
+  authoritative playtime (`gameplay.gog.com/games/{id}/users/{uid}/sessions` →
+  `time_sum`) and, for played games (unless `--no-achievements`), achievements
+  (`gameplay.gog.com/clients/{id}/users/{uid}/achievements`).
+- **Merges** with the **prefer-cloud** rule (`playtimeMinutes = max(cloud, local)`),
+  downloads covers into `assets/images/games/covers/<Title>.<ext>` (skips existing;
+  `--no-covers`), and **rebuilds only the `platform: gog` entries** (played added,
+  others pruned) as the last block, under a marker it emits. 0-playtime games
+  excluded by default (`--include-unplayed`).
+
+### How GOG differs from the Epic sync
+
+- **Playtime is prefer-cloud, NOT summed.** Heroic *pushes* its GOG sessions up to
+  GOG, so the cloud `time_sum` already contains them — summing would double-count.
+- **Achievements ARE set** (GOG exposes them). Expect them sparse until games run
+  through GOG's achievement service (Comet); Heroic's local achievement cache is
+  often empty.
+- The cloud is a **per-game fan-out** (~one request per owned game), not a single
+  aggregate call — the slow part; `--no-cloud` is the fast, no-network path.
+
+### What it deliberately leaves for a human
+
+- `rating`, `genres`, `tags`, `notes` — subjective; add by hand to a GOG entry and
+  they are **preserved across syncs** (matched by `appName`, one line each).
+- Any non-GOG game — never touched (the Steam block, the Epic block, hand-added rows).
+- `link` — GOG library rows carry no reliable store URL, so GOG entries have none.
+
+### Workflow
+
+1. **Freshen the token (cloud half):** open **Heroic once** so its GOG session is
+   fresh, else the script warns and proceeds Heroic-local only. (Manual override:
+   `GOG_REFRESH_TOKEN` / `GOG_USER_ID` in env or a gitignored `.env`; never commit.)
+
+2. **Preview** (writes nothing):
+   ```
+   python3 scripts/sync-gog.py --dry-run             # Heroic + cloud
+   python3 scripts/sync-gog.py --no-cloud --dry-run  # Heroic-local only
+   ```
+
+3. **Sync**:
+   ```
+   python3 scripts/sync-gog.py
+   ```
+
+4. **Eyeball the diff**: `git diff data/gaming.yaml` — confirm the Steam/Epic blocks
+   and hand-added entries are untouched and new covers look right.
+
+5. **Sanity-check the build**: `hugo` should succeed.
+
+Do **not** run `./deploy.sh` — deployment is a separate step the user authorizes
+explicitly.
+
+### Note on the private GOG API
+
+The cloud half uses GOG's undocumented Galaxy endpoints (`auth.gog.com`,
+`gameplay.gog.com`) with your own token — the same thing Heroic / gogdl do. Your own
+data, read-only. The OAuth client id/secret baked into the script is the well-known
+public Galaxy constant, not a secret.
