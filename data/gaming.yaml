@@ -39,6 +39,169 @@
 #   genres: ["action-adventure", "open-world"]
 #   notes: "First playthrough on launch."
 
+# ==== SWITCH: hand-added (Nintendo Switch library) ===========================
+
+- title: "Mario Kart 8 Deluxe"
+  platform: switch
+  playtimeMinutes: 6300
+  cover: "images/games/covers/Mario Kart 8 Deluxe.jpg"
+  link: "https://en.wikipedia.org/wiki/Mario_Kart_8_Deluxe"
+
+- title: "Stardew Valley"
+  platform: switch
+  playtimeMinutes: 3600
+  cover: "images/games/covers/Stardew Valley.jpg"
+  link: "https://www.stardewvalley.net/"
+
+- title: "NoReload Heroes"
+  platform: switch
+  playtimeMinutes: 540
+  cover: "images/games/covers/NoReload Heroes.jpg"
+  link: "https://store.steampowered.com/app/806770/"
+
+- title: "ARMS"
+  platform: switch
+  playtimeMinutes: 900
+  cover: "images/games/covers/ARMS.jpg"
+  link: "https://en.wikipedia.org/wiki/Arms_(video_game)"
+
+- title: "Splatoon 2"
+  platform: switch
+  playtimeMinutes: 4200
+  cover: "images/games/covers/Splatoon 2.jpg"
+  link: "https://en.wikipedia.org/wiki/Splatoon_2"
+
+- title: "FAST RMX"
+  platform: switch
+  playtimeMinutes: 600
+  cover: "images/games/covers/FAST RMX.jpg"
+  link: "https://en.wikipedia.org/wiki/Fast_RMX"
+
+- title: "Tetris 99"
+  platform: switch
+  playtimeMinutes: 180
+  cover: "images/games/covers/Tetris 99.jpg"
+  link: "https://en.wikipedia.org/wiki/Tetris_99"
+
+- title: "Super Smash Bros. Ultimate"
+  platform: switch
+  playtimeMinutes: 1800
+  cover: "images/games/covers/Super Smash Bros. Ultimate.jpg"
+  link: "https://en.wikipedia.org/wiki/Super_Smash_Bros._Ultimate"
+
+- title: "Super Mario Odyssey"
+  platform: switch
+  playtimeMinutes: 1200
+  cover: "images/games/covers/Super Mario Odyssey.jpg"
+  link: "https://en.wikipedia.org/wiki/Super_Mario_Odyssey"
+
+- title: "Pokkén Tournament DX"
+  platform: switch
+  playtimeMinutes: 600
+  cover: "images/games/covers/Pokkén Tournament DX.jpg"
+  link: "https://en.wikipedia.org/wiki/Pokk%C3%A9n_Tournament"
+
+- title: "The Way Remastered"
+  platform: switch
+  playtimeMinutes: 540
+  cover: "images/games/covers/The Way Remastered.jpg"
+  link: "https://en.wikipedia.org/wiki/The_Way_(video_game)"
+
+- title: "The Legend of Zelda: Tears of the Kingdom"
+  platform: switch
+  playtimeMinutes: 1800
+  cover: "images/games/covers/The Legend of Zelda: Tears of the Kingdom.jpg"
+  link: "https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Tears_of_the_Kingdom"
+
+- title: "The Legend of Zelda: Breath of the Wild"
+  platform: switch
+  playtimeMinutes: 9000
+  cover: "images/games/covers/The Legend of Zelda: Breath of the Wild.jpg"
+  link: "https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild"
+
+- title: "#RaceDieRun"
+  platform: switch
+  playtimeMinutes: 120
+  cover: "images/games/covers/RaceDieRun.jpg"
+
+- title: "Mario + Rabbids Kingdom Battle"
+  platform: switch
+  playtimeMinutes: 1200
+  cover: "images/games/covers/Mario + Rabbids Kingdom Battle.jpg"
+  link: "https://en.wikipedia.org/wiki/Mario_%2B_Rabbids_Kingdom_Battle"
+
+- title: "Overcooked! 2"
+  platform: switch
+  playtimeMinutes: 600
+  cover: "images/games/covers/Overcooked! 2.jpg"
+  link: "https://store.steampowered.com/app/728880/"
+
+- title: "Fortnite"
+  platform: switch
+  playtimeMinutes: 6900
+  cover: "images/games/covers/Fortnite.jpg"
+  link: "https://www.fortnite.com/"
+
+- title: "ARK: Survival Evolved"
+  platform: switch
+  playtimeMinutes: 3300
+  cover: "images/games/covers/ARK: Survival Evolved.jpg"
+  link: "https://store.steampowered.com/app/346110/"
+
+- title: "Pokémon: Let's Go, Eevee!"
+  platform: switch
+  playtimeMinutes: 2700
+  cover: "images/games/covers/Pokémon: Let's Go, Eevee!.jpg"
+  link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon:_Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!"
+
+- title: "Minecraft: Nintendo Switch Edition"
+  platform: switch
+  playtimeMinutes: 2700
+  cover: "images/games/covers/Minecraft: Nintendo Switch Edition.jpg"
+  link: "https://www.minecraft.net/"
+
+- title: "Pokémon Quest"
+  platform: switch
+  playtimeMinutes: 2100
+  cover: "images/games/covers/Pokémon Quest.jpg"
+  link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Quest"
+
+- title: "Rocket League"
+  platform: switch
+  playtimeMinutes: 1500
+  cover: "images/games/covers/Rocket League.jpg"
+  link: "https://www.rocketleague.com/"
+
+- title: "Ultimate Chicken Horse"
+  platform: switch
+  playtimeMinutes: 1500
+  cover: "images/games/covers/Ultimate Chicken Horse.jpg"
+  link: "https://store.steampowered.com/app/386940/"
+
+- title: "Pokémon Shield"
+  platform: switch
+  playtimeMinutes: 1200
+  cover: "images/games/covers/Pokémon Shield.jpg"
+  link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Sword_and_Shield"
+
+- title: "1-2-Switch"
+  platform: switch
+  playtimeMinutes: 900
+  cover: "images/games/covers/1-2-Switch.jpg"
+  link: "https://en.wikipedia.org/wiki/1-2-Switch"
+
+- title: "Fallout Shelter"
+  platform: switch
+  playtimeMinutes: 480
+  cover: "images/games/covers/Fallout Shelter.jpg"
+  link: "https://store.steampowered.com/app/588430/"
+
+- title: "Yono and the Celestial Elephants"
+  platform: switch
+  playtimeMinutes: 420
+  cover: "images/games/covers/Yono and the Celestial Elephants.jpg"
+  link: "https://store.steampowered.com/app/602430/"
+
 # ==== STEAM: auto-managed by scripts/sync-steam.py (regenerated each sync) ====
 
 - title: Portal 2
