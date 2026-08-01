@@ -1,18 +1,22 @@
 <div class="gaming">
-  {{/* --- Aggregate stats + distinct platforms (single pass) --- */}}
+  {{/* Same-title copies (e.g. one game on two platforms) are merged into a
+       single card; the data keeps them separate. See partials/gaming-merged.html. */}}
+  {{ $games := partialCached "gaming-merged.html" . }}
+
+  {{/* --- Aggregate stats + distinct platforms (single pass over merged games) --- */}}
   {{ $totalMinutes := 0 }}
   {{ $totalAch := 0 }}
   {{ $platforms := slice }}
-  {{ range hugo.Data.gaming }}
+  {{ range $games }}
     {{ $totalMinutes = add $totalMinutes (.playtimeMinutes | default 0) }}
     {{ $totalAch = add $totalAch (.achievementsUnlocked | default 0) }}
-    {{ $platforms = $platforms | append (.platform | default "other") }}
+    {{ range .platforms }}{{ $platforms = $platforms | append . }}{{ end }}
   {{ end }}
   {{ $totalHours := int (div $totalMinutes 60) }}
   {{ $platforms = $platforms | uniq | sort }}
 
   <div class="gaming-stats">
-    <span class="gaming-stats__item"><strong>{{ len hugo.Data.gaming }}</strong> {{ i18n "gamesCount" }}</span>
+    <span class="gaming-stats__item"><strong>{{ len $games }}</strong> {{ i18n "gamesCount" }}</span>
     <span class="gaming-stats__item"><strong>{{ lang.FormatNumberCustom 0 $totalHours }}</strong> {{ i18n "hoursPlayed" }}</span>
     {{ if gt $totalAch 0 }}
     <span class="gaming-stats__item"><strong>{{ lang.FormatNumberCustom 0 $totalAch }}</strong> {{ i18n "achievementsWord" }}</span>
@@ -39,7 +43,7 @@
 
   {{/* Pre-sorted by playtime desc so the initial DOM matches the default active button. */}}
   <div class="gaming-grid">
-    {{ range sort hugo.Data.gaming "playtimeMinutes" "desc" }}
+    {{ range sort $games "playtimeMinutes" "desc" }}
     {{ $game := . }}
 
     {{/* Compact playtime badge: minutes below an hour, else hours (1 decimal under 10h). */}}
@@ -55,7 +59,7 @@
     <a class="game-card" id="{{ urlize .title }}"
        {{ with .link }}href="{{ . }}" target="_blank" rel="noopener"{{ end }}
        data-playtime="{{ $mins }}" data-lastplayed="{{ .lastPlayed }}"
-       data-title="{{ .title | lower }}" data-platform="{{ .platform | default "other" }}">
+       data-title="{{ .title | lower }}" data-platform="{{ delimit .platforms " " }}">
       <div class="game-card__cover">
         {{ with .cover }}
           {{ $img := resources.Get . }}
@@ -122,7 +126,8 @@
 
     function filterBy(platform) {
       cards.forEach(function (c) {
-        c.style.display = (platform === 'all' || c.dataset.platform === platform) ? '' : 'none';
+        var plats = (c.dataset.platform || '').split(' ');
+        c.style.display = (platform === 'all' || plats.indexOf(platform) !== -1) ? '' : 'none';
       });
     }
 

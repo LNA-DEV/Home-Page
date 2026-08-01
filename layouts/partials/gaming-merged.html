@@ -1,0 +1,66 @@
+{{/*
+  Collapses gaming entries that share a `title` into one UI item.
+
+  The data (data/gaming.yaml) intentionally keeps one entry per copy of a game
+  (e.g. the same title owned on both `switch` and `steam`). For display we merge
+  copies that share a title into a single card:
+
+    playtimeMinutes      -> summed across all copies (total time on that game)
+    lastPlayed           -> newest of the copies
+    achievements(Un/T)   -> taken from the copy with the most unlocked
+    platforms            -> all distinct platforms of the copies (for filtering)
+    cover / link / rating -> first non-empty across the copies
+
+  Returns a slice of dicts with the same field names the single-entry markup
+  used, plus `platforms` (a slice). hugo.Data is global / language-independent,
+  so callers should invoke this via `partialCached`.
+*/}}
+{{ $titles := slice }}
+{{ range hugo.Data.gaming }}
+  {{ $titles = $titles | append .title }}
+{{ end }}
+{{ $titles = $titles | uniq }}
+
+{{ $merged := slice }}
+{{ range $titles }}
+  {{ $title := . }}
+  {{ $group := where hugo.Data.gaming "title" $title }}
+
+  {{ $sumMinutes := 0 }}
+  {{ $lastPlayed := "" }}
+  {{ $platforms := slice }}
+  {{ $bestUnlocked := -1 }}
+  {{ $achU := 0 }}
+  {{ $achT := 0 }}
+  {{ $cover := "" }}
+  {{ $link := "" }}
+  {{ $rating := 0 }}
+
+  {{ range $group }}
+    {{ $sumMinutes = add $sumMinutes (.playtimeMinutes | default 0) }}
+    {{ with .lastPlayed }}{{ if gt . $lastPlayed }}{{ $lastPlayed = . }}{{ end }}{{ end }}
+    {{ $platforms = $platforms | append (.platform | default "other") }}
+    {{ $u := int (.achievementsUnlocked | default 0) }}
+    {{ if gt $u $bestUnlocked }}
+      {{ $bestUnlocked = $u }}
+      {{ $achU = $u }}
+      {{ $achT = int (.achievementsTotal | default 0) }}
+    {{ end }}
+    {{ if and (eq $cover "") .cover }}{{ $cover = .cover }}{{ end }}
+    {{ if and (eq $link "") .link }}{{ $link = .link }}{{ end }}
+    {{ if and (eq $rating 0) .rating }}{{ $rating = .rating }}{{ end }}
+  {{ end }}
+
+  {{ $merged = $merged | append (dict
+      "title" $title
+      "playtimeMinutes" $sumMinutes
+      "lastPlayed" $lastPlayed
+      "platforms" ($platforms | uniq | sort)
+      "achievementsUnlocked" $achU
+      "achievementsTotal" $achT
+      "cover" $cover
+      "link" $link
+      "rating" $rating
+  ) }}
+{{ end }}
+{{ return $merged }}

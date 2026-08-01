@@ -7,8 +7,12 @@
 {{ $lang := .Page.Site.Language.Lang }}
 {{ $gamingUrl := printf "/%s/gaming/" $lang }}
 
+{{/* Merge same-title copies (e.g. one game on two platforms) so a title can't
+     show up twice. See partials/gaming-merged.html. */}}
+{{ $all := partialCached "gaming-merged.html" . }}
+
 {{ $dated := slice }}
-{{ range hugo.Data.gaming }}
+{{ range $all }}
   {{ if .lastPlayed }}
     {{ $dated = $dated | append . }}
   {{ end }}
@@ -18,7 +22,7 @@
 {{ if gt (len $dated) 0 }}
   {{ $games = first 6 (sort $dated "lastPlayed" "desc") }}
 {{ else }}
-  {{ $games = collections.Reverse (last 6 hugo.Data.gaming) }}
+  {{ $games = collections.Reverse (last 6 $all) }}
 {{ end }}
 
 <div class="recent-gaming">
