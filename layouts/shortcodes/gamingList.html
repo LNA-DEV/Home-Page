@@ -28,8 +28,10 @@
     {{ if gt (len $platforms) 1 }}
     <div class="gaming-filter">
       <button type="button" class="gaming-btn is-active" data-filter="all">{{ i18n "allPlatforms" }}</button>
+      {{/* Proper-case labels for platforms `title` mangles (digit-leading / acronyms). */}}
+      {{ $platformLabels := dict "3ds" "3DS" "ds" "DS" "gog" "GOG" }}
       {{ range $platforms }}
-      <button type="button" class="gaming-btn" data-filter="{{ . }}">{{ . | title }}</button>
+      <button type="button" class="gaming-btn" data-filter="{{ . }}">{{ index $platformLabels . | default (. | title) }}</button>
       {{ end }}
     </div>
     {{ end }}

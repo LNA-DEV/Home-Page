@@ -347,6 +347,72 @@
   playtimeMinutes: 39
   cover: "images/games/covers/Farm Life.jpg"
 
+# ==== NINTENDO DS: hand-added (Nintendo DS library) ==========================
+
+- title: "Pokémon White 2"
+  platform: ds
+  playtimeMinutes: 7384
+  cover: "images/games/covers/Pokémon White 2.jpg"
+  link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Black_2_and_White_2"
+
+- title: "Pokémon HeartGold"
+  platform: ds
+  playtimeMinutes: 2433
+  cover: "images/games/covers/Pokémon HeartGold.jpg"
+  link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_HeartGold_and_SoulSilver"
+
+- title: "LEGO Pirates of the Caribbean"
+  platform: ds
+  playtimeMinutes: 1574
+  cover: "images/games/covers/LEGO Pirates of the Caribbean.jpg"
+  link: "https://en.wikipedia.org/wiki/Lego_Pirates_of_the_Caribbean:_The_Video_Game"
+
+- title: "Dolphins"
+  platform: ds
+  playtimeMinutes: 480
+  cover: "images/games/covers/Dolphins.jpg"
+
+- title: "Mario Kart DS"
+  platform: ds
+  cover: "images/games/covers/Mario Kart DS.jpg"
+  link: "https://en.wikipedia.org/wiki/Mario_Kart_DS"
+
+- title: "Farm Life"
+  platform: ds
+  cover: "images/games/covers/Farm Life.jpg"
+
+- title: "Animal Life: Dinosaurs"
+  platform: ds
+  cover: "images/games/covers/Animal Life: Dinosaurs.jpg"
+
+- title: "Mario Party DS"
+  platform: ds
+  cover: "images/games/covers/Mario Party DS.jpg"
+  link: "https://en.wikipedia.org/wiki/Mario_Party_DS"
+
+- title: "Pokémon Black"
+  platform: ds
+  cover: "images/games/covers/Pokémon Black.jpg"
+  link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Black_and_White"
+
+- title: "Catz"
+  platform: ds
+  cover: "images/games/covers/Catz.jpg"
+
+- title: "WAS IST WAS: Versunkene Schätze"
+  platform: ds
+  cover: "images/games/covers/WAS IST WAS: Versunkene Schätze.jpg"
+
+- title: "The Legend of Zelda: Spirit Tracks"
+  platform: ds
+  cover: "images/games/covers/The Legend of Zelda: Spirit Tracks.jpg"
+  link: "https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Spirit_Tracks"
+
+- title: "New Super Mario Bros."
+  platform: ds
+  cover: "images/games/covers/New Super Mario Bros..jpg"
+  link: "https://en.wikipedia.org/wiki/New_Super_Mario_Bros."
+
 # ==== STEAM: auto-managed by scripts/sync-steam.py (regenerated each sync) ====
 
 - title: Portal 2
