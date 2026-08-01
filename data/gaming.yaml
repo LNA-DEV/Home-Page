@@ -1,9 +1,10 @@
 # Games I've played — a flat, unordered list, one entry per game.
 # Modelled on data/reading.yaml. Multiple sources write here:
 #
-#   * hand-added entries — any `platform:` value OTHER than `steam`
+#   * hand-added entries — any `platform:` value that is NOT auto-managed
 #     (e.g. gog / switch / playstation / manual).
 #   * Steam entries — auto-managed by scripts/sync-steam.py.
+#   * Epic entries  — auto-managed by scripts/sync-epic.py.
 #
 # The `platform` field is the discriminator. The Steam sync ONLY ever touches
 # entries with `platform: steam`: it rebuilds them from the live Steam library
@@ -11,12 +12,16 @@
 # it emits. Everything else in this file is left byte-for-byte untouched, so
 # hand-added games are safe. Human-owned fields (rating, genres, tags, notes)
 # set on a Steam entry ARE preserved across syncs — the script merges them back
-# by `appid`. The auto-managed Steam block is always written LAST in the file.
+# by `appid`. The Epic sync (scripts/sync-epic.py) does the same for `platform:
+# epic` entries, keyed by `appName`, merging Heroic-local + Epic-cloud playtime.
+# Each sync writes ITS block LAST, so whichever ran most recently sits at the
+# bottom; the other sync's block is preserved byte-for-byte.
 #
 # Fields (all optional except `title` + `platform`):
 #   title                 game name
-#   platform              steam | gog | switch | playstation | manual | ...
-#   appid                 Steam AppID — stable key the sync matches on (steam only)
+#   platform              steam | epic | gog | switch | playstation | manual | ...
+#   appid                 Steam AppID — stable key the Steam sync matches on (steam only)
+#   appName               Epic app codename — stable key the Epic sync matches on (epic only)
 #   playtimeMinutes       total playtime in minutes (steam: playtime_forever)
 #   lastPlayed            "YYYY-MM-DD"
 #   achievementsUnlocked  number of unlocked achievements
@@ -995,3 +1000,300 @@
   achievementsUnlocked: 14
   achievementsTotal: 45
   link: "https://store.steampowered.com/app/3478870/"
+
+# ==== EPIC: auto-managed by scripts/sync-epic.py (regenerated each sync) ====
+
+- title: Death Coming
+  platform: epic
+  appName: 2333810845fd49a286baf29f9b58f9ae
+  playtimeMinutes: 5
+  cover: images/games/covers/Death Coming.jpg
+  link: "https://www.epicgames.com/store/product/death-coming"
+
+- title: Assassins Creed Syndicate
+  platform: epic
+  appName: Albacore
+  playtimeMinutes: 7
+  cover: images/games/covers/Assassins Creed Syndicate.jpg
+  link: "https://www.epicgames.com/store/product/assassins-creed-syndicate"
+
+- title: Rayman Legends
+  platform: epic
+  appName: Anchovy
+  playtimeMinutes: 5
+  cover: images/games/covers/Rayman Legends.jpg
+  link: "https://www.epicgames.com/store/product/rayman-legends"
+
+- title: Q.U.B.E. 2
+  platform: epic
+  appName: Auk
+  playtimeMinutes: 102
+  cover: images/games/covers/Q.U.B.E. 2.jpg
+  link: "https://www.epicgames.com/store/product/qube-2"
+
+- title: Towerfall Ascension
+  platform: epic
+  appName: Bichir
+  playtimeMinutes: 116
+  cover: images/games/covers/Towerfall Ascension.jpg
+  link: "https://www.epicgames.com/store/product/towerfall-ascension"
+
+- title: Faster Than Light
+  platform: epic
+  appName: Blowfish
+  playtimeMinutes: 1
+  cover: images/games/covers/Faster Than Light.png
+  link: "https://www.epicgames.com/store/product/faster-than-light"
+
+- title: Barony
+  platform: epic
+  appName: c98c4cd6d83a4524b4b22f13af95a104
+  playtimeMinutes: 4
+  cover: images/games/covers/Barony.jpg
+  link: "https://www.epicgames.com/store/product/barony"
+
+- title: Kingdom New Lands
+  platform: epic
+  appName: cacao
+  playtimeMinutes: 80
+  cover: images/games/covers/Kingdom New Lands.jpg
+  link: "https://www.epicgames.com/store/product/kingdom-new-lands"
+
+- title: This War of Mine
+  platform: epic
+  appName: Cardinal
+  playtimeMinutes: 15
+  cover: images/games/covers/This War of Mine.jpg
+  link: "https://www.epicgames.com/store/product/this-war-of-mine"
+
+- title: Bad North Jotunn Edition
+  platform: epic
+  appName: Chives
+  playtimeMinutes: 5
+  cover: images/games/covers/Bad North Jotunn Edition.png
+  link: "https://www.epicgames.com/store/product/bad-north-jotunn-edition"
+
+- title: Ape Out
+  platform: epic
+  appName: Coley
+  playtimeMinutes: 8
+  cover: images/games/covers/Ape Out.jpg
+  link: "https://www.epicgames.com/store/product/ape-out"
+
+- title: Satisfactory
+  platform: epic
+  appName: CrabEA
+  playtimeMinutes: 2483
+  lastPlayed: "2025-12-24"
+  cover: images/games/covers/Satisfactory.jpg
+  link: "https://www.epicgames.com/store/product/satisfactory"
+
+- title: Drawful 2
+  platform: epic
+  appName: Daisy
+  playtimeMinutes: 9
+  cover: images/games/covers/Drawful 2.jpg
+  link: "https://www.epicgames.com/store/product/drawful-2"
+
+- title: Borderlands 2
+  platform: epic
+  appName: Dodo
+  playtimeMinutes: 13
+  cover: images/games/covers/Borderlands 2.jpg
+  link: "https://www.epicgames.com/store/product/borderlands-2"
+
+- title: SUPERHOT
+  platform: epic
+  appName: Dory
+  playtimeMinutes: 96
+  cover: images/games/covers/SUPERHOT.jpg
+  link: "https://www.epicgames.com/store/product/superhot"
+
+- title: Totally Accurate Battle Simulator
+  platform: epic
+  appName: Driftfish
+  playtimeMinutes: 11
+  cover: images/games/covers/Totally Accurate Battle Simulator.jpg
+  link: "https://www.epicgames.com/store/product/totally-accurate-battle-simulator"
+
+- title: Moonlighter
+  platform: epic
+  appName: Eagle
+  playtimeMinutes: 1
+  cover: images/games/covers/Moonlighter.jpg
+  link: "https://www.epicgames.com/store/product/moonlighter"
+
+- title: Mutant Year Zero Road to Eden
+  platform: epic
+  appName: Falcon
+  playtimeMinutes: 8
+  cover: images/games/covers/Mutant Year Zero Road to Eden.jpg
+  link: "https://www.epicgames.com/store/product/mutant-year-zero-road-to-eden"
+
+- title: Fortnite
+  platform: epic
+  appName: Fortnite
+  playtimeMinutes: 865
+  cover: images/games/covers/Fortnite.jpg
+  link: "https://www.epicgames.com/store/product/fortnite"
+
+- title: The Escapists 2
+  platform: epic
+  appName: Fowl
+  playtimeMinutes: 417
+  cover: images/games/covers/The Escapists 2.jpg
+  link: "https://www.epicgames.com/store/product/the-escapists-2"
+
+- title: Enter the Gungeon
+  platform: epic
+  appName: Garlic
+  playtimeMinutes: 49
+  cover: images/games/covers/Enter the Gungeon.jpg
+  link: "https://www.epicgames.com/store/product/enter-the-gungeon"
+
+- title: Oxenfree
+  platform: epic
+  appName: Hibiscus
+  playtimeMinutes: 417
+  cover: images/games/covers/Oxenfree.jpg
+  link: "https://www.epicgames.com/store/product/oxenfree"
+
+- title: Just Cause 4
+  platform: epic
+  appName: Kakopo
+  playtimeMinutes: 15
+  cover: images/games/covers/Just Cause 4.jpg
+  link: "https://www.epicgames.com/store/product/just-cause-4"
+
+- title: "Sid Meier's Civilization VI"
+  platform: epic
+  appName: Kinglet
+  playtimeMinutes: 4
+  cover: "images/games/covers/Sid Meier's Civilization VI.jpg"
+  link: "https://www.epicgames.com/store/product/sid-meier-civilization-vi"
+
+- title: "Civilization VI : Aztec DLC"
+  platform: epic
+  appName: KingletAztec
+  playtimeMinutes: 4
+  cover: "images/games/covers/Civilization VI : Aztec DLC.jpg"
+  link: "https://www.epicgames.com/store/product/civilization-vi--aztec-dlc"
+
+- title: RUINER
+  platform: epic
+  appName: Laridae
+  playtimeMinutes: 15
+  cover: images/games/covers/RUINER.jpg
+  link: "https://www.epicgames.com/store/product/ruiner"
+
+- title: Hob
+  platform: epic
+  appName: Lyrebird
+  playtimeMinutes: 6
+  cover: images/games/covers/Hob.jpg
+  link: "https://www.epicgames.com/store/product/hob"
+
+- title: The Witness
+  platform: epic
+  appName: Magnolia
+  playtimeMinutes: 6
+  cover: images/games/covers/The Witness.jpg
+  link: "https://www.epicgames.com/store/product/the-witness"
+
+- title: Surviving Mars
+  platform: epic
+  appName: Ovenbird
+  playtimeMinutes: 3
+  cover: images/games/covers/Surviving Mars.jpg
+  link: "https://www.epicgames.com/store/product/surviving-mars"
+
+- title: Everything
+  platform: epic
+  appName: Pelican
+  playtimeMinutes: 52
+  cover: images/games/covers/Everything.png
+  link: "https://www.epicgames.com/store/product/everything"
+
+- title: The Escapists
+  platform: epic
+  appName: Peony
+  playtimeMinutes: 1
+  link: "https://www.epicgames.com/store/product/the-escapists"
+
+- title: Metro 2033 Redux
+  platform: epic
+  appName: Petunia
+  playtimeMinutes: 445
+  cover: images/games/covers/Metro 2033 Redux.png
+  link: "https://www.epicgames.com/store/product/metro-2033-redux"
+
+- title: Celeste
+  platform: epic
+  appName: Salt
+  playtimeMinutes: 758
+  lastPlayed: "2026-02-26"
+  cover: images/games/covers/Celeste.jpg
+  link: "https://www.epicgames.com/store/product/celeste"
+
+- title: Farming Simulator 19
+  platform: epic
+  appName: Stellula
+  playtimeMinutes: 54
+  cover: images/games/covers/Farming Simulator 19.jpg
+  link: "https://www.epicgames.com/store/product/farming-simulator-19"
+
+- title: Rocket League®
+  platform: epic
+  appName: Sugar
+  playtimeMinutes: 170
+  cover: images/games/covers/Rocket League®.jpg
+  link: "https://www.epicgames.com/store/product/rocket-league"
+
+- title: "Anodyne 2: Return to Dust"
+  platform: epic
+  appName: Tanzanite
+  playtimeMinutes: 6
+  cover: "images/games/covers/Anodyne 2: Return to Dust.jpg"
+  link: "https://www.epicgames.com/store/product/anodyne-2-return-to-dust"
+
+- title: ">observer_"
+  platform: epic
+  appName: Tumeric
+  playtimeMinutes: 9
+  cover: "images/games/covers/>observer_.jpg"
+  link: "https://www.epicgames.com/store/product/observer"
+
+- title: Nuclear Throne
+  platform: epic
+  appName: Turaco
+  playtimeMinutes: 3
+  cover: images/games/covers/Nuclear Throne.jpg
+  link: "https://www.epicgames.com/store/product/nuclear-throne"
+
+- title: Hello Neighbor
+  platform: epic
+  appName: Ursus
+  playtimeMinutes: 3
+  cover: images/games/covers/Hello Neighbor.jpg
+  link: "https://www.epicgames.com/store/product/hello-neighbor"
+
+- title: Costume Quest
+  platform: epic
+  appName: Violetear
+  playtimeMinutes: 1
+  cover: images/games/covers/Costume Quest.jpg
+  link: "https://www.epicgames.com/store/product/costume-quest"
+
+- title: Faeria
+  platform: epic
+  appName: Vulture
+  playtimeMinutes: 6
+  cover: images/games/covers/Faeria.jpg
+  link: "https://www.epicgames.com/store/product/faeria"
+
+- title: World War Z
+  platform: epic
+  appName: Wombat
+  playtimeMinutes: 184
+  cover: images/games/covers/World War Z.jpg
+  link: "https://www.epicgames.com/store/product/world-war-z"

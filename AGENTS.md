@@ -161,3 +161,91 @@ explicitly.
 Copy the commented template at the top of `data/gaming.yaml`, uncomment it, and
 set `platform:` to something other than `steam` (e.g. `switch`, `gog`,
 `manual`). The Steam sync will leave it alone.
+
+## Syncing games from Epic
+
+Epic Games has **no** Steam-style public API (no API key, no owned-games
+endpoint). `scripts/sync-epic.py` instead reads what the **Heroic** launcher has
+already cached on disk and merges it with Epic's private cloud playtime. It is
+standard-library only and edits `gaming.yaml` as raw text, exactly like
+`sync-steam.py` — it owns only the `platform: epic` entries.
+
+### Why two sources
+
+Playtime is split by which client launched the game, and the two never overlap:
+
+- **Historical** play through the **official Epic launcher** lives only on Epic's
+  **cloud**.
+- Play through **Heroic** lives only in Heroic's **local** files (Heroic never
+  uploads it to Epic).
+
+A session is launched by exactly one client, so the totals are disjoint and the
+true per-game total is `heroic + cloud`, matched on the Epic `appName` (the
+codename like `Salt` / `CrabEA`; the cloud endpoint calls it `artifactId`).
+
+### What the script does
+
+- **Heroic-local (always, no login):** reads the owned library
+  (`store_cache/legendary_library.json` → title, `appName`, portrait cover URL,
+  store link) and Heroic-launched playtime + `lastPlayed` (`store/timestamp.json`,
+  minutes). The Heroic config dir is auto-detected (Flatpak
+  `~/.var/app/com.heroicgameslauncher.hgl/config/heroic`, then native
+  `~/.config/heroic`; override with `--heroic-config`).
+- **Epic cloud (unless `--no-cloud`):** reuses the Epic OAuth refresh token Heroic
+  already stored (`legendaryConfig/legendary/user.json`) — **no separate login**.
+  It refreshes that token and GETs `library-service`'s per-account playtime
+  endpoint for the historical official-launcher hours (seconds → minutes).
+- **Merges** the two (`playtimeMinutes = heroic + cloud`), downloads each game's
+  portrait cover into `assets/images/games/covers/<Title>.<ext>` (skipping ones
+  that exist; `--no-covers` to skip), and **rebuilds only the `platform: epic`
+  entries** (played games added, others pruned) as the last block in the file,
+  under a marker it emits. 0-playtime games are excluded by default
+  (`--include-unplayed` to keep them).
+
+### What it deliberately leaves out / for a human
+
+- **Achievements** — Epic closed the achievement-progress API in Jan 2025; there
+  is no reliable public source, so the Epic sync never sets them.
+- `rating`, `genres`, `tags`, `notes` — subjective. Add them by hand to an Epic
+  entry and they are **preserved across syncs** (re-emitted verbatim, matched by
+  `appName`). Keep each to a single line.
+- Any non-Epic game — the sync never touches entries whose `platform` isn't
+  `epic` (including the Steam block).
+
+### Workflow
+
+1. **Freshen the token (for the cloud half):** the script reuses Heroic's stored
+   Epic session, which goes stale when Heroic hasn't run in a while. **Open Heroic
+   once** (it re-auths Epic) before syncing. If the token is still stale the script
+   prints a warning and proceeds Heroic-local only. (A manual token can be supplied
+   via `EPIC_REFRESH_TOKEN` / `EPIC_ACCOUNT_ID` in the env or a gitignored `.env`;
+   never commit it.)
+
+2. **Preview** (writes nothing):
+   ```
+   python3 scripts/sync-epic.py --dry-run             # Heroic + cloud
+   python3 scripts/sync-epic.py --no-cloud --dry-run  # Heroic-local only
+   ```
+   It prints `+N added, ~M updated, -K pruned`. Sanity-check the counts.
+
+3. **Sync**:
+   ```
+   python3 scripts/sync-epic.py
+   ```
+
+4. **Eyeball the diff**: `git diff data/gaming.yaml` — confirm hand-added entries
+   and the Steam block are untouched and the new covers under
+   `assets/images/games/covers/` look right.
+
+5. **Sanity-check the build**: `hugo` should succeed.
+
+Do **not** run `./deploy.sh` — deployment is a separate step the user authorizes
+explicitly.
+
+### Note on the private Epic API
+
+The cloud half calls Epic's undocumented launcher endpoints with your own token —
+the same thing Heroic / Legendary / Playnite do. It's your own data, one read per
+run. Not a sanctioned public API; keep it to personal use. The OAuth client
+id/secret baked into the script is the well-known public "launcher" constant, not
+a secret.
