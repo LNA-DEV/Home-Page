@@ -202,6 +202,151 @@
   cover: "images/games/covers/Yono and the Celestial Elephants.jpg"
   link: "https://store.steampowered.com/app/602430/"
 
+# ==== NINTENDO 3DS: hand-added (Nintendo 3DS / DS library) ====================
+
+- title: "Pokémon Alpha Sapphire"
+  platform: 3ds
+  playtimeMinutes: 5961
+  cover: "images/games/covers/Pokémon Alpha Sapphire.jpg"
+  link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Omega_Ruby_and_Alpha_Sapphire"
+
+- title: "Mario Kart 7"
+  platform: 3ds
+  playtimeMinutes: 3234
+  cover: "images/games/covers/Mario Kart 7.jpg"
+  link: "https://en.wikipedia.org/wiki/Mario_Kart_7"
+
+- title: "Pokémon Moon"
+  platform: 3ds
+  playtimeMinutes: 3003
+  cover: "images/games/covers/Pokémon Moon.jpg"
+  link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Sun_and_Moon"
+
+- title: "Super Smash Bros. for Nintendo 3DS"
+  platform: 3ds
+  playtimeMinutes: 2988
+  cover: "images/games/covers/Super Smash Bros. for Nintendo 3DS.jpg"
+  link: "https://en.wikipedia.org/wiki/Super_Smash_Bros._for_Nintendo_3DS_and_Wii_U"
+
+- title: "Super Mario Maker for Nintendo 3DS"
+  platform: 3ds
+  playtimeMinutes: 1291
+  cover: "images/games/covers/Super Mario Maker for Nintendo 3DS.jpg"
+  link: "https://en.wikipedia.org/wiki/Super_Mario_Maker_for_Nintendo_3DS"
+
+- title: "Pokémon White 2"
+  platform: 3ds
+  playtimeMinutes: 1151
+  cover: "images/games/covers/Pokémon White 2.jpg"
+  link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Black_2_and_White_2"
+
+- title: "Mario Party: Star Rush"
+  platform: 3ds
+  playtimeMinutes: 852
+  cover: "images/games/covers/Mario Party: Star Rush.jpg"
+  link: "https://en.wikipedia.org/wiki/Mario_Party:_Star_Rush"
+
+- title: "StreetPass Mii Plaza"
+  platform: 3ds
+  playtimeMinutes: 735
+  cover: "images/games/covers/StreetPass Mii Plaza.jpg"
+  link: "https://en.wikipedia.org/wiki/StreetPass_Mii_Plaza"
+
+- title: "Animal Crossing: New Leaf"
+  platform: 3ds
+  playtimeMinutes: 672
+  cover: "images/games/covers/Animal Crossing: New Leaf.jpg"
+  link: "https://en.wikipedia.org/wiki/Animal_Crossing:_New_Leaf"
+
+- title: "Poochy & Yoshi's Woolly World"
+  platform: 3ds
+  playtimeMinutes: 583
+  cover: "images/games/covers/Poochy & Yoshi's Woolly World.jpg"
+  link: "https://en.wikipedia.org/wiki/Yoshi%27s_Woolly_World"
+
+- title: "Pokémon HeartGold"
+  platform: 3ds
+  playtimeMinutes: 545
+  cover: "images/games/covers/Pokémon HeartGold.jpg"
+  link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_HeartGold_and_SoulSilver"
+
+- title: "Pokémon Y"
+  platform: 3ds
+  playtimeMinutes: 505
+  cover: "images/games/covers/Pokémon Y.jpg"
+  link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_X_and_Y"
+
+- title: "Mario Party DS"
+  platform: 3ds
+  playtimeMinutes: 496
+  cover: "images/games/covers/Mario Party DS.jpg"
+  link: "https://en.wikipedia.org/wiki/Mario_Party_DS"
+
+- title: "New Super Mario Bros."
+  platform: 3ds
+  playtimeMinutes: 466
+  cover: "images/games/covers/New Super Mario Bros..jpg"
+  link: "https://en.wikipedia.org/wiki/New_Super_Mario_Bros."
+
+- title: "The Legend of Zelda: Spirit Tracks"
+  platform: 3ds
+  playtimeMinutes: 450
+  cover: "images/games/covers/The Legend of Zelda: Spirit Tracks.jpg"
+  link: "https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Spirit_Tracks"
+
+- title: "Mario Kart DS"
+  platform: 3ds
+  playtimeMinutes: 423
+  cover: "images/games/covers/Mario Kart DS.jpg"
+  link: "https://en.wikipedia.org/wiki/Mario_Kart_DS"
+
+- title: "Super Mario 3D Land"
+  platform: 3ds
+  playtimeMinutes: 423
+  cover: "images/games/covers/Super Mario 3D Land.jpg"
+  link: "https://en.wikipedia.org/wiki/Super_Mario_3D_Land"
+
+- title: "Steel Diver: Sub Wars"
+  platform: 3ds
+  playtimeMinutes: 307
+  cover: "images/games/covers/Steel Diver: Sub Wars.jpg"
+  link: "https://en.wikipedia.org/wiki/Steel_Diver"
+
+- title: "nintendogs + cats"
+  platform: 3ds
+  playtimeMinutes: 297
+  cover: "images/games/covers/nintendogs + cats.jpg"
+  link: "https://en.wikipedia.org/wiki/Nintendogs_%2B_Cats"
+
+- title: "Pokémon Shuffle"
+  platform: 3ds
+  playtimeMinutes: 270
+  cover: "images/games/covers/Pokémon Shuffle.jpg"
+  link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Shuffle"
+
+- title: "Pokémon Rumble World"
+  platform: 3ds
+  playtimeMinutes: 85
+  cover: "images/games/covers/Pokémon Rumble World.jpg"
+  link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Rumble_World"
+
+- title: "Pokémon Black"
+  platform: 3ds
+  playtimeMinutes: 78
+  cover: "images/games/covers/Pokémon Black.jpg"
+  link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Black_and_White"
+
+- title: "LEGO Pirates of the Caribbean"
+  platform: 3ds
+  playtimeMinutes: 58
+  cover: "images/games/covers/LEGO Pirates of the Caribbean.jpg"
+  link: "https://en.wikipedia.org/wiki/Lego_Pirates_of_the_Caribbean:_The_Video_Game"
+
+- title: "Farm Life"
+  platform: 3ds
+  playtimeMinutes: 39
+  cover: "images/games/covers/Farm Life.jpg"
+
 # ==== STEAM: auto-managed by scripts/sync-steam.py (regenerated each sync) ====
 
 - title: Portal 2
