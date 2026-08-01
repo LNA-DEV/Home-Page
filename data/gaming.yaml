@@ -455,8 +455,6 @@
   cover: "images/games/covers/New Super Mario Bros..jpg"
   link: "https://en.wikipedia.org/wiki/New_Super_Mario_Bros."
 
-# ==== STEAM: auto-managed by scripts/sync-steam.py (regenerated each sync) ====
-
 - title: Portal 2
   platform: steam
   appid: 620
