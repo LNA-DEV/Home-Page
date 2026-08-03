@@ -233,6 +233,7 @@ if (gallery) {
           // Get EXIF data from caption
           const exifItems = captionEl.querySelectorAll(".exif-item");
           const gearItems = captionEl.querySelectorAll(".gear-item");
+          const title = captionEl.querySelector(".caption-title")?.textContent || "";
           const copyright = captionEl.querySelector(".caption-copyright")?.textContent || "";
           const artist = captionEl.querySelector(".caption-artist")?.textContent || "";
           const keywords = captionEl.querySelector(".caption-keywords")?.textContent || "";
@@ -264,6 +265,10 @@ if (gallery) {
           // Build popup content
           let content = '<div class="pswp-info-popup-content">';
           content += '<button class="pswp-info-popup-close" aria-label="Close">&times;</button>';
+
+          if (title) {
+            content += `<h3 class="pswp-info-title">${title}</h3>`;
+          }
 
           if (exifItems.length === 0 && gearItems.length === 0 && !copyright && !artist && !keywords) {
             content += '<p class="pswp-info-empty">No data available</p>';
