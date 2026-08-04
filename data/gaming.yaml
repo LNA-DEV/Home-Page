@@ -23,6 +23,8 @@
 #   appid                 Steam AppID — stable key the Steam sync matches on (steam only)
 #   appName               Epic app codename — stable key the Epic sync matches on (epic only)
 #   playtimeMinutes       total playtime in minutes (steam: playtime_forever)
+#   extraMinutes          optional hand-entered extra minutes (human) — ADDED to
+#                         playtimeMinutes in every UI total. Survives syncs.
 #   lastPlayed            "YYYY-MM-DD"
 #   achievementsUnlocked  number of unlocked achievements
 #   achievementsTotal     number of achievements the game has
@@ -43,6 +45,12 @@
 #   rating: 5
 #   genres: ["action-adventure", "open-world"]
 #   notes: "First playthrough on launch."
+
+# ==== MANUAL: hand-added (no platform) =======================================
+
+- title: "Minecraft"
+  cover: "images/games/covers/Minecraft.jpg"
+  link: "https://www.minecraft.net/"
 
 # ==== SWITCH: hand-added (Nintendo Switch library) ===========================
 
@@ -159,10 +167,10 @@
   cover: "images/games/covers/Pokémon: Let's Go, Eevee!.jpg"
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon:_Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!"
 
-- title: "Minecraft: Nintendo Switch Edition"
+- title: "Minecraft"
   platform: switch
   playtimeMinutes: 2700
-  cover: "images/games/covers/Minecraft: Nintendo Switch Edition.jpg"
+  cover: "images/games/covers/Minecraft.jpg"
   link: "https://www.minecraft.net/"
 
 - title: "Pokémon Quest"

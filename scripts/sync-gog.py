@@ -100,7 +100,7 @@ HEROIC_CONFIG_CANDIDATES = [
 GOG_MARKER = "# ==== GOG: auto-managed by scripts/sync-gog.py (regenerated each sync) ===="
 
 # Human-owned fields on a GOG entry that must survive a resync.
-HUMAN_FIELDS = ("rating", "genres", "tags", "notes")
+HUMAN_FIELDS = ("rating", "genres", "tags", "notes", "extraMinutes")
 
 # GOG library rows that are not real games (redistributables / DLC roots).
 SKIP_APP_NAMES = {"gog-redist"}

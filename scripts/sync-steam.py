@@ -60,7 +60,7 @@ STEAM_MARKER = "# ==== STEAM: auto-managed by scripts/sync-steam.py (regenerated
 
 # Human-owned fields on a Steam entry that must survive a resync. Re-emitted
 # verbatim (single line each) after the script-owned mechanical fields.
-HUMAN_FIELDS = ("rating", "genres", "tags", "notes")
+HUMAN_FIELDS = ("rating", "genres", "tags", "notes", "extraMinutes")
 
 
 # --------------------------------------------------------------------------- #

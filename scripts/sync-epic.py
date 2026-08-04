@@ -89,7 +89,7 @@ HEROIC_CONFIG_CANDIDATES = [
 EPIC_MARKER = "# ==== EPIC: auto-managed by scripts/sync-epic.py (regenerated each sync) ===="
 
 # Human-owned fields on an Epic entry that must survive a resync.
-HUMAN_FIELDS = ("rating", "genres", "tags", "notes")
+HUMAN_FIELDS = ("rating", "genres", "tags", "notes", "extraMinutes")
 
 
 # --------------------------------------------------------------------------- #

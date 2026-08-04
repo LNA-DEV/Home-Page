@@ -5,7 +5,8 @@
   (e.g. the same title owned on both `switch` and `steam`). For display we merge
   copies that share a title into a single card:
 
-    playtimeMinutes      -> summed across all copies (total time on that game)
+    playtimeMinutes      -> summed across all copies, plus each copy's optional
+                            extraMinutes (hand-entered untracked/estimated time)
     lastPlayed           -> newest of the copies
     achievements(Un/T)   -> taken from the copy with the most unlocked
     platforms            -> all distinct platforms of the copies (for filtering)
@@ -49,7 +50,7 @@
   {{ $rating := 0 }}
 
   {{ range $group }}
-    {{ $sumMinutes = add $sumMinutes (.playtimeMinutes | default 0) }}
+    {{ $sumMinutes = add $sumMinutes (add (.playtimeMinutes | default 0) (.extraMinutes | default 0)) }}
     {{ with .lastPlayed }}{{ if gt . $lastPlayed }}{{ $lastPlayed = . }}{{ end }}{{ end }}
     {{ $platforms = $platforms | append (.platform | default "other") }}
     {{ $u := int (.achievementsUnlocked | default 0) }}
