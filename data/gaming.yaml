@@ -1118,8 +1118,8 @@
 - title: Satisfactory
   platform: epic
   appName: CrabEA
-  playtimeMinutes: 2483
-  lastPlayed: "2025-12-24"
+  playtimeMinutes: 2484
+  lastPlayed: "2026-08-01"
   cover: images/games/covers/Satisfactory.jpg
   link: "https://www.epicgames.com/store/product/satisfactory"
 
@@ -1341,6 +1341,15 @@
   playtimeMinutes: 2
   cover: images/games/covers/The Way.jpg
 
+- title: "Thronebreaker: The Witcher Tales"
+  platform: gog
+  appName: 1297352383
+  playtimeMinutes: 28
+  lastPlayed: "2026-08-01"
+  achievementsUnlocked: 0
+  achievementsTotal: 39
+  cover: "images/games/covers/Thronebreaker: The Witcher Tales.jpg"
+
 - title: Hollow Knight
   platform: gog
   appName: 1308320804
@@ -1350,8 +1359,8 @@
 - title: Cyberpunk 2077
   platform: gog
   appName: 1423049311
-  playtimeMinutes: 469
-  lastPlayed: "2025-12-24"
+  playtimeMinutes: 478
+  lastPlayed: "2026-08-01"
   achievementsUnlocked: 1
   achievementsTotal: 57
   cover: images/games/covers/Cyberpunk 2077.jpg

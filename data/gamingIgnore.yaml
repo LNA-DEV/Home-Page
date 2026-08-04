@@ -1,0 +1,21 @@
+# Games to hide from every gaming view.
+#
+# Any game whose `title` appears in this list is NOT rendered to the page — it is
+# dropped from the /gaming/ grid, from the stats header (count / hours /
+# achievements), and from the "recently played" row on the About page. The entry
+# STAYS in data/gaming.yaml and keeps syncing (Steam/Epic/GOG) untouched; it is
+# only hidden at render time. This filtering lives in
+# layouts/partials/gaming-merged.html.
+#
+# Matching is case-insensitive and ignores surrounding whitespace, but is
+# otherwise exact — enter the full title as it appears in data/gaming.yaml.
+# One title per line, e.g.:
+#
+#   - "Half-Life 2"
+#   - "A Game I Don't Want Shown"
+
+titles:
+  - "Civilization VI : Aztec DLC"
+  - "Hello Neighbor"
+  - "The Way"
+  - "Surviving Mars"

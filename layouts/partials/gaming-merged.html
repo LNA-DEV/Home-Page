@@ -15,9 +15,21 @@
   used, plus `platforms` (a slice). hugo.Data is global / language-independent,
   so callers should invoke this via `partialCached`.
 */}}
+{{/* Titles listed in data/gamingIgnore.yaml are hidden from every gaming view
+     (grid, stats, recent-played) even though they stay in data/gaming.yaml.
+     The match is case-insensitive and whitespace-trimmed, otherwise exact. */}}
+{{ $ignore := slice }}
+{{ with hugo.Data.gamingIgnore.titles }}
+  {{ range . }}
+    {{ $ignore = $ignore | append (lower (trim (printf "%v" .) " ")) }}
+  {{ end }}
+{{ end }}
+
 {{ $titles := slice }}
 {{ range hugo.Data.gaming }}
-  {{ $titles = $titles | append .title }}
+  {{ if not (in $ignore (lower (trim .title " "))) }}
+    {{ $titles = $titles | append .title }}
+  {{ end }}
 {{ end }}
 {{ $titles = $titles | uniq }}
 

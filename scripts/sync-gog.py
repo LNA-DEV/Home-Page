@@ -13,6 +13,9 @@ Heroic stored. On every run it:
                                          app_name (the numeric GOG product id)
       - store/timestamp.json          -> playtime for games launched via Heroic
                                          (minutes), keyed by app id (cross-runner)
+      - gog_store/saveTimestamps.json -> GOG cloud-save sync time, used as a
+                                         lastPlayed FALLBACK for games that have
+                                         playtime but an empty timestamp.json date
   * Optionally reaches GOG's cloud (unless --no-cloud) by reusing the GOG refresh
     token Heroic stored (gog_store/auth.json, under the Galaxy client id):
       - gameplay.gog.com .../sessions      -> `time_sum`, the authoritative total
@@ -223,6 +226,19 @@ def resolve_heroic_config(explicit):
 # --------------------------------------------------------------------------- #
 # Collector 1: Heroic-local (no auth)                                          #
 # --------------------------------------------------------------------------- #
+def _save_date(raw):
+    """Convert a GOG cloud-save unix timestamp (seconds, possibly fractional, as a
+    str or number) to a 'YYYY-MM-DD' UTC date string, or None if unparseable. UTC
+    to match the sliced 'Z' timestamps in store/timestamp.json."""
+    try:
+        ts = float(raw)
+    except (TypeError, ValueError):
+        return None
+    if ts <= 0:
+        return None
+    return time.strftime("%Y-%m-%d", time.gmtime(ts))
+
+
 def collect_heroic(heroic_dir):
     """Return {app_name: {title, cover_url, minutes, lastPlayed}} for the owned GOG
     library (real games only), overlaid with Heroic-launched playtime."""
@@ -252,6 +268,25 @@ def collect_heroic(heroic_dir):
                 last = (info.get("lastPlayed") or "")[:10]
                 if last:
                     games[app]["lastPlayed"] = last
+    # lastPlayed fallback. Heroic often records playtime for a game but leaves
+    # `lastPlayed` empty (typically when the total was reconciled from GOG's cloud,
+    # which carries no date — and GOG's playtime API exposes no dates either). Use
+    # the GOG cloud-save sync time as a proxy: it flushes on exit, so it lands
+    # within seconds of the real last-played time. Only fills games still missing a
+    # date, and only reaches games that use GOG cloud saves.
+    saves_path = heroic_dir / "gog_store" / "saveTimestamps.json"
+    if saves_path.exists():
+        try:
+            saves = json.loads(saves_path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            saves = {}
+        for app, info in saves.items():
+            g = games.get(app)
+            if not g or g["lastPlayed"]:
+                continue
+            date = _save_date((info or {}).get("saves"))
+            if date:
+                g["lastPlayed"] = date
     return games
 
 
