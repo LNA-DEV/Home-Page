@@ -156,6 +156,16 @@
       {{- $title = . -}}
     {{- end -}}
 
+    {{- /* Fallback: derive a title from the filename when none is set,
+           skipping camera-generated codes like P1002405 / DSC_0753 */ -}}
+    {{- if not $title -}}
+      {{- $stem := strings.TrimSuffix (path.Ext (path.Base $image.Name)) (path.Base $image.Name) -}}
+      {{- $stem = strings.TrimPrefix "archive--" $stem -}}
+      {{- if not (findRE `(?i)^[ _-]?[a-z]{0,4}[ _-]?\d{3,}([ _-][a-z0-9]+)*$` $stem) -}}
+        {{- $title = $stem -}}
+      {{- end -}}
+    {{- end -}}
+
     {{- /* Alt text: data file > EXIF */ -}}
     {{- $alt := "" -}}
     {{- with $meta.alt -}}

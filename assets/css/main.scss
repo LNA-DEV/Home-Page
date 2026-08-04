@@ -2,7 +2,6 @@
 // @import "colors";
 @import "styles";
 @import "photoswipe/photoswipe";
-@import "photoswipe/photoswipe-dynamic-caption-plugin";
 
 // Like count display in PhotoSwipe lightbox
 .pswp__like-count {
@@ -55,50 +54,9 @@
   }
 }
 
-// Caption styling for EXIF data
+// Hidden metadata block; read by the info ("i") popup, never shown as a caption
 .pswp-caption-content {
-  display: none; // Hidden in gallery, shown by PhotoSwipe
-}
-
-.pswp__dynamic-caption {
-  .caption-title {
-    display: block;
-    font-weight: 500;
-    margin-bottom: 0.5em;
-  }
-
-  .caption-exif {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75em;
-    font-size: 0.9em;
-    opacity: 0.85;
-    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-  }
-
-  .exif-item {
-    white-space: nowrap;
-
-    &:not(:last-child)::after {
-      content: "·";
-      margin-left: 0.75em;
-      opacity: 0.5;
-    }
-  }
-
-  .caption-gear {
-    display: block;
-    margin-top: 0.4em;
-    font-size: 0.85em;
-    opacity: 0.7;
-  }
-
-  .gear-item {
-    &:not(:last-child)::after {
-      content: " + ";
-      opacity: 0.5;
-    }
-  }
+  display: none;
 }
 
 // Info button in PhotoSwipe toolbar

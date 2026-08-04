@@ -1,6 +1,5 @@
 import PhotoSwipeLightbox from "./photoswipe/photoswipe-lightbox.esm.js";
 import PhotoSwipe from "./photoswipe/photoswipe.esm.js";
-import PhotoSwipeDynamicCaption from "./photoswipe/photoswipe-dynamic-caption-plugin.esm.min.js";
 import * as params from "@params";
 
 const gallery = document.getElementById("gallery");
@@ -399,16 +398,7 @@ if (gallery) {
     }
   });
 
-  // Caption only shows title now, EXIF details moved to info popup
-  new PhotoSwipeDynamicCaption(lightbox, {
-    mobileLayoutBreakpoint: 700,
-    type: "auto",
-    mobileCaptionOverlapRatio: 1,
-    captionContent: (slide) => {
-      const titleEl = slide.data.element?.querySelector(".caption-title");
-      return titleEl ? titleEl.textContent : "";
-    },
-  });
+  // Title is shown only in the info ("i") popup, not as a caption next to the image.
 
   lightbox.on('openingAnimationStart', () => {
     const img = lightbox.pswp.currSlide.container.querySelector('.pswp__img');
