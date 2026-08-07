@@ -807,3 +807,16 @@
   originalLanguage: en
   languagesRead:
     - en
+
+- title: "A Court of Silver Flames"
+  series: A Court of Thorns and Roses
+  author: "Sarah J. Maas"
+  genres: ["fantasy", "romance"]
+  year: 2021
+  link: "https://en.wikipedia.org/wiki/A_Court_of_Thorns_and_Roses"
+  cover: "images/books/covers/A Court of Silver Flames.jpg"
+  pages: 768
+  rating: 4
+  originalLanguage: en
+  languagesRead:
+    - en
