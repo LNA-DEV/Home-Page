@@ -756,6 +756,18 @@
   languagesRead:
     - de
 
+- title: "Views"
+  author: "Marc-Uwe Kling"
+  genres: ["thriller", "crime"]
+  year: 2024
+  link: "https://openlibrary.org/works/OL38410048W"
+  cover: "images/books/covers/Views.jpg"
+  pages: 272
+  rating: 4
+  originalLanguage: de
+  languagesRead:
+    - de
+
 - title: "A Court of Thorns and Roses"
   series: A Court of Thorns and Roses
   author: "Sarah J. Maas"
