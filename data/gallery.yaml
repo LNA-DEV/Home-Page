@@ -5993,7 +5993,7 @@ images:
   category: city
   section: general
   project: ""
-  portfolio: false
+  portfolio: true
   tags: []
   alt: ""
   title: ""

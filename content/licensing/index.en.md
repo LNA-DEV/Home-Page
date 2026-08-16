@@ -39,6 +39,7 @@ Each image in the [gallery](/en/gallery/) includes structured metadata with its 
 
 - **CC BY-ND 4.0** -- [Creative Commons Attribution-NoDerivatives 4.0](https://creativecommons.org/licenses/by-nd/4.0/)
 - **CC BY-SA 4.0** -- [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+- **All Rights Reserved** -- full copyright, no reuse without permission (used where Creative Commons is not appropriate, e.g. portraits without consent or platform-specific requirements)
 
 ## Contact
 

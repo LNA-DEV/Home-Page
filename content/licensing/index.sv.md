@@ -39,6 +39,7 @@ Varje bild i [galleriet](/sv/gallery/) innehåller strukturerad metadata med lic
 
 - **CC BY-ND 4.0** -- [Creative Commons Erkännande-IngaBearbetningar 4.0](https://creativecommons.org/licenses/by-nd/4.0/deed.sv)
 - **CC BY-SA 4.0** -- [Creative Commons Erkännande-DelaLika 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.sv)
+- **Alla rättigheter förbehållna** -- full upphovsrätt, ingen återanvändning utan tillstånd (används där Creative Commons inte passar, t.ex. porträtt utan samtycke eller plattformsspecifika krav)
 
 ## Kontakt
 

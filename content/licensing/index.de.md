@@ -39,6 +39,7 @@ Jedes Bild in der [Galerie](/de/gallery/) enthält strukturierte Metadaten mit L
 
 - **CC BY-ND 4.0** -- [Creative Commons Namensnennung-Keine Bearbeitungen 4.0](https://creativecommons.org/licenses/by-nd/4.0/deed.de)
 - **CC BY-SA 4.0** -- [Creative Commons Namensnennung-Weitergabe unter gleichen Bedingungen 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.de)
+- **Alle Rechte vorbehalten** -- volles Urheberrecht, keine Weiterverwendung ohne Erlaubnis (verwendet, wo Creative Commons nicht passt, z.B. bei Porträts ohne Einwilligung oder plattformspezifischen Anforderungen)
 
 ## Kontakt
 
