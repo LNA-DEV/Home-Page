@@ -9457,6 +9457,12 @@ images:
   section: general
   project: wildlife-of-inn-valley
   portfolio: true
+- id: cdb2743d-d9b7-402d-b7e9-c2d1e0a072ee
+  src: Curious Juvenile - Young Red Fox Meeting the Cameras Gaze.jpg
+  category: animals
+  section: general
+  project: wildlife-of-inn-valley
+  portfolio: true
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
