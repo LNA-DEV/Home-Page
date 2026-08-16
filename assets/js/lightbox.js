@@ -350,7 +350,7 @@ if (gallery) {
         let currentImageName = null;
 
         const updateLikeCount = async () => {
-          currentImageName = pswp.currSlide.data?.element?.dataset?.imageId;
+          currentImageName = pswp.currSlide?.data?.element?.dataset?.imageId;
           if (!currentImageName) {
             el.style.display = "none";
             return;
@@ -394,6 +394,7 @@ if (gallery) {
 
   lightbox.on("change", () => {
     const currSlide = lightbox.pswp.currSlide;
+    if (!currSlide) return;
     const el = currSlide.data?.element;
     const id = el?.dataset?.id || currSlide.index;
     history.replaceState("", document.title, "#" + id);
