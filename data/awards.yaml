@@ -1,0 +1,14 @@
+# Photography awards and contest placements shown in the activity feed.
+# Fields: title + date (YYYY-MM-DD) are required. Optional: competition, result,
+# scope, organizer, image_id (a UUID from data/gallery.yaml → thumbnail + deep-link
+# into the gallery lightbox), link (external URL or internal path; if absent the
+# card links to the gallery image), icon (defaults to 🏆), description.
+- title: "Wiki Loves Earth 2025 (Human Rights & Environment)"
+  result: "International Winner - Special Category: Human Rights & Environment"
+  date: 2026-03-02
+  organizer: "Wiki Loves Earth"
+  image_id: "b58439c8-8f51-417c-b1b8-ffbd44fbedce"
+  link: "/en/posts/photography/wiki-loves-earth-2025/"
+  icon: "🌍"
+  # Official special-category winners: https://wikilovesearth.org/winning-images-of-the-special-category-human-rights-and-environment-from-wiki-loves-earth-2025/
+  description: "Winning photo: a fledgling bird attempting to swallow a piece of plastic — a reminder of our impact on the environment."

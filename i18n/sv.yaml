@@ -106,6 +106,10 @@
   translation: "Foton"
 - id: activity_filter_talks
   translation: "Föredrag"
+- id: activity_filter_awards
+  translation: "Utmärkelser"
+- id: activity_filter_publications
+  translation: "Publikationer"
 
 # Gallery navigation
 - id: gallery_portfolio

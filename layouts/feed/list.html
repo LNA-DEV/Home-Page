@@ -38,6 +38,48 @@
   {{- end }}
 {{- end }}
 
+{{- /* Resources for resolving award/publication thumbnails via image_id */ -}}
+{{- $galleryPage := site.GetPage "/gallery" -}}
+{{- $honorMeta := partialCached "gallery-meta.html" . -}}
+{{- $honorImages := partialCached "gallery-images.html" . -}}
+
+{{- /* Add awards / contest placements from data file */ -}}
+{{- range hugo.Data.awards }}
+  {{- $date := time .date }}
+  {{- if gt $date.Year 2000 }}
+    {{- $img := "" }}
+    {{- $permalink := .link | default "" }}
+    {{- with .image_id }}
+      {{- $mid := . }}
+      {{- with index $honorMeta.byId $mid }}
+        {{- $img = $honorImages.GetMatch (printf "images/gallery/%s" .src) }}
+      {{- end }}
+      {{- if not $permalink }}{{ $permalink = printf "%s#%s" $galleryPage.Permalink $mid }}{{ end }}
+    {{- end }}
+    {{- $item := dict "type" "award" "title" .title "date" $date "permalink" $permalink "competition" (.competition | default "") "result" (.result | default "") "scope" (.scope | default "") "organizer" (.organizer | default "") "icon" (.icon | default "🏆") "image" $img "description" (.description | default "") }}
+    {{- $activityItems = $activityItems | append $item }}
+  {{- end }}
+{{- end }}
+
+{{- /* Add publications (image or text) from data file */ -}}
+{{- range hugo.Data.publications }}
+  {{- $date := time .date }}
+  {{- if gt $date.Year 2000 }}
+    {{- $img := "" }}
+    {{- $permalink := .link | default "" }}
+    {{- with .image_id }}
+      {{- $mid := . }}
+      {{- with index $honorMeta.byId $mid }}
+        {{- $img = $honorImages.GetMatch (printf "images/gallery/%s" .src) }}
+      {{- end }}
+      {{- if not $permalink }}{{ $permalink = printf "%s#%s" $galleryPage.Permalink $mid }}{{ end }}
+    {{- end }}
+    {{- $defaultIcon := cond (eq (.kind | default "image") "text") "📝" "📰" }}
+    {{- $item := dict "type" "publication" "title" .title "date" $date "permalink" $permalink "medium" (.medium | default "") "publisher" (.publisher | default "") "edition" (.edition | default "") "icon" (.icon | default $defaultIcon) "image" $img "description" (.description | default "") }}
+    {{- $activityItems = $activityItems | append $item }}
+  {{- end }}
+{{- end }}
+
 {{- range $allPages }}
   {{- $layout := .Layout }}
   {{- if and (ne $layout "search") (ne $layout "archives") (ne $layout "activity") (ne .Section "feed") }}
@@ -104,12 +146,22 @@
 {{- /* Max photos to show per month */ -}}
 {{- $maxPhotosPerMonth := 8 }}
 
+{{- /* Only surface a filter when there is at least one item of that type */ -}}
+{{- $hasAwards := gt (len (where $activityItems "type" "award")) 0 }}
+{{- $hasPublications := gt (len (where $activityItems "type" "publication")) 0 }}
+
 <!-- Filter buttons -->
 <div class="activity-filters">
   <button class="activity-filter active" data-filter="all">{{ i18n "activity_filter_all" | default "All" }}</button>
   <button class="activity-filter" data-filter="posts">{{ i18n "activity_filter_posts" | default "Posts" }}</button>
   <button class="activity-filter" data-filter="photos">{{ i18n "activity_filter_photos" | default "Photos" }}</button>
   <button class="activity-filter" data-filter="talks">{{ i18n "activity_filter_talks" | default "Talks" }}</button>
+  {{- if $hasAwards }}
+  <button class="activity-filter" data-filter="awards">{{ i18n "activity_filter_awards" | default "Awards" }}</button>
+  {{- end }}
+  {{- if $hasPublications }}
+  <button class="activity-filter" data-filter="publications">{{ i18n "activity_filter_publications" | default "Publications" }}</button>
+  {{- end }}
 </div>
 
 <div class="activity-timeline" data-filter="all">
@@ -129,21 +181,27 @@
       {{- $month := . }}
       {{- $items := index $yearData $month }}
       {{- if $items }}
-        {{- /* Separate posts, photos, and talks */ -}}
+        {{- /* Separate posts, photos, talks, awards, and publications */ -}}
         {{- $posts := slice }}
         {{- $photos := slice }}
         {{- $talks := slice }}
+        {{- $awards := slice }}
+        {{- $publications := slice }}
         {{- range $items }}
           {{- if eq .type "photo" }}
             {{- $photos = $photos | append . }}
           {{- else if eq .type "talk" }}
             {{- $talks = $talks | append . }}
+          {{- else if eq .type "award" }}
+            {{- $awards = $awards | append . }}
+          {{- else if eq .type "publication" }}
+            {{- $publications = $publications | append . }}
           {{- else }}
             {{- $posts = $posts | append . }}
           {{- end }}
         {{- end }}
 
-        <div class="activity-month" data-has-posts="{{ if $posts }}true{{ else }}false{{ end }}" data-has-photos="{{ if $photos }}true{{ else }}false{{ end }}" data-has-talks="{{ if $talks }}true{{ else }}false{{ end }}" data-posts-count="{{ len $posts }}" data-photos-count="{{ len $photos }}" data-talks-count="{{ len $talks }}" data-total-count="{{ len $items }}">
+        <div class="activity-month" data-has-posts="{{ if $posts }}true{{ else }}false{{ end }}" data-has-photos="{{ if $photos }}true{{ else }}false{{ end }}" data-has-talks="{{ if $talks }}true{{ else }}false{{ end }}" data-has-awards="{{ if $awards }}true{{ else }}false{{ end }}" data-has-publications="{{ if $publications }}true{{ else }}false{{ end }}" data-posts-count="{{ len $posts }}" data-photos-count="{{ len $photos }}" data-talks-count="{{ len $talks }}" data-awards-count="{{ len $awards }}" data-publications-count="{{ len $publications }}" data-total-count="{{ len $items }}">
           <div class="activity-month-label">
             {{ $month }}<sup class="activity-month-count">{{ len $items }}</sup>
           </div>
@@ -196,6 +254,69 @@
             </div>
             {{- end }}
 
+            {{- if $awards }}
+            <div class="activity-awards">
+              {{- range $awards }}
+                {{- if .permalink }}
+                <a href="{{ .permalink }}" class="activity-honor activity-honor--award"{{ if strings.HasPrefix .permalink "http" }} target="_blank" rel="noopener"{{ end }}>
+                {{- else }}
+                <div class="activity-honor activity-honor--award">
+                {{- end }}
+                  {{- with .image }}
+                  {{- $thumb := .Filter (slice images.AutoOrient (images.Process "fill 120x120")) }}
+                  <img class="activity-honor-thumb" src="{{ $thumb.RelPermalink }}" alt="" loading="lazy">
+                  {{- end }}
+                  <div class="activity-honor-body">
+                    <div class="activity-honor-title">{{ .title }}</div>
+                    <div class="activity-honor-meta">{{ .date.Format "January 2, 2006" }} · {{ .icon }}</div>
+                    {{- $sub := slice }}
+                    {{- with .competition }}{{ $sub = $sub | append . }}{{ end }}
+                    {{- with .result }}{{ $sub = $sub | append . }}{{ end }}
+                    {{- with .scope }}{{ $sub = $sub | append . }}{{ end }}
+                    {{- with .organizer }}{{ $sub = $sub | append . }}{{ end }}
+                    {{- if $sub }}<div class="activity-honor-sub">{{ delimit $sub " · " }}</div>{{ end }}
+                    {{- with .description }}<div class="activity-honor-description">{{ . }}</div>{{ end }}
+                  </div>
+                {{- if .permalink }}
+                </a>
+                {{- else }}
+                </div>
+                {{- end }}
+              {{- end }}
+            </div>
+            {{- end }}
+
+            {{- if $publications }}
+            <div class="activity-publications">
+              {{- range $publications }}
+                {{- if .permalink }}
+                <a href="{{ .permalink }}" class="activity-honor activity-honor--publication"{{ if strings.HasPrefix .permalink "http" }} target="_blank" rel="noopener"{{ end }}>
+                {{- else }}
+                <div class="activity-honor activity-honor--publication">
+                {{- end }}
+                  {{- with .image }}
+                  {{- $thumb := .Filter (slice images.AutoOrient (images.Process "fill 120x120")) }}
+                  <img class="activity-honor-thumb" src="{{ $thumb.RelPermalink }}" alt="" loading="lazy">
+                  {{- end }}
+                  <div class="activity-honor-body">
+                    <div class="activity-honor-title">{{ .title }}</div>
+                    <div class="activity-honor-meta">{{ .date.Format "January 2, 2006" }} · {{ .icon }}</div>
+                    {{- $sub := slice }}
+                    {{- with .medium }}{{ $sub = $sub | append . }}{{ end }}
+                    {{- with .publisher }}{{ $sub = $sub | append . }}{{ end }}
+                    {{- with .edition }}{{ $sub = $sub | append . }}{{ end }}
+                    {{- if $sub }}<div class="activity-honor-sub">{{ delimit $sub " · " }}</div>{{ end }}
+                    {{- with .description }}<div class="activity-honor-description">{{ . }}</div>{{ end }}
+                  </div>
+                {{- if .permalink }}
+                </a>
+                {{- else }}
+                </div>
+                {{- end }}
+              {{- end }}
+            </div>
+            {{- end }}
+
             {{- if $photos }}
             <div class="activity-photos">
               {{- $photosToShow := first $maxPhotosPerMonth $photos }}
@@ -232,6 +353,8 @@
     if (filterType === 'posts') return parseInt(month.dataset.postsCount) || 0;
     if (filterType === 'photos') return parseInt(month.dataset.photosCount) || 0;
     if (filterType === 'talks') return parseInt(month.dataset.talksCount) || 0;
+    if (filterType === 'awards') return parseInt(month.dataset.awardsCount) || 0;
+    if (filterType === 'publications') return parseInt(month.dataset.publicationsCount) || 0;
     return 0;
   }
 
@@ -283,6 +406,8 @@
         const hasPosts = month.dataset.hasPosts === 'true';
         const hasPhotos = month.dataset.hasPhotos === 'true';
         const hasTalks = month.dataset.hasTalks === 'true';
+        const hasAwards = month.dataset.hasAwards === 'true';
+        const hasPublications = month.dataset.hasPublications === 'true';
 
         if (filterType === 'all') {
           month.classList.remove('hidden');
@@ -292,6 +417,10 @@
           month.classList.toggle('hidden', !hasPhotos);
         } else if (filterType === 'talks') {
           month.classList.toggle('hidden', !hasTalks);
+        } else if (filterType === 'awards') {
+          month.classList.toggle('hidden', !hasAwards);
+        } else if (filterType === 'publications') {
+          month.classList.toggle('hidden', !hasPublications);
         }
       });
 

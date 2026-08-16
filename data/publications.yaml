@@ -1,0 +1,18 @@
+# Publications shown in the activity feed — an image or text of yours appearing
+# somewhere (newspaper, magazine, website, book, …).
+# Fields: title + date (YYYY-MM-DD) are required. Optional: medium (the outlet),
+# kind (image | text — drives the default icon 📰 / 📝), publisher, edition,
+# image_id (a UUID from data/gallery.yaml → thumbnail + deep-link), link (external
+# URL), icon, description.
+#
+# The Publications filter only appears once at least one real entry exists.
+# Example (uncomment and edit):
+# - title: "Aerial shot featured in Alpine Magazine"
+#   medium: "Alpine Magazine"
+#   kind: image
+#   date: 2025-05-12
+#   publisher: "Example Verlag"
+#   edition: "Print, Issue 4/2025"
+#   image_id: "bc068332-0999-4a94-aa76-816c25fa5360"
+#   link: "https://example.com/article"
+#   description: "A short note about the publication."

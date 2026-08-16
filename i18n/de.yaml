@@ -111,6 +111,10 @@
   translation: "Fotos"
 - id: activity_filter_talks
   translation: "Vorträge"
+- id: activity_filter_awards
+  translation: "Auszeichnungen"
+- id: activity_filter_publications
+  translation: "Veröffentlichungen"
 
 # Gallery / PhotoSwipe
 - id: closeTitle

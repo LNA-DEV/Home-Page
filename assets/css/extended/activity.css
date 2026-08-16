@@ -200,19 +200,96 @@ a.activity-talk:hover {
   margin-top: 0.4rem;
 }
 
+/* Awards & Publications (honors) */
+.activity-awards,
+.activity-publications {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.activity-honor {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  background: var(--code-bg);
+  border-left: 3px solid #f1c40f;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.activity-honor--publication {
+  border-left-color: #3498db;
+}
+
+a.activity-honor:hover {
+  background: var(--border);
+  transform: translateX(4px);
+}
+
+.activity-honor-thumb {
+  width: 56px;
+  height: 56px;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.activity-honor-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.activity-honor-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.activity-honor-meta {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  margin-top: 0.3rem;
+}
+
+.activity-honor-sub {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  font-style: italic;
+  margin-top: 0.2rem;
+}
+
+.activity-honor-description {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  margin-top: 0.4rem;
+}
+
 /* Hide filtered content */
 .activity-timeline[data-filter="posts"] .activity-photos,
-.activity-timeline[data-filter="posts"] .activity-talks {
-  display: none;
-}
-
+.activity-timeline[data-filter="posts"] .activity-talks,
+.activity-timeline[data-filter="posts"] .activity-awards,
+.activity-timeline[data-filter="posts"] .activity-publications,
 .activity-timeline[data-filter="photos"] .activity-posts,
-.activity-timeline[data-filter="photos"] .activity-talks {
-  display: none;
-}
-
+.activity-timeline[data-filter="photos"] .activity-talks,
+.activity-timeline[data-filter="photos"] .activity-awards,
+.activity-timeline[data-filter="photos"] .activity-publications,
 .activity-timeline[data-filter="talks"] .activity-posts,
-.activity-timeline[data-filter="talks"] .activity-photos {
+.activity-timeline[data-filter="talks"] .activity-photos,
+.activity-timeline[data-filter="talks"] .activity-awards,
+.activity-timeline[data-filter="talks"] .activity-publications,
+.activity-timeline[data-filter="awards"] .activity-posts,
+.activity-timeline[data-filter="awards"] .activity-photos,
+.activity-timeline[data-filter="awards"] .activity-talks,
+.activity-timeline[data-filter="awards"] .activity-publications,
+.activity-timeline[data-filter="publications"] .activity-posts,
+.activity-timeline[data-filter="publications"] .activity-photos,
+.activity-timeline[data-filter="publications"] .activity-talks,
+.activity-timeline[data-filter="publications"] .activity-awards {
   display: none;
 }
 
