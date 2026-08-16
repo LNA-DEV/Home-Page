@@ -27,6 +27,7 @@
         <div class="like-count" aria-label="Likes"></div>
         <span class="pswp-caption-content">
           {{- with .Title }}<span class="caption-title">{{ . }}</span>{{ end -}}
+          {{- with .DateTaken }}<span class="caption-date">{{ . }}</span>{{ end -}}
           {{- if or .Aperture .ShutterSpeed .ISO .FocalLength }}
           <span class="caption-exif">
             {{- with .FocalLength }}<span class="exif-item">{{ . }}</span>{{ end -}}

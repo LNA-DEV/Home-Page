@@ -67,6 +67,7 @@
     {{- /* Extract EXIF metadata */ -}}
     {{- $title := "" -}}
     {{- $date := "" -}}
+    {{- $dateTaken := "" -}}
     {{- $aperture := "" -}}
     {{- $shutterSpeed := "" -}}
     {{- $iso := "" -}}
@@ -79,6 +80,10 @@
 
     {{- with $image.Meta -}}
       {{- $date = .Date -}}
+      {{- /* .Date is a time.Time here; year > 2000 mirrors the feed's valid-date convention */ -}}
+      {{- if gt .Date.Year 2000 -}}
+        {{- $dateTaken = .Date.Format "2006-01-02" -}}
+      {{- end -}}
       {{- with .Exif.ImageDescription -}}
         {{- $title = . -}}
       {{- end -}}
@@ -215,6 +220,7 @@
       "Title" $title
       "Alt" $alt
       "Date" $date
+      "DateTaken" $dateTaken
       "Aperture" $aperture
       "ShutterSpeed" $shutterSpeed
       "ISO" $iso

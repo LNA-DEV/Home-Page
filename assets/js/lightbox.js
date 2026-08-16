@@ -233,6 +233,7 @@ if (gallery) {
           const exifItems = captionEl.querySelectorAll(".exif-item");
           const gearItems = captionEl.querySelectorAll(".gear-item");
           const title = captionEl.querySelector(".caption-title")?.textContent || "";
+          const dateTaken = captionEl.querySelector(".caption-date")?.textContent || "";
           const copyright = captionEl.querySelector(".caption-copyright")?.textContent || "";
           const artist = captionEl.querySelector(".caption-artist")?.textContent || "";
           const keywords = captionEl.querySelector(".caption-keywords")?.textContent || "";
@@ -269,7 +270,7 @@ if (gallery) {
             content += `<h3 class="pswp-info-title">${title}</h3>`;
           }
 
-          if (exifItems.length === 0 && gearItems.length === 0 && !copyright && !artist && !keywords) {
+          if (exifItems.length === 0 && gearItems.length === 0 && !dateTaken && !copyright && !artist && !keywords) {
             content += '<p class="pswp-info-empty">No data available</p>';
           }
 
@@ -289,6 +290,10 @@ if (gallery) {
               content += `<div class="pswp-info-item"><span class="pswp-info-label">${gearLabels[i] || ""}</span><span class="pswp-info-value">${item.textContent}</span></div>`;
             });
             content += '</div></div>';
+          }
+
+          if (dateTaken) {
+            content += `<div class="pswp-info-section"><h4>Date taken</h4><p class="pswp-info-date">${dateTaken}</p></div>`;
           }
 
           if (keywords) {
