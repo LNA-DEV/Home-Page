@@ -9451,10 +9451,21 @@ images:
   src: The Warmth Ahead - Spring Lamb in a Sunlit Meadow.jpg
   category: animals
   section: general
+- id: 7b147fb0-f667-4fec-9abf-a612fba46a69
+  src: Sunrise Patrol - White-tailed Eagle Gliding Over a Bavarian Bog.jpg
+  category: animals
+  section: general
+  project: wildlife-of-inn-valley
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
   description: Aerial perspectives from above the cloud line in the Alps — mountain peaks piercing through blankets of white.
   featured_image: DJI_0915.jpg
   category: landscape
+  weight: 2
+- slug: wildlife-of-inn-valley
+  title: The wildlife of the Inn-Valley
+  description: Photos of the wildlife of the Inn-Valley near Rosenheim in the Bavarian Alps.
+  featured_image: Sunrise Patrol - White-tailed Eagle Gliding Over a Bavarian Bog.jpg
+  category: animals
   weight: 1
