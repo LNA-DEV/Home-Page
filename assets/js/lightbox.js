@@ -10,6 +10,9 @@ const likeDataCache = new Map();
 // Cache for native like status
 const nativeLikeStatusCache = new Map();
 
+// Last image id reported to Plausible (dedupe consecutive change events)
+let lastTrackedImageId = null;
+
 // Platform display names
 const platformNames = {
   bluesky: "Bluesky",
@@ -391,8 +394,17 @@ if (gallery) {
 
   lightbox.on("change", () => {
     const currSlide = lightbox.pswp.currSlide;
-    const id = currSlide.data?.element?.dataset?.id || currSlide.index;
+    const el = currSlide.data?.element;
+    const id = el?.dataset?.id || currSlide.index;
     history.replaceState("", document.title, "#" + id);
+
+    // Report the viewed image to Plausible — only real gallery items (with a UUID),
+    // deduped so a single slide isn't counted twice.
+    if (el?.dataset?.id && lastTrackedImageId !== el.dataset.id) {
+      lastTrackedImageId = el.dataset.id;
+      const title = el.querySelector(".caption-title")?.textContent || "";
+      window.plausible?.("Image View", { props: { gallery_image_id: el.dataset.id, gallery_image_title: title } });
+    }
   });
 
   lightbox.on("close", () => {
