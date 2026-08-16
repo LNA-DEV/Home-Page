@@ -228,3 +228,16 @@
   font-size: 0.9rem;
   opacity: 0.85;
 }
+
+.pswp-info-license-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+
+  &:hover {
+    color: #fff;
+  }
+}

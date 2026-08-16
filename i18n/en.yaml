@@ -126,6 +126,8 @@
   translation: "The photo cannot be loaded"
 - id: downloadTitle
   translation: "Download"
+- id: licensingDetails
+  translation: "Licensing details"
 - id: photoCount
   translation:
     one: "1 photo"

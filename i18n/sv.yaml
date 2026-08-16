@@ -116,6 +116,8 @@
   translation: "Alla Foton"
 - id: gallery_archive
   translation: "Arkiv"
+- id: licensingDetails
+  translation: "Licensinformation"
 - id: gallery_filter_all
   translation: "Alla"
 

@@ -225,6 +225,9 @@
 {{- if strings.Contains .Path "/gallery"}}
 {{ $css := resources.Get "/css/main.scss" | toCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+{{- /* Licensing page for the current language — linked from the info popup's copyright section */ -}}
+{{ $licensingUrl := "" }}
+{{ with site.GetPage "/licensing" }}{{ $licensingUrl = .RelPermalink }}{{ end }}
 {{ $params := dict
 "closeTitle" (i18n "closeTitle")
 "zoomTitle" (i18n "zoomTitle")
@@ -233,6 +236,8 @@
 "errorMsg" (i18n "errorMsg")
 "downloadTitle" (i18n "downloadTitle")
 "companionUrl" site.Params.CompanionUrl
+"licensingUrl" $licensingUrl
+"licensingLinkText" (i18n "licensingDetails")
 }}
 {{ $js := resources.Get "js/main.js" | js.Build (dict "minify" true "params" $params) | resources.Fingerprint }}
 <script src="{{ $js.RelPermalink }}" defer></script>

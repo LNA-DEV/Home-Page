@@ -313,6 +313,9 @@ if (gallery) {
             if (copyright) {
               content += `<p class="pswp-info-copyright">${copyright}</p>`;
             }
+            if (params.licensingUrl) {
+              content += `<a class="pswp-info-license-link" href="${params.licensingUrl}">${params.licensingLinkText || "Licensing details"}</a>`;
+            }
             content += '</div>';
           }
 
