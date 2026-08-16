@@ -340,7 +340,7 @@ images:
   src: GreenDragonflyClosed.JPG
   category: animals
   section: general
-  project: ""
+  project: wildlife-of-inn-valley
   portfolio: false
   tags:
   - photo
@@ -359,7 +359,7 @@ images:
   src: GreenDragonflyOpen.JPG
   category: animals
   section: general
-  project: ""
+  project: wildlife-of-inn-valley
   portfolio: true
   tags:
   - photo
@@ -1245,7 +1245,7 @@ images:
   src: P1013617.JPG
   category: animals
   section: general
-  project: ""
+  project: wildlife-of-inn-valley
   portfolio: false
   tags:
   - photo
@@ -1685,7 +1685,7 @@ images:
   src: DSC_0673.jpg
   category: animals
   section: general
-  project: ""
+  project: wildlife-of-inn-valley
   portfolio: false
   tags: []
   alt: ""
@@ -1696,7 +1696,7 @@ images:
   src: DSC_0679.jpg
   category: animals
   section: general
-  project: ""
+  project: wildlife-of-inn-valley
   portfolio: true
   tags: []
   alt: ""
@@ -1707,7 +1707,7 @@ images:
   src: DSC_0720.jpg
   category: animals
   section: general
-  project: ""
+  project: wildlife-of-inn-valley
   portfolio: false
   tags: []
   alt: ""
@@ -1718,7 +1718,7 @@ images:
   src: DSC_0728.jpg
   category: animals
   section: general
-  project: ""
+  project: wildlife-of-inn-valley
   portfolio: false
   tags: []
   alt: ""
@@ -1729,7 +1729,7 @@ images:
   src: DSC_0729.jpg
   category: animals
   section: general
-  project: ""
+  project: wildlife-of-inn-valley
   portfolio: false
   tags: []
   alt: ""
@@ -1740,7 +1740,7 @@ images:
   src: DSC_1004.jpg
   category: animals
   section: general
-  project: ""
+  project: wildlife-of-inn-valley
   portfolio: false
   tags: []
   alt: ""
@@ -1751,7 +1751,7 @@ images:
   src: DSC_1087.jpg
   category: animals
   section: general
-  project: ""
+  project: wildlife-of-inn-valley
   portfolio: false
   tags: []
   alt: ""
@@ -1762,7 +1762,7 @@ images:
   src: DSC_1211.jpg
   category: animals
   section: general
-  project: ""
+  project: wildlife-of-inn-valley
   portfolio: true
   tags: []
   alt: ""
@@ -1773,7 +1773,7 @@ images:
   src: DSC_1277.jpg
   category: animals
   section: general
-  project: ""
+  project: wildlife-of-inn-valley
   portfolio: false
   tags: []
   alt: ""
@@ -2666,7 +2666,7 @@ images:
 - id: 23d6ea80-9544-45cb-b0df-2b74f21f582a
   src: GoldenTree.JPG
   category: landscape
-  section: general
+  section: archive
   project: ""
   portfolio: false
   tags:
@@ -3756,7 +3756,7 @@ images:
 - id: 8060ce5a-3a85-4d31-981b-4ed04572b1c7
   src: P1013693.JPG
   category: landscape
-  section: general
+  section: archive
   project: ""
   portfolio: false
   tags:
@@ -4829,7 +4829,7 @@ images:
 - id: 50966f66-4afa-4c19-bae9-a886b657f62f
   src: DSC_2439.jpg
   category: landscape
-  section: general
+  section: archive
   project: ""
   portfolio: false
   tags: []
@@ -6793,7 +6793,7 @@ images:
 - id: d997884a-6634-4840-a024-c25f69e5a56b
   src: P1002526.JPG
   category: plants
-  section: general
+  section: archive
   project: ""
   portfolio: false
   tags:
@@ -7179,7 +7179,7 @@ images:
 - id: a9703687-79b8-49a7-a9a2-0a4ab0c02804
   src: P1013647.JPG
   category: plants
-  section: general
+  section: archive
   project: ""
   portfolio: false
   tags:
@@ -7483,7 +7483,7 @@ images:
 - id: 4e10ac0c-ec99-46b1-b068-a759995cd4ae
   src: WetRoses.JPG
   category: plants
-  section: general
+  section: archive
   project: ""
   portfolio: false
   tags:
@@ -7605,7 +7605,7 @@ images:
 - id: 05de3f3f-baa8-48d6-ae95-45af3789d5a4
   src: P1001821.jpg
   category: plants
-  section: general
+  section: archive
   project: ""
   portfolio: false
   tags:
@@ -9456,6 +9456,7 @@ images:
   category: animals
   section: general
   project: wildlife-of-inn-valley
+  portfolio: true
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
