@@ -12,6 +12,8 @@
 {{- partial "gallery-breadcrumb.html" . }}
 {{- partial "title.html" . }}
 {{- partial "gallery.html" . }}
+{{- else if eq .Params.Theme "dex-species" }}
+{{- partial "dex-detail.html" . }}
 {{- else if eq .Params.Theme "gallery-project" }}
 {{- partial "gallery-breadcrumb.html" . }}
 {{- partial "title.html" . }}

@@ -1,0 +1,44 @@
+{{- /*
+  dex-card.html
+  One species tile in the dex grid.
+
+  Caught species get their own photo and link through to the species page.
+  Uncaught ones keep the same footprint but show a silhouette placeholder and a
+  muted palette, so the grid reads as a checklist rather than a gallery with
+  holes in it.
+
+  Expects: (dict "entry" <dex-index entry> "lang" <lang> "base" <dex RelPermalink>)
+*/ -}}
+{{- $entry := .entry -}}
+{{- $species := $entry.species -}}
+{{- $lang := .lang -}}
+{{- $name := partial "dex-text.html" (dict "field" $species.names "lang" $lang) -}}
+{{- $name = $name | default $species.scientific | default $entry.slug -}}
+{{- $href := printf "%s%s/" .base $entry.slug -}}
+
+<a class="dex-card{{ if not $entry.caught }} dex-card--uncaught{{ end }}"
+   href="{{ $href }}"
+   data-group="{{ $entry.group }}"
+   data-caught="{{ if $entry.caught }}1{{ else }}0{{ end }}"
+   data-search="{{ lower (printf "%s %s %s" $name ($species.scientific | default "") $entry.slug) }}">
+  <div class="dex-card__frame">
+    {{- with $entry.cover -}}
+      {{- $thumb := .image.Filter (slice images.AutoOrient (images.Process "fill 480x480 Center")) -}}
+      <img class="dex-card__image" src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}"
+           alt="{{ .Alt | default $name }}" loading="lazy" decoding="async">
+    {{- else -}}
+      <span class="dex-card__silhouette" aria-hidden="true">
+        {{- partial "dex-silhouette.html" $entry.group -}}
+      </span>
+      <span class="visually-hidden">{{ i18n "dex_not_photographed" }}</span>
+    {{- end -}}
+    <span class="dex-card__number">#{{ $entry.number }}</span>
+    {{- if gt (len $entry.photos) 1 }}
+    <span class="dex-card__count" title="{{ i18n "dex_photo_count" (len $entry.photos) }}">{{ len $entry.photos }}</span>
+    {{- end }}
+  </div>
+  <div class="dex-card__body">
+    <h3 class="dex-card__name">{{ $name }}</h3>
+    {{- with $species.scientific }}<p class="dex-card__scientific">{{ . }}</p>{{ end }}
+  </div>
+</a>

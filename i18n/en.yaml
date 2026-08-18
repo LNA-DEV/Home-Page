@@ -205,3 +205,140 @@
   translation: "days"
 - id: trip_stat_km
   translation: "km"
+
+# Photo dex
+- id: gallery_dex
+  translation: "Photo Dex"
+- id: dex_species_photographed
+  translation: "species photographed"
+- id: dex_filter_label
+  translation: "Filter species"
+- id: dex_group_all
+  translation: "All"
+- id: dex_group_mammals
+  translation: "Mammals"
+- id: dex_group_birds
+  translation: "Birds"
+- id: dex_group_reptiles
+  translation: "Reptiles"
+- id: dex_group_amphibians
+  translation: "Amphibians"
+- id: dex_group_fish
+  translation: "Fish"
+- id: dex_group_insects
+  translation: "Insects"
+- id: dex_group_arachnids
+  translation: "Arachnids"
+- id: dex_group_molluscs
+  translation: "Molluscs"
+- id: dex_group_crustaceans
+  translation: "Crustaceans"
+- id: dex_group_other
+  translation: "Other"
+- id: dex_search_placeholder
+  translation: "Search species…"
+- id: dex_only_photographed
+  translation: "Only photographed"
+- id: dex_no_matches
+  translation: "No species match that filter."
+- id: dex_photographed
+  translation: "Photographed"
+- id: dex_not_photographed
+  translation: "Not photographed yet"
+- id: dex_first_seen
+  translation: "first photographed"
+- id: dex_facts
+  translation: "Quick facts"
+- id: dex_about
+  translation: "About"
+- id: dex_group
+  translation: "Group"
+- id: dex_family
+  translation: "Family"
+- id: dex_height
+  translation: "Height"
+- id: dex_weight
+  translation: "Weight"
+- id: dex_diet
+  translation: "Diet"
+- id: dex_years
+  translation: "yrs"
+- id: dex_lifespan
+  translation: "Lifespan"
+- id: dex_habitat
+  translation: "Habitat"
+- id: dex_iucn
+  translation: "IUCN Red List status"
+- id: dex_distribution
+  translation: "Distribution"
+- id: dex_field_notes
+  translation: "Field notes"
+- id: dex_best_time
+  translation: "Best time"
+- id: dex_approach
+  translation: "Approach"
+- id: dex_my_photos
+  translation: "My photos"
+- id: dex_reference_photo
+  translation: "Reference photo"
+- id: dex_source_wikipedia
+  translation: "Description from Wikipedia (CC BY-SA)."
+- id: dex_map_range
+  translation: "Range"
+- id: dex_map_sighting
+  translation: "My sighting"
+- id: dex_map_detailed
+  translation: "Detailed map"
+- id: dex_map_detailed_note
+  translation: "Loads map tiles and observation data from OpenStreetMap and GBIF."
+- id: dex_map_credit
+  translation: "Range: iNaturalist (CC BY 4.0) · Base map: Natural Earth (public domain)"
+- id: dex_map_unavailable
+  translation: "No distribution data for this species yet."
+- id: dex_difficulty_easy
+  translation: "Easy"
+- id: dex_difficulty_moderate
+  translation: "Moderate"
+- id: dex_difficulty_challenging
+  translation: "Challenging"
+- id: dex_diet_omnivore
+  translation: "Omnivore"
+- id: dex_diet_carnivore
+  translation: "Carnivore"
+- id: dex_diet_herbivore
+  translation: "Herbivore"
+- id: dex_diet_piscivore
+  translation: "Fish eater"
+- id: dex_diet_insectivore
+  translation: "Insectivore"
+- id: dex_diet_frugivore
+  translation: "Fruit eater"
+- id: dex_diet_granivore
+  translation: "Seed eater"
+- id: dex_diet_nectarivore
+  translation: "Nectar feeder"
+- id: dex_diet_detritivore
+  translation: "Detritivore"
+- id: dex_diet_filter-feeder
+  translation: "Filter feeder"
+- id: dex_iucn_lc
+  translation: "Least concern"
+- id: dex_iucn_nt
+  translation: "Near threatened"
+- id: dex_iucn_vu
+  translation: "Vulnerable"
+- id: dex_iucn_en
+  translation: "Endangered"
+- id: dex_iucn_cr
+  translation: "Critically endangered"
+- id: dex_iucn_ew
+  translation: "Extinct in the wild"
+- id: dex_iucn_ex
+  translation: "Extinct"
+- id: dex_iucn_dd
+  translation: "Data deficient"
+- id: dex_iucn_ne
+  translation: "Not evaluated"
+- id: dex_photo_count
+  one: "1 photo"
+  other: "{{ . }} photos"

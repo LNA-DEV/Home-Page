@@ -8,6 +8,14 @@
     {{- with .Params.project_slug -}}
       {{- $filter = merge $filter (dict "project" .) -}}
     {{- end -}}
+    {{- /* Dex species pages show every photo of one species, archive included —
+           "have I photographed this" does not care whether a shot was retired. */ -}}
+    {{- with .Params.filter_species -}}
+      {{- $filter = merge $filter (dict "species" .) -}}
+    {{- end -}}
+    {{- if .Params.include_archive -}}
+      {{- $filter = merge $filter (dict "excludeArchive" false) -}}
+    {{- end -}}
     {{- /* For archive pages, show only archive images */ -}}
     {{- if eq .Params.Theme "gallery-archive" -}}
       {{- $filter = merge $filter (dict "section" "archive") -}}

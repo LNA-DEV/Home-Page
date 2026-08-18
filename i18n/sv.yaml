@@ -177,3 +177,140 @@
   translation: "dagar"
 - id: trip_stat_km
   translation: "km"
+
+# Photo dex
+- id: gallery_dex
+  translation: "Fotodex"
+- id: dex_species_photographed
+  translation: "arter fotograferade"
+- id: dex_filter_label
+  translation: "Filtrera arter"
+- id: dex_group_all
+  translation: "Alla"
+- id: dex_group_mammals
+  translation: "Däggdjur"
+- id: dex_group_birds
+  translation: "Fåglar"
+- id: dex_group_reptiles
+  translation: "Kräldjur"
+- id: dex_group_amphibians
+  translation: "Groddjur"
+- id: dex_group_fish
+  translation: "Fiskar"
+- id: dex_group_insects
+  translation: "Insekter"
+- id: dex_group_arachnids
+  translation: "Spindeldjur"
+- id: dex_group_molluscs
+  translation: "Blötdjur"
+- id: dex_group_crustaceans
+  translation: "Kräftdjur"
+- id: dex_group_other
+  translation: "Övriga"
+- id: dex_search_placeholder
+  translation: "Sök arter…"
+- id: dex_only_photographed
+  translation: "Endast fotograferade"
+- id: dex_no_matches
+  translation: "Ingen art matchar filtret."
+- id: dex_photographed
+  translation: "Fotograferad"
+- id: dex_not_photographed
+  translation: "Inte fotograferad än"
+- id: dex_first_seen
+  translation: "först fotograferad"
+- id: dex_facts
+  translation: "Snabbfakta"
+- id: dex_about
+  translation: "Om arten"
+- id: dex_group
+  translation: "Grupp"
+- id: dex_family
+  translation: "Familj"
+- id: dex_height
+  translation: "Storlek"
+- id: dex_weight
+  translation: "Vikt"
+- id: dex_diet
+  translation: "Föda"
+- id: dex_years
+  translation: "år"
+- id: dex_lifespan
+  translation: "Livslängd"
+- id: dex_habitat
+  translation: "Livsmiljö"
+- id: dex_iucn
+  translation: "IUCN:s rödlistestatus"
+- id: dex_distribution
+  translation: "Utbredning"
+- id: dex_field_notes
+  translation: "Fältanteckningar"
+- id: dex_best_time
+  translation: "Bästa tid"
+- id: dex_approach
+  translation: "Tillvägagångssätt"
+- id: dex_my_photos
+  translation: "Mina foton"
+- id: dex_reference_photo
+  translation: "Referensfoto"
+- id: dex_source_wikipedia
+  translation: "Beskrivning från Wikipedia (CC BY-SA)."
+- id: dex_map_range
+  translation: "Utbredningsområde"
+- id: dex_map_sighting
+  translation: "Min observation"
+- id: dex_map_detailed
+  translation: "Detaljerad karta"
+- id: dex_map_detailed_note
+  translation: "Laddar kartrutor och observationsdata från OpenStreetMap och GBIF."
+- id: dex_map_credit
+  translation: "Utbredning: iNaturalist (CC BY 4.0) · Bakgrundskarta: Natural Earth (public domain)"
+- id: dex_map_unavailable
+  translation: "Inga utbredningsdata för den här arten än."
+- id: dex_difficulty_easy
+  translation: "Lätt"
+- id: dex_difficulty_moderate
+  translation: "Medel"
+- id: dex_difficulty_challenging
+  translation: "Svår"
+- id: dex_diet_omnivore
+  translation: "Allätare"
+- id: dex_diet_carnivore
+  translation: "Köttätare"
+- id: dex_diet_herbivore
+  translation: "Växtätare"
+- id: dex_diet_piscivore
+  translation: "Fiskätare"
+- id: dex_diet_insectivore
+  translation: "Insektsätare"
+- id: dex_diet_frugivore
+  translation: "Fruktätare"
+- id: dex_diet_granivore
+  translation: "Fröätare"
+- id: dex_diet_nectarivore
+  translation: "Nektarätare"
+- id: dex_diet_detritivore
+  translation: "Detritusätare"
+- id: dex_diet_filter-feeder
+  translation: "Filtrerare"
+- id: dex_iucn_lc
+  translation: "Livskraftig"
+- id: dex_iucn_nt
+  translation: "Nära hotad"
+- id: dex_iucn_vu
+  translation: "Sårbar"
+- id: dex_iucn_en
+  translation: "Starkt hotad"
+- id: dex_iucn_cr
+  translation: "Akut hotad"
+- id: dex_iucn_ew
+  translation: "Utdöd i vilt tillstånd"
+- id: dex_iucn_ex
+  translation: "Utdöd"
+- id: dex_iucn_dd
+  translation: "Kunskapsbrist"
+- id: dex_iucn_ne
+  translation: "Ej bedömd"
+- id: dex_photo_count
+  one: "1 foto"
+  other: "{{ . }} foton"

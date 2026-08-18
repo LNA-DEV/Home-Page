@@ -1,0 +1,53 @@
+{{- /*
+  dex-overview.html
+  The dex landing grid: progress header, filters, and every species as a card.
+
+  All filtering is client-side over data-* attributes (assets/js/dex.js), the
+  same approach the gallery filter bubbles use — the whole list is in the DOM,
+  so it works without JS and stays a single cached page.
+*/ -}}
+{{- $index := partialCached "dex-index.html" . -}}
+{{- $lang := site.Language.Lang -}}
+{{- $base := .RelPermalink -}}
+{{- $percent := 0 -}}
+{{- if gt $index.total 0 }}{{ $percent = math.Round (div (mul $index.caught 100.0) $index.total) }}{{ end -}}
+
+<section class="dex" data-dex>
+  <header class="dex-progress">
+    <div class="dex-progress__stats">
+      <span class="dex-progress__count"><strong>{{ $index.caught }}</strong> / {{ $index.total }}</span>
+      <span class="dex-progress__label">{{ i18n "dex_species_photographed" }}</span>
+    </div>
+    <div class="dex-progress__bar" role="img"
+         aria-label="{{ i18n "dex_species_photographed" }}: {{ $index.caught }} / {{ $index.total }}">
+      <span style="width: {{ $percent }}%"></span>
+    </div>
+  </header>
+
+  <nav class="dex-filters" aria-label="{{ i18n "dex_filter_label" }}">
+    <div class="dex-filters__groups">
+      <button type="button" class="dex-pill is-active" data-group="all">{{ i18n "dex_group_all" }}</button>
+      {{- range $index.groups }}
+      <button type="button" class="dex-pill" data-group="{{ . }}">{{ i18n (printf "dex_group_%s" .) }}</button>
+      {{- end }}
+    </div>
+    <div class="dex-filters__tools">
+      <label class="dex-search">
+        <span class="visually-hidden">{{ i18n "dex_search_placeholder" }}</span>
+        <input type="search" data-dex-search placeholder="{{ i18n "dex_search_placeholder" }}" autocomplete="off">
+      </label>
+      <label class="dex-toggle">
+        <input type="checkbox" data-dex-only-caught>
+        <span>{{ i18n "dex_only_photographed" }}</span>
+      </label>
+    </div>
+  </nav>
+
+  <div class="dex-grid" data-dex-grid>
+    {{- range $index.all }}
+      {{- partial "dex-card.html" (dict "entry" . "lang" $lang "base" $base) }}
+    {{- end }}
+  </div>
+
+  <p class="dex-empty" data-dex-empty hidden>{{ i18n "dex_no_matches" }}</p>
+</section>

@@ -1,0 +1,43 @@
+{{- /*
+  Content adapter: one page per dex species, per language.
+
+  data/dex.yaml holds ~190 species and the site is trilingual, so hand-written
+  page bundles would mean ~570 markdown files. The adapter builds them at build
+  time instead, which keeps the species data in one place and still gives every
+  species a real URL, a place in the search index and a sitemap entry.
+
+  The page body is the species description in the current language (English
+  fallback), so `.Plain` has something for the search index to chew on. The
+  rendering itself is dispatched by params.theme = "dex-species", the same way
+  the other gallery views work.
+*/ -}}
+
+{{- $lang := .Site.Language.Lang -}}
+{{- $index := partialCached "dex-index.html" . -}}
+
+{{- range $index.all -}}
+  {{- $species := .species -}}
+  {{- $name := partial "dex-text.html" (dict "field" $species.names "lang" $lang) -}}
+  {{- $name = $name | default $species.scientific | default .slug -}}
+  {{- $description := partial "dex-text.html" (dict "field" $species.description "lang" $lang) -}}
+
+  {{- $page := dict
+        "path" .slug
+        "kind" "page"
+        "title" $name
+        "description" (printf "%s — %s" $name ($species.scientific | default ""))
+        "content" (dict "mediaType" "text/markdown" "value" $description)
+        "params" (dict
+          "theme" "dex-species"
+          "dex_slug" .slug
+          "translationKey" (printf "dex-%s" .slug)
+          "hideMeta" true
+          "searchHidden" false
+          "filter_species" .slug
+          "include_archive" true
+          "sort_by" "DateTaken"
+          "sort_order" "desc"
+        )
+      -}}
+  {{- $.AddPage $page -}}
+{{- end -}}

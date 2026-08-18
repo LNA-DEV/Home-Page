@@ -1,0 +1,23 @@
+{{- /*
+  dex-text.html
+  Resolve a per-language field from data/dex.yaml, falling back to English.
+
+  The dex stores prose as { en: "…", de: "…" } and only some species have a
+  translation, so every read goes through here rather than indexing directly.
+
+  Usage:
+    {{ partial "dex-text.html" (dict "field" $species.names "lang" $lang) }}
+*/ -}}
+{{- $field := .field -}}
+{{- $lang := .lang | default site.Language.Lang -}}
+{{- $out := "" -}}
+{{- if $field -}}
+  {{- with index $field $lang -}}
+    {{- $out = . -}}
+  {{- else -}}
+    {{- with index $field "en" -}}
+      {{- $out = . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $out -}}

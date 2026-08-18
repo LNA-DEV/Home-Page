@@ -1,0 +1,100 @@
+{{- /*
+  dex-index.html
+  The single join between data/dex.yaml and the gallery. Returns everything the
+  dex templates need, built once per language:
+
+    .all      slice of entries, sorted by dex number
+    .bySlug   the same entries keyed by species slug (for the detail page)
+    .caught   number of species with at least one photo
+    .total    number of species in the dex
+    .groups   sorted list of the groups actually present
+
+  Each entry is a dict:
+
+    .slug     species slug
+    .number   dex number, e.g. "001"
+    .group    mammals | birds | reptiles | …
+    .caught   true when .photos is non-empty
+    .species  the raw data/dex.yaml record
+    .photos   collect-images items showing this species, best first
+    .cover    the photo to use as the card/hero image (nil when uncaught)
+
+  A species counts as photographed when a gallery entry carries its slug in
+  `species:` — archive photos count too, they just sort last, because "have I
+  photographed this" is a different question from "is it in the current set".
+
+  Always call via partialCached.
+*/ -}}
+
+{{- $images := partial "collect-images.html" (dict "context" . "filter" (dict "excludeArchive" false)) -}}
+
+{{- /* slug -> photos, in one pass over the gallery */ -}}
+{{- $bySpecies := newScratch -}}
+{{- range $image := $images -}}
+  {{- with $image.Species -}}
+    {{- $bySpecies.Add . (slice $image) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $entries := slice -}}
+{{- $caught := 0 -}}
+{{- $groups := slice -}}
+
+{{- range $species := hugo.Data.dex.species -}}
+  {{- $slug := $species.slug -}}
+  {{- if not $slug -}}
+    {{- errorf "data/dex.yaml: entry %q has no slug" ($species.scientific | default "?") -}}
+  {{- end -}}
+
+  {{- $photos := $bySpecies.Get $slug | default slice -}}
+
+  {{- /* Portfolio picks first, then current photos, then archive. Within each
+         band keep the gallery's own order so the choice is stable. */ -}}
+  {{- $portfolio := slice -}}
+  {{- $current := slice -}}
+  {{- $archived := slice -}}
+  {{- range $photos -}}
+    {{- if eq .Section "archive" -}}
+      {{- $archived = $archived | append . -}}
+    {{- else if .Portfolio -}}
+      {{- $portfolio = $portfolio | append . -}}
+    {{- else -}}
+      {{- $current = $current | append . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $ordered := $portfolio | append $current | append $archived -}}
+
+  {{- $cover := "" -}}
+  {{- if $ordered -}}
+    {{- $cover = index $ordered 0 -}}
+    {{- $caught = add $caught 1 -}}
+  {{- end -}}
+
+  {{- $group := $species.group | default "other" -}}
+  {{- $groups = $groups | append $group -}}
+
+  {{- $entries = $entries | append (dict
+        "slug"    $slug
+        "number"  (printf "%v" ($species.number | default ""))
+        "group"   $group
+        "caught"  (gt (len $ordered) 0)
+        "species" $species
+        "photos"  $ordered
+        "cover"   $cover
+      ) -}}
+{{- end -}}
+
+{{- $entries = sort $entries "number" -}}
+
+{{- $lookup := newScratch -}}
+{{- range $entries -}}
+  {{- $lookup.SetInMap "bySlug" .slug . -}}
+{{- end -}}
+
+{{- return (dict
+      "all"    $entries
+      "bySlug" ($lookup.Get "bySlug" | default dict)
+      "caught" $caught
+      "total"  (len $entries)
+      "groups" ($groups | uniq | sort)
+    ) -}}

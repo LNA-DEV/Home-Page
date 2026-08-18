@@ -11,6 +11,7 @@
     - section: filter by section (general, archive) — if omitted, excludes archive
     - portfolio: if true, only return portfolio images
     - project: filter by project slug
+    - species: filter by dex species slug (data/dex.yaml)
     - excludeArchive: if true (default), exclude archive images
 */ -}}
 
@@ -59,6 +60,12 @@
 
   {{- with index $filter "project" -}}
     {{- if ne ($meta.project | default "") . -}}
+      {{- $include = false -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with index $filter "species" -}}
+    {{- if ne ($meta.species | default "") . -}}
       {{- $include = false -}}
     {{- end -}}
   {{- end -}}
@@ -234,6 +241,9 @@
       "ResolvedArtist" $resolvedArtist
       "Keywords" $keywords
       "Category" ($meta.category | default "")
+      "Section" ($meta.section | default "general")
+      "Species" ($meta.species | default "")
+      "Portfolio" ($meta.portfolio | default false)
       "image" $image
       )
     -}}

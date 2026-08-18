@@ -1,0 +1,184 @@
+{{- /*
+  dex-detail.html
+  A single species page.
+
+  Layout: hero (best photo or the Commons reference shot) · quick facts ·
+  description · distribution map · every photo of the species · field notes.
+
+  The photo strip is the ordinary `gallery.html` partial driven by the page's
+  `filter_species` param, so it inherits PhotoSwipe, the like counters, the EXIF
+  captions and the schema.org markup without any of it being reimplemented here.
+*/ -}}
+{{- $index := partialCached "dex-index.html" . -}}
+{{- $slug := .Params.dex_slug -}}
+{{- $entry := index $index.bySlug $slug -}}
+{{- if not $entry -}}
+  {{- errorf "dex: no species %q in data/dex.yaml (page %s)" $slug .RelPermalink -}}
+{{- end -}}
+{{- $species := $entry.species -}}
+{{- $lang := site.Language.Lang -}}
+{{- $name := .Title -}}
+{{- $dexPage := site.GetPage "/gallery/dex" -}}
+
+{{- /* First and latest capture dates, for the "photographed since" line. */ -}}
+{{- $dates := slice -}}
+{{- range $entry.photos -}}
+  {{- with .DateTaken }}{{ $dates = $dates | append . }}{{ end -}}
+{{- end -}}
+{{- $dates = sort $dates -}}
+
+<article class="dex-single">
+
+  {{- with $dexPage }}
+  <nav class="gallery-breadcrumb" aria-label="Breadcrumb">
+    {{- with site.GetPage "/gallery" }}
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <span>/</span>
+    {{- end }}
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <span>/</span>
+    <span>{{ $name }}</span>
+  </nav>
+  {{- end }}
+
+  <header class="dex-hero{{ if not $entry.caught }} dex-hero--uncaught{{ end }}">
+    <div class="dex-hero__media">
+      {{- with $entry.cover -}}
+        {{- $img := .image.Filter (slice images.AutoOrient (images.Process "fill 900x900 Center")) -}}
+        <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}"
+             alt="{{ .Alt | default $name }}">
+      {{- else -}}
+        {{- $reference := "" -}}
+        {{- with $species.reference -}}
+          {{- with .file -}}
+            {{- $reference = resources.Get (printf "images/dex/reference/%s" .) -}}
+          {{- end -}}
+        {{- end -}}
+        {{- with $reference -}}
+          {{- /* Commons stand-ins are fetched at 320px, so fill to that rather
+                 than upscaling them to the size of a real hero photo. */ -}}
+          {{- $img := .Filter (slice images.AutoOrient (images.Process "fill 320x320 Center")) -}}
+          <img class="dex-hero__reference" src="{{ $img.RelPermalink }}"
+               width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ $name }}">
+          <p class="dex-hero__credit">
+            {{ i18n "dex_reference_photo" }} —
+            {{- with $species.reference.credit_url }}
+            <a href="{{ . }}" rel="noopener nofollow">{{ $species.reference.credit | default "Wikimedia Commons" }}</a>
+            {{- else }}
+            {{ $species.reference.credit | default "Wikimedia Commons" }}
+            {{- end }}
+          </p>
+        {{- else -}}
+          <span class="dex-hero__silhouette" aria-hidden="true">
+            {{- partial "dex-silhouette.html" $entry.group -}}
+          </span>
+        {{- end -}}
+      {{- end -}}
+    </div>
+
+    <div class="dex-hero__info">
+      <span class="dex-hero__number">#{{ $entry.number }}</span>
+      <h1 class="dex-hero__name">{{ $name }}</h1>
+      {{- with $species.scientific }}<p class="dex-hero__scientific">{{ . }}</p>{{ end }}
+
+      <div class="dex-badges">
+        {{- with $species.difficulty }}
+        <span class="dex-badge dex-badge--{{ . | urlize }}">{{ i18n (printf "dex_difficulty_%s" .) }}</span>
+        {{- end }}
+        {{- with $species.iucn }}
+        <span class="dex-badge dex-badge--iucn dex-badge--iucn-{{ . | lower }}" title="{{ i18n "dex_iucn" }}">{{ i18n (printf "dex_iucn_%s" (. | lower)) }}</span>
+        {{- end }}
+        {{- if $entry.caught }}
+        <span class="dex-badge dex-badge--caught">{{ i18n "dex_photographed" }}</span>
+        {{- else }}
+        <span class="dex-badge dex-badge--pending">{{ i18n "dex_not_photographed" }}</span>
+        {{- end }}
+      </div>
+
+      {{- if $entry.caught }}
+      <p class="dex-hero__meta">
+        {{ i18n "dex_photo_count" (len $entry.photos) }}
+        {{- with $dates }} · {{ i18n "dex_first_seen" }} {{ index . 0 }}{{ end }}
+      </p>
+      {{- end }}
+    </div>
+  </header>
+
+  <div class="dex-columns">
+    <section class="dex-facts">
+      <h2 class="dex-section-title">{{ i18n "dex_facts" }}</h2>
+      <dl class="dex-stats">
+        {{- with $species.group }}
+        <div class="dex-stat"><dt>{{ i18n "dex_group" }}</dt><dd>{{ i18n (printf "dex_group_%s" .) }}</dd></div>
+        {{- end }}
+        {{- with $species.family }}
+        <div class="dex-stat"><dt>{{ i18n "dex_family" }}</dt><dd>{{ . }}</dd></div>
+        {{- end }}
+        {{- with $species.height }}
+        <div class="dex-stat"><dt>{{ i18n "dex_height" }}</dt><dd>{{ . }}</dd></div>
+        {{- end }}
+        {{- with $species.body_weight }}
+        <div class="dex-stat"><dt>{{ i18n "dex_weight" }}</dt><dd>{{ . }}</dd></div>
+        {{- end }}
+        {{- with $species.diet }}
+        <div class="dex-stat"><dt>{{ i18n "dex_diet" }}</dt><dd>{{ i18n (printf "dex_diet_%s" .) }}</dd></div>
+        {{- end }}
+        {{- with $species.lifespan }}
+        {{- /* Stored as a bare range — "yr" is the one unit here that differs
+               per language, so the word comes from i18n. */}}
+        <div class="dex-stat"><dt>{{ i18n "dex_lifespan" }}</dt><dd>{{ . }}&nbsp;{{ i18n "dex_years" }}</dd></div>
+        {{- end }}
+        {{- $habitat := partial "dex-text.html" (dict "field" $species.habitat "lang" $lang) }}
+        {{- with $habitat }}
+        <div class="dex-stat"><dt>{{ i18n "dex_habitat" }}</dt><dd>{{ . }}</dd></div>
+        {{- end }}
+      </dl>
+
+      {{- with .Content }}
+      <div class="dex-description">
+        <h2 class="dex-section-title">{{ i18n "dex_about" }}</h2>
+        {{ . }}
+        {{- with $species.wikidata_id }}
+        <p class="dex-source">{{ i18n "dex_source_wikipedia" }}</p>
+        {{- end }}
+      </div>
+      {{- end }}
+    </section>
+
+    <section class="dex-distribution">
+      <h2 class="dex-section-title">{{ i18n "dex_distribution" }}</h2>
+      {{- partial "dex-map.html" (dict "page" . "entry" $entry) }}
+    </section>
+  </div>
+
+  {{- $tips := $species.tips | default dict }}
+  {{- $bestTime := partial "dex-text.html" (dict "field" (index $tips "best_time") "lang" $lang) }}
+  {{- $approach := partial "dex-text.html" (dict "field" (index $tips "approach") "lang" $lang) }}
+  {{- if or $bestTime $approach }}
+  <section class="dex-fieldnotes">
+    <h2 class="dex-section-title">{{ i18n "dex_field_notes" }}</h2>
+    <div class="dex-fieldnotes__grid">
+      {{- with $bestTime }}
+      <div class="dex-fieldnote">
+        <h3>{{ i18n "dex_best_time" }}</h3>
+        <p>{{ . }}</p>
+      </div>
+      {{- end }}
+      {{- with $approach }}
+      <div class="dex-fieldnote">
+        <h3>{{ i18n "dex_approach" }}</h3>
+        <p>{{ . }}</p>
+      </div>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+
+  {{- if $entry.caught }}
+  <section class="dex-photos">
+    <h2 class="dex-section-title">{{ i18n "dex_my_photos" }}</h2>
+    {{- partial "gallery.html" . }}
+  </section>
+  {{- end }}
+
+</article>
