@@ -266,6 +266,11 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  /* `main > section` in assets/css/_styles.scss gives every gallery page 1.5rem
+     of side padding. This is an <article>, so that rule misses it and the
+     species page would sit 24px wider on each side than the dex overview and
+     the photo grids. Opt in explicitly to line them up. */
+  padding-inline: 1.5rem;
 }
 
 /* Narrow first: photo, name, facts, map in a single column. The wide layout
