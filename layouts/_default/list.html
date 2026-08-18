@@ -72,11 +72,11 @@
     <a href="{{ .RelPermalink }}projects/" class="gallery-nav-card" style="background-image: url('{{ $projectThumb.RelPermalink }}')">
       <span>{{ i18n "gallery_projects" }}</span>
     </a>
-    <a href="{{ .RelPermalink }}general/" class="gallery-nav-card" style="background-image: url('{{ $generalThumb.RelPermalink }}')">
-      <span>{{ i18n "gallery_general" }}</span>
-    </a>
     <a href="{{ .RelPermalink }}dex/" class="gallery-nav-card" style="background-image: url('{{ $dexThumb.RelPermalink }}')">
       <span>{{ i18n "gallery_dex" }}</span>
+    </a>
+    <a href="{{ .RelPermalink }}general/" class="gallery-nav-card" style="background-image: url('{{ $generalThumb.RelPermalink }}')">
+      <span>{{ i18n "gallery_general" }}</span>
     </a>
   {{- end -}}
 </nav>
