@@ -49,6 +49,12 @@
     center: [30, 10],
     zoom: 1,
     minZoom: 1,
+    /* Fractional zoom. With integer-only zoom, a container wider than 512px
+       forces a global range down to zoom 1, where one world is 512px and the
+       leftover width fills with the ±360° copies — the map then reads as
+       repeating wallpaper. Fractional levels let exactly one world fill the
+       frame instead. */
+    zoomSnap: 0,
     maxZoom: 7,
     zoomControl: true,
     scrollWheelZoom: false,
@@ -71,6 +77,17 @@
        keeps panning smooth where SVG would start to struggle on a phone. */
     preferCanvas: true,
   });
+  /* The zoom at which a single world exactly spans the container. Used as the
+     floor, so the default view never shows more than 360° of longitude — the
+     copies stay available for panning across the antimeridian. */
+  function worldFitZoom() {
+    const width = canvas.clientWidth || 0;
+    return width > 0 ? Math.log2(width / 256) : 1;
+  }
+  const applyMinZoom = () => map.setMinZoom(Math.max(1, worldFitZoom()));
+  applyMinZoom();
+  map.on("resize", applyMinZoom);
+
   // Click to take control of the wheel, leave to give it back to the page.
   map.on("click", () => map.scrollWheelZoom.enable());
   map.on("mouseout", () => map.scrollWheelZoom.disable());
@@ -175,11 +192,47 @@
     };
   }
 
+
+  /* Total area of a range, in square degrees. Only used to decide whether the
+     ocean mask is appropriate — see below. */
+  function rangeArea(geojson) {
+    let total = 0;
+    const ringArea = (ring) => {
+      let sum = 0;
+      for (let i = 0; i < ring.length - 1; i += 1) {
+        sum += ring[i][0] * ring[i + 1][1] - ring[i + 1][0] * ring[i][1];
+      }
+      return Math.abs(sum) / 2;
+    };
+    const walk = (geometry) => {
+      if (!geometry) return;
+      const polygons =
+        geometry.type === "MultiPolygon"
+          ? geometry.coordinates
+          : geometry.type === "Polygon"
+            ? [geometry.coordinates]
+            : [];
+      for (const polygon of polygons) total += ringArea(polygon[0]);
+    };
+    if (geojson.geometry) walk(geojson.geometry);
+    if (geojson.features) geojson.features.forEach((f) => walk(f.geometry));
+    return total;
+  }
+
+  /* Below this, masking does more harm than good. The mask exists to trim
+     iNaturalist's ocean over-prediction on wide-ranging species; a local
+     endemic has no such problem, and the base map is Natural Earth 110m, which
+     omits small islands entirely — so the mask would have no hole to leave and
+     would paint the whole range away. The Galapagos giant tortoise (3 sq deg)
+     is the case that exposed this. */
+  const MASK_MIN_RANGE_AREA = 60;
+
   const worldUrl = container.dataset.world;
   const bordersUrl = container.dataset.borders;
   const oceanUrl = container.dataset.ocean;
   const rangeUrl = container.dataset.range;
   const isMarine = container.dataset.marine === "1";
+  let maskAllowed = !isMarine;
 
   const worldReady = worldUrl
     ? loadJson(worldUrl).then((data) => {
@@ -203,21 +256,7 @@
      wild boar genuinely covers the north Pacific in the source data. Painting
      the ocean back over the range clips it to the coastline. Marine species
      opt out, since for them the water is the whole point. */
-  const oceanReady =
-    oceanUrl && !isMarine
-      ? loadJson(oceanUrl).then((data) => {
-          if (!data) return;
-          maskCopies.push(
-            ...addCopies(
-              data,
-              { stroke: false, fillColor: colors.water, fillOpacity: 1 },
-              maskLayers,
-              renderers.ocean
-            )
-          );
-          applyMaskStyle();
-        })
-      : Promise.resolve();
+  const oceanData = oceanUrl && !isMarine ? loadJson(oceanUrl) : Promise.resolve(null);
 
   const bordersReady = bordersUrl
     ? loadJson(bordersUrl).then((data) => {
@@ -238,6 +277,7 @@
         rangeCopies.push(...layers);
         const bounds = layers[COPIES.indexOf(0)].getBounds();
         if (bounds.isValid()) rangeBounds = bounds;
+        if (rangeArea(data) < MASK_MIN_RANGE_AREA) maskAllowed = false;
       })
     : Promise.resolve();
 
@@ -262,6 +302,21 @@
     marker.bindPopup(label || container.dataset.labelSighting || "");
     sightingBounds.push([spot.lat, spot.lng]);
   }
+
+  /* Ocean goes on only once the range has been measured, so a species too
+     small to mask never gets covered up. */
+  const oceanReady = Promise.all([oceanData, rangeReady]).then(([data]) => {
+    if (!data || !maskAllowed) return;
+    maskCopies.push(
+      ...addCopies(
+        data,
+        { stroke: false, fillColor: colors.water, fillOpacity: 1 },
+        maskLayers,
+        renderers.ocean
+      )
+    );
+    applyMaskStyle();
+  });
 
   Promise.all([worldReady, oceanReady, bordersReady, rangeReady]).then(() => {
     if (sightingBounds.length) {

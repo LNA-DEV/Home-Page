@@ -268,12 +268,25 @@
   gap: 2rem;
 }
 
-.dex-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
-  gap: 1.5rem;
-  align-items: center;
+/* Narrow first: photo, name, facts, map in a single column. The wide layout
+   is opted into further down, so small screens never have to undo a grid. */
+.dex-top {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
+
+/* The markup nests the name and the map together, but they belong in different
+   columns — `display: contents` lifts them out so the grid can place each. */
+.dex-top__main {
+  display: contents;
+}
+
+/* `order` restores the reading sequence the wide grid deliberately breaks. */
+.dex-top__rail { order: 1; }
+.dex-hero__info { order: 2; }
+.dex-facts { order: 3; }
+.dex-distribution { order: 4; }
 
 .dex-hero__media {
   position: relative;
@@ -366,12 +379,7 @@
 .dex-badge--iucn-vu,
 .dex-badge--iucn-nt { border-color: #c98a2e; color: #c98a2e; }
 
-.dex-columns {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 2rem;
-  align-items: start;
-}
+
 
 .dex-section-title {
   margin: 0 0 0.8rem;
@@ -383,9 +391,11 @@
 
 .dex-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  /* Capped track width: the facts row is full-page wide now, and 1fr tracks
+     would blow two facts up into two enormous tiles. */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 210px));
   gap: 0.7rem;
-  margin: 0 0 1.6rem;
+  margin: 0;
 }
 
 .dex-stat {
@@ -406,6 +416,11 @@
 .dex-stat dd {
   margin: 0.15rem 0 0;
   font-size: 0.95rem;
+}
+
+.dex-description {
+  /* Prose stops at a readable measure even when the page is very wide. */
+  max-width: 68ch;
 }
 
 .dex-description p { margin: 0 0 0.8rem; }
@@ -431,6 +446,9 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   min-height: 260px;
+  /* The map column is wide now; without this the aspect ratio alone would make
+     it taller than the viewport on a large screen. */
+  max-height: 60vh;
 }
 
 /* Leaflet puts `leaflet-container` on the element it is handed, which here is
@@ -526,12 +544,56 @@
 
 /* --- responsive --------------------------------------------------------- */
 
-@media (max-width: 768px) {
-  .dex-hero,
-  .dex-columns {
-    grid-template-columns: minmax(0, 1fr);
+/* Wide layout: the map becomes a third column sitting to the right of both the
+   photo and the name block, at a fixed width so it stays a compact reference
+   rather than stretching with the page. Facts run underneath, full width. */
+@media (min-width: 1150px) {
+  .dex-top {
+    display: grid;
+    /* `fit-content` keeps the name column only as wide as the name needs, so
+       the leftover width goes to the map rather than to a gap in the middle.
+       The floor stops it collapsing just above the breakpoint. */
+    grid-template-columns: minmax(0, 300px) fit-content(420px) minmax(340px, 1fr);
+    grid-template-rows: max-content auto;
+    gap: 1.5rem;
+    align-items: start;
   }
 
+  .dex-top__rail { grid-column: 1; grid-row: 1; }
+  .dex-hero__info { grid-column: 2; grid-row: 1; }
+
+  /* Facts sit in row 2 under the photo and name — spanning only those two
+     columns, so the map beside them never pushes them down the page. */
+  .dex-facts { grid-column: 1 / 3; grid-row: 2; }
+
+  /* The map spans both rows and stretches to whatever height the left side
+     ends up being. Its own aspect ratio is dropped here on purpose: if the
+     map sized itself, a spanning item taller than its rows would inflate them
+     and shove the facts downward again. */
+  .dex-distribution {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dex-distribution .dex-map {
+    flex: 1 1 auto;
+    display: flex;
+    min-height: 320px;
+  }
+
+  .dex-distribution .dex-map__canvas {
+    flex: 1 1 auto;
+    aspect-ratio: auto;
+    max-height: none;
+    min-height: 0;
+  }
+}
+
+
+@media (max-width: 768px) {
   .dex-hero__media {
     max-width: 320px;
   }

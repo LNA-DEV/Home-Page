@@ -2,8 +2,10 @@
   dex-detail.html
   A single species page.
 
-  Layout: hero (best photo or the Commons reference shot) · quick facts ·
-  description · distribution map · every photo of the species · field notes.
+  Wide layout is three columns across the top — photo (or the Commons reference
+  shot), name block, and the distribution map — with the quick facts as a
+  full-width strip beneath them, then description, field notes and the photo
+  strip. Below 1150px the whole thing stacks; see assets/css/extended/dex.css.
 
   The photo strip is the ordinary `gallery.html` partial driven by the page's
   `filter_species` param, so it inherits PhotoSwipe, the like counters, the EXIF
@@ -41,7 +43,11 @@
   </nav>
   {{- end }}
 
-  <header class="dex-hero{{ if not $entry.caught }} dex-hero--uncaught{{ end }}">
+  {{- /* One rail + one main column, each stacking independently, so the map
+         starts level with the title instead of waiting for the full hero row
+         to finish. Quick facts drop into the rail under the photo. */}}
+  <div class="dex-top{{ if not $entry.caught }} dex-top--uncaught{{ end }}">
+    <div class="dex-top__rail">
     <div class="dex-hero__media">
       {{- with $entry.cover -}}
         {{- $img := .image.Filter (slice images.AutoOrient (images.Process "fill 900x900 Center")) -}}
@@ -76,6 +82,9 @@
       {{- end -}}
     </div>
 
+    </div>{{/* end rail media; facts are appended to the rail below */}}
+
+    <div class="dex-top__main">
     <div class="dex-hero__info">
       <span class="dex-hero__number">#{{ $entry.number }}</span>
       <h1 class="dex-hero__name">{{ $name }}</h1>
@@ -102,9 +111,13 @@
       </p>
       {{- end }}
     </div>
-  </header>
 
-  <div class="dex-columns">
+    <section class="dex-distribution">
+      <h2 class="dex-section-title">{{ i18n "dex_distribution" }}</h2>
+      {{- partial "dex-map.html" (dict "page" . "entry" $entry) }}
+    </section>
+    </div>{{/* end main */}}
+
     <section class="dex-facts">
       <h2 class="dex-section-title">{{ i18n "dex_facts" }}</h2>
       <dl class="dex-stats">
@@ -134,22 +147,21 @@
         {{- end }}
       </dl>
 
-      {{- with .Content }}
-      <div class="dex-description">
-        <h2 class="dex-section-title">{{ i18n "dex_about" }}</h2>
-        {{ . }}
-        {{- with $species.wikidata_id }}
-        <p class="dex-source">{{ i18n "dex_source_wikipedia" }}</p>
-        {{- end }}
-      </div>
-      {{- end }}
     </section>
+  </div>{{/* end dex-top */}}
 
-    <section class="dex-distribution">
-      <h2 class="dex-section-title">{{ i18n "dex_distribution" }}</h2>
-      {{- partial "dex-map.html" (dict "page" . "entry" $entry) }}
-    </section>
-  </div>
+  {{- /* Full width rather than in the facts column: that column is the narrow
+         rail now, and prose set 320px wide reads badly. Capped below so it does
+         not stretch to the full page width either. */}}
+  {{- with .Content }}
+  <section class="dex-description">
+    <h2 class="dex-section-title">{{ i18n "dex_about" }}</h2>
+    {{ . }}
+    {{- with $species.wikidata_id }}
+    <p class="dex-source">{{ i18n "dex_source_wikipedia" }}</p>
+    {{- end }}
+  </section>
+  {{- end }}
 
   {{- $tips := $species.tips | default dict }}
   {{- $bestTime := partial "dex-text.html" (dict "field" (index $tips "best_time") "lang" $lang) }}
