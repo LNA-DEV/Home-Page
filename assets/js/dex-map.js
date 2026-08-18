@@ -57,7 +57,11 @@
     zoomSnap: 0,
     maxZoom: 7,
     zoomControl: true,
-    scrollWheelZoom: false,
+    /* The wheel zooms the map directly. The usual click-to-arm dance avoids
+       hijacking page scroll, but it makes the map feel inert until you work
+       out that it needs a click first. minZoom is pinned to the world-fit
+       level below, so the wheel can never zoom out past a single world. */
+    scrollWheelZoom: true,
     attributionControl: false,
     /* worldCopyJump snaps the view back to the middle copy when you pan past
        the antimeridian. That snap only earns its keep when the overlays exist
@@ -88,9 +92,6 @@
   applyMinZoom();
   map.on("resize", applyMinZoom);
 
-  // Click to take control of the wheel, leave to give it back to the page.
-  map.on("click", () => map.scrollWheelZoom.enable());
-  map.on("mouseout", () => map.scrollWheelZoom.disable());
 
   /* Three groups. "Detailed map" swaps out only `baseLayers`; the range and
      the ocean mask stay, so the range means the same thing in both modes. */
