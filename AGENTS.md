@@ -462,6 +462,6 @@ than it looks like it should.
 
 `dex-ranges.py` simplifies the iNaturalist polygons until each fits `--max-kb`
 (45 KB), coarsening a wide-ranging species rather than dropping its map. The
-whole set is ~5 MB. `dex-covers.py` fetches 320px Commons thumbnails and, by
+whole set is ~5 MB. `dex-covers.py` fetches ~960px Commons thumbnails (`--width 900`; see that script's docstring for why, and why Commons ignores widths in between) and, by
 default, only for species you have *not* photographed — the rest show your own
 photo, so a stand-in for them would be bytes nothing renders.

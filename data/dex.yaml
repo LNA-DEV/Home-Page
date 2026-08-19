@@ -641,9 +641,9 @@ species:
     en: Coniferous forests, Mixed woodland, Rocky scrub
     de: "Nadelwälder, Mischwälder, Felsiges Gebüsch"
   reference:
-    credit: Dani Kropivnik, CC BY-SA 3.0, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:Martes_martes_crop_%28cropped%29.jpg"
-    commons_file: Martes martes crop (cropped).jpg
+    credit: Charles J. Sharp, CC BY-SA 4.0, Wikimedia Commons
+    credit_url: "https://commons.wikimedia.org/wiki/File:European_pine_marten_%28Martes_martes%29_Drenthe_2.jpg"
+    commons_file: European pine marten (Martes martes) Drenthe 2.jpg
     file: pine-marten.jpg
   names:
     en: Pine Marten
@@ -1961,9 +1961,9 @@ species:
     en: Freshwater canals, High-altitude lakes, Wetlands
     de: "Süßwasserkanäle, Hochlandseen, Feuchtgebiete"
   reference:
-    credit: Mariblubb, CC BY-SA 4.0, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:Axolotl_Wild_Type.jpg"
-    commons_file: Axolotl Wild Type.jpg
+    credit: "Fernando Losada Rodríguez, CC BY-SA 4.0, Wikimedia Commons"
+    credit_url: "https://commons.wikimedia.org/wiki/File:Ambystoma_mexicanum.101_-_Aquarium_Finisterrae.jpg"
+    commons_file: Ambystoma mexicanum.101 - Aquarium Finisterrae.jpg
     file: axolotl.jpg
   names:
     en: Axolotl

@@ -11,10 +11,29 @@ Wikidata P18 claim in `reference.commons_file`; this script turns that into an
 actual file and writes back the attribution that belongs to the file it
 downloaded, so `reference.credit` can never drift away from the image on disk.
 
-Thumbnails are requested at `--width` pixels (320 by default, ~20–45 KB each)
-via the Commons thumbnail service rather than downloading originals, which run
-to several megabytes apiece. Only species you have *not* photographed are
-fetched, since the rest display your own photo — pass `--all` to override.
+Thumbnails are requested at `--width` pixels (900 by default) via the Commons
+thumbnail service rather than downloading originals, which run to several
+megabytes apiece. Only species you have *not* photographed are fetched, since
+the rest display your own photo — pass `--all` to override.
+
+Two things about `--width` are worth knowing before changing it:
+
+  * Commons does not serve arbitrary widths. It snaps the delivered file **up**
+    to whichever cached rendition is next largest, so a request for 560–960 all
+    return the same ~960px file. The `thumbwidth` the API reports back is the
+    width you asked for, not the width you get — check the `NNNpx-` segment of
+    the thumbnail URL for the truth. For these files the buckets land at roughly
+    500 / 960 / 1280 px, so 900 (→ ~960 px, ~180 KB) and 500 (→ 500 px, ~60 KB)
+    are the two sensible settings; anything in between just costs more bytes for
+    the same image.
+  * 900 is chosen to match the render size of the site owner's own photos, which
+    `dex-detail.html` processes at `fill 900x900`. The hero slot is only 300–320
+    CSS px wide, so ~960 px is what makes a stand-in look as sharp as a real
+    photo on a 3x display instead of visibly softer beside it.
+
+Where a file's original is smaller than the requested width, MediaWiki returns
+the original rather than upscaling — so a handful of species stay low-resolution
+no matter what `--width` says, and the template must not upscale them either.
 
 The species page dims these images and labels them "reference photo", so they
 are never mistaken for the site owner's own work — but they are still CC-licensed
@@ -111,7 +130,10 @@ def main(argv=None):
     parser.add_argument("--only", action="append", default=[], help="Limit to these slugs")
     parser.add_argument("--force", action="store_true", help="Redownload existing files")
     parser.add_argument("--dry-run", action="store_true", help="Report, download nothing")
-    parser.add_argument("--width", type=int, default=320, help="Thumbnail width (default: 320)")
+    parser.add_argument(
+        "--width", type=int, default=900,
+        help="Thumbnail width (default: 900, delivered as ~960px; see module docstring — "
+             "Commons snaps up to cached buckets, so 500 is the only cheaper useful value)")
     parser.add_argument(
         "--all",
         action="store_true",

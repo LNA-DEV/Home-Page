@@ -61,9 +61,19 @@
           {{- end -}}
         {{- end -}}
         {{- with $reference -}}
-          {{- /* Commons stand-ins are fetched at 320px, so fill to that rather
-                 than upscaling them to the size of a real hero photo. */ -}}
-          {{- $img := .Filter (slice images.AutoOrient (images.Process "fill 320x320 Center")) -}}
+          {{- /* Match the 900x900 a real hero photo gets — the slot is only
+                 300-320 CSS px, so 900 is what keeps a stand-in sharp on a 3x
+                 display instead of visibly softer than the owner's own photos.
+
+                 But never upscale. A square `fill` is limited by the SHORTER
+                 side, so a 330x247 thumbnail asked for 320x320 gets stretched
+                 1.3x — which was the real source of the blur here, independent
+                 of the fetch width. A few Commons originals are also genuinely
+                 small (pine marten is 302px). Capping at min(width, height, 900)
+                 leaves those honestly soft rather than stretched. */ -}}
+          {{- $side := math.Min .Width .Height -}}
+          {{- $target := int (math.Min 900 $side) -}}
+          {{- $img := .Filter (slice images.AutoOrient (images.Process (printf "fill %dx%d Center" $target $target))) -}}
           <img class="dex-hero__reference" src="{{ $img.RelPermalink }}"
                width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ $name }}">
           <p class="dex-hero__credit">
