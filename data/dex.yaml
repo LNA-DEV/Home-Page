@@ -43,6 +43,9 @@ species:
   description:
     en: "The red fox is the largest of the true foxes, and the most widely distributed member of the order Carnivora. It is present across the entire Northern Hemisphere, including most of North America, Europe and Asia, as well as parts of North Africa. Its range has expanded alongside human settlement, with the species having been introduced to Australia, where it preys on native small and medium-sized rodents and marsupials."
     de: "Der Rotfuchs ist der einzige mitteleuropäische Vertreter der Füchse und wird daher meistens als „der Fuchs“ bezeichnet. Er ist in Europa der häufigste Wildhund."
+  description_source:
+    en: "https://en.wikipedia.org/wiki/Red_fox"
+    de: "https://de.wikipedia.org/wiki/Rotfuchs"
   tips:
     best_time:
       en: "Dawn and dusk, year-round. Cubs visible Mar–May."
@@ -50,9 +53,6 @@ species:
     approach:
       en: "Foxes in urban areas are habituated to people — sit quietly and they'll often approach you. In rural settings, use a hide near known paths or den sites. Downwind approach is essential. A 200–400mm lens is usually enough. They're most active in low light, so bring a fast lens or raise ISO."
       de: "Füchse in Stadtgebieten sind an Menschen gewöhnt — ruhig sitzen bleiben und sie kommen oft von selbst. In ländlichen Gebieten ein Versteck an bekannten Pfaden oder Bauten nutzen. Gegen den Wind annähern ist wichtig. Ein 200–400mm Objektiv reicht meist. Am aktivsten bei schwachem Licht, also schnelles Objektiv oder hohe ISO mitbringen."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Red_fox"
-    de: "https://de.wikipedia.org/wiki/Rotfuchs"
 - slug: grey-wolf
   number: "002"
   scientific: Canis lupus
@@ -86,6 +86,9 @@ species:
   description:
     en: "The largest extant member of Canidae. Highly social, living in nuclear families with complex communication through howling, body language, and scent marking. Apex predator across the Northern Hemisphere."
     de: "Das größte lebende Mitglied der Hundeartigen. Sehr sozial, lebt in Familienverbänden mit komplexer Kommunikation durch Heulen, Körpersprache und Duftmarkierung. Spitzenprädator auf der gesamten Nordhalbkugel."
+  description_source:
+    en: "https://en.wikipedia.org/wiki/Wolf"
+    de: "https://de.wikipedia.org/wiki/Wolf"
   tips:
     best_time:
       en: Winter for tracks in snow. Dawn howling sessions year-round.
@@ -93,9 +96,6 @@ species:
     approach:
       en: "Extremely wary — direct approach rarely works. Use a vehicle as a hide in parks like Yellowstone. In Europe, stake out feeding sites or known crossing points. A 500mm+ lens is essential. Patience is everything — multiple days may be needed. Listen for howling at dawn to locate packs."
       de: "Extrem scheu — direkte Annäherung funktioniert selten. In Parks wie Yellowstone das Fahrzeug als Versteck nutzen. In Europa Futterstellen oder bekannte Wechsel beobachten. Ein 500mm+ Objektiv ist unerlässlich. Geduld ist alles — mehrere Tage können nötig sein. Bei Morgengrauen auf Heulen achten um Rudel zu orten."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Wolf"
-    de: "https://de.wikipedia.org/wiki/Wolf"
 - slug: barn-owl
   number: "003"
   scientific: Tyto alba
@@ -129,6 +129,9 @@ species:
   description:
     en: "One of the most widespread land birds, found on every continent except Antarctica. Distinguished by a heart-shaped facial disc that channels sound to asymmetric ears, enabling precision hunting in complete darkness."
     de: "Einer der am weitesten verbreiteten Landvögel, auf jedem Kontinent außer der Antarktis zu finden. Ausgezeichnet durch einen herzförmigen Gesichtsschleier, der Schall zu asymmetrischen Ohren leitet und präzise Jagd in völliger Dunkelheit ermöglicht."
+  description_source:
+    en: "https://en.wikipedia.org/wiki/Western_barn_owl"
+    de: "https://de.wikipedia.org/wiki/Schleiereule"
   tips:
     best_time:
       en: "Dusk and just after sunset. Winter evenings when hunting starts earlier."
@@ -136,9 +139,6 @@ species:
     approach:
       en: "Scout for regular hunting routes along field edges and hedgerows — they often follow the same flight path nightly. Park near the route and wait in a vehicle. Flash photography is discouraged near nest sites. A 300mm lens at high ISO works well. They fly silently and low, so be ready for fast panning shots."
       de: "Regelmäßige Jagdrouten entlang von Feldrändern und Hecken erkunden — sie folgen oft allnächtlich demselben Flugpfad. In der Nähe der Route im Fahrzeug warten. Blitzfotografie an Nestplätzen vermeiden. Ein 300mm Objektiv bei hoher ISO funktioniert gut. Sie fliegen leise und niedrig — bereit sein für schnelle Mitzieher."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Western_barn_owl"
-    de: "https://de.wikipedia.org/wiki/Schleiereule"
 - slug: european-hedgehog
   number: "004"
   scientific: Erinaceus europaeus
@@ -172,6 +172,9 @@ species:
   description:
     en: "A nocturnal insectivore covered in approximately 5,000–7,000 spines. Rolls into a tight ball when threatened. An iconic garden visitor across Western Europe, though populations have declined significantly in recent decades."
     de: "Ein nachtaktiver Insektenfresser mit etwa 5.000–7.000 Stacheln. Rollt sich bei Gefahr zu einer festen Kugel zusammen. Ein ikonischer Gartenbesucher in Westeuropa, dessen Populationen in den letzten Jahrzehnten deutlich zurückgegangen sind."
+  description_source:
+    en: "https://en.wikipedia.org/wiki/European_hedgehog"
+    de: "https://de.wikipedia.org/wiki/Braunbrustigel"
   tips:
     best_time:
       en: "After dark, spring through autumn. Most active on warm, damp nights."
@@ -179,9 +182,6 @@ species:
     approach:
       en: "Leave cat food or mealworms in a garden to attract them, then wait quietly nearby. They have poor eyesight and rely on smell — stay downwind and move slowly. A macro or short telephoto (100mm) works for close-up portraits. Use a dim red torch to avoid startling them. Very tolerant once feeding."
       de: "Katzenfutter oder Mehlwürmer im Garten auslegen, dann ruhig in der Nähe warten. Sie haben schlechte Augen und verlassen sich auf den Geruch — gegen den Wind bleiben und langsam bewegen. Ein Makro oder kurzes Tele (100mm) eignet sich für Nahporträts. Eine schwache rote Taschenlampe verwenden um sie nicht zu erschrecken. Sehr tolerant sobald sie fressen."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/European_hedgehog"
-    de: "https://de.wikipedia.org/wiki/Braunbrustigel"
 - slug: atlantic-puffin
   number: "005"
   scientific: Fratercula arctica
@@ -216,6 +216,9 @@ species:
   description:
     en: "A charismatic seabird with a colourful bill that spends most of its life at sea. Nests in burrows on coastal cliffs and can carry 10+ fish crosswise in its bill. Populations declining due to climate-driven changes in prey fish distribution."
     de: "Ein charismatischer Seevogel mit buntem Schnabel, der den Großteil seines Lebens auf dem Meer verbringt. Nistet in Höhlen an Küstenklippen und kann 10+ Fische quer im Schnabel tragen. Populationen rückläufig durch klimabedingte Veränderungen der Beutefischverteilung."
+  description_source:
+    en: "https://en.wikipedia.org/wiki/Atlantic_puffin"
+    de: "https://de.wikipedia.org/wiki/Papageitaucher"
   tips:
     best_time:
       en: "May–August breeding season. Midday for best light on cliffs."
@@ -223,9 +226,6 @@ species:
     approach:
       en: "Visit a breeding colony (Farne Islands, Skellig Michael, Látrabjarg). Puffins at established colonies are remarkably tame — sit near burrow entrances and they'll walk right past. A 70–200mm zoom is ideal. Lie flat for eye-level shots. Best images come when they return with beaks full of sand eels. Wind and rain are common, so protect your gear."
       de: "Eine Brutkolonie besuchen (Farne Islands, Skellig Michael, Látrabjarg). Papageitaucher an etablierten Kolonien sind bemerkenswert zahm — in der Nähe von Höhleneingängen sitzen und sie laufen direkt vorbei. Ein 70–200mm Zoom ist ideal. Flach hinlegen für Aufnahmen auf Augenhöhe. Die besten Bilder entstehen wenn sie mit vollem Schnabel Sandaale zurückkehren. Wind und Regen sind häufig — Ausrüstung schützen."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Atlantic_puffin"
-    de: "https://de.wikipedia.org/wiki/Papageitaucher"
 - slug: red-deer
   number: "006"
   scientific: Cervus elaphus
@@ -259,6 +259,9 @@ species:
   description:
     en: "One of the largest deer species and a keystone herbivore across Eurasia. Males grow and shed impressive antlers annually, using them in dramatic rutting contests each autumn. Important for ecosystem management through grazing."
     de: "Eine der größten Hirscharten und ein Schlüssel-Pflanzenfresser in Eurasien. Männchen wachsen und werfen jährlich beeindruckende Geweihe ab, die sie in dramatischen Brunftkämpfen im Herbst einsetzen. Wichtig für das Ökosystem- Management durch Beweidung."
+  description_source:
+    en: "https://en.wikipedia.org/wiki/Red_deer"
+    de: "https://de.wikipedia.org/wiki/Rothirsch"
   tips:
     best_time:
       en: "Autumn rut (Sep–Oct) for stags roaring. Dawn in open glens."
@@ -266,9 +269,6 @@ species:
     approach:
       en: "During the rut, stags are vocal and distracted — approach slowly using terrain for cover. A 400mm+ lens lets you keep a safe distance. Stay low and avoid skylining yourself on ridges. Outside the rut, deer are more skittish. Forest populations are harder than open moorland. Richmond Park (London) has very habituated herds for easy close-ups."
       de: "Während der Brunft sind Hirsche laut und abgelenkt — langsam annähern und das Gelände als Deckung nutzen. Ein 400mm+ Objektiv ermöglicht sicheren Abstand. Niedrig bleiben und nicht auf Bergkämmen Silhouette zeigen. Außerhalb der Brunft sind Hirsche scheuer. Waldpopulationen sind schwieriger als offenes Moorland. Richmond Park (London) hat sehr zahme Herden für einfache Nahaufnahmen."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Red_deer"
-    de: "https://de.wikipedia.org/wiki/Rothirsch"
 - slug: musk-ox
   number: "007"
   scientific: Ovibos moschatus
@@ -1325,149 +1325,6 @@ species:
   description_source:
     en: "https://en.wikipedia.org/wiki/African_bush_elephant"
     de: "https://de.wikipedia.org/wiki/Afrikanischer_Elefant"
-- slug: lion
-  number: "037"
-  scientific: Panthera leo
-  family: Felidae
-  group: mammals
-  difficulty: moderate
-  iucn: VU
-  gbif_taxon_key: 5219404
-  inat_taxon_id: 41964
-  wikidata_id: Q140
-  height: "1.0–1.2 m"
-  height_measure: shoulder
-  body_weight: "120–225 kg"
-  diet: carnivore
-  lifespan: "12–17"
-  habitat:
-    en: Savanna, Grasslands, Open woodland
-    de: "Savanne, Grasland, Offene Wälder"
-  reference:
-    credit: "Sumit.pamnani at English Wikipedia, Public domain, Wikimedia Commons"
-    credit_url: "https://commons.wikimedia.org/wiki/File:Lion_in_masai_mara.jpg"
-    commons_file: Lion in masai mara.jpg
-    file: lion.jpg
-    artist: Sumit.pamnani at English Wikipedia
-    license: Public domain
-  names:
-    en: Lion
-    de: "Löwe"
-    sv: Lejon
-  description:
-    en: "The lion is a large cat of the genus Panthera, currently ranging only in Sub-Saharan Africa and India. It has a muscular, broad-chested body; a short, rounded head; round ears; and a dark, hairy tuft at the tip of its tail. It is sexually dimorphic; adult male lions are larger than females and have a prominent mane that which extends from the head to the shoulders and chest."
-    de: "Der Löwe ist neben dem Tiger eine der beiden größten Arten aus der Familie der Katzen. Er ist heute nur noch in Teilen Afrikas südlich der Sahara sowie im indischen Bundesstaat Gujarat beheimatet; in Afrika ist er das größte Landraubtier. Charakteristisches Merkmal erwachsener Männchen ist eine Mähne."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Lion"
-    de: "https://de.wikipedia.org/wiki/L%C3%B6we"
-- slug: leopard
-  number: "038"
-  scientific: Panthera pardus
-  family: Felidae
-  group: mammals
-  difficulty: challenging
-  iucn: VU
-  gbif_taxon_key: 5219436
-  inat_taxon_id: 41963
-  wikidata_id: Q34706
-  height: "57–70 cm"
-  height_measure: shoulder
-  body_weight: "20–70 kg"
-  diet: carnivore
-  lifespan: "12–17"
-  habitat:
-    en: Savanna, Rainforest, Rocky hills, Woodland
-    de: "Savanne, Regenwald, Felsige Hügel, Wälder"
-  reference:
-    credit: Sumeet Moghe, CC BY-SA 4.0, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:Male_leopard_-_Mara.jpg"
-    commons_file: Male leopard - Mara.jpg
-    file: leopard.jpg
-    artist: Sumeet Moghe
-    license: CC BY-SA 4.0
-    license_url: "https://creativecommons.org/licenses/by-sa/4.0"
-  names:
-    en: Leopard
-    de: Leopard
-    sv: Leopard
-  description:
-    en: "The leopard is one of the five extant cat species in the genus Panthera. It has a pale yellowish to dark golden fur with dark spots grouped in rosettes. Its body is slender and muscular, reaching a length of 92–183 cm (36–72 in) with a 66–102 cm (26–40 in) long tail and a shoulder height of 60–70 cm (24–28 in)."
-    de: "Der Leopard, auch Panther oder Panter, ist eine Art aus der Familie der Katzen, die in Afrika und Asien verbreitet ist. Darüber hinaus kommt sie auch im Kaukasus vor. Der Leopard ist nach Tiger, Löwe, Jaguar und Puma die fünftgrößte Katzenart."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Leopard"
-    de: "https://de.wikipedia.org/wiki/Leopard"
-- slug: cheetah
-  number: "039"
-  scientific: Acinonyx jubatus
-  family: Felidae
-  group: mammals
-  difficulty: moderate
-  iucn: VU
-  gbif_taxon_key: 2435270
-  inat_taxon_id: 41955
-  wikidata_id: Q23907
-  height: "67–94 cm"
-  height_measure: shoulder
-  body_weight: "21–65 kg"
-  diet: carnivore
-  lifespan: "10–12"
-  habitat:
-    en: Savannah, Grassland, Semi-desert
-    de: "Savanne, Grasland, Halbwüste"
-  reference:
-    credit: Charles J. Sharp, CC BY-SA 4.0, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:Cheetah_%28Acinonyx_jubatus%29_female_2.jpg"
-    commons_file: Cheetah (Acinonyx jubatus) female 2.jpg
-    file: cheetah.jpg
-    artist: Charles J. Sharp
-    license: CC BY-SA 4.0
-    license_url: "https://creativecommons.org/licenses/by-sa/4.0"
-  names:
-    en: Cheetah
-    de: Gepard
-    sv: Gepard
-  description:
-    en: "The cheetah is a species of large feline and the only living member of the genus Acinonyx. An iconic pursuit predator, it is the fastest land animal, capable of running at 93–104 km/h (58–65 mph); it has evolved for speed, having powerful hindlimb muscles, long limbs and a flexible spine. The cheetah has a tawny to creamy white or pale buff fur that is marked with evenly spaced, solid black spots."
-    de: "Der Gepard [ˈgeːpart/geˈpart] ist ein hauptsächlich in Afrika verbreitetes Raubtier, das zur Familie der Katzen gehört. Die in ihrem Jagdverhalten hoch spezialisierten Geparde sind die schnellsten Landtiere der Welt. Damit verbunden gibt es in Gestalt und Körperbau deutliche Unterschiede zu anderen Katzenarten, weshalb dem Gepard traditionell eine eigene Unterfamilie eingeräumt wurde."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Cheetah"
-    de: "https://de.wikipedia.org/wiki/Gepard"
-- slug: mountain-gorilla
-  number: "040"
-  scientific: Gorilla beringei beringei
-  family: Hominidae
-  group: mammals
-  difficulty: challenging
-  iucn: EN
-  gbif_taxon_key: 4267319
-  inat_taxon_id: 147661
-  wikidata_id: Q737878
-  height: "1.4–1.7 m"
-  height_measure: standing
-  body_weight: "70–190 kg"
-  diet: herbivore
-  lifespan: "35–40"
-  habitat:
-    en: Montane forest, Bamboo forest, Subalpine zone
-    de: Bergwald, Bambuswald, Subalpine Zone
-  reference:
-    credit: "https://www.flickr.com/photos/deepphoto/ d_proffer, CC BY 2.0, Wikimedia Commons"
-    credit_url: "https://commons.wikimedia.org/wiki/File:Susa_group%2C_mountain_gorilla.jpg"
-    commons_file: Susa group, mountain gorilla.jpg
-    file: mountain-gorilla.jpg
-    artist: "https://www.flickr.com/photos/deepphoto/ d_proffer"
-    license: CC BY 2.0
-    license_url: "https://creativecommons.org/licenses/by/2.0"
-  names:
-    en: Mountain Gorilla
-    de: Berggorilla
-    sv: Bergsgorilla
-  description:
-    en: "The mountain gorilla is one of the two subspecies of the eastern gorilla. It is listed as endangered by the IUCN as of 2018."
-    de: "Der Berggorilla ist eine Unterart des Östlichen Gorillas aus der Primatenfamilie der Menschenaffen (Hominidae). Von allen Gorillas stellt er die am ausgeprägtesten auf dem Boden lebende und sich am meisten von Blättern ernährende Population dar. Berggorillas bewohnen zwei kleine Gebiete im östlichen Afrika, das Gebiet der Virunga-Vulkane und den Bwindi-Wald, wobei die Population des Bwindiwaldes möglicherweise eine vom Berggorilla zu unterscheidende Unterart („Bwindigorilla“) darstellt."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Mountain_gorilla"
-    de: "https://de.wikipedia.org/wiki/Berggorilla"
 - slug: giraffe
   number: "041"
   scientific: Giraffa camelopardalis
@@ -1540,435 +1397,6 @@ species:
   description_source:
     en: "https://en.wikipedia.org/wiki/Plains_zebra"
     de: "https://de.wikipedia.org/wiki/Steppenzebra"
-- slug: hippopotamus
-  number: "043"
-  scientific: Hippopotamus amphibius
-  family: Hippopotamidae
-  group: mammals
-  difficulty: moderate
-  iucn: VU
-  gbif_taxon_key: 2441247
-  inat_taxon_id: 42149
-  wikidata_id: Q34505
-  height: "1.3–1.65 m"
-  height_measure: shoulder
-  body_weight: "1.3–1.8 t"
-  diet: herbivore
-  lifespan: "40–50"
-  habitat:
-    en: Rivers, Lakes, Swamps
-    de: "Flüsse, Seen, Sümpfe"
-  reference:
-    credit: Bernard DUPONT from FRANCE, CC BY-SA 2.0, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:Hippo_%28Hippopotamus_amphibius%29_%2816485955207%29.jpg"
-    commons_file: Hippo (Hippopotamus amphibius) (16485955207).jpg
-    file: hippopotamus.jpg
-    artist: Bernard DUPONT from FRANCE
-    license: CC BY-SA 2.0
-    license_url: "https://creativecommons.org/licenses/by-sa/2.0"
-  names:
-    en: Hippopotamus
-    de: Flusspferd
-    sv: "Flodhäst"
-  description:
-    en: "The hippopotamus, often shortened to hippo, further qualified as the common hippopotamus, Nile hippopotamus and river hippopotamus, is a large semiaquatic mammal native to sub-Saharan Africa. It is one of only two extant species in the family Hippopotamidae, the other being the pygmy hippopotamus. Its name comes from the Ancient Greek for \"river horse\" (ἱπποπόταμος)."
-    de: "Das Flusspferd, auch Großflusspferd genannt, ist eine Säugetierart aus der Familie der Flusspferde und der Ordnung der Paarhufer. Innerhalb der Gattung Hippopotamus gilt es inzwischen als einziges Mitglied. Nach den Elefanten und neben einigen Vertretern der Nashörner und der Giraffen zählt es zu den größten landbewohnenden Tieren."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Hippopotamus"
-    de: "https://de.wikipedia.org/wiki/Flusspferd"
-- slug: black-rhinoceros
-  number: "044"
-  scientific: Diceros bicornis
-  family: Rhinocerotidae
-  group: mammals
-  difficulty: challenging
-  iucn: CR
-  gbif_taxon_key: 5220111
-  inat_taxon_id: 43350
-  wikidata_id: Q95036
-  height: "1.3–1.8 m"
-  height_measure: shoulder
-  body_weight: "800–1400 kg"
-  diet: herbivore
-  lifespan: "35–50"
-  habitat:
-    en: Bushland, Savannah, Riverine woodland
-    de: "Buschland, Savanne, Ufergehölze"
-  reference:
-    credit: Yathin S Krishnappa, CC BY-SA 3.0, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:2012_Black_Rhinoceros_Gemsbokvlakte.jpg"
-    commons_file: 2012 Black Rhinoceros Gemsbokvlakte.jpg
-    file: black-rhinoceros.jpg
-    artist: Yathin S Krishnappa
-    license: CC BY-SA 3.0
-    license_url: "https://creativecommons.org/licenses/by-sa/3.0"
-  names:
-    en: Black Rhinoceros
-    de: Spitzmaulnashorn
-    sv: "Spetsnoshörning"
-  description:
-    en: "The black rhinoceros, also called the black rhino or the hooked-lip rhinoceros, is a species of rhinoceros native to East and Southern Africa, including Angola, Botswana, Eswatini, Kenya, Lesotho, Malawi, Mozambique, Namibia, South Africa, Tanzania, Zambia, and Zimbabwe. Although the species is referred to as black, its colours vary from brown to grey. It is the only extant species of the genus Diceros."
-    de: "Das Spitzmaulnashorn, auch Spitzlippennashorn oder seltener Schwarzes Nashorn genannt, ist eine Säugetierart aus der Familie der Nashörner (Rhinocerotidae). Es ist neben dem etwas größeren Breitmaulnashorn eine der beiden Nashornarten des afrikanischen Kontinents. Die bis zu 1.400 Kilogramm schweren Tiere sind Bewohner der Savannen und offenen Landschaften und heute unter anderem in Ost- und Südafrika zu finden."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Black_rhinoceros"
-    de: "https://de.wikipedia.org/wiki/Spitzmaulnashorn"
-- slug: bengal-tiger
-  number: "045"
-  scientific: Panthera tigris tigris
-  family: Felidae
-  group: mammals
-  difficulty: challenging
-  iucn: EN
-  gbif_taxon_key: 7059276
-  inat_taxon_id: 130793
-  wikidata_id: Q19939
-  height: "90–110 cm"
-  height_measure: shoulder
-  body_weight: "110–260 kg"
-  diet: carnivore
-  lifespan: "10–15"
-  habitat:
-    en: Tropical forest, Mangroves, Grassland
-    de: Tropischer Wald, Mangroven, Grasland
-  reference:
-    credit: Seemaleena, CC BY-SA 4.0, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:Adult_male_Royal_Bengal_tiger.jpg"
-    commons_file: Adult male Royal Bengal tiger.jpg
-    file: bengal-tiger.jpg
-    artist: Seemaleena
-    license: CC BY-SA 4.0
-    license_url: "https://creativecommons.org/licenses/by-sa/4.0"
-  names:
-    en: Bengal Tiger
-    de: Bengaltiger
-    sv: Bengalisk tiger
-  description:
-    en: "The tiger is a large cat and a member of the genus Panthera native to Asia. It has a powerful, muscular body with a large head and paws, a long tail and orange fur with black, mostly vertical stripes. It is traditionally classified into nine recent subspecies, though some recognise only two subspecies, mainland Asian tigers and the island tigers of the Sunda Islands."
-    de: "Der Königstiger, auch Bengal-Tiger oder Indischer Tiger, ist eine Unterart des Tigers, die zu den Festlandsunterarten zählt. Er ist auf dem Indischen Subkontinent verbreitet und wird von der IUCN als stark gefährdet (Endangered) eingestuft. Die gesamte Population wird auf weniger als 2500 Individuen geschätzt."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Tiger"
-    de: "https://de.wikipedia.org/wiki/Tiger"
-- slug: snow-leopard
-  number: "046"
-  scientific: Panthera uncia
-  family: Felidae
-  group: mammals
-  difficulty: challenging
-  iucn: VU
-  gbif_taxon_key: 5787213
-  inat_taxon_id: 74831
-  wikidata_id: Q30197
-  height: "56–60 cm"
-  height_measure: shoulder
-  body_weight: "22–55 kg"
-  diet: carnivore
-  lifespan: "15–18"
-  habitat:
-    en: Alpine meadows, Rocky slopes, High mountains
-    de: "Alpine Matten, Felshänge, Hochgebirge"
-  reference:
-    credit: Bernard Landgraf, CC BY-SA 3.0, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:Uncia_uncia.jpg"
-    commons_file: Uncia uncia.jpg
-    file: snow-leopard.jpg
-    artist: Bernard Landgraf
-    license: CC BY-SA 3.0
-    license_url: "http://creativecommons.org/licenses/by-sa/3.0/"
-  names:
-    en: Snow Leopard
-    de: Schneeleopard
-    sv: "Snöleopard"
-  description:
-    en: "The snow leopard is a species of large cat in the genus Panthera of the family Felidae. It is native to the mountain ranges of Central and South Asia, ranging from eastern Afghanistan, the Himalayas and the Tibetan Plateau to southern Siberia, Mongolia and Western China. It inhabits alpine and subalpine zones at elevations of 3,000–4,500 m (9,800–14,800 ft), but also lives at lower elevations in the northern part of its range."
-    de: "Der Schneeleopard, Irbis oder Unze ist eine Großkatze (Pantherinae) der zentralasiatischen Hochgebirge. Man findet ihn vom Himalaya Nepals und Indiens im Süden bis zum Altai- und Sajangebirge Russlands im Norden sowie vom tibetischen Hochland im Osten bis zum Pamir, Hindukusch und Tianshan-Gebirge im Westen. Er sieht einem Leoparden ähnlich, hat aber ein längeres, meist graues Fell, das in der kalten Jahreszeit besonders dick ist."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Snow_leopard"
-    de: "https://de.wikipedia.org/wiki/Schneeleopard"
-- slug: giant-panda
-  number: "047"
-  scientific: Ailuropoda melanoleuca
-  family: Ursidae
-  group: mammals
-  difficulty: moderate
-  iucn: VU
-  gbif_taxon_key: 2433399
-  inat_taxon_id: 41659
-  wikidata_id: Q33602
-  height: "60–90 cm"
-  height_measure: shoulder
-  body_weight: "70–125 kg"
-  diet: herbivore
-  lifespan: "15–20"
-  habitat:
-    en: Bamboo forest, Montane forest, Coniferous forest
-    de: Bambuswald, Bergwald, Nadelwald
-  reference:
-    credit: Jeff Kubina, Public domain, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:Giant_Panda_2004-03-2.jpg"
-    commons_file: Giant Panda 2004-03-2.jpg
-    file: giant-panda.jpg
-    artist: Jeff Kubina
-    license: Public domain
-  names:
-    en: Giant Panda
-    de: "Großer Panda"
-    sv: "Jättepanda"
-  description:
-    en: "The giant panda, also known as the panda bear or simply panda, is a bear species endemic to China. It is characterised by its white coat with black patches around the eyes, ears, legs and shoulders. Its body is rotund; adult individuals weigh 100 to 115 kg and are typically 1.2 to 1.9 m long."
-    de: "Der Große Panda, auch Riesenpanda oder Pandabär, ist eine Säugetierart aus der Familie der Bären (Ursidae). Als Symbol des WWF und manchmal auch des Artenschutzes allgemein hat er trotz seines sehr beschränkten Verbreitungsgebiets weltweite Bekanntheit erlangt. In älterer deutscher Literatur wird der Große Panda auch Bambusbär oder Prankenbär genannt."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Giant_panda"
-    de: "https://de.wikipedia.org/wiki/Gro%C3%9Fer_Panda"
-- slug: red-panda
-  number: "048"
-  scientific: Ailurus fulgens
-  family: Ailuridae
-  group: mammals
-  difficulty: moderate
-  iucn: EN
-  gbif_taxon_key: 5219446
-  inat_taxon_id: 41653
-  wikidata_id: Q41960
-  height: "51–64 cm"
-  height_measure: length
-  body_weight: "3–6.2 kg"
-  diet: herbivore
-  lifespan: "8–10"
-  habitat:
-    en: "Temperate broadleaf forest, Bamboo understorey, Montane forest"
-    de: Laubmischwald, Bambusunterwuchs, Bergwald
-  reference:
-    credit: Ajit Hota, CC BY-SA 4.0, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:RedPanda_SingalilaNationalPark_DFrame.jpg"
-    commons_file: RedPanda SingalilaNationalPark DFrame.jpg
-    file: red-panda.jpg
-    artist: Ajit Hota
-    license: CC BY-SA 4.0
-    license_url: "https://creativecommons.org/licenses/by-sa/4.0"
-  names:
-    en: Red Panda
-    de: Kleiner Panda
-    sv: "Kattbjörn"
-  description:
-    en: "The red panda, also known as the lesser panda, is a small mammal native to the eastern Himalayas and southwestern China. It has dense reddish-brown fur with a black belly and legs, white-lined ears, a mostly white muzzle and a ringed tail. Its head-to-body length is 51–63.5 cm (20.1–25.0 in) with a 28–48.5 cm (11.0–19.1 in) tail, and it weighs between 3.2 and 15 kg."
-    de: "Der Westliche Kleine Panda, auch Himalaja-Katzenbär genannt, ist ein mittelgroßes Säugetier aus der Gattung der Kleinen bzw. Roten Pandas (Ailurus), das in Nepal, im nordöstlichen Indien und in Bhutan sowie im südöstlichen Tibet vorkommt."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Red_panda"
-    de: "https://de.wikipedia.org/wiki/Westlicher_Kleiner_Panda"
-- slug: orangutan
-  number: "049"
-  scientific: Pongo pygmaeus
-  family: Hominidae
-  group: mammals
-  difficulty: moderate
-  iucn: CR
-  gbif_taxon_key: 5219532
-  inat_taxon_id: 43582
-  wikidata_id: Q599672
-  height: "1.0–1.4 m"
-  height_measure: standing
-  body_weight: "30–100 kg"
-  diet: frugivore
-  lifespan: "35–45"
-  habitat:
-    en: Lowland rainforest, Peat swamp forest, Montane forest
-    de: Tieflandregenwald, Torfsumpfwald, Bergwald
-  reference:
-    credit: Ltshears, Public domain, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:OrangutanP1.jpg"
-    commons_file: OrangutanP1.jpg
-    file: orangutan.jpg
-    artist: Ltshears
-    license: Public domain
-  names:
-    en: Orangutan
-    de: Orang-Utan
-    sv: Orangutang
-  description:
-    en: "The Bornean orangutan is an orangutan species endemic to the island of Borneo. It belongs to the only genus of great apes native to Asia and is the largest of the three Pongo species. It has a coarse, reddish coat and up to 1.5 m long arms."
-    de: "Der Borneo-Orang-Utan ist eine Menschenaffenart. Zusammen mit dem Sumatra-Orang-Utan und dem 2017 beschriebenen Tapanuli-Orang-Utan bildet er die Gattung der Orang-Utans. Er ist auf Borneo endemisch."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Bornean_orangutan"
-    de: "https://de.wikipedia.org/wiki/Borneo-Orang-Utan"
-- slug: asian-elephant
-  number: "050"
-  scientific: Elephas maximus
-  family: Elephantidae
-  group: mammals
-  difficulty: moderate
-  iucn: EN
-  gbif_taxon_key: 5219461
-  inat_taxon_id: 43697
-  wikidata_id: Q133006
-  height: "2–3 m"
-  height_measure: shoulder
-  body_weight: "2–5 t"
-  diet: herbivore
-  lifespan: "55–70"
-  habitat:
-    en: Tropical forest, Grassland, Scrubland
-    de: Tropischer Wald, Grasland, Buschland
-  reference:
-    credit: Yathin S Krishnappa, CC BY-SA 3.0, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:Elephas_maximus_%28Bandipur%29.jpg"
-    commons_file: Elephas maximus (Bandipur).jpg
-    file: asian-elephant.jpg
-    artist: Yathin S Krishnappa
-    license: CC BY-SA 3.0
-    license_url: "https://creativecommons.org/licenses/by-sa/3.0"
-  names:
-    en: Asian Elephant
-    de: Asiatischer Elefant
-    sv: Asiatisk elefant
-  description:
-    en: "The Asian elephant, also known as the Asiatic elephant, is the only living species in the genus Elephas. It is the largest living land animal in Asia and the second largest living elephantid in the world. It is characterised by its long trunk with a single finger-like process; large tusks in males; laterally folded large ears and wrinkled grey skin that is partly depigmented on the trunk, ears or neck."
-    de: "Der Asiatische Elefant ist eine Art aus der Familie der Elefanten und nach dem Afrikanischen Elefanten das zweitgrößte Landtier der Erde. Wie sein afrikanischer Vetter zeichnet er sich durch den Rüssel, die (kleineren) Stoßzähne, die säulenförmigen Beine und die allgemeine Körpergröße aus. Beide unterscheiden sich aber in der Größe der Ohren, der etwas anders verlaufenden Rückenlinie und in zahlreichen anatomischen Einzelmerkmalen."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Asian_elephant"
-    de: "https://de.wikipedia.org/wiki/Asiatischer_Elefant"
-- slug: grizzly-bear
-  number: "051"
-  scientific: Ursus arctos horribilis
-  family: Ursidae
-  group: mammals
-  difficulty: moderate
-  iucn: LC
-  gbif_taxon_key: 6163845
-  inat_taxon_id: 125461
-  wikidata_id: Q171004
-  height: "90–130 cm"
-  height_measure: shoulder
-  body_weight: "130–360 kg"
-  diet: omnivore
-  lifespan: "20–25"
-  habitat:
-    en: Forests, Mountains, Tundra, Coasts
-    de: "Wälder, Gebirge, Tundra, Küsten"
-  reference:
-    credit: Jean Beaufort, CC0, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:GrizzlyBearJeanBeaufort.jpg"
-    commons_file: GrizzlyBearJeanBeaufort.jpg
-    file: grizzly-bear.jpg
-    artist: Jean Beaufort
-    license: CC0
-    license_url: "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
-  names:
-    en: Grizzly Bear
-    de: "Grizzlybär"
-    sv: "Grizzlybjörn"
-  description:
-    en: "The grizzly bear, also known as the North American brown bear or simply grizzly, is a population or subspecies of the brown bear inhabiting North America."
-    de: "Der Grizzlybär, seltener auch Graubär genannt, ist eine in Nordamerika lebende Unterart des Braunbären aus der Familie der Bären (Ursidae). Ging man in früherer Zeit noch von zahlreichen verschiedenen Unterarten auf diesem Kontinent aus, so werden heute in der Regel alle dort lebenden Braunbären mit Ausnahme der Kodiakbären als Grizzlybären bezeichnet."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Grizzly_bear"
-    de: "https://de.wikipedia.org/wiki/Grizzlyb%C3%A4r"
-- slug: bald-eagle
-  number: "052"
-  scientific: Haliaeetus leucocephalus
-  family: Accipitridae
-  group: birds
-  difficulty: moderate
-  iucn: LC
-  gbif_taxon_key: 2480446
-  inat_taxon_id: 5305
-  wikidata_id: Q127216
-  height: "1.8–2.3 m"
-  height_measure: wingspan
-  body_weight: "3–6.3 kg"
-  diet: piscivore
-  lifespan: "20–30"
-  habitat:
-    en: Coasts, Large lakes, Rivers, Forests
-    de: "Küsten, Große Seen, Flüsse, Wälder"
-  reference:
-    credit: "Andy Morffew from Itchen Abbas, Hampshire, UK, CC BY 2.0, Wikimedia Commons"
-    credit_url: "https://commons.wikimedia.org/wiki/File:Bald_Eagle_%28Haliaeetus_leucocephalus%29_Kachemak_Bay%2C_Alaska.jpg"
-    commons_file: "Bald Eagle (Haliaeetus leucocephalus) Kachemak Bay, Alaska.jpg"
-    file: bald-eagle.jpg
-    artist: Andy Morffew from Itchen Abbas, Hampshire, UK
-    license: CC BY 2.0
-    license_url: "https://creativecommons.org/licenses/by/2.0"
-  names:
-    en: Bald Eagle
-    de: "Weißkopfseeadler"
-    sv: "Vithövdad havsörn"
-  description:
-    en: "The bald eagle is a bird of prey found in North America. A sea eagle, it has two known subspecies and forms a species pair with the white-tailed eagle, which occupies the same niche as the bald eagle in the Palearctic. Its range includes most of Canada and Alaska, all of the contiguous United States, and northern Mexico."
-    de: "Der Weißkopfseeadler ist ein großer Greifvogel aus der Familie der Accipitridae. In Aussehen und Lebensweise ähnelt die Art sehr dem eurasischen Seeadler, die beiden Arten werden daher von manchen Autoren zu einer Superspezies vereinigt. Der Weißkopfseeadler ist der Wappenvogel der USA und daher auf deren Siegel zu sehen."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Bald_eagle"
-    de: "https://de.wikipedia.org/wiki/Wei%C3%9Fkopfseeadler"
-- slug: american-bison
-  number: "053"
-  scientific: Bison bison
-  family: Bovidae
-  group: mammals
-  difficulty: easy
-  iucn: NT
-  gbif_taxon_key: 2441176
-  inat_taxon_id: 208700
-  wikidata_id: Q82728
-  height: "1.5–1.9 m"
-  height_measure: shoulder
-  body_weight: "360–900 kg"
-  diet: herbivore
-  lifespan: "12–20"
-  habitat:
-    en: Prairies, Grasslands, River valleys
-    de: "Prärien, Grasland, Flusstäler"
-  reference:
-    credit: Jack Dykinga, Public domain, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:American_bison_k5680-1.jpg"
-    commons_file: American bison k5680-1.jpg
-    file: american-bison.jpg
-    artist: Jack Dykinga
-    license: Public domain
-  names:
-    en: American Bison
-    de: Amerikanischer Bison
-    sv: Bisonoxe
-  description:
-    en: "The American bison, commonly known as the American buffalo, or simply buffalo, is a species of bison that is endemic to North America. It is one of two extant species of bison, along with the European bison."
-    de: "Der Amerikanische Bison, oft auch als Büffel bezeichnet, ist ein in Nordamerika verbreitetes Wildrind und zugleich das größte Landsäugetier der Region. Ob er zusammen mit dem in Europa vorkommenden, ihm ähnlichen Wisent eine eigene Gattung der Bisons (Bison) bildet, ist in der Forschung umstritten. Heute werden beide aber häufig zu den Eigentlichen Rindern (Bos) gestellt."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/American_bison"
-    de: "https://de.wikipedia.org/wiki/Amerikanischer_Bison"
-- slug: jaguar
-  number: "054"
-  scientific: Panthera onca
-  family: Felidae
-  group: mammals
-  difficulty: challenging
-  iucn: NT
-  gbif_taxon_key: 5219426
-  inat_taxon_id: 41970
-  wikidata_id: Q35694
-  height: "63–76 cm"
-  height_measure: shoulder
-  body_weight: "45–100 kg"
-  diet: carnivore
-  lifespan: "10–12"
-  habitat:
-    en: Rainforests, Wetlands, Grasslands
-    de: "Regenwälder, Feuchtgebiete, Grasland"
-  reference:
-    credit: "Bjørn Christian Tørrissen, CC BY-SA 3.0, Wikimedia Commons"
-    credit_url: "https://commons.wikimedia.org/wiki/File:Junior-Jaguar-Belize-Zoo.jpg"
-    commons_file: Junior-Jaguar-Belize-Zoo.jpg
-    file: jaguar.jpg
-    artist: "Bjørn Christian Tørrissen"
-    license: CC BY-SA 3.0
-    license_url: "https://creativecommons.org/licenses/by-sa/3.0"
-  names:
-    en: Jaguar
-    de: Jaguar
-    sv: Jaguar
-  description:
-    en: "The jaguar is a large cat species and the only living member of the genus Panthera that is native to the Americas. Its distinctively marked coat features pale yellow to tan colored fur covered by spots that transition to rosettes on the sides, although a melanistic black coat appears in some individuals. With a body length of up to 1.85 m and a weight of up to 158 kg (348 lb), it is the biggest cat species in the Americas and the third largest in the world."
-    de: "Der Jaguar ist eine Art aus der Familie der Katzen, die in der Neuen Welt verbreitet ist. Ältere Bezeichnungen für den Jaguar sind Unze, Onze oder Onza. Nach dem Tiger und dem Löwen ist der Jaguar die drittgrößte Katze überhaupt."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Jaguar"
-    de: "https://de.wikipedia.org/wiki/Jaguar"
 - slug: polar-bear
   number: "055"
   scientific: Ursus maritimus
@@ -2006,149 +1434,6 @@ species:
   description_source:
     en: "https://en.wikipedia.org/wiki/Polar_bear"
     de: "https://de.wikipedia.org/wiki/Eisb%C3%A4r"
-- slug: american-alligator
-  number: "056"
-  scientific: Alligator mississippiensis
-  family: Alligatoridae
-  group: reptiles
-  difficulty: easy
-  iucn: LC
-  gbif_taxon_key: 2441370
-  inat_taxon_id: 26159
-  wikidata_id: Q193327
-  height: "2.6–4.4 m"
-  height_measure: length
-  body_weight: "90–360 kg"
-  diet: carnivore
-  lifespan: "30–50"
-  habitat:
-    en: Freshwater marshes, Cypress swamps, Rivers, Lakes
-    de: "Süßwassermarschen, Zypressensümpfe, Flüsse, Seen"
-  reference:
-    credit: "User:Postdlf, CC BY-SA 3.0, Wikimedia Commons"
-    credit_url: "https://commons.wikimedia.org/wiki/File:American_Alligator.jpg"
-    commons_file: American Alligator.jpg
-    file: american-alligator.jpg
-    artist: "User:Postdlf"
-    license: CC BY-SA 3.0
-    license_url: "http://creativecommons.org/licenses/by-sa/3.0/"
-  names:
-    en: American Alligator
-    de: Mississippi-Alligator
-    sv: Mississippialligator
-  description:
-    en: "The American alligator, sometimes referred to as a common alligator or just gator, is a large crocodilian reptile native to the Southeastern United States. It is one of the two extant species in the genus Alligator, and is larger than the only other living alligator species, the Chinese alligator."
-    de: "Der Mississippi-Alligator, auch Hechtalligator genannt, ist ein im Südosten der USA lebender Alligator."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/American_alligator"
-    de: "https://de.wikipedia.org/wiki/Mississippi-Alligator"
-- slug: monarch-butterfly
-  number: "057"
-  scientific: Danaus plexippus
-  family: Nymphalidae
-  group: insects
-  difficulty: easy
-  iucn: LC
-  gbif_taxon_key: 5133088
-  inat_taxon_id: 48662
-  wikidata_id: Q212398
-  height: "89–102 mm"
-  height_measure: wingspan
-  body_weight: "0.25–0.75 g"
-  diet: nectarivore
-  lifespan: "0.1–0.75"
-  habitat:
-    en: Meadows, Gardens, Roadsides, Overwintering forests
-    de: "Wiesen, Gärten, Wegränder, Überwinterungswälder"
-  reference:
-    credit: Didier Descouens, CC BY-SA 3.0, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:Danaus_plexippus_MHNT_femelle.jpg"
-    commons_file: Danaus plexippus MHNT femelle.jpg
-    file: monarch-butterfly.jpg
-    artist: Didier Descouens
-    license: CC BY-SA 3.0
-    license_url: "https://creativecommons.org/licenses/by-sa/3.0"
-  names:
-    en: Monarch Butterfly
-    de: Monarchfalter
-    sv: Monark
-  description:
-    en: "The monarch butterfly or simply monarch is a milkweed butterfly in the family Nymphalidae. Other common names, depending on region, include milkweed, common tiger, wanderer, and black-veined brown. It is among the most familiar of North American butterflies and an iconic pollinator, although it is not an especially effective pollinator of milkweeds."
-    de: "Der Monarchfalter oder Amerikanische Monarch ist ein auffällig orange und schwarz gezeichneter Schmetterling (Tagfalter) aus der Familie der Edelfalter (Nymphalidae). Er ist in Amerika weit verbreitet und hat sich im 18. Jahrhundert über den Südpazifik bis nach Australien ausgebreitet."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Monarch_butterfly"
-    de: "https://de.wikipedia.org/wiki/Monarchfalter"
-- slug: mountain-lion
-  number: "058"
-  scientific: Puma concolor
-  family: Felidae
-  group: mammals
-  difficulty: challenging
-  iucn: LC
-  gbif_taxon_key: 2435099
-  inat_taxon_id: 42007
-  wikidata_id: Q35255
-  height: "60–90 cm"
-  height_measure: shoulder
-  body_weight: "34–72 kg"
-  diet: carnivore
-  lifespan: "8–13"
-  habitat:
-    en: Mountains, Forests, Deserts, Scrubland
-    de: "Gebirge, Wälder, Wüsten, Buschland"
-  reference:
-    credit: Carlos, CC BY 2.0, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:Puma_-_49044464307.jpg"
-    commons_file: Puma - 49044464307.jpg
-    file: mountain-lion.jpg
-    artist: Carlos
-    license: CC BY 2.0
-    license_url: "https://creativecommons.org/licenses/by/2.0"
-  names:
-    en: Mountain Lion
-    de: Puma
-    sv: Puma
-  description:
-    en: "The cougar, also called puma, mountain lion, catamount, and panther, is a large small cat native to the Americas. It inhabits North, Central and South America, making it the most widely distributed wild, terrestrial mammal in the Western Hemisphere, and one of the most widespread in the world. Its range spans Yukon, British Columbia and Alberta in Canada, the Rocky Mountains and areas in the western United States."
-    de: "Der Puma ist nach dem Jaguar die zweitgrößte Art der Katzen (Felidae) in Amerika. Unter den Kleinkatzen wird sie als deren größte Art weltweit angesehen. Der Puma ist in weiten Teilen Nord-, Mittel- und Südamerikas verbreitet und dort unter zahlreichen weiteren Namen bekannt; für viele davon gibt es auch im Deutschen eine Entsprechung: Silberlöwe, Berglöwe oder Kuguar."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Cougar"
-    de: "https://de.wikipedia.org/wiki/Puma"
-- slug: galapagos-giant-tortoise
-  number: "059"
-  scientific: Chelonoidis niger
-  family: Testudinidae
-  group: reptiles
-  difficulty: moderate
-  iucn: CR
-  gbif_taxon_key: 9527499
-  inat_taxon_id: 539452
-  wikidata_id: Q20014035
-  height: "90–130 cm"
-  height_measure: shell
-  body_weight: "130–320 kg"
-  diet: herbivore
-  lifespan: "100–150"
-  habitat:
-    en: Arid lowlands, Humid highlands, Grasslands
-    de: Trockenes Tiefland, Feuchtes Hochland, Grasland
-  reference:
-    credit: "The original uploader was Pandanus at German Wikipedia ., Public domain, Wikimedia Commons"
-    credit_url: "https://commons.wikimedia.org/wiki/File:Galapagos_Geochelone_nigra_porteri.jpg"
-    commons_file: Galapagos Geochelone nigra porteri.jpg
-    file: galapagos-giant-tortoise.jpg
-    artist: The original uploader was Pandanus at German Wikipedia .
-    license: Public domain
-  names:
-    en: "Galápagos Giant Tortoise"
-    de: "Galápagos-Riesenschildkröte"
-    sv: "Galapagossköldpadda"
-  description:
-    en: "The Galápagos tortoise, also called the Galápagos giant tortoise, is a very large species of tortoise in the genus Chelonoidis. The species comprises 15 subspecies. It is the largest living species of tortoise, and can weigh up to 417 kg (919 lb)."
-    de: "Als Galapagos-Riesenschildkröten werden 15 auf den verschiedenen Galapagosinseln endemisch vorkommende Schildkrötenarten bezeichnet. Die Galapagos-Riesenschildkröten sind kein eigenständiges Taxon, sondern bilden mit einigen Schildkrötenarten des südamerikanischen Festlands die Gattung Chelonoidis in der Familie der Landschildkröten (Testudinidae). Vier Arten der Galapagos-Riesenschildkröten gelten als ausgerottet."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Gal%C3%A1pagos_tortoise"
-    de: "https://de.wikipedia.org/wiki/Galapagos-Riesenschildkr%C3%B6ten"
 - slug: toco-toucan
   number: "060"
   scientific: Ramphastos toco
@@ -2293,42 +1578,6 @@ species:
   description_source:
     en: "https://en.wikipedia.org/wiki/Snowy_owl"
     de: "https://de.wikipedia.org/wiki/Schneeeule"
-- slug: axolotl
-  number: "064"
-  scientific: Ambystoma mexicanum
-  family: Ambystomatidae
-  group: amphibians
-  difficulty: moderate
-  iucn: CR
-  gbif_taxon_key: 2431950
-  inat_taxon_id: 26777
-  wikidata_id: Q22718
-  height: "20–30 cm"
-  height_measure: length
-  body_weight: "60–110 g"
-  diet: carnivore
-  lifespan: "10–15"
-  habitat:
-    en: Freshwater canals, High-altitude lakes, Wetlands
-    de: "Süßwasserkanäle, Hochlandseen, Feuchtgebiete"
-  reference:
-    credit: "Fernando Losada Rodríguez, CC BY-SA 4.0, Wikimedia Commons"
-    credit_url: "https://commons.wikimedia.org/wiki/File:Ambystoma_mexicanum.101_-_Aquarium_Finisterrae.jpg"
-    commons_file: Ambystoma mexicanum.101 - Aquarium Finisterrae.jpg
-    file: axolotl.jpg
-    artist: "Fernando Losada Rodríguez"
-    license: CC BY-SA 4.0
-    license_url: "https://creativecommons.org/licenses/by-sa/4.0"
-  names:
-    en: Axolotl
-    de: Axolotl
-    sv: Axolotl
-  description:
-    en: "The axolotl is a species of mole salamander. They are neotenic, fully maturing without undergoing metamorphosis, and adults remain fully aquatic with obvious external gills. Axolotls may be difficult to distinguish from the larval stage of other neotenic adult mole salamanders, such as the tiger salamander, or other species such as mudpuppies."
-    de: "Der Axolotl ist ein in Mexiko rein aquatisch lebender Schwanzlurch aus der Familie der Querzahnmolche (Ambystomatidae), der natürlicherweise nur als Dauerlarve auftritt. Axolotl erreichen ihre Geschlechtsreife, ohne ihre äußere Larvengestalt zu verändern und eine bei Amphibien sonst übliche Metamorphose zu durchlaufen."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Axolotl"
-    de: "https://de.wikipedia.org/wiki/Axolotl"
 - slug: narwhal
   number: "065"
   scientific: Monodon monoceros
@@ -2440,78 +1689,6 @@ species:
   description_source:
     en: "https://en.wikipedia.org/wiki/Green_sea_turtle"
     de: "https://de.wikipedia.org/wiki/Gr%C3%BCne_Meeresschildkr%C3%B6te"
-- slug: ocelot
-  number: "068"
-  scientific: Leopardus pardalis
-  family: Felidae
-  group: mammals
-  difficulty: challenging
-  iucn: LC
-  gbif_taxon_key: 2434982
-  inat_taxon_id: 41997
-  wikidata_id: Q33261
-  height: "40–50 cm"
-  height_measure: shoulder
-  body_weight: "7–18 kg"
-  diet: carnivore
-  lifespan: "7–10"
-  habitat:
-    en: Tropical forests, Mangroves, Thorn scrub
-    de: "Tropische Wälder, Mangroven, Dornbuschwald"
-  reference:
-    credit: Giles Laurent, CC BY-SA 4.0, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:081_Ocelot_in_Encontro_das_%C3%81guas_State_Park_Photo_by_Giles_Laurent.jpg"
-    commons_file: "081 Ocelot in Encontro das Águas State Park Photo by Giles Laurent.jpg"
-    file: ocelot.jpg
-    artist: Giles Laurent
-    license: CC BY-SA 4.0
-    license_url: "https://creativecommons.org/licenses/by-sa/4.0"
-  names:
-    en: Ocelot
-    de: Ozelot
-    sv: Ozelot
-  description:
-    en: "The ocelot is a medium-sized spotted wild cat that reaches 40–50 cm (16–20 in) at the shoulders and weighs between 7 and 15.5 kg on average. It is native to the southwestern United States, Mexico, Central and South America, and the Caribbean islands of Trinidad and Margarita. Carl Linnaeus scientifically described it in 1758."
-    de: "Der Ozelot ist eine in Mittel- und Südamerika lebende Raubtierart aus der Familie der Katzen (Felidae). Er ist der größte und wohl bekannteste Vertreter der Pardelkatzen (Leopardus), einer auf Amerika beschränkten Gattung kleinerer, gefleckter Katzen."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Ocelot"
-    de: "https://de.wikipedia.org/wiki/Ozelot"
-- slug: american-black-bear
-  number: "069"
-  scientific: Ursus americanus
-  family: Ursidae
-  group: mammals
-  difficulty: easy
-  iucn: LC
-  gbif_taxon_key: 2433407
-  inat_taxon_id: 41638
-  wikidata_id: Q122783
-  height: "65–100 cm"
-  height_measure: shoulder
-  body_weight: "40–300 kg"
-  diet: omnivore
-  lifespan: "15–20"
-  habitat:
-    en: Forests, Swamps, Mountains
-    de: "Wälder, Sümpfe, Gebirge"
-  reference:
-    credit: HBarrison, CC BY-SA 2.0, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:Canadian_Rockies_-_the_bear_at_Lake_Louise.jpg"
-    commons_file: Canadian Rockies - the bear at Lake Louise.jpg
-    file: american-black-bear.jpg
-    artist: HBarrison
-    license: CC BY-SA 2.0
-    license_url: "https://creativecommons.org/licenses/by-sa/2.0"
-  names:
-    en: American Black Bear
-    de: "Amerikanischer Schwarzbär"
-    sv: "Svartbjörn"
-  description:
-    en: "The American black bear, or simply black bear, is a species of medium-sized bear which is endemic to North America. It is the continent's smallest and most widely distributed bear species. It is an omnivore, with a diet varying greatly depending on season and location."
-    de: "Der Amerikanische Schwarzbär, auch Baribal genannt, ist eine in Nordamerika lebende Raubtierart aus der Familie der Bären (Ursidae). In seiner Heimat wird er meistens als black bear oder Ours noir bezeichnet. Im Vergleich zum eher gefürchteten Grizzlybären gilt der Schwarzbär als weniger gefährlich."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/American_black_bear"
-    de: "https://de.wikipedia.org/wiki/Amerikanischer_Schwarzb%C3%A4r"
 - slug: red-kangaroo
   number: "070"
   scientific: Osphranter rufus
@@ -2656,42 +1833,6 @@ species:
   description_source:
     en: "https://en.wikipedia.org/wiki/Common_wombat"
     de: "https://de.wikipedia.org/wiki/Nacktnasenwombat"
-- slug: tasmanian-devil
-  number: "074"
-  scientific: Sarcophilus harrisii
-  family: Dasyuridae
-  group: mammals
-  difficulty: moderate
-  iucn: EN
-  gbif_taxon_key: 2435451
-  inat_taxon_id: 40232
-  wikidata_id: Q134964
-  height: "53–80 cm"
-  height_measure: length
-  body_weight: "6–9 kg"
-  diet: carnivore
-  lifespan: "5"
-  habitat:
-    en: Dry eucalypt forest, Coastal woodland, Farmland
-    de: "Trockene Eukalyptuswälder, Küstenwälder, Agrarland"
-  reference:
-    credit: "JJ Harrison ( https://www.jjharrison.com.au/ ), CC BY-SA 3.0, Wikimedia Commons"
-    credit_url: "https://commons.wikimedia.org/wiki/File:Sarcophilus_harrisii_taranna.jpg"
-    commons_file: Sarcophilus harrisii taranna.jpg
-    file: tasmanian-devil.jpg
-    artist: "JJ Harrison ( https://www.jjharrison.com.au/ )"
-    license: CC BY-SA 3.0
-    license_url: "https://creativecommons.org/licenses/by-sa/3.0"
-  names:
-    en: Tasmanian Devil
-    de: Tasmanischer Teufel
-    sv: "Tasmansk djävul"
-  description:
-    en: "The Tasmanian devil is a carnivorous marsupial of the family Dasyuridae. It was formerly present across mainland Australia, but became extinct there around 3,500 years ago; it is now confined to the island of Tasmania. The size of a small dog, the Tasmanian devil became the largest carnivorous marsupial in the world following the extinction of the thylacine in 1936."
-    de: "Der Beutelteufel, auch Tasmanischer Teufel genannt, ist eine Tierart aus der Familie der Raubbeutler (Dasyuridae) und deren größter lebender Vertreter. In der rekonstruierten Sprache Palawa Kani der tasmanischen Aborigines wird er als Purinina bezeichnet. Mit Ausnahme von wenigen dutzend Tieren als Teil eines Wiederansiedlungsprojekts auf dem australischen Festland, wo die Tierart wahrscheinlich schon im 14."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Tasmanian_devil"
-    de: "https://de.wikipedia.org/wiki/Beutelteufel"
 - slug: kiwi
   number: "075"
   scientific: Apteryx mantelli
@@ -2728,78 +1869,6 @@ species:
   description_source:
     en: "https://en.wikipedia.org/wiki/North_Island_brown_kiwi"
     de: "https://de.wikipedia.org/wiki/Nordstreifenkiwi"
-- slug: saltwater-crocodile
-  number: "076"
-  scientific: Crocodylus porosus
-  family: Crocodylidae
-  group: reptiles
-  difficulty: moderate
-  iucn: LC
-  gbif_taxon_key: 2441333
-  inat_taxon_id: 26068
-  wikidata_id: Q182599
-  height: "2.7–5 m"
-  height_measure: length
-  body_weight: "80–1000 kg"
-  diet: carnivore
-  lifespan: "50–70"
-  habitat:
-    en: Mangrove swamps, River deltas, Estuaries, Coastal seas
-    de: "Mangrovensümpfe, Flussdeltas, Flussmündungen, Küstengewässer"
-  reference:
-    credit: Laubarr, CC BY-SA 3.0, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:Laurie%27s_crocodile_in_the_garden.jpg"
-    commons_file: Laurie's crocodile in the garden.jpg
-    file: saltwater-crocodile.jpg
-    artist: Laubarr
-    license: CC BY-SA 3.0
-    license_url: "https://creativecommons.org/licenses/by-sa/3.0"
-  names:
-    en: Saltwater Crocodile
-    de: Leistenkrokodil
-    sv: Saltvattenkrokodil
-  description:
-    en: "The saltwater crocodile is a crocodilian native to saltwater habitats, brackish wetlands and freshwater rivers from India's east coast across Southeast Asia and the Sundaland to northern Australia and Micronesia. It has been listed as Least Concern on the IUCN Red List since 1996. It was hunted for its skin throughout its range up to the 1970s, and is threatened by illegal killing and habitat loss."
-    de: "Das Leistenkrokodil, auch Salzwasserkrokodil genannt, ist das größte heute lebende Krokodil, gefolgt vom Nilkrokodil. Es handelt sich dabei um eine Art der Echten Krokodile (Crocodylidae). Wie auch die Spitzkrokodile können Leistenkrokodile sowohl im Salz- als auch im Süßwasser leben."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Saltwater_crocodile"
-    de: "https://de.wikipedia.org/wiki/Leistenkrokodil"
-- slug: cassowary
-  number: "077"
-  scientific: Casuarius casuarius
-  family: Casuariidae
-  group: birds
-  difficulty: challenging
-  iucn: LC
-  gbif_taxon_key: 5231783
-  inat_taxon_id: 20500
-  wikidata_id: Q375790
-  height: "1.5–1.8 m"
-  height_measure: standing
-  body_weight: "29–76 kg"
-  diet: frugivore
-  lifespan: "18–20"
-  habitat:
-    en: Tropical rainforest, Mangroves, Savanna forest
-    de: Tropischer Regenwald, Mangroven, Savannenwald
-  reference:
-    credit: Wvbailey, CC BY 3.0, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:Wild_cassowary_walking_at_Mission_Beach_IMG_3933.jpg"
-    commons_file: Wild cassowary walking at Mission Beach IMG 3933.jpg
-    file: cassowary.jpg
-    artist: Wvbailey
-    license: CC BY 3.0
-    license_url: "https://creativecommons.org/licenses/by/3.0"
-  names:
-    en: Southern Cassowary
-    de: Helmkasuar
-    sv: "Hjälmkasuar"
-  description:
-    en: "The southern cassowary, also known as double-wattled cassowary, Australian cassowary, or two-wattled cassowary, is a large, flightless, mostly black bird, found in Indonesia, Papua New Guinea, and northeastern Australia. It is one of the three living species of cassowary, alongside the dwarf cassowary and the northern cassowary. It is a ratite and therefore related to the emu, ostrich, rhea and kiwi."
-    de: "Der Helmkasuar ist eine große flugunfähige Vogelart aus der Familie der Casuariidae."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Southern_cassowary"
-    de: "https://de.wikipedia.org/wiki/Helmkasuar"
 - slug: humpback-whale
   number: "078"
   scientific: Megaptera novaeangliae
@@ -3089,189 +2158,6 @@ species:
   description_source:
     en: "https://en.wikipedia.org/wiki/Leatherback_sea_turtle"
     de: "https://de.wikipedia.org/wiki/Lederschildkr%C3%B6te"
-- slug: giant-pacific-octopus
-  number: "086"
-  scientific: Enteroctopus dofleini
-  family: Enteroctopodidae
-  group: molluscs
-  difficulty: challenging
-  marine: true
-  iucn: LC
-  gbif_taxon_key: 2289485
-  inat_taxon_id: 48863
-  wikidata_id: Q912404
-  height: "2–4.3 m"
-  height_measure: length
-  body_weight: "15–50 kg"
-  diet: carnivore
-  lifespan: "3–5"
-  habitat:
-    en: Rocky reefs, Kelp forests, Coastal seafloor
-    de: "Felsenriffe, Kelpwälder, Küstennaher Meeresboden"
-  reference:
-    credit: "NOAA/R. N. Lea [1], Public domain, Wikimedia Commons"
-    credit_url: "https://commons.wikimedia.org/wiki/File:Enteroctopus_dolfeini.jpg"
-    commons_file: Enteroctopus dolfeini.jpg
-    file: giant-pacific-octopus.jpg
-    artist: "NOAA/R. N. Lea [1]"
-    license: Public domain
-  names:
-    en: Giant Pacific Octopus
-    de: Pazifischer Riesenkrake
-    sv: "Stor stillahavsbläckfisk"
-  description:
-    en: "The giant Pacific octopus, also known as the North Pacific giant octopus, is a large marine cephalopod belonging to the genus Enteroctopus and Enteroctopodidae family."
-    de: "Der Pazifische Riesenkrake ist ein großer Kopffüßer aus der Gattung der Riesenkraken. Er lebt in der Nähe der Küsten des nordwestlichen Pazifiks meist auf nicht-felsigem Untergrund und wird als größter Krake angesehen."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Giant_Pacific_octopus"
-    de: "https://de.wikipedia.org/wiki/Pazifischer_Riesenkrake"
-- slug: clownfish
-  number: "087"
-  scientific: Amphiprion ocellaris
-  family: Pomacentridae
-  group: fish
-  difficulty: easy
-  marine: true
-  iucn: LC
-  gbif_taxon_key: 5212106
-  inat_taxon_id: 132688
-  wikidata_id: Q1126155
-  height: "6–8 cm"
-  height_measure: length
-  body_weight: "5–10 g"
-  diet: omnivore
-  lifespan: "6–10"
-  habitat:
-    en: Coral reefs, Lagoons, Sea anemones
-    de: Korallenriffe, Lagunen, Seeanemonen
-  reference:
-    credit: Raimond Spekking, CC BY-SA 4.0, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:Clownfisch_%28Amphiprion_ocellaris%29.jpg"
-    commons_file: Clownfisch (Amphiprion ocellaris).jpg
-    file: clownfish.jpg
-    artist: Raimond Spekking
-    license: CC BY-SA 4.0
-    license_url: "https://creativecommons.org/licenses/by-sa/4.0"
-  names:
-    en: Ocellaris Clownfish
-    de: Falscher Clownfisch
-    sv: Vanlig clownfisk
-  description:
-    en: "The ocellaris clownfish, also known as the false percula clownfish or common clownfish, is a marine fish belonging to the family Pomacentridae, which includes clownfishes and damselfishes. A. ocellaris are found in different colors, depending on where they are located."
-    de: "Der Falsche Clownfisch, der auch als Orangeringel-Anemonenfisch bekannt ist, lebt westlich des Verbreitungsgebietes des Echten Clownfischs in den Riffen Südostasiens, westlich bis zu den Andamanen und Nikobaren, nördlich bis zu den Ryukyu-Inseln und südlich bis an die Küste des nordwestlichen Australien. Die Verbreitungsgebiete der beiden Clownfisch-Arten überschneiden sich nicht."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Ocellaris_clownfish"
-    de: "https://de.wikipedia.org/wiki/Falscher_Clownfisch"
-- slug: whale-shark
-  number: "088"
-  scientific: Rhincodon typus
-  family: Rhincodontidae
-  group: fish
-  difficulty: moderate
-  marine: true
-  iucn: EN
-  gbif_taxon_key: 2417522
-  inat_taxon_id: 52188
-  wikidata_id: Q80378
-  height: "8–14 m"
-  height_measure: length
-  body_weight: "9–15 t"
-  diet: filter-feeder
-  lifespan: "70–100"
-  habitat:
-    en: Open ocean, Tropical seas, Coastal upwellings
-    de: "Offener Ozean, Tropische Meere, Küstenauftriebsgebiete"
-  reference:
-    credit: "User:Zac Wolf (original), en:User:Stefan (cropping), CC BY-SA 2.5, Wikimedia Commons"
-    credit_url: "https://commons.wikimedia.org/wiki/File:Whale_shark_Georgia_aquarium.jpg"
-    commons_file: Whale shark Georgia aquarium.jpg
-    file: whale-shark.jpg
-    artist: "User:Zac Wolf (original), en:User:Stefan (cropping)"
-    license: CC BY-SA 2.5
-    license_url: "https://creativecommons.org/licenses/by-sa/2.5"
-  names:
-    en: Whale Shark
-    de: Walhai
-    sv: Valhaj
-  description:
-    en: "The whale shark is a slow-moving, filter-feeding carpet shark and the largest known extant fish species. An individual with a length of 18.8 m (61.7 ft) has been considered the largest reliably recorded. The whale shark holds many records for size in the animal kingdom, most notably being by far the most massive living non-cetacean animal."
-    de: "Der Walhai ist der größte Hai und zugleich der größte Fisch der Gegenwart. Es handelt sich um die einzige Art der Gattung Rhincodon, die wiederum die einzige Gattung innerhalb der Familie Rhincodontidae ist. Der Walhai gehört der Ordnung der Ammenhaiartigen an."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Whale_shark"
-    de: "https://de.wikipedia.org/wiki/Walhai"
-- slug: great-white-shark
-  number: "089"
-  scientific: Carcharodon carcharias
-  family: Lamnidae
-  group: fish
-  difficulty: challenging
-  marine: true
-  iucn: VU
-  gbif_taxon_key: 2420694
-  inat_taxon_id: 50873
-  wikidata_id: Q129026
-  height: "3.4–4.9 m"
-  height_measure: length
-  body_weight: "680–1900 kg"
-  diet: carnivore
-  lifespan: "30–70"
-  habitat:
-    en: Coastal waters, Open ocean, Seal colonies
-    de: "Küstengewässer, Offener Ozean, Robbenkolonien"
-  reference:
-    credit: Sharkdiver.com, Public domain, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:Carcharodon_carcharias.jpg"
-    commons_file: Carcharodon carcharias.jpg
-    file: great-white-shark.jpg
-    artist: Sharkdiver.com
-    license: Public domain
-  names:
-    en: Great White Shark
-    de: "Weißer Hai"
-    sv: Vithaj
-  description:
-    en: "The great white shark, also known as the white shark, white pointer, or great white, is a large shark. It is closely related to the mako sharks, the porbeagle, and the salmon shark. It is a robustly built species with a grayish upperside and a white underside."
-    de: "Der Weiße Hai, seltener auch als Weißhai oder Menschenhai bezeichnet, ist die einzige Art der Gattung Carcharodon aus der Familie der Makrelenhaie (Lamnidae). Der Trivialname bezieht sich auf die auffällig helle Bauchfärbung der Tiere. Die Art kommt fast weltweit vor und besiedelt bevorzugt gemäßigte Küstengewässer."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Great_white_shark"
-    de: "https://de.wikipedia.org/wiki/Wei%C3%9Fer_Hai"
-- slug: manta-ray
-  number: "090"
-  scientific: Mobula birostris
-  family: Mobulidae
-  group: fish
-  difficulty: moderate
-  marine: true
-  iucn: EN
-  gbif_taxon_key: 9548142
-  inat_taxon_id: 623966
-  wikidata_id: Q321976
-  height: "4–5 m"
-  height_measure: length
-  body_weight: "1–2 t"
-  diet: filter-feeder
-  lifespan: "40"
-  habitat:
-    en: Open ocean, Seamounts, Coastal upwellings
-    de: "Offener Ozean, Seeberge, Küstenauftriebsgebiete"
-  reference:
-    credit: jon hanson from london, UK, CC BY-SA 2.0, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:Manta_birostris-Thailand3.jpg"
-    commons_file: Manta birostris-Thailand3.jpg
-    file: manta-ray.jpg
-    artist: jon hanson from london, UK
-    license: CC BY-SA 2.0
-    license_url: "https://creativecommons.org/licenses/by-sa/2.0"
-  names:
-    en: Giant Manta Ray
-    de: Riesenmanta
-    sv: "Jättemanta"
-  description:
-    en: "The giant oceanic manta ray, giant manta ray, or oceanic manta ray is a species of ray in the family Mobulidae and the largest type of ray in the world. It is circumglobal and is typically found in tropical and subtropical waters but can also be found in temperate waters. Until 2017, the species was classified in the genus Manta, along with the smaller reef manta ray."
-    de: "Der Riesenmanta ist eine Rochenart aus der Familie der Teufelsrochen. „Manta“ ist spanisch und bedeutet „Decke“. Die Kopfflossen brachten den Tieren schließlich den Namen „Teufelsrochen“ ein."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Giant_oceanic_manta_ray"
-    de: "https://de.wikipedia.org/wiki/Riesenmanta"
 - slug: beluga-whale
   number: "091"
   scientific: Delphinapterus leucas
@@ -3346,78 +2232,6 @@ species:
   description_source:
     en: "https://en.wikipedia.org/wiki/Harbor_seal"
     de: "https://de.wikipedia.org/wiki/Seehund"
-- slug: hammerhead-shark
-  number: "093"
-  scientific: Sphyrna mokarran
-  family: Sphyrnidae
-  group: fish
-  difficulty: challenging
-  marine: true
-  iucn: CR
-  gbif_taxon_key: 2418792
-  inat_taxon_id: 56766
-  wikidata_id: Q757353
-  height: "3–4 m"
-  height_measure: length
-  body_weight: "230–450 kg"
-  diet: carnivore
-  lifespan: "20–30"
-  habitat:
-    en: Coral reefs, Continental shelves, Lagoons
-    de: Korallenriffe, Kontinentalschelf, Lagunen
-  reference:
-    credit: "Josh Hallett from Winter Haven, FL, USA, CC BY 2.0, Wikimedia Commons"
-    credit_url: "https://commons.wikimedia.org/wiki/File:Sphyrna_mokarran_at_georgia.jpg"
-    commons_file: Sphyrna mokarran at georgia.jpg
-    file: hammerhead-shark.jpg
-    artist: Josh Hallett from Winter Haven, FL, USA
-    license: CC BY 2.0
-    license_url: "https://creativecommons.org/licenses/by/2.0"
-  names:
-    en: Great Hammerhead Shark
-    de: "Großer Hammerhai"
-    sv: Stor hammarhaj
-  description:
-    en: "The great hammerhead is the largest species of hammerhead shark, belonging to the family Sphyrnidae, attaining an average length of 4.6 m (15 ft) and reaching a maximum length of 6.2 m (20 ft). It is found in tropical and warm temperate waters worldwide, inhabiting coastal areas and the continental shelf."
-    de: "Der Große Hammerhai ist mit einer maximalen Größe zwischen 5,5 und 6,1 Metern der größte Hai innerhalb der Familie der Hammerhaie (Sphyrnidae). Er lebt weltweit im Bereich tropischer und subtropischer Küstengebiete und des Kontinentalschelfs, wobei er Korallenriffe als Lebensraum bevorzugt. Von anderen großen Haien unterscheidet er sich vor allem durch die Ausprägung des hammerförmig vergrößerten Kopfes (Cephalofoil) sowie seiner sehr großen und sichelförmigen ersten Rückenflosse."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Great_hammerhead"
-    de: "https://de.wikipedia.org/wiki/Gro%C3%9Fer_Hammerhai"
-- slug: firefly
-  number: "094"
-  scientific: Lampyris noctiluca
-  family: Lampyridae
-  group: insects
-  difficulty: moderate
-  iucn: NT
-  gbif_taxon_key: 5744295
-  inat_taxon_id: 143617
-  wikidata_id: Q852831
-  height: "10–20 mm"
-  height_measure: length
-  diet: carnivore
-  lifespan: "2–3"
-  habitat:
-    en: Grassland, Hedgerows, Woodland edges
-    de: "Grasland, Hecken, Waldränder"
-  reference:
-    credit: Hectonichus, CC BY-SA 3.0, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:Lampyridae_-_Lampyris_noctiluca.JPG"
-    commons_file: Lampyridae - Lampyris noctiluca.JPG
-    file: firefly.jpg
-    artist: Hectonichus
-    license: CC BY-SA 3.0
-    license_url: "https://creativecommons.org/licenses/by-sa/3.0"
-  names:
-    en: Common Glow-worm
-    de: "Großer Leuchtkäfer"
-    sv: Stor lysmask
-  description:
-    en: "Lampyris noctiluca, the common glowworm of Europe, is the type species of beetle in the genus Lampyris and the family Lampyridae."
-    de: "Der Große Leuchtkäfer bzw. das Große Glühwürmchen oder Große Johanniswürmchen ist eine Käferart aus der Familie Leuchtkäfer (Lampyridae)."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Lampyris_noctiluca"
-    de: "https://de.wikipedia.org/wiki/Gro%C3%9Fer_Leuchtk%C3%A4fer"
 - slug: honeybee
   number: "095"
   scientific: Apis mellifera
@@ -3806,42 +2620,6 @@ species:
   description_source:
     en: "https://en.wikipedia.org/wiki/European_green_lizard"
     de: "https://de.wikipedia.org/wiki/%C3%96stliche_Smaragdeidechse"
-- slug: saiga-antelope
-  number: "106"
-  scientific: Saiga tatarica
-  family: Bovidae
-  group: mammals
-  difficulty: challenging
-  iucn: NT
-  gbif_taxon_key: 2441067
-  inat_taxon_id: 42378
-  wikidata_id: Q126683
-  height: "61–81 cm"
-  height_measure: shoulder
-  body_weight: "26–69 kg"
-  diet: herbivore
-  lifespan: "7–10"
-  habitat:
-    en: Steppe, Semi-desert, Grassland
-    de: "Steppen, Halbwüsten, Grasland"
-  reference:
-    credit: Andrey Giljov, CC BY-SA 4.0, Wikimedia Commons
-    credit_url: "https://commons.wikimedia.org/wiki/File:Saiga_antelope_at_the_Stepnoi_Sanctuary.jpg"
-    commons_file: Saiga antelope at the Stepnoi Sanctuary.jpg
-    file: saiga-antelope.jpg
-    artist: Andrey Giljov
-    license: CC BY-SA 4.0
-    license_url: "https://creativecommons.org/licenses/by-sa/4.0"
-  names:
-    en: Saiga Antelope
-    de: Saiga
-    sv: Saigaantilop
-  description:
-    en: "The saiga antelope or saiga is a species of antelope which during antiquity inhabited a vast area of the Eurasian steppe, spanning the foothills of the Carpathian Mountains in the northwest and Caucasus in the southwest into Mongolia in the northeast and Dzungaria in the southeast. During the Pleistocene, it ranged across the mammoth steppe from the British Isles to Beringia."
-    de: "Die Saiga, teilweise auch Saigaantilope, ist eine in den eurasischen Steppen verbreitete Huftierart, die vor allem durch ihre rüsselartige Nase auffällt. Man unterscheidet herkömmlich zwei Unterarten, die westliche Unterart und die Mongolische Saiga. In einigen Systematiken werden beide teilweise auch als getrennte Arten aufgefasst, doch diese Anschauung ist nicht generell akzeptiert."
-  description_source:
-    en: "https://en.wikipedia.org/wiki/Saiga_antelope"
-    de: "https://de.wikipedia.org/wiki/Saiga"
 - slug: eurasian-jay
   number: "107"
   scientific: Garrulus glandarius

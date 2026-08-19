@@ -379,8 +379,9 @@ diff only shows what actually changed.
    python3 scripts/dex-enrich.py --only sand-lizard
    ```
    **Check `body_weight`, `height` and `lifespan` by hand afterwards — do not
-   trust them.** A full audit of all 186 species in August 2026 found 82 of the
-   83 `body_weight` values this script had produced were wrong, several by three
+   trust them.** A full audit of all 186 species then in the dex (August 2026; 34 were
+   removed afterwards) found 82 of the 83 `body_weight` values this script had
+   produced were wrong, several by three
    to six orders of magnitude (whale shark `12`, humpback `1.5–45` with no unit,
    giant panda `104–117.5 g`, common buzzard `0.9–966.5 kg`, giraffe `54.5 kg`).
    The cause is `quantity_range()` in `scripts/dex-enrich.py`: it takes
@@ -462,6 +463,6 @@ than it looks like it should.
 
 `dex-ranges.py` simplifies the iNaturalist polygons until each fits `--max-kb`
 (45 KB), coarsening a wide-ranging species rather than dropping its map. The
-whole set is ~5 MB. `dex-covers.py` fetches ~960px Commons thumbnails (`--width 900`; see that script's docstring for why, and why Commons ignores widths in between) and, by
+whole set is ~4.2 MB. `dex-covers.py` fetches ~960px Commons thumbnails (`--width 900`; see that script's docstring for why, and why Commons ignores widths in between) and, by
 default, only for species you have *not* photographed — the rest show your own
 photo, so a stand-in for them would be bytes nothing renders.
