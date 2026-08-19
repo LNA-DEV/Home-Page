@@ -11,6 +11,7 @@
     - section: filter by section (general, archive) — if omitted, excludes archive
     - portfolio: if true, only return portfolio images
     - project: filter by project slug
+    - species: filter by scientific name, e.g. "Vulpes vulpes" (case-insensitive)
     - excludeArchive: if true (default), exclude archive images
 */ -}}
 
@@ -63,6 +64,13 @@
     {{- end -}}
   {{- end -}}
 
+  {{- with index $filter "species" -}}
+    {{- /* Scientific names are long and easy to mis-case; match like dex-index. */ -}}
+    {{- if ne (lower ($meta.species | default "")) (lower .) -}}
+      {{- $include = false -}}
+    {{- end -}}
+  {{- end -}}
+
   {{- if $include -}}
     {{- /* Extract EXIF metadata */ -}}
     {{- $title := "" -}}
@@ -77,6 +85,7 @@
     {{- $copyright := "" -}}
     {{- $artist := "" -}}
     {{- $keywords := "" -}}
+    {{- $software := "" -}}
 
     {{- with $image.Meta -}}
       {{- $date = .Date -}}
@@ -146,13 +155,37 @@
         {{- $iso = printf "ISO %v" . -}}
       {{- end -}}
       {{- with .Exif.FocalLength -}}
-        {{- $focalLength = printf "%vmm" . -}}
+        {{- /* EXIF stores focal length as a rational, and it is not always
+               reduced — 61 photos here carry "419/50", which printed straight out
+               reads "419/50mm" instead of "8.4mm". Same handling as FNumber and
+               ExposureTime above. */ -}}
+        {{- $fl := printf "%v" . -}}
+        {{- if strings.Contains $fl "/" -}}
+          {{- $parts := split $fl "/" -}}
+          {{- $den := float (index $parts 1) -}}
+          {{- if gt $den 0.0 -}}
+            {{- $focalLength = printf "%.1fmm" (div (float (index $parts 0)) $den) -}}
+          {{- end -}}
+        {{- else -}}
+          {{- $focalLength = printf "%vmm" . -}}
+        {{- end -}}
       {{- end -}}
       {{- with .Exif.Model -}}
         {{- $cameraModel = . -}}
       {{- end -}}
       {{- with .Exif.LensModel -}}
         {{- $lensModel = . -}}
+      {{- end -}}
+      {{- with .Exif.Software -}}
+        {{- $raw := printf "%v" . | strings.TrimSpace -}}
+        {{- /* Cameras write their own FIRMWARE version into the Software tag —
+               157 of the 633 photos here say just "Ver.1.2", which is not editing
+               software and would be noise in the info panel. Editing software
+               always names itself, so a value that is nothing but a version
+               number is rejected. */ -}}
+        {{- if and $raw (not (findRE `(?i)^ver\.?\s*[0-9.]+$` $raw)) -}}
+          {{- $software = $raw -}}
+        {{- end -}}
       {{- end -}}
     {{- end -}}
 
@@ -227,6 +260,7 @@
       "FocalLength" $focalLength
       "CameraModel" $cameraModel
       "LensModel" $lensModel
+      "Software" $software
       "Copyright" $licenseText
       "Artist" $resolvedArtist
       "LicenseText" $licenseText
@@ -234,6 +268,9 @@
       "ResolvedArtist" $resolvedArtist
       "Keywords" $keywords
       "Category" ($meta.category | default "")
+      "Section" ($meta.section | default "general")
+      "Species" ($meta.species | default "")
+      "Portfolio" ($meta.portfolio | default false)
       "image" $image
       )
     -}}

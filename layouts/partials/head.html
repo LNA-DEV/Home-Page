@@ -134,6 +134,17 @@
 {{- range .AllTranslations -}}
 <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
 {{ end -}}
+{{- /* x-default tells search engines which version to serve a visitor whose
+       language matches none of en/de/sv. `defaultContentLanguageInSubdir` means
+       there is no unprefixed per-page URL to point at (only `/` itself
+       meta-refreshes), so the English page is the fallback — matching
+       `defaultContentLanguage: en` in hugo.yaml. */ -}}
+{{- $defaultLang := "en" -}}
+{{- range .AllTranslations -}}
+  {{- if eq .Lang $defaultLang -}}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+  {{- end -}}
+{{- end }}
 
 <noscript>
     <style>
@@ -238,6 +249,8 @@
 "companionUrl" site.Params.CompanionUrl
 "licensingUrl" $licensingUrl
 "licensingLinkText" (i18n "licensingDetails")
+"speciesLabel" (i18n "speciesLabel")
+"softwareLabel" (i18n "softwareLabel")
 }}
 {{ $js := resources.Get "js/main.js" | js.Build (dict "minify" true "params" $params) | resources.Fingerprint }}
 <script src="{{ $js.RelPermalink }}" defer></script>
@@ -274,4 +287,15 @@
 }}
 {{ $tripJs := resources.Get "js/travel.js" | js.Build (dict "minify" true "params" $tripParams) | resources.Fingerprint }}
 <script src="{{ $tripJs.RelPermalink }}" defer></script>
+{{- end }}
+
+{{/*  Photo dex — grid filtering on the overview, local-first range map on a species page  */}}
+{{- if eq .Params.Theme "dex-home" }}
+{{ $dexJs := resources.Get "js/dex.js" | js.Build (dict "minify" true) | resources.Fingerprint }}
+<script src="{{ $dexJs.RelPermalink }}" defer></script>
+{{- else if eq .Params.Theme "dex-species" }}
+{{- /* Both deferred, so Leaflet is guaranteed to have run before dex-map.js. */}}
+<script src="/packages/leaflet/leaflet.js" defer></script>
+{{ $dexMapJs := resources.Get "js/dex-map.js" | js.Build (dict "minify" true) | resources.Fingerprint }}
+<script src="{{ $dexMapJs.RelPermalink }}" defer></script>
 {{- end }}

@@ -1,6 +1,7 @@
 <section class="gallery">
   <div id="gallery">
     {{- $images := partial "collect-portfolio.html" . -}}
+    {{- $lang := site.Language.Lang -}}
     {{- range sort $images (.Params.sort_by | default "Name") (.Params.sort_order | default "asc") -}}
       {{- $image := .image -}}
       {{- $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
@@ -16,17 +17,28 @@
           {{- with .Title }}<span class="caption-title">{{ . }}</span>{{ end -}}
           {{- if or .Aperture .ShutterSpeed .ISO .FocalLength }}
           <span class="caption-exif">
-            {{- with .FocalLength }}<span class="exif-item">{{ . }}</span>{{ end -}}
-            {{- with .Aperture }}<span class="exif-item">{{ . }}</span>{{ end -}}
-            {{- with .ShutterSpeed }}<span class="exif-item">{{ . }}</span>{{ end -}}
-            {{- with .ISO }}<span class="exif-item">{{ . }}</span>{{ end -}}
+            {{- /* data-field, not document order: the info popup used to label these
+                   by index, so a photo carrying only an ISO had it labelled
+                   "Focal Length". Each item now says which field it is. */ -}}
+            {{- with .FocalLength }}<span class="exif-item" data-field="focal">{{ . }}</span>{{ end -}}
+            {{- with .Aperture }}<span class="exif-item" data-field="aperture">{{ . }}</span>{{ end -}}
+            {{- with .ShutterSpeed }}<span class="exif-item" data-field="shutter">{{ . }}</span>{{ end -}}
+            {{- with .ISO }}<span class="exif-item" data-field="iso">{{ . }}</span>{{ end -}}
           </span>
           {{- end -}}
           {{- if or .CameraModel .LensModel }}
           <span class="caption-gear">
-            {{- with .CameraModel }}<span class="gear-item">{{ . }}</span>{{ end -}}
-            {{- with .LensModel }}<span class="gear-item">{{ . }}</span>{{ end -}}
+            {{- with .CameraModel }}<span class="gear-item" data-field="camera">{{ . }}</span>{{ end -}}
+            {{- with .LensModel }}<span class="gear-item" data-field="lens">{{ . }}</span>{{ end -}}
           </span>
+          {{- end -}}
+          {{- /* Mirrors gallery.html — the info popup reads the same spans from both. */ -}}
+          {{- with .Software }}<span class="caption-software">{{ . }}</span>{{ end -}}
+          {{- $sci := .Species -}}
+          {{- with $sci -}}
+            {{- $dex := index (partialCached "dex-lookup.html" (dict "lang" $lang) $lang) (lower $sci) -}}
+            <span class="caption-species" data-scientific="{{ $sci }}"
+              {{- with $dex }} data-dex-url="{{ .url }}"{{ end }}>{{ with $dex }}{{ .name }}{{ else }}{{ $sci }}{{ end }}</span>
           {{- end -}}
           {{- with .Copyright }}<span class="caption-copyright">{{ . }}</span>{{ end -}}
           {{- with .Artist }}<span class="caption-artist">{{ . }}</span>{{ end -}}

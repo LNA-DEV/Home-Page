@@ -324,3 +324,180 @@ The cloud half uses GOG's undocumented Galaxy endpoints (`auth.gog.com`,
 `gameplay.gog.com`) with your own token — the same thing Heroic / gogdl do. Your own
 data, read-only. The OAuth client id/secret baked into the script is the well-known
 public Galaxy constant, not a secret.
+
+## Working on the photo dex
+
+The dex at `/gallery/dex/` is a Pokédex-style checklist of animal species: which
+ones the photo gallery already contains, and which are still open. See the
+"Photo dex" section of `CLAUDE.md` for the data model. All seven scripts are
+standard-library only and edit `data/dex.yaml` through the shared reader/writer
+in `scripts/dex_common.py`, so field order and quoting stay stable and the git
+diff only shows what actually changed.
+
+### The scripts, in the order they are normally used
+
+| Script | Owns | Rerunnable |
+|---|---|---|
+| `dex-import.py` | one-shot import of the `animal-dex` proof of concept | yes, only adds missing species |
+| `dex-add.py` | adding one species by hand | yes |
+| `dex-tag-photos.py` | the `species:` field in `data/gallery.yaml` | yes, never retags |
+| `dex-enrich.py` | the empty fields of `data/dex.yaml` | yes, never overwrites |
+| `dex-ranges.py` | `assets/data/dex/**` | yes, `--force` to refetch |
+| `dex-covers.py` | `assets/images/dex/reference/**` + `reference.*` | yes, `--force` to refetch |
+| `dex-renumber.py` | the `number` field — closes gaps after a removal | yes, idempotent |
+
+### Adding a species you just photographed
+
+1. **Add the photo** to the gallery the normal way (drop it in the photo store,
+   then `python3 scripts/sync-gallery.py` and fill in the stub entry).
+
+2. **Make sure the species exists** in `data/dex.yaml`:
+   ```
+   python3 scripts/dex-add.py "Sand Lizard" --scientific "Lacerta agilis" \
+       --family Lacertidae --difficulty moderate
+   ```
+   The dex number is assigned automatically. Skip this if the species is
+   already listed — the script tells you and does nothing.
+
+3. **Tag the photo.** Either add `species: <Scientific name>` under the entry's
+   `category:` line by hand (`species: Lacerta agilis` — the scientific name, not
+   the slug, and it must match `scientific:` in `data/dex.yaml`), or let the
+   tagger propose it:
+   ```
+   python3 scripts/dex-tag-photos.py --dry-run
+   python3 scripts/dex-tag-photos.py --write
+   ```
+   The tagger only ever fills in entries that have no `species:` yet, so it is
+   safe to rerun. Its `MANUAL`/`ALIASES` tables are keyed by slug because that is
+   what is readable to write by hand; it resolves the slug to the scientific name
+   as it writes. Photos it cannot identify are listed and left alone — an
+   untagged photo is a normal gallery photo, it just is not in the dex. A
+   `species:` value that matches no dex species logs a build warning and drops
+   those photos from the dex; the build still succeeds.
+
+4. **Fill in the facts** (only touches empty fields):
+   ```
+   python3 scripts/dex-enrich.py --only sand-lizard
+   ```
+   **Check `body_weight`, `height` and `lifespan` by hand afterwards — do not
+   trust them.** A full audit of all 186 species then in the dex (August 2026; 34 were
+   removed afterwards) found 82 of the 83 `body_weight` values this script had
+   produced were wrong, several by three
+   to six orders of magnitude (whale shark `12`, humpback `1.5–45` with no unit,
+   giant panda `104–117.5 g`, common buzzard `0.9–966.5 kg`, giraffe `54.5 kg`).
+   The cause is `quantity_range()` in `scripts/dex-enrich.py`: it takes
+   `min()`/`max()` across *every* Wikidata mass statement for the taxon while
+   ignoring the qualifiers that distinguish them, so a newborn's mass becomes the
+   low end and a record specimen the high end; it also silently discards any
+   value whose unit QID is missing from the 5-entry `UNIT_MAP` (pounds, tonnes),
+   leaving an incoherent partial set. `lifespan` has the same shape of problem —
+   it tends to land on the record-longevity figure rather than the typical adult
+   range. The audit also established the house conventions those fields follow:
+   en-dash ranges, `mm`/`cm`/`m` and `g`/`kg`/`t`, a bare year range for
+   `lifespan`, and a `height_measure` slug on every record that has a `height`.
+
+   Also note two rules the script cannot know: a **domesticated form has no IUCN
+   assessment**, so `iucn` must be absent on dog/cat/cattle/sheep/goat/chicken/
+   domestic duck/alpaca rather than carrying the wild ancestor's category, and a
+   **Europe-only regional assessment is not a global one** (the honeybee and
+   carder bee had regional categories that had to be removed).
+
+5. **Fetch its map and, if you have not photographed it, its stand-in photo:**
+   ```
+   python3 scripts/dex-ranges.py --only sand-lizard
+   python3 scripts/dex-covers.py --only sand-lizard
+   ```
+
+6. **Check the build**: `hugo` should succeed and the species should appear at
+   `/en/gallery/dex/sand-lizard/`.
+
+Do **not** run `./deploy.sh` — deployment is a separate step the user authorizes
+explicitly.
+
+### Removing a species
+
+Nothing automates this, and the order matters:
+
+1. **Check it is not photographed first.** A species counts as photographed when a
+   `data/gallery.yaml` entry carries its scientific name. Removing a dex entry that
+   photos still point at leaves those photos referencing nothing — the build warns
+   but does not fail, and they silently drop out of the dex:
+   ```
+   grep -c "^  species: <Scientific name>$" data/gallery.yaml
+   ```
+   If it is non-zero, retag or keep the species; do not remove it.
+
+2. **Delete the record** from `data/dex.yaml` (match on `slug`).
+
+3. **Delete the assets it owned**, or they become orphans nothing renders:
+   ```
+   rm -f assets/data/dex/ranges/<slug>.geojson
+   rm -f assets/images/dex/reference/<slug>.jpg
+   ```
+
+4. **Close the numbering gap** it left behind:
+   ```
+   python3 scripts/dex-renumber.py --dry-run
+   python3 scripts/dex-renumber.py --write
+   ```
+   `number` is both the badge and the grid's only sort key, so holes read as
+   missing entries. The renumber preserves the existing order and only closes the
+   holes. It does shift numbers, which is safe: `number` appears in the two badges
+   and that one sort, never in a URL, a deep link, or the likes API.
+
+5. **Update the counts** in `CLAUDE.md` (species total, range/reference file counts,
+   `marine: true` count) and rebuild.
+
+### What the scripts deliberately leave for a human
+
+- **Species identification.** `dex-tag-photos.py` matches alt text, tags and
+  filenames against the dex names, and carries a `MANUAL` table of photos that
+  were identified by eye. It will not guess: a gull that could be two species
+  stays untagged.
+- **`difficulty`** — how hard the animal is to photograph is a judgement call,
+  so `dex-add.py` defaults it to `moderate`.
+- **`tips.best_time` / `tips.approach`** — the field notes are yours to write;
+  nothing generates them.
+- **`sightings`** — where you actually saw it. Only 13 of the gallery photos
+  carry GPS EXIF, so these coordinates are hand-entered.
+- **Swedish and German prose.** `dex-enrich.py` takes *names* from Wikidata in
+  all three languages, but descriptions only in English and German, and never
+  translates anything itself.
+
+### If a species' range looks wrong on the map
+
+Work through it in this order — the first two are rendering, the third is the data.
+
+1. **Green floating in open ocean at the left/right edge, mirroring a landmass.**
+   That is the ±360° copies showing without a base map under them. Every vector
+   layer must be duplicated together; see the map notes in `CLAUDE.md`.
+2. **Green everywhere *except* on land.** The range is painting under the land
+   instead of over it — check the pane z-indexes in `assets/js/dex-map.js`.
+3. **Green spilling a few hundred km out from the coast, or across a whole sea.**
+   That is the source data, not the pipeline: iNaturalist's geomodel is a coarse
+   thresholded prediction and genuinely includes water for widespread species.
+   The ocean mask hides it for terrestrial species. If a *marine* species looks
+   wrong, check its `marine: true` flag — without it the mask erases its range.
+4. **A wrong animal's range entirely.** Check `inat_taxon_id`. `dex-enrich.py`
+   resolves it by name and falls back to iNaturalist's first search hit, which
+   can silently attach the wrong taxon. Fix the id by hand, then
+   `python3 scripts/dex-ranges.py --only <slug> --force`.
+5. **Scattered fragments where the animal is actually widespread.** The geomodel
+   itself is thin for that species — nothing downstream can recover it. Compare
+   against its peers with `python3 scripts/dex-ranges.py --audit`, which lists
+   the area every stored range covers. Red fox is the known case: 608 sq deg
+   against 7,748 for grey wolf and 25,189 for wild boar, and it renders as
+   coastal fringes. Small numbers are not automatically wrong — the Galapagos
+   giant tortoise is legitimately 3 sq deg.
+
+Note that the ocean mask makes simplification much less visible — coarsened
+outlines mostly get clipped away at the coast — so raising `--max-kb` buys less
+than it looks like it should.
+
+### Sizes to keep an eye on
+
+`dex-ranges.py` simplifies the iNaturalist polygons until each fits `--max-kb`
+(45 KB), coarsening a wide-ranging species rather than dropping its map. The
+whole set is ~4.2 MB. `dex-covers.py` fetches ~960px Commons thumbnails (`--width 900`; see that script's docstring for why, and why Commons ignores widths in between) and, by
+default, only for species you have *not* photographed — the rest show your own
+photo, so a stand-in for them would be bytes nothing renders.

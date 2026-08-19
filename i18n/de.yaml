@@ -129,6 +129,10 @@
   translation: "Das Bild konnte nicht geladen werden"
 - id: downloadTitle
   translation: "Download"
+- id: speciesLabel
+  translation: "Art"
+- id: softwareLabel
+  translation: "Bearbeitet mit"
 - id: licensingDetails
   translation: "Lizenzdetails"
 - id: photoCount
@@ -204,3 +208,150 @@
   translation: "Tage"
 - id: trip_stat_km
   translation: "km"
+
+# Photo dex
+- id: gallery_dex
+  translation: "Foto-Dex"
+- id: dex_species_photographed
+  translation: "Arten fotografiert"
+- id: dex_filter_label
+  translation: "Arten filtern"
+- id: dex_group_all
+  translation: "Alle"
+- id: dex_group_mammals
+  translation: "Säugetiere"
+- id: dex_group_birds
+  translation: "Vögel"
+- id: dex_group_reptiles
+  translation: "Reptilien"
+- id: dex_group_amphibians
+  translation: "Amphibien"
+- id: dex_group_fish
+  translation: "Fische"
+- id: dex_group_insects
+  translation: "Insekten"
+- id: dex_group_arachnids
+  translation: "Spinnentiere"
+- id: dex_group_molluscs
+  translation: "Weichtiere"
+- id: dex_group_crustaceans
+  translation: "Krebstiere"
+- id: dex_group_other
+  translation: "Sonstige"
+- id: dex_search_placeholder
+  translation: "Arten suchen…"
+- id: dex_only_photographed
+  translation: "Nur fotografierte"
+- id: dex_no_matches
+  translation: "Keine Art passt zu diesem Filter."
+- id: dex_photographed
+  translation: "Fotografiert"
+- id: dex_not_photographed
+  translation: "Noch nicht fotografiert"
+- id: dex_first_seen
+  translation: "zuerst fotografiert"
+- id: dex_facts
+  translation: "Steckbrief"
+- id: dex_about
+  translation: "Über die Art"
+- id: dex_group
+  translation: "Gruppe"
+- id: dex_family
+  translation: "Familie"
+- id: dex_height
+  translation: "Größe"
+- id: dex_measure_shoulder
+  translation: "Schulterhöhe"
+- id: dex_measure_standing
+  translation: "Standhöhe"
+- id: dex_measure_length
+  translation: "Länge"
+- id: dex_measure_wingspan
+  translation: "Spannweite"
+- id: dex_measure_shell
+  translation: "Schalenlänge"
+- id: dex_weight
+  translation: "Gewicht"
+- id: dex_diet
+  translation: "Ernährung"
+- id: dex_years
+  translation: "Jahre"
+- id: dex_lifespan
+  translation: "Lebenserwartung"
+- id: dex_habitat
+  translation: "Lebensraum"
+- id: dex_iucn
+  translation: "Status der Roten Liste (IUCN)"
+- id: dex_distribution
+  translation: "Verbreitung"
+- id: dex_field_notes
+  translation: "Notizen aus dem Feld"
+- id: dex_best_time
+  translation: "Beste Zeit"
+- id: dex_approach
+  translation: "Annäherung"
+- id: dex_my_photos
+  translation: "Meine Fotos"
+- id: dex_reference_photo
+  translation: "Referenzfoto"
+- id: dex_source_wikipedia
+  translation: "Beschreibung von {{ .source }} ({{ .license }}), gekürzt."
+- id: dex_map_range
+  translation: "Verbreitungsgebiet"
+- id: dex_map_sighting
+  translation: "Meine Sichtung"
+- id: dex_map_detailed
+  translation: "Detailkarte"
+- id: dex_map_detailed_note
+  translation: "Lädt Kartenkacheln und Beobachtungsdaten von OpenStreetMap und GBIF."
+- id: dex_map_credit
+  translation: "Verbreitung: iNaturalist (CC BY 4.0) · Grundkarte: Natural Earth (gemeinfrei)"
+- id: dex_map_unavailable
+  translation: "Für diese Art gibt es noch keine Verbreitungsdaten."
+- id: dex_difficulty_easy
+  translation: "Einfach"
+- id: dex_difficulty_moderate
+  translation: "Mittel"
+- id: dex_difficulty_challenging
+  translation: "Schwierig"
+- id: dex_diet_omnivore
+  translation: "Allesfresser"
+- id: dex_diet_carnivore
+  translation: "Fleischfresser"
+- id: dex_diet_herbivore
+  translation: "Pflanzenfresser"
+- id: dex_diet_piscivore
+  translation: "Fischfresser"
+- id: dex_diet_insectivore
+  translation: "Insektenfresser"
+- id: dex_diet_frugivore
+  translation: "Fruchtfresser"
+- id: dex_diet_granivore
+  translation: "Körnerfresser"
+- id: dex_diet_nectarivore
+  translation: "Nektarfresser"
+- id: dex_diet_detritivore
+  translation: "Detritusfresser"
+- id: dex_diet_filter-feeder
+  translation: "Filtrierer"
+- id: dex_iucn_lc
+  translation: "Nicht gefährdet"
+- id: dex_iucn_nt
+  translation: "Potenziell gefährdet"
+- id: dex_iucn_vu
+  translation: "Gefährdet"
+- id: dex_iucn_en
+  translation: "Stark gefährdet"
+- id: dex_iucn_cr
+  translation: "Vom Aussterben bedroht"
+- id: dex_iucn_ew
+  translation: "In der Natur ausgestorben"
+- id: dex_iucn_ex
+  translation: "Ausgestorben"
+- id: dex_iucn_dd
+  translation: "Ungenügende Datenlage"
+- id: dex_iucn_ne
+  translation: "Nicht beurteilt"
+- id: dex_photo_count
+  one: "1 Foto"
+  other: "{{ . }} Fotos"

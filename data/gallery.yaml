@@ -2,6 +2,7 @@ images:
 - id: 6885f633-8371-4989-8dbc-877910730c16
   src: Alpaca behind tree.JPG
   category: animals
+  species: Vicugna pacos
   section: general
   project: ""
   portfolio: false
@@ -24,6 +25,7 @@ images:
 - id: 0f23e431-9466-433a-aaf1-8437688254e8
   src: Alpaca Portrait.JPG
   category: animals
+  species: Vicugna pacos
   section: general
   project: ""
   portfolio: false
@@ -46,6 +48,7 @@ images:
 - id: 923170c0-e8e1-4e44-906f-75cc41090d89
   src: BabyLizard.JPG
   category: animals
+  species: Lacerta agilis
   section: general
   project: ""
   portfolio: false
@@ -67,6 +70,7 @@ images:
 - id: 2c81f443-d9fd-46e2-8321-29287562f3d8
   src: BavarianSheep.JPG
   category: animals
+  species: Ovis aries
   section: general
   project: ""
   portfolio: false
@@ -89,6 +93,7 @@ images:
 - id: 88baf925-d13d-4cf2-aeeb-bc821420ffb7
   src: Bee.JPG
   category: animals
+  species: Apis mellifera
   section: general
   project: ""
   portfolio: false
@@ -110,6 +115,7 @@ images:
 - id: c87e33bd-9bf5-4a69-8e12-a789b12e79a4
   src: Bee from the front.JPG
   category: animals
+  species: Apis mellifera
   section: general
   project: ""
   portfolio: false
@@ -130,6 +136,7 @@ images:
 - id: 8df368ae-5e61-456f-91d5-a37985f4f79f
   src: Bee on white flowers.JPG
   category: animals
+  species: Apis mellifera
   section: general
   project: ""
   portfolio: false
@@ -149,6 +156,7 @@ images:
 - id: fd1244df-e227-4ecd-ac40-13cfcc8daeee
   src: Blackbird an the fence.JPG
   category: animals
+  species: Turdus merula
   section: general
   project: ""
   portfolio: false
@@ -168,6 +176,7 @@ images:
 - id: 030b508d-21f3-4ff8-93a9-ecb5621059c5
   src: Bumblebee on the flowers.JPG
   category: animals
+  species: Bombus terrestris
   section: general
   project: ""
   portfolio: false
@@ -187,6 +196,7 @@ images:
 - id: ef435477-ea2b-4e86-8d18-7bfafc3e6e89
   src: Caterpillar.JPG
   category: animals
+  species: Sphinx ligustri
   section: general
   project: ""
   portfolio: false
@@ -206,6 +216,7 @@ images:
 - id: d4eb1c17-b510-43cf-99be-7d09985408ae
   src: Dolphins next to boat.JPG
   category: animals
+  species: Tursiops truncatus
   section: general
   project: ""
   portfolio: false
@@ -225,6 +236,7 @@ images:
 - id: f8f421b9-29de-4cb8-b5ba-3dcd83f95d09
   src: DuckInTheWater.JPG
   category: animals
+  species: Anas platyrhynchos domesticus
   section: general
   project: ""
   portfolio: false
@@ -244,6 +256,7 @@ images:
 - id: a5547495-aa8a-4897-bd58-9fe0fe06fa94
   src: DuckInTheWaterLookingToTheLeft.JPG
   category: animals
+  species: Anas platyrhynchos domesticus
   section: general
   project: ""
   portfolio: false
@@ -263,6 +276,7 @@ images:
 - id: b2e0925f-a092-411e-8e7f-7a3288a26438
   src: Duck swimming.JPG
   category: animals
+  species: Anas platyrhynchos
   section: general
   project: ""
   portfolio: false
@@ -282,6 +296,7 @@ images:
 - id: 0c0a6527-8db3-4241-9917-fc4d41fadecd
   src: Duckys.JPG
   category: animals
+  species: Aix galericulata
   section: general
   project: ""
   portfolio: false
@@ -320,6 +335,7 @@ images:
 - id: ea033c9d-b44e-4cee-8332-b5f3fd777326
   src: GreatSpottedWoodpecker.JPG
   category: animals
+  species: Dendrocopos major
   section: general
   project: ""
   portfolio: false
@@ -339,6 +355,7 @@ images:
 - id: 4231cd2b-b364-4c60-a87d-59f55200cdd1
   src: GreenDragonflyClosed.JPG
   category: animals
+  species: Calopteryx virgo
   section: general
   project: wildlife-of-inn-valley
   portfolio: false
@@ -358,6 +375,7 @@ images:
 - id: 8f423ae7-aa5d-430e-8c58-72b8f723c974
   src: GreenDragonflyOpen.JPG
   category: animals
+  species: Calopteryx virgo
   section: general
   project: wildlife-of-inn-valley
   portfolio: true
@@ -377,6 +395,7 @@ images:
 - id: 19f92aca-051a-4e3d-bc4c-9036b139bd4a
   src: Green Lizard.JPG
   category: animals
+  species: Lacerta agilis
   section: general
   project: ""
   portfolio: false
@@ -396,6 +415,7 @@ images:
 - id: e79544cd-7575-4368-92ce-bfc0d0ca9320
   src: Lizard Fight.JPG
   category: animals
+  species: Lacerta agilis
   section: general
   project: ""
   portfolio: false
@@ -415,6 +435,7 @@ images:
 - id: c28dddb8-0a4a-4a0d-a048-435d5db3f750
   src: LizardNextToHedghog.JPG
   category: animals
+  species: Lacerta agilis
   section: general
   project: ""
   portfolio: false
@@ -434,6 +455,7 @@ images:
 - id: f72be1e6-e364-443a-a5c4-ee28dd2a5b80
   src: LizardOnTheStone.JPG
   category: animals
+  species: Lacerta agilis
   section: general
   project: ""
   portfolio: false
@@ -453,6 +475,7 @@ images:
 - id: 1e319342-052d-4c55-a803-1bb1432ba2fa
   src: Mr Gray Seagull.JPG
   category: animals
+  species: Larus michahellis
   section: general
   project: ""
   portfolio: false
@@ -472,6 +495,7 @@ images:
 - id: 007fa8ec-8bae-4b15-84e4-595b0904433d
   src: P1002301.JPG
   category: animals
+  species: Aix galericulata
   section: general
   project: ""
   portfolio: false
@@ -491,6 +515,7 @@ images:
 - id: 338d9242-300b-4065-8f38-007f2328414f
   src: P1002394.JPG
   category: animals
+  species: Anas platyrhynchos
   section: general
   project: ""
   portfolio: false
@@ -510,6 +535,7 @@ images:
 - id: dcb923b6-1b5d-49ae-b4c5-c903eb2b7230
   src: P1002418.JPG
   category: animals
+  species: Anas platyrhynchos
   section: general
   project: ""
   portfolio: false
@@ -529,6 +555,7 @@ images:
 - id: ea114ffe-d238-4c5c-bd42-9e78205eea95
   src: P1002423.JPG
   category: animals
+  species: Anas platyrhynchos
   section: general
   project: ""
   portfolio: false
@@ -548,6 +575,7 @@ images:
 - id: e61c18d6-79ef-40e4-b90a-ab9d849572b8
   src: P1002438.JPG
   category: animals
+  species: Anas platyrhynchos
   section: general
   project: ""
   portfolio: false
@@ -567,6 +595,7 @@ images:
 - id: ce51d60c-0dac-4792-af91-1747f182b9bd
   src: P1002443.JPG
   category: animals
+  species: Anas platyrhynchos
   section: general
   project: ""
   portfolio: false
@@ -587,6 +616,7 @@ images:
 - id: e11d754e-667e-4ce1-807c-d0ea653a07d1
   src: P1002449.JPG
   category: animals
+  species: Anas platyrhynchos
   section: general
   project: ""
   portfolio: false
@@ -627,6 +657,7 @@ images:
 - id: a091d0e3-9120-4060-9f30-ac3bd0c279f8
   src: P1002468.JPG
   category: animals
+  species: Anas platyrhynchos
   section: general
   project: ""
   portfolio: false
@@ -645,6 +676,7 @@ images:
 - id: d8aaa46b-5072-440b-b526-64f143f992d2
   src: P1002474.JPG
   category: animals
+  species: Anas platyrhynchos
   section: general
   project: ""
   portfolio: false
@@ -664,6 +696,7 @@ images:
 - id: ab9e58c7-4c5a-433e-b5bd-d23c9b96acf1
   src: P1002496.JPG
   category: animals
+  species: Vicugna pacos
   section: general
   project: ""
   portfolio: false
@@ -682,6 +715,7 @@ images:
 - id: 4a4ec8be-f091-4297-882e-2b6b7cc6f153
   src: P1002497.JPG
   category: animals
+  species: Vicugna pacos
   section: general
   project: ""
   portfolio: false
@@ -704,6 +738,7 @@ images:
 - id: 19a1c38a-25a1-4fbb-9520-ba2344a24216
   src: P1002569.JPG
   category: animals
+  species: Cygnus olor
   section: general
   project: ""
   portfolio: false
@@ -722,6 +757,7 @@ images:
 - id: d9f3e4f6-5d6b-4736-95b3-73cf03a700ce
   src: P1002573.JPG
   category: animals
+  species: Anas platyrhynchos
   section: general
   project: ""
   portfolio: false
@@ -745,6 +781,7 @@ images:
 - id: a1fe7889-79d0-4d66-b51d-536c70e7f447
   src: P1002593.JPG
   category: animals
+  species: Anser anser
   section: general
   project: ""
   portfolio: false
@@ -763,6 +800,7 @@ images:
 - id: e5a6c9e4-21ec-45f9-91a9-8cf63588e13f
   src: P1002650.JPG
   category: animals
+  species: Bos taurus
   section: general
   project: ""
   portfolio: false
@@ -781,6 +819,7 @@ images:
 - id: 1eced070-db7f-4ae4-90cc-5f41d2854bbb
   src: P1002651.JPG
   category: animals
+  species: Bos taurus
   section: general
   project: ""
   portfolio: false
@@ -799,6 +838,7 @@ images:
 - id: 0952fe00-a3f6-485b-9624-3870af7ef5b7
   src: P1002501.JPG
   category: animals
+  species: Vicugna pacos
   section: general
   project: ""
   portfolio: false
@@ -819,6 +859,7 @@ images:
 - id: 4f1f7637-3371-44ef-a363-29c6b3d3d276
   src: P1002502.JPG
   category: animals
+  species: Vicugna pacos
   section: general
   project: ""
   portfolio: false
@@ -839,6 +880,7 @@ images:
 - id: b8cbf7fb-7d59-4d08-83b6-ca66d9c2436b
   src: P1002576.JPG
   category: animals
+  species: Anser anser
   section: general
   project: ""
   portfolio: false
@@ -862,6 +904,7 @@ images:
 - id: d054f232-0db1-4d36-b1e8-baedbedf112a
   src: P1013559.JPG
   category: animals
+  species: Branta canadensis
   section: general
   project: ""
   portfolio: false
@@ -880,6 +923,7 @@ images:
 - id: 0371a3aa-c4b2-4b95-bc59-c217d04d54f0
   src: P1013564.JPG
   category: animals
+  species: Branta canadensis
   section: general
   project: ""
   portfolio: false
@@ -898,6 +942,7 @@ images:
 - id: cc644cc3-3d72-4ff6-903e-e78ec638aefa
   src: P1013568.JPG
   category: animals
+  species: Branta canadensis
   section: general
   project: ""
   portfolio: false
@@ -916,6 +961,7 @@ images:
 - id: f2ebbeba-e298-406c-87d6-539f3bca857e
   src: P1013578.JPG
   category: animals
+  species: Branta canadensis
   section: general
   project: ""
   portfolio: true
@@ -934,6 +980,7 @@ images:
 - id: dc284bd4-4f15-4562-85c5-94803da57f65
   src: Snail.JPG
   category: animals
+  species: Cepaea nemoralis
   section: general
   project: ""
   portfolio: false
@@ -952,6 +999,7 @@ images:
 - id: 5a3c365c-32a7-4e79-8a1d-0e49030e3013
   src: Special Chick.JPG
   category: animals
+  species: Gallus gallus domesticus
   section: general
   project: ""
   portfolio: true
@@ -970,6 +1018,7 @@ images:
 - id: ab0a8976-3905-4b08-ba50-2428da89fe87
   src: SuperCat.JPG
   category: animals
+  species: Felis catus
   section: general
   project: ""
   portfolio: false
@@ -988,6 +1037,7 @@ images:
 - id: e3c2f745-debd-4952-b5fa-4d31e53fdb13
   src: TeenageSheep.JPG
   category: animals
+  species: Ovis aries
   section: general
   project: ""
   portfolio: false
@@ -1007,6 +1057,7 @@ images:
 - id: 948e2385-2d93-4090-8220-ffa54f535f35
   src: White Seagull looking to the side.JPG
   category: animals
+  species: Larus michahellis
   section: general
   project: ""
   portfolio: false
@@ -1025,6 +1076,7 @@ images:
 - id: 20b8de29-ce89-47a0-b28e-d678df68c8a3
   src: Wild Pig Baby.JPG
   category: animals
+  species: Sus scrofa
   section: general
   project: ""
   portfolio: false
@@ -1043,6 +1095,7 @@ images:
 - id: d0933d72-5512-4236-9eca-ec12d8608a2b
   src: Wild Pig Baby searching for food.JPG
   category: animals
+  species: Sus scrofa
   section: general
   project: ""
   portfolio: true
@@ -1061,6 +1114,7 @@ images:
 - id: 53b4137e-ed5f-4df2-a40e-053cfc17fdf2
   src: Wild Pig Baby walking.JPG
   category: animals
+  species: Sus scrofa
   section: general
   project: ""
   portfolio: false
@@ -1079,6 +1133,7 @@ images:
 - id: 776900df-5c93-4fa3-aad7-0589124ad95f
   src: Wild Pig from the side.JPG
   category: animals
+  species: Sus scrofa
   section: general
   project: ""
   portfolio: false
@@ -1097,6 +1152,7 @@ images:
 - id: 8cf40ed8-1b3c-41ef-837f-8bcd6c57b3dc
   src: WuffWuff.JPG
   category: animals
+  species: Canis familiaris
   section: general
   project: ""
   portfolio: false
@@ -1116,6 +1172,7 @@ images:
 - id: 712131db-740f-4d0c-89fb-6757e2abca0a
   src: DuckOnTheBeach.JPG
   category: animals
+  species: Anas platyrhynchos domesticus
   section: general
   project: ""
   portfolio: false
@@ -1154,6 +1211,7 @@ images:
 - id: e500ce91-9862-4333-a8d5-5e71a8aa416f
   src: P1013510.JPG
   category: animals
+  species: Ovis aries
   section: general
   project: ""
   portfolio: false
@@ -1172,6 +1230,7 @@ images:
 - id: 3f7b04f8-663f-4a63-99cd-81b9a46a5f8a
   src: P1013594.JPG
   category: animals
+  species: Bos taurus
   section: general
   project: ""
   portfolio: false
@@ -1190,6 +1249,7 @@ images:
 - id: a6195753-8927-4786-9aaa-e91db8769a31
   src: P1013599.JPG
   category: animals
+  species: Bos taurus
   section: general
   project: ""
   portfolio: false
@@ -1208,6 +1268,7 @@ images:
 - id: 0d329c6f-8cf9-4d90-b286-47838b943250
   src: P1013612.JPG
   category: animals
+  species: Bos taurus
   section: general
   project: ""
   portfolio: false
@@ -1226,6 +1287,7 @@ images:
 - id: 736a5583-49f5-4fa8-96b6-6f47d6cd09fd
   src: P1013597.JPG
   category: animals
+  species: Bos taurus
   section: general
   project: ""
   portfolio: false
@@ -1244,6 +1306,7 @@ images:
 - id: 0b0d0265-443c-488f-9e27-c76ac4a47152
   src: P1013617.JPG
   category: animals
+  species: Rupicapra rupicapra
   section: general
   project: wildlife-of-inn-valley
   portfolio: false
@@ -1279,6 +1342,7 @@ images:
 - id: 6cca1dd2-3399-4a80-96a0-b5ae412f0e19
   src: Perfectly aligned seagull.JPG
   category: animals
+  species: Larus michahellis
   section: general
   project: ""
   portfolio: false
@@ -1297,6 +1361,7 @@ images:
 - id: 865f10a3-f3b3-4071-9c7e-f1c5e532f46e
   src: Posing Seagull.JPG
   category: animals
+  species: Larus michahellis
   section: general
   project: ""
   portfolio: false
@@ -1315,6 +1380,7 @@ images:
 - id: 3ae44f34-8a01-441e-9ce2-9fa287707ece
   src: Seagull watching sunset.JPG
   category: animals
+  species: Larus michahellis
   section: general
   project: ""
   portfolio: false
@@ -1333,6 +1399,7 @@ images:
 - id: 175fa2de-4914-4a8a-96e9-9f28976d1357
   src: Seagull eating trash.JPG
   category: animals
+  species: Larus michahellis
   section: general
   project: ""
   portfolio: false
@@ -1351,6 +1418,7 @@ images:
 - id: d28c81a8-44af-44f7-b443-172376cd3ecc
   src: Seagull flying over the sea.JPG
   category: animals
+  species: Larus michahellis
   section: general
   project: ""
   portfolio: true
@@ -1369,6 +1437,7 @@ images:
 - id: 4502295f-2f17-4a85-92d8-37d3159b124c
   src: Seagull mirroring.JPG
   category: animals
+  species: Larus michahellis
   section: general
   project: ""
   portfolio: false
@@ -1387,6 +1456,7 @@ images:
 - id: b347c25c-5d61-4d95-aa23-91a30b8f3122
   src: SheepStaringAtTheCamera.JPG
   category: animals
+  species: Ovis aries
   section: general
   project: ""
   portfolio: false
@@ -1404,6 +1474,7 @@ images:
 - id: 5cdbe4ba-8580-429c-b790-437d3d1963cf
   src: WhiteDucky.JPG
   category: animals
+  species: Anas platyrhynchos domesticus
   section: general
   project: ""
   portfolio: false
@@ -1421,6 +1492,7 @@ images:
 - id: 7a166f12-162e-436c-aa17-65e58adf4b06
   src: P1001866.jpg
   category: animals
+  species: Capra hircus
   section: general
   project: ""
   portfolio: false
@@ -1440,6 +1512,7 @@ images:
 - id: f3e00148-fd0a-46d9-af55-26451587ac92
   src: P1001868.jpg
   category: animals
+  species: Capra hircus
   section: general
   project: ""
   portfolio: true
@@ -1459,6 +1532,7 @@ images:
 - id: 88c4acfb-a6b0-41b1-902b-3885ede3ed03
   src: P1001867.jpg
   category: animals
+  species: Capra hircus
   section: general
   project: ""
   portfolio: false
@@ -1479,6 +1553,7 @@ images:
 - id: e500d484-3115-467e-a8be-d66db30f2a98
   src: P1001775.jpg
   category: animals
+  species: Bos taurus
   section: general
   project: ""
   portfolio: false
@@ -1497,6 +1572,7 @@ images:
 - id: 09a12e61-a28d-4a5b-a6ff-ac9ab2dde7be
   src: DJI_0875.jpg
   category: animals
+  species: Bos taurus
   section: general
   project: ""
   portfolio: false
@@ -1515,6 +1591,7 @@ images:
 - id: d8b619e5-1cd4-4758-adfc-a9f195113940
   src: P1002023.jpg
   category: animals
+  species: Bos taurus
   section: general
   project: ""
   portfolio: false
@@ -1534,6 +1611,7 @@ images:
 - id: 0fbb5401-84e9-45e9-ac20-a9bc1d891192
   src: P1002032.jpg
   category: animals
+  species: Bos taurus
   section: general
   project: ""
   portfolio: false
@@ -1555,6 +1633,7 @@ images:
 - id: 94206d12-40aa-400f-b981-cd377629bba3
   src: P1002086.jpg
   category: animals
+  species: Microtus arvalis
   section: general
   project: ""
   portfolio: false
@@ -1608,6 +1687,7 @@ images:
 - id: 15a78721-a550-4d5d-98ad-a2297a381de4
   src: P1013282.jpg
   category: animals
+  species: Phalacrocorax carbo
   section: general
   project: ""
   portfolio: false
@@ -1629,6 +1709,7 @@ images:
 - id: e67b2f79-6cc7-4fdf-9416-2a2b7d4dfeba
   src: DSC_0362.jpg
   category: animals
+  species: Bombus terrestris
   section: general
   project: ""
   portfolio: false
@@ -1640,6 +1721,7 @@ images:
 - id: 043986e9-9c28-47d0-9795-dc166f9e5bb2
   src: DSC_0363.jpg
   category: animals
+  species: Bombus terrestris
   section: general
   project: ""
   portfolio: false
@@ -1651,6 +1733,7 @@ images:
 - id: b58439c8-8f51-417c-b1b8-ffbd44fbedce
   src: DSC_0517.jpg
   category: animals
+  species: Passer domesticus
   section: general
   project: ""
   portfolio: true
@@ -1662,6 +1745,7 @@ images:
 - id: 8a95d800-3d6c-4066-8454-f85699fb73c6
   src: DSC_0600.jpg
   category: animals
+  species: Lacerta agilis
   section: general
   project: ""
   portfolio: false
@@ -1673,6 +1757,7 @@ images:
 - id: dabee4cb-a7d7-480d-b753-6a53104a5e4b
   src: DSC_0668.jpg
   category: animals
+  species: Passer domesticus
   section: general
   project: ""
   portfolio: true
@@ -1684,6 +1769,7 @@ images:
 - id: 56b67eae-42fa-41e8-bceb-9ee2c8726444
   src: DSC_0673.jpg
   category: animals
+  species: Anguis fragilis
   section: general
   project: wildlife-of-inn-valley
   portfolio: false
@@ -1695,6 +1781,7 @@ images:
 - id: 9f6bb756-4e62-49a8-9d88-88a8c3a9bc51
   src: DSC_0679.jpg
   category: animals
+  species: Anguis fragilis
   section: general
   project: wildlife-of-inn-valley
   portfolio: true
@@ -1706,6 +1793,7 @@ images:
 - id: 291af310-b6e7-48a6-b942-3746aaed69a7
   src: DSC_0720.jpg
   category: animals
+  species: Laothoe populi
   section: general
   project: wildlife-of-inn-valley
   portfolio: false
@@ -1717,6 +1805,7 @@ images:
 - id: 8dbb83fa-d297-436f-9a52-b8e77969874c
   src: DSC_0728.jpg
   category: animals
+  species: Laothoe populi
   section: general
   project: wildlife-of-inn-valley
   portfolio: false
@@ -1728,6 +1817,7 @@ images:
 - id: 6f00d9ed-cc0c-4ef9-920e-e79888f84955
   src: DSC_0729.jpg
   category: animals
+  species: Laothoe populi
   section: general
   project: wildlife-of-inn-valley
   portfolio: false
@@ -1739,6 +1829,7 @@ images:
 - id: 3a80c8b6-b91e-43b6-9cb5-78018d9b26aa
   src: DSC_1004.jpg
   category: animals
+  species: Parus major
   section: general
   project: wildlife-of-inn-valley
   portfolio: false
@@ -1750,6 +1841,7 @@ images:
 - id: 91a35a6a-faca-4da0-83a5-c500e7573ec2
   src: DSC_1087.jpg
   category: animals
+  species: Parus major
   section: general
   project: wildlife-of-inn-valley
   portfolio: false
@@ -1761,6 +1853,7 @@ images:
 - id: 3fbdb966-0176-4101-a4da-ba5d2ad33e95
   src: DSC_1211.jpg
   category: animals
+  species: Parus major
   section: general
   project: wildlife-of-inn-valley
   portfolio: true
@@ -1772,6 +1865,7 @@ images:
 - id: b66886e2-32fb-439f-b683-354ef01c3a0f
   src: DSC_1277.jpg
   category: animals
+  species: Parus major
   section: general
   project: wildlife-of-inn-valley
   portfolio: false
@@ -1783,6 +1877,7 @@ images:
 - id: 5165e8e6-acae-45bb-9e31-a9ad08da3bc8
   src: DSC_2007.jpg
   category: animals
+  species: Bombus terrestris
   section: general
   project: ""
   portfolio: false
@@ -1794,6 +1889,7 @@ images:
 - id: 00eadda6-ce15-4640-ba34-321f1e6e2ba0
   src: DSC_2055.jpg
   category: animals
+  species: Bos taurus
   section: general
   project: ""
   portfolio: false
@@ -1805,6 +1901,7 @@ images:
 - id: 08f83fea-9b27-489a-bee4-86c1e536124d
   src: DSC_2055_01.jpg
   category: animals
+  species: Bos taurus
   section: general
   project: ""
   portfolio: false
@@ -1816,6 +1913,7 @@ images:
 - id: 3d7806f3-6a7e-44ed-8644-93700614e926
   src: DSC_2055_02.jpg
   category: animals
+  species: Bos taurus
   section: general
   project: ""
   portfolio: false
@@ -1827,6 +1925,7 @@ images:
 - id: bfe4fb13-e973-45d1-af0e-9cd67186de8e
   src: DSC_2057.jpg
   category: animals
+  species: Bos taurus
   section: general
   project: ""
   portfolio: false
@@ -1838,6 +1937,7 @@ images:
 - id: 862302bf-2fac-4714-ad6a-30341bb95aed
   src: DSC_2189.jpg
   category: animals
+  species: Bombus pascuorum
   section: general
   project: ""
   portfolio: false
@@ -1849,6 +1949,7 @@ images:
 - id: 5aef18e1-a69c-4adc-89e8-0be483e4b7f0
   src: DSC_2196.jpg
   category: animals
+  species: Bombus pascuorum
   section: general
   project: ""
   portfolio: false
@@ -1860,6 +1961,7 @@ images:
 - id: 5062b4a3-0252-49e7-aec5-d0ae3b87be84
   src: DSC_2200.jpg
   category: animals
+  species: Bombus pascuorum
   section: general
   project: ""
   portfolio: false
@@ -1871,6 +1973,7 @@ images:
 - id: 888042ea-41bd-4bf9-9e0a-9f431485fb6d
   src: DSC_2253.jpg
   category: animals
+  species: Mergus merganser
   section: general
   project: ""
   portfolio: false
@@ -1882,6 +1985,7 @@ images:
 - id: 1bbf71f8-934e-417e-bd11-54d28be46fc9
   src: DSC_2484.jpg
   category: animals
+  species: Bison bonasus
   section: general
   project: ""
   portfolio: false
@@ -1893,6 +1997,7 @@ images:
 - id: 6900da18-5a14-4e93-80c9-874955a6e531
   src: DSC_2487.jpg
   category: animals
+  species: Bison bonasus
   section: general
   project: ""
   portfolio: false
@@ -1904,6 +2009,7 @@ images:
 - id: a123a846-cd53-44c5-ab37-80b5e4056082
   src: DSC_2532.jpg
   category: animals
+  species: Bison bonasus
   section: general
   project: ""
   portfolio: false
@@ -1915,6 +2021,7 @@ images:
 - id: 1574a520-adf7-4376-8bd9-9829517997de
   src: DSC_2537.jpg
   category: animals
+  species: Bison bonasus
   section: general
   project: ""
   portfolio: false
@@ -1926,6 +2033,7 @@ images:
 - id: 67627b7b-04f7-457f-8582-5bc3dd104d47
   src: DSC_2538.jpg
   category: animals
+  species: Bison bonasus
   section: general
   project: ""
   portfolio: false
@@ -1937,6 +2045,7 @@ images:
 - id: 44354a3b-8367-4072-8371-e4495924a067
   src: DSC_2542.jpg
   category: animals
+  species: Bison bonasus
   section: general
   project: ""
   portfolio: false
@@ -1948,6 +2057,7 @@ images:
 - id: bcb57ce9-ae1f-4c4c-b6a4-a49417c041a7
   src: P1015709.jpg
   category: animals
+  species: Bombus terrestris
   section: general
   project: ""
   portfolio: false
@@ -1959,6 +2069,7 @@ images:
 - id: 0a29a20f-93cc-475e-b230-ad7cefe0e525
   src: P1015994.jpg
   category: animals
+  species: Anser anser
   section: general
   project: ""
   portfolio: false
@@ -1970,6 +2081,7 @@ images:
 - id: 27e6bdac-9dc5-4119-8cd5-702c26ebd5c5
   src: P1016134.jpg
   category: animals
+  species: Branta leucopsis
   section: general
   project: ""
   portfolio: false
@@ -1981,6 +2093,7 @@ images:
 - id: 328b2e83-9765-48da-93aa-c6c512b154e7
   src: P1016186.jpg
   category: animals
+  species: Branta leucopsis
   section: general
   project: ""
   portfolio: false
@@ -1992,6 +2105,7 @@ images:
 - id: 4faad3e9-f1fd-46a5-a5ce-3d7a8684a7d1
   src: P1016499.jpg
   category: animals
+  species: Dama dama
   section: general
   project: ""
   portfolio: false
@@ -2003,6 +2117,7 @@ images:
 - id: 38cd2974-1377-4912-81cb-0846d6261050
   src: P1016680.jpg
   category: animals
+  species: Bos taurus
   section: general
   project: ""
   portfolio: false
@@ -2014,6 +2129,7 @@ images:
 - id: 565140d6-65b8-4f64-a36a-fea531423df1
   src: P1016691.jpg
   category: animals
+  species: Bos taurus
   section: general
   project: ""
   portfolio: false
@@ -2025,6 +2141,7 @@ images:
 - id: f0b06fb4-0725-4ec7-91fc-66136fb904fe
   src: P1016700.jpg
   category: animals
+  species: Bos taurus
   section: general
   project: ""
   portfolio: false
@@ -2036,6 +2153,7 @@ images:
 - id: c841a810-5f8a-48c7-93a0-b51c1b532041
   src: P1016721.jpg
   category: animals
+  species: Bos taurus
   section: general
   project: ""
   portfolio: false
@@ -2047,6 +2165,7 @@ images:
 - id: bd8943eb-7dce-4094-86a0-8752358b4f70
   src: P1016730.jpg
   category: animals
+  species: Bos taurus
   section: general
   project: ""
   portfolio: false
@@ -2058,6 +2177,7 @@ images:
 - id: 45ecdeb2-8687-4776-910c-5b1955f629de
   src: P1017063.jpg
   category: animals
+  species: Lacerta agilis
   section: general
   project: ""
   portfolio: false
@@ -2069,6 +2189,7 @@ images:
 - id: 05bed370-3fff-4a7d-b4d4-8f7e3a4b75f8
   src: P1017069.jpg
   category: animals
+  species: Lacerta agilis
   section: general
   project: ""
   portfolio: false
@@ -2080,6 +2201,7 @@ images:
 - id: c57613c1-5155-4df8-b65a-d4184e98dac1
   src: P1017174.jpg
   category: animals
+  species: Ovis aries
   section: general
   project: ""
   portfolio: false
@@ -2091,6 +2213,7 @@ images:
 - id: 23ddd116-eb36-40d6-9cf2-21b72271bcff
   src: P1017179.jpg
   category: animals
+  species: Ovis aries
   section: general
   project: ""
   portfolio: false
@@ -2102,6 +2225,7 @@ images:
 - id: 8c644713-e165-44fd-965d-ac4b61a46ea7
   src: P1017181.jpg
   category: animals
+  species: Ovis aries
   section: general
   project: ""
   portfolio: false
@@ -2113,6 +2237,7 @@ images:
 - id: 9b00517b-71b3-440d-90eb-b763a8c85165
   src: P1017193.jpg
   category: animals
+  species: Ovis aries
   section: general
   project: ""
   portfolio: false
@@ -2124,6 +2249,7 @@ images:
 - id: 11cbceb6-720b-414b-a2ef-a0f808963dce
   src: P1017205.jpg
   category: animals
+  species: Ovis aries
   section: general
   project: ""
   portfolio: false
@@ -2135,6 +2261,7 @@ images:
 - id: dec15806-a5f5-42b4-9e0a-78c92132edea
   src: P1017231.jpg
   category: animals
+  species: Ovis aries
   section: general
   project: ""
   portfolio: false
@@ -2146,6 +2273,7 @@ images:
 - id: b60fa4c5-8e15-4665-9afd-9ce01b69daf8
   src: P1017375.jpg
   category: animals
+  species: Lacerta agilis
   section: general
   project: ""
   portfolio: false
@@ -2157,6 +2285,7 @@ images:
 - id: e99d4814-0dca-4ff2-94cb-510d37246b06
   src: P1017380.jpg
   category: animals
+  species: Lacerta agilis
   section: general
   project: ""
   portfolio: false
@@ -2168,6 +2297,7 @@ images:
 - id: e05f0847-e238-448d-ae1a-1c1778851dde
   src: P1017390.jpg
   category: animals
+  species: Lacerta agilis
   section: general
   project: ""
   portfolio: false
@@ -2179,6 +2309,7 @@ images:
 - id: 7f946955-e568-4581-9548-5c40615cf7de
   src: P1017433.jpg
   category: animals
+  species: Lacerta agilis
   section: general
   project: ""
   portfolio: false
@@ -2190,6 +2321,7 @@ images:
 - id: 2af6da10-6b04-4978-a2ef-e1055f547b78
   src: P1017437.jpg
   category: animals
+  species: Lacerta agilis
   section: general
   project: ""
   portfolio: false
@@ -2201,6 +2333,7 @@ images:
 - id: 5877c044-9f3f-4665-be3f-4c33e4cfae7e
   src: P1017463.jpg
   category: animals
+  species: Lacerta agilis
   section: general
   project: ""
   portfolio: false
@@ -2212,6 +2345,7 @@ images:
 - id: 0b371f97-07d5-4816-a90c-b8bbf2169400
   src: P1017475.jpg
   category: animals
+  species: Lacerta agilis
   section: general
   project: ""
   portfolio: false
@@ -2223,6 +2357,7 @@ images:
 - id: cd93bc1f-f33c-4221-9380-8d8e081b419e
   src: P1017487.jpg
   category: animals
+  species: Lacerta agilis
   section: general
   project: ""
   portfolio: false
@@ -2234,6 +2369,7 @@ images:
 - id: 6b2f25b5-e841-4bf7-bc60-dd3f65abc012
   src: P1017497.jpg
   category: animals
+  species: Lacerta agilis
   section: general
   project: ""
   portfolio: false
@@ -2245,6 +2381,7 @@ images:
 - id: b769e8c9-f535-4428-8900-47fa39204114
   src: P1017499.jpg
   category: animals
+  species: Lacerta agilis
   section: general
   project: ""
   portfolio: false
@@ -8657,6 +8794,7 @@ images:
 - id: 11d9a284-5bf6-4bb8-8580-45debdeb2a34
   src: Black Stork.JPG
   category: animals
+  species: Ciconia nigra
   section: archive
   project: ""
   portfolio: false
@@ -8668,6 +8806,7 @@ images:
 - id: 0a4bacbb-54f8-450b-9ecc-485d215308ea
   src: archive--Cat.JPG
   category: animals
+  species: Felis catus
   section: archive
   project: ""
   portfolio: false
@@ -8680,6 +8819,7 @@ images:
 - id: c2b4c6af-83ed-4431-8a61-082bc2e5a769
   src: archive--CatLookingToTheSide.JPG
   category: animals
+  species: Felis catus
   section: archive
   project: ""
   portfolio: false
@@ -8692,6 +8832,7 @@ images:
 - id: 1a13e726-88ce-44c5-ab11-2a87cc031949
   src: ClimbingSnail.JPG
   category: animals
+  species: Helix pomatia
   section: archive
   project: ""
   portfolio: false
@@ -8703,6 +8844,7 @@ images:
 - id: f2b33ec6-db54-4e4e-b645-8890feeefa5e
   src: Crow in the City.JPG
   category: animals
+  species: Corvus corone
   section: archive
   project: ""
   portfolio: false
@@ -8714,6 +8856,7 @@ images:
 - id: bccf0d39-0741-40b6-99fc-8b9abc563129
   src: FireSalamander.JPG
   category: animals
+  species: Salamandra salamandra
   section: archive
   project: ""
   portfolio: false
@@ -8725,6 +8868,7 @@ images:
 - id: 5b936739-4b9c-43be-9109-c3cdf1b6904e
   src: FunnySheep.jpg
   category: animals
+  species: Ovis aries
   section: archive
   project: ""
   portfolio: false
@@ -8758,6 +8902,7 @@ images:
 - id: 7c85fa46-efa6-4ece-ac16-f2b3da314319
   src: Lizard from behind.JPG
   category: animals
+  species: Lacerta agilis
   section: archive
   project: ""
   portfolio: false
@@ -8769,6 +8914,7 @@ images:
 - id: 77f7aab5-f1ff-4aa5-a7a8-6ab2a7e2d0a2
   src: Orange Moth.JPG
   category: animals
+  species: Argynnis paphia
   section: archive
   project: ""
   portfolio: false
@@ -8780,6 +8926,7 @@ images:
 - id: 8fbcac41-3c44-4e31-bd86-8b6362b795de
   src: P1002440.JPG
   category: animals
+  species: Anas platyrhynchos
   section: archive
   project: ""
   portfolio: false
@@ -8791,6 +8938,7 @@ images:
 - id: 5adc9349-c846-4cd9-a223-af08d1bed636
   src: P1002574.JPG
   category: animals
+  species: Anas platyrhynchos
   section: archive
   project: ""
   portfolio: false
@@ -8802,6 +8950,7 @@ images:
 - id: c15b089a-f900-48cc-9661-3cccd64f6f7d
   src: P1013563.JPG
   category: animals
+  species: Branta canadensis
   section: archive
   project: ""
   portfolio: false
@@ -8824,6 +8973,7 @@ images:
 - id: 9c4fac24-f43c-451b-8314-cd632d286e86
   src: SlimySnails.JPG
   category: animals
+  species: Helix pomatia
   section: archive
   project: ""
   portfolio: false
@@ -8835,6 +8985,7 @@ images:
 - id: b7f900d3-4ce7-4570-b22e-77aad7e627a2
   src: SnailOnTheTree.JPG
   category: animals
+  species: Helix pomatia
   section: archive
   project: ""
   portfolio: false
@@ -8846,6 +8997,7 @@ images:
 - id: 5c4a2aa2-5b69-4724-b7b9-088b8af1e434
   src: Wild deer.JPG
   category: animals
+  species: Capreolus capreolus
   section: archive
   project: ""
   portfolio: false
@@ -9438,28 +9590,34 @@ images:
 - id: 9df3dcfe-590b-4011-ade7-c716d1f52784
   src: First Taste of Spring — Lamb Grazing in the Fresh Green Grass.jpg
   category: animals
+  species: Ovis aries
   section: general
 - id: a41bc684-4816-4554-9316-067e3d77389f
   src: It's Always Cozy in the Sun - Spring Lamb Curled Up in a Sunlit Meadow.jpg
   category: animals
+  species: Ovis aries
   section: general
 - id: 5af26f9a-1c14-42f4-af66-0cb0bd463004
   src: Smiling Lamb - Spring Lamb Basking in the Afternoon Sun.jpg
   category: animals
+  species: Ovis aries
   section: general
 - id: 94c8d104-189a-4fad-8e12-995258ea0122
   src: The Warmth Ahead - Spring Lamb in a Sunlit Meadow.jpg
   category: animals
+  species: Ovis aries
   section: general
 - id: 7b147fb0-f667-4fec-9abf-a612fba46a69
   src: Sunrise Patrol - White-tailed Eagle Gliding Over a Bavarian Bog.jpg
   category: animals
+  species: Haliaeetus albicilla
   section: general
   project: wildlife-of-inn-valley
   portfolio: true
 - id: cdb2743d-d9b7-402d-b7e9-c2d1e0a072ee
   src: Curious Juvenile - Young Red Fox Meeting the Cameras Gaze.jpg
   category: animals
+  species: Vulpes vulpes
   section: general
   project: wildlife-of-inn-valley
   portfolio: true

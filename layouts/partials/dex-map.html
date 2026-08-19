@@ -1,0 +1,66 @@
+{{- /*
+  dex-map.html
+  Distribution map container for a species page.
+
+  Everything the first paint needs is served from this site: a Natural Earth
+  world outline (public domain) as the base layer, plus the species' own
+  simplified iNaturalist range polygon if scripts/dex-ranges.py fetched one.
+  No third-party request happens unless the visitor presses "detailed map",
+  which is what makes the page usable over the Tor onion build.
+
+  The actual Leaflet wiring lives in assets/js/dex-map.js; everything it needs
+  arrives through data-* attributes so no template values end up inside a
+  <script> block.
+
+  Expects: (dict "page" <page> "entry" <dex-index entry>)
+*/ -}}
+{{- $entry := .entry -}}
+{{- $species := $entry.species -}}
+{{- $slug := $entry.slug -}}
+
+{{- $world := resources.Get "data/dex/world-land.geojson" -}}
+{{- $borders := resources.Get "data/dex/world-borders.geojson" -}}
+{{- $ocean := resources.Get "data/dex/world-ocean.geojson" -}}
+{{- $range := resources.Get (printf "data/dex/ranges/%s.geojson" $slug) -}}
+
+{{- $sightings := slice -}}
+{{- range $species.sightings -}}
+  {{- if and .lat .lng -}}
+    {{- $sightings = $sightings | append (dict "lat" .lat "lng" .lng "label" (.label | default "") "date" (.date | default "")) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if or $world $range -}}
+<div class="dex-map"
+     data-dex-map
+     data-world="{{ with $world }}{{ .RelPermalink }}{{ end }}"
+     data-borders="{{ with $borders }}{{ .RelPermalink }}{{ end }}"
+     data-ocean="{{ with $ocean }}{{ .RelPermalink }}{{ end }}"
+     data-marine="{{ if $species.marine }}1{{ end }}"
+     data-range="{{ with $range }}{{ .RelPermalink }}{{ end }}"
+     data-sightings="{{ $sightings | jsonify }}"
+     data-gbif-key="{{ $species.gbif_taxon_key | default "" }}"
+     data-label-range="{{ i18n "dex_map_range" }}"
+     data-label-sighting="{{ i18n "dex_map_sighting" }}">
+  <div class="dex-map__canvas" data-dex-map-canvas></div>
+</div>
+
+<div class="dex-map__legend">
+  {{- if $range }}<span class="dex-map__key dex-map__key--range">{{ i18n "dex_map_range" }}</span>{{ end }}
+  {{- if $sightings }}<span class="dex-map__key dex-map__key--sighting">{{ i18n "dex_map_sighting" }}</span>{{ end }}
+</div>
+
+{{- with $species.gbif_taxon_key }}
+<p class="dex-map__detail">
+  <button type="button" class="dex-map__detail-btn" data-dex-map-detail>{{ i18n "dex_map_detailed" }}</button>
+  <span class="dex-map__detail-note">{{ i18n "dex_map_detailed_note" }}</span>
+</p>
+{{- end }}
+
+<p class="dex-map__attribution">
+  {{ i18n "dex_map_credit" }}
+</p>
+
+{{- else -}}
+<p class="dex-map__missing">{{ i18n "dex_map_unavailable" }}</p>
+{{- end -}}

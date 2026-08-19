@@ -1,0 +1,8 @@
+{{- /*
+  Content adapter for the de dex species pages.
+
+  Hugo scopes a content adapter to the language of its filename, so there is one
+  file per language and the shared body lives in layouts/partials/dex-pages.html
+  — it receives this adapter context and calls .AddPage on it.
+*/ -}}
+{{- partial "dex-pages.html" . -}}

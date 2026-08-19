@@ -1,0 +1,45 @@
+{{- /*
+  dex-lookup.html
+  Scientific name -> the dex species page, for linking a gallery photo to the dex.
+
+  Returns a dict keyed by LOWERCASED scientific name:
+
+    { "vulpes vulpes": { "slug": "red-fox", "name": "Rotfuchs", "url": "/de/gallery/dex/red-fox/" } }
+
+  `name` is the common name in the requested language (English fallback), so the
+  lightbox can label the link the way the rest of the page is labelled.
+
+  Deliberately NOT dex-index.html: that partial joins every species against every
+  gallery photo to work out what is photographed, which a caption link does not
+  need. This reads data/dex.yaml directly and stays cheap enough to call from
+  gallery.html, which renders on many pages that have nothing to do with the dex.
+
+  Call via partialCached with the language as the variant:
+    {{ partialCached "dex-lookup.html" (dict "lang" $lang) $lang }}
+*/ -}}
+
+{{- $lang := .lang | default site.Language.Lang -}}
+{{- $out := newScratch -}}
+
+{{- range $species := hugo.Data.dex.species -}}
+  {{- $sci := $species.scientific -}}
+  {{- $slug := $species.slug -}}
+  {{- if and $sci $slug -}}
+    {{- $name := partial "dex-text.html" (dict "field" $species.names "lang" $lang) -}}
+    {{- $name = $name | default $sci -}}
+
+    {{- /* Species pages come from a content adapter, so resolve the real page
+           rather than assembling a URL by hand — that keeps the link correct if
+           the dex ever moves. A species with no page yields no entry, and the
+           caption then renders the name as plain text instead of a dead link. */ -}}
+    {{- with site.GetPage (printf "/gallery/dex/%s" $slug) -}}
+      {{- $out.SetInMap "m" (lower $sci) (dict
+            "slug" $slug
+            "name" $name
+            "url"  .RelPermalink
+          ) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return ($out.Get "m" | default dict) -}}

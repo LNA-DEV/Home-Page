@@ -51,8 +51,29 @@
     {{- if not $generalImg }}{{ $generalImg = index $allImages 0 }}{{ end -}}
     {{- $generalThumb := $generalImg.Filter (slice images.AutoOrient (images.Process "fill 600x400")) -}}
 
+    {{- /* Dex card — use dex_cover UUID or the first animal photo carrying a species */ -}}
+    {{- $dexImg := "" -}}
+    {{- with $.Params.dex_cover -}}
+      {{- with index $metaAll.byId . -}}
+        {{- $dexImg = $allImages.GetMatch (printf "images/gallery/%s" .src) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if not $dexImg -}}
+      {{- range $allImages -}}
+        {{- $meta := index $lookup (path.Base .Name) -}}
+        {{- if and (not $dexImg) $meta $meta.species (ne ($meta.section | default "") "archive") -}}
+          {{- $dexImg = . -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if not $dexImg }}{{ $dexImg = index $allImages 0 }}{{ end -}}
+    {{- $dexThumb := $dexImg.Filter (slice images.AutoOrient (images.Process "fill 600x400")) -}}
+
     <a href="{{ .RelPermalink }}projects/" class="gallery-nav-card" style="background-image: url('{{ $projectThumb.RelPermalink }}')">
       <span>{{ i18n "gallery_projects" }}</span>
+    </a>
+    <a href="{{ .RelPermalink }}dex/" class="gallery-nav-card" style="background-image: url('{{ $dexThumb.RelPermalink }}')">
+      <span>{{ i18n "gallery_dex" }}</span>
     </a>
     <a href="{{ .RelPermalink }}general/" class="gallery-nav-card" style="background-image: url('{{ $generalThumb.RelPermalink }}')">
       <span>{{ i18n "gallery_general" }}</span>
@@ -63,6 +84,18 @@
   <a href="{{ .RelPermalink }}archive/">{{ i18n "gallery_archive" }}</a>
 </div>
 </div>{{/* end gallery-home-center */}}
+
+{{- else if eq .Params.Theme "dex-home" }}
+
+<header class="page-header gallery-page-header">
+  {{- partial "gallery-breadcrumb.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}
+  <div class="post-description">{{ . }}</div>
+  {{- end }}
+</header>
+
+{{- partial "dex-overview.html" . }}
 
 {{- else if eq .Params.Theme "gallery-general-home" }}
 
