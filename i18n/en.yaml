@@ -130,6 +130,10 @@
   translation: "The photo cannot be loaded"
 - id: downloadTitle
   translation: "Download"
+- id: speciesLabel
+  translation: "Species"
+- id: softwareLabel
+  translation: "Edited with"
 - id: licensingDetails
   translation: "Licensing details"
 - id: photoCount

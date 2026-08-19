@@ -129,6 +129,10 @@
   translation: "Das Bild konnte nicht geladen werden"
 - id: downloadTitle
   translation: "Download"
+- id: speciesLabel
+  translation: "Art"
+- id: softwareLabel
+  translation: "Bearbeitet mit"
 - id: licensingDetails
   translation: "Lizenzdetails"
 - id: photoCount

@@ -120,6 +120,10 @@
   translation: "Alla Foton"
 - id: gallery_archive
   translation: "Arkiv"
+- id: speciesLabel
+  translation: "Art"
+- id: softwareLabel
+  translation: "Redigerad med"
 - id: licensingDetails
   translation: "Licensinformation"
 - id: gallery_filter_all

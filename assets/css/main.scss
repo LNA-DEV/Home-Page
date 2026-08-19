@@ -205,6 +205,38 @@
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 }
 
+.pswp-info-species {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Reads as a link, matching .pswp-info-license-link, but stays legible against
+   the dark popup rather than inheriting the page's link colour. */
+.pswp-info-species-link {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+/* The scientific name is secondary to the common name it follows. */
+.pswp-info-species-sci {
+  font-weight: 400;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.pswp-info-software {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+
 .pswp-info-tags {
   display: flex;
   flex-wrap: wrap;

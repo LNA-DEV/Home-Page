@@ -5,6 +5,17 @@ import * as params from "@params";
 const gallery = document.getElementById("gallery");
 const companionUrl = params.companionUrl || "";
 
+/* The info popup is assembled as an HTML string, so anything interpolated into it
+   has to be escaped. These values come from our own data files rather than user
+   input, but a species name or software string containing an & or a quote would
+   otherwise break the markup — and the species field is now interpolated into an
+   href as well. */
+const escapeHtml = (value) =>
+  String(value).replace(
+    /[&<>"']/g,
+    (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c],
+  );
+
 // Cache for like data to avoid duplicate API calls
 const likeDataCache = new Map();
 // Cache for native like status
@@ -240,6 +251,13 @@ if (gallery) {
           const copyright = captionEl.querySelector(".caption-copyright")?.textContent || "";
           const artist = captionEl.querySelector(".caption-artist")?.textContent || "";
           const keywords = captionEl.querySelector(".caption-keywords")?.textContent || "";
+          const software = captionEl.querySelector(".caption-software")?.textContent || "";
+          // The species link needs the href too, so keep the element: the dex URL
+          // and the scientific name ride along as data attributes.
+          const speciesEl = captionEl.querySelector(".caption-species");
+          const species = speciesEl?.textContent || "";
+          const speciesUrl = speciesEl?.dataset.dexUrl || "";
+          const speciesSci = speciesEl?.dataset.scientific || "";
 
           // Create or get existing popup
           let popup = document.querySelector(".pswp-info-popup");
@@ -273,15 +291,38 @@ if (gallery) {
             content += `<h3 class="pswp-info-title">${title}</h3>`;
           }
 
-          if (exifItems.length === 0 && gearItems.length === 0 && !dateTaken && !copyright && !artist && !keywords) {
+          if (exifItems.length === 0 && gearItems.length === 0 && !dateTaken && !copyright && !artist && !keywords && !species && !software) {
             content += '<p class="pswp-info-empty">No data available</p>';
+          }
+
+          if (species) {
+            // Links through to the dex entry when the species has one. The
+            // scientific name is appended only when it differs from the label,
+            // so "Vulpes vulpes" is not printed twice for an untagged species.
+            const label = speciesUrl
+              ? `<a class="pswp-info-species-link" href="${escapeHtml(speciesUrl)}">${escapeHtml(species)}</a>`
+              : escapeHtml(species);
+            const sci =
+              speciesSci && speciesSci.toLowerCase() !== species.toLowerCase()
+                ? ` <em class="pswp-info-species-sci">${escapeHtml(speciesSci)}</em>`
+                : "";
+            content += `<div class="pswp-info-section"><h4>${escapeHtml(params.speciesLabel || "Species")}</h4><p class="pswp-info-species">${label}${sci}</p></div>`;
           }
 
           if (exifItems.length > 0) {
             content += '<div class="pswp-info-section"><h4>Settings</h4><div class="pswp-info-grid">';
+            // Keyed off data-field so a missing value cannot shift the labels;
+            // the positional array stays as a fallback for older markup.
             const labels = ["Focal Length", "Aperture", "Shutter Speed", "ISO"];
+            const labelByField = {
+              focal: "Focal Length",
+              aperture: "Aperture",
+              shutter: "Shutter Speed",
+              iso: "ISO",
+            };
             exifItems.forEach((item, i) => {
-              content += `<div class="pswp-info-item"><span class="pswp-info-label">${labels[i] || ""}</span><span class="pswp-info-value">${item.textContent}</span></div>`;
+              const label = labelByField[item.dataset.field] || labels[i] || "";
+              content += `<div class="pswp-info-item"><span class="pswp-info-label">${label}</span><span class="pswp-info-value">${item.textContent}</span></div>`;
             });
             content += '</div></div>';
           }
@@ -289,10 +330,16 @@ if (gallery) {
           if (gearItems.length > 0) {
             content += '<div class="pswp-info-section"><h4>Gear</h4><div class="pswp-info-gear">';
             const gearLabels = ["Camera", "Lens"];
+            const gearLabelByField = { camera: "Camera", lens: "Lens" };
             gearItems.forEach((item, i) => {
-              content += `<div class="pswp-info-item"><span class="pswp-info-label">${gearLabels[i] || ""}</span><span class="pswp-info-value">${item.textContent}</span></div>`;
+              const label = gearLabelByField[item.dataset.field] || gearLabels[i] || "";
+              content += `<div class="pswp-info-item"><span class="pswp-info-label">${label}</span><span class="pswp-info-value">${item.textContent}</span></div>`;
             });
             content += '</div></div>';
+          }
+
+          if (software) {
+            content += `<div class="pswp-info-section"><h4>${escapeHtml(params.softwareLabel || "Edited with")}</h4><p class="pswp-info-software">${escapeHtml(software)}</p></div>`;
           }
 
           if (dateTaken) {
