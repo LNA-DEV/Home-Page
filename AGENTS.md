@@ -329,7 +329,7 @@ public Galaxy constant, not a secret.
 
 The dex at `/gallery/dex/` is a Pokédex-style checklist of animal species: which
 ones the photo gallery already contains, and which are still open. See the
-"Photo dex" section of `CLAUDE.md` for the data model. All five scripts are
+"Photo dex" section of `CLAUDE.md` for the data model. All seven scripts are
 standard-library only and edit `data/dex.yaml` through the shared reader/writer
 in `scripts/dex_common.py`, so field order and quoting stay stable and the git
 diff only shows what actually changed.
@@ -344,6 +344,7 @@ diff only shows what actually changed.
 | `dex-enrich.py` | the empty fields of `data/dex.yaml` | yes, never overwrites |
 | `dex-ranges.py` | `assets/data/dex/**` | yes, `--force` to refetch |
 | `dex-covers.py` | `assets/images/dex/reference/**` + `reference.*` | yes, `--force` to refetch |
+| `dex-renumber.py` | the `number` field — closes gaps after a removal | yes, idempotent |
 
 ### Adding a species you just photographed
 
@@ -412,6 +413,40 @@ diff only shows what actually changed.
 
 Do **not** run `./deploy.sh` — deployment is a separate step the user authorizes
 explicitly.
+
+### Removing a species
+
+Nothing automates this, and the order matters:
+
+1. **Check it is not photographed first.** A species counts as photographed when a
+   `data/gallery.yaml` entry carries its scientific name. Removing a dex entry that
+   photos still point at leaves those photos referencing nothing — the build warns
+   but does not fail, and they silently drop out of the dex:
+   ```
+   grep -c "^  species: <Scientific name>$" data/gallery.yaml
+   ```
+   If it is non-zero, retag or keep the species; do not remove it.
+
+2. **Delete the record** from `data/dex.yaml` (match on `slug`).
+
+3. **Delete the assets it owned**, or they become orphans nothing renders:
+   ```
+   rm -f assets/data/dex/ranges/<slug>.geojson
+   rm -f assets/images/dex/reference/<slug>.jpg
+   ```
+
+4. **Close the numbering gap** it left behind:
+   ```
+   python3 scripts/dex-renumber.py --dry-run
+   python3 scripts/dex-renumber.py --write
+   ```
+   `number` is both the badge and the grid's only sort key, so holes read as
+   missing entries. The renumber preserves the existing order and only closes the
+   holes. It does shift numbers, which is safe: `number` appears in the two badges
+   and that one sort, never in a URL, a deep link, or the likes API.
+
+5. **Update the counts** in `CLAUDE.md` (species total, range/reference file counts,
+   `marine: true` count) and rebuild.
 
 ### What the scripts deliberately leave for a human
 

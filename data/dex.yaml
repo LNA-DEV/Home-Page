@@ -1326,7 +1326,7 @@ species:
     en: "https://en.wikipedia.org/wiki/African_bush_elephant"
     de: "https://de.wikipedia.org/wiki/Afrikanischer_Elefant"
 - slug: giraffe
-  number: "041"
+  number: "037"
   scientific: Giraffa camelopardalis
   family: Giraffidae
   group: mammals
@@ -1362,7 +1362,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Northern_giraffe"
     de: "https://de.wikipedia.org/wiki/Nord-Giraffe"
 - slug: plains-zebra
-  number: "042"
+  number: "038"
   scientific: Equus quagga
   family: Equidae
   group: mammals
@@ -1398,7 +1398,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Plains_zebra"
     de: "https://de.wikipedia.org/wiki/Steppenzebra"
 - slug: polar-bear
-  number: "055"
+  number: "039"
   scientific: Ursus maritimus
   family: Ursidae
   group: mammals
@@ -1435,7 +1435,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Polar_bear"
     de: "https://de.wikipedia.org/wiki/Eisb%C3%A4r"
 - slug: toco-toucan
-  number: "060"
+  number: "040"
   scientific: Ramphastos toco
   family: Ramphastidae
   group: birds
@@ -1471,7 +1471,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Toco_toucan"
     de: "https://de.wikipedia.org/wiki/Riesentukan"
 - slug: capybara
-  number: "061"
+  number: "041"
   scientific: Hydrochoerus hydrochaeris
   family: Caviidae
   group: mammals
@@ -1507,7 +1507,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Capybara"
     de: "https://de.wikipedia.org/wiki/Capybara"
 - slug: wolverine
-  number: "062"
+  number: "042"
   scientific: Gulo gulo
   family: Mustelidae
   group: mammals
@@ -1543,7 +1543,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Wolverine"
     de: "https://de.wikipedia.org/wiki/Vielfra%C3%9F"
 - slug: snowy-owl
-  number: "063"
+  number: "043"
   scientific: Bubo scandiacus
   family: Strigidae
   group: birds
@@ -1579,7 +1579,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Snowy_owl"
     de: "https://de.wikipedia.org/wiki/Schneeeule"
 - slug: narwhal
-  number: "065"
+  number: "044"
   scientific: Monodon monoceros
   family: Monodontidae
   group: mammals
@@ -1616,7 +1616,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Narwhal"
     de: "https://de.wikipedia.org/wiki/Narwal"
 - slug: sea-otter
-  number: "066"
+  number: "045"
   scientific: Enhydra lutris
   family: Mustelidae
   group: mammals
@@ -1653,7 +1653,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Sea_otter"
     de: "https://de.wikipedia.org/wiki/Seeotter"
 - slug: green-sea-turtle
-  number: "067"
+  number: "046"
   scientific: Chelonia mydas
   family: Cheloniidae
   group: reptiles
@@ -1690,7 +1690,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Green_sea_turtle"
     de: "https://de.wikipedia.org/wiki/Gr%C3%BCne_Meeresschildkr%C3%B6te"
 - slug: red-kangaroo
-  number: "070"
+  number: "047"
   scientific: Osphranter rufus
   family: Macropodidae
   group: mammals
@@ -1726,7 +1726,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Red_kangaroo"
     de: "https://de.wikipedia.org/wiki/Rotes_Riesenk%C3%A4nguru"
 - slug: koala
-  number: "071"
+  number: "048"
   scientific: Phascolarctos cinereus
   family: Phascolarctidae
   group: mammals
@@ -1762,7 +1762,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Koala"
     de: "https://de.wikipedia.org/wiki/Koala"
 - slug: platypus
-  number: "072"
+  number: "049"
   scientific: Ornithorhynchus anatinus
   family: Ornithorhynchidae
   group: mammals
@@ -1798,7 +1798,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Platypus"
     de: "https://de.wikipedia.org/wiki/Schnabeltier"
 - slug: wombat
-  number: "073"
+  number: "050"
   scientific: Vombatus ursinus
   family: Vombatidae
   group: mammals
@@ -1834,7 +1834,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Common_wombat"
     de: "https://de.wikipedia.org/wiki/Nacktnasenwombat"
 - slug: kiwi
-  number: "075"
+  number: "051"
   scientific: Apteryx mantelli
   family: Apterygidae
   group: birds
@@ -1870,7 +1870,7 @@ species:
     en: "https://en.wikipedia.org/wiki/North_Island_brown_kiwi"
     de: "https://de.wikipedia.org/wiki/Nordstreifenkiwi"
 - slug: humpback-whale
-  number: "078"
+  number: "052"
   scientific: Megaptera novaeangliae
   family: Balaenopteridae
   group: mammals
@@ -1906,7 +1906,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Humpback_whale"
     de: "https://de.wikipedia.org/wiki/Buckelwal"
 - slug: orca
-  number: "079"
+  number: "053"
   scientific: Orcinus orca
   family: Delphinidae
   group: mammals
@@ -1942,7 +1942,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Orca"
     de: "https://de.wikipedia.org/wiki/Schwertwal"
 - slug: bottlenose-dolphin
-  number: "080"
+  number: "054"
   scientific: Tursiops truncatus
   family: Delphinidae
   group: mammals
@@ -1975,7 +1975,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Common_bottlenose_dolphin"
     de: "https://de.wikipedia.org/wiki/Gro%C3%9Fer_T%C3%BCmmler"
 - slug: blue-whale
-  number: "081"
+  number: "055"
   scientific: Balaenoptera musculus
   family: Balaenopteridae
   group: mammals
@@ -2011,7 +2011,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Blue_whale"
     de: "https://de.wikipedia.org/wiki/Blauwal"
 - slug: walrus
-  number: "082"
+  number: "056"
   scientific: Odobenus rosmarus
   family: Odobenidae
   group: mammals
@@ -2048,7 +2048,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Walrus"
     de: "https://de.wikipedia.org/wiki/Walross"
 - slug: emperor-penguin
-  number: "083"
+  number: "057"
   scientific: Aptenodytes forsteri
   family: Spheniscidae
   group: birds
@@ -2085,7 +2085,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Emperor_penguin"
     de: "https://de.wikipedia.org/wiki/Kaiserpinguin"
 - slug: king-penguin
-  number: "084"
+  number: "058"
   scientific: Aptenodytes patagonicus
   family: Spheniscidae
   group: birds
@@ -2122,7 +2122,7 @@ species:
     en: "https://en.wikipedia.org/wiki/King_penguin"
     de: "https://de.wikipedia.org/wiki/K%C3%B6nigspinguin"
 - slug: leatherback-sea-turtle
-  number: "085"
+  number: "059"
   scientific: Dermochelys coriacea
   family: Dermochelyidae
   group: reptiles
@@ -2159,7 +2159,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Leatherback_sea_turtle"
     de: "https://de.wikipedia.org/wiki/Lederschildkr%C3%B6te"
 - slug: beluga-whale
-  number: "091"
+  number: "060"
   scientific: Delphinapterus leucas
   family: Monodontidae
   group: mammals
@@ -2196,7 +2196,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Beluga_whale"
     de: "https://de.wikipedia.org/wiki/Wei%C3%9Fwal"
 - slug: harbor-seal
-  number: "092"
+  number: "061"
   scientific: Phoca vitulina
   family: Phocidae
   group: mammals
@@ -2233,7 +2233,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Harbor_seal"
     de: "https://de.wikipedia.org/wiki/Seehund"
 - slug: honeybee
-  number: "095"
+  number: "062"
   scientific: Apis mellifera
   family: Apidae
   group: insects
@@ -2264,7 +2264,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Western_honey_bee"
     de: "https://de.wikipedia.org/wiki/Westliche_Honigbiene"
 - slug: alpine-marmot
-  number: "096"
+  number: "063"
   scientific: Marmota marmota
   family: Sciuridae
   group: mammals
@@ -2300,7 +2300,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Alpine_marmot"
     de: "https://de.wikipedia.org/wiki/Alpenmurmeltier"
 - slug: common-dormouse
-  number: "097"
+  number: "064"
   scientific: Muscardinus avellanarius
   family: Gliridae
   group: mammals
@@ -2336,7 +2336,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Hazel_dormouse"
     de: "https://de.wikipedia.org/wiki/Haselmaus"
 - slug: eurasian-beaver
-  number: "098"
+  number: "065"
   scientific: Castor fiber
   family: Castoridae
   group: mammals
@@ -2372,7 +2372,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Eurasian_beaver"
     de: "https://de.wikipedia.org/wiki/Europ%C3%A4ischer_Biber"
 - slug: european-hornet
-  number: "099"
+  number: "066"
   scientific: Vespa crabro
   family: Vespidae
   group: insects
@@ -2407,7 +2407,7 @@ species:
     en: "https://en.wikipedia.org/wiki/European_hornet"
     de: "https://de.wikipedia.org/wiki/Hornisse"
 - slug: european-hare
-  number: "100"
+  number: "067"
   scientific: Lepus europaeus
   family: Leporidae
   group: mammals
@@ -2443,7 +2443,7 @@ species:
     en: "https://en.wikipedia.org/wiki/European_hare"
     de: "https://de.wikipedia.org/wiki/Feldhase"
 - slug: greater-mouse-eared-bat
-  number: "101"
+  number: "068"
   scientific: Myotis myotis
   family: Vespertilionidae
   group: mammals
@@ -2479,7 +2479,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Greater_mouse-eared_bat"
     de: "https://de.wikipedia.org/wiki/Gro%C3%9Fes_Mausohr"
 - slug: european-mouflon
-  number: "102"
+  number: "069"
   scientific: Ovis aries musimon
   family: Bovidae
   group: mammals
@@ -2514,7 +2514,7 @@ species:
     en: "https://en.wikipedia.org/wiki/European_mouflon"
     de: "https://de.wikipedia.org/wiki/Europ%C3%A4ischer_Mufflon"
 - slug: european-polecat
-  number: "103"
+  number: "070"
   scientific: Mustela putorius
   family: Mustelidae
   group: mammals
@@ -2550,7 +2550,7 @@ species:
     en: "https://en.wikipedia.org/wiki/European_polecat"
     de: "https://de.wikipedia.org/wiki/Europ%C3%A4ischer_Iltis"
 - slug: camargue-horse
-  number: "104"
+  number: "071"
   scientific: Equus ferus caballus
   family: Equidae
   group: mammals
@@ -2585,7 +2585,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Horse"
     de: "https://de.wikipedia.org/wiki/Hauspferd"
 - slug: european-green-lizard
-  number: "105"
+  number: "072"
   scientific: Lacerta viridis
   family: Lacertidae
   group: reptiles
@@ -2621,7 +2621,7 @@ species:
     en: "https://en.wikipedia.org/wiki/European_green_lizard"
     de: "https://de.wikipedia.org/wiki/%C3%96stliche_Smaragdeidechse"
 - slug: eurasian-jay
-  number: "107"
+  number: "073"
   scientific: Garrulus glandarius
   family: Corvidae
   group: birds
@@ -2657,7 +2657,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Eurasian_jay"
     de: "https://de.wikipedia.org/wiki/Eichelh%C3%A4her"
 - slug: green-woodpecker
-  number: "108"
+  number: "074"
   scientific: Picus viridis
   family: Picidae
   group: birds
@@ -2693,7 +2693,7 @@ species:
     en: "https://en.wikipedia.org/wiki/European_green_woodpecker"
     de: "https://de.wikipedia.org/wiki/Gr%C3%BCnspecht"
 - slug: long-tailed-tit
-  number: "109"
+  number: "075"
   scientific: Aegithalos caudatus
   family: Aegithalidae
   group: birds
@@ -2729,7 +2729,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Long-tailed_tit"
     de: "https://de.wikipedia.org/wiki/Schwanzmeise"
 - slug: rock-dove
-  number: "110"
+  number: "076"
   scientific: Columba livia
   family: Columbidae
   group: birds
@@ -2765,7 +2765,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Rock_dove"
     de: "https://de.wikipedia.org/wiki/Felsentaube"
 - slug: cirl-bunting
-  number: "111"
+  number: "077"
   scientific: Emberiza cirlus
   family: Emberizidae
   group: birds
@@ -2801,7 +2801,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Cirl_bunting"
     de: "https://de.wikipedia.org/wiki/Zaunammer"
 - slug: yellowhammer
-  number: "112"
+  number: "078"
   scientific: Emberiza citrinella
   family: Emberizidae
   group: birds
@@ -2837,7 +2837,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Yellowhammer"
     de: "https://de.wikipedia.org/wiki/Goldammer"
 - slug: short-toed-treecreeper
-  number: "113"
+  number: "079"
   scientific: Certhia brachydactyla
   family: Certhiidae
   group: birds
@@ -2873,7 +2873,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Short-toed_treecreeper"
     de: "https://de.wikipedia.org/wiki/Gartenbauml%C3%A4ufer"
 - slug: common-blackbird
-  number: "114"
+  number: "080"
   scientific: Turdus merula
   family: Turdidae
   group: birds
@@ -2905,7 +2905,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Common_blackbird"
     de: "https://de.wikipedia.org/wiki/Amsel"
 - slug: long-eared-owl
-  number: "115"
+  number: "081"
   scientific: Asio otus
   family: Strigidae
   group: birds
@@ -2941,7 +2941,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Long-eared_owl"
     de: "https://de.wikipedia.org/wiki/Waldohreule"
 - slug: little-owl
-  number: "116"
+  number: "082"
   scientific: Athene noctua
   family: Strigidae
   group: birds
@@ -2977,7 +2977,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Little_owl"
     de: "https://de.wikipedia.org/wiki/Steinkauz"
 - slug: eurasian-pygmy-owl
-  number: "117"
+  number: "083"
   scientific: Glaucidium passerinum
   family: Strigidae
   group: birds
@@ -3013,7 +3013,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Eurasian_pygmy_owl"
     de: "https://de.wikipedia.org/wiki/Sperlingskauz"
 - slug: tawny-owl
-  number: "118"
+  number: "084"
   scientific: Strix aluco
   family: Strigidae
   group: birds
@@ -3049,7 +3049,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Tawny_owl"
     de: "https://de.wikipedia.org/wiki/Waldkauz"
 - slug: ural-owl
-  number: "119"
+  number: "085"
   scientific: Strix uralensis
   family: Strigidae
   group: birds
@@ -3085,7 +3085,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Ural_owl"
     de: "https://de.wikipedia.org/wiki/Habichtskauz"
 - slug: mandarin-duck
-  number: "120"
+  number: "086"
   scientific: Aix galericulata
   family: Anatidae
   group: birds
@@ -3117,7 +3117,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Mandarin_duck"
     de: "https://de.wikipedia.org/wiki/Mandarinente"
 - slug: mallard
-  number: "121"
+  number: "087"
   scientific: Anas platyrhynchos
   family: Anatidae
   group: birds
@@ -3149,7 +3149,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Mallard"
     de: "https://de.wikipedia.org/wiki/Stockente"
 - slug: greylag-goose
-  number: "122"
+  number: "088"
   scientific: Anser anser
   family: Anatidae
   group: birds
@@ -3181,7 +3181,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Greylag_goose"
     de: "https://de.wikipedia.org/wiki/Graugans"
 - slug: brent-goose
-  number: "123"
+  number: "089"
   scientific: Branta bernicla
   family: Anatidae
   group: birds
@@ -3217,7 +3217,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Brant_(goose)"
     de: "https://de.wikipedia.org/wiki/Ringelgans"
 - slug: canada-goose
-  number: "124"
+  number: "090"
   scientific: Branta canadensis
   family: Anatidae
   group: birds
@@ -3249,7 +3249,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Canada_goose"
     de: "https://de.wikipedia.org/wiki/Kanadagans"
 - slug: mute-swan
-  number: "125"
+  number: "091"
   scientific: Cygnus olor
   family: Anatidae
   group: birds
@@ -3281,7 +3281,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Mute_swan"
     de: "https://de.wikipedia.org/wiki/H%C3%B6ckerschwan"
 - slug: gadwall
-  number: "126"
+  number: "092"
   scientific: Mareca strepera
   family: Anatidae
   group: birds
@@ -3317,7 +3317,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Gadwall"
     de: "https://de.wikipedia.org/wiki/Schnatterente"
 - slug: eurasian-hobby
-  number: "127"
+  number: "093"
   scientific: Falco subbuteo
   family: Falconidae
   group: birds
@@ -3353,7 +3353,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Eurasian_hobby"
     de: "https://de.wikipedia.org/wiki/Baumfalke"
 - slug: common-kestrel
-  number: "128"
+  number: "094"
   scientific: Falco tinnunculus
   family: Falconidae
   group: birds
@@ -3389,7 +3389,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Common_kestrel"
     de: "https://de.wikipedia.org/wiki/Turmfalke"
 - slug: grey-partridge
-  number: "129"
+  number: "095"
   scientific: Perdix perdix
   family: Phasianidae
   group: birds
@@ -3425,7 +3425,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Grey_partridge"
     de: "https://de.wikipedia.org/wiki/Rebhuhn"
 - slug: western-capercaillie
-  number: "130"
+  number: "096"
   scientific: Tetrao urogallus
   family: Phasianidae
   group: birds
@@ -3461,7 +3461,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Western_capercaillie"
     de: "https://de.wikipedia.org/wiki/Auerhuhn"
 - slug: european-goldfinch
-  number: "131"
+  number: "097"
   scientific: Carduelis carduelis
   family: Fringillidae
   group: birds
@@ -3497,7 +3497,7 @@ species:
     en: "https://en.wikipedia.org/wiki/European_goldfinch"
     de: "https://de.wikipedia.org/wiki/Stieglitz"
 - slug: european-greenfinch
-  number: "132"
+  number: "098"
   scientific: Chloris chloris
   family: Fringillidae
   group: birds
@@ -3533,7 +3533,7 @@ species:
     en: "https://en.wikipedia.org/wiki/European_greenfinch"
     de: "https://de.wikipedia.org/wiki/Gr%C3%BCnfink"
 - slug: common-chaffinch
-  number: "133"
+  number: "099"
   scientific: Fringilla coelebs
   family: Fringillidae
   group: birds
@@ -3569,7 +3569,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Eurasian_chaffinch"
     de: "https://de.wikipedia.org/wiki/Buchfink"
 - slug: common-nightingale
-  number: "134"
+  number: "100"
   scientific: Luscinia megarhynchos
   family: Muscicapidae
   group: birds
@@ -3605,7 +3605,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Common_nightingale"
     de: "https://de.wikipedia.org/wiki/Nachtigall"
 - slug: goldcrest
-  number: "135"
+  number: "101"
   scientific: Regulus regulus
   family: Regulidae
   group: birds
@@ -3641,7 +3641,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Goldcrest"
     de: "https://de.wikipedia.org/wiki/Wintergoldh%C3%A4hnchen"
 - slug: northern-goshawk
-  number: "136"
+  number: "102"
   scientific: Astur gentilis
   family: Accipitridae
   group: birds
@@ -3677,7 +3677,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Eurasian_goshawk"
     de: "https://de.wikipedia.org/wiki/Habicht"
 - slug: eurasian-sparrowhawk
-  number: "137"
+  number: "103"
   scientific: Accipiter nisus
   family: Accipitridae
   group: birds
@@ -3713,7 +3713,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Eurasian_sparrowhawk"
     de: "https://de.wikipedia.org/wiki/Sperber_(Art)"
 - slug: common-buzzard
-  number: "138"
+  number: "104"
   scientific: Buteo buteo
   family: Accipitridae
   group: birds
@@ -3749,7 +3749,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Common_buzzard"
     de: "https://de.wikipedia.org/wiki/M%C3%A4usebussard"
 - slug: great-cormorant
-  number: "139"
+  number: "105"
   scientific: Phalacrocorax carbo
   family: Phalacrocoracidae
   group: birds
@@ -3781,7 +3781,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Great_cormorant"
     de: "https://de.wikipedia.org/wiki/Kormoran_(Art)"
 - slug: eurasian-blue-tit
-  number: "140"
+  number: "106"
   scientific: Cyanistes caeruleus
   family: Paridae
   group: birds
@@ -3817,7 +3817,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Eurasian_blue_tit"
     de: "https://de.wikipedia.org/wiki/Blaumeise"
 - slug: great-tit
-  number: "141"
+  number: "107"
   scientific: Parus major
   family: Paridae
   group: birds
@@ -3849,7 +3849,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Great_tit"
     de: "https://de.wikipedia.org/wiki/Kohlmeise"
 - slug: european-herring-gull
-  number: "142"
+  number: "108"
   scientific: Larus argentatus
   family: Laridae
   group: birds
@@ -3885,7 +3885,7 @@ species:
     en: "https://en.wikipedia.org/wiki/European_herring_gull"
     de: "https://de.wikipedia.org/wiki/Silberm%C3%B6we"
 - slug: yellow-legged-gull
-  number: "143"
+  number: "109"
   scientific: Larus michahellis
   family: Laridae
   group: birds
@@ -3917,7 +3917,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Yellow-legged_gull"
     de: "https://de.wikipedia.org/wiki/Mittelmeerm%C3%B6we"
 - slug: hooded-crow
-  number: "144"
+  number: "110"
   scientific: Corvus cornix
   family: Corvidae
   group: birds
@@ -3953,7 +3953,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Hooded_crow"
     de: "https://de.wikipedia.org/wiki/Nebelkr%C3%A4he"
 - slug: carrion-crow
-  number: "145"
+  number: "111"
   scientific: Corvus corone
   family: Corvidae
   group: birds
@@ -3985,7 +3985,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Carrion_crow"
     de: "https://de.wikipedia.org/wiki/Rabenkr%C3%A4he"
 - slug: rook
-  number: "146"
+  number: "112"
   scientific: Corvus frugilegus
   family: Corvidae
   group: birds
@@ -4021,7 +4021,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Rook_(bird)"
     de: "https://de.wikipedia.org/wiki/Saatkr%C3%A4he"
 - slug: western-jackdaw
-  number: "147"
+  number: "113"
   scientific: Coloeus monedula
   family: Corvidae
   group: birds
@@ -4057,7 +4057,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Western_jackdaw"
     de: "https://de.wikipedia.org/wiki/Dohle"
 - slug: eurasian-magpie
-  number: "148"
+  number: "114"
   scientific: Pica pica
   family: Corvidae
   group: birds
@@ -4093,7 +4093,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Eurasian_magpie"
     de: "https://de.wikipedia.org/wiki/Elster"
 - slug: alpine-chough
-  number: "149"
+  number: "115"
   scientific: Pyrrhocorax graculus
   family: Corvidae
   group: birds
@@ -4129,7 +4129,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Alpine_chough"
     de: "https://de.wikipedia.org/wiki/Alpendohle"
 - slug: great-skua
-  number: "150"
+  number: "116"
   scientific: Stercorarius skua
   family: Stercorariidae
   group: birds
@@ -4165,7 +4165,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Great_skua"
     de: "https://de.wikipedia.org/wiki/Gro%C3%9Fe_Raubm%C3%B6we"
 - slug: common-ringed-plover
-  number: "151"
+  number: "117"
   scientific: Charadrius hiaticula
   family: Charadriidae
   group: birds
@@ -4201,7 +4201,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Common_ringed_plover"
     de: "https://de.wikipedia.org/wiki/Sandregenpfeifer"
 - slug: grey-heron
-  number: "152"
+  number: "118"
   scientific: Ardea cinerea
   family: Ardeidae
   group: birds
@@ -4237,7 +4237,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Grey_heron"
     de: "https://de.wikipedia.org/wiki/Graureiher"
 - slug: common-house-martin
-  number: "153"
+  number: "119"
   scientific: Delichon urbicum
   family: Hirundinidae
   group: birds
@@ -4273,7 +4273,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Western_house_martin"
     de: "https://de.wikipedia.org/wiki/Mehlschwalbe"
 - slug: barn-swallow
-  number: "154"
+  number: "120"
   scientific: Hirundo rustica
   family: Hirundinidae
   group: birds
@@ -4309,7 +4309,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Barn_swallow"
     de: "https://de.wikipedia.org/wiki/Rauchschwalbe"
 - slug: great-spotted-woodpecker
-  number: "155"
+  number: "121"
   scientific: Dendrocopos major
   family: Picidae
   group: birds
@@ -4341,7 +4341,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Great_spotted_woodpecker"
     de: "https://de.wikipedia.org/wiki/Buntspecht"
 - slug: house-sparrow
-  number: "156"
+  number: "122"
   scientific: Passer domesticus
   family: Passeridae
   group: birds
@@ -4373,7 +4373,7 @@ species:
     en: "https://en.wikipedia.org/wiki/House_sparrow"
     de: "https://de.wikipedia.org/wiki/Haussperling"
 - slug: eurasian-tree-sparrow
-  number: "157"
+  number: "123"
   scientific: Passer montanus
   family: Passeridae
   group: birds
@@ -4409,7 +4409,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Eurasian_tree_sparrow"
     de: "https://de.wikipedia.org/wiki/Feldsperling"
 - slug: common-starling
-  number: "158"
+  number: "124"
   scientific: Sturnus vulgaris
   family: Sturnidae
   group: birds
@@ -4445,7 +4445,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Common_starling"
     de: "https://de.wikipedia.org/wiki/Star_(Art)"
 - slug: white-wagtail
-  number: "159"
+  number: "125"
   scientific: Motacilla alba
   family: Motacillidae
   group: birds
@@ -4481,7 +4481,7 @@ species:
     en: "https://en.wikipedia.org/wiki/White_wagtail"
     de: "https://de.wikipedia.org/wiki/Bachstelze"
 - slug: common-wood-pigeon
-  number: "160"
+  number: "126"
   scientific: Columba palumbus
   family: Columbidae
   group: birds
@@ -4517,7 +4517,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Common_wood_pigeon"
     de: "https://de.wikipedia.org/wiki/Ringeltaube"
 - slug: european-turtle-dove
-  number: "161"
+  number: "127"
   scientific: Streptopelia turtur
   family: Columbidae
   group: birds
@@ -4553,7 +4553,7 @@ species:
     en: "https://en.wikipedia.org/wiki/European_turtle_dove"
     de: "https://de.wikipedia.org/wiki/Turteltaube"
 - slug: white-throated-dipper
-  number: "162"
+  number: "128"
   scientific: Cinclus cinclus
   family: Cinclidae
   group: birds
@@ -4589,7 +4589,7 @@ species:
     en: "https://en.wikipedia.org/wiki/White-throated_dipper"
     de: "https://de.wikipedia.org/wiki/Wasseramsel"
 - slug: eurasian-wren
-  number: "163"
+  number: "129"
   scientific: Troglodytes troglodytes
   family: Troglodytidae
   group: birds
@@ -4625,7 +4625,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Eurasian_wren"
     de: "https://de.wikipedia.org/wiki/Zaunk%C3%B6nig"
 - slug: alpaca
-  number: "164"
+  number: "130"
   scientific: Vicugna pacos
   family: Camelidae
   group: mammals
@@ -4652,7 +4652,7 @@ species:
   description_source:
     en: "https://en.wikipedia.org/wiki/Alpaca"
 - slug: domestic-sheep
-  number: "165"
+  number: "131"
   scientific: Ovis aries
   family: Bovidae
   group: mammals
@@ -4681,7 +4681,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Sheep"
     de: "https://de.wikipedia.org/wiki/Hausschaf"
 - slug: cattle
-  number: "166"
+  number: "132"
   scientific: Bos taurus
   family: Bovidae
   group: mammals
@@ -4710,7 +4710,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Cattle"
     de: "https://de.wikipedia.org/wiki/Hausrind"
 - slug: domestic-goat
-  number: "167"
+  number: "133"
   scientific: Capra hircus
   family: Bovidae
   group: mammals
@@ -4739,7 +4739,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Goat"
     de: "https://de.wikipedia.org/wiki/Hausziege"
 - slug: domestic-cat
-  number: "168"
+  number: "134"
   scientific: Felis catus
   family: Felidae
   group: mammals
@@ -4768,7 +4768,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Cat"
     de: "https://de.wikipedia.org/wiki/Hauskatze"
 - slug: domestic-dog
-  number: "169"
+  number: "135"
   scientific: Canis familiaris
   family: Canidae
   group: mammals
@@ -4797,7 +4797,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Dog"
     de: "https://de.wikipedia.org/wiki/Haushund"
 - slug: chicken
-  number: "170"
+  number: "136"
   scientific: Gallus gallus domesticus
   family: Phasianidae
   group: birds
@@ -4821,7 +4821,7 @@ species:
     en: "The domesticated descendant of the red junglefowl and the most numerous bird on Earth. Kept worldwide for eggs and meat, with hundreds of breeds differing widely in size, colour and comb shape."
     de: "Der domestizierte Nachfahre des Bankivahuhns und der zahlreichste Vogel der Erde. Weltweit für Eier und Fleisch gehalten, mit Hunderten Rassen, die sich in Größe, Farbe und Kammform stark unterscheiden."
 - slug: domestic-duck
-  number: "171"
+  number: "137"
   scientific: Anas platyrhynchos domesticus
   family: Anatidae
   group: birds
@@ -4843,7 +4843,7 @@ species:
     en: "The domesticated form of the mallard, kept on farms and ponds across the world. Most breeds are heavier and less able to fly than their wild ancestor, and white plumage is common."
     de: "Die domestizierte Form der Stockente, weltweit auf Höfen und Teichen gehalten. Die meisten Rassen sind schwerer und flugunfähiger als ihre wilde Stammform, häufig mit weißem Gefieder."
 - slug: sand-lizard
-  number: "172"
+  number: "138"
   scientific: Lacerta agilis
   family: Lacertidae
   group: reptiles
@@ -4873,7 +4873,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Sand_lizard"
     de: "https://de.wikipedia.org/wiki/Zauneidechse"
 - slug: slow-worm
-  number: "173"
+  number: "139"
   scientific: Anguis fragilis
   family: Anguidae
   group: reptiles
@@ -4903,7 +4903,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Common_slow_worm"
     de: "https://de.wikipedia.org/wiki/Blindschleiche"
 - slug: roman-snail
-  number: "174"
+  number: "140"
   scientific: Helix pomatia
   family: Helicidae
   group: molluscs
@@ -4933,7 +4933,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Helix_pomatia"
     de: "https://de.wikipedia.org/wiki/Weinbergschnecke"
 - slug: grove-snail
-  number: "175"
+  number: "141"
   scientific: Cepaea nemoralis
   family: Helicidae
   group: molluscs
@@ -4962,7 +4962,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Cepaea_nemoralis"
     de: "https://de.wikipedia.org/wiki/Hain-B%C3%A4nderschnecke"
 - slug: buff-tailed-bumblebee
-  number: "176"
+  number: "142"
   scientific: Bombus terrestris
   family: Apidae
   group: insects
@@ -4991,7 +4991,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Bombus_terrestris"
     de: "https://de.wikipedia.org/wiki/Dunkle_Erdhummel"
 - slug: common-carder-bee
-  number: "177"
+  number: "143"
   scientific: Bombus pascuorum
   family: Apidae
   group: insects
@@ -5019,7 +5019,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Bombus_pascuorum"
     de: "https://de.wikipedia.org/wiki/Ackerhummel"
 - slug: poplar-hawk-moth
-  number: "178"
+  number: "144"
   scientific: Laothoe populi
   family: Sphingidae
   group: insects
@@ -5047,7 +5047,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Poplar_hawkmoth"
     de: "https://de.wikipedia.org/wiki/Pappelschw%C3%A4rmer"
 - slug: privet-hawk-moth
-  number: "179"
+  number: "145"
   scientific: Sphinx ligustri
   family: Sphingidae
   group: insects
@@ -5075,7 +5075,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Sphinx_ligustri"
     de: "https://de.wikipedia.org/wiki/Ligusterschw%C3%A4rmer"
 - slug: silver-washed-fritillary
-  number: "180"
+  number: "146"
   scientific: Argynnis paphia
   family: Nymphalidae
   group: insects
@@ -5103,7 +5103,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Silver-washed_fritillary"
     de: "https://de.wikipedia.org/wiki/Kaisermantel"
 - slug: beautiful-demoiselle
-  number: "181"
+  number: "147"
   scientific: Calopteryx virgo
   family: Calopterygidae
   group: insects
@@ -5132,7 +5132,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Beautiful_demoiselle"
     de: "https://de.wikipedia.org/wiki/Blaufl%C3%BCgel-Prachtlibelle"
 - slug: barnacle-goose
-  number: "182"
+  number: "148"
   scientific: Branta leucopsis
   family: Anatidae
   group: birds
@@ -5162,7 +5162,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Barnacle_goose"
     de: "https://de.wikipedia.org/wiki/Wei%C3%9Fwangengans"
 - slug: black-stork
-  number: "183"
+  number: "149"
   scientific: Ciconia nigra
   family: Ciconiidae
   group: birds
@@ -5192,7 +5192,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Black_stork"
     de: "https://de.wikipedia.org/wiki/Schwarzstorch"
 - slug: fallow-deer
-  number: "184"
+  number: "150"
   scientific: Dama dama
   family: Cervidae
   group: mammals
@@ -5222,7 +5222,7 @@ species:
     en: "https://en.wikipedia.org/wiki/European_fallow_deer"
     de: "https://de.wikipedia.org/wiki/Damhirsch"
 - slug: goosander
-  number: "185"
+  number: "151"
   scientific: Mergus merganser
   family: Anatidae
   group: birds
@@ -5252,7 +5252,7 @@ species:
     en: "https://en.wikipedia.org/wiki/Common_merganser"
     de: "https://de.wikipedia.org/wiki/G%C3%A4nses%C3%A4ger"
 - slug: common-vole
-  number: "186"
+  number: "152"
   scientific: Microtus arvalis
   family: Cricetidae
   group: mammals
