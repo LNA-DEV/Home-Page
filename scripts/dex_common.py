@@ -57,6 +57,7 @@ FIELD_ORDER = [
     "sightings",
     "names",
     "description",
+    "description_source",
     "tips",
 ]
 

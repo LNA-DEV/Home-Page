@@ -82,7 +82,15 @@ def photographed_species():
 
 
 def commons_metadata(filename, width):
-    """Return (thumb_url, credit, page_url) for a Commons file."""
+    """Return (thumb_url, credit, page_url, artist, licence, licence_url).
+
+    `credit` stays the single display string the species page renders. The
+    separate `artist` / `licence` / `licence_url` parts are what the page needs
+    for the schema.org ImageObject microdata (`creator`, `creditText`,
+    `license`), which wants a licence URL rather than a human-readable name.
+    Public-domain files legitimately have no LicenseUrl, so that one can be
+    empty and the template omits `license` instead of inventing a deed.
+    """
     data = http_get(
         COMMONS_API,
         {
@@ -120,9 +128,11 @@ def commons_metadata(filename, width):
             else None
         )
 
+        licence_url = (meta.get("LicenseUrl", {}) or {}).get("value", "").strip()
+
         parts = [part for part in (artist, licence, "Wikimedia Commons") if part]
-        return thumb, ", ".join(parts), page_url
-    return None, None, None
+        return thumb, ", ".join(parts), page_url, artist, licence, licence_url
+    return None, None, None, None, None, None
 
 
 def main(argv=None):
@@ -186,7 +196,8 @@ def main(argv=None):
             failed.append(f"{slug} (no Wikidata image)")
             continue
 
-        thumb, credit, page_url = commons_metadata(commons_file, args.width)
+        thumb, credit, page_url, artist, licence, licence_url = commons_metadata(
+            commons_file, args.width)
         if not thumb:
             failed.append(f"{slug} (Commons lookup failed for {commons_file})")
             continue
@@ -209,6 +220,12 @@ def main(argv=None):
             reference["credit"] = credit
         if page_url:
             reference["credit_url"] = page_url
+        if artist:
+            reference["artist"] = artist
+        if licence:
+            reference["license"] = licence
+        if licence_url:
+            reference["license_url"] = licence_url
 
     print()
     print(f"downloaded: {downloaded}")

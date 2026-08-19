@@ -134,6 +134,17 @@
 {{- range .AllTranslations -}}
 <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
 {{ end -}}
+{{- /* x-default tells search engines which version to serve a visitor whose
+       language matches none of en/de/sv. `defaultContentLanguageInSubdir` means
+       there is no unprefixed per-page URL to point at (only `/` itself
+       meta-refreshes), so the English page is the fallback — matching
+       `defaultContentLanguage: en` in hugo.yaml. */ -}}
+{{- $defaultLang := "en" -}}
+{{- range .AllTranslations -}}
+  {{- if eq .Lang $defaultLang -}}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+  {{- end -}}
+{{- end }}
 
 <noscript>
     <style>

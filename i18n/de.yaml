@@ -291,7 +291,7 @@
 - id: dex_reference_photo
   translation: "Referenzfoto"
 - id: dex_source_wikipedia
-  translation: "Beschreibung von Wikipedia (CC BY-SA)."
+  translation: "Beschreibung von {{ .source }} ({{ .license }}), gekürzt."
 - id: dex_map_range
   translation: "Verbreitungsgebiet"
 - id: dex_map_sighting

@@ -292,7 +292,7 @@
 - id: dex_reference_photo
   translation: "Reference photo"
 - id: dex_source_wikipedia
-  translation: "Description from Wikipedia (CC BY-SA)."
+  translation: "Description from {{ .source }} ({{ .license }}), abridged."
 - id: dex_map_range
   translation: "Range"
 - id: dex_map_sighting

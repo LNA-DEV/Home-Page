@@ -21,6 +21,27 @@
   {{- $name = $name | default $species.scientific | default .slug -}}
   {{- $description := partial "dex-text.html" (dict "field" $species.description "lang" $lang) -}}
 
+  {{- /* Which language actually supplied the description, mirroring the fallback
+         in dex-text.html, so the CC BY-SA credit on the page can link the exact
+         Wikipedia article the text was abridged from. A Swedish page shows the
+         English text, so it must credit the English article. Empty for the two
+         species with no wikidata_id, and the credit then renders unlinked. */ -}}
+  {{- $sourceLang := "" -}}
+  {{- with $species.description -}}
+    {{- if index . $lang -}}
+      {{- $sourceLang = $lang -}}
+    {{- else if index . "en" -}}
+      {{- $sourceLang = "en" -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $sourceURL := "" -}}
+  {{- if $sourceLang -}}
+    {{- $sourceURL = index ($species.description_source | default dict) $sourceLang | default "" -}}
+  {{- end -}}
+
+  {{- /* dex_scientific / dex_family / dex_wikidata carry the taxon facts for the
+         JSON-LD in schema_json.html, so the <head> does not have to reach back
+         into dex-index.html for them. */ -}}
   {{- $page := dict
         "path" .slug
         "kind" "page"
@@ -34,6 +55,10 @@
           "hideMeta" true
           "searchHidden" false
           "filter_species" .scientific
+          "dex_scientific" .scientific
+          "dex_family" ($species.family | default "")
+          "dex_wikidata" ($species.wikidata_id | default "")
+          "dex_source_url" $sourceURL
           "include_archive" true
           "sort_by" "DateTaken"
           "sort_order" "desc"

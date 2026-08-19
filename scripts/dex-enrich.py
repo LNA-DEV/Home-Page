@@ -381,12 +381,25 @@ def enrich(record, verbose=True):
                     if path not in wanted:
                         continue
                     title = (sitelinks.get(f"{lang}wiki") or {}).get("title")
+                    sitelink_title = title
                     if not title and lang == "en":
                         title = en_title or scientific
                     text = wikipedia_summary(title, lang)
                     if text:
                         set_path(record, path, text)
                         written.append(path)
+                        # Wikipedia text is CC BY-SA, so the species page has to
+                        # link the exact article it was abridged from. Only record
+                        # a real sitelink — a guessed title (the scientific-name
+                        # fallback above) may resolve through a redirect to an
+                        # article under a different name, and a credit link that
+                        # might be wrong is worse than none.
+                        if sitelink_title:
+                            quoted = urllib.parse.quote(
+                                sitelink_title.replace(" ", "_"), safe="():,'!-")
+                            set_path(record, f"description_source.{lang}",
+                                     f"https://{lang}.wikipedia.org/wiki/{quoted}")
+                            written.append(f"description_source.{lang}")
 
     # --- iNaturalist ------------------------------------------------------
     if "inat_taxon_id" in wanted:

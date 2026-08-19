@@ -264,7 +264,7 @@
 - id: dex_reference_photo
   translation: "Referensfoto"
 - id: dex_source_wikipedia
-  translation: "Beskrivning från Wikipedia (CC BY-SA)."
+  translation: "Beskrivning från {{ .source }} ({{ .license }}), förkortad."
 - id: dex_map_range
   translation: "Utbredningsområde"
 - id: dex_map_sighting

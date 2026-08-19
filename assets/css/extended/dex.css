@@ -311,6 +311,12 @@
   display: block;
 }
 
+/* Wrapper exists only to scope the schema.org ImageObject microdata around the
+   stand-in and its credit; `contents` keeps it out of the flex layout. */
+.dex-hero__ref {
+  display: contents;
+}
+
 /* A Commons stand-in is dimmed so it never reads as one of my own photos. */
 .dex-hero__reference {
   filter: saturate(0.55) brightness(0.9);

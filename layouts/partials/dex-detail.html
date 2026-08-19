@@ -74,6 +74,16 @@
           {{- $side := math.Min .Width .Height -}}
           {{- $target := int (math.Min 900 $side) -}}
           {{- $img := .Filter (slice images.AutoOrient (images.Process (printf "fill %dx%d Center" $target $target))) -}}
+          {{- /* Same schema.org ImageObject microdata gallery.html emits for the
+                 owner's own photos — a caught species inherits it from the photo
+                 strip, but an uncaught one had no image metadata at all, on the
+                 one image that most needs it: third-party CC-licensed work.
+
+                 `display: contents` on the wrapper keeps the flex layout of
+                 .dex-hero__media exactly as it was. No `copyrightNotice` here,
+                 unlike the owner's own photos: we do not hold the copyright, and
+                 the public-domain files have none to assert. */ -}}
+          <span class="dex-hero__ref" itemscope itemtype="https://schema.org/ImageObject">
           <img class="dex-hero__reference" src="{{ $img.RelPermalink }}"
                width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ $name }}">
           <p class="dex-hero__credit">
@@ -84,6 +94,23 @@
             {{ $species.reference.credit | default "Wikimedia Commons" }}
             {{- end }}
           </p>
+          <meta itemprop="contentUrl" content="{{ $img.Permalink }}" />
+          <meta itemprop="name" content="{{ $name }}" />
+          {{- with $species.reference.license_url }}
+          <link itemprop="license" href="{{ . }}" />
+          {{- end }}
+          {{- with $species.reference.credit_url }}
+          <link itemprop="acquireLicensePage" href="{{ . }}" />
+          {{- end }}
+          {{- with $species.reference.artist }}
+          <span itemprop="creator" itemtype="https://schema.org/Person" itemscope>
+            <meta itemprop="name" content="{{ . }}" />
+          </span>
+          {{- end }}
+          {{- with $species.reference.credit }}
+          <meta itemprop="creditText" content="{{ . }}" />
+          {{- end }}
+          </span>
         {{- else -}}
           <span class="dex-hero__silhouette" aria-hidden="true">
             {{- partial "dex-silhouette.html" $entry.group -}}
@@ -172,9 +199,26 @@
   <section class="dex-description">
     <h2 class="dex-section-title">{{ i18n "dex_about" }}</h2>
     {{ . }}
-    {{- with $species.wikidata_id }}
-    <p class="dex-source">{{ i18n "dex_source_wikipedia" }}</p>
-    {{- end }}
+    {{- /* The prose is an abridged Wikipedia summary (CC BY-SA 4.0), so every page
+           that shows it has to credit it, link the licence, and say it was
+           shortened. This was previously gated on `wikidata_id`, which silently
+           dropped the credit on the two species that have none — leaving CC BY-SA
+           text with no attribution at all.
+
+           `dex_source_url` is resolved in dex-pages.html against the language
+           that actually supplied the text, so a Swedish page (which falls back to
+           the English description) credits the English article. Where the article
+           could not be resolved, `source` stays a plain word instead of a link.
+
+           NOTE: this assumes every description is Wikipedia-derived, which is
+           true for all 186 today. If hand-written prose is ever added, this needs
+           a per-species opt-out rather than being unconditional. */ -}}
+    {{- $sourceLabel := "Wikipedia" -}}
+    {{- with $.Params.dex_source_url -}}
+      {{- $sourceLabel = printf `<a href="%s" rel="noopener nofollow">Wikipedia</a>` . -}}
+    {{- end -}}
+    {{- $licenseLabel := `<a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license noopener nofollow">CC BY-SA 4.0</a>` -}}
+    <p class="dex-source">{{ i18n "dex_source_wikipedia" (dict "source" $sourceLabel "license" $licenseLabel) | safeHTML }}</p>
   </section>
   {{- end }}
 
