@@ -46,13 +46,6 @@ species:
   description_source:
     en: "https://en.wikipedia.org/wiki/Red_fox"
     de: "https://de.wikipedia.org/wiki/Rotfuchs"
-  tips:
-    best_time:
-      en: "Dawn and dusk, year-round. Cubs visible Mar–May."
-      de: "Morgen- und Abenddämmerung, ganzjährig. Junge sichtbar Mär–Mai."
-    approach:
-      en: "Foxes in urban areas are habituated to people — sit quietly and they'll often approach you. In rural settings, use a hide near known paths or den sites. Downwind approach is essential. A 200–400mm lens is usually enough. They're most active in low light, so bring a fast lens or raise ISO."
-      de: "Füchse in Stadtgebieten sind an Menschen gewöhnt — ruhig sitzen bleiben und sie kommen oft von selbst. In ländlichen Gebieten ein Versteck an bekannten Pfaden oder Bauten nutzen. Gegen den Wind annähern ist wichtig. Ein 200–400mm Objektiv reicht meist. Am aktivsten bei schwachem Licht, also schnelles Objektiv oder hohe ISO mitbringen."
 - slug: grey-wolf
   number: "002"
   scientific: Canis lupus
@@ -89,13 +82,6 @@ species:
   description_source:
     en: "https://en.wikipedia.org/wiki/Wolf"
     de: "https://de.wikipedia.org/wiki/Wolf"
-  tips:
-    best_time:
-      en: Winter for tracks in snow. Dawn howling sessions year-round.
-      de: "Winter für Spuren im Schnee. Morgendliches Heulen ganzjährig."
-    approach:
-      en: "Extremely wary — direct approach rarely works. Use a vehicle as a hide in parks like Yellowstone. In Europe, stake out feeding sites or known crossing points. A 500mm+ lens is essential. Patience is everything — multiple days may be needed. Listen for howling at dawn to locate packs."
-      de: "Extrem scheu — direkte Annäherung funktioniert selten. In Parks wie Yellowstone das Fahrzeug als Versteck nutzen. In Europa Futterstellen oder bekannte Wechsel beobachten. Ein 500mm+ Objektiv ist unerlässlich. Geduld ist alles — mehrere Tage können nötig sein. Bei Morgengrauen auf Heulen achten um Rudel zu orten."
 - slug: barn-owl
   number: "003"
   scientific: Tyto alba
@@ -132,13 +118,6 @@ species:
   description_source:
     en: "https://en.wikipedia.org/wiki/Western_barn_owl"
     de: "https://de.wikipedia.org/wiki/Schleiereule"
-  tips:
-    best_time:
-      en: "Dusk and just after sunset. Winter evenings when hunting starts earlier."
-      de: "Abenddämmerung und kurz nach Sonnenuntergang. Winterabende wenn die Jagd früher beginnt."
-    approach:
-      en: "Scout for regular hunting routes along field edges and hedgerows — they often follow the same flight path nightly. Park near the route and wait in a vehicle. Flash photography is discouraged near nest sites. A 300mm lens at high ISO works well. They fly silently and low, so be ready for fast panning shots."
-      de: "Regelmäßige Jagdrouten entlang von Feldrändern und Hecken erkunden — sie folgen oft allnächtlich demselben Flugpfad. In der Nähe der Route im Fahrzeug warten. Blitzfotografie an Nestplätzen vermeiden. Ein 300mm Objektiv bei hoher ISO funktioniert gut. Sie fliegen leise und niedrig — bereit sein für schnelle Mitzieher."
 - slug: european-hedgehog
   number: "004"
   scientific: Erinaceus europaeus
@@ -175,13 +154,6 @@ species:
   description_source:
     en: "https://en.wikipedia.org/wiki/European_hedgehog"
     de: "https://de.wikipedia.org/wiki/Braunbrustigel"
-  tips:
-    best_time:
-      en: "After dark, spring through autumn. Most active on warm, damp nights."
-      de: "Nach Einbruch der Dunkelheit, Frühling bis Herbst. Am aktivsten in warmen, feuchten Nächten."
-    approach:
-      en: "Leave cat food or mealworms in a garden to attract them, then wait quietly nearby. They have poor eyesight and rely on smell — stay downwind and move slowly. A macro or short telephoto (100mm) works for close-up portraits. Use a dim red torch to avoid startling them. Very tolerant once feeding."
-      de: "Katzenfutter oder Mehlwürmer im Garten auslegen, dann ruhig in der Nähe warten. Sie haben schlechte Augen und verlassen sich auf den Geruch — gegen den Wind bleiben und langsam bewegen. Ein Makro oder kurzes Tele (100mm) eignet sich für Nahporträts. Eine schwache rote Taschenlampe verwenden um sie nicht zu erschrecken. Sehr tolerant sobald sie fressen."
 - slug: atlantic-puffin
   number: "005"
   scientific: Fratercula arctica
@@ -219,13 +191,6 @@ species:
   description_source:
     en: "https://en.wikipedia.org/wiki/Atlantic_puffin"
     de: "https://de.wikipedia.org/wiki/Papageitaucher"
-  tips:
-    best_time:
-      en: "May–August breeding season. Midday for best light on cliffs."
-      de: "Mai–August Brutsaison. Mittags für bestes Licht an den Klippen."
-    approach:
-      en: "Visit a breeding colony (Farne Islands, Skellig Michael, Látrabjarg). Puffins at established colonies are remarkably tame — sit near burrow entrances and they'll walk right past. A 70–200mm zoom is ideal. Lie flat for eye-level shots. Best images come when they return with beaks full of sand eels. Wind and rain are common, so protect your gear."
-      de: "Eine Brutkolonie besuchen (Farne Islands, Skellig Michael, Látrabjarg). Papageitaucher an etablierten Kolonien sind bemerkenswert zahm — in der Nähe von Höhleneingängen sitzen und sie laufen direkt vorbei. Ein 70–200mm Zoom ist ideal. Flach hinlegen für Aufnahmen auf Augenhöhe. Die besten Bilder entstehen wenn sie mit vollem Schnabel Sandaale zurückkehren. Wind und Regen sind häufig — Ausrüstung schützen."
 - slug: red-deer
   number: "006"
   scientific: Cervus elaphus
@@ -262,13 +227,6 @@ species:
   description_source:
     en: "https://en.wikipedia.org/wiki/Red_deer"
     de: "https://de.wikipedia.org/wiki/Rothirsch"
-  tips:
-    best_time:
-      en: "Autumn rut (Sep–Oct) for stags roaring. Dawn in open glens."
-      de: "Herbstbrunft (Sep–Okt) für röhrende Hirsche. Morgengrauen in offenen Tälern."
-    approach:
-      en: "During the rut, stags are vocal and distracted — approach slowly using terrain for cover. A 400mm+ lens lets you keep a safe distance. Stay low and avoid skylining yourself on ridges. Outside the rut, deer are more skittish. Forest populations are harder than open moorland. Richmond Park (London) has very habituated herds for easy close-ups."
-      de: "Während der Brunft sind Hirsche laut und abgelenkt — langsam annähern und das Gelände als Deckung nutzen. Ein 400mm+ Objektiv ermöglicht sicheren Abstand. Niedrig bleiben und nicht auf Bergkämmen Silhouette zeigen. Außerhalb der Brunft sind Hirsche scheuer. Waldpopulationen sind schwieriger als offenes Moorland. Richmond Park (London) hat sehr zahme Herden für einfache Nahaufnahmen."
 - slug: musk-ox
   number: "007"
   scientific: Ovibos moschatus
