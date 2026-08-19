@@ -128,7 +128,12 @@
         <div class="dex-stat"><dt>{{ i18n "dex_family" }}</dt><dd>{{ . }}</dd></div>
         {{- end }}
         {{- with $species.height }}
-        <div class="dex-stat"><dt>{{ i18n "dex_height" }}</dt><dd>{{ . }}</dd></div>
+        {{- /* Which dimension this is (shoulder / length / wingspan / shell) is a
+               slug rather than part of the string, so the parenthetical gets
+               translated the same way diet does — an English "(shoulder)" would
+               otherwise show up on the German and Swedish pages. */}}
+        <div class="dex-stat"><dt>{{ i18n "dex_height" }}</dt><dd>{{ . }}
+          {{- with $species.height_measure }} <span class="dex-stat__qualifier">({{ i18n (printf "dex_measure_%s" .) }})</span>{{ end }}</dd></div>
         {{- end }}
         {{- with $species.body_weight }}
         <div class="dex-stat"><dt>{{ i18n "dex_weight" }}</dt><dd>{{ . }}</dd></div>

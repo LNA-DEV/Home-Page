@@ -25,6 +25,7 @@ species:
   inat_taxon_id: 42069
   wikidata_id: Q8332
   height: "35–50 cm"
+  height_measure: shoulder
   body_weight: "4–14 kg"
   diet: omnivore
   lifespan: "3–10"
@@ -60,7 +61,8 @@ species:
   inat_taxon_id: 42048
   wikidata_id: Q18498
   height: "80–85 cm"
-  body_weight: "30–80 kg"
+  height_measure: shoulder
+  body_weight: "30–50 kg"
   diet: carnivore
   lifespan: "6–8"
   habitat:
@@ -73,7 +75,7 @@ species:
     file: grey-wolf.jpg
   names:
     en: Grey Wolf
-    de: Grauwolf
+    de: Wolf
     sv: Varg
   description:
     en: "The largest extant member of Canidae. Highly social, living in nuclear families with complex communication through howling, body language, and scent marking. Apex predator across the Northern Hemisphere."
@@ -96,9 +98,10 @@ species:
   inat_taxon_id: 20445
   wikidata_id: Q25317
   height: "33–39 cm"
-  body_weight: "0.2–0.7 kg"
+  height_measure: length
+  body_weight: "240–480 g"
   diet: carnivore
-  lifespan: "4"
+  lifespan: "4–10"
   habitat:
     en: Farmland, Grasslands, Woodland edges
     de: "Ackerland, Grasland, Waldränder"
@@ -131,9 +134,10 @@ species:
   gbif_taxon_key: 5219616
   inat_taxon_id: 43042
   wikidata_id: Q6145
-  height: "20–30 cm (length)"
-  body_weight: "0.6–1.2 kg"
-  diet: omnivore
+  height: "20–30 cm"
+  height_measure: length
+  body_weight: "600–1200 g"
+  diet: insectivore
   lifespan: "3–8"
   habitat:
     en: Gardens, Hedgerows, Woodland edges
@@ -168,8 +172,9 @@ species:
   gbif_taxon_key: 2481353
   inat_taxon_id: 4504
   wikidata_id: Q26685
-  height: "26–29 cm"
-  body_weight: "0.3–0.5 kg"
+  height: "28–30 cm"
+  height_measure: length
+  body_weight: "400–650 g"
   diet: piscivore
   lifespan: "20–30"
   habitat:
@@ -204,13 +209,14 @@ species:
   gbif_taxon_key: 2440958
   inat_taxon_id: 204113
   wikidata_id: Q79794
-  height: "107–137 cm"
-  body_weight: "160–240 kg"
+  height: "95–130 cm"
+  height_measure: shoulder
+  body_weight: "120–240 kg"
   diet: herbivore
   lifespan: "10–13"
   habitat:
     en: Forests, Moorland, Grasslands
-    de: "Wälder, Moorland, Grasland"
+    de: "Wälder, Heide, Grasland"
   reference:
     credit: Lviatour, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Cervus_elaphus_Luc_Viatour_6.jpg"
@@ -240,6 +246,14 @@ species:
   gbif_taxon_key: 2441108
   inat_taxon_id: 42412
   wikidata_id: Q184004
+  height: "1.1–1.5 m"
+  height_measure: shoulder
+  body_weight: "180–410 kg"
+  diet: herbivore
+  lifespan: "12–20"
+  habitat:
+    en: Arctic tundra, River valleys, Grasslands
+    de: "Arktische Tundra, Flusstäler, Grasland"
   reference:
     credit: Quartl, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Ovibos_moschatus_qtl3.jpg"
@@ -262,6 +276,14 @@ species:
   gbif_taxon_key: 2433875
   inat_taxon_id: 855297
   wikidata_id: Q27066
+  height: "25–30 cm"
+  height_measure: shoulder
+  body_weight: "7–17 kg"
+  diet: omnivore
+  lifespan: "3–6"
+  habitat:
+    en: Deciduous woodland, Pastureland, Hedgerows, Suburban
+    de: "Laubwälder, Weideland, Hecken, Vorstädte"
   reference:
     credit: Charles J. Sharp, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:European_badger_%28Meles_meles_taxus%29_Drenthe.jpg"
@@ -270,7 +292,7 @@ species:
   names:
     en: European Badger
     de: "Europäischer Dachs"
-    sv: "Europeisk grävling"
+    sv: "Grävling"
   description:
     en: "The European badger, also known as the Eurasian badger, is a species of badger in the family Mustelidae native to Europe and West Asia and parts of Central Asia. It is classified as least concern on the IUCN Red List due to its wide range and large, stable population size which is thought to be increasing in some regions. Several subspecies are recognised, with the nominate subspecies predominating in most of Europe."
     de: "Der Europäische Dachs ist ein Raubtier aus der Familie der Marder und eine von vier Arten der Gattung Meles, die noch bis Anfang der 2000er Jahre in einer Art zusammengefasst waren. Volkstümlich wird der Dachs auch – vor allem in der Fabel – als „Grimbart“ bezeichnet."
@@ -282,8 +304,16 @@ species:
   difficulty: challenging
   iucn: LC
   gbif_taxon_key: 2435240
-  inat_taxon_id: 83843
+  inat_taxon_id: 41979
   wikidata_id: Q43375
+  height: "55–75 cm"
+  height_measure: shoulder
+  body_weight: "8–30 kg"
+  diet: carnivore
+  lifespan: "10–12"
+  habitat:
+    en: Boreal forests, Mixed woodland, Rocky mountains
+    de: "Boreale Wälder, Mischwälder, Felsige Gebirge"
   reference:
     credit: "Bernard Landgraf ( User:Baerni ), CC BY-SA 3.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Lynx_lynx_poing.jpg"
@@ -306,7 +336,14 @@ species:
   gbif_taxon_key: 2433433
   inat_taxon_id: 41641
   wikidata_id: Q36341
-  body_weight: 500 kg
+  height: "90–150 cm"
+  height_measure: shoulder
+  body_weight: "100–350 kg"
+  diet: omnivore
+  lifespan: "20–25"
+  habitat:
+    en: Forests, Mountains, Tundra
+    de: "Wälder, Gebirge, Tundra"
   reference:
     credit: Robert F. Tobler, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Kamchatka_Brown_Bear_near_Dvuhyurtochnoe_on_2015-07-23.jpg"
@@ -329,6 +366,14 @@ species:
   gbif_taxon_key: 7705930
   inat_taxon_id: 42134
   wikidata_id: Q58697
+  height: "70–95 cm"
+  height_measure: shoulder
+  body_weight: "60–130 kg"
+  diet: omnivore
+  lifespan: "4–10"
+  habitat:
+    en: Deciduous forests, Wetlands, Farmland
+    de: "Laubwälder, Feuchtgebiete, Agrarland"
   reference:
     credit: "DataBase Center for Life Science (DBCLS), CC BY 4.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:202310_Wild_boar.svg"
@@ -350,7 +395,14 @@ species:
   gbif_taxon_key: 5220126
   inat_taxon_id: 42184
   wikidata_id: Q122069
-  body_weight: 1.4 kg
+  height: "63–67 cm"
+  height_measure: shoulder
+  body_weight: "15–35 kg"
+  diet: herbivore
+  lifespan: "7–8"
+  habitat:
+    en: Woodland, Farmland, Scrub
+    de: "Wälder, Agrarland, Gebüsch"
   reference:
     credit: Jerzystrzelecki, CC BY 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Capreolus_(js)11.jpg"
@@ -372,6 +424,14 @@ species:
   gbif_taxon_key: 2441184
   inat_taxon_id: 1696537
   wikidata_id: Q81091
+  height: "1.7–2.1 m"
+  height_measure: shoulder
+  body_weight: "420–920 kg"
+  diet: herbivore
+  lifespan: "18–24"
+  habitat:
+    en: Lowland forests, Mountain forests, Meadows
+    de: "Tieflandwälder, Bergwälder, Wiesen"
   reference:
     credit: Charles J. Sharp, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:European_bison_(Bison_bonasus)_male_Białowieza.jpg"
@@ -393,6 +453,14 @@ species:
   gbif_taxon_key: 2441055
   inat_taxon_id: 42357
   wikidata_id: Q168327
+  height: "73–101 cm"
+  height_measure: shoulder
+  body_weight: "40–100 kg"
+  diet: herbivore
+  lifespan: "10–18"
+  habitat:
+    en: Alpine meadows, Rocky cliffs, High mountains
+    de: "Alpine Matten, Felswände, Hochgebirge"
   reference:
     credit: Ibex73, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Bouquetin_en_Vanoise%2C_%C3%A9t%C3%A9_2023_03.jpg"
@@ -415,6 +483,14 @@ species:
   gbif_taxon_key: 5220170
   inat_taxon_id: 42347
   wikidata_id: Q131340
+  height: "70–80 cm"
+  height_measure: shoulder
+  body_weight: "25–60 kg"
+  diet: herbivore
+  lifespan: "15–17"
+  habitat:
+    en: Alpine meadows, Rocky slopes, Mountain forests
+    de: "Almwiesen, Felshänge, Bergwälder"
   reference:
     credit: Giles Laurent, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:064_Wild_Chamois_Parc_régional_Chasseral_Photo_by_Giles_Laurent.jpg"
@@ -436,7 +512,14 @@ species:
   gbif_taxon_key: 2433753
   inat_taxon_id: 41850
   wikidata_id: Q29995
-  body_weight: 110 g
+  height: "60–90 cm"
+  height_measure: length
+  body_weight: "7–12 kg"
+  diet: piscivore
+  lifespan: "3–5"
+  habitat:
+    en: Rivers, Lakes, Coastal waters
+    de: "Flüsse, Seen, Küstengewässer"
   reference:
     credit: "김진환, Korean National Institute of Biological Resources, KOGL Type 1, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Otter.png"
@@ -459,6 +542,14 @@ species:
   gbif_taxon_key: 2440940
   inat_taxon_id: 522193
   wikidata_id: Q35517
+  height: "1.4–2.1 m"
+  height_measure: shoulder
+  body_weight: "200–700 kg"
+  diet: herbivore
+  lifespan: "15–20"
+  habitat:
+    en: Boreal forests, Wetlands, Mixed woodland
+    de: "Boreale Wälder, Feuchtgebiete, Mischwälder"
   reference:
     credit: Badzil, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Elk-telemark.jpg"
@@ -467,7 +558,7 @@ species:
   names:
     en: Moose
     de: Elch
-    sv: "Europeisk älg"
+    sv: "Älg"
   description:
     en: "The moose or elk is the world's tallest, largest and heaviest extant species of deer and the only extant species in the genus Alces. It is also the tallest, and the second-largest, land animal in North America, falling short only to the American bison in body mass. Most adult male moose have broad, palmate antlers; other members of the deer family have pointed antlers with a dendritic (\"twig-like\") configuration."
     de: "Der Elch ist die größte heute vorkommende Art der Hirsche. Sein Lebensraum erstreckt sich über Nordeuropa, Nordasien und Nordamerika. Der Elch wird von der IUCN als „nicht gefährdet“ eingestuft."
@@ -481,6 +572,14 @@ species:
   gbif_taxon_key: 5219303
   inat_taxon_id: 233598
   wikidata_id: Q82738
+  height: "25–30 cm"
+  height_measure: shoulder
+  body_weight: "2.5–5 kg"
+  diet: carnivore
+  lifespan: "3–6"
+  habitat:
+    en: Arctic tundra, Sea ice, Coastal areas
+    de: "Arktische Tundra, Meereis, Küstengebiete"
   reference:
     credit: "Hobboto4ek (Ольга Яковлевна Куликова / Olga Y. Kulikova), CC BY-SA 4.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%BC%D0%BA%D0%B0_%D0%BF%D0%B5%D1%81%D1%86%D0%B0_%D1%81%D0%BE_%D1%81%D0%BF%D1%83%D1%82%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D1%8B%D0%BC_%D0%BF%D1%80%D0%B5%D0%B4%D0%B0%D1%82%D1%87%D0%B8%D0%BA%D0%BE%D0%BC.jpg"
@@ -503,6 +602,14 @@ species:
   gbif_taxon_key: 5220114
   inat_taxon_id: 42199
   wikidata_id: Q39624
+  height: "90–140 cm"
+  height_measure: shoulder
+  body_weight: "60–300 kg"
+  diet: herbivore
+  lifespan: "12–15"
+  habitat:
+    en: Arctic tundra, Taiga, Mountain plateaus
+    de: Arktische Tundra, Taiga, Hochplateaus
   reference:
     credit: "Dean Biggins (U.S. Fish and Wildlife Service), Public domain, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Caribou.jpg"
@@ -525,6 +632,14 @@ species:
   gbif_taxon_key: 5218878
   inat_taxon_id: 41796
   wikidata_id: Q26046
+  height: "45–58 cm"
+  height_measure: length
+  body_weight: "0.8–1.8 kg"
+  diet: omnivore
+  lifespan: "3–5"
+  habitat:
+    en: Coniferous forests, Mixed woodland, Rocky scrub
+    de: "Nadelwälder, Mischwälder, Felsiges Gebüsch"
   reference:
     credit: Dani Kropivnik, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Martes_martes_crop_%28cropped%29.jpg"
@@ -547,6 +662,14 @@ species:
   gbif_taxon_key: 8211070
   inat_taxon_id: 46001
   wikidata_id: Q4388
+  height: "19–23 cm"
+  height_measure: length
+  body_weight: "250–340 g"
+  diet: herbivore
+  lifespan: "3–7"
+  habitat:
+    en: Coniferous forests, Mixed woodland, Parks
+    de: "Nadelwälder, Mischwälder, Parks"
   reference:
     credit: Peter Trimming, CC BY 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Squirrel_posing.jpg"
@@ -555,7 +678,7 @@ species:
   names:
     en: Red Squirrel
     de: "Eichhörnchen"
-    sv: Europeisk ekorre
+    sv: Ekorre
   description:
     en: "The red squirrel, also called Eurasian red squirrel, is a species of tree squirrel in the genus Sciurus. It is an arboreal and primarily herbivorous rodent and common throughout Eurasia."
     de: "Das Eurasische Eichhörnchen, häufig nur als Eichhörnchen bekannt, ist ein Nagetier aus der Familie der Hörnchen (Sciuridae). Es ist der einzige natürlich in Mitteleuropa vorkommende Vertreter aus der Gattung der Eichhörnchen und wird zur Unterscheidung von anderen Arten wie dem Kaukasischen Eichhörnchen und dem in Europa eingebürgerten Grauhörnchen auch als Europäisches Eichhörnchen bezeichnet."
@@ -569,6 +692,14 @@ species:
   gbif_taxon_key: 2436756
   inat_taxon_id: 55908
   wikidata_id: Q180035
+  height: "45–65 cm"
+  height_measure: length
+  body_weight: "2–5.3 kg"
+  diet: herbivore
+  lifespan: "3–4"
+  habitat:
+    en: Alpine tundra, Moorland, Boreal forests
+    de: "Alpine Tundra, Moorlandschaft, Boreale Wälder"
   reference:
     credit: "Правительство Волгоградской области, CC BY-SA 3.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Lepus_timidus_in_Volgograd_Oblast.jpg"
@@ -591,7 +722,14 @@ species:
   gbif_taxon_key: 2480506
   inat_taxon_id: 5074
   wikidata_id: Q41181
-  body_weight: "3.6–5.2 kg"
+  height: "1.8–2.3 m"
+  height_measure: wingspan
+  body_weight: "2.8–6.7 kg"
+  diet: carnivore
+  lifespan: "20–30"
+  habitat:
+    en: Mountains, Alpine meadows, Open tundra
+    de: Gebirge, Almwiesen, Offene Tundra
   reference:
     credit: "Jarkko Järvinen, CC BY-SA 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Maakotka_%28Aquila_chrysaetos%29_by_Jarkko_J%C3%A4rvinen.jpg"
@@ -614,7 +752,14 @@ species:
   gbif_taxon_key: 2481912
   inat_taxon_id: 4733
   wikidata_id: Q25352
-  body_weight: 110 g
+  height: "1.55–2.15 m"
+  height_measure: wingspan
+  body_weight: "2.3–4.5 kg"
+  diet: carnivore
+  lifespan: "20–25"
+  habitat:
+    en: Wet meadows, Farmland, Villages
+    de: "Feuchtwiesen, Ackerland, Dörfer"
   reference:
     credit: Krzysztof Kin, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Ciconia_ciconia.jpg"
@@ -635,9 +780,16 @@ species:
   difficulty: challenging
   iucn: LC
   gbif_taxon_key: 5959092
-  inat_taxon_id: 20034
+  inat_taxon_id: 20059
   wikidata_id: Q130933
-  body_weight: "2.4–80 g"
+  height: "56–75 cm"
+  height_measure: length
+  body_weight: "1.2–4.6 kg"
+  diet: carnivore
+  lifespan: "20"
+  habitat:
+    en: Rocky cliffs, Forest edges, Quarries
+    de: "Felswände, Waldränder, Steinbrüche"
   reference:
     credit: Marton Berntsen, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Hubro_%28Bubo_bubo%29.JPG"
@@ -660,7 +812,14 @@ species:
   gbif_taxon_key: 2492462
   inat_taxon_id: 13094
   wikidata_id: Q25334
-  body_weight: 2.4 g
+  height: "12.5–14 cm"
+  height_measure: length
+  body_weight: "16–22 g"
+  diet: insectivore
+  lifespan: "2–3"
+  habitat:
+    en: Woodland, Hedgerows, Gardens
+    de: "Wälder, Hecken, Gärten"
   reference:
     credit: Francis C. Franklin, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Erithacus_rubecula_with_cocked_head.jpg"
@@ -683,7 +842,14 @@ species:
   gbif_taxon_key: 2475532
   inat_taxon_id: 2599
   wikidata_id: Q79915
-  body_weight: 4.3 g
+  height: "16–17 cm"
+  height_measure: length
+  body_weight: "34–46 g"
+  diet: piscivore
+  lifespan: "2–7"
+  habitat:
+    en: Rivers, Lakes, Wooded streams
+    de: "Flüsse, Seen, Bachläufe"
   reference:
     credit: Artemy Voikhansky, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Alcedo_Atthis.jpg"
@@ -706,7 +872,14 @@ species:
   gbif_taxon_key: 2480649
   inat_taxon_id: 5379
   wikidata_id: Q126167
-  body_weight: "4.9–224 g"
+  height: "2.3–2.8 m"
+  height_measure: wingspan
+  body_weight: "4.5–7.8 kg"
+  diet: carnivore
+  lifespan: "20–25"
+  habitat:
+    en: High mountains, Cliffs, Alpine pastures
+    de: "Hochgebirge, Felswände, Almen"
   reference:
     credit: "Francesco Veronesi from Italy, CC BY-SA 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Bearded_Vulture_-_Catalan_Pyrenees_-_Spain_%2825098398432%29.jpg"
@@ -729,6 +902,14 @@ species:
   gbif_taxon_key: 2498415
   inat_taxon_id: 20969
   wikidata_id: Q25247
+  height: "25–32 cm"
+  height_measure: length
+  body_weight: "46–89 g"
+  diet: insectivore
+  lifespan: "6–10"
+  habitat:
+    en: Open woodland, Orchards, Grasslands
+    de: "Offene Wälder, Streuobstwiesen, Grasland"
   reference:
     credit: Keta, CC BY-SA 2.5, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Upupa_epops_Madrid_02.jpg"
@@ -751,6 +932,14 @@ species:
   gbif_taxon_key: 4352332
   inat_taxon_id: 73222
   wikidata_id: Q179863
+  height: "1.1–1.5 m"
+  height_measure: standing
+  body_weight: "2–4 kg"
+  diet: filter-feeder
+  lifespan: "20–30"
+  habitat:
+    en: Coastal lagoons, Salt pans, Mudflats
+    de: "Küstenlagunen, Salinen, Schlickflächen"
   reference:
     credit: El Golli Mohamed, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Flamant_rose_Thyna009.jpg"
@@ -773,7 +962,14 @@ species:
   gbif_taxon_key: 2480449
   inat_taxon_id: 5309
   wikidata_id: Q25438
-  body_weight: "4.0–142 kg"
+  height: "1.8–2.4 m"
+  height_measure: wingspan
+  body_weight: "3.1–6.9 kg"
+  diet: piscivore
+  lifespan: "20–25"
+  habitat:
+    en: Coasts, Large lakes, River valleys
+    de: "Küsten, Große Seen, Flusstäler"
   reference:
     credit: "Original: Andreas Weith. This edit: MPF., CC BY-SA 4.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Adult_White-tailed_Eagle_defending_prey,_Rezerwat_Gostynin-Wloclawek,_Poland.jpg"
@@ -795,6 +991,14 @@ species:
   gbif_taxon_key: 2481047
   inat_taxon_id: 4647
   wikidata_id: Q30535
+  height: "74–120 cm"
+  height_measure: wingspan
+  body_weight: "0.6–1.3 kg"
+  diet: carnivore
+  lifespan: "12–15"
+  habitat:
+    en: Cliffs, Open country, Cities
+    de: "Felsklippen, Offenes Land, Städte"
   reference:
     credit: "Georges Lignier (georges.lignier@wanadoo.fr), CC BY-SA 3.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Faucon_pelerin_7_mai.jpg"
@@ -813,10 +1017,18 @@ species:
   family: Salamandridae
   group: amphibians
   difficulty: easy
-  iucn: LC
+  iucn: VU
   gbif_taxon_key: 2431776
-  inat_taxon_id: 20978
+  inat_taxon_id: 27726
   wikidata_id: Q26395
+  height: "15–25 cm"
+  height_measure: length
+  body_weight: "25–50 g"
+  diet: insectivore
+  lifespan: "10–20"
+  habitat:
+    en: Deciduous forests, Hill streams, Damp woodland
+    de: "Laubwälder, Waldbäche, Feuchte Wälder"
   reference:
     credit: Michael Linnenbach, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Feuersalamander_portrait.jpg"
@@ -839,6 +1051,14 @@ species:
   gbif_taxon_key: 2434806
   inat_taxon_id: 41733
   wikidata_id: Q27370
+  height: "1.6–2.3 m"
+  height_measure: length
+  body_weight: "100–310 kg"
+  diet: piscivore
+  lifespan: "25–35"
+  habitat:
+    en: Rocky coasts, Sandy beaches, Coastal seas
+    de: "Felsküsten, Sandstrände, Küstenmeere"
   reference:
     credit: Lucc77, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Two_seals_in_the_water.jpg"
@@ -861,7 +1081,14 @@ species:
   gbif_taxon_key: 2475443
   inat_taxon_id: 2191
   wikidata_id: Q170718
-  body_weight: 6.5 g
+  height: "27–29 cm"
+  height_measure: length
+  body_weight: "44–78 g"
+  diet: insectivore
+  lifespan: "5–7"
+  habitat:
+    en: Open country, River banks, Farmland
+    de: Offenes Land, Flussufer, Agrarland
   reference:
     credit: Pierre Dalous, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Merops_apiaster_04.jpg"
@@ -880,9 +1107,18 @@ species:
   family: Elephantidae
   group: mammals
   difficulty: easy
+  iucn: EN
   gbif_taxon_key: 2435350
   inat_taxon_id: 43694
   wikidata_id: Q36557
+  height: "2.6–3.4 m"
+  height_measure: shoulder
+  body_weight: "3–7 t"
+  diet: herbivore
+  lifespan: "60–70"
+  habitat:
+    en: Savanna, Woodland, Wetlands
+    de: Savanne, Waldland, Feuchtgebiete
   reference:
     credit: Giles Laurent, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg"
@@ -905,7 +1141,14 @@ species:
   gbif_taxon_key: 5219404
   inat_taxon_id: 41964
   wikidata_id: Q140
-  body_weight: "1.6–188 kg"
+  height: "1.0–1.2 m"
+  height_measure: shoulder
+  body_weight: "120–225 kg"
+  diet: carnivore
+  lifespan: "12–17"
+  habitat:
+    en: Savanna, Grasslands, Open woodland
+    de: "Savanne, Grasland, Offene Wälder"
   reference:
     credit: "Sumit.pamnani at English Wikipedia, Public domain, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Lion_in_masai_mara.jpg"
@@ -928,6 +1171,14 @@ species:
   gbif_taxon_key: 5219436
   inat_taxon_id: 41963
   wikidata_id: Q34706
+  height: "57–70 cm"
+  height_measure: shoulder
+  body_weight: "20–70 kg"
+  diet: carnivore
+  lifespan: "12–17"
+  habitat:
+    en: Savanna, Rainforest, Rocky hills, Woodland
+    de: "Savanne, Regenwald, Felsige Hügel, Wälder"
   reference:
     credit: Sumeet Moghe, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Male_leopard_-_Mara.jpg"
@@ -950,7 +1201,14 @@ species:
   gbif_taxon_key: 2435270
   inat_taxon_id: 41955
   wikidata_id: Q23907
-  body_weight: "35–275 g"
+  height: "67–94 cm"
+  height_measure: shoulder
+  body_weight: "21–65 kg"
+  diet: carnivore
+  lifespan: "10–12"
+  habitat:
+    en: Savannah, Grassland, Semi-desert
+    de: "Savanne, Grasland, Halbwüste"
   reference:
     credit: Charles J. Sharp, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Cheetah_%28Acinonyx_jubatus%29_female_2.jpg"
@@ -969,9 +1227,18 @@ species:
   family: Hominidae
   group: mammals
   difficulty: challenging
+  iucn: EN
   gbif_taxon_key: 4267319
   inat_taxon_id: 147661
   wikidata_id: Q737878
+  height: "1.4–1.7 m"
+  height_measure: standing
+  body_weight: "70–190 kg"
+  diet: herbivore
+  lifespan: "35–40"
+  habitat:
+    en: Montane forest, Bamboo forest, Subalpine zone
+    de: Bergwald, Bambuswald, Subalpine Zone
   reference:
     credit: "https://www.flickr.com/photos/deepphoto/ d_proffer, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Susa_group%2C_mountain_gorilla.jpg"
@@ -994,8 +1261,14 @@ species:
   gbif_taxon_key: 2441205
   inat_taxon_id: 42157
   wikidata_id: Q15083
-  height: 5.5 m
-  body_weight: 54.5 kg
+  height: "4.3–5.7 m"
+  height_measure: standing
+  body_weight: "800–1200 kg"
+  diet: herbivore
+  lifespan: "20–25"
+  habitat:
+    en: Savannah, Open woodland, Semi-desert
+    de: "Savanne, Offene Wälder, Halbwüste"
   reference:
     credit: Thomas Fuhrmann, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Rothschild%27s_giraffe_%28Giraffa_camelopardalis_rothschildi%29_-_Murchison_Falls_National_Park.jpg"
@@ -1018,6 +1291,14 @@ species:
   gbif_taxon_key: 2440892
   inat_taxon_id: 43335
   wikidata_id: Q245305
+  height: "127–140 cm"
+  height_measure: shoulder
+  body_weight: "175–320 kg"
+  diet: herbivore
+  lifespan: "20–25"
+  habitat:
+    en: Grassland, Savannah woodland, Open plains
+    de: Grasland, Savannenwald, Offene Ebenen
   reference:
     credit: Muhammad Mahdi Karim, GFDL 1.2, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Plains_Zebra_Equus_quagga.jpg"
@@ -1040,6 +1321,14 @@ species:
   gbif_taxon_key: 2441247
   inat_taxon_id: 42149
   wikidata_id: Q34505
+  height: "1.3–1.65 m"
+  height_measure: shoulder
+  body_weight: "1.3–1.8 t"
+  diet: herbivore
+  lifespan: "40–50"
+  habitat:
+    en: Rivers, Lakes, Swamps
+    de: "Flüsse, Seen, Sümpfe"
   reference:
     credit: Bernard DUPONT from FRANCE, CC BY-SA 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Hippo_%28Hippopotamus_amphibius%29_%2816485955207%29.jpg"
@@ -1062,7 +1351,14 @@ species:
   gbif_taxon_key: 5220111
   inat_taxon_id: 43350
   wikidata_id: Q95036
-  body_weight: 36 kg
+  height: "1.3–1.8 m"
+  height_measure: shoulder
+  body_weight: "800–1400 kg"
+  diet: herbivore
+  lifespan: "35–50"
+  habitat:
+    en: Bushland, Savannah, Riverine woodland
+    de: "Buschland, Savanne, Ufergehölze"
   reference:
     credit: Yathin S Krishnappa, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:2012_Black_Rhinoceros_Gemsbokvlakte.jpg"
@@ -1081,10 +1377,18 @@ species:
   family: Felidae
   group: mammals
   difficulty: challenging
+  iucn: EN
   gbif_taxon_key: 7059276
   inat_taxon_id: 130793
   wikidata_id: Q19939
-  body_weight: "1.2–180 kg"
+  height: "90–110 cm"
+  height_measure: shoulder
+  body_weight: "110–260 kg"
+  diet: carnivore
+  lifespan: "10–15"
+  habitat:
+    en: Tropical forest, Mangroves, Grassland
+    de: Tropischer Wald, Mangroven, Grasland
   reference:
     credit: Seemaleena, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Adult_male_Royal_Bengal_tiger.jpg"
@@ -1093,7 +1397,7 @@ species:
   names:
     en: Bengal Tiger
     de: Bengaltiger
-    sv: Tiger
+    sv: Bengalisk tiger
   description:
     en: "The tiger is a large cat and a member of the genus Panthera native to Asia. It has a powerful, muscular body with a large head and paws, a long tail and orange fur with black, mostly vertical stripes. It is traditionally classified into nine recent subspecies, though some recognise only two subspecies, mainland Asian tigers and the island tigers of the Sunda Islands."
     de: "Der Königstiger, auch Bengal-Tiger oder Indischer Tiger, ist eine Unterart des Tigers, die zu den Festlandsunterarten zählt. Er ist auf dem Indischen Subkontinent verbreitet und wird von der IUCN als stark gefährdet (Endangered) eingestuft. Die gesamte Population wird auf weniger als 2500 Individuen geschätzt."
@@ -1107,6 +1411,14 @@ species:
   gbif_taxon_key: 5787213
   inat_taxon_id: 74831
   wikidata_id: Q30197
+  height: "56–60 cm"
+  height_measure: shoulder
+  body_weight: "22–55 kg"
+  diet: carnivore
+  lifespan: "15–18"
+  habitat:
+    en: Alpine meadows, Rocky slopes, High mountains
+    de: "Alpine Matten, Felshänge, Hochgebirge"
   reference:
     credit: Bernard Landgraf, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Uncia_uncia.jpg"
@@ -1129,7 +1441,14 @@ species:
   gbif_taxon_key: 2433399
   inat_taxon_id: 41659
   wikidata_id: Q33602
-  body_weight: "104–117.5 g"
+  height: "60–90 cm"
+  height_measure: shoulder
+  body_weight: "70–125 kg"
+  diet: herbivore
+  lifespan: "15–20"
+  habitat:
+    en: Bamboo forest, Montane forest, Coniferous forest
+    de: Bambuswald, Bergwald, Nadelwald
   reference:
     credit: Jeff Kubina, Public domain, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Giant_Panda_2004-03-2.jpg"
@@ -1148,10 +1467,18 @@ species:
   family: Ailuridae
   group: mammals
   difficulty: moderate
+  iucn: EN
   gbif_taxon_key: 5219446
   inat_taxon_id: 41653
   wikidata_id: Q41960
-  body_weight: "5.0–120 g"
+  height: "51–64 cm"
+  height_measure: length
+  body_weight: "3–6.2 kg"
+  diet: herbivore
+  lifespan: "8–10"
+  habitat:
+    en: "Temperate broadleaf forest, Bamboo understorey, Montane forest"
+    de: Laubmischwald, Bambusunterwuchs, Bergwald
   reference:
     credit: Ajit Hota, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:RedPanda_SingalilaNationalPark_DFrame.jpg"
@@ -1174,7 +1501,14 @@ species:
   gbif_taxon_key: 5219532
   inat_taxon_id: 43582
   wikidata_id: Q599672
-  body_weight: 1.7 kg
+  height: "1.0–1.4 m"
+  height_measure: standing
+  body_weight: "30–100 kg"
+  diet: frugivore
+  lifespan: "35–45"
+  habitat:
+    en: Lowland rainforest, Peat swamp forest, Montane forest
+    de: Tieflandregenwald, Torfsumpfwald, Bergwald
   reference:
     credit: Ltshears, Public domain, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:OrangutanP1.jpg"
@@ -1193,10 +1527,18 @@ species:
   family: Elephantidae
   group: mammals
   difficulty: moderate
+  iucn: EN
   gbif_taxon_key: 5219461
   inat_taxon_id: 43697
   wikidata_id: Q133006
-  body_weight: 95 kg
+  height: "2–3 m"
+  height_measure: shoulder
+  body_weight: "2–5 t"
+  diet: herbivore
+  lifespan: "55–70"
+  habitat:
+    en: Tropical forest, Grassland, Scrubland
+    de: Tropischer Wald, Grasland, Buschland
   reference:
     credit: Yathin S Krishnappa, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Elephas_maximus_%28Bandipur%29.jpg"
@@ -1215,9 +1557,18 @@ species:
   family: Ursidae
   group: mammals
   difficulty: moderate
+  iucn: LC
   gbif_taxon_key: 6163845
   inat_taxon_id: 125461
   wikidata_id: Q171004
+  height: "90–130 cm"
+  height_measure: shoulder
+  body_weight: "130–360 kg"
+  diet: omnivore
+  lifespan: "20–25"
+  habitat:
+    en: Forests, Mountains, Tundra, Coasts
+    de: "Wälder, Gebirge, Tundra, Küsten"
   reference:
     credit: Jean Beaufort, CC0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:GrizzlyBearJeanBeaufort.jpg"
@@ -1240,7 +1591,14 @@ species:
   gbif_taxon_key: 2480446
   inat_taxon_id: 5305
   wikidata_id: Q127216
-  body_weight: "4.1–117 g"
+  height: "1.8–2.3 m"
+  height_measure: wingspan
+  body_weight: "3–6.3 kg"
+  diet: piscivore
+  lifespan: "20–30"
+  habitat:
+    en: Coasts, Large lakes, Rivers, Forests
+    de: "Küsten, Große Seen, Flüsse, Wälder"
   reference:
     credit: "Andy Morffew from Itchen Abbas, Hampshire, UK, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Bald_Eagle_%28Haliaeetus_leucocephalus%29_Kachemak_Bay%2C_Alaska.jpg"
@@ -1261,9 +1619,16 @@ species:
   difficulty: easy
   iucn: NT
   gbif_taxon_key: 2441176
-  inat_taxon_id: 42241
+  inat_taxon_id: 208700
   wikidata_id: Q82728
-  body_weight: "20–2800 kg"
+  height: "1.5–1.9 m"
+  height_measure: shoulder
+  body_weight: "360–900 kg"
+  diet: herbivore
+  lifespan: "12–20"
+  habitat:
+    en: Prairies, Grasslands, River valleys
+    de: "Prärien, Grasland, Flusstäler"
   reference:
     credit: Jack Dykinga, Public domain, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:American_bison_k5680-1.jpg"
@@ -1286,7 +1651,14 @@ species:
   gbif_taxon_key: 5219426
   inat_taxon_id: 41970
   wikidata_id: Q35694
-  body_weight: 800 g
+  height: "63–76 cm"
+  height_measure: shoulder
+  body_weight: "45–100 kg"
+  diet: carnivore
+  lifespan: "10–12"
+  habitat:
+    en: Rainforests, Wetlands, Grasslands
+    de: "Regenwälder, Feuchtgebiete, Grasland"
   reference:
     credit: "Bjørn Christian Tørrissen, CC BY-SA 3.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Junior-Jaguar-Belize-Zoo.jpg"
@@ -1305,12 +1677,19 @@ species:
   family: Ursidae
   group: mammals
   difficulty: challenging
+  marine: true
   iucn: VU
   gbif_taxon_key: 2433451
   inat_taxon_id: 41644
   wikidata_id: Q33609
-  body_weight: "450–600 g"
-  lifespan: "50"
+  height: "1.3–1.6 m"
+  height_measure: shoulder
+  body_weight: "150–800 kg"
+  diet: carnivore
+  lifespan: "15–18"
+  habitat:
+    en: Sea ice, Arctic coasts, Tundra
+    de: "Meereis, Arktische Küsten, Tundra"
   reference:
     credit: Alan Wilson, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Polar_Bear_-_Alaska_%28cropped%29.jpg"
@@ -1333,6 +1712,14 @@ species:
   gbif_taxon_key: 2441370
   inat_taxon_id: 26159
   wikidata_id: Q193327
+  height: "2.6–4.4 m"
+  height_measure: length
+  body_weight: "90–360 kg"
+  diet: carnivore
+  lifespan: "30–50"
+  habitat:
+    en: Freshwater marshes, Cypress swamps, Rivers, Lakes
+    de: "Süßwassermarschen, Zypressensümpfe, Flüsse, Seen"
   reference:
     credit: "User:Postdlf, CC BY-SA 3.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:American_Alligator.jpg"
@@ -1355,6 +1742,14 @@ species:
   gbif_taxon_key: 5133088
   inat_taxon_id: 48662
   wikidata_id: Q212398
+  height: "89–102 mm"
+  height_measure: wingspan
+  body_weight: "0.25–0.75 g"
+  diet: nectarivore
+  lifespan: "0.1–0.75"
+  habitat:
+    en: Meadows, Gardens, Roadsides, Overwintering forests
+    de: "Wiesen, Gärten, Wegränder, Überwinterungswälder"
   reference:
     credit: Didier Descouens, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Danaus_plexippus_MHNT_femelle.jpg"
@@ -1377,6 +1772,14 @@ species:
   gbif_taxon_key: 2435099
   inat_taxon_id: 42007
   wikidata_id: Q35255
+  height: "60–90 cm"
+  height_measure: shoulder
+  body_weight: "34–72 kg"
+  diet: carnivore
+  lifespan: "8–13"
+  habitat:
+    en: Mountains, Forests, Deserts, Scrubland
+    de: "Gebirge, Wälder, Wüsten, Buschland"
   reference:
     credit: Carlos, CC BY 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Puma_-_49044464307.jpg"
@@ -1395,9 +1798,18 @@ species:
   family: Testudinidae
   group: reptiles
   difficulty: moderate
+  iucn: CR
   gbif_taxon_key: 9527499
   inat_taxon_id: 539452
   wikidata_id: Q20014035
+  height: "90–130 cm"
+  height_measure: shell
+  body_weight: "130–320 kg"
+  diet: herbivore
+  lifespan: "100–150"
+  habitat:
+    en: Arid lowlands, Humid highlands, Grasslands
+    de: Trockenes Tiefland, Feuchtes Hochland, Grasland
   reference:
     credit: "The original uploader was Pandanus at German Wikipedia ., Public domain, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Galapagos_Geochelone_nigra_porteri.jpg"
@@ -1420,6 +1832,14 @@ species:
   gbif_taxon_key: 2478765
   inat_taxon_id: 18793
   wikidata_id: Q376038
+  height: "55–65 cm"
+  height_measure: length
+  body_weight: "500–860 g"
+  diet: frugivore
+  lifespan: "20"
+  habitat:
+    en: Gallery forest, Savanna, Woodland
+    de: "Galeriewald, Savanne, Lichte Wälder"
   reference:
     credit: Giles Laurent, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:006_Toco_toucan_in_Encontro_das_%C3%81guas_State_Park_Photo_by_Giles_Laurent.jpg"
@@ -1442,7 +1862,14 @@ species:
   gbif_taxon_key: 5786666
   inat_taxon_id: 74442
   wikidata_id: Q131538
-  body_weight: "1.5–48.9 kg"
+  height: "106–134 cm"
+  height_measure: length
+  body_weight: "35–66 kg"
+  diet: herbivore
+  lifespan: "6–10"
+  habitat:
+    en: Wetlands, Riverbanks, Savannas
+    de: Feuchtgebiete, Flussufer, Savannen
   reference:
     credit: Bernard DUPONT from FRANCE, CC BY-SA 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Capybaras_%28Hydrochoerus_hydrachaeris%29_female_and_young_suckling_..._%2848427191032%29.jpg"
@@ -1463,9 +1890,16 @@ species:
   difficulty: challenging
   iucn: LC
   gbif_taxon_key: 5219073
-  inat_taxon_id: 7004
+  inat_taxon_id: 41852
   wikidata_id: Q14334
-  body_weight: "10.6–84 g"
+  height: "36–45 cm"
+  height_measure: shoulder
+  body_weight: "8–18 kg"
+  diet: carnivore
+  lifespan: "8–10"
+  habitat:
+    en: Boreal forests, Tundra, Alpine
+    de: "Boreale Wälder, Tundra, Hochgebirge"
   reference:
     credit: Zefram, CC BY 2.5, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Gulo_gulo_2.jpg"
@@ -1488,6 +1922,14 @@ species:
   gbif_taxon_key: 5959143
   inat_taxon_id: 144594
   wikidata_id: Q170177
+  height: "53–71 cm"
+  height_measure: length
+  body_weight: "1.3–3 kg"
+  diet: carnivore
+  lifespan: "9–10"
+  habitat:
+    en: Arctic tundra, Coastal grassland, Open farmland
+    de: "Arktische Tundra, Küstengrasland, Offenes Agrarland"
   reference:
     credit: "Bill Bouton from San Luis Obispo, CA, USA, CC BY-SA 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Bubo_scandiacus_male_Muskegon.jpg"
@@ -1510,7 +1952,14 @@ species:
   gbif_taxon_key: 2431950
   inat_taxon_id: 26777
   wikidata_id: Q22718
-  body_weight: "8"
+  height: "20–30 cm"
+  height_measure: length
+  body_weight: "60–110 g"
+  diet: carnivore
+  lifespan: "10–15"
+  habitat:
+    en: Freshwater canals, High-altitude lakes, Wetlands
+    de: "Süßwasserkanäle, Hochlandseen, Feuchtgebiete"
   reference:
     credit: Mariblubb, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Axolotl_Wild_Type.jpg"
@@ -1534,7 +1983,14 @@ species:
   gbif_taxon_key: 5220008
   inat_taxon_id: 41459
   wikidata_id: Q159426
-  body_weight: 80 kg
+  height: "3.0–5.5 m"
+  height_measure: length
+  body_weight: "800–1600 kg"
+  diet: carnivore
+  lifespan: "30–40"
+  habitat:
+    en: Arctic seas, Pack ice, Fjords
+    de: Arktische Meere, Packeis, Fjorde
   reference:
     credit: "пресс-служба ПАО \"Газпром нефть\", CC BY-SA 4.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B0%D1%80%D0%B2%D0%B0%D0%BB_%D0%B2_%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B9_%D0%90%D1%80%D0%BA%D1%82%D0%B8%D0%BA%D0%B5.jpg"
@@ -1554,10 +2010,18 @@ species:
   group: mammals
   difficulty: easy
   marine: true
+  iucn: EN
   gbif_taxon_key: 2433670
   inat_taxon_id: 41860
   wikidata_id: Q41407
-  body_weight: "1.9–45 kg"
+  height: "1.0–1.5 m"
+  height_measure: length
+  body_weight: "14–45 kg"
+  diet: carnivore
+  lifespan: "10–20"
+  habitat:
+    en: Kelp forests, Rocky coasts, Coastal waters
+    de: "Kelpwälder, Felsküsten, Küstengewässer"
   reference:
     credit: Mike Baird from Morro Bay, USA, CC BY 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Sea_otter_cropped.jpg"
@@ -1581,6 +2045,14 @@ species:
   gbif_taxon_key: 2442225
   inat_taxon_id: 39659
   wikidata_id: Q199458
+  height: "80–110 cm"
+  height_measure: shell
+  body_weight: "70–190 kg"
+  diet: herbivore
+  lifespan: "60–70"
+  habitat:
+    en: "Seagrass meadows, Coral reefs, Coastal lagoons, Nesting beaches"
+    de: "Seegraswiesen, Korallenriffe, Küstenlagunen, Sandstrände"
   reference:
     credit: Charles J. Sharp, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg"
@@ -1603,7 +2075,14 @@ species:
   gbif_taxon_key: 2434982
   inat_taxon_id: 41997
   wikidata_id: Q33261
-  body_weight: 13.5 kg
+  height: "40–50 cm"
+  height_measure: shoulder
+  body_weight: "7–18 kg"
+  diet: carnivore
+  lifespan: "7–10"
+  habitat:
+    en: Tropical forests, Mangroves, Thorn scrub
+    de: "Tropische Wälder, Mangroven, Dornbuschwald"
   reference:
     credit: Giles Laurent, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:081_Ocelot_in_Encontro_das_%C3%81guas_State_Park_Photo_by_Giles_Laurent.jpg"
@@ -1626,6 +2105,14 @@ species:
   gbif_taxon_key: 2433407
   inat_taxon_id: 41638
   wikidata_id: Q122783
+  height: "65–100 cm"
+  height_measure: shoulder
+  body_weight: "40–300 kg"
+  diet: omnivore
+  lifespan: "15–20"
+  habitat:
+    en: Forests, Swamps, Mountains
+    de: "Wälder, Sümpfe, Gebirge"
   reference:
     credit: HBarrison, CC BY-SA 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Canadian_Rockies_-_the_bear_at_Lake_Louise.jpg"
@@ -1640,7 +2127,7 @@ species:
     de: "Der Amerikanische Schwarzbär, auch Baribal genannt, ist eine in Nordamerika lebende Raubtierart aus der Familie der Bären (Ursidae). In seiner Heimat wird er meistens als black bear oder Ours noir bezeichnet. Im Vergleich zum eher gefürchteten Grizzlybären gilt der Schwarzbär als weniger gefährlich."
 - slug: red-kangaroo
   number: "070"
-  scientific: Macropus rufus
+  scientific: Osphranter rufus
   family: Macropodidae
   group: mammals
   difficulty: easy
@@ -1648,6 +2135,14 @@ species:
   gbif_taxon_key: 5219963
   inat_taxon_id: 1453439
   wikidata_id: Q104831614
+  height: "1.5–1.8 m"
+  height_measure: standing
+  body_weight: "18–90 kg"
+  diet: herbivore
+  lifespan: "8–16"
+  habitat:
+    en: Deserts, Grasslands, Scrubland
+    de: "Wüsten, Grasland, Buschland"
   reference:
     credit: "fir0002 flagstaffotos [at] gmail.com Canon 20D + Canon 70-200mm f/2.8 L, GFDL 1.2, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Red_kangaroo_-_melbourne_zoo.jpg"
@@ -1656,6 +2151,7 @@ species:
   names:
     en: Red Kangaroo
     de: "Rotes Riesenkänguru"
+    sv: "Röd jättekänguru"
   description:
     en: "The red kangaroo is the largest of all kangaroos, the largest terrestrial mammal native to Australia, and the largest extant marsupial. It is found across mainland Australia, except for the more fertile areas, such as southern Western Australia, the eastern and southeastern coasts, and the rainforests along the northern coast."
     de: "Das Rote Riesenkänguru ist der größte Vertreter der Kängurus und das größte lebende Beuteltier."
@@ -1669,7 +2165,14 @@ species:
   gbif_taxon_key: 2440012
   inat_taxon_id: 42983
   wikidata_id: Q36101
-  lifespan: "10"
+  height: "60–85 cm"
+  height_measure: length
+  body_weight: "4–15 kg"
+  diet: herbivore
+  lifespan: "13–18"
+  habitat:
+    en: Eucalyptus forests, Open woodland, Riparian zones
+    de: "Eukalyptuswälder, Offene Wälder, Uferzonen"
   reference:
     credit: Diliff, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Koala_climbing_tree.jpg"
@@ -1692,6 +2195,14 @@ species:
   gbif_taxon_key: 2433376
   inat_taxon_id: 43236
   wikidata_id: Q15343
+  height: "37–63 cm"
+  height_measure: length
+  body_weight: "0.6–3 kg"
+  diet: carnivore
+  lifespan: "10–20"
+  habitat:
+    en: Rivers, Streams, Freshwater lakes
+    de: "Flüsse, Bäche, Süßwasserseen"
   reference:
     credit: Charles J. Sharp, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Duck-billed_platypus_%28Ornithorhynchus_anatinus%29_Scottsdale.jpg"
@@ -1714,14 +2225,22 @@ species:
   gbif_taxon_key: 2440301
   inat_taxon_id: 43009
   wikidata_id: Q752436
+  height: "90–120 cm"
+  height_measure: length
+  body_weight: "22–35 kg"
+  diet: herbivore
+  lifespan: "12–15"
+  habitat:
+    en: Forests, Heathland, Mountain slopes
+    de: "Wälder, Heideland, Berghänge"
   reference:
     credit: "JJ Harrison ( jjharrison89@facebook.com ), CC BY-SA 3.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Vombatus_ursinus_-Maria_Island_National_Park.jpg"
     commons_file: Vombatus ursinus -Maria Island National Park.jpg
     file: wombat.jpg
   names:
-    en: Wombat
-    de: Wombat
+    en: Common Wombat
+    de: Nacktnasenwombat
     sv: Nakennosvombat
   description:
     en: "The common wombat, also known as the bare-nosed wombat, is a marsupial, one of three extant species of wombats and the sole extant member of the genus Vombatus. It has three subspecies: Vombatus ursinus hirsutus, found on the Australian mainland; Vombatus ursinus tasmaniensis, found in Tasmania; and Vombatus ursinus ursinus, found on Flinders Island and Maria Island in the Bass Strait."
@@ -1732,9 +2251,18 @@ species:
   family: Dasyuridae
   group: mammals
   difficulty: moderate
+  iucn: EN
   gbif_taxon_key: 2435451
   inat_taxon_id: 40232
   wikidata_id: Q134964
+  height: "53–80 cm"
+  height_measure: length
+  body_weight: "6–9 kg"
+  diet: carnivore
+  lifespan: "5"
+  habitat:
+    en: Dry eucalypt forest, Coastal woodland, Farmland
+    de: "Trockene Eukalyptuswälder, Küstenwälder, Agrarland"
   reference:
     credit: "JJ Harrison ( https://www.jjharrison.com.au/ ), CC BY-SA 3.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Sarcophilus_harrisii_taranna.jpg"
@@ -1757,15 +2285,22 @@ species:
   gbif_taxon_key: 2495144
   inat_taxon_id: 20496
   wikidata_id: Q734829
-  body_weight: "2.2–3.0 kg"
+  height: 40 cm
+  height_measure: length
+  body_weight: "1.4–3.9 kg"
+  diet: insectivore
+  lifespan: "20–30"
+  habitat:
+    en: Native forest, Scrub, Pine plantations
+    de: Naturwald, Buschland, Kiefernplantagen
   reference:
     credit: The.Rohit, CC BY 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Apteryx_mantelli_-Rotorua%2C_North_Island%2C_New_Zealand-8a.jpg"
     commons_file: Apteryx mantelli -Rotorua, North Island, New Zealand-8a.jpg
     file: kiwi.jpg
   names:
-    en: Kiwi
-    de: Kiwi
+    en: North Island Brown Kiwi
+    de: Nordstreifenkiwi
     sv: Brunkivi
   description:
     en: "The North Island brown kiwi is a species of kiwi that is widespread in the northern two-thirds of the North Island of New Zealand and, with about 35,000 remaining, it is the most common kiwi species. The eggs laid by the North Island brown kiwi are among the largest eggs relative to its body size."
@@ -1780,6 +2315,14 @@ species:
   gbif_taxon_key: 2441333
   inat_taxon_id: 26068
   wikidata_id: Q182599
+  height: "2.7–5 m"
+  height_measure: length
+  body_weight: "80–1000 kg"
+  diet: carnivore
+  lifespan: "50–70"
+  habitat:
+    en: Mangrove swamps, River deltas, Estuaries, Coastal seas
+    de: "Mangrovensümpfe, Flussdeltas, Flussmündungen, Küstengewässer"
   reference:
     credit: Laubarr, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Laurie%27s_crocodile_in_the_garden.jpg"
@@ -1802,13 +2345,21 @@ species:
   gbif_taxon_key: 5231783
   inat_taxon_id: 20500
   wikidata_id: Q375790
+  height: "1.5–1.8 m"
+  height_measure: standing
+  body_weight: "29–76 kg"
+  diet: frugivore
+  lifespan: "18–20"
+  habitat:
+    en: Tropical rainforest, Mangroves, Savanna forest
+    de: Tropischer Regenwald, Mangroven, Savannenwald
   reference:
     credit: Wvbailey, CC BY 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Wild_cassowary_walking_at_Mission_Beach_IMG_3933.jpg"
     commons_file: Wild cassowary walking at Mission Beach IMG 3933.jpg
     file: cassowary.jpg
   names:
-    en: Cassowary
+    en: Southern Cassowary
     de: Helmkasuar
     sv: "Hjälmkasuar"
   description:
@@ -1825,8 +2376,14 @@ species:
   gbif_taxon_key: 5220086
   inat_taxon_id: 41566
   wikidata_id: Q132905
-  body_weight: "1.5–45"
-  lifespan: "47.5"
+  height: "12–16 m"
+  height_measure: length
+  body_weight: "25–40 t"
+  diet: filter-feeder
+  lifespan: "45–50"
+  habitat:
+    en: Open ocean, Continental shelf waters, Polar feeding grounds
+    de: "Offener Ozean, Schelfgewässer, Polare Nahrungsgebiete"
   reference:
     credit: Dr. Louis M. Herman., Public domain, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Humpback_whales_in_singing_position.jpg"
@@ -1850,6 +2407,14 @@ species:
   gbif_taxon_key: 2440483
   inat_taxon_id: 41521
   wikidata_id: Q26843
+  height: "5–8 m"
+  height_measure: length
+  body_weight: "3–6 t"
+  diet: carnivore
+  lifespan: "30–50"
+  habitat:
+    en: Open ocean, Coastal waters, Polar seas
+    de: "Offener Ozean, Küstengewässer, Polarmeere"
   reference:
     credit: Robert Pittman, Public domain, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg"
@@ -1873,6 +2438,14 @@ species:
   gbif_taxon_key: 2440447
   inat_taxon_id: 41482
   wikidata_id: Q174199
+  height: "2–4 m"
+  height_measure: length
+  body_weight: "150–650 kg"
+  diet: carnivore
+  lifespan: "40–50"
+  habitat:
+    en: Coastal waters, Open ocean, Estuaries
+    de: "Küstengewässer, Offener Ozean, Flussmündungen"
   reference:
     credit: NASA, Public domain, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01-cropped.jpg"
@@ -1891,9 +2464,18 @@ species:
   group: mammals
   difficulty: challenging
   marine: true
+  iucn: EN
   gbif_taxon_key: 2440735
   inat_taxon_id: 41553
   wikidata_id: Q42196
+  height: "23–30 m"
+  height_measure: length
+  body_weight: "100–150 t"
+  diet: filter-feeder
+  lifespan: "80–90"
+  habitat:
+    en: Open ocean, Polar feeding grounds, Tropical breeding grounds
+    de: "Offener Ozean, Polare Nahrungsgebiete, Tropische Fortpflanzungsgebiete"
   reference:
     credit: NOAA Photo Library, Public domain, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Anim1755_-_Flickr_-_NOAA_Photo_Library.jpg"
@@ -1917,6 +2499,14 @@ species:
   gbif_taxon_key: 5218819
   inat_taxon_id: 41766
   wikidata_id: Q40994
+  height: "2.2–3.5 m"
+  height_measure: length
+  body_weight: "600–1700 kg"
+  diet: carnivore
+  lifespan: "20–30"
+  habitat:
+    en: Pack ice, Arctic shelf seas, Coastal haul-outs
+    de: "Packeis, Arktische Schelfmeere, Küstenliegeplätze"
   reference:
     credit: Nixette, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Walrus_in_the_Russian_Arctic_National_Park%2C_Novaya_Zemlya_2015-2.jpg"
@@ -1936,11 +2526,18 @@ species:
   group: birds
   difficulty: challenging
   marine: true
-  iucn: NT
+  iucn: EN
   gbif_taxon_key: 2481661
   inat_taxon_id: 3820
   wikidata_id: Q161829
-  body_weight: 425 g
+  height: "100–120 cm"
+  height_measure: standing
+  body_weight: "22–45 kg"
+  diet: piscivore
+  lifespan: "15–20"
+  habitat:
+    en: Antarctic sea ice, Ice shelves, Open ocean
+    de: Antarktisches Meereis, Schelfeis, Offener Ozean
   reference:
     credit: Ian Duffy from UK, CC BY 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg"
@@ -1964,7 +2561,14 @@ species:
   gbif_taxon_key: 2481660
   inat_taxon_id: 3821
   wikidata_id: Q182209
-  body_weight: "11.5–306 g"
+  height: "85–95 cm"
+  height_measure: standing
+  body_weight: "9.3–18 kg"
+  diet: piscivore
+  lifespan: "15–25"
+  habitat:
+    en: Subantarctic islands, Beaches, Open ocean
+    de: "Subantarktische Inseln, Strände, Offener Ozean"
   reference:
     credit: Liam Quinn from Canada, CC BY-SA 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:King_Penguins_on_Saunders_Island_%285586254113%29.jpg"
@@ -1988,6 +2592,14 @@ species:
   gbif_taxon_key: 9789983
   inat_taxon_id: 39677
   wikidata_id: Q120043
+  height: "1.4–1.7 m"
+  height_measure: shell
+  body_weight: "250–700 kg"
+  diet: carnivore
+  lifespan: "30–50"
+  habitat:
+    en: Open ocean, Coastal waters, Nesting beaches
+    de: "Offener Ozean, Küstengewässer, Sandstrände"
   reference:
     credit: Julien Renoult, CC BY 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Dermochelys_coriacea_-_Julien_Renoult_-_12981952.jpeg"
@@ -2011,6 +2623,14 @@ species:
   gbif_taxon_key: 2289485
   inat_taxon_id: 48863
   wikidata_id: Q912404
+  height: "2–4.3 m"
+  height_measure: length
+  body_weight: "15–50 kg"
+  diet: carnivore
+  lifespan: "3–5"
+  habitat:
+    en: Rocky reefs, Kelp forests, Coastal seafloor
+    de: "Felsenriffe, Kelpwälder, Küstennaher Meeresboden"
   reference:
     credit: "NOAA/R. N. Lea [1], Public domain, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Enteroctopus_dolfeini.jpg"
@@ -2019,7 +2639,7 @@ species:
   names:
     en: Giant Pacific Octopus
     de: Pazifischer Riesenkrake
-    sv: Enteroctopus dofleini
+    sv: "Stor stillahavsbläckfisk"
   description:
     en: "The giant Pacific octopus, also known as the North Pacific giant octopus, is a large marine cephalopod belonging to the genus Enteroctopus and Enteroctopodidae family."
     de: "Der Pazifische Riesenkrake ist ein großer Kopffüßer aus der Gattung der Riesenkraken. Er lebt in der Nähe der Küsten des nordwestlichen Pazifiks meist auf nicht-felsigem Untergrund und wird als größter Krake angesehen."
@@ -2034,14 +2654,22 @@ species:
   gbif_taxon_key: 5212106
   inat_taxon_id: 132688
   wikidata_id: Q1126155
+  height: "6–8 cm"
+  height_measure: length
+  body_weight: "5–10 g"
+  diet: omnivore
+  lifespan: "6–10"
+  habitat:
+    en: Coral reefs, Lagoons, Sea anemones
+    de: Korallenriffe, Lagunen, Seeanemonen
   reference:
     credit: Raimond Spekking, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Clownfisch_%28Amphiprion_ocellaris%29.jpg"
     commons_file: Clownfisch (Amphiprion ocellaris).jpg
     file: clownfish.jpg
   names:
-    en: Clownfish
-    de: Clownfisch
+    en: Ocellaris Clownfish
+    de: Falscher Clownfisch
     sv: Vanlig clownfisk
   description:
     en: "The ocellaris clownfish, also known as the false percula clownfish or common clownfish, is a marine fish belonging to the family Pomacentridae, which includes clownfishes and damselfishes. A. ocellaris are found in different colors, depending on where they are located."
@@ -2053,10 +2681,18 @@ species:
   group: fish
   difficulty: moderate
   marine: true
+  iucn: EN
   gbif_taxon_key: 2417522
   inat_taxon_id: 52188
   wikidata_id: Q80378
-  body_weight: "12"
+  height: "8–14 m"
+  height_measure: length
+  body_weight: "9–15 t"
+  diet: filter-feeder
+  lifespan: "70–100"
+  habitat:
+    en: Open ocean, Tropical seas, Coastal upwellings
+    de: "Offener Ozean, Tropische Meere, Küstenauftriebsgebiete"
   reference:
     credit: "User:Zac Wolf (original), en:User:Stefan (cropping), CC BY-SA 2.5, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Whale_shark_Georgia_aquarium.jpg"
@@ -2080,8 +2716,14 @@ species:
   gbif_taxon_key: 2420694
   inat_taxon_id: 50873
   wikidata_id: Q129026
-  body_weight: "2400"
-  lifespan: "73"
+  height: "3.4–4.9 m"
+  height_measure: length
+  body_weight: "680–1900 kg"
+  diet: carnivore
+  lifespan: "30–70"
+  habitat:
+    en: Coastal waters, Open ocean, Seal colonies
+    de: "Küstengewässer, Offener Ozean, Robbenkolonien"
   reference:
     credit: Sharkdiver.com, Public domain, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Carcharodon_carcharias.jpg"
@@ -2101,18 +2743,27 @@ species:
   group: fish
   difficulty: moderate
   marine: true
+  iucn: EN
   gbif_taxon_key: 9548142
   inat_taxon_id: 623966
   wikidata_id: Q321976
+  height: "4–5 m"
+  height_measure: length
+  body_weight: "1–2 t"
+  diet: filter-feeder
+  lifespan: "40"
+  habitat:
+    en: Open ocean, Seamounts, Coastal upwellings
+    de: "Offener Ozean, Seeberge, Küstenauftriebsgebiete"
   reference:
     credit: jon hanson from london, UK, CC BY-SA 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Manta_birostris-Thailand3.jpg"
     commons_file: Manta birostris-Thailand3.jpg
     file: manta-ray.jpg
   names:
-    en: Manta Ray
-    de: Mantarochen
-    sv: Manta
+    en: Giant Manta Ray
+    de: Riesenmanta
+    sv: "Jättemanta"
   description:
     en: "The giant oceanic manta ray, giant manta ray, or oceanic manta ray is a species of ray in the family Mobulidae and the largest type of ray in the world. It is circumglobal and is typically found in tropical and subtropical waters but can also be found in temperate waters. Until 2017, the species was classified in the genus Manta, along with the smaller reef manta ray."
     de: "Der Riesenmanta ist eine Rochenart aus der Familie der Teufelsrochen. „Manta“ ist spanisch und bedeutet „Decke“. Die Kopfflossen brachten den Tieren schließlich den Namen „Teufelsrochen“ ein."
@@ -2127,7 +2778,14 @@ species:
   gbif_taxon_key: 5220003
   inat_taxon_id: 41461
   wikidata_id: Q132072
-  body_weight: 60 kg
+  height: "3–5.5 m"
+  height_measure: length
+  body_weight: "700–1600 kg"
+  diet: carnivore
+  lifespan: "40–60"
+  habitat:
+    en: Arctic seas, Estuaries, Pack ice edge
+    de: "Arktische Meere, Flussmündungen, Packeisrand"
   reference:
     credit: "Carquinyol from Badalona, Catalunya, CC BY-SA 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Beluga_oceanografic.jpg"
@@ -2151,6 +2809,14 @@ species:
   gbif_taxon_key: 2434793
   inat_taxon_id: 41708
   wikidata_id: Q26913
+  height: "1.5–1.8 m"
+  height_measure: length
+  body_weight: "55–130 kg"
+  diet: piscivore
+  lifespan: "20–30"
+  habitat:
+    en: Coastal waters, Sandbanks, Rocky shores
+    de: "Küstengewässer, Sandbänke, Felsküsten"
   reference:
     credit: Andreas Trepte, CC BY-SA 2.5, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Common_Seal_Phoca_vitulina.jpg"
@@ -2174,14 +2840,22 @@ species:
   gbif_taxon_key: 2418792
   inat_taxon_id: 56766
   wikidata_id: Q757353
+  height: "3–4 m"
+  height_measure: length
+  body_weight: "230–450 kg"
+  diet: carnivore
+  lifespan: "20–30"
+  habitat:
+    en: Coral reefs, Continental shelves, Lagoons
+    de: Korallenriffe, Kontinentalschelf, Lagunen
   reference:
     credit: "Josh Hallett from Winter Haven, FL, USA, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Sphyrna_mokarran_at_georgia.jpg"
     commons_file: Sphyrna mokarran at georgia.jpg
     file: hammerhead-shark.jpg
   names:
-    en: Hammerhead Shark
-    de: Hammerhai
+    en: Great Hammerhead Shark
+    de: "Großer Hammerhai"
     sv: Stor hammarhaj
   description:
     en: "The great hammerhead is the largest species of hammerhead shark, belonging to the family Sphyrnidae, attaining an average length of 4.6 m (15 ft) and reaching a maximum length of 6.2 m (20 ft). It is found in tropical and warm temperate waters worldwide, inhabiting coastal areas and the continental shelf."
@@ -2192,17 +2866,25 @@ species:
   family: Lampyridae
   group: insects
   difficulty: moderate
+  iucn: NT
   gbif_taxon_key: 5744295
   inat_taxon_id: 143617
   wikidata_id: Q852831
+  height: "10–20 mm"
+  height_measure: length
+  diet: carnivore
+  lifespan: "2–3"
+  habitat:
+    en: Grassland, Hedgerows, Woodland edges
+    de: "Grasland, Hecken, Waldränder"
   reference:
     credit: Hectonichus, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Lampyridae_-_Lampyris_noctiluca.JPG"
     commons_file: Lampyridae - Lampyris noctiluca.JPG
     file: firefly.jpg
   names:
-    en: Firefly
-    de: "Glühwürmchen"
+    en: Common Glow-worm
+    de: "Großer Leuchtkäfer"
     sv: Stor lysmask
   description:
     en: "Lampyris noctiluca, the common glowworm of Europe, is the type species of beetle in the genus Lampyris and the family Lampyridae."
@@ -2213,17 +2895,24 @@ species:
   family: Apidae
   group: insects
   difficulty: easy
-  iucn: DD
   gbif_taxon_key: 1341976
   inat_taxon_id: 47219
   wikidata_id: Q30034
+  height: "11–13 mm"
+  height_measure: length
+  body_weight: "0.08–0.1 g"
+  diet: nectarivore
+  lifespan: "0.1–3"
+  habitat:
+    en: Meadows, Gardens, Farmland, Woodland
+    de: "Wiesen, Gärten, Agrarland, Wälder"
   reference:
     credit: Didier Descouens, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:(MHNT)_Apis_mellifera_(female)_-_on_viburnum_tinus_flowers.jpg"
     commons_file: "(MHNT) Apis mellifera (female) - on viburnum tinus flowers.jpg"
   names:
-    en: Honeybee
-    de: Honigbiene
+    en: Western Honey Bee
+    de: Westliche Honigbiene
     sv: Honungsbi
   description:
     en: "The western honey bee is the most common of the 7–12 species of honey bees worldwide. The genus name Apis is Latin for 'bee', and mellifera is the Latin for 'honey-bearing' or 'honey-carrying', referring to the species' production of honey."
@@ -2236,8 +2925,16 @@ species:
   difficulty: moderate
   iucn: LC
   gbif_taxon_key: 2437377
-  inat_taxon_id: 45933
+  inat_taxon_id: 46082
   wikidata_id: Q285884
+  height: "40–50 cm"
+  height_measure: length
+  body_weight: "3–7 kg"
+  diet: herbivore
+  lifespan: "10–15"
+  habitat:
+    en: Alpine meadows, Rocky slopes, High pastures
+    de: "Almwiesen, Felshänge, Hochweiden"
   reference:
     credit: "François Trazzi ., CC BY-SA 3.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Marmota_marmota_Alpes2.jpg"
@@ -2260,13 +2957,21 @@ species:
   gbif_taxon_key: 2439658
   inat_taxon_id: 45856
   wikidata_id: Q207148
+  height: "6.5–9 cm"
+  height_measure: length
+  body_weight: "17–19 g"
+  diet: omnivore
+  lifespan: "3–4"
+  habitat:
+    en: Deciduous woodland, Hedgerows, Scrub
+    de: "Laubwälder, Hecken, Gebüsch"
   reference:
     credit: Danielle Schwarz, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Haselmaus.jpg"
     commons_file: Haselmaus.jpg
     file: common-dormouse.jpg
   names:
-    en: Common Dormouse
+    en: Hazel Dormouse
     de: Haselmaus
     sv: Hasselmus
   description:
@@ -2282,6 +2987,14 @@ species:
   gbif_taxon_key: 4409131
   inat_taxon_id: 43793
   wikidata_id: Q181191
+  height: "80–100 cm"
+  height_measure: length
+  body_weight: "11–30 kg"
+  diet: herbivore
+  lifespan: "7–10"
+  habitat:
+    en: Rivers, Lakes, Wetlands
+    de: "Flüsse, Seen, Feuchtgebiete"
   reference:
     credit: Per Harald Olsen, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Beaver_pho34.jpg"
@@ -2303,6 +3016,14 @@ species:
   gbif_taxon_key: 1311527
   inat_taxon_id: 54327
   wikidata_id: Q30258
+  height: "18–35 mm"
+  height_measure: length
+  body_weight: "0.4–0.5 g"
+  diet: insectivore
+  lifespan: "0.1–1"
+  habitat:
+    en: Woodland, Parks, Gardens, Tree hollows
+    de: "Wälder, Parks, Gärten, Baumhöhlen"
   reference:
     credit: PiccoloNamek, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Hornet-vespa.jpg"
@@ -2325,6 +3046,14 @@ species:
   gbif_taxon_key: 7952072
   inat_taxon_id: 43128
   wikidata_id: Q26838
+  height: "55–65 cm"
+  height_measure: length
+  body_weight: "3.5–5 kg"
+  diet: herbivore
+  lifespan: "3–5"
+  habitat:
+    en: Farmland, Grassland, Open country
+    de: "Ackerland, Grasland, Offenes Gelände"
   reference:
     credit: caroline legg, CC BY 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:European_Brown_Hare_%2850341079472%29.jpg"
@@ -2345,8 +3074,16 @@ species:
   difficulty: challenging
   iucn: LC
   gbif_taxon_key: 2432416
-  inat_taxon_id: 1150085
+  inat_taxon_id: 40291
   wikidata_id: Q723413
+  height: "35–43 cm"
+  height_measure: wingspan
+  body_weight: "20–40 g"
+  diet: insectivore
+  lifespan: "4–7"
+  habitat:
+    en: Open woodland, Pastures, Caves, Attics
+    de: "Lichte Wälder, Weiden, Höhlen, Dachböden"
   reference:
     credit: "Urheber: Manuel Werner, Germany, Wikipedia-Kontakt: http://de.wikipedia.org/wiki/Benutzer:Werner,_Deutschland, CC BY-SA 3.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Myotis.jpg"
@@ -2368,6 +3105,14 @@ species:
   gbif_taxon_key: 6165157
   inat_taxon_id: 340942
   wikidata_id: Q993274
+  height: "65–90 cm"
+  height_measure: shoulder
+  body_weight: "25–55 kg"
+  diet: herbivore
+  lifespan: "10–15"
+  habitat:
+    en: Mountain slopes, Deciduous forest, Dry heath
+    de: "Berghänge, Laubwälder, Trockenheiden"
   reference:
     credit: "Unknown author Unknown author, CC BY-SA 2.0 de, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Mufflon-02.jpg"
@@ -2376,6 +3121,7 @@ species:
   names:
     en: European Mouflon
     de: "Europäischer Mufflon"
+    sv: "Mufflonfår"
   description:
     en: "The European mouflon is a feral subspecies of the primitive domestic sheep. It is found in Europe and western Asia. It is originally from western Asia."
     de: "Der Europäische Mufflon, jägersprachlich Muffelwild oder kurz Muffel genannt, ist die westlichste und kleinste Unterart des Mufflons. Verbreitet war er ursprünglich nur auf den Mittelmeerinseln Korsika und Sardinien, ist inzwischen aber in zahlreichen Gegenden Europas eingeführt worden."
@@ -2389,6 +3135,14 @@ species:
   gbif_taxon_key: 5218911
   inat_taxon_id: 41812
   wikidata_id: Q26582
+  height: "29–46 cm"
+  height_measure: length
+  body_weight: "0.7–1.5 kg"
+  diet: carnivore
+  lifespan: "3–5"
+  habitat:
+    en: Woodland edges, Farmland, Wetlands
+    de: "Waldränder, Ackerland, Feuchtgebiete"
   reference:
     credit: Peter Trimming, CC BY 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Storm_the_polecat.jpg"
@@ -2403,13 +3157,21 @@ species:
     de: "Der Europäische Iltis, Waldiltis, auch bekannt als Gemeiner Iltis, Schwarzer oder Waldiltis, Europäisches Frettchen, oder wildes Frettchen, auch Ratz oder Stänker sowie Fiss genannt, ist eine Raubtierart aus der Familie der Marder (Mustelidae)."
 - slug: camargue-horse
   number: "104"
-  scientific: Equus caballus
+  scientific: Equus ferus caballus
   family: Equidae
   group: mammals
   difficulty: easy
   gbif_taxon_key: 2440886
   inat_taxon_id: 209233
   wikidata_id: Q726
+  height: "1.35–1.5 m"
+  height_measure: shoulder
+  body_weight: "350–500 kg"
+  diet: herbivore
+  lifespan: "25–30"
+  habitat:
+    en: Coastal marshes, Wetlands, Pastures
+    de: "Küstenmarschen, Feuchtgebiete, Weiden"
   reference:
     credit: "Mikel Ortega from Errenteria, Basque Country, Spain, with a retouche by Richard Bartz . See the original file here., CC BY-SA 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Biandintz_eta_zaldiak_-_modified2.jpg"
@@ -2418,7 +3180,7 @@ species:
   names:
     en: Camargue Horse
     de: Camargue-Pferd
-    sv: "Häst"
+    sv: "Camarguehäst"
   description:
     en: "The horse is a domesticated, one-toed, hoofed mammal. It belongs to the taxonomic family Equidae and is one of two extant subspecies of Equus ferus. The horse has evolved over the past 45 to 55 million years from a small multi-toed creature, Eohippus, into the large single-toed animal of today, originally in North America."
     de: "Das Hauspferd, kurz meist Pferd, gelegentlich auch Ross genannt, ist ein weit verbreitetes Haus- bzw. Nutztier, das heute in zahlreichen Rassen auf der ganzen Welt existiert."
@@ -2432,6 +3194,14 @@ species:
   gbif_taxon_key: 6159273
   inat_taxon_id: 35854
   wikidata_id: Q307047
+  height: "30–40 cm"
+  height_measure: length
+  body_weight: "15–25 g"
+  diet: insectivore
+  lifespan: "8–12"
+  habitat:
+    en: Scrubland, Woodland edges, Hedgerows, Embankments
+    de: "Buschland, Waldränder, Hecken, Bahndämme"
   reference:
     credit: Uoaei1, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Lacerta_viridis_-_male_01.JPG"
@@ -2439,7 +3209,7 @@ species:
     file: european-green-lizard.jpg
   names:
     en: European Green Lizard
-    de: Smaragdeidechse
+    de: "Östliche Smaragdeidechse"
     sv: "Smaragdödla"
   description:
     en: "The European green lizard is a large lizard distributed across European mid-latitudes from Slovenia and eastern Austria to as far east as the Black Sea coasts of Ukraine and Turkey. It is often seen sunning on rocks or lawns, or sheltering amongst bushes."
@@ -2454,6 +3224,14 @@ species:
   gbif_taxon_key: 2441067
   inat_taxon_id: 42378
   wikidata_id: Q126683
+  height: "61–81 cm"
+  height_measure: shoulder
+  body_weight: "26–69 kg"
+  diet: herbivore
+  lifespan: "7–10"
+  habitat:
+    en: Steppe, Semi-desert, Grassland
+    de: "Steppen, Halbwüsten, Grasland"
   reference:
     credit: Andrey Giljov, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Saiga_antelope_at_the_Stepnoi_Sanctuary.jpg"
@@ -2476,7 +3254,14 @@ species:
   gbif_taxon_key: 5229493
   inat_taxon_id: 8088
   wikidata_id: Q25354
-  body_weight: 8.5 g
+  height: "32–35 cm"
+  height_measure: length
+  body_weight: "140–190 g"
+  diet: omnivore
+  lifespan: "4–7"
+  habitat:
+    en: Deciduous woodland, Mixed forest, Parks
+    de: "Laubwälder, Mischwälder, Parks"
   reference:
     credit: Luc Viatour, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Garrulus_glandarius_1_Luc_Viatour.jpg"
@@ -2499,14 +3284,21 @@ species:
   gbif_taxon_key: 2478523
   inat_taxon_id: 144243
   wikidata_id: Q166171
-  body_weight: "8.9–193 g"
+  height: "30–36 cm"
+  height_measure: length
+  body_weight: "140–200 g"
+  diet: insectivore
+  lifespan: "7–10"
+  habitat:
+    en: Open woodland, Parkland, Orchards, Grassland
+    de: "Lichte Wälder, Parklandschaften, Streuobstwiesen, Grasland"
   reference:
     credit: Alexis Lours, CC BY 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Green_woodpecker_Franconville_2022_01_21_2.jpg"
     commons_file: Green woodpecker Franconville 2022 01 21 2.jpg
     file: green-woodpecker.jpg
   names:
-    en: Green Woodpecker
+    en: European Green Woodpecker
     de: "Grünspecht"
     sv: "Gröngöling"
   description:
@@ -2522,6 +3314,14 @@ species:
   gbif_taxon_key: 2495000
   inat_taxon_id: 7278
   wikidata_id: Q170831
+  height: "13–15 cm"
+  height_measure: length
+  body_weight: "7–10 g"
+  diet: insectivore
+  lifespan: "2–3"
+  habitat:
+    en: Deciduous woodland, Scrub, Hedgerows, Gardens
+    de: "Laubwälder, Gebüsch, Hecken, Gärten"
   reference:
     credit: Rhododendrites, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Long-tailed_tit_%2874940%29.jpg"
@@ -2544,7 +3344,14 @@ species:
   gbif_taxon_key: 2495414
   inat_taxon_id: 3017
   wikidata_id: Q42326
-  body_weight: "267–294 g"
+  height: "30–35 cm"
+  height_measure: length
+  body_weight: "240–380 g"
+  diet: granivore
+  lifespan: "3–5"
+  habitat:
+    en: Sea cliffs, Rocky coasts, Caves, Urban
+    de: "Meeresklippen, Felsküsten, Höhlen, Städtisch"
   reference:
     credit: william_stephens, CC BY 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Columba_livia_%28Rock_Dove%2C_wild%29%2C_Duncansby_Head%2C_Caithness%2C_Scotland_1.jpg"
@@ -2552,7 +3359,7 @@ species:
     file: rock-dove.jpg
   names:
     en: Rock Dove
-    de: "Straßentaube"
+    de: Felsentaube
     sv: Klippduva
   description:
     en: "The rock dove, also known as the common pigeon or rock pigeon, is a member of the bird family Columbidae. In common usage, it is often simply referred to as the \"pigeon\", although the rock dove is the wild form of the bird; the pigeons familiar to most people are the domesticated forms of the wild rock dove."
@@ -2567,6 +3374,14 @@ species:
   gbif_taxon_key: 7626513
   inat_taxon_id: 9192
   wikidata_id: Q148583
+  height: "15–16.5 cm"
+  height_measure: length
+  body_weight: "20–25 g"
+  diet: granivore
+  lifespan: "2–3"
+  habitat:
+    en: Vineyards, Hedgerows, Scrubby farmland
+    de: Weinberge, Hecken, Kulturland
   reference:
     credit: "Paco Gómez from Castellón, Spain, CC BY-SA 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Emberiza_cirlus_-Valencian_Community%2C_Spain_-male-8.jpg"
@@ -2589,7 +3404,14 @@ species:
   gbif_taxon_key: 2491534
   inat_taxon_id: 9195
   wikidata_id: Q26205
-  body_weight: 2.9 g
+  height: "16–16.5 cm"
+  height_measure: length
+  body_weight: "20–36 g"
+  diet: granivore
+  lifespan: "3–6"
+  habitat:
+    en: Farmland, Hedgerows, Scrub
+    de: "Kulturland, Hecken, Gebüsch"
   reference:
     credit: "Ómar Runólfsson, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Emberiza_citrinella_-Midtjylland%2C_Denmark_-male-8.jpg"
@@ -2612,7 +3434,14 @@ species:
   gbif_taxon_key: 7806848
   inat_taxon_id: 7462
   wikidata_id: Q125895
-  body_weight: "1.2–8.4 g"
+  height: "12–13 cm"
+  height_measure: length
+  body_weight: "7.5–11 g"
+  diet: insectivore
+  lifespan: "2–3"
+  habitat:
+    en: Deciduous woodland, Parks, Orchards
+    de: "Laubwälder, Parks, Obstgärten"
   reference:
     credit: Charles J. Sharp, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Short-toed_treecreeper_%28Certhia_brachydactyla_brachydactyla%29.jpg"
@@ -2635,6 +3464,14 @@ species:
   gbif_taxon_key: 2490719
   inat_taxon_id: 12716
   wikidata_id: Q25234
+  height: "23–29 cm"
+  height_measure: length
+  body_weight: "80–125 g"
+  diet: omnivore
+  lifespan: "3–4"
+  habitat:
+    en: Woodland, Gardens, Parks
+    de: "Wälder, Gärten, Parks"
   reference:
     credit: Kahvilokki, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:20190722_Turdus_Merula_02.jpg"
@@ -2656,6 +3493,14 @@ species:
   gbif_taxon_key: 2497306
   inat_taxon_id: 20307
   wikidata_id: Q25384
+  height: "31–40 cm"
+  height_measure: length
+  body_weight: "220–435 g"
+  diet: carnivore
+  lifespan: "4–10"
+  habitat:
+    en: Conifer stands, Forest edges, Open farmland
+    de: "Nadelwälder, Waldränder, Offenes Kulturland"
   reference:
     credit: Luis nunes alberto, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Asio_otus11.JPG"
@@ -2678,6 +3523,14 @@ species:
   gbif_taxon_key: 2497266
   inat_taxon_id: 19998
   wikidata_id: Q129958
+  height: "21–23 cm"
+  height_measure: length
+  body_weight: "140–200 g"
+  diet: carnivore
+  lifespan: "4–6"
+  habitat:
+    en: Open farmland, Orchards, Ruins
+    de: "Offenes Kulturland, Obstgärten, Ruinen"
   reference:
     credit: "Frank Vassen from Brussels, Belgium, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Athene_noctua%2C_Ambula%2C_Montenegro_2.jpg"
@@ -2700,7 +3553,14 @@ species:
   gbif_taxon_key: 5232162
   inat_taxon_id: 19848
   wikidata_id: Q191155
-  body_weight: "8.3–73 g"
+  height: "15–19 cm"
+  height_measure: length
+  body_weight: "50–77 g"
+  diet: carnivore
+  lifespan: "6–7"
+  habitat:
+    en: Boreal forest, Montane conifer forest, Clearings
+    de: "Boreale Wälder, Bergnadelwälder, Lichtungen"
   reference:
     credit: Charles J. Sharp, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Eurasian_pygmy_owl_%28Glaucidium_passerinum%29_Bia%C5%82owieza.jpg"
@@ -2723,7 +3583,14 @@ species:
   gbif_taxon_key: 9282206
   inat_taxon_id: 19898
   wikidata_id: Q25756
-  body_weight: "426–524 g"
+  height: "37–46 cm"
+  height_measure: length
+  body_weight: "400–600 g"
+  diet: carnivore
+  lifespan: "5–10"
+  habitat:
+    en: Deciduous woodland, Parks, Gardens
+    de: "Laubwälder, Parks, Gärten"
   reference:
     credit: Chrumps, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Strix_aluco_aluco.jpg"
@@ -2746,6 +3613,14 @@ species:
   gbif_taxon_key: 2497509
   inat_taxon_id: 19910
   wikidata_id: Q190083
+  height: "50–62 cm"
+  height_measure: length
+  body_weight: "550–1200 g"
+  diet: carnivore
+  lifespan: "10–15"
+  habitat:
+    en: Taiga, Mature mixed forest, Forest clearings
+    de: "Taiga, Alte Mischwälder, Waldlichtungen"
   reference:
     credit: "Tatiana Bulyonkova from Novosibirsk, Russia, CC BY-SA 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:2012-11-01_Ural_Owl%2C_Novosibirsk_Oblast%2C_Russia.jpg"
@@ -2768,7 +3643,14 @@ species:
   gbif_taxon_key: 2498388
   inat_taxon_id: 7106
   wikidata_id: Q200339
-  body_weight: 41 g
+  height: "41–49 cm"
+  height_measure: length
+  body_weight: "430–690 g"
+  diet: omnivore
+  lifespan: "6–9"
+  habitat:
+    en: Wooded rivers, Lakes, Ponds
+    de: "Bewaldete Flüsse, Seen, Teiche"
   reference:
     credit: "星外之神, CC BY-SA 4.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Mandarin_ducks_by_the_Weiming_Lake_of_Peking_University_16.jpg"
@@ -2790,6 +3672,14 @@ species:
   gbif_taxon_key: 9761484
   inat_taxon_id: 6930
   wikidata_id: Q25348
+  height: "50–65 cm"
+  height_measure: length
+  body_weight: "0.7–1.6 kg"
+  diet: omnivore
+  lifespan: "5–10"
+  habitat:
+    en: Lakes, Rivers, Ponds, Marshes
+    de: "Seen, Flüsse, Teiche, Sümpfe"
   reference:
     credit: Commonists, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Anas_platyrhynchos_(Male)_on_the_ground.jpg"
@@ -2811,7 +3701,14 @@ species:
   gbif_taxon_key: 2498036
   inat_taxon_id: 7018
   wikidata_id: Q25882
-  body_weight: "3.2–160 g"
+  height: "75–90 cm"
+  height_measure: length
+  body_weight: "2.5–4.1 kg"
+  diet: herbivore
+  lifespan: "10–15"
+  habitat:
+    en: Lakes, Marshes, Grassland
+    de: "Seen, Sümpfe, Grasland"
   reference:
     credit: W. Bulach, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:00_3688_Graugans_(Anser_anser).jpg"
@@ -2833,6 +3730,14 @@ species:
   gbif_taxon_key: 5232446
   inat_taxon_id: 7087
   wikidata_id: Q27050
+  height: "55–66 cm"
+  height_measure: length
+  body_weight: "0.9–2.2 kg"
+  diet: herbivore
+  lifespan: "10–15"
+  habitat:
+    en: Arctic tundra, Coastal mudflats, Estuaries
+    de: "Arktische Tundra, Wattflächen, Flussmündungen"
   reference:
     credit: Kev Chapman, CC BY 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Branta_bernicla_bernicla_Norfolk_1.jpg"
@@ -2855,7 +3760,14 @@ species:
   gbif_taxon_key: 5232437
   inat_taxon_id: 7089
   wikidata_id: Q26733
-  body_weight: "3.3–5 kg"
+  height: "75–110 cm"
+  height_measure: length
+  body_weight: "2.4–6.5 kg"
+  diet: herbivore
+  lifespan: "10–24"
+  habitat:
+    en: Lakes, Rivers, Marshes, Urban parks
+    de: "Seen, Flüsse, Sümpfe, Stadtparks"
   reference:
     credit: "Laurent Bélanger, CC BY-SA 4.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Bernache_du_Canada,_à_l'Île_Paton_(2).jpg"
@@ -2877,8 +3789,14 @@ species:
   gbif_taxon_key: 2498343
   inat_taxon_id: 6921
   wikidata_id: Q25402
-  height: 1.2 m
-  body_weight: "9.7–11.8 kg"
+  height: "2.0–2.4 m"
+  height_measure: wingspan
+  body_weight: "8–13 kg"
+  diet: herbivore
+  lifespan: "10–20"
+  habitat:
+    en: Lakes, Slow rivers, Coastal lagoons
+    de: "Seen, Langsame Flüsse, Küstenlagunen"
   reference:
     credit: Geni, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Mute_Swan_Emsworth2.JPG"
@@ -2900,6 +3818,14 @@ species:
   gbif_taxon_key: 9362027
   inat_taxon_id: 558439
   wikidata_id: Q28106966
+  height: "47–58 cm"
+  height_measure: length
+  body_weight: "500–1050 g"
+  diet: herbivore
+  lifespan: "5–10"
+  habitat:
+    en: Shallow lakes, Marshes, Wet grassland
+    de: "Flache Seen, Sümpfe, Feuchtwiesen"
   reference:
     credit: Andreas Trepte, CC BY-SA 2.5, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Gadwall-Anas-strepera.jpg"
@@ -2922,7 +3848,14 @@ species:
   gbif_taxon_key: 2481035
   inat_taxon_id: 4643
   wikidata_id: Q25876
-  body_weight: "24–240.5 g"
+  height: "74–84 cm"
+  height_measure: wingspan
+  body_weight: "175–285 g"
+  diet: carnivore
+  lifespan: "5–10"
+  habitat:
+    en: Open farmland, Heathland, Woodland edges
+    de: "Offene Feldflur, Heiden, Waldränder"
   reference:
     credit: "Mike Prince from Bangalore, India, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Eurasian_Hobby_%2814574008925%29_%28cropped%29.jpg"
@@ -2945,7 +3878,14 @@ species:
   gbif_taxon_key: 9616058
   inat_taxon_id: 472766
   wikidata_id: Q26490
-  body_weight: "21–201 g"
+  height: "65–82 cm"
+  height_measure: wingspan
+  body_weight: "136–314 g"
+  diet: carnivore
+  lifespan: "4–8"
+  habitat:
+    en: Farmland, Grassland, Heathland, Urban
+    de: "Feldflur, Grasland, Heiden, Städtisch"
   reference:
     credit: Andreas Trepte, CC BY-SA 2.5, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Common_kestrel_falco_tinnunculus.jpg"
@@ -2968,6 +3908,14 @@ species:
   gbif_taxon_key: 2473958
   inat_taxon_id: 831
   wikidata_id: Q26106
+  height: "29–31 cm"
+  height_measure: length
+  body_weight: "320–455 g"
+  diet: granivore
+  lifespan: "2–4"
+  habitat:
+    en: Farmland, Hedgerows, Grassland
+    de: Feldflur, Hecken, Grasland
   reference:
     credit: K.Pitk, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Nurmkana_%28cropped%29.jpg"
@@ -2990,7 +3938,14 @@ species:
   gbif_taxon_key: 2473577
   inat_taxon_id: 1026
   wikidata_id: Q129059
-  body_weight: "2.0–53 kg"
+  height: "54–85 cm"
+  height_measure: length
+  body_weight: "1.5–5 kg"
+  diet: herbivore
+  lifespan: "3–7"
+  habitat:
+    en: Conifer forests, Taiga, Bogs
+    de: "Nadelwälder, Taiga, Moore"
   reference:
     credit: Simon Bailey, CC BY 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Tetrao_urogallus%2C_Glenfeshie%2C_Scotland_1.jpg"
@@ -3013,7 +3968,14 @@ species:
   gbif_taxon_key: 2494686
   inat_taxon_id: 9398
   wikidata_id: Q25418
-  body_weight: 1.5 g
+  height: "12–13 cm"
+  height_measure: length
+  body_weight: "14–19 g"
+  diet: granivore
+  lifespan: "2–5"
+  habitat:
+    en: Gardens, Hedgerows, Wasteland
+    de: "Gärten, Hecken, Brachflächen"
   reference:
     credit: Pierre Dalous, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Carduelis_carduelis_%282012%29.jpg"
@@ -3033,10 +3995,17 @@ species:
   group: birds
   difficulty: easy
   iucn: LC
-  gbif_taxon_key: 2494642
+  gbif_taxon_key: 5845582
   inat_taxon_id: 145360
   wikidata_id: Q27075785
-  body_weight: 2.2 g
+  height: "14–15 cm"
+  height_measure: length
+  body_weight: "25–31 g"
+  diet: granivore
+  lifespan: "2–5"
+  habitat:
+    en: Gardens, Woodland edges, Farmland hedges
+    de: "Gärten, Waldränder, Feldhecken"
   reference:
     credit: Martin Kunz, CC BY 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Chloris_chloris_%28profile%29.jpg"
@@ -3059,7 +4028,14 @@ species:
   gbif_taxon_key: 2494422
   inat_taxon_id: 10070
   wikidata_id: Q25383
-  body_weight: "2.2–22 g"
+  height: "14–16 cm"
+  height_measure: length
+  body_weight: "18–29 g"
+  diet: granivore
+  lifespan: "3–5"
+  habitat:
+    en: Woodlands, Hedgerows, Gardens
+    de: "Wälder, Hecken, Gärten"
   reference:
     credit: "Gilles San Martin from Namur, Belgium, CC BY-SA 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_%285577610542%29.jpg"
@@ -3082,7 +4058,14 @@ species:
   gbif_taxon_key: 7660710
   inat_taxon_id: 13079
   wikidata_id: Q25393
-  body_weight: 2.6 g
+  height: "15–17 cm"
+  height_measure: length
+  body_weight: "16–25 g"
+  diet: insectivore
+  lifespan: "2–4"
+  habitat:
+    en: Dense scrub, Coppice woodland, Thickets
+    de: "Dichtes Gebüsch, Niederwald, Dickichte"
   reference:
     credit: Warrieboy, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Luscinia_megarhynchos_-_Common_nightingale_-_Nachtegaal.jpg"
@@ -3105,7 +4088,14 @@ species:
   gbif_taxon_key: 2484596
   inat_taxon_id: 793469
   wikidata_id: Q26657
-  body_weight: 0.8 g
+  height: "8.5–9.5 cm"
+  height_measure: length
+  body_weight: "4.5–7 g"
+  diet: insectivore
+  lifespan: "2–3"
+  habitat:
+    en: Coniferous forests, Mixed woodland, Parks
+    de: "Nadelwälder, Mischwald, Parks"
   reference:
     credit: Francis C. Franklin, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Goldcrest_1.jpg"
@@ -3120,21 +4110,29 @@ species:
     de: "Das Wintergoldhähnchen ist eine der kleinsten Vogelarten Europas. Mit seinen etwa 9 Zentimetern Körpergröße wiegt es nur zwischen 4 und 7 Gramm. Es ist leicht mit dem Sommergoldhähnchen zu verwechseln, das aber anders als das Wintergoldhähnchen einen weißen Überaugenstreifen und leuchtend gelbgrüne Halsseiten besitzt."
 - slug: northern-goshawk
   number: "136"
-  scientific: Accipiter gentilis
+  scientific: Astur gentilis
   family: Accipitridae
   group: birds
   difficulty: challenging
+  iucn: LC
   gbif_taxon_key: 2480589
   inat_taxon_id: 1579015
   wikidata_id: Q137474876
-  body_weight: "1.1–712 g"
+  height: "98–127 cm"
+  height_measure: wingspan
+  body_weight: "630–1500 g"
+  diet: carnivore
+  lifespan: "7–11"
+  habitat:
+    en: Forests, Woodland edges, Urban parks
+    de: "Wälder, Waldränder, Stadtparks"
   reference:
     commons_file: Northern Goshawk ad M2.jpg
     file: northern-goshawk.jpg
     credit: Norbert Kenntner, Berlin, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Northern_Goshawk_ad_M2.jpg"
   names:
-    en: Northern Goshawk
+    en: Eurasian Goshawk
     de: Habicht
     sv: "Duvhök"
   description:
@@ -3150,8 +4148,14 @@ species:
   gbif_taxon_key: 2480637
   inat_taxon_id: 5106
   wikidata_id: Q25380
-  body_weight: "22.5–290 g"
-  lifespan: "4"
+  height: "55–80 cm"
+  height_measure: wingspan
+  body_weight: "110–340 g"
+  diet: carnivore
+  lifespan: "2–4"
+  habitat:
+    en: Woodland, Farmland, Gardens
+    de: "Wälder, Agrarland, Gärten"
   reference:
     credit: Hajotthu, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Sperber_%28Accipiter_nisus%29_male_-20200308_%282%29.JPG"
@@ -3174,8 +4178,14 @@ species:
   gbif_taxon_key: 2480537
   inat_taxon_id: 204472
   wikidata_id: Q25385
-  body_weight: "0.9–966.5 kg"
-  lifespan: "10"
+  height: "113–128 cm"
+  height_measure: wingspan
+  body_weight: "550–1200 g"
+  diet: carnivore
+  lifespan: "8–12"
+  habitat:
+    en: Woodland edges, Farmland, Grassland
+    de: "Waldränder, Agrarland, Grasland"
   reference:
     credit: caroline legg, CC BY 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Common_Buzzard_by_caroline_legg_%28cropped%29.jpg"
@@ -3198,7 +4208,14 @@ species:
   gbif_taxon_key: 2481890
   inat_taxon_id: 4270
   wikidata_id: Q25440
-  body_weight: "2–2.4 kg"
+  height: "80–100 cm"
+  height_measure: length
+  body_weight: "1.8–3 kg"
+  diet: piscivore
+  lifespan: "10–15"
+  habitat:
+    en: Coasts, Estuaries, Lakes, Rivers
+    de: "Küsten, Flussmündungen, Seen, Flüsse"
   reference:
     credit: MPF, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:2021-05-05_Phalacrocorax_carbo_carbo,_Killingworth_Lake,_Northumberland_1-2.jpg"
@@ -3220,7 +4237,14 @@ species:
   gbif_taxon_key: 2487879
   inat_taxon_id: 144849
   wikidata_id: Q25404
-  body_weight: "1.1–11.8 g"
+  height: "10.5–12 cm"
+  height_measure: length
+  body_weight: "9–12 g"
+  diet: insectivore
+  lifespan: "2–3"
+  habitat:
+    en: Deciduous woodland, Parks, Gardens
+    de: "Laubwälder, Parks, Gärten"
   reference:
     credit: Maximilian Dorsch, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:ParusCaeruleus.jpg"
@@ -3243,7 +4267,14 @@ species:
   gbif_taxon_key: 9705453
   inat_taxon_id: 203153
   wikidata_id: Q25485
-  body_weight: "1.7–18.5 g"
+  height: "12.5–14 cm"
+  height_measure: length
+  body_weight: "14–22 g"
+  diet: insectivore
+  lifespan: "3–5"
+  habitat:
+    en: Deciduous woodland, Mixed forest, Gardens
+    de: "Laubwälder, Mischwald, Gärten"
   reference:
     credit: "Frank Vassen from Brussels, Belgium, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Great_tit_(Parus_major),_Parc_de_Woluwé,_Brussels_(13042792905).jpg"
@@ -3265,6 +4296,14 @@ species:
   gbif_taxon_key: 2481139
   inat_taxon_id: 204533
   wikidata_id: Q28236
+  height: "55–67 cm"
+  height_measure: length
+  body_weight: "700–1500 g"
+  diet: omnivore
+  lifespan: "15–25"
+  habitat:
+    en: Coasts, Harbours, Urban rooftops
+    de: "Küsten, Häfen, Stadtdächer"
   reference:
     credit: Rhododendrites, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:European_herring_gull_vocalizing_%2800170%29.jpg"
@@ -3287,6 +4326,14 @@ species:
   gbif_taxon_key: 9413670
   inat_taxon_id: 59202
   wikidata_id: Q704982
+  height: "52–68 cm"
+  height_measure: length
+  body_weight: "550–1600 g"
+  diet: omnivore
+  lifespan: "10–20"
+  habitat:
+    en: Rocky coasts, Islands, Harbours
+    de: "Felsküsten, Inseln, Häfen"
   reference:
     credit: "Cinty Ionescu from Bucharest, Romania, this edit MPF, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Larus_michahellis_atlantis,_Lagoa_do_Fogo,_Azores_1a.jpg"
@@ -3304,9 +4351,18 @@ species:
   family: Corvidae
   group: birds
   difficulty: easy
+  iucn: LC
   gbif_taxon_key: 2482515
   inat_taxon_id: 144757
   wikidata_id: Q25405
+  height: "44–51 cm"
+  height_measure: length
+  body_weight: "430–650 g"
+  diet: omnivore
+  lifespan: "4–8"
+  habitat:
+    en: Farmland, Coastal cliffs, Urban
+    de: "Agrarland, Küstenklippen, Städtisch"
   reference:
     credit: "Donald Hobern from Copenhagen, Denmark, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Corvus_cornix_%2833515567265%29.jpg"
@@ -3329,6 +4385,14 @@ species:
   gbif_taxon_key: 9409796
   inat_taxon_id: 204496
   wikidata_id: Q26198
+  height: "44–51 cm"
+  height_measure: length
+  body_weight: "400–600 g"
+  diet: omnivore
+  lifespan: "4–8"
+  habitat:
+    en: Farmland, Woodland, Urban
+    de: "Agrarland, Wälder, Städtisch"
   reference:
     credit: Alexis Lours, CC BY 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Carrion_crow_2022_04_05_05_02.jpg"
@@ -3336,7 +4400,7 @@ species:
   names:
     en: Carrion Crow
     de: "Rabenkrähe"
-    sv: "Kråka"
+    sv: "Svartkråka"
   description:
     en: "The carrion crow is a passerine bird of the family Corvidae, native to western Europe and the eastern Palearctic. Along with the hooded crow, the carrion crow occupies a similar ecological niche in Eurasia to the American crow in North America. The two species look very similar to one another, but can be differentiated by size, as the carrion crow is larger and of a stockier build compared to the American crow."
     de: "Die Rabenkrähe ist eine Vogelart aus der Familie der Rabenvögel (Corvidae). Sie ist eng mit der grau-schwarzen Nebelkrähe verwandt, mit der sie sich auch verpaart. Beide Arten wurden früher als zwei Unterarten oder Morphen derselben Art aufgefasst, die traditionell als Aaskrähe bezeichnet wurde – eine Auffassung, die von einigen Autoren weiterhin vertreten wird."
@@ -3350,7 +4414,14 @@ species:
   gbif_taxon_key: 2482513
   inat_taxon_id: 8029
   wikidata_id: Q25386
-  body_weight: "418–489 g"
+  height: "44–47 cm"
+  height_measure: length
+  body_weight: "340–530 g"
+  diet: omnivore
+  lifespan: "6–10"
+  habitat:
+    en: Farmland, Pasture, Tall trees, Villages
+    de: "Agrarland, Weiden, Hohe Bäume, Dörfer"
   reference:
     credit: "Brian Snelson from Hockley, Essex, England, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Corvus_frugilegus_-Dartmoor%2C_Devon%2C_England-8.jpg"
@@ -3369,9 +4440,18 @@ species:
   family: Corvidae
   group: birds
   difficulty: easy
+  iucn: LC
   gbif_taxon_key: 6100954
   inat_taxon_id: 336399
   wikidata_id: Q25345384
+  height: "34–39 cm"
+  height_measure: length
+  body_weight: "175–300 g"
+  diet: omnivore
+  lifespan: "5–10"
+  habitat:
+    en: Farmland, Parkland, Coastal cliffs, Towns
+    de: "Agrarland, Parklandschaft, Küstenklippen, Städte"
   reference:
     credit: "Karl Jonsson from Göteborg, Sweden, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Coloeus_monedula_-Munkedal%2C_Vastra_Gotaland%2C_Sweden-8.jpg"
@@ -3392,10 +4472,16 @@ species:
   difficulty: easy
   iucn: LC
   gbif_taxon_key: 5229490
-  inat_taxon_id: 17550
+  inat_taxon_id: 891696
   wikidata_id: Q25307
-  body_weight: "9.9–221 g"
+  height: "44–46 cm"
+  height_measure: length
+  body_weight: "180–270 g"
   diet: omnivore
+  lifespan: "3–5"
+  habitat:
+    en: Open countryside, Farmland, Parks, Gardens
+    de: "Offenes Kulturland, Agrarland, Parks, Gärten"
   reference:
     credit: Rhododendrites, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Eurasian_magpie_%2810860%29.jpg"
@@ -3418,6 +4504,14 @@ species:
   gbif_taxon_key: 2482553
   inat_taxon_id: 8350
   wikidata_id: Q191386
+  height: "37–39 cm"
+  height_measure: length
+  body_weight: "190–250 g"
+  diet: omnivore
+  lifespan: "8–10"
+  habitat:
+    en: High mountains, Alpine meadows, Cliffs, Ski resorts
+    de: "Hochgebirge, Alpine Matten, Felswände, Skigebiete"
   reference:
     credit: Jim Higham from UK, CC BY 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Alpine_Chough_by_Jim_Higham.jpg"
@@ -3441,7 +4535,14 @@ species:
   gbif_taxon_key: 2481618
   inat_taxon_id: 144297
   wikidata_id: Q207760
-  body_weight: "1.7–111.7 g"
+  height: "50–58 cm"
+  height_measure: length
+  body_weight: "1.2–1.7 kg"
+  diet: carnivore
+  lifespan: "15–20"
+  habitat:
+    en: Open ocean, Coastal moorland, Rocky islands
+    de: "Offener Ozean, Küstenmoore, Felsinseln"
   reference:
     credit: "Psychofox at English Wikipedia, Public domain, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:GreatSkuaInWater.jpg"
@@ -3464,7 +4565,14 @@ species:
   gbif_taxon_key: 9566659
   inat_taxon_id: 4801
   wikidata_id: Q26816
-  body_weight: 10.9 g
+  height: "17–19 cm"
+  height_measure: length
+  body_weight: "55–75 g"
+  diet: insectivore
+  lifespan: "5"
+  habitat:
+    en: Sandy beaches, Shingle shores, Mudflats, Tundra
+    de: "Sandstrände, Kiesstrände, Watt, Tundra"
   reference:
     commons_file: Charadrius hiaticula 3 breeding.jpg
     file: common-ringed-plover.jpg
@@ -3487,7 +4595,14 @@ species:
   gbif_taxon_key: 9797180
   inat_taxon_id: 4954
   wikidata_id: Q25273
-  body_weight: 61 g
+  height: "84–102 cm"
+  height_measure: length
+  body_weight: "1–2 kg"
+  diet: piscivore
+  lifespan: "5–10"
+  habitat:
+    en: Lakes, Rivers, Marshes, Coasts
+    de: "Seen, Flüsse, Sümpfe, Küsten"
   reference:
     credit: "Bengt Nyman from Vaxholm, Sweden, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Ardea_cinerea_EM1A2714_%2827349354381%29.jpg"
@@ -3510,6 +4625,14 @@ species:
   gbif_taxon_key: 2489214
   inat_taxon_id: 64705
   wikidata_id: Q26055
+  height: "13–15 cm"
+  height_measure: length
+  body_weight: "15–23 g"
+  diet: insectivore
+  lifespan: "2–5"
+  habitat:
+    en: Towns, Villages, Farmland, Cliffs
+    de: "Städte, Dörfer, Agrarland, Felswände"
   reference:
     credit: MPF, CC BY 2.5, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Delichon_urbica.jpg"
@@ -3532,6 +4655,14 @@ species:
   gbif_taxon_key: 9515886
   inat_taxon_id: 11901
   wikidata_id: Q25429
+  height: "17–19 cm"
+  height_measure: length
+  body_weight: "16–22 g"
+  diet: insectivore
+  lifespan: "2–4"
+  habitat:
+    en: Farmland, Meadows, Barns, Wetlands
+    de: "Agrarland, Wiesen, Ställe, Feuchtgebiete"
   reference:
     credit: Andreas Trepte, CC BY-SA 2.5, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Rauchschwalbe_Hirundo_rustica.jpg"
@@ -3554,7 +4685,14 @@ species:
   gbif_taxon_key: 2477968
   inat_taxon_id: 17871
   wikidata_id: Q26209
-  body_weight: "5.7–89 g"
+  height: "20–24 cm"
+  height_measure: length
+  body_weight: "70–98 g"
+  diet: omnivore
+  lifespan: "2–5"
+  habitat:
+    en: Woodland, Mixed forests, Parks, Gardens
+    de: "Wälder, Mischwälder, Parks, Gärten"
   reference:
     credit: "Bengt Nyman from Vaxholm, Sweden, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Dendrocopos_major_EM1B2679_(35219263071).jpg"
@@ -3576,7 +4714,14 @@ species:
   gbif_taxon_key: 5231190
   inat_taxon_id: 13858
   wikidata_id: Q14683
-  body_weight: 30.5 g
+  height: "14–18 cm"
+  height_measure: length
+  body_weight: "24–40 g"
+  diet: granivore
+  lifespan: "3–5"
+  habitat:
+    en: Towns, Villages, Farmyards, Gardens
+    de: "Städte, Dörfer, Bauernhöfe, Gärten"
   reference:
     credit: Rhododendrites, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:House_sparrow_male_in_Prospect_Park_(53532).jpg"
@@ -3598,7 +4743,14 @@ species:
   gbif_taxon_key: 5231198
   inat_taxon_id: 13851
   wikidata_id: Q25968
-  body_weight: 26 g
+  height: "12.5–14 cm"
+  height_measure: length
+  body_weight: "19–25 g"
+  diet: granivore
+  lifespan: "2–3"
+  habitat:
+    en: Farmland, Hedgerows, Open woodland, Villages
+    de: "Agrarland, Hecken, Offene Wälder, Dörfer"
   reference:
     credit: Andreas Trepte, CC BY-SA 2.5, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Tree-Sparrow-2009-16-02.jpg"
@@ -3621,6 +4773,14 @@ species:
   gbif_taxon_key: 9809229
   inat_taxon_id: 14850
   wikidata_id: Q25469
+  height: "19–23 cm"
+  height_measure: length
+  body_weight: "60–100 g"
+  diet: omnivore
+  lifespan: "2–5"
+  habitat:
+    en: Farmland, Grassland, Towns, Reedbeds
+    de: "Agrarland, Grasland, Städte, Schilfgebiete"
   reference:
     credit: PierreSelim, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Toulouse_-_Sturnus_vulgaris_-_2012-02-26_-_2.jpg"
@@ -3643,6 +4803,14 @@ species:
   gbif_taxon_key: 9687165
   inat_taxon_id: 13695
   wikidata_id: Q25399
+  height: "16.5–19 cm"
+  height_measure: length
+  body_weight: 25 g
+  diet: insectivore
+  lifespan: "2–3"
+  habitat:
+    en: Riverbanks, Farmland, Urban
+    de: "Flussufer, Kulturland, Städtisch"
   reference:
     credit: "Jac. Janssen from BAARLO LB, NL, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:20180415_015_Winterswijk_Witte_kwikstaart_%2840785272624%29.jpg"
@@ -3665,7 +4833,14 @@ species:
   gbif_taxon_key: 2495455
   inat_taxon_id: 3048
   wikidata_id: Q26026
-  body_weight: 18.9 g
+  height: "38–45 cm"
+  height_measure: length
+  body_weight: "300–615 g"
+  diet: herbivore
+  lifespan: "3–5"
+  habitat:
+    en: Woodlands, Farmland, Parks, Urban
+    de: "Wälder, Kulturland, Parks, Städtisch"
   reference:
     credit: Don Loarie, CC BY 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Columba_palumbus_ssp._palumbus.jpg"
@@ -3688,7 +4863,14 @@ species:
   gbif_taxon_key: 2495708
   inat_taxon_id: 2938
   wikidata_id: Q168514
-  body_weight: "8.2–136 g"
+  height: "26–28 cm"
+  height_measure: length
+  body_weight: "100–160 g"
+  diet: granivore
+  lifespan: "3–5"
+  habitat:
+    en: Open woodland, Hedgerows, Farmland
+    de: "Lichte Wälder, Hecken, Kulturland"
   reference:
     credit: MPF, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:2015-05-21_Streptopelia_turtur%2C_Sutton_Bank%2C_Yorkshire_06.jpg"
@@ -3711,6 +4893,14 @@ species:
   gbif_taxon_key: 2495093
   inat_taxon_id: 7647
   wikidata_id: Q201831
+  height: 18 cm
+  height_measure: length
+  body_weight: "55–75 g"
+  diet: insectivore
+  lifespan: "3–5"
+  habitat:
+    en: Fast-flowing streams, Mountain rivers
+    de: "Schnellfließende Bäche, Gebirgsflüsse"
   reference:
     credit: Alun Williams333, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Cinclus_cinclus_bronwen_y_dwr.jpg"
@@ -3733,6 +4923,14 @@ species:
   gbif_taxon_key: 5231438
   inat_taxon_id: 145363
   wikidata_id: Q25740
+  height: "9–11 cm"
+  height_measure: length
+  body_weight: "7.5–11 g"
+  diet: insectivore
+  lifespan: "2–4"
+  habitat:
+    en: Woodland undergrowth, Hedgerows, Gardens
+    de: "Waldunterholz, Hecken, Gärten"
   reference:
     credit: Alexis Lours, CC BY 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Eurasian_wren_%28Troglodytes_troglodytes%29.jpg"
@@ -3754,11 +4952,20 @@ species:
   gbif_taxon_key: 7515593
   inat_taxon_id: 319688
   wikidata_id: Q122181742
+  height: "81–99 cm"
+  height_measure: shoulder
+  body_weight: "48–90 kg"
+  diet: herbivore
+  lifespan: "15–20"
+  habitat:
+    en: Andean highlands, Pastures, Farms
+    de: "Andenhochland, Weiden, Bauernhöfe"
   reference:
     commons_file: Alpacas.JPG
   names:
     en: Alpaca
-    de: Lama pacos
+    de: Alpaka
+    sv: Alpacka
   description:
     en: "The alpaca is a domesticated species of South American camelid. Traditionally, alpacas were kept in herds that grazed on the level heights of the Andes of Southern Peru, Western Bolivia, Ecuador, and Northern Chile. More recently, alpacas may be found on farms and ranches worldwide, with thousands of animals born and raised annually."
 - slug: domestic-sheep
@@ -3770,6 +4977,14 @@ species:
   gbif_taxon_key: 2441110
   inat_taxon_id: 121578
   wikidata_id: Q7368
+  height: "60–90 cm"
+  height_measure: shoulder
+  body_weight: "45–160 kg"
+  diet: herbivore
+  lifespan: "10–12"
+  habitat:
+    en: Pastures, Farmland, Uplands
+    de: Weiden, Ackerland, Hochland
   reference:
     commons_file: Flock of sheep.jpg
   names:
@@ -3788,6 +5003,14 @@ species:
   gbif_taxon_key: 2441022
   inat_taxon_id: 74113
   wikidata_id: Q830
+  height: "1.2–1.5 m"
+  height_measure: shoulder
+  body_weight: "450–1000 kg"
+  diet: herbivore
+  lifespan: "20–25"
+  habitat:
+    en: Pastures, Farmland, Meadows
+    de: Weiden, Ackerland, Wiesen
   reference:
     commons_file: Bulgarian gray cattle.jpg
   names:
@@ -3806,7 +5029,14 @@ species:
   gbif_taxon_key: 2441056
   inat_taxon_id: 123070
   wikidata_id: Q2934
-  lifespan: "15"
+  height: "60–90 cm"
+  height_measure: shoulder
+  body_weight: "45–90 kg"
+  diet: herbivore
+  lifespan: "15–18"
+  habitat:
+    en: Pastures, Farmland, Rocky slopes
+    de: "Weiden, Ackerland, Felshänge"
   reference:
     commons_file: Billy goat.jpg
   names:
@@ -3825,13 +5055,20 @@ species:
   gbif_taxon_key: 2435035
   inat_taxon_id: 118552
   wikidata_id: Q146
-  lifespan: "15"
+  height: "23–25 cm"
+  height_measure: shoulder
+  body_weight: "4–5 kg"
+  diet: carnivore
+  lifespan: "12–16"
+  habitat:
+    en: Homes, Urban, Farmland
+    de: "Wohnhäuser, Städtisch, Ackerland"
   reference:
     commons_file: Cat grooming.jpg
   names:
     en: Domestic Cat
     de: Hauskatze
-    sv: Katt
+    sv: Tamkatt
   description:
     en: "The cat, also called domestic cat and house cat, is a small domesticated carnivorous mammal. It is a member of Felidae, the family of mammals in the order Carnivora also colloquially referred to as cats. It is an obligate carnivore, requiring a predominantly meat-based diet."
     de: "Die Hauskatze ist die Haustierform der Falbkatze. Sie zählt zu den beliebtesten Heimtieren. In der Rassekatzenzucht werden oft nur die Tiere als Hauskatze bezeichnet, die keiner anerkannten Rasse angehören."
@@ -3844,13 +5081,20 @@ species:
   gbif_taxon_key: 5219200
   inat_taxon_id: 47144
   wikidata_id: Q144
-  lifespan: "9"
+  height: "15–80 cm"
+  height_measure: shoulder
+  body_weight: "0.5–80 kg"
+  diet: omnivore
+  lifespan: "10–13"
+  habitat:
+    en: Homes, Urban, Farmland
+    de: "Wohnhäuser, Städtisch, Ackerland"
   reference:
     commons_file: Greenland 467 (35130903436) (cropped).jpg
   names:
     en: Domestic Dog
     de: Haushund
-    sv: Hund
+    sv: Tamhund
   description:
     en: "The dog is a domesticated descendant of wolves. Also called the domestic dog, it was selectively bred during the Late Pleistocene by hunter-gatherers. Dogs and the modern gray wolf share a common ancestor."
     de: "Der Haushund ist ein Haustier und wird als Heim- und Nutztier gehalten. Seine wilde Stammform ist der Wolf, dem er als Unterart zugeordnet wird. Wann die Domestizierung stattfand, ist umstritten; wissenschaftliche Schätzungen variieren zwischen etwa 15.000 v. Chr."
@@ -3860,8 +5104,15 @@ species:
   family: Phasianidae
   group: birds
   difficulty: easy
-  iucn: LC
-  body_weight: "500–844 g"
+  inat_taxon_id: 505478
+  height: "25–37 cm"
+  height_measure: standing
+  body_weight: "2–4 kg"
+  diet: omnivore
+  lifespan: "5–10"
+  habitat:
+    en: Farmyards, Villages, Gardens
+    de: "Bauernhöfe, Dörfer, Gärten"
   reference:
     commons_file: Red jungle fowl.png
   names:
@@ -3877,13 +5128,19 @@ species:
   family: Anatidae
   group: birds
   difficulty: easy
-  iucn: LC
+  inat_taxon_id: 236935
+  body_weight: "1–4 kg"
+  diet: omnivore
+  lifespan: "8–12"
+  habitat:
+    en: Farm ponds, Wetlands, Villages
+    de: "Hofteiche, Feuchtgebiete, Dörfer"
   reference:
     commons_file: Male mallard3.jpg
   names:
     en: Domestic Duck
     de: Hausente
-    sv: Tamand
+    sv: Anka
   description:
     en: "The domesticated form of the mallard, kept on farms and ponds across the world. Most breeds are heavier and less able to fly than their wild ancestor, and white plumage is common."
     de: "Die domestizierte Form der Stockente, weltweit auf Höfen und Teichen gehalten. Die meisten Rassen sind schwerer und flugunfähiger als ihre wilde Stammform, häufig mit weißem Gefieder."
@@ -3897,7 +5154,14 @@ species:
   gbif_taxon_key: 6159223
   inat_taxon_id: 35912
   wikidata_id: Q148595
-  body_weight: 11 g
+  height: "18–20 cm"
+  height_measure: length
+  body_weight: "10–20 g"
+  diet: insectivore
+  lifespan: "5–10"
+  habitat:
+    en: Heathland, Sand dunes, Dry grassland, Sunny slopes
+    de: "Heiden, Sanddünen, Trockenrasen, Sonnige Hänge"
   reference:
     commons_file: Lacerta agilis male 2.JPG
   names:
@@ -3917,6 +5181,14 @@ species:
   gbif_taxon_key: 2468095
   inat_taxon_id: 343021
   wikidata_id: Q183660
+  height: "35–50 cm"
+  height_measure: length
+  body_weight: "20–50 g"
+  diet: insectivore
+  lifespan: "20–30"
+  habitat:
+    en: Woodland edges, Grassland, Heathland, Gardens
+    de: "Waldränder, Wiesen, Heiden, Gärten"
   reference:
     commons_file: Anguidae.jpg
   names:
@@ -3936,6 +5208,14 @@ species:
   gbif_taxon_key: 2294287
   inat_taxon_id: 61523
   wikidata_id: Q245314
+  height: "30–50 mm"
+  height_measure: shell
+  body_weight: "16–18 g"
+  diet: herbivore
+  lifespan: "6–10"
+  habitat:
+    en: Deciduous woodland, Hedgerows, Vineyards, Gardens
+    de: "Laubwälder, Hecken, Weinberge, Gärten"
   reference:
     commons_file: Helix pomatia 89a.jpg
   names:
@@ -3955,6 +5235,13 @@ species:
   gbif_taxon_key: 2294280
   inat_taxon_id: 48586
   wikidata_id: Q114893
+  height: "18–25 mm"
+  height_measure: shell
+  diet: detritivore
+  lifespan: "3–8"
+  habitat:
+    en: Woodland edges, Hedgerows, Dunes, Gardens
+    de: "Waldränder, Hecken, Dünen, Gärten"
   reference:
     commons_file: Cepaea nemoralis edit.jpg
   names:
@@ -3973,6 +5260,14 @@ species:
   gbif_taxon_key: 1340503
   inat_taxon_id: 57516
   wikidata_id: Q752274
+  height: "11–22 mm"
+  height_measure: length
+  body_weight: "0.07–0.75 g"
+  diet: nectarivore
+  lifespan: "0.1–1"
+  habitat:
+    en: Meadows, Gardens, Farmland, Woodland edges
+    de: "Wiesen, Gärten, Agrarland, Waldränder"
   reference:
     commons_file: Bumblebee October 2007-3a.jpg
   names:
@@ -3988,10 +5283,16 @@ species:
   family: Apidae
   group: insects
   difficulty: easy
-  iucn: LC
   gbif_taxon_key: 1340405
   inat_taxon_id: 55637
   wikidata_id: Q267532
+  height: "9–18 mm"
+  height_measure: length
+  diet: nectarivore
+  lifespan: "0.1–1"
+  habitat:
+    en: Meadows, Hedgerows, Gardens, Woodland edges
+    de: "Wiesen, Hecken, Gärten, Waldränder"
   reference:
     commons_file: Bombus pascuorum female 2 (aka).jpg
   names:
@@ -4010,6 +5311,13 @@ species:
   gbif_taxon_key: 5124007
   inat_taxon_id: 62331
   wikidata_id: Q782434
+  height: "70–100 mm"
+  height_measure: wingspan
+  diet: herbivore
+  lifespan: "1"
+  habitat:
+    en: Riverside woodland, Parks, Gardens
+    de: "Auwälder, Parks, Gärten"
   reference:
     commons_file: "Laothoe populi MHNT CUT 2010 0 359 Mont Pelvoux, France - female.jpg"
   names:
@@ -4028,6 +5336,13 @@ species:
   gbif_taxon_key: 5124143
   inat_taxon_id: 362591
   wikidata_id: Q163794
+  height: "90–120 mm"
+  height_measure: wingspan
+  diet: nectarivore
+  lifespan: "1"
+  habitat:
+    en: Woodland, Hedgerows, Gardens
+    de: "Wälder, Hecken, Gärten"
   reference:
     commons_file: "Sphinx ligustri - Ligusterschwärmer (1).jpg"
   names:
@@ -4046,6 +5361,13 @@ species:
   gbif_taxon_key: 1909398
   inat_taxon_id: 123628
   wikidata_id: Q503978
+  height: "54–70 mm"
+  height_measure: wingspan
+  diet: nectarivore
+  lifespan: "1"
+  habitat:
+    en: Deciduous woodland, Woodland clearings, Forest tracks
+    de: "Laubwälder, Waldlichtungen, Waldwege"
   reference:
     commons_file: Argynnis paphia MHNT CUT 2013 3 24 PONT GERENDOINE Male.jpg
   names:
@@ -4065,6 +5387,13 @@ species:
   gbif_taxon_key: 1427037
   inat_taxon_id: 61536
   wikidata_id: Q248379
+  height: "45–50 mm"
+  height_measure: length
+  diet: insectivore
+  lifespan: "1–2"
+  habitat:
+    en: Fast-flowing streams, Rivers, Wooded banks
+    de: "Schnellfließende Bäche, Flüsse, Bewaldete Ufer"
   reference:
     commons_file: Beautiful Demoiselle Calopteryx virgo.jpg
   names:
@@ -4084,7 +5413,14 @@ species:
   gbif_taxon_key: 5232464
   inat_taxon_id: 7101
   wikidata_id: Q26680
-  body_weight: 107 g
+  height: "55–70 cm"
+  height_measure: length
+  body_weight: "1.4–2.2 kg"
+  diet: herbivore
+  lifespan: "15–20"
+  habitat:
+    en: Arctic tundra, Coastal grassland, Saltmarsh
+    de: "Arktische Tundra, Küstengrasland, Salzwiesen"
   reference:
     commons_file: Branta leucopsis -standing in a field-8.jpg
   names:
@@ -4104,6 +5440,14 @@ species:
   gbif_taxon_key: 2481909
   inat_taxon_id: 4736
   wikidata_id: Q25398
+  height: "1.45–1.55 m"
+  height_measure: wingspan
+  body_weight: 3 kg
+  diet: piscivore
+  lifespan: "10–18"
+  habitat:
+    en: Old-growth forest, Wooded wetlands, Streams
+    de: "Altwälder, Waldsümpfe, Bäche"
   reference:
     commons_file: Ciconia nigra -Kruger National Park-8.jpg
   names:
@@ -4121,9 +5465,16 @@ species:
   difficulty: moderate
   iucn: LC
   gbif_taxon_key: 5220136
-  inat_taxon_id: 211194
+  inat_taxon_id: 42161
   wikidata_id: Q159857
-  body_weight: 5 kg
+  height: "75–100 cm"
+  height_measure: shoulder
+  body_weight: "35–90 kg"
+  diet: herbivore
+  lifespan: "8–16"
+  habitat:
+    en: Deciduous woodland, Parkland, Farmland
+    de: "Laubwälder, Parklandschaft, Ackerland"
   reference:
     commons_file: Fallow deer in field.jpg
   names:
@@ -4143,7 +5494,14 @@ species:
   gbif_taxon_key: 9537647
   inat_taxon_id: 7004
   wikidata_id: Q180991
-  body_weight: "1.2–1.7 kg"
+  height: "58–72 cm"
+  height_measure: length
+  body_weight: "0.9–2.1 kg"
+  diet: piscivore
+  lifespan: "7–10"
+  habitat:
+    en: Rivers, Lakes, Forested waterways
+    de: "Flüsse, Seen, Waldgewässer"
   reference:
     commons_file: Mergus merganser -Sandwell -England -male-8.jpg
   names:
@@ -4163,6 +5521,14 @@ species:
   gbif_taxon_key: 2438606
   inat_taxon_id: 44280
   wikidata_id: Q243727
+  height: "9–12 cm"
+  height_measure: length
+  body_weight: "18–40 g"
+  diet: herbivore
+  lifespan: "0.5–2"
+  habitat:
+    en: Meadows, Farmland, Grassland
+    de: Wiesen, Ackerland, Grasland
   reference:
     commons_file: Feldmaus Microtus arvalis.jpg
   names:

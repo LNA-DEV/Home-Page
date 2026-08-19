@@ -229,6 +229,16 @@
   translation: "Familj"
 - id: dex_height
   translation: "Storlek"
+- id: dex_measure_shoulder
+  translation: "skulderhöjd"
+- id: dex_measure_standing
+  translation: "stående höjd"
+- id: dex_measure_length
+  translation: "längd"
+- id: dex_measure_wingspan
+  translation: "vingspann"
+- id: dex_measure_shell
+  translation: "skallängd"
 - id: dex_weight
   translation: "Vikt"
 - id: dex_diet

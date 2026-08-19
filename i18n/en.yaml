@@ -256,7 +256,17 @@
 - id: dex_family
   translation: "Family"
 - id: dex_height
-  translation: "Height"
+  translation: "Size"
+- id: dex_measure_shoulder
+  translation: "shoulder"
+- id: dex_measure_standing
+  translation: "standing"
+- id: dex_measure_length
+  translation: "length"
+- id: dex_measure_wingspan
+  translation: "wingspan"
+- id: dex_measure_shell
+  translation: "shell"
 - id: dex_weight
   translation: "Weight"
 - id: dex_diet

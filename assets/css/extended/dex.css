@@ -423,6 +423,14 @@
   font-size: 0.95rem;
 }
 
+/* Which dimension a size refers to (shoulder / length / wingspan / shell).
+   Subordinate to the number itself, so it is dimmed and a size smaller. */
+.dex-stat__qualifier {
+  color: var(--secondary);
+  font-size: 0.8em;
+  white-space: nowrap;
+}
+
 .dex-description {
   /* Prose stops at a readable measure even when the page is very wide. */
   max-width: 68ch;

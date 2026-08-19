@@ -378,6 +378,27 @@ diff only shows what actually changed.
    ```
    python3 scripts/dex-enrich.py --only sand-lizard
    ```
+   **Check `body_weight`, `height` and `lifespan` by hand afterwards — do not
+   trust them.** A full audit of all 186 species in August 2026 found 82 of the
+   83 `body_weight` values this script had produced were wrong, several by three
+   to six orders of magnitude (whale shark `12`, humpback `1.5–45` with no unit,
+   giant panda `104–117.5 g`, common buzzard `0.9–966.5 kg`, giraffe `54.5 kg`).
+   The cause is `quantity_range()` in `scripts/dex-enrich.py`: it takes
+   `min()`/`max()` across *every* Wikidata mass statement for the taxon while
+   ignoring the qualifiers that distinguish them, so a newborn's mass becomes the
+   low end and a record specimen the high end; it also silently discards any
+   value whose unit QID is missing from the 5-entry `UNIT_MAP` (pounds, tonnes),
+   leaving an incoherent partial set. `lifespan` has the same shape of problem —
+   it tends to land on the record-longevity figure rather than the typical adult
+   range. The audit also established the house conventions those fields follow:
+   en-dash ranges, `mm`/`cm`/`m` and `g`/`kg`/`t`, a bare year range for
+   `lifespan`, and a `height_measure` slug on every record that has a `height`.
+
+   Also note two rules the script cannot know: a **domesticated form has no IUCN
+   assessment**, so `iucn` must be absent on dog/cat/cattle/sheep/goat/chicken/
+   domestic duck/alpaca rather than carrying the wild ancestor's category, and a
+   **Europe-only regional assessment is not a global one** (the honeybee and
+   carder bee had regional categories that had to be removed).
 
 5. **Fetch its map and, if you have not photographed it, its stand-in photo:**
    ```

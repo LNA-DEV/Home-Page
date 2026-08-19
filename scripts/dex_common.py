@@ -48,6 +48,7 @@ FIELD_ORDER = [
     "inat_taxon_id",
     "wikidata_id",
     "height",
+    "height_measure",
     "body_weight",
     "diet",
     "lifespan",
