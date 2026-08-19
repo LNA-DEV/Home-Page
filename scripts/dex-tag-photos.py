@@ -7,10 +7,14 @@ The dex joins to the gallery through a single optional field on each
     - id: 6885f633-…
       src: Alpaca behind tree.JPG
       category: animals
-      species: alpaca          # <- this script writes it
+      species: Vicugna pacos   # <- this script writes it
 
-A species counts as photographed when at least one gallery entry carries its
-slug, so this field is the only thing that decides what is "caught".
+The value is the species' **scientific name**, so a gallery entry says what it
+shows without a lookup into data/dex.yaml. A species counts as photographed when
+at least one gallery entry carries that name, so this field is the only thing
+that decides what is "caught". The tables below are keyed by dex slug because
+that is what is readable to write by hand; the slug is resolved to the scientific
+name at the moment of writing.
 
 Two sources feed a proposal:
 
@@ -283,7 +287,7 @@ def propose(block, phrase_map, known_slugs):
     manual = MANUAL.get(src)
     if manual:
         if manual not in known_slugs:
-            return None, f"manual slug {manual!r} is not in data/dex.yaml"
+            return None, f"manual slug {manual!r} has no scientific name in data/dex.yaml"
         return manual, "visual"
 
     tags = re.findall(r"^  - (.*)$", block, re.M)
@@ -306,10 +310,10 @@ def propose(block, phrase_map, known_slugs):
     return None, None
 
 
-def insert_species(block, slug):
-    """Insert `  species: <slug>` right after the category line."""
+def insert_species(block, scientific):
+    """Insert `  species: <Scientific name>` right after the category line."""
     def repl(match):
-        return f"{match.group(0)}\n  species: {slug}"
+        return f"{match.group(0)}\n  species: {scientific}"
 
     new_block, count = CATEGORY_RE.subn(repl, block, count=1)
     if count == 0:
@@ -330,7 +334,21 @@ def main(argv=None):
     species = load_dex()
     if not species:
         raise SystemExit("data/dex.yaml is empty — run scripts/dex-import.py first")
-    known_slugs = {entry["slug"] for entry in species if entry.get("slug")}
+    # The gallery stores the scientific name, so a species without one cannot be
+    # tagged at all — surface that here rather than writing an empty field.
+    scientific_by_slug = {
+        entry["slug"]: entry["scientific"]
+        for entry in species
+        if entry.get("slug") and entry.get("scientific")
+    }
+    nameless = sorted(
+        entry["slug"]
+        for entry in species
+        if entry.get("slug") and not entry.get("scientific")
+    )
+    if nameless:
+        print(f"warning: no scientific name, cannot be tagged: {', '.join(nameless)}")
+    known_slugs = set(scientific_by_slug)
     phrase_map = build_phrase_map(species)
 
     text = GALLERY_PATH.read_text(encoding="utf-8")
@@ -360,7 +378,7 @@ def main(argv=None):
             continue
 
         proposals.append((src, slug, how))
-        out_blocks.append(insert_species(block, slug))
+        out_blocks.append(insert_species(block, scientific_by_slug[slug]))
 
     if args.list_unmatched:
         for src in unmatched:
@@ -372,7 +390,7 @@ def main(argv=None):
         by_slug.setdefault(slug, []).append((src, how))
     for slug in sorted(by_slug):
         entries = by_slug[slug]
-        print(f"{slug}  ({len(entries)})")
+        print(f"{slug} -> {scientific_by_slug[slug]}  ({len(entries)})")
         for src, how in entries:
             print(f"    {src}   [{how}]")
 

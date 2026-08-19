@@ -55,10 +55,11 @@ COMMONS_API = "https://commons.wikimedia.org/w/api.php"
 DELAY = 0.3
 
 
-def photographed_slugs():
-    """Species slugs that already have at least one photo in the gallery."""
+def photographed_species():
+    """Lowercased scientific names that already have a photo in the gallery."""
     text = GALLERY_PATH.read_text(encoding="utf-8")
-    return set(re.findall(r"^  species: (.+)$", text, re.M))
+    found = (m.strip().lower() for m in re.findall(r"^  species: (.+)$", text, re.M))
+    return {name for name in found if name}
 
 
 def commons_metadata(filename, width):
@@ -123,12 +124,13 @@ def main(argv=None):
     if not species:
         raise SystemExit("data/dex.yaml is empty — run scripts/dex-import.py first")
 
-    caught = photographed_slugs()
+    caught = photographed_species()
     todo = [s for s in species if not args.only or s.get("slug") in args.only]
     if not args.all:
         # A species you have photographed shows your own photo everywhere, so a
         # Commons stand-in for it would be bytes in the repo that nothing renders.
-        todo = [s for s in todo if s.get("slug") not in caught]
+        # The gallery joins on the scientific name, so that is what we match on.
+        todo = [s for s in todo if (s.get("scientific") or "").lower() not in caught]
 
     header_lines = []
     for line in DEX_PATH.read_text(encoding="utf-8").splitlines():

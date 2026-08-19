@@ -53,8 +53,9 @@ from dex_common import (  # noqa: E402
 HEADER = """data/dex.yaml — the photo dex species list.
 
 One record per species. A species counts as "photographed" when at least one
-entry in data/gallery.yaml carries its slug in `species:` — there is no
-separate caught/uncaught flag to keep in sync.
+entry in data/gallery.yaml carries its scientific name in `species:` — there is
+no separate caught/uncaught flag to keep in sync. The slug stays the URL and the
+key for range/reference files; the scientific name is what the gallery joins on.
 
 Language-neutral facts (scientific name, family, measurements, taxon keys) sit
 at the top level; anything that reads as prose is nested per language under

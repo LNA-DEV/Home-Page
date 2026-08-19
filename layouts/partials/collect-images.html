@@ -11,7 +11,7 @@
     - section: filter by section (general, archive) — if omitted, excludes archive
     - portfolio: if true, only return portfolio images
     - project: filter by project slug
-    - species: filter by dex species slug (data/dex.yaml)
+    - species: filter by scientific name, e.g. "Vulpes vulpes" (case-insensitive)
     - excludeArchive: if true (default), exclude archive images
 */ -}}
 
@@ -65,7 +65,8 @@
   {{- end -}}
 
   {{- with index $filter "species" -}}
-    {{- if ne ($meta.species | default "") . -}}
+    {{- /* Scientific names are long and easy to mis-case; match like dex-index. */ -}}
+    {{- if ne (lower ($meta.species | default "")) (lower .) -}}
       {{- $include = false -}}
     {{- end -}}
   {{- end -}}

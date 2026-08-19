@@ -11,42 +11,57 @@
 
   Each entry is a dict:
 
-    .slug     species slug
-    .number   dex number, e.g. "001"
-    .group    mammals | birds | reptiles | …
-    .caught   true when .photos is non-empty
-    .species  the raw data/dex.yaml record
-    .photos   collect-images items showing this species, best first
-    .cover    the photo to use as the card/hero image (nil when uncaught)
+    .slug        species slug (URL identity)
+    .scientific  scientific name — the value gallery.yaml joins on
+    .number      dex number, e.g. "001"
+    .group       mammals | birds | reptiles | …
+    .caught      true when .photos is non-empty
+    .species     the raw data/dex.yaml record
+    .photos      collect-images items showing this species, best first
+    .cover       the photo to use as the card/hero image (nil when uncaught)
 
-  A species counts as photographed when a gallery entry carries its slug in
-  `species:` — archive photos count too, they just sort last, because "have I
-  photographed this" is a different question from "is it in the current set".
+  A species counts as photographed when a gallery entry carries its scientific
+  name in `species:` — archive photos count too, they just sort last, because
+  "have I photographed this" is a different question from "is it in the current
+  set". The join runs on the scientific name rather than the slug so the gallery
+  metadata stands on its own: `species: Vulpes vulpes` says what the photo shows
+  without a lookup into data/dex.yaml. Matching is case-insensitive; a value that
+  names no dex species warns rather than failing the build, since an untagged or
+  mistagged photo is still a perfectly good gallery photo.
 
   Always call via partialCached.
 */ -}}
 
 {{- $images := partial "collect-images.html" (dict "context" . "filter" (dict "excludeArchive" false)) -}}
 
-{{- /* slug -> photos, in one pass over the gallery */ -}}
+{{- /* lowercased scientific name -> photos, in one pass over the gallery */ -}}
 {{- $bySpecies := newScratch -}}
+{{- $used := slice -}}
 {{- range $image := $images -}}
   {{- with $image.Species -}}
-    {{- $bySpecies.Add . (slice $image) -}}
+    {{- $key := lower . -}}
+    {{- $bySpecies.Add $key (slice $image) -}}
+    {{- $used = $used | append $key -}}
   {{- end -}}
 {{- end -}}
 
 {{- $entries := slice -}}
 {{- $caught := 0 -}}
 {{- $groups := slice -}}
+{{- $known := slice -}}
 
 {{- range $species := hugo.Data.dex.species -}}
   {{- $slug := $species.slug -}}
   {{- if not $slug -}}
     {{- errorf "data/dex.yaml: entry %q has no slug" ($species.scientific | default "?") -}}
   {{- end -}}
+  {{- $scientific := $species.scientific -}}
+  {{- if not $scientific -}}
+    {{- errorf "data/dex.yaml: species %q has no scientific name — the gallery joins on it" $slug -}}
+  {{- end -}}
+  {{- $known = $known | append (lower $scientific) -}}
 
-  {{- $photos := $bySpecies.Get $slug | default slice -}}
+  {{- $photos := $bySpecies.Get (lower $scientific) | default slice -}}
 
   {{- /* Portfolio picks first, then current photos, then archive. Within each
          band keep the gallery's own order so the choice is stable. */ -}}
@@ -74,14 +89,23 @@
   {{- $groups = $groups | append $group -}}
 
   {{- $entries = $entries | append (dict
-        "slug"    $slug
-        "number"  (printf "%v" ($species.number | default ""))
-        "group"   $group
-        "caught"  (gt (len $ordered) 0)
-        "species" $species
-        "photos"  $ordered
-        "cover"   $cover
+        "slug"       $slug
+        "scientific" $scientific
+        "number"     (printf "%v" ($species.number | default ""))
+        "group"      $group
+        "caught"     (gt (len $ordered) 0)
+        "species"    $species
+        "photos"     $ordered
+        "cover"      $cover
       ) -}}
+{{- end -}}
+
+{{- /* A gallery `species:` that names nothing in the dex is almost always a typo
+       in a Latin name — loud enough to notice, cheap enough not to block a build. */ -}}
+{{- range $used | uniq -}}
+  {{- if not (in $known .) -}}
+    {{- warnf "data/gallery.yaml: species %q is not a scientific name in data/dex.yaml — those photos will not appear in the dex" . -}}
+  {{- end -}}
 {{- end -}}
 
 {{- $entries = sort $entries "number" -}}

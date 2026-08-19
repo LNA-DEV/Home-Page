@@ -358,15 +358,21 @@ diff only shows what actually changed.
    The dex number is assigned automatically. Skip this if the species is
    already listed — the script tells you and does nothing.
 
-3. **Tag the photo.** Either add `species: <slug>` under the entry's
-   `category:` line by hand, or let the tagger propose it:
+3. **Tag the photo.** Either add `species: <Scientific name>` under the entry's
+   `category:` line by hand (`species: Lacerta agilis` — the scientific name, not
+   the slug, and it must match `scientific:` in `data/dex.yaml`), or let the
+   tagger propose it:
    ```
    python3 scripts/dex-tag-photos.py --dry-run
    python3 scripts/dex-tag-photos.py --write
    ```
    The tagger only ever fills in entries that have no `species:` yet, so it is
-   safe to rerun. Photos it cannot identify are listed and left alone —
-   an untagged photo is a normal gallery photo, it just is not in the dex.
+   safe to rerun. Its `MANUAL`/`ALIASES` tables are keyed by slug because that is
+   what is readable to write by hand; it resolves the slug to the scientific name
+   as it writes. Photos it cannot identify are listed and left alone — an
+   untagged photo is a normal gallery photo, it just is not in the dex. A
+   `species:` value that matches no dex species logs a build warning and drops
+   those photos from the dex; the build still succeeds.
 
 4. **Fill in the facts** (only touches empty fields):
    ```
