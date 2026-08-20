@@ -9621,6 +9621,31 @@ images:
   section: general
   project: wildlife-of-inn-valley
   portfolio: true
+- id: 989b3223-3c86-4637-947e-d0b38e221a77
+  src: Heavy Early Mornings - White-Tailed Eagle Skimming a Fog-Covered Bog Lake.jpg
+  category: animals
+  section: general
+  portfolio: true
+  project: wildlife-of-inn-valley
+  species: Haliaeetus albicilla
+- id: 0bb3b7dc-a6fe-46d9-9718-cedb87164962
+  src: Between the Foglets - White-Tailed Eagle on a Wild Hunt in the Mist.jpg
+  category: animals
+  section: general
+  project: wildlife-of-inn-valley
+  species: Haliaeetus albicilla
+- id: 576c11d6-6ee7-493b-a512-e36f6218cdb1
+  src: Gilded Wings - White-tailed Eagle Gliding Through the Morning Sun.jpg
+  category: animals
+  section: general
+  project: wildlife-of-inn-valley
+  species: Haliaeetus albicilla
+- id: e0a971e5-cf10-485a-b462-d4730f1375ef
+  src: To the Outlook - A White-Tailed Eagle over Bavarian Pines.jpg
+  category: animals
+  section: general
+  project: wildlife-of-inn-valley
+  species: Haliaeetus albicilla
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
