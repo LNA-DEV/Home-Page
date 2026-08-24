@@ -9646,6 +9646,12 @@ images:
   section: general
   project: wildlife-of-inn-valley
   species: Haliaeetus albicilla
+- id: d4c0b96a-4d85-41a7-8ff1-a687b49c7dca
+  src: Morning Watch - Osprey Scanning the Bog from a Treetop.jpg
+  category: animals
+  section: general
+  project: wildlife-of-inn-valley
+  species: Pandion haliaetus
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
