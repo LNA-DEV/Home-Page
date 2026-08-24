@@ -43,9 +43,11 @@ species:
   description:
     en: "The red fox is the largest of the true foxes, and the most widely distributed member of the order Carnivora. It is present across the entire Northern Hemisphere, including most of North America, Europe and Asia, as well as parts of North Africa. Its range has expanded alongside human settlement, with the species having been introduced to Australia, where it preys on native small and medium-sized rodents and marsupials."
     de: "Der Rotfuchs ist der einzige mitteleuropäische Vertreter der Füchse und wird daher meistens als „der Fuchs“ bezeichnet. Er ist in Europa der häufigste Wildhund."
+    sv: "Rödräv eller vanlig räv är ett hunddjur och den mest förekommande arten i rävsläktet (Vulpes). Den förekommer i stora delar av Palearktis och Nearktis och i mycket mindre utsträckning i Afrika. I modern tid har den också spridits till Australien."
   description_source:
     en: "https://en.wikipedia.org/wiki/Red_fox"
     de: "https://de.wikipedia.org/wiki/Rotfuchs"
+    sv: "https://sv.wikipedia.org/wiki/R%C3%B6dr%C3%A4v"
 - slug: grey-wolf
   number: "002"
   scientific: Canis lupus
@@ -79,9 +81,11 @@ species:
   description:
     en: "The largest extant member of Canidae. Highly social, living in nuclear families with complex communication through howling, body language, and scent marking. Apex predator across the Northern Hemisphere."
     de: "Das größte lebende Mitglied der Hundeartigen. Sehr sozial, lebt in Familienverbänden mit komplexer Kommunikation durch Heulen, Körpersprache und Duftmarkierung. Spitzenprädator auf der gesamten Nordhalbkugel."
+    sv: "Varg, arkaiskt även ulv, är ett rovdjur vars utbredningsområde sträcker sig över stora delar av världen. Vargen är det största vilda hunddjuret och en fullvuxen varg väger vanligen 20 till 55 kg, i undantagsfall upp till 80 kg för hanar. En mängd underarter är beskrivna men det vetenskapligt faktiskt accepterade antalet är under diskussion."
   description_source:
     en: "https://en.wikipedia.org/wiki/Wolf"
     de: "https://de.wikipedia.org/wiki/Wolf"
+    sv: "https://sv.wikipedia.org/wiki/Varg"
 - slug: barn-owl
   number: "003"
   scientific: Tyto alba
@@ -115,9 +119,11 @@ species:
   description:
     en: "One of the most widespread land birds, found on every continent except Antarctica. Distinguished by a heart-shaped facial disc that channels sound to asymmetric ears, enabling precision hunting in complete darkness."
     de: "Einer der am weitesten verbreiteten Landvögel, auf jedem Kontinent außer der Antarktis zu finden. Ausgezeichnet durch einen herzförmigen Gesichtsschleier, der Schall zu asymmetrischen Ohren leitet und präzise Jagd in völliger Dunkelheit ermöglicht."
+    sv: "Tornuggla är en vida spridd fågel inom ordningen ugglefåglar. Från att tidigare även ha omfattat bestånd i södra och sydöstra Asien, Amerika och Australien begränsas numera tornugglan till fåglar i västra Asien, Europa och Afrika."
   description_source:
     en: "https://en.wikipedia.org/wiki/Western_barn_owl"
     de: "https://de.wikipedia.org/wiki/Schleiereule"
+    sv: "https://sv.wikipedia.org/wiki/Tornuggla"
 - slug: european-hedgehog
   number: "004"
   scientific: Erinaceus europaeus
@@ -151,9 +157,11 @@ species:
   description:
     en: "A nocturnal insectivore covered in approximately 5,000–7,000 spines. Rolls into a tight ball when threatened. An iconic garden visitor across Western Europe, though populations have declined significantly in recent decades."
     de: "Ein nachtaktiver Insektenfresser mit etwa 5.000–7.000 Stacheln. Rollt sich bei Gefahr zu einer festen Kugel zusammen. Ein ikonischer Gartenbesucher in Westeuropa, dessen Populationen in den letzten Jahrzehnten deutlich zurückgegangen sind."
+    sv: "Igelkott är ett marklevande djur med en västpalearktisk utbredning som tillhör familjen igelkottdjur (Erinaceidae). Som skydd mot predation är den på ovansidan klädd med taggar och den lever av insekter, maskar och mångfotingar."
   description_source:
     en: "https://en.wikipedia.org/wiki/European_hedgehog"
     de: "https://de.wikipedia.org/wiki/Braunbrustigel"
+    sv: "https://sv.wikipedia.org/wiki/Igelkott"
 - slug: atlantic-puffin
   number: "005"
   scientific: Fratercula arctica
@@ -188,9 +196,11 @@ species:
   description:
     en: "A charismatic seabird with a colourful bill that spends most of its life at sea. Nests in burrows on coastal cliffs and can carry 10+ fish crosswise in its bill. Populations declining due to climate-driven changes in prey fish distribution."
     de: "Ein charismatischer Seevogel mit buntem Schnabel, der den Großteil seines Lebens auf dem Meer verbringt. Nistet in Höhlen an Küstenklippen und kann 10+ Fische quer im Schnabel tragen. Populationen rückläufig durch klimabedingte Veränderungen der Beutefischverteilung."
+    sv: "Lunnefågel är en fågel som tillhör familjen alkor. Den häckar i nordatlanten både på den europeiska och nordamerikanska sidan. Lunnefågeln minskar kraftigt i antal till följd av predation från invasiva arter, miljöförstöring och födobrist."
   description_source:
     en: "https://en.wikipedia.org/wiki/Atlantic_puffin"
     de: "https://de.wikipedia.org/wiki/Papageitaucher"
+    sv: "https://sv.wikipedia.org/wiki/Lunnef%C3%A5gel"
 - slug: red-deer
   number: "006"
   scientific: Cervus elaphus
@@ -224,9 +234,11 @@ species:
   description:
     en: "One of the largest deer species and a keystone herbivore across Eurasia. Males grow and shed impressive antlers annually, using them in dramatic rutting contests each autumn. Important for ecosystem management through grazing."
     de: "Eine der größten Hirscharten und ein Schlüssel-Pflanzenfresser in Eurasien. Männchen wachsen und werfen jährlich beeindruckende Geweihe ab, die sie in dramatischen Brunftkämpfen im Herbst einsetzen. Wichtig für das Ökosystem- Management durch Beweidung."
+    sv: "Kronhjort, är ett stort hjortdjur. Det är landskapsdjur i Skåne och på Åland."
   description_source:
     en: "https://en.wikipedia.org/wiki/Red_deer"
     de: "https://de.wikipedia.org/wiki/Rothirsch"
+    sv: "https://sv.wikipedia.org/wiki/Kronhjort"
 - slug: musk-ox
   number: "007"
   scientific: Ovibos moschatus
@@ -260,9 +272,11 @@ species:
   description:
     en: "The muskox is a hoofed mammal of the family Bovidae. Native to the Arctic, it is noted for its thick coat and for the strong odor emitted by males during the seasonal rut, from which its name derives. This musky odor has the effect of attracting females during mating season."
     de: "Der Moschusochse, auch als Bisamochse oder Schafsochse bezeichnet, ist ein Paarhufer aus der Unterfamilie der Antilopinae; innerhalb derer gehört er in die Verwandtschaftsgruppe der Ziegenartigen (Caprini). Die bis zu 1,50 m hohen männlichen und bis zu 1,30 m hohen weiblichen Tiere sind Bewohner der arktischen Tundren und heute ursprünglich nur noch in Grönland und Kanada zu finden."
+    sv: "Myskoxe är ett slidhornsdjur som tillhör underfamiljen Caprinae. Djuret lever på den arktiska tundran framför allt i Grönland, Kanada och Alaska. Små flockar har inplanterats i Tajmyrien i Ryssland och i Dovrefjell i Norge."
   description_source:
     en: "https://en.wikipedia.org/wiki/Muskox"
     de: "https://de.wikipedia.org/wiki/Moschusochse"
+    sv: "https://sv.wikipedia.org/wiki/Myskoxe"
 - slug: european-badger
   number: "008"
   scientific: Meles meles
@@ -296,9 +310,11 @@ species:
   description:
     en: "The European badger, also known as the Eurasian badger, is a species of badger in the family Mustelidae native to Europe and West Asia and parts of Central Asia. It is classified as least concern on the IUCN Red List due to its wide range and large, stable population size which is thought to be increasing in some regions. Several subspecies are recognised, with the nominate subspecies predominating in most of Europe."
     de: "Der Europäische Dachs ist ein Raubtier aus der Familie der Marder und eine von vier Arten der Gattung Meles, die noch bis Anfang der 2000er Jahre in einer Art zusammengefasst waren. Volkstümlich wird der Dachs auch – vor allem in der Fabel – als „Grimbart“ bezeichnet."
+    sv: "Grävling eller europeisk grävling är ett rovdjur som tillhör familjen mårddjur och som förekommer i Eurasien. Europeisk grävling är en av tre arter i släktet Meles."
   description_source:
     en: "https://en.wikipedia.org/wiki/European_badger"
     de: "https://de.wikipedia.org/wiki/Europ%C3%A4ischer_Dachs"
+    sv: "https://sv.wikipedia.org/wiki/Europeisk_gr%C3%A4vling"
 - slug: eurasian-lynx
   number: "009"
   scientific: Lynx lynx
@@ -332,9 +348,11 @@ species:
   description:
     en: "The Eurasian lynx is one of the four extant species within the medium-sized wild cat genus Lynx. It is widely distributed from Northern, Central and Eastern Europe to Central Asia and Siberia, the Tibetan Plateau and the Himalayas. It inhabits temperate and boreal forests up to an elevation of 5,500 m (18,000 ft)."
     de: "Der Eurasische Luchs oder Nordluchs ist eine in Eurasien verbreitete Art der Luchse. Im deutschen Sprachgebrauch ist mit Luchs fast immer diese Art gemeint. Nach Braunbär, Wolf und Persischem Leoparden und noch vor dem Vielfraß ist diese Katze das viertgrößte in Europa heimische Landraubtier."
+    sv: "Lo, lodjur eller lokatt, i västra Sverige även göpe eller göpa med flera, är ett kattdjur som förekommer i Europa och Asien. Lodjuret är Europas största kattdjur och fanns en gång i skogar över stora delar av den europeiska kontinenten och vidare österut till Sibirien. På Iberiska halvön förekommer istället den närbesläktade panterlon."
   description_source:
     en: "https://en.wikipedia.org/wiki/Eurasian_lynx"
     de: "https://de.wikipedia.org/wiki/Eurasischer_Luchs"
+    sv: "https://sv.wikipedia.org/wiki/Lodjur"
 - slug: brown-bear
   number: "010"
   scientific: Ursus arctos
@@ -368,9 +386,11 @@ species:
   description:
     en: "The brown bear is a large bear native to Eurasia and North America. Of the land carnivorans, it is rivaled in size only by its closest relative, the polar bear, which is much less variable in size and slightly bigger on average. The brown bear is a sexually dimorphic species, as adult males are larger and more compactly built than females."
     de: "Der Braunbär gehört zu den Säugetieren aus der Familie der Bären (Ursidae). In Eurasien und Nordamerika kommt er in mehreren Unterarten vor, darunter Europäischer Braunbär, Grizzlybär und Kodiakbär."
+    sv: "Brunbjörn är ett växt- och köttätande däggdjur som ingår i familjen björnar och som har ett stort utbredningsområde i holarktis. Grizzlybjörn, kodiakbjörn och den utdöda mexikanska brunbjörnen är alla underarter till brunbjörn."
   description_source:
     en: "https://en.wikipedia.org/wiki/Brown_bear"
     de: "https://de.wikipedia.org/wiki/Braunb%C3%A4r"
+    sv: "https://sv.wikipedia.org/wiki/Brunbj%C3%B6rn"
 - slug: wild-boar
   number: "011"
   scientific: Sus scrofa
@@ -400,9 +420,11 @@ species:
   description:
     en: "The wild boar, also known as the wild swine, common wild pig, Eurasian wild pig, or simply wild pig, is a suid native to much of Eurasia and North Africa, and has been introduced to the Americas and Oceania. The species is now one of the widest-ranging mammals in the world, as well as the most widespread suiform. It has been assessed as least concern on the IUCN Red List due to its wide range, high numbers, and adaptability to a diversity of habitats."
     de: "Das Wildschwein, jägersprachlich Schwarzwild genannt, ist ein Paarhufer in der Familie der Echten Schweine und die Stammform des Hausschweins. Das ursprüngliche Verbreitungsgebiet reicht von Westeuropa bis Südostasien. Durch Aussetzen in Nord- und Südamerika, Australien sowie auf zahlreichen Inseln ist es heute nahezu weltweit verbreitet."
+    sv: "Vildsvin är ett partåigt hovdjur vars ursprungliga utbredningsområde sträckte sig från västra Europa till Sydostasien. Vildsvinet introducerades sedan i Nordamerika, Sydamerika, Australien och på många öar och har därför idag en nästan världsvid utbredning. Tamsvinet är den domesticerade formen av vildsvin."
   description_source:
     en: "https://en.wikipedia.org/wiki/Wild_boar"
     de: "https://de.wikipedia.org/wiki/Wildschwein"
+    sv: "https://sv.wikipedia.org/wiki/Vildsvin"
 - slug: roe-deer
   number: "012"
   scientific: Capreolus capreolus
@@ -432,9 +454,11 @@ species:
   description:
     en: "The roe deer, also known as the roe, western roe deer, or European roe, is a species of deer. The male of the species is sometimes referred to as a roebuck. The roe is a small deer, reddish and grey-brown, and well-adapted to cold environments."
     de: "Das Reh, zur Unterscheidung vom Sibirischen Reh auch Europäisches Reh genannt, ist die in Europa häufigste und kleinste Art der Hirsche. Als Trughirsch ist es näher mit dem Ren, dem Elch und dem amerikanischen Weißwedelhirsch verwandt als mit dem in Mitteleuropa ebenfalls heimischen Rothirsch."
+    sv: "Rådjur är ett litet hjortdjur som förekommer i Europa och Mindre Asien. Benämningen på en vuxen hane är bock. Honan kallas för get eller rå, ungdjur under första året kallas kid eller killing, och getter som ännu inte fött kid kallas för smaldjur."
   description_source:
     en: "https://en.wikipedia.org/wiki/Roe_deer"
     de: "https://de.wikipedia.org/wiki/Reh"
+    sv: "https://sv.wikipedia.org/wiki/R%C3%A5djur"
 - slug: european-bison
   number: "013"
   scientific: Bison bonasus
@@ -464,9 +488,11 @@ species:
   description:
     en: "The European bison or the European wood bison, also known as the wisent, the zubr, or sometimes colloquially as the European buffalo, is a European species of bison. It is one of two extant species of bison, alongside the American bison. The European bison is the heaviest wild land animal in Europe, and individuals in the past may have been even larger than their modern-day descendants."
     de: "Der Wisent oder Europäische Bison ist eine europäische Rinderart (Bovini). Wisente kamen bis in das frühe Mittelalter in den Urwäldern von West-, Zentral- und Südosteuropa vor. Ihr Lebensraum sind gemäßigte Laub-, Nadel- und Mischwälder mit großen Offenlandflächen."
+    sv: "Visent eller europeisk bison är en av de två idag levande arterna i släktet Bison. Den europeiska arten är i jämförelse med sin amerikanska släkting bisonoxen mindre i storlek, har något längre svans och kortare päls. Den lever kvar i Europa, medan arten amerikansk bisonoxe avdelades efter utvandring till Amerika för mellan 195.000 och 135.000 år sedan via landbron vid nuvarande Berings sund."
   description_source:
     en: "https://en.wikipedia.org/wiki/European_bison"
     de: "https://de.wikipedia.org/wiki/Wisent"
+    sv: "https://sv.wikipedia.org/wiki/Visent"
 - slug: alpine-ibex
   number: "014"
   scientific: Capra ibex
@@ -500,9 +526,11 @@ species:
   description:
     en: "The Alpine ibex, also known as the steinbock, is a European species of goat which lives in the Alps. It is one of ten species in the genus Capra and its closest living relative is the Iberian ibex. The Alpine ibex is a sexually dimorphic species; males are larger and carry longer horns than females."
     de: "Der Alpensteinbock ist eine in den Alpen wieder verbreitete Art von Steinböcken aus der Gattung der Ziegen. Ein weiblicher Steinbock wird Steingeiß genannt und ist nicht so groß wie ein männlicher."
+    sv: "Stenbock eller alpstenbock är en art inom getterna som förekommer i Alperna. Arten var i början av 1800-talet nästan utrotad men har efter intensiva skyddsåtgärder återhämtat sig."
   description_source:
     en: "https://en.wikipedia.org/wiki/Alpine_ibex"
     de: "https://de.wikipedia.org/wiki/Alpensteinbock"
+    sv: "https://sv.wikipedia.org/wiki/Stenbock"
 - slug: chamois
   number: "015"
   scientific: Rupicapra rupicapra
@@ -532,9 +560,11 @@ species:
   description:
     en: "The chamois, or Alpine chamois, is a species of goat-antelope native to mountainous parts of Europe and Western Asia, from the Pyrenees, the Alps, the Apennines, the Dinarides, the Tatra to the Carpathian Mountains, the Balkan Mountains, the Rila–Rhodope massif, Pindus, the northeastern mountains of Turkey, and the Caucasus. It has also been introduced to the South Island of New Zealand. Some subspecies of chamois are strictly protected in the EU under the European Habitats Directive."
     de: "Die (Alpen-)Gämse, vor der Rechtschreibreform Gemse geschrieben und in der Jägersprache mit Gams oder Gamswild bezeichnet, ist eine in Europa und Kleinasien beheimatete Art der Ziegenartigen. Zusammen mit der Pyrenäen-Gämse und weiteren Arten gehört sie zur Gattung der Gämsen (Rupicapra)."
+    sv: "Gems, även känd som stenget eller alpget, hör till slidhornsdjuren inom ordningen partåiga hovdjur."
   description_source:
     en: "https://en.wikipedia.org/wiki/Chamois"
     de: "https://de.wikipedia.org/wiki/G%C3%A4mse"
+    sv: "https://sv.wikipedia.org/wiki/Gems"
 - slug: eurasian-otter
   number: "016"
   scientific: Lutra lutra
@@ -568,9 +598,11 @@ species:
   description:
     en: "The Eurasian otter, also known as the European otter, Eurasian river otter, European river otter, common otter, and Old World otter, is a semiaquatic mammal native to Eurasia and the Maghreb. it is the most widely distributed member of the otter subfamily (Lutrinae) of the weasel family (Mustelidae) and is found in the waterways and on the coasts of Europe, much of Asia, and parts of North Africa. The Eurasian otter eats mainly of fish, and is strongly territorial."
     de: "Der Fischotter ist ein an das Wasserleben angepasster Marder, der zu den besten Schwimmern unter den Landraubtieren zählt. Er kommt in fast ganz Europa vor und wird einschließlich Schwanz etwa 130 Zentimeter lang. Eine eindeutigere Bezeichnung für diese Art ist Eurasischer Fischotter, da es in der Gruppe der Otter noch weitere Arten gibt, die Fischotter heißen, beispielsweise den Indischen oder die Amerikanischen Fischotter."
+    sv: "Utter eller eurasisk utter, ett eurasiskt rovdjur tillhörande familjen mårddjur. Namnet kan även avse andra arter i underfamiljen Lutrinae, som finns spridd över stora delar av världen. Uttern är Smålands landskapsdjur i Sverige och Andalusiens provinsdjur i Spanien."
   description_source:
     en: "https://en.wikipedia.org/wiki/Eurasian_otter"
     de: "https://de.wikipedia.org/wiki/Fischotter"
+    sv: "https://sv.wikipedia.org/wiki/Utter"
 - slug: moose
   number: "017"
   scientific: Alces alces
@@ -604,9 +636,11 @@ species:
   description:
     en: "The moose or elk is the world's tallest, largest and heaviest extant species of deer and the only extant species in the genus Alces. It is also the tallest, and the second-largest, land animal in North America, falling short only to the American bison in body mass. Most adult male moose have broad, palmate antlers; other members of the deer family have pointed antlers with a dendritic (\"twig-like\") configuration."
     de: "Der Elch ist die größte heute vorkommende Art der Hirsche. Sein Lebensraum erstreckt sich über Nordeuropa, Nordasien und Nordamerika. Der Elch wird von der IUCN als „nicht gefährdet“ eingestuft."
+    sv: "Europeisk älg, i dagligt tal ofta kallad älg är en art i ordningen partåiga hovdjur som tillsammans med amerikansk älg är det största nu levande hjortdjuret. Älgarna behandlades fram till mitten av 2000-talet som en enda art med varierande antal underarter. Efter olika fylogenetiska studier delas släktet älgar (Alces) upp i de två arterna europeisk- och amerikansk älg."
   description_source:
     en: "https://en.wikipedia.org/wiki/Moose"
     de: "https://de.wikipedia.org/wiki/Elch"
+    sv: "https://sv.wikipedia.org/wiki/Europeisk_%C3%A4lg"
 - slug: arctic-fox
   number: "018"
   scientific: Vulpes lagopus
@@ -640,9 +674,11 @@ species:
   description:
     en: "The Arctic fox, also known as the white fox, polar fox, or snow fox, is a small species of fox native to the Arctic regions of the Northern Hemisphere and common throughout the Arctic tundra. It is well adapted to living in cold environments, and is known for its thick, warm fur that can be used as camouflage against snow in the winter. It has a large and fluffy tail."
     de: "Der Polarfuchs, Schneefuchs oder Eisfuchs ist eine Fuchsart, die in der nördlichen Polarregion beheimatet ist."
+    sv: "Fjällräv är en art i familjen hunddjur som förekommer i Arktis och angränsande områden."
   description_source:
     en: "https://en.wikipedia.org/wiki/Arctic_fox"
     de: "https://de.wikipedia.org/wiki/Polarfuchs"
+    sv: "https://sv.wikipedia.org/wiki/Fj%C3%A4llr%C3%A4v"
 - slug: reindeer
   number: "019"
   scientific: Rangifer tarandus
@@ -675,9 +711,11 @@ species:
   description:
     en: "The reindeer or caribou is a species of deer with circumpolar distribution, native to Arctic, subarctic, tundra, boreal, and mountainous regions of Northern Europe, Siberia, and North America. It is the only representative of the genus Rangifer. More recent studies suggest the splitting of reindeer and caribou."
     de: "Das Ren [reːn], [rɛn] oder Rentier [ˈreːnˌtiːɐ], [ˈrɛnˌtiːɐ] ist eine Säugetierart aus der Familie der Hirsche (Cervidae). Es lebt zirkumpolar im Sommer in den Tundren und im Winter in der Taiga Nordeurasiens und Nordamerikas sowie auf Grönland und anderen arktischen Inseln. Es ist die einzige Hirschart, die domestiziert wurde."
+    sv: "Ren är ett arktiskt hjortdjur som förekommer på tundran och i det boreala skogsområdet i norra Eurasien, norra Nordamerika, på Grönland och på flera arktiska öar. Tidigare fanns arten även i den tempererade klimatzonen. Renen utgör den enda arten i släktet Rangifer och utmärker sig genom att vara det enda hjortdjuret där båda könen har horn."
   description_source:
     en: "https://en.wikipedia.org/wiki/Reindeer"
     de: "https://de.wikipedia.org/wiki/Ren"
+    sv: "https://sv.wikipedia.org/wiki/Ren"
 - slug: pine-marten
   number: "020"
   scientific: Martes martes
@@ -711,9 +749,11 @@ species:
   description:
     en: "The European pine marten, also known as the pine marten, is a mustelid native to and widespread in most of Europe, Asia Minor, the Caucasus, and parts of Iran, Iraq, and Syria. It is listed as Least Concern on the IUCN Red List. It is less commonly known as baum marten or sweet marten."
     de: "Der Baummarder oder Edelmarder ist eine Art der echten Marder (Mustelidae) innerhalb der Raubtiere (Carnivora). Er lebt in Europa sowie Klein- und Nordasien und ist ein Waldbewohner. Anders als sein Verwandter, der Steinmarder, folgt der Baummarder dem Menschen nicht in die Nähe der Siedlungen."
+    sv: "Mård är ett skogslevande mellanstort rovdjur i familjen mårddjur som förekommer i större delen av Europa och delar av västra Asien. Mården skall inte blandas samman med mårdhunden, eftersom den senare inte är ett mårddjur, utan ett hunddjur."
   description_source:
     en: "https://en.wikipedia.org/wiki/European_pine_marten"
     de: "https://de.wikipedia.org/wiki/Baummarder"
+    sv: "https://sv.wikipedia.org/wiki/M%C3%A5rd"
 - slug: red-squirrel
   number: "021"
   scientific: Sciurus vulgaris
@@ -747,9 +787,11 @@ species:
   description:
     en: "The red squirrel, also called Eurasian red squirrel, is a species of tree squirrel in the genus Sciurus. It is an arboreal and primarily herbivorous rodent and common throughout Eurasia."
     de: "Das Eurasische Eichhörnchen, häufig nur als Eichhörnchen bekannt, ist ein Nagetier aus der Familie der Hörnchen (Sciuridae). Es ist der einzige natürlich in Mitteleuropa vorkommende Vertreter aus der Gattung der Eichhörnchen und wird zur Unterscheidung von anderen Arten wie dem Kaukasischen Eichhörnchen und dem in Europa eingebürgerten Grauhörnchen auch als Europäisches Eichhörnchen bezeichnet."
+    sv: "Ekorre, även känd som röd ekorre eller europeisk ekorre, är en trädlevande gnagare med yvig svans som förekommer i Palearktis."
   description_source:
     en: "https://en.wikipedia.org/wiki/Red_squirrel"
     de: "https://de.wikipedia.org/wiki/Eurasisches_Eichh%C3%B6rnchen"
+    sv: "https://sv.wikipedia.org/wiki/Ekorre"
 - slug: mountain-hare
   number: "022"
   scientific: Lepus timidus
@@ -783,9 +825,11 @@ species:
   description:
     en: "The mountain hare or arctic hare, also known as blue hare, tundra hare, variable hare, white hare, snow hare, alpine hare, and Irish hare, is a species of Palearctic hare that is largely adapted to polar and mountainous habitats."
     de: "Der Schneehase ist eine zur Familie der Hasen (Leporidae) gehörige Art. In Europa gehört er zur Wirbeltierfauna der Alpen und ist gemeinsam mit dem Alpenschneehuhn eine der wenigen Tierarten, die an den boreo-alpinen Lebensraum gut angepasst sind. Die Deutsche Wildtier Stiftung wählte den Alpenschneehasen zum Tier des Jahres 2025."
+    sv: "Skogshare är en art av hare som förekommer över stora delar av Palearktis, främst i tajgaområden. Den är brungrå på sommaren och vit på vintern med svarta spetsar på öronen. Den är ett populärt jaktvilt."
   description_source:
     en: "https://en.wikipedia.org/wiki/Mountain_hare"
     de: "https://de.wikipedia.org/wiki/Schneehase"
+    sv: "https://sv.wikipedia.org/wiki/Skogshare"
 - slug: golden-eagle
   number: "023"
   scientific: Aquila chrysaetos
@@ -819,9 +863,11 @@ species:
   description:
     en: "The golden eagle is a bird of prey living in the Northern Hemisphere. It is the most widely distributed species of eagle. Like all eagles, it belongs to the family Accipitridae."
     de: "Der Steinadler ist eine große Greifvogelart innerhalb der Familie der Habichtartigen (Accipitridae). Steinadler besiedeln offene und halboffene Landschaften in der gesamten Holarktis. Sie ernähren sich meist von mittelgroßen, bodenbewohnenden Säugern."
+    sv: "Kungsörn är en rovfågel som tillhör familjen Accipitridae, och som förekommer på norra halvklotet i Eurasien, Nordamerika och delar av Afrika. Som hos många rovfåglar är honorna större än hanarna. Den adulta kungsörnen varierar från svartbrun till mörkt brun med en guldbrun hjässa och nacke."
   description_source:
     en: "https://en.wikipedia.org/wiki/Golden_eagle"
     de: "https://de.wikipedia.org/wiki/Steinadler"
+    sv: "https://sv.wikipedia.org/wiki/Kungs%C3%B6rn"
 - slug: white-stork
   number: "024"
   scientific: Ciconia ciconia
@@ -855,9 +901,11 @@ species:
   description:
     en: "The white stork is a large bird in the stork family, Ciconiidae. Its plumage is mainly white, with black on the bird's wings. Adults have long red legs and long pointed red beaks, and measure on average 100–115 cm (39–45 in) from beak tip to end of tail, with a 155–215 cm (61–85 in) wingspan."
     de: "Der Weißstorch, auch Klapperstorch genannt, ist eine Vogelart aus der Familie der Störche (Ciconiidae). Er war 1984 und 1994 in Deutschland Vogel des Jahres."
+    sv: "Vit stork är en fågel i familjen storkar. Den är en stor fågel med lång hals, långa ben och långa breda vingar. Fjäderdräkten är övervägande vit, med svarta arm- och vingpennor samt lång röd näbb och röda ben."
   description_source:
     en: "https://en.wikipedia.org/wiki/White_stork"
     de: "https://de.wikipedia.org/wiki/Wei%C3%9Fstorch"
+    sv: "https://sv.wikipedia.org/wiki/Vit_stork"
 - slug: eurasian-eagle-owl
   number: "025"
   scientific: Bubo bubo
@@ -891,9 +939,11 @@ species:
   description:
     en: "The Eurasian eagle-owl is a species of eagle-owl, a type of bird that resides much over Eurasia. It is often just called the eagle-owl in Europe and Asia."
     de: "Der Uhu ist eine Vogelart aus der Gattung der Uhus (Bubo), die zur Ordnung der Eulen (Strigiformes) gehört. Uhus haben einen massigen Körper und einen auffällig dicken Kopf mit Federohren. Die Augen sind orangegelb."
+    sv: "Berguv är en fågelart i släktet Bubo och Europas största samt en av världens största ugglor. Den är en stannfågel, som förekommer i större delen av Europa och Asien. Den har en kraftfull kropp och ett påfallande kraftigt huvud med örontofsar."
   description_source:
     en: "https://en.wikipedia.org/wiki/Eurasian_eagle-owl"
     de: "https://de.wikipedia.org/wiki/Uhu"
+    sv: "https://sv.wikipedia.org/wiki/Berguv"
 - slug: european-robin
   number: "026"
   scientific: Erithacus rubecula
@@ -927,9 +977,11 @@ species:
   description:
     en: "The European robin, known simply as the robin or robin redbreast in the British Isles, is a small insectivorous passerine bird belonging to the Old World flycatcher family Muscicapidae. It is found across Europe, as far east as Western Siberia, and as far south as North Africa. It is sedentary in the west and south of its range, and migratory in the north and east of its range where winters are harsher."
     de: "Das Rotkehlchen ist eine Vogelart aus der Familie der Fliegenschnäpper (Muscicapidae). Es besiedelt Nordafrika, Europa und Kleinasien sowie die Mittelmeerinseln. Seine Nahrung besteht vor allem aus Insekten, kleinen Spinnen, Würmern und Schnecken."
+    sv: "Rödhake är en fågel som återfinns över hela Sverige. Rödhaken är en liten, knubbig tätting, omkring 12,5–14 centimeter lång, med stort huvud och kort stjärt. Den har orangerött bröst och ansikte inramat med grå till brun ovansida och vitaktig buk."
   description_source:
     en: "https://en.wikipedia.org/wiki/European_robin"
     de: "https://de.wikipedia.org/wiki/Rotkehlchen"
+    sv: "https://sv.wikipedia.org/wiki/R%C3%B6dhake"
 - slug: common-kingfisher
   number: "027"
   scientific: Alcedo atthis
@@ -963,9 +1015,11 @@ species:
   description:
     en: "The common kingfisher, also known as the Eurasian kingfisher and river kingfisher, is a small kingfisher with seven subspecies recognized within its wide distribution across Eurasia and North Africa. It is resident in much of its range, but migrates from areas where rivers freeze in winter."
     de: "Der Eisvogel ist die einzige in Mitteleuropa vorkommende Art aus der Familie der Eisvögel (Alcedinidae). Er besiedelt weite Teile Europas, Asiens sowie das westliche Nordafrika und lebt an mäßig schnell fließenden oder stehenden, klaren Gewässern mit Kleinfischbestand und Sitzwarten. Seine Nahrung setzt sich aus Fischen, Wasserinsekten, Kleinkrebsen und Kaulquappen zusammen."
+    sv: "Kungsfiskare är en fågelart inom familjen kungsfiskare (Alcedinidae) som vanligtvis delas in i sju eller åtta underarter och har en palearktisk häckningsutbredning. I stora delar av sitt utbredningsområde är den en stannfågel, men flyttar om vintern från de områden där floder och åar fryser till."
   description_source:
     en: "https://en.wikipedia.org/wiki/Common_kingfisher"
     de: "https://de.wikipedia.org/wiki/Eisvogel"
+    sv: "https://sv.wikipedia.org/wiki/Kungsfiskare"
 - slug: bearded-vulture
   number: "028"
   scientific: Gypaetus barbatus
@@ -999,9 +1053,11 @@ species:
   description:
     en: "The bearded vulture, also known as the lammergeier and ossifrage, is a very large bird of prey in the monotypic genus Gypaetus. The bearded vulture is the only known vertebrate whose diet consists of 70–90% bone."
     de: "Der Bartgeier, veraltet auch Lämmergeier genannt, ist ein Greifvogel aus der Familie der Habichtartigen (Accipitridae). Er bildet die einzige Art der gleichnamigen Gattung (Gypaetus). Traditionell zählte er zur Unterfamilie der Altweltgeier (Aegypiinae), ehe er aufgrund molekulargenetischer Untersuchungen mit dem Schmutzgeier und dem Palmgeier in eine eigene Unterfamilie (Gypaetinae) gestellt wurde."
+    sv: "Lammgam är en gam som förekommer i bergiga områden i Asien, Afrika och södra Europa. Den placeras som ensam art inom släktet Gypaetus, inom familjen hökartade rovfåglar, och är i motsats till de flesta gamar befjädrad på huvud och hals. Globalt bedöms populationen av lammgam som livskraftig, men i exempelvis Europa och södra Afrika är den hotad."
   description_source:
     en: "https://en.wikipedia.org/wiki/Bearded_vulture"
     de: "https://de.wikipedia.org/wiki/Bartgeier"
+    sv: "https://sv.wikipedia.org/wiki/Lammgam"
 - slug: hoopoe
   number: "029"
   scientific: Upupa epops
@@ -1035,9 +1091,11 @@ species:
   description:
     en: "The Eurasian hoopoe or common hoopoe is the most widespread species of the genus Upupa. It is a distinctive cinnamon coloured bird with black and white wings, a tall erectile crest, a broad white band across a black tail, and a long narrow downcurved bill. Its call is a soft \"oop-oop-oop\"."
     de: "Der Wiedehopf ist eine von drei Arten aus der Vogelfamilie der Wiedehopfe (Upupidae). Die Wiedehopfe werden gemeinsam mit der etwas artenreicheren Familie der Baumhopfe (Phoeniculidae) in die Ordnung der Bucerotiformes gestellt. Die Zuordnung zu den Rackenvögeln (Coraciiformes) ist nicht mehr üblich."
+    sv: "Härfågel är en fågel inom familjen härfåglar och återfinns i stora delar av Europa, Asien och Afrika. Den har en karaktäristisk och kraftfullt färgad fjäderdräkt i svart, vitt och orange och när den är exalterad reser den en fjäderplym på huvudet. Även dess läte är vittljudande och distinkt."
   description_source:
     en: "https://en.wikipedia.org/wiki/Eurasian_hoopoe"
     de: "https://de.wikipedia.org/wiki/Wiedehopf"
+    sv: "https://sv.wikipedia.org/wiki/H%C3%A4rf%C3%A5gel"
 - slug: greater-flamingo
   number: "030"
   scientific: Phoenicopterus roseus
@@ -1071,9 +1129,11 @@ species:
   description:
     en: "The greater flamingo is the largest and most widespread species of the flamingo family. Common in the Old World, they are found in Northern (coastal) and Sub-Saharan Africa, the Indian subcontinent, the Middle East, the Levant, the Persian Gulf, the Gulf of Aden, the Red Sea, and the Mediterranean countries of Southern Europe."
     de: "Der Rosaflamingo ist eine Art aus der Familie der Flamingos (Phoenicopteridae). Er kommt in Teilen von Afrika, Asien und Süd-Europa vor."
+    sv: "Större flamingo är en fågel som tillhör fågelfamiljen flamingor."
   description_source:
     en: "https://en.wikipedia.org/wiki/Greater_flamingo"
     de: "https://de.wikipedia.org/wiki/Rosaflamingo"
+    sv: "https://sv.wikipedia.org/wiki/St%C3%B6rre_flamingo"
 - slug: white-tailed-eagle
   number: "031"
   scientific: Haliaeetus albicilla
@@ -1103,9 +1163,11 @@ species:
   description:
     en: "The white-tailed eagle, sometimes known as the \"sea eagle\", is a large bird of prey, widely distributed across temperate Eurasia. Like all eagles, it is a member of the family Accipitridae which also includes other diurnal raptors such as hawks, kites, and harriers. One of up to eleven members in the genus Haliaeetus, which are commonly called sea eagles, it is also referred to as the white-tailed sea-eagle."
     de: "Der Seeadler ist ein Greifvogel aus der Familie der Habichtartigen (Accipitridae). Seeadler bewohnen gewässerreiche Landschaften Eurasiens von Grönland bis zum Pazifik. Sie ernähren sich überwiegend von Fischen, Wasservögeln und Aas."
+    sv: "Havsörn är en mycket stor rovfågel som häckar i norra Palearktis från Berings sund till Island, samt på Grönland."
   description_source:
     en: "https://en.wikipedia.org/wiki/White-tailed_eagle"
     de: "https://de.wikipedia.org/wiki/Seeadler_(Art)"
+    sv: "https://sv.wikipedia.org/wiki/Havs%C3%B6rn"
 - slug: peregrine-falcon
   number: "032"
   scientific: Falco peregrinus
@@ -1139,9 +1201,11 @@ species:
   description:
     en: "The peregrine falcon, also referred to simply as the peregrine, is a bird of prey (raptor) in the family Falconidae known for its speed. A large, crow-sized falcon, it has a blue-grey back, barred white underparts and a black head. As is typical for bird-eating (avivore) raptors, peregrine falcons are sexually dimorphic, with females being considerably larger than males."
     de: "Der Wanderfalke gehört zur Familie der Falkenartigen. Er zählt zu den größten Vertretern der Familie und ist mit einer Spitzengeschwindigkeit von mehr als 320 km/h beim Jagdstoß das schnellste bekannte Tier. Der Wanderfalke ist ein Kosmopolit und die am weitesten verbreitete Vogelart der Welt."
+    sv: "Pilgrimsfalk är en stor och kraftfull falk med distinkt teckning i svart/grått och vitt. Ryggen är mörk och undersidan är ljus, med tät grå vattring. Ansiktsmasken är skarp med tydlig falkmustasch."
   description_source:
     en: "https://en.wikipedia.org/wiki/Peregrine_falcon"
     de: "https://de.wikipedia.org/wiki/Wanderfalke"
+    sv: "https://sv.wikipedia.org/wiki/Pilgrimsfalk"
 - slug: fire-salamander
   number: "033"
   scientific: Salamandra salamandra
@@ -1171,9 +1235,11 @@ species:
   description:
     en: "The fire salamander is a common species of salamander found in Europe."
     de: "Der Feuersalamander ist eine europäische Amphibienart aus der Familie der Echten Salamander. Die Spezies wurde erstmals 1758 von dem schwedischen Naturforscher Carl von Linné beschrieben. Je nach regionaler Mundart wird sie unter anderem auch als Feuermolch, Erdmolch, Erdsalamander, Regenmolch, Regenmännchen, Gelber Schneider, Bergnarr, Wegnarr, Regenmolli oder Tattermandl (bayerisch) bezeichnet."
+    sv: "Eldsalamander är ett groddjur i familjen salamandrar. Arten beskrevs för första gången vetenskapligt år 1758 av Carl von Linné."
   description_source:
     en: "https://en.wikipedia.org/wiki/Fire_salamander"
     de: "https://de.wikipedia.org/wiki/Feuersalamander"
+    sv: "https://sv.wikipedia.org/wiki/Eldsalamander"
 - slug: grey-seal
   number: "034"
   scientific: Halichoerus grypus
@@ -1208,9 +1274,11 @@ species:
   description:
     en: "The grey seal, or gray seal in the United States, is a large seal of the family Phocidae, which are commonly referred to as \"true seals\" or \"earless seals\". The only species classified in the genus Halichoerus, it is found on both shores of the North Atlantic Ocean. In Latin, Halichoerus grypus means \"hook-nosed sea pig\"."
     de: "Die Kegelrobbe ist neben dem Seehund die zweite an deutschen Küsten verbreitete Robbenart und daneben das größte in Deutschland freilebend vorkommende Raubtier. Der Name leitet sich von den kegelförmigen Zähnen und der Kopfform der Robbe ab."
+    sv: "Gråsäl är en säl som förekommer i Östersjön och Atlanten. Den tillhör familjen öronlösa sälar och är den enda arten i släktet Halichoerus. Gråsälen är större än knubbsälen och vikaren, och i motsats till andra sälarter som förekommer vid svenska kusten har den ett konformigt huvud."
   description_source:
     en: "https://en.wikipedia.org/wiki/Grey_seal"
     de: "https://de.wikipedia.org/wiki/Kegelrobbe"
+    sv: "https://sv.wikipedia.org/wiki/Gr%C3%A5s%C3%A4l"
 - slug: european-bee-eater
   number: "035"
   scientific: Merops apiaster
@@ -1244,9 +1312,11 @@ species:
   description:
     en: "The European bee-eater is a bird species in the bee-eater family, Meropidae. It breeds in southern and central Europe, northern and southern Africa, and western Asia. Except for the resident southern African population, the species is strongly migratory, wintering in tropical Africa."
     de: "Der Bienenfresser, selten auch – fälschlich, da nicht zu den Spechten gehörend – „Bienenspecht“ genannt, ist ein auffallend bunter Vogel aus der gleichnamigen Familie der Bienenfresser (Meropidae). Er gehört zu den in Afrika überwinternden Zugvögeln."
+    sv: "Biätare är en slank och färggrann fågel som tillhör familjen biätare (Meropidae). Den är en flyttfågel som häckar i södra Europa och delar av norra Afrika och västra Asien. Det finns även en häckpopulation i södra Afrika."
   description_source:
     en: "https://en.wikipedia.org/wiki/European_bee-eater"
     de: "https://de.wikipedia.org/wiki/Bienenfresser_(Art)"
+    sv: "https://sv.wikipedia.org/wiki/Bi%C3%A4tare"
 - slug: african-elephant
   number: "036"
   scientific: Loxodonta africana
@@ -1280,9 +1350,11 @@ species:
   description:
     en: "The African bush elephant, also known as the African savanna elephant, is a species of elephant native to sub-Saharan Africa. It is one of three extant elephant species and, along with the African forest elephant, one of two extant species of African elephant."
     de: "Der Afrikanische Elefant, auch Afrikanischer Savannenelefant, Afrikanischer Steppenelefant oder Afrikanischer Buschelefant, ist eine Säugetierart aus der Familie der Elefanten. Er ist das größte rezente landbewohnende Tier der Erde. Herausragende Kennzeichen sind neben den Stoßzähnen und dem markanten Rüssel die großen Ohren und die säulenförmigen Beine."
+    sv: "Savannelefant är en art i släktet afrikanska elefanter och är världens största landdjur. Arten betecknades tidigare ofta som stäppelefant men namnet savannelefant anses mer korrekt med hänsyn till dess biotop, och är det idag oftare förekommande namnet."
   description_source:
     en: "https://en.wikipedia.org/wiki/African_bush_elephant"
     de: "https://de.wikipedia.org/wiki/Afrikanischer_Elefant"
+    sv: "https://sv.wikipedia.org/wiki/Savannelefant"
 - slug: giraffe
   number: "037"
   scientific: Giraffa camelopardalis
@@ -1316,9 +1388,11 @@ species:
   description:
     en: "The northern giraffe, also known as the three-horned giraffe, is a species of giraffe native to North Africa."
     de: "Die Nord-Giraffe ist eine Art aus der Gattung der Giraffen. Sie entspricht der ursprünglich von Carl von Linné beschriebenen Art. Der wissenschaftliche Name G."
+    sv: "Giraff är ett afrikanskt däggdjur som kan bli över fem meter högt och är därmed det högsta nutida landlevande djuret i världen. Giraffen har en lång hals och lång tunga. Den livnär sig på att beta löv från träd och buskar."
   description_source:
     en: "https://en.wikipedia.org/wiki/Northern_giraffe"
     de: "https://de.wikipedia.org/wiki/Nord-Giraffe"
+    sv: "https://sv.wikipedia.org/wiki/Giraff"
 - slug: plains-zebra
   number: "038"
   scientific: Equus quagga
@@ -1352,9 +1426,11 @@ species:
   description:
     en: "The plains zebra is the most common and geographically widespread species of zebra. Its range is fragmented, but spans much of southern and eastern Africa south of the Sahara. Six or seven subspecies have been recognised, including the quagga which was thought to be a separate species."
     de: "Das Steppenzebra oder Pferdezebra ist ein Zebra aus der Gattung der Pferde (Equus) innerhalb der Familie der Pferde (Equidae). Es stellt heute die häufigste Zebra-Art in Afrika dar und ist vom Nordosten bis in den Süden des Kontinents verbreitet. Es lebt gesellig in kleinen Herdenverbänden und ernährt sich hauptsächlich von Gräsern."
+    sv: "Stäppzebra eller stäppsebra, även vanlig zebra, är en art i familjen hästdjur (Equidae) som tillhör ordningen uddatåiga hovdjur (Perissodactyla)."
   description_source:
     en: "https://en.wikipedia.org/wiki/Plains_zebra"
     de: "https://de.wikipedia.org/wiki/Steppenzebra"
+    sv: "https://sv.wikipedia.org/wiki/St%C3%A4ppzebra"
 - slug: polar-bear
   number: "039"
   scientific: Ursus maritimus
@@ -1389,9 +1465,11 @@ species:
   description:
     en: "The polar bear is a large bear native to the Arctic and nearby areas. It is closely related to the brown bear, and the two species can interbreed. The polar bear is the largest extant species of bear and land carnivore by body mass, with adult males weighing 300–800 kg (660–1,760 lb)."
     de: "Der Eisbär, auch Polarbär genannt, ist eine Raubtierart aus der Familie der Bären (Ursidae). Er lebt an den Küsten und auf dem Eis in den nördlichen Polarregionen und ist eng mit dem Braunbären verwandt. Neben Kamtschatkabären und Kodiakbären gelten Eisbären als die größten an Land lebenden Raubtiere der Erde."
+    sv: "Isbjörn är en köttätande björn. Den lever i arktiska områden, vilket omfattar Norra ishavet, dess omgivande hav och landmassor. Isbjörn är tillsammans med brunbjörnens underart kodiakbjörnen den största björnen inom familjen."
   description_source:
     en: "https://en.wikipedia.org/wiki/Polar_bear"
     de: "https://de.wikipedia.org/wiki/Eisb%C3%A4r"
+    sv: "https://sv.wikipedia.org/wiki/Isbj%C3%B6rn"
 - slug: toco-toucan
   number: "040"
   scientific: Ramphastos toco
@@ -1425,9 +1503,11 @@ species:
   description:
     en: "The toco toucan is a species of bird in the toucan family Ramphastidae. It is the largest species of toucan and has a distinctive appearance, with a black body, a white throat, chest and uppertail-coverts, and red undertail-coverts. Its most conspicuous feature is its huge beak, which is yellow-orange with a black base and large spot on the tip."
     de: "Der Riesentukan ist eine Vogelart aus der Familie der Tukane (Ramphastidae) und der Ordnung der Spechtvögel (Piciformes). Wie der Name vermuten lässt, handelt es sich um eine sehr große Tukanart mit einem ebenso überdimensionalen, auffällig orange gefärbtem Schnabel, der die Art unverwechselbar macht. Der Vogel kommt ausschließlich in Südamerika vor und ist die einzige Tukanart, die geschlossene Waldgebiete weitgehend meidet."
+    sv: "Tocotukan är en fågel i familjen tukaner inom ordningen hackspettartade fåglar."
   description_source:
     en: "https://en.wikipedia.org/wiki/Toco_toucan"
     de: "https://de.wikipedia.org/wiki/Riesentukan"
+    sv: "https://sv.wikipedia.org/wiki/Tocotukan"
 - slug: capybara
   number: "041"
   scientific: Hydrochoerus hydrochaeris
@@ -1461,9 +1541,11 @@ species:
   description:
     en: "The capybara or greater capybara is the largest living rodent, native to all countries in South America except Chile. It is a semiaquatic herbivore that inhabits savannas and dense forests, living near and in bodies of water and feeding mainly on grasses and aquatic plants."
     de: "Das Capybara oder Wasserschwein ist eine Säugetierart aus der Familie der Meerschweinchen (Caviidae). Es bildet gemeinsam mit dem Panama-Capybara die Gattung Hydrochoerus und ist das größte heute lebende Nagetier. Es bewohnt feuchte Regionen in Südamerika und ist vom Körperbau seiner semiaquatischen Lebensweise angepasst."
+    sv: "Kapybara eller vattensvin är världens största gnagare. Den påminner i sitt levnadssätt om flodhästar men är närmare släkt med marsvin. Fram till 1990-talet kategoriserades kapybaran som ensam art i släktet Hydrochoerus, som i sin tur placerades som ensamt släkte i familjen Hydrochaeridae."
   description_source:
     en: "https://en.wikipedia.org/wiki/Capybara"
     de: "https://de.wikipedia.org/wiki/Capybara"
+    sv: "https://sv.wikipedia.org/wiki/Kapybara"
 - slug: wolverine
   number: "042"
   scientific: Gulo gulo
@@ -1497,9 +1579,11 @@ species:
   description:
     en: "The wolverine, also called the carcajou or quickhatch, is the largest land-dwelling member of the family Mustelidae. It is a muscular carnivore and a solitary animal. The wolverine has a reputation for ferocity and strength out of proportion to its size, with the documented ability to kill prey many times larger than itself."
     de: "Der Vielfraß ist eine Raubtierart aus der Familie der Marder (Mustelidae), die im nördlichen Eurasien und in Nordamerika lebt. Er wird auch als Bärenmarder, Gierling, Giermagen oder Gierschlund bezeichnet."
+    sv: "Järv är ett rovdjur i familjen mårddjur och den enda arten i släktet Gulo."
   description_source:
     en: "https://en.wikipedia.org/wiki/Wolverine"
     de: "https://de.wikipedia.org/wiki/Vielfra%C3%9F"
+    sv: "https://sv.wikipedia.org/wiki/J%C3%A4rv"
 - slug: snowy-owl
   number: "043"
   scientific: Bubo scandiacus
@@ -1533,9 +1617,11 @@ species:
   description:
     en: "The snowy owl, also known as the polar owl, the white owl and the Arctic owl, is a large, white owl of the true owl family. Snowy owls are native to the Arctic regions of both North America and the Palearctic, breeding mostly on the tundra. It has a number of unique adaptations to its habitat and lifestyle, which are quite distinct from other extant owls."
     de: "Die Schneeeule ist eine Vogel-Art aus der Familie der Eigentlichen Eulen (Strigidae), die zu den charakteristischen Vögeln der arktischen Tundra zählt."
+    sv: "Fjälluggla är en uggla som förekommer cirkumpolärt på tundran i polartrakterna på norra halvklotet. Dess dräkt är relativt ljus med mycket inslag av vitt och den lever mest av lämlar och andra smågnagare. Arten minskar kraftigt i antal och kategoriseras som utrotningshotad."
   description_source:
     en: "https://en.wikipedia.org/wiki/Snowy_owl"
     de: "https://de.wikipedia.org/wiki/Schneeeule"
+    sv: "https://sv.wikipedia.org/wiki/Fj%C3%A4lluggla"
 - slug: narwhal
   number: "044"
   scientific: Monodon monoceros
@@ -1570,9 +1656,11 @@ species:
   description:
     en: "The narwhal is a species of toothed whale native to the Arctic. It is the only member of the genus Monodon and one of two living representatives of the family Monodontidae. The narwhal is a stocky cetacean with a relatively blunt snout, a large melon, and a shallow ridge in place of a dorsal fin."
     de: "Der Narwal ist eine Art der Zahnwale (Odontoceti). Zusammen mit dem nahe verwandten Weißwal bildet er die Familie der Gründelwale (Monodontidae)."
+    sv: "Narval är en tandval med en markant framåtriktad, spiralvriden huggtand som kan bli upp till tre meter lång. Narvalar lever i Norra ishavet i närheten av isen."
   description_source:
     en: "https://en.wikipedia.org/wiki/Narwhal"
     de: "https://de.wikipedia.org/wiki/Narwal"
+    sv: "https://sv.wikipedia.org/wiki/Narval"
 - slug: sea-otter
   number: "045"
   scientific: Enhydra lutris
@@ -1607,9 +1695,11 @@ species:
   description:
     en: "The sea otter is a marine mammal native to the coasts of the northern and eastern North Pacific Ocean. Adult sea otters typically weigh between 14 and 45 kg (30–100 lb), making them the heaviest members of the weasel family, but among the smallest marine mammals. Unlike most marine mammals, the sea otter's primary form of insulation is an exceptionally thick coat of fur, the densest in the animal kingdom."
     de: "Der Seeotter, Kalan oder Meerotter ist eine Raubtierart aus der Unterfamilie der Otter (Lutrinae). Er ist neben dem Küstenotter des Südpazifiks die einzige Otterart, die nur im Meer lebt. Seeotter gelten als intelligent und lernfähig, bekannt sind sie vor allem wegen des regelmäßigen Gebrauchs von Werkzeugen."
+    sv: "Havsuttern är ett mårddjur som lever i norra delar av Stilla havet. Utbredningsområdet sträcker sig från norra Japan över Kamtjatka och Aleuterna, vidare över Kanadas och USA:s västra kustlinjer till halvön Baja California (USA/Mexiko)."
   description_source:
     en: "https://en.wikipedia.org/wiki/Sea_otter"
     de: "https://de.wikipedia.org/wiki/Seeotter"
+    sv: "https://sv.wikipedia.org/wiki/Havsutter"
 - slug: green-sea-turtle
   number: "046"
   scientific: Chelonia mydas
@@ -1644,9 +1734,11 @@ species:
   description:
     en: "The green sea turtle, also known as the green turtle, black sea turtle, and Pacific green turtle, is a species of large sea turtle of the family Cheloniidae. It is the only species in the genus Chelonia. Its range extends throughout tropical and subtropical seas around the world, with two distinct populations in the Atlantic and Pacific Oceans, but it is also found in the Indian Ocean."
     de: "Die Grüne Meeresschildkröte ist ein Vertreter der Familie der Meeresschildkröten und stellt eine der bekanntesten Arten dieser Gruppe dar. Die ehemals als Unterart von Chelonia mydas bezeichnete Schwarze Meeresschildkröte wird heute zumeist als eigene Art Chelonia agassizii geführt. Der Name Grüne Meeresschildkröte entspricht der im englischen Sprachraum üblichen Bezeichnung „green turtle“, doch ist beispielsweise in Mexiko der Name „tortuga blanca“ üblich."
+    sv: "Grön havssköldpadda eller soppsköldpadda är en art i familjen havssköldpaddor som förekommer över hela världen i tropiska och subtropiska havsområden."
   description_source:
     en: "https://en.wikipedia.org/wiki/Green_sea_turtle"
     de: "https://de.wikipedia.org/wiki/Gr%C3%BCne_Meeresschildkr%C3%B6te"
+    sv: "https://sv.wikipedia.org/wiki/Gr%C3%B6n_havssk%C3%B6ldpadda"
 - slug: red-kangaroo
   number: "047"
   scientific: Osphranter rufus
@@ -1716,9 +1808,11 @@ species:
   description:
     en: "The koala, sometimes inaccurately called the koala bear, is an arboreal herbivorous marsupial native to Australia. It is the only extant representative of the family Phascolarctidae. Its closest living relatives are the wombats."
     de: "Der Koala, auch Beutelbär, manchmal Koalabär genannt, ist ein baumbewohnender Beutelsäuger in Australien. Er wurde von dem Zoologen Georg August Goldfuß im Jahre 1817 als Lipurus cinereus erstbeschrieben. Der Koala ist neben dem Känguru das am weitesten verbreitete Symbol Australiens."
+    sv: "Koala är ett australiensiskt trädlevande pungdjur och den enda nu levande arten i familjen Phascolarctidae. Den har tidigare kallats pungbjörn och koalabjörn vilket är missvisande eftersom den saknar släktskap med björnar."
   description_source:
     en: "https://en.wikipedia.org/wiki/Koala"
     de: "https://de.wikipedia.org/wiki/Koala"
+    sv: "https://sv.wikipedia.org/wiki/Koala"
 - slug: platypus
   number: "049"
   scientific: Ornithorhynchus anatinus
@@ -1752,9 +1846,11 @@ species:
   description:
     en: "The platypus, sometimes referred to as the duck-billed platypus, is a semiaquatic, egg-laying mammal endemic to eastern Australia, including Tasmania. The platypus is the sole living representative of its family Ornithorhynchidae and genus Ornithorhynchus, though a number of related species appear in the fossil record. Together with the four species of echidna, it is one of the five extant species of monotremes, mammals that lay eggs instead of giving birth to live young."
     de: "Das Schnabeltier ist ein eierlegendes Säugetier aus Australien. Es ist die einzige lebende Art der Familie der Schnabeltiere (Ornithorhynchidae). Zusammen mit den vier Arten der Ameisenigel bildet es das Taxon der Kloakentiere (Monotremata), die sich stark von allen anderen Säugetieren unterscheiden."
+    sv: "Näbbdjur är ett litet äggläggande däggdjur som lever i Australien. Det ser ut som en utter med bäversvans, men dessutom med en näbb. Arten tillhör ordningen kloakdjur, där näbbdjuret tillsammans med familjen myrpiggsvin utgör de enda medlemmarna."
   description_source:
     en: "https://en.wikipedia.org/wiki/Platypus"
     de: "https://de.wikipedia.org/wiki/Schnabeltier"
+    sv: "https://sv.wikipedia.org/wiki/N%C3%A4bbdjur"
 - slug: wombat
   number: "050"
   scientific: Vombatus ursinus
@@ -1788,9 +1884,11 @@ species:
   description:
     en: "The common wombat, also known as the bare-nosed wombat, is a marsupial, one of three extant species of wombats and the sole extant member of the genus Vombatus. It has three subspecies: Vombatus ursinus hirsutus, found on the Australian mainland; Vombatus ursinus tasmaniensis, found in Tasmania; and Vombatus ursinus ursinus, found on Flinders Island and Maria Island in the Bass Strait."
     de: "Der Nacktnasenwombat ist eine Beutelsäugerart aus der Familie der Wombats (Vombatidae)."
+    sv: "Nakennosvombat är ett pungdjur i familjen vombater och placeras som ensam art i släktet Vombatus. Arten har ett stort utbredningsområde i östra och södra Australien och på Tasmanien."
   description_source:
     en: "https://en.wikipedia.org/wiki/Common_wombat"
     de: "https://de.wikipedia.org/wiki/Nacktnasenwombat"
+    sv: "https://sv.wikipedia.org/wiki/Nakennosvombat"
 - slug: kiwi
   number: "051"
   scientific: Apteryx mantelli
@@ -1824,9 +1922,11 @@ species:
   description:
     en: "The North Island brown kiwi is a species of kiwi that is widespread in the northern two-thirds of the North Island of New Zealand and, with about 35,000 remaining, it is the most common kiwi species. The eggs laid by the North Island brown kiwi are among the largest eggs relative to its body size."
     de: "Der Nordstreifenkiwi, auch Nördlicher Streifenkiwi, Brauner Kiwi oder Nordkiwi, ist eine große Kiwiart. Auf der neuseeländischen Nordinsel und auf vorgelagerten Inseln Neuseelands beheimatet, ist er zwar eine der häufigeren Kiwi-Arten, durch den Jagddruck von Weißen eingeschleppter Raubtiere aber dennoch vielerorts selten geworden oder gar ausgerottet."
+    sv: "Brunkivi är en starkt hotad fågel i familjen kivier inom ordningen kivifåglar. Fågeln är endemisk för den nyzeeländska Nordön."
   description_source:
     en: "https://en.wikipedia.org/wiki/North_Island_brown_kiwi"
     de: "https://de.wikipedia.org/wiki/Nordstreifenkiwi"
+    sv: "https://sv.wikipedia.org/wiki/Brunkivi"
 - slug: humpback-whale
   number: "052"
   scientific: Megaptera novaeangliae
@@ -1860,9 +1960,11 @@ species:
   description:
     en: "The humpback whale is a species of baleen whale. It is a rorqual and is the only species in the genus Megaptera. Adults range in length from 14–17 m (46–56 ft) and weigh up to 40 metric tons."
     de: "Der Buckelwal ist ein oft in Küstennähe vorkommender Vertreter der Furchenwale. Er erreicht eine Körpergröße von 12 bis 15 Metern und hat im Vergleich zu anderen Walen deutlich größere Flipper. Bekannt sind die Tiere unter anderem aufgrund ihres Walgesangs und ihrer Lebhaftigkeit."
+    sv: "Knölvalen är ett däggdjur som tillhör bardvalarna. Den placeras som ensam art i släktet Megaptera. Knölvalen är en stor val, och som vuxen mäter den 11–18 meter och väger omkring 36 ton."
   description_source:
     en: "https://en.wikipedia.org/wiki/Humpback_whale"
     de: "https://de.wikipedia.org/wiki/Buckelwal"
+    sv: "https://sv.wikipedia.org/wiki/Kn%C3%B6lval"
 - slug: orca
   number: "053"
   scientific: Orcinus orca
@@ -1896,9 +1998,11 @@ species:
   description:
     en: "The orca, or killer whale, is a toothed whale and the largest member of the oceanic dolphin family. The only extant species in the genus Orcinus, it is recognizable by its distinct pigmentation; being mostly black on top, white on the bottom and having recognizable white eye patches. A cosmopolitan species, it inhabits a wide range of marine environments, from Arctic to Antarctic regions to tropical seas, but is more commonly documented in temperate or cooler coastal waters."
     de: "Der (Große) Schwertwal, auch Orca, Killerwal, Mörderwal oder veraltet Butzkopf genannt, ist die größte heute vorkommende Art der Delfine. Schwertwale leben in allen Ozeanen, hauptsächlich in den Polargebieten."
+    sv: "Späckhuggare är den största arten i delfinfamiljen och en välkänd tandval. Späckhuggare förs ibland till en separat familj, Globicephalidae, späckhuggare och grindvalar."
   description_source:
     en: "https://en.wikipedia.org/wiki/Orca"
     de: "https://de.wikipedia.org/wiki/Schwertwal"
+    sv: "https://sv.wikipedia.org/wiki/Sp%C3%A4ckhuggare"
 - slug: bottlenose-dolphin
   number: "054"
   scientific: Tursiops truncatus
@@ -1929,9 +2033,11 @@ species:
   description:
     en: "The common bottlenose dolphin or Atlantic bottlenose dolphin is one of three species of bottlenose dolphin in the genus Tursiops. While formerly known simply as the bottlenose dolphin, this term is now applied to the genus Tursiops as a whole. As considerable genetic variation has been described within this species, even between neighboring populations, many experts think additional species may be recognized and split out."
     de: "Der Große Tümmler, in Abgrenzung zu anderen Arten der Gattung Tursiops neuerdings auch Gewöhnlicher Großer Tümmler, ist eine in allen Ozeanen verbreitete Art der Delfine. Es ist diese Art, die hauptsächlich in Delfinarien gehalten wird und durch die Serie Flipper bekannt wurde. Dadurch ist der Große Tümmler der bekannteste aller Delfine geworden."
+    sv: "Öresvin eller flasknosdelfin är en delfin som förekommer i tropiska och tempererade delar av Atlanten, Stilla havet, Medelhavet och Svarta havet, och är den delfinart som är vanligast i delfinarier och djurparker."
   description_source:
     en: "https://en.wikipedia.org/wiki/Common_bottlenose_dolphin"
     de: "https://de.wikipedia.org/wiki/Gro%C3%9Fer_T%C3%BCmmler"
+    sv: "https://sv.wikipedia.org/wiki/%C3%96resvin"
 - slug: blue-whale
   number: "055"
   scientific: Balaenoptera musculus
@@ -1965,9 +2071,11 @@ species:
   description:
     en: "The blue whale is a species of baleen whale and the largest marine mammal in the rorqual family Balaenopteridae. Reaching a maximum confirmed length of 29.9–30.5 m (98–100 ft) and weighing up to 190–200 t, it is the largest animal known to have ever existed. The blue whale's long and slender body can be of various shades of greyish-blue on its upper surface and somewhat lighter underneath."
     de: "Der Blauwal ist ein Bartenwal in der Familie der Furchenwale (Balaenopteridae). Mit einer Körperlänge von bis zu 33 Metern und einer Körpermasse von bis zu 200 Tonnen ist der Blauwal eines der größten und schwersten bekannten Tiere der Erdgeschichte. Als Kosmopolit ist diese Art in allen Ozeanen der Erde verbreitet."
+    sv: "Blåval är en fenval. Vuxna blåvalar kan bli mer än 30 meter långa och den högsta registrerade vikten är nästan 177 ton. Blåvalen är världens största och tyngsta djur."
   description_source:
     en: "https://en.wikipedia.org/wiki/Blue_whale"
     de: "https://de.wikipedia.org/wiki/Blauwal"
+    sv: "https://sv.wikipedia.org/wiki/Bl%C3%A5val"
 - slug: walrus
   number: "056"
   scientific: Odobenus rosmarus
@@ -2002,9 +2110,11 @@ species:
   description:
     en: "The walrus is a large pinniped marine mammal with discontinuous distribution about the North Pole in the Arctic Ocean and subarctic seas of the Northern Hemisphere. It is the only extant species in the family Odobenidae and genus Odobenus. This species is subdivided into two subspecies: the Atlantic walrus, which lives in the Atlantic Ocean, and the Pacific walrus, which lives in the Pacific Ocean."
     de: "Das Walross ist eine Robbenart, die in den kalten Meeren der Nordhalbkugel vorkommt. Zwei Unterarten, das Atlantische und das etwas größere Pazifische Walross, werden unterschieden. Das Walross gehört zur Ordnung der Raubtiere und ist die einzige Art in der Familie der Walrosse (Odobenidae)."
+    sv: "Valross är en sälart som lever i Arktiska havet. Den är en stor säl och känns igen via sina övre hörntänder som förlängts till långa betar."
   description_source:
     en: "https://en.wikipedia.org/wiki/Walrus"
     de: "https://de.wikipedia.org/wiki/Walross"
+    sv: "https://sv.wikipedia.org/wiki/Valross"
 - slug: emperor-penguin
   number: "057"
   scientific: Aptenodytes forsteri
@@ -2039,9 +2149,11 @@ species:
   description:
     en: "The emperor penguin is the tallest and heaviest of all living penguin species and lives exclusively in Antarctica. The male and female are similar in plumage and size, reaching 100 cm (39 in) in length and weighing from 22 to 45 kg. Feathers of the head and back are black and sharply delineated from the white belly, pale-yellow breast and bright-yellow ear patches."
     de: "Der Kaiserpinguin ist die größte Art aus der Familie der Pinguine (Spheniscidae) und zählt zusammen mit dem Königspinguin zur Gattung der Großpinguine (Aptenodytes). Es werden keine Unterarten für den Kaiserpinguin anerkannt. Auf Grund zahlreicher Infotainment- und Dokumentarfilme zählt der Kaiserpinguin zu den bekanntesten Pinguinarten."
+    sv: "Kejsarpingvin är den största och tyngsta nu levande pingvinarten och är endemisk för Antarktis. Hanen och honan är lika såväl till fjäderdräkt som storlek, vilken uppgår till cirka 120 centimeter. De väger i genomsnitt mellan 22 och 37 kg."
   description_source:
     en: "https://en.wikipedia.org/wiki/Emperor_penguin"
     de: "https://de.wikipedia.org/wiki/Kaiserpinguin"
+    sv: "https://sv.wikipedia.org/wiki/Kejsarpingvin"
 - slug: king-penguin
   number: "058"
   scientific: Aptenodytes patagonicus
@@ -2076,9 +2188,11 @@ species:
   description:
     en: "The king penguin is the second largest species of penguin, smaller than but somewhat similar in appearance to the emperor penguin."
     de: "Der Königspinguin ist nach dem Kaiserpinguin die zweitgrößte Art der Pinguine (Spheniscidae) und wird zusammen mit dem Kaiserpinguin zu der Gattung der Großpinguine (Aptenodytes) gezählt. Es werden derzeit für den Königspinguin zwei Unterarten unterschieden."
+    sv: "Kungspingvin är den näst största pingvinarten. Tillsammans med kejsarpingvinen bildar den släktet Aptenodytes."
   description_source:
     en: "https://en.wikipedia.org/wiki/King_penguin"
     de: "https://de.wikipedia.org/wiki/K%C3%B6nigspinguin"
+    sv: "https://sv.wikipedia.org/wiki/Kungspingvin"
 - slug: leatherback-sea-turtle
   number: "059"
   scientific: Dermochelys coriacea
@@ -2113,9 +2227,11 @@ species:
   description:
     en: "The leatherback sea turtle, sometimes called the lute turtle, leathery turtle or simply the luth, is the largest of all living turtles and the heaviest non-crocodilian reptile, reaching lengths of up to 2.7 metres and weights of 500 kilograms (1,100 lb). It is the only living species in the genus Dermochelys and family Dermochelyidae."
     de: "Die Lederschildkröte ist die größte lebende Schildkröte und wird meistens als einzige rezente Angehörige der gleichnamigen Familie (Dermochelyidae) angesehen. Sie zählt somit zoologisch nicht zur Familie der Meeresschildkröten (Cheloniidae), wird aber zusammen mit diesen in die Überfamilie Chelonioidea vereint, die im Deutschen manchmal ebenfalls als Meeresschildkröten bezeichnet wird. Ihr Lebensraum sind tropische und subtropische Meere."
+    sv: "Havslädersköldpadda är världens största sköldpadda och förekommer sparsamt i de flesta tempererade och tropiska oceaner."
   description_source:
     en: "https://en.wikipedia.org/wiki/Leatherback_sea_turtle"
     de: "https://de.wikipedia.org/wiki/Lederschildkr%C3%B6te"
+    sv: "https://sv.wikipedia.org/wiki/Havsl%C3%A4dersk%C3%B6ldpadda"
 - slug: beluga-whale
   number: "060"
   scientific: Delphinapterus leucas
@@ -2150,9 +2266,11 @@ species:
   description:
     en: "The beluga whale, is an Arctic and sub-Arctic cetacean. It is one of two living members of the family Monodontidae, along with the narwhal, and the only member of the genus Delphinapterus. It is also known as the white whale, as it is the only cetacean to regularly occur with this colour; the sea canary, due to its high-pitched calls; and the melonhead, though that more commonly refers to the melon-headed whale, which is an oceanic dolphin."
     de: "Der Weißwal oder Beluga ist eine Art der Gründelwale, die in arktischen und subarktischen Gewässern lebt. Wie die nahe verwandten Narwale besitzen sie keine Rückenfinne; auffällig ist ihre bläulich-weiße bis cremeweiße Färbung."
+    sv: "Vitval eller beluga är en tre till sex meter lång tandval som lever i arktiska och subarktiska havsområden."
   description_source:
     en: "https://en.wikipedia.org/wiki/Beluga_whale"
     de: "https://de.wikipedia.org/wiki/Wei%C3%9Fwal"
+    sv: "https://sv.wikipedia.org/wiki/Vitval"
 - slug: harbor-seal
   number: "061"
   scientific: Phoca vitulina
@@ -2187,9 +2305,11 @@ species:
   description:
     en: "The harbor seal, also known as the common seal, is a true seal found along temperate and Arctic marine coastlines of the Northern Hemisphere. The most widely distributed species of pinniped, they are found in coastal waters of the northern Atlantic and Pacific oceans, Baltic and North seas."
     de: "Der Seehund ist eine in allen nördlich-gemäßigten Meeren verbreitete Robbe aus der Familie der Hundsrobben."
+    sv: "Knubbsäl är en art i familjen öronlösa sälar som förekommer huvudsakligen i norra Atlanten, norra delen av Stilla havet och Nordsjön. Den lever även vid Sveriges kustlinjer vid västkusten och i södra Östersjön. Knubbsälen är Bohusläns landskapsdjur."
   description_source:
     en: "https://en.wikipedia.org/wiki/Harbor_seal"
     de: "https://de.wikipedia.org/wiki/Seehund"
+    sv: "https://sv.wikipedia.org/wiki/Knubbs%C3%A4l"
 - slug: honeybee
   number: "062"
   scientific: Apis mellifera
@@ -2218,9 +2338,11 @@ species:
   description:
     en: "The western honey bee is the most common of the 7–12 species of honey bees worldwide. The genus name Apis is Latin for 'bee', and mellifera is the Latin for 'honey-bearing' or 'honey-carrying', referring to the species' production of honey."
     de: "Die Westliche Honigbiene, auch Europäische Honigbiene, meist einfach Biene, Honigbiene und oberdeutsch auch Imme genannt, gehört zur Familie der Echten Bienen (Apidae), innerhalb derer sie eine Vertreterin der Gattung der Honigbienen (Apis) ist. Ihr ursprüngliches Verbreitungsgebiet war Europa, Afrika und Vorderasien. Da dieses Insekt Honig produziert, wird sie durch den Menschen genutzt (Imkerei) und zählt zu den wichtigsten Nutztieren in der Landwirtschaft."
+    sv: "Honungsbi eller tambi är en art i insektsordningen steklar som tillhör familjen långtungebin (Apidae)."
   description_source:
     en: "https://en.wikipedia.org/wiki/Western_honey_bee"
     de: "https://de.wikipedia.org/wiki/Westliche_Honigbiene"
+    sv: "https://sv.wikipedia.org/wiki/Honungsbi"
 - slug: alpine-marmot
   number: "063"
   scientific: Marmota marmota
@@ -2254,9 +2376,11 @@ species:
   description:
     en: "The alpine marmot is a large ground-dwelling squirrel, from the genus of marmots. It is found in high numbers in mountainous areas of central and southern Europe, at heights between 800 and 3,200 m (2,600–10,500 ft) in the Alps, Carpathians, Tatras and Northern Apennines. In 1948 they were reintroduced with success in the Pyrenees, where the alpine marmot had disappeared at end of the Pleistocene epoch."
     de: "Das Alpenmurmeltier, süddeutsch und österreichisch auch Mankei oder Murmel, in der Schweiz auch Mungg oder Murmunda, ist ein besonders in den Alpen verbreitetes Nagetier. Es ist nach dem Biber und dem Stachelschwein das drittgrößte in Europa vorkommende Nagetier. Jungtiere des Alpenmurmeltieres erreichen in der Regel im dritten Jahr ihre Geschlechtsreife und verlassen frühestens dann ihren Familienverband."
+    sv: "Alpmurmeldjur, eller enbart murmeldjur, är ett däggdjur i ordningen gnagare som tillhör släktet murmeldjur."
   description_source:
     en: "https://en.wikipedia.org/wiki/Alpine_marmot"
     de: "https://de.wikipedia.org/wiki/Alpenmurmeltier"
+    sv: "https://sv.wikipedia.org/wiki/Alpmurmeldjur"
 - slug: common-dormouse
   number: "064"
   scientific: Muscardinus avellanarius
@@ -2290,9 +2414,11 @@ species:
   description:
     en: "The hazel dormouse or common dormouse is a small dormouse species native to Europe and the only living species in the genus Muscardinus."
     de: "Die Haselmaus ist ein mausähnliches, nachtaktives Nagetier aus der Familie der Bilche (Gliridae)."
+    sv: "Hasselmus är en liten gnagare som tillhör familjen sovmöss och som ensam placeras i släktet Muscardinus. Den förekommer i lövskogar i stora delar av Europa och norra Mindre Asien. Hasselmusen väger 17–20 gram under sommaren, men ökar sin vikt fram till vinterdvalan till 30–40 gram."
   description_source:
     en: "https://en.wikipedia.org/wiki/Hazel_dormouse"
     de: "https://de.wikipedia.org/wiki/Haselmaus"
+    sv: "https://sv.wikipedia.org/wiki/Hasselmus"
 - slug: eurasian-beaver
   number: "065"
   scientific: Castor fiber
@@ -2326,9 +2452,11 @@ species:
   description:
     en: "The Eurasian beaver or European beaver is a species of beaver widespread across Eurasia, with a rapidly increasing population of at least 1.5 million in 2020. The Eurasian beaver was hunted to near-extinction for both its fur and castoreum, with only about 1,200 beavers in eight relict populations from France to Mongolia in the early 20th century."
     de: "Der Europäische Biber, auch Eurasischer Biber genannt, ist das größte Nagetier Europas. Er erreicht eine Kopf-Rumpf-Länge von 80 bis 102 cm und eine Schwanzlänge von bis zu 35 cm. Ausgewachsene Europäische Biber wiegen zwischen 23 und 30 kg."
+    sv: "Europeisk bäver, eurasisk bäver, ofta endast betecknad som bäver, är en art i släktet bävrar som tillhör ordningen gnagare."
   description_source:
     en: "https://en.wikipedia.org/wiki/Eurasian_beaver"
     de: "https://de.wikipedia.org/wiki/Europ%C3%A4ischer_Biber"
+    sv: "https://sv.wikipedia.org/wiki/Europeisk_b%C3%A4ver"
 - slug: european-hornet
   number: "066"
   scientific: Vespa crabro
@@ -2361,9 +2489,11 @@ species:
   description:
     en: "The European hornet is the largest eusocial wasp native to Europe. It is also the only true hornet found in North America, having been introduced to the United States and Canada from Europe as early as 1840. Vespines, such as V."
     de: "Die Hornisse oder Europäische Hornisse ist eine Art aus der Familie der Faltenwespen (Vespidae)."
+    sv: "Bålgeting är den största samhällsbyggande getingen i Europa. Den bygger sitt bo främst i ihåliga ekar och andra lövträd, men kan också bo i människors byggnader. Den äter större och mindre insekter och tillfredsställer sitt sockerbehov främst genom att dricka sav från lövträd."
   description_source:
     en: "https://en.wikipedia.org/wiki/European_hornet"
     de: "https://de.wikipedia.org/wiki/Hornisse"
+    sv: "https://sv.wikipedia.org/wiki/B%C3%A5lgeting"
 - slug: european-hare
   number: "067"
   scientific: Lepus europaeus
@@ -2397,9 +2527,11 @@ species:
   description:
     en: "The European hare, also known as the brown hare, is a species of hare native to Europe and parts of Asia. It is among the largest hare species and is adapted to temperate, open country. Hares are herbivorous and feed mainly on grasses and herbs, supplementing these with twigs, buds, bark and field crops, particularly in winter."
     de: "Der Feldhase, kurz auch Hase genannt, ist ein Säugetier aus der Familie der Hasen (Leporidae). Die Art besiedelt offene und halboffene Landschaften. Das natürliche Verbreitungsgebiet umfasst weite Teile der südwestlichen Paläarktis; durch zahlreiche Einbürgerungen kommt der Feldhase heute jedoch auf fast allen Kontinenten vor."
+    sv: "Fälthare är en art av hare som tillhör familjen Harar och kaniner (Leporidae) och som förekommer naturligt i Europa, västra Asien och norra Afrika. Fältharen har också introducerats till flera olika världsdelar."
   description_source:
     en: "https://en.wikipedia.org/wiki/European_hare"
     de: "https://de.wikipedia.org/wiki/Feldhase"
+    sv: "https://sv.wikipedia.org/wiki/F%C3%A4lthare"
 - slug: greater-mouse-eared-bat
   number: "068"
   scientific: Myotis myotis
@@ -2433,9 +2565,11 @@ species:
   description:
     en: "The greater mouse-eared bat is a European species of bat in the family Vespertilionidae."
     de: "Das Große Mausohr oder auch nur Mausohr ist eine Fledermaus-Art aus der Gattung der Mausohren, die 1797 von Borkhausen unter der Bezeichnung Vespertilio myotis erstbeschrieben wurde. Man findet sie auch unter dem Namen Riesenfledermaus. In Deutschland ist das Große Mausohr die größte heimische Fledermausart."
+    sv: "Större musöra är en fladdermus som först beskrevs av Moritz Balthasar Borkhausen 1797. Större musöra ingår i släktet Myotis, och familjen läderlappar. Inga underarter finns listade."
   description_source:
     en: "https://en.wikipedia.org/wiki/Greater_mouse-eared_bat"
     de: "https://de.wikipedia.org/wiki/Gro%C3%9Fes_Mausohr"
+    sv: "https://sv.wikipedia.org/wiki/St%C3%B6rre_mus%C3%B6ra"
 - slug: european-mouflon
   number: "069"
   scientific: Ovis aries musimon
@@ -2539,9 +2673,11 @@ species:
   description:
     en: "The horse is a domesticated, one-toed, hoofed mammal. It belongs to the taxonomic family Equidae and is one of two extant subspecies of Equus ferus. The horse has evolved over the past 45 to 55 million years from a small multi-toed creature, Eohippus, into the large single-toed animal of today, originally in North America."
     de: "Das Hauspferd, kurz meist Pferd, gelegentlich auch Ross genannt, ist ein weit verbreitetes Haus- bzw. Nutztier, das heute in zahlreichen Rassen auf der ganzen Welt existiert."
+    sv: "Tamhäst (Equus ferus caballus) är en domesticerad underart av vildhästen som tillhör släktet hästar (Equus). Hästen domesticerades för cirka 6 000 år sedan, och har sedan dess använts som dragdjur eller riddjur, men även som föda och för att producera mjölk eller hudar. Under lång tid har man avlat fram flera skiftande typer i färg och kroppskonstitution, vilket utvecklats till dagens hästraser."
   description_source:
     en: "https://en.wikipedia.org/wiki/Horse"
     de: "https://de.wikipedia.org/wiki/Hauspferd"
+    sv: "https://sv.wikipedia.org/wiki/H%C3%A4st"
 - slug: european-green-lizard
   number: "072"
   scientific: Lacerta viridis
@@ -2575,9 +2711,11 @@ species:
   description:
     en: "The European green lizard is a large lizard distributed across European mid-latitudes from Slovenia and eastern Austria to as far east as the Black Sea coasts of Ukraine and Turkey. It is often seen sunning on rocks or lawns, or sheltering amongst bushes."
     de: "Die Östliche Smaragdeidechse ist eine große europäische Eidechsenart mit grüner Grundfärbung. Erst mit dem Nachweis mangelnder Kreuzbarkeit sowie nach weiteren vergleichenden genetischen Studien wird seit etwa 1991 anerkannt, dass es neben dieser noch eine weitere auch mitteleuropäisch vorkommende Spezies gibt, die Westliche Smaragdeidechse. Zuvor waren diese Arten nicht unterschieden worden, obwohl es schon früher Hinweise und Bestrebungen dazu gegeben hatte."
+    sv: "Smaragdödla är en ödla med grönaktig kroppsfärg som förekommer i södra Europa. Tidigare sammanfattades den västra och den östra populationen till en enda art men numera avser Lacerta viridis den östra populationen medan den västra populationen räknas som Lacerta bilineata. Uppdelningen skedde under 1990-talet efter genetiska studier och då de två populationerna inte kan korsas med varandra."
   description_source:
     en: "https://en.wikipedia.org/wiki/European_green_lizard"
     de: "https://de.wikipedia.org/wiki/%C3%96stliche_Smaragdeidechse"
+    sv: "https://sv.wikipedia.org/wiki/Smaragd%C3%B6dla"
 - slug: eurasian-jay
   number: "073"
   scientific: Garrulus glandarius
@@ -2611,9 +2749,11 @@ species:
   description:
     en: "The Eurasian jay, also known simply as the jay without any epithets in the United Kingdom and Ireland, is a species of passerine bird in the crow family Corvidae. It has pinkish brown plumage with a black stripe on each side of a whitish throat, a bright blue panel on the upper wing and a black tail."
     de: "Der Eichelhäher ist ein Singvogel aus der Familie der Rabenvögel (Corvidae)."
+    sv: "Nötskrika är en fågel som tillhör familjen kråkfåglar. Den förekommer i ett vidsträckt område i den palearktiska regionen, från västra Europa och nordvästra Afrika österut till Asiens östra kust och söderut i Sydostasien. Utseendemässigt uppvisar den en mängd variationer och delas upp i ett flertal underarter."
   description_source:
     en: "https://en.wikipedia.org/wiki/Eurasian_jay"
     de: "https://de.wikipedia.org/wiki/Eichelh%C3%A4her"
+    sv: "https://sv.wikipedia.org/wiki/N%C3%B6tskrika"
 - slug: green-woodpecker
   number: "074"
   scientific: Picus viridis
@@ -2647,9 +2787,11 @@ species:
   description:
     en: "The European green woodpecker, also known as the yaffle and sometimes called a nickle, is a large green woodpecker with a bright red crown and a black moustache. Males have a red centre to the moustache stripe which is absent in females. It is resident across much of Europe and the western Palearctic but in Spain and Portugal it is replaced by the similar Iberian green woodpecker."
     de: "Der Grünspecht, manchmal auch Grasspecht oder Erdspecht genannt, ist eine Vogelart aus der Familie der Spechte (Picidae). Der Grünspecht und seine Schwesterart, der Grauspecht, sind die einzigen Vertreter der Gattung Picus in Mitteleuropa."
+    sv: "Gröngöling är en fågel inom familjen hackspettar. Den är en stannfågel som förekommer i västra och sydvästra Asien, samt i större delen av Europa förutom på vissa öar och i de nordligaste områdena. Den är en av de vanligaste hackspettarna i Europa."
   description_source:
     en: "https://en.wikipedia.org/wiki/European_green_woodpecker"
     de: "https://de.wikipedia.org/wiki/Gr%C3%BCnspecht"
+    sv: "https://sv.wikipedia.org/wiki/Gr%C3%B6ng%C3%B6ling"
 - slug: long-tailed-tit
   number: "075"
   scientific: Aegithalos caudatus
@@ -2683,9 +2825,11 @@ species:
   description:
     en: "The long-tailed tit or long-tailed bushtit is a common bird species belonging to the bushtit family found throughout Eurasia. An insectivore, it inhabits deciduous and mixed woodlands as well as scrub, heathland, farmland, parks and gardens. The plumage of this small long-tailed bird is predominantly black and white with varying amounts of pink and grey."
     de: "Die Schwanzmeise ist ein kleiner Sperlingsvogel aus der Familie der Schwanzmeisen (Aegithalidae). Ihren Namen verdankt sie dem langen Schwanz, der ihr ein präzises Ausbalancieren beim Hangeln auf den äußeren Enden feiner Zweige ermöglicht, auf denen sie vorrangig ihre Nahrung sucht. Sie besiedelt vor allem lichte Wälder, Waldränder und Parks mit viel Unterwuchs, in dem sie ihr eiförmiges Nest aus Moos, Pflanzenwolle und Federn errichtet."
+    sv: "Stjärtmes är en tätting och den enda europeiska representanten för familjen stjärtmesar. Den är mycket liten med en stjärt som utgör mer än halva kroppslängden. Stjärtmesen hittas i löv- och blandskog där den ofta ses röra sig kvickt i små familjegrupper."
   description_source:
     en: "https://en.wikipedia.org/wiki/Long-tailed_tit"
     de: "https://de.wikipedia.org/wiki/Schwanzmeise"
+    sv: "https://sv.wikipedia.org/wiki/Stj%C3%A4rtmes"
 - slug: rock-dove
   number: "076"
   scientific: Columba livia
@@ -2719,9 +2863,11 @@ species:
   description:
     en: "The rock dove, also known as the common pigeon or rock pigeon, is a member of the bird family Columbidae. In common usage, it is often simply referred to as the \"pigeon\", although the rock dove is the wild form of the bird; the pigeons familiar to most people are the domesticated forms of the wild rock dove."
     de: "Die Felsentaube ist eine Vogelart aus der Familie der Tauben (Columbidae). Sie ist die alleinige Stammform der Haustaube und damit auch der Stadttaube. Diese domestizierte und verwilderte Form zählt zu den erfolgreichsten Vögeln der Erde und ist mittlerweile, von der Arktis und Antarktis abgesehen, weltweit verbreitet."
+    sv: "Klippduva är en fågelart i familjen duvor. Arten inkluderar den domesticerade tamduvan, och förrymda bestånd av tamduvor som givit upphov till stadsduvan. Dessa tre typer häckar med varandra."
   description_source:
     en: "https://en.wikipedia.org/wiki/Rock_dove"
     de: "https://de.wikipedia.org/wiki/Felsentaube"
+    sv: "https://sv.wikipedia.org/wiki/Klippduva"
 - slug: cirl-bunting
   number: "077"
   scientific: Emberiza cirlus
@@ -2755,9 +2901,11 @@ species:
   description:
     en: "The cirl bunting is a passerine bird in the bunting family Emberizidae, a group now separated by most modern authors from the finches, Fringillidae."
     de: "Die Zaunammer ist eine Sperlingsvogelart aus der Familie der Ammern (Emberizidae). Die Zaunammer ist ein Standvogel – ihr Verbreitungsgebiet erstreckt sich über den Süden Europas und Nordafrika. In Süddeutschland gibt es kleine Bestände in wärmeexponierten Lagen."
+    sv: "Häcksparv är en fågel inom familjen fältsparvar inom ordningen tättingar. Den är en stannfågel som förekommer i Sydeuropa och Nordafrika. IUCN kategoriserar den som livskraftig."
   description_source:
     en: "https://en.wikipedia.org/wiki/Cirl_bunting"
     de: "https://de.wikipedia.org/wiki/Zaunammer"
+    sv: "https://sv.wikipedia.org/wiki/H%C3%A4cksparv"
 - slug: yellowhammer
   number: "078"
   scientific: Emberiza citrinella
@@ -2791,9 +2939,11 @@ species:
   description:
     en: "The yellowhammer is a passerine bird in the bunting family that is native to Eurasia and has been introduced to New Zealand and Australia. Most European birds remain in the breeding range year-round, but the eastern subspecies is partially migratory, with much of the population wintering further south. The male yellowhammer has a bright yellow head, streaked brown back, chestnut rump, and yellow under parts."
     de: "Die Goldammer ist eine Vogelart aus der Familie der Ammern (Emberizidae). Sie ist die häufigste Ammer in Europa und einer der charakteristischen Brutvögel der Feldmark. Außerhalb der Brutzeit bilden sich mitunter größere Trupps, die sich an günstigen Nahrungsplätzen am Rand von Dörfern oder an Fasanen- und Rebhuhnschütten einfinden."
+    sv: "Gulsparv är en stor och långstjärtad sparv inom familjen fältsparvar som förekommer över stora delar av Europa och i Väst- och Centralasien. Merparten av den europeiska populationen är stannfåglar medan den östra underarten delvis består av flyttfåglar som övervintrar längre söderut."
   description_source:
     en: "https://en.wikipedia.org/wiki/Yellowhammer"
     de: "https://de.wikipedia.org/wiki/Goldammer"
+    sv: "https://sv.wikipedia.org/wiki/Gulsparv"
 - slug: short-toed-treecreeper
   number: "079"
   scientific: Certhia brachydactyla
@@ -2827,9 +2977,11 @@ species:
   description:
     en: "The short-toed treecreeper is a small passerine bird found in woodlands through much of the warmer regions of Europe and into north Africa. It has a generally more southerly distribution than the other European treecreeper species, the common treecreeper, with which it is easily confused where they both occur. The short-toed treecreeper tends to prefer deciduous trees and lower altitudes than its relative in these overlap areas."
     de: "Der Gartenbaumläufer ist eine Vogelart aus der Gattung der Baumläufer (Certhia). Er ist in weiten Teilen Mitteleuropas ein verbreiteter Brutvogel, der vor allem im Tiefland anzutreffen ist."
+    sv: "Trädgårdsträdkrypare är en fågel i familjen trädkrypare inom ordningen tättingar. Den lever i de varma tempererade delarna av Europa samt i Nordafrika."
   description_source:
     en: "https://en.wikipedia.org/wiki/Short-toed_treecreeper"
     de: "https://de.wikipedia.org/wiki/Gartenbauml%C3%A4ufer"
+    sv: "https://sv.wikipedia.org/wiki/Tr%C3%A4dg%C3%A5rdstr%C3%A4dkrypare"
 - slug: common-blackbird
   number: "080"
   scientific: Turdus merula
@@ -2859,9 +3011,11 @@ species:
   description:
     en: "The common blackbird is a species of true thrush. It is also known as the Eurasian blackbird, or simply the blackbird. It breeds in Europe, western Asia, and North Africa, and has been introduced to Australia and New Zealand."
     de: "Die Amsel oder Schwarzdrossel, manchmal Kohlamsel oder Schwarzamsel, ist eine Vogelart aus der Familie der Drosseln (Turdidae). In Europa ist die Amsel der am weitesten verbreitete Vertreter dieser Familie und zugleich einer der bekanntesten Vögel überhaupt. Ihre Körperlänge liegt zwischen 24 und 27 Zentimetern."
+    sv: "Koltrast är en fågel som tillhör familjen trastar. Den räknas som den mest utbredda trasten i Europa. Tidigare var koltrasten en utpräglad skogsfågel men den har sedan mitten av 1800-talet bosatt sig i parker nära bebyggelse samt i trädgårdar vilket idag gör den till en kulturföljare."
   description_source:
     en: "https://en.wikipedia.org/wiki/Common_blackbird"
     de: "https://de.wikipedia.org/wiki/Amsel"
+    sv: "https://sv.wikipedia.org/wiki/Koltrast"
 - slug: long-eared-owl
   number: "081"
   scientific: Asio otus
@@ -2895,9 +3049,11 @@ species:
   description:
     en: "The long-eared owl, also known as the northern long-eared owl or, more informally, as the lesser horned owl or cat owl, is a medium-sized species of owl with an extensive breeding range. The genus name, Asio, is Latin for \"horned owl\", and the specific epithet, otus, is derived from Greek and refers to a small eared owl. The species breeds in many areas through Europe and the Palearctic, as well as in North America."
     de: "Die Waldohreule ist eine nachtaktive Greifvogelart, die zu den Eigentlichen Eulen (Strigidae) gehört. Sie zählt zur Gattung der Ohreulen und ist eine der häufigsten Eulen in Mitteleuropa. Die Namensgebung geht auf die beiden Federbüschel am Kopf zurück."
+    sv: "Hornuggla är en fågel inom släktet Asio och familjen ugglor. Arten har en ovanligt stor utbredning och häckar i Europa, Asien och Nordamerika. Till största delen är den flyttfågel."
   description_source:
     en: "https://en.wikipedia.org/wiki/Long-eared_owl"
     de: "https://de.wikipedia.org/wiki/Waldohreule"
+    sv: "https://sv.wikipedia.org/wiki/Hornuggla"
 - slug: little-owl
   number: "082"
   scientific: Athene noctua
@@ -2931,9 +3087,11 @@ species:
   description:
     en: "The little owl, also known as the owl of Athena or owl of Minerva, is a bird that inhabits much of the temperate and warmer parts of Europe, the Palearctic east to Korea, and North Africa. It was introduced into Britain at the end of the 19th century and into the South Island of New Zealand in the early 20th century."
     de: "Der Steinkauz ist eine kleine, kurzschwänzige Eulenart aus der Familie der Eigentlichen Eulen (Strigidae). Das Verbreitungsgebiet des Steinkauzes erstreckt sich über Eurasien und Nordafrika. Er ist ein charakteristischer Bewohner der Baumsteppe mit spärlicher oder niedriger Vegetation und jagt bevorzugt auf dem Boden."
+    sv: "Minervauggla är en liten, daglevande uggla som ses i kontinentala Europa, Asien samt norra och södra Afrika."
   description_source:
     en: "https://en.wikipedia.org/wiki/Little_owl"
     de: "https://de.wikipedia.org/wiki/Steinkauz"
+    sv: "https://sv.wikipedia.org/wiki/Minervauggla"
 - slug: eurasian-pygmy-owl
   number: "083"
   scientific: Glaucidium passerinum
@@ -2967,9 +3125,11 @@ species:
   description:
     en: "The Eurasian pygmy owl is the smallest owl in Europe. It is dark reddish to greyish-brown, with spotted sides and half of a white ring around the back of the neck. This species is found in the boreal forests of Northern and Central Europe to Siberia."
     de: "Der Sperlingskauz ist die kleinste in Mitteleuropa heimische Eule. Auch weltweit gehört die Art zu den Zwergen unter den Eulenvögeln. Der Sperlingskauz ist ein Bewohner des paläarktischen Nadelwaldgürtels, in Mitteleuropa waren seine Vorkommen lange Zeit auf montane Wälder und Wälder in Mittelgebirgslagen beschränkt."
+    sv: "Sparvuggla är en mycket liten uggla som förekommer i Europa och norra Asien. Den häckar i barr- och blandskogar och livnär sig på småfåglar och smågnagare. IUCN kategoriserar den som livskraftig (LC)."
   description_source:
     en: "https://en.wikipedia.org/wiki/Eurasian_pygmy_owl"
     de: "https://de.wikipedia.org/wiki/Sperlingskauz"
+    sv: "https://sv.wikipedia.org/wiki/Sparvuggla"
 - slug: tawny-owl
   number: "084"
   scientific: Strix aluco
@@ -3003,9 +3163,11 @@ species:
   description:
     en: "The tawny owl, also called the brown owl, is a stocky, medium-sized owl in the family Strigidae. It is commonly found in woodlands across Europe, as well as western Siberia, and has seven recognized subspecies. The tawny owl's underparts are pale with dark streaks, whilst its upper body may be either brown or grey."
     de: "Der Waldkauz ist eine mittelgroße Eulenart mit einer Verbreitung von Europa bis nach Westsibirien und in den Iran. Er kommt außerdem in Südostasien vor. In Mitteleuropa ist der Waldkauz gemeinsam mit der Waldohreule die häufigste Eule."
+    sv: "Kattuggla är en kompakt, medelstor uggla som tillhör familjen ugglor och är vanlig i skogar över stora delar av Eurasien. Dess undersida är blek med mörka strimmor och ovansidan är antingen brun eller grå, och flera av de elva erkända underarterna uppvisar båda dessa färgvarianter. Boet är vanligen placerat i en trädhåla och ägg och ungar försvaras våldsamt mot potentiella predatorer."
   description_source:
     en: "https://en.wikipedia.org/wiki/Tawny_owl"
     de: "https://de.wikipedia.org/wiki/Waldkauz"
+    sv: "https://sv.wikipedia.org/wiki/Kattuggla"
 - slug: ural-owl
   number: "085"
   scientific: Strix uralensis
@@ -3039,9 +3201,11 @@ species:
   description:
     en: "The Ural owl is a large nocturnal owl. It is a member of the true owl family, Strigidae. The Ural owl is a member of the genus Strix, that is also the origin of the family's name under Linnaean taxonomy."
     de: "Der Habichtskauz oder Uralkauz ist eine große Eule aus der Gattung Strix innerhalb der Familie der Eigentlichen Eulen (Strigidae). Er ähnelt dem Waldkauz, ist aber kontrastreicher gefärbt, bedeutend größer und oft mehr als doppelt so schwer wie dieser. Das geschlossene Verbreitungsgebiet der Art liegt im borealen Waldgürtel der Paläarktis und reicht ostwärts bis Korea und Japan."
+    sv: "Slaguggla är en medelstor nattaktiv uggla av släktet Strix, med nio underarter i Europa och norra Asien. Den norra populationen häckar på tajga med grovstammiga barrträd och myrar medan den lilla populationen som återfinns i södra Europa häckar i bok- och bergsskogar. Det globala beståndet kategoriseras som livskraftigt."
   description_source:
     en: "https://en.wikipedia.org/wiki/Ural_owl"
     de: "https://de.wikipedia.org/wiki/Habichtskauz"
+    sv: "https://sv.wikipedia.org/wiki/Slaguggla"
 - slug: mandarin-duck
   number: "086"
   scientific: Aix galericulata
@@ -3071,9 +3235,11 @@ species:
   description:
     en: "The mandarin duck is a perching duck species native to the East Palearctic. It is sexually dimorphic; the males are elaborately coloured, while the females have more subdued colours. It is a medium-sized duck, at 41–49 cm (16–19 in) long with a 65–75 cm (26–30 in) wingspan."
     de: "Die Mandarinente ist eine ursprünglich in Ostasien beheimatete Vogelart aus der Familie der Entenvögel (Anatidae). Sie gehört wie die Brautente zur Gattung Aix. In Europa gibt es vereinzelt verwilderte Parkpopulationen, die aus Gefangenschaftsflüchtlingen entstanden sind."
+    sv: "Mandarinand är en fågelart inom familjen änder från Östasien. Dess fjäderdräkt har gjort den populär som prydnadsfågel i fågeldammar i parker och i zoologiska trädgårdar även i länder utanför dess naturliga utbredningsområde."
   description_source:
     en: "https://en.wikipedia.org/wiki/Mandarin_duck"
     de: "https://de.wikipedia.org/wiki/Mandarinente"
+    sv: "https://sv.wikipedia.org/wiki/Mandarinand"
 - slug: mallard
   number: "087"
   scientific: Anas platyrhynchos
@@ -3103,9 +3269,11 @@ species:
   description:
     en: "The mallard or wild duck is a dabbling duck that breeds throughout the temperate and subtropical Americas, Eurasia, and North Africa. It has been introduced to New Zealand, Australia, Peru, Brazil, Uruguay, Argentina, Chile, Colombia, the Falkland Islands, and South Africa. Belonging to the subfamily Anatinae of the waterfowl family Anatidae, mallards live in wetlands, eat water plants and small animals, and are social animals preferring to congregate in groups or flocks of varying sizes."
     de: "Die Stockente ist eine Vogelart aus der Familie der Entenvögel (Anatidae)."
+    sv: "Gräsand är en välkänd andfågel som är mycket vanlig och vida spridd på stora delar av norra halvklotet. Gräsanden är tillsammans med myskanden ursprunget till tamankorna."
   description_source:
     en: "https://en.wikipedia.org/wiki/Mallard"
     de: "https://de.wikipedia.org/wiki/Stockente"
+    sv: "https://sv.wikipedia.org/wiki/Gr%C3%A4sand"
 - slug: greylag-goose
   number: "088"
   scientific: Anser anser
@@ -3135,9 +3303,11 @@ species:
   description:
     en: "The greylag goose is a species of large goose in the waterfowl family Anatidae and the type species of the genus Anser. It has mottled and barred grey and white plumage and an orange beak and pink legs. A large bird, it measures between 74 and 91 centimetres in length, with an average weight of 3.3 kilograms."
     de: "Die Graugans, häufig kurz Gans genannt, ist eine Art der Gattung Feldgänse (Anser) in der Familie der Entenvögel (Anatidae). Graugänse zählen zu den häufigsten Wasservögeln und sind, nach der Kanadagans, die zweitgrößte Gänseart in Europa. Sie sind die wilden Vorfahren der domestizierten Hausgänse."
+    sv: "Grågås är en andfågel inom släktgruppen gäss som placeras i släktet Anser. Arten beskrevs av Carl von Linné 1758. Grågåsen är en stor och kraftig grå gås med kraftig ljusrosa näbb och ben, och tydliga ljusgrå vingframkanter."
   description_source:
     en: "https://en.wikipedia.org/wiki/Greylag_goose"
     de: "https://de.wikipedia.org/wiki/Graugans"
+    sv: "https://sv.wikipedia.org/wiki/Gr%C3%A5g%C3%A5s"
 - slug: brent-goose
   number: "089"
   scientific: Branta bernicla
@@ -3171,9 +3341,11 @@ species:
   description:
     en: "The brant or brent goose is a small goose of the genus Branta. There are three subspecies, all of which winter along temperate-zone sea-coasts and breed on the high-Arctic tundra."
     de: "Die Ringelgans ist eine kleine, gesellig lebende Art der Gattung Meergänse (Branta) der Familie der Entenvögel (Anatidae). Sie ist die kleinste und dunkelste der Meergänsearten, zu denen neben der Ringelgans die Nonnengans, die Rothalsgans, die Kanadagans, die Zwergkanadagans und die Hawaiigans zählen. Ihr Brutareal sind die arktische Kältewüste und arktische Tundra Eurasiens und Nordamerikas."
+    sv: "Prutgås är en andfågel av släktet Branta i underfamiljen Anserinae. Den häckar i arktiska Nordamerika, Europa och Asien. Vintertid flyttar den till kusterna vid Atlanten, Nordsjön och Stilla havet."
   description_source:
     en: "https://en.wikipedia.org/wiki/Brant_(goose)"
     de: "https://de.wikipedia.org/wiki/Ringelgans"
+    sv: "https://sv.wikipedia.org/wiki/Prutg%C3%A5s"
 - slug: canada-goose
   number: "090"
   scientific: Branta canadensis
@@ -3203,9 +3375,11 @@ species:
   description:
     en: "The Canada goose is a large species of goose with a black head and neck, white cheeks, white under its chin, and a brown body. It is native to the arctic and temperate regions of North America, and it is occasionally found during migration across the Atlantic in northern Europe. It has been introduced to France, the United Kingdom, Ireland, Scandinavia, New Zealand, Japan, Chile, Argentina, and the Falkland Islands."
     de: "Die Kanadagans ist eine Vogelart aus der Familie der Entenvögel (Anatidae) und gilt als die weltweit am häufigsten vorkommende Gans. Ihr ursprüngliches Verbreitungsgebiet ist Nordamerika. Sie ist dort ein Charaktervogel des Tieflandes und brütet an Binnenseen der Prärie- und Ackerbaugebiete."
+    sv: "Kanadagås är en fågel inom släktgruppen gäss med sin ursprungliga utbredning i Nordamerika men som genom introduktion nu har en stor population i Europa och även i Nya Zeeland. Polargåsen behandlades länge som en underart till kanadagåsen men har idag artstatus."
   description_source:
     en: "https://en.wikipedia.org/wiki/Canada_goose"
     de: "https://de.wikipedia.org/wiki/Kanadagans"
+    sv: "https://sv.wikipedia.org/wiki/Kanadag%C3%A5s"
 - slug: mute-swan
   number: "091"
   scientific: Cygnus olor
@@ -3235,9 +3409,11 @@ species:
   description:
     en: "The mute swan is a species of swan and a member of the waterfowl family Anatidae. It is native to much of Europe and parts of Asia and the far north of Africa. It is an introduced species in North America, home to the largest populations outside of its native range, with additional smaller introductions in Australasia and Southern Africa."
     de: "Der Höckerschwan ist eine Vogelart, die innerhalb der Entenvögel (Anatidae) zur Gattung der Schwäne (Cygnus) und zur Unterfamilie der Gänse (Anserinae) gehört. Als halbdomestizierter Vogel ist er heute in weiten Bereichen Mitteleuropas beheimatet. Er hält sich bevorzugt auf Seen, Park- und Fischteichen, in seichten Meeresbuchten und im Winter auch auf offenen Flussläufen auf."
+    sv: "Knölsvan är en stor andfågel, inom släktet Cygnus, som främst förekommer i Europas och Asiens tempererade områden så långt österut som Kina. Knölsvan har introducerats till ett flertal områden runt om i världen, bland annat Nordamerika och Australien. Som adult har den ett vingspann på drygt två meter, en kraftig kropp, lång böjlig hals, litet huvud, vit fjäderdräkt och orange näbb med svart knöl på ovansidan av näbbroten."
   description_source:
     en: "https://en.wikipedia.org/wiki/Mute_swan"
     de: "https://de.wikipedia.org/wiki/H%C3%B6ckerschwan"
+    sv: "https://sv.wikipedia.org/wiki/Kn%C3%B6lsvan"
 - slug: gadwall
   number: "092"
   scientific: Mareca strepera
@@ -3271,9 +3447,11 @@ species:
   description:
     en: "The gadwall is a common and widespread dabbling duck in the family Anatidae."
     de: "Die Schnatterente, in älterer Literatur auch Mittelente oder Knarrente genannt, ist eine Vogelart aus der Familie der Entenvögel (Anatidae). Der mittlerweile altertümliche Begriff Mittelente drückt aus, dass ihre Körpergröße zwischen der der kleineren europäischen Entenarten und der Stockente liegt. Der Begriff Schnatterente weist dagegen auf die Art ihrer Nahrungsaufnahme hin."
+    sv: "Snatterand är en vida spridd andfågel i familjen änder. Den förekommer i stora delar av Europa, Asien och Nordamerika."
   description_source:
     en: "https://en.wikipedia.org/wiki/Gadwall"
     de: "https://de.wikipedia.org/wiki/Schnatterente"
+    sv: "https://sv.wikipedia.org/wiki/Snatterand"
 - slug: eurasian-hobby
   number: "093"
   scientific: Falco subbuteo
@@ -3307,9 +3485,11 @@ species:
   description:
     en: "The Eurasian hobby, or just hobby, is a small, slim falcon. It belongs to a group of similar falcons often considered a subgenus of Falco."
     de: "Der Baumfalke ist ein kleiner Falke, dessen auffälligstes Merkmal seine rostroten „Hosen“ sind. Er ist in Deutschland die zweithäufigste Falkenart, nach dem Turmfalken und vor dem Wanderfalken. Der Bestand ist rückläufig."
+    sv: "Lärkfalk är en medelstor falk som häckar över stora delar av Palearktis. Den är en snabb och skicklig flygare som lever av stora insekter och småfåglar som den fångar i luften. För sitt födosök är den beroende av vatten varför den ofta uppträder vid sjöar, myrar eller vid kusten."
   description_source:
     en: "https://en.wikipedia.org/wiki/Eurasian_hobby"
     de: "https://de.wikipedia.org/wiki/Baumfalke"
+    sv: "https://sv.wikipedia.org/wiki/L%C3%A4rkfalk"
 - slug: common-kestrel
   number: "094"
   scientific: Falco tinnunculus
@@ -3343,9 +3523,11 @@ species:
   description:
     en: "The common kestrel, also known as the European kestrel, Eurasian kestrel or Old World kestrel, is a species of predatory bird belonging to the kestrel group of the falcon family Falconidae. In the United Kingdom, where no other kestrel species commonly occurs, it is generally just called the \"kestrel\"."
     de: "Der Turmfalke ist der am häufigsten vorkommende Falke Mitteleuropas. Der Öffentlichkeit ist er relativ vertraut, da er sich auch Städte und Stadträume als Lebensraum erobert hat und öfter beim „Rüttelflug“ zu beobachten ist."
+    sv: "Tornfalk är en medelstor rovfågel som ofta ses ryttla över fält och öppna ytor, som kalhyggen och myrar. Tornfalken är en av Europas talrikaste rovfåglar."
   description_source:
     en: "https://en.wikipedia.org/wiki/Common_kestrel"
     de: "https://de.wikipedia.org/wiki/Turmfalke"
+    sv: "https://sv.wikipedia.org/wiki/Tornfalk"
 - slug: grey-partridge
   number: "095"
   scientific: Perdix perdix
@@ -3379,9 +3561,11 @@ species:
   description:
     en: "The grey partridge is a bird in the pheasant family Phasianidae of the order Galliformes, gallinaceous birds. The scientific name is the Latin for \"partridge\"."
     de: "Das Rebhuhn ist eine bodenbrütende Vogelart aus der Ordnung der Hühnervögel (Galliformes). Rebhühner bewohnen Steppen- und Heidelandschaften in weiten Teilen Europas und Asiens. Sie ernähren sich überwiegend von Sämereien, Wildkräutern und Getreidekörnern."
+    sv: "Rapphöna är en fågel inom familjen fasanfåglar. Den förekommer naturligt i stora delar av Europa och västra Asien. Arten har av jaktintresse introducerats till Nordamerika där den etablerat frilevande bestånd."
   description_source:
     en: "https://en.wikipedia.org/wiki/Grey_partridge"
     de: "https://de.wikipedia.org/wiki/Rebhuhn"
+    sv: "https://sv.wikipedia.org/wiki/Rapph%C3%B6na"
 - slug: western-capercaillie
   number: "096"
   scientific: Tetrao urogallus
@@ -3415,9 +3599,11 @@ species:
   description:
     en: "The western capercaillie, also known as the Eurasian capercaillie, wood grouse, heather cock, cock-of-the-woods, or simply capercaillie, is a heavy member of the grouse tribe and the largest of all extant grouse species. Found across Europe and the Palearctic, this primarily-ground-dwelling forest grouse is renowned for its courtship display. The bird shows extreme sexual dimorphism, with males nearly twice the size of females."
     de: "Das Auerhuhn ist eine Vogelart aus der Familie der Fasanenartigen (Phasianidae) und der Ordnung der Hühnervögel (Galliformes). Es ist zugleich der größte Hühnervogel Europas. Es besiedelt Nadel-, Misch- und Laubwaldzonen von Schottland über Nordeuropa bis in den Osten Zentralsibiriens."
+    sv: "Tjäder är en skogsfågel i familjen fasanfåglar. Den förekommer i öppna skogar i norra och mellersta Europa samt i norra Asien. Den är nära besläktad med orre och det förekommer hybrider mellan tjäder och andra hönsfåglar."
   description_source:
     en: "https://en.wikipedia.org/wiki/Western_capercaillie"
     de: "https://de.wikipedia.org/wiki/Auerhuhn"
+    sv: "https://sv.wikipedia.org/wiki/Tj%C3%A4der"
 - slug: european-goldfinch
   number: "097"
   scientific: Carduelis carduelis
@@ -3451,9 +3637,11 @@ species:
   description:
     en: "The European goldfinch or simply referred to as the goldfinch is a small passerine bird in the finch family that is native to the Palearctic zone in Europe, northern Africa, and western Asia. It has been introduced to other areas, including Australia, New Zealand, Uruguay and the United States."
     de: "Der Stieglitz, auch Distelfink genannt, ist eine Vogelart aus der Familie der Finken (Fringillidae). Er besiedelt Eurasien von Westeuropa bis Vorderasien sowie Nordafrika. In Südamerika und Australien sowie auf Neuseeland und einigen Inseln Ozeaniens wurde er eingeführt."
+    sv: "Steglits är en liten färggrann fågel som tillhör familjen finkar. Över stora delar av sitt utbredningsområde, som sträcker sig från norra Afrika, Europa och österut till södra Sibirien, är den en vanlig häckfågel i öppna, trädrika landskap, trädgårdar och fruktodlingar."
   description_source:
     en: "https://en.wikipedia.org/wiki/European_goldfinch"
     de: "https://de.wikipedia.org/wiki/Stieglitz"
+    sv: "https://sv.wikipedia.org/wiki/Steglits"
 - slug: european-greenfinch
   number: "098"
   scientific: Chloris chloris
@@ -3487,9 +3675,11 @@ species:
   description:
     en: "The European greenfinch or simply the greenfinch is a small passerine bird in the finch family Fringillidae."
     de: "Der Grünfink, auch Grünling genannt, ist ein Vogel aus der Unterfamilie der Stieglitzartigen in der Familie der Finken, der in ganz Europa, dem nördlichen Afrika und dem südwestlichen Asien heimisch ist. Der überwiegende Teil der Grünfinken sind Standvögel, einige der nördlicheren Populationen ziehen jedoch im Winter nach West- und Südeuropa."
+    sv: "Grönfink är en fågel som hör till familjen finkar och som huvudsakligen förekommer i Europa."
   description_source:
     en: "https://en.wikipedia.org/wiki/European_greenfinch"
     de: "https://de.wikipedia.org/wiki/Gr%C3%BCnfink"
+    sv: "https://sv.wikipedia.org/wiki/Gr%C3%B6nfink"
 - slug: common-chaffinch
   number: "099"
   scientific: Fringilla coelebs
@@ -3523,9 +3713,11 @@ species:
   description:
     en: "The Eurasian chaffinch, common chaffinch, or simply the chaffinch is a common and widespread small passerine bird in the finch family. The male is brightly coloured with a blue-grey cap and rust-red underparts. The female is more subdued in colouring, but both sexes have two contrasting white wing bars and white sides to the tail."
     de: "Der Buchfink ist ein zur Familie der Finken (Fringillidae) gehöriger Singvogel. Er kommt in ganz Europa mit Ausnahme Islands und des nördlichsten Skandinaviens vor, sein Verbreitungsgebiet erstreckt sich in östlicher Richtung bis nach Mittelsibirien. Er ist außerdem ein Brutvogel in Nordafrika und Vorderasien bis einschließlich des Irans."
+    sv: "Bofink är en liten tätting som tillhör familjen finkar. Den är mycket talrik i Europa."
   description_source:
     en: "https://en.wikipedia.org/wiki/Eurasian_chaffinch"
     de: "https://de.wikipedia.org/wiki/Buchfink"
+    sv: "https://sv.wikipedia.org/wiki/Bofink"
 - slug: common-nightingale
   number: "100"
   scientific: Luscinia megarhynchos
@@ -3559,9 +3751,11 @@ species:
   description:
     en: "The common nightingale, rufous nightingale or simply nightingale, is a small passerine bird which is best known for its powerful and beautiful song. An Old World flycatcher, it belongs to a group of more terrestrial species, often called chats. Its range partly overlaps with that of the more northerly thrush nightingale, a closely related species with which hybrids have occurred."
     de: "Die Nachtigall ist eine Vogelart aus der Ordnung der Sperlingsvögel (Passeriformes), Unterordnung Singvögel (Passeres). Nach neueren molekularbiologischen Erkenntnissen zur Phylogenese der Singvögel wird sie heute meist zur Familie der Fliegenschnäpper (Muscicapidae) gestellt. Manchmal findet man sie aber auch heute noch bei den Drosseln (Turdidae) eingeordnet."
+    sv: "Sydnäktergal är en fågel i familjen flugsnappare inom ordningen tättingar. Det är denna art som är \"the nightingale\" som är så välbeskriven för sin sång i engelskspråkiga sånger, poesi och andra texter. Sydnäktergalen ersätter näktergalen åt väster och söder."
   description_source:
     en: "https://en.wikipedia.org/wiki/Common_nightingale"
     de: "https://de.wikipedia.org/wiki/Nachtigall"
+    sv: "https://sv.wikipedia.org/wiki/Sydn%C3%A4ktergal"
 - slug: goldcrest
   number: "101"
   scientific: Regulus regulus
@@ -3595,9 +3789,11 @@ species:
   description:
     en: "The goldcrest is a very small passerine bird in the kinglet family. Its colourful golden crest feathers, as well as being called the \"king of the birds\" in European folklore, gives rise to its English and scientific names. The scientific name, R."
     de: "Das Wintergoldhähnchen ist eine der kleinsten Vogelarten Europas. Mit seinen etwa 9 Zentimetern Körpergröße wiegt es nur zwischen 4 und 7 Gramm. Es ist leicht mit dem Sommergoldhähnchen zu verwechseln, das aber anders als das Wintergoldhähnchen einen weißen Überaugenstreifen und leuchtend gelbgrüne Halsseiten besitzt."
+    sv: "Kungsfågel är en mycket liten tätting som numera oftast placeras i familjen kungsfåglar (Regulidae). Både dess vetenskapliga namn och dess svenska trivialnamn syftar på kunglighet och anspelar i förlängningen på kungsfåglarnas färgstarka gyllene hjässband. Arten delas in i en rad underarter med stor geografisk spridning som omfattar merparten av Eurasien och öarna i Makaronesien."
   description_source:
     en: "https://en.wikipedia.org/wiki/Goldcrest"
     de: "https://de.wikipedia.org/wiki/Wintergoldh%C3%A4hnchen"
+    sv: "https://sv.wikipedia.org/wiki/Kungsf%C3%A5gel"
 - slug: northern-goshawk
   number: "102"
   scientific: Astur gentilis
@@ -3631,9 +3827,11 @@ species:
   description:
     en: "The Eurasian goshawk is a species of medium-large bird of prey in the family Accipitridae, a family which also includes other extant diurnal raptors, such as eagles, buzzards and harriers. It was formerly placed in the genus Accipiter. It is a widespread species that inhabits many of the temperate parts of Eurasia."
     de: "Der Habicht ist ein Greifvogel, der zur Familie der Habichtartigen (Accipitridae) gehört. Das Verbreitungsgebiet der Art umfasst die arktischen bis subtropischen Zonen der Paläarktis. Habichte ernähren sich überwiegend von kleinen bis mittelgroßen Vögeln und Säugetieren bis zu einem Gewicht von etwa 1,0 kg."
+    sv: "Duvhök är en medelstor kraftfull hökfågel som traditionellt placeras i släktet Accipiter men som lyfts med sina närmaste släktingar till det egna släktet Astur. Den har ett stort utbredningsområde som sträcker sig över de tempererade områdena i Europa och Asien. Bestånd i Nordamerika som tidigare räknats till arten har urskilts som amerikansk duvhök."
   description_source:
     en: "https://en.wikipedia.org/wiki/Eurasian_goshawk"
     de: "https://de.wikipedia.org/wiki/Habicht"
+    sv: "https://sv.wikipedia.org/wiki/Duvh%C3%B6k"
 - slug: eurasian-sparrowhawk
   number: "103"
   scientific: Accipiter nisus
@@ -3667,9 +3865,11 @@ species:
   description:
     en: "The Eurasian sparrowhawk, also known as the northern sparrowhawk or simply the sparrowhawk, is a small bird of prey in the family Accipitridae. Adult male Eurasian sparrowhawks have bluish grey upperparts and orange-barred underparts; females and juveniles are brown above with brown barring below. The female is up to 25% larger than the male – one of the greatest size differences between the sexes in any bird species."
     de: "Der Sperber ist ein Greifvogel und gehört zur Familie der Habichtartigen (Accipitridae). Die Weibchen sind deutlich größer als die Männchen und fast doppelt so schwer. In der Jägersprache werden die Männchen Sprinz genannt."
+    sv: "Sparvhök är en liten rovfågel inom familjen hökar, som omfattar många andra dagaktiva rovfåglar med namn som örnar, vråkar, kärrhökar och andra hökar. Adulta sparvhökshanar har blågrå ovansida och orangestreckad undersida. Honor och juveniler är bruna på ovansidan och har brunstreckade undersidor."
   description_source:
     en: "https://en.wikipedia.org/wiki/Eurasian_sparrowhawk"
     de: "https://de.wikipedia.org/wiki/Sperber_(Art)"
+    sv: "https://sv.wikipedia.org/wiki/Sparvh%C3%B6k"
 - slug: common-buzzard
   number: "104"
   scientific: Buteo buteo
@@ -3703,9 +3903,11 @@ species:
   description:
     en: "The common buzzard is a medium-to-large bird of prey which has a large range. It is a member of the genus Buteo in the family Accipitridae. The species lives in most of Europe and extends its breeding range across much of the Palearctic as far as northwestern China, far western Siberia and northwestern Mongolia."
     de: "Der Mäusebussard ist ein Greifvogel aus der Familie der Habichtartigen und der häufigste Vertreter dieser Familie in Mitteleuropa. Er ist mittelgroß und kompakt, das Gefieder variiert von Dunkelbraun bis fast Weiß. Er kann oft bei seinen kreisenden Segelflügen oder bei der Ansitzjagd beobachtet werden."
+    sv: "Ormvråk är en medelstor hökfågel som häckar i palearktiska regionen och är den dominerande vråkarten i stora delar av Europa och västra Asien. I Europa är den vanligen stannfågel, men bestånd i Skandinavien och Finland liksom östligare fåglar flyttar vintertid söderut. Den häckar i skogar eller dungar intill öppna områden och ses ofta kretsa högt eller sittande utmed vägar på jakt efter byten som smågnagare, fågelungar, reptiler, groddjur och till och med daggmask."
   description_source:
     en: "https://en.wikipedia.org/wiki/Common_buzzard"
     de: "https://de.wikipedia.org/wiki/M%C3%A4usebussard"
+    sv: "https://sv.wikipedia.org/wiki/Ormvr%C3%A5k"
 - slug: great-cormorant
   number: "105"
   scientific: Phalacrocorax carbo
@@ -3735,9 +3937,11 @@ species:
   description:
     en: "The great cormorant, also known as just cormorant in Britain, as black shag or kawau in New Zealand, formerly also known as the great black cormorant across the Northern Hemisphere, the black cormorant in Australia, and the large cormorant in India, is a widespread member of the cormorant family of seabirds. It breeds in much of the Old World, Australasia, and the Atlantic coast of North America."
     de: "Der Kormoran ist eine Vogelart aus der Familie der Kormorane (Phalacrocoracidae). Das Verbreitungsgebiet der Art umfasst große Teile Europas, Asiens und Afrikas, außerdem Australien und Neuseeland sowie Grönland und die Ostküste Nordamerikas. Die Nahrung besteht wie bei allen Vertretern der Gattung Phalacrocorax fast ausschließlich aus Fisch."
+    sv: "Storskarv, ålkråka, ålakråka, ålekråka, havstjäder eller kormoran är en fågel inom familjen skarvar. Skarvarnas närmsta släktingar utgörs av fregattfåglar, sulor och ormhalsfåglar. Storskarven förekommer på alla världens kontinenter utom Antarktis och Sydamerika och förekommer både vid kusten och i inlandet."
   description_source:
     en: "https://en.wikipedia.org/wiki/Great_cormorant"
     de: "https://de.wikipedia.org/wiki/Kormoran_(Art)"
+    sv: "https://sv.wikipedia.org/wiki/Storskarv"
 - slug: eurasian-blue-tit
   number: "106"
   scientific: Cyanistes caeruleus
@@ -3771,9 +3975,11 @@ species:
   description:
     en: "The Eurasian blue tit is a small passerine bird in the tit family, Paridae. It is easily recognised by its blue and yellow plumage and small size."
     de: "Die Blaumeise ist eine Vogelart der Gattung Cyanistes aus der Familie Meisen (Paridae). Der Kleinvogel ist mit seinem blau-gelben Gefieder einfach zu bestimmen und in Mitteleuropa sehr häufig anzutreffen. Bevorzugte Lebensräume sind Laub- und Mischwälder mit hohem Eichenanteil; die Blaumeise ist auch häufig in Parkanlagen und Gärten zu finden."
+    sv: "Blåmes är en fågelart inom ordningen tättingar i familjen mesar. Den lilla fågeln är med sin blågula fjäderdräkt rätt enkel att känna igen och mycket vanlig i stora delar av Europa. Blåmesens habitat är löv- och blandskog, men den återfinns också i parker och trädgårdar."
   description_source:
     en: "https://en.wikipedia.org/wiki/Eurasian_blue_tit"
     de: "https://de.wikipedia.org/wiki/Blaumeise"
+    sv: "https://sv.wikipedia.org/wiki/Bl%C3%A5mes"
 - slug: great-tit
   number: "107"
   scientific: Parus major
@@ -3803,9 +4009,11 @@ species:
   description:
     en: "The great tit is a small passerine bird in the tit family Paridae. It is widespread and common throughout Europe, the Middle East, Central Asia and as far east as the Amur River. It also occurs in parts of North Africa where it is generally resident in any sort of woodland."
     de: "Die Kohlmeise ist eine Vogelart aus der Familie der Meisen (Paridae). Sie ist die größte und am weitesten verbreitete Meisenart in Europa. Darüber hinaus erstreckt sich ihr Verbreitungsgebiet über den Nahen Osten und durch die gemäßigte Zone Asiens bis nach Fernost."
+    sv: "Talgoxe är en fågel inom ordningen tättingar och familjen mesar. Den är vanlig i hela Europa, västra, centrala och norra Asien och delar av Nordafrika och förekommer i alla sorters skogslandskap. Den är vanligen stannfågel och de flesta talgoxar flyttar inte förutom under extremt hårda vintrar."
   description_source:
     en: "https://en.wikipedia.org/wiki/Great_tit"
     de: "https://de.wikipedia.org/wiki/Kohlmeise"
+    sv: "https://sv.wikipedia.org/wiki/Talgoxe"
 - slug: european-herring-gull
   number: "108"
   scientific: Larus argentatus
@@ -3839,9 +4047,11 @@ species:
   description:
     en: "The European herring gull or simply herring gull is a large gull, up to 66 cm (26 in) long. It breeds throughout the northern and western coasts of Europe. Some European herring gulls, especially those resident in colder areas, migrate farther south in winter, but many are permanent residents, such as in Ireland, Britain, Iceland, or on the North Sea shores."
     de: "Die Silbermöwe ist eine Vogelart innerhalb der Möwen (Larinae) und die häufigste Großmöwe in Nord- und Westeuropa. Ihr Verbreitungsgebiet erstreckt sich vom Weißen Meer über die Küsten Fennoskandiens, der Ostsee, der Nordsee und des Ärmelkanals sowie über große Teile der Atlantikküste Frankreichs und der Britischen Inseln. Außerdem kommt die Art auf Island vor."
+    sv: "Gråtrut är en havsfågel inom familjen måsfåglar (Laridae). Den har vit undersida, vitt huvud, grå vingovansida, gul näbb med en röd fläck och vanligen skära ben. Fågeln förekommer i norra och västra Europa, från Barents hav till Biscayabukten i Frankrike."
   description_source:
     en: "https://en.wikipedia.org/wiki/European_herring_gull"
     de: "https://de.wikipedia.org/wiki/Silberm%C3%B6we"
+    sv: "https://sv.wikipedia.org/wiki/Gr%C3%A5trut"
 - slug: yellow-legged-gull
   number: "109"
   scientific: Larus michahellis
@@ -3871,9 +4081,11 @@ species:
   description:
     en: "The yellow-legged gull or western yellow-legged gull is a large gull found in Europe, the Middle East and North Africa, which has only recently achieved wide recognition as a distinct species. It was formerly treated as a subspecies of either the Caspian gull L. cachinnans, or more broadly as a subspecies of the herring gull L."
     de: "Die Mittelmeermöwe ist eine Vogelart innerhalb der Möwen (Larinae). Sie brütet in Makaronesien, an der Biskaya, auf der Iberischen Halbinsel, im Mittelmeer- und im Schwarzmeerraum. Zerstreute Vorkommen gibt es auch im nördlichen West- und Mitteleuropa."
+    sv: "Medelhavstrut är en stor trut inom familjen Laridae, som förekommer i Europa, Nordafrika och Mellanöstern. Utanför häckningstid förekommer den över ett större område som sträcker sig från norra Mauretanien i söder till norra Danmark och södra Sverige i norr. Den ingår i gråtrutskomplexet och klassificerades tidigare som underart till gråtruten."
   description_source:
     en: "https://en.wikipedia.org/wiki/Yellow-legged_gull"
     de: "https://de.wikipedia.org/wiki/Mittelmeerm%C3%B6we"
+    sv: "https://sv.wikipedia.org/wiki/Medelhavstrut"
 - slug: hooded-crow
   number: "110"
   scientific: Corvus cornix
@@ -3907,9 +4119,11 @@ species:
   description:
     en: "The hooded crow, also colloquially called just hoodie, is a Eurasian bird subspecies of the carrion crow in the genus Corvus. Widely distributed, it is found across Northern, Eastern, and Southeastern Europe, as well as parts of the Middle East. It is an ashy-grey bird with black head, throat, wings, tail, and thigh feathers, as well as a black bill, eyes, and feet."
     de: "Die Nebelkrähe ist eine eurasische Vogelart der Gattung Corvus und gehört zur Familie der Rabenvögel (Corvidae). Sie ist weit verbreitet und kommt in Nord-, Mittel-, Ost- und Südosteuropa sowie in Teilen des Nahen Ostens vor. Die Nebelkrähe ist ein aschgrauer Vogel mit schwarzem Kopf, Hals, Flügeln, Schwanz und Oberschenkelfedern sowie einem schwarzen Schnabel, Augen und Füßen."
+    sv: "Gråkråka är en fågel i familjen kråkfåglar. Den och svartkråka har tidvis behandlats som egna arter. Sedan juni 2025 kategoriserar dock BirdLife Sverige dem dock som en och samma art, kråka."
   description_source:
     en: "https://en.wikipedia.org/wiki/Hooded_crow"
     de: "https://de.wikipedia.org/wiki/Nebelkr%C3%A4he"
+    sv: "https://sv.wikipedia.org/wiki/Gr%C3%A5kr%C3%A5ka"
 - slug: carrion-crow
   number: "111"
   scientific: Corvus corone
@@ -3939,9 +4153,11 @@ species:
   description:
     en: "The carrion crow is a passerine bird of the family Corvidae, native to western Europe and the eastern Palearctic. Along with the hooded crow, the carrion crow occupies a similar ecological niche in Eurasia to the American crow in North America. The two species look very similar to one another, but can be differentiated by size, as the carrion crow is larger and of a stockier build compared to the American crow."
     de: "Die Rabenkrähe ist eine Vogelart aus der Familie der Rabenvögel (Corvidae). Sie ist eng mit der grau-schwarzen Nebelkrähe verwandt, mit der sie sich auch verpaart. Beide Arten wurden früher als zwei Unterarten oder Morphen derselben Art aufgefasst, die traditionell als Aaskrähe bezeichnet wurde – eine Auffassung, die von einigen Autoren weiterhin vertreten wird."
+    sv: "Kråka är en fågel i familjen kråkfåglar. Den är en vanligt förekommande fågel i Europa, Nordafrika och Asien österut till Japan. Världspopulationen anses vara livskraftig."
   description_source:
     en: "https://en.wikipedia.org/wiki/Carrion_crow"
     de: "https://de.wikipedia.org/wiki/Rabenkr%C3%A4he"
+    sv: "https://sv.wikipedia.org/wiki/Kr%C3%A5ka"
 - slug: rook
   number: "112"
   scientific: Corvus frugilegus
@@ -3975,9 +4191,11 @@ species:
   description:
     en: "The rook is a member of the family Corvidae in the passerine order of birds. It is found in the Palearctic, its range extending from Scandinavia and western Europe to eastern Siberia. It is a large, gregarious, black-feathered bird, distinguished from similar species by the whitish featherless area on the face."
     de: "Die Saatkrähe ist eine der vier europäischen Arten der Gattung Corvus aus der Familie der Rabenvögel (Corvidae)."
+    sv: "Råka är en fågel som tillhör kråksläktet inom familjen kråkfåglar. Råkan förekommer i stora delar av palearktiska regionen och har introducerats på Nya Zeeland. Den utmärks av sin långa, spetsiga och något nedåtböjda näbb med det ljusa nakna hudpartiet vid näbbasen och sin metalliskt glänsande svarta fjäderdräkt."
   description_source:
     en: "https://en.wikipedia.org/wiki/Rook_(bird)"
     de: "https://de.wikipedia.org/wiki/Saatkr%C3%A4he"
+    sv: "https://sv.wikipedia.org/wiki/R%C3%A5ka"
 - slug: western-jackdaw
   number: "113"
   scientific: Coloeus monedula
@@ -4011,9 +4229,11 @@ species:
   description:
     en: "The western jackdaw, also known as the Eurasian jackdaw, the European jackdaw, or simply the jackdaw, is a passerine bird in the crow family. It is found across Europe, western Asia and western North Africa; it is mostly resident, although northern and eastern populations migrate south in the winter. Four subspecies are recognised, which differ mainly in the darker or paler greyscale of the plumage on the head and nape."
     de: "Die Dohle, auch Turmkrähe genannt, ist eine Singvogelart aus der Familie der Rabenvögel (Corvidae). Sie ist eine von zwei Arten der Untergattung der Dohlen. Im Vergleich zu den eng verwandten Arten der Raben und Krähen (Corvus) ist sie ein eher kleiner Vertreter der Rabenvögel."
+    sv: "Kaja är en fågel i familjen kråkfåglar som förekommer över Europa, västra Asien och i Nordafrika. Den är huvudsakligen en stannfågel, men en del populationer i norr och öster flyttar söderut på vintern. Fyra underarter har identifierats."
   description_source:
     en: "https://en.wikipedia.org/wiki/Western_jackdaw"
     de: "https://de.wikipedia.org/wiki/Dohle"
+    sv: "https://sv.wikipedia.org/wiki/Kaja"
 - slug: eurasian-magpie
   number: "114"
   scientific: Pica pica
@@ -4047,9 +4267,11 @@ species:
   description:
     en: "The Eurasian magpie or common magpie is a resident breeding bird throughout the northern part of the Eurasian continent. It is one of several birds in the crow family (corvids) that are designated as magpies, and it belongs to the Holarctic radiation of \"monochrome\" magpies. In Europe, the term \"magpie\" is used by English speakers as a synonym for the Eurasian magpie; the only other species of magpie in Europe is the Iberian magpie, which is restricted to the Iberian Peninsula."
     de: "Die Elster ist eine Vogelart aus der Familie der Rabenvögel. Sie besiedelt weite Teile Europas und Asiens sowie das nördliche Nordafrika. In Europa ist sie vor allem im Siedlungsraum häufig."
+    sv: "Skata är en fågel inom släktet skator och familjen kråkfåglar, som förekommer i stora delar av Europa samt västra och norra Asien. I Europa är skatan vanlig, särskilt i bebodda områden, och med sin karakteristiska svartvita fjäderdräkt och påfallande långa stjärt är den svår att förväxla med andra arter. Skatan är ofta starkt knuten till mänsklig bebyggelse, en så kallad kulturföljare, och uppträder både i städer och på landsbygden."
   description_source:
     en: "https://en.wikipedia.org/wiki/Eurasian_magpie"
     de: "https://de.wikipedia.org/wiki/Elster"
+    sv: "https://sv.wikipedia.org/wiki/Skata"
 - slug: alpine-chough
   number: "115"
   scientific: Pyrrhocorax graculus
@@ -4083,9 +4305,11 @@ species:
   description:
     en: "The Alpine chough or yellow-billed chough is a bird in the crow family, one of only two species in the genus Pyrrhocorax. Its two subspecies breed in high mountains from Spain eastwards through southern Europe and North Africa to Central Asia and Nepal, and it may nest at a higher altitude than any other bird. Its eggs have adaptations to the thin atmosphere that improve oxygen take-up and reduce water loss."
     de: "Die Alpendohle ist eine Vogelart aus der Familie der Rabenvögel (Corvidae). Der 34 bis 38 cm große Vogel ist ein mittelgroßer Vertreter seiner Familie und zeichnet sich durch schwarzes Gefieder, rote Beine und einen gelben Schnabel aus. Im Feld ist die Art daneben auch durch ihren akrobatischen Segelflug und ihre pfeifenden Rufe zu erkennen."
+    sv: "Alpkaja är en bergslevande fågel i familjen kråkfåglar. Den förekommer på europeiska kontinenten och österut till Indien. IUCN kategoriserar den som livskraftig."
   description_source:
     en: "https://en.wikipedia.org/wiki/Alpine_chough"
     de: "https://de.wikipedia.org/wiki/Alpendohle"
+    sv: "https://sv.wikipedia.org/wiki/Alpkaja"
 - slug: great-skua
   number: "116"
   scientific: Stercorarius skua
@@ -4119,9 +4343,11 @@ species:
   description:
     en: "The great skua, sometimes known by the name bonxie in Britain, is a large seabird in the skua family Stercorariidae. It is roughly the size of a herring gull. It mainly eats fish caught at the sea surface or taken from other birds."
     de: "Die Große Raubmöwe, oft kurz, aber mehrdeutig Skua genannt, ist ein Meeresvogel aus der Familie Stercorariidae."
+    sv: "Storlabb är en fågel inom familjen labbar som förekommer i norra Atlanten."
   description_source:
     en: "https://en.wikipedia.org/wiki/Great_skua"
     de: "https://de.wikipedia.org/wiki/Gro%C3%9Fe_Raubm%C3%B6we"
+    sv: "https://sv.wikipedia.org/wiki/Storlabb"
 - slug: common-ringed-plover
   number: "117"
   scientific: Charadrius hiaticula
@@ -4155,9 +4381,11 @@ species:
   description:
     en: "The common ringed plover, great ringed plover or ringed plover is a species of bird in the family Charadriidae. It breeds across much of northern Eurasia, as well as Greenland."
     de: "Der Sandregenpfeifer, auch Halsbandregenpfeifer genannt, ist eine Vogelart aus der Familie der Regenpfeifer (Charadriidae). Er ist ein Brutvogel im Norden Europas, Asiens, Süd- und Nordamerikas. In Mitteleuropa brütet er im Küstengebiet der Nord- und Ostsee."
+    sv: "Större strandpipare är en vadarfågel i familjen pipare. Den har en vid utbredning i norra Europa och Asien samt i nordöstra Kanada. Vintertid flyttar den till södra Europa, Afrika samt östra, södra och sydvästra Asien."
   description_source:
     en: "https://en.wikipedia.org/wiki/Common_ringed_plover"
     de: "https://de.wikipedia.org/wiki/Sandregenpfeifer"
+    sv: "https://sv.wikipedia.org/wiki/St%C3%B6rre_strandpipare"
 - slug: grey-heron
   number: "118"
   scientific: Ardea cinerea
@@ -4191,9 +4419,11 @@ species:
   description:
     en: "The grey heron is a long-legged wading bird of the heron family, Ardeidae, native throughout temperate Europe and Asia, and also parts of Africa. It is resident in much of its range, but some populations from the more northern parts migrate southwards in autumn. A bird of wetland areas, it can be seen around lakes, rivers, ponds, marshes and on the sea coast."
     de: "Der Graureiher, auch Fischreiher genannt, ist eine Vogelart aus der Ordnung Pelecaniformes. Er ist in Eurasien und Afrika weit verbreitet und häufig. Weltweit werden vier Unterarten unterschieden."
+    sv: "Gråhäger, tidigare kallad enbart häger, tillhör familjen hägrar inom ordningen pelikanfåglar. Den är vida spridd i Europa, Asien och Afrika och ofta den i norra Europa enda förekommande hägerarten."
   description_source:
     en: "https://en.wikipedia.org/wiki/Grey_heron"
     de: "https://de.wikipedia.org/wiki/Graureiher"
+    sv: "https://sv.wikipedia.org/wiki/Gr%C3%A5h%C3%A4ger"
 - slug: common-house-martin
   number: "119"
   scientific: Delichon urbicum
@@ -4227,9 +4457,11 @@ species:
   description:
     en: "The western house martin, sometimes called the common house martin, northern house martin or, particularly in Europe, just house martin, is a migratory passerine bird of the swallow family which breeds in Europe, north Africa and west-central Asia; and winters in sub-Saharan Africa and southwestern Asia. It feeds on insects which are caught in flight, and it migrates to climates where flying insects are plentiful."
     de: "Die Mehlschwalbe, auch Stadtschwalbe und Kirchschwalbe genannt, ist eine Vogelart aus der Familie der Schwalben (Hirundinidae). Sie ist neben Ufer-, Rauch- und Felsenschwalbe die vierte Art dieser Familie, die in Mitteleuropa als Brutvogel vorkommt. Sie ist besonders gut durch den weißen Bürzel zu identifizieren, den keine andere europäische Schwalbenart zeigt."
+    sv: "Hussvala är en fågel som tillhör familjen svalor. Den är en flyttfågel som häckar i Europa, Nordafrika och i de tempererade delarna av Asien och övervintrar i subsahariska Afrika och tropiska Asien. Hussvalan livnär sig av insekter som den fångar i flykten, och vintertid flyttar den till klimat där flygande insekter finns i rikliga mängder."
   description_source:
     en: "https://en.wikipedia.org/wiki/Western_house_martin"
     de: "https://de.wikipedia.org/wiki/Mehlschwalbe"
+    sv: "https://sv.wikipedia.org/wiki/Hussvala"
 - slug: barn-swallow
   number: "120"
   scientific: Hirundo rustica
@@ -4263,9 +4495,11 @@ species:
   description:
     en: "The barn swallow is the most widespread species of swallow in the world, occurring on all continents, with vagrants reported even in Antarctica. It is a distinctive passerine bird with blue upperparts and a long, deeply forked tail. In Anglophone Europe, it is just called the swallow; in northern Europe, it is the only member of family Hirundinidae called a \"swallow\" rather than a \"martin\"."
     de: "Die Rauchschwalbe, auch Hausschwalbe und Gabelschwalbe genannt, ist eine Vogelart aus der Familie der Schwalben (Hirundinidae). Sie ist ein Zugvogel."
+    sv: "Ladusvala är den mest spridda fågelarten i familjen svalor. Ladusvalan är en tätting med ett distinkt utseende med blå ovansida, lång, djupt delad stjärt och böjda spetsiga vingar. Den förekommer i Europa, Asien, Afrika och Amerika."
   description_source:
     en: "https://en.wikipedia.org/wiki/Barn_swallow"
     de: "https://de.wikipedia.org/wiki/Rauchschwalbe"
+    sv: "https://sv.wikipedia.org/wiki/Ladusvala"
 - slug: great-spotted-woodpecker
   number: "121"
   scientific: Dendrocopos major
@@ -4295,9 +4529,11 @@ species:
   description:
     en: "The great spotted woodpecker is a medium-sized woodpecker with pied black and white plumage and a red patch on the lower belly. Males and young birds also have red markings on the neck or head. This species is found across the Palearctic including parts of North Africa."
     de: "Der Buntspecht ist eine Vogelart aus der Familie der Spechte (Picidae). Buntspechte besiedeln große Teile des nördlichen Eurasiens sowie Nordafrika und bewohnen Wälder fast jeder Art sowie Parks und baumreiche Gärten. Die Nahrung wird in allen Strata des Waldes gesucht, jedoch vor allem in den Baumkronen."
+    sv: "Större hackspett är en fågelart inom familjen hackspettar (Picidae). Den förekommer i Europa, norra Afrika och norra Asien. Merparten av världspopulationen är stannfåglar, förutom de som häckar i den kallaste nordligaste delarna av utbredningsområdet."
   description_source:
     en: "https://en.wikipedia.org/wiki/Great_spotted_woodpecker"
     de: "https://de.wikipedia.org/wiki/Buntspecht"
+    sv: "https://sv.wikipedia.org/wiki/St%C3%B6rre_hackspett"
 - slug: house-sparrow
   number: "122"
   scientific: Passer domesticus
@@ -4327,9 +4563,11 @@ species:
   description:
     en: "The house sparrow is a bird of the sparrow family Passeridae, found in most parts of the world. It is a small bird that has a typical length of 16 cm (6.3 in) and a mass of 24–39.5 g (0.85–1.39 oz). Females and young birds are coloured pale brown and grey, and males have brighter black, white, and brown markings."
     de: "Der Haussperling – auch Spatz oder Hausspatz genannt – ist eine Vogelart aus der Familie der Sperlinge (Passeridae) und einer der bekanntesten und am weitesten verbreiteten Singvögel. Der Spatz hat sich vor über 10.000 Jahren als Kulturfolger dem Menschen angeschlossen. Nach zahlreichen absichtlichen oder versehentlichen Einbürgerungen ist er mit Ausnahme weniger Gebiete fast überall anzutreffen, wo Menschen sich das ganze Jahr aufhalten."
+    sv: "Gråsparv är en fågel som tillhör familjen sparvfinkar. Gråsparven är spridd över stora delar av Europa och Asien, men har även av människan introducerats till Amerika, Afrika och Australien och är idag en av världens mest spridda fågelarter. Gråsparven är en kulturföljare och har levt nära människor i över 10 000 år."
   description_source:
     en: "https://en.wikipedia.org/wiki/House_sparrow"
     de: "https://de.wikipedia.org/wiki/Haussperling"
+    sv: "https://sv.wikipedia.org/wiki/Gr%C3%A5sparv"
 - slug: eurasian-tree-sparrow
   number: "123"
   scientific: Passer montanus
@@ -4363,9 +4601,11 @@ species:
   description:
     en: "The tree sparrow is a passerine bird in the sparrow family with a rich chestnut crown and nape and a black patch on each pure white cheek. The sexes have similar plumage, and young birds are duller versions of the adult. This sparrow breeds across much of temperate Eurasia and Southeast Asia and has been introduced elsewhere, including the United States, where it is known as the Eurasian tree sparrow or German sparrow to differentiate it from the native American tree sparrow."
     de: "Der Feldsperling oder Feldspatz ist eine in Eurasien weit verbreitete Vogelart in der Familie der Sperlinge (Passeridae). Er ist etwas kleiner als der Haussperling und im Westen der Paläarktis weniger an den Menschen angepasst und deutlich scheuer."
+    sv: "Pilfink är en fågel som tillhör familjen sparvfinkar, liksom gråsparven som den är ganska lik och ibland förväxlas med. Pilfinken har kastanjefärgad hjässa och nacke, och en svart fläck på den vita kinden. Könen är lika till utseendet medan juvenil dräkt är en blekare version av den adulta."
   description_source:
     en: "https://en.wikipedia.org/wiki/Eurasian_tree_sparrow"
     de: "https://de.wikipedia.org/wiki/Feldsperling"
+    sv: "https://sv.wikipedia.org/wiki/Pilfink"
 - slug: common-starling
   number: "124"
   scientific: Sturnus vulgaris
@@ -4399,9 +4639,11 @@ species:
   description:
     en: "The common starling, also known simply as the starling in Great Britain and Ireland, and as the European starling in North America, is a medium-sized passerine bird in the starling family, Sturnidae. It is about 20 cm (8 in) long and has glossy black plumage with a metallic sheen, which is speckled with white at some times of the year. The legs are pink and the bill is black in winter and yellow in summer; young birds have browner plumage than the adults."
     de: "Der Star, auch als Gemeiner Star bezeichnet, ist der in Eurasien am weitesten verbreitete und häufigste Vertreter der Familie der Stare (Sturnidae). Durch zahlreiche Einbürgerungen auf anderen Kontinenten ist der Star heute einer der häufigsten Vögel der Welt. Im Niederdeutschen werden Stare Spreen genannt."
+    sv: "Stare är i Europa den vanligaste och mest utbredda företrädaren för familjen starar (Sturnidae). För en ovan betraktare kan den förväxlas med koltrasten, eftersom denna är en annan vanlig gulnäbbad mörk fågel som ses öppet på gräsmattor och inne i samhällen och städer. Staren är dock mindre, har spetsiga vingar och i sommardräkt en metalliskt blänkande fjäderdräkt."
   description_source:
     en: "https://en.wikipedia.org/wiki/Common_starling"
     de: "https://de.wikipedia.org/wiki/Star_(Art)"
+    sv: "https://sv.wikipedia.org/wiki/Stare"
 - slug: white-wagtail
   number: "125"
   scientific: Motacilla alba
@@ -4435,9 +4677,11 @@ species:
   description:
     en: "The white wagtail is a small passerine bird in the family Motacillidae, which also includes pipits and longclaws. The species breeds in the Palearctic zone in most of Europe and Asia and parts of North Africa; it also has a toehold in western Alaska as a scarce breeder. It is resident in the mildest parts of its range, but otherwise migrates to Africa."
     de: "Die Bachstelze ist eine Singvogelart aus der Familie der Stelzen und Pieper. Sie fällt durch ihr kontrastreiches, schwarz-weiß-graues Gefieder und den stelzentypischen Wippschwanz auf. Der charakteristische Ruf ist ein hohes, metallisches dschiwid."
+    sv: "Sädesärla är en liten, slank, svartvit ärla med lång stjärt som den ofta vickar på. Den häckar i större delen av Europa och Asien, delar av norra Afrika samt i Alaska. Den är en stannfågel i de mildaste områdena av utbredningsområdet, men är i övrigt en flyttfågel som övervintrar i Afrika."
   description_source:
     en: "https://en.wikipedia.org/wiki/White_wagtail"
     de: "https://de.wikipedia.org/wiki/Bachstelze"
+    sv: "https://sv.wikipedia.org/wiki/S%C3%A4des%C3%A4rla"
 - slug: common-wood-pigeon
   number: "126"
   scientific: Columba palumbus
@@ -4471,9 +4715,11 @@ species:
   description:
     en: "The common wood pigeon, also known simply as the wood pigeon, is a large pigeon native to the western Palearctic. It belongs to the genus Columba, which includes closely related species such as the rock dove. It has a flexible diet, feeding mainly on plant material, including cereals, and is therefore considered an agricultural pest."
     de: "Die Ringeltaube ist eine Vogelart aus der Familie der Tauben (Columbidae). Sie ist die größte Taubenart Mitteleuropas und besiedelt weite Teile der Paläarktis von Nordafrika, Portugal und Irland nach Osten bis Ostsibirien und Kaschmir. Auffällige Merkmale sind die weißen Flügelbänder und der weiße Halsstreifen."
+    sv: "Ringduva är den största och mest utspridda duvarten i Europa. Ringduvan förekommer i de flesta typer av skog och har på senare år förflyttat sig till mänsklig bebyggelse, såsom parker och trädgårdar."
   description_source:
     en: "https://en.wikipedia.org/wiki/Common_wood_pigeon"
     de: "https://de.wikipedia.org/wiki/Ringeltaube"
+    sv: "https://sv.wikipedia.org/wiki/Ringduva"
 - slug: european-turtle-dove
   number: "127"
   scientific: Streptopelia turtur
@@ -4507,9 +4753,11 @@ species:
   description:
     en: "The European turtle dove is a threatened or vulnerable member of the bird family Columbidae, the doves and pigeons. It breeds over a wide area of the south western Palearctic including north Africa but migrates to northern sub-Saharan Africa to winter."
     de: "Die Turteltaube ist eine Vogelart aus der Familie der Tauben. Das Verbreitungsgebiet umfasst weite Teile der westlichen und zentralen Paläarktis und reicht vom nördlichen Afrika, der iberischen Halbinsel und Großbritannien nach Osten über den Nahen und Mittleren Osten bis Nordwestchina und in die Mongolei. Im Mittelmeerraum ist die Turteltaube besonders häufig."
+    sv: "Turturduva är en fågel som tillhör familjen duvor. Den är i dagsläget hotad och minskar kraftigt i antal. I kulturen är turturduvan en omtalad symbol för trofast kärlek."
   description_source:
     en: "https://en.wikipedia.org/wiki/European_turtle_dove"
     de: "https://de.wikipedia.org/wiki/Turteltaube"
+    sv: "https://sv.wikipedia.org/wiki/Turturduva"
 - slug: white-throated-dipper
   number: "128"
   scientific: Cinclus cinclus
@@ -4543,9 +4791,11 @@ species:
   description:
     en: "The white-throated dipper, also known as the European dipper or just dipper, is an aquatic, passerine bird found in Europe, the Middle East, Central Asia, and the Indian subcontinent. The species is divided into several subspecies, based primarily on colour differences, particularly of the pectoral band."
     de: "Die Wasseramsel oder Eurasische Wasseramsel ist die einzige auch in Mitteleuropa vorkommende Vertreterin der Familie der Wasseramseln (Cinclidae). Der etwa starengroße, rundlich wirkende Singvogel ist eng an das Leben entlang schnellfließender, klarer Gewässer gebunden. Dort ernährt sich die Art vornehmlich von Wasserinsekten, die sie vor allem tauchend erbeutet."
+    sv: "Strömstare är en fågel i familjen strömstarar. Liksom övriga medlemmar av familjen påträffas den vid rinnande vatten i anslutning till forsar och fall. Strömstare förekommer i stora delar av Europa, där den är den tätting som både kan simma och dyka, men förekommer även i bergstrakter i västra och centrala Asien."
   description_source:
     en: "https://en.wikipedia.org/wiki/White-throated_dipper"
     de: "https://de.wikipedia.org/wiki/Wasseramsel"
+    sv: "https://sv.wikipedia.org/wiki/Str%C3%B6mstare"
 - slug: eurasian-wren
   number: "129"
   scientific: Troglodytes troglodytes
@@ -4579,9 +4829,11 @@ species:
   description:
     en: "The Eurasian wren or northern wren is a very small insectivorous bird and the only member of the wren family found in the Old World, specifically in Eurasia and Africa (Maghreb). In Anglophone Europe, it is commonly known simply as the wren. It has a very short tail which is often held erect, a short neck and a relatively long thin bill."
     de: "Der Zaunkönig ist die einzige in Eurasien vorkommende Art aus der Vogelfamilie der Zaunkönige (Troglodytidae). Er ist nach Winter- und Sommergoldhähnchen der drittkleinste Vogel Europas. Lange Zeit wurde er Schneekönig genannt, da er auch im Winter lebhaft singt."
+    sv: "Gärdsmyg är en liten brun tätting som tillhör familjen gärdsmygar. Fågeln är kort och med upprättstående stjärt, och den livnär sig mestadels på insekter."
   description_source:
     en: "https://en.wikipedia.org/wiki/Eurasian_wren"
     de: "https://de.wikipedia.org/wiki/Zaunk%C3%B6nig"
+    sv: "https://sv.wikipedia.org/wiki/G%C3%A4rdsmyg"
 - slug: alpaca
   number: "130"
   scientific: Vicugna pacos
@@ -4635,9 +4887,11 @@ species:
   description:
     en: "Sheep or domestic sheep are a domesticated ruminant mammal typically kept as livestock. Although the term sheep can apply to other species in the genus Ovis, in everyday usage it almost always refers to domesticated sheep. Like all ruminants, sheep are members of the order Artiodactyla, the even-toed ungulates."
     de: "Das Hausschaf, kurz auch Schaf, ist die domestizierte Form des Mufflons. Es spielt in der Geschichte der Menschheit eine bedeutende Rolle als Milch-, Lammfleisch- beziehungsweise Hammelfleisch-, Woll- und Schaffelllieferant."
+    sv: "Tamfåret är en domesticerad variant av får. Det är fortfarande omstritt om den ska räknas som egen art Ovis aries eller som underart till Ovis orientalis."
   description_source:
     en: "https://en.wikipedia.org/wiki/Sheep"
     de: "https://de.wikipedia.org/wiki/Hausschaf"
+    sv: "https://sv.wikipedia.org/wiki/Tamf%C3%A5r"
 - slug: cattle
   number: "132"
   scientific: Bos taurus
@@ -4664,9 +4918,11 @@ species:
   description:
     en: "Cattle are large, domesticated, bovid ungulates widely kept as livestock. They are prominent modern members of the subfamily Bovinae and the most widespread species of the genus Bos."
     de: "Das Hausrind oder schlicht Rind ist die domestizierte Form des eurasischen Auerochsen. Es wurde zunächst wegen seines Fleisches, später auch wegen seiner Milch und Leistung als Zugtier domestiziert. Seitdem hat der Mensch eine Anzahl unterschiedlicher Rinderrassen gezüchtet, in die teilweise auch Wildrinder eingekreuzt wurden."
+    sv: "Nötkreatur, även nöt, nötdjur, nötboskap, är domesticerade klövdjur av familjen oxdjur, det vill säga vanliga kor, tjurar, kvigor och kalvar. Dessa tamdjur används mest för mjölk- och köttproduktion, och som dragdjur."
   description_source:
     en: "https://en.wikipedia.org/wiki/Cattle"
     de: "https://de.wikipedia.org/wiki/Hausrind"
+    sv: "https://sv.wikipedia.org/wiki/N%C3%B6tkreatur"
 - slug: domestic-goat
   number: "133"
   scientific: Capra hircus
@@ -4693,9 +4949,11 @@ species:
   description:
     en: "The goat or domestic goat is a species of goat-antelope that is mostly kept as livestock. It was domesticated from the wild goat of Southwest Asia and Eastern Europe. The goat is a member of the family Bovidae, meaning it is closely related to the sheep."
     de: "Die Hausziege ist nach dem Hund und zusammen mit dem Schaf vermutlich eines der ersten wirtschaftlich genutzten Haustiere. Hausziegen gehören zur Gattung der Ziegen in der Familie der Hornträger."
+    sv: "Tamget är ett däggdjur som ingår i släktet Capra, och familjen slidhornsdjur. Den beskrevs av Linné 1758 som arten Capra hircus. Idag brukar den definieras som en underart till vildget, men flera auktoriteter definierar den fortfarande som art."
   description_source:
     en: "https://en.wikipedia.org/wiki/Goat"
     de: "https://de.wikipedia.org/wiki/Hausziege"
+    sv: "https://sv.wikipedia.org/wiki/Tamget"
 - slug: domestic-cat
   number: "134"
   scientific: Felis catus
@@ -4722,9 +4980,11 @@ species:
   description:
     en: "The cat, also called domestic cat and house cat, is a small domesticated carnivorous mammal. It is a member of Felidae, the family of mammals in the order Carnivora also colloquially referred to as cats. It is an obligate carnivore, requiring a predominantly meat-based diet."
     de: "Die Hauskatze ist die Haustierform der Falbkatze. Sie zählt zu den beliebtesten Heimtieren. In der Rassekatzenzucht werden oft nur die Tiere als Hauskatze bezeichnet, die keiner anerkannten Rasse angehören."
+    sv: "Katt, även känd som tamkatt, är ett relativt litet, smygjagande rovdjur i familjen kattdjur och ett vanligt sällskapsdjur i stora delar av världen. Falbkatten, en underart till vildkatten, blev tidigt domesticerad av människan som nyttodjur för att hålla efter skadedjur eller för sällskap, både på landet och i stadsmiljö. Till havs har man sedan gammalt haft skeppskatter som skyddade mot gnagarangrepp på tåg och i proviantförråd."
   description_source:
     en: "https://en.wikipedia.org/wiki/Cat"
     de: "https://de.wikipedia.org/wiki/Hauskatze"
+    sv: "https://sv.wikipedia.org/wiki/Katt"
 - slug: domestic-dog
   number: "135"
   scientific: Canis familiaris
@@ -4751,16 +5011,20 @@ species:
   description:
     en: "The dog is a domesticated descendant of wolves. Also called the domestic dog, it was selectively bred during the Late Pleistocene by hunter-gatherers. Dogs and the modern gray wolf share a common ancestor."
     de: "Der Haushund ist ein Haustier und wird als Heim- und Nutztier gehalten. Seine wilde Stammform ist der Wolf, dem er als Unterart zugeordnet wird. Wann die Domestizierung stattfand, ist umstritten; wissenschaftliche Schätzungen variieren zwischen etwa 15.000 v. Chr."
+    sv: "Hund är en domesticerad underart av varg. Hundar finns av många olika raser, vilka framavlats av människan sedan hunden domesticerades. Idag bestäms dessa raser utifrån vissa rasstandarder som internationellt fastställs av Fédération Cynologique Internationale (FCI)."
   description_source:
     en: "https://en.wikipedia.org/wiki/Dog"
     de: "https://de.wikipedia.org/wiki/Haushund"
+    sv: "https://sv.wikipedia.org/wiki/Hund"
 - slug: chicken
   number: "136"
   scientific: Gallus gallus domesticus
   family: Phasianidae
   group: birds
   difficulty: easy
+  gbif_taxon_key: 9457155
   inat_taxon_id: 505478
+  wikidata_id: Q780
   height: "25–37 cm"
   height_measure: standing
   body_weight: "2–4 kg"
@@ -4778,13 +5042,18 @@ species:
   description:
     en: "The domesticated descendant of the red junglefowl and the most numerous bird on Earth. Kept worldwide for eggs and meat, with hundreds of breeds differing widely in size, colour and comb shape."
     de: "Der domestizierte Nachfahre des Bankivahuhns und der zahlreichste Vogel der Erde. Weltweit für Eier und Fleisch gehalten, mit Hunderten Rassen, die sich in Größe, Farbe und Kammform stark unterscheiden."
+    sv: "Tamhöna är en mycket vanlig typ av fjäderfä och den domesticerade varianten av i första hand röd djungelhöna. Tamhöns hålls för köttproduktion, äggproduktion, tuppfäktning eller som prydnad. En hane kallas för tupp, en hona för höna och en unge för kyckling."
+  description_source:
+    sv: "https://sv.wikipedia.org/wiki/Tamh%C3%B6na"
 - slug: domestic-duck
   number: "137"
   scientific: Anas platyrhynchos domesticus
   family: Anatidae
   group: birds
   difficulty: easy
+  gbif_taxon_key: 9577769
   inat_taxon_id: 236935
+  wikidata_id: Q742292
   body_weight: "1–4 kg"
   diet: omnivore
   lifespan: "8–12"
@@ -4800,6 +5069,9 @@ species:
   description:
     en: "The domesticated form of the mallard, kept on farms and ponds across the world. Most breeds are heavier and less able to fly than their wild ancestor, and white plumage is common."
     de: "Die domestizierte Form der Stockente, weltweit auf Höfen und Teichen gehalten. Die meisten Rassen sind schwerer und flugunfähiger als ihre wilde Stammform, häufig mit weißem Gefieder."
+    sv: "Ankor är den domesticerade formen av gräsänder. Ett undantag är den tama myskankan som härstammar från den vilda myskanden. Ankor föds upp för köttets eller äggens skull."
+  description_source:
+    sv: "https://sv.wikipedia.org/wiki/Anka"
 - slug: sand-lizard
   number: "138"
   scientific: Lacerta agilis
@@ -4827,9 +5099,11 @@ species:
   description:
     en: "The sand lizard is a lacertid lizard. There are several subspecies, including L. a. agilis, L. a. argus, and L. a. exigua."
     de: "Die Zauneidechse ist ein vor allem in Mittel- und Osteuropa sowie Vorderasien verbreitetes Reptil aus der Familie der Echten Eidechsen (Lacertidae)."
+    sv: "Sandödla är en äggläggande ödla av släktet halsbandsödlor (Lacerta), som föredrar öppna landskapstyper med lägre vegetation. Den förekommer i de tempererade delarna av palearktis, från mellersta och södra Europa, till Sibirien i öster och mellersta Sverige i norr. Det lever av små ryggradslösa djur som insekter."
   description_source:
     en: "https://en.wikipedia.org/wiki/Sand_lizard"
     de: "https://de.wikipedia.org/wiki/Zauneidechse"
+    sv: "https://sv.wikipedia.org/wiki/Sand%C3%B6dla"
 - slug: slow-worm
   number: "139"
   scientific: Anguis fragilis
@@ -4857,9 +5131,11 @@ species:
   description:
     en: "The common slow worm is a non-venomous species of legless lizard native to Europe. It is also called a deaf adder, blindworm, or regionally, a long-cripple, steelworm, and hazelworm."
     de: "Die Blindschleiche ist eine Echsenart innerhalb der Familie der Schleichen (Anguidae). In Mitteleuropa gehört sie zu den am häufigsten vorkommenden Reptilien. Mit ihrem beinlosen, langgestreckten Körper gleicht sie einer Schlange und wird auch oft für eine solche gehalten."
+    sv: "Kopparödla är en benlös ödla i familjen kopparödlor, som förekommer i Eurasien. Eftersom den saknar yttre extremiteter liknar den till utseendet en orm, och ett synonymt trivialnamn är därför kopparorm. Det senare är utbrett, men eftersom arten inte hör till underordningen ormar är den rekommenderade termen kopparödla i den svenska taxonomiska databasen Artdatabanken."
   description_source:
     en: "https://en.wikipedia.org/wiki/Common_slow_worm"
     de: "https://de.wikipedia.org/wiki/Blindschleiche"
+    sv: "https://sv.wikipedia.org/wiki/Koppar%C3%B6dla"
 - slug: roman-snail
   number: "140"
   scientific: Helix pomatia
@@ -4887,9 +5163,11 @@ species:
   description:
     en: "Helix pomatia, known as the Roman snail, Burgundy snail, or escargot, is a species of large, air-breathing stylommatophoran land snail native to Europe. It is characterized by a globular brown shell."
     de: "Die Weinbergschnecke ist eine gehäusetragende Landschnecke, die systematisch zu den Landlungenschnecken (Stylommatophora) und hier zur Familie der Helicidae gerechnet wird."
+    sv: "Vinbergssnäcka är ett blötdjur i klassen snäckor vars ursprungliga utbredning omfattar centrala och sydöstra Europa, men som människan, eftersom den är ätlig, har introducerat till många andra områden i Europa."
   description_source:
     en: "https://en.wikipedia.org/wiki/Helix_pomatia"
     de: "https://de.wikipedia.org/wiki/Weinbergschnecke"
+    sv: "https://sv.wikipedia.org/wiki/Vinbergssn%C3%A4cka"
 - slug: grove-snail
   number: "141"
   scientific: Cepaea nemoralis
@@ -4916,9 +5194,11 @@ species:
   description:
     en: "Cepaea nemoralis, the grove snail, brown-lipped snail or lemon snail, is a species of air-breathing land snail, a terrestrial pulmonate gastropod mollusc. Cepaea nemoralis is the type species of the genus Cepaea."
     de: "Die Hain-Bänderschnecke – auch Hain-Schnirkelschnecke oder Schwarzmündige Bänderschnecke genannt – gehört zur Familie der Schnirkelschnecken (Helicidae), die zur Ordnung der Lungenschnecken (Pulmonata) gerechnet wird und kann leicht mit der nah verwandten Garten-Bänderschnecke verwechselt werden."
+    sv: "Parksnäcka är en snäckart som först beskrevs av Carl von Linné 1758. Parksnäcka ingår i släktet Cepaea och familjen storsnäckor. IUCN kategoriserar arten globalt som livskraftig."
   description_source:
     en: "https://en.wikipedia.org/wiki/Cepaea_nemoralis"
     de: "https://de.wikipedia.org/wiki/Hain-B%C3%A4nderschnecke"
+    sv: "https://sv.wikipedia.org/wiki/Parksn%C3%A4cka"
 - slug: buff-tailed-bumblebee
   number: "142"
   scientific: Bombus terrestris
@@ -4945,9 +5225,11 @@ species:
   description:
     en: "Bombus terrestris, the buff-tailed bumblebee or large earth bumblebee, is one of the most numerous bumblebee species in Europe. It is one of the main species used in greenhouse pollination, and so can be found in many countries and areas where it is not native, such as Tasmania. Moreover, it is a eusocial insect with an overlap of generations, a division of labour, and cooperative brood care."
     de: "Die Dunkle Erdhummel ist eine der in Europa am häufigsten vorkommenden und auch größten Arten der Hummeln. Sie ist ein schwarzes Tier mit zwei gelben Querbinden und einer weißen Hinterleibspitze. Die begatteten Jungköniginnen der Dunklen Erdhummeln zählen zu den frühesten, die in einem Kalenderjahr beobachtet werden können."
+    sv: "Mörk jordhumla är en insekt i överfamiljen bin (Apoidea). Har tidigare kallats bara jordhumla."
   description_source:
     en: "https://en.wikipedia.org/wiki/Bombus_terrestris"
     de: "https://de.wikipedia.org/wiki/Dunkle_Erdhummel"
+    sv: "https://sv.wikipedia.org/wiki/M%C3%B6rk_jordhumla"
 - slug: common-carder-bee
   number: "143"
   scientific: Bombus pascuorum
@@ -4973,9 +5255,11 @@ species:
   description:
     en: "Bombus pascuorum, the common carder bee, is a species of bumblebee present in most of Europe in a wide variety of habitats such as meadows, pastures, waste ground, ditches and embankments, roads, and field margins, as well as gardens and parks in urban areas and forests and forest edges. It is similar in appearance to Bombus muscorum, and is replacing that species in northern Britain."
     de: "Die Ackerhummel ist eine Art der Hummeln (Bombus). Sie wird von der Feld-Kuckuckshummel Bombus (Psithyrus) campestris parasitiert. Die Art ist häufig und nicht gefährdet."
+    sv: "Åkerhumla är en insekt i överfamiljen bin (Apoidea)."
   description_source:
     en: "https://en.wikipedia.org/wiki/Bombus_pascuorum"
     de: "https://de.wikipedia.org/wiki/Ackerhummel"
+    sv: "https://sv.wikipedia.org/wiki/%C3%85kerhumla"
 - slug: poplar-hawk-moth
   number: "144"
   scientific: Laothoe populi
@@ -5001,9 +5285,11 @@ species:
   description:
     en: "The poplar hawkmoth is a moth of the family Sphingidae. The species was first described by Carl Linnaeus in his 1758 10th edition of Systema Naturae. It is found throughout the Palearctic region and the Near East and is one of the most common members of the family in the region."
     de: "Der Pappelschwärmer ist ein Schmetterling (Nachtfalter) aus der Familie der Schwärmer (Sphingidae)."
+    sv: "Poppelsvärmare är en stor fjäril i familjen svärmare (Sphingidae) och är en av de vanligaste svärmarna i Norden."
   description_source:
     en: "https://en.wikipedia.org/wiki/Poplar_hawkmoth"
     de: "https://de.wikipedia.org/wiki/Pappelschw%C3%A4rmer"
+    sv: "https://sv.wikipedia.org/wiki/Poppelsv%C3%A4rmare"
 - slug: privet-hawk-moth
   number: "145"
   scientific: Sphinx ligustri
@@ -5029,9 +5315,11 @@ species:
   description:
     en: "Sphinx ligustri, the privet hawk moth, is a moth found in most of the Palearctic realm. The species was first described by Carl Linnaeus in his 1758 10th edition of Systema Naturae."
     de: "Der Ligusterschwärmer ist ein Schmetterling (Nachtfalter) aus der Familie der Schwärmer (Sphingidae)."
+    sv: "Ligustersvärmare är en fjäril som beskrevs 1758 av Carl von Linné. Arten ingår i släktet Sphinx och familjen svärmare. Den är en av de största nattfjärilarna i Sverige."
   description_source:
     en: "https://en.wikipedia.org/wiki/Sphinx_ligustri"
     de: "https://de.wikipedia.org/wiki/Ligusterschw%C3%A4rmer"
+    sv: "https://sv.wikipedia.org/wiki/Ligustersv%C3%A4rmare"
 - slug: silver-washed-fritillary
   number: "146"
   scientific: Argynnis paphia
@@ -5057,9 +5345,11 @@ species:
   description:
     en: "The silver-washed fritillary is a common and variable butterfly found over much of the Palearctic realm – Algeria, Europe and across the Palearctic to Japan."
     de: "Der Kaisermantel oder Silberstrich ist ein Schmetterling (Tagfalter) der Gattung Argynnis aus der Familie der Edelfalter (Nymphalidae). Er ist der größte mitteleuropäische Perlmuttfalter. Das Artepitheton leitet sich von Paphia, einem Beinamen der Aphrodite aus der griechischen Mythologie ab."
+    sv: "Silverstreckad pärlemorfjäril är en art i släktet pärlemorfjärilar. De första uppträder i början av juli, och sedan flyger de fram till slutet av augusti. Den håller till på ängsmarker och i skogsgläntor och skogsbryn."
   description_source:
     en: "https://en.wikipedia.org/wiki/Silver-washed_fritillary"
     de: "https://de.wikipedia.org/wiki/Kaisermantel"
+    sv: "https://sv.wikipedia.org/wiki/Silverstreckad_p%C3%A4rlemorfj%C3%A4ril"
 - slug: beautiful-demoiselle
   number: "147"
   scientific: Calopteryx virgo
@@ -5086,9 +5376,11 @@ species:
   description:
     en: "The beautiful demoiselle is a species of damselfly belonging to the family Calopterygidae. The species has been found in Europe, North Africa, and Western Asia, and is often found by fast-flowing waters."
     de: "Die Blauflügel-Prachtlibelle ist eine Libellenart aus der Familie der Prachtlibellen (Calopterygidae) innerhalb der Kleinlibellen. Sie ist neben der Gebänderten Prachtlibelle die einzige Art der Prachtlibellen in Mitteleuropa und fällt vor allem durch die namengebenden blauen Flügel der Männchen auf."
+    sv: "Blå jungfruslända är en art i insektsordningen trollsländor som tillhör familjen jungfrusländor."
   description_source:
     en: "https://en.wikipedia.org/wiki/Beautiful_demoiselle"
     de: "https://de.wikipedia.org/wiki/Blaufl%C3%BCgel-Prachtlibelle"
+    sv: "https://sv.wikipedia.org/wiki/Bl%C3%A5_jungfrusl%C3%A4nda"
 - slug: barnacle-goose
   number: "148"
   scientific: Branta leucopsis
@@ -5116,9 +5408,11 @@ species:
   description:
     en: "The barnacle goose is a species of goose that belongs to the genus Branta of black geese, which contains species with extensive black in the plumage, distinguishing them from the grey Anser species. Despite its superficial similarity to the brant goose, genetic analysis has shown its closest relative is the cackling goose."
     de: "Die Weißwangengans oder Nonnengans ist eine Art der Gattung Meergänse (Branta) in der Familie der Entenvögel (Anatidae). Sie wird nicht in Unterarten, jedoch in drei getrennte Populationen aufgeteilt. Der Verein Jordsand hat diese Vogelart zum Seevogel des Jahres 2021 gekürt."
+    sv: "Vitkindad gås är en gås inom familjen änder. Den är en flyttfågel som främst häckar i Arktis men sedan 1970-talet även på vissa platser i Skandinavien. Vitkindad gås är en kompakt, ganska korthalsad gås med svart, vit och grå fjäderdräkt."
   description_source:
     en: "https://en.wikipedia.org/wiki/Barnacle_goose"
     de: "https://de.wikipedia.org/wiki/Wei%C3%9Fwangengans"
+    sv: "https://sv.wikipedia.org/wiki/Vitkindad_g%C3%A5s"
 - slug: black-stork
   number: "149"
   scientific: Ciconia nigra
@@ -5146,9 +5440,11 @@ species:
   description:
     en: "The black stork is a large bird in the stork family Ciconiidae. It was first described by Carl Linnaeus in the 10th edition of his Systema Naturae. Measuring on average 95 to 100 cm from beak tip to end of tail with a 145-to-155 cm (57-to-61 in) wingspan, the adult black stork has mainly black plumage, with white underparts, long red legs and a long pointed red beak."
     de: "Der Schwarzstorch ist neben dem Weißstorch die einzige in Europa brütende Art aus der Vogelfamilie der Störche (Ciconiidae). Das sehr große Verbreitungsgebiet reicht von der westeuropäischen Atlantikküste bis an den Pazifik in Ostasien. In Mitteleuropa ist er ein seltener, sehr verborgen lebender Brutvogel."
+    sv: "Svart stork är en fågel i familjen storkar med spridd men lokal utbredning i Europa, Asien och södra Afrika. Den är mer skogslevande och tillbakadragen än sin nära släkting vit stork. Arten förekommer huvudsakligen från östra Europa österut till Kina, men även lokalt på Iberiska halvön, i södra Afrika och på spridda lokaler i bland annat Frankrike och Belgien."
   description_source:
     en: "https://en.wikipedia.org/wiki/Black_stork"
     de: "https://de.wikipedia.org/wiki/Schwarzstorch"
+    sv: "https://sv.wikipedia.org/wiki/Svart_stork"
 - slug: fallow-deer
   number: "150"
   scientific: Dama dama
@@ -5176,9 +5472,11 @@ species:
   description:
     en: "The European fallow deer, also known as the common fallow deer or simply fallow deer, is a species of deer native to Eurasia. It is one of two living species of fallow deer alongside the Persian fallow deer. It is historically native to Turkey and possibly the Italian Peninsula, Balkan Peninsula, and the island of Rhodes near Anatolia."
     de: "Der Damhirsch, in der Jägersprache Damwild genannt, ist ein mittelgroßer Hirsch. Charakteristisch ist das Schaufelgeweih der männlichen Tiere und das häufig gefleckte Sommerfell. Damhirsche sind tag- und nachtaktiv und leben bevorzugt in offenen Landschaften, in denen sich kleine Waldpartien mit landwirtschaftlichen Flächen abwechseln."
+    sv: "Dovhjort är ett hjortdjur som är mindre än kronhjorten."
   description_source:
     en: "https://en.wikipedia.org/wiki/European_fallow_deer"
     de: "https://de.wikipedia.org/wiki/Damhirsch"
+    sv: "https://sv.wikipedia.org/wiki/Dovhjort"
 - slug: goosander
   number: "151"
   scientific: Mergus merganser
@@ -5206,9 +5504,11 @@ species:
   description:
     en: "The common merganser or goosander is a large sea duck of rivers and lakes in forested areas of Europe, Asia, and North America. The common merganser eats mainly fish. It nests in holes in trees."
     de: "Der Gänsesäger ist der größte Vertreter der Gattung der Säger aus der Familie der Entenvögel (Anatidae). Das Verbreitungsgebiet ist die Holarktis und umfasst weite Teile des nördlichen Eurasiens und Nordamerikas. Es werden drei Unterarten unterschieden."
+    sv: "Storskrake är en stor andfågel med vid utbredning i både Nordamerika, norra Europa och norra Asien. Fågeln hittas vid djupa och klara vatten där den skickligt dyker efter fisk. Den häckar i trädhål men även i holkar."
   description_source:
     en: "https://en.wikipedia.org/wiki/Common_merganser"
     de: "https://de.wikipedia.org/wiki/G%C3%A4nses%C3%A4ger"
+    sv: "https://sv.wikipedia.org/wiki/Storskrake"
 - slug: common-vole
   number: "152"
   scientific: Microtus arvalis
@@ -5236,6 +5536,40 @@ species:
   description:
     de: "Die Feldmaus ist ein Säugetier aus der Unterfamilie der Wühlmäuse (Arvicolinae). Sie ist als typischer r-Stratege eines der häufigsten Säugetiere Mitteleuropas und zeigt zyklische Massenvermehrungen."
     en: "A small grey-brown rodent of open grassland and farmland across Europe, with a blunt muzzle, short ears and a short tail. Numbers swing through multi-year boom and crash cycles, which makes it a staple prey of kestrels, owls and foxes."
+    sv: "Fältsorken är en art i underfamiljen sorkar. Den är mycket lik åkersorken."
   description_source:
     en: "https://en.wikipedia.org/wiki/Common_vole"
     de: "https://de.wikipedia.org/wiki/Feldmaus"
+    sv: "https://sv.wikipedia.org/wiki/F%C3%A4ltsork"
+- slug: osprey
+  number: "153"
+  scientific: Pandion haliaetus
+  family: Pandionidae
+  group: birds
+  difficulty: moderate
+  iucn: LC
+  gbif_taxon_key: 2480726
+  inat_taxon_id: 116999
+  wikidata_id: Q25332
+  height: "1.3–1.8 m"
+  height_measure: wingspan
+  body_weight: "1.2–2.0 kg"
+  diet: piscivore
+  lifespan: "7–10"
+  habitat:
+    en: Lakes, Rivers, Coasts
+    de: "Seen, Flüsse, Küsten"
+  reference:
+    commons_file: Balbuzard pecheur Lac de Tunis.jpg
+  names:
+    en: Osprey
+    de: Fischadler
+    sv: Fiskgjuse
+  description:
+    en: "The osprey, historically known as sea hawk, river hawk, and fish hawk, is a diurnal, fish-eating bird of prey with a cosmopolitan range. It is a large raptor, reaching more than 60 cm (24 in) in length and a wingspan of 180 cm (71 in). It is brown on the upperparts and predominantly greyish on the head and underparts."
+    de: "Der Fischadler ist eine Vogelart aus der Ordnung der Greifvögel (Accipitriformes). Aufgrund zahlreicher besonderer Merkmale wird die Art meist in eine eigene Familie Pandionidae gestellt, diese Familie und die Gattung Pandion sind damit monotypisch. Der Fischadler ist somit nicht näher verwandt mit den Echten Adlern und den anderen als „Adler“ bezeichneten großen Greifvögeln, die alle zur artenreichen Familie der Habichtartigen gehören."
+    sv: "Fiskgjuse är en hökfågel i familjen fiskgjusar (Pandionidae). Den lever uteslutande av fisk som den tar i vattenytan. Fiskgjusen är en av världens mest spridda hökfåglar."
+  description_source:
+    en: "https://en.wikipedia.org/wiki/Osprey"
+    de: "https://de.wikipedia.org/wiki/Fischadler"
+    sv: "https://sv.wikipedia.org/wiki/Fiskgjuse"

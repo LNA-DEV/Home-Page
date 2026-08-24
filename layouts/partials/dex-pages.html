@@ -23,9 +23,12 @@
 
   {{- /* Which language actually supplied the description, mirroring the fallback
          in dex-text.html, so the CC BY-SA credit on the page can link the exact
-         Wikipedia article the text was abridged from. A Swedish page shows the
-         English text, so it must credit the English article. Empty for the two
-         species with no wikidata_id, and the credit then renders unlinked. */ -}}
+         Wikipedia article the text was abridged from. Every language's text comes
+         from its own Wikipedia, so this is usually just $lang — but the handful of
+         species with no article in a language fall back to the English text, and
+         must then credit the English article rather than a page that did not
+         supply the words. Empty where the article could not be resolved at all,
+         and the credit then renders unlinked. */ -}}
   {{- $sourceLang := "" -}}
   {{- with $species.description -}}
     {{- if index . $lang -}}

@@ -206,12 +206,13 @@
            text with no attribution at all.
 
            `dex_source_url` is resolved in dex-pages.html against the language
-           that actually supplied the text, so a Swedish page (which falls back to
-           the English description) credits the English article. Where the article
-           could not be resolved, `source` stays a plain word instead of a link.
+           that actually supplied the text, so a page falling back to the English
+           description credits the English article rather than one that did not
+           supply the words. Where the article could not be resolved, `source`
+           stays a plain word instead of a link.
 
            NOTE: this assumes every description is Wikipedia-derived, which is
-           true for all 186 today. If hand-written prose is ever added, this needs
+           true for all 153 today. If hand-written prose is ever added, this needs
            a per-species opt-out rather than being unconditional. */ -}}
     {{- $sourceLabel := "Wikipedia" -}}
     {{- with $.Params.dex_source_url -}}

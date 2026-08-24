@@ -17,14 +17,15 @@ Per species, in this order:
               -> height (P2048), body_weight (P2067), lifespan (P2250),
                  diet (P1034), IUCN status (P141), reference photo (P18),
                  and the common names in en / de / sv
-  Wikipedia   REST summary for en and de
+  Wikipedia   REST summary for en, de and sv
               -> description, trimmed to the first two or three sentences
   iNaturalist taxa search on the scientific name
               -> inat_taxon_id, which scripts/dex-ranges.py needs
 
-Only *names* are taken for Swedish — the descriptions stay English/German,
-because a Wikidata label is a curated common name whereas a machine-picked
-Swedish paragraph would be unreviewed prose on the site.
+Every description is the summary of that language's *own* Wikipedia article,
+resolved through the Wikidata sitelink — nothing here is machine-translated. A
+language is only filled where a real sitelink exists, so a species with no
+sv.wikipedia article keeps falling back to the English text on the Swedish page.
 
 Standard library only. Be polite: there is a delay between requests, so a full
 run over ~190 species takes a few minutes.
@@ -87,9 +88,35 @@ FILLABLE = [
     "gbif_taxon_key", "family", "group", "inat_taxon_id", "wikidata_id",
     "height", "body_weight", "diet", "lifespan", "iucn",
     "names.de", "names.sv",
-    "description.en", "description.de",
+    "description.en", "description.de", "description.sv",
     "reference.commons_file",
 ]
+
+
+# Fields a human deliberately emptied. "Fill only what is empty" cannot tell a
+# never-populated field from a corrected one, so without this table every rerun
+# puts these straight back:
+#
+#   * A **domesticated form has no IUCN assessment.** The Red List assesses the
+#     wild ancestor; carrying its category over to the farm animal asserts
+#     something untrue on the species page.
+#   * A **Europe-only regional assessment is not a global one.** Wikidata files
+#     the regional category for these two bees in the same P141 slot as a global
+#     one, behind a qualifier this script does not read.
+#
+# See AGENTS.md, "Fill in the facts".
+PROTECTED = {
+    "honeybee": {"iucn"},
+    "common-carder-bee": {"iucn"},
+    "alpaca": {"iucn"},
+    "cattle": {"iucn"},
+    "chicken": {"iucn"},
+    "domestic-cat": {"iucn"},
+    "domestic-dog": {"iucn"},
+    "domestic-duck": {"iucn"},
+    "domestic-goat": {"iucn"},
+    "domestic-sheep": {"iucn"},
+}
 
 
 # ---------------------------------------------------------------------------
@@ -289,7 +316,9 @@ def enrich(record, verbose=True):
     if not scientific:
         return []
 
-    wanted = [path for path in FILLABLE if is_empty(get_path(record, path))]
+    protected = PROTECTED.get(record.get("slug") or "", frozenset())
+    wanted = [path for path in FILLABLE
+              if path not in protected and is_empty(get_path(record, path))]
     if not wanted:
         return []
 
@@ -315,7 +344,8 @@ def enrich(record, verbose=True):
     # --- Wikidata ---------------------------------------------------------
     needs_wikidata = {
         "wikidata_id", "height", "body_weight", "diet", "lifespan", "iucn",
-        "names.de", "names.sv", "description.en", "description.de",
+        "names.de", "names.sv",
+        "description.en", "description.de", "description.sv",
         "reference.commons_file",
     } & set(wanted)
     if needs_wikidata:
@@ -376,7 +406,7 @@ def enrich(record, verbose=True):
                         written.append("reference.commons_file")
 
                 # --- Wikipedia descriptions -------------------------------
-                for lang in ("en", "de"):
+                for lang in ("en", "de", "sv"):
                     path = f"description.{lang}"
                     if path not in wanted:
                         continue

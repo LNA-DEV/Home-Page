@@ -400,7 +400,12 @@ diff only shows what actually changed.
    assessment**, so `iucn` must be absent on dog/cat/cattle/sheep/goat/chicken/
    domestic duck/alpaca rather than carrying the wild ancestor's category, and a
    **Europe-only regional assessment is not a global one** (the honeybee and
-   carder bee had regional categories that had to be removed).
+   carder bee had regional categories that had to be removed). Both rules are now
+   held by the `PROTECTED` table at the top of `scripts/dex-enrich.py`: "fill only
+   what is empty" cannot tell a never-populated field from a deliberately emptied
+   one, so a rerun used to put those twelve `iucn` values straight back. **If you
+   ever correct a field by clearing it, add it to `PROTECTED`** or the next run
+   undoes you.
 
 5. **Fetch its map and, if you have not photographed it, its stand-in photo:**
    ```
@@ -460,9 +465,13 @@ Nothing automates this, and the order matters:
   nothing generates them.
 - **`sightings`** — where you actually saw it. Only 13 of the gallery photos
   carry GPS EXIF, so these coordinates are hand-entered.
-- **Swedish and German prose.** `dex-enrich.py` takes *names* from Wikidata in
-  all three languages, but descriptions only in English and German, and never
-  translates anything itself.
+- **Habitat prose, in every language.** `dex-enrich.py` fills `description` in
+  all three languages — each one abridged from that language's *own* Wikipedia
+  article via the Wikidata sitelink, so nothing is machine-translated — but
+  `habitat` is hand-written and only ever carries `en` and `de`. Where a language
+  has no article (4 species have no `svwiki` sitelink, and the sv summary for
+  `european-polecat` is a 28-character stub the script's 50-character floor
+  rejects), the page falls back to English and credits the English article.
 
 ### If a species' range looks wrong on the map
 
