@@ -9652,6 +9652,12 @@ images:
   section: general
   project: wildlife-of-inn-valley
   species: Pandion haliaetus
+- id: 75b3427e-d6ec-4f21-b216-69ce394bb73f
+  src: Morning Glide - Osprey Riding the First Light Below a Forested Ridge.jpg
+  category: animals
+  section: general
+  project: wildlife-of-inn-valley
+  species: Pandion haliaetus
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
