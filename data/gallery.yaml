@@ -9658,6 +9658,18 @@ images:
   section: general
   project: wildlife-of-inn-valley
   species: Pandion haliaetus
+- id: c01bb9eb-0995-4e4e-9fe9-c4f2e4cab75e
+  src: Leaving the Lookout - Osprey Lifting Off in Early Morning Light.jpg
+  category: animals
+  section: general
+  project: wildlife-of-inn-valley
+  species: Pandion haliaetus
+- id: afc97c39-9033-4eef-9c90-ae3455dd50a8
+  src: First Light - Osprey Gliding Past a Sunlit Mountain Farm.jpg
+  category: animals
+  section: general
+  project: wildlife-of-inn-valley
+  species: Pandion haliaetus
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
