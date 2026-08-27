@@ -1,148 +1,103 @@
 {{- /*
   galleryImage.html
-  Inserts one gallery photo into a post, addressed by its UUID from data/gallery.yaml.
+  One gallery photo at full content width, addressed by its UUID from data/gallery.yaml.
+  For a photo beside its text, use {{< galleryImageText >}} instead.
 
   Usage:
     {{< galleryImage id="6885f633-8371-4989-8dbc-877910730c16" >}}
-    {{< galleryImage id="…" showTitle="true" showExif="true" >}}
     {{< galleryImage id="…" alt="Ein Seeadler über dem Moorsee" caption="Mein bestes Bild" >}}
+    {{< galleryImage id="…" showTitle="true" showExif="true" >}}
     {{< galleryImage id="…" link="false" loading="eager" >}}
+    {{< galleryImage id="…" align="right" >}}   ← Bild rechts, dein Text fliesst herum
+    {{< galleryImage id="…" align="right" size="small" >}}
+    {{< galleryImage id="…" align="left" size="260" >}}
 
   Params:
     id        (required) UUID from data/gallery.yaml. Stable across renames — that
-              is the whole point of addressing photos by id rather than filename.
+              is the point of addressing photos by id rather than filename.
     alt       Overrides the alt text. The alt in data/gallery.yaml is English, so a
               German or Swedish post will often want to pass its own.
     caption   Explicit caption text. Wins over showTitle.
     showTitle "true" to use the photo's title from data/gallery.yaml as the caption.
-    showExif  "true" to append the shooting data (lens, focal length, aperture,
-              shutter, ISO) as a second caption line.
+    showExif  "true" to append lens, focal length, aperture, shutter and ISO.
     link      Defaults to a deep link into the gallery, which opens the photo in the
-              PhotoSwipe lightbox there (lightbox.js matches window.location.hash
-              against data-id). "false" renders no link; any other value is used as
-              the href verbatim.
+              PhotoSwipe lightbox there. "false" renders no link; any other value is
+              used as the href verbatim.
     loading   "eager" for an image above the fold; defaults to "lazy".
+    align     "left" or "right" floats the photo so the following paragraphs wrap
+              around it — your ordinary Markdown stays where it is, unlike
+              {{< galleryImageText >}} which takes the text inside the shortcode.
+              The float is pulled into the page margin beside the 720px column, so
+              it gets 340px of photo and still leaves ~58 characters of text rather
+              than the ~41 an in-column float would. Omit for full content width.
+    size      Per-call width. Either a named step — "small" (280px), "medium" (340px,
+              the default) or "large" (420px) — or a bare number of pixels, e.g.
+              size="260". With align, this is the float's width and every 20px off
+              the photo buys about two characters of text; without align it caps an
+              otherwise full-width photo and centres it. The value also feeds the
+              `sizes` attribute, so a smaller photo really downloads a smaller file
+              rather than just being scaled down in CSS.
 
   Both caption lines are off by default — a photo essay should not be forced to
   carry a caption under every image.
-
-  Sizing is fixed to the content column (--main-width: 720px) with a srcset up to
-  1440px for HiDPI. Variants wider than the original are skipped so a small file is
-  never upscaled.
 */ -}}
 
-{{- $id := .Get "id" -}}
-{{- if not $id -}}
-  {{- errorf "galleryImage (%s): no id given — use {{< galleryImage id=\"<uuid from data/gallery.yaml>\" >}}" .Position -}}
-{{- end -}}
-
-{{- /* collect-images.html is the single entry point for gallery images: it merges
-       data/gallery.yaml with EXIF/XMP and resolves license and artist, so a photo
-       in a post carries exactly the same metadata as in the gallery. excludeArchive
-       is off because naming a photo by id is explicit — an archived one should
-       still render rather than silently disappear. */ -}}
-{{- $matches := partial "collect-images.html" (dict
-      "context" .Page
-      "filter"  (dict "id" $id "excludeArchive" false)) -}}
-
-{{- if not $matches -}}
-  {{- errorf "galleryImage (%s): no image with id %q in data/gallery.yaml" .Position $id -}}
-{{- end -}}
-{{- $item := index $matches 0 -}}
-
-{{- /* AutoOrient first, always — EXIF rotation is not applied otherwise. */ -}}
-{{- $src := $item.image.Filter images.AutoOrient -}}
-
-{{- /* Width-constrained variants. The height cap is deliberately huge so `fit`
-       bounds the width alone; a tall portrait then stays 720px wide rather than
-       being shrunk to fit a square. */ -}}
-{{- $variants := slice -}}
-{{- range slice 480 720 1080 1440 -}}
-  {{- if le . $src.Width -}}
-    {{- $variants = $variants | append ($src.Process (printf "fit %dx%d" . (mul . 10))) -}}
-  {{- end -}}
-{{- end -}}
-{{- if not $variants -}}
-  {{- $variants = slice $src -}}
-{{- end -}}
-
-{{- /* src points at the 720px variant where it exists, so a non-srcset client gets
-       the content-width image rather than the 1440px one. */ -}}
-{{- $primary := index $variants 0 -}}
-{{- range $variants -}}
-  {{- if le .Width 720 -}}
-    {{- $primary = . -}}
-  {{- end -}}
-{{- end -}}
-
-{{- $alt := .Get "alt" | default $item.Alt -}}
-{{- if not $alt -}}
-  {{- $alt = $item.Title -}}
-{{- end -}}
-{{- if not $alt -}}
-  {{- warnf "galleryImage (%s): image %q (id %s) has no alt text — add alt: in data/gallery.yaml or pass alt=\"…\"" .Position $item.Name $id -}}
-{{- end -}}
-
 {{- $truthy := slice "true" "yes" "1" -}}
-{{- $showTitle := in $truthy (.Get "showTitle" | default "" | lower) -}}
-{{- $showExif  := in $truthy (.Get "showExif"  | default "" | lower) -}}
-
-{{- $caption := .Get "caption" | default "" -}}
-{{- if and (not $caption) $showTitle -}}
-  {{- $caption = $item.Title -}}
+{{- $align := .Get "align" | default "" | lower -}}
+{{- if and $align (not (in (slice "left" "right") $align)) -}}
+  {{- errorf "galleryImage (%s): align must be \"left\" or \"right\", got %q" .Position $align -}}
 {{- end -}}
 
-{{- $exif := slice -}}
-{{- if $showExif -}}
-  {{- with $item.LensModel }}{{ $exif = $exif | append . }}{{ end -}}
-  {{- with $item.FocalLength }}{{ $exif = $exif | append . }}{{ end -}}
-  {{- with $item.Aperture }}{{ $exif = $exif | append . }}{{ end -}}
-  {{- with $item.ShutterSpeed }}{{ $exif = $exif | append . }}{{ end -}}
-  {{- with $item.ISO }}{{ $exif = $exif | append . }}{{ end -}}
-{{- end -}}
-
-{{- /* Deep link into the gallery. Resolved through site.GetPage rather than
-       assembled by hand, so it stays language-correct and survives the gallery
-       moving. There is no per-category gallery page — /gallery/general/ holds every
-       non-archive photo, /gallery/archive/ the rest. */ -}}
-{{- $linkParam := .Get "link" | default "" -}}
-{{- $href := "" -}}
-{{- if eq (lower $linkParam) "false" -}}
-{{- else if $linkParam -}}
-  {{- $href = $linkParam -}}
-{{- else -}}
-  {{- $target := cond (eq $item.Section "archive") "/gallery/archive" "/gallery/general" -}}
-  {{- with site.GetPage $target -}}
-    {{- $href = printf "%s#%s" .RelPermalink $item.Id -}}
+{{- /* Named steps keep the common cases consistent across the site; a bare number
+       is the escape hatch. Either way the resolved pixel value drives BOTH the CSS
+       width and the `sizes` attribute, so the two can never drift apart and the
+       browser always picks a candidate that matches the slot it will occupy. */ -}}
+{{- $steps := dict "small" 280 "medium" 340 "large" 420 -}}
+{{- $size := .Get "size" | default "" | lower -}}
+{{- $width := 0 -}}
+{{- with $size -}}
+  {{- with index $steps . -}}
+    {{- $width = . -}}
+  {{- else -}}
+    {{- if findRE `^[0-9]+$` $size -}}
+      {{- $width = int $size -}}
+    {{- else -}}
+      {{- errorf "galleryImage (%s): size must be small, medium, large or a number of pixels, got %q" $.Position $size -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 
-<figure class="gallery-image" itemscope itemtype="https://schema.org/ImageObject">
-  {{- if $href }}<a class="gallery-image-link" href="{{ $href }}">{{ end -}}
-  <img
-    src="{{ $primary.RelPermalink }}"
-    {{ with $variants }}srcset="{{ range $i, $v := . }}{{ if $i }}, {{ end }}{{ $v.RelPermalink }} {{ $v.Width }}w{{ end }}"
-    sizes="(max-width: 720px) 100vw, 720px"{{ end }}
-    width="{{ $primary.Width }}" height="{{ $primary.Height }}"
-    alt="{{ $alt }}"
-    loading="{{ if eq (.Get "loading" | default "lazy") "eager" }}eager{{ else }}lazy{{ end }}"
-    decoding="async"
-    itemprop="contentUrl" />
-  {{- if $href }}</a>{{ end }}
-  {{- if or $caption $exif }}
-  <figcaption>
-    {{- with $caption }}<span class="gallery-image-caption" itemprop="caption">{{ . }}</span>{{ end -}}
-    {{- with $exif }}<span class="gallery-image-exif">{{ delimit . " · " }}</span>{{ end }}
-  </figcaption>
-  {{- end }}
-  {{- with $item.Title }}<meta itemprop="name" content="{{ . }}" />{{ end }}
-  {{- with $alt }}<meta itemprop="description" content="{{ . }}" />{{ end }}
-  {{- with $item.DateTaken }}<meta itemprop="dateCreated" content="{{ . }}" />{{ end }}
-  {{- with $item.LicenseUrl }}<link itemprop="license" href="{{ . }}" />{{ end }}
-  {{- with site.Params.licensingPage }}<link itemprop="acquireLicensePage" href="{{ . | absURL }}" />{{ end }}
-  <span itemprop="creator" itemtype="https://schema.org/Person" itemscope>
-    <meta itemprop="name" content="{{ $item.ResolvedArtist }}" />
-  </span>
-  <meta itemprop="creditText" content="{{ $item.ResolvedArtist }}" />
-  <meta itemprop="copyrightNotice" content="{{ printf "© %s" $item.ResolvedArtist }}" />
-</figure>
+{{- /* A floated photo is 340px wide, not the 720px of the full-width case, so it
+       must not claim the content width in `sizes` — otherwise the browser picks a
+       needlessly large candidate from the same srcset. */ -}}
+{{- $sizes := "(max-width: 720px) 100vw, 720px" -}}
+{{- $class := "" -}}
+{{- $style := "" -}}
+{{- if $align -}}
+  {{- $w := cond (gt $width 0) $width 340 -}}
+  {{- $sizes = printf "(max-width: 900px) calc(100vw - 28px), %dpx" $w -}}
+  {{- $class = printf "gallery-image-float align-%s" $align -}}
+  {{- /* Always emitted, not only when size= was given: the caption font size is
+         derived from --img-width, and an unset variable would fall back to the
+         720px full-width value and print a 16px caption under a 340px photo. */ -}}
+  {{- $style = printf "--img-width: %dpx" $w -}}
+{{- else if gt $width 0 -}}
+  {{- $sizes = printf "(max-width: 900px) calc(100vw - 28px), %dpx" $width -}}
+  {{- $class = "gallery-image-sized" -}}
+  {{- $style = printf "--img-width: %dpx" $width -}}
+{{- end -}}
+
+{{- partial "gallery-image-figure.html" (dict
+      "page"      .Page
+      "position"  .Position
+      "id"        (.Get "id")
+      "alt"       (.Get "alt")
+      "caption"   (.Get "caption")
+      "showTitle" (in $truthy (.Get "showTitle" | default "" | lower))
+      "showExif"  (in $truthy (.Get "showExif"  | default "" | lower))
+      "link"      (.Get "link")
+      "loading"   (.Get "loading")
+      "sizes"     $sizes
+      "class"     $class
+      "style"     $style
+    ) -}}

@@ -1,0 +1,126 @@
+{{- /*
+  gallery-image-figure.html
+  Renders one gallery photo as a <figure>, resolved by its UUID from data/gallery.yaml.
+
+  Shared by the {{< galleryImage >}} and {{< galleryImageText >}} shortcodes so the
+  metadata resolution, the srcset ladder, the deep link and the schema.org markup
+  exist once. The only things that differ between the two are the CSS class and the
+  `sizes` attribute — a photo in the 720px column and one in a 45% grid track need
+  different candidates from the same srcset.
+
+  Params:
+    page      (required) the Page, for collect-images and RenderString context
+    id        (required) UUID from data/gallery.yaml
+    sizes     (required) the sizes attribute for this layout
+    class     extra class on the <figure>
+    style     inline style on the <figure>, used to carry a per-call --img-width
+    position  shortcode .Position, so an error names the file and line
+    alt / caption / showTitle / showExif / link / loading — see the shortcodes
+*/ -}}
+
+{{- $id := .id -}}
+{{- $pos := .position | default "" -}}
+{{- if not $id -}}
+  {{- errorf "gallery image (%s): no id given — use id=\"<uuid from data/gallery.yaml>\"" $pos -}}
+{{- end -}}
+
+{{- /* collect-images.html is the single entry point for gallery images: it merges
+       data/gallery.yaml with EXIF/XMP and resolves license and artist, so a photo
+       in a post carries exactly the metadata the gallery shows. excludeArchive is
+       off because naming a photo by id is explicit — an archived one should still
+       render rather than silently disappear. */ -}}
+{{- $matches := partial "collect-images.html" (dict
+      "context" .page
+      "filter"  (dict "id" $id "excludeArchive" false)) -}}
+{{- if not $matches -}}
+  {{- errorf "gallery image (%s): no image with id %q in data/gallery.yaml" $pos $id -}}
+{{- end -}}
+{{- $item := index $matches 0 -}}
+
+{{- /* AutoOrient first, always — EXIF rotation is not applied otherwise. */ -}}
+{{- $src := $item.image.Filter images.AutoOrient -}}
+
+{{- /* Width-constrained variants. The height cap is deliberately 10x the width so
+       `fit` bounds the width alone; a tall portrait then stays full-width instead
+       of being shrunk to a square the way the gallery grid's `fit 600x600` does. */ -}}
+{{- $variants := slice -}}
+{{- range slice 480 720 1080 1440 -}}
+  {{- if le . $src.Width -}}
+    {{- $variants = $variants | append ($src.Process (printf "fit %dx%d" . (mul . 10))) -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $variants -}}
+  {{- $variants = slice $src -}}
+{{- end -}}
+
+{{- /* src points at the 720px variant where it exists, so a client that ignores
+       srcset still gets the content-width image rather than the 1440px one. */ -}}
+{{- $primary := index $variants 0 -}}
+{{- range $variants -}}
+  {{- if le .Width 720 -}}
+    {{- $primary = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $alt := .alt | default $item.Alt -}}
+{{- if not $alt -}}{{- $alt = $item.Title -}}{{- end -}}
+{{- if not $alt -}}
+  {{- warnf "gallery image (%s): %q (id %s) has no alt text — add alt: in data/gallery.yaml or pass alt=\"…\"" $pos $item.Name $id -}}
+{{- end -}}
+
+{{- $caption := .caption | default "" -}}
+{{- if and (not $caption) .showTitle -}}{{- $caption = $item.Title -}}{{- end -}}
+
+{{- $exif := slice -}}
+{{- if .showExif -}}
+  {{- with $item.LensModel }}{{ $exif = $exif | append . }}{{ end -}}
+  {{- with $item.FocalLength }}{{ $exif = $exif | append . }}{{ end -}}
+  {{- with $item.Aperture }}{{ $exif = $exif | append . }}{{ end -}}
+  {{- with $item.ShutterSpeed }}{{ $exif = $exif | append . }}{{ end -}}
+  {{- with $item.ISO }}{{ $exif = $exif | append . }}{{ end -}}
+{{- end -}}
+
+{{- /* Deep link into the gallery. Resolved through site.GetPage rather than
+       assembled by hand, so it stays language-correct and survives the gallery
+       moving. There is no per-category gallery page — /gallery/general/ holds
+       every non-archive photo, /gallery/archive/ the rest. */ -}}
+{{- $linkParam := .link | default "" -}}
+{{- $href := "" -}}
+{{- if eq (lower $linkParam) "false" -}}
+{{- else if $linkParam -}}
+  {{- $href = $linkParam -}}
+{{- else -}}
+  {{- $target := cond (eq $item.Section "archive") "/gallery/archive" "/gallery/general" -}}
+  {{- with site.GetPage $target -}}
+    {{- $href = printf "%s#%s" .RelPermalink $item.Id -}}
+  {{- end -}}
+{{- end -}}
+
+<figure class="gallery-image{{ with .class }} {{ . }}{{ end }}"{{ with .style }} style="{{ . | safeCSS }}"{{ end }} itemscope itemtype="https://schema.org/ImageObject">
+  {{- if $href }}<a class="gallery-image-link" href="{{ $href }}">{{ end -}}
+  <img src="{{ $primary.RelPermalink }}"
+    {{ with $variants }}srcset="{{ range $i, $v := . }}{{ if $i }}, {{ end }}{{ $v.RelPermalink }} {{ $v.Width }}w{{ end }}"
+    sizes="{{ $.sizes }}"{{ end }}
+    width="{{ $primary.Width }}" height="{{ $primary.Height }}"
+    alt="{{ $alt }}"
+    loading="{{ if eq (.loading | default "lazy") "eager" }}eager{{ else }}lazy{{ end }}"
+    decoding="async"
+    itemprop="contentUrl" />
+  {{- if $href }}</a>{{ end }}
+  {{- if or $caption $exif }}
+  <figcaption>
+    {{- with $caption }}<span class="gallery-image-caption" itemprop="caption">{{ . }}</span>{{ end -}}
+    {{- with $exif }}<span class="gallery-image-exif">{{ delimit . " · " }}</span>{{ end }}
+  </figcaption>
+  {{- end }}
+  {{- with $item.Title }}<meta itemprop="name" content="{{ . }}" />{{ end }}
+  {{- with $alt }}<meta itemprop="description" content="{{ . }}" />{{ end }}
+  {{- with $item.DateTaken }}<meta itemprop="dateCreated" content="{{ . }}" />{{ end }}
+  {{- with $item.LicenseUrl }}<link itemprop="license" href="{{ . }}" />{{ end }}
+  {{- with site.Params.licensingPage }}<link itemprop="acquireLicensePage" href="{{ . | absURL }}" />{{ end }}
+  <span itemprop="creator" itemtype="https://schema.org/Person" itemscope>
+    <meta itemprop="name" content="{{ $item.ResolvedArtist }}" />
+  </span>
+  <meta itemprop="creditText" content="{{ $item.ResolvedArtist }}" />
+  <meta itemprop="copyrightNotice" content="{{ printf "© %s" $item.ResolvedArtist }}" />
+</figure>

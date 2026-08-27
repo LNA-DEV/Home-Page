@@ -32,14 +32,186 @@
   text-align: center;
 }
 
+/* Caption and EXIF scale with the photo. A 16px caption under a 280px float reads
+   as heavy as a headline, but the same 16px under a 720px photo is right — and it
+   is what PaperMod uses, so the full-width case must not change.
+
+   Both are a two-point linear map from --img-width: 280px -> 12px, 720px -> 16px
+   for the caption (11px -> 14px for the EXIF line), clamped at both ends. Deriving
+   it from the variable rather than from per-step classes means size="260" and any
+   other bare pixel value scale too, not just small/medium/large. The 720px fallback
+   makes an unsized full-width photo land on exactly the old values. */
+
 .post-content figure.gallery-image .gallery-image-caption {
   color: var(--primary);
-  font-size: 16px;
+  font-size: clamp(12px, calc(9.455px + var(--img-width, 720px) * 0.00909), 16px);
   font-weight: bold;
 }
 
 .post-content figure.gallery-image .gallery-image-exif {
   color: var(--secondary);
-  font-size: 14px;
+  font-size: clamp(11px, calc(9.091px + var(--img-width, 720px) * 0.00682), 14px);
   font-weight: normal;
+}
+
+/* ---- {{< galleryImageText >}} — photo beside its text ----
+   The block breaks out of the 720px content column to --nav-width, the width the
+   site header already uses — 1060px here, since navbar.css overrides PaperMod's
+   1024px default. Inside 720px a 45% photo would leave a ~372px text column (~41
+   characters), which is below the readable range and makes the theme's
+   `word-break: break-word` split German compounds mid-word. At 1060px the same
+   split measures 466px of photo and 570px of text, about 63 characters.
+
+   `margin-left: 50%` + `translateX(-50%)` centres an element wider than its parent.
+   The width is capped at `100vw - 2*gap` rather than a bare 100vw: 100vw includes
+   the scrollbar, and the gap (48px desktop / 28px mobile) is comfortably wider than
+   any scrollbar, so the block never causes horizontal overflow. */
+
+.post-content .gallery-image-text {
+  width: min(var(--nav-width), calc(100vw - var(--gap) * 2));
+  margin: 2rem 0 2rem 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: 45fr 55fr;
+  gap: var(--gap);
+  /* Centred, not top-aligned: a portrait photo is far taller than the two or three
+     lines of text usually set beside it, and top-alignment leaves the text stranded
+     at the top of a tall empty column. */
+  align-items: center;
+}
+
+.post-content .gallery-image-text.align-right {
+  grid-template-columns: 55fr 45fr;
+}
+
+.post-content .gallery-image-text.align-right .gallery-image-text-media {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.post-content .gallery-image-text.align-right .gallery-image-text-body {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* The figure already carries its own vertical rhythm for the full-width case;
+   inside the grid the wrapper owns the spacing instead. */
+.post-content .gallery-image-text .gallery-image {
+  margin: 0;
+}
+
+.post-content .gallery-image-text-body > :first-child {
+  margin-top: 0;
+}
+
+.post-content .gallery-image-text-body > :last-child {
+  margin-bottom: 0;
+}
+
+/* Stacked below 900px, not at the theme's 768px breakpoint: at 768px the 55% text
+   track is ~44 characters, still too narrow. 900px is where it clears ~52. */
+@media screen and (max-width: 900px) {
+  .post-content .gallery-image-text,
+  .post-content .gallery-image-text.align-right {
+    width: auto;
+    margin: 1.5rem 0;
+    transform: none;
+    grid-template-columns: 1fr;
+  }
+
+  /* Photo first on narrow screens whichever side it takes on desktop. */
+  .post-content .gallery-image-text .gallery-image-text-media,
+  .post-content .gallery-image-text.align-right .gallery-image-text-media {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .post-content .gallery-image-text .gallery-image-text-body,
+  .post-content .gallery-image-text.align-right .gallery-image-text-body {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+/* ---- floated photo: {{< galleryImage align="left|right" >}} ----
+   Unlike galleryImageText, this leaves your Markdown where it is — the following
+   paragraphs simply wrap around the photo.
+
+   The float is pulled into the page margin beside the 720px column rather than
+   sitting entirely inside it. Between --main-width (720px) and --nav-width (1060px)
+   there are 170px of unused margin per side; using them means a 340px photo that
+   only eats 170px of the text column, leaving ~526px (~58 characters) instead of
+   the ~372px (~41 characters) an in-column float of the same visual weight would.
+   Change the one `width` below to retune: every 20px off the photo buys about two
+   characters of text.
+
+   The negative margin is clamped to the margin that actually exists at the current
+   viewport: below ~1108px there is less than 170px to give, and a fixed -170px
+   would push the photo off-screen and cause horizontal overflow. */
+
+.post-content .gallery-image-float {
+  /* --img-width is set inline by size="…" on the shortcode; 340px is the default. */
+  width: var(--img-width, 340px);
+  max-width: 100%;
+  /* Never pull further out than the real margin at this viewport. */
+  --pull: calc(-1 * min(170px, (100vw - var(--main-width) - var(--gap) * 2) / 2));
+}
+
+.post-content .gallery-image-float.align-left {
+  float: left;
+  margin: 0.4rem var(--gap) 1rem var(--pull);
+}
+
+.post-content .gallery-image-float.align-right {
+  float: right;
+  margin: 0.4rem var(--pull) 1rem var(--gap);
+}
+
+/* Headings must not slide up beside a float that the preceding paragraphs did not
+   fully clear — a short paragraph next to a tall photo would otherwise pull the
+   next section's heading into the gap. */
+.post-content .gallery-image-float + h1,
+.post-content .gallery-image-float + h2,
+.post-content .gallery-image-float + h3,
+.post-content h1, .post-content h2, .post-content h3 {
+  clear: both;
+}
+
+/* Below 900px every variant collapses to the full content width, so every variant
+   must also look exactly like a plain {{< galleryImage >}} there — same width and
+   the same caption sizes. The font size is normally derived from --img-width, which
+   is an inline style and therefore cannot be overridden by a rule; setting the two
+   font sizes directly is both simpler and immune to that. */
+@media screen and (max-width: 900px) {
+  .post-content .gallery-image-float.align-left,
+  .post-content .gallery-image-float.align-right,
+  .post-content .gallery-image-sized {
+    float: none;
+    width: auto;
+    margin: 1.5rem 0;
+  }
+
+  .post-content figure.gallery-image .gallery-image-caption {
+    font-size: 16px;
+  }
+
+  .post-content figure.gallery-image .gallery-image-exif {
+    font-size: 14px;
+  }
+}
+
+/* size="…" without align: cap an otherwise full-width photo and centre it.
+   Goes full width below 900px like every other variant — see the media query. */
+.post-content .gallery-image-sized {
+  width: var(--img-width);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* The paired layout has no --img-width of its own: its photo is a 45% grid track,
+   which lands near 466px at the header width. Naming it here keeps the caption on
+   the same scale as a comparably sized float. */
+.post-content .gallery-image-text .gallery-image {
+  --img-width: 466px;
 }

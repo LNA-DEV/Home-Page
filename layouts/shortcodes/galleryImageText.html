@@ -1,0 +1,53 @@
+{{- /*
+  galleryImageText.html
+  A gallery photo beside its text, in a block that breaks out of the 720px content
+  column to the width of the site header (--nav-width, 1060px here).
+
+  Usage (paired — the text goes inside):
+    {{< galleryImageText id="989b3223-…" >}}
+    Der Absatz neben dem Bild. Ganz normales **Markdown**.
+    {{< /galleryImageText >}}
+
+    {{< galleryImageText id="…" align="right" showExif="true" >}}…{{< /galleryImageText >}}
+
+  Why it breaks out: at the 720px content width a 45% photo leaves a ~372px text
+  column, about 41 characters per line — below the readable range, and the theme's
+  `word-break: break-word` then splits German compounds mid-word. The header width is
+  not arbitrary: it is --nav-width, which navbar.css sets to 1060px here (PaperMod
+  defaults to 1024). Measured in the browser at that width: 466px of photo and 570px
+  of text, about 63 characters.
+
+  Params: id, alt, caption, showTitle, showExif, link, loading — all as in
+  {{< galleryImage >}}, plus:
+    align   "left" (default) puts the photo left and the text right; "right" swaps
+            them. On narrow screens the photo always comes first regardless.
+*/ -}}
+
+{{- $align := .Get "align" | default "left" | lower -}}
+{{- if not (in (slice "left" "right") $align) -}}
+  {{- errorf "galleryImageText (%s): align must be \"left\" or \"right\", got %q" .Position $align -}}
+{{- end -}}
+{{- $truthy := slice "true" "yes" "1" -}}
+
+{{- /* The photo occupies a 45% track of a block at most 1024px wide, so its
+       `sizes` must not claim the 720px the full-width shortcode does — otherwise
+       the browser picks a needlessly large candidate from the same srcset. */ -}}
+<div class="gallery-image-text align-{{ $align }}">
+  <div class="gallery-image-text-media">
+    {{- partial "gallery-image-figure.html" (dict
+          "page"      .Page
+          "position"  .Position
+          "id"        (.Get "id")
+          "alt"       (.Get "alt")
+          "caption"   (.Get "caption")
+          "showTitle" (in $truthy (.Get "showTitle" | default "" | lower))
+          "showExif"  (in $truthy (.Get "showExif"  | default "" | lower))
+          "link"      (.Get "link")
+          "loading"   (.Get "loading")
+          "sizes"     "(max-width: 900px) calc(100vw - 28px), (max-width: 1108px) 45vw, 466px"
+        ) -}}
+  </div>
+  <div class="gallery-image-text-body">
+    {{- .Page.RenderString (dict "display" "block") .Inner -}}
+  </div>
+</div>
