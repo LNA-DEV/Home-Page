@@ -1,0 +1,45 @@
+/* {{< galleryImage >}} — one gallery photo inlined in a post.
+   Theme variables only, so it follows light/dark like the rest of the site. */
+
+.post-content figure.gallery-image {
+  margin: 1.5rem 0;
+}
+
+.post-content figure.gallery-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 4px;
+}
+
+.post-content figure.gallery-image .gallery-image-link {
+  display: block;
+  box-shadow: none;
+}
+
+/* PaperMod underlines links inside .post-content; an image link must not get one. */
+.post-content figure.gallery-image .gallery-image-link:hover img {
+  opacity: 0.92;
+  transition: opacity 0.2s ease;
+}
+
+.post-content figure.gallery-image > figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 8px 0 0;
+  text-align: center;
+}
+
+.post-content figure.gallery-image .gallery-image-caption {
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.post-content figure.gallery-image .gallery-image-exif {
+  color: var(--secondary);
+  font-size: 14px;
+  font-weight: normal;
+}

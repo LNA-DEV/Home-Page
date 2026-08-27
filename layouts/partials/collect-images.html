@@ -12,6 +12,9 @@
     - portfolio: if true, only return portfolio images
     - project: filter by project slug
     - species: filter by scientific name, e.g. "Vulpes vulpes" (case-insensitive)
+    - id: filter by the UUID from data/gallery.yaml — returns at most one image.
+          Pair it with excludeArchive false: naming a photo by id is explicit, so
+          an archived one should still come back (see the galleryImage shortcode).
     - excludeArchive: if true (default), exclude archive images
 */ -}}
 
@@ -67,6 +70,12 @@
   {{- with index $filter "species" -}}
     {{- /* Scientific names are long and easy to mis-case; match like dex-index. */ -}}
     {{- if ne (lower ($meta.species | default "")) (lower .) -}}
+      {{- $include = false -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with index $filter "id" -}}
+    {{- if ne ($meta.id | default "") . -}}
       {{- $include = false -}}
     {{- end -}}
   {{- end -}}

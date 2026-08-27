@@ -1,0 +1,148 @@
+{{- /*
+  galleryImage.html
+  Inserts one gallery photo into a post, addressed by its UUID from data/gallery.yaml.
+
+  Usage:
+    {{< galleryImage id="6885f633-8371-4989-8dbc-877910730c16" >}}
+    {{< galleryImage id="…" showTitle="true" showExif="true" >}}
+    {{< galleryImage id="…" alt="Ein Seeadler über dem Moorsee" caption="Mein bestes Bild" >}}
+    {{< galleryImage id="…" link="false" loading="eager" >}}
+
+  Params:
+    id        (required) UUID from data/gallery.yaml. Stable across renames — that
+              is the whole point of addressing photos by id rather than filename.
+    alt       Overrides the alt text. The alt in data/gallery.yaml is English, so a
+              German or Swedish post will often want to pass its own.
+    caption   Explicit caption text. Wins over showTitle.
+    showTitle "true" to use the photo's title from data/gallery.yaml as the caption.
+    showExif  "true" to append the shooting data (lens, focal length, aperture,
+              shutter, ISO) as a second caption line.
+    link      Defaults to a deep link into the gallery, which opens the photo in the
+              PhotoSwipe lightbox there (lightbox.js matches window.location.hash
+              against data-id). "false" renders no link; any other value is used as
+              the href verbatim.
+    loading   "eager" for an image above the fold; defaults to "lazy".
+
+  Both caption lines are off by default — a photo essay should not be forced to
+  carry a caption under every image.
+
+  Sizing is fixed to the content column (--main-width: 720px) with a srcset up to
+  1440px for HiDPI. Variants wider than the original are skipped so a small file is
+  never upscaled.
+*/ -}}
+
+{{- $id := .Get "id" -}}
+{{- if not $id -}}
+  {{- errorf "galleryImage (%s): no id given — use {{< galleryImage id=\"<uuid from data/gallery.yaml>\" >}}" .Position -}}
+{{- end -}}
+
+{{- /* collect-images.html is the single entry point for gallery images: it merges
+       data/gallery.yaml with EXIF/XMP and resolves license and artist, so a photo
+       in a post carries exactly the same metadata as in the gallery. excludeArchive
+       is off because naming a photo by id is explicit — an archived one should
+       still render rather than silently disappear. */ -}}
+{{- $matches := partial "collect-images.html" (dict
+      "context" .Page
+      "filter"  (dict "id" $id "excludeArchive" false)) -}}
+
+{{- if not $matches -}}
+  {{- errorf "galleryImage (%s): no image with id %q in data/gallery.yaml" .Position $id -}}
+{{- end -}}
+{{- $item := index $matches 0 -}}
+
+{{- /* AutoOrient first, always — EXIF rotation is not applied otherwise. */ -}}
+{{- $src := $item.image.Filter images.AutoOrient -}}
+
+{{- /* Width-constrained variants. The height cap is deliberately huge so `fit`
+       bounds the width alone; a tall portrait then stays 720px wide rather than
+       being shrunk to fit a square. */ -}}
+{{- $variants := slice -}}
+{{- range slice 480 720 1080 1440 -}}
+  {{- if le . $src.Width -}}
+    {{- $variants = $variants | append ($src.Process (printf "fit %dx%d" . (mul . 10))) -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $variants -}}
+  {{- $variants = slice $src -}}
+{{- end -}}
+
+{{- /* src points at the 720px variant where it exists, so a non-srcset client gets
+       the content-width image rather than the 1440px one. */ -}}
+{{- $primary := index $variants 0 -}}
+{{- range $variants -}}
+  {{- if le .Width 720 -}}
+    {{- $primary = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $alt := .Get "alt" | default $item.Alt -}}
+{{- if not $alt -}}
+  {{- $alt = $item.Title -}}
+{{- end -}}
+{{- if not $alt -}}
+  {{- warnf "galleryImage (%s): image %q (id %s) has no alt text — add alt: in data/gallery.yaml or pass alt=\"…\"" .Position $item.Name $id -}}
+{{- end -}}
+
+{{- $truthy := slice "true" "yes" "1" -}}
+{{- $showTitle := in $truthy (.Get "showTitle" | default "" | lower) -}}
+{{- $showExif  := in $truthy (.Get "showExif"  | default "" | lower) -}}
+
+{{- $caption := .Get "caption" | default "" -}}
+{{- if and (not $caption) $showTitle -}}
+  {{- $caption = $item.Title -}}
+{{- end -}}
+
+{{- $exif := slice -}}
+{{- if $showExif -}}
+  {{- with $item.LensModel }}{{ $exif = $exif | append . }}{{ end -}}
+  {{- with $item.FocalLength }}{{ $exif = $exif | append . }}{{ end -}}
+  {{- with $item.Aperture }}{{ $exif = $exif | append . }}{{ end -}}
+  {{- with $item.ShutterSpeed }}{{ $exif = $exif | append . }}{{ end -}}
+  {{- with $item.ISO }}{{ $exif = $exif | append . }}{{ end -}}
+{{- end -}}
+
+{{- /* Deep link into the gallery. Resolved through site.GetPage rather than
+       assembled by hand, so it stays language-correct and survives the gallery
+       moving. There is no per-category gallery page — /gallery/general/ holds every
+       non-archive photo, /gallery/archive/ the rest. */ -}}
+{{- $linkParam := .Get "link" | default "" -}}
+{{- $href := "" -}}
+{{- if eq (lower $linkParam) "false" -}}
+{{- else if $linkParam -}}
+  {{- $href = $linkParam -}}
+{{- else -}}
+  {{- $target := cond (eq $item.Section "archive") "/gallery/archive" "/gallery/general" -}}
+  {{- with site.GetPage $target -}}
+    {{- $href = printf "%s#%s" .RelPermalink $item.Id -}}
+  {{- end -}}
+{{- end -}}
+
+<figure class="gallery-image" itemscope itemtype="https://schema.org/ImageObject">
+  {{- if $href }}<a class="gallery-image-link" href="{{ $href }}">{{ end -}}
+  <img
+    src="{{ $primary.RelPermalink }}"
+    {{ with $variants }}srcset="{{ range $i, $v := . }}{{ if $i }}, {{ end }}{{ $v.RelPermalink }} {{ $v.Width }}w{{ end }}"
+    sizes="(max-width: 720px) 100vw, 720px"{{ end }}
+    width="{{ $primary.Width }}" height="{{ $primary.Height }}"
+    alt="{{ $alt }}"
+    loading="{{ if eq (.Get "loading" | default "lazy") "eager" }}eager{{ else }}lazy{{ end }}"
+    decoding="async"
+    itemprop="contentUrl" />
+  {{- if $href }}</a>{{ end }}
+  {{- if or $caption $exif }}
+  <figcaption>
+    {{- with $caption }}<span class="gallery-image-caption" itemprop="caption">{{ . }}</span>{{ end -}}
+    {{- with $exif }}<span class="gallery-image-exif">{{ delimit . " · " }}</span>{{ end }}
+  </figcaption>
+  {{- end }}
+  {{- with $item.Title }}<meta itemprop="name" content="{{ . }}" />{{ end }}
+  {{- with $alt }}<meta itemprop="description" content="{{ . }}" />{{ end }}
+  {{- with $item.DateTaken }}<meta itemprop="dateCreated" content="{{ . }}" />{{ end }}
+  {{- with $item.LicenseUrl }}<link itemprop="license" href="{{ . }}" />{{ end }}
+  {{- with site.Params.licensingPage }}<link itemprop="acquireLicensePage" href="{{ . | absURL }}" />{{ end }}
+  <span itemprop="creator" itemtype="https://schema.org/Person" itemscope>
+    <meta itemprop="name" content="{{ $item.ResolvedArtist }}" />
+  </span>
+  <meta itemprop="creditText" content="{{ $item.ResolvedArtist }}" />
+  <meta itemprop="copyrightNotice" content="{{ printf "© %s" $item.ResolvedArtist }}" />
+</figure>
