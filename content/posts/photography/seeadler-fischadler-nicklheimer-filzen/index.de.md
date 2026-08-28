@@ -2,18 +2,18 @@
 title: "Seeadler und Fischadler in den Nicklheimer Filzen"
 date: 2026-08-27T21:19:00+02:00
 draft: false
-tags: ["Photography"]
-categories: ["Photography"]
+tags: ["Fotografie", "Wildlife-Fotografie", "Vögel", "Seeadler", "Fischadler", "Nicklheimer Filzen", "Bayern"]
+categories: ["Fotografie"]
 showToc: true
 TocOpen: false
-description: ""
+description: "Ich war zum Sonnenaufgang in den Nicklheimer Filzen bei Rosenheim und hatte gleich zwei seltene Greifvögel vor der Linse: Seeadler und Fischadler."
 disableShare: true
 disableHLJS: false
 searchHidden: false
 sitemap:
   priority: 0.8
 cover:  
-  image: seeadler-nicklheimer-filze.jpg
+  image: seeadler-nicklheimer-filzen.jpg
   alt: "Ein Seeadler gleitet mit ausgebreiteten Flügeln im warmen Morgenlicht vor einem dunklen, bewaldeten Berghang."  
   relative: true  
   hidden: false  
@@ -43,7 +43,7 @@ Gleich zwei Tiere an meinem ersten Morgen in den Filzen zu erwischen, die dann a
 
 {{< galleryImage id="989b3223-3c86-4637-947e-d0b38e221a77" alt="Ein Seeadler streift dicht über einen nebelverhangenen Moorsee." showTitle="true" showExif="true" >}}
 
-Den Fischadler konnte ich dann tatsächlich auch später noch beobachten und fotografieren, wie er über einen anderen Teil der Filze geflogen ist. Nach diesem doch recht aufregenden und spannenden Part hatte ich noch einige weitere Gelegenheiten für schöne, aber nicht so spektakuläre Beobachtungen wie Fischreiher, die im goldenen Licht fliegen, oder Gänse neben dem Wendelstein, der durch die Eigenschaft des Teleobjektivs näher an das Motiv gerückt wurde.
+Den Fischadler konnte ich dann tatsächlich auch später noch beobachten und fotografieren, wie er über einen anderen Teil der Filzen geflogen ist. Nach diesem doch recht aufregenden und spannenden Part hatte ich noch einige weitere Gelegenheiten für schöne, aber nicht so spektakuläre Beobachtungen wie Fischreiher, die im goldenen Licht fliegen, oder Gänse neben dem Wendelstein, der durch die Eigenschaft des Teleobjektivs näher an das Motiv gerückt wurde.
 
 Nachdem es schon eine Weile hell war, hab ich mich dann langsam auf den Weg gemacht, nochmal einen anderen Teil der Umgebung näher zu beobachten. Ich hatte mir auch die Hoffnung gemacht, ein [Reh](/de/gallery/dex/roe-deer/) sehen zu können, da ich das typische "Bellen" gehört hatte aus der Richtung, in die ich gehen wollte. Und ja, tatsächlich, als ich bei einer Schiene nach links schaue, schaut mich aus ein paar Metern Entfernung ein Reh an und lässt sich brav ablichten und verschwindet dann langsam und ohne größere Angst im Unterholz. Wobei wir wieder beim Thema Glück mit diesem Erlebnis wären.
 
