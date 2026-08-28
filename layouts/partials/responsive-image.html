@@ -1,0 +1,74 @@
+{{- /* Resolves an image path as written in content to a web-sized, EXIF-corrected
+       variant plus its srcset. The single place that knows how a content-authored
+       image reference becomes an <img>: the Markdown render hook and the figure /
+       img shortcodes all go through here, so a photo is served the same way no
+       matter which syntax the post used.
+
+       in:  page   the page the reference is written on (page-bundle lookup)
+            src    the path exactly as written in the content
+            sizes  optional; defaults to the 720px post column. Pass a narrower
+                   value where the image is not shown at content width, or the
+                   browser picks a variant far larger than it paints.
+
+       out: src        URL for the src attribute
+            srcset     "" when the image could not be processed
+            sizes      "" ditto
+            width      "" ditto — a string, not an int, because callers print
+                       attribute values with %q and %q on an int yields a rune
+            height     "" ditto
+            processed  false for external URLs, unresolvable paths and formats
+                       Hugo cannot resize
+
+       GIF is deliberately not in the processable list: Hugo would take the first
+       frame and silently kill the animation. SVG needs no resizing anyway. */ -}}
+
+{{- $page := .page -}}
+{{- $sizes := .sizes | default "(min-width: 768px) 720px, 100vw" -}}
+{{- $u := urls.Parse .src -}}
+{{- $out := dict "src" $u.String "srcset" "" "sizes" "" "width" "" "height" "" "processed" false -}}
+
+{{- if not $u.IsAbs -}}
+  {{- $path := strings.TrimPrefix "./" $u.Path -}}
+  {{- with or ($page.Resources.Get $path) (resources.Get $path) -}}
+    {{- $base := .RelPermalink -}}
+    {{- $srcset := "" -}}
+    {{- $w := "" -}}
+    {{- $h := "" -}}
+
+    {{- $formats := slice "jpg" "jpeg" "png" "tif" "bmp" -}}
+    {{- if hugo.IsExtended -}}
+      {{- $formats = $formats | append "webp" -}}
+    {{- end -}}
+
+    {{- if in $formats .MediaType.SubType -}}
+      {{- /* AutoOrient first, always — EXIF rotation is not applied otherwise. */ -}}
+      {{- $set := partial "image-variants.html" (dict "image" (.Filter images.AutoOrient)) -}}
+      {{- $list := slice -}}
+      {{- range $set.variants -}}
+        {{- $list = $list | append (printf "%s %dw" .RelPermalink .Width) -}}
+      {{- end -}}
+      {{- $base = $set.primary.RelPermalink -}}
+      {{- $srcset = delimit $list ", " -}}
+      {{- $w = printf "%d" $set.primary.Width -}}
+      {{- $h = printf "%d" $set.primary.Height -}}
+    {{- end -}}
+
+    {{- $src := $base -}}
+    {{- with $u.RawQuery -}}
+      {{- $src = printf "%s?%s" $src . -}}
+    {{- end -}}
+    {{- with $u.Fragment -}}
+      {{- $src = printf "%s#%s" $src . -}}
+    {{- end -}}
+
+    {{- $out = dict
+          "src" $src
+          "srcset" $srcset
+          "sizes" (cond (eq $srcset "") "" $sizes)
+          "width" $w
+          "height" $h
+          "processed" (ne $srcset "") -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $out -}}

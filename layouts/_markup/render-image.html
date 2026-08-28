@@ -1,0 +1,29 @@
+{{- /* Project override of PaperMod's render-image.html.
+
+       Upstream resolves a Markdown image to its resource and then links the file
+       as it sits on disk — a post body could therefore ship a 3 MB camera JPEG
+       into a 720px column. Resolution and sizing now live in
+       responsive-image.html, shared with the figure and img shortcodes; what is
+       left here is upstream's attribute handling (`.Attributes` passthrough,
+       lazy loading, external URLs untouched). */ -}}
+
+{{- $img := partial "responsive-image.html" (dict "page" .PageInner "src" .Destination) -}}
+
+{{- $computed := dict "alt" .Text "title" (.Title | transform.HTMLEscape) "loading" "lazy" -}}
+{{- if $img.processed -}}
+  {{- $computed = merge $computed (dict
+        "srcset" $img.srcset
+        "sizes" $img.sizes
+        "width" $img.width
+        "height" $img.height
+        "decoding" "async") -}}
+{{- end -}}
+
+{{- $attributes := merge .Attributes $computed (dict "src" $img.src) -}}
+<img
+  {{- range $k, $v := $attributes -}}
+    {{- if $v -}}
+      {{- printf " %s=%q" $k $v | safeHTMLAttr -}}
+    {{- end -}}
+  {{- end -}}>
+{{- /**/ -}}

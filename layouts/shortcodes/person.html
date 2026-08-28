@@ -3,7 +3,12 @@
   {{ range $.Page.Params.persons }}
 
   <div class="card">
-    <img src="{{ .img }}" alt="Image / logo of {{ .name }}" style="width: 100%"/>
+    {{- $img := partial "responsive-image.html" (dict "page" $.Page "src" .img "sizes" "(min-width: 600px) 350px, 100vw") }}
+    <img src="{{ $img.src }}"
+      {{- with $img.srcset }} srcset="{{ . }}" sizes="{{ $img.sizes }}" decoding="async"{{ end }}
+      {{- with $img.width }} width="{{ . }}"{{ end }}
+      {{- with $img.height }} height="{{ . }}"{{ end }}
+      loading="lazy" alt="Image / logo of {{ .name }}" style="width: 100%"/>
     <div class="container">
       <h3><b>{{ .name }}</b></h3>
       <p>{{ markdownify .description }}</p>

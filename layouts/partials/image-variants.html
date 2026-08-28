@@ -1,0 +1,56 @@
+{{- /* Builds the responsive variant ladder shared by post covers and inline post
+       images, so both agree on widths, the cap and the `src` fallback.
+
+       in:  image       an image resource — the caller applies images.AutoOrient
+                        first, since only the caller knows whether it has to
+                        read .Width off the corrected image
+            maxWidth    hard cap, default 1500: the post column is 720px
+                        (--main-width), so 1500 already covers a 2x display
+            primaryMax  width the non-srcset `src` should aim at, default 720
+            format      optional Hugo image spec suffix (e.g. "webp q85").
+                        Defaults to WebP for PNG sources — see below — and to
+                        the source format otherwise.
+
+       out: variants    resized resources, ascending
+            primary     the largest variant at or below primaryMax
+
+       The cap never exceeds the source width, so a small image is re-encoded at
+       its own size rather than upscaled.
+
+       PNG sources are re-encoded as WebP because resizing a photographic PNG
+       makes it *bigger*: the 3000px `fuck-spez.png` came out of a 1500px resize
+       at 2.6 MB against a 2.0 MB original, since Hugo writes full RGBA PNG
+       whatever the source was optimised to. The same image as WebP q85 is
+       736 KB, and a UI screenshot goes from 163 KB to 49 KB with the text still
+       pixel-crisp at 1:1. q85 rather than Hugo's default 75 because these PNGs
+       are mostly screenshots, where text is the first thing to smear. Alpha
+       survives — WebP carries an alpha channel. JPEG sources stay JPEG: they are
+       already lossy, and re-encoding buys far less than it risks. */ -}}
+
+{{- $img := .image -}}
+{{- $maxWidth := .maxWidth | default 1500 -}}
+{{- $primaryMax := .primaryMax | default 720 -}}
+{{- $format := .format -}}
+{{- if not $format -}}
+  {{- $format = cond (eq $img.MediaType.SubType "png") "webp q85" "" -}}
+{{- end -}}
+{{- $spec := cond (eq $format "") "%dx" (printf "%%dx %s" $format) -}}
+
+{{- $cap := cond (gt $img.Width $maxWidth) $maxWidth $img.Width -}}
+{{- $widths := slice -}}
+{{- range (slice 360 480 720 1080 1500) -}}
+  {{- if lt . $cap -}}{{- $widths = $widths | append . -}}{{- end -}}
+{{- end -}}
+{{- $widths = $widths | append $cap -}}
+
+{{- $variants := slice -}}
+{{- range $widths -}}
+  {{- $variants = $variants | append ($img.Resize (printf $spec .)) -}}
+{{- end -}}
+
+{{- $primary := index $variants 0 -}}
+{{- range $variants -}}
+  {{- if le .Width $primaryMax -}}{{- $primary = . -}}{{- end -}}
+{{- end -}}
+
+{{- return (dict "variants" $variants "primary" $primary) -}}

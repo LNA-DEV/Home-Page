@@ -30,28 +30,9 @@
     {{- $imgdl := (.Params.cover.image) | absURL }}
 
     {{- if $src }}
-        {{- /* Cover is displayed at --main-width (720px), so 1500 covers a 2x
-               display and there is no reason to ship anything larger. Never
-               upscale: the cap is the original width when it is below 1500. */ -}}
-        {{- $maxWidth := 1500 }}
-        {{- $cap := cond (gt $src.Width $maxWidth) $maxWidth $src.Width }}
-        {{- $widths := slice }}
-        {{- range (slice 360 480 720 1080 1500) }}
-            {{- if lt . $cap }}{{ $widths = $widths | append . }}{{ end }}
-        {{- end }}
-        {{- $widths = $widths | append $cap }}
-
-        {{- $variants := slice }}
-        {{- range $widths }}
-            {{- $variants = $variants | append ($src.Resize (printf "%dx" .)) }}
-        {{- end }}
-
-        {{- /* src points at the largest variant up to 720px, so a client that
-               ignores srcset still gets the content-width image. */ -}}
-        {{- $primary := index $variants 0 }}
-        {{- range $variants }}
-            {{- if le .Width 720 }}{{ $primary = . }}{{ end }}
-        {{- end }}
+        {{- $set := partial "image-variants.html" (dict "image" $src) }}
+        {{- $variants := $set.variants }}
+        {{- $primary := $set.primary }}
         {{- $imgdl = (index $variants (sub (len $variants) 1)).Permalink }}
 
         {{- if $addLink }}
