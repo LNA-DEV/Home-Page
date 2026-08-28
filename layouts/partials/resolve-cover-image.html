@@ -1,0 +1,39 @@
+{{- /* Resolves a page's `cover.image` front-matter value to its image resource.
+
+       Mirrors the lookup PaperMod's cover.html does (page bundle first, global
+       resources as fallback), but in one place so cover.html and the social/SEO
+       meta partials cannot disagree about which file the cover actually is.
+
+       Returns a dict:
+         raw    the resource as it sits on disk, or false when the cover is an
+                external URL / a path with no matching resource
+         image  the same resource with EXIF rotation applied, or false when the
+                format is not processable (svg, …) — callers resize this one
+
+       The global lookup only runs when the page bundle has no match: it globs
+       every image asset on the site, and with the gallery mounted that is 600+
+       files. */ -}}
+
+{{- $raw := false -}}
+{{- $image := false -}}
+
+{{- with .Params.cover.image -}}
+  {{- $match := printf "*%s*" . -}}
+  {{- $raw = ($.Resources.ByType "image").GetMatch $match -}}
+  {{- if not $raw -}}
+    {{- $raw = (resources.ByType "image").GetMatch $match -}}
+  {{- end -}}
+{{- end -}}
+
+{{- with $raw -}}
+  {{- $formats := slice "jpg" "jpeg" "png" "tif" "bmp" "gif" -}}
+  {{- if hugo.IsExtended -}}
+    {{- $formats = $formats | append "webp" -}}
+  {{- end -}}
+  {{- if in $formats .MediaType.SubType -}}
+    {{- /* AutoOrient first, always — EXIF rotation is not applied otherwise. */ -}}
+    {{- $image = .Filter images.AutoOrient -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return (dict "raw" $raw "image" $image) -}}

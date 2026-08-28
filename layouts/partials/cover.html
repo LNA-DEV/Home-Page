@@ -1,0 +1,91 @@
+{{- /* Project override of PaperMod's cover.html.
+
+       Upstream serves the untouched original both as `src` and as the largest
+       srcset candidate, so every post's cover shipped at whatever size it was
+       exported at — a 3000px, multi-megabyte JPEG unless the author remembered
+       to shrink it by hand. Here every candidate is a Hugo-processed variant,
+       EXIF-rotated and capped at $maxWidth, so no post has to think about it.
+
+       Two other deviations from upstream:
+         - variants are built in development too, so `hugo server` shows the same
+           files production ships (covers are ~5 images, the cache absorbs it);
+         - the resource lookup lives in resolve-cover-image.html, shared with the
+           opengraph / twitter / schema partials. */ -}}
+
+{{- with .cxt}} {{/* Apply proper context from dict */}}
+{{- if (and .Params.cover.image (not $.isHidden)) }}
+<figure class="entry-cover">
+    {{- $loading := cond $.IsSingle "eager" "lazy" }}
+    {{- $addLink := (and site.Params.cover.linkFullImages $.IsSingle) }}
+    {{- $alt := (.Params.cover.alt | default .Params.cover.caption | plainify) }}
+    {{- $responsiveImages := (.Params.cover.responsiveImages | default site.Params.cover.responsiveImages) | default true }}
+
+    {{- if not $alt }}
+      {{- warnf "cover (%s): %q has no alt text — add cover.alt in the front matter" .Path .Params.cover.image }}
+    {{- end }}
+
+    {{- $resolved := partial "resolve-cover-image.html" . }}
+    {{- $src := $resolved.image }}
+
+    {{- $imgdl := (.Params.cover.image) | absURL }}
+
+    {{- if $src }}
+        {{- /* Cover is displayed at --main-width (720px), so 1500 covers a 2x
+               display and there is no reason to ship anything larger. Never
+               upscale: the cap is the original width when it is below 1500. */ -}}
+        {{- $maxWidth := 1500 }}
+        {{- $cap := cond (gt $src.Width $maxWidth) $maxWidth $src.Width }}
+        {{- $widths := slice }}
+        {{- range (slice 360 480 720 1080 1500) }}
+            {{- if lt . $cap }}{{ $widths = $widths | append . }}{{ end }}
+        {{- end }}
+        {{- $widths = $widths | append $cap }}
+
+        {{- $variants := slice }}
+        {{- range $widths }}
+            {{- $variants = $variants | append ($src.Resize (printf "%dx" .)) }}
+        {{- end }}
+
+        {{- /* src points at the largest variant up to 720px, so a client that
+               ignores srcset still gets the content-width image. */ -}}
+        {{- $primary := index $variants 0 }}
+        {{- range $variants }}
+            {{- if le .Width 720 }}{{ $primary = . }}{{ end }}
+        {{- end }}
+        {{- $imgdl = (index $variants (sub (len $variants) 1)).Permalink }}
+
+        {{- if $addLink }}
+        <a href="{{ $imgdl }}" target="_blank" rel="noopener noreferrer">
+        {{- end }}
+        <img loading="{{ $loading }}"
+            {{- if $responsiveImages }}
+            srcset="{{ range $i, $v := $variants }}{{ if $i }}, {{ end }}{{ $v.Permalink }} {{ $v.Width }}w{{ end }}"
+            sizes="(min-width: 768px) 720px, 100vw"
+            {{- end }}
+            src="{{ $primary.Permalink }}"
+            width="{{ $primary.Width }}" height="{{ $primary.Height }}"
+            decoding="async"
+            alt="{{ $alt }}">
+    {{- else }}
+        {{- /* External URL, or a resource Hugo cannot process (svg, …) — pass
+               it through untouched, there is nothing to resize. */ -}}
+        {{- with $resolved.raw }}{{ $imgdl = .Permalink }}{{ end }}
+        {{- if $addLink }}
+        <a href="{{ $imgdl }}" target="_blank" rel="noopener noreferrer">
+        {{- end }}
+        <img loading="{{ $loading }}" src="{{ $imgdl }}" alt="{{ $alt }}">
+    {{- end }}
+
+    {{- if $addLink }}
+        </a>
+    {{- end -}}
+
+    {{- /*  Display Caption  */}}
+    {{- if $.IsSingle }}
+        {{ with .Params.cover.caption -}}
+            <figcaption>{{ . | markdownify }}</figcaption>
+        {{- end }}
+    {{- end }}
+</figure>
+{{- end }}{{/* End image */}}
+{{- end -}}{{/* End context */ -}}
