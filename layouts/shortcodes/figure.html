@@ -1,0 +1,48 @@
+{{- /* Project override of PaperMod's figure.html.
+
+       Identical markup to upstream — class/align, link, alt, caption, title,
+       attr/attrlink all behave the same — except that a `src` pointing at a page
+       resource is resolved and resized through responsive-image.html instead of
+       being linked at its original size. Explicit width/height attributes still
+       win over the computed ones; external URLs and SVGs pass through untouched.
+
+       The `#center` fragment is upstream's hook for the align-center CSS rule and
+       is appended after resolution so it survives the rewrite. */ -}}
+
+{{- $img := partial "responsive-image.html" (dict "page" .Page "src" (.Get "src")) -}}
+{{- $src := $img.src -}}
+{{- if eq (.Get "align") "center" -}}{{- $src = printf "%s#center" $src -}}{{- end -}}
+{{- $width := or (.Get "width") $img.width -}}
+{{- $height := or (.Get "height") $img.height -}}
+<figure{{ if or (.Get "class") (eq (.Get "align") "center") }} class="
+           {{- if eq (.Get "align") "center" }}align-center {{ end }}
+           {{- with .Get "class" }}{{ . }}{{- end }}"
+{{- end -}}>
+    {{- if .Get "link" -}}
+        <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+    {{- end }}
+    <img loading="lazy" src="{{ $src }}"
+         {{- with $img.srcset }} srcset="{{ . }}" sizes="{{ $img.sizes }}" decoding="async"{{ end -}}
+         {{- if or (.Get "alt") (.Get "caption") }}
+         alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
+         {{- end -}}
+         {{- with $width }} width="{{ . }}"{{ end -}}
+         {{- with $height }} height="{{ . }}"{{ end -}}
+    /> <!-- Closing img tag -->
+    {{- if .Get "link" }}</a>{{ end -}}
+    {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
+        <figcaption>
+            {{ with (.Get "title") -}}
+                {{ . }}
+            {{- end -}}
+            {{- if or (.Get "caption") (.Get "attr") -}}<p>
+                {{- .Get "caption" | markdownify -}}
+                {{- with .Get "attrlink" }}
+                    <a href="{{ . }}">
+                {{- end -}}
+                {{- .Get "attr" | markdownify -}}
+                {{- if .Get "attrlink" }}</a>{{ end }}</p>
+            {{- end }}
+        </figcaption>
+    {{- end }}
+</figure>

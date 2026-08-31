@@ -1,18 +1,18 @@
-{{- $img := (.Get "url") }}
+{{- /* Resolves `url` through responsive-image.html, so an About-page photo is
+       served at the size the column actually shows rather than at whatever the
+       camera wrote. External URLs and unprocessable formats pass through. */ -}}
+{{- $img := partial "responsive-image.html" (dict "page" .Page "src" (.Get "url")) }}
 {{- $alt := (.Get "alt") }}
 {{- $caption := (.Get "caption") }}
 {{- $link := (.Get "link") }}
 
 <figure>
-{{- if $link -}}
-  <a href="{{$link}}">
-    <img src="{{$img}}" alt="{{$alt}}">
-  </a>
-{{- else -}}
-  <img src="{{$img}}" alt="{{$alt}}">
-{{- end -}}
+{{- if $link }}<a href="{{ $link }}">{{ end -}}
+  <img src="{{ $img.src }}"
+    {{- with $img.srcset }} srcset="{{ . }}" sizes="{{ $img.sizes }}" decoding="async"{{ end }}
+    {{- with $img.width }} width="{{ . }}"{{ end }}
+    {{- with $img.height }} height="{{ . }}"{{ end }}
+    loading="lazy" alt="{{ $alt }}">
+{{- if $link }}</a>{{ end }}
   <figcaption class="img-caption-center">{{ $caption | default $alt }}</figcaption>
 </figure>
-
-
-

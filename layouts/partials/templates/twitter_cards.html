@@ -1,10 +1,8 @@
 {{- if .Params.cover.image -}}
 <meta name="twitter:card" content="summary_large_image">
-{{- if (ne $.Params.cover.relative true) }}
-<meta name="twitter:image" content="{{ .Params.cover.image | absURL }}">
-{{- else }}
-<meta name="twitter:image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}">
-{{- end}}
+{{- with partial "templates/_funcs/get-cover-url" . }}
+<meta name="twitter:image" content="{{ . }}">
+{{- end }}
 {{- else }}
 {{- $images := partial "templates/_funcs/get-page-images" . -}}
 {{- with index $images 0 -}}

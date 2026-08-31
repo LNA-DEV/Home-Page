@@ -8,7 +8,22 @@
 {{- end }}
 
 {{- /* Title */}}
-<title>{{ if .IsHome }}{{ else }}{{ if .Title }}{{ .Title }} | {{ end }}{{ end }}{{ site.Title }}</title>
+{{- /* The site-name suffix is not free: Google truncates the <title> at roughly
+       60 characters, and "LNA-DEV ~ Lukas Nagel" alone eats 21 of them, which
+       pushes the tail off a long post title — on the Nicklheimer-Filzen post
+       exactly the local search term it wants to rank for.
+
+       `titleSuffix` overrides it: set it in a page's front matter to buy those
+       characters back for that page, or under `params:` in hugo.yaml to change
+       it site-wide. An explicit empty string ("") drops the suffix entirely.
+       Unset anywhere, the title is byte-for-byte what PaperMod produced. */ -}}
+{{- $suffix := site.Title -}}
+{{- if isset .Params "titlesuffix" -}}
+  {{- $suffix = .Params.titleSuffix -}}
+{{- else if isset site.Params "titlesuffix" -}}
+  {{- $suffix = site.Params.titleSuffix -}}
+{{- end -}}
+<title>{{ if .IsHome }}{{ $suffix }}{{ else if .Title }}{{ .Title }}{{ with $suffix }} | {{ . }}{{ end }}{{ else }}{{ $suffix }}{{ end }}</title>
 
 {{- /* Meta */}}
 {{- if .IsHome }}

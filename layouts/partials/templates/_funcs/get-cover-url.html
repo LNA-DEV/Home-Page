@@ -1,0 +1,35 @@
+{{- /* Absolute URL of a page's cover, sized for social/SEO consumers.
+
+       opengraph.html, twitter_cards.html and schema_json.html each used to build
+       this URL by hand as `path.Join .RelPermalink .Params.cover.image`, which
+       pointed straight at the untouched original — a 2.7 MB fetch for a link
+       preview — and was plain wrong for a cover that lives in global resources
+       rather than the page bundle.
+
+       Bounded to 1200px on the long edge: above OG's 600px minimum, comfortably
+       under the 5 MB every scraper caps at, and aspect-preserving so a portrait
+       cover is not cropped. Returns "" when the page has no cover. */ -}}
+
+{{- $url := "" -}}
+{{- with .Params.cover.image -}}
+  {{- $resolved := partial "resolve-cover-image.html" $ -}}
+  {{- with $resolved.image -}}
+    {{- $img := . -}}
+    {{- if or (gt $img.Width 1200) (gt $img.Height 1200) -}}
+      {{- $img = $img.Fit "1200x1200" -}}
+    {{- end -}}
+    {{- $url = $img.Permalink -}}
+  {{- else -}}
+    {{- with $resolved.raw -}}
+      {{- $url = .Permalink -}}
+    {{- else -}}
+      {{- /* External URL or unresolvable path — fall back to the old behaviour. */ -}}
+      {{- if eq $.Params.cover.relative true -}}
+        {{- $url = (path.Join $.RelPermalink .) | absURL -}}
+      {{- else -}}
+        {{- $url = . | absURL -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $url -}}

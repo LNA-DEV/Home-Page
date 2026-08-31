@@ -1,0 +1,17 @@
+{{- /* Project override of PaperMod's collapse.html.
+
+       Only one line differs: the body is rendered with .Page.RenderString rather
+       than markdownify. markdownify is handed a bare string, so the render hooks
+       it triggers have no page to resolve a relative image against — every
+       Markdown image inside a collapse fell through to its untouched original
+       (2.1 MB for one rabbit photo) while the same syntax outside the shortcode
+       was resized. RenderString carries the page, so the images inside a collapse
+       go through render-image.html like every other image in the post. */ -}}
+{{ if .Get "summary" }}
+{{ else }}
+{{ warnf "missing value for param 'summary': %s" .Position }}
+{{ end }}
+<p><details {{ if (eq (.Get "openByDefault") true) }} open=true {{ end }}>
+  <summary markdown="span">{{ .Get "summary" | markdownify }}</summary>
+  {{ .Page.RenderString (dict "display" "block") .Inner }}
+</details></p>
