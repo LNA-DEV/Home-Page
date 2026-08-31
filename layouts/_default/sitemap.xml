@@ -30,11 +30,52 @@
                 href="{{ .Permalink }}"
                 />
     {{- end }}
-    {{- range .Resources.ByType "image" }}
+    {{- /* Page-bundle images, for Google Images.
+
+           The cover is special-cased twice. Its `.Permalink` is the untouched
+           original — never rendered on the page, which loads a 720px variant out
+           of a srcset — so pointing the sitemap at it advertised a 2.7 MB file as
+           the post's image (that is what the Nicklheimer-Filzen cover weighs).
+           `get-cover-url` returns the 1200px variant opengraph, twitter_cards and
+           schema_json already publish, so all four now name the same file and no
+           new image variant is generated.
+
+           Its title came out wrong too: `image-alt.html` falls back to the EXIF
+           ImageDescription, which is English on photos edited for the gallery, so
+           German and Swedish pages advertised an English title. The page's own
+           `cover.alt` is written in the page's language and wins here.
+
+           Non-cover bundle images keep `.Permalink`: those really are embedded at
+           full size by Markdown, and Google wants the URL the page uses.
+
+           The cover is matched against the bundle only, deliberately not through
+           `resolve-cover-image.html`: that partial falls back to globbing every
+           image asset on the site (600+ with the gallery mounted) when the bundle
+           has no match, and this template runs for every page in every language,
+           dex species pages included. A cover that lives in global resources is
+           not in `.Resources` and so never reaches this loop anyway. */ -}}
+    {{- $images := .Resources.ByType "image" }}
+    {{- $coverRaw := "" }}
+    {{- with .Params.cover.image }}
+    {{- with $images.GetMatch (printf "*%s*" .) }}{{ $coverRaw = .RelPermalink }}{{ end }}
+    {{- end }}
+    {{- $coverURL := "" }}
+    {{- $coverAlt := "" }}
+    {{- if $coverRaw }}
+    {{- $coverURL = partial "templates/_funcs/get-cover-url" . }}
+    {{- $coverAlt = .Params.cover.alt }}
+    {{- end }}
+    {{- range $images }}
     {{- if ne .MediaType.SubType "svg" }}
+    {{- $loc := .Permalink }}
+    {{- $title := partial "image-alt.html" . }}
+    {{- if and $coverRaw (eq .RelPermalink $coverRaw) }}
+    {{- with $coverURL }}{{ $loc = . }}{{ end }}
+    {{- with $coverAlt }}{{ $title = . }}{{ end }}
+    {{- end }}
     <image:image>
-      <image:loc>{{ .Permalink }}</image:loc>
-      {{- with partial "image-alt.html" . }}
+      <image:loc>{{ $loc }}</image:loc>
+      {{- with $title }}
       <image:title>{{ . | htmlEscape }}</image:title>
       {{- end }}
     </image:image>
