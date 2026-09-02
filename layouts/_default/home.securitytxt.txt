@@ -1,0 +1,11 @@
+{{- /* RFC 9116 security.txt, served at /.well-known/security.txt via the
+`securitytxt` output format in hugo.yaml. Generated instead of static so that
+`Expires` cannot go stale: it is one day short of a year from the build, which
+keeps it inside the RFC's "less than a year into the future" recommendation.
+Truncating to whole days keeps the output deterministic across rebuilds.
+`absURL` resolves against the build's baseURL, so the Tor build in deploy.sh
+gets an onion `Canonical` rather than the clearnet one. */ -}}
+Contact: mailto:security@lna-dev.net
+Expires: {{ (now.AddDate 1 0 -1).UTC.Format "2006-01-02" }}T00:00:00.000Z
+Preferred-Languages: de, en, sv
+Canonical: {{ "/.well-known/security.txt" | absURL }}
