@@ -16,7 +16,7 @@
     {{- if $meta -}}
       {{- $include := true -}}
       {{- if and $filterCategory (ne ($meta.category | default "") $filterCategory) -}}{{ $include = false }}{{ end -}}
-      {{- if and $filterProject (ne ($meta.project | default "") $filterProject) -}}{{ $include = false }}{{ end -}}
+      {{- if and $filterProject (not (in $meta.projects $filterProject)) -}}{{ $include = false }}{{ end -}}
       {{- if and $filterArchive (ne ($meta.section | default "") "archive") -}}{{ $include = false }}{{ end -}}
       {{- if and (not $filterArchive) (eq ($meta.section | default "") "archive") -}}{{ $include = false }}{{ end -}}
       {{- if $include -}}

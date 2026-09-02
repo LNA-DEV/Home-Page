@@ -9612,7 +9612,7 @@ images:
   category: animals
   species: Haliaeetus albicilla
   section: general
-  project: wildlife-of-inn-valley
+  project: [wildlife-of-inn-valley, 2026-08-nicklheim-adler]
   portfolio: true
 - id: cdb2743d-d9b7-402d-b7e9-c2d1e0a072ee
   src: Curious Juvenile - Young Red Fox Meeting the Cameras Gaze.jpg
@@ -9626,49 +9626,49 @@ images:
   category: animals
   section: general
   portfolio: true
-  project: wildlife-of-inn-valley
+  project: [wildlife-of-inn-valley, 2026-08-nicklheim-adler]
   species: Haliaeetus albicilla
 - id: 0bb3b7dc-a6fe-46d9-9718-cedb87164962
   src: Between the Foglets - White-Tailed Eagle on a Wild Hunt in the Mist.jpg
   category: animals
   section: general
-  project: wildlife-of-inn-valley
+  project: [wildlife-of-inn-valley, 2026-08-nicklheim-adler]
   species: Haliaeetus albicilla
 - id: 576c11d6-6ee7-493b-a512-e36f6218cdb1
   src: Gilded Wings - White-tailed Eagle Gliding Through the Morning Sun.jpg
   category: animals
   section: general
-  project: wildlife-of-inn-valley
+  project: [wildlife-of-inn-valley, 2026-08-nicklheim-adler]
   species: Haliaeetus albicilla
 - id: e0a971e5-cf10-485a-b462-d4730f1375ef
   src: To the Outlook - A White-Tailed Eagle over Bavarian Pines.jpg
   category: animals
   section: general
-  project: wildlife-of-inn-valley
+  project: [wildlife-of-inn-valley, 2026-08-nicklheim-adler]
   species: Haliaeetus albicilla
 - id: d4c0b96a-4d85-41a7-8ff1-a687b49c7dca
   src: Morning Watch - Osprey Scanning the Bog from a Treetop.jpg
   category: animals
   section: general
-  project: wildlife-of-inn-valley
+  project: [wildlife-of-inn-valley, 2026-08-nicklheim-adler]
   species: Pandion haliaetus
 - id: 75b3427e-d6ec-4f21-b216-69ce394bb73f
   src: Morning Glide - Osprey Riding the First Light Below a Forested Ridge.jpg
   category: animals
   section: general
-  project: wildlife-of-inn-valley
+  project: [wildlife-of-inn-valley, 2026-08-nicklheim-adler]
   species: Pandion haliaetus
 - id: c01bb9eb-0995-4e4e-9fe9-c4f2e4cab75e
   src: Leaving the Lookout - Osprey Lifting Off in Early Morning Light.jpg
   category: animals
   section: general
-  project: wildlife-of-inn-valley
+  project: [wildlife-of-inn-valley, 2026-08-nicklheim-adler]
   species: Pandion haliaetus
 - id: afc97c39-9033-4eef-9c90-ae3455dd50a8
   src: First Light - Osprey Gliding Past a Sunlit Mountain Farm.jpg
   category: animals
   section: general
-  project: wildlife-of-inn-valley
+  project: [wildlife-of-inn-valley, 2026-08-nicklheim-adler]
   species: Pandion haliaetus
 projects:
 - slug: above-the-clouds

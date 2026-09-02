@@ -10,7 +10,8 @@
     - category: filter by category (animals, landscape, city, plants, portrait, others)
     - section: filter by section (general, archive) — if omitted, excludes archive
     - portfolio: if true, only return portfolio images
-    - project: filter by project slug
+    - project: filter by project slug (matches any slug in the entry's `project`,
+              which may be a single string or a list)
     - species: filter by scientific name, e.g. "Vulpes vulpes" (case-insensitive)
     - id: filter by the UUID from data/gallery.yaml — returns at most one image.
           Pair it with excludeArchive false: naming a photo by id is explicit, so
@@ -62,7 +63,9 @@
   {{- end -}}
 
   {{- with index $filter "project" -}}
-    {{- if ne ($meta.project | default "") . -}}
+    {{- /* .projects is the normalised slice from gallery-meta — a photo may be in
+           several albums, e.g. a thematic one and a single-session one. */ -}}
+    {{- if not (in $meta.projects .) -}}
       {{- $include = false -}}
     {{- end -}}
   {{- end -}}

@@ -5,6 +5,12 @@
     .byId  — keyed by UUID id (used by featured_image and other id-based lookups)
   Use with partialCached for O(1) builds after first call.
 
+  Every entry gains a derived `.projects` key: the `project:` field normalised to a
+  slice, so a photo can sit in several albums (`project: [a, b]`) while the plain
+  string form keeps working. Filter with `in $meta.projects $slug` — never compare
+  `.project` directly, and never use `in` on the raw field, which would match a
+  substring ("eagles" against "eagles-2026") instead of a whole slug.
+
   Hard-fails if any entry is missing an id — run scripts/add-gallery-ids.py to fix.
 
   Usage:
@@ -18,7 +24,16 @@
   {{- if not .id -}}
     {{- errorf "data/gallery.yaml: entry %q has no id (run scripts/add-gallery-ids.py)" .src -}}
   {{- end -}}
-  {{- $bySrc = merge $bySrc (dict .src .) -}}
-  {{- $byId  = merge $byId  (dict .id  .) -}}
+  {{- $projects := .project | default "" -}}
+  {{- if not (reflect.IsSlice $projects) -}}
+    {{- if $projects -}}
+      {{- $projects = slice $projects -}}
+    {{- else -}}
+      {{- $projects = slice -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $entry := merge . (dict "projects" $projects) -}}
+  {{- $bySrc = merge $bySrc (dict .src $entry) -}}
+  {{- $byId  = merge $byId  (dict .id  $entry) -}}
 {{- end -}}
 {{- return (dict "bySrc" $bySrc "byId" $byId) -}}

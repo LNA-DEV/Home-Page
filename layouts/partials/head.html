@@ -37,10 +37,13 @@
 {{- $filterCategory := .Params.filter_category | default "" -}}
 {{- $filterProject := .Params.project_slug | default "" -}}
 {{- $filterArchive := eq .Params.Theme "gallery-archive" -}}
-{{- range hugo.Data.gallery.images -}}
+{{- /* Via gallery-meta rather than hugo.Data.gallery.images directly: the entries
+       there carry the normalised `.projects` slice, so an album filter matches a
+       photo that belongs to several albums. */ -}}
+{{- range (partialCached "gallery-meta.html" .).bySrc -}}
   {{- $include := true -}}
   {{- if and $filterCategory (ne (.category | default "") $filterCategory) }}{{ $include = false }}{{ end -}}
-  {{- if and $filterProject (ne (.project | default "") $filterProject) }}{{ $include = false }}{{ end -}}
+  {{- if and $filterProject (not (in .projects $filterProject)) }}{{ $include = false }}{{ end -}}
   {{- if and $filterArchive (ne (.section | default "") "archive") }}{{ $include = false }}{{ end -}}
   {{- if and (not $filterArchive) (eq (.section | default "") "archive") }}{{ $include = false }}{{ end -}}
   {{- if $include -}}
