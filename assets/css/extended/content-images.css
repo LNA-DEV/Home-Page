@@ -1,0 +1,36 @@
+/* Keeps content images on their aspect ratio.
+
+   Every image template in this repo emits intrinsic `width`/`height` attributes
+   against layout shift — render-image.html, the figure shortcode and the person
+   shortcode via responsive-image.html/image-variants.html, gallery-image-figure.html
+   from its own variant ladder. Those attributes are CSS presentational hints, so
+   they fix *both* dimensions unless the cascade says otherwise, and PaperMod's
+   reset gives images `max-width: 100%` with no matching `height: auto` (see
+   core/reset.css). Anything that constrains only the width therefore leaves the
+   height pinned to the source pixel value and the image is painted distorted:
+
+     - the person cards on /links/ set `width: 100%` inline and were stretched to
+       their source height — 176px to 720px across the five portraits, so every
+       card was wrong by a different amount;
+     - any content image wider than the viewport gets its width clamped by
+       `max-width: 100%` while the height attribute stays put, which squashes
+       Markdown and figure-shortcode images on narrow screens.
+
+   `:where()` contributes no specificity, so this rule weighs the same as a bare
+   `img` selector (0,0,1): it beats the attribute hints, and it loses to every
+   class-based rule. That matters — components that legitimately pin a height keep
+   it without needing !important or a load-order tweak, e.g.
+   `.game-card__cover img { height: 100% }` in gamingList.css,
+   `.dex-hero__media img` in dex.css and `.gallery-item figure img` in _styles.scss.
+
+   Scoped to .post-content rather than applied to `img` globally because the site
+   header logo carries a bare `height="35"` and no CSS height at all (PaperMod's
+   header.html + header.css), so a global rule would collapse it on every page.
+   Post covers need nothing: PaperMod already ships `.entry-cover img { height: auto }`.
+
+   Gallery pages already got this via `.main img { height: auto }` in
+   assets/css/_styles.scss, but that sheet is only loaded under /gallery. */
+
+:where(.post-content) img {
+  height: auto;
+}

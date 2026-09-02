@@ -4,11 +4,17 @@
 
   <div class="card">
     {{- $img := partial "responsive-image.html" (dict "page" $.Page "src" .img "sizes" "(min-width: 600px) 350px, 100vw") }}
+    {{- /* `height: auto` is load-bearing, not decoration. The width/height attributes
+           responsive-image.html emits against layout shift are presentational hints:
+           `width: 100%` overrides the width one, but the height one then still pins the
+           box to the variant's pixel height. A 350px-wide card whose primary variant is
+           176px tall renders 350x176, one whose variant is 720px tall renders 350x720 —
+           every logo distorted and every card a different height. */ -}}
     <img src="{{ $img.src }}"
       {{- with $img.srcset }} srcset="{{ . }}" sizes="{{ $img.sizes }}" decoding="async"{{ end }}
       {{- with $img.width }} width="{{ . }}"{{ end }}
       {{- with $img.height }} height="{{ . }}"{{ end }}
-      loading="lazy" alt="Image / logo of {{ .name }}" style="width: 100%"/>
+      loading="lazy" alt="Image / logo of {{ .name }}" style="width: 100%; height: auto"/>
     <div class="container">
       <h3><b>{{ .name }}</b></h3>
       <p>{{ markdownify .description }}</p>
