@@ -28,7 +28,9 @@ let lastTrackedImageId = null;
 const platformNames = {
   bluesky: "Bluesky",
   instagram: "Instagram",
+  mastodon: "Mastodon",
   pixelfed: "Pixelfed",
+  threads: "Threads",
   native: "This site",
 };
 
