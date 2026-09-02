@@ -1,6 +1,6 @@
 ---
 title: Eagles over the Nicklheimer Filzen
-description: One sunrise in the Nicklheimer Filzen near Raubling, August 2026 — a white-tailed eagle and an osprey over the same bog lake.
+description: One sunrise in the Nicklheimer Filzen near Raubling, August 2026 - a white-tailed eagle and an osprey over the same bog lake.
 weight: 3
 sort_by: Date
 sort_order: desc

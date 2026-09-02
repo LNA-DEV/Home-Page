@@ -1,6 +1,6 @@
 ---
 title: Adler über den Nicklheimer Filzen
-description: Ein Sonnenaufgang in den Nicklheimer Filzen bei Raubling im August 2026 — ein Seeadler und ein Fischadler über demselben Moorsee.
+description: Ein Sonnenaufgang in den Nicklheimer Filzen bei Raubling im August 2026 - ein Seeadler und ein Fischadler über demselben Moorsee.
 weight: 3
 sort_by: Date
 sort_order: desc

@@ -1,6 +1,6 @@
 ---
 title: Örnar över Nicklheimer Filzen
-description: En soluppgång i Nicklheimer Filzen nära Raubling i augusti 2026 — en havsörn och en fiskgjuse över samma mossesjö.
+description: En soluppgång i Nicklheimer Filzen nära Raubling i augusti 2026 - en havsörn och en fiskgjuse över samma mossesjö.
 weight: 3
 sort_by: Date
 sort_order: desc
