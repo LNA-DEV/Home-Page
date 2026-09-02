@@ -583,14 +583,14 @@
   cover: images/games/covers/Brawlhalla.jpg
   link: "https://store.steampowered.com/app/291550/"
 
-- title: "The Witcher 3: Wild Hunt"
+- title: "The Witcher 3: Wild Hunt - Complete Edition"
   platform: steam
   appid: 292030
   playtimeMinutes: 5754
   lastPlayed: "2026-07-19"
   achievementsUnlocked: 26
   achievementsTotal: 78
-  cover: "images/games/covers/The Witcher 3: Wild Hunt.jpg"
+  cover: "images/games/covers/The Witcher 3: Wild Hunt - Complete Edition.jpg"
   link: "https://store.steampowered.com/app/292030/"
 
 - title: Enter the Gungeon
@@ -684,8 +684,8 @@
 - title: Stardew Valley
   platform: steam
   appid: 413150
-  playtimeMinutes: 6029
-  lastPlayed: "2026-04-03"
+  playtimeMinutes: 6059
+  lastPlayed: "2026-08-09"
   achievementsUnlocked: 19
   achievementsTotal: 49
   cover: images/games/covers/Stardew Valley.jpg
@@ -793,7 +793,7 @@
   playtimeMinutes: 1889
   lastPlayed: "2021-04-08"
   achievementsUnlocked: 3
-  achievementsTotal: 37
+  achievementsTotal: 50
   cover: images/games/covers/PixARK.jpg
   link: "https://store.steampowered.com/app/593600/"
 
@@ -990,9 +990,9 @@
 - title: Core Keeper
   platform: steam
   appid: 1621690
-  playtimeMinutes: 833
-  lastPlayed: "2026-07-31"
-  achievementsUnlocked: 9
+  playtimeMinutes: 1183
+  lastPlayed: "2026-08-28"
+  achievementsUnlocked: 10
   achievementsTotal: 55
   cover: images/games/covers/Core Keeper.jpg
   link: "https://store.steampowered.com/app/1621690/"
