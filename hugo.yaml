@@ -159,7 +159,7 @@ languages:
           weight: 30
   sv:
     label: "🇸🇪 Sv"
-    locale: sv-Sv
+    locale: sv-SE
     weight: 3
     params: 
       description: Jag är Lukas Nagel (LNA-DEV) och delar insikter om programutveckling, teknik, fotografi och mer på denna sida, som fungerar som mitt digitala nav.
