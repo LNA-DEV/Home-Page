@@ -9670,6 +9670,12 @@ images:
   section: general
   project: [wildlife-of-inn-valley, 2026-08-nicklheim-adler]
   species: Pandion haliaetus
+- id: 264e9975-3699-4368-ad78-71e334375c4b
+  src: Hard Bank - Three Mallards Turning Below a Forested Ridge.jpg
+  category: animals
+  section: general
+  project: [wildlife-of-inn-valley, 2026-08-nicklheim-adler]
+  species: Anas platyrhynchos
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
