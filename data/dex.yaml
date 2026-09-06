@@ -5573,3 +5573,35 @@ species:
     en: "https://en.wikipedia.org/wiki/Osprey"
     de: "https://de.wikipedia.org/wiki/Fischadler"
     sv: "https://sv.wikipedia.org/wiki/Fiskgjuse"
+- slug: wood-sandpiper
+  number: "154"
+  scientific: Tringa glareola
+  family: Scolopacidae
+  group: birds
+  difficulty: moderate
+  iucn: LC
+  gbif_taxon_key: 2481713
+  inat_taxon_id: 3888
+  wikidata_id: Q18837
+  height: "19–21 cm"
+  height_measure: length
+  body_weight: "50–90 g"
+  diet: insectivore
+  lifespan: "7–9"
+  habitat:
+    en: Bogs, Marshes, Wet meadows, Taiga
+    de: "Moore, Sümpfe, Feuchtwiesen, Taiga"
+  reference:
+    commons_file: Wood Sandpiper (50206067826), crop.jpg
+  names:
+    en: Wood Sandpiper
+    de: "Bruchwasserläufer"
+    sv: "Grönbena"
+  description:
+    en: "The wood sandpiper is a small wader belonging to the sandpiper family Scolopacidae. A Eurasian species, it is the smallest of the shanks, a genus of mid-sized, long-legged waders that largely inhabit freshwater and wetland environments, as opposed to the maritime or coastal habitats of other, similar species."
+    de: "Der Bruchwasserläufer ist ein eurasischer Vogel aus der Familie der Schnepfenvögel (Scolopacidae). Er ist ein Brutvogel der gemäßigten und borealen bis subarktischen Tundrenzone. In Mitteleuropa ist er ein sehr seltener, nur lokal vorkommender Brut- und Sommervogel."
+    sv: "Grönbena är en vadarfågel som tillhör familjen snäppor. Den är en utpräglad flyttfågel som häckar från norra Europa till östra Asien och övervintrar i södra Afrika, södra och sydöstra Asien och i Australien. Under flyttningen uppträder den ofta i mindre flockar vid våtmarker och kustområden."
+  description_source:
+    en: "https://en.wikipedia.org/wiki/Wood_sandpiper"
+    de: "https://de.wikipedia.org/wiki/Bruchwasserl%C3%A4ufer"
+    sv: "https://sv.wikipedia.org/wiki/Gr%C3%B6nbena"

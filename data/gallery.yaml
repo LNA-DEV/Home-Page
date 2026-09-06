@@ -9682,6 +9682,12 @@ images:
   section: general
   project: [wildlife-of-inn-valley, 2026-08-nicklheim-adler]
   species: Capreolus capreolus
+- id: 11a41bb1-dd84-4375-afca-d9a08d4e3bdf
+  src: Beachtime - Wood Sandpiper Passing Through the Bog Shore.jpg
+  category: animals
+  section: general
+  project: [wildlife-of-inn-valley, 2026-08-nicklheim-adler]
+  species: Tringa glareola
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
