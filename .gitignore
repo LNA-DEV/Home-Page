@@ -10,3 +10,7 @@ node_modules
 .inbox/**
 .env
 scripts/__pycache__/**
+# Large downloadable archives (photo packs etc.). Kept out of git — GitHub caps
+# files at 100 MB — but still deployed: `hugo` copies static/ into public/ and
+# deploy.sh rsyncs from this machine. Same model as /gallery-photos above.
+/static/downloads/
