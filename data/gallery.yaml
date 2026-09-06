@@ -9676,6 +9676,12 @@ images:
   section: general
   project: [wildlife-of-inn-valley, 2026-08-nicklheim-adler]
   species: Anas platyrhynchos
+- id: c4193636-b822-4e60-a88c-97a1b9bf2396
+  src: Quiet Attention - Roe Deer at First Light.jpg
+  category: animals
+  section: general
+  project: [wildlife-of-inn-valley, 2026-08-nicklheim-adler]
+  species: Capreolus capreolus
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
