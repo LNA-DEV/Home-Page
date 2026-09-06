@@ -1,3 +1,12 @@
 .img-caption-center{
     text-align: center;
 }
+/* A full-width figure must not start beside a floated photo: only its line boxes
+   would be shortened, so its own <img> — which is 100% of the figure's width —
+   would run straight through the float. Headings already clear (galleryImage.css);
+   figures did not need to until {{< img align="…" >}} made a float possible before
+   one. The float itself is excluded, or two consecutive floats could not sit side
+   by side. */
+.post-content figure:not(.gallery-image-float) {
+    clear: both;
+}

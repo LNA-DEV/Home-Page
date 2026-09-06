@@ -167,15 +167,25 @@
   margin: 0.4rem var(--pull) 1rem var(--gap);
 }
 
-/* Headings must not slide up beside a float that the preceding paragraphs did not
-   fully clear — a short paragraph next to a tall photo would otherwise pull the
-   next section's heading into the gap. */
-.post-content .gallery-image-float + h1,
-.post-content .gallery-image-float + h2,
-.post-content .gallery-image-float + h3,
-.post-content h1, .post-content h2, .post-content h3 {
-  clear: both;
-}
+/* Headings deliberately do NOT clear floats: a heading sets beside a photo exactly
+   the way a paragraph does, so a whole section — heading and prose together — can
+   run alongside a tall portrait instead of starting below it.
+
+   This reverses the earlier rule here, which cleared h1–h3 so a short paragraph
+   could not pull the next section's heading up beside the photo. The gap that rule
+   produced turned out to be the worse of the two: a 373px photo next to four lines
+   of text left ~270px of dead space before the page continued, and the only way to
+   fill it is to let the following section flow into it.
+
+   Nothing is needed to get this — it is the browser default. The rule is worth
+   keeping as a comment because "why does my heading sit next to the photo?" has an
+   answer here, and because PaperMod gives headings no border or background: a
+   heading whose line box is shortened by a float shows no seam. Add `clear: both`
+   back to a single heading if one specific spot reads badly.
+
+   Full-width figures still clear — see img-shortcode.css. A figure is not text: its
+   <img> is 100% of the figure's width, so it would run straight through the float
+   rather than wrap around it. */
 
 /* Below 900px every variant collapses to the full content width, so every variant
    must also look exactly like a plain {{< galleryImage >}} there — same width and

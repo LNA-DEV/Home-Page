@@ -13,12 +13,12 @@ aliases:
   - me
 ---
 
+{{< img url="./Lukas Nagel - Nature Photographer Waiting for the Light on a Moorland Boardwalk.jpg" align="right" size="small" alt="A young man (Lukas Nagel) with a short beard in a teal t-shirt and dark hiking trousers leans against a white birch trunk on a narrow wooden boardwalk, holding a Nikon camera with a long telephoto lens in both hands. He looks off to the left, lit by low afternoon sun, with dense green conifers, birches and flowering purple heather around him." >}}
+
 ## A bit about me
 
 Hej👋  
 My name is Lukas Nagel and I am a software engineer from Bavaria, Germany. I also call myself LNA-DEV here and there on the web. On this page, I want to introduce myself a bit.
-
-{{< img url="./InnValley.JPG" alt="Image of a valley in Bavaria, Germany. I took the photo near my village / home town. Taken by me / Lukas Nagel." caption="Image of a valley in Bavaria, Germany. I took the photo near my village / home town." link="/en/gallery/landscape/#2391675672" >}}
 
 ### FOSS (Free and open source software)
 
@@ -42,7 +42,7 @@ I take photographs in many different categories (like landscapes, animals and pl
 
 I edit my photography using [Darktable](https://www.darktable.org/), a free and open-source photo editing and management program. It is a bit like Lightroom but completely free in terms of money but also in terms of freedom.
 
-{{< img url="./Seagull flying over the sea.JPG" alt="Image of a seagull flying over the sea. Taken by me / Lukas Nagel." caption="One of the images taken by me. But there are many more." link="/en/gallery/animals/#2681282402" >}}
+{{< galleryImage id="d28c81a8-44af-44f7-b443-172376cd3ecc" alt="Image of a seagull flying over the sea. Taken by me / Lukas Nagel." caption="One of the images taken by me. But there are many more." >}}
 
 ## Reading
 
@@ -56,20 +56,4 @@ Gaming is another hobby of mine. Here are the games I've played most recently:
 
 {{< recentGaming >}}
 
-## Domains I control
-
-- [lna-dev.net](https://lna-dev.net) (Homepage)
-- [lna-dev.de](https://lna-dev.de) (Backup)
-- [lna-dev.com](https://lna-dev.com) (Backup)
-- [fachinformatikerpruefungsvorbereitung.de](https://fachinformatikerpruefungsvorbereitung.de) (Project)
-- [fachinformatiker-prüfungsvorbereitung.de](https://fachinformatiker-prüfungsvorbereitung.de) (Backup)
-- [fedodo.social](https://fedodo.social) (Inactive project)
-- [fedodo.org](https://fedodo.org) (Inactive project)
-
-## Social Media accounts I control
-
-- [GitHub](https://github.com/LNA-DEV)
-- [Mastodon](https://mastodon.online/@lna_dev)
-- [Pixelfed](https://pixelfed.de/i/web/profile/482439783472092612)
-- [Matrix](https://matrix.to/#/@lna-dev:matrix.org)
-- [Instagram](https://www.instagram.com/lnadev/)
+The domains and social media accounts I control are listed on the [Identity](../identity/) page.

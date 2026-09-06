@@ -1,18 +1,96 @@
-{{- /* Resolves `url` through responsive-image.html, so an About-page photo is
-       served at the size the column actually shows rather than at whatever the
-       camera wrote. External URLs and unprocessable formats pass through. */ -}}
-{{- $img := partial "responsive-image.html" (dict "page" .Page "src" (.Get "url")) }}
+{{- /*
+  img.html
+  One page-bundle (or external) image in a content page.
+
+  Resolves `url` through responsive-image.html, so the photo is served at the size
+  the column actually shows rather than at whatever the camera wrote. External URLs
+  and unprocessable formats pass through.
+
+  Usage:
+    {{< img url="./Photo.jpg" alt="…" caption="…" link="/en/gallery/general/" >}}
+    {{< img url="./Photo.jpg" align="right" alt="…" >}}   ← text wraps around it
+    {{< img url="./Photo.jpg" align="left" size="small" alt="…" >}}
+    {{< img url="./Photo.jpg" size="420" alt="…" >}}      ← capped and centred
+
+  Params:
+    url       (required) path as written in content, or an external URL
+    alt       alt text; also the caption fallback
+    caption   figure caption. Omit it and no <figcaption> is rendered at all —
+              alt text is not used as a fallback, see the note below the markup
+    link      href to wrap the image in
+    align     "left" or "right" floats the photo so the following paragraphs wrap
+              around it. Omit for the full-width figure this shortcode has always
+              rendered.
+    size      per-call width — "small" (280px), "medium" (340px, default with
+              align), "large" (420px), or a bare pixel number. With align it is
+              the float's width; without it caps and centres an otherwise
+              full-width photo.
+
+  align/size reuse the float geometry, the --img-width caption scaling and the
+  <900px collapse from galleryImage.css. The `gallery-image*` class names are that
+  shared visual pattern, not a claim of gallery membership — this shortcode renders
+  images that live in the page bundle (a photo of the author, taken by someone
+  else) rather than photos out of data/gallery.yaml. Keeping one set of rules means
+  retuning the float margin retunes both.
+*/ -}}
+{{- $align := .Get "align" | default "" | lower -}}
+{{- if and $align (not (in (slice "left" "right") $align)) -}}
+  {{- errorf "img (%s): align must be \"left\" or \"right\", got %q" .Position $align -}}
+{{- end -}}
+
+{{- /* The named steps and their pixel values match {{< galleryImage >}} so the two
+       shortcodes cannot drift apart on what "small" means. The resolved number
+       drives both --img-width and the `sizes` attribute from one place, so a
+       smaller photo really downloads a smaller file. */ -}}
+{{- $size := .Get "size" | default "" | lower -}}
+{{- $width := 0 -}}
+{{- with $size -}}
+  {{- $steps := dict "small" 280 "medium" 340 "large" 420 -}}
+  {{- if isset $steps . -}}
+    {{- $width = index $steps . -}}
+  {{- else if findRE `^[0-9]+$` . -}}
+    {{- $width = int . -}}
+  {{- else -}}
+    {{- errorf "img (%s): size must be small, medium, large or a number of pixels, got %q" $.Position . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $class := "" -}}
+{{- $style := "" -}}
+{{- $sizes := "" -}}
+{{- if $align -}}
+  {{- $w := cond (gt $width 0) $width 340 -}}
+  {{- $class = printf "gallery-image gallery-image-float align-%s" $align -}}
+  {{- $style = printf "--img-width: %dpx;" $w -}}
+  {{- $sizes = printf "(max-width: 900px) calc(100vw - 28px), %dpx" $w -}}
+{{- else if gt $width 0 -}}
+  {{- $class = "gallery-image gallery-image-sized" -}}
+  {{- $style = printf "--img-width: %dpx;" $width -}}
+  {{- $sizes = printf "(max-width: 900px) calc(100vw - 28px), %dpx" $width -}}
+{{- end -}}
+
+{{- $img := partial "responsive-image.html" (dict "page" .Page "src" (.Get "url") "sizes" $sizes) }}
 {{- $alt := (.Get "alt") }}
 {{- $caption := (.Get "caption") }}
 {{- $link := (.Get "link") }}
 
-<figure>
-{{- if $link }}<a href="{{ $link }}">{{ end -}}
+<figure{{ with $class }} class="{{ . }}"{{ end }}{{ with $style }} style="{{ . | safeCSS }}"{{ end }}>
+{{- if $link }}<a{{ if $class }} class="gallery-image-link"{{ end }} href="{{ $link }}">{{ end -}}
   <img src="{{ $img.src }}"
     {{- with $img.srcset }} srcset="{{ . }}" sizes="{{ $img.sizes }}" decoding="async"{{ end }}
     {{- with $img.width }} width="{{ . }}"{{ end }}
     {{- with $img.height }} height="{{ . }}"{{ end }}
     loading="lazy" alt="{{ $alt }}">
 {{- if $link }}</a>{{ end }}
-  <figcaption class="img-caption-center">{{ $caption | default $alt }}</figcaption>
+  {{- /* No caption, no <figcaption>. Alt text is deliberately not a fallback: it
+         describes the image *instead of* seeing it, while a caption is prose read
+         *alongside* it, and printing one as the other makes a screen reader
+         announce the same sentence twice — once as the image description, once as
+         the figure caption. {{< galleryImage >}} behaves the same way. */ -}}
+  {{- with $caption }}
+  <figcaption{{ if not $class }} class="img-caption-center"{{ end }}>
+    {{- if $class }}<span class="gallery-image-caption">{{ . }}</span>
+    {{- else }}{{ . }}{{ end -}}
+  </figcaption>
+  {{- end }}
 </figure>

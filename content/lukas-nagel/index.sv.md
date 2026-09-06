@@ -13,12 +13,12 @@ aliases:
   - me
 ---
 
+{{< img url="./Lukas Nagel - Nature Photographer Waiting for the Light on a Moorland Boardwalk.jpg" align="right" size="small" alt="En ung man (Lukas Nagel) med kort skägg, i turkos t-shirt och mörka vandringsbyxor, lutar sig mot en vit björkstam på en smal spång och håller en Nikon-kamera med långt teleobjektiv i båda händerna. Han blickar åt vänster, upplyst av den låga eftermiddagssolen, omgiven av täta gröna barrträd, björkar och blommande lila ljung." >}}
+
 ## Lite om mig
 
 Hej👋  
 Jag heter Lukas Nagel och jag är en programmerare från Bayern, Tyskland. Jag kallar mig också LNA-DEV här och där på webben. På denna sida vill jag presentera mig lite.
-
-{{< img url="./InnValley.JPG" alt="Det är en bild av en dal i Bayern, Tyskland. Jag gjorde den nära min kommun/hemstad. Skapad av mig / Lukas Nagel." caption="Det är en bild av en dal i Bayern, Tyskland. Jag gjorde den nära min kommun/hemstad." link="/en/gallery/landscape/#2391675672" >}}
 
 ### FOSS (Free and open source software)
 
@@ -42,7 +42,7 @@ Jag tar foton inom många olika kategorier, som landskap, djur och växter. Men 
 
 Jag redigerar mina fotografier med [Darktable](https://www.darktable.org/), ett fritt och öppen källkodsprogram för foto-redigering och hantering. Det liknar Lightroom men är helt fri både vad gäller pengar och frihet.
 
-{{< img url="./Seagull flying over the sea.JPG" alt="Bild av en mås som flyger över havet. Skapad av mig / Lukas Nagel." caption="Ett av de fotografier jag har tagit. Men det finns många fler." link="/en/gallery/animals/#2681282402" >}}
+{{< galleryImage id="d28c81a8-44af-44f7-b443-172376cd3ecc" alt="Bild av en mås som flyger över havet. Skapad av mig / Lukas Nagel." caption="Ett av de fotografier jag har tagit. Men det finns många fler." >}}
 
 ### Norden 🇸🇪 🇳🇴 🇩🇰 🇫🇮 🇮🇸
 
@@ -60,20 +60,4 @@ Att spela spel är en annan av mina hobbyer. Här är spelen jag har spelat sena
 
 {{< recentGaming >}}
 
-## Domäner jag kontrollera
-
-- [lna-dev.net](https://lna-dev.net) (Hemsida)
-- [lna-dev.de](https://lna-dev.de) (Backup)
-- [lna-dev.com](https://lna-dev.com) (Backup)
-- [fachinformatikerpruefungsvorbereitung.de](https://fachinformatikerpruefungsvorbereitung.de) (Projekt)
-- [fachinformatiker-prüfungsvorbereitung.de](https://fachinformatiker-prüfungsvorbereitung.de) (Backup)
-- [fedodo.social](https://fedodo.social) (Inaktivt projekt)
-- [fedodo.org](https://fedodo.org) (Inaktivt projekt)
-
-## Sociala mediekonton jag kontrollera
-
-- [GitHub](https://github.com/LNA-DEV)
-- [Mastodon](https://mastodon.online/@lna_dev)
-- [Pixelfed](https://pixelfed.de/i/web/profile/482439783472092612)
-- [Matrix](https://matrix.to/#/@lna-dev:matrix.org)
-- [Instagram](https://www.instagram.com/lnadev/)
+Domänerna och sociala mediekonton jag kontrollerar hittar du på sidan [Identitet](../identity/).

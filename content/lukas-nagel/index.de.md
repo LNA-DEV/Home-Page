@@ -13,12 +13,12 @@ aliases:
   - me
 ---
 
+{{< img url="./Lukas Nagel - Nature Photographer Waiting for the Light on a Moorland Boardwalk.jpg" align="right" size="small" alt="Ein junger Mann (Lukas Nagel) mit kurzem Bart, in türkisfarbenem T-Shirt und dunkler Wanderhose, lehnt an einem weißen Birkenstamm auf einem schmalen Bohlenweg und hält mit beiden Händen eine Nikon-Kamera mit langem Teleobjektiv. Er blickt nach links, beleuchtet von der tiefstehenden Nachmittagssonne, umgeben von dichten grünen Nadelbäumen, Birken und blühendem lila Heidekraut." >}}
+
 ## Über mich
 
 Hej👋  
 Ich heiße Lukas Nagel und bin ein Softwareentwickler aus Bayern. Hier und da im Internet nenne ich mich auch LNA-DEV. Auf dieser Seite möchte ich mich kurz vorstellen.
-
-{{< img url="./InnValley.JPG" alt="Bild von einem Tal in Bayern. Aufgenommen habe ich es in der Nähe meines Heimatdorfes. Aufgenommen von mir / Lukas Nagel." caption="Bild von einem Tal in Bayern. Aufgenommen in der Nähe meines Heimatdorfes." link="/en/gallery/landscape/#2391675672" >}}
 
 ### FOSS (Free and open source software)
 
@@ -42,7 +42,7 @@ Ich nehme Fotos in verschiedenen Kategorien auf (zum Beispiel Landschaft, Tiere 
 
 Editieren tue ich meine Fotografie in [Darktable](https://www.darktable.org/), einem FOSS-Tool zur Fotobearbeitung und Management. Es ähnelt Lightroom, ist aber komplett frei.
 
-{{< img url="./Seagull flying over the sea.JPG" alt="Bild einer Möwe, die über das Meer fliegt. Aufgenommen von mir / Lukas Nagel" caption="Eines meiner Bilder, aber da sind noch deutlich mehr." link="/en/gallery/animals/#2681282402" >}}
+{{< galleryImage id="d28c81a8-44af-44f7-b443-172376cd3ecc" alt="Bild einer Möwe, die über das Meer fliegt. Aufgenommen von mir / Lukas Nagel" caption="Eines meiner Bilder, aber da sind noch deutlich mehr." >}}
 
 ## Lesen
 
@@ -50,26 +50,10 @@ Lesen ist eines meiner Hobbys. Hier sind die zuletzt gelesenen Bücher:
 
 {{< recentReading >}}
 
-## Spiele
+## Gaming
 
 Auch Gaming ist eines meiner Hobbys. Hier sind die zuletzt gespielten Spiele:
 
 {{< recentGaming >}}
 
-## Domains unter meiner Kontrolle
-
-- [lna-dev.net](https://lna-dev.net) (Homepage)
-- [lna-dev.de](https://lna-dev.de) (Backup)
-- [lna-dev.com](https://lna-dev.com) (Backup)
-- [fachinformatikerpruefungsvorbereitung.de](https://fachinformatikerpruefungsvorbereitung.de) (Projekt)
-- [fachinformatiker-prüfungsvorbereitung.de](https://fachinformatiker-prüfungsvorbereitung.de) (Backup)
-- [fedodo.social](https://fedodo.social) (Inaktives Projekt)
-- [fedodo.org](https://fedodo.org) (Inaktives Projekt)
-
-## Social-Media Accounts unter meiner Kontrolle
-
-- [GitHub](https://github.com/LNA-DEV)
-- [Mastodon](https://mastodon.online/@lna_dev)
-- [Pixelfed](https://pixelfed.de/i/web/profile/482439783472092612)
-- [Matrix](https://matrix.to/#/@lna-dev:matrix.org)
-- [Instagram](https://www.instagram.com/lnadev/)
+Die Domains und Social-Media-Accounts unter meiner Kontrolle findest du auf der Seite [Identität](../identity/).
