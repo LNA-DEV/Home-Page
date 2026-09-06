@@ -1783,7 +1783,7 @@ images:
   category: animals
   species: Anguis fragilis
   section: general
-  project: wildlife-of-inn-valley
+  project: [wildlife-of-inn-valley, 2026-08-nicklheim-adler]
   portfolio: true
   tags: []
   alt: ""
@@ -9688,6 +9688,18 @@ images:
   section: general
   project: [wildlife-of-inn-valley, 2026-08-nicklheim-adler]
   species: Tringa glareola
+- id: 1a822978-f8ca-4a0b-9b6c-fc845c9f8a1e
+  src: Island of One - Solitary Pine in the Moorland Glow.jpg
+  portfolio: true
+  category: landscape
+  section: general
+  project: [2026-08-nicklheim-adler]
+- id: 6be3c0be-e887-4192-a074-91a835ede648
+  src: King of the Peasants - Grey Heron Claiming the Highest Branch.jpg
+  category: animals
+  section: general
+  project: [wildlife-of-inn-valley, 2026-08-nicklheim-adler]
+  species: Ardea cinerea
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
