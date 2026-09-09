@@ -1,0 +1,118 @@
+{{- /* Newsletter subscribe button.
+
+       A <details> element, so the button itself needs no JS: the summary is the
+       button, the Listmonk form is the panel it opens.
+
+       The nine language-specific lists are a language x topic matrix, so the UI
+       does not show nine checkboxes -- it shows a row of language pills and a row
+       of topic bubbles, and ticks the intersection. Language-independent lists
+       (data/newsletter.yaml -> standalone) join the topic row but are wired
+       straight to their own checkbox, since no language applies to them.
+
+       Progressive enhancement, because the pills are buttons and only JS can
+       compute the intersection: the real checkboxes are rendered as a plain list
+       and are what actually gets posted. assets/js/newsletter.js hides that list
+       and reveals the pills. With JS off the visitor still gets a working, if
+       plainer, form rather than an empty box -- which matters for the Tor build.
+
+       That script is loaded by head.html, gated on `.HasShortcode "newsletter"`,
+       so the class names and the data-lang / data-topic / data-list attributes
+       below are its contract -- renaming one here breaks the picker silently
+       into the plain-checkbox fallback.
+
+       Pre-selection: English is checked in the markup so the no-JS form is
+       useful; the script then adds the browser's own languages, which is the one
+       thing a static build cannot know.
+
+       `nonce` is the honeypot field from Listmonk's own generated form: it must
+       stay empty (a filled one is treated as a bot). Keep it as Listmonk ships it.
+
+       Checkboxes wrap their label instead of using id/for, so two newsletter
+       shortcodes on one page cannot collide on duplicate ids.
+
+       Usage: {{< newsletter >}}  (optionally with title="..." / text="...") */ -}}
+
+{{- $data := site.Data.newsletter -}}
+{{- $topics := $data.topics -}}
+{{- $standalone := $data.standalone | default slice -}}
+{{- if not $data.languages -}}
+  {{- errorf "newsletter shortcode: data/newsletter.yaml has no languages (%s)" .Position -}}
+{{- end -}}
+
+<details class="newsletter">
+  <summary class="newsletter-button">{{ .Get "title" | default (i18n "newsletter_title") }}</summary>
+
+  <form class="newsletter-form" method="post" action="{{ $data.url }}">
+    {{- /* honeypot -- left empty by humans, filled by bots */}}
+    <input type="hidden" name="nonce" />
+    <input type="hidden" name="next" value="{{ "" | absLangURL }}" />
+
+    <p class="newsletter-text">{{ .Get "text" | default (i18n "newsletter_text") }}</p>
+
+    <p class="newsletter-fields">
+      <input type="email" name="email" required placeholder="{{ i18n "newsletter_email" }}" />
+      <input type="text" name="name" placeholder="{{ i18n "newsletter_name" }}" />
+    </p>
+
+    {{- /* the pill UI -- revealed by the script below */}}
+    <div class="newsletter-picker" hidden>
+      <p class="newsletter-label">{{ i18n "newsletter_languages" }}</p>
+      <div class="newsletter-pills">
+        {{- range $data.languages }}
+        <button type="button" class="newsletter-pill" data-lang="{{ .lang }}" aria-pressed="false">
+          <span class="newsletter-flag" aria-hidden="true">{{ .flag }}</span>{{ .name }}
+        </button>
+        {{- end }}
+      </div>
+
+      <p class="newsletter-label">{{ i18n "newsletter_topics" }}</p>
+      <div class="newsletter-pills">
+        {{- range $topics }}
+        <button type="button" class="newsletter-pill" data-topic="{{ . }}" aria-pressed="true">
+          {{ i18n (printf "newsletter_topic_%s" .) }}
+        </button>
+        {{- end }}
+        {{- range $standalone }}
+        <button type="button" class="newsletter-pill" data-list="{{ .uuid }}" aria-pressed="true">
+          {{ i18n (printf "newsletter_topic_%s" .key) }}
+        </button>
+        {{- end }}
+      </div>
+    </div>
+
+    {{- /* the fields that are actually posted; the picker drives these */}}
+    <div class="newsletter-raw">
+      {{- range $lang := $data.languages }}
+      <fieldset class="newsletter-group">
+        <legend>{{ $lang.flag }} {{ $lang.name }}</legend>
+        {{- range $topic := $topics }}
+        {{- $uuid := index $data.lists $lang.lang $topic }}
+        {{- if not $uuid }}
+          {{- errorf "newsletter shortcode: data/newsletter.yaml has no list uuid for %s/%s" $lang.lang $topic }}
+        {{- end }}
+        <label class="newsletter-list">
+          <input type="checkbox" name="l" value="{{ $uuid }}"
+                 data-lang="{{ $lang.lang }}" data-topic="{{ $topic }}"
+                 {{ if eq $lang.lang "en" }}checked{{ end }} />
+          {{ i18n (printf "newsletter_topic_%s" $topic) }}
+        </label>
+        {{- end }}
+      </fieldset>
+      {{- end }}
+
+      {{- with $standalone }}
+      <fieldset class="newsletter-group">
+        <legend>{{ i18n "newsletter_all_languages" }}</legend>
+        {{- range . }}
+        <label class="newsletter-list">
+          <input type="checkbox" name="l" value="{{ .uuid }}" data-list="{{ .uuid }}" checked />
+          {{ i18n (printf "newsletter_topic_%s" .key) }}
+        </label>
+        {{- end }}
+      </fieldset>
+      {{- end }}
+    </div>
+
+    <button type="submit" class="newsletter-submit">{{ i18n "newsletter_submit" }}</button>
+  </form>
+</details>

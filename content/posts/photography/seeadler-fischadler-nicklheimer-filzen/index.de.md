@@ -61,6 +61,8 @@ Auf dem weiteren Erkundungsweg hab ich zwar interessante Landschaft gesehen, abe
 
 Alles in allem war das mit Abstand meine krasseste Wildlife-Begegnung, die ich bis jetzt hatte. Das macht es aber natürlich umso spannender. Direkt am Anfang so belohnt zu werden, hat auf jeden Fall die Langzeitmotivation stark erhöht und ich werde öfter solche Aktionen machen. Falls dich das interessiert, kannst du gern den [RSS-Feed](/de/index.xml) abonnieren, dir die [Galerie](/de/gallery/) ansehen oder regelmäßig auf dieser Homepage vorbeischauen.
 
+{{< newsletter >}} 
+
 [^ahpBayern]: Ornithologische Gesellschaft Bayern, Artenhilfsprogramm Fisch- und Seeadler: <https://www.og-bayern.de/ahp-fisch-und-seeadler/> Stand 27.08.2026
 [^lbvSeeadler]: LBV, Artenportrait Seeadler: <https://www.lbv.de/ratgeber/naturwissen/artenportraits/detail/seeadler/> Stand 27.08.2026
 [^lbvFischadlerPortrait]: LBV, Artenportrait Fischadler: <https://www.lbv.de/ratgeber/naturwissen/artenportraits/detail/fischadler/> Stand 27.08.2026

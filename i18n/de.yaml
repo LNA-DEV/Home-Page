@@ -355,3 +355,29 @@
 - id: dex_photo_count
   one: "1 Foto"
   other: "{{ . }} Fotos"
+
+# Newsletter
+- id: newsletter_title
+  translation: "📬 Newsletter abonnieren"
+- id: newsletter_text
+  translation: "Neue Beiträge per E-Mail. Ich schreibe in jeder Sprache über andere Themen — wähle Themen und Sprachen aus, jederzeit abbestellbar."
+- id: newsletter_email
+  translation: "E-Mail"
+- id: newsletter_name
+  translation: "Name (optional)"
+- id: newsletter_submit
+  translation: "Abonnieren"
+- id: newsletter_languages
+  translation: "Sprachen"
+- id: newsletter_topics
+  translation: "Themen"
+- id: newsletter_all_languages
+  translation: "Alle Sprachen"
+- id: newsletter_topic_general
+  translation: "Allgemein"
+- id: newsletter_topic_tech
+  translation: "Tech"
+- id: newsletter_topic_photography
+  translation: "Fotografie"
+- id: newsletter_topic_images
+  translation: "Neue Fotos"

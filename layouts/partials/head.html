@@ -317,3 +317,14 @@
 {{ $dexMapJs := resources.Get "js/dex-map.js" | js.Build (dict "minify" true) | resources.Fingerprint }}
 <script src="{{ $dexMapJs.RelPermalink }}" defer></script>
 {{- end }}
+
+{{/*  Newsletter — pill picker on any page embedding the {{< newsletter >}} shortcode  */}}
+{{- /* .HasShortcode only sees shortcodes in page content. If the form ever moves
+       into a partial (a site-wide footer, say), this condition has to widen with
+       it or the pills silently stay hidden and visitors get the plain checkbox
+       fallback. Deferred, so the DOM is parsed before it runs; no params are
+       passed because every label is already rendered server-side. */ -}}
+{{- if .HasShortcode "newsletter" }}
+{{ $newsletterJs := resources.Get "js/newsletter.js" | js.Build (dict "minify" true) | resources.Fingerprint }}
+<script src="{{ $newsletterJs.RelPermalink }}" defer></script>
+{{- end }}

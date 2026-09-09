@@ -1,0 +1,151 @@
+/* Newsletter subscribe button + form (layouts/shortcodes/newsletter.html).
+   Theme variables only, so it follows light/dark like the rest of the site.
+   The pills deliberately mirror .filter-pill from gallery-nav.css -- same
+   shape, same active state -- so the newsletter reads as part of the site
+   rather than as a bolted-on widget. */
+
+.newsletter {
+  margin: var(--content-gap) 0;
+}
+
+.newsletter-button {
+  /* Right-aligned: block + fit-content keeps the pill hugging its text, and
+     margin-left:auto pushes it over. Doing this with text-align on .newsletter
+     would inherit into the form below it.
+     Back to left: display:inline-block, drop width and margin-left. */
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  background: var(--tertiary);
+  color: var(--primary);
+  font-weight: 500;
+  list-style: none;
+}
+
+/* Safari still paints the default disclosure triangle without this. */
+.newsletter-button::-webkit-details-marker {
+  display: none;
+}
+
+.newsletter-button:hover {
+  opacity: 0.85;
+}
+
+.newsletter-form {
+  margin-top: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--entry);
+}
+
+.newsletter-text {
+  margin: 0 0 12px;
+  color: var(--secondary);
+  font-size: 15px;
+}
+
+.newsletter-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 16px;
+}
+
+.newsletter-fields input {
+  flex: 1 1 200px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--theme);
+  color: var(--primary);
+}
+
+/* --- pill picker ------------------------------------------------------- */
+
+.newsletter-label {
+  margin: 0 0 6px;
+  color: var(--secondary);
+  font-size: 14px;
+}
+
+.newsletter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--secondary);
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.newsletter-pill:hover,
+.newsletter-pill.active {
+  background: var(--primary);
+  color: var(--theme);
+  border-color: var(--primary);
+}
+
+/* Flags keep their own colours on an active pill, where the text goes light. */
+.newsletter-flag {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+/* --- no-JS fallback: the plain checkbox list --------------------------- */
+
+.newsletter-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 16px;
+  margin: 0 0 8px;
+  padding: 0;
+  border: 0;
+}
+
+.newsletter-group legend {
+  float: left; /* a legend is not a flex item, so it needs taking out of flow */
+  width: 100%;
+  margin-bottom: 4px;
+  padding: 0;
+  color: var(--secondary);
+  font-size: 14px;
+}
+
+.newsletter-list {
+  cursor: pointer;
+}
+
+/* --- submit ------------------------------------------------------------ */
+
+.newsletter-submit {
+  margin-top: 4px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: var(--theme);
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.newsletter-submit:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}

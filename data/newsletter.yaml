@@ -1,0 +1,54 @@
+# Listmonk newsletter lists.
+# The UUIDs come from the public subscription form Listmonk generates
+# (Listmonk admin -> Lists -> public subscription page).
+#
+# The nine lists are a language x topic matrix, which is why they are stored as
+# one -- the UI lets the visitor pick languages and topics separately and ticks
+# the intersection. `lists.<lang>.<topic>` must therefore stay complete: every
+# language needs an entry for every topic below.
+#
+# Language names are endonyms, so they read the same whatever language the
+# visitor is browsing in -- same convention as the language switcher in
+# hugo.yaml. Topic labels are NOT here: they are translated per visitor via the
+# `newsletter_topic_<key>` i18n keys.
+#
+# Rendered by layouts/shortcodes/newsletter.html.
+url: https://listmonk.lna-dev.net/subscription/form
+
+languages:
+  - lang: en
+    name: English
+    flag: "🇬🇧"
+  - lang: de
+    name: Deutsch
+    flag: "🇩🇪"
+  - lang: sv
+    name: Svenska
+    flag: "🇸🇪"
+
+topics:
+  - general
+  - tech
+  - photography
+
+# Lists that are NOT part of the language x topic matrix: one single list for
+# everyone, whatever language they read in. Rendered as further bubbles in the
+# topic row, but wired straight to their own checkbox -- the language pills do
+# not apply to them. Labels come from `newsletter_topic_<key>` like the others.
+standalone:
+  - key: images
+    uuid: cfe47623-6358-49cc-8004-e4f13c4ded1f
+
+lists:
+  en:
+    general: 3a0bf78d-cfc8-4abe-9e0c-f753a7db6879
+    tech: d4fa19f9-9a39-4ff3-9006-dd108b34e9b9
+    photography: d855abf2-0b23-4bb6-971a-93ac207aeb88
+  de:
+    general: 474f8d74-77ec-41c8-8fa1-3cc357afc270
+    tech: bfc90436-5469-4ab4-91af-4187c6fade34
+    photography: d29f9fe5-0919-455b-ab27-72deb09c29db
+  sv:
+    general: 45becaa4-c20b-4667-b57f-7efa92126906
+    tech: d4bc59d3-c8eb-4bf0-bd1c-a334ca16dc21
+    photography: 40904cda-6fdf-4933-bf20-fb74b09621a6
