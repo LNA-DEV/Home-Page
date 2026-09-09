@@ -333,7 +333,7 @@
 - id: newsletter_title
   translation: "📬 Prenumerera på nyhetsbrevet"
 - id: newsletter_text
-  translation: "Få nya inlägg via e-post. Jag skriver om olika saker på varje språk — välj ämnen och språk, avsluta när du vill."
+  translation: "Få nya inlägg via e-post. Jag skriver om olika saker på varje språk - välj ämnen och språk, avsluta när du vill."
 - id: newsletter_email
   translation: "E-post"
 - id: newsletter_name
@@ -344,8 +344,10 @@
   translation: "Språk"
 - id: newsletter_topics
   translation: "Ämnen"
-- id: newsletter_all_languages
-  translation: "Alla språk"
+- id: newsletter_status_ok
+  translation: "Bekräftelsemejl skickat - klicka på länken i det för att slutföra prenumerationen."
+- id: newsletter_status_error
+  translation: "Det gick inte. Försök igen om en stund."
 - id: newsletter_topic_general
   translation: "Allmänt"
 - id: newsletter_topic_tech

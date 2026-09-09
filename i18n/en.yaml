@@ -361,7 +361,7 @@
 - id: newsletter_title
   translation: "📬 Subscribe to the newsletter"
 - id: newsletter_text
-  translation: "Get new posts by e-mail. I write about different things in each language — pick the topics and languages you want, unsubscribe any time."
+  translation: "Get new posts by e-mail. I write about different things in each language - pick the topics and languages you want, unsubscribe any time."
 - id: newsletter_email
   translation: "E-mail"
 - id: newsletter_name
@@ -372,8 +372,10 @@
   translation: "Languages"
 - id: newsletter_topics
   translation: "Topics"
-- id: newsletter_all_languages
-  translation: "All languages"
+- id: newsletter_status_ok
+  translation: "Confirmation e-mail sent - click the link in it to complete your subscription."
+- id: newsletter_status_error
+  translation: "That did not work. Please try again in a moment."
 - id: newsletter_topic_general
   translation: "General"
 - id: newsletter_topic_tech

@@ -149,3 +149,76 @@
   opacity: 0.45;
   cursor: not-allowed;
 }
+
+/* Inline error, shown in place under the button.
+   The text keeps var(--primary) and the state is carried by the tint and the
+   left border instead: a red dark enough to read on white washes out on the
+   dark background and vice versa, so colouring the text itself would fail one
+   of the two themes. Border and background have no such requirement. */
+.newsletter-status {
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  border-left: 3px solid #e05252;
+  border-radius: var(--radius);
+  background: rgba(224, 82, 82, 0.12);
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+
+/* --- success: takes over the whole panel ------------------------------- */
+
+/* min-height rather than a fixed one: it keeps the panel from collapsing to a
+   fraction of the form it replaces, without clipping a wrapped message on a
+   narrow screen. */
+/* An author `display` beats the UA stylesheet's `[hidden] { display: none }`
+   whatever the specificity, so a flex container with a hidden attribute stays
+   visible. Every other element here is toggled the same way but has no display
+   of its own, which is why only this one needs the rule. */
+.newsletter-done[hidden] {
+  display: none;
+}
+
+.newsletter-done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  min-height: 240px;
+  margin-top: 12px;
+  padding: 2rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--entry);
+  text-align: center;
+}
+
+.newsletter-check {
+  width: 84px;
+  height: 84px;
+  color: #4aa96c;
+  animation: newsletter-pop 0.3s ease-out;
+}
+
+.newsletter-done p {
+  max-width: 32em;
+  margin: 0;
+  color: var(--primary);
+}
+
+@keyframes newsletter-pop {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .newsletter-check {
+    animation: none;
+  }
+}

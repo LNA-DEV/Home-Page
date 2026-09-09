@@ -322,8 +322,9 @@
 {{- /* .HasShortcode only sees shortcodes in page content. If the form ever moves
        into a partial (a site-wide footer, say), this condition has to widen with
        it or the pills silently stay hidden and visitors get the plain checkbox
-       fallback. Deferred, so the DOM is parsed before it runs; no params are
-       passed because every label is already rendered server-side. */ -}}
+       fallback. Deferred, so the DOM is parsed before it runs. No params: every
+       string, success and error alike, is rendered server-side by the shortcode
+       and the script only toggles what is already there. */ -}}
 {{- if .HasShortcode "newsletter" }}
 {{ $newsletterJs := resources.Get "js/newsletter.js" | js.Build (dict "minify" true) | resources.Fingerprint }}
 <script src="{{ $newsletterJs.RelPermalink }}" defer></script>

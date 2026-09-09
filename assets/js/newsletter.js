@@ -1,29 +1,39 @@
 /* Newsletter subscribe form: a row of language pills and a row of topic
-   bubbles, instead of the ten raw checkboxes Listmonk's own generated form
+   bubbles, instead of the twelve raw checkboxes Listmonk's own generated form
    ships with.
 
-   The nine blog lists are a language x topic matrix, so what gets submitted is
-   the intersection of the two rows — pick 🇩🇪 + 🇬🇧 and "Photography" and two
-   lists are ticked. Lists that are not part of that matrix (new photos) carry
-   data-list instead of data-lang/data-topic and are toggled on their own.
+   The lists are a language x topic matrix, so what gets submitted is the
+   intersection of the two rows — pick 🇩🇪 + 🇬🇧 and "Photography" and two lists
+   go out.
 
-   The checkboxes inside .newsletter-raw are what is actually posted; this file
-   only ticks them and hides them behind the pills. With JavaScript off that
-   plain list stays visible and the form still works — which is what the Tor
-   build falls back to. */
+   Submission goes to Listmonk's public API (data/newsletter.yaml -> api, passed
+   down as data-api) rather than to the form action, so the visitor stays in the
+   open panel: on success the form is replaced by the confirmation panel, on
+   failure an inline error appears. Only JavaScript being off falls back to the
+   plain cross-site POST; a failed request reports itself rather than quietly
+   navigating away.
+
+   Both messages are rendered server-side by the shortcode, so there is nothing
+   to translate here — this file only toggles what is already on the page.
+
+   The checkboxes inside .newsletter-raw stay the source of truth for which
+   lists are selected; this file ticks them, hides them behind the pills, and
+   reads them back when posting. */
 (function () {
   for (const root of document.querySelectorAll(".newsletter")) init(root);
 
   function init(root) {
+    const form = root.querySelector(".newsletter-form");
     const picker = root.querySelector(".newsletter-picker");
     const raw = root.querySelector(".newsletter-raw");
     const submit = root.querySelector(".newsletter-submit");
-    if (!picker || !raw || !submit) return;
+    const error = root.querySelector(".newsletter-status");
+    const done = root.querySelector(".newsletter-done");
+    if (!form || !picker || !raw || !submit) return;
 
     const boxes = Array.from(raw.querySelectorAll('input[type="checkbox"]'));
     const langPills = Array.from(picker.querySelectorAll("[data-lang]"));
     const topicPills = Array.from(picker.querySelectorAll("[data-topic]"));
-    const listPills = Array.from(picker.querySelectorAll("[data-list]"));
 
     const setPressed = (pill, on) => {
       pill.classList.toggle("active", on);
@@ -32,24 +42,21 @@
     const isPressed = (pill) => pill.classList.contains("active");
     const selected = (pills, key) =>
       pills.filter(isPressed).map((pill) => pill.dataset[key]);
+    const checkedLists = () =>
+      boxes.filter((box) => box.checked).map((box) => box.value);
+    const showError = (on) => {
+      if (error) error.hidden = !on;
+    };
 
     function sync() {
       const langs = selected(langPills, "lang");
       const topics = selected(topicPills, "topic");
-      const lists = selected(listPills, "list");
-
-      let any = false;
       for (const box of boxes) {
-        const on = box.dataset.list
-          ? lists.includes(box.dataset.list)
-          : langs.includes(box.dataset.lang) &&
-            topics.includes(box.dataset.topic);
-        box.checked = on;
-        any = any || on;
+        box.checked =
+          langs.includes(box.dataset.lang) && topics.includes(box.dataset.topic);
       }
-
       // Listmonk rejects a submission that carries no list at all.
-      submit.disabled = !any;
+      submit.disabled = checkedLists().length === 0;
     }
 
     // English always, plus whatever the browser asks for. This is the one thing
@@ -60,14 +67,75 @@
     }
     for (const pill of langPills) setPressed(pill, wanted.has(pill.dataset.lang));
     for (const pill of topicPills) setPressed(pill, true);
-    for (const pill of listPills) setPressed(pill, true);
 
     picker.addEventListener("click", (event) => {
       const pill = event.target.closest(".newsletter-pill");
       if (!pill) return;
       setPressed(pill, !isPressed(pill));
+      showError(false);
       sync();
     });
+
+    const api = form.dataset.api;
+    if (api) form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      send();
+    });
+
+    async function send() {
+      const honeypot = form.querySelector('input[name="nonce"]');
+      if (honeypot && honeypot.value) return; // a bot filled it in
+
+      const email = form.querySelector('input[name="email"]');
+      const name = form.querySelector('input[name="name"]');
+      const lists = checkedLists();
+      if (!lists.length) return;
+
+      showError(false);
+      submit.disabled = true;
+      try {
+        // Form-encoded, not JSON, and deliberately so: a urlencoded body is a
+        // "simple" CORS request, so the browser sends no OPTIONS preflight and
+        // the reverse proxy in front of Listmonk only has to add one response
+        // header. A JSON body would need the proxy to answer preflights too.
+        // Listmonk's public endpoint takes both; the form variant repeats `l`
+        // where the JSON one takes list_uuids. URLSearchParams sets the content
+        // type itself — setting it by hand here would break the simple request.
+        const body = new URLSearchParams();
+        body.set("email", email.value);
+        if (name) body.set("name", name.value);
+        for (const uuid of lists) body.append("l", uuid);
+
+        const res = await fetch(api, { method: "POST", body });
+        if (res.ok) {
+          // Hand the whole panel over to the confirmation — but only if there is
+          // one to hand it to. Hiding the form without it leaves an empty box,
+          // which is what a stale page (script rebuilt, HTML not) looks like.
+          if (done) {
+            form.hidden = true;
+            done.hidden = false;
+          } else {
+            console.warn("newsletter: .newsletter-done missing, keeping the form");
+          }
+          return;
+        }
+        // Listmonk's own message is in Listmonk's language, not the visitor's,
+        // so it goes to the console and the visitor gets the translated one.
+        const answer = await res.json().catch(() => ({}));
+        console.warn("newsletter:", res.status, answer.message || res.statusText);
+        showError(true);
+      } catch (err) {
+        // Never reached Listmonk at all: missing CORS header, offline, blocked.
+        // Deliberately NOT falling back to form.submit() here. That would post
+        // the old way and dump the visitor on a Listmonk page, which is
+        // indistinguishable from the newsletter simply not working and hides the
+        // actual cause. A visible error beats a silent redirect.
+        console.warn("newsletter: request failed (CORS?)", err);
+        showError(true);
+      } finally {
+        sync();
+      }
+    }
 
     sync();
     raw.hidden = true;

@@ -2,10 +2,26 @@
 # The UUIDs come from the public subscription form Listmonk generates
 # (Listmonk admin -> Lists -> public subscription page).
 #
-# The nine lists are a language x topic matrix, which is why they are stored as
-# one -- the UI lets the visitor pick languages and topics separately and ticks
-# the intersection. `lists.<lang>.<topic>` must therefore stay complete: every
-# language needs an entry for every topic below.
+# Endpoints:
+#   url    — the classic form POST. Leaves the site, and is what the form falls
+#            back to with JavaScript off.
+#   api — Listmonk's public endpoint, where the fetch goes so the visitor stays
+#         in the panel. Cross-origin, so listmonk.lna-dev.net has to answer with
+#         an Access-Control-Allow-Origin header naming the site's origin — both
+#         https://lna-dev.net and http://localhost:1313 while developing.
+#         The request is sent form-encoded, which keeps it a "simple" CORS
+#         request: no OPTIONS preflight, so only the POST response needs the
+#         header. Sending JSON instead would require answering preflights too.
+# Both endpoints are gated by "Enable public subscription page" in Listmonk:
+# with it off, the form 404s and the API 400s.
+url: https://listmonk.lna-dev.net/subscription/form
+api: https://listmonk.lna-dev.net/api/public/subscription
+
+# The twelve lists are a complete language x topic matrix, which is why they are
+# stored as one -- the UI lets the visitor pick languages and topics separately
+# and ticks the intersection. `lists.<lang>.<topic>` must therefore stay
+# complete: every language needs an entry for every topic, and the build fails
+# loudly if one is missing.
 #
 # Language names are endonyms, so they read the same whatever language the
 # visitor is browsing in -- same convention as the language switcher in
@@ -13,8 +29,6 @@
 # `newsletter_topic_<key>` i18n keys.
 #
 # Rendered by layouts/shortcodes/newsletter.html.
-url: https://listmonk.lna-dev.net/subscription/form
-
 languages:
   - lang: en
     name: English
@@ -30,25 +44,21 @@ topics:
   - general
   - tech
   - photography
-
-# Lists that are NOT part of the language x topic matrix: one single list for
-# everyone, whatever language they read in. Rendered as further bubbles in the
-# topic row, but wired straight to their own checkbox -- the language pills do
-# not apply to them. Labels come from `newsletter_topic_<key>` like the others.
-standalone:
-  - key: images
-    uuid: cfe47623-6358-49cc-8004-e4f13c4ded1f
+  - images
 
 lists:
   en:
     general: 3a0bf78d-cfc8-4abe-9e0c-f753a7db6879
     tech: d4fa19f9-9a39-4ff3-9006-dd108b34e9b9
     photography: d855abf2-0b23-4bb6-971a-93ac207aeb88
+    images: cfe47623-6358-49cc-8004-e4f13c4ded1f
   de:
     general: 474f8d74-77ec-41c8-8fa1-3cc357afc270
     tech: bfc90436-5469-4ab4-91af-4187c6fade34
     photography: d29f9fe5-0919-455b-ab27-72deb09c29db
+    images: 2ec2eaf3-b6ea-42b8-b5b3-ab801215c0e6
   sv:
     general: 45becaa4-c20b-4667-b57f-7efa92126906
     tech: d4bc59d3-c8eb-4bf0-bd1c-a334ca16dc21
     photography: 40904cda-6fdf-4933-bf20-fb74b09621a6
+    images: 882951bb-dfca-4b95-8ca7-4360636e13fd
