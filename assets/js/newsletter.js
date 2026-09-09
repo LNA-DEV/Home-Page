@@ -48,6 +48,15 @@
       if (error) error.hidden = !on;
     };
 
+    /* Plausible. The queue stub is set up site-wide in extend_head.html, so the
+       function exists even before the script has loaded — the guard is for the
+       case where a blocker removed it. Never pass anything from the e-mail or
+       name field: only which languages and topics were picked, which is exactly
+       the aggregate worth knowing and carries nothing personal. */
+    const track = (name, props) => {
+      if (typeof window.plausible === "function") window.plausible(name, { props });
+    };
+
     function sync() {
       const langs = selected(langPills, "lang");
       const topics = selected(topicPills, "topic");
@@ -76,6 +85,16 @@
       sync();
     });
 
+    // Opening the panel is the top of the funnel: it says how many people were
+    // interested at all, which the signup count alone cannot. Once per page
+    // view — a visitor folding it open and shut would otherwise inflate it.
+    let openTracked = false;
+    root.addEventListener("toggle", () => {
+      if (!root.open || openTracked) return;
+      openTracked = true;
+      track("Newsletter Open");
+    });
+
     const api = form.dataset.api;
     if (api) form.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -90,6 +109,12 @@
       const name = form.querySelector('input[name="name"]');
       const lists = checkedLists();
       if (!lists.length) return;
+
+      // Sorted, so "de,en" and "en,de" are one value in Plausible rather than two.
+      const picked = {
+        languages: selected(langPills, "lang").sort().join(","),
+        topics: selected(topicPills, "topic").sort().join(","),
+      };
 
       showError(false);
       submit.disabled = true;
@@ -108,6 +133,7 @@
 
         const res = await fetch(api, { method: "POST", body });
         if (res.ok) {
+          track("Newsletter Signup", picked);
           // Hand the whole panel over to the confirmation — but only if there is
           // one to hand it to. Hiding the form without it leaves an empty box,
           // which is what a stale page (script rebuilt, HTML not) looks like.
@@ -123,6 +149,7 @@
         // so it goes to the console and the visitor gets the translated one.
         const answer = await res.json().catch(() => ({}));
         console.warn("newsletter:", res.status, answer.message || res.statusText);
+        track("Newsletter Error", { reason: String(res.status) });
         showError(true);
       } catch (err) {
         // Never reached Listmonk at all: missing CORS header, offline, blocked.
@@ -131,6 +158,7 @@
         // indistinguishable from the newsletter simply not working and hides the
         // actual cause. A visible error beats a silent redirect.
         console.warn("newsletter: request failed (CORS?)", err);
+        track("Newsletter Error", { reason: "network" });
         showError(true);
       } finally {
         sync();
