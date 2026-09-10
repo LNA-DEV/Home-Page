@@ -145,7 +145,46 @@
       <guid>{{ .Permalink }}</guid>
       <description>{{ with .Description | html }}{{ . }}{{ else }}{{ .Summary | html }}{{ end -}}</description>
       {{- if and site.Params.ShowFullTextinRSS .Content }}
-      <content:encoded>{{ (printf "<![CDATA[%s]]>" .Content) | safeHTML }}</content:encoded>
+      {{- /* The feed ships the page's own HTML, which is written for this site's
+             stylesheet and for a browser that knows the origin. Neither holds in a
+             feed reader, so the markup is adjusted here rather than by rendering the
+             content a second time per output format: every image in a post body goes
+             through responsive-image.html or gallery-image-figure.html, and both
+             already point `src` at the largest variant <= 720px — which is exactly
+             what a feed wants. Dropping the responsive attributes therefore leaves
+             the right image behind, for all six image shortcodes at once, without a
+             single .rss.xml template.
+
+             1. srcset/sizes out. `sizes` describes a slot that only exists on this
+                site: a floated {{< galleryImage >}} claims "280px", so a reader with
+                a wide window picks the 480w candidate and upscales it to the panel
+                width. Removing both leaves `src` (the 720px variant) and, as a side
+                effect, removes the only comma-separated URL lists — which is what
+                keeps step 2 a single, simple rewrite.
+             2. Root-relative URLs out. This is the bug this block exists for: RSS 2.0
+                defines no base URL for HTML inside content:encoded and xml:base is
+                not honoured reliably, so a reader resolves `/images/gallery/…`
+                against its own origin and the image — or link — is simply lost. It
+                hit every image in every post, and every hand-written link in the
+                prose too. Built from site.BaseURL so deploy.sh's second pass emits
+                the onion host. Protocol-relative `//host` URLs are left alone; the
+                Mastodon and PeerTube embeds use them.
+             3. schema.org microdata out. No feed consumer reads it, sanitizers drop
+                it anyway, and it is ~1.4 kB per image. Only elements carrying
+                `itemprop` are matched, so nothing an author wrote in the content is
+                touched; attribution stays with the channel <copyright> and the
+                caption.
+
+             The gallery branch above needs none of this — it builds its own markup
+             and already uses absolute permalinks. */ -}}
+      {{- $base := strings.TrimSuffix "/" site.BaseURL -}}
+      {{- $c := .Content -}}
+      {{- $c = replaceRE `\s+(?:srcset|sizes)="[^"]*"` "" $c -}}
+      {{- $c = replaceRE `(src|href|poster)="/([^/])` (printf `${1}="%s/${2}` $base) $c -}}
+      {{- $c = replaceRE `(src|href|poster)="/"` (printf `${1}="%s/"` $base) $c -}}
+      {{- $c = replaceRE `\s*<(?:meta|link) itemprop="[^"]*"[^>]*>` "" $c -}}
+      {{- $c = replaceRE `\s*<span itemprop="creator"[^>]*>\s*</span>` "" $c -}}
+      <content:encoded>{{ (printf "<![CDATA[%s]]>" $c) | safeHTML }}</content:encoded>
       {{- end }}
     </item>
     {{- end }}
