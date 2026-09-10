@@ -7,18 +7,11 @@ baseURL: https://lna-dev.net
 title: LNA-DEV ~ Lukas Nagel
 theme:
   - github.com/adityatelange/hugo-PaperMod
-# Gallery photos live outside the repo (Nextcloud) and are mounted in, because Hugo
-# does not follow symbolic links during resource discovery. Declaring any project mount
-# disables the default `assets` mount, so it is re-declared explicitly. The gallery
-# source is the repo-root `gallery-photos` symlink (gitignored) so this config stays
-# machine-agnostic — each machine points that symlink at its own photo store.
-module:
-  mounts:
-    - source: assets
-      target: assets
-    - source: gallery-photos
-      target: assets/images/gallery
-      disableWatch: true
+# Gallery photos live outside the repo (Nextcloud) and are mounted in. The mount is
+# NOT declared here: its source is an absolute, machine-specific path, so it lives in
+# the gitignored `config/_default/module.yaml` instead (see CLAUDE.md "Build / Deploy").
+# Do not re-add a `module.mounts` block here — `mounts` is replace-not-merge, so a list
+# in this file would be silently discarded whole by that local override.
 enableEmoji: true
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: true

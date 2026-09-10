@@ -4,8 +4,13 @@ node_modules
 .env.*
 /public
 /resources/_gen/
-# Gallery photos live outside the repo; mounted in via hugo.yaml module.mounts.
-# This symlink → the local photo store (see CLAUDE.md "Build / Deploy").
+# Gallery photos live outside the repo; mounted in via config/_default/module.yaml,
+# which holds this machine's absolute path to the photo store and is therefore local
+# only (copy config/_default/module.yaml.example — see CLAUDE.md "Build / Deploy").
+/config/_default/module.yaml
+# Inert leftover: the old `gallery-photos` symlink. Hugo stopped following symlinked
+# mount sources in 0.163.1 (CVE-2026-58403 fix), which is why the mount moved to an
+# absolute path above. Still ignored so a stale symlink does not show up as untracked.
 /gallery-photos
 .inbox/**
 .env

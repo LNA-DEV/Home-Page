@@ -3,5 +3,18 @@
   Returns all gallery image resources from assets/images/gallery/.
   Global resources are inherently language-independent — no cross-site lookup needed.
   Always call via partialCached.
+
+  Note .Name on these resources is a full path with a leading slash
+  ("/images/gallery/photo.jpg") — look photos up by bare filename with path.Base.
+
+  The empty-mount guard is load-bearing. The gallery mount source is an absolute,
+  machine-specific path in the gitignored config/_default/module.yaml, and a mount
+  whose source does not exist is not an error to Hugo — it just mounts nothing. That
+  used to surface far away from the cause, as a galleryImage shortcode failing with
+  "no image with id … in data/gallery.yaml" for an id that is plainly in that file.
 */ -}}
-{{- return resources.Match "images/gallery/*" -}}
+{{- $images := resources.Match "images/gallery/*" -}}
+{{- if not $images -}}
+  {{- warnf "no gallery images found under assets/images/gallery — is the mount source in config/_default/module.yaml missing or wrong? (copy config/_default/module.yaml.example; see CLAUDE.md \"Build / Deploy\")" -}}
+{{- end -}}
+{{- return $images -}}

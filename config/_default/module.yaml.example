@@ -1,0 +1,21 @@
+# Template for the machine-specific Hugo mounts file.
+#
+#   cp config/_default/module.yaml.example config/_default/module.yaml
+#
+# then set the gallery `source` below to this machine's photo store. The real
+# module.yaml is gitignored, because that path is absolute and machine-specific.
+# See CLAUDE.md "Build / Deploy".
+#
+# Two things to know:
+#   * `mounts` is REPLACE-not-merge — this list is the only one Hugo sees, so the
+#     default `assets` mount has to be restated here alongside the gallery one.
+#     hugo.yaml deliberately declares no mounts at all for that reason.
+#   * The `source` must be a REAL DIRECTORY, not a symlink. Hugo stopped following
+#     symlinked mount sources in 0.163.1 (CVE-2026-58403 fix) and a symlinked one
+#     now resolves to nothing at all — no error, just an empty gallery.
+mounts:
+  - source: assets
+    target: assets
+  - source: /absolute/path/to/your/photo/store
+    target: assets/images/gallery
+    disableWatch: true

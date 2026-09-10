@@ -21,9 +21,10 @@ This script keeps the two in lockstep:
     until a license is added, which usefully flags them as needing work.
 
 Paths default to the repo layout (this script lives in <repo>/scripts/).
-The photos folder is the gitignored `gallery-photos` symlink at the repo
-root (see hugo.yaml module.mounts). Use --data / --photos to override,
-mainly for testing against fixtures.
+The photos folder is read from the same place Hugo reads it -- the gallery
+`module.mounts` entry in the gitignored config/_default/module.yaml -- so
+the two never drift. Use --data / --photos to override, mainly for testing
+against fixtures.
 
 Standard library only — no YAML dependency. gallery.yaml is edited as text
 so existing entries stay byte-for-byte unchanged and the git diff is limited
@@ -43,6 +44,40 @@ IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".gif", ".webp", ".tif", ".tiff"}
 
 SRC_RE = re.compile(r"^  src: (.*)$")
 
+# The Hugo mount target the gallery photos are mounted onto. Kept in sync with
+# config/_default/module.yaml by reading that file rather than duplicating the path.
+GALLERY_MOUNT_TARGET = "assets/images/gallery"
+
+
+def photos_dir_from_hugo_mounts(repo_root):
+    """Return the gallery mount `source` from config/_default/module.yaml, or None.
+
+    Hugo stopped following symlinked mount sources in 0.163.1 (CVE-2026-58403),
+    so that file holds an absolute, machine-specific path and is gitignored. It has
+    a fixed, tiny shape, so a line-based read keeps this script stdlib-only -- the
+    same choice the rest of the file makes for gallery.yaml.
+    """
+    config = repo_root / "config" / "_default" / "module.yaml"
+    if not config.is_file():
+        return None
+    source = None
+    for line in config.read_text(encoding="utf-8").splitlines():
+        stripped = line.strip()
+        if stripped.startswith("#"):
+            continue
+        # A new list item resets the pending source; `source` always precedes
+        # `target` in this file, but a malformed pairing must not leak across items.
+        if stripped.startswith("- "):
+            source = None
+            stripped = stripped[2:].strip()
+        if stripped.startswith("source:"):
+            source = stripped[len("source:"):].strip().strip("\"'")
+        elif stripped.startswith("target:"):
+            target = stripped[len("target:"):].strip().strip("\"'")
+            if target.strip("/") == GALLERY_MOUNT_TARGET and source:
+                return Path(source).expanduser()
+    return None
+
 
 def parse_args(argv):
     repo_root = Path(__file__).resolve().parent.parent
@@ -56,8 +91,9 @@ def parse_args(argv):
     parser.add_argument(
         "--photos",
         type=Path,
-        default=repo_root / "gallery-photos",
-        help="Path to the photos folder (default: <repo>/gallery-photos)",
+        default=photos_dir_from_hugo_mounts(repo_root),
+        help="Path to the photos folder (default: the gallery mount `source` in "
+        "config/_default/module.yaml, i.e. whatever Hugo itself builds from)",
     )
     parser.add_argument(
         "--dry-run",
@@ -125,11 +161,21 @@ def main(argv=None):
 
     if not args.data.is_file():
         sys.exit(f"ERROR: data file not found: {args.data}")
-    # Follows the symlink; a clean checkout without `gallery-photos` lands here.
+    # A clean checkout with no config/_default/module.yaml lands here, as does one
+    # whose mount source points at a path that does not exist on this machine.
+    setup_hint = (
+        "       (cp config/_default/module.yaml.example config/_default/module.yaml\n"
+        "        and set the gallery mount `source` — see CLAUDE.md \"Build / Deploy\")"
+    )
+    if args.photos is None:
+        sys.exit(
+            "ERROR: no gallery mount found in config/_default/module.yaml, and no "
+            "--photos given\n" + setup_hint
+        )
     if not args.photos.is_dir():
         sys.exit(
             f"ERROR: photos folder not found or not a directory: {args.photos}\n"
-            "       (create the `gallery-photos` symlink — see CLAUDE.md / hugo.yaml)"
+            + setup_hint
         )
 
     raw = args.data.read_text(encoding="utf-8")
