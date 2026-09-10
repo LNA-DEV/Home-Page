@@ -1,0 +1,52 @@
+{{- /* Does THIS page get the newsletter block in its post footer?
+
+       Returns a boolean. This is the single source of truth for that question,
+       and it exists because two places need the same answer and must not be able
+       to drift apart:
+
+         layouts/_default/single.html + page.html — whether to render the block
+         layouts/partials/head.html               — whether to load newsletter.js
+
+       If those two ever disagree in the direction "rendered but no script", the
+       pills stay hidden and the visitor gets twelve raw checkboxes, with no build
+       error and no console error to show for it. head.html says as much in its
+       own comment; calling this partial from both sides is what keeps that
+       promise mechanically instead of by memory.
+
+       Three conditions, all of which must hold:
+
+       1. It is a single page. Lists, the home page and taxonomy terms render
+          through list.html, which has no post footer at all.
+
+       2. It is not one of the gallery/dex themes. single.html and page.html
+          dispatch those to their own partials before ever reaching the
+          post-single branch, so a footer block would simply never appear.
+          NOTE: this list mirrors the dispatch in those two templates. Adding a
+          theme there means adding it here, or the script gets loaded on a page
+          that has no form -- harmless, but it is the kind of drift worth
+          catching early. The reverse direction cannot happen: an unknown theme
+          falls through to the post-single branch, and so does this list.
+
+       3. The page has neither opted out (`hideNewsletter: true` in front
+          matter) nor already placed the form inline via the shortcode. That
+          second half is deliberate: a post that embeds {{ "{{< newsletter >}}" }} in its body
+          would otherwise show the form twice on one page. Detecting it here
+          means no author has to remember a flag, and the existing photography
+          post needed no edit at all. */ -}}
+
+{{- $galleryThemes := slice
+      "gallery-portfolio" "gallery-page" "gallery-page-hidden"
+      "gallery-archive" "gallery-project" "dex-species" -}}
+
+{{- $show := true -}}
+{{- if ne .Kind "page" -}}
+  {{- $show = false -}}
+{{- else if in $galleryThemes (.Params.Theme | default "") -}}
+  {{- $show = false -}}
+{{- else if .Param "hideNewsletter" -}}
+  {{- $show = false -}}
+{{- else if .HasShortcode "newsletter" -}}
+  {{- $show = false -}}
+{{- end -}}
+
+{{- return $show -}}

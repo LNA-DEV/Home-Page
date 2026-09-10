@@ -64,6 +64,59 @@
   color: var(--primary);
 }
 
+/* --- open variant: the post-footer card -------------------------------- */
+
+/* Deliberately the same shape as .post-tags, .share-buttons and .paginav in the
+   theme's post-single.css -- var(--code-bg), 1px var(--border), var(--radius).
+   The block sits among those elements, so borrowing their formal language makes
+   it read as one more part of the article footer rather than as an ad someone
+   pasted underneath. Anything louder (a tinted panel, an accent bar) reads as a
+   banner, and in dark mode an accent drawn from --primary is nearly white. */
+.newsletter--open {
+  margin: var(--content-gap) 0;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--code-bg);
+}
+
+.newsletter-heading {
+  margin: 0 0 6px;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+/* The form is the card here, so it drops the frame and background it carries as
+   a disclosure panel -- otherwise there would be a box inside a box. */
+.newsletter--open .newsletter-form {
+  margin-top: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+/* Same reasoning for the success panel: it replaces the form INSIDE the card. */
+.newsletter--open .newsletter-done {
+  margin-top: 0;
+  border: 0;
+  background: transparent;
+  min-height: 0;
+  padding: 1.5rem 0;
+}
+
+/* The inputs sit on --code-bg here rather than on --entry, so they need a
+   surface that still reads as a field against it. */
+.newsletter--open .newsletter-fields input {
+  background: var(--theme);
+}
+
+/* The submit button goes to the right edge, where a form's action belongs and
+   where the eye ends up after the pills. */
+.newsletter--open .newsletter-submit {
+  display: block;
+  margin-left: auto;
+}
+
 /* --- pill picker ------------------------------------------------------- */
 
 .newsletter-label {

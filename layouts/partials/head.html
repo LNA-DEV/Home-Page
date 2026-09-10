@@ -319,23 +319,27 @@
 {{- end }}
 
 {{/*  Newsletter — pill picker on any page embedding the {{< newsletter >}} shortcode  */}}
-{{- /* READ THIS BEFORE ADDING A SECOND PLACEMENT.
+{{- /* READ THIS BEFORE ADDING A PLACEMENT.
 
-       The markup now lives in partials/newsletter-form.html, and the shortcode is
-       only its first caller. `.HasShortcode` sees shortcodes in page content and
-       nothing else, so this condition is correct exactly as long as that stays
-       true. The moment a template renders newsletter-form.html directly — the
-       header dialog, the post-footer block — this line must widen to match, or
-       the script is never loaded on those pages: the pills stay hidden and the
-       visitor is handed twelve raw checkboxes instead.
+       The markup lives in partials/newsletter-form.html and has two callers so
+       far: the shortcode (inline in a post body) and the post footer. This
+       condition must cover EVERY caller. Miss one and the script is not loaded
+       there: the pills stay hidden and the visitor is handed twelve raw
+       checkboxes -- no build error, no console error, just a form that looks
+       wrong to everyone except the person who changed it.
 
-       Nothing fails loudly when that happens. No build error, no console error,
-       just a form that looks wrong to everyone but the person who changed it.
+       The two halves are deliberately different in kind. `.HasShortcode` can
+       only answer for page content, so the footer block gets its own predicate
+       in newsletter-in-footer.html, which the templates call as well -- one
+       source of truth, consulted from both sides, instead of the same rule
+       written out twice and drifting.
+
+       The header dialog will be the third caller and needs its own term here.
 
        Deferred, so the DOM is parsed before it runs. No params: every string,
        success and error alike, is rendered server-side by the partial and the
        script only toggles what is already there. */ -}}
-{{- if .HasShortcode "newsletter" }}
+{{- if or (.HasShortcode "newsletter") (partial "newsletter-in-footer.html" .) }}
 {{ $newsletterJs := resources.Get "js/newsletter.js" | js.Build (dict "minify" true) | resources.Fingerprint }}
 <script src="{{ $newsletterJs.RelPermalink }}" defer></script>
 {{- end }}

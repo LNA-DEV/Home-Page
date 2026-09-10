@@ -109,12 +109,23 @@
     // Opening the panel is the top of the funnel: it says how many people were
     // interested at all, which the signup count alone cannot. Once per page
     // view — a visitor folding it open and shut would otherwise inflate it.
-    let openTracked = false;
-    root.addEventListener("toggle", () => {
-      if (!root.open || openTracked) return;
-      openTracked = true;
-      track("Newsletter Open");   // props: just the source, added by track()
-    });
+    //
+    // Only the <details> variant has this event. The post-footer block renders
+    // already open, so there is no opening to record and no listener to attach —
+    // "toggle" on a <div> would simply never fire. The consequence is worth
+    // knowing when reading the stats: that placement reports signups but no
+    // opens, so the two placements are comparable on conversions, not on funnel
+    // top. Recording an equivalent for it would mean an IntersectionObserver
+    // ("was it ever scrolled into view"), which is a different question and not
+    // one anybody has asked yet.
+    if (root.tagName === "DETAILS") {
+      let openTracked = false;
+      root.addEventListener("toggle", () => {
+        if (!root.open || openTracked) return;
+        openTracked = true;
+        track("Newsletter Open");   // props: just the source, added by track()
+      });
+    }
 
     const api = form.dataset.api;
     if (api) form.addEventListener("submit", (event) => {

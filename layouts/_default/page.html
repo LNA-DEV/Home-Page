@@ -68,6 +68,14 @@
         <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
         {{- end }}
       </ul>
+      {{- /* Before the nav links, deliberately: those are an invitation to travel
+             on, and a reader who takes it is gone. Whether it appears at all is
+             decided in one place -- see newsletter-in-footer.html, which
+             head.html consults too so the script is guaranteed to be loaded
+             wherever this renders. */}}
+      {{- if partial "newsletter-in-footer.html" . }}
+      {{- partial "newsletter-form.html" (dict "ctx" . "source" "post-footer" "variant" "open") }}
+      {{- end }}
       {{- if (.Param "ShowPostNavLinks") }}
       {{- partial "post_nav_links.html" . }}
       {{- end }}

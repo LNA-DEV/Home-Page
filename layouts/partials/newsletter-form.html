@@ -15,7 +15,14 @@
                  which is the only way to tell afterwards WHICH placement actually
                  produced signups. Two instances on one page are expected, so an
                  unlabelled event would be useless.
-         title   optional — overrides the summary label.
+         variant optional — "details" (default) or "open".
+                 "details" is the collapsed disclosure widget used inline in a
+                 post body. "open" renders the same form already unfolded, as a
+                 card, for the post footer: at the end of an article the reader
+                 is finished, and an extra click before the e-mail field only
+                 costs signups. Where the click IS the point -- the header -- the
+                 disclosure variant stays right.
+         title   optional — overrides the summary/heading label.
          text    optional — overrides the intro paragraph.
 
        A <details> element, so the button itself needs no JS: the summary is the
@@ -56,6 +63,11 @@
 
 {{- $ctx := .ctx -}}
 {{- $source := .source -}}
+{{- $variant := .variant | default "details" -}}
+{{- if not (in (slice "details" "open") $variant) -}}
+  {{- errorf "newsletter-form: unknown variant %q (details|open), source=%q" $variant $source -}}
+{{- end -}}
+{{- $isOpen := eq $variant "open" -}}
 {{- if not $ctx -}}
   {{- errorf "newsletter-form: called without ctx (source=%q)" $source -}}
 {{- end -}}
@@ -73,8 +85,16 @@
   {{- errorf "newsletter-form: data/newsletter.yaml has no languages (on %q)" $ctx.Path -}}
 {{- end -}}
 
+{{- /* The wrapper differs, the body does not. `.newsletter` is what
+       newsletter.js keys on, so both variants carry it; the modifier class is
+       purely for CSS. A <div> has no toggle event -- see newsletter.js. */ -}}
+{{- if $isOpen }}
+<div class="newsletter newsletter--open" data-page-lang="{{ $pageLang }}" data-source="{{ $source }}">
+  <h2 class="newsletter-heading">{{ .title | default (i18n "newsletter_title") }}</h2>
+{{- else }}
 <details class="newsletter" data-page-lang="{{ $pageLang }}" data-source="{{ $source }}">
   <summary class="newsletter-button">{{ .title | default (i18n "newsletter_title") }}</summary>
+{{- end }}
 
   <form class="newsletter-form" method="post" action="{{ $data.url }}" data-api="{{ $data.api }}">
     {{- /* honeypot -- left empty by humans, filled by bots */}}
@@ -145,4 +165,4 @@
     </svg>
     <p>{{ i18n "newsletter_status_ok" }}</p>
   </div>
-</details>
+{{ if $isOpen }}</div>{{ else }}</details>{{ end }}

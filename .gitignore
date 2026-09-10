@@ -20,3 +20,5 @@ scripts/__pycache__/**
 # deploy.sh rsyncs from this machine. Same model as /gallery-photos above.
 /static/downloads/
 konzepte/**
+konzept/rss-galeriebilder.md
+konzept/test-feed.py
