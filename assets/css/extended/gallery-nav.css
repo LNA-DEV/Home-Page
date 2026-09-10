@@ -146,17 +146,37 @@
   font-size: 0.9rem;
   cursor: pointer;
   font-family: inherit;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  /* 0.12s -- see .newsletter-pill in newsletter.css for why a state toggle
+     should not linger at 0.2s. */
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
 }
 
-.filter-pill:hover {
-  background: var(--primary);
-  color: var(--theme);
-  border-color: var(--primary);
-}
-
+/* Only .active is filled. :hover carried an identical declaration, which left a
+   tapped pill stuck in the active look on touch devices (browsers keep :hover
+   after a tap) and hid the change under the cursor on desktop. Less obvious here
+   than on the newsletter pills because this row is radio-like -- exactly one
+   category is active -- but the stuck highlight still lies about which filter is
+   applied. Same fix, same shape as .reading-btn / .dex-pill / .activity-filter. */
 .filter-pill.active {
   background: var(--primary);
   color: var(--theme);
   border-color: var(--primary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .filter-pill:hover:not(.active) {
+    color: var(--primary);
+    border-color: var(--primary);
+  }
+
+  .filter-pill.active:hover {
+    opacity: 0.85;
+  }
+}
+
+/* Bigger tap target on a coarse pointer -- 0.5rem padding leaves 34px. */
+@media (pointer: coarse) {
+  .filter-pill {
+    padding: 0.65rem 1.1rem;
+  }
 }

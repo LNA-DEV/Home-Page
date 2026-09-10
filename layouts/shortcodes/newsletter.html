@@ -19,9 +19,12 @@
        contract -- renaming one here breaks the picker silently into the
        plain-checkbox fallback.
 
-       Pre-selection: English is checked in the markup so the no-JS form is
-       useful; the script then adds the browser's own languages, which is the one
-       thing a static build cannot know.
+       Pre-selection: English plus the language of the page itself are checked
+       in the markup, so the no-JS form is useful and a visitor reading the German
+       post is not silently signed up for the English list only. The script then
+       adds the browser's own languages, which is the one thing a static build
+       cannot know -- the page language, by contrast, it knows perfectly well, and
+       it is passed down as data-page-lang rather than re-derived from the URL.
 
        `nonce` is the honeypot field from Listmonk's own generated form: it must
        stay empty (a filled one is treated as a bot). Keep it as Listmonk ships it.
@@ -34,11 +37,14 @@
 {{- /* hugo.Data, not site.Data: the latter was deprecated in Hugo 0.156.0. */ -}}
 {{- $data := hugo.Data.newsletter -}}
 {{- $topics := $data.topics -}}
+{{- /* The language of the page this shortcode sits on -- drives both the checked
+       fallback below and, via data-page-lang, the pill pre-selection in the JS. */ -}}
+{{- $pageLang := .Page.Lang -}}
 {{- if not $data.languages -}}
   {{- errorf "newsletter shortcode: data/newsletter.yaml has no languages (%s)" .Position -}}
 {{- end -}}
 
-<details class="newsletter">
+<details class="newsletter" data-page-lang="{{ $pageLang }}">
   <summary class="newsletter-button">{{ .Get "title" | default (i18n "newsletter_title") }}</summary>
 
   <form class="newsletter-form" method="post" action="{{ $data.url }}" data-api="{{ $data.api }}">
@@ -87,7 +93,7 @@
         <label class="newsletter-list">
           <input type="checkbox" name="l" value="{{ $uuid }}"
                  data-lang="{{ $lang.lang }}" data-topic="{{ $topic }}"
-                 {{ if eq $lang.lang "en" }}checked{{ end }} />
+                 {{ if or (eq $lang.lang "en") (eq $lang.lang $pageLang) }}checked{{ end }} />
           {{ i18n (printf "newsletter_topic_%s" $topic) }}
         </label>
         {{- end }}

@@ -68,9 +68,22 @@
       submit.disabled = checkedLists().length === 0;
     }
 
-    // English always, plus whatever the browser asks for. This is the one thing
-    // a static build cannot know, and the reason any of this runs client-side.
+    // English always, plus the language of the page being read, plus whatever the
+    // browser asks for.
+    //
+    // The page language comes from the shortcode as data-page-lang rather than
+    // being parsed out of the URL: the site puts every language in its own path
+    // segment, but that is a config decision (defaultContentLanguageInSubdir),
+    // not something this file should encode.
+    //
+    // It matters because the browser's languages and the page's are routinely
+    // different -- someone on an English-language system reading the German post
+    // used to end up subscribed to the English list only, which is the opposite
+    // of what picking the German article signals. Only navigator.languages is
+    // genuinely unknowable to a static build; the page language is not, and was
+    // simply missing here.
     const wanted = new Set(["en"]);
+    if (root.dataset.pageLang) wanted.add(root.dataset.pageLang);
     for (const tag of navigator.languages || [navigator.language || ""]) {
       wanted.add(String(tag).toLowerCase().split("-")[0]);
     }

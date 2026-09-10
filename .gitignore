@@ -19,3 +19,4 @@ scripts/__pycache__/**
 # files at 100 MB — but still deployed: `hugo` copies static/ into public/ and
 # deploy.sh rsyncs from this machine. Same model as /gallery-photos above.
 /static/downloads/
+konzepte/**

@@ -91,14 +91,52 @@
   font-family: inherit;
   font-size: 0.9rem;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  /* 0.12s, not 0.2s: this is a state toggle, not a decorative fade. At 0.2s the
+     fill is still visibly crossfading when the eye looks for the answer to
+     "did my tap register?", which reads as lag on top of the hover problem
+     below. */
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
 }
 
-.newsletter-pill:hover,
+/* The filled look belongs to .active ALONE.
+   :hover used to share this rule, and that was the whole bug: after a click the
+   cursor is still on the pill, so hover kept painting the active look and the
+   deselection only became visible once the mouse moved away -- indistinguishable
+   from a laggy UI. On touch it is worse: browsers make :hover stick after a tap,
+   so a deselected pill stays lit until something else is tapped, and deselecting
+   looks like it does not work at all.
+   .reading-btn, .dex-pill and .activity-filter already separate the two; this is
+   the same shape. */
 .newsletter-pill.active {
   background: var(--primary);
   color: var(--theme);
   border-color: var(--primary);
+}
+
+/* Hover styling only where hover is real. A touch device matches neither
+   condition, so it never acquires a stuck hover state in the first place --
+   that alone fixes the mobile symptom, with no JS involved.
+   The inactive hover deliberately does NOT set a background: sharing the fill
+   with .active is exactly what broke it. */
+@media (hover: hover) and (pointer: fine) {
+  .newsletter-pill:hover:not(.active) {
+    color: var(--primary);
+    border-color: var(--primary);
+  }
+
+  .newsletter-pill.active:hover {
+    opacity: 0.85;
+  }
+}
+
+/* A coarse pointer gets a bigger target. 0.5rem padding leaves a 34px pill;
+   WCAG 2.5.8 asks for 24px minimum but a thumb wants ~44px, and these pills are
+   the one control here that gets tapped repeatedly. Keyed on the pointer type
+   rather than a width breakpoint, so a touch laptop gets it too. */
+@media (pointer: coarse) {
+  .newsletter-pill {
+    padding: 0.65rem 1.1rem;
+  }
 }
 
 /* Flags keep their own colours on an active pill, where the text goes light. */
