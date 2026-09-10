@@ -202,6 +202,31 @@ if (gallery) {
     errorMsg: params.errorMsg,
   });
 
+  /* Browser history. An open photo is a view state, so it gets exactly one history
+     entry: pressing back closes the viewer instead of leaving the gallery page.
+     One entry per lightbox session rather than per slide — swiping through 30 photos
+     must still cost a single back press — so slide changes stay on replaceState.
+     PhotoSwipe v5 dropped v4's history module on purpose; this is hand-wired. */
+  let historyEntryPushed = false; // our #id entry is on the stack
+  let suppressHistoryBack = false; // close() came from popstate — don't call back()
+  let pendingClose = false; // back pressed while the opening animation was running
+
+  const galleryUrl = () => window.location.pathname + window.location.search;
+
+  function openFromHash(fromHistory) {
+    const id = window.location.hash.substring(1);
+    if (!id) return false;
+    const index = Array.from(gallery.querySelectorAll("a")).findIndex((el) => el.dataset?.id === id);
+    if (index < 0) return false;
+    // Forward navigation lands back on a photo URL whose entry is still on the stack:
+    // claim it before opening, because "change" fires inside loadAndOpen.
+    const wasPushed = historyEntryPushed;
+    if (fromHistory) historyEntryPushed = true;
+    const opened = lightbox.loadAndOpen(index, { gallery });
+    if (!opened) historyEntryPushed = wasPushed;
+    return opened;
+  }
+
   lightbox.on("uiRegister", () => {
     lightbox.pswp.ui.registerElement({
       name: "download-button",
@@ -446,7 +471,17 @@ if (gallery) {
     if (!currSlide) return;
     const el = currSlide.data?.element;
     const id = el?.dataset?.id || currSlide.index;
-    history.replaceState("", document.title, "#" + id);
+    if (historyEntryPushed) {
+      history.replaceState({ pswp: true }, "", "#" + id);
+    } else {
+      // Deep link: the current entry already *is* the photo URL. Rewrite it to the
+      // bare gallery URL first, so there is something inside this page to go back to.
+      if (window.location.hash.substring(1) === String(id)) {
+        history.replaceState(null, "", galleryUrl());
+      }
+      history.pushState({ pswp: true }, "", "#" + id);
+      historyEntryPushed = true;
+    }
 
     // Report the viewed image to Plausible — only real gallery items (with a UUID),
     // deduped so a single slide isn't counted twice.
@@ -458,7 +493,14 @@ if (gallery) {
   });
 
   lightbox.on("close", () => {
-    history.replaceState("", document.title, window.location.pathname);
+    // Hand back the entry we pushed. When the close came from popstate the browser has
+    // already restored the gallery URL, and a second back() would leave the page.
+    const cameFromHistory = suppressHistoryBack;
+    const hadEntry = historyEntryPushed;
+    suppressHistoryBack = false;
+    historyEntryPushed = false;
+    if (hadEntry && !cameFromHistory) history.back();
+
     // Close info popup when lightbox closes
     const popup = document.querySelector(".pswp-info-popup");
     if (popup) {
@@ -487,13 +529,28 @@ if (gallery) {
     }
   });
 
+  // Back pressed mid-open: PhotoSwipe ignores close() until the opening animation has
+  // landed (opener.isOpen flips only then), so a close asked for earlier is deferred here.
+  lightbox.on("openingAnimationEnd", () => {
+    if (!pendingClose) return;
+    pendingClose = false;
+    lightbox.pswp?.close();
+  });
+
+  window.addEventListener("popstate", () => {
+    const pswp = lightbox.pswp;
+    if (pswp) {
+      if (pswp.isDestroying) return; // closing animation already under way
+      historyEntryPushed = false; // the entry that just went away was ours
+      suppressHistoryBack = true; // and close() must not pop another one
+      if (pswp.opener.isOpen) pswp.close();
+      else pendingClose = true;
+      return;
+    }
+    openFromHash(true); // forward navigation, back onto a photo URL
+  });
+
   lightbox.init();
 
-  if (window.location.hash.substring(1).length > 0) {
-    const id = window.location.hash.substring(1);
-    const index = Array.from(gallery.querySelectorAll("a")).findIndex((el) => el.dataset?.id === id); 
-    if (!Number.isNaN(index) && index >= 0 && index < gallery.querySelectorAll("a").length) {
-      lightbox.loadAndOpen(index, { gallery });
-    }
-  }
+  openFromHash(false);
 }
