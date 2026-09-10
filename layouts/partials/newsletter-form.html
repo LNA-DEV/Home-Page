@@ -41,12 +41,13 @@
 
        That script is loaded by head.html. The class names and the data-lang /
        data-topic / data-source attributes below are its contract -- renaming one
-       here breaks the picker silently into the plain-checkbox fallback. The
-       loading CONDITION in head.html is the other half of that contract: it is
-       currently gated on `.HasShortcode "newsletter"`, which holds only as long
-       as the shortcode is the sole caller of this partial. Adding a caller
-       without widening that condition leaves the pills hidden and the visitor
-       staring at twelve raw checkboxes -- with no error to warn anyone.
+       here breaks the picker silently into the plain-checkbox fallback. So is
+       the loading CONDITION over there, which is now unconditional: the header
+       CTA puts this partial on every page, so there is nothing left to gate on.
+       It used to be `.HasShortcode "newsletter"`, and the failure mode that
+       created is the one to keep in mind if it is ever narrowed again -- a
+       placement on pages that do not load the script shows no error at all,
+       just hidden pills and twelve raw checkboxes.
 
        Pre-selection: English plus the language of the page itself are checked
        in the markup, so the no-JS form is useful and a visitor reading the German

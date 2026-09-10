@@ -120,6 +120,14 @@
 /* --- modal variant: the header CTA ------------------------------------- */
 
 .newsletter-modal {
+  /* Shared by the card padding and by the close button that is positioned
+     against it -- the two have to agree or the X stops lining up. */
+  --modal-pad: 24px;
+  /* The first line box of .newsletter-heading (20px * 1.3), which is what the
+     close button is centred against. */
+  --modal-heading-line: 26px;
+
+  position: relative;
   width: min(560px, calc(100vw - 2 * var(--gap)));
   padding: 0;
   border: 1px solid var(--border);
@@ -145,7 +153,7 @@
   border: 0;
   border-radius: 0;
   background: transparent;
-  padding: 24px;
+  padding: var(--modal-pad);
 }
 
 /* ...which means the inputs are back on --theme and need the field surface the
@@ -154,15 +162,32 @@
   background: var(--code-bg);
 }
 
+/* The close button sits on the SAME line as the heading, which is the one thing
+   the flow order cannot give us: the dismiss form is a sibling of the whole
+   card, so in flow it can only be a row of its own above the heading -- and a
+   lone X floating over an empty strip reads as a mistake.
+
+   Taking it out of flow and pinning it to the card's own padding box is what
+   puts the two on one line. Its height is the heading's first line box rather
+   than the button's own, so `align-items: center` centres the glyph on the
+   heading text and not on whatever the 24px font happens to measure. The
+   heading then has to keep clear of it -- see below. */
 .newsletter-modal__dismiss {
+  position: absolute;
+  inset-block-start: var(--modal-pad);
+  inset-inline-end: var(--modal-pad);
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  height: var(--modal-heading-line);
   margin: 0;
-  padding: 8px 8px 0;
+  padding: 0;
 }
 
+/* padding + equal negative margin: a 44px touch target that occupies the space
+   of the glyph alone, so growing it does not move the X off the heading line. */
 .newsletter-modal__dismiss button {
-  padding: 2px 10px;
+  padding: 10px;
+  margin: -10px;
   border: 0;
   border-radius: var(--radius);
   background: transparent;
@@ -177,10 +202,13 @@
   color: var(--primary);
 }
 
-/* The heading is redundant beside the close row on a narrow modal, but it is
-   the dialog's visible title -- keep it, just tighten the space above it. */
+/* The heading is the dialog's visible title, and now the anchor the close
+   button is aligned to. The padding is the button's own width plus its 10px of
+   invisible hit area, so a long translated title wraps before it runs under
+   the X instead of colliding with it. */
 .newsletter-modal .newsletter-heading {
   margin-top: 0;
+  padding-inline-end: 2.5rem;
 }
 
 /* --- pill picker ------------------------------------------------------- */

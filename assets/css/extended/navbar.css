@@ -31,13 +31,33 @@
     min-width: 0;
 }
 
+/* Pinned to the FIRST row of the header, not to the header's centre.
+   .nav wraps once the menu no longer fits beside the logo -- logo, theme toggle
+   and language switch keep row one, the menu drops to row two -- and at that
+   point align-items:center on .header parks the CTA in the gap between the two
+   rows, level with neither of them. Aligning it to the top instead and pushing
+   it down by half of what is left over in ONE row puts it on the logo and
+   language line, which is where it belongs.
+
+   No media query, because the same offset is also correct when the nav does not
+   wrap: a single-row header is exactly one row tall, so centring in that row and
+   centring in the header are the same thing. The wrap point depends on the
+   translated menu labels anyway, so there is no honest breakpoint to write.
+
+   The explicit height is what makes the offset computable: left to its padding
+   the pill measures 33px here and 29px below 1200px, where the label is hidden
+   and only the emoji sets the height. */
 .newsletter-cta {
+    --cta-height: 33px;
     flex: 0 0 auto;
+    align-self: flex-start;
+    margin-block-start: calc((var(--header-height) - var(--cta-height)) / 2);
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
+    height: var(--cta-height);
     margin-inline-end: var(--gap);
-    padding: 6px 14px;
+    padding: 0 14px;
     border-radius: var(--radius);
     background: var(--tertiary);
     color: var(--primary);
@@ -68,6 +88,6 @@
     }
 
     .newsletter-cta {
-        padding: 6px 10px;
+        padding: 0 10px;
     }
 }
