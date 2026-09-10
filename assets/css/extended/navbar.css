@@ -1,33 +1,44 @@
 /* This is needed for fucking Windows... */
 :root{
     --nav-width: 1060px;
+    /* The centred header track: the theme puts exactly this on .nav's max-width
+       (--nav-width plus a --gap either side). Named here because the header grid
+       has to reserve a column of precisely that size. */
+    --nav-track: calc(var(--nav-width) + var(--gap) * 2);
 }
 
 /* --- newsletter call to action in the header ---------------------------- */
 
-/* The header becomes the flex container and .nav its growing child, so the CTA
-   can sit flush against the screen edge instead of against the centred track.
+/* Three columns: an empty one, the nav track, and the CTA. The nav keeps the
+   page's true centre line, and the CTA still sits flush against the screen edge
+   rather than against the track.
 
-   The alternative -- position:absolute on the CTA -- keeps .nav pixel-centred,
-   but only while there is room beside it. The track is capped at 1108px
-   (--nav-width plus a --gap either side), so the free margin either side is
-   half of whatever the viewport has beyond that: 86px at 1280px wide, and none
-   at all at 1108px. Below roughly 1450px an absolutely positioned text CTA
-   would start overlapping the menu.
+   The point of the grid is that the two outer columns are both 1fr, so the empty
+   left one mirrors whatever the right one costs -- no pixel constant to keep in
+   sync, and no drift when a translation makes the button wider ("Nyhetsbrev" is
+   2px wider than "Newsletter").
 
-   This way it never overlaps at any width. The cost is that .nav is centred in
-   the REMAINING space, so on a 1920px screen it sits about 85px left of true
-   centre. PaperMod's header is asymmetric anyway -- logo left, menu right --
-   so it reads as unchanged to anyone who is not measuring it. */
+   It also degrades on its own, which is what the flex version could not do. This
+   used to be `display: flex` with .nav as the growing child, and that centred the
+   nav in the space LEFT OVER by the CTA: 155px gone on one side only, so the nav
+   sat ~78px left of centre on any screen wide enough to cap the track. Absolute
+   positioning would have centred it, but only while there was room beside it --
+   the track is capped at 1108px, so below roughly 1370px the button would start
+   overlapping the end of the menu. Here the right column simply cannot go below
+   the button's own width, so as the viewport tightens the left column gives way
+   first, symmetric centring turns back into flush-left, and nothing ever
+   overlaps. Perfect symmetry from 1418px up (1108 + 155 either side), a shrinking
+   offset below that, and the old behaviour by the time it runs out. */
 .header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr minmax(0, var(--nav-track)) 1fr;
     align-items: center;
 }
 
 .nav {
-    flex: 1 1 auto;
-    /* A flex item defaults to min-width:auto and would refuse to shrink below
-       the menu's own 706px, shoving the CTA off the right edge on a phone. */
+    grid-column: 2;
+    /* A grid item defaults to min-width:auto and would refuse to shrink below
+       the menu's own width, pushing the CTA off the right edge on a phone. */
     min-width: 0;
 }
 
@@ -45,11 +56,14 @@
    translated menu labels anyway, so there is no honest breakpoint to write.
 
    The explicit height is what makes the offset computable: left to its padding
-   the pill measures 33px here and 29px below 1200px, where the label is hidden
+   the pill measures 33px here and 29px below 480px, where the label is hidden
    and only the emoji sets the height. */
 .newsletter-cta {
     --cta-height: 33px;
-    flex: 0 0 auto;
+    grid-column: 3;
+    /* Grid items stretch by default, which would smear the pill across the whole
+       column. */
+    justify-self: end;
     align-self: flex-start;
     margin-block-start: calc((var(--header-height) - var(--cta-height)) / 2);
     display: inline-flex;
@@ -79,16 +93,16 @@
 
 /* Once the nav has wrapped, the CTA stops taking a bite out of the menu's row.
 
-   As a flex sibling of .nav the CTA shortens EVERY row of the nav, including the
-   second one -- so the menu was being clipped 159px early while the strip
+   Sharing the header grid with .nav, the CTA shortens EVERY row of the nav,
+   including the second one -- so the menu was being clipped 159px early while the strip
    directly under the button sat empty. On a 715px window the menu had 542px of
    its 646px; with the strip it has 701px and fits outright. That is the whole
    bug: the menu ends under the button instead of running through beneath it.
 
    Taking the CTA out of flow hands .nav the full width and the menu keeps its
    row to itself. This is the absolute positioning the comment at the top of this
-   file argues against -- and the argument still holds where it was made: while
-   the header is a SINGLE row, an out-of-flow CTA would sit on top of the menu's
+   file rules out -- and that reasoning still holds where it was made: while the
+   header is a SINGLE row, an out-of-flow CTA would sit on top of the menu's
    right end. So it is confined to widths where the nav has certainly wrapped.
 
    768px is that width, measured per language with the CTA already out of flow
@@ -100,6 +114,13 @@
    ~30px SHORTER, which would put a single-row header inside this query. */
 @media screen and (max-width: 768px) {
     .header {
+        /* Back to a plain block. The three columns have nothing to do here --
+           there is no room to centre anything in, .nav wants the full width for
+           its menu row, and an out-of-flow grid item is positioned against its
+           grid AREA rather than the container, which for the empty third column
+           would be a zero-width strip. A block leaves .nav to fill the header
+           and makes the header itself the CTA's reference. */
+        display: block;
         position: relative;
     }
 
