@@ -356,3 +356,9 @@
   translation: "Fotografi"
 - id: newsletter_topic_images
   translation: "Nya foton"
+- id: newsletter_cta
+  translation: "Nyhetsbrev"
+- id: newsletter_cta_aria
+  translation: "Prenumerera på nyhetsbrevet"
+- id: newsletter_close
+  translation: "Stäng"

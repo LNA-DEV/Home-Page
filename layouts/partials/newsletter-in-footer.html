@@ -1,17 +1,13 @@
 {{- /* Does THIS page get the newsletter block in its post footer?
 
-       Returns a boolean. This is the single source of truth for that question,
-       and it exists because two places need the same answer and must not be able
-       to drift apart:
+       Returns a boolean, and single.html and page.html both ask it — which is
+       the whole point, since those two templates are near-duplicates and a rule
+       written out twice is a rule that eventually disagrees with itself.
 
-         layouts/_default/single.html + page.html — whether to render the block
-         layouts/partials/head.html               — whether to load newsletter.js
-
-       If those two ever disagree in the direction "rendered but no script", the
-       pills stay hidden and the visitor gets twelve raw checkboxes, with no build
-       error and no console error to show for it. head.html says as much in its
-       own comment; calling this partial from both sides is what keeps that
-       promise mechanically instead of by memory.
+       head.html used to consult this as well, to decide whether to load
+       newsletter.js. It no longer needs to: the header CTA put a form on every
+       page, so the script is loaded unconditionally. Should that CTA ever go
+       away, head.html will want this predicate back.
 
        Three conditions, all of which must hold:
 

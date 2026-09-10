@@ -21,6 +21,32 @@
    reads them back when posting. */
 (function () {
   for (const root of document.querySelectorAll(".newsletter")) init(root);
+  initCta();
+
+  /* The header CTA. It is a real link to Listmonk's own subscription page, so it
+     works with no JavaScript at all — that is the Tor build's path. Here we take
+     the click back and open the dialog instead.
+
+     showModal(), not the open attribute: only the modal form puts the dialog in
+     the top layer and brings the focus trap, the ESC handler and ::backdrop with
+     it. Everything below is the one thing it does NOT give us — dismissing on a
+     click outside. The check works because the backdrop is painted by the dialog
+     element itself, so a click on it reports the dialog as its target, while a
+     click on any real content reports a descendant. */
+  function initCta() {
+    const link = document.querySelector("[data-newsletter-open]");
+    const modal = document.querySelector(".newsletter-modal");
+    if (!link || !modal || typeof modal.showModal !== "function") return;
+
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      modal.showModal();
+    });
+
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) modal.close();
+    });
+  }
 
   function init(root) {
     const form = root.querySelector(".newsletter-form");

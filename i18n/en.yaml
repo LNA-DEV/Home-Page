@@ -384,3 +384,9 @@
   translation: "Photography"
 - id: newsletter_topic_images
   translation: "New photos"
+- id: newsletter_cta
+  translation: "Newsletter"
+- id: newsletter_cta_aria
+  translation: "Subscribe to the newsletter"
+- id: newsletter_close
+  translation: "Close"

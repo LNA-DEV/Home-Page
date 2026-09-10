@@ -1,0 +1,49 @@
+{{- /* The newsletter call to action in the site header, plus the dialog it opens.
+
+       WHY IT IS A LINK AND NOT A BUTTON
+
+       A <dialog> that is never shown with showModal() stays invisible, so a
+       button here would be dead weight without JavaScript — and the Tor build is
+       exactly that case. Every other piece of this feature degrades gracefully
+       (the shortcode is a <details>, the form falls back to a plain cross-site
+       POST), and this must too.
+
+       So the CTA is a real link to Listmonk's own subscription page. It works on
+       its own. newsletter.js then intercepts the click and opens the dialog
+       instead, which is the enhancement — not the baseline. No <noscript> block,
+       no button that silently does nothing, and nothing to remember when the JS
+       is blocked by an extension rather than switched off.
+
+       WHERE IT SITS
+
+       Rendered as a sibling of <nav class="nav"> inside <header>, NOT inside the
+       nav itself. The nav is capped at --nav-width and centred, and its contents
+       (logo 272px + menu 706px) already fill roughly 1026 of its 1060 usable
+       pixels. A ~170px button added to that flex row would overflow it and, since
+       .nav has flex-wrap:wrap, push the whole menu onto a second line. Putting
+       the CTA outside the nav is what makes "flush against the screen edge"
+       possible at all — see navbar.css for the layout half of this.
+
+       The dialog markup lives here too rather than at the end of <body>: a modal
+       shown with showModal() is promoted to the top layer regardless of where it
+       sits in the DOM, so proximity to its trigger costs nothing and keeps the
+       two together. */ -}}
+
+{{- $data := hugo.Data.newsletter -}}
+
+<a class="newsletter-cta" href="{{ $data.url }}"
+   data-newsletter-open
+   aria-haspopup="dialog"
+   aria-label="{{ i18n "newsletter_cta_aria" }}"
+   title="{{ i18n "newsletter_cta_aria" }}">
+  <span class="newsletter-cta__icon" aria-hidden="true">📬</span>
+  <span class="newsletter-cta__label">{{ i18n "newsletter_cta" }}</span>
+</a>
+
+<dialog class="newsletter-modal" aria-label="{{ i18n "newsletter_cta_aria" }}">
+  {{- /* method="dialog" closes the dialog with no JS of its own. */}}
+  <form method="dialog" class="newsletter-modal__dismiss">
+    <button type="submit" aria-label="{{ i18n "newsletter_close" }}" title="{{ i18n "newsletter_close" }}">&times;</button>
+  </form>
+  {{- partial "newsletter-form.html" (dict "ctx" . "source" "header" "variant" "open") }}
+</dialog>

@@ -319,27 +319,27 @@
 {{- end }}
 
 {{/*  Newsletter — pill picker on any page embedding the {{< newsletter >}} shortcode  */}}
-{{- /* READ THIS BEFORE ADDING A PLACEMENT.
+{{- /* Loaded unconditionally, and that is not laziness.
 
-       The markup lives in partials/newsletter-form.html and has two callers so
-       far: the shortcode (inline in a post body) and the post footer. This
-       condition must cover EVERY caller. Miss one and the script is not loaded
-       there: the pills stay hidden and the visitor is handed twelve raw
-       checkboxes -- no build error, no console error, just a form that looks
-       wrong to everyone except the person who changed it.
+       The header CTA (partials/newsletter-cta.html) is part of the site header,
+       so a newsletter form is now on every single page. Any condition here would
+       evaluate to true everywhere; writing one out would only invite the belief
+       that it still guards something.
 
-       The two halves are deliberately different in kind. `.HasShortcode` can
-       only answer for page content, so the footer block gets its own predicate
-       in newsletter-in-footer.html, which the templates call as well -- one
-       source of truth, consulted from both sides, instead of the same rule
-       written out twice and drifting.
+       This replaces a `.HasShortcode "newsletter"` test that was correct while
+       the shortcode was the sole placement, and briefly an or-chain once the post
+       footer joined it. Should the header CTA ever be dropped, narrow this again
+       rather than leaving it: the script is small, but shipping it to pages with
+       no form to drive is still shipping it for nothing.
 
-       The header dialog will be the third caller and needs its own term here.
+       The failure mode this used to risk is worth remembering. When a placement
+       exists whose pages do NOT load this script, its pills stay hidden and the
+       visitor is handed twelve raw checkboxes -- no build error, no console
+       error, just a form that looks wrong to everyone except the person who
+       changed it.
 
        Deferred, so the DOM is parsed before it runs. No params: every string,
        success and error alike, is rendered server-side by the partial and the
        script only toggles what is already there. */ -}}
-{{- if or (.HasShortcode "newsletter") (partial "newsletter-in-footer.html" .) }}
 {{ $newsletterJs := resources.Get "js/newsletter.js" | js.Build (dict "minify" true) | resources.Fingerprint }}
 <script src="{{ $newsletterJs.RelPermalink }}" defer></script>
-{{- end }}

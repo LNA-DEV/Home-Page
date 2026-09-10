@@ -107,4 +107,8 @@
             {{- end }}
         </ul>
     </nav>
+    {{- /* Outside .nav on purpose: inside it the CTA would overflow the centred
+           1060px track and wrap the menu onto a second line. See
+           newsletter-cta.html and navbar.css. */}}
+    {{- partial "newsletter-cta.html" . }}
 </header>

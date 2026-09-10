@@ -2,3 +2,72 @@
 :root{
     --nav-width: 1060px;
 }
+
+/* --- newsletter call to action in the header ---------------------------- */
+
+/* The header becomes the flex container and .nav its growing child, so the CTA
+   can sit flush against the screen edge instead of against the centred track.
+
+   The alternative -- position:absolute on the CTA -- keeps .nav pixel-centred,
+   but only while there is room beside it. The track is capped at 1108px
+   (--nav-width plus a --gap either side), so the free margin either side is
+   half of whatever the viewport has beyond that: 86px at 1280px wide, and none
+   at all at 1108px. Below roughly 1450px an absolutely positioned text CTA
+   would start overlapping the menu.
+
+   This way it never overlaps at any width. The cost is that .nav is centred in
+   the REMAINING space, so on a 1920px screen it sits about 85px left of true
+   centre. PaperMod's header is asymmetric anyway -- logo left, menu right --
+   so it reads as unchanged to anyone who is not measuring it. */
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    flex: 1 1 auto;
+    /* A flex item defaults to min-width:auto and would refuse to shrink below
+       the menu's own 706px, shoving the CTA off the right edge on a phone. */
+    min-width: 0;
+}
+
+.newsletter-cta {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-inline-end: var(--gap);
+    padding: 6px 14px;
+    border-radius: var(--radius);
+    background: var(--tertiary);
+    color: var(--primary);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.newsletter-cta:hover {
+    opacity: 0.85;
+}
+
+.newsletter-cta__icon {
+    font-size: 1.05rem;
+    line-height: 1;
+}
+
+/* On narrow screens the label goes and the emoji carries the CTA alone. The
+   menu is already horizontally scrollable at that size -- its 706px are fixed,
+   independent of the viewport -- so every pixel the CTA gives back is one the
+   menu gets to use. The accessible name lives in aria-label rather than in this
+   span, precisely so that hiding it costs a screen reader nothing. */
+@media screen and (max-width: 1200px) {
+    .newsletter-cta__label {
+        display: none;
+    }
+
+    .newsletter-cta {
+        padding: 6px 10px;
+    }
+}
