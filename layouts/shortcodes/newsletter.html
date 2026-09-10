@@ -1,119 +1,22 @@
-{{- /* Newsletter subscribe button.
+{{- /* Newsletter subscribe button, inline in a post body.
 
-       A <details> element, so the button itself needs no JS: the summary is the
-       button, the Listmonk form is the panel it opens.
+       All of the markup lives in layouts/partials/newsletter-form.html — this
+       shortcode only adapts the shortcode calling convention to that partial's
+       dict, so the same widget can also be rendered from a template (the header
+       dialog, the post-footer block) without duplicating a hundred lines.
 
-       The twelve lists are a language x topic matrix, so the UI does not show
-       twelve checkboxes -- it shows a row of language pills and a row of topic
-       bubbles, and ticks the intersection.
+       `.Page` rather than `.` : inside a shortcode `.` is the shortcode itself,
+       and the partial wants the page — it reads `.Lang` off it.
 
-       Progressive enhancement, because the pills are buttons and only JS can
-       compute the intersection: the real checkboxes are rendered as a plain list
-       and are what a plain POST would carry. assets/js/newsletter.js hides that
-       list, reveals the pills, and submits to Listmonk's public API so the
-       visitor stays in the panel. With JS off the form posts the old way and
-       still works -- which is what the Tor build falls back to.
-
-       That script is loaded by head.html, gated on `.HasShortcode "newsletter"`,
-       so the class names and the data-lang / data-topic attributes below are its
-       contract -- renaming one here breaks the picker silently into the
-       plain-checkbox fallback.
-
-       Pre-selection: English plus the language of the page itself are checked
-       in the markup, so the no-JS form is useful and a visitor reading the German
-       post is not silently signed up for the English list only. The script then
-       adds the browser's own languages, which is the one thing a static build
-       cannot know -- the page language, by contrast, it knows perfectly well, and
-       it is passed down as data-page-lang rather than re-derived from the URL.
-
-       `nonce` is the honeypot field from Listmonk's own generated form: it must
-       stay empty (a filled one is treated as a bot). Keep it as Listmonk ships it.
-
-       Checkboxes wrap their label instead of using id/for, so two newsletter
-       shortcodes on one page cannot collide on duplicate ids.
+       source="shortcode" marks this placement in the Plausible events, which is
+       what makes an inline call distinguishable from the other placements once
+       they exist.
 
        Usage: {{< newsletter >}}  (optionally with title="..." / text="...") */ -}}
 
-{{- /* hugo.Data, not site.Data: the latter was deprecated in Hugo 0.156.0. */ -}}
-{{- $data := hugo.Data.newsletter -}}
-{{- $topics := $data.topics -}}
-{{- /* The language of the page this shortcode sits on -- drives both the checked
-       fallback below and, via data-page-lang, the pill pre-selection in the JS. */ -}}
-{{- $pageLang := .Page.Lang -}}
-{{- if not $data.languages -}}
-  {{- errorf "newsletter shortcode: data/newsletter.yaml has no languages (%s)" .Position -}}
-{{- end -}}
-
-<details class="newsletter" data-page-lang="{{ $pageLang }}">
-  <summary class="newsletter-button">{{ .Get "title" | default (i18n "newsletter_title") }}</summary>
-
-  <form class="newsletter-form" method="post" action="{{ $data.url }}" data-api="{{ $data.api }}">
-    {{- /* honeypot -- left empty by humans, filled by bots */}}
-    <input type="hidden" name="nonce" />
-    <input type="hidden" name="next" value="{{ "" | absLangURL }}" />
-
-    <p class="newsletter-text">{{ .Get "text" | default (i18n "newsletter_text") }}</p>
-
-    <p class="newsletter-fields">
-      <input type="email" name="email" required placeholder="{{ i18n "newsletter_email" }}" />
-      <input type="text" name="name" placeholder="{{ i18n "newsletter_name" }}" />
-    </p>
-
-    {{- /* the pill UI -- revealed by the script */}}
-    <div class="newsletter-picker" hidden>
-      <p class="newsletter-label">{{ i18n "newsletter_languages" }}</p>
-      <div class="newsletter-pills">
-        {{- range $data.languages }}
-        <button type="button" class="newsletter-pill" data-lang="{{ .lang }}" aria-pressed="false">
-          <span class="newsletter-flag" aria-hidden="true">{{ .flag }}</span>{{ .name }}
-        </button>
-        {{- end }}
-      </div>
-
-      <p class="newsletter-label">{{ i18n "newsletter_topics" }}</p>
-      <div class="newsletter-pills">
-        {{- range $topics }}
-        <button type="button" class="newsletter-pill" data-topic="{{ . }}" aria-pressed="true">
-          {{ i18n (printf "newsletter_topic_%s" .) }}
-        </button>
-        {{- end }}
-      </div>
-    </div>
-
-    {{- /* the fields a plain POST carries; the picker drives these */}}
-    <div class="newsletter-raw">
-      {{- range $lang := $data.languages }}
-      <fieldset class="newsletter-group">
-        <legend>{{ $lang.flag }} {{ $lang.name }}</legend>
-        {{- range $topic := $topics }}
-        {{- $uuid := index $data.lists $lang.lang $topic }}
-        {{- if not $uuid }}
-          {{- errorf "newsletter shortcode: data/newsletter.yaml has no list uuid for %s/%s" $lang.lang $topic }}
-        {{- end }}
-        <label class="newsletter-list">
-          <input type="checkbox" name="l" value="{{ $uuid }}"
-                 data-lang="{{ $lang.lang }}" data-topic="{{ $topic }}"
-                 {{ if or (eq $lang.lang "en") (eq $lang.lang $pageLang) }}checked{{ end }} />
-          {{ i18n (printf "newsletter_topic_%s" $topic) }}
-        </label>
-        {{- end }}
-      </fieldset>
-      {{- end }}
-    </div>
-
-    <button type="submit" class="newsletter-submit">{{ i18n "newsletter_submit" }}</button>
-    <p class="newsletter-status" role="status" aria-live="polite" hidden>{{ i18n "newsletter_status_error" }}</p>
-  </form>
-
-  {{- /* Success takes over the whole panel: the form is hidden and this replaces
-         it. Both messages are rendered here rather than passed into the script,
-         so newsletter.js needs no i18n params at all. */}}
-  <div class="newsletter-done" role="status" aria-live="polite" hidden>
-    <svg class="newsletter-check" viewBox="0 0 52 52" aria-hidden="true" focusable="false">
-      <circle cx="26" cy="26" r="24" fill="none" stroke="currentColor" stroke-width="3" />
-      <path d="M15 27l8 8 15-16" fill="none" stroke="currentColor" stroke-width="4"
-            stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
-    <p>{{ i18n "newsletter_status_ok" }}</p>
-  </div>
-</details>
+{{- partial "newsletter-form.html" (dict
+      "ctx"    .Page
+      "source" "shortcode"
+      "title"  (.Get "title")
+      "text"   (.Get "text")
+) -}}

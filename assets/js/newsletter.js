@@ -53,8 +53,16 @@
        case where a blocker removed it. Never pass anything from the e-mail or
        name field: only which languages and topics were picked, which is exactly
        the aggregate worth knowing and carries nothing personal. */
+    // Which placement this instance is: "shortcode" | "header" | "post-footer".
+    // Set by newsletter-form.html. It rides along on every event because two
+    // instances on one page are expected, and an event that does not say which
+    // one fired cannot answer the only question worth asking of this data --
+    // whether a placement earns its space.
+    const source = root.dataset.source || "unknown";
+
     const track = (name, props) => {
-      if (typeof window.plausible === "function") window.plausible(name, { props });
+      if (typeof window.plausible === "function")
+        window.plausible(name, { props: { source, ...props } });
     };
 
     function sync() {
@@ -105,7 +113,7 @@
     root.addEventListener("toggle", () => {
       if (!root.open || openTracked) return;
       openTracked = true;
-      track("Newsletter Open");
+      track("Newsletter Open");   // props: just the source, added by track()
     });
 
     const api = form.dataset.api;

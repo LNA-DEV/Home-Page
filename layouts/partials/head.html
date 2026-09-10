@@ -319,12 +319,22 @@
 {{- end }}
 
 {{/*  Newsletter — pill picker on any page embedding the {{< newsletter >}} shortcode  */}}
-{{- /* .HasShortcode only sees shortcodes in page content. If the form ever moves
-       into a partial (a site-wide footer, say), this condition has to widen with
-       it or the pills silently stay hidden and visitors get the plain checkbox
-       fallback. Deferred, so the DOM is parsed before it runs. No params: every
-       string, success and error alike, is rendered server-side by the shortcode
-       and the script only toggles what is already there. */ -}}
+{{- /* READ THIS BEFORE ADDING A SECOND PLACEMENT.
+
+       The markup now lives in partials/newsletter-form.html, and the shortcode is
+       only its first caller. `.HasShortcode` sees shortcodes in page content and
+       nothing else, so this condition is correct exactly as long as that stays
+       true. The moment a template renders newsletter-form.html directly — the
+       header dialog, the post-footer block — this line must widen to match, or
+       the script is never loaded on those pages: the pills stay hidden and the
+       visitor is handed twelve raw checkboxes instead.
+
+       Nothing fails loudly when that happens. No build error, no console error,
+       just a form that looks wrong to everyone but the person who changed it.
+
+       Deferred, so the DOM is parsed before it runs. No params: every string,
+       success and error alike, is rendered server-side by the partial and the
+       script only toggles what is already there. */ -}}
 {{- if .HasShortcode "newsletter" }}
 {{ $newsletterJs := resources.Get "js/newsletter.js" | js.Build (dict "minify" true) | resources.Fingerprint }}
 <script src="{{ $newsletterJs.RelPermalink }}" defer></script>
