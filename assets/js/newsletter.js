@@ -23,6 +23,28 @@
   for (const root of document.querySelectorAll(".newsletter")) init(root);
   initCta();
 
+  /* Plausible. The queue stub is set up site-wide in extend_head.html, so the
+     function exists even before the script has loaded — the guard is for the
+     case where a blocker removed it. Never pass anything from the e-mail or
+     name field: only which languages and topics were picked, which is exactly
+     the aggregate worth knowing and carries nothing personal.
+
+     `source` — "shortcode" | "header" | "post-footer" — rides along on every
+     event. Several instances on one page are expected, so an event that does not
+     say which one fired cannot answer the only question worth asking of this
+     data: whether a placement earns its space. It lives out here rather than
+     inside init() because the header's open event is raised from initCta(),
+     which has no form instance to hang a closure on.
+
+     NOT called send(): init() declares its own send() for posting the form, and
+     a function declaration shadows the outer one inside it -- track() would then
+     hand its arguments to the submitter and every successful signup would submit
+     again on success, forever. */
+  function trackEvent(source, name, props) {
+    if (typeof window.plausible === "function")
+      window.plausible(name, { props: { source: source || "unknown", ...props } });
+  }
+
   /* The header CTA. It is a real link to Listmonk's own subscription page, so it
      works with no JavaScript at all — that is the Tor build's path. Here we take
      the click back and open the dialog instead.
@@ -38,9 +60,28 @@
     const modal = document.querySelector(".newsletter-modal");
     if (!link || !modal || typeof modal.showModal !== "function") return;
 
+    /* This click IS the open event for this placement: there is no panel to
+       unfold, the dialog is the panel. It is the one placement where the click
+       is the whole point, so leaving it unrecorded meant the header reported
+       signups against no denominator at all.
+
+       Counted once per page view, exactly like the <details> toggle below —
+       someone who opens the dialog, dismisses it and opens it again is one
+       interested visitor, not two.
+
+       The source is read back off the form inside the dialog instead of being
+       written out here, so this cannot drift from what newsletter-cta.html
+       actually passed to the partial. */
+    const instance = modal.querySelector(".newsletter");
+    const source = instance && instance.dataset.source;
+    let openTracked = false;
+
     link.addEventListener("click", (event) => {
       event.preventDefault();
       modal.showModal();
+      if (openTracked) return;
+      openTracked = true;
+      trackEvent(source, "Newsletter Open");
     });
 
     modal.addEventListener("click", (event) => {
@@ -74,22 +115,10 @@
       if (error) error.hidden = !on;
     };
 
-    /* Plausible. The queue stub is set up site-wide in extend_head.html, so the
-       function exists even before the script has loaded — the guard is for the
-       case where a blocker removed it. Never pass anything from the e-mail or
-       name field: only which languages and topics were picked, which is exactly
-       the aggregate worth knowing and carries nothing personal. */
-    // Which placement this instance is: "shortcode" | "header" | "post-footer".
-    // Set by newsletter-form.html. It rides along on every event because two
-    // instances on one page are expected, and an event that does not say which
-    // one fired cannot answer the only question worth asking of this data --
-    // whether a placement earns its space.
-    const source = root.dataset.source || "unknown";
-
-    const track = (name, props) => {
-      if (typeof window.plausible === "function")
-        window.plausible(name, { props: { source, ...props } });
-    };
+    // Which placement this instance is: "shortcode" | "header" | "post-footer",
+    // set by newsletter-form.html. See trackEvent() for why every event carries it.
+    const source = root.dataset.source;
+    const track = (name, props) => trackEvent(source, name, props);
 
     function sync() {
       const langs = selected(langPills, "lang");
@@ -136,14 +165,15 @@
     // interested at all, which the signup count alone cannot. Once per page
     // view — a visitor folding it open and shut would otherwise inflate it.
     //
-    // Only the <details> variant has this event. The post-footer block renders
-    // already open, so there is no opening to record and no listener to attach —
-    // "toggle" on a <div> would simply never fire. The consequence is worth
+    // Two of the three placements raise this event: the shortcode here, and the
+    // header from its CTA click in initCta(). The post-footer block cannot —
+    // it renders already open, so there is no opening to record and no listener
+    // to attach, since "toggle" on a <div> would never fire. That is worth
     // knowing when reading the stats: that placement reports signups but no
-    // opens, so the two placements are comparable on conversions, not on funnel
-    // top. Recording an equivalent for it would mean an IntersectionObserver
-    // ("was it ever scrolled into view"), which is a different question and not
-    // one anybody has asked yet.
+    // opens, so it is comparable to the others on conversions, not on funnel
+    // top. Giving it an equivalent would mean an IntersectionObserver ("was it
+    // ever scrolled into view"), which answers a different question and is
+    // deliberately not built.
     if (root.tagName === "DETAILS") {
       let openTracked = false;
       root.addEventListener("toggle", () => {
