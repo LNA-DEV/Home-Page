@@ -23,12 +23,18 @@
           catching early. The reverse direction cannot happen: an unknown theme
           falls through to the post-single branch, and so does this list.
 
-       3. The page has neither opted out (`hideNewsletter: true` in front
-          matter) nor already placed the form inline via the shortcode. That
-          second half is deliberate: a post that embeds {{ "{{< newsletter >}}" }} in its body
-          would otherwise show the form twice on one page. Detecting it here
-          means no author has to remember a flag, and the existing photography
-          post needed no edit at all. */ -}}
+       3. The page has not opted out with `hideNewsletter: true` in its front
+          matter. That flag is the ONLY way to suppress the block.
+
+          This used to also bail out on `.HasShortcode "newsletter"`, so that a
+          post embedding {{ "{{< newsletter >}}" }} in its body did not end up carrying the
+          form twice. Removed on purpose: it meant a shortcode in the body
+          silently switched off an unrelated block further down the page, which
+          is invisible at both call sites -- nothing in the post says it, and
+          nothing in the footer does either. An author who wants only the inline
+          one now says so with `hideNewsletter: true`, which reads as what it is.
+          The cost is that the combination is no longer prevented for you: a post
+          with the shortcode and no flag shows both. */ -}}
 
 {{- $galleryThemes := slice
       "gallery-portfolio" "gallery-page" "gallery-page-hidden"
@@ -40,8 +46,6 @@
 {{- else if in $galleryThemes (.Params.Theme | default "") -}}
   {{- $show = false -}}
 {{- else if .Param "hideNewsletter" -}}
-  {{- $show = false -}}
-{{- else if .HasShortcode "newsletter" -}}
   {{- $show = false -}}
 {{- end -}}
 
