@@ -77,17 +77,76 @@
     line-height: 1;
 }
 
-/* On narrow screens the label goes and the emoji carries the CTA alone. The
-   menu is already horizontally scrollable at that size -- its 706px are fixed,
-   independent of the viewport -- so every pixel the CTA gives back is one the
-   menu gets to use. The accessible name lives in aria-label rather than in this
-   span, precisely so that hiding it costs a screen reader nothing. */
-@media screen and (max-width: 1200px) {
+/* Once the nav has wrapped, the CTA stops taking a bite out of the menu's row.
+
+   As a flex sibling of .nav the CTA shortens EVERY row of the nav, including the
+   second one -- so the menu was being clipped 159px early while the strip
+   directly under the button sat empty. On a 715px window the menu had 542px of
+   its 646px; with the strip it has 701px and fits outright. That is the whole
+   bug: the menu ends under the button instead of running through beneath it.
+
+   Taking the CTA out of flow hands .nav the full width and the menu keeps its
+   row to itself. This is the absolute positioning the comment at the top of this
+   file argues against -- and the argument still holds where it was made: while
+   the header is a SINGLE row, an out-of-flow CTA would sit on top of the menu's
+   right end. So it is confined to widths where the nav has certainly wrapped.
+
+   768px is that width, measured per language with the CTA already out of flow
+   (the nav then wraps later, so this is the number that matters, not the
+   in-flow one): the nav wraps at or below 970px in German, 965px in English and
+   795px in Swedish -- Swedish being the tightest because its menu needs only
+   468px against German's 646px. Add a menu item in any language and the wrap
+   comes earlier, which is safe; the margin to watch is a Swedish menu getting
+   ~30px SHORTER, which would put a single-row header inside this query. */
+@media screen and (max-width: 768px) {
+    .header {
+        position: relative;
+    }
+
+    /* Same vertical position the in-flow margin produced -- see above. */
+    .newsletter-cta {
+        position: absolute;
+        inset-block-start: calc((var(--header-height) - var(--cta-height)) / 2);
+        inset-inline-end: var(--gap);
+        margin: 0;
+    }
+}
+
+/* Only on a phone does the label go and the emoji carry the CTA alone. This
+   used to happen at 1200px, to buy pixels back for the horizontally scrollable
+   menu -- but the menu is not what the CTA competes with. Below roughly 1250px
+   the nav has already wrapped, so the menu has a row to itself and the CTA
+   shares row one with nothing but the logo and the language switch. There the
+   spare space is measured in hundreds of pixels.
+
+   What the label does cost is that row breaking in two. Row one is
+   logo + theme toggle + language switch (~292px) plus the CTA, and .logo
+   inherits flex-wrap:wrap, so once the two no longer fit, the toggle and the
+   languages drop below the site title and the header grows to three rows --
+   with the CTA then level with "Home" alone, which is half of what it is
+   supposed to line up with. Measured against the real phone --gap of 14px, that
+   happens at 444px with the label and at 362px without it.
+
+   Hence 480px: a phone gets the emoji, everything wider keeps the word, and the
+   ~35px of margin absorbs a font that renders wider than this one does.
+
+   The accessible name lives in aria-label rather than in this span, precisely
+   so that hiding it costs a screen reader nothing. */
+@media screen and (max-width: 480px) {
     .newsletter-cta__label {
         display: none;
     }
 
     .newsletter-cta {
         padding: 0 10px;
+    }
+
+    /* The CTA is out of flow at this width, so nothing keeps row one clear of it
+       any more: below ~351px the language switch would slide underneath the
+       button instead of wrapping. Reserving its width here (41px emoji-only plus
+       the gap, rounded up for emoji fonts that render wider) restores the wrap
+       for row one only -- row two, the menu, stays free to run under it. */
+    .logo {
+        padding-inline-end: 60px;
     }
 }
