@@ -832,3 +832,15 @@
   originalLanguage: en
   languagesRead:
     - en
+
+- title: "Die Götter von Asgard"
+  author: "Liza Grimm"
+  genres: ["fantasy"]
+  year: 2018
+  link: "https://www.goodreads.com/book/show/37756918-die-g-tter-von-asgard"
+  cover: "images/books/covers/Die Götter von Asgard.jpg"
+  pages: 304
+  rating: 3
+  originalLanguage: de
+  languagesRead:
+    - de
