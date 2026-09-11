@@ -586,9 +586,9 @@
 - title: "The Witcher 3: Wild Hunt - Complete Edition"
   platform: steam
   appid: 292030
-  playtimeMinutes: 5754
-  lastPlayed: "2026-07-19"
-  achievementsUnlocked: 26
+  playtimeMinutes: 6008
+  lastPlayed: "2026-09-11"
+  achievementsUnlocked: 30
   achievementsTotal: 78
   cover: "images/games/covers/The Witcher 3: Wild Hunt - Complete Edition.jpg"
   link: "https://store.steampowered.com/app/292030/"
@@ -833,7 +833,7 @@
   playtimeMinutes: 99
   lastPlayed: "2021-01-09"
   achievementsUnlocked: 9
-  achievementsTotal: 100
+  achievementsTotal: 114
   cover: images/games/covers/Aimlabs.jpg
   link: "https://store.steampowered.com/app/714010/"
 
@@ -990,8 +990,8 @@
 - title: Core Keeper
   platform: steam
   appid: 1621690
-  playtimeMinutes: 1183
-  lastPlayed: "2026-08-28"
+  playtimeMinutes: 1322
+  lastPlayed: "2026-09-04"
   achievementsUnlocked: 10
   achievementsTotal: 55
   cover: images/games/covers/Core Keeper.jpg
@@ -1038,9 +1038,9 @@
 - title: GeoGuessr Steam Edition
   platform: steam
   appid: 3478870
-  playtimeMinutes: 4562
-  lastPlayed: "2026-03-14"
-  achievementsUnlocked: 14
+  playtimeMinutes: 4605
+  lastPlayed: "2026-09-04"
+  achievementsUnlocked: 16
   achievementsTotal: 45
   link: "https://store.steampowered.com/app/3478870/"
 
