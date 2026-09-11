@@ -7,6 +7,7 @@ description: "Hier verlinke ich Dinge und Personen welche ich wertschätze."
 disableShare: true
 disableHLJS: false
 searchHidden: false
+hideNewsletter: true
 hidemeta: false
 ShowReadingTime: false
 ShowWordCount: false

@@ -7,6 +7,7 @@ description: "Die Spiele, die ich gespielt habe, mit Spielzeit und Erfolgen."
 disableShare: true
 disableHLJS: false
 searchHidden: false
+hideNewsletter: true
 hidemeta: true
 ShowReadingTime: false
 ShowWordCount: false

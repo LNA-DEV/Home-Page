@@ -7,6 +7,7 @@ description: Here you can dive into a curated list of things and persons I reall
 disableShare: true
 disableHLJS: false
 searchHidden: false
+hideNewsletter: true
 hidemeta: false
 ShowReadingTime: false
 ShowWordCount: false

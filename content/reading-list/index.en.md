@@ -7,6 +7,7 @@ description: "A list of books I have read."
 disableShare: true
 disableHLJS: false
 searchHidden: false
+hideNewsletter: true
 hidemeta: true
 ShowReadingTime: false
 ShowWordCount: false

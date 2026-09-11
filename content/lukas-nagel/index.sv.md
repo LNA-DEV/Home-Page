@@ -7,6 +7,7 @@ description: "Jag heter Lukas Nagel (LNA-DEV) och på denna sida vill jag berät
 disableShare: true
 disableHLJS: false
 searchHidden: false
+hideNewsletter: true
 sitemap:
   priority: 0.9
 aliases: 

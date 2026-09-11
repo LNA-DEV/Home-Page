@@ -7,6 +7,7 @@ description: "Ich bin Lukas Nagel (LNA-DEV) und auf dieser Unterseite möchte ic
 disableShare: true
 disableHLJS: false
 searchHidden: false
+hideNewsletter: true
 sitemap:
   priority: 0.9
 aliases: 

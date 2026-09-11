@@ -7,6 +7,7 @@ description: "Spelen jag har spelat, med speltid och prestationer."
 disableShare: true
 disableHLJS: false
 searchHidden: false
+hideNewsletter: true
 hidemeta: true
 ShowReadingTime: false
 ShowWordCount: false
