@@ -16,3 +16,11 @@
 #   image_id: "bc068332-0999-4a94-aa76-816c25fa5360"
 #   link: "https://example.com/article"
 #   description: "A short note about the publication."
+- title: "Three photos in the OVB: \"Seeadler in der Nicklheimer Filze gesichtet\""
+  medium: "Oberbayerisches Volksblatt (OVB)"
+  kind: image
+  date: 2026-09-12
+  edition: "Print - 12.09.2026"
+  image_id: "7b147fb0-f667-4fec-9abf-a612fba46a69"
+  link: "https://www.ovb-heimatzeitungen.de/region-im-blick/2026/09/11/seeadler-in-der-nicklheimer-filze-gesichtet.ovb"
+  description: "The OVB did a piece on me and the Nicklheimer Filzen and ran three of the photos from my sessions: the white-tailed eagle, the grey heron and the roe deer."
