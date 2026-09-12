@@ -8,6 +8,7 @@ TocOpen: false
 disableShare: true
 disableHLJS: false
 searchHidden: false
+hideNewsletter: true
 hidemeta: false
 ShowReadingTime: false
 ShowWordCount: false
