@@ -40,6 +40,12 @@
 
 {{- /* Resources for resolving award/publication thumbnails via image_id */ -}}
 {{- $galleryPage := site.GetPage "/gallery" -}}
+{{- /* Photos are rendered by /gallery/general/ (non-archive) and /gallery/archive/,
+       not by the gallery home, so a deep link has to target the page that actually
+       contains the item — otherwise the #uuid has no data-id to match and the
+       lightbox never opens. Same resolution as gallery-image-figure.html. */ -}}
+{{- $galleryGeneral := site.GetPage "/gallery/general" -}}
+{{- $galleryArchive := site.GetPage "/gallery/archive" -}}
 {{- $honorMeta := partialCached "gallery-meta.html" . -}}
 {{- $honorImages := partialCached "gallery-images.html" . -}}
 
@@ -51,10 +57,16 @@
     {{- $permalink := .link | default "" }}
     {{- with .image_id }}
       {{- $mid := . }}
+      {{- $section := "" }}
       {{- with index $honorMeta.byId $mid }}
         {{- $img = $honorImages.GetMatch (printf "images/gallery/%s" .src) }}
+        {{- $section = .section | default "" }}
       {{- end }}
-      {{- if not $permalink }}{{ $permalink = printf "%s#%s" $galleryPage.Permalink $mid }}{{ end }}
+      {{- if not $permalink }}
+        {{- with cond (eq $section "archive") $galleryArchive $galleryGeneral }}
+          {{- $permalink = printf "%s#%s" .RelPermalink $mid }}
+        {{- end }}
+      {{- end }}
     {{- end }}
     {{- $item := dict "type" "award" "title" .title "date" $date "permalink" $permalink "competition" (.competition | default "") "result" (.result | default "") "scope" (.scope | default "") "organizer" (.organizer | default "") "icon" (.icon | default "🏆") "image" $img "description" (.description | default "") }}
     {{- $activityItems = $activityItems | append $item }}
@@ -69,10 +81,16 @@
     {{- $permalink := .link | default "" }}
     {{- with .image_id }}
       {{- $mid := . }}
+      {{- $section := "" }}
       {{- with index $honorMeta.byId $mid }}
         {{- $img = $honorImages.GetMatch (printf "images/gallery/%s" .src) }}
+        {{- $section = .section | default "" }}
       {{- end }}
-      {{- if not $permalink }}{{ $permalink = printf "%s#%s" $galleryPage.Permalink $mid }}{{ end }}
+      {{- if not $permalink }}
+        {{- with cond (eq $section "archive") $galleryArchive $galleryGeneral }}
+          {{- $permalink = printf "%s#%s" .RelPermalink $mid }}
+        {{- end }}
+      {{- end }}
     {{- end }}
     {{- $defaultIcon := cond (eq (.kind | default "image") "text") "📝" "📰" }}
     {{- $item := dict "type" "publication" "title" .title "date" $date "permalink" $permalink "medium" (.medium | default "") "publisher" (.publisher | default "") "edition" (.edition | default "") "icon" (.icon | default $defaultIcon) "image" $img "description" (.description | default "") }}
@@ -99,7 +117,6 @@
 {{- /* Add gallery images from global resources */ -}}
 {{- $allGalleryImages := partialCached "gallery-images.html" . -}}
 {{- if $allGalleryImages -}}
-  {{- $galleryPage := site.GetPage "/gallery" -}}
   {{- $metaAll := partialCached "gallery-meta.html" . -}}
   {{- $lookup  := $metaAll.bySrc -}}
   {{- range $image := $allGalleryImages -}}
@@ -107,8 +124,8 @@
     {{- if and $meta (ne ($meta.section | default "") "archive") -}}
       {{- with $image.Meta -}}
         {{- if gt .Date.Year 2000 -}}
-          {{- $imageLink := printf "%s#%s" $galleryPage.Permalink $meta.id -}}
-          {{- $item := dict "type" "photo" "title" (path.Base $image.Name) "date" .Date "permalink" $imageLink "page" $galleryPage "image" $image "description" "" -}}
+          {{- $imageLink := printf "%s#%s" $galleryGeneral.RelPermalink $meta.id -}}
+          {{- $item := dict "type" "photo" "title" (path.Base $image.Name) "date" .Date "permalink" $imageLink "page" $galleryGeneral "image" $image "description" "" -}}
           {{- $activityItems = $activityItems | append $item -}}
         {{- end -}}
       {{- end -}}
@@ -328,7 +345,7 @@
                 </a>
               {{- end }}
               {{- if gt $remainingPhotos 0 }}
-                <a href="/en/gallery/" class="activity-photos-more" title="View more photos">
+                <a href="{{ with $galleryGeneral }}{{ .RelPermalink }}{{ end }}" class="activity-photos-more" title="View more photos">
                   +{{ $remainingPhotos }}
                 </a>
               {{- end }}
