@@ -9700,6 +9700,19 @@ images:
   section: general
   project: [wildlife-of-inn-valley, 2026-08-nicklheim-adler]
   species: Ardea cinerea
+- id: 4dd75d95-c062-4a4a-a640-590d65063eb5
+  src: New Generation Rises - A Young Alpine Ibex on a Stone Above the Forest.jpg
+  category: animals
+  section: general
+  project: [wildlife-of-inn-valley]
+  species: Capra ibex
+  portfolio: true
+- id: 3e05d931-187b-4950-a2c2-b405900b0646
+  src: Step into the Unknown - Juvenile Alpine Ibex Looking into the Camera.jpg
+  category: animals
+  section: general
+  project: [wildlife-of-inn-valley]
+  species: Capra ibex
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
