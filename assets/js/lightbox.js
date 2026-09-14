@@ -386,15 +386,6 @@ if (gallery) {
             content += '</div></div>';
           }
 
-          /* Link out to the photo's own page. The grid item's href already IS
-             that URL, but data-page is explicit: the hero on the photo page
-             hrefs the full-size image, and carries no data-page, so the link
-             correctly does not render there. */
-          const pageUrl = currSlide.data?.element?.dataset?.page || "";
-          if (pageUrl) {
-            content += `<p class="pswp-info-page"><a href="${escapeHtml(pageUrl)}">${escapeHtml(params.openPageLabel || "Open photo page")} &rarr;</a></p>`;
-          }
-
           if (copyright || artist) {
             content += '<div class="pswp-info-section"><h4>Copyright</h4>';
             if (artist) {
@@ -407,6 +398,16 @@ if (gallery) {
               content += `<a class="pswp-info-license-link" href="${params.licensingUrl}">${params.licensingLinkText || "Licensing details"}</a>`;
             }
             content += '</div>';
+          }
+
+          /* Last, deliberately: this is a terminal action, and buried between
+             Tags and Copyright it read as a stray line in the middle of a
+             metadata list. data-page rather than the anchor's href because the
+             hero on a photo page hrefs the full-size image and carries no
+             data-page — so the link correctly does not render there. */
+          const pageUrl = currSlide.data?.element?.dataset?.page || "";
+          if (pageUrl) {
+            content += `<p class="pswp-info-page"><a href="${escapeHtml(pageUrl)}">${escapeHtml(params.openPageLabel || "Open photo page")}</a></p>`;
           }
 
           content += '</div>';

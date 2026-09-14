@@ -370,20 +370,24 @@
 
 /* Copy-to-clipboard. Hidden until photo-page.js confirms the Clipboard API, so
    a visitor without JS never sees a control that cannot work. Declared on the
-   root rather than toggled per button because the same markup is injected into
-   the lightbox popup from the fetched fragment. */
+   root rather than per button because the same markup appears in more than one
+   place. */
 .photo-copy {
   display: none;
 }
 
 :root.has-clipboard .photo-copy {
+  /* inline-flex in normal inline FLOW, and the row is deliberately not a flex
+     container: the UUID wraps onto two lines, and as a flex sibling the button
+     was pushed onto a third line of its own, orphaned under the text. */
   display: inline-flex;
+  position: relative;
   align-items: center;
   justify-content: center;
-  vertical-align: middle;
+  vertical-align: text-bottom;
   margin-left: 6px;
-  padding: 3px;
-  border: 1px solid var(--border);
+  padding: 2px;
+  border: 0;
   border-radius: 4px;
   background: none;
   color: var(--secondary);
@@ -393,30 +397,45 @@
 
 .photo-copy:hover {
   color: var(--primary);
-  border-color: var(--secondary);
+  background: var(--tertiary);
+}
+
+.photo-copy:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.photo-copy__icon--done {
+  display: none;
 }
 
 .photo-copy.is-copied {
   color: var(--primary);
-  border-color: currentColor;
 }
 
-.photo-permalink-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 2px;
-  flex-wrap: wrap;
+.photo-copy.is-copied .photo-copy__icon--copy {
+  display: none;
 }
 
-/* The popup's link out to the photo page. The panel itself is rendered by
-   lightbox.js from the data in .pswp-caption-content — deliberately a separate
-   UI from the page — so this rule lives with the popup's other styles. */
-.pswp-info-page {
-  margin: 16px 0 0;
-  font-size: 14px;
+.photo-copy.is-copied .photo-copy__icon--done {
+  display: block;
 }
 
-.pswp-info-page a {
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
+/* Confirmation floats above the button rather than sitting beside it, so
+   nothing reflows when it appears. The label comes from the data attribute,
+   which keeps it translated without JS needing to know the string. */
+.photo-copy.is-copied::after {
+  content: attr(data-label-done);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 6px);
+  transform: translateX(-50%);
+  padding: 3px 7px;
+  border-radius: 4px;
+  background: var(--primary);
+  color: var(--theme);
+  font-size: 11px;
+  line-height: 1.4;
+  white-space: nowrap;
+  pointer-events: none;
 }

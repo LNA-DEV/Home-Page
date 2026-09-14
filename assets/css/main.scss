@@ -186,6 +186,32 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
+/* Terminal action at the foot of the info popup. The panel is a fixed dark
+   sheet (#1a1a1a, white text) rather than theme-aware, so these colours are
+   literal like the rest of the popup's. */
+.pswp-info-page {
+  margin: 20px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.pswp-info-page a {
+  display: block;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.875rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.pswp-info-page a:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
 .pswp-info-empty {
   margin: 0;
   color: rgba(255, 255, 255, 0.5);
