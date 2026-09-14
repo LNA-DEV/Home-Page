@@ -11,7 +11,12 @@
     {{- with .Sitemap.ChangeFreq }}
     <changefreq>{{ . }}</changefreq>
     {{- end }}
-    {{- if ge .Sitemap.Priority 0.0 }}
+    {{- /* `gt`, not `ge`. A file-based page defaults to Priority -1 ("unset"), but
+           a page from a content adapter defaults to 0 — so this guard used to
+           emit <priority>0</priority> on every adapter page, telling crawlers the
+           154 dex species pages were worthless. Omitting the element entirely is
+           the correct way to say "unset"; consumers then assume 0.5. */ -}}
+    {{- if gt .Sitemap.Priority 0.0 }}
     {{- if ne .Sitemap.Priority 0.5 }}
     <priority>{{ .Sitemap.Priority }}</priority>
     {{- end }}
@@ -54,6 +59,22 @@
            has no match, and this template runs for every page in every language,
            dex species pages included. A cover that lives in global resources is
            not in `.Resources` and so never reaches this loop anyway. */ -}}
+    {{- /* Gallery photos are GLOBAL resources (resources.Match "images/gallery/*"),
+           so they are not in .Resources and the page-bundle loop below never sees
+           them — which is why 648 photographs were in no image sitemap at all.
+           The per-photo pages carry exactly one image each, named here. */ -}}
+    {{- if eq .Params.Theme "gallery-photo" }}
+    {{- $c := partialCached "gallery-collected.html" . .Language.Lang }}
+    {{- with index $c.byId .Params.photo_id }}
+    {{- $full := .image.Filter (slice images.AutoOrient (images.Process "fit 4000x4000")) }}
+    <image:image>
+      <image:loc>{{ $full.Permalink }}</image:loc>
+      {{- with .Alt }}
+      <image:title>{{ . | htmlEscape }}</image:title>
+      {{- end }}
+    </image:image>
+    {{- end }}
+    {{- end }}
     {{- $images := .Resources.ByType "image" }}
     {{- $coverRaw := "" }}
     {{- with .Params.cover.image }}

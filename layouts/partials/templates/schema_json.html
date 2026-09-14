@@ -113,6 +113,61 @@
   }
 }
 </script>
+{{- else if (eq .Params.Theme "gallery-photo") }}
+{{- /* A per-photo page IS an image, so it describes itself as one rather than
+       falling through to the BlogPosting branch below — which would have claimed
+       the alt text as an articleBody and stamped datePublished 0001-01-01 on all
+       648 of them, exactly the bug the dex pages had.
+
+       The photo is looked up through the cached gallery-collected partial, so
+       this costs one map lookup rather than another walk over the gallery. */ -}}
+{{- $c := partialCached "gallery-collected.html" . site.Language.Lang -}}
+{{- with index $c.byId .Params.photo_id -}}
+{{- $full := .image.Filter (slice images.AutoOrient (images.Process "fit 4000x4000")) -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "name": {{ $.Title | plainify }},
+  {{- with .Alt }}
+  "description": {{ . }},
+  {{- end }}
+  "url": {{ $.Permalink | safeHTML }},
+  "contentUrl": {{ $full.Permalink | safeHTML }},
+  "width": {{ $full.Width }},
+  "height": {{ $full.Height }},
+  "identifier": {{ .Id }},
+  "inLanguage": {{ $.Language.Lang | default "en" }},
+  {{- with .DateTaken }}
+  "dateCreated": {{ . }},
+  {{- end }}
+  {{- with .Tags }}
+  "keywords": [{{ range $i, $t := . }}{{ if $i }}, {{ end }}{{ $t }}{{ end }}],
+  {{- end }}
+  {{- with .LicenseUrl }}
+  "license": {{ . }},
+  {{- end }}
+  {{- with site.Params.licensingPage }}
+  "acquireLicensePage": {{ . | absURL }},
+  {{- end }}
+  "creditText": {{ .ResolvedArtist }},
+  "copyrightNotice": {{ printf "© %s" .ResolvedArtist }},
+  "creator": {
+    "@type": "Person",
+    "name": {{ .ResolvedArtist }}
+  },
+  "isPartOf": {
+    "@type": "CollectionPage",
+    {{- with site.GetPage "/gallery" }}
+    "name": {{ .Title }},
+    "url": {{ .Permalink | safeHTML }}
+    {{- else }}
+    "name": {{ i18n "gallery_general" }}
+    {{- end }}
+  }
+}
+</script>
+{{- end }}
 {{- else if (or (eq .Params.Theme "gallery-page") (eq .Params.Theme "gallery-page-hidden") (eq .Params.Theme "gallery-portfolio") (eq .Params.Theme "gallery-general") (eq .Params.Theme "gallery-archive") (eq .Params.Theme "gallery-project")) }}
 <script type="application/ld+json">
 {

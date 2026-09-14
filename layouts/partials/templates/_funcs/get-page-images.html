@@ -41,6 +41,23 @@
       "Permalink" $processed.Permalink) }}
   {{- end }}
 {{- end }}
+{{/* Per-photo page: the single photograph the page is about. Without this branch
+     every one of the 648 photo pages fell through to site.Params.images and
+     shared a link preview showing the site logo instead of the photograph —
+     the worst possible outcome for a photography site, since the preview was
+     confidently wrong rather than merely absent.
+     fit 1200x630 matches the other gallery branches above, so a photo already
+     used as a featured image reuses its cached variant. */}}
+{{- if and (not $imgParams) (not $imgs) (eq .Params.Theme "gallery-photo") }}
+  {{- $c := partialCached "gallery-collected.html" . site.Language.Lang }}
+  {{- with index $c.byId .Params.photo_id }}
+    {{- $processed := .image.Filter (slice images.AutoOrient (images.Process "fit 1200x630")) }}
+    {{- $imgs = $imgs | append (dict
+      "Image" $processed
+      "RelPermalink" $processed.RelPermalink
+      "Permalink" $processed.Permalink) }}
+  {{- end }}
+{{- end }}
 {{/* Use the first one of site images as the fallback. */}}
 {{- if and (not $imgParams) (not $imgs) }}
   {{- with site.Params.images }}

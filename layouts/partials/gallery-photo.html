@@ -1,0 +1,185 @@
+{{- /*
+  gallery-photo.html — one photograph's page.
+
+  The heading is the TITLE. The alt text is body copy below the image, never
+  promoted into the heading: keeping them apart lets the alt stay a full
+  descriptive sentence for screen readers and for search while the heading stays
+  a name. See docs/concepts/gallery-photo-pages.md.
+
+  The hero is wrapped in an `id="gallery"` container holding a single
+  `.gallery-item`, which is the whole reason this page needs no new JavaScript:
+  assets/js/lightbox.js binds to exactly that shape, so PhotoSwipe, the like
+  counter and the info popup all work here unchanged. main.js is already loaded
+  on any path containing /gallery (see head.html), and this page is one.
+
+  The anchor's href is the full-size file, not this page — without JavaScript a
+  click should land on the photograph itself.
+*/ -}}
+
+{{- $c := partialCached "gallery-collected.html" . site.Language.Lang -}}
+{{- $photo := index $c.byId .Params.photo_id -}}
+{{- if not $photo -}}
+  {{- errorf "gallery-photo: no photo with id %q (page %s)" .Params.photo_id .RelPermalink -}}
+{{- end -}}
+
+{{- $img := $photo.image -}}
+{{- $lang := site.Language.Lang -}}
+{{- $isArchive := eq $photo.Section "archive" -}}
+
+{{- /* One new variant only: 600 and 4000 are already generated for the grid and
+       the lightbox, so adding 1200 costs one render per photo rather than three.
+       The hero never displays wider than the content column, so 600w/1200w
+       covers 1x and 2x; 4000 stays the lightbox and download target. */ -}}
+{{- $small := $img.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
+{{- $mid   := $img.Filter (slice images.AutoOrient (images.Process "fit 1200x1200")) -}}
+{{- $full  := $img.Filter (slice images.AutoOrient (images.Process "fit 4000x4000")) -}}
+
+{{- /* Section base derived from this page's own URL rather than from .Parent:
+       the section carries `render: never`, so its RelPermalink is not usable.
+       Every sibling photo page and the uuid alias hang off this. */ -}}
+{{- $base := strings.TrimSuffix (printf "%s/" $photo.Slug) .RelPermalink -}}
+
+{{- $galleryPage := site.GetPage "/gallery" -}}
+{{- $parent := site.GetPage (cond $isArchive "/gallery/archive" "/gallery/general") -}}
+{{- $dex := "" -}}
+{{- with $photo.Species -}}
+  {{- $dex = index (partialCached "dex-lookup.html" (dict "lang" $lang) $lang) (lower .) -}}
+{{- end -}}
+
+<article class="photo-single" itemscope itemtype="https://schema.org/ImageObject">
+
+  <nav class="gallery-breadcrumb" aria-label="Breadcrumb">
+    {{- with $galleryPage }}<a href="{{ .RelPermalink }}">{{ .Title }}</a><span>/</span>{{ end }}
+    {{- with $parent }}<a href="{{ .RelPermalink }}">{{ .Title }}</a><span>/</span>{{ end -}}
+    <span>{{ .Title }}</span>
+  </nav>
+
+  <header class="photo-header">
+    <h1 itemprop="name">{{ .Title }}</h1>
+    {{- if $isArchive }}<span class="photo-badge">{{ i18n "gallery_archive" }}</span>{{ end }}
+  </header>
+
+  {{- /* id="gallery" is load-bearing — lightbox.js keys off it. */}}
+  <div class="photo-hero" id="gallery">
+    <a class="gallery-item" href="{{ $full.RelPermalink }}"
+       data-id="{{ $photo.Id }}" data-image-id="{{ $photo.Id }}"
+       data-download="{{ $full.RelPermalink }}"
+       data-category="{{ $photo.Category }}"
+       data-pswp-src="{{ $full.RelPermalink }}"
+       data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}">
+      <img src="{{ $mid.RelPermalink }}"
+           srcset="{{ $small.RelPermalink }} {{ $small.Width }}w, {{ $mid.RelPermalink }} {{ $mid.Width }}w"
+           sizes="(max-width: 1060px) 100vw, 1060px"
+           width="{{ $mid.Width }}" height="{{ $mid.Height }}"
+           alt="{{ $photo.Alt }}" itemprop="contentUrl" />
+      <div class="like-count" aria-label="Likes"></div>
+      <span class="pswp-caption-content">
+        {{- with $photo.Title }}<span class="caption-title">{{ . }}</span>{{ end -}}
+        {{- with $photo.DateTaken }}<span class="caption-date">{{ . }}</span>{{ end -}}
+        {{- if or $photo.Aperture $photo.ShutterSpeed $photo.ISO $photo.FocalLength }}
+        <span class="caption-exif">
+          {{- /* data-field, not document order: the popup used to label these by
+                 index, so a photo carrying only an ISO had it labelled "Focal
+                 Length". Each item says which field it is. */ -}}
+          {{- with $photo.FocalLength }}<span class="exif-item" data-field="focal">{{ . }}</span>{{ end -}}
+          {{- with $photo.Aperture }}<span class="exif-item" data-field="aperture">{{ . }}</span>{{ end -}}
+          {{- with $photo.ShutterSpeed }}<span class="exif-item" data-field="shutter">{{ . }}</span>{{ end -}}
+          {{- with $photo.ISO }}<span class="exif-item" data-field="iso">{{ . }}</span>{{ end -}}
+        </span>
+        {{- end -}}
+        {{- if or $photo.CameraModel $photo.LensModel }}
+        <span class="caption-gear">
+          {{- with $photo.CameraModel }}<span class="gear-item" data-field="camera">{{ . }}</span>{{ end -}}
+          {{- with $photo.LensModel }}<span class="gear-item" data-field="lens">{{ . }}</span>{{ end -}}
+        </span>
+        {{- end -}}
+        {{- with $photo.Software }}<span class="caption-software">{{ . }}</span>{{ end -}}
+        {{- with $photo.Species -}}
+          <span class="caption-species" data-scientific="{{ . }}"
+            {{- with $dex }} data-dex-url="{{ .url }}"{{ end }}>{{ with $dex }}{{ .name }}{{ else }}{{ . }}{{ end }}</span>
+        {{- end -}}
+        {{- with $photo.Copyright }}<span class="caption-copyright">{{ . }}</span>{{ end -}}
+        {{- with $photo.Artist }}<span class="caption-artist">{{ . }}</span>{{ end -}}
+        {{- with $photo.Keywords }}<span class="caption-keywords">{{ . }}</span>{{ end -}}
+      </span>
+    </a>
+    {{- /* The JS <-> HTML round trip. #<uuid> is what lightbox.js matches in
+           openFromHash, so this lands on the grid with this photo already open
+           in the viewer — and the grid's own items link back here. */ -}}
+    <p class="photo-actions">
+      {{- with $parent }}
+      <a class="photo-in-gallery" href="{{ .RelPermalink }}#{{ $photo.Id }}">{{ i18n "photo_view_in_gallery" }}</a>
+      {{- end }}
+      <a class="photo-fullsize-link" href="{{ $full.RelPermalink }}">{{ i18n "photo_view_full" }} ({{ $full.Width }}&nbsp;&times;&nbsp;{{ $full.Height }})</a>
+    </p>
+  </div>
+
+  {{- with $photo.Alt }}
+  <p class="photo-description" itemprop="description">{{ . }}</p>
+  {{- end }}
+
+  {{ partial "photo-meta.html" (dict "photo" $photo "permalink" (printf "%s%s/" $base $photo.Id)) }}
+
+  {{- $projects := slice -}}
+  {{- $metaAll := partialCached "gallery-meta.html" . -}}
+  {{- with index $metaAll.byId $photo.Id -}}{{- $projects = .projects -}}{{- end -}}
+  <div class="photo-appears-in">
+    <h2>{{ i18n "photo_appears_in" }}</h2>
+    <ul>
+      {{- with $parent }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+      {{- /* Only albums the projects index actually lists. An album hidden with
+             `build: {list: never}` is excluded from its section's .RegularPages
+             by Hugo itself, which is the most reliable signal available — the
+             `build` block is not exposed through .Params. Linking an unlisted
+             album from 600+ photo pages would undo the hiding entirely. */ -}}
+      {{- $listed := dict -}}
+      {{- with site.GetPage "/gallery/projects" -}}
+        {{- range .RegularPages -}}{{- $listed = merge $listed (dict .RelPermalink true) -}}{{- end -}}
+      {{- end -}}
+      {{- range $projects }}
+        {{- with site.GetPage (printf "/gallery/projects/%s" .) }}
+          {{- if index $listed .RelPermalink }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+        {{- end }}
+      {{- end }}
+      {{- with $dex }}<li><a href="{{ .url }}">{{ .name }}</a></li>{{ end }}
+    </ul>
+  </div>
+
+  {{- /* Thumbnails reuse the grid's existing 600px variant, so the strip adds no
+         image processing at all. */ -}}
+  {{- $related := index (partialCached "gallery-related.html" . site.Language.Lang) $photo.Id -}}
+  {{- with $related }}
+  <section class="photo-related">
+    <h2>{{ i18n "photo_related" }}</h2>
+    <ul>
+      {{- range . }}
+      {{- $t := .image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
+      <li>
+        <a href="{{ printf "%s%s/" $base .Slug }}">
+          <img loading="lazy" src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}" alt="{{ .Alt }}" />
+          <span>{{ .DisplayTitle }}</span>
+        </a>
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+
+  {{- /* Hrefs are composed from $base, not site.GetPage: a lookup per neighbour
+         would be 1,296 page resolutions across the set for no added information,
+         and the slug IS the path segment by construction. */ -}}
+  {{- $nb := index $c.neighbours $photo.Id -}}
+  {{- if $nb }}
+  <nav class="photo-nav" aria-label="{{ i18n "photo_appears_in" }}">
+    {{- with $nb.prev }}{{- with index $c.byId . }}
+      <a class="photo-nav-prev" href="{{ printf "%s%s/" $base .Slug }}"><span>&larr; {{ i18n "photo_prev" }}</span><strong>{{ .DisplayTitle }}</strong></a>
+    {{- end }}{{- end }}
+    {{- with $nb.next }}{{- with index $c.byId . }}
+      <a class="photo-nav-next" href="{{ printf "%s%s/" $base .Slug }}"><span>{{ i18n "photo_next" }} &rarr;</span><strong>{{ .DisplayTitle }}</strong></a>
+    {{- end }}{{- end }}
+  </nav>
+  {{- end }}
+
+  <meta itemprop="creditText" content="{{ $photo.ResolvedArtist }}" />
+  <meta itemprop="copyrightNotice" content="© {{ $photo.ResolvedArtist }}" />
+</article>

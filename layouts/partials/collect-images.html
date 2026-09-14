@@ -98,6 +98,7 @@
     {{- $artist := "" -}}
     {{- $keywords := "" -}}
     {{- $software := "" -}}
+    {{- $tagChunks := slice -}}
 
     {{- with $image.Meta -}}
       {{- $date = .Date -}}
@@ -105,9 +106,11 @@
       {{- if gt .Date.Year 2000 -}}
         {{- $dateTaken = .Date.Format "2006-01-02" -}}
       {{- end -}}
-      {{- with .Exif.ImageDescription -}}
-        {{- $title = . -}}
-      {{- end -}}
+      {{- /* Exif.ImageDescription is deliberately NOT a title source. Every one of
+             the seven values present in this library is caption prose of 97-149
+             characters — six of them the same paragraph about the Avesta
+             Visentpark — which made a 147-character heading and slug. It is alt
+             text, and image-alt.html already uses it as such. */ -}}
       {{- with .Exif.Copyright -}}
         {{- $copyright = . -}}
       {{- end -}}
@@ -135,6 +138,20 @@
       {{- if not $keywords -}}
         {{- with $meta.tags -}}
           {{- $keywords = delimit . ", " -}}
+        {{- end -}}
+      {{- end -}}
+      {{- /* .Tags is the UNION of every source, unlike $keywords above, which is
+             first-match-wins because it is what the info popup displays. The
+             similarity scorer wants the richest vocabulary available: 352 photos
+             carry keywords only in EXIF/XMP and others only in the data file, so
+             preferring one source would throw away signal. */ -}}
+      {{- range $chunk := (slice .Exif.subject .Exif.Subject .Exif.Keywords .XMP.Subject) -}}
+        {{- with $chunk -}}
+          {{- if reflect.IsSlice . -}}
+            {{- $tagChunks = $tagChunks | append (delimit . ",") -}}
+          {{- else -}}
+            {{- $tagChunks = $tagChunks | append (printf "%v" .) -}}
+          {{- end -}}
         {{- end -}}
       {{- end -}}
       {{- with .Exif.FNumber -}}
@@ -201,6 +218,19 @@
       {{- end -}}
     {{- end -}}
 
+    {{- with $meta.tags -}}
+      {{- $tagChunks = $tagChunks | append (delimit . ",") -}}
+    {{- end -}}
+    {{- $tags := slice -}}
+    {{- range $chunk := $tagChunks -}}
+      {{- range $t := split (replace $chunk ";" ",") "," -}}
+        {{- $t = lower (trim $t " ") -}}
+        {{- if and $t (not (in $tags $t)) -}}
+          {{- $tags = $tags | append $t -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+
     {{- /* Override EXIF with data file values where available */ -}}
     {{- with $meta.title -}}
       {{- $title = . -}}
@@ -215,6 +245,15 @@
         {{- $title = $stem -}}
       {{- end -}}
     {{- end -}}
+
+    {{- /* DisplayTitle is never empty. $title stays blank for camera-code
+           filenames so the grid does not caption a photo the author never named,
+           but a page heading, a nav link and a related-photo label all need
+           something to print — and the stem IS the name until the file is
+           renamed. Derived once here so those three never disagree. */ -}}
+    {{- $bare := path.Base $image.Name -}}
+    {{- $stemAll := strings.TrimPrefix "archive--" (strings.TrimSuffix (path.Ext $bare) $bare) -}}
+    {{- $displayTitle := $title | default $stemAll -}}
 
     {{- /* Alt text: data file > EXIF */ -}}
     {{- $alt := "" -}}
@@ -261,8 +300,12 @@
 
     {{- $collected = $collected | append (dict
       "Id" $meta.id
+      "Slug" $meta.slug
+      "Tags" $tags
+      "Projects" ($meta.projects | default slice)
       "Name" (path.Base $image.Name)
       "Title" $title
+      "DisplayTitle" $displayTitle
       "Alt" $alt
       "Date" $date
       "DateTaken" $dateTaken

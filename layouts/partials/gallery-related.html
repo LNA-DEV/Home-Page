@@ -1,0 +1,89 @@
+{{- /*
+  gallery-related.html
+  Similar photographs for every photo in the gallery, scored once for the whole
+  set and returned as { <id>: [entry, ...] }. Call through partialCached.
+
+      score(a,b) = Σ idf(t) for t in tags(a) ∩ tags(b)   idf(t) = log(N / df(t))
+                   + 3.0  same species
+                   + 2.0  shares a project album
+                   + 0.5  same category
+                   − 1.0  b is archived and a is not
+
+  Inverse document frequency rather than a hand-curated stopword list: `photo` is
+  on 589 of 648 images and `photography` on 557, so both score ~0 automatically,
+  and that stays true as the library grows. Nothing to maintain.
+
+  Tags carried by more than DF_CAP photos are skipped outright. That is a pure
+  performance measure: walking every tag's postings costs ~1.26M pair visits,
+  capping at 60 costs ~64K, and the 23 tags it discards contribute an idf of
+  roughly 0.1 each. Without it this partial is the slowest thing in the build.
+
+  Scratches, not dicts, for the accumulators: `merge` copies the whole map on
+  every write, which at 648 photos x ~10 tags is millions of map copies.
+*/ -}}
+
+{{- $DF_CAP := 60 -}}
+{{- $WANT := 6 -}}
+
+{{- $c := partialCached "gallery-collected.html" . site.Language.Lang -}}
+{{- $all := $c.all -}}
+{{- $n := len $all -}}
+
+{{- /* Document frequency. */ -}}
+{{- $df := newScratch -}}
+{{- range $all -}}
+  {{- range .Tags -}}{{- $df.Add . 1 -}}{{- end -}}
+{{- end -}}
+
+{{- /* Inverted index, discriminative tags only, holding positions into $all. */ -}}
+{{- $post := newScratch -}}
+{{- range $i, $p := $all -}}
+  {{- range $p.Tags -}}
+    {{- if le ($df.Get .) $DF_CAP -}}{{- $post.Add . (slice $i) -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $out := dict -}}
+{{- range $i, $p := $all -}}
+  {{- $sc := newScratch -}}
+  {{- range $t := $p.Tags -}}
+    {{- $d := $df.Get $t -}}
+    {{- if le $d $DF_CAP -}}
+      {{- $w := math.Log (div (float $n) (float $d)) -}}
+      {{- range $j := ($post.Get $t) -}}
+        {{- if ne $j $i -}}{{- $sc.Add (string $j) $w -}}{{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $cand := slice -}}
+  {{- range $k, $v := $sc.Values -}}
+    {{- $q := index $all (int $k) -}}
+    {{- $s := $v -}}
+    {{- if and $p.Species (eq $q.Species $p.Species) -}}{{- $s = add $s 3.0 -}}{{- end -}}
+    {{- if and $p.Projects $q.Projects -}}
+      {{- range $p.Projects -}}
+        {{- if in $q.Projects . -}}{{- $s = add $s 2.0 -}}{{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if eq $q.Category $p.Category -}}{{- $s = add $s 0.5 -}}{{- end -}}
+    {{- if and (eq $q.Section "archive") (ne $p.Section "archive") -}}{{- $s = sub $s 1.0 -}}{{- end -}}
+    {{- $cand = $cand | append (dict "e" $q "s" $s) -}}
+  {{- end -}}
+  {{- $picked := slice -}}
+  {{- range first $WANT (sort $cand "s" "desc") -}}{{- $picked = $picked | append .e -}}{{- end -}}
+
+  {{- /* The 32 photos with no discriminative tags get category-mates instead of
+         an empty strip — a dead section reads as broken. */ -}}
+  {{- if lt (len $picked) $WANT -}}
+    {{- range $q := $all -}}
+      {{- if and (lt (len $picked) $WANT) (ne $q.Id $p.Id) (eq $q.Category $p.Category) (ne $q.Section "archive") -}}
+        {{- if not (in $picked $q) -}}{{- $picked = $picked | append $q -}}{{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $out = merge $out (dict $p.Id $picked) -}}
+{{- end -}}
+
+{{- return $out -}}

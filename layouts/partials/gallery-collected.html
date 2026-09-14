@@ -1,0 +1,68 @@
+{{- /*
+  gallery-collected.html
+  The whole gallery, collected once — every photo including the archive, plus
+  id and slug indexes over the same entries.
+
+  Exists for one reason: collect-images.html walks all 648 photos and pulls EXIF
+  for each, and it is NOT partialCached at its call sites. That is affordable
+  while a handful of list pages call it, but the per-photo pages would turn it
+  into 648 x 648 full EXIF extractions. Call this instead, through partialCached,
+  and a page that wants one photo does an O(1) lookup:
+
+    {{ $c := partialCached "gallery-collected.html" . site.Language.Lang }}
+    {{ $photo := index $c.byId $id }}
+
+  Cache the key on the language: the image resources are language-independent,
+  but collect-images resolves the artist through site.Params, which is not.
+
+  Returns { all, byId, bySlug }, all three sharing the same entry objects.
+*/ -}}
+{{- /* Deliberately UNSORTED here. The neighbour chains below re-filter and sort
+       this exact list the way each gallery page does, and Hugo's sort is stable
+       — so feeding it the same input in the same order reproduces the page's
+       order exactly, ties included. Pre-sorting would change the input and make
+       equal-timestamp photos fall in a different order than the grid. */ -}}
+{{- $all := partial "collect-images.html" (dict "context" . "filter" (dict "excludeArchive" false)) -}}
+{{- $byId := dict -}}
+{{- $bySlug := dict -}}
+{{- range $all -}}
+  {{- $byId = merge $byId (dict .Id .) -}}
+  {{- $bySlug = merge $bySlug (dict .Slug .) -}}
+{{- end -}}
+{{- /* Neighbours for the per-photo prev/next links, built once here rather than
+       by each page scanning `all` for itself — that would be 648 x 648 again,
+       which is the exact cost this partial exists to avoid.
+
+       TWO chains, not one. /gallery/general/ and /gallery/archive/ are separate
+       galleries, and PhotoSwipe only ever walks the photos on the page you
+       opened it from. A single chain over all 648 photos interleaved the 76
+       archived ones by date, so 98 of 152 archive prev/next links jumped into
+       the general gallery and 98 general links jumped into the archive —
+       photos you cannot reach by swiping. Each chain is filtered and sorted
+       exactly as its page's front matter does (`sort_by: Date`, `desc`), so the
+       links and the lightbox agree slide for slide. */ -}}
+{{- $general := slice -}}
+{{- $archive := slice -}}
+{{- range $all -}}
+  {{- if eq .Section "archive" -}}
+    {{- $archive = $archive | append . -}}
+  {{- else -}}
+    {{- $general = $general | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- $general = sort $general "Date" "desc" -}}
+{{- $archive = sort $archive "Date" "desc" -}}
+
+{{- $neighbours := dict -}}
+{{- range $chain := (slice $general $archive) -}}
+  {{- $n := len $chain -}}
+  {{- range $i, $p := $chain -}}
+    {{- $prev := "" -}}
+    {{- $next := "" -}}
+    {{- if gt $i 0 -}}{{- $prev = (index $chain (sub $i 1)).Id -}}{{- end -}}
+    {{- if lt $i (sub $n 1) -}}{{- $next = (index $chain (add $i 1)).Id -}}{{- end -}}
+    {{- $neighbours = merge $neighbours (dict $p.Id (dict "prev" $prev "next" $next)) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return (dict "all" $all "byId" $byId "bySlug" $bySlug "neighbours" $neighbours) -}}

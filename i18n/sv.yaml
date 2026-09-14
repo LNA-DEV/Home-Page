@@ -362,3 +362,53 @@
   translation: "Prenumerera på nyhetsbrevet"
 - id: newsletter_close
   translation: "Stäng"
+
+# Photo page
+- id: photo_view_full
+  translation: "Visa i full storlek"
+- id: photo_settings
+  translation: "Inställningar"
+- id: photo_gear
+  translation: "Utrustning"
+- id: photo_focal
+  translation: "Brännvidd"
+- id: photo_aperture
+  translation: "Bländare"
+- id: photo_shutter
+  translation: "Slutartid"
+- id: photo_iso
+  translation: "ISO"
+- id: photo_camera
+  translation: "Kamera"
+- id: photo_lens
+  translation: "Objektiv"
+- id: photo_date_taken
+  translation: "Fotograferad"
+- id: photo_license
+  translation: "Licens"
+- id: photo_photographer
+  translation: "Fotograf"
+- id: photo_identifier
+  translation: "Identifierare"
+- id: photo_permalink
+  translation: "Permalänk"
+- id: photo_tags
+  translation: "Taggar"
+- id: photo_appears_in
+  translation: "Finns i"
+- id: photo_prev
+  translation: "Föregående"
+- id: photo_next
+  translation: "Nästa"
+- id: photo_related
+  translation: "Liknande foton"
+- id: photo_file
+  translation: "Fil"
+- id: photo_copy
+  translation: "Kopiera länk"
+- id: photo_copied
+  translation: "Kopierad"
+- id: photo_open_page
+  translation: "Öppna fotosidan"
+- id: photo_view_in_gallery
+  translation: "Visa i galleriet"

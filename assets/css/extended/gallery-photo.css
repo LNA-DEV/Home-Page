@@ -1,0 +1,422 @@
+/* Per-photo pages (/gallery/photo/<slug>/).
+   Built on PaperMod's theme variables so light and dark both work without a
+   second palette — the same approach as dex.css. Nothing here is scoped to a
+   body class, so the page inherits the site's theme switch for free. */
+
+/* One spine, capped at the header's width and CENTRED in the (75%-wide) main
+   column — otherwise the whole page hangs off the left edge with ~320px of dead
+   space on the right. Constraining the article rather than each child matters:
+   widths set per-child would centre each block independently, and
+   .photo-description (max-width 68ch) would then float in the middle instead of
+   starting at the photo's left edge. */
+.photo-single {
+  width: min(100%, var(--nav-width, 1060px));
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+/* lightbox.js binds to id="gallery", and an ID selector (specificity 100) beats
+   a class (10) — so #gallery's flex-grid rules in _styles.scss won over
+   .photo-hero and the hero became a flex ROW. The visible symptom was the "view
+   full size" caption rendering BESIDE the photo, stretched to its full height,
+   and #gallery::after { flex-grow: 999 } sitting in the row as an invisible
+   element eating the remaining width. Matched at equal specificity here.
+
+   flex-basis and aspect-ratio are reset too: the grid sets them from --ratio,
+   which this page never defines. They are inert only by accident today, and
+   would silently deform the hero the moment --ratio gained a fallback. */
+#gallery.photo-hero {
+  display: block;
+}
+
+#gallery.photo-hero::after {
+  content: none;
+}
+
+#gallery.photo-hero .gallery-item {
+  flex-basis: auto;
+  aspect-ratio: auto;
+  max-width: 100%;
+}
+
+.photo-header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.photo-header h1 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.photo-badge {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--tertiary);
+  color: var(--secondary);
+}
+
+/* The hero carries id="gallery", which lightbox.js binds to. Keep it a plain
+   block: the grid styles in image-gallery.css target #gallery with flex, and a
+   single item there would stretch to fill the row. */
+.photo-hero {
+  position: relative;
+}
+
+.photo-hero .gallery-item {
+  display: block;
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--tertiary);
+}
+
+.photo-hero .gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+.photo-hero .pswp-caption-content {
+  display: none;
+}
+
+.photo-actions {
+  margin: 8px 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: var(--secondary);
+}
+
+.photo-actions .photo-fullsize-link {
+  margin-left: auto;
+}
+
+.photo-description {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--content);
+  max-width: 68ch;
+}
+
+.photo-species {
+  margin: 0;
+  font-size: 16px;
+}
+
+.photo-species em {
+  color: var(--secondary);
+  font-style: italic;
+}
+
+.photo-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--secondary);
+  margin-right: 6px;
+}
+
+/* Facts. Auto-fit rather than a fixed column count so a photo carrying only a
+   licence block does not leave three empty tracks. */
+.photo-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--gap);
+}
+
+.photo-meta section {
+  align-self: start;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  background: var(--entry);
+}
+
+.photo-meta h2 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--secondary);
+}
+
+.photo-meta dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 12px;
+  font-size: 14px;
+}
+
+.photo-meta dt {
+  color: var(--secondary);
+  white-space: nowrap;
+}
+
+.photo-meta dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+/* Settings and Gear hold two-word values and read well in two columns. Licence
+   and Identifier do not: "Creative Commons Attribution-ShareAlike (CC BY-SA)"
+   and a 36-character UUID were wrapping to five lines inside a ~200px value
+   column. Stacking the label gives them the card's full width. */
+.photo-facts--wide dl {
+  grid-template-columns: 1fr;
+  gap: 2px 0;
+}
+
+.photo-facts--wide dt {
+  font-size: 12px;
+}
+
+.photo-facts--wide dd + dt {
+  margin-top: 10px;
+}
+
+.photo-meta__link {
+  margin: 10px 0 0;
+  font-size: 14px;
+}
+
+.photo-id,
+.photo-permalink code {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.photo-tags ul,
+.photo-appears-in ul {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.photo-tags li {
+  font-size: 13px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--tertiary);
+  color: var(--secondary);
+}
+
+.photo-appears-in li a {
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  display: inline-block;
+}
+
+.photo-tags h2,
+.photo-appears-in h2 {
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--secondary);
+}
+
+.photo-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--gap);
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.photo-nav a {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 45%;
+  font-size: 14px;
+}
+
+.photo-nav-next {
+  text-align: right;
+  margin-left: auto;
+}
+
+.photo-nav span {
+  color: var(--secondary);
+  font-size: 12px;
+}
+
+.photo-nav strong {
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .photo-header h1 { font-size: 22px; }
+  .photo-description { font-size: 16px; }
+  .photo-meta { grid-template-columns: 1fr; }
+}
+
+/* Similar photos. Fixed-height tiles with object-fit so a mixed portrait and
+   landscape row still reads as a row rather than a staircase. */
+.photo-related h2 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--secondary);
+}
+
+.photo-related ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  /* 150px, chosen so the six results land as ONE row of six at the 1060px
+     spine ((1060-70)/6 = 165px each) and as two columns at phone width. At
+     190px the sixth tile orphaned onto a second row; at phone width it was a
+     single 380px column, i.e. six full-bleed photos to scroll past. */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+}
+
+.photo-related a {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.photo-related img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: var(--tertiary);
+}
+
+/* Clamped: titles run to 70+ characters ("Heavy Early Mornings - White-Tailed
+   Eagle Skimming a Fog-Covered Bog Lake"), which made tiles 213px tall with
+   110px of that being wrapped text. */
+.photo-related span {
+  font-size: 13px;
+  color: var(--secondary);
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Link affordances.
+   PaperMod's reset applies `a { text-decoration: none }` site-wide and only puts
+   the underline back under `.post-content`, which this page is not — so the
+   species, licence, licensing-details, permalink and "view full size" links all
+   rendered as plain text with nothing marking them as clickable.
+
+   text-decoration rather than the theme's `box-shadow: 0 1px 0` trick: the
+   licence string wraps onto a second line inside its card, and a box-shadow
+   underlines the BOX, not the text, so it would draw one line under a two-line
+   value. An underline wraps with the text. */
+.photo-actions a,
+.photo-species a,
+.photo-meta dd a,
+.photo-meta__link a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.photo-actions a:hover,
+.photo-species a:hover,
+.photo-meta dd a:hover,
+.photo-meta__link a:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Links that already signal themselves — a bordered pill, a thumbnail, an arrow
+   — stay clean and pick the underline up only on hover. Underlining these too
+   would turn the page into a wall of rules. */
+.photo-appears-in li a:hover,
+.photo-nav a:hover strong,
+.photo-related a:hover span {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* The permalink is a UUID in a monospace face; keep the underline clear of the
+   descenders and let it wrap with the code element. */
+.photo-permalink code {
+  text-decoration: inherit;
+}
+
+/* Copy-to-clipboard. Hidden until photo-page.js confirms the Clipboard API, so
+   a visitor without JS never sees a control that cannot work. Declared on the
+   root rather than toggled per button because the same markup is injected into
+   the lightbox popup from the fetched fragment. */
+.photo-copy {
+  display: none;
+}
+
+:root.has-clipboard .photo-copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  margin-left: 6px;
+  padding: 3px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: none;
+  color: var(--secondary);
+  cursor: pointer;
+  line-height: 0;
+}
+
+.photo-copy:hover {
+  color: var(--primary);
+  border-color: var(--secondary);
+}
+
+.photo-copy.is-copied {
+  color: var(--primary);
+  border-color: currentColor;
+}
+
+.photo-permalink-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2px;
+  flex-wrap: wrap;
+}
+
+/* The popup's link out to the photo page. The panel itself is rendered by
+   lightbox.js from the data in .pswp-caption-content — deliberately a separate
+   UI from the page — so this rule lives with the popup's other styles. */
+.pswp-info-page {
+  margin: 16px 0 0;
+  font-size: 14px;
+}
+
+.pswp-info-page a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}

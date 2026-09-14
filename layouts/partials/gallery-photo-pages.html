@@ -1,0 +1,46 @@
+{{- /*
+  Content adapter: one page per gallery photo.
+
+  English only for now. The dex generates all three languages because it has
+  genuine per-language prose with an English fallback; a photo page has nothing
+  per-language except chrome, so three near-identical pages would be duplicate
+  surface with no reader benefit. The German and Swedish grids link across to the
+  English page. Turning the other two on later means nesting `alt` and `title` as
+  {en, de, sv} maps in data/gallery.yaml and adding the sibling _content files —
+  the slug is language-neutral, so no URL moves when that happens.
+
+  Every photo gets a page, archive included: only four of 648 carry no title, no
+  alt, no species and no tags, which is far too few to justify a threshold.
+
+  `aliases` is a TOP-LEVEL key of AddPage, not a param (verified on Hugo 0.166).
+  It emits a redirect page carrying rel=canonical back to the slug URL, which is
+  what makes /gallery/photo/<uuid>/ a permanent address: the slug follows the
+  filename and can move, the id never does.
+*/ -}}
+
+{{- $lang := .Site.Language.Lang -}}
+{{- $c := partialCached "gallery-collected.html" . $lang -}}
+
+{{- range $c.all -}}
+  {{- /* The heading is the title, never the alt text. .DisplayTitle is the
+         title where one exists and the filename stem where it does not — see
+         collect-images.html. */ -}}
+  {{- $title := .DisplayTitle -}}
+
+  {{- $page := dict
+        "path" .Slug
+        "kind" "page"
+        "title" $title
+        "description" (or .Alt $title | plainify | truncate 160)
+        "content" (dict "mediaType" "text/markdown" "value" (.Alt | default ""))
+        "aliases" (slice (printf "/gallery/photo/%s/" .Id))
+        "params" (dict
+          "theme" "gallery-photo"
+          "photo_id" .Id
+          "translationKey" (printf "photo-%s" .Id)
+          "hideMeta" true
+          "searchHidden" false
+        )
+      -}}
+  {{- $.AddPage $page -}}
+{{- end -}}

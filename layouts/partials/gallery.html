@@ -23,13 +23,28 @@
 
     {{- $images := partial "collect-images.html" (dict "context" . "filter" $filter) -}}
     {{- $lang := site.Language.Lang -}}
+    {{- /* Per-photo pages are generated for the default content language only, so
+           the German and Swedish grids link across to the English page rather
+           than to a URL that does not exist. site.Sites is ordered by language
+           weight and English carries weight 1 (hugo.Sites, not the deprecated site.Sites). When de/sv are switched on this
+           becomes site.Home.RelPermalink and the cross-linking disappears. */ -}}
+    {{- $photoBase := printf "%sgallery/photo/" (index hugo.Sites 0).Home.RelPermalink -}}
     {{- range sort $images (.Params.sort_by | default "Name") (.Params.sort_order | default "asc") -}}
       {{- $image := .image -}}
       {{- $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
       {{- $full := $image.Filter (slice images.AutoOrient (images.Process "fit 4000x4000")) -}}
       {{- $color := index $thumbnail.Colors 0 | default "transparent" -}}
       {{- $ratio := div (mul $thumbnail.Width 1.0) $thumbnail.Height }}
-      <a class="gallery-item" href="{{ $image.RelPermalink }}" data-id="{{ .Id }}" data-image-id="{{ .Id }}" data-category="{{ .Category }}" data-pswp-src="{{ $full.RelPermalink }}" data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}" title="{{ .Title | default .Alt }}" itemscope itemtype="https://schema.org/ImageObject" style="flex-grow: {{ printf "%.4f" $ratio }}; --ratio: {{ printf "%.4f" $ratio }}">
+      {{- /* href is the photo PAGE — that is what makes the grid crawlable and
+             what a visitor without JavaScript follows. PhotoSwipe preventDefaults
+             this click, so nothing changes for everyone else. The original file
+             URL moves to data-download, which the lightbox download button reads:
+             leaving it on href would have served an HTML page as the download. */ -}}
+      {{- /* data-page: the photo's own page, so the lightbox popup can link out
+             to it. The href carries the same URL, but the hero on a photo page
+             hrefs the full-size image instead — data-page is the unambiguous
+             signal, and its absence is how that hero suppresses the link. */ -}}
+      <a class="gallery-item" href="{{ printf "%s%s/" $photoBase .Slug }}" data-download="{{ $full.RelPermalink }}" data-page="{{ printf "%s%s/" $photoBase .Slug }}" data-id="{{ .Id }}" data-image-id="{{ .Id }}" data-category="{{ .Category }}" data-pswp-src="{{ $full.RelPermalink }}" data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}" title="{{ .Title | default .Alt }}" itemscope itemtype="https://schema.org/ImageObject" style="flex-grow: {{ printf "%.4f" $ratio }}; --ratio: {{ printf "%.4f" $ratio }}">
         <figure style="background-color: {{ $color }}">
           <img loading="lazy" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" src="{{ $thumbnail.RelPermalink }}" alt="{{ .Alt }}" />
         </figure>

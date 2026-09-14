@@ -269,6 +269,7 @@
 "licensingLinkText" (i18n "licensingDetails")
 "speciesLabel" (i18n "speciesLabel")
 "softwareLabel" (i18n "softwareLabel")
+"openPageLabel" (i18n "photo_open_page")
 }}
 {{ $js := resources.Get "js/main.js" | js.Build (dict "minify" true "params" $params) | resources.Fingerprint }}
 <script src="{{ $js.RelPermalink }}" defer></script>

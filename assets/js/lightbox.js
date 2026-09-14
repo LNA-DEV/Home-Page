@@ -244,7 +244,11 @@ if (gallery) {
         el.setAttribute("rel", "noopener");
         el.setAttribute("title", params.downloadTitle || "Download");
         pswp.on("change", () => {
-          el.href = pswp.currSlide.data.element.href;
+          /* data-download, not href: href now points at the photo's own page, so
+             reading it here would hand the visitor an HTML file. The fallback
+             covers any gallery-item rendered without the attribute. */
+          const item = pswp.currSlide.data.element;
+          el.href = item.dataset.download || item.href;
         });
       },
     });
@@ -380,6 +384,15 @@ if (gallery) {
               content += `<span class="pswp-info-tag">${keyword}</span>`;
             });
             content += '</div></div>';
+          }
+
+          /* Link out to the photo's own page. The grid item's href already IS
+             that URL, but data-page is explicit: the hero on the photo page
+             hrefs the full-size image, and carries no data-page, so the link
+             correctly does not render there. */
+          const pageUrl = currSlide.data?.element?.dataset?.page || "";
+          if (pageUrl) {
+            content += `<p class="pswp-info-page"><a href="${escapeHtml(pageUrl)}">${escapeHtml(params.openPageLabel || "Open photo page")} &rarr;</a></p>`;
           }
 
           if (copyright || artist) {

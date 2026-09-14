@@ -1,0 +1,105 @@
+{{- /*
+  photo-meta.html
+  The photo page's metadata block: species, capture settings, gear, licence,
+  identifiers and tags.
+
+  A partial rather than inline markup purely for readability — gallery-photo.html
+  is long enough without it. The lightbox popup deliberately renders its OWN
+  panel from the data in .pswp-caption-content; the two UIs are separate on
+  purpose, and only the underlying data is shared (via collect-images.html).
+
+  Params:
+    photo     — an entry from collect-images.html / gallery-collected.html
+    permalink — the uuid permalink, optional; the copy button hangs off it
+*/ -}}
+{{- $photo := .photo -}}
+{{- $permalink := .permalink | default "" -}}
+{{- $lang := site.Language.Lang -}}
+{{- $dex := "" -}}
+{{- with $photo.Species -}}
+  {{- $dex = index (partialCached "dex-lookup.html" (dict "lang" $lang) $lang) (lower .) -}}
+{{- end -}}
+
+{{- with $photo.Species }}
+<p class="photo-species">
+  <span class="photo-label">{{ i18n "speciesLabel" }}</span>
+  {{- with $dex }}
+  <a href="{{ .url }}">{{ .name }}</a> <em>{{ $photo.Species }}</em>
+  {{- else }}
+  <em>{{ . }}</em>
+  {{- end }}
+</p>
+{{- end }}
+
+<div class="photo-meta">
+  {{- if or $photo.FocalLength $photo.Aperture $photo.ShutterSpeed $photo.ISO }}
+  <section>
+    <h2>{{ i18n "photo_settings" }}</h2>
+    <dl>
+      {{- with $photo.FocalLength }}<dt>{{ i18n "photo_focal" }}</dt><dd>{{ . }}</dd>{{ end }}
+      {{- with $photo.Aperture }}<dt>{{ i18n "photo_aperture" }}</dt><dd>{{ . }}</dd>{{ end }}
+      {{- with $photo.ShutterSpeed }}<dt>{{ i18n "photo_shutter" }}</dt><dd>{{ . }}</dd>{{ end }}
+      {{- with $photo.ISO }}<dt>{{ i18n "photo_iso" }}</dt><dd>{{ . }}</dd>{{ end }}
+    </dl>
+  </section>
+  {{- end }}
+
+  {{- if or $photo.CameraModel $photo.LensModel $photo.Software $photo.DateTaken }}
+  <section>
+    <h2>{{ i18n "photo_gear" }}</h2>
+    <dl>
+      {{- with $photo.CameraModel }}<dt>{{ i18n "photo_camera" }}</dt><dd>{{ . }}</dd>{{ end }}
+      {{- with $photo.LensModel }}<dt>{{ i18n "photo_lens" }}</dt><dd>{{ . }}</dd>{{ end }}
+      {{- with $photo.Software }}<dt>{{ i18n "softwareLabel" }}</dt><dd>{{ . }}</dd>{{ end }}
+      {{- with $photo.DateTaken }}<dt>{{ i18n "photo_date_taken" }}</dt><dd><time datetime="{{ . }}">{{ . }}</time></dd>{{ end }}
+    </dl>
+  </section>
+  {{- end }}
+
+  <section class="photo-facts--wide">
+    <h2>{{ i18n "photo_license" }}</h2>
+    <dl>
+      <dt>{{ i18n "photo_photographer" }}</dt>
+      <dd><span itemprop="creator" itemscope itemtype="https://schema.org/Person"><span itemprop="name">{{ $photo.ResolvedArtist }}</span></span></dd>
+      <dt>{{ i18n "photo_license" }}</dt>
+      <dd>
+        {{- with $photo.LicenseUrl }}<a href="{{ . }}" itemprop="license" rel="license">{{ $photo.LicenseText }}</a>
+        {{- else }}{{ $photo.LicenseText }}{{ end }}
+      </dd>
+    </dl>
+    {{- with site.GetPage "/licensing" }}
+    <p class="photo-meta__link"><a href="{{ .RelPermalink }}" itemprop="acquireLicensePage">{{ i18n "licensingDetails" }}</a></p>
+    {{- end }}
+  </section>
+
+  {{- with $permalink }}
+  <section class="photo-facts--wide">
+    <h2>{{ i18n "photo_identifier" }}</h2>
+    <dl>
+      <dt>{{ i18n "photo_permalink" }}</dt>
+      <dd class="photo-permalink-row">
+        <a class="photo-permalink" href="{{ . }}"><code class="photo-id">{{ $photo.Id }}</code></a>
+        {{- /* Hidden by CSS until <html> gains `has-clipboard`, so a visitor with
+               no JS or no Clipboard API never sees a dead control, and copies of
+               this markup injected into the lightbox popup are covered too. */ -}}
+        <button type="button" class="photo-copy" data-copy="{{ . | absURL }}"
+                data-label-copy="{{ i18n "photo_copy" }}" data-label-done="{{ i18n "photo_copied" }}"
+                title="{{ i18n "photo_copy" }}" aria-label="{{ i18n "photo_copy" }}">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/>
+          </svg>
+        </button>
+      </dd>
+      <dt>{{ i18n "photo_file" }}</dt>
+      <dd><code>{{ $photo.Name }}</code></dd>
+    </dl>
+  </section>
+  {{- end }}
+</div>
+
+{{- with $photo.Tags }}
+<div class="photo-tags">
+  <h2>{{ i18n "photo_tags" }}</h2>
+  <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+</div>
+{{- end }}

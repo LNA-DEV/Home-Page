@@ -2,13 +2,17 @@
   <div id="gallery">
     {{- $images := partial "collect-portfolio.html" . -}}
     {{- $lang := site.Language.Lang -}}
+    {{- /* Same photo-page base as gallery.html — this grid was still linking to
+           the raw .JPG, so portfolio photos contributed nothing to crawlability
+           and their lightbox had no metadata fragment to fetch. */ -}}
+    {{- $photoBase := printf "%sgallery/photo/" (index hugo.Sites 0).Home.RelPermalink -}}
     {{- range sort $images (.Params.sort_by | default "Name") (.Params.sort_order | default "asc") -}}
       {{- $image := .image -}}
       {{- $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
       {{- $full := $image.Filter (slice images.AutoOrient (images.Process "fit 4000x4000")) -}}
       {{- $color := index $thumbnail.Colors 0 | default "transparent" -}}
       {{- $ratio := div (mul $thumbnail.Width 1.0) $thumbnail.Height }}
-      <a class="gallery-item" href="{{ $image.RelPermalink }}" data-id="{{ .Id }}" data-image-id="{{ .Id }}" data-pswp-src="{{ $full.RelPermalink }}" data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}" title="{{ .Title | default .Alt }}" itemscope itemtype="https://schema.org/ImageObject" style="flex-grow: {{ printf "%.4f" $ratio }}; --ratio: {{ printf "%.4f" $ratio }}">
+      <a class="gallery-item" href="{{ printf "%s%s/" $photoBase .Slug }}" data-download="{{ $full.RelPermalink }}" data-page="{{ printf "%s%s/" $photoBase .Slug }}" data-id="{{ .Id }}" data-image-id="{{ .Id }}" data-pswp-src="{{ $full.RelPermalink }}" data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}" title="{{ .Title | default .Alt }}" itemscope itemtype="https://schema.org/ImageObject" style="flex-grow: {{ printf "%.4f" $ratio }}; --ratio: {{ printf "%.4f" $ratio }}">
         <figure style="background-color: {{ $color }}">
           <img loading="lazy" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" src="{{ $thumbnail.RelPermalink }}" alt="{{ .Alt }}" />
         </figure>

@@ -5,13 +5,34 @@
     .byId  — keyed by UUID id (used by featured_image and other id-based lookups)
   Use with partialCached for O(1) builds after first call.
 
-  Every entry gains a derived `.projects` key: the `project:` field normalised to a
-  slice, so a photo can sit in several albums (`project: [a, b]`) while the plain
-  string form keeps working. Filter with `in $meta.projects $slug` — never compare
-  `.project` directly, and never use `in` on the raw field, which would match a
-  substring ("eagles" against "eagles-2026") instead of a whole slug.
+  Every entry gains two derived keys:
 
-  Hard-fails if any entry is missing an id — run scripts/add-gallery-ids.py to fix.
+  `.projects` — the `project:` field normalised to a slice, so a photo can sit in
+  several albums (`project: [a, b]`) while the plain string form keeps working.
+  Filter with `in $meta.projects $slug` — never compare `.project` directly, and
+  never use `in` on the raw field, which would match a substring ("eagles" against
+  "eagles-2026") instead of a whole slug.
+
+  `.slug` — the per-photo page URL segment, `entry.slug || stem(src)`:
+
+      slug = urlize( entry.slug  ||  stem(entry.src) )
+
+  Both inputs are tracked in git, which is the point. The alt text is the richer
+  source but lives in the image's XMP, outside the repo, so a re-export from
+  darktable would silently move a live URL. Deriving from the filename instead
+  means a URL can only move when someone deliberately renames a file — which is
+  already a documented, deliberate act (see CLAUDE.md). Across the current 648
+  photos the rule yields zero collisions, so nothing has to be stored; set an
+  explicit `slug:` on an entry only to pin a URL that must not follow a rename.
+
+  The `archive--` prefix is a storage convention rather than part of the name, so
+  it is stripped. A handful of characters are transliterated before `urlize`,
+  which would otherwise percent-encode them: "Skärgård" must not become
+  "sk%C3%A4rg%C3%A5rd". ASCII punctuation and dashes `urlize` already handles.
+
+  Hard-fails if any entry is missing an id — run scripts/add-gallery-ids.py to fix —
+  or if two entries resolve to the same slug, which would make one page silently
+  overwrite the other.
 
   Usage:
     {{ $metaAll := partialCached "gallery-meta.html" . }}
@@ -20,10 +41,21 @@
 */ -}}
 {{- $bySrc := dict -}}
 {{- $byId  := dict -}}
+{{- $seenSlugs := dict -}}
+
+{{- /* Characters urlize would percent-encode rather than fold. */ -}}
+{{- $translit := slice
+      (slice "ä" "ae") (slice "ö" "oe") (slice "ü" "ue")
+      (slice "Ä" "Ae") (slice "Ö" "Oe") (slice "Ü" "Ue")
+      (slice "å" "a")  (slice "Å" "A")  (slice "ß" "ss")
+      (slice "æ" "ae") (slice "ø" "oe") (slice "é" "e") (slice "è" "e")
+-}}
+
 {{- range hugo.Data.gallery.images -}}
   {{- if not .id -}}
     {{- errorf "data/gallery.yaml: entry %q has no id (run scripts/add-gallery-ids.py)" .src -}}
   {{- end -}}
+
   {{- $projects := .project | default "" -}}
   {{- if not (reflect.IsSlice $projects) -}}
     {{- if $projects -}}
@@ -32,7 +64,28 @@
       {{- $projects = slice -}}
     {{- end -}}
   {{- end -}}
-  {{- $entry := merge . (dict "projects" $projects) -}}
+
+  {{- /* Captured before the `with` below: inside it `.` is the colliding entry's
+         src, and `$` is the partial's page context — not this entry. */ -}}
+  {{- $src := .src -}}
+  {{- $slug := .slug | default "" -}}
+  {{- if not $slug -}}
+    {{- $slug = strings.TrimSuffix (path.Ext .src) .src -}}
+    {{- $slug = strings.TrimPrefix "archive--" $slug -}}
+  {{- end -}}
+  {{- range $pair := $translit -}}
+    {{- $slug = replace $slug (index $pair 0) (index $pair 1) -}}
+  {{- end -}}
+  {{- $slug = urlize $slug -}}
+  {{- if not $slug -}}
+    {{- errorf "data/gallery.yaml: entry %q (id %s) produced an empty slug — set `slug:` on it" .src .id -}}
+  {{- end -}}
+  {{- with index $seenSlugs $slug -}}
+    {{- errorf "data/gallery.yaml: %q and %q both resolve to the slug %q — set an explicit `slug:` on one of them" . $src $slug -}}
+  {{- end -}}
+  {{- $seenSlugs = merge $seenSlugs (dict $slug .src) -}}
+
+  {{- $entry := merge . (dict "projects" $projects "slug" $slug) -}}
   {{- $bySrc = merge $bySrc (dict .src $entry) -}}
   {{- $byId  = merge $byId  (dict .id  $entry) -}}
 {{- end -}}

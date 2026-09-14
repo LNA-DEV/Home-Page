@@ -389,3 +389,53 @@
   translation: "Newsletter abonnieren"
 - id: newsletter_close
   translation: "Schließen"
+
+# Photo page
+- id: photo_view_full
+  translation: "In voller Größe ansehen"
+- id: photo_settings
+  translation: "Einstellungen"
+- id: photo_gear
+  translation: "Ausrüstung"
+- id: photo_focal
+  translation: "Brennweite"
+- id: photo_aperture
+  translation: "Blende"
+- id: photo_shutter
+  translation: "Belichtungszeit"
+- id: photo_iso
+  translation: "ISO"
+- id: photo_camera
+  translation: "Kamera"
+- id: photo_lens
+  translation: "Objektiv"
+- id: photo_date_taken
+  translation: "Aufnahmedatum"
+- id: photo_license
+  translation: "Lizenz"
+- id: photo_photographer
+  translation: "Fotograf"
+- id: photo_identifier
+  translation: "Kennung"
+- id: photo_permalink
+  translation: "Permalink"
+- id: photo_tags
+  translation: "Schlagwörter"
+- id: photo_appears_in
+  translation: "Zu finden in"
+- id: photo_prev
+  translation: "Zurück"
+- id: photo_next
+  translation: "Weiter"
+- id: photo_related
+  translation: "Ähnliche Fotos"
+- id: photo_file
+  translation: "Datei"
+- id: photo_copy
+  translation: "Link kopieren"
+- id: photo_copied
+  translation: "Kopiert"
+- id: photo_open_page
+  translation: "Fotoseite öffnen"
+- id: photo_view_in_gallery
+  translation: "In der Galerie ansehen"
