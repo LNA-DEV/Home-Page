@@ -18,35 +18,53 @@
 
   `.title`, `.alt`, `.description` — normalised IN PLACE from string-or-map to a
   `{en, de, sv}` map, so a reader only ever has to handle one shape. A bare string
-  means English; `title: Foo` and `title: {en: Foo}` are the same entry. Nothing
-  is resolved here: this partial is cached WITHOUT a language key (head.html calls
-  it that way, and the data file is language-neutral), so the language pick has to
-  happen in collect-images.html, which is not cached. Never print one of the three
-  directly — you would get a Go map literal.
+  means English; `title: Foo` and `title: {en: Foo}` are the same entry. They are
+  NOT resolved to one language here — head.html, resolve-featured-image.html and
+  feed/list.html all want the raw maps, and collect-images.html does the pick for
+  the templates that render prose. Never print one of the three directly — you
+  would get a Go map literal.
 
-  `.slug` — the per-photo page URL segment, `entry.slug || stem(src)`:
+  `.slug` — the per-photo page URL segment, PER LANGUAGE:
 
-      slug = urlize( entry.slug  ||  stem(entry.src) )
+      slug = urlize( entry.slug  ||  title[lang] || title.en )
 
-  Both inputs are tracked in git, which is the point. The alt text is the richer
-  source but lives in the image's XMP, outside the repo, so a re-export from
-  darktable would silently move a live URL. Deriving from the filename instead
-  means a URL can only move when someone deliberately renames a file — which is
-  already a documented, deliberate act (see CLAUDE.md). Across the current 648
-  photos the rule yields zero collisions, so nothing has to be stored; set an
-  explicit `slug:` on an entry only to pin a URL that must not follow a rename.
+  This partial is `partialCached` with no variant key, which is fine and is why
+  the slug may depend on the language at all: Hugo keeps that cache per language
+  Site, so the partial is evaluated once per language and each build sees its own
+  value (verified on 0.166 — a no-variant partial returning .Site.Language.Lang
+  yields en/de/sv correctly). The context argument contributes nothing to the key;
+  only variants do. An earlier version of this comment claimed the opposite and
+  used it to argue the return value had to stay language-neutral. It does not.
 
-  The `archive--` prefix is a storage convention rather than part of the name, so
-  it is stripped. A handful of characters are transliterated before `urlize`,
-  which would otherwise percent-encode them: "Skärgård" must not become
-  "sk%C3%A4rg%C3%A5rd". ASCII punctuation and dashes `urlize` already handles.
+  Deriving from the title rather than the filename is deliberate: 65% of the
+  filenames are camera output ("DSC_2632", "P1017063"), which made for URLs no
+  reader or search engine could use. The old objection — that prose lived in the
+  image's XMP, outside the repo, so a darktable re-export would silently move a
+  live URL — died with the one-time metadata import: titles live in
+  data/gallery.yaml now and the build never looks at the file's XMP again.
+
+  The cost is that a reworded title moves a URL. Two things absorb that: every
+  page keeps its permanent /gallery/photo/<uuid>/ alias, and `slugAliases:` below
+  holds the URLs it used to have. Set an explicit `slug:` to pin one language-
+  neutrally and opt out of the whole mechanism.
+
+  `.slugAliases` — frozen former URL segments, normalised to a slice. Written once
+  at the one-time filename→title migration and never recomputed;
+  gallery-photo-pages.html emits each as a redirect, skipping any that equals the
+  current language's slug. Hand-edit to preserve a URL after a rewording.
+
+  Transliteration before `urlize`, which would otherwise percent-encode — "Skärgård"
+  must not become "sk%C3%A4rg%C3%A5rd". The table is PER LANGUAGE: German expands
+  the umlaut ("Porträt" → "portraet"), Swedish and English fold it away ("över" →
+  "over"). See the table itself for why each is wrong in the other's language.
 
   Hard-fails if any entry is missing an id — run scripts/add-gallery-ids.py to fix —
-  or if two entries resolve to the same slug, which would make one page silently
-  overwrite the other. Also hard-fails on a `model:` slug that names no record in
-  data/models.yaml, and on a record without a valid `visibility:` — see the block
-  above the range for why a person is the one join that must not degrade to a
-  warning.
+  if an entry has no title in the current language and none in English, since it
+  would then have no URL, or if two entries resolve to the same slug, which would
+  make one page silently overwrite the other. Also hard-fails on a `model:` slug
+  that names no record in data/models.yaml, and on a record without a valid
+  `visibility:` — see the block above the range for why a person is the one join
+  that must not degrade to a warning.
 
   Usage:
     {{ $metaAll := partialCached "gallery-meta.html" . }}
@@ -57,13 +75,54 @@
 {{- $byId  := dict -}}
 {{- $seenSlugs := dict -}}
 
-{{- /* Characters urlize would percent-encode rather than fold. */ -}}
-{{- $translit := slice
-      (slice "ä" "ae") (slice "ö" "oe") (slice "ü" "ue")
-      (slice "Ä" "Ae") (slice "Ö" "Oe") (slice "Ü" "Ue")
-      (slice "å" "a")  (slice "Å" "A")  (slice "ß" "ss")
-      (slice "æ" "ae") (slice "ø" "oe") (slice "é" "e") (slice "è" "e")
--}}
+{{- /* Hugo scopes the partialCached store per language Site — verified on 0.166:
+       a partial cached with NO variant key still returns the current language's
+       value in each of the three builds. So this runs once per language and the
+       slug below may safely depend on it; $seenSlugs is per-language for free. */ -}}
+{{- $lang := site.Language.Lang -}}
+
+{{- /* Characters urlize would percent-encode rather than fold — "Skärgård" must
+       not become "sk%C3%A4rg%C3%A5rd".
+
+       The table is PER LANGUAGE, because the two conventions genuinely differ and
+       each is wrong in the other's language. German expands the umlaut, which is
+       what a German keyboard-less speller does and what DIN 5007-2 codifies:
+       "Porträt" → "portraet", "grünen" → "gruenen", "weißen" → "weissen". Swedish
+       does not: ä ö å are letters in their own right, not decorated vowels, so the
+       ASCII fallback drops the ring and the dots — "över" → "over". English has no
+       native diacritics and folds the same way for the handful of borrowed names
+       it carries ("Ardèche" → "ardeche", "Öland" → "oland").
+
+       Verified across all 648 photos with both tables in place: zero collisions in
+       any of the three languages, so neither the expansion nor the folding costs a
+       URL here. Expansion can only ever reduce collisions; folding is the one that
+       could in principle merge two titles, and does not.
+ */ -}}
+{{- /* Written out in full rather than composed from a shared tail: `append` on a
+       slice of slices appends the inner slice as one element, and the two tails
+       are ten pairs. Keep the trailing block identical in both. */ -}}
+{{- $translit := slice -}}
+{{- if eq $lang "de" -}}
+  {{- $translit = slice
+        (slice "ä" "ae") (slice "ö" "oe") (slice "ü" "ue")
+        (slice "Ä" "Ae") (slice "Ö" "Oe") (slice "Ü" "Ue")
+        (slice "æ" "ae") (slice "Æ" "Ae") (slice "ø" "oe") (slice "Ø" "Oe")
+        (slice "å" "a")  (slice "Å" "A")  (slice "ß" "ss")
+        (slice "é" "e")  (slice "è" "e")  (slice "ê" "e")
+        (slice "á" "a")  (slice "à" "a")  (slice "í" "i")  (slice "ó" "o")
+        (slice "ú" "u")  (slice "ñ" "n")  (slice "ç" "c")
+  -}}
+{{- else -}}
+  {{- $translit = slice
+        (slice "ä" "a")  (slice "ö" "o")  (slice "å" "a")
+        (slice "Ä" "A")  (slice "Ö" "O")  (slice "Å" "A")
+        (slice "ü" "u")  (slice "Ü" "U")  (slice "ß" "ss")
+        (slice "æ" "a")  (slice "Æ" "A")  (slice "ø" "o")  (slice "Ø" "O")
+        (slice "é" "e")  (slice "è" "e")  (slice "ê" "e")
+        (slice "á" "a")  (slice "à" "a")  (slice "í" "i")  (slice "ó" "o")
+        (slice "ú" "u")  (slice "ñ" "n")  (slice "ç" "c")
+  -}}
+{{- end -}}
 
 {{- /* The closed set of model slugs, validated once. Unlike `species:`, an
        unknown `model:` is an ERROR rather than a warning: the slugs are a small
@@ -151,22 +210,47 @@
     {{- end -}}
   {{- end -}}
 
-  {{- $slug := .slug | default "" -}}
+  {{- /* The title in THIS language, falling back to English — the same rule the
+         prose fields use below, resolved early because the slug needs it before
+         the normalisation block runs. `title:` is string-or-map at this point. */ -}}
+  {{- $rawTitle := index . "title" -}}
+  {{- $titleHere := "" -}}
+  {{- if reflect.IsMap $rawTitle -}}
+    {{- $titleHere = or (index $rawTitle $lang) (index $rawTitle "en") "" -}}
+  {{- else -}}
+    {{- $titleHere = $rawTitle | default "" -}}
+  {{- end -}}
+
+  {{- /* printf, not the raw value: an unquoted `slug: 007` is an int in YAML and
+         would urlize to "7". */ -}}
+  {{- $slug := printf "%v" (.slug | default "") -}}
   {{- if not $slug -}}
-    {{- $slug = strings.TrimSuffix (path.Ext .src) .src -}}
-    {{- $slug = strings.TrimPrefix "archive--" $slug -}}
+    {{- if not $titleHere -}}
+      {{- errorf "data/gallery.yaml: entry %q (id %s) has no title in %q and none in en, so it has no URL — give it a title, or pin one with `slug:`" .src .id $lang -}}
+    {{- end -}}
+    {{- $slug = $titleHere -}}
   {{- end -}}
   {{- range $pair := $translit -}}
     {{- $slug = replace $slug (index $pair 0) (index $pair 1) -}}
   {{- end -}}
   {{- $slug = urlize $slug -}}
   {{- if not $slug -}}
-    {{- errorf "data/gallery.yaml: entry %q (id %s) produced an empty slug — set `slug:` on it" .src .id -}}
+    {{- errorf "data/gallery.yaml: entry %q (id %s) produced an empty slug in %q — its title is punctuation only; set `slug:` on it" .src .id $lang -}}
   {{- end -}}
   {{- with index $seenSlugs $slug -}}
-    {{- errorf "data/gallery.yaml: %q and %q both resolve to the slug %q — set an explicit `slug:` on one of them" . $src $slug -}}
+    {{- errorf "data/gallery.yaml: %q and %q both resolve to the slug %q in %q — reword one title, or set an explicit `slug:` on one of them" . $src $slug $lang -}}
   {{- end -}}
   {{- $seenSlugs = merge $seenSlugs (dict $slug .src) -}}
+
+  {{- /* Frozen former URLs, emitted as redirects by gallery-photo-pages.html.
+         Written once at the filename→title migration and never recomputed: an
+         alias exists to keep a dead URL alive, so it must NOT follow the thing
+         that moved. urlize defensively — the file is hand-editable. */ -}}
+  {{- $aliases := slice -}}
+  {{- range $a := (.slugAliases | default slice) -}}
+    {{- $a = urlize (printf "%v" $a) -}}
+    {{- if $a -}}{{- $aliases = $aliases | append $a -}}{{- end -}}
+  {{- end -}}
 
   {{- /* Prose fields: string-or-map in, map out. `.` is rebound by the inner
          range and `$` is the partial's page context, so the entry is captured
@@ -183,7 +267,7 @@
     {{- end -}}
   {{- end -}}
 
-  {{- $entry := merge . (dict "projects" $projects "models" $models "slug" $slug) -}}
+  {{- $entry := merge . (dict "projects" $projects "models" $models "slug" $slug "slugAliases" $aliases) -}}
   {{- $entry = merge $entry $prose -}}
   {{- $bySrc = merge $bySrc (dict .src $entry) -}}
   {{- $byId  = merge $byId  (dict .id  $entry) -}}

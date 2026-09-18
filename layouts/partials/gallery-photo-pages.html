@@ -11,8 +11,8 @@
 
   There is one adapter file per language because Hugo scopes an adapter to the
   language of its filename — a bare _content.gotmpl produces English pages only.
-  The slug is language-neutral, so the three share a URL segment and no URL moved
-  when the other two were switched on.
+  The slug is derived from the title and is therefore PER LANGUAGE: the three no
+  longer share a URL segment, and `translationKey` is what ties them together.
 
   Every photo gets a page, archive included: only four of 648 carry no title, no
   alt, no species and no tags, which is far too few to justify a threshold.
@@ -20,7 +20,8 @@
   `aliases` is a TOP-LEVEL key of AddPage, not a param (verified on Hugo 0.166).
   It emits a redirect page carrying rel=canonical back to the slug URL, which is
   what makes /gallery/photo/<uuid>/ a permanent address: the slug follows the
-  filename and can move, the id never does.
+  title and can move, the id never does. The frozen former slugs in
+  `.SlugAliases` ride along the same mechanism — see gallery-meta.html.
 */ -}}
 
 {{- $lang := .Site.Language.Lang -}}
@@ -35,13 +36,27 @@
   {{- /* The meta description and the search index want the story where there is
          one and the alt text where there is not — which is exactly what
          .Description resolves to (collect-images.html falls it back to .Alt). */ -}}
+  {{- /* The permanent id address, plus every URL this photo used to live at.
+         A former slug that equals THIS language's current slug is skipped: it is
+         not an alias, it is the page, and aliasing a page to itself makes Hugo
+         write a redirect over the page it redirects to. That happens whenever a
+         photo's title in one language reproduces its old filename, so the filter
+         is load-bearing rather than defensive. */ -}}
+  {{- $slug := .Slug -}}
+  {{- $aliases := slice (printf "/gallery/photo/%s/" .Id) -}}
+  {{- range $former := (.SlugAliases | default slice) -}}
+    {{- if ne $former $slug -}}
+      {{- $aliases = $aliases | append (printf "/gallery/photo/%s/" $former) -}}
+    {{- end -}}
+  {{- end -}}
+
   {{- $page := dict
         "path" .Slug
         "kind" "page"
         "title" $title
         "description" (or .Description $title | plainify | truncate 160)
         "content" (dict "mediaType" "text/markdown" "value" (.Description | default ""))
-        "aliases" (slice (printf "/gallery/photo/%s/" .Id))
+        "aliases" $aliases
         "params" (dict
           "theme" "gallery-photo"
           "photo_id" .Id

@@ -388,6 +388,7 @@
     {{- $collected = $collected | append (dict
       "Id" $meta.id
       "Slug" $meta.slug
+      "SlugAliases" ($meta.slugAliases | default slice)
       "Tags" $tags
       "Projects" ($meta.projects | default slice)
       "Name" (path.Base $image.Name)

@@ -33,7 +33,8 @@
            home, not the default language's. It used to be
            `(index hugo.Sites 0).Home.RelPermalink`, which pointed the German and
            Swedish grids at /en/ because those pages did not exist yet. The slug
-           is language-neutral, so the path after the base is the same either way. */ -}}
+           is per-language now, so base and segment must come from the same site —
+           pairing this base with another language's slug would 404. */ -}}
     {{- $photoBase := printf "%sgallery/photo/" site.Home.RelPermalink -}}
     {{- /* Hoisted out of the loop below: partialCached is a map lookup, but this
            range runs 648 times on the general grid. */ -}}
