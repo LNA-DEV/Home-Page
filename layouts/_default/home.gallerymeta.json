@@ -1,0 +1,48 @@
+{{- /*
+  gallery-metadata.json — the manifest the post-build embedding step reads.
+
+  Emitted per language at /<lang>/gallery-metadata.json via the `gallerymeta`
+  output format in hugo.yaml. scripts/gallery-embed-metadata.py merges the three
+  on `id` and writes the values into every file under public/images/gallery/.
+
+  It exists so the resolver lives exactly once. Everything here — the string-or-map
+  language fallbacks, the licence keys and their aliases, the tag union and its
+  blacklist, the artist ladder — is already implemented in collect-images.html. A
+  Python re-implementation would be a second resolver to keep in step with the
+  first, and would need a YAML dependency the stdlib-only scripts here do not have.
+
+  Per language rather than one file with all three, because collect-images.html
+  resolves against `site`, which is the site being rendered; an English home page
+  cannot ask it for German values without threading a language through every read.
+
+  Deliberately no build timestamp: the file has to be byte-identical between the
+  clearnet and the onion build, or rsync ships it twice per deploy — and the
+  embedding step has to be idempotent, which a changing input would defeat.
+
+  `title` is .Title, NOT .DisplayTitle: DisplayTitle falls back to the filename
+  stem so a page always has a heading, and for the 427 camera-code files that stem
+  is "P1002405". A heading has to print something; dc:title in a downloaded JPEG
+  is better left empty than filled with a camera counter.
+*/ -}}
+{{- $c := partialCached "gallery-collected.html" . site.Language.Lang -}}
+{{- $records := slice -}}
+{{- range $c.all -}}
+  {{- $records = $records | append (dict
+        "id" .Id
+        "src" .Name
+        "slug" .Slug
+        "section" .Section
+        "dateTaken" .DateTaken
+        "artist" .ResolvedArtist
+        "license" (dict
+          "key" .LicenseKey
+          "label" .LicenseText
+          "url" .LicenseUrl
+          "terms" .LicenseTerms)
+        "title" .Title
+        "alt" .Alt
+        "description" .Description
+        "tags" .Tags
+      ) -}}
+{{- end -}}
+{{- dict "language" site.Language.Lang "count" (len $records) "photos" $records | jsonify (dict "indent" "  ") -}}

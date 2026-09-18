@@ -4,8 +4,9 @@
     {{- $lang := site.Language.Lang -}}
     {{- /* Same photo-page base as gallery.html — this grid was still linking to
            the raw .JPG, so portfolio photos contributed nothing to crawlability
-           and their lightbox had no metadata fragment to fetch. */ -}}
-    {{- $photoBase := printf "%sgallery/photo/" (index hugo.Sites 0).Home.RelPermalink -}}
+           and their lightbox had no metadata fragment to fetch. The current
+           site's home, now that all three languages generate photo pages. */ -}}
+    {{- $photoBase := printf "%sgallery/photo/" site.Home.RelPermalink -}}
     {{- range sort $images (.Params.sort_by | default "Name") (.Params.sort_order | default "asc") -}}
       {{- $image := .image -}}
       {{- $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
@@ -53,7 +54,7 @@
         <link itemprop="license" href="{{ . }}" />
         {{- end -}}
         {{- with site.Params.licensingPage }}
-        <link itemprop="acquireLicensePage" href="{{ . | absURL }}" />
+        <link itemprop="acquireLicensePage" href="{{ . | absLangURL }}" />
         {{- end }}
         <span itemprop="creator" itemtype="https://schema.org/Person" itemscope>
           <meta itemprop="name" content="{{ .ResolvedArtist }}" />

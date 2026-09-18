@@ -1,4 +1,52 @@
-"Creative Commons Attribution-ShareAlike (CC BY-SA)": "https://creativecommons.org/licenses/by-sa/4.0/"
-"Creative Commons Attribution-NoDerivatives (CC BY-ND)": "https://creativecommons.org/licenses/by-nd/4.0/"
-"all rights reserved": "/en/licensing/"
-"test": "https://example.com"
+# Licences a gallery photo can carry.
+#
+# The KEY is the identity (`license: cc-by-sa-4.0` in data/gallery.yaml). It was
+# the English display string until the per-language work started: once a label
+# has to be translated it cannot also be the key. Resolution lives in
+# layouts/partials/license-index.html — never index this file directly.
+#
+#   aliases     optional extra spellings that resolve to this key. NONE are in use:
+#               the legacy English display strings that data/gallery.yaml and the
+#               exported JPEGs used to carry were rewritten to keys by the one-time
+#               import (docs/concepts/gallery-metadata-import.md) and the lists went
+#               with them. license-index.html still honours the field, so renaming a
+#               key later without touching 648 entries stays a one-line option.
+#   url         where the licence is defined. A value starting with "/" is
+#               site-relative and is resolved per language with relLangURL — the
+#               licensing page exists in all three languages and a hard-coded
+#               /en/ sent German and Swedish readers into the wrong one.
+#   url_by_lang optional per-language override of `url` (CC publishes translated
+#               deeds). Falls back to `url`.
+#   label       what a reader sees. String, or an {en, de, sv} map falling back to
+#               en. CC licence names conventionally stay English in German and
+#               Swedish prose, so only the plain-language ones are translated.
+#   terms       the one-sentence, human-readable grant written into the served
+#               JPEG as xmpRights:UsageTerms by scripts/gallery-embed-metadata.py.
+#               String or map, resolved like `label`.
+
+cc-by-sa-4.0:
+  url: https://creativecommons.org/licenses/by-sa/4.0/
+  url_by_lang:
+    de: https://creativecommons.org/licenses/by-sa/4.0/deed.de
+    sv: https://creativecommons.org/licenses/by-sa/4.0/deed.sv
+  label: Creative Commons Attribution-ShareAlike 4.0
+  terms: "Licensed under CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/"
+
+cc-by-nd-4.0:
+  url: https://creativecommons.org/licenses/by-nd/4.0/
+  url_by_lang:
+    de: https://creativecommons.org/licenses/by-nd/4.0/deed.de
+    sv: https://creativecommons.org/licenses/by-nd/4.0/deed.sv
+  label: Creative Commons Attribution-NoDerivatives 4.0
+  terms: "Licensed under CC BY-ND 4.0 — https://creativecommons.org/licenses/by-nd/4.0/"
+
+all-rights-reserved:
+  url: /licensing/
+  label:
+    en: All rights reserved
+    de: Alle Rechte vorbehalten
+    sv: Alla rättigheter förbehållna
+  terms:
+    en: "All rights reserved. Contact the creator for licensing: https://lna-dev.net/en/licensing/"
+    de: "Alle Rechte vorbehalten. Für eine Lizenz bitte den Urheber kontaktieren: https://lna-dev.net/de/licensing/"
+    sv: "Alla rättigheter förbehållna. Kontakta upphovspersonen för licensiering: https://lna-dev.net/sv/licensing/"

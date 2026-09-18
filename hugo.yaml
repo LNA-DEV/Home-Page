@@ -47,12 +47,24 @@ outputFormats:
     path: ../.well-known
     isPlainText: true
     notAlternative: true
+  # The gallery metadata manifest: every resolved editorial value for every photo,
+  # rendered from layouts/_default/home.gallerymeta.json. Hugo cannot write image
+  # metadata, so scripts/gallery-embed-metadata.py does it after the build and reads
+  # this file rather than re-implementing the resolver in Python. Unlike securitytxt
+  # this one IS listed in the top-level `outputs.home` below: each language must
+  # write its own copy, because the values it holds are language-dependent.
+  gallerymeta:
+    mediaType: application/json
+    baseName: gallery-metadata
+    isPlainText: true
+    notAlternative: true
 
 outputs:
   home:
     - HTML
     - RSS
     - JSON
+    - gallerymeta
 
 minify:
   disableXML: true
@@ -69,6 +81,9 @@ languages:
         - RSS
         - JSON
         - securitytxt
+        # A per-language `outputs` REPLACES the top-level one, so gallerymeta has
+        # to be restated here or English alone would emit no manifest.
+        - gallerymeta
     params:
       description: I'm Lukas Nagel (LNA-DEV), sharing insights on development, tech, photography, and more on this page which serves as my digital hub.
       homeInfoParams:
@@ -199,7 +214,9 @@ params:
     - Privacy
     - Open Source
     - Photography
-  licensingPage: "/en/licensing/"
+  # Language-RELATIVE on purpose: the licensing page exists in all three
+  # languages. Every consumer resolves it with absLangURL / relLangURL.
+  licensingPage: "/licensing/"
   author:
     name: Lukas Nagel
     email: me@lna-dev.net

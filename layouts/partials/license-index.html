@@ -1,0 +1,70 @@
+{{- /*
+  license-index.html
+  Resolve data/licenseMap.yaml into one flat lookup for the CURRENT language.
+
+  Returns a dict keyed by the LOWERCASED licence key *and* by every lowercased
+  entry in that key's `aliases`, so both spellings resolve to the same record:
+
+      { key, label, url, terms }
+
+  with `label`, `terms` and `url` already resolved for this language. That is why
+  it must be cached per language:
+
+      {{ $lic := partialCached "license-index.html" . site.Language.Lang }}
+      {{ $rec := index $lic (lower $value) }}
+
+  `aliases` is currently empty on every key: it held the English display strings
+  that data/gallery.yaml carried before the one-time import
+  (docs/concepts/gallery-metadata-import.md) rewrote all 648 entries to keys. The
+  field is still honoured so that renaming a key later does not mean touching
+  every entry in the same commit. Lookup is case-insensitive, and keys and aliases
+  must therefore be unique ignoring case.
+*/ -}}
+{{- $lang := site.Language.Lang -}}
+{{- $out := dict -}}
+
+{{- range $key, $entry := hugo.Data.licenseMap -}}
+  {{- /* label / terms are string-or-map; normalise so dex-text.html can resolve
+         them with the same English fallback the dex prose uses. */ -}}
+  {{- $label := $entry.label | default $key -}}
+  {{- if not (reflect.IsMap $label) -}}
+    {{- $label = dict "en" $label -}}
+  {{- end -}}
+  {{- $terms := $entry.terms | default "" -}}
+  {{- if not (reflect.IsMap $terms) -}}
+    {{- $terms = dict "en" $terms -}}
+  {{- end -}}
+
+  {{- /* url_by_lang wins, then url. A site-relative url is resolved into this
+         language: the licensing page exists in all three, and the hard-coded
+         /en/ this replaces sent German and Swedish readers to the English one. */ -}}
+  {{- $url := $entry.url | default "" -}}
+  {{- with $entry.url_by_lang -}}
+    {{- with index . $lang -}}
+      {{- $url = . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if hasPrefix $url "/" -}}
+    {{- $url = $url | relLangURL -}}
+  {{- end -}}
+
+  {{- $rec := dict
+        "key" $key
+        "label" (partial "dex-text.html" (dict "field" $label "lang" $lang))
+        "terms" (partial "dex-text.html" (dict "field" $terms "lang" $lang))
+        "url" $url
+  -}}
+
+  {{- $names := (slice $key) | append ($entry.aliases | default slice) -}}
+  {{- range $name := $names -}}
+    {{- $lookup := lower $name -}}
+    {{- with index $out $lookup -}}
+      {{- if ne .key $rec.key -}}
+        {{- errorf "data/licenseMap.yaml: %q is claimed by both %q and %q — keys and aliases must be unique, ignoring case" $lookup .key $rec.key -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $out = merge $out (dict $lookup $rec) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $out -}}

@@ -23,12 +23,13 @@
 
     {{- $images := partial "collect-images.html" (dict "context" . "filter" $filter) -}}
     {{- $lang := site.Language.Lang -}}
-    {{- /* Per-photo pages are generated for the default content language only, so
-           the German and Swedish grids link across to the English page rather
-           than to a URL that does not exist. site.Sites is ordered by language
-           weight and English carries weight 1 (hugo.Sites, not the deprecated site.Sites). When de/sv are switched on this
-           becomes site.Home.RelPermalink and the cross-linking disappears. */ -}}
-    {{- $photoBase := printf "%sgallery/photo/" (index hugo.Sites 0).Home.RelPermalink -}}
+    {{- /* Every language now has its own per-photo pages (one content adapter per
+           language under content/gallery/photo/), so this is the CURRENT site's
+           home, not the default language's. It used to be
+           `(index hugo.Sites 0).Home.RelPermalink`, which pointed the German and
+           Swedish grids at /en/ because those pages did not exist yet. The slug
+           is language-neutral, so the path after the base is the same either way. */ -}}
+    {{- $photoBase := printf "%sgallery/photo/" site.Home.RelPermalink -}}
     {{- range sort $images (.Params.sort_by | default "Name") (.Params.sort_order | default "asc") -}}
       {{- $image := .image -}}
       {{- $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
@@ -89,7 +90,7 @@
         <link itemprop="license" href="{{ . }}" />
         {{- end -}}
         {{- with site.Params.licensingPage }}
-        <link itemprop="acquireLicensePage" href="{{ . | absURL }}" />
+        <link itemprop="acquireLicensePage" href="{{ . | absLangURL }}" />
         {{- end }}
         <span itemprop="creator" itemtype="https://schema.org/Person" itemscope>
           <meta itemprop="name" content="{{ .ResolvedArtist }}" />

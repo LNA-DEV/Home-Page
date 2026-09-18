@@ -38,45 +38,20 @@ import sys
 import uuid
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from gallery_common import (  # noqa: E402
+    PHOTOS_SETUP_HINT,
+    license_key,
+    photos_dir_from_hugo_mounts,
+    yaml_scalar,
+)
+import gallery_xmp  # noqa: E402
+
 # Extensions we treat as gallery images (case-insensitive), so stray files
 # like .DS_Store never get a stub entry.
 IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".gif", ".webp", ".tif", ".tiff"}
 
 SRC_RE = re.compile(r"^  src: (.*)$")
-
-# The Hugo mount target the gallery photos are mounted onto. Kept in sync with
-# config/_default/module.yaml by reading that file rather than duplicating the path.
-GALLERY_MOUNT_TARGET = "assets/images/gallery"
-
-
-def photos_dir_from_hugo_mounts(repo_root):
-    """Return the gallery mount `source` from config/_default/module.yaml, or None.
-
-    Hugo stopped following symlinked mount sources in 0.163.1 (CVE-2026-58403),
-    so that file holds an absolute, machine-specific path and is gitignored. It has
-    a fixed, tiny shape, so a line-based read keeps this script stdlib-only -- the
-    same choice the rest of the file makes for gallery.yaml.
-    """
-    config = repo_root / "config" / "_default" / "module.yaml"
-    if not config.is_file():
-        return None
-    source = None
-    for line in config.read_text(encoding="utf-8").splitlines():
-        stripped = line.strip()
-        if stripped.startswith("#"):
-            continue
-        # A new list item resets the pending source; `source` always precedes
-        # `target` in this file, but a malformed pairing must not leak across items.
-        if stripped.startswith("- "):
-            source = None
-            stripped = stripped[2:].strip()
-        if stripped.startswith("source:"):
-            source = stripped[len("source:"):].strip().strip("\"'")
-        elif stripped.startswith("target:"):
-            target = stripped[len("target:"):].strip().strip("\"'")
-            if target.strip("/") == GALLERY_MOUNT_TARGET and source:
-                return Path(source).expanduser()
-    return None
 
 
 def parse_args(argv):
@@ -147,13 +122,43 @@ def list_disk_images(photos_dir):
     return names
 
 
-def build_stub(filename):
-    return [
+def build_stub(filename, editorial=None):
+    """One gallery.yaml entry for a photo that has none yet.
+
+    The editorial fields are read out of the file ONCE, here, by gallery_xmp.py —
+    darktable is where the first English title, alt text and licence are typed, and
+    this is the only moment the site looks at them. After this the data file is the
+    source of truth and a re-export cannot change what the site says about a photo
+    (docs/concepts/gallery-metadata-single-source.md §6).
+
+    Prose is written as an {en: …} map because that is the shape gallery-meta.html
+    normalises every entry to; writing it out explicitly means adding a German
+    title later is one more indented line, not a restructure.
+    """
+    editorial = editorial or {}
+    lines = [
         f"- id: {uuid.uuid4()}",
         f"  src: {filename}",
         "  category: others",
         "  section: general",
     ]
+    for field in ("title", "alt", "description"):
+        value = editorial.get(field)
+        if value:
+            lines.append(f"  {field}:")
+            lines.append(f"    en: {yaml_scalar(value)}")
+    # dc:rights holds the licence's English display NAME. A stub must carry the
+    # key instead: the display strings survive today only as `aliases` in
+    # data/licenseMap.yaml, and those leave with the one-time import — a new entry
+    # written in the old spelling would fail the build the day they do. An
+    # unmapped string is left verbatim, so it shows up as a build error naming the
+    # photo rather than being silently dropped.
+    license_value = editorial.get("license")
+    if license_value:
+        lines.append(f"  license: {yaml_scalar(license_key(license_value) or license_value)}")
+    if editorial.get("artist"):
+        lines.append(f"  artist: {yaml_scalar(editorial['artist'])}")
+    return lines
 
 
 def main(argv=None):
@@ -163,10 +168,7 @@ def main(argv=None):
         sys.exit(f"ERROR: data file not found: {args.data}")
     # A clean checkout with no config/_default/module.yaml lands here, as does one
     # whose mount source points at a path that does not exist on this machine.
-    setup_hint = (
-        "       (cp config/_default/module.yaml.example config/_default/module.yaml\n"
-        "        and set the gallery mount `source` — see CLAUDE.md \"Build / Deploy\")"
-    )
+    setup_hint = PHOTOS_SETUP_HINT
     if args.photos is None:
         sys.exit(
             "ERROR: no gallery mount found in config/_default/module.yaml, and no "
@@ -210,9 +212,17 @@ def main(argv=None):
         return 0
 
     # Build stub entries for the new files and insert before the block end.
+    # One exiftool process for all of them, or none at all when it is not installed.
+    editorial = gallery_xmp.read(args.photos / name for name in new_files)
+    if new_files and not gallery_xmp.available():
+        print(
+            "NOTE: exiftool not found — stubs are written without the title, alt "
+            "text, license and artist darktable put in the file.",
+            file=sys.stderr,
+        )
     additions = []
     for name in new_files:
-        additions.extend(build_stub(name))
+        additions.extend(build_stub(name, editorial.get(name)))
 
     noun = "entry" if len(new_files) == 1 else "entries"
 

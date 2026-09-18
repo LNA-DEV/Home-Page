@@ -114,7 +114,12 @@
     </p>
   </div>
 
-  {{- with $photo.Alt }}
+  {{- /* The body prose is `description:`, not `alt:`. Alt text is the short
+         account of what is visible that belongs on the <img> above and nowhere
+         else; description is the story. It falls back to alt in
+         collect-images.html, so a photo that only has an alt reads exactly as it
+         did before the field existed. */ -}}
+  {{- with $photo.Description }}
   <p class="photo-description" itemprop="description">{{ . }}</p>
   {{- end }}
 

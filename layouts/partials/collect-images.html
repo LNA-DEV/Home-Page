@@ -28,6 +28,35 @@
 {{- $metaAll := partialCached "gallery-meta.html" . -}}
 {{- $lookup  := $metaAll.bySrc -}}
 
+{{- /* The language every prose field is resolved into. data/gallery.yaml stores
+       title/alt/description as {en, de, sv} maps (gallery-meta.html normalises the
+       bare-string form into one), and each read below falls back to `en` — the
+       same rule dex-text.html applies to the species prose. It is inlined rather
+       than calling that partial because this one is NOT cached at its call sites:
+       it runs once per dex species page, so three partial calls per photo would
+       be the better part of a million per build. */ -}}
+{{- $lang := site.Language.Lang -}}
+
+{{- /* Licences, resolved for this language. Cached per language: the label, the
+       terms and a site-relative url all differ between them. */ -}}
+{{- $licenseIndex := partialCached "license-index.html" . $lang -}}
+
+{{- /* Tags the camera or the export chain wrote into dc:subject that must never
+       reach a reader (data/galleryTagIgnore.yaml). Applied to the union below AND
+       to the first-match-wins $keywords string the lightbox popup shows, so the
+       junk is gone from the grids, the RSS categories, the schema keywords and
+       the metadata the post-build embedding step writes into the served files.
+
+       Titles become a dict for an O(1) lookup: this partial is NOT cached at its
+       call sites and runs once per dex species page, so the tag loop below
+       executes a few hundred thousand times per build. */ -}}
+{{- $tagIgnore := hugo.Data.galleryTagIgnore | default dict -}}
+{{- $tagIgnoreSet := dict -}}
+{{- range $t := ($tagIgnore.titles | default slice) -}}
+  {{- $tagIgnoreSet = merge $tagIgnoreSet (dict (lower (trim $t " ")) true) -}}
+{{- end -}}
+{{- $tagIgnorePatterns := $tagIgnore.patterns | default slice -}}
+
 {{- range $image := $allImages -}}
   {{- $meta := index $lookup (path.Base $image.Name) -}}
   {{- if not $meta -}}
@@ -94,8 +123,6 @@
     {{- $focalLength := "" -}}
     {{- $cameraModel := "" -}}
     {{- $lensModel := "" -}}
-    {{- $copyright := "" -}}
-    {{- $artist := "" -}}
     {{- $keywords := "" -}}
     {{- $software := "" -}}
     {{- $tagChunks := slice -}}
@@ -106,17 +133,11 @@
       {{- if gt .Date.Year 2000 -}}
         {{- $dateTaken = .Date.Format "2006-01-02" -}}
       {{- end -}}
-      {{- /* Exif.ImageDescription is deliberately NOT a title source. Every one of
-             the seven values present in this library is caption prose of 97-149
-             characters — six of them the same paragraph about the Avesta
-             Visentpark — which made a 147-character heading and slug. It is alt
-             text, and image-alt.html already uses it as such. */ -}}
-      {{- with .Exif.Copyright -}}
-        {{- $copyright = . -}}
-      {{- end -}}
-      {{- with .Exif.Artist -}}
-        {{- $artist = . -}}
-      {{- end -}}
+      {{- /* Nothing editorial is read out of the file here any more — the
+             one-time import (docs/concepts/gallery-metadata-import.md) moved the
+             licence, alt, title and the seven dc:description captions into
+             data/gallery.yaml. What is left below is the technical data and the
+             tags, which stay darktable-owned by design. */ -}}
       {{- with .Exif.subject -}}
         {{- $keywords = . -}}
       {{- end -}}
@@ -226,14 +247,42 @@
       {{- range $t := split (replace $chunk ";" ",") "," -}}
         {{- $t = lower (trim $t " ") -}}
         {{- if and $t (not (in $tags $t)) -}}
-          {{- $tags = $tags | append $t -}}
+          {{- $drop := index $tagIgnoreSet $t -}}
+          {{- if not $drop -}}
+            {{- range $pat := $tagIgnorePatterns -}}
+              {{- if findRE $pat $t -}}{{- $drop = true -}}{{- end -}}
+            {{- end -}}
+          {{- end -}}
+          {{- if not $drop -}}
+            {{- $tags = $tags | append $t -}}
+          {{- end -}}
         {{- end -}}
       {{- end -}}
     {{- end -}}
 
+    {{- /* Same blacklist over $keywords, which keeps its original casing and its
+           first-match-wins source because it is the string the info popup prints. */ -}}
+    {{- with $keywords -}}
+      {{- $kept := slice -}}
+      {{- range $t := split (replace . ";" ",") "," -}}
+        {{- $t = trim $t " " -}}
+        {{- $drop := index $tagIgnoreSet (lower $t) -}}
+        {{- if not $drop -}}
+          {{- range $pat := $tagIgnorePatterns -}}
+            {{- if findRE $pat $t -}}{{- $drop = true -}}{{- end -}}
+          {{- end -}}
+        {{- end -}}
+        {{- if and $t (not $drop) -}}
+          {{- $kept = $kept | append $t -}}
+        {{- end -}}
+      {{- end -}}
+      {{- $keywords = delimit $kept ", " -}}
+    {{- end -}}
+
     {{- /* Override EXIF with data file values where available */ -}}
     {{- with $meta.title -}}
-      {{- $title = . -}}
+      {{- $title = index . $lang -}}
+      {{- if not $title -}}{{- $title = index . "en" -}}{{- end -}}
     {{- end -}}
 
     {{- /* Fallback: derive a title from the filename when none is set,
@@ -255,46 +304,74 @@
     {{- $stemAll := strings.TrimPrefix "archive--" (strings.TrimSuffix (path.Ext $bare) $bare) -}}
     {{- $displayTitle := $title | default $stemAll -}}
 
-    {{- /* Alt text: data file > EXIF */ -}}
+    {{- /* Alt text: data file only. There used to be an image-alt.html fallback
+           onto the file's own XMP here, which served English to all three
+           languages and let a darktable re-export silently change what the site
+           said; the import moved those 281 values into the YAML and this branch
+           went with them. 60 photos have no alt text yet — that is an editorial
+           backlog, and an empty alt is a warning in the shortcode, not an error. */ -}}
     {{- $alt := "" -}}
     {{- with $meta.alt -}}
-      {{- $alt = . -}}
-    {{- else -}}
-      {{- $alt = partial "image-alt.html" $image -}}
+      {{- $alt = index . $lang -}}
+      {{- if not $alt -}}{{- $alt = index . "en" -}}{{- end -}}
     {{- end -}}
 
-    {{- /* License resolution: data file > EXIF copyright > error */ -}}
-    {{- $licenseText := "" -}}
+    {{- /* Description: the story, not the alt text. `alt` is the short account of
+           what is visible that a screen reader gets; `description` is the prose
+           the photo page prints. Falls back to alt so a photo with only an alt
+           still reads the way it did before the field existed. */ -}}
+    {{- $description := "" -}}
+    {{- with $meta.description -}}
+      {{- $description = index . $lang -}}
+      {{- if not $description -}}{{- $description = index . "en" -}}{{- end -}}
+    {{- end -}}
+    {{- if not $description -}}{{- $description = $alt -}}{{- end -}}
+
+    {{- /* License resolution: data file, or a build error. The value is a KEY
+           into data/licenseMap.yaml — the English display strings the entries used
+           to hold were rewritten by the one-time import
+           (docs/concepts/gallery-metadata-import.md), and the aliases that used to
+           resolve them left with it. The Exif.Copyright fallback went too: a
+           licence that lives only inside a JPEG is a licence a re-export can
+           change. Every one of the 648 entries carries a key, so a photo that
+           reaches this without one is new and genuinely unlicensed. */ -}}
+    {{- $licenseValue := "" -}}
     {{- with $meta.license -}}
-      {{- $licenseText = . -}}
+      {{- $licenseValue = . -}}
     {{- else -}}
-      {{- with $copyright -}}
-        {{- $licenseText = . -}}
+      {{- errorf "No license found for image %s — set `license:` in data/gallery.yaml" (path.Base $image.Name) -}}
+    {{- end -}}
+
+    {{- $licenseKey := "" -}}
+    {{- $licenseText := "" -}}
+    {{- $licenseUrl := "" -}}
+    {{- $licenseTerms := "" -}}
+    {{- /* Guarded on $licenseValue: errorf does not stop the build, so without it
+           a photo with no licence at all reported this second error too, naming a
+           key of "" and burying the one message that says what to do. */ -}}
+    {{- with $licenseValue -}}
+      {{- with index $licenseIndex (lower .) -}}
+        {{- $licenseKey = .key -}}
+        {{- $licenseText = .label -}}
+        {{- $licenseUrl = .url -}}
+        {{- $licenseTerms = .terms -}}
       {{- else -}}
-        {{- errorf "No license found for image %s — set it in data/gallery.yaml" (path.Base $image.Name) -}}
+        {{- errorf "License %q for image %s is not a key in data/licenseMap.yaml" $licenseValue (path.Base $image.Name) -}}
       {{- end -}}
     {{- end -}}
 
-    {{- $licenseUrl := "" -}}
-    {{- with index hugo.Data.licenseMap $licenseText -}}
-      {{- $licenseUrl = . -}}
-    {{- else -}}
-      {{- errorf "License text %q for image %s not found in hugo.Data.licenseMap" $licenseText (path.Base $image.Name) -}}
-    {{- end -}}
-
-    {{- /* Artist resolution: data file > EXIF > site author */ -}}
+    {{- /* Artist resolution: data file > site author. The Exif.Artist step that
+           sat between them read 287 files to learn the site author's own name,
+           which is config in git — see the import concept §2 for why those values
+           were not copied into the YAML instead. */ -}}
     {{- $resolvedArtist := "" -}}
     {{- with $meta.artist -}}
       {{- $resolvedArtist = . -}}
     {{- else -}}
-      {{- with $artist -}}
+      {{- with site.Params.author.name -}}
         {{- $resolvedArtist = . -}}
       {{- else -}}
-        {{- with site.Params.author.name -}}
-          {{- $resolvedArtist = . -}}
-        {{- else -}}
-          {{- errorf "No artist found for image %s and no site author configured" (path.Base $image.Name) -}}
-        {{- end -}}
+        {{- errorf "No artist found for image %s and no site author configured" (path.Base $image.Name) -}}
       {{- end -}}
     {{- end -}}
 
@@ -307,6 +384,7 @@
       "Title" $title
       "DisplayTitle" $displayTitle
       "Alt" $alt
+      "Description" $description
       "Date" $date
       "DateTaken" $dateTaken
       "Aperture" $aperture
@@ -318,8 +396,10 @@
       "Software" $software
       "Copyright" $licenseText
       "Artist" $resolvedArtist
+      "LicenseKey" $licenseKey
       "LicenseText" $licenseText
       "LicenseUrl" $licenseUrl
+      "LicenseTerms" $licenseTerms
       "ResolvedArtist" $resolvedArtist
       "Keywords" $keywords
       "Category" ($meta.category | default "")

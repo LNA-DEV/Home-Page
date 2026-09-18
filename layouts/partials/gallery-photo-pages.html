@@ -1,13 +1,18 @@
 {{- /*
   Content adapter: one page per gallery photo.
 
-  English only for now. The dex generates all three languages because it has
-  genuine per-language prose with an English fallback; a photo page has nothing
-  per-language except chrome, so three near-identical pages would be duplicate
-  surface with no reader benefit. The German and Swedish grids link across to the
-  English page. Turning the other two on later means nesting `alt` and `title` as
-  {en, de, sv} maps in data/gallery.yaml and adding the sibling _content files —
-  the slug is language-neutral, so no URL moves when that happens.
+  All three languages, always — the same call the dex makes. `title`, `alt` and
+  `description` are {en, de, sv} maps in data/gallery.yaml now, each falling back
+  to English, so a German page with English prose is a German page whose prose has
+  not been written yet, not a duplicate: Hugo links the three through
+  `translationKey`, head.html and sitemap.xml emit the hreflang cluster on their
+  own, and Google reads such a cluster as alternates. Generating a page only once
+  a translation exists would instead send a /de/ visitor to /en/ for most photos.
+
+  There is one adapter file per language because Hugo scopes an adapter to the
+  language of its filename — a bare _content.gotmpl produces English pages only.
+  The slug is language-neutral, so the three share a URL segment and no URL moved
+  when the other two were switched on.
 
   Every photo gets a page, archive included: only four of 648 carry no title, no
   alt, no species and no tags, which is far too few to justify a threshold.
@@ -27,12 +32,15 @@
          collect-images.html. */ -}}
   {{- $title := .DisplayTitle -}}
 
+  {{- /* The meta description and the search index want the story where there is
+         one and the alt text where there is not — which is exactly what
+         .Description resolves to (collect-images.html falls it back to .Alt). */ -}}
   {{- $page := dict
         "path" .Slug
         "kind" "page"
         "title" $title
-        "description" (or .Alt $title | plainify | truncate 160)
-        "content" (dict "mediaType" "text/markdown" "value" (.Alt | default ""))
+        "description" (or .Description $title | plainify | truncate 160)
+        "content" (dict "mediaType" "text/markdown" "value" (.Description | default ""))
         "aliases" (slice (printf "/gallery/photo/%s/" .Id))
         "params" (dict
           "theme" "gallery-photo"

@@ -114,22 +114,18 @@
   {{- end }}
 {{- end }}
 
-{{- /* Add gallery images from global resources */ -}}
-{{- $allGalleryImages := partialCached "gallery-images.html" . -}}
-{{- if $allGalleryImages -}}
-  {{- $metaAll := partialCached "gallery-meta.html" . -}}
-  {{- $lookup  := $metaAll.bySrc -}}
-  {{- range $image := $allGalleryImages -}}
-    {{- $meta := index $lookup (path.Base $image.Name) -}}
-    {{- if and $meta (ne ($meta.section | default "") "archive") -}}
-      {{- with $image.Meta -}}
-        {{- if gt .Date.Year 2000 -}}
-          {{- $imageLink := printf "%s#%s" $galleryGeneral.RelPermalink $meta.id -}}
-          {{- $item := dict "type" "photo" "title" (path.Base $image.Name) "date" .Date "permalink" $imageLink "page" $galleryGeneral "image" $image "description" "" -}}
-          {{- $activityItems = $activityItems | append $item -}}
-        {{- end -}}
-      {{- end -}}
-    {{- end -}}
+{{- /* Add gallery images. Through gallery-collected.html rather than the raw
+       resources: the item title is printed and used as the thumbnail's alt text,
+       and deriving it from path.Base gave every photo its filename — camera codes
+       included — in all three languages. .DisplayTitle is the resolved title, or
+       the filename stem where the photo has none. .DateTaken carries the same
+       "EXIF date, year > 2000" rule this loop used to apply by hand. */ -}}
+{{- $galleryCollected := partialCached "gallery-collected.html" . site.Language.Lang -}}
+{{- range $galleryCollected.all -}}
+  {{- if and (ne .Section "archive") .DateTaken -}}
+    {{- $imageLink := printf "%s#%s" $galleryGeneral.RelPermalink .Id -}}
+    {{- $item := dict "type" "photo" "title" .DisplayTitle "date" .Date "permalink" $imageLink "page" $galleryGeneral "image" .image "description" "" -}}
+    {{- $activityItems = $activityItems | append $item -}}
   {{- end -}}
 {{- end -}}
 

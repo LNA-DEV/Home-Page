@@ -117,7 +117,7 @@
   {{- with $alt }}<meta itemprop="description" content="{{ . }}" />{{ end }}
   {{- with $item.DateTaken }}<meta itemprop="dateCreated" content="{{ . }}" />{{ end }}
   {{- with $item.LicenseUrl }}<link itemprop="license" href="{{ . }}" />{{ end }}
-  {{- with site.Params.licensingPage }}<link itemprop="acquireLicensePage" href="{{ . | absURL }}" />{{ end }}
+  {{- with site.Params.licensingPage }}<link itemprop="acquireLicensePage" href="{{ . | absLangURL }}" />{{ end }}
   <span itemprop="creator" itemtype="https://schema.org/Person" itemscope>
     <meta itemprop="name" content="{{ $item.ResolvedArtist }}" />
   </span>

@@ -15,8 +15,10 @@
   Params:
     id        (required) UUID from data/gallery.yaml. Stable across renames — that
               is the point of addressing photos by id rather than filename.
-    alt       Overrides the alt text. The alt in data/gallery.yaml is English, so a
-              German or Swedish post will often want to pass its own.
+    alt       Overrides the alt text. data/gallery.yaml resolves `alt` into the
+              post's language with an English fallback, so this is now only needed
+              where that photo has no translation yet, or where the post wants
+              different wording from the gallery's.
     caption   Explicit caption text. Wins over showTitle.
     showTitle "true" to use the photo's title from data/gallery.yaml as the caption.
     showExif  "true" to append lens, focal length, aperture, shutter and ISO.

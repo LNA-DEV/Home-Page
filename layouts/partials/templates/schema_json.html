@@ -129,7 +129,7 @@
   "@context": "https://schema.org",
   "@type": "ImageObject",
   "name": {{ $.Title | plainify }},
-  {{- with .Alt }}
+  {{- with (or .Description .Alt) }}
   "description": {{ . }},
   {{- end }}
   "url": {{ $.Permalink | safeHTML }},
@@ -148,7 +148,7 @@
   "license": {{ . }},
   {{- end }}
   {{- with site.Params.licensingPage }}
-  "acquireLicensePage": {{ . | absURL }},
+  "acquireLicensePage": {{ . | absLangURL }},
   {{- end }}
   "creditText": {{ .ResolvedArtist }},
   "copyrightNotice": {{ printf "© %s" .ResolvedArtist }},

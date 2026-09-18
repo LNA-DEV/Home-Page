@@ -5,6 +5,104 @@ detailed project guide is **`CLAUDE.md`** — read it first for build/deploy,
 the gallery system, and overall architecture. This file documents workflows
 that are worth spelling out step by step.
 
+## Adding gallery photos, and what happens to them on deploy
+
+Two scripts, at opposite ends of a photo's life. Both are standard-library only
+(no `pip install`) and both edit `data/gallery.yaml` as text, so lines that are
+not part of the change stay byte-identical. Neither ever writes to the photo
+store — that folder is darktable's export target and a Nextcloud share.
+
+### `scripts/sync-gallery.py` — the photo enters the data file
+
+Run it after exporting new photos into the photo store (the gallery mount
+`source` in `config/_default/module.yaml`; the script reads that file, so the two
+never drift):
+
+```bash
+python3 scripts/sync-gallery.py --dry-run   # look first
+python3 scripts/sync-gallery.py
+```
+
+- A `src:` in the YAML with no file on disk is an **error**, not a fix: it usually
+  means a rename to make by hand. The script reports every one and writes nothing.
+- A file on disk with no entry gets a stub appended, with a fresh UUID `id`, and
+  `title` / `alt` / `description` / `license` / `artist` pre-filled from what
+  darktable wrote into the JPEG (`scripts/gallery_xmp.py`, one exiftool process for
+  all new files; without exiftool the fields are simply left empty).
+- That file read happens **once, here**. Hugo does not look at those tags at build
+  time, so a later re-export cannot silently change what the site says about a
+  photo — the point of `docs/concepts/gallery-metadata-single-source.md`.
+- The prose fields are written as `{en: …}` maps, which is the shape everything
+  reads; adding a German title later is one more indented line. `license` is
+  written as a **key** (`cc-by-sa-4.0`), mapped from darktable's display string
+  through `data/licenseMap.yaml`.
+
+Left for a human: `category` (the stub says `others`), `section`, `project`,
+`portfolio`, `species`, and the German and Swedish prose.
+
+### `scripts/gallery-embed-metadata.py` — the photo leaves for the web
+
+The post-build pass that writes the metadata into the files the site serves and
+takes the camera's private data back out of the published originals. `deploy.sh`
+runs it after each of its two builds; run it by hand only to inspect the result:
+
+```bash
+hugo
+python3 scripts/gallery-embed-metadata.py --dry-run    # resolve and report, write nothing
+python3 scripts/gallery-embed-metadata.py              # ~3m40s for 4,161 files
+python3 scripts/gallery-embed-metadata.py --check      # every served file carries its UUID
+exiftool "public/images/gallery/<some photo>.JPG"      # see what a visitor downloads
+```
+
+- It reads `public/<lang>/gallery-metadata.json`, which Hugo renders — so **run
+  `hugo` first**, and re-run it after any change to the gallery data or templates.
+- It is idempotent: a second run leaves every file byte-identical.
+- It aborts before writing anything if a published file maps to no photo, or if a
+  source original is missing from the photo store.
+- `--check` is what stands between an untagged file and the live site. If it fails,
+  do not deploy — rerun the embedding step.
+
+Do **not** run `./deploy.sh` after either script. That is a separate, explicitly
+authorised step.
+
+### `scripts/gallery-import-xmp.py` — done, do not re-run
+
+The one-time migration that made "the YAML is the truth" literally true. It is
+kept for the record; **it has run and there is nothing left for it to do.** Before
+it, 282 photos had their licence, 281 their alt text and 21 their title only inside
+the exported JPEG, and the build read them back through fallbacks — so a darktable
+re-export could change what the site said about a photo with no diff in git.
+
+What it did, in one pass over `data/gallery.yaml` (`docs/concepts/gallery-metadata-import.md`):
+
+| | |
+|---|---:|
+| licence display strings rewritten to keys | 366 |
+| `license` filled from the file | 282 |
+| `alt` filled from the file | 281 |
+| `title` filled from the file | 22 |
+| `description` added from the file | 7 |
+
+`artist` was deliberately **not** imported: all 287 file values are `Lukas Nagel`,
+which is `site.Params.author.name` and already the fallback (`--artist` imports
+them if uniformity is ever preferred). Tags were not imported either — they stay
+darktable-owned and are read live at build time, by design.
+
+It removed the fallbacks with it, so from here on:
+
+- A photo with no `license:` in `data/gallery.yaml` is a **hard build error** naming
+  the file. There is no `Exif.Copyright` to fall back to any more.
+- `license:` must be a **key** of `data/licenseMap.yaml`. The old display strings
+  were registered there as `aliases`; those lists are now empty.
+- `alt` comes from the YAML alone. 60 photos still have none anywhere — that is an
+  editorial backlog, not a defect, and the script lists them.
+- `layouts/partials/image-alt.html` still exists, but only `sitemap.xml` uses it,
+  for page-bundle images that are not gallery photos.
+
+Running it again prints `Nothing to import` and changes nothing, which is the
+intended way to confirm the state. It refuses to run at all if `data/gallery.yaml`
+and the photo store are out of step, or if any licence value is unknown.
+
 ## Adding books to the reading list
 
 The reading list lives in `data/reading.yaml` (one entry per book) with cover

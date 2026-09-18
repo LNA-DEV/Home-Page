@@ -1,12 +1,19 @@
+{{- /* The home page's 8-photo strip. The alt text comes from the collected item,
+       not from image-alt.html: that partial reads only the image's own XMP/EXIF,
+       so this strip — on the most-visited page of the site — ignored `alt:` in
+       data/gallery.yaml entirely and printed the English EXIF caption in all
+       three languages. */ -}}
 {{- $metaAll := partialCached "gallery-meta.html" . -}}
 {{- $lookup  := $metaAll.bySrc -}}
+{{- $collected := partialCached "gallery-collected.html" . site.Language.Lang -}}
 {{- range . -}}
 {{- $meta := index $lookup (path.Base .Name) -}}
 {{- $id := "" -}}{{- with $meta }}{{ $id = .id }}{{ end -}}
 {{- $galleryPage := site.GetPage "/gallery/general" -}}
 {{- $link := printf "%s#%s" $galleryPage.Permalink $id -}}
 {{- $image := .Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
-{{- $alt := partial "image-alt.html" . }}
+{{- $alt := "" -}}
+{{- with index $collected.byId $id }}{{ $alt = .Alt }}{{ end -}}
 <div class="responsive">
   <div class="gallery">
     <a href="{{ $link }}">

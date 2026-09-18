@@ -60,55 +60,42 @@
     {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{- end -}}
 
-    {{- $allImages := partialCached "gallery-images.html" . -}}
-    {{- if $allImages -}}
-    {{- $metaAll := partialCached "gallery-meta.html" . -}}
-    {{- $lookup  := $metaAll.bySrc -}}
-    {{- range $allImages -}}
-    {{- $meta := index $lookup (path.Base .Name) -}}
-    {{- if and $meta (ne ($meta.section | default "") "archive") -}}
+    {{- /* Photos come through gallery-collected.html rather than being rebuilt
+           from gallery-meta + EXIF by hand, which is what this block used to do:
+           the title was the raw filename, the alt was the English YAML value on
+           every language's feed, and the categories were a second, unfiltered
+           copy of the keyword ladder in collect-images.html. All three are
+           resolved there now, per language and with the tag blacklist applied.
+
+           `link` and `guid` are deliberately untouched — the guid is the photo's
+           UUID and the link its anchor on the gallery page, and both have to stay
+           stable or every reader re-shows the whole feed. */ -}}
+    {{- $c := partialCached "gallery-collected.html" . site.Language.Lang -}}
+    {{- range $c.all -}}
+    {{- if ne .Section "archive" -}}
 
     <item>
-      <title>{{ path.Base .Name }}</title>
-      <link>{{ $.Permalink }}#{{ $meta.id }}</link>
-      {{- with .Meta }}{{- with .Date }}
+      <title>{{ .DisplayTitle }}</title>
+      <link>{{ $.Permalink }}#{{ .Id }}</link>
+      {{- with .image.Meta }}{{- with .Date }}
       <pubDate>{{ .Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
       {{- end }}{{- end }}
       {{- with $authorEmail }}<author>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</author>{{ end }}
-      <guid isPermaLink="false">{{ $meta.id }}</guid>
-      {{ $full := .Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) }}
+      <guid isPermaLink="false">{{ .Id }}</guid>
+      {{ $full := .image.Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) }}
       <media:content url="{{ $full.Permalink }}" type="image/jpeg"/>
       <description>
-        <img src="{{ $full.Permalink }}" alt="{{ with $meta.alt }}{{ . }}{{ else }}{{ partial "image-alt.html" . }}{{ end }}"/>
-        {{- if ne .Title (path.Base .Name) -}}
-        <p> {{ .Title }} </p>
-        {{ end }}
-      </description>
-      {{ range $meta.tags }}
-      <category>{{ . }}</category>
-      {{- end }}
-      {{- if not $meta.tags }}
-      {{- $keywords := "" }}
-      {{- with .Meta }}
-      {{- with .Exif }}
-      {{- with .subject }}{{ $keywords = . }}{{ end }}
-      {{- if not $keywords }}{{ with .Subject }}{{ $keywords = . }}{{ end }}{{ end }}
-      {{- if not $keywords }}{{ with .Keywords }}{{ $keywords = . }}{{ end }}{{ end }}
-      {{- end }}
-      {{- if not $keywords }}{{ with .XMP }}{{ with .Subject }}{{ $keywords = delimit . ", " }}{{ end }}{{ end }}{{ end }}
-      {{- end }}
-      {{- with $keywords }}
-        {{- range split . ", " }}
-          {{- if . }}
-        <category>{{ . }}</category>
-          {{- end }}
+        <img src="{{ $full.Permalink }}" alt="{{ .Alt }}"/>
+        {{- if and .Description (ne .Description .Alt) }}
+        <p>{{ .Description }}</p>
         {{- end }}
-      {{- end }}
+      </description>
+      {{- range .Tags }}
+      <category>{{ . }}</category>
       {{- end }}
     </item>
     {{- end -}}
     {{- end -}}
-    {{- end }}
     
   </channel>
 </rss>

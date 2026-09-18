@@ -13,6 +13,14 @@
   never use `in` on the raw field, which would match a substring ("eagles" against
   "eagles-2026") instead of a whole slug.
 
+  `.title`, `.alt`, `.description` — normalised IN PLACE from string-or-map to a
+  `{en, de, sv}` map, so a reader only ever has to handle one shape. A bare string
+  means English; `title: Foo` and `title: {en: Foo}` are the same entry. Nothing
+  is resolved here: this partial is cached WITHOUT a language key (head.html calls
+  it that way, and the data file is language-neutral), so the language pick has to
+  happen in collect-images.html, which is not cached. Never print one of the three
+  directly — you would get a Go map literal.
+
   `.slug` — the per-photo page URL segment, `entry.slug || stem(src)`:
 
       slug = urlize( entry.slug  ||  stem(entry.src) )
@@ -85,7 +93,23 @@
   {{- end -}}
   {{- $seenSlugs = merge $seenSlugs (dict $slug .src) -}}
 
+  {{- /* Prose fields: string-or-map in, map out. `.` is rebound by the inner
+         range and `$` is the partial's page context, so the entry is captured
+         first. In `merge a b` the right-hand map wins, which is what replaces the
+         raw string with the normalised map below. */ -}}
+  {{- $entryRaw := . -}}
+  {{- $prose := dict -}}
+  {{- range $key := (slice "title" "alt" "description") -}}
+    {{- $val := index $entryRaw $key -}}
+    {{- if reflect.IsMap $val -}}
+      {{- $prose = merge $prose (dict $key $val) -}}
+    {{- else -}}
+      {{- $prose = merge $prose (dict $key (dict "en" ($val | default ""))) -}}
+    {{- end -}}
+  {{- end -}}
+
   {{- $entry := merge . (dict "projects" $projects "slug" $slug) -}}
+  {{- $entry = merge $entry $prose -}}
   {{- $bySrc = merge $bySrc (dict .src $entry) -}}
   {{- $byId  = merge $byId  (dict .id  $entry) -}}
 {{- end -}}
