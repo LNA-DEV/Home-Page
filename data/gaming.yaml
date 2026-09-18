@@ -586,9 +586,9 @@
 - title: "The Witcher 3: Wild Hunt - Complete Edition"
   platform: steam
   appid: 292030
-  playtimeMinutes: 6182
-  lastPlayed: "2026-09-12"
-  achievementsUnlocked: 33
+  playtimeMinutes: 6465
+  lastPlayed: "2026-09-18"
+  achievementsUnlocked: 36
   achievementsTotal: 78
   cover: "images/games/covers/The Witcher 3: Wild Hunt - Complete Edition.jpg"
   link: "https://store.steampowered.com/app/292030/"
@@ -990,9 +990,9 @@
 - title: Core Keeper
   platform: steam
   appid: 1621690
-  playtimeMinutes: 1322
-  lastPlayed: "2026-09-04"
-  achievementsUnlocked: 10
+  playtimeMinutes: 1487
+  lastPlayed: "2026-09-18"
+  achievementsUnlocked: 11
   achievementsTotal: 55
   cover: images/games/covers/Core Keeper.jpg
   link: "https://store.steampowered.com/app/1621690/"
