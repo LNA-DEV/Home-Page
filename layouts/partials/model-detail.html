@@ -1,0 +1,95 @@
+{{- /*
+  model-detail.html
+  One model's page: hero, name, bio, links, the rights note, and their photos.
+
+  The photo strip is the ordinary `gallery.html` partial driven by the page's
+  `filter_model` param, so PhotoSwipe, the like counters, the EXIF captions and
+  the schema.org ImageObject markup all come for free — the same move
+  dex-detail.html makes for a species.
+
+  The links carry rel="noopener" and NOTHING else. PaperMod's social_icons.html
+  emits rel="me" because those are the site owner's own profiles and rel=me is an
+  identity claim about the author; this page links to somebody else, so it must
+  not make that claim — which is why that partial is not reused here (it also
+  iterates site.Params.socialIcons rather than an argument).
+*/ -}}
+{{- $index := partialCached "model-index.html" . site.Language.Lang -}}
+{{- $slug := .Params.model_slug -}}
+{{- $entry := index $index.bySlug $slug -}}
+{{- if not $entry -}}
+  {{- errorf "model: no record %q in data/models.yaml, or it renders no page (page %s)" $slug .RelPermalink -}}
+{{- end -}}
+{{- $record := $entry.record -}}
+{{- $name := $entry.name -}}
+{{- $modelsPage := site.GetPage "/gallery/models" -}}
+
+{{- /* First and latest capture dates, for the "photographed since" line. */ -}}
+{{- $dates := slice -}}
+{{- range $entry.photos -}}
+  {{- with .DateTaken }}{{ $dates = $dates | append . }}{{ end -}}
+{{- end -}}
+{{- $dates = sort $dates -}}
+
+<article class="model-single">
+
+  <nav class="gallery-breadcrumb" aria-label="Breadcrumb">
+    {{- with site.GetPage "/gallery" }}
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <span>/</span>
+    {{- end }}
+    {{- with $modelsPage }}
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <span>/</span>
+    {{- end }}
+    <span>{{ $name }}</span>
+  </nav>
+
+  <header class="model-hero">
+    <div class="model-hero__media">
+      {{- with $entry.cover -}}
+        {{- $img := .image.Filter (slice images.AutoOrient (images.Process "fill 900x900 Center")) -}}
+        <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}"
+             alt="{{ .Alt | default $name }}">
+      {{- end -}}
+    </div>
+
+    <div class="model-hero__info">
+      <h1 class="model-hero__name">{{ $name }}</h1>
+      <p class="model-hero__meta">
+        {{ i18n "photoCount" $entry.count }}
+        {{- with $dates }} · {{ i18n "models_first_photographed" }} {{ index . 0 }}{{ end }}
+      </p>
+
+      {{- /* The bio is .Content, i.e. the per-language bio the adapter put in the
+             page body. Renders nothing at all when empty — a placeholder line
+             about a person is worse than no line. */ -}}
+      {{- with .Content }}
+      <div class="model-hero__bio">{{ . }}</div>
+      {{- end }}
+
+      {{- with $record.links }}
+      <div class="model-links">
+        {{- range . }}
+        {{- /* NO safeURL, unlike social_icons.html. That partial serves the site
+               owner's own config; this one serves whatever a third party handed the
+               author to put on their page, and safeURL switches Hugo's scheme filter
+               OFF. Without it a javascript:/data: URL renders as #ZgotmplZ — visible
+               and debuggable — instead of executing. An unusual but legitimate
+               scheme would be caught the same way, which is the better failure. */ -}}
+        <a href="{{ trim .url " " }}" rel="noopener" target="_blank"
+           title="{{ (.title | default .name) | title }}">
+          {{ partial "svg.html" . }}
+          <span class="visually-hidden">{{ (.title | default .name) | title }}</span>
+        </a>
+        {{- end }}
+      </div>
+      {{- end }}
+    </div>
+  </header>
+
+  <section class="model-photos">
+    <h2 class="model-section-title">{{ i18n "models_photos_of" (dict "name" $name) }}</h2>
+    {{- partial "gallery.html" . }}
+  </section>
+
+</article>

@@ -45,6 +45,14 @@
 {{- with $photo.Species -}}
   {{- $dex = index (partialCached "dex-lookup.html" (dict "lang" $lang) $lang) (lower .) -}}
 {{- end -}}
+{{- /* The people in the photo, resolved to {name, url}. Only records that are
+       published resolve at all — a `hidden` one yields nothing, and nothing is
+       exactly what this page then prints about them. */ -}}
+{{- $modelLookup := partialCached "model-lookup.html" (dict "lang" $lang) $lang -}}
+{{- $models := slice -}}
+{{- range $photo.Models -}}
+  {{- with index $modelLookup . -}}{{- $models = $models | append . -}}{{- end -}}
+{{- end -}}
 
 <article class="photo-single" itemscope itemtype="https://schema.org/ImageObject">
 
@@ -98,6 +106,9 @@
           <span class="caption-species" data-scientific="{{ . }}"
             {{- with $dex }} data-dex-url="{{ .url }}"{{ end }}>{{ with $dex }}{{ .name }}{{ else }}{{ . }}{{ end }}</span>
         {{- end -}}
+        {{- range $models -}}
+          <span class="caption-model" data-field="model" data-model-url="{{ .url }}">{{ .name }}</span>
+        {{- end -}}
         {{- with $photo.Copyright }}<span class="caption-copyright">{{ . }}</span>{{ end -}}
         {{- with $photo.Artist }}<span class="caption-artist">{{ . }}</span>{{ end -}}
         {{- with $photo.Keywords }}<span class="caption-keywords">{{ . }}</span>{{ end -}}
@@ -123,7 +134,7 @@
   <p class="photo-description" itemprop="description">{{ . }}</p>
   {{- end }}
 
-  {{ partial "photo-meta.html" (dict "photo" $photo "permalink" (printf "%s%s/" $base $photo.Id)) }}
+  {{ partial "photo-meta.html" (dict "photo" $photo "models" $models "permalink" (printf "%s%s/" $base $photo.Id)) }}
 
   {{- $projects := slice -}}
   {{- $metaAll := partialCached "gallery-meta.html" . -}}
@@ -147,6 +158,11 @@
         {{- end }}
       {{- end }}
       {{- with $dex }}<li><a href="{{ .url }}">{{ .name }}</a></li>{{ end }}
+      {{- /* Unlisted model pages ARE linked from here, unlike unlisted albums
+             above: `unlisted` means "not in a listing and not in the index", not
+             "unreachable" — and the photo that shows the person is the one place
+             the link belongs. A `hidden` record never reaches $models. */ -}}
+      {{- range $models }}<li><a href="{{ .url }}">{{ .name }}</a></li>{{ end }}
     </ul>
   </div>
 

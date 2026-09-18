@@ -113,6 +113,57 @@
   }
 }
 </script>
+{{- else if (eq .Params.Theme "model") }}
+{{- /* ProfilePage with mainEntity: Person is the schema.org shape for exactly
+       this page. Without a branch here it falls through to the BlogPosting one
+       at the bottom, which would claim the site owner as `author` of somebody
+       else's bio and stamp datePublished 0001-01-01 on it — the same bug the dex
+       and the photo pages each had to fix.
+
+       Only what the page already shows: the name, the hero image and the links
+       the person gave. `sameAs` is the honest field for those links, and it is
+       the reason the page itself uses rel="noopener" and never rel="me" — the
+       claim belongs in the site's structured data about a Person, not in a link
+       relation that asserts the SITE AUTHOR owns those profiles. */ -}}
+{{- $index := partialCached "model-index.html" . site.Language.Lang -}}
+{{- with index $index.bySlug .Params.model_slug -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": {{ $.Permalink | safeHTML }},
+  "inLanguage": {{ $.Language.Lang | default "en" }},
+  "mainEntity": {
+    "@type": "Person",
+    "name": {{ .name }}
+    {{- with .cover }},
+    {{- $img := .image.Filter (slice images.AutoOrient (images.Process "fill 900x900 Center")) }}
+    "image": {{ $img.Permalink | safeHTML }}
+    {{- end }}
+    {{- with .record.links }},
+    "sameAs": [{{ range $i, $l := . }}{{ if $i }}, {{ end }}{{ trim $l.url " " | safeURL }}{{ end }}]
+    {{- end }}
+  },
+  "isPartOf": {
+    "@type": "CollectionPage",
+    {{- with site.GetPage "/gallery/models" }}
+    "name": {{ .Title }},
+    "url": {{ .Permalink | safeHTML }}
+    {{- else }}
+    "name": {{ i18n "gallery_models" }}
+    {{- end }}
+  },
+  "publisher": {
+    "@type": "{{- ( site.Params.schema.publisherType | default "Organization") | title -}}",
+    "name": {{ site.Title }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ site.Params.assets.favicon | default "favicon.ico" | absURL }}
+    }
+  }
+}
+</script>
+{{- end }}
 {{- else if (eq .Params.Theme "gallery-photo") }}
 {{- /* A per-photo page IS an image, so it describes itself as one rather than
        falling through to the BlogPosting branch below — which would have claimed
@@ -143,6 +194,17 @@
   {{- end }}
   {{- with .Tags }}
   "keywords": [{{ range $i, $t := . }}{{ if $i }}, {{ end }}{{ $t }}{{ end }}],
+  {{- end }}
+  {{- /* Only people the page already names visibly — model-lookup.html resolves
+         nothing for a `hidden` record, and structured data must not say more
+         about a person than the rendered page does. */ -}}
+  {{- $ml := partialCached "model-lookup.html" (dict "lang" site.Language.Lang) site.Language.Lang -}}
+  {{- $people := slice -}}
+  {{- range .Models -}}
+    {{- with index $ml . -}}{{- $people = $people | append . -}}{{- end -}}
+  {{- end -}}
+  {{- with $people }}
+  "about": [{{ range $i, $p := . }}{{ if $i }}, {{ end }}{"@type": "Person", "name": {{ $p.name }}, "url": {{ $p.url | absURL | safeHTML }}}{{ end }}],
   {{- end }}
   {{- with .LicenseUrl }}
   "license": {{ . }},

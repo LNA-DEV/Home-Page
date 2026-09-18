@@ -412,3 +412,29 @@
   translation: "Öppna fotosidan"
 - id: photo_view_in_gallery
   translation: "Visa i galleriet"
+
+# Gallery counts — saknades tidigare, så svenska sidor föll tillbaka på engelska
+- id: photoCount
+  translation:
+    one: "1 foto"
+    other: "{{ . }} foton"
+- id: albumCount
+  translation:
+    one: "{{ .photoCount }} i {{ .count }} album"
+    other: "{{ .photoCount }} i {{ .count }} album"
+
+# Models — personerna framför linsen
+- id: gallery_models
+  translation: "Modeller"
+- id: modelLabel
+  translation: "Modell"
+- id: modelsLabel
+  translation: "Modeller"
+- id: models_first_photographed
+  translation: "först fotograferad"
+- id: models_photos_of
+  translation: "Bilder på {{ .name }}"
+- id: models_description_fallback
+  translation: "Bilder på {{ .name }}"
+- id: models_empty
+  translation: "Inga modellsidor än."

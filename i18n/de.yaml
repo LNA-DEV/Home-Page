@@ -439,3 +439,19 @@
   translation: "Fotoseite öffnen"
 - id: photo_view_in_gallery
   translation: "In der Galerie ansehen"
+
+# Models — die Menschen vor der Linse
+- id: gallery_models
+  translation: "Models"
+- id: modelLabel
+  translation: "Model"
+- id: modelsLabel
+  translation: "Models"
+- id: models_first_photographed
+  translation: "zuerst fotografiert"
+- id: models_photos_of
+  translation: "Fotos von {{ .name }}"
+- id: models_description_fallback
+  translation: "Fotos von {{ .name }}"
+- id: models_empty
+  translation: "Noch keine Model-Seiten."

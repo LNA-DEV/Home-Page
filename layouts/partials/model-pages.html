@@ -1,0 +1,67 @@
+{{- /*
+  Content adapter: one page per model, per language.
+
+  All three languages, unlike the per-photo pages and like the dex. A photo page
+  is English-only because it had no per-language prose to justify three copies; a
+  model page has the bio, which the author writes himself and can translate, and
+  dex-text.html falls an untranslated one back to English so the page still reads.
+
+  There is one adapter FILE per language (content/gallery/models/_content.*.gotmpl)
+  because Hugo scopes an adapter to the language of its filename — a bare
+  _content.gotmpl produces English pages only. The slug is language-neutral, so
+  the three share a URL segment and Hugo links them through translationKey.
+
+  Only records that render a page are emitted: `hidden` ones and records with no
+  non-archive photo are already absent from model-index.html's .all.
+
+  `build` is a TOP-LEVEL key of AddPage, not a param — the same shape the
+  Nicklheim album sets in its front matter, and the same rule `aliases` follows on
+  the photo pages. `list: never` is what keeps an unlisted model out of the
+  section's .RegularPages (and so out of the grid and the section RSS) and out of
+  sitemap.xml, while `render: always` keeps the page reachable by URL.
+*/ -}}
+
+{{- $lang := .Site.Language.Lang -}}
+{{- $index := partialCached "model-index.html" . $lang -}}
+
+{{- range $index.all -}}
+  {{- $record := .record -}}
+  {{- $unlisted := ne .visibility "public" -}}
+  {{- /* string-or-map in, one shape out — data/models.yaml documents `bio` as
+         either an {en, de, sv} map or a bare string meaning English, the same
+         courtesy gallery-meta.html extends to title/alt/description. dex-text.html
+         indexes the field, and `index "some string" "de"` is a build ERROR, not an
+         empty result, so the bare string has to be wrapped before it gets there. */ -}}
+  {{- $bioField := $record.bio | default "" -}}
+  {{- if not (reflect.IsMap $bioField) -}}
+    {{- $bioField = dict "en" (printf "%v" $bioField) -}}
+  {{- end -}}
+  {{- $bio := partial "dex-text.html" (dict "field" $bioField "lang" $lang) -}}
+
+  {{- /* The meta description collapses whitespace before truncating. A `bio: |`
+         block scalar keeps its newlines, which otherwise put a raw three-line
+         string inside <meta name="description">. No markdownify: a content adapter
+         runs before the site is fully initialised and calling it there is a build
+         error — plainify over markdown source is what the photo pages do too. */ -}}
+
+  {{- $page := dict
+        "path" .slug
+        "kind" "page"
+        "title" .name
+        "description" (or ($bio | plainify | replaceRE `\s+` " " | strings.TrimSpace | truncate 160) (i18n "models_description_fallback" (dict "name" .name)))
+        "content" (dict "mediaType" "text/markdown" "value" $bio)
+        "build" (dict "list" (cond $unlisted "never" "always") "render" "always")
+        "params" (dict
+          "theme" "model"
+          "model_slug" .slug
+          "filter_model" .slug
+          "translationKey" (printf "model-%s" .slug)
+          "robotsNoIndex" $unlisted
+          "searchHidden" $unlisted
+          "hideMeta" true
+          "sort_by" "Date"
+          "sort_order" "desc"
+        )
+      -}}
+  {{- $.AddPage $page -}}
+{{- end -}}

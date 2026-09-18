@@ -69,6 +69,12 @@
     {{- if not $dexImg }}{{ $dexImg = index $allImages 0 }}{{ end -}}
     {{- $dexThumb := $dexImg.Filter (slice images.AutoOrient (images.Process "fill 600x400")) -}}
 
+    {{- /* NO Models card here, deliberately. /gallery/models/ is reachable from the
+           photos that show a person and through the site search, and that is as
+           much promotion as a page about someone else's face should get from the
+           gallery's front door. If it is ever linked from here, the card has to
+           stay conditional on model-index.html having a `listed` record — the
+           section is built from data/models.yaml and can legitimately be empty. */ -}}
     <a href="{{ .RelPermalink }}projects/" class="gallery-nav-card" style="background-image: url('{{ $projectThumb.RelPermalink }}')">
       <span>{{ i18n "gallery_projects" }}</span>
     </a>
@@ -96,6 +102,33 @@
 </header>
 
 {{- partial "dex-overview.html" . }}
+
+{{- else if eq .Params.Theme "models-home" }}
+
+<header class="page-header gallery-page-header">
+  {{- partial "gallery-breadcrumb.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}
+  <div class="post-description">{{ . }}</div>
+  {{- end }}
+</header>
+
+{{- /* .listed, not .all: an `unlisted` record has a page and is linked from its
+       photos, but must not appear in a grid — that is the whole difference
+       between `unlisted` and `public`. Hugo's own `build: {list: never}` already
+       keeps it out of .RegularPages, so this is belt and braces on the one view
+       that is built from the data rather than from the page list. */ -}}
+{{- $index := partialCached "model-index.html" . site.Language.Lang }}
+{{- $base := .RelPermalink }}
+{{- with $index.listed }}
+<div class="model-grid">
+  {{- range . }}
+    {{- partial "model-card.html" (dict "entry" . "base" $base) }}
+  {{- end }}
+</div>
+{{- else }}
+<p class="model-empty">{{ i18n "models_empty" }}</p>
+{{- end }}
 
 {{- else if eq .Params.Theme "gallery-general-home" }}
 

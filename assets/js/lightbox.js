@@ -289,6 +289,13 @@ if (gallery) {
           const species = speciesEl?.textContent || "";
           const speciesUrl = speciesEl?.dataset.dexUrl || "";
           const speciesSci = speciesEl?.dataset.scientific || "";
+          // One span per person in the photo. The template emits a span only for
+          // a model whose page is published, so an empty list here means "say
+          // nothing about who is in this photo" — never fall back to a slug.
+          const models = Array.from(captionEl.querySelectorAll(".caption-model")).map((el) => ({
+            name: el.textContent || "",
+            url: el.dataset.modelUrl || "",
+          })).filter((m) => m.name);
 
           // Create or get existing popup
           let popup = document.querySelector(".pswp-info-popup");
@@ -322,7 +329,7 @@ if (gallery) {
             content += `<h3 class="pswp-info-title">${title}</h3>`;
           }
 
-          if (exifItems.length === 0 && gearItems.length === 0 && !dateTaken && !copyright && !artist && !keywords && !species && !software) {
+          if (exifItems.length === 0 && gearItems.length === 0 && !dateTaken && !copyright && !artist && !keywords && !species && !software && models.length === 0) {
             content += '<p class="pswp-info-empty">No data available</p>';
           }
 
@@ -338,6 +345,20 @@ if (gallery) {
                 ? ` <em class="pswp-info-species-sci">${escapeHtml(speciesSci)}</em>`
                 : "";
             content += `<div class="pswp-info-section"><h4>${escapeHtml(params.speciesLabel || "Species")}</h4><p class="pswp-info-species">${label}${sci}</p></div>`;
+          }
+
+          if (models.length > 0) {
+            const heading = models.length > 1
+              ? params.modelsLabel || "Models"
+              : params.modelLabel || "Model";
+            const names = models
+              .map((m) =>
+                m.url
+                  ? `<a class="pswp-info-model-link" href="${escapeHtml(m.url)}">${escapeHtml(m.name)}</a>`
+                  : escapeHtml(m.name),
+              )
+              .join(", ");
+            content += `<div class="pswp-info-section"><h4>${escapeHtml(heading)}</h4><p class="pswp-info-model">${names}</p></div>`;
           }
 
           if (exifItems.length > 0) {

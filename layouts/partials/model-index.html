@@ -1,0 +1,135 @@
+{{- /*
+  model-index.html
+  The single join between data/models.yaml and the gallery — the dex's
+  dex-index.html with the nouns swapped. Returns:
+
+    .all      slice of entries, records with photos first, then by name
+    .bySlug   the same entries keyed by model slug
+    .listed   the subset that belongs in the /gallery/models/ grid
+    .total    number of records that produce a page
+
+  Each entry is a dict:
+
+    .slug        the URL segment and the value gallery.yaml joins on
+    .name        display name, straight off the record — a name is not translated
+    .record      the raw data/models.yaml record (bio, links, consent, cover…)
+    .visibility  public | unlisted | hidden, validated in gallery-meta.html
+    .photos      collect-images items showing this person, portfolio first then newest
+    .count       len .photos
+    .cover       the photo for the hero / card, nil when there are none
+    .hasPage     renders a page: not hidden, and at least one non-archive photo
+    .listed      appears in the grid and the sitemap: public, and has photos
+
+  ARCHIVE PHOTOS DO NOT COUNT here, unlike the dex. "Have I photographed this
+  species" is a question about the whole body of work, so the dex counts retired
+  shots; a person's page is a page that is currently published, and the archive is
+  where retired shots go. A record whose photos are all archived therefore renders
+  no page at all.
+
+  Reads gallery-collected.html rather than calling collect-images itself: that
+  partial is already cached and already carries every photo with its EXIF
+  resolved, so the join costs one walk over a list in memory and no image
+  processing.
+
+  Cache the key on the language, like gallery-collected.html — the entries embed
+  collect-images items, whose prose and licence labels are language-resolved:
+
+    {{ partialCached "model-index.html" . site.Language.Lang }}
+*/ -}}
+
+{{- $c := partialCached "gallery-collected.html" . site.Language.Lang -}}
+
+{{- /* slug -> photos, in one pass over the gallery. Archive photos are skipped
+       here rather than filtered per record. */ -}}
+{{- $byModel := newScratch -}}
+{{- range $image := $c.all -}}
+  {{- if ne $image.Section "archive" -}}
+    {{- range $slug := $image.Models -}}
+      {{- $byModel.Add $slug (slice $image) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $entries := slice -}}
+{{- $listed := slice -}}
+
+{{- range $record := (hugo.Data.models.models | default slice) -}}
+  {{- $slug := $record.slug -}}
+  {{- $visibility := $record.visibility -}}
+  {{- $photos := $byModel.Get $slug | default slice -}}
+
+  {{- /* Portfolio picks first, newest first within each band — the same ordering
+         rule the dex uses for a species' photos, minus the archive band. */ -}}
+  {{- $portfolio := slice -}}
+  {{- $rest := slice -}}
+  {{- range $photos -}}
+    {{- if .Portfolio -}}
+      {{- $portfolio = $portfolio | append . -}}
+    {{- else -}}
+      {{- $rest = $rest | append . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $ordered := slice -}}
+  {{- with $portfolio }}{{ $ordered = $ordered | append (sort . "Date" "desc") }}{{ end -}}
+  {{- with $rest }}{{ $ordered = $ordered | append (sort . "Date" "desc") }}{{ end -}}
+
+  {{- /* `cover:` names a photo by uuid. It is honoured even when that photo is
+         not in $ordered — an archived or differently-tagged shot is a legitimate
+         portrait to lead with — but a uuid that resolves to nothing is a typo and
+         should say so rather than silently falling back. */ -}}
+  {{- $cover := "" -}}
+  {{- with $record.cover -}}
+    {{- $cover = index $c.byId . -}}
+    {{- if not $cover -}}
+      {{- errorf "data/models.yaml: model %q has cover %q, which is not a gallery photo id" $slug . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if and (not $cover) $ordered -}}
+    {{- $cover = index $ordered 0 -}}
+  {{- end -}}
+
+  {{- /* ALLOWLIST, never `ne "hidden"`. gallery-meta.html already rejects a
+         visibility that is not one of the three — but errorf LOGS and marks the
+         build failed without stopping template execution (see collect-images.html,
+         which says the same about its licence error), so a misspelled
+         `visibility: hiden` would still render this page and write the name into
+         public/ on the way to a failing build. The one rule this feature exists to
+         enforce has to fail CLOSED: anything that is not exactly `public` or
+         `unlisted` renders nothing. */ -}}
+  {{- $published := in (slice "public" "unlisted") $visibility -}}
+  {{- $hasPage := and $published (gt (len $ordered) 0) -}}
+  {{- $isListed := and (eq $visibility "public") (gt (len $ordered) 0) -}}
+
+  {{- $entry := dict
+        "slug"       $slug
+        "name"       $record.name
+        "record"     $record
+        "visibility" $visibility
+        "photos"     $ordered
+        "count"      (len $ordered)
+        "cover"      $cover
+        "hasPage"    $hasPage
+        "listed"     $isListed
+      -}}
+  {{- if $hasPage -}}
+    {{- $entries = $entries | append $entry -}}
+    {{- if $isListed -}}{{- $listed = $listed | append $entry -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Most photos first, then alphabetically — a grid of one-photo records in
+       file order reads as random. `sort` is stable, so the name sort survives. */ -}}
+{{- with $entries }}{{ $entries = sort (sort . "name" "asc") "count" "desc" }}{{ end -}}
+{{- with $listed }}{{ $listed = sort (sort . "name" "asc") "count" "desc" }}{{ end -}}
+
+{{- $lookup := newScratch -}}
+{{- range $entries -}}
+  {{- $lookup.SetInMap "bySlug" .slug . -}}
+{{- end -}}
+
+{{- return (dict
+      "all"    $entries
+      "bySlug" ($lookup.Get "bySlug" | default dict)
+      "listed" $listed
+      "total"  (len $entries)
+    ) -}}

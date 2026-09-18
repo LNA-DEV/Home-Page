@@ -10,9 +10,14 @@
 
   Params:
     photo     — an entry from collect-images.html / gallery-collected.html
+    models    — resolved [{name, url}] from model-lookup.html, optional. Resolved
+                by the caller rather than here, because "resolves to nothing" is a
+                meaningful state (a `hidden` record) that must produce no row at
+                all — and the caller needs the same list for its own markup.
     permalink — the uuid permalink, optional; the copy button hangs off it
 */ -}}
 {{- $photo := .photo -}}
+{{- $models := .models | default slice -}}
 {{- $permalink := .permalink | default "" -}}
 {{- $lang := site.Language.Lang -}}
 {{- $dex := "" -}}
@@ -27,6 +32,15 @@
   <a href="{{ .url }}">{{ .name }}</a> <em>{{ $photo.Species }}</em>
   {{- else }}
   <em>{{ . }}</em>
+  {{- end }}
+</p>
+{{- end }}
+
+{{- with $models }}
+<p class="photo-model">
+  <span class="photo-label">{{ i18n (cond (gt (len .) 1) "modelsLabel" "modelLabel") }}</span>
+  {{- range $i, $m := . }}{{ if $i }}<span class="photo-model__sep">·</span>{{ end }}
+  <a href="{{ $m.url }}">{{ $m.name }}</a>
   {{- end }}
 </p>
 {{- end }}

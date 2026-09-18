@@ -1,0 +1,50 @@
+{{- /*
+  model-lookup.html
+  Model slug -> the model's page, for naming and linking a person on a photo.
+
+  Returns a dict keyed by slug:
+
+    { "jane-doe": { "name": "Jane Doe", "url": "/de/gallery/models/jane-doe/" } }
+
+  Deliberately NOT model-index.html: that partial joins every record against
+  every gallery photo, and a caption needs a name and a URL. gallery.html renders
+  on every grid, every album, every dex species page and every photo page, so
+  making it depend on the whole-gallery collection for one string would be the
+  same mistake dex-lookup.html exists to avoid.
+
+  THE ABSENCE OF AN ENTRY MEANS PRINT NOTHING. This is the one place it differs
+  from dex-lookup.html, where a species the dex does not know still gets its
+  scientific name printed as plain text. A person's name appears on this site only
+  through a record that is published — so a `hidden` record, a record whose page
+  was not generated (no non-archive photos), and a slug this lookup has never
+  heard of all render as no row at all. The slug is never a fallback for the name,
+  and the caller must not invent one.
+
+  `unlisted` records ARE in here: their page is rendered and reachable, it is just
+  not listed or indexed, and the photos that link to it are indexed anyway.
+
+  The URL comes from site.GetPage rather than being assembled by hand, so the link
+  survives the section moving — and a record whose page does not exist yields no
+  entry, which is exactly the behaviour above.
+
+  Call via partialCached with the language as the variant:
+    {{ partialCached "model-lookup.html" (dict "lang" $lang) $lang }}
+*/ -}}
+
+{{- $out := newScratch -}}
+
+{{- range $record := (hugo.Data.models.models | default slice) -}}
+  {{- /* ALLOWLIST — see the same note in model-index.html. `ne "hidden"` would
+         publish a name on every photo caption the moment `visibility:` is
+         misspelled, and errorf does not stop the build from writing those files. */ -}}
+  {{- if and $record.slug $record.name (in (slice "public" "unlisted") ($record.visibility | default "")) -}}
+    {{- with site.GetPage (printf "/gallery/models/%s" $record.slug) -}}
+      {{- $out.SetInMap "m" $record.slug (dict
+            "name" $record.name
+            "url"  .RelPermalink
+          ) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return ($out.Get "m" | default dict) -}}

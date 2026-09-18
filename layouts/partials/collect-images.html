@@ -13,6 +13,8 @@
     - project: filter by project slug (matches any slug in the entry's `project`,
               which may be a single string or a list)
     - species: filter by scientific name, e.g. "Vulpes vulpes" (case-insensitive)
+    - model: filter by model slug (matches any slug in the entry's `model`, which
+             may be a single string or a list — a group photo names everyone in it)
     - id: filter by the UUID from data/gallery.yaml — returns at most one image.
           Pair it with excludeArchive false: naming a photo by id is explicit, so
           an archived one should still come back (see the galleryImage shortcode).
@@ -102,6 +104,14 @@
   {{- with index $filter "species" -}}
     {{- /* Scientific names are long and easy to mis-case; match like dex-index. */ -}}
     {{- if ne (lower ($meta.species | default "")) (lower .) -}}
+      {{- $include = false -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- with index $filter "model" -}}
+    {{- /* .models is the normalised slice from gallery-meta — a photo may show
+           several people. Same rule as `project`: never `in` on the raw string. */ -}}
+    {{- if not (in $meta.models .) -}}
       {{- $include = false -}}
     {{- end -}}
   {{- end -}}
@@ -405,6 +415,7 @@
       "Category" ($meta.category | default "")
       "Section" ($meta.section | default "general")
       "Species" ($meta.species | default "")
+      "Models" ($meta.models | default slice)
       "Portfolio" ($meta.portfolio | default false)
       "image" $image
       )

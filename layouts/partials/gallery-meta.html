@@ -13,6 +13,9 @@
   never use `in` on the raw field, which would match a substring ("eagles" against
   "eagles-2026") instead of a whole slug.
 
+  `.models` — the same normalisation for `model:`, the slug(s) of the people in
+  the photo (data/models.yaml). Same rule: filter with `in $meta.models $slug`.
+
   `.title`, `.alt`, `.description` — normalised IN PLACE from string-or-map to a
   `{en, de, sv}` map, so a reader only ever has to handle one shape. A bare string
   means English; `title: Foo` and `title: {en: Foo}` are the same entry. Nothing
@@ -40,7 +43,10 @@
 
   Hard-fails if any entry is missing an id — run scripts/add-gallery-ids.py to fix —
   or if two entries resolve to the same slug, which would make one page silently
-  overwrite the other.
+  overwrite the other. Also hard-fails on a `model:` slug that names no record in
+  data/models.yaml, and on a record without a valid `visibility:` — see the block
+  above the range for why a person is the one join that must not degrade to a
+  warning.
 
   Usage:
     {{ $metaAll := partialCached "gallery-meta.html" . }}
@@ -59,6 +65,50 @@
       (slice "æ" "ae") (slice "ø" "oe") (slice "é" "e") (slice "è" "e")
 -}}
 
+{{- /* The closed set of model slugs, validated once. Unlike `species:`, an
+       unknown `model:` is an ERROR rather than a warning: the slugs are a small
+       set the author invented himself, so a miss is always a typo — and the cost
+       of a silent miss is a person losing the credit or the visibility setting
+       they agreed to. A record is therefore also required to state `visibility:`
+       explicitly, with no default: consent is a decision somebody made, not
+       something a template gets to assume.
+
+       Deleting a record is NOT how a person is removed — the photos still carry
+       the slug and this loop will stop the build, which is correct, because the
+       photos themselves still need a decision. `visibility: hidden` is the
+       tombstone. See data/models.yaml. */ -}}
+{{- $modelSlugs := dict -}}
+{{- $visibilities := slice "public" "unlisted" "hidden" -}}
+{{- range $record := (hugo.Data.models.models | default slice) -}}
+  {{- /* printf, not the raw value: YAML resolves an unquoted `slug: 007` or
+         `model: 2026` to an int, and both `dict <int> true` and the `index`
+         below then fail with an opaque Go type error instead of the message
+         this loop exists to print. Normalising here makes every downstream
+         `.models` entry a string too, so `in $meta.models $slug` keeps working. */ -}}
+  {{- $mslug := printf "%v" ($record.slug | default "") -}}
+  {{- if not $mslug -}}
+    {{- errorf "data/models.yaml: a record has no `slug:`" -}}
+  {{- else -}}
+    {{- if index $modelSlugs $mslug -}}
+      {{- errorf "data/models.yaml: duplicate slug %q — a slug is an identity and is never reused" $mslug -}}
+    {{- end -}}
+    {{- $vis := $record.visibility | default "" -}}
+    {{- if not (in $visibilities $vis) -}}
+      {{- errorf "data/models.yaml: model %q must set `visibility:` to one of public | unlisted | hidden (got %q)" $mslug $vis -}}
+    {{- end -}}
+    {{- /* `name:` is required for a record that renders, and deliberately NOT for
+           a `hidden` one. This file is public on GitHub, history included, so a
+           tombstone that still had to carry the name would take the name off the
+           site and leave it in the repository forever — which is not what someone
+           asking to be forgotten asked for. A hidden record may be `slug:` +
+           `visibility:` and nothing else. */ -}}
+    {{- if and (ne $vis "hidden") (not $record.name) -}}
+      {{- errorf "data/models.yaml: model %q has no `name:` — the display name lives here and nowhere else (only a `hidden` record may omit it)" $mslug -}}
+    {{- end -}}
+    {{- $modelSlugs = merge $modelSlugs (dict $mslug true) -}}
+  {{- end -}}
+{{- end -}}
+
 {{- range hugo.Data.gallery.images -}}
   {{- if not .id -}}
     {{- errorf "data/gallery.yaml: entry %q has no id (run scripts/add-gallery-ids.py)" .src -}}
@@ -73,9 +123,34 @@
     {{- end -}}
   {{- end -}}
 
-  {{- /* Captured before the `with` below: inside it `.` is the colliding entry's
-         src, and `$` is the partial's page context — not this entry. */ -}}
+  {{- /* Captured before the `with` and the ranges below: inside those `.` is no
+         longer this entry, and `$` is the partial's page context, not the entry
+         either. */ -}}
   {{- $src := .src -}}
+
+  {{- $models := .model | default "" -}}
+  {{- if not (reflect.IsSlice $models) -}}
+    {{- if $models -}}
+      {{- $models = slice $models -}}
+    {{- else -}}
+      {{- $models = slice -}}
+    {{- end -}}
+  {{- end -}}
+  {{- /* uniq, unlike .projects: a repeated slug on one photo would count the photo
+         twice on that person's page and emit two caption spans for one name. A
+         repeated project slug is harmless by comparison. printf for the same
+         reason the record loop above uses it — an unquoted numeric slug. */ -}}
+  {{- with $models -}}
+    {{- $norm := slice -}}
+    {{- range . }}{{ $norm = $norm | append (printf "%v" .) }}{{ end -}}
+    {{- $models = uniq $norm -}}
+  {{- end -}}
+  {{- range $mslug := $models -}}
+    {{- if not (index $modelSlugs $mslug) -}}
+      {{- errorf "data/gallery.yaml: photo %q names model %q, which is not a slug in data/models.yaml" $src $mslug -}}
+    {{- end -}}
+  {{- end -}}
+
   {{- $slug := .slug | default "" -}}
   {{- if not $slug -}}
     {{- $slug = strings.TrimSuffix (path.Ext .src) .src -}}
@@ -108,7 +183,7 @@
     {{- end -}}
   {{- end -}}
 
-  {{- $entry := merge . (dict "projects" $projects "slug" $slug) -}}
+  {{- $entry := merge . (dict "projects" $projects "models" $models "slug" $slug) -}}
   {{- $entry = merge $entry $prose -}}
   {{- $bySrc = merge $bySrc (dict .src $entry) -}}
   {{- $byId  = merge $byId  (dict .id  $entry) -}}

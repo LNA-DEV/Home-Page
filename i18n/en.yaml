@@ -440,3 +440,19 @@
   translation: "Open photo page"
 - id: photo_view_in_gallery
   translation: "View in gallery"
+
+# Models — the people in front of the lens
+- id: gallery_models
+  translation: "Models"
+- id: modelLabel
+  translation: "Model"
+- id: modelsLabel
+  translation: "Models"
+- id: models_first_photographed
+  translation: "first photographed"
+- id: models_photos_of
+  translation: "Photos of {{ .name }}"
+- id: models_description_fallback
+  translation: "Photos of {{ .name }}"
+- id: models_empty
+  translation: "No model pages yet."

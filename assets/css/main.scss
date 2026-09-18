@@ -249,6 +249,24 @@
   }
 }
 
+/* The model row, directly under the species one. Same shape, same reason: the
+   name reads as a link but has to stay legible against the dark popup. */
+.pswp-info-model {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.pswp-info-model-link {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
+}
+
 /* The scientific name is secondary to the common name it follows. */
 .pswp-info-species-sci {
   font-weight: 400;

@@ -2,7 +2,12 @@
        every RegularPage except search-hidden / archives / search) and then adds
        the Travel landing page explicitly: it is a JS-driven section (branch) page
        with no per-trip RegularPages, so site.RegularPages never includes it and it
-       would otherwise be unsearchable. */ -}}
+       would otherwise be unsearchable -- and the Models section, for the same
+       reason plus one more: it is deliberately not linked from the gallery home
+       (see layouts/_default/list.html), so the search IS its way in. The other
+       gallery branch pages (/gallery/, /general/, /dex/, /projects/) are absent
+       from this index for the same underlying reason; they are reachable from the
+       gallery's nav cards, which is why nobody has missed them. */ -}}
 {{- $.Scratch.Add "index" slice -}}
 {{- range site.RegularPages -}}
     {{- if and (not .Params.searchHidden) (ne .Layout `archives`) (ne .Layout `search`) }}
@@ -11,5 +16,13 @@
 {{- end -}}
 {{- with site.GetPage "/travel" -}}
     {{- $.Scratch.Add "index" (dict "title" .Title "content" (printf "%s. %s" .Title .Description) "permalink" .Permalink "summary" .Description) -}}
+{{- end -}}
+{{- /* Only when a public record actually has photos -- the section is built from
+       data/models.yaml and can legitimately be empty, and a search hit landing on
+       an empty grid is the same mistake as a nav card onto one. */ -}}
+{{- with site.GetPage "/gallery/models" -}}
+    {{- if (partialCached "model-index.html" . site.Language.Lang).listed -}}
+    {{- $.Scratch.Add "index" (dict "title" .Title "content" (printf "%s. %s" .Title .Description) "permalink" .Permalink "summary" .Description) -}}
+    {{- end -}}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}

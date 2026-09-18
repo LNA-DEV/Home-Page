@@ -1,0 +1,30 @@
+{{- /*
+  model-card.html
+  One tile in the /gallery/models/ grid, modelled on dex-card.html.
+
+  No uncaught state, unlike the dex: a record with no photos never reaches here
+  (model-index.html drops it), because an empty model page has no purpose — it
+  would be a name and a link list about a person with nothing to show.
+
+  Expects: (dict "entry" <model-index entry> "base" <models section RelPermalink>)
+*/ -}}
+{{- $entry := .entry -}}
+{{- $href := printf "%s%s/" .base $entry.slug -}}
+
+<a class="model-card" href="{{ $href }}">
+  <div class="model-card__frame">
+    {{- with $entry.cover -}}
+      {{- $thumb := .image.Filter (slice images.AutoOrient (images.Process "fill 480x480 Center")) -}}
+      <img class="model-card__image" src="{{ $thumb.RelPermalink }}"
+           width="{{ $thumb.Width }}" height="{{ $thumb.Height }}"
+           alt="{{ .Alt | default $entry.name }}" loading="lazy" decoding="async">
+    {{- end -}}
+    {{- if gt $entry.count 1 }}
+    <span class="model-card__count" title="{{ i18n "photoCount" $entry.count }}">{{ $entry.count }}</span>
+    {{- end }}
+  </div>
+  <div class="model-card__body">
+    <h3 class="model-card__name">{{ $entry.name }}</h3>
+    <p class="model-card__meta">{{ i18n "photoCount" $entry.count }}</p>
+  </div>
+</a>

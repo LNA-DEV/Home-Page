@@ -7,6 +7,7 @@
            and their lightbox had no metadata fragment to fetch. The current
            site's home, now that all three languages generate photo pages. */ -}}
     {{- $photoBase := printf "%sgallery/photo/" site.Home.RelPermalink -}}
+    {{- $modelLookup := partialCached "model-lookup.html" (dict "lang" $lang) $lang -}}
     {{- range sort $images (.Params.sort_by | default "Name") (.Params.sort_order | default "asc") -}}
       {{- $image := .image -}}
       {{- $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
@@ -44,6 +45,15 @@
             {{- $dex := index (partialCached "dex-lookup.html" (dict "lang" $lang) $lang) (lower $sci) -}}
             <span class="caption-species" data-scientific="{{ $sci }}"
               {{- with $dex }} data-dex-url="{{ .url }}"{{ end }}>{{ with $dex }}{{ .name }}{{ else }}{{ $sci }}{{ end }}</span>
+          {{- end -}}
+          {{- /* Mirrors gallery.html: one span per published person, nothing at all
+                 for a record the lookup does not know. The portfolio is the grid the
+                 gallery home leads with, so leaving it out here would mean the Model
+                 row appeared everywhere except the most-seen page. */ -}}
+          {{- range .Models -}}
+            {{- with index $modelLookup . -}}
+              <span class="caption-model" data-field="model" data-model-url="{{ .url }}">{{ .name }}</span>
+            {{- end -}}
           {{- end -}}
           {{- with .Copyright }}<span class="caption-copyright">{{ . }}</span>{{ end -}}
           {{- with .Artist }}<span class="caption-artist">{{ . }}</span>{{ end -}}

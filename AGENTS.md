@@ -608,3 +608,191 @@ than it looks like it should.
 whole set is ~4.2 MB. `dex-covers.py` fetches ~960px Commons thumbnails (`--width 900`; see that script's docstring for why, and why Commons ignores widths in between) and, by
 default, only for species you have *not* photographed — the rest show your own
 photo, so a stand-in for them would be bytes nothing renders.
+
+## Adding a model
+
+A "model" is a person who appears in a gallery photo and has a page at
+`/gallery/models/<slug>/`. See the "Models" section of `CLAUDE.md` for the data
+model and the reasoning. There is **no script** for this — it is a handful of
+YAML lines per person, and every one of them is a decision somebody made about
+their own likeness, so nothing about it is automated.
+
+The order matters: the record first, the photos second. A `model:` slug that
+names no record is a hard build error, so tagging the photos first leaves the
+site unbuildable until you catch up.
+
+1. **Write the record** in `data/models.yaml`, under the top-level `models:`
+   list. The file's header comment is the schema reference; the minimum is
+   three lines:
+
+   ```yaml
+     - slug: jane-doe          # URL segment + the key photos join on. Never changes.
+       name: Jane Doe          # display name — lives here and nowhere else
+       visibility: public      # REQUIRED: public | unlisted | hidden
+   ```
+
+   `visibility` has **no default** and the build refuses a record without a valid
+   one. Pick it deliberately:
+
+   - `public` — page rendered, listed on `/gallery/models/`, indexed, name shown
+     on every photo.
+   - `unlisted` — page rendered and reachable by URL, but not listed, not in the
+     sitemap, not in the search index, `noindex`. The name still shows on the
+     photos that link to it. This is the setting for "fine to show to someone who
+     was handed the link, not something a search engine should surface".
+   - `hidden` — no page, and the name appears nowhere on the site. See
+     *Withdrawing consent* below.
+
+   Then the optional fields, all of which are page content — remember the
+   repository is public, so nothing goes in here that the person has not agreed
+   to have published, and **never any contact details**:
+
+   ```yaml
+       consent: "2026-09-18"   # date the release / consent was given; never rendered
+       cover: 5ebb463e-…       # a gallery photo UUID for the hero; else the first
+                               # portfolio photo, else the newest
+       bio:                    # per language, English fallback; a bare string
+                               # (bio: "…") also works and means English
+         en: |
+           Two or three sentences, in the person's own framing.
+         de: |
+           …
+       links:                  # name = an icon key svg.html knows (instagram,
+         - name: website       # mastodon, pixelfed, bluesky, github, website, …);
+           url: https://…      # unknown keys get a chain-link glyph
+   ```
+
+   A `cover:` uuid that is not a gallery photo fails the build, so paste it from
+   the photo's `id:` in `data/gallery.yaml` rather than typing it.
+
+2. **Tag the photos.** Add `model: <slug>` to each photo's entry in
+   `data/gallery.yaml`, right under `category:` (the same slot `species:` uses).
+   String form for one person, list form for a group shot:
+
+   ```yaml
+   - id: 0c16ee6e-67b6-4cb0-9812-162da7df7922
+     src: DSC_2340.jpg
+     category: portrait
+     model: jane-doe
+   ```
+
+   ```yaml
+     model: [jane-doe, john-roe]
+   ```
+
+   Check what you tagged:
+
+   ```
+   grep -c "^  model: " data/gallery.yaml
+   grep -B3 "^  model: .*jane-doe" data/gallery.yaml
+   ```
+
+   **Only non-archive photos count.** Unlike the dex, a `section: archive` photo
+   does not put a person on their page — and a record whose photos are *all*
+   archived (or that has no photos at all) renders no page and no card.
+
+3. **Set `artist:` on any photo the site owner did not take.** This is the step
+   that is easy to miss and impossible to see afterwards: `collect-images.html`
+   resolves the photographer as `data/gallery.yaml` `artist:` → `site.Params.author.name`,
+   so a photo with no `artist:` line silently credits **Lukas Nagel** — which is
+   exactly wrong for a photo *of* him taken by somebody else. Self-portraits and
+   photos he did shoot need nothing.
+
+   ```yaml
+     artist: Someone Else
+   ```
+
+4. **Check the licence, per photo.** The gallery's default is CC BY-SA, which
+   covers the photographer's copyright and **nothing else** — it grants no rights
+   over the depicted person. The site says nothing about this anywhere (a rights
+   notice was built and then deliberately removed — see CLAUDE.md; do not re-add
+   it unasked), and the build enforces nothing per model, so the licence field is
+   the only lever there is. `all-rights-reserved` is already a key in
+   `data/licenseMap.yaml` and is the sensible choice for model work:
+
+   ```yaml
+     license: all-rights-reserved
+   ```
+
+5. **Rebuild and look.** Use a fresh `hugo` build, not the long-running server on
+   :1313, which misses newly created layout and content files:
+
+   ```
+   hugo
+   ls public/en/gallery/models/
+   ```
+
+   Then check, per language: the page at `/en/gallery/models/<slug>/` (hero, bio,
+   links, photo strip), the card on `/en/gallery/models/` (which is
+   **not** linked from the gallery home — go there by URL or through a photo), the
+   **Model** row in the lightbox on `/en/gallery/general/`, the row and the
+   "Appears in" link on the photo page, and — for an `unlisted` record — that the
+   URL works while the slug appears in neither the grid nor `sitemap.xml`:
+
+   ```
+   grep -c "gallery/models/<slug>" public/sitemap.xml public/en/index.json
+   ```
+
+Do **not** run `./deploy.sh` — deployment is a separate step the user authorizes
+explicitly.
+
+### Withdrawing consent / removing a person
+
+**Set `visibility: hidden`. Never delete the record.**
+
+```yaml
+  - slug: jane-doe
+    visibility: hidden
+```
+
+`name:` may go with it — it is required only on a record that renders. This file
+is public on GitHub, **history included**, so a tombstone that had to keep the
+name would take it off the site and leave it in the repository forever. If the
+request was to be forgotten, drop `name`, `bio`, `links` and `cover` and leave the
+slug and the flag. (The name stays in the git history of earlier commits either
+way; removing that is a history rewrite, not an edit.)
+
+That is one edit and it is complete: no page is generated, no card, no caption
+span, no lightbox row, no "Appears in" link, no JSON-LD — the name and the slug
+leave `public/` entirely (verified against a real build). The record staying
+behind is the point: it keeps the slug reserved so it can never be reused for
+somebody else, and it keeps the photos building.
+
+Deleting the record instead fails the build, because the photos still carry the
+slug. That is the intended outcome, not an obstacle — **the photos themselves are
+a separate decision** and the failure is what forces it. Whether they stay in the
+gallery untagged, move to `section: archive`, or leave the photo store altogether
+is a per-case call, made with the workflows that already exist:
+
+- stay, but no longer attributed to a person → remove the `model:` line from the
+  photo entry;
+- retired from the current gallery → `section: archive` (the photos keep their
+  `model:`, they simply stop counting for the page);
+- gone → delete the file from the photo store and its entry from
+  `data/gallery.yaml`, the normal photo-removal path.
+
+Neither `hidden` nor archiving unpublishes a file somebody already downloaded, so
+if the request was to take the images down, it is the photo store and
+`data/gallery.yaml` that have to change, not just the visibility flag.
+
+### What the build will refuse
+
+All four are hard errors naming the file and the value, not warnings — unlike a
+`species:` that matches no dex entry, which only warns. A person losing a credit
+or a visibility setting silently is not an acceptable failure mode, and the slugs
+are a small closed set, so a miss is always a typo:
+
+- **`model:` naming no record** — *data/gallery.yaml: photo "DSC_2340.jpg" names
+  model "jane-do", which is not a slug in data/models.yaml*.
+- **A record with no `visibility:`, or an invalid one** — *model "jane-doe" must
+  set visibility: to one of public | unlisted | hidden*. The same loop also fails
+  on a record with no `slug:`, and on a **rendering** record with no `name:` (a
+  `hidden` one may omit it). An invalid value also fails *closed*: the record
+  renders nothing at all rather than being treated as published.
+- **A duplicate `slug:`** — a slug is an identity and is never reused, so two
+  records claiming one would make a page silently overwrite the other.
+- **A `cover:` that is not a gallery photo id** — *data/models.yaml: model
+  "jane-doe" has cover "…", which is not a gallery photo id*.
+
+Do **not** run `./deploy.sh` — deployment is a separate step the user authorizes
+explicitly.

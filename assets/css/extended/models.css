@@ -1,0 +1,227 @@
+/* Models — the /gallery/models/ grid and a single model's page.
+   Built on PaperMod's theme variables so light and dark both work without a
+   second palette, the same rule dex.css follows. No tokens of its own: a model
+   page is a portrait, a name and a body of photos, and it should read as part of
+   the gallery rather than as a section with its own colour. */
+
+/* --- the grid ------------------------------------------------------------ */
+
+.model-grid {
+  display: grid;
+  /* FIXED track + auto-FIT + justify-content, and all three matter. This section
+     can hold two records for a long time, under a centred header:
+       - minmax(…, 1fr) would stretch each portrait to a third of a 1060px page
+         and turn two tiles into billboards, so the track is a fixed 190px;
+       - auto-FILL keeps the empty tracks alive, so justify-content has nothing
+         left to distribute and a single card stays pinned to the left edge —
+         which is exactly what it did. auto-fit collapses them to zero;
+       - justify-content then centres the tracks that remain.
+     The usual warning about auto-fit ("it stretches your items") is about
+     auto-fit + 1fr; with a fixed track size it only collapses the empties. */
+  grid-template-columns: repeat(auto-fit, 190px);
+  justify-content: center;
+  gap: 1.25rem;
+  /* Same spine as .photo-single — capped at the header width and centred in the
+     75%-wide main column. */
+  width: min(100%, var(--nav-width, 1060px));
+  margin: 0 auto 2rem;
+}
+
+.model-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.model-card__frame {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: var(--tertiary);
+}
+
+.model-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.model-card__count {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  min-width: 1.6rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: rgb(235, 235, 236);
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.model-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.model-card__name {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.model-card__meta {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--secondary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .model-card:hover .model-card__image {
+    transform: scale(1.04);
+  }
+}
+
+.model-empty {
+  color: var(--secondary);
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* --- a single model ------------------------------------------------------ */
+
+/* One spine, capped at the header's width and centred in the (75%-wide) main
+   column — the same move .photo-single makes, and for the same reason: without
+   it the whole page hangs off the left edge with a few hundred px of dead space
+   on the right. Constrain the article, not each child, so the blocks stay
+   left-aligned to each other. */
+.model-single {
+  width: min(100%, var(--nav-width, 1060px));
+  margin-inline: auto;
+}
+
+.model-hero {
+  display: flex;
+  gap: 1.75rem;
+  align-items: flex-start;
+  margin: 0 0 2.5rem;
+}
+
+.model-hero__media {
+  flex: 0 0 300px;
+  max-width: 300px;
+}
+
+.model-hero__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.9rem;
+}
+
+.model-hero__info {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.model-hero__name {
+  margin: 0 0 0.3rem;
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+.model-hero__meta {
+  margin: 0 0 1rem;
+  color: var(--secondary);
+  font-size: 0.9rem;
+}
+
+.model-hero__bio {
+  margin: 0 0 1.1rem;
+  /* Prose stops at a readable measure even when the page is wide — the same cap
+     .photo-description and .dex-description use. */
+  max-width: 68ch;
+}
+
+.model-hero__bio p:last-child {
+  margin-bottom: 0;
+}
+
+.model-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.model-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* 40px, so the tap target clears the 24px icon on a coarse pointer. */
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--primary);
+  transition: border-color 0.12s, color 0.12s;
+}
+
+.model-links a svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .model-links a:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    opacity: 0.85;
+  }
+}
+
+.model-section-title {
+  font-size: 1.15rem;
+  margin: 0 0 1rem;
+}
+
+.model-photos {
+  margin: 0 0 2rem;
+}
+
+/* The model row on a photo page, mirroring .photo-species. */
+.photo-model {
+  margin: 0.2rem 0 1rem;
+}
+
+.photo-model__sep {
+  color: var(--secondary);
+  opacity: 0.6;
+  margin: 0 0.15rem;
+}
+
+/* Stacks at the same 900px the galleryImageText shortcode uses: below it the
+   text track beside a 300px portrait is down to ~40 characters. */
+@media (max-width: 900px) {
+  .model-hero {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .model-hero__media {
+    flex: 0 0 auto;
+    max-width: 260px;
+    align-self: center;
+  }
+
+  .model-hero__name {
+    font-size: 1.6rem;
+  }
+}

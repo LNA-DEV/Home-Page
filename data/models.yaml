@@ -1,0 +1,75 @@
+# Models - one record per person who appears in a gallery photo.
+#
+# A photo joins to a record through `model: <slug>` in data/gallery.yaml (a bare
+# slug or a list of them, like `project:`). The slug is the only thing stored on
+# the photo; the display name lives HERE and nowhere else, so a change of name is
+# a one-line edit rather than a sweep through 650 photo entries.
+#
+# FIELDS
+#   slug        REQUIRED  URL segment and the key photos join on. Never changes,
+#                         never gets reused - see `hidden` below.
+#   name        REQUIRED  Display name. Change freely.
+#   visibility  REQUIRED  public | unlisted | hidden. No default, on purpose:
+#                         consent is a decision someone made, not something a
+#                         template may assume.
+#
+#                           public    page rendered, listed on /gallery/models/,
+#                                     indexed, name shown on every photo
+#                           unlisted  page rendered and reachable by URL, but not
+#                                     listed, not in the sitemap, noindex; the
+#                                     name still shows on the photos that link to it
+#                           hidden    no page at all, and the name appears NOWHERE
+#                                     on the site - not on a photo, not as a slug
+#
+#                         `hidden` is the tombstone. Do NOT delete a record to
+#                         remove someone: the photos still carry the slug and the
+#                         build will fail, which is the correct outcome, because
+#                         the photos themselves still need a decision. Setting
+#                         `visibility: hidden` makes the person vanish from every
+#                         rendered page in one edit, and keeps the slug reserved.
+#
+#   consent     optional  Date the release / consent was given (YYYY-MM-DD).
+#                         Never rendered; it is a note to the author.
+#   bio         optional  {en, de, sv} map or a bare string (= English), English
+#                         fallback. Rendered as the page body.
+#   links       optional  [{name, url}] - `name` is an icon key understood by
+#                         layouts/partials/svg.html (instagram, mastodon, website,
+#                         …; unknown keys fall back to a chain-link glyph).
+#   cover       optional  A gallery photo UUID to use as the hero. Falls back to
+#                         the first portfolio photo, then the newest.
+#
+# TWO THINGS THAT MUST NOT GO IN THIS FILE
+#   - Contact details of any kind. This repository is public, so everything here
+#     is public - treat it as page content, because that is what it is.
+#   - Anything the person did not agree to have published.
+#
+# The links are rendered with rel="noopener" only, never rel="me": rel=me is an
+# identity claim about the site's author, and these are somebody else's profiles.
+
+models:
+  - slug: lukas-nagel
+    name: Lukas Nagel
+    visibility: public
+    consent: "2026-09-18"
+    cover: 5ebb463e-be05-4bc3-ac88-affdd385e382
+    bio:
+      en: |
+        Software engineer and photographer from Bavaria. Usually the one behind
+        the camera - these are the few frames from the other side of it.
+      de: |
+        Softwareentwickler und Fotograf aus Bayern. Normalerweise der hinter der
+        Kamera - das hier sind die wenigen Aufnahmen von der anderen Seite.
+      sv: |
+        Programmerare och fotograf från Bayern. Vanligtvis den bakom kameran -
+        det här är de få bilderna från andra sidan.
+    links:
+      - name: website
+        url: https://lna-dev.net
+      - name: mastodon
+        url: https://mastodon.online/@lna_dev
+      - name: pixelfed
+        url: https://pixelfed.de/LNA-DEV
+      - name: bluesky
+        url: https://bsky.app/profile/lna-dev.net
+      - name: github
+        url: https://github.com/LNA-DEV
