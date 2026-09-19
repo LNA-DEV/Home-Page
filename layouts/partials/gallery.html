@@ -44,17 +44,22 @@
       {{- $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
       {{- $full := $image.Filter (slice images.AutoOrient (images.Process "fit 4000x4000")) -}}
       {{- $color := index $thumbnail.Colors 0 | default "transparent" -}}
-      {{- $ratio := div (mul $thumbnail.Width 1.0) $thumbnail.Height }}
+      {{- $ratio := div (mul $thumbnail.Width 1.0) $thumbnail.Height -}}
+      {{- /* The download ladder, the licence key and the finished filename, all
+             from one place so the lightbox dialog and the photo page's static
+             card cannot disagree. The 600 and 4000 variants are handed in
+             rather than recomputed. */ -}}
+      {{- $dl := partial "gallery-download-attrs.html" (dict "item" . "small" $thumbnail "full" $full) }}
       {{- /* href is the photo PAGE — that is what makes the grid crawlable and
              what a visitor without JavaScript follows. PhotoSwipe preventDefaults
-             this click, so nothing changes for everyone else. The original file
-             URL moves to data-download, which the lightbox download button reads:
-             leaving it on href would have served an HTML page as the download. */ -}}
+             this click, so nothing changes for everyone else. It is also how a
+             visitor with no JavaScript reaches the download at all: the photo
+             page carries the same ladder as a static card. */ -}}
       {{- /* data-page: the photo's own page, so the lightbox popup can link out
              to it. The href carries the same URL, but the hero on a photo page
              hrefs the full-size image instead — data-page is the unambiguous
              signal, and its absence is how that hero suppresses the link. */ -}}
-      <a class="gallery-item" href="{{ printf "%s%s/" $photoBase .Slug }}" data-download="{{ $full.RelPermalink }}" data-page="{{ printf "%s%s/" $photoBase .Slug }}" data-id="{{ .Id }}" data-image-id="{{ .Id }}" data-category="{{ .Category }}" data-pswp-src="{{ $full.RelPermalink }}" data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}" title="{{ .Title | default .Alt }}" itemscope itemtype="https://schema.org/ImageObject" style="flex-grow: {{ printf "%.4f" $ratio }}; --ratio: {{ printf "%.4f" $ratio }}">
+      <a class="gallery-item" href="{{ printf "%s%s/" $photoBase .Slug }}" data-license="{{ $dl.license }}" data-downloads="{{ $dl.downloads }}" data-download-name="{{ $dl.name }}" data-page="{{ printf "%s%s/" $photoBase .Slug }}" data-id="{{ .Id }}" data-image-id="{{ .Id }}" data-category="{{ .Category }}" data-pswp-src="{{ $full.RelPermalink }}" data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}" title="{{ .Title | default .Alt }}" itemscope itemtype="https://schema.org/ImageObject" style="flex-grow: {{ printf "%.4f" $ratio }}; --ratio: {{ printf "%.4f" $ratio }}">
         <figure style="background-color: {{ $color }}">
           <img loading="lazy" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" src="{{ $thumbnail.RelPermalink }}" alt="{{ .Alt }}" />
         </figure>
@@ -116,7 +121,19 @@
         </span>
         <meta itemprop="creditText" content="{{ .ResolvedArtist }}" />
         <meta itemprop="copyrightNotice" content="{{ printf "© %s" .ResolvedArtist }}" />
-        <meta itemprop="name" content="{{ .Name }}" />
+        {{- /* The photo's NAME is its title, not its filename. This was
+               `{{ .Name }}`, which told every crawler that 1,671 of the built
+               ImageObjects were called "DSC_0517.jpg" — while gallery-photo.html
+               gave the same entity its real name in <h1 itemprop="name">. Two
+               contradictory names for one image, and the useless one sat on the
+               grids that actually get crawled. 425 of the 648 photos have
+               camera-code source filenames, so this was not a rare case.
+               .Title cannot be empty here: gallery-meta.html hard-fails the
+               build on an entry with no title in this language and none in
+               English. The FILE name still has a home — the photo page prints
+               it under "File", which is where a filename is information rather
+               than a claim about what the picture is called. */ -}}
+        <meta itemprop="name" content="{{ .Title }}" />
       </a>
     {{- end }}
   </div>

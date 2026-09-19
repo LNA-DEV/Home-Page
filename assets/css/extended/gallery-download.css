@@ -1,0 +1,188 @@
+/* The photo page's download card — the static half of the download dialog.
+
+   docs/concepts/gallery-download-dialog.md §7: this is not a fallback, it is the
+   same data in a second rendering, and it is complete with no JavaScript
+   running. Everything here is PaperMod theme variables; the card sits inside
+   the light/dark page, unlike the dialog, which only ever opens over a black
+   lightbox and is styled beside the info popup in main.scss.
+
+   Deliberately no colour of its own on the may / must / not lists. A green tick
+   and a red cross would read well for most people and badly for some; the three
+   glyphs and the three headings already carry the distinction, and inventing a
+   palette here is what models.css exists as a precedent against. */
+
+/* The card is much taller than Settings or Gear, so it spans the whole
+   auto-fit grid instead of being squeezed into one ~220px column. */
+.photo-download {
+  grid-column: 1 / -1;
+}
+
+.photo-download h3 {
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--secondary);
+}
+
+/* ---- what the licence allows ------------------------------------------- */
+
+.photo-download__deed {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px var(--gap);
+  margin-top: 16px;
+}
+
+.photo-download__deed ul {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 5px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.photo-download__deed li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.photo-download__deed li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.photo-download__deed-group--may li::before {
+  content: "\2713"; /* check mark */
+}
+
+.photo-download__deed-group--must li::before {
+  content: "\0021"; /* exclamation mark */
+}
+
+.photo-download__deed-group--not li::before {
+  content: "\2715"; /* multiplication x */
+}
+
+/* ---- the credit line ---------------------------------------------------- */
+
+.photo-download__credit {
+  margin-top: 16px;
+}
+
+.photo-download__credit-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* pre-wrap is load-bearing: the credit line is two lines separated by a real
+   newline (title/author/licence, then the source URL), exactly as it is meant
+   to be pasted. */
+.photo-download__credit-text {
+  flex: 1;
+  display: block;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 9px 11px;
+  border-radius: var(--radius);
+  background: var(--tertiary);
+  color: var(--content);
+}
+
+/* ---- the all-rights-reserved notice ------------------------------------- */
+
+.photo-download__notice {
+  margin-top: 16px;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--tertiary);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.photo-download__notice p {
+  margin: 0;
+}
+
+.photo-download__notice-links {
+  margin-top: 8px !important;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* ---- the size ladder ---------------------------------------------------- */
+
+.photo-download__sizes-heading {
+  margin-top: 18px !important;
+}
+
+.photo-download__sizes {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 8px;
+}
+
+.photo-download__size {
+  display: grid;
+  gap: 2px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: background-color 150ms, border-color 150ms;
+}
+
+.photo-download__size:hover {
+  background: var(--tertiary);
+  border-color: var(--secondary);
+}
+
+.photo-download__tier {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.photo-download__dims,
+.photo-download__hint {
+  font-size: 12px;
+  color: var(--secondary);
+}
+
+/* ---- the gate ----------------------------------------------------------- */
+
+/* Inserted by gallery-download.js and by nothing else. With no script the
+   holder is never created, the links keep their default state, and the notice
+   above them is the whole of the restriction — which is the intended
+   degradation, not an accident of it. */
+.photo-download__gate {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.photo-download__size[aria-disabled="true"] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.photo-download__size[aria-disabled="true"]:hover {
+  background: transparent;
+  border-color: var(--border);
+}

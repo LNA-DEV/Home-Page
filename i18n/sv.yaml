@@ -364,8 +364,6 @@
   translation: "Stäng"
 
 # Photo page
-- id: photo_view_full
-  translation: "Visa i full storlek"
 - id: photo_settings
   translation: "Inställningar"
 - id: photo_gear
@@ -438,3 +436,44 @@
   translation: "Bilder på {{ .name }}"
 - id: models_empty
   translation: "Inga modellsidor än."
+
+# Download — dialogen (assets/js/gallery-download.js) och fotosidans statiska
+# nedladdningskort; båda skriver ut samma strängar ur samma data.
+- id: download_heading
+  translation: "Ladda ner"
+- id: download_may
+  translation: "Du får"
+- id: download_must
+  translation: "Du måste"
+- id: download_not
+  translation: "Du får inte"
+- id: download_credit_by
+  translation: "av"
+- id: download_credit
+  translation: "Bildkredit"
+- id: download_copy_credit
+  translation: "Kopiera bildkrediten"
+- id: download_size
+  translation: "Storlek"
+- id: download_tier_small
+  translation: "Liten"
+- id: download_tier_medium
+  translation: "Mellan"
+- id: download_tier_large
+  translation: "Stor"
+- id: download_tier_original
+  translation: "Original"
+- id: download_hint_small
+  translation: "avatarer"
+- id: download_hint_medium
+  translation: "inlägg"
+- id: download_hint_large
+  translation: "utskrifter, 4K"
+- id: download_hint_original
+  translation: "som exporterad"
+- id: download_notice
+  translation: "Du är välkommen att ladda ner det här fotot för egen del — titta på det, använda det som bakgrundsbild. Att publicera, dela eller använda det kommersiellt kräver mitt tillstånd."
+- id: download_contact
+  translation: "Hör av dig"
+- id: download_gate
+  translation: "Jag använder det här fotot enbart privat"

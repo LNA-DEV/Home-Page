@@ -42,6 +42,6 @@ Jedes Bild in der [Galerie](/de/gallery/) enthält strukturierte Metadaten mit L
 - **CC BY-SA 4.0** -- [Creative Commons Namensnennung-Weitergabe unter gleichen Bedingungen 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.de)
 - **Alle Rechte vorbehalten** -- volles Urheberrecht, keine Weiterverwendung ohne Erlaubnis (verwendet, wo Creative Commons nicht passt, z.B. bei Porträts ohne Einwilligung oder plattformspezifischen Anforderungen)
 
-## Kontakt
+## Kontakt {#contact}
 
 Bei Fragen zur Lizenzierung kontaktiere bitte [me@lna-dev.net](mailto:me@lna-dev.net).

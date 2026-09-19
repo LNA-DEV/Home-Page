@@ -392,8 +392,6 @@
   translation: "Close"
 
 # Photo page
-- id: photo_view_full
-  translation: "View full size"
 - id: photo_settings
   translation: "Settings"
 - id: photo_gear
@@ -456,3 +454,44 @@
   translation: "Photos of {{ .name }}"
 - id: models_empty
   translation: "No model pages yet."
+
+# Download — the dialog (assets/js/gallery-download.js) and the photo page's
+# static download card, which print the same strings from the same data.
+- id: download_heading
+  translation: "Download"
+- id: download_may
+  translation: "You may"
+- id: download_must
+  translation: "You must"
+- id: download_not
+  translation: "You may not"
+- id: download_credit_by
+  translation: "by"
+- id: download_credit
+  translation: "Credit line"
+- id: download_copy_credit
+  translation: "Copy credit line"
+- id: download_size
+  translation: "Size"
+- id: download_tier_small
+  translation: "Small"
+- id: download_tier_medium
+  translation: "Medium"
+- id: download_tier_large
+  translation: "Large"
+- id: download_tier_original
+  translation: "Original"
+- id: download_hint_small
+  translation: "avatars"
+- id: download_hint_medium
+  translation: "posts"
+- id: download_hint_large
+  translation: "prints, 4K"
+- id: download_hint_original
+  translation: "as exported"
+- id: download_notice
+  translation: "You are welcome to download this photo for yourself — to look at it, to use it as a wallpaper. Publishing it, sharing it or using it commercially needs my permission."
+- id: download_contact
+  translation: "Contact me"
+- id: download_gate
+  translation: "I will use this photo privately only"

@@ -14,12 +14,25 @@
                 by the caller rather than here, because "resolves to nothing" is a
                 meaningful state (a `hidden` record) that must produce no row at
                 all — and the caller needs the same list for its own markup.
+    download  — the dict from gallery-download-attrs.html, optional. Present, it
+                turns the licence card into the DOWNLOAD CARD: the same deed, the
+                same credit line and the same size ladder the lightbox dialog
+                shows, as static markup that needs no JavaScript at all. See
+                docs/concepts/gallery-download-dialog.md §7.
+    source    — this photo page's own canonical URL, optional; the credit line's
+                source link
     permalink — the uuid permalink, optional; the copy button hangs off it
 */ -}}
 {{- $photo := .photo -}}
 {{- $models := .models | default slice -}}
 {{- $permalink := .permalink | default "" -}}
+{{- $dl := .download -}}
+{{- $source := .source | default "" -}}
 {{- $lang := site.Language.Lang -}}
+{{- $lic := "" -}}
+{{- with $photo.LicenseKey -}}
+  {{- $lic = index (partialCached "license-index.html" $ $lang) (lower .) -}}
+{{- end -}}
 {{- $dex := "" -}}
 {{- with $photo.Species -}}
   {{- $dex = index (partialCached "dex-lookup.html" (dict "lang" $lang) $lang) (lower .) -}}
@@ -70,22 +83,6 @@
   </section>
   {{- end }}
 
-  <section class="photo-facts--wide">
-    <h2>{{ i18n "photo_license" }}</h2>
-    <dl>
-      <dt>{{ i18n "photo_photographer" }}</dt>
-      <dd><span itemprop="creator" itemscope itemtype="https://schema.org/Person"><span itemprop="name">{{ $photo.ResolvedArtist }}</span></span></dd>
-      <dt>{{ i18n "photo_license" }}</dt>
-      <dd>
-        {{- with $photo.LicenseUrl }}<a href="{{ . }}" itemprop="license" rel="license">{{ $photo.LicenseText }}</a>
-        {{- else }}{{ $photo.LicenseText }}{{ end }}
-      </dd>
-    </dl>
-    {{- with site.GetPage "/licensing" }}
-    <p class="photo-meta__link"><a href="{{ .RelPermalink }}" itemprop="acquireLicensePage">{{ i18n "licensingDetails" }}</a></p>
-    {{- end }}
-  </section>
-
   {{- with $permalink }}
   <section class="photo-facts--wide">
     <h2>{{ i18n "photo_identifier" }}</h2>
@@ -112,6 +109,111 @@
     </dl>
   </section>
   {{- end }}
+
+  {{- /* The licence card and the download card are one card: what the licence
+         allows and how to take the file are the same decision, and splitting
+         them is how the old lightbox managed to hand over a photo without ever
+         naming its licence. `id="download"` is the target of the in-page link
+         in .photo-actions, which is what makes the whole thing reachable with
+         no script running. */ -}}
+  <section class="photo-facts--wide photo-download" id="download"{{ if and $lic $lic.requiresPermission }} data-requires-permission="true"{{ end }}>
+    <h2>{{ i18n "photo_license" }}</h2>
+    <dl>
+      <dt>{{ i18n "photo_photographer" }}</dt>
+      <dd><span itemprop="creator" itemscope itemtype="https://schema.org/Person"><span itemprop="name">{{ $photo.ResolvedArtist }}</span></span></dd>
+      <dt>{{ i18n "photo_license" }}</dt>
+      <dd>
+        {{- with $photo.LicenseUrl }}<a href="{{ . }}" itemprop="license" rel="license">{{ $photo.LicenseText }}</a>
+        {{- else }}{{ $photo.LicenseText }}{{ end }}
+      </dd>
+    </dl>
+
+    {{- with $lic }}
+    {{- /* may / must / not, in the reader's language, straight out of
+           data/licenseMap.yaml. Each list renders only when it has something in
+           it: CC BY-SA forbids nothing, and an empty "You may not" heading
+           would read as an omission rather than as a grant. */ -}}
+    <div class="photo-download__deed">
+      {{- range $kind := slice "may" "must" "not" }}
+      {{- with index $lic.deed $kind }}
+      <div class="photo-download__deed-group photo-download__deed-group--{{ $kind }}">
+        <h3>{{ i18n (printf "download_%s" $kind) }}</h3>
+        <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+      </div>
+      {{- end }}
+      {{- end }}
+    </div>
+    {{- end }}
+
+    {{- /* The credit line, composed the way Creative Commons' own attribution
+           guidance asks for it: title, author, source, licence. A licence that
+           requires permission gets none — there is nothing to attribute because
+           there is nothing to reuse. */ -}}
+    {{- if and $lic (not $lic.requiresPermission) $source }}
+    {{- /* Explicit quotes rather than %q: that verb emits a GO string literal,
+           which escapes anything it considers unprintable, and the joining word
+           is translated — an English "by" on the German page is the kind of
+           thing the whole per-language filename work exists to avoid. */ -}}
+    {{- $credit := printf "\"%s\" %s %s, %s\n%s" $photo.Title (i18n "download_credit_by") $photo.ResolvedArtist $lic.short $source }}
+    <div class="photo-download__credit">
+      <h3>{{ i18n "download_credit" }}</h3>
+      <div class="photo-download__credit-row">
+        <code class="photo-download__credit-text">{{ $credit }}</code>
+        {{- /* The same .photo-copy[data-copy] control the permalink row uses:
+               photo-page.js binds it by delegation and CSS keeps it hidden until
+               <html> gains `has-clipboard`, so with no JavaScript there is no
+               dead button — and the line itself is still selectable text. */ -}}
+        <button type="button" class="photo-copy" data-copy="{{ $credit }}"
+                data-label-copy="{{ i18n "download_copy_credit" }}" data-label-done="{{ i18n "photo_copied" }}"
+                title="{{ i18n "download_copy_credit" }}" aria-label="{{ i18n "download_copy_credit" }}">
+          <svg class="photo-copy__icon photo-copy__icon--copy" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/>
+          </svg>
+          <svg class="photo-copy__icon photo-copy__icon--done" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 6 9 17l-5-5"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    {{- end }}
+
+    {{- /* Driven by the FLAG, never by the key: a second restricted licence must
+           behave identically without a template edit. */ -}}
+    {{- if and $lic $lic.requiresPermission }}
+    <div class="photo-download__notice">
+      <p>{{ i18n "download_notice" }}</p>
+      <p class="photo-download__notice-links">
+        {{- with site.Params.author.email }}<a href="mailto:{{ . }}">{{ i18n "download_contact" }}</a>{{ end }}
+        {{- with site.GetPage "/licensing" }}<span aria-hidden="true">·</span><a href="{{ .RelPermalink }}#contact">{{ i18n "licensingDetails" }}</a>{{ end }}
+      </p>
+    </div>
+    {{- end }}
+
+    {{- with $dl }}
+    {{- /* Plain <a download> links. The rename needs no JavaScript — `download`
+           is HTML, every URL here is same-origin and nothing sets a
+           Content-Disposition in front of it — so this list is the feature, not
+           a fallback for it. The name is the same for every tier; the browser
+           disambiguates a second download by itself. */ -}}
+    <h3 class="photo-download__sizes-heading">{{ i18n "download_size" }}</h3>
+    <ul class="photo-download__sizes">
+      {{- range .tiers }}
+      <li>
+        <a class="photo-download__size" href="{{ .url }}" download="{{ $dl.name }}" data-tier="{{ .tier }}">
+          <span class="photo-download__tier">{{ i18n (printf "download_tier_%s" .tier) }}</span>
+          <span class="photo-download__dims">{{ .w }}&nbsp;&times;&nbsp;{{ .h }}</span>
+          <span class="photo-download__hint">{{ i18n (printf "download_hint_%s" .tier) }}</span>
+        </a>
+      </li>
+      {{- end }}
+    </ul>
+    {{- end }}
+
+    {{- with site.GetPage "/licensing" }}
+    <p class="photo-meta__link"><a href="{{ .RelPermalink }}" itemprop="acquireLicensePage">{{ i18n "licensingDetails" }}</a></p>
+    {{- end }}
+  </section>
+
 </div>
 
 {{- with $photo.Tags }}

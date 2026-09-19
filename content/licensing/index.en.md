@@ -42,6 +42,6 @@ Each image in the [gallery](/en/gallery/) includes structured metadata with its 
 - **CC BY-SA 4.0** -- [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 - **All Rights Reserved** -- full copyright, no reuse without permission (used where Creative Commons is not appropriate, e.g. portraits without consent or platform-specific requirements)
 
-## Contact
+## Contact {#contact}
 
 For licensing questions or inquiries, please contact [me@lna-dev.net](mailto:me@lna-dev.net).

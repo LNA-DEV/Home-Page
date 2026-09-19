@@ -102,7 +102,7 @@
   color: var(--secondary);
 }
 
-.photo-actions .photo-fullsize-link {
+.photo-actions .photo-download-link {
   margin-left: auto;
 }
 
@@ -134,14 +134,37 @@
 
 /* Facts. Auto-fit rather than a fixed column count so a photo carrying only a
    licence block does not leave three empty tracks. */
+/* Settings, Gear and Identifier sit side by side on desktop; the licence and
+   download card spans the whole row below them (see .photo-download).
+
+   The track minimum is 280px, not 220px, and that number is doing real work:
+   the content column is capped at --nav-width (1060px) and the gap is 24px, so
+   a fourth track would need 4*280 + 3*24 = 1192px and can never fit — three is
+   the maximum by arithmetic rather than by luck, and the three cards always
+   fill the row instead of leaving a hole where a fourth would have gone. With
+   220px a fourth track fitted (952px), so three sections left a visible gap.
+   `auto-fit` does NOT rescue that, which is the counter-intuitive part: it
+   collapses tracks that are empty across the WHOLE grid, and the licence card
+   below spans 1/-1, so the fourth track was occupied and stayed open as a hole
+   in the row above. Below roughly 880px this falls to two tracks and then to
+   one — that is the "everything stacked on mobile" half, no media query
+   needed. Measured: 3 columns down to an 884px container, 2 down to 584px,
+   1 below that. */
 .photo-meta {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--gap);
 }
 
+/* stretch, not start: every card in a row takes the height of the tallest one
+   in that row, so the row has one clean bottom edge instead of three ragged
+   ones. It was `start`, which let each card shrink to its own content — with
+   Settings at 156px, Gear at 178px and Identifier at 154px that read as three
+   boxes that had slipped. The content stays top-aligned; only the box grows.
+   Stacked at one column this is a no-op, because each row then holds one card
+   and the tallest in the row is the card itself. */
 .photo-meta section {
-  align-self: start;
+  align-self: stretch;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 14px 16px;

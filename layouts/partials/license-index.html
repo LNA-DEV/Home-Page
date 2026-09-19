@@ -5,10 +5,12 @@
   Returns a dict keyed by the LOWERCASED licence key *and* by every lowercased
   entry in that key's `aliases`, so both spellings resolve to the same record:
 
-      { key, label, url, terms }
+      { key, label, short, url, terms, deed, requiresPermission }
 
-  with `label`, `terms` and `url` already resolved for this language. That is why
-  it must be cached per language:
+  with every field already resolved for this language. `deed` is
+  { may, must, not } — three string slices, the plain-language summary the
+  download dialog and the photo page's download card print. That is why the
+  whole thing must be cached per language:
 
       {{ $lic := partialCached "license-index.html" . site.Language.Lang }}
       {{ $rec := index $lic (lower $value) }}
@@ -34,6 +36,35 @@
   {{- if not (reflect.IsMap $terms) -}}
     {{- $terms = dict "en" $terms -}}
   {{- end -}}
+  {{- /* `short` is the compact name the credit line and the dialog heading use
+         ("CC BY-SA 4.0"). It falls back to the full label, which is right for a
+         plain-language licence whose label is already short. */ -}}
+  {{- $short := $entry.short | default $label -}}
+  {{- if not (reflect.IsMap $short) -}}
+    {{- $short = dict "en" $short -}}
+  {{- end -}}
+
+  {{- /* The deed is a per-language BLOCK with an English fallback, not
+         string-or-map per bullet: nine translated lines per licence are written
+         and reviewed as three lists far more easily than as nine two-line maps.
+         A key without one is a hard error — a licence the download dialog
+         cannot explain in words must not be attachable to a photo. */ -}}
+  {{- $deedRaw := "" -}}
+  {{- with $entry.deed -}}
+    {{- with index . $lang -}}
+      {{- $deedRaw = . -}}
+    {{- else -}}
+      {{- with index . "en" -}}{{- $deedRaw = . -}}{{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not $deedRaw -}}
+    {{- errorf "data/licenseMap.yaml: %q has no `deed` (not for %q, not for `en`) — every licence needs the may/must/not summary the download dialog prints" $key $lang -}}
+  {{- end -}}
+  {{- $deed := dict
+        "may"  ((index $deedRaw "may")  | default slice)
+        "must" ((index $deedRaw "must") | default slice)
+        "not"  ((index $deedRaw "not")  | default slice)
+  -}}
 
   {{- /* url_by_lang wins, then url. A site-relative url is resolved into this
          language: the licensing page exists in all three, and the hard-coded
@@ -48,11 +79,17 @@
     {{- $url = $url | relLangURL -}}
   {{- end -}}
 
+  {{- /* A flag, never a key comparison. The day a second restricted licence
+         exists it has to behave identically by carrying the flag, and nothing
+         downstream may test `eq .key "all-rights-reserved"`. */ -}}
   {{- $rec := dict
         "key" $key
         "label" (partial "dex-text.html" (dict "field" $label "lang" $lang))
+        "short" (partial "dex-text.html" (dict "field" $short "lang" $lang))
         "terms" (partial "dex-text.html" (dict "field" $terms "lang" $lang))
         "url" $url
+        "deed" $deed
+        "requiresPermission" ($entry.requires_permission | default false)
   -}}
 
   {{- $names := (slice $key) | append ($entry.aliases | default slice) -}}

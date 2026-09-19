@@ -1,0 +1,132 @@
+{{- /*
+  gallery-download-attrs.html
+  The download ladder for one gallery photo, computed once and consumed twice:
+  by the lightbox dialog (assets/js/gallery-download.js, through the three
+  data attributes) and by the static card on the photo page (photo-meta.html,
+  through `tiers`). Both therefore say exactly the same thing, and the no-
+  JavaScript path is not a reduced copy of the dialog but the same data.
+
+  See docs/concepts/gallery-download-dialog.md §2, §3 and §8.
+
+  Params:
+    item   — an entry from collect-images.html (needs .image, .Id, .Title, .LicenseKey)
+    small  — optional, the caller's `fit 600x600` variant, to avoid recomputing it
+    full   — optional, the caller's `fit 4000x4000` variant, likewise
+
+  Returns:
+    { license, downloads, name, tiers }
+
+      license    the licence KEY, for data-license; the JS looks the deed up per
+                 licence rather than carrying ~400 bytes of it per item
+      downloads  "WxH URL|WxH URL|…", ascending, already deduplicated
+      name       the finished, sanitised download filename for THIS language
+      tiers      [{ tier, w, h, url }] — the same list, for template use
+
+  NO IMAGE IS PROCESSED THAT IS NOT PROCESSED ALREADY. 600 and 4000 are the grid
+  thumbnail and the lightbox source; 1200 is the photo page's hero, rendered for
+  every photo because every photo has a page. Referencing the 1200 from a grid is
+  a cache hit, not a render.
+*/ -}}
+
+{{- $item := .item -}}
+{{- $img := $item.image -}}
+
+{{- $small := .small -}}
+{{- if not $small -}}
+  {{- $small = $img.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
+{{- end -}}
+{{- $mid := $img.Filter (slice images.AutoOrient (images.Process "fit 1200x1200")) -}}
+{{- $full := .full -}}
+{{- if not $full -}}
+  {{- $full = $img.Filter (slice images.AutoOrient (images.Process "fit 4000x4000")) -}}
+{{- end -}}
+
+{{- /* The published original's dimensions AFTER EXIF rotation, without paying for
+       an AutoOrient render of it (that would be a fourth variant for all 648
+       photos). .Width/.Height are the stored pair; AutoOrient only ever rotates
+       by a multiple of 90°, so the oriented pair is that same pair, possibly
+       swapped. The 4000 variant is already oriented, so its landscape/portrait
+       sense says which of the two it is. Square images make both branches equal. */ -}}
+{{- $ow := $img.Width -}}
+{{- $oh := $img.Height -}}
+{{- if ne (lt $ow $oh) (lt $full.Width $full.Height) -}}
+  {{- $ow = $img.Height -}}
+  {{- $oh = $img.Width -}}
+{{- end -}}
+
+{{- /* Ascending by construction: each fit is into a larger box, and `fit` never
+       upscales, so the original is always the largest (or equal). */ -}}
+{{- $ladder := slice
+      (dict "w" $small.Width "h" $small.Height "url" $small.RelPermalink)
+      (dict "w" $mid.Width   "h" $mid.Height   "url" $mid.RelPermalink)
+      (dict "w" $full.Width  "h" $full.Height  "url" $full.RelPermalink)
+      (dict "w" $ow          "h" $oh           "url" $img.RelPermalink)
+-}}
+
+{{- /* Drop a tier whose dimensions equal the next larger tier's. 46 originals
+       have a long side under 4000, so their `fit 4000x4000` is a re-encode of
+       the original at the original's size: same pixels, worse file, offered
+       twice. The rule is general, so it also covers an original under 1200. */ -}}
+{{- $kept := slice -}}
+{{- $n := len $ladder -}}
+{{- range $i, $t := $ladder -}}
+  {{- $dup := false -}}
+  {{- if lt (add $i 1) $n -}}
+    {{- $next := index $ladder (add $i 1) -}}
+    {{- if and (eq $t.w $next.w) (eq $t.h $next.h) -}}
+      {{- $dup = true -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not $dup -}}
+    {{- $kept = $kept | append $t -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Tier names by position from the top — the last is always Original, the
+       first Small, whatever survives in between fills Medium and Large. The JS
+       applies the identical rule to the packed string, so the dialog and the
+       static card label the same file the same way. */ -}}
+{{- $names := slice "small" "medium" "large" -}}
+{{- $tiers := slice -}}
+{{- $packed := slice -}}
+{{- $last := sub (len $kept) 1 -}}
+{{- range $i, $t := $kept -}}
+  {{- $tier := cond (eq $i $last) "original" (index $names $i) -}}
+  {{- /* The packed format is "WxH URL", pipe-separated, so neither character may
+         appear inside a URL. RelPermalink percent-encodes a filename's spaces —
+         796 of the served files have one — but assert it rather than trust it: a
+         mis-split ladder would silently hand out the wrong file. */ -}}
+  {{- if or (strings.Contains $t.url " ") (strings.Contains $t.url "|") -}}
+    {{- errorf "gallery-download-attrs: the %s URL for %s contains a space or a pipe, which the packed format cannot carry: %s" $tier $item.Name $t.url -}}
+  {{- end -}}
+  {{- $tiers = $tiers | append (dict "tier" $tier "w" $t.w "h" $t.h "url" $t.url) -}}
+  {{- $packed = $packed | append (printf "%dx%d %s" $t.w $t.h $t.url) -}}
+{{- end -}}
+{{- $downloads := delimit $packed "|" -}}
+
+{{- /* THE FILENAME — built here, not in the script.
+       docs/concepts/gallery-download-dialog.md §3: the static card on the photo
+       page needs the identical string, so a JS-only sanitiser would leave the
+       one path that is meant to work without JavaScript carrying Hugo's hashed
+       name. Measured across all 1,944 titles, none of these rules changes
+       anything today and the 120 cap never fires; they are here for the title
+       nobody has written yet. */ -}}
+{{- $stem := $item.Title -}}
+{{- $stem = replaceRE `[\x00-\x1f\\/:*?"<>|]` "-" $stem -}}
+{{- $stem = replaceRE `\s+` " " $stem -}}
+{{- $stem = trim $stem " " -}}
+{{- $stem = replaceRE `[. ]+$` "" $stem -}}
+{{- if gt (strings.RuneCount $stem) 120 -}}
+  {{- $stem = substr $stem 0 120 -}}
+{{- end -}}
+{{- if eq $stem "" -}}
+  {{- $stem = printf "photo-%s" $item.Id -}}
+{{- end -}}
+{{- $name := printf "%s%s" $stem (lower (path.Ext $img.RelPermalink)) -}}
+
+{{- return dict
+      "license" $item.LicenseKey
+      "downloads" $downloads
+      "name" $name
+      "tiers" $tiers
+-}}

@@ -391,8 +391,6 @@
   translation: "Schließen"
 
 # Photo page
-- id: photo_view_full
-  translation: "In voller Größe ansehen"
 - id: photo_settings
   translation: "Einstellungen"
 - id: photo_gear
@@ -455,3 +453,44 @@
   translation: "Fotos von {{ .name }}"
 - id: models_empty
   translation: "Noch keine Model-Seiten."
+
+# Download — der Dialog (assets/js/gallery-download.js) und die statische
+# Download-Karte der Fotoseite; beide drucken dieselben Strings aus denselben Daten.
+- id: download_heading
+  translation: "Herunterladen"
+- id: download_may
+  translation: "Du darfst"
+- id: download_must
+  translation: "Du musst"
+- id: download_not
+  translation: "Du darfst nicht"
+- id: download_credit_by
+  translation: "von"
+- id: download_credit
+  translation: "Bildnachweis"
+- id: download_copy_credit
+  translation: "Bildnachweis kopieren"
+- id: download_size
+  translation: "Größe"
+- id: download_tier_small
+  translation: "Klein"
+- id: download_tier_medium
+  translation: "Mittel"
+- id: download_tier_large
+  translation: "Groß"
+- id: download_tier_original
+  translation: "Original"
+- id: download_hint_small
+  translation: "Avatare"
+- id: download_hint_medium
+  translation: "Beiträge"
+- id: download_hint_large
+  translation: "Drucke, 4K"
+- id: download_hint_original
+  translation: "wie exportiert"
+- id: download_notice
+  translation: "Du darfst dieses Foto gern für dich herunterladen — ansehen, als Hintergrundbild nutzen. Veröffentlichen, weitergeben oder kommerziell nutzen braucht meine Erlaubnis."
+- id: download_contact
+  translation: "Schreib mir"
+- id: download_gate
+  translation: "Ich nutze dieses Foto nur privat"

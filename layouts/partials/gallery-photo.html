@@ -45,6 +45,11 @@
 {{- with $photo.Species -}}
   {{- $dex = index (partialCached "dex-lookup.html" (dict "lang" $lang) $lang) (lower .) -}}
 {{- end -}}
+{{- /* The download ladder, the licence key and the filename — the same partial
+       the grids call, so the static card below and the lightbox dialog show the
+       identical set of files under the identical name. */ -}}
+{{- $dl := partial "gallery-download-attrs.html" (dict "item" $photo "small" $small "full" $full) -}}
+
 {{- /* The people in the photo, resolved to {name, url}. Only records that are
        published resolve at all — a `hidden` one yields nothing, and nothing is
        exactly what this page then prints about them. */ -}}
@@ -71,7 +76,9 @@
   <div class="photo-hero" id="gallery">
     <a class="gallery-item" href="{{ $full.RelPermalink }}"
        data-id="{{ $photo.Id }}" data-image-id="{{ $photo.Id }}"
-       data-download="{{ $full.RelPermalink }}"
+       data-license="{{ $dl.license }}"
+       data-downloads="{{ $dl.downloads }}"
+       data-download-name="{{ $dl.name }}"
        data-category="{{ $photo.Category }}"
        data-pswp-src="{{ $full.RelPermalink }}"
        data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}">
@@ -121,7 +128,11 @@
       {{- with $parent }}
       <a class="photo-in-gallery" href="{{ .RelPermalink }}#{{ $photo.Id }}">{{ i18n "photo_view_in_gallery" }}</a>
       {{- end }}
-      <a class="photo-fullsize-link" href="{{ $full.RelPermalink }}">{{ i18n "photo_view_full" }} ({{ $full.Width }}&nbsp;&times;&nbsp;{{ $full.Height }})</a>
+      {{- /* An in-page link to the static download card below, not a button and
+             not the raw file: it works with no script at all, it is the same
+             reasoning newsletter-cta.html gives, and it puts the licence in
+             front of the visitor before the file rather than after it. */ -}}
+      <a class="photo-download-link" href="#download">{{ i18n "download_heading" }}</a>
     </p>
   </div>
 
@@ -134,7 +145,7 @@
   <p class="photo-description" itemprop="description">{{ . }}</p>
   {{- end }}
 
-  {{ partial "photo-meta.html" (dict "photo" $photo "models" $models "permalink" (printf "%s%s/" $base $photo.Id)) }}
+  {{ partial "photo-meta.html" (dict "photo" $photo "models" $models "download" $dl "source" .Permalink "permalink" (printf "%s%s/" $base $photo.Id)) }}
 
   {{- $projects := slice -}}
   {{- $metaAll := partialCached "gallery-meta.html" . -}}

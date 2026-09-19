@@ -256,7 +256,17 @@
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
 {{- /* Licensing page for the current language — linked from the info popup's copyright section */ -}}
 {{ $licensingUrl := "" }}
-{{ with site.GetPage "/licensing" }}{{ $licensingUrl = .RelPermalink }}{{ end }}
+{{ $contactUrl := "" }}
+{{- /* #contact is an explicit {#contact} anchor on the Contact heading in all
+       three languages — Hugo derives heading ids from the heading text, so the
+       German and Swedish pages would otherwise be #kontakt. */ -}}
+{{ with site.GetPage "/licensing" }}{{ $licensingUrl = .RelPermalink }}{{ $contactUrl = printf "%s#contact" .RelPermalink }}{{ end }}
+{{- /* The download dialog's strings and data ride along in the same params dict.
+       `licenses` is the WHOLE licence index for this language — three keys, a few
+       hundred bytes — because the deed belongs per LICENCE, not per photo: each
+       .gallery-item carries only data-license, and repeating ~400 bytes of
+       may/must/not across 572 grid items would cost far more than the lookup.
+       See docs/concepts/gallery-download-dialog.md §4. */ -}}
 {{ $params := dict
 "closeTitle" (i18n "closeTitle")
 "zoomTitle" (i18n "zoomTitle")
@@ -272,6 +282,34 @@
 "modelsLabel" (i18n "modelsLabel")
 "softwareLabel" (i18n "softwareLabel")
 "openPageLabel" (i18n "photo_open_page")
+"licenses" (partialCached "license-index.html" . site.Language.Lang)
+"authorEmail" site.Params.author.email
+"contactUrl" $contactUrl
+"download" (dict
+  "heading" (i18n "download_heading")
+  "close" (i18n "closeTitle")
+  "licenseHeading" (i18n "photo_license")
+  "may" (i18n "download_may")
+  "must" (i18n "download_must")
+  "not" (i18n "download_not")
+  "credit" (i18n "download_credit")
+  "by" (i18n "download_credit_by")
+  "copyCredit" (i18n "download_copy_credit")
+  "copied" (i18n "photo_copied")
+  "size" (i18n "download_size")
+  "notice" (i18n "download_notice")
+  "contact" (i18n "download_contact")
+  "gate" (i18n "download_gate")
+  "tiers" (dict
+    "small" (i18n "download_tier_small")
+    "medium" (i18n "download_tier_medium")
+    "large" (i18n "download_tier_large")
+    "original" (i18n "download_tier_original"))
+  "hints" (dict
+    "small" (i18n "download_hint_small")
+    "medium" (i18n "download_hint_medium")
+    "large" (i18n "download_hint_large")
+    "original" (i18n "download_hint_original")))
 }}
 {{ $js := resources.Get "js/main.js" | js.Build (dict "minify" true "params" $params) | resources.Fingerprint }}
 <script src="{{ $js.RelPermalink }}" defer></script>

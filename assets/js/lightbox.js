@@ -1,5 +1,6 @@
 import PhotoSwipeLightbox from "./photoswipe/photoswipe-lightbox.esm.js";
 import PhotoSwipe from "./photoswipe/photoswipe.esm.js";
+import { openDownloadDialog, isDownloadDialogOpen, closeDownloadDialog } from "./gallery-download.js";
 import * as params from "@params";
 
 const gallery = document.getElementById("gallery");
@@ -228,29 +229,43 @@ if (gallery) {
   }
 
   lightbox.on("uiRegister", () => {
+    /* A button, not a link. It used to be an <a download> straight to the 4000px
+       render: one size, the hashed filename, and not a word about the licence at
+       the moment it matters most. It now opens the dialog, which offers the
+       renders that already exist, names the file after the photo and puts the
+       deed in front of the file rather than after it.
+
+       `target="_blank"` went with the anchor and is not coming back: `download`
+       already means "save, do not navigate", and the target made Safari open an
+       empty tab beside the download. */
     lightbox.pswp.ui.registerElement({
       name: "download-button",
       order: 8,
       isButton: true,
-      tagName: "a",
+      tagName: "button",
       html: {
         isCustomSVG: true,
         inner: '<path d="M20.5 14.3 17.1 18V10h-2.2v7.9l-3.4-3.6L10 16l6 6.1 6-6.1ZM23 23H9v2h14Z" id="pswp__icn-download"/>',
         outlineID: "pswp__icn-download",
       },
       onInit: (el, pswp) => {
-        el.setAttribute("download", "");
-        el.setAttribute("target", "_blank");
-        el.setAttribute("rel", "noopener");
         el.setAttribute("title", params.downloadTitle || "Download");
-        pswp.on("change", () => {
-          /* data-download, not href: href now points at the photo's own page, so
-             reading it here would hand the visitor an HTML file. The fallback
-             covers any gallery-item rendered without the attribute. */
-          const item = pswp.currSlide.data.element;
-          el.href = item.dataset.download || item.href;
+        el.setAttribute("aria-haspopup", "dialog");
+        el.addEventListener("click", (e) => {
+          e.stopPropagation();
+          openDownloadDialog(pswp.currSlide?.data?.element);
         });
       },
+    });
+
+    /* Escape has two listeners. PhotoSwipe binds keydown on document and closes
+       the viewer on Escape, so with the dialog open one press would close both.
+       PhotoSwipe checks its own dispatch's defaultPrevented before acting, so
+       this is its contract rather than a patched-over document listener: the
+       first Escape closes the dialog (the browser does that itself for a modal
+       <dialog>), the second closes the lightbox. */
+    lightbox.pswp.on("keydown", (e) => {
+      if (isDownloadDialogOpen()) e.preventDefault();
     });
 
     // Info button for EXIF details popup
@@ -535,6 +550,9 @@ if (gallery) {
     suppressHistoryBack = false;
     historyEntryPushed = false;
     if (hadEntry && !cameFromHistory) history.back();
+
+    // The dialog only ever opens over the lightbox, so it goes when that goes.
+    closeDownloadDialog();
 
     // Close info popup when lightbox closes
     const popup = document.querySelector(".pswp-info-popup");

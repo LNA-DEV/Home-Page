@@ -20,9 +20,29 @@
 #   label       what a reader sees. String, or an {en, de, sv} map falling back to
 #               en. CC licence names conventionally stay English in German and
 #               Swedish prose, so only the plain-language ones are translated.
+#   short       the compact name for the credit line and the download dialog's
+#               heading ("CC BY-SA 4.0"). String or map, resolved like `label`.
+#               Falls back to `label` when absent.
 #   terms       the one-sentence, human-readable grant written into the served
 #               JPEG as xmpRights:UsageTerms by scripts/gallery-embed-metadata.py.
 #               String or map, resolved like `label`.
+#   deed        the plain-language summary the download dialog and the photo
+#               page's download card print: three lists, `may` / `must` / `not`,
+#               PER LANGUAGE with an English fallback for the whole block. A key
+#               without a `deed` is a BUILD ERROR: a licence the dialog cannot
+#               explain must not be attachable to a photo.
+#               The bullets never name the photographer. They are resolved once
+#               per licence, not once per photo (docs/concepts/gallery-download-
+#               dialog.md §4), while `artist:` is per photo — so "the
+#               photographer" is the only spelling that is true for all of them.
+#               The actual name is right underneath, in the credit line.
+#   requires_permission
+#               optional flag. True means: downloading is fine, anything beyond
+#               private use needs asking. It drives the notice, the contact link
+#               and the checkbox in the dialog. Neither the templates nor the JS
+#               may branch on `eq $key "all-rights-reserved"` instead — the day a
+#               second restricted licence appears it must behave identically by
+#               carrying this flag, not by being special-cased.
 
 cc-by-sa-4.0:
   url: https://creativecommons.org/licenses/by-sa/4.0/
@@ -30,7 +50,39 @@ cc-by-sa-4.0:
     de: https://creativecommons.org/licenses/by-sa/4.0/deed.de
     sv: https://creativecommons.org/licenses/by-sa/4.0/deed.sv
   label: Creative Commons Attribution-ShareAlike 4.0
+  short: CC BY-SA 4.0
   terms: "Licensed under CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/"
+  deed:
+    en:
+      may:
+        - Share it — copy and redistribute it, in any medium
+        - Adapt it — crop, edit, build on it
+        - Use it commercially
+      must:
+        - Credit the photographer and link to the source
+        - Link to the licence and mark any changes
+        - Release adaptations under this same licence
+      not: []
+    de:
+      may:
+        - Teilen — kopieren und weiterverbreiten, in jedem Format
+        - Bearbeiten — zuschneiden, verändern, darauf aufbauen
+        - Kommerziell nutzen
+      must:
+        - Den Fotografen nennen und auf die Quelle verlinken
+        - Auf die Lizenz verlinken und Änderungen kennzeichnen
+        - Bearbeitungen unter derselben Lizenz weitergeben
+      not: []
+    sv:
+      may:
+        - Dela — kopiera och sprida vidare, i valfritt format
+        - Bearbeta — beskära, redigera, bygga vidare på
+        - Använda kommersiellt
+      must:
+        - Ange fotografen och länka till källan
+        - Länka till licensen och markera ändringar
+        - Dela bearbetningar under samma licens
+      not: []
 
 cc-by-nd-4.0:
   url: https://creativecommons.org/licenses/by-nd/4.0/
@@ -38,8 +90,48 @@ cc-by-nd-4.0:
     de: https://creativecommons.org/licenses/by-nd/4.0/deed.de
     sv: https://creativecommons.org/licenses/by-nd/4.0/deed.sv
   label: Creative Commons Attribution-NoDerivatives 4.0
+  short: CC BY-ND 4.0
   terms: "Licensed under CC BY-ND 4.0 — https://creativecommons.org/licenses/by-nd/4.0/"
+  deed:
+    en:
+      may:
+        - Share it — copy and redistribute it, in any medium
+        - Use it commercially
+      must:
+        - Credit the photographer and link to the source
+        - Link to the licence
+      not:
+        - Distribute a modified version — cropping and colour edits included
+    de:
+      may:
+        - Teilen — kopieren und weiterverbreiten, in jedem Format
+        - Kommerziell nutzen
+      must:
+        - Den Fotografen nennen und auf die Quelle verlinken
+        - Auf die Lizenz verlinken
+      not:
+        - Eine veränderte Fassung verbreiten — Zuschnitt und Farbkorrektur eingeschlossen
+    sv:
+      may:
+        - Dela — kopiera och sprida vidare, i valfritt format
+        - Använda kommersiellt
+      must:
+        - Ange fotografen och länka till källan
+        - Länka till licensen
+      not:
+        - Sprida en ändrad version — beskärning och färgredigering inräknat
 
+# The `may` list below deliberately does NOT offer printing, and an earlier
+# revision of it did. Looking at the photo and setting it as a wallpaper are
+# screen-bound and end with the file; a print is a physical object that outlives
+# it, travels, and carries none of the creator, UsageTerms or WebStatement that
+# scripts/gallery-embed-metadata.py writes into every served JPEG. It is also
+# the one use somebody would pay for, on the handful of photos whose whole point
+# is that they are not given away — and the dialog offers these photos' ORIGINAL,
+# up to 8280 px, right beside the sentence. Saying nothing is not a prohibition:
+# the line under it says to ask for anything else, and where a private-copy
+# limitation exists in law it is untouched by what this file says.
+# THIS WAS A DECISION. Do not put printing back without asking.
 all-rights-reserved:
   url: /licensing/
   label:
@@ -50,3 +142,26 @@ all-rights-reserved:
     en: "All rights reserved. Contact the creator for licensing: https://lna-dev.net/en/licensing/"
     de: "Alle Rechte vorbehalten. Für eine Lizenz bitte den Urheber kontaktieren: https://lna-dev.net/de/licensing/"
     sv: "Alla rättigheter förbehållna. Kontakta upphovspersonen för licensiering: https://lna-dev.net/sv/licensing/"
+  requires_permission: true
+  deed:
+    en:
+      may:
+        - Keep it for yourself — look at it, use it as a wallpaper
+      must:
+        - Ask before doing anything else
+      not:
+        - Publish, share or use it commercially without permission
+    de:
+      may:
+        - Für dich behalten — ansehen, als Hintergrundbild nutzen
+      must:
+        - Für alles andere vorher fragen
+      not:
+        - Ohne Erlaubnis veröffentlichen, weitergeben oder kommerziell nutzen
+    sv:
+      may:
+        - Behålla det själv — titta på det, använda som bakgrundsbild
+      must:
+        - Fråga innan du gör något annat
+      not:
+        - Publicera, dela eller använda kommersiellt utan tillstånd

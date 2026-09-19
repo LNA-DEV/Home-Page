@@ -317,3 +317,273 @@
     color: #fff;
   }
 }
+/* The download dialog. A native <dialog> shown with showModal(), which is what
+   puts it in the top layer: PhotoSwipe's root sits at z-index 100000 and the
+   info popup at 999999 !important, and a modal dialog paints above both without
+   a number. assets/js/gallery-download.js builds its contents.
+
+   Literal dark colours rather than theme variables, like .pswp-info-popup above:
+   the lightbox is bgOpacity 1 — black — and this only ever opens over it. The
+   same content in the light/dark page is the photo page's static card, which is
+   theme-variable based and lives in extended/gallery-download.css. */
+.gallery-download {
+  padding: 0;
+  border: none;
+  border-radius: 12px;
+  /* Two declarations rather than min(92vw, 420px): Sass resolves a bare min()
+     itself and rejects mixed units. */
+  width: 92vw;
+  max-width: 420px;
+  max-height: 85vh;
+  background-color: #1a1a1a;
+  color: #fff;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+
+  &[open] {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* PaperMod strips underlines globally. On a dark sheet with no colour
+     difference to fall back on, that left the licence name and the contact
+     links looking like plain text — the one link in here that has to be
+     obviously a link is the deed. */
+  a {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-color: rgba(255, 255, 255, 0.4);
+  }
+
+  a:hover {
+    text-decoration-color: #fff;
+  }
+}
+
+.gallery-download__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 20px 12px;
+}
+
+.gallery-download__heading {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.gallery-download__close {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 150ms;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.gallery-download__body {
+  overflow-y: auto;
+  padding: 0 20px 20px;
+}
+
+.gallery-download__title {
+  margin: 0 0 16px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.gallery-download h3 {
+  margin: 0;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.gallery-download h4 {
+  margin: 0;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.gallery-download section + section {
+  margin-top: 18px;
+}
+
+.gallery-download__license-name {
+  display: block;
+  margin: 6px 0 10px;
+  font-size: 14px;
+}
+
+.gallery-download__deed + .gallery-download__deed {
+  margin-top: 10px;
+}
+
+.gallery-download__deed ul {
+  list-style: none;
+  margin: 5px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.gallery-download__deed li {
+  position: relative;
+  padding-left: 18px;
+}
+
+/* Glyphs, not colours — the same decision the static card makes, for the same
+   reason. */
+.gallery-download__deed li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.gallery-download__deed--may li::before {
+  content: "\2713";
+}
+
+.gallery-download__deed--must li::before {
+  content: "\0021";
+}
+
+.gallery-download__deed--not li::before {
+  content: "\2715";
+}
+
+.gallery-download__credit-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+/* pre-wrap: the credit line is deliberately two lines, and it is meant to be
+   pasted exactly as shown. */
+.gallery-download__credit-text {
+  flex: 1;
+  display: block;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.gallery-download__notice {
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 13px;
+  line-height: 1.55;
+
+  p {
+    margin: 0;
+  }
+}
+
+.gallery-download__notice-links {
+  margin-top: 8px !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.gallery-download__size-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.gallery-download__size {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: baseline;
+  gap: 4px 10px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  transition: background-color 150ms, border-color 150ms;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.gallery-download__tier {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.gallery-download__dims,
+.gallery-download__bytes {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+}
+
+/* The hint sits on its own row under the three columns above it. */
+.gallery-download__hint {
+  grid-column: 1 / -1;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.gallery-download__gate {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.gallery-download__size[aria-disabled="true"] {
+  opacity: 0.4;
+  cursor: not-allowed;
+
+  &:hover {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
+/* PhotoSwipe's own breakpoint (paddingFn drops all padding below 700px), so the
+   dialog becomes a bottom sheet at exactly the width the viewer goes edge to
+   edge. */
+@media (max-width: 700px) {
+  .gallery-download {
+    width: 100vw;
+    max-width: none;
+    max-height: 88vh;
+    margin: auto auto 0;
+    border-radius: 14px 14px 0 0;
+  }
+}

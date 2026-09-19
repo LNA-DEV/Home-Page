@@ -42,6 +42,6 @@ Varje bild i [galleriet](/sv/gallery/) innehåller strukturerad metadata med lic
 - **CC BY-SA 4.0** -- [Creative Commons Erkännande-DelaLika 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.sv)
 - **Alla rättigheter förbehållna** -- full upphovsrätt, ingen återanvändning utan tillstånd (används där Creative Commons inte passar, t.ex. porträtt utan samtycke eller plattformsspecifika krav)
 
-## Kontakt
+## Kontakt {#contact}
 
 Vid licensfrågor, kontakta [me@lna-dev.net](mailto:me@lna-dev.net).
