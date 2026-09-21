@@ -9,6 +9,11 @@
     one: "1 min"
     other: "{{ .Count }} min"
 
+- id: words
+  translation:
+    one: "ord"
+    other: "{{ .Count }} ord"
+
 - id: toc
   translation: "Innehållsförteckning"
 
@@ -120,6 +125,18 @@
   translation: "Alla Foton"
 - id: gallery_archive
   translation: "Arkiv"
+- id: closeTitle
+  translation: "Stäng"
+- id: zoomTitle
+  translation: "Zooma"
+- id: arrowPrevTitle
+  translation: "Föregående"
+- id: arrowNextTitle
+  translation: "Nästa"
+- id: errorMsg
+  translation: "Bilden kan inte laddas"
+- id: downloadTitle
+  translation: "Ladda ner"
 - id: speciesLabel
   translation: "Art"
 - id: softwareLabel

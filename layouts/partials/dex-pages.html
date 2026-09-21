@@ -51,10 +51,10 @@
         "title" $name
         "description" (printf "%s — %s" $name ($species.scientific | default ""))
         "content" (dict "mediaType" "text/markdown" "value" $description)
+        "translationKey" (printf "dex-%s" .slug)
         "params" (dict
           "theme" "dex-species"
           "dex_slug" .slug
-          "translationKey" (printf "dex-%s" .slug)
           "hideMeta" true
           "searchHidden" false
           "filter_species" .scientific

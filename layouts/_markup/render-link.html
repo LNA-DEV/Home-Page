@@ -1,0 +1,94 @@
+{{- /* Resolve a relative Markdown link at build time.
+
+       A link written as `../../media/fediverse/` is correct on the page and
+       broken everywhere else. RSS 2.0 defines no base URL for the HTML inside
+       content:encoded and xml:base is not honoured reliably, so a feed reader
+       resolves it against its OWN origin and the link is lost. rss.xml already
+       rewrites root-relative URLs to absolute ones for exactly that reason, but
+       it cannot rewrite `../` — it does not know which page the body came from.
+       This hook does, so it is the right place: the destination is resolved
+       once, here, and everything downstream only ever sees a root-relative path.
+
+       The point is that `../x` and `/en/x` end up byte-identical in the output,
+       so a post can be written with relative links without that costing
+       anything — in the feed, in the search index, or anywhere else the body is
+       reused away from its own URL.
+
+       Resolution is deliberately done the way a BROWSER does it, against the
+       page's own URL, and not with `.GetPage`: Hugo's page lookup does not
+       understand `..` at all and returns nothing for every link this hook
+       exists for. The resolved URL is then looked up in permalink-index.html,
+       which both confirms a page is published there and supplies its canonical
+       spelling — so `../foo` and `../foo/` land on the same href.
+
+       Untouched: anything with a scheme, protocol-relative `//host`, a bare
+       `#fragment`, and anything already starting with `/`. An absolute link is
+       the author's explicit statement and is left exactly as written.
+
+       A relative destination that resolves to no published page and no page
+       resource is a WARNING naming the page and the link — and with the build
+       test in docs/concepts/testing.md treating every warning as a failure, that
+       is a stopped deploy. The old spelling could rot silently into a 404; this
+       one cannot. */ -}}
+
+{{- $page := or .PageInner .Page -}}
+{{- $dest := .Destination -}}
+
+{{- /* Split fragment and query off before resolving, and put them back after. */ -}}
+{{- $path := $dest -}}
+{{- $suffix := "" -}}
+{{- if strings.Contains $path "#" -}}
+  {{- $parts := split $path "#" -}}
+  {{- $path = index $parts 0 -}}
+  {{- $suffix = printf "#%s" (delimit (after 1 $parts) "#") -}}
+{{- end -}}
+{{- if strings.Contains $path "?" -}}
+  {{- $parts := split $path "?" -}}
+  {{- $path = index $parts 0 -}}
+  {{- $suffix = printf "?%s%s" (delimit (after 1 $parts) "?") $suffix -}}
+{{- end -}}
+
+{{- /* A destination produced by a shortcode — `[x]({{< ref "y" >}})`, which
+       hugo.yaml's footer text uses — is still an opaque placeholder token at
+       this point: Hugo substitutes the real URL after the markdown is rendered.
+       Resolving it here would turn the placeholder into a path and the
+       substitution would then have nothing to replace. */ -}}
+{{- $placeholder := strings.Contains $path "HAHAHUGOSHORTCODE" -}}
+
+{{- $relative := and
+      (ne $path "")
+      (not $placeholder)
+      (not (strings.HasPrefix $path "/"))
+      (not (strings.HasPrefix $path "//"))
+      (eq (urls.Parse $path).Scheme "")
+      -}}
+
+{{- if $relative -}}
+  {{- /* A page resource of this bundle wins: `[the pack](photos.zip)` must keep
+         pointing at the file, not be mistaken for a sibling page. */ -}}
+  {{- $res := $page.Resources.GetMatch $path -}}
+  {{- if $res -}}
+    {{- $dest = printf "%s%s" $res.RelPermalink $suffix -}}
+  {{- else -}}
+    {{- $joined := path.Join $page.RelPermalink $path -}}
+    {{- $index := partialCached "permalink-index.html" . -}}
+    {{- $canonical := index $index $joined -}}
+    {{- if $canonical -}}
+      {{- $dest = printf "%s%s" $canonical $suffix -}}
+    {{- else -}}
+      {{- $where := $page.RelPermalink -}}
+      {{- with $page.File -}}{{- $where = .Path -}}{{- end -}}
+      {{- warnf "render-link: %q on %s resolves to %s, where no page is published" $dest $where $joined -}}
+      {{- $dest = printf "%s%s" $joined $suffix -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $attributes := merge .Attributes (dict "href" $dest "title" .Title) -}}
+<a
+  {{- range $k, $v := $attributes -}}
+    {{- if $v -}}
+      {{- printf " %s=%q" $k $v | safeHTMLAttr -}}
+    {{- end -}}
+  {{- end -}}>{{ .Text }}</a>
+{{- /**/ -}}

@@ -1,9 +1,9 @@
 # Concept: making the site testable
 
-**Status:** proposal, 2026-09-18, revised the same day after review with the author (browser matrix, single command and report, Tor and CI scope). Nothing implemented. Every number below was measured against the working tree on that day: `data/gallery.yaml` with 648 entries, the photo store (648 files, 6.6 GB), a warm image cache (2.1 GB), Hugo 0.166.0, and a fresh production build (4,641 HTML files, 8.0 GB, 15.2 s).
+**Status:** proposal, 2026-09-18, revised the same day after review with the author (browser matrix, single command and report, Tor and CI scope); re-read against the tree on 2026-09-20 and amended for the three features that landed in between — the model pages, the download dialog and the photo pages (`a3493a3`, `9b43872`, `a40d8ec`). **Implemented on 2026-09-20** — phases 1 to 5 of §8; §11 below records what the build found and where the implementation departs from this design. Phase 6 (fixtures, hosted CI) is still designed rather than scheduled, as intended. Every number below was measured against the working tree on that day: `data/gallery.yaml` with 648 entries, the photo store (648 files, 6.6 GB), a warm image cache (2.1 GB), Hugo 0.166.0, and a fresh production build (4,641 HTML files, 8.0 GB, 15.2 s).
 **Read against:** the tree after the metadata single-source work (`gallery-metadata-single-source.md`, `gallery-metadata-import.md`), which is what introduced the one permanent automated check this repo has — `gallery-embed-metadata.py --check`.
 
-The site has three kinds of logic and none of them is under test: ~90 Go templates that resolve, filter and join the data files; ~1,800 lines of client-side JavaScript (lightbox with hand-wired history, filters, the dex map, the feed, the newsletter form); and four stdlib-only Python toolchains (gallery, dex, reading list, game syncs) that write the data files. The only automated checks are the 24 `errorf` and 8 `warnf` calls in the templates, plus `--check` in `deploy.sh`. Everything else has been verified by hand, often with a throwaway probe script written beside a concept document and deleted with its worktree — `test-feed.py` ran 285 feed assertions, `xmllint` over 114 feeds and an MD5 diff over 753 pages for the RSS work, and none of that runs today.
+The site has three kinds of logic and none of them is under test: ~90 Go templates that resolve, filter and join the data files; ~2,400 lines of client-side JavaScript (lightbox with hand-wired history, filters, the dex map, the feed, the newsletter form, the download dialog); and four stdlib-only Python toolchains (gallery, dex, reading list, game syncs) that write the data files. The only automated checks are the 24 `errorf` and 8 `warnf` calls in the templates, plus `--check` in `deploy.sh`. Everything else has been verified by hand, often with a throwaway probe script written beside a concept document and deleted with its worktree — `test-feed.py` ran 285 feed assertions, `xmllint` over 114 feeds and an MD5 diff over 753 pages for the RSS work, and none of that runs today.
 
 Two constraints shape what "testable" can mean here and both are in CLAUDE.md already: **the photos are not in git**, so no hosted CI can build the real gallery, and **the image cache costs more than ten minutes cold**, so nothing may ever start from a clean build. The proposal is four layers behind **one command, `npm test`, producing one report**: the build itself, Python unit tests, static checks over the built HTML, and browser tests in Firefox first, Chromium and WebKit beside it. All of it runs locally and becomes the gate in `deploy.sh`; hosted CI on a fixture gallery is designed in §4 but not scheduled.
 
@@ -31,8 +31,8 @@ Two constraints shape what "testable" can mean here and both are in CLAUDE.md al
 
 | | |
 |---|---|
-| WebKit on this machine | Playwright's WebKit build needs a set of shared libraries that `npx playwright install-deps` only knows how to install on apt systems. On Fedora it is either the list Playwright prints on first launch, installed with `dnf`, or the browser projects run in the `mcr.microsoft.com/playwright` image under podman with `--network=host` against the host's static server. Decided in phase 4, when the first WebKit run tells us which |
-| The `@mobile` subset | starts with the scenarios that have a mobile fix commit (navbar, back link) plus lightbox and gallery grid; grows when a mobile bug appears |
+| ~~WebKit on this machine~~ | **Answered, 2026-09-20: the container.** Playwright's Linux WebKit links `libicu*.so.74` and `libjpeg.so.8`; Fedora 44 ships ICU 77 and `libjpeg.so.62`, so there is no `dnf` list that satisfies it without compat packages. Chromium and Firefox run natively and needed nothing. `webkit` and `mobile-safari` are therefore **opt-in** (`WEBKIT=1`), not in the default run — a suite that is red every time teaches people to ignore red — and `playwright.config.ts` carries the podman command |
+| ~~The `@mobile` subset~~ | **Built as designed:** navbar, gallery back link, grid layout, lightbox under touch — four scenarios in `tests/e2e/mobile.spec.ts`, each tagged `@mobile`. It grows when a mobile bug appears |
 
 ---
 
@@ -46,8 +46,8 @@ Two constraints shape what "testable" can mean here and both are in CLAUDE.md al
 
 | Finding | Where | Would be caught by |
 |---|---|---|
-| 8 Swedish i18n keys missing; the lightbox falls back to English on `/sv/` | `i18n/sv.yaml` — 192 keys against 201 in `en` and `de`; a ninth, `albumCount`, is missing too but no rendered page hits it | L0 `--printI18nWarnings`, and the key-parity test in L2 |
-| 8 broken internal links | `<a class="next" href="posts">` in `home.html:126` and `list.html:232` is *relative*, so on `/en/page/2/` it resolves to `/en/page/2/posts` — broken on every paginated home page in `en` and `de`; plus three relative links in the pixelfed-automation post | L2 link check |
+| 7 Swedish i18n keys missing; the lightbox falls back to English on `/sv/` | `i18n/sv.yaml` — 219 ids against 226 in `en` and `de`: `arrowNextTitle`, `arrowPrevTitle`, `closeTitle`, `downloadTitle`, `errorMsg`, `words`, `zoomTitle`. It was 9 when this was measured; `photoCount` and `albumCount` were added by the models commit two days later, and `downloadTitle` arrived missing with the download dialog the day after that — which is the case for the parity test better than the count is | L0 `--printI18nWarnings`, and the key-parity test in L2 |
+| 8 broken internal links (the count on the day of the probe) | `<a class="next" href="posts">` in `home.html:126` and `list.html:265` is *relative*, so on `/en/page/2/` it resolves to `/en/page/2/posts` — broken on every paginated home page in `en` and `de`; plus the two relative links in `content/posts/Projects/pixelfed-automation/index.en.md` (lines 19 and 22 — note the capital `Projects` in that path) | L2 link check |
 | `public/` held a **development build**: `http://localhost:1313` on 4,640 of 4,641 pages, no opengraph, no JSON-LD | `hugo server` **writes to disk by default** in this Hugo version (`hugo server --help`), so the everyday server on :1313 overwrites `public/` on every rebuild. `deploy.sh` rebuilds before it publishes, so nothing shipped — but nothing would have stopped it either, and it is why the test build gets its own destination | the static project run over `public/` in `deploy.sh` — "no `localhost`, every page has its schema" |
 | `--printUnusedTemplates` is **unusable as a gate** | it reports `schema_json.html`, `opengraph.html`, `twitter_cards.html` and `_default/page.html` as unused; the first three are invoked with `template`, not `partial`, and are on every page | nothing — noted so nobody wires it in |
 | HTML is not byte-reproducible | `layouts/shortcodes/map.html:3` uses `math.Rand` for the element id, so two builds of the same tree differ | a determinism test, once the id comes from `.Ordinal` |
@@ -82,6 +82,8 @@ The scripts are text-level writers with pure cores. The tests need no photos and
 This is the layer with the highest payoff per line, because the build output is the contract with the outside world and it is already on disk. The project reads `SITE_DIR` (default `.test-site`) and `SITE_BASE` (default `http://localhost:1414`) so the same checks run over `public/` with the production base URL from `deploy.sh`. Grouped:
 
 *Data ↔ output.* Every `id` in `gallery.yaml` is a UUID and unique; every entry has a photo page in all three languages and every photo page maps back to an entry; the set of `data-id`s on `/gallery/general/` + `/gallery/archive/` equals the set of ids in `gallery-metadata.json` equals the set in the YAML, and the three manifests agree on `count` and on ids; every `species:` is a `scientific:` in `dex.yaml`; every `project:` slug is an album under `content/gallery/projects/`; every `featured_image` / `*_cover` / `photo_id` UUID exists; every `license:` is a key; i18n key parity across the three files; every dex record with `height` has `height_measure`; every `sightings` entry has numeric `lat`/`lng`.
+
+*Models.* The section that landed after this was written, and the one place where a silent failure costs somebody other than the author. Four checks, all of them reading `data/models.yaml` against the built site: every `model:` slug in `gallery.yaml` has a record and every record's `visibility` is exactly `public`, `unlisted` or `hidden`; a **`hidden`** record's slug and — when it has one — its name appear **nowhere** under `SITE_DIR`, not in a page, a caption, a `data-` attribute, `index.json`, a feed or a path; an **`unlisted`** record's page resolves but its URL is in no `sitemap.xml`, no section feed and no `index.json`; a **`public`** record's page carries a `ProfilePage` JSON-LD whose `sameAs` holds exactly the record's `links` and no more. The `hidden` test is vacuous today — the file holds one record, `lukas-nagel`, `public` — and that is the reason to write it now rather than when it first matters. Note a `hidden` record may carry `slug:` and `visibility:` and nothing else, so the search is over the slug plus the name only if present.
 
 *HTML.* No `localhost:1313`, `ZgotmplZ`, `map[`, `<no value>` or `%!` anywhere, and — when `SITE_BASE` is the production URL — no `localhost` at all (one legitimate `localhost` sits in the nginx-proxy-manager post body and is allow-listed by path); every `<img>` has `alt`; every internal `href`/`src`/`srcset` resolves to a file or an alias, and every `#fragment` on a gallery deep link matches a `data-id` on the target page; translated pages carry `hreflang` alternates; every `<script type="application/ld+json">` parses and has the `@type` its theme promises — `ImageObject` on `gallery-photo`, `WebPage` + `about.Taxon` on `dex-species`, `ImageGallery` on the list themes, `BlogPosting` on posts and **never** on a dex page (§ SEO in CLAUDE.md); `robotsNoIndex` pages carry `noindex`.
 
@@ -121,6 +123,8 @@ Two engine differences the tests have to respect. Playwright cannot grant clipbo
 | Search | typing finds a known post title |
 | Newsletter form | submit posts to the mocked `data-api`; success and error states render; nothing goes to the network |
 | Likes | the mocked companion returns a count; the heart toggles and posts once |
+| Download dialog | opening from a grid item lists the size tiers and each row's `download` attribute equals the `data-download-name` Hugo wrote — the script computes no filename, so the test is that it did not start; Escape and a backdrop click close the native `<dialog>`; the per-tier HEAD requests go to `localhost` and nowhere else. On an `all-rights-reserved` photo the gate appears, a row click is cancelled while `aria-disabled="true"`, and ticking the box releases it. With JavaScript disabled the static card on the photo page still renders every link **ungated** — the property the module's comment calls the point of it, and the only one a JS test cannot see |
+| Model page | a `public` record's page shows the name, the bio and the photo strip, and the **Model** row in the lightbox info panel links to it; an `unlisted` record's page is reachable by URL and absent from the `/gallery/models/` grid; the photo of a model with no record renders no row at all rather than a row built from the slug |
 | Console | no `error`-level console message and no failed request on one page per theme |
 | `@mobile` | at phone width the navbar and the gallery back link are visible and clickable — the two September fixes; the grid and the lightbox work with touch |
 
@@ -223,7 +227,7 @@ The second `static` run is the guard §1 asked for: it looks at the very files r
 
 ## 8. Build order
 
-1. **Prerequisites, so the first run is green rather than a backlog.** Add the 9 Swedish keys. Make the paginator link absolute (`home.html:126`, `list.html:232`). Fix the three relative links in the pixelfed-automation post. Replace `math.Rand` in `map.html` with `.Ordinal`. Promote the unknown-species `warnf` to `errorf`, or leave it and let the build test do it. None of these change any URL.
+1. **Prerequisites, so the first run is green rather than a backlog.** Add the 7 Swedish keys named in §1. Make the paginator link absolute (`home.html:126`, `list.html:265`). Fix the two relative links in `content/posts/Projects/pixelfed-automation/index.en.md`. Replace `math.Rand` in `map.html` with `.Ordinal`. Promote the unknown-species `warnf` to `errorf`, or leave it and let the build test do it. None of these change any URL.
 2. **The skeleton: `build` + `static`, one report.** `package.json`, `playwright.config.ts` with the `webServer`, the `build` project and the `static` project, `tests/support/site.ts` (read the site dir, the YAML and the manifests once per run), the L2 groups of §2 in the order listed, the golden list generated and committed. After this step `npm test` exists and produces the report. Verify: run twice, identical result; run with `SITE_DIR=public` over a deploy build.
 3. **`python`.** The `parse_records` refactor in `gallery_xmp.py`, `_load.py`, the tests of §2. Verify against the real `dex.yaml` round trip.
 4. **Browsers, Firefox first.** `npx playwright install firefox`, the network fixture, the mocks, the scenarios in the order of the table — the six with a fix commit first — all green in Firefox. Then `chromium` and `webkit` (here the Fedora question resolves itself), then the two mobile projects with the `@mobile` tag. Engine-specific skips are written down with a reason, never silently.
@@ -240,7 +244,7 @@ Each phase is independently useful and stops at a working state; phases 1 and 2 
 - `playwright.config.ts` — projects `python`, `build`, `static`, `firefox`, `chromium`, `webkit`, `mobile-chrome`, `mobile-safari`; `webServer`; reporters
 - `tests/build/hugo.spec.ts` — the L0 tests
 - `tests/python/unittest.spec.ts` — the L1 bridge, one entry per module
-- `tests/static/*.spec.ts` — the L2 groups of §2, one file each
+- `tests/static/*.spec.ts` — the L2 groups of §2, one file each, `models.spec.ts` among them
 - `tests/e2e/*.spec.ts` — one file per L3 scenario row
 - `tests/support/site.ts`, `tests/support/network.ts`, `tests/support/mocks.ts`
 - `tests/golden/published-urls.txt`
@@ -253,7 +257,7 @@ Each phase is independently useful and stops at a working state; phases 1 and 2 
 - `i18n/sv.yaml` — the missing keys
 - `layouts/_default/home.html`, `layouts/_default/list.html` — the paginator link
 - `layouts/shortcodes/map.html` — deterministic id
-- `content/posts/projects/pixelfed-automation/index.en.md` — three links
+- `content/posts/Projects/pixelfed-automation/index.en.md` — two links
 - `scripts/gallery_xmp.py` — `parse_records` split out of `read`
 - `.gitignore` — `.test-site/`, `playwright-report/`, `test-results/`
 - `CLAUDE.md`, `AGENTS.md` — a *Testing* section: the one command, what each project is, how to run one layer, how to update the golden list, how to record an engine-specific skip
@@ -270,3 +274,111 @@ Each phase is independently useful and stops at a working state; phases 1 and 2 
 - **The companion API.** Its own repository; here it is mocked, and the contract the mock encodes (paths, shapes) is the one place a change there shows up.
 - **The 3m40s embedding run inside the suite.** `--check` stays where it is, in deploy; L1 tests `photo_args` and `build_argfile` as pure functions, plus a two-file smoke run into a temp dir when exiftool is present.
 - **The Nextcloud sync and the photo store.** Read-only in every layer, as everywhere else.
+
+---
+
+## 11. What was built, 2026-09-20
+
+Phases 1 to 5 of §8, in one sitting. `npm test` exists, runs **201 tests in seven
+projects** and produces one HTML report. On this machine: **195 passed, 6 skipped,
+0 failed, 1m 0s** end to end with a warm cache — comfortably inside the 3–5 min
+§7 budgeted, because the browser scenarios parallelise better than estimated.
+
+| Layer | What runs | Result |
+|---|---|---|
+| L0 `build` | the §2 command into `.test-site/`, every `WARN` a failure, plus `hugo mod verify` | 2 tests, 12–15 s |
+| L1 `python` | `unittest` over six modules, one report entry each | 7 tests / **96 assertions**, < 1 s |
+| L2 `static` | the six groups of §2 | 62 tests, **2.4 s over the real 8 GB artefact** |
+| L3 browsers | 15 scenario files in `firefox`, `chromium` and `mobile-chrome` | 130 tests, ~50 s |
+
+The six skips are honest ones, not hidden failures: the `hidden` and `unlisted`
+model checks are vacuous while `data/models.yaml` holds one `public` record, the
+determinism check is `@slow` and skips when pointed at a foreign `SITE_DIR`, the
+clipboard read-back is Chromium-only, and two scenarios skip where the fixture
+they need is absent.
+
+### What the first green run cost — eight real defects
+
+Every one of these was found by writing the check, not by reading the code:
+
+1. **1,944 photo pages had no hreflang cluster.** `translationKey` sat inside
+   `params` in `gallery-photo-pages.html`, where Hugo ignores it — it is a
+   top-level key of `.AddPage`, like `aliases` and `build`. Hugo then paired
+   translations by path, which works on the dex and model adapters (their slug is
+   language-neutral) and cannot work here, where the three languages have three
+   different slugs by design. Every photo page in every language declared only
+   itself. Moved to the top level in all three adapters, and L2 gained *"a page
+   that exists in three languages declares all three alternates"*, scoped to the
+   adapter pages — the weaker "has at least one alternate" check passed happily
+   on a page that named only itself.
+2. **Every RSS feed advertised a PNG as its own site.** `<image><link>` in
+   `rss.xml` held the image URL; RSS 2.0 says it is the URL of the site and
+   should match the channel's `<link>`. 114 feeds × 3 languages. (The fix needs
+   `$.Permalink`, not `.Permalink` — inside `with site.Params.images` the dot is
+   the images slice.)
+3. **Twenty-one relative links in post bodies.** They resolve on the page and
+   break in a feed reader, which renders the body on its own origin. Found by the
+   `content:encoded` check, not by the link checker, which correctly saw them
+   resolve. **The first fix was to write the language prefix into the content by
+   hand; the author asked for the `../` spelling to keep working instead**, which
+   is the better answer — so the resolution moved into
+   `layouts/_markup/render-link.html`, where it belongs, and the content went
+   back to `../`. `../x` and `/en/x` now render byte-identically (verified by
+   diffing 120 resolved hrefs across the ten affected pages before and after).
+   L2 gained *"no relative link survives out of rendered Markdown"*, scoped to
+   `.post-content`. Three links in that set were not relative-notation at all but
+   genuinely broken — `posts/media/fediverse/` and `tags/open-source/` were
+   missing their root and resolved into the post's own directory, and
+   `/tags/Kubernetes` had no language prefix and the wrong case — and those
+   stayed content fixes.
+4. **Two genuinely dead links**: `/tags/Kubernetes` (no language prefix, wrong
+   case) and a screenshot that has not existed for as long as git remembers.
+5. The **7 Swedish i18n keys** and the **relative paginator link** of §1, as
+   planned, plus `math.Rand` in `map.html` — after which the determinism check
+   passes and two builds of the same tree are byte-identical.
+
+### Where the implementation departs from this design
+
+- **Determinism is tagged `@slow`** and `npm run test:quick` excludes it: it runs
+  a second full build into `.test-site-verify/` (~13 s, 8 GB, removed afterwards),
+  which is more than the "~20 s" §6 promised for the quick lane.
+- **The analytics script is stubbed, not blocked.** `extend_head.html` loads
+  Plausible unconditionally, so it is on every page of every build — including
+  the Tor one. Chromium logs an aborted request as a console error and Firefox
+  does not, so blocking it would make the "no console error" scenario pass in one
+  engine and fail in the other. It is answered with an empty script instead; the
+  real service still never sees a test run. The dex-map scenario names the
+  exception out loud rather than filtering it silently, because the claim that
+  page rests on is that **no map data** comes from a third party — which holds.
+- **The network allow-list is an option fixture wrapped in an object**
+  (`test.use({ net: { allow: [...] } })`). Playwright's option fixtures use a
+  `[value, options]` tuple and a bare `RegExp[]` is ambiguous with it.
+- **L3 needs one wait that is not obvious.** PhotoSwipe does its wiring — the
+  keyboard listener, the heavy image, the close path — in `openingAnimationEnd`,
+  not in `open`. Both `.pswp--open` and `.pswp--ui-visible` appear well before
+  that, so a test that acts as soon as the viewer looks open has its click or key
+  press swallowed, which reads exactly like a broken lightbox. `openLightbox()`
+  in `tests/support/fixtures.ts` waits for the placeholder image to be swapped
+  for the real one, which is the first thing that handler does. **This cost an
+  hour and produced a convincing false bug report; it is written down here so it
+  costs nobody else one.**
+
+### One thing this found that is a decision, not a defect
+
+**The language switcher always points at the language home**, on every page —
+including pages that are fully translated, photo pages included. §2 assumed
+"from a translated page it lands on the translation, from an untranslated page on
+the other language's home"; only the second half is true. `tests/e2e/language.spec.ts`
+asserts the shipped behaviour and says so in a header comment, and it separately
+asserts that the translation *is* reachable through the hreflang alternate (which
+it now is — finding 1). Teaching the switcher to follow `.Translations` is a
+product decision, not a bug fix, and was left to the author.
+
+### Files
+
+Everything §9 lists, with these differences: `tests/python/unittest.spec.ts` is
+the L1 bridge (one test per module), `tests/golden/collect.mjs` is shared by the
+golden-list test and `npm run golden:update` so the two cannot disagree about
+what counts as published, and `tests/support/fixtures.ts` holds the `probe`
+fixture (network policy, console errors, failed requests) that every scenario
+uses. `tests/golden/published-urls.txt` has **2,587 URLs**.

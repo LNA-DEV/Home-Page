@@ -16,6 +16,30 @@ Hugo static site for `lna-dev.net` (personal site of Lukas Nagel). Theme is `hug
   - **`mounts` is replace-not-merge.** A `module.mounts` list in `config/_default/module.yaml` silently discards the whole list in `hugo.yaml` — which is why the local file restates the default `assets` mount and why `hugo.yaml` deliberately declares no mounts at all. Everything else in `hugo.yaml` is still read normally.
   - **A symlink can no longer be the mount `source`.** It used to work — that is what the old repo-root `gallery-photos` symlink relied on — but only because of a Hugo regression (`RootMappingFs.statRoot` calling `Stat` instead of `Lstat`, introduced in 0.123.0). That was a symlink-confinement bypass (CVE-2026-58403) and was fixed in 0.163.1, so from Hugo 0.163.1 on a symlinked mount source resolves to nothing — no error, just an empty gallery. Do not reintroduce one. See memory `project_gallery_mount.md`.
 
+## Testing
+
+`npm test` — one command, four layers, one HTML report (~1 min warm). It is the
+gate in `deploy.sh`. Design: `docs/concepts/testing.md`; full workflow and the
+traps: the *Testing* section of `AGENTS.md`. The short version:
+
+- Seven Playwright projects: `build` (Hugo, **every `WARN` a failure**),
+  `python` (stdlib `unittest` over `scripts/`), `static` (the built site: data ↔
+  output, links, JSON-LD, feeds, sitemap, URL stability, model visibility), and
+  the browsers `firefox` / `chromium` / `mobile-chrome`. `webkit` and
+  `mobile-safari` are opt-in (`WEBKIT=1`) — Playwright's WebKit does not run on
+  Fedora as shipped.
+- **The build under test is `.test-site/`, never `public/`.** `public/` is
+  written only by `deploy.sh`.
+- **A warning blocks a deploy.** Loosen it through Hugo's `ignoreLogs` in
+  `hugo.yaml`, keyed by warning id, never by weakening a test.
+- **A new published URL needs `npm run golden:update`**, and a retired one may
+  only leave `tests/golden/published-urls.txt` in the commit that adds its
+  redirect. This is the rule this file states for the gallery and for RSS, and
+  nothing could check it before.
+- **No test reaches the network**: the companion API, listmonk and the map tiles
+  are mocked; everything else off localhost is aborted, which is itself the
+  assertion the dex map rests on.
+
 ## Architecture
 
 ### Gallery system (the load-bearing part of the site)
@@ -189,4 +213,12 @@ UI strings in `i18n/{en,de,sv}.yaml`. Per-language menus, descriptions, and home
 - A new photo's entry is best created with `python3 scripts/sync-gallery.py`, which appends a stub and pre-fills `title` / `alt` / `description` / `license` / `artist` from what darktable wrote into the file. That read happens **once, at stub time** — the build never looks at those tags again, so a later re-export cannot change what the site says about a photo.
 - `security.txt` (RFC 9116) is **generated, not static** — `layouts/_default/home.securitytxt.txt` plus the `securitytxt` output format in `hugo.yaml`. It was a static file whose `Expires` sat four months in the past before anyone noticed; generating it refreshes the date on every build (build day + 1 year - 1 day, so it stays inside the RFC's "less than a year" recommendation, truncated to whole days so rebuilds are byte-identical). Two things are load-bearing: the format's `path` is `../.well-known` because `path` resolves relative to the **language** directory and the file must sit at the domain root, and it is listed under `languages.en.outputs.home` **only** — putting it in the top-level `outputs` makes all three languages write the same target path. `Canonical` uses `absURL`, so the Tor build in `deploy.sh` emits the onion URL instead of the clearnet one. Do not re-add `static/.well-known/security.txt`; a static file of the same name would collide with the generated one.
 - Adding a model: write the record in `data/models.yaml` **first** (`slug`, `name`, and an explicit `visibility:` — the build errors without one), then add `model: <slug>` to the photo entries in `data/gallery.yaml`. A slug with no record is a hard build error; removing someone is `visibility: hidden`, never a deleted record. Set `artist:` on any photo the owner did not take — it otherwise resolves to the site author. Full workflow in `AGENTS.md`.
+- **Relative Markdown links are resolved at build time** and need no special spelling: `[x](../../media/fediverse/)` and `[x](/en/posts/media/fediverse/)` produce a byte-identical `href`. `layouts/_markup/render-link.html` resolves a relative destination against the page's own URL — the way a browser would, because Hugo's `.GetPage` does not understand `..` at all — then looks the result up in `layouts/partials/permalink-index.html` to get the canonical URL (trailing slash included) and to confirm a page is actually published there. A relative link that resolves to nothing is a **`warnf` naming the page and the link**, which the build test turns into a stopped deploy. Anything with a scheme, `//host`, a bare `#fragment` or a leading `/` is passed through untouched — an absolute link is the author's explicit statement. Shortcode-produced destinations (`[x]({{< ref "y" >}})`, used by the footer text in `hugo.yaml`) are still opaque placeholders at hook time and are skipped; resolving one would break Hugo's own substitution. **Why this matters beyond tidiness:** a relative link is correct on its page and wrong everywhere the body is reused — RSS 2.0 defines no base URL for HTML inside `content:encoded`, so a feed reader resolves `../x` against its own origin and the link is lost. `rss.xml` already rewrites root-relative URLs to absolute ones, but it cannot rewrite `../` because it does not know which page the body came from. The hook does.
 - Gallery scripting/migration helpers are written in Python (per project memory).
+- **`translationKey` is a top-level key of `.AddPage`, not a param** — the same
+  shape as `aliases` and `build`. Inside `params` Hugo ignores it and pairs
+  translations by path instead, which silently works wherever the slug is
+  language-neutral (the dex, the models) and silently fails where it is not: it
+  left all 648 photo pages in all three languages with no hreflang cluster at all.
+- Content adapters live in `content/**/_content.<lang>.gotmpl`, one per language,
+  because Hugo scopes an adapter to the language of its filename.

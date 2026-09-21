@@ -1,0 +1,18 @@
+{
+  "name": "lna-dev-site-tests",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Test suite for the lna-dev.net Hugo site. See docs/concepts/testing.md.",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:quick": "playwright test --project build --project python --project static --grep-invert @slow",
+    "test:e2e": "playwright test --project firefox",
+    "report": "playwright show-report",
+    "golden:update": "node tests/golden/update.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "yaml": "^2.9.0"
+  }
+}

@@ -110,7 +110,10 @@
     <image>
       <title>{{ site.Title }}</title>
       <url>{{ index . 0 | absURL }}</url>
-      <link>{{ index . 0 | absURL }}</link>
+      {{- /* RSS 2.0: <image><link> is the URL of the SITE, and should match the
+             channel's own <link>. It held the image URL again, which made every
+             one of the 114 feeds advertise a PNG as the site it came from. */}}
+      <link>{{ $.Permalink }}</link>
     </image>
     {{- end }}
     <generator>Hugo -- {{ hugo.Version }}</generator>

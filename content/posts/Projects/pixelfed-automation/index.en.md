@@ -16,10 +16,10 @@ sitemap:
 
 ## My problem with posting to Pixelfed
 
-I started with Mastodon as my first account in the [Fediverse](posts/media/fediverse/). After a while, I found out about Pixelfed and created my account there. I kept using it for a while and even posted from time to time. My problem with posting to Pixelfed was the lack of a scheduler. I want to post regularly, but I do not want to login every day and make a post manually. This feature was even announced but never finished. Even today, this is not implemented. There is also a [GitHub issue](https://github.com/pixelfed/pixelfed/issues/2872) discussing this if your interest goes deeper. In the following post by Pixelfed, you can see the announcement.
+I started with Mastodon as my first account in the [Fediverse](/en/posts/media/fediverse/). After a while, I found out about Pixelfed and created my account there. I kept using it for a while and even posted from time to time. My problem with posting to Pixelfed was the lack of a scheduler. I want to post regularly, but I do not want to login every day and make a post manually. This feature was even announced but never finished. Even today, this is not implemented. There is also a [GitHub issue](https://github.com/pixelfed/pixelfed/issues/2872) discussing this if your interest goes deeper. In the following post by Pixelfed, you can see the announcement.
 {{< mastodon url="https://mastodon.social/@pixelfed/107574719894032457/embed" >}}
 
-There are some post schedulers for Mastodon out there. I tried using them with Pixelfed, but nothing worked properly. I even tried the client-side automatic upload feature of [Fedilab](https://fedilab.app/), which posted immediately instead of at the given time. This surely was a bug I could have reported or fixed myself (because Fedilab is [FOSS](tags/open-source/)). But I wanted to make things more automatic anyway.
+There are some post schedulers for Mastodon out there. I tried using them with Pixelfed, but nothing worked properly. I even tried the client-side automatic upload feature of [Fedilab](https://fedilab.app/), which posted immediately instead of at the given time. This surely was a bug I could have reported or fixed myself (because Fedilab is [FOSS](/en/tags/open-source/)). But I wanted to make things more automatic anyway.
 
 I do not want to complain about this. It is totally fine. There are a lot of other things that need to be done in Pixelfed and the Fediverse as a whole. But for me, it meant I needed to implement something on my own.
 
@@ -362,7 +362,7 @@ That done, I made a final API request to my personal API noting that I uploaded 
 
 ### The schedule
 
-This part was fairly easy because I was already using a [Kubernetes](/tags/Kubernetes) cluster. I just needed to create a cronjob running each day and that's it.
+This part was fairly easy because I was already using a [Kubernetes](/en/tags/kubernetes/) cluster. I just needed to create a cronjob running each day and that's it.
 
 ```yaml
 apiVersion: batch/v1

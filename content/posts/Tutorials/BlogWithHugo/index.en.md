@@ -270,8 +270,6 @@ hugo serve
 2. Select the GitHubPages tab
 3. Set the source to GitHubActions
 
-<!-- Only works if running -->
-![GitHubPages Settings](/BlogWithHugo/GitHubPages.png)
 
 ### Add Pipeline YAML
 

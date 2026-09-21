@@ -1,8 +1,11 @@
 {{- $coordinatesJson := .Get "coordinates" }}
 {{- $coordinates := $coordinatesJson | transform.Unmarshal }}
-{{ $random := math.Rand }}
+{{- /* The element id must be unique on the page and identical between two
+       builds of the same tree: math.Rand made every build differ, which
+       ruled out the determinism check in docs/concepts/testing.md. */}}
+{{ $id := printf "map%d" .Ordinal }}
 
-<div id="map{{ $random }}" class="map"></div>
+<div id="{{ $id }}" class="map"></div>
 <script src="/packages/leaflet/leaflet.js"></script>
 <script src="/packages/leaflet-routing-machine/leaflet-routing-machine.min.js"></script>
 
@@ -34,6 +37,6 @@
                 { x: {{ .x }}, y: {{ .y }} },
             {{- end }}
         ];
-        initializeMap('map{{ $random }}', coordinates);
+        initializeMap('{{ $id }}', coordinates);
     });
 </script>

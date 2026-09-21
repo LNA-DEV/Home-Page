@@ -51,11 +51,11 @@
         "description" (or ($bio | plainify | replaceRE `\s+` " " | strings.TrimSpace | truncate 160) (i18n "models_description_fallback" (dict "name" .name)))
         "content" (dict "mediaType" "text/markdown" "value" $bio)
         "build" (dict "list" (cond $unlisted "never" "always") "render" "always")
+        "translationKey" (printf "model-%s" .slug)
         "params" (dict
           "theme" "model"
           "model_slug" .slug
           "filter_model" .slug
-          "translationKey" (printf "model-%s" .slug)
           "robotsNoIndex" $unlisted
           "searchHidden" $unlisted
           "hideMeta" true

@@ -123,7 +123,9 @@
     </a>
     {{- end }}
     {{- else}}
-    <a class="next" href="posts">
+    {{- /* Language-correct and absolute: a bare "posts" is relative, so on
+           /en/page/2/ it resolved to /en/page/2/posts. */}}
+    <a class="next" href="{{ with site.GetPage "/posts" }}{{ .RelPermalink }}{{ else }}{{ "/posts/" | relLangURL }}{{ end }}">
         All posts »
     </a>
     {{- end }}

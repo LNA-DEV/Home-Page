@@ -67,8 +67,18 @@ def read(paths):
         return {}
     if not proc.stdout.strip():
         return {}
+    return parse_records(proc.stdout)
+
+
+def parse_records(json_text):
+    """Map exiftool's JSON output to {basename: {field: value}}.
+
+    Split out of `read()` so the mapping can be tested without exiftool and
+    without a photo: it is the half that encodes the field map, and the half that
+    would silently start reading the wrong tag.
+    """
     try:
-        records = json.loads(proc.stdout)
+        records = json.loads(json_text)
     except json.JSONDecodeError:
         return {}
 

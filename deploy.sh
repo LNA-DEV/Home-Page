@@ -30,8 +30,28 @@ publish() {
   rsync -avz --delete public/ "${REMOTE}:$1"
 }
 
-hugo
+# The gate. `npm test` runs all four layers of docs/concepts/testing.md against
+# its own build in .test-site/ — the build itself with warnings counted as
+# failures, the Python unit tests, the static checks over the built site, and the
+# browser scenarios. A failure here stops the script before anything is written
+# to the server, because `set -e` is on.
+npm test
+
+# The artefact, as before, with --panicOnWarning: the test build deliberately
+# collects every warning so the report can show them all at once, but here the
+# first one is reason enough to stop.
+hugo --panicOnWarning --printI18nWarnings --printPathWarnings
+
+# The one check that can catch a stale or development build in the artefact
+# itself: the same static project, run over the very files rsync is about to
+# ship, with the production base URL. It costs about two seconds and would have
+# refused the `hugo server` output that used to sit in public/. With SITE_DIR
+# set, the project drops its dependency on `build` and rebuilds nothing.
+SITE_DIR=public SITE_BASE=https://lna-dev.net npx playwright test --project static
+
 publish /mnt/homepage/homepage-site-data
 
-hugo -b "$ONION"
+# The Tor build has to come out of hugo and be reachable; that is the whole
+# requirement. No second test pass, no clearnet-leak policy.
+hugo -b "$ONION" --panicOnWarning --printI18nWarnings --printPathWarnings
 publish /mnt/homepage/homepage-tor-site-data

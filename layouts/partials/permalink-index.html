@@ -1,0 +1,23 @@
+{{- /* Every URL this language's build serves a page at → its canonical RelPermalink.
+
+       Used by render-link.html to turn a resolved relative link into the exact
+       URL the page is published at (trailing slash included) and to tell a link
+       that resolves to a real page from one that resolves to nothing.
+
+       Keyed with and without the trailing slash, because a Markdown author
+       writes both. `site.Pages` covers every kind — home, section, taxonomy,
+       term and regular page — which is what makes `../../../tags/foo/` work.
+
+       Call via partialCached; Hugo scopes the partial cache per language Site,
+       so each language gets its own index without a variant key. */ -}}
+
+{{- $index := dict -}}
+{{- range site.Pages -}}
+  {{- $url := .RelPermalink -}}
+  {{- $index = merge $index (dict $url $url) -}}
+  {{- $bare := strings.TrimSuffix "/" $url -}}
+  {{- if and (ne $bare $url) (ne $bare "") -}}
+    {{- $index = merge $index (dict $bare $url) -}}
+  {{- end -}}
+{{- end -}}
+{{- return $index -}}

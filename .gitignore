@@ -22,3 +22,11 @@ scripts/__pycache__/**
 konzepte/**
 konzept/rss-galeriebilder.md
 konzept/test-feed.py
+# Test suite (docs/concepts/testing.md). `.test-site/` is the build under test —
+# a second full copy of the site, ~8 GB, rewritten by every run. It is deliberately
+# NOT public/, so the deploy artefact is only ever written by deploy.sh.
+/.test-site/
+/.test-site-verify/
+/playwright-report/
+/test-results/
+tests/py/__pycache__/**

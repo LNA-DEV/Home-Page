@@ -50,6 +50,12 @@
     {{- end -}}
   {{- end -}}
 
+  {{- /* `translationKey` is TOP LEVEL, not a param: it is a front-matter key of
+         .AddPage, the same shape as `aliases` and `build`. Inside `params` Hugo
+         ignores it and falls back to pairing translations by path — invisible on
+         the dex and model adapters, whose slug is language-neutral, and silently
+         wrong here, where the three languages have three different slugs. It left
+         all 648 photos in all three languages with no hreflang cluster at all. */}}
   {{- $page := dict
         "path" .Slug
         "kind" "page"
@@ -57,10 +63,10 @@
         "description" (or .Description $title | plainify | truncate 160)
         "content" (dict "mediaType" "text/markdown" "value" (.Description | default ""))
         "aliases" $aliases
+        "translationKey" (printf "photo-%s" .Id)
         "params" (dict
           "theme" "gallery-photo"
           "photo_id" .Id
-          "translationKey" (printf "photo-%s" .Id)
           "hideMeta" true
           "searchHidden" false
         )
