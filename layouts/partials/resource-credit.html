@@ -1,0 +1,54 @@
+{{- /*
+  resource-credit.html
+  The credit of a page-bundle image taken by somebody else, read from Hugo's own
+  page-resource metadata in the page's front matter:
+
+      resources:
+        - src: "Photo.jpg"
+          params:
+            credit: Jane Doe
+            license: all-rights-reserved   # a key in data/licenseMap.yaml
+
+  Context: the image resource. Returns {} when it carries no `credit`, else
+
+      { credit, notice, licenseUrl }
+
+  - `notice` is "© <capture year> <credit>", or "© <credit>" when the file has no
+    usable capture date. The year comes from the file's own date (EXIF
+    DateTimeOriginal via .Meta), never from the build, the same rule
+    scripts/gallery-embed-metadata.py follows: a build year would be wrong and
+    would change every New Year's Day.
+  - `licenseUrl` is set only when the licence resolves to an ABSOLUTE URL, i.e. a
+    public deed such as Creative Commons. all-rights-reserved resolves to the
+    site's own licensing page, which licenses the site owner's work and cannot
+    speak for another photographer's, so it yields no URL at all.
+
+  Used by {{< img >}} (microdata) and author-portrait.html (JSON-LD), so the two
+  cannot disagree about who took a photo.
+*/ -}}
+{{- $res := . -}}
+{{- $out := dict -}}
+{{- with $res.Params.credit -}}
+  {{- $credit := . -}}
+  {{- $year := 0 -}}
+  {{- if in (slice "jpeg" "png" "tiff" "webp") $res.MediaType.SubType -}}
+    {{- with $res.Meta -}}
+      {{- if gt .Date.Year 2000 -}}{{- $year = .Date.Year -}}{{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $notice := cond (gt $year 0) (printf "© %d %s" $year $credit) (printf "© %s" $credit) -}}
+
+  {{- $licenseUrl := "" -}}
+  {{- with $res.Params.license -}}
+    {{- $key := . -}}
+    {{- $lic := partialCached "license-index.html" $res site.Language.Lang -}}
+    {{- with index $lic (lower $key) -}}
+      {{- if hasPrefix .url "http" -}}{{- $licenseUrl = .url -}}{{- end -}}
+    {{- else -}}
+      {{- errorf "page resource %q: license %q is not a key in data/licenseMap.yaml" $res.Name $key -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $out = dict "credit" $credit "notice" $notice "licenseUrl" $licenseUrl -}}
+{{- end -}}
+{{- return $out -}}

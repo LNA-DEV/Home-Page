@@ -10,3 +10,12 @@
 .post-content figure:not(.gallery-image-float) {
     clear: both;
 }
+
+/* The credit line under a page-bundle photo taken by somebody else — see
+   {{< img >}}'s showCredit. Secondary and small, like galleryImage's EXIF line. */
+.post-content figure .img-credit {
+    display: block;
+    color: var(--secondary);
+    font-size: 0.85em;
+    font-weight: normal;
+}

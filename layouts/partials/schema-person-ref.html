@@ -1,0 +1,26 @@
+{{- /*
+  schema-person-ref.html
+  The site owner as a schema.org Person REFERENCE: @type, @id, name, url.
+
+  Every `author`, `publisher` and owner-`creator` in the site's JSON-LD is this,
+  so that all of them are recognisably one person. The @id is language-neutral
+  (<baseURL>/#person); the full node carrying it is schema-person.html, emitted on
+  the home page and the About page only.
+
+  It carries name and url as well as the @id on purpose: a bare {"@id": …} only
+  resolves when the full node is on the same page, and on a post it is not — a
+  consumer that does not follow ids across pages would see a Person with no name.
+
+  Returns a dict, printed straight into the <script type="application/ld+json">
+  (html/template marshals it as a JSON object). Call per language:
+
+      {{ $ref := partialCached "schema-person-ref.html" . site.Language.Lang }}
+
+  Design: docs/concepts/about-page-structured-data.md §2.
+*/ -}}
+{{- $a := site.Params.author -}}
+{{- $ref := dict "@type" "Person" "@id" (printf "%s#person" ("/" | absURL)) "name" $a.name -}}
+{{- with site.GetPage $a.page -}}
+  {{- $ref = merge $ref (dict "url" .Permalink) -}}
+{{- end -}}
+{{- return $ref -}}

@@ -1,0 +1,30 @@
+{{- /*
+  author-portrait.html
+  The site owner's portrait: the image resource of the About page bundle
+  (`params.author.page`) whose front-matter resource metadata says
+  `portrait: true`.
+
+  Returns {} when there is none, else
+
+      { resource, image, credit }
+
+  `image` is a fit 1200x1200 variant (AutoOrient first), shared by the Person's
+  JSON-LD `image` and the About page's og:image, so both point at one file.
+  `credit` is resource-credit.html's result. Cache per language — each language's
+  About page is its own bundle:
+
+      {{ with partialCached "author-portrait.html" . site.Language.Lang }}…{{ end }}
+*/ -}}
+{{- $out := dict -}}
+{{- with site.GetPage site.Params.author.page -}}
+  {{- range .Resources.ByType "image" -}}
+    {{- if and .Params.portrait (not $out) -}}
+      {{- $out = dict
+            "resource" .
+            "image" (.Filter (slice images.AutoOrient (images.Process "fit 1200x1200")))
+            "credit" (partial "resource-credit.html" .)
+      -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $out -}}

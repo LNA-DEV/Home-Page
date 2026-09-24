@@ -62,6 +62,17 @@ export const dex = memo<any[]>(() => readYaml("data/dex.yaml").species ?? []);
 export const models = memo<any[]>(() => readYaml("data/models.yaml").models ?? []);
 export const licenseMap = memo<Record<string, any>>(() => readYaml("data/licenseMap.yaml"));
 
+/* The site config. `params.author` and `params.schema.sameAs` define the owner as
+   one schema.org Person; the structured-data tests assert the pages against it. */
+export const hugoConfig = memo<any>(() => readYaml("hugo.yaml"));
+
+/** The YAML front matter of a content file, parsed ("content/x/index.en.md"). */
+export function frontMatter(rel: string): any {
+  const text = fs.readFileSync(path.join(REPO, rel), "utf8");
+  const m = text.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  return m ? parseYaml(m[1]) : {};
+}
+
 export const i18nIds = memo<Record<Lang, Set<string>>>(() => {
   const out = {} as Record<Lang, Set<string>>;
   for (const lang of LANGS) {
@@ -191,6 +202,9 @@ export function pageKind(file: string): string {
   if (/\/gallery\/dex\/[^/]+\//.test(u)) return "dex-species";
   if (/\/gallery\/models\/[^/]+\//.test(u)) return "model";
   if (/\/gallery\//.test(u)) return "gallery-list";
+  /* The About page — params.author.page — renders as a ProfilePage. */
+  const about = String(hugoConfig()?.params?.author?.page ?? "").replace(/^\/|\/$/g, "");
+  if (about && u === `/${u.split("/")[1]}/${about}/`) return "profile";
   /* /posts/page/2/ and /posts/<section>/page/2/ are paginator pages of a list,
      not articles — they carry a breadcrumb and nothing else, correctly. */
   if (/\/page\/\d+\//.test(u)) return "other";

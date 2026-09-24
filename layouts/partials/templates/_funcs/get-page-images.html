@@ -58,6 +58,22 @@
       "Permalink" $processed.Permalink) }}
   {{- end }}
 {{- end }}
+{{/* The About page: the owner's portrait — the bundle's `portrait: true`
+     resource, in the same fit 1200x1200 variant the Person's JSON-LD `image`
+     uses, so the link preview and the structured data point at one file.
+     Without this a shared About link showed the site logo. */}}
+{{- if and (not $imgParams) (not $imgs) }}
+  {{- with site.GetPage site.Params.author.page }}
+    {{- if eq .Permalink $.Permalink }}
+      {{- with partialCached "author-portrait.html" $ site.Language.Lang }}
+        {{- $imgs = $imgs | append (dict
+          "Image" .image
+          "RelPermalink" .image.RelPermalink
+          "Permalink" .image.Permalink) }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
 {{/* Use the first one of site images as the fallback. */}}
 {{- if and (not $imgParams) (not $imgs) }}
   {{- with site.Params.images }}

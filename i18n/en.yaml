@@ -495,3 +495,10 @@
   translation: "Contact me"
 - id: download_gate
   translation: "I will use this photo privately only"
+
+# The site owner as a person — JSON-LD (schema-person.html) and the credit line
+# {{< img >}} prints under a page-bundle image taken by somebody else.
+- id: person_job_title
+  translation: "Software Engineer"
+- id: photo_credit
+  translation: "Photo: {{ .Name }}"

@@ -30,7 +30,7 @@ Det här är domänerna och kontona som verkligen är mina. Allt annat som utger
 
 - [GitHub](https://github.com/LNA-DEV)
 - [Mastodon](https://mastodon.online/@lna_dev)
-- [Pixelfed](https://pixelfed.de/i/web/profile/482439783472092612)
+- [Pixelfed](https://pixelfed.de/LNA-DEV)
 - [Matrix](https://matrix.to/#/@lna-dev:matrix.org)
 - [Instagram](https://www.instagram.com/lnadev/)
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+  lna-dev.net/about → the English About page.
+
+  Static on purpose: a Hugo alias cannot produce this path. On a multilingual site
+  Hugo prefixes even an absolute alias with the language (`/about` in
+  index.en.md becomes /en/about/), so the domain-root /about/ has to be a file.
+  It copies the page Hugo writes for an alias, and it uses a root-relative
+  target so the Tor build redirects within the onion site.
+
+  The per-language /<lang>/about/, /de/ueber-mich/ and /sv/om-mig/ ARE aliases,
+  in content/lukas-nagel/index.*.md. tests/static/html.spec.ts checks that all of
+  them, this one included, reach the About page.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>/en/lukas-nagel/</title>
+    <link rel="canonical" href="/en/lukas-nagel/">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="refresh" content="0; url=/en/lukas-nagel/">
+  </head>
+  <body>
+    <p>This page has moved to <a href="/en/lukas-nagel/">/en/lukas-nagel/</a>.</p>
+  </body>
+</html>

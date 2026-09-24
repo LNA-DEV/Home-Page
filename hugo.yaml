@@ -200,8 +200,18 @@ languages:
           weight: 30
 
 params:
+  # The site owner's identities, for JSON-LD `sameAs` (PaperMod's own param name).
+  # Profiles only — no feed, no mail address, no link redirector such as matrix.to.
+  # The IndieWeb follow-up (docs/concepts/indieweb-basics.md) reads the same list
+  # for rel="me", so this stays the one place an identity is declared.
   schema:
-    publisherType: Person
+    sameAs:
+      - https://github.com/LNA-DEV
+      - https://mastodon.online/@lna_dev
+      - https://pixelfed.de/LNA-DEV
+      - https://bsky.app/profile/lna-dev.net
+      - https://www.instagram.com/lnadev/
+  # Also the WebSite `name` in JSON-LD and og:site_name — see schema_json.html.
   ShortTitle: "LNA-DEV"
   CompanionUrl: "https://companion.lna-dev.net"
   ShowFullTextinRSS: true
@@ -217,8 +227,17 @@ params:
   # Language-RELATIVE on purpose: the licensing page exists in all three
   # languages. Every consumer resolves it with absLangURL / relLangURL.
   licensingPage: "/licensing/"
+  # The site owner as ONE schema.org Person (layouts/partials/schema-person*.html).
+  # `page` is the About page: the Person's `url`, the page that renders as a
+  # ProfilePage, and the bundle holding the `portrait: true` image. `modelSlug` is
+  # the owner's record in data/models.yaml, whose model page then shares the
+  # Person's @id instead of describing a second, unrelated namesake.
+  # `email` is PaperMod's and is never emitted into JSON-LD.
   author:
     name: Lukas Nagel
+    alternateName: LNA-DEV
+    page: /lukas-nagel
+    modelSlug: lukas-nagel
     email: me@lna-dev.net
   images:
     - /assets/Pingüino/Pingüino.png

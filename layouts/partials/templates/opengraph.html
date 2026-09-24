@@ -1,6 +1,12 @@
 <meta property="og:title" content="{{ .Title }}" />
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
-<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+{{- /* The About page is a profile, not an article (docs/concepts/about-page-structured-data.md §9). */}}
+{{- $isProfile := false }}
+{{- with site.GetPage site.Params.author.page }}{{ $isProfile = eq .Permalink $.Permalink }}{{ end }}
+<meta property="og:type" content="{{ if $isProfile }}profile{{ else if .IsPage }}article{{ else }}website{{ end }}" />
+{{- if $isProfile }}{{ with site.Params.author.alternateName }}
+<meta property="profile:username" content="{{ . }}" />
+{{- end }}{{ end }}
 <meta property="og:url" content="{{ .Permalink }}" />
 {{- if .Params.cover.image -}}
 {{- with partial "templates/_funcs/get-cover-url" . }}
@@ -14,7 +20,7 @@
 {{ end -}}
 {{- end }}
 
-{{- if .IsPage }}
+{{- if and .IsPage (not $isProfile) }}
 {{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
 <meta property="article:section" content="{{ .Section }}" />
 {{ with .PublishDate }}<meta property="article:published_time" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />{{ end }}
@@ -23,7 +29,11 @@
 
 {{- with .Params.audio }}<meta property="og:audio" content="{{ . }}" />{{ end }}
 {{- with .Params.locale }}<meta property="og:locale" content="{{ . }}" />{{ end }}
-{{- with site.Params.title }}<meta property="og:site_name" content="{{ . }}" />{{ end }}
+{{- /* The short site name, the same value as the JSON-LD WebSite `name` — the
+       two are the signals Google reads a site name from. PaperMod read
+       site.Params.title, which this site never sets, so no og:site_name was
+       emitted at all. */}}
+{{- with site.Params.ShortTitle | default site.Title }}<meta property="og:site_name" content="{{ . }}" />{{ end }}
 {{- with .Params.videos }}{{- range . }}
 <meta property="og:video" content="{{ . | absURL }}" />
 {{ end }}{{ end }}

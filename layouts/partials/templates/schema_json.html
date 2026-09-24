@@ -1,63 +1,67 @@
-{{ if .IsHome }}
+{{- /* JSON-LD for every page, rendered from head.html in production only.
+
+  ONE PERSON. The site owner is a single schema.org Person with a language-neutral
+  @id (<baseURL>/#person): the full node on the home page and the About page
+  (schema-person.html), a reference carrying @id + name + url everywhere else
+  (schema-person-ref.html). Every `author`, `publisher` and owner-`creator` below
+  is that reference. None of them carries a `logo`: schema.org defines `logo` on
+  organisations and brands, not people.
+
+  NO INVENTED DATES. A page without a date emits no datePublished/dateModified
+  at all. PaperMod's version stamped 0001-01-01 on every undated page.
+
+  The new blocks are built as dicts and printed whole — html/template marshals a
+  dict inside <script type="application/ld+json"> as a JSON object — so there is no
+  hand-placed comma to get wrong. The older dex / model / photo / gallery blocks
+  are still literal JSON; only their person references changed.
+
+  Design: docs/concepts/about-page-structured-data.md. */ -}}
+{{- $root := "/" | absURL -}}
+{{- $personRef := partialCached "schema-person-ref.html" . site.Language.Lang -}}
+{{- $website := dict
+      "@type" "WebSite"
+      "@id" (printf "%s#website" $root)
+      "name" site.Params.ShortTitle
+      "url" $root
+-}}
+{{- $about := site.GetPage site.Params.author.page -}}
+
+{{- if .IsHome }}
+{{- /* WebSite + Person. `name` is the short site name Google is asked to show
+       above the result URL, with the owner's name as the fallback it may pick
+       instead. The <title> keeps "LNA-DEV ~ Lukas Nagel" — the site name carries
+       no ranking weight, and a title-shaped name would be discarded anyway. */ -}}
+{{- $site := merge $website (dict
+      "alternateName" (slice site.Params.author.name)
+      "inLanguage" .Language.Lang
+      "publisher" (dict "@id" (index $personRef "@id"))) -}}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "{{- ( site.Params.schema.publisherType | default "Organization") | title -}}",
-  "name": {{ site.Title }},
-  "url": {{ site.Home.Permalink }},
-  "description": {{ site.Params.description | plainify | truncate 180 | safeHTML }},
-  {{- if (eq site.Params.schema.publisherType "Person") }}
-  "image": {{ site.Params.assets.favicon | default "favicon.ico" | absURL }},
-  {{- else }}
-  "logo": {{ site.Params.assets.favicon | default "favicon.ico" | absURL }},
-  {{- end }}
-  "sameAs": [
-    {{- if site.Params.schema.sameAs }}
-      {{ range $i, $e := site.Params.schema.sameAs }}{{ if $i }}, {{ end }}{{ trim $e " " }}{{ end }}
-    {{- else}}
-      {{ range $i, $e := site.Params.SocialIcons }}{{ if $i }}, {{ end }}{{ trim $e.url " " | safeURL }}{{ end }}
-    {{- end}}
-  ]
-}
+{{ dict "@context" "https://schema.org" "@graph" (slice $site (partialCached "schema-person.html" . site.Language.Lang)) }}
 </script>
 {{- else if (or .IsPage .IsSection) }}
-{{/* BreadcrumbList */}}
-{{- $url := replace .Parent.Permalink ( printf "%s" site.Home.Permalink) "" }}
-{{- $lang_url := strings.TrimPrefix ( printf "%s/" .Lang) $url }}
-{{- $bc_list := (split $lang_url "/")}}
-
-{{- $scratch := newScratch }}
+{{- /* BreadcrumbList: Home, each ancestor section, the page itself — numbered
+       1…n from Hugo's own .Ancestors. The old version split the parent's
+       permalink on "/", which never included Home (so a top-level page got a
+       one-item list) and left gaps where a path segment was not a section.
+       An ancestor that is never rendered (`build: {render: never}`, such as
+       /gallery/photo/) has no URL and is left out, not listed with an empty one. */ -}}
+{{- $items := slice -}}
+{{- range .Ancestors.Reverse -}}
+  {{- if .Permalink -}}
+  {{- $items = $items | append (dict
+        "@type" "ListItem"
+        "position" (add (len $items) 1)
+        "name" (cond .IsHome (i18n "home" | default "Home") (.Title | plainify))
+        "item" .Permalink) -}}
+  {{- end -}}
+{{- end -}}
+{{- $items = $items | append (dict
+      "@type" "ListItem"
+      "position" (add (len $items) 1)
+      "name" (.Title | plainify)
+      "item" .Permalink) -}}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-  {{- range $index, $element := $bc_list }}
-
-    {{- $scratch.Add "path" (printf "%s/" $element ) | safeJS }}
-    {{- $bc_pg := site.GetPage ($scratch.Get "path") -}}
-
-    {{- if (and ($bc_pg) (gt (len . ) 0))}}
-    {{- if (and $index)}}, {{end }}
-    {
-      "@type": "ListItem",
-      "position": {{ add 1 $index  }},
-      "name": {{ $bc_pg.Name }},
-      "item": {{ $bc_pg.Permalink | safeHTML }}
-    }
-    {{- end }}
-
-  {{- end }}
-  {{- /*  self-page addition  */ -}}
-  {{- if (ge (len $bc_list) 2) }}, {{end }}
-    {
-      "@type": "ListItem",
-      "position": {{len $bc_list}},
-      "name": {{ .Name }},
-      "item": {{ .Permalink | safeHTML }}
-    }
-  ]
-}
+{{ dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $items }}
 </script>
 {{- if .IsPage }}
 {{- if (eq .Params.Theme "dex-species") }}
@@ -103,14 +107,7 @@
     "url": {{ (printf "%s/gallery/dex/" (strings.TrimSuffix "/" site.Home.Permalink)) | safeHTML }}
     {{- end }}
   },
-  "publisher": {
-    "@type": "{{- ( site.Params.schema.publisherType | default "Organization") | title -}}",
-    "name": {{ site.Title }},
-    "logo": {
-      "@type": "ImageObject",
-      "url": {{ site.Params.assets.favicon | default "favicon.ico" | absURL }}
-    }
-  }
+  "publisher": {{ $personRef }}
 }
 </script>
 {{- else if (eq .Params.Theme "model") }}
@@ -124,8 +121,15 @@
        the person gave. `sameAs` is the honest field for those links, and it is
        the reason the page itself uses rel="noopener" and never rel="me" — the
        claim belongs in the site's structured data about a Person, not in a link
-       relation that asserts the SITE AUTHOR owns those profiles. */ -}}
+       relation that asserts the SITE AUTHOR owns those profiles.
+
+       ONE exception: the owner's own record (params.author.modelSlug). Its Person
+       carries the owner's @id and the About page as `url`, so a consumer sees one
+       person with two pages — the profile and the photos of him — instead of two
+       namesakes. The match is on the slug, never on the name. Nobody else gets an
+       @id: the site makes no identity claims about other people. */ -}}
 {{- $index := partialCached "model-index.html" . site.Language.Lang -}}
+{{- $isOwner := and site.Params.author.modelSlug (eq .Params.model_slug site.Params.author.modelSlug) -}}
 {{- with index $index.bySlug .Params.model_slug -}}
 <script type="application/ld+json">
 {
@@ -135,6 +139,12 @@
   "inLanguage": {{ $.Language.Lang | default "en" }},
   "mainEntity": {
     "@type": "Person",
+    {{- if $isOwner }}
+    "@id": {{ index $personRef "@id" }},
+    {{- with index $personRef "url" }}
+    "url": {{ . }},
+    {{- end }}
+    {{- end }}
     "name": {{ .name }}
     {{- with .cover }},
     {{- $img := .image.Filter (slice images.AutoOrient (images.Process "fill 900x900 Center")) }}
@@ -153,14 +163,7 @@
     "name": {{ i18n "gallery_models" }}
     {{- end }}
   },
-  "publisher": {
-    "@type": "{{- ( site.Params.schema.publisherType | default "Organization") | title -}}",
-    "name": {{ site.Title }},
-    "logo": {
-      "@type": "ImageObject",
-      "url": {{ site.Params.assets.favicon | default "favicon.ico" | absURL }}
-    }
-  }
+  "publisher": {{ $personRef }}
 }
 </script>
 {{- end }}
@@ -197,14 +200,21 @@
   {{- end }}
   {{- /* Only people the page already names visibly — model-lookup.html resolves
          nothing for a `hidden` record, and structured data must not say more
-         about a person than the rendered page does. */ -}}
+         about a person than the rendered page does. The owner, when he is in
+         the photo, is the shared person reference rather than a namesake. */ -}}
   {{- $ml := partialCached "model-lookup.html" (dict "lang" site.Language.Lang) site.Language.Lang -}}
   {{- $people := slice -}}
-  {{- range .Models -}}
-    {{- with index $ml . -}}{{- $people = $people | append . -}}{{- end -}}
+  {{- range $slug := .Models -}}
+    {{- with index $ml $slug -}}
+      {{- if eq $slug site.Params.author.modelSlug -}}
+        {{- $people = $people | append $personRef -}}
+      {{- else -}}
+        {{- $people = $people | append (dict "@type" "Person" "name" .name "url" (.url | absURL)) -}}
+      {{- end -}}
+    {{- end -}}
   {{- end -}}
   {{- with $people }}
-  "about": [{{ range $i, $p := . }}{{ if $i }}, {{ end }}{"@type": "Person", "name": {{ $p.name }}, "url": {{ $p.url | absURL | safeHTML }}}{{ end }}],
+  "about": {{ . }},
   {{- end }}
   {{- with .LicenseUrl }}
   "license": {{ . }},
@@ -214,10 +224,9 @@
   {{- end }}
   "creditText": {{ .ResolvedArtist }},
   "copyrightNotice": {{ printf "© %s" .ResolvedArtist }},
-  "creator": {
-    "@type": "Person",
-    "name": {{ .ResolvedArtist }}
-  },
+  {{- /* The owner's @id only on the owner's own photos — on a photo by somebody
+         else it would say the owner took it. */}}
+  "creator": {{ if eq .ResolvedArtist site.Params.author.name }}{{ $personRef }}{{ else }}{{ dict "@type" "Person" "name" .ResolvedArtist }}{{ end }},
   "isPartOf": {
     "@type": "CollectionPage",
     {{- with site.GetPage "/gallery" }}
@@ -239,87 +248,89 @@
   "description": {{ with .Description | plainify }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }},
   "url": {{ .Permalink | safeHTML }},
   "inLanguage": {{ .Language.Lang | default "en-us" }},
-  {{- with (.Params.author | default site.Params.author) }}
-  "author": {
-    "@type": "Person",
-    "name": {{- if reflect.IsMap . }} {{ .name }}{{ else }} {{ . }}{{ end }}
-  },
-  {{- end }}
-  "publisher": {
-    "@type": "{{- ( site.Params.schema.publisherType | default "Organization") | title -}}",
-    "name": {{ site.Title }},
-    "logo": {
-      "@type": "ImageObject",
-      "url": {{ site.Params.assets.favicon | default "favicon.ico" | absURL }}
-    }
-  }
+  "author": {{ $personRef }},
+  "publisher": {{ $personRef }}
 }
+</script>
+{{- else if and $about (eq .Permalink $about.Permalink) }}
+{{- /* The About page is a profile, not an article: ProfilePage with the full
+       Person node as mainEntity. No articleBody, keywords, wordCount — those
+       belong to articles — and no dates unless the page really has one. */ -}}
+{{- $profile := dict
+      "@context" "https://schema.org"
+      "@type" "ProfilePage"
+      "url" .Permalink
+      "name" (.Title | plainify)
+      "inLanguage" .Language.Lang
+      "isPartOf" $website
+      "mainEntity" (partialCached "schema-person.html" . site.Language.Lang)
+-}}
+{{- with .Description }}{{ $profile = merge $profile (dict "description" (. | plainify)) }}{{ end -}}
+{{- if not .Lastmod.IsZero }}{{ $profile = merge $profile (dict "dateModified" .Lastmod) }}{{ end -}}
+<script type="application/ld+json">
+{{ $profile }}
+</script>
+{{- else if and (eq .Section "posts") (not .Date.IsZero) }}
+{{- /* A blog post — the only thing on this site that is one. */ -}}
+{{- $post := dict
+      "@context" "https://schema.org"
+      "@type" "BlogPosting"
+      "headline" (.Title | plainify)
+      "name" (.Title | plainify)
+      "description" (cond (ne (.Description | plainify) "") (.Description | plainify) (.Summary | plainify))
+      "articleBody" (.Content | safeJS | htmlUnescape | plainify)
+      "wordCount" .WordCount
+      "inLanguage" .Language.Lang
+      "datePublished" .PublishDate
+      "dateModified" .Lastmod
+      "author" $personRef
+      "publisher" $personRef
+      "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+-}}
+{{- /* A post by someone else names them plainly; no post sets `author` today. */ -}}
+{{- with .Params.author -}}
+  {{- $names := cond (reflect.IsSlice .) . (slice .) -}}
+  {{- $people := slice -}}
+  {{- range $names -}}
+    {{- $n := . -}}
+    {{- if reflect.IsMap . }}{{ $n = .name }}{{ end -}}
+    {{- $people = $people | append (cond (eq $n site.Params.author.name) $personRef (dict "@type" "Person" "name" $n)) -}}
+  {{- end -}}
+  {{- $post = merge $post (dict "author" (cond (eq (len $people) 1) (index $people 0) $people)) -}}
+{{- end -}}
+{{- with (.Params.keywords | default .Params.tags) -}}
+  {{- $post = merge $post (dict "keywords" .) -}}
+{{- end -}}
+{{- if .Params.cover.image -}}
+  {{- $post = merge $post (dict "image" (partial "templates/_funcs/get-cover-url" .)) -}}
+{{- else -}}
+  {{- with index (partial "templates/_funcs/get-page-images" .) 0 -}}
+    {{- $post = merge $post (dict "image" .Permalink) -}}
+  {{- end -}}
+{{- end -}}
+<script type="application/ld+json">
+{{ $post }}
 </script>
 {{- else }}
+{{- /* Everything else — links, identity, licensing, projects, the reading list,
+       gaming, search, an undated post: a plain WebPage, with a date only when
+       the page really has one. It used to be a BlogPosting dated 0001-01-01. */ -}}
+{{- $page := dict
+      "@context" "https://schema.org"
+      "@type" "WebPage"
+      "name" (.Title | plainify)
+      "url" .Permalink
+      "inLanguage" .Language.Lang
+      "isPartOf" $website
+      "publisher" $personRef
+-}}
+{{- with .Description }}{{ $page = merge $page (dict "description" (. | plainify)) }}{{ end -}}
+{{- if not .Date.IsZero }}{{ $page = merge $page (dict "datePublished" .PublishDate) }}{{ end -}}
+{{- if not .Lastmod.IsZero }}{{ $page = merge $page (dict "dateModified" .Lastmod) }}{{ end -}}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": {{ .Title | plainify}},
-  "name": "{{ .Title | plainify }}",
-  "description": {{ with .Description | plainify }}{{ . }}{{ else }}{{ .Summary | plainify  }}{{ end -}},
-  "keywords": [
-    {{- if .Params.keywords }}
-    {{ range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
-    {{- else }}
-    {{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
-    {{- end }}
-  ],
-  "articleBody": {{ .Content | safeJS | htmlUnescape | plainify }},
-  "wordCount" : "{{ .WordCount }}",
-  "inLanguage": {{ .Language.Lang | default "en-us" }},
-  {{ if .Params.cover.image -}}
-  "image": {{ partial "templates/_funcs/get-cover-url" . }},
-  {{- else }}
-    {{- $images := partial "templates/_funcs/get-page-images" . -}}
-    {{- with index $images 0 -}}
-  "image": {{ .Permalink }},
-    {{- end }}
-  {{- end -}}
-  "datePublished": {{ .PublishDate }},
-  "dateModified": {{ .Lastmod }},
-  {{- with (.Params.author | default site.Params.author) }}
-  "author":
-    {{- if (or (eq (printf "%T" .) "[]string") (eq (printf "%T" .) "[]interface {}")) -}}
-  [{{- range $i, $v := . -}}
-  {{- if $i }}, {{end -}}
-  {
-    "@type": "Person",
-    "name": {{ $v }}
-  }
-  {{- end }}],
-    {{- else if reflect.IsMap . -}}
-  {
-    "@type": "Person",
-    "name": {{ .name }}
-  },
-    {{- else -}}
-  {
-    "@type": "Person",
-    "name": {{ . }}
-  },
-    {{- end -}}
-  {{- end }}
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": {{ .Permalink | safeHTML }}
-  },
-  "publisher": {
-    "@type": "{{- ( site.Params.schema.publisherType | default "Organization") | title -}}",
-    "name": {{ site.Title }},
-    "logo": {
-      "@type": "ImageObject",
-      "url": {{ site.Params.assets.favicon | default "favicon.ico" | absURL }}
-    }
-  }
-}
+{{ $page }}
 </script>
-{{- end }}{{/* gallery vs blog end */}}
+{{- end }}{{/* branch by page kind */}}
 {{- end }}{{/* .IsPage end */}}
 
 {{- end -}}

@@ -25,6 +25,22 @@
               align), "large" (420px), or a bare pixel number. With align it is
               the float's width; without it caps and centres an otherwise
               full-width photo.
+    showCredit  "false" to hide the visible "Photo: <credit>" line. Default on.
+              Only matters for an image whose resource metadata has a credit.
+
+  CREDIT. A page-bundle image taken by somebody else carries its credit in the
+  page's front matter, as Hugo page-resource metadata (resource-credit.html has
+  the fields):
+
+      resources:
+        - src: "Photo.jpg"
+          params: { credit: Jane Doe, license: all-rights-reserved }
+
+  Such an image gets schema.org ImageObject microdata (creator, creditText,
+  copyrightNotice, and a licence link when the licence has a public deed) and,
+  unless showCredit="false", a visible credit line. Whether to SHOW the credit is
+  a per-call rendering choice, like galleryImage's showTitle; who took the photo
+  is a fact about the file, so it lives with the file.
 
   align/size reuse the float geometry, the --img-width caption scaling and the
   <900px collapse from galleryImage.css. The `gallery-image*` class names are that
@@ -74,23 +90,41 @@
 {{- $caption := (.Get "caption") }}
 {{- $link := (.Get "link") }}
 
-<figure{{ with $class }} class="{{ . }}"{{ end }}{{ with $style }} style="{{ . | safeCSS }}"{{ end }}>
+{{- $credit := dict -}}
+{{- $u := urls.Parse (.Get "url") -}}
+{{- if not $u.IsAbs -}}
+  {{- with .Page.Resources.Get (strings.TrimPrefix "./" $u.Path) -}}
+    {{- $credit = partial "resource-credit.html" . -}}
+  {{- end -}}
+{{- end -}}
+{{- $showCredit := and $credit (not (in (slice "false" "0" "no" "off") (.Get "showCredit" | default "" | lower))) -}}
+
+<figure{{ with $class }} class="{{ . }}"{{ end }}{{ with $style }} style="{{ . | safeCSS }}"{{ end }}{{ if $credit }} itemscope itemtype="https://schema.org/ImageObject"{{ end }}>
 {{- if $link }}<a{{ if $class }} class="gallery-image-link"{{ end }} href="{{ $link }}">{{ end -}}
   <img src="{{ $img.src }}"
     {{- with $img.srcset }} srcset="{{ . }}" sizes="{{ $img.sizes }}" decoding="async"{{ end }}
     {{- with $img.width }} width="{{ . }}"{{ end }}
     {{- with $img.height }} height="{{ . }}"{{ end }}
-    loading="lazy" alt="{{ $alt }}">
+    loading="lazy" alt="{{ $alt }}"{{ if $credit }} itemprop="contentUrl"{{ end }}>
 {{- if $link }}</a>{{ end }}
   {{- /* No caption, no <figcaption>. Alt text is deliberately not a fallback: it
          describes the image *instead of* seeing it, while a caption is prose read
          *alongside* it, and printing one as the other makes a screen reader
          announce the same sentence twice — once as the image description, once as
          the figure caption. {{< galleryImage >}} behaves the same way. */ -}}
-  {{- with $caption }}
+  {{- if or $caption $showCredit }}
   <figcaption{{ if not $class }} class="img-caption-center"{{ end }}>
+    {{- with $caption }}
     {{- if $class }}<span class="gallery-image-caption">{{ . }}</span>
     {{- else }}{{ . }}{{ end -}}
+    {{- end }}
+    {{- if $showCredit }}<span class="img-credit">{{ i18n "photo_credit" (dict "Name" $credit.credit) }}</span>{{ end -}}
   </figcaption>
+  {{- end }}
+  {{- with $credit }}
+  <span itemprop="creator" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="{{ .credit }}" /></span>
+  <meta itemprop="creditText" content="{{ .credit }}" />
+  <meta itemprop="copyrightNotice" content="{{ .notice }}" />
+  {{- with .licenseUrl }}<link itemprop="license" href="{{ . }}" />{{ end }}
   {{- end }}
 </figure>

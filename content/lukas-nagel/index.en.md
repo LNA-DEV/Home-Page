@@ -10,11 +10,21 @@ searchHidden: false
 hideNewsletter: true
 sitemap:
   priority: 0.9
-aliases: 
+aliases:
   - me
+  - about
+resources:
+  # The portrait was taken by Jan Göbel, not by the site owner. The credit is data
+  # about the file: it feeds the figure's microdata and the Person's JSON-LD image
+  # (resource-credit.html). The visible credit line is switched off per call below.
+  - src: "Lukas Nagel - Nature Photographer Waiting for the Light on a Moorland Boardwalk.jpg"
+    params:
+      credit: Jan Göbel
+      license: all-rights-reserved
+      portrait: true
 ---
 
-{{< img url="./Lukas Nagel - Nature Photographer Waiting for the Light on a Moorland Boardwalk.jpg" align="right" size="small" alt="A young man (Lukas Nagel) with a short beard in a teal t-shirt and dark hiking trousers leans against a white birch trunk on a narrow wooden boardwalk, holding a Nikon camera with a long telephoto lens in both hands. He looks off to the left, lit by low afternoon sun, with dense green conifers, birches and flowering purple heather around him." >}}
+{{< img url="./Lukas Nagel - Nature Photographer Waiting for the Light on a Moorland Boardwalk.jpg" align="right" size="small" showCredit="false" alt="A young man (Lukas Nagel) with a short beard in a teal t-shirt and dark hiking trousers leans against a white birch trunk on a narrow wooden boardwalk, holding a Nikon camera with a long telephoto lens in both hands. He looks off to the left, lit by low afternoon sun, with dense green conifers, birches and flowering purple heather around him." >}}
 
 ## A bit about me
 

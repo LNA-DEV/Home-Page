@@ -1,0 +1,46 @@
+{{- /*
+  schema-person.html
+  The site owner as the FULL schema.org Person node — the one definition every
+  schema-person-ref.html points at by @id. Emitted on the home page (inside the
+  @graph) and on the About page (as the ProfilePage's mainEntity), nowhere else.
+
+  Only what the About page itself says: name, the alias, the job, the portrait and
+  the profiles in `params.schema.sameAs`. Deliberately not: email (it would only
+  feed spam lists), birth date, home location, knowsAbout — the same rule the
+  model pages follow, structured data says no more about a person than the page.
+
+      {{ $person := partialCached "schema-person.html" . site.Language.Lang }}
+*/ -}}
+{{- $a := site.Params.author -}}
+{{- $extra := dict "jobTitle" (i18n "person_job_title") -}}
+{{- with $a.alternateName -}}
+  {{- $extra = merge $extra (dict "alternateName" .) -}}
+{{- end -}}
+{{- with site.Params.schema.sameAs -}}
+  {{- $extra = merge $extra (dict "sameAs" .) -}}
+{{- end -}}
+
+{{- /* The portrait is someone else's photo, so it carries its creator and
+       copyright. `license` only when the licence has a public deed URL — the
+       site's own licensing page cannot license another photographer's work. */ -}}
+{{- with partialCached "author-portrait.html" . site.Language.Lang -}}
+  {{- $img := dict
+        "@type" "ImageObject"
+        "contentUrl" .image.Permalink
+        "url" .image.Permalink
+        "width" .image.Width
+        "height" .image.Height
+  -}}
+  {{- with .credit -}}
+    {{- $img = merge $img (dict
+          "creator" (dict "@type" "Person" "name" .credit)
+          "creditText" .credit
+          "copyrightNotice" .notice) -}}
+    {{- with .licenseUrl -}}
+      {{- $img = merge $img (dict "license" .) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $extra = merge $extra (dict "image" $img) -}}
+{{- end -}}
+
+{{- return merge (partialCached "schema-person-ref.html" . site.Language.Lang) $extra -}}

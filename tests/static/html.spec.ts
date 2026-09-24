@@ -10,7 +10,9 @@ import path from "node:path";
 import {
   SITE_BASE, LANGS,
   htmlFiles, readSiteFile, eachHtml, servedPaths, urlOf, jsonLdBlocks, pageKind,
+  hugoConfig, frontMatter, models, sitePath,
 } from "../support/site";
+import fs from "node:fs";
 
 const PRODUCTION = !SITE_BASE.includes("localhost");
 
@@ -211,6 +213,7 @@ test.describe("structured data", () => {
       "gallery-photo": "ImageObject",
       "dex-species": "Taxon",
       model: "ProfilePage",
+      profile: "ProfilePage",
       post: "BlogPosting",
     };
     const bad: string[] = [];
@@ -236,6 +239,162 @@ test.describe("structured data", () => {
     expect(home, "no opengraph — was this built without -e production?").toContain('property="og:title"');
     expect(home).toContain('name="twitter:card"');
     expect(jsonLdBlocks(home).length, "no JSON-LD on the home page").toBeGreaterThan(0);
+  });
+});
+
+/* The site owner is ONE schema.org Person — docs/concepts/about-page-structured-data.md.
+   Before, the About page and 24 other undated pages were BlogPostings published on
+   0001-01-01, and the owner appeared as three unlinked Persons per page, one of
+   them named after the site title and carrying a `logo`. */
+test.describe("structured data — one person, no invented dates", () => {
+  const cfg = () => hugoConfig().params;
+  const personId = `${SITE_BASE}/#person`;
+  const aboutSeg = () => String(cfg().author.page).replace(/^\/|\/$/g, "");
+
+  /** Every object node inside one parsed JSON-LD value, depth first. */
+  function nodes(v: any, out: any[] = []): any[] {
+    if (Array.isArray(v)) v.forEach((x) => nodes(x, out));
+    else if (v && typeof v === "object") {
+      out.push(v);
+      Object.values(v).forEach((x) => nodes(x, out));
+    }
+    return out;
+  }
+  function parsed(html: string): any[] {
+    return jsonLdBlocks(html).map((b) => JSON.parse(b));
+  }
+  const isRedirect = (html: string) => /http-equiv="refresh"/.test(html);
+
+  test("no invented dates, no logo on a Person, no empty keywords, wordCount is a number", () => {
+    const bad: string[] = [];
+    for (const { file, html } of eachHtml()) {
+      if (isRedirect(html)) continue;
+      for (const n of parsed(html).flatMap((d) => nodes(d))) {
+        for (const k of ["datePublished", "dateModified", "dateCreated"]) {
+          if (String(n[k] ?? "").startsWith("0001")) bad.push(`${file}: ${k} ${n[k]}`);
+        }
+        if (n["@type"] === "Person" && "logo" in n) bad.push(`${file}: Person with a logo`);
+        if (Array.isArray(n.keywords) && n.keywords.length === 0) bad.push(`${file}: empty keywords`);
+        if ("wordCount" in n && typeof n.wordCount !== "number") bad.push(`${file}: wordCount ${JSON.stringify(n.wordCount)}`);
+      }
+    }
+    expect(bad.slice(0, 20), `${bad.length} problem(s)\n${bad.slice(0, 20).join("\n")}`).toEqual([]);
+  });
+
+  test("BlogPosting only on posts", () => {
+    const bad: string[] = [];
+    for (const { file, html } of eachHtml()) {
+      if (isRedirect(html) || pageKind(file) === "post") continue;
+      if (parsed(html).flatMap((d) => nodes(d)).some((n) => n["@type"] === "BlogPosting")) bad.push(file);
+    }
+    expect(bad.slice(0, 20), `${bad.length} non-post page(s) claim to be a BlogPosting\n${bad.slice(0, 20).join("\n")}`).toEqual([]);
+  });
+
+  test("every Person named after the owner carries the owner's @id", () => {
+    /* The check that the graph is actually linked: author, publisher, a photo's
+       creator and `about`, the owner's model page — all one person. */
+    const name = cfg().author.name;
+    const bad: string[] = [];
+    for (const { file, html } of eachHtml()) {
+      if (isRedirect(html)) continue;
+      for (const n of parsed(html).flatMap((d) => nodes(d))) {
+        if (n["@type"] === "Person" && n.name === name && n["@id"] !== personId) bad.push(`${file}: ${JSON.stringify(n).slice(0, 120)}`);
+      }
+    }
+    expect(bad.slice(0, 20), `${bad.length} unlinked owner Person(s)\n${bad.slice(0, 20).join("\n")}`).toEqual([]);
+  });
+
+  test("the owner's @id is on no other model", () => {
+    const owner = cfg().author.modelSlug;
+    const bad: string[] = [];
+    for (const m of models()) {
+      for (const lang of LANGS) {
+        const f = sitePath(lang, "gallery", "models", m.slug, "index.html");
+        if (!fs.existsSync(f)) continue;
+        const person = parsed(fs.readFileSync(f, "utf8")).find((d) => d["@type"] === "ProfilePage")?.mainEntity;
+        const id = person?.["@id"];
+        if (m.slug === owner && id !== personId) bad.push(`${lang}/${m.slug}: the owner's model page has @id ${id}`);
+        if (m.slug !== owner && id !== undefined) bad.push(`${lang}/${m.slug}: somebody else's Person carries @id ${id}`);
+      }
+    }
+    expect(bad).toEqual([]);
+  });
+
+  test("the About page is a ProfilePage of the owner, credited like its figure", () => {
+    for (const lang of LANGS) {
+      const html = readSiteFile(path.join(lang, aboutSeg(), "index.html"));
+      const profile = parsed(html).find((d) => d["@type"] === "ProfilePage");
+      expect(profile, `${lang}: no ProfilePage`).toBeTruthy();
+      const person = profile.mainEntity;
+      expect(person["@id"], lang).toBe(personId);
+      expect(person.name, lang).toBe(cfg().author.name);
+      expect(person.sameAs, `${lang}: sameAs must be params.schema.sameAs`).toEqual(cfg().schema.sameAs);
+
+      /* One source for the credit: the portrait's resource metadata. The JSON-LD
+         image and the figure's microdata must both say what it says. */
+      const fm = frontMatter(`content/${aboutSeg()}/index.${lang}.md`);
+      const portrait = (fm.resources ?? []).find((r: any) => r?.params?.portrait);
+      expect(portrait, `${lang}: no portrait: true resource`).toBeTruthy();
+      const credit = portrait.params.credit;
+      expect(person.image?.creator?.name, `${lang}: JSON-LD image creator`).toBe(credit);
+      const micro = html.match(/itemprop="creator"[^>]*>\s*<meta itemprop="name" content="([^"]*)"/);
+      expect(micro?.[1], `${lang}: figure microdata creator`).toBe(credit);
+      /* showCredit="false" on this page: named in the metadata, not under the photo. */
+      expect(html, `${lang}: the credit line is switched off on the About page`).not.toContain('class="img-credit"');
+
+      expect(html, lang).toContain('<meta property="og:type" content="profile" />');
+    }
+  });
+
+  test("the home page is WebSite + Person, and every sameAs is a profile URL", () => {
+    for (const lang of LANGS) {
+      const html = readSiteFile(path.join(lang, "index.html"));
+      const graph: any[] = parsed(html).find((d) => d["@graph"])?.["@graph"] ?? [];
+      const site = graph.find((n) => n["@type"] === "WebSite");
+      const person = graph.find((n) => n["@type"] === "Person");
+      expect(site, `${lang}: no WebSite`).toBeTruthy();
+      expect(person?.["@id"], `${lang}: Person @id`).toBe(personId);
+      expect(site.publisher?.["@id"], `${lang}: WebSite publisher`).toBe(personId);
+      expect(site.name, lang).toBe(cfg().ShortTitle);
+      for (const u of person.sameAs ?? []) expect(u, `${lang}: sameAs`).toMatch(/^https:\/\//);
+      expect(html, `${lang}: og:site_name`).toContain(`<meta property="og:site_name" content="${cfg().ShortTitle}" />`);
+    }
+  });
+
+  test("every BreadcrumbList starts at the language home and counts 1…n", () => {
+    const bad: string[] = [];
+    for (const { file, html } of eachHtml()) {
+      if (isRedirect(html)) continue;
+      for (const d of parsed(html)) {
+        if (d["@type"] !== "BreadcrumbList") continue;
+        const items: any[] = d.itemListElement;
+        const pos = items.map((i) => i.position).join(",");
+        if (pos !== items.map((_, i) => i + 1).join(",")) bad.push(`${file}: positions ${pos}`);
+        const lang = urlOf(file).split("/")[1];
+        if (items[0]?.item !== `${SITE_BASE}/${lang}/`) bad.push(`${file}: starts at ${items[0]?.item}`);
+        /* A never-rendered section (/gallery/photo/) has no URL and must be skipped. */
+        for (const i of items) if (!i.item) bad.push(`${file}: "${i.name}" has no URL`);
+      }
+    }
+    expect(bad.slice(0, 20), `${bad.length} breadcrumb(s)\n${bad.slice(0, 20).join("\n")}`).toEqual([]);
+  });
+
+  test("/about and the localised aliases reach the About page", () => {
+    /* /about/ is a static file (a Hugo alias cannot write the domain root on a
+       multilingual site) and goes to English; the rest are aliases. */
+    const want: Record<string, string> = {
+      "about": "en",
+      "en/about": "en",
+      "de/about": "de",
+      "de/ueber-mich": "de",
+      "sv/about": "sv",
+      "sv/om-mig": "sv",
+    };
+    for (const [from, lang] of Object.entries(want)) {
+      const html = readSiteFile(path.join(from, "index.html"));
+      const target = html.match(/http-equiv="refresh" content="0; url=([^"]+)"/)?.[1] ?? "";
+      expect(target.replace(SITE_BASE, ""), `/${from}/`).toBe(`/${lang}/${aboutSeg()}/`);
+    }
   });
 });
 
