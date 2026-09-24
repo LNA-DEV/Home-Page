@@ -70,10 +70,38 @@ class BuildStub(unittest.TestCase):
         self.assertIn("  alt:", lines)
         self.assertIn("    en: a fox", lines)
 
-    def test_a_licence_display_string_is_written_as_its_key(self):
-        # dc:rights holds the display NAME; the data file takes the key.
+    def test_alt_always_has_all_three_languages(self):
+        # A slot to type into, even when darktable wrote no alt text at all.
+        for editorial, en in (({}, '""'), ({"alt": "a fox"}, "a fox")):
+            with self.subTest(editorial=editorial):
+                lines = sg.build_stub("a.jpg", editorial)
+                i = lines.index("  alt:")
+                self.assertEqual(lines[i + 1:i + 4], [f"    en: {en}", '    de: ""', '    sv: ""'])
+
+    def test_a_licence_key_is_written_as_is(self):
         lines = sg.build_stub("a.jpg", {"license": "cc-by-sa-4.0"})
         self.assertIn("  license: cc-by-sa-4.0", lines)
+
+    def test_a_licence_display_string_is_written_as_its_key(self):
+        # dc:rights holds the display NAME; the data file takes the key. These
+        # are the two spellings darktable actually writes into the photo store.
+        cases = {
+            "all rights reserved": "all-rights-reserved",
+            "All Rights Reserved": "all-rights-reserved",
+            "Creative Commons Attribution-ShareAlike (CC BY-SA)": "cc-by-sa-4.0",
+            "  CC  BY-SA 4.0 ": "cc-by-sa-4.0",
+        }
+        for line, key in cases.items():
+            with self.subTest(line=line):
+                lines = sg.build_stub("a.jpg", {"license": line})
+                self.assertIn(f"  license: {key}", lines)
+
+    def test_every_mapped_key_exists_in_the_licence_map(self):
+        # A typo in LICENSE_LINES would otherwise write a key the build rejects.
+        import gallery_common as gc
+        known = set(gc.license_aliases().values())
+        self.assertTrue(known)
+        self.assertLessEqual(set(sg.LICENSE_LINES.values()), known)
 
     def test_an_unmapped_licence_is_left_verbatim(self):
         # So it surfaces as a build error naming the photo rather than vanishing.

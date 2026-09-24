@@ -53,6 +53,35 @@ IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".gif", ".webp", ".tif", ".tiff"}
 
 SRC_RE = re.compile(r"^  src: (.*)$")
 
+# Licence lines as they turn up in dc:rights, mapped to their data/licenseMap.yaml
+# key. Matched ignoring case and runs of whitespace. The first two per licence are
+# what darktable's rights presets actually write (all 283 photos in the store that
+# carry a licence use one of them); the rest are the labels and short names
+# licenseMap.yaml prints. A bare "(CC BY-SA)" means 4.0 — the pre-key map pointed
+# that exact string at the 4.0 deed. Convenience only: Hugo accepts keys and
+# nothing else, and a line not listed here is still written verbatim so it fails
+# the build naming the photo.
+LICENSE_LINES = {
+    "all rights reserved": "all-rights-reserved",
+    "© all rights reserved": "all-rights-reserved",
+    "creative commons attribution-sharealike (cc by-sa)": "cc-by-sa-4.0",
+    "creative commons attribution-sharealike 4.0": "cc-by-sa-4.0",
+    "creative commons attribution-sharealike 4.0 international": "cc-by-sa-4.0",
+    "cc by-sa 4.0": "cc-by-sa-4.0",
+    "cc by-sa": "cc-by-sa-4.0",
+    "creative commons attribution-noderivatives (cc by-nd)": "cc-by-nd-4.0",
+    "creative commons attribution-noderivatives 4.0": "cc-by-nd-4.0",
+    "creative commons attribution-noderivatives 4.0 international": "cc-by-nd-4.0",
+    "cc by-nd 4.0": "cc-by-nd-4.0",
+    "cc by-nd": "cc-by-nd-4.0",
+}
+
+
+def license_slug(value):
+    """A dc:rights line as its licenseMap.yaml key, or the line itself if unknown."""
+    text = " ".join(str(value).split())
+    return license_key(text) or LICENSE_LINES.get(text.lower()) or text
+
 
 def parse_args(argv):
     repo_root = Path(__file__).resolve().parent.parent
@@ -144,18 +173,25 @@ def build_stub(filename, editorial=None):
     ]
     for field in ("title", "alt", "description"):
         value = editorial.get(field)
-        if value:
+        # alt is written even when darktable had none, with all three languages
+        # present as empty strings, so filling it in is typing into a slot rather
+        # than remembering the shape. An empty string resolves exactly like a
+        # missing key: collect-images.html falls back to `en` on any falsy value.
+        if field == "alt":
+            lines.append("  alt:")
+            lines.append(f"    en: {yaml_scalar(value or '')}")
+            lines.append('    de: ""')
+            lines.append('    sv: ""')
+        elif value:
             lines.append(f"  {field}:")
             lines.append(f"    en: {yaml_scalar(value)}")
-    # dc:rights holds the licence's English display NAME. A stub must carry the
-    # key instead: the display strings survive today only as `aliases` in
-    # data/licenseMap.yaml, and those leave with the one-time import — a new entry
-    # written in the old spelling would fail the build the day they do. An
-    # unmapped string is left verbatim, so it shows up as a build error naming the
-    # photo rather than being silently dropped.
+    # dc:rights holds the licence's display NAME; a stub must carry the key, which
+    # is all the build accepts. LICENSE_LINES does the translation. An unmapped
+    # string is left verbatim, so it shows up as a build error naming the photo
+    # rather than being silently dropped.
     license_value = editorial.get("license")
     if license_value:
-        lines.append(f"  license: {yaml_scalar(license_key(license_value) or license_value)}")
+        lines.append(f"  license: {yaml_scalar(license_slug(license_value))}")
     if editorial.get("artist"):
         lines.append(f"  artist: {yaml_scalar(editorial['artist'])}")
     return lines
