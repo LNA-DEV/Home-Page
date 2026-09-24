@@ -172,6 +172,7 @@
 /de/gallery/general/
 /de/gallery/models/
 /de/gallery/models/lukas-nagel/
+/de/gallery/models/markus-penninger/
 /de/gallery/photo/abend-am-inn-flussbogen-unter-den-kalkwaenden/
 /de/gallery/photo/abend-an-der-stromschnelle-glattes-wasser-zwischen-den-felsen/
 /de/gallery/photo/abendruhe-stockenten-weibchen-auf-dem-flachen-wasser/
@@ -755,6 +756,7 @@
 /de/gallery/photo/wache-am-rand-mandarinente-ueber-ihren-kueken/
 /de/gallery/photo/wald-zu-beiden-seiten-stilles-wasser-unter-sommerwolken/
 /de/gallery/photo/warnfarben-schwarz-gelbe-raupe-auf-stein/
+/de/gallery/photo/was-der-berg-sprach-wanderer-mit-notizbuch-im-schwedischen-fjaell/
 /de/gallery/photo/was-es-verschluckt-hat-sperlingsjunges-gestorben-an-plastik/
 /de/gallery/photo/wasser-unter-dem-grat-das-moor-und-das-tal-dahinter/
 /de/gallery/photo/wegweiser-ueber-dem-nebel-ein-bayerisches-wanderschild/
@@ -1033,6 +1035,7 @@
 /en/gallery/general/
 /en/gallery/models/
 /en/gallery/models/lukas-nagel/
+/en/gallery/models/markus-penninger/
 /en/gallery/photo/a-bed-of-primroses-purple-and-yellow-in-spring-sun/
 /en/gallery/photo/a-hole-beside-the-town-a-quarry-from-the-air/
 /en/gallery/photo/a-hole-in-the-clouds-gold-over-the-dark-valley/
@@ -1653,6 +1656,7 @@
 /en/gallery/photo/watching-the-water-go-an-evening-at-the-rapids/
 /en/gallery/photo/water-below-the-ridge-the-moor-and-the-valley-beyond/
 /en/gallery/photo/what-it-swallowed-fledgling-sparrow-killed-by-plastic/
+/en/gallery/photo/what-the-mountain-said-a-hiker-with-his-notebook-in-the-swedish-fjall/
 /en/gallery/photo/wheel-and-flag-an-old-mill-house-in-switzerland/
 /en/gallery/photo/where-the-cloud-stops-ridgeline-at-the-edge-of-the-fog/
 /en/gallery/photo/where-the-meadow-meets-the-rock-coastal-summer-in-sweden/
@@ -1920,6 +1924,7 @@
 /sv/gallery/general/
 /sv/gallery/models/
 /sv/gallery/models/lukas-nagel/
+/sv/gallery/models/markus-penninger/
 /sv/gallery/photo/allt-i-gult-ett-hav-av-hostkrysantemum/
 /sv/gallery/photo/anda-ner-till-smorblomman-alpacka-betar-i-solen/
 /sv/gallery/photo/ander-over-viken-sommarmoln-over-sjon/
@@ -2534,6 +2539,7 @@
 /sv/gallery/photo/utan-ben-kopparodla-korsar-grusvagen/
 /sv/gallery/photo/utgaende-en-farja-lamnar-stockholm-mot-havet/
 /sv/gallery/photo/utskuret-ur-sluttningen-ett-stenbrott-rakt-uppifran/
+/sv/gallery/photo/vad-bergen-talade-om-vandrare-med-anteckningsbok-i-svenska-fjallen/
 /sv/gallery/photo/vad-den-svalde-sparvunge-dodad-av-plast/
 /sv/gallery/photo/vag-langs-majsen-kvall-over-falten/
 /sv/gallery/photo/vagen-hem-en-by-i-kvallssolen/
