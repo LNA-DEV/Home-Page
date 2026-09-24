@@ -29,12 +29,58 @@
     {{- end }}
   {{- end }}
 {{- end }}
-{{/* Portfolio page fallback: pick first collected portfolio image. */}}
-{{- if and (not $imgParams) (not $imgs) (eq .Params.Theme "gallery-portfolio") }}
-  {{- $collected := partial "collect-portfolio.html" . }}
-  {{- with index $collected 0 }}
-    {{- $image := .image }}
-    {{- $processed := $image.Filter (slice images.AutoOrient (images.Process "fit 1200x630")) }}
+{{/* Portfolio page and gallery home: the portfolio's hero — its featured_image,
+     else its first photo. That is the photo featured.html puts at the top of the
+     gallery home, so the gallery's link preview shows what the gallery opens
+     with. (The portfolio used to take its first photo and ignore featured_image,
+     and the gallery home fell through to the site logo.) */}}
+{{- if and (not $imgParams) (not $imgs) (or (eq .Params.Theme "gallery-portfolio") (eq .Params.Theme "gallery-home")) }}
+  {{- with index (where site.Pages "Params.theme" "eq" "gallery-portfolio") 0 }}
+    {{- $hero := partial "resolve-featured-image.html" (dict "page" . "bundleImages" (partialCached "gallery-images.html" .)) }}
+    {{- if not $hero }}
+      {{- with index (partial "collect-portfolio.html" .) 0 }}{{ $hero = .image }}{{ end }}
+    {{- end }}
+    {{- with $hero }}
+      {{- $processed := .Filter (slice images.AutoOrient (images.Process "fit 1200x630")) }}
+      {{- $imgs = $imgs | append (dict
+        "Image" $processed
+        "RelPermalink" $processed.RelPermalink
+        "Permalink" $processed.Permalink) }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{/* Gallery sections without a photo of their own — the projects list, All
+     Photos, the dex overview: the photo on their card on the gallery home
+     (gallery-section-cover.html), the same pick in both places. */}}
+{{- if and (not $imgParams) (not $imgs) }}
+  {{- with index (dict "gallery-projects-list" "projects" "gallery-general-home" "general" "dex-home" "dex") (.Params.Theme | default "") }}
+    {{- with partialCached "gallery-section-cover.html" . . site.Language.Lang }}
+      {{- $processed := .Filter (slice images.AutoOrient (images.Process "fit 1200x630")) }}
+      {{- $imgs = $imgs | append (dict
+        "Image" $processed
+        "RelPermalink" $processed.RelPermalink
+        "Permalink" $processed.Permalink) }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{/* A dex species and a model page: their own hero photo. A species nobody has
+     photographed yet keeps the site logo ON PURPOSE — its hero is a Wikimedia
+     Commons stand-in, mostly CC BY-SA, and a link preview on Mastodon or in a
+     messenger shows that picture without the attribution the licence requires.
+     The models overview: the first listed model's photo. */}}
+{{- if and (not $imgParams) (not $imgs) }}
+  {{- $cover := "" }}
+  {{- if eq .Params.Theme "dex-species" }}
+    {{- with index (partialCached "dex-index.html" .).bySlug .Params.dex_slug }}{{ $cover = .cover }}{{ end }}
+  {{- else if eq .Params.Theme "model" }}
+    {{- with index (partialCached "model-index.html" . site.Language.Lang).bySlug .Params.model_slug }}{{ $cover = .cover }}{{ end }}
+  {{- else if eq .Params.Theme "models-home" }}
+    {{- /* `listed` may legitimately be empty — data/models.yaml can hold no
+           public record — and `index` on an empty slice is a build error. */}}
+    {{- with (partialCached "model-index.html" . site.Language.Lang).listed }}{{ $cover = (index . 0).cover }}{{ end }}
+  {{- end }}
+  {{- with $cover }}
+    {{- $processed := .image.Filter (slice images.AutoOrient (images.Process "fit 1200x630")) }}
     {{- $imgs = $imgs | append (dict
       "Image" $processed
       "RelPermalink" $processed.RelPermalink

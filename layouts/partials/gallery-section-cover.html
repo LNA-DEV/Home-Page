@@ -1,0 +1,46 @@
+{{- /*
+  gallery-section-cover.html
+  The photo that stands for a gallery section: the nav-card image on the gallery
+  home AND the link-preview image (og:image) of the section page itself, so what
+  the card shows and what a shared link shows cannot drift apart.
+
+      {{ $img := partialCached "gallery-section-cover.html" "dex" "dex" site.Language.Lang }}
+
+  Context: "projects" | "general" | "dex". Returns an unprocessed gallery image
+  resource, or "" when the gallery is empty.
+
+  Order: the gallery home's `<kind>_cover` uuid (projects_cover, general_cover,
+  dex_cover), else the first photo that fits the section — in a project / not
+  archived, not portfolio, in no project / carrying a species and not archived —
+  else the first photo at all.
+*/ -}}
+{{- $kind := . -}}
+{{- $out := "" -}}
+{{- $allImages := partialCached "gallery-images.html" site.Home -}}
+{{- if $allImages -}}
+  {{- $metaAll := partialCached "gallery-meta.html" site.Home -}}
+  {{- $lookup := $metaAll.bySrc -}}
+  {{- with site.GetPage "/gallery" -}}
+    {{- with index .Params (printf "%s_cover" $kind) -}}
+      {{- with index $metaAll.byId . -}}
+        {{- $out = $allImages.GetMatch (printf "images/gallery/%s" .src) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not $out -}}
+    {{- range $allImages -}}
+      {{- $meta := index $lookup (path.Base .Name) -}}
+      {{- if and (not $out) $meta -}}
+        {{- $archived := eq ($meta.section | default "") "archive" -}}
+        {{- if or
+              (and (eq $kind "projects") $meta.projects)
+              (and (eq $kind "general") (not $archived) (not $meta.portfolio) (not $meta.projects))
+              (and (eq $kind "dex") $meta.species (not $archived)) -}}
+          {{- $out = . -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not $out }}{{ $out = index $allImages 0 }}{{ end -}}
+{{- end -}}
+{{- return $out -}}

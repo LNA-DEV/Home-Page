@@ -10,7 +10,7 @@ import path from "node:path";
 import {
   SITE_BASE, LANGS,
   htmlFiles, readSiteFile, eachHtml, servedPaths, urlOf, jsonLdBlocks, pageKind,
-  hugoConfig, frontMatter, models, sitePath,
+  hugoConfig, frontMatter, models, sitePath, gallery, dex,
 } from "../support/site";
 import fs from "node:fs";
 
@@ -379,6 +379,26 @@ test.describe("structured data — one person, no invented dates", () => {
     expect(bad.slice(0, 20), `${bad.length} breadcrumb(s)\n${bad.slice(0, 20).join("\n")}`).toEqual([]);
   });
 
+  test("every URL in the JSON-LD is absolute", () => {
+    /* Microdata resolves a relative href against the page; JSON-LD does not. The
+       16 all-rights-reserved photos carried `"license": "/en/licensing/"`, which
+       Google reported as an invalid URL — so exactly the photos whose licence
+       says "ask me" were the ones not eligible for the Licensable badge. */
+    const URL_KEYS = ["url", "contentUrl", "license", "acquireLicensePage", "item", "sameAs", "image", "@id"];
+    const bad: string[] = [];
+    for (const { file, html } of eachHtml()) {
+      if (isRedirect(html)) continue;
+      for (const n of parsed(html).flatMap((d) => nodes(d))) {
+        for (const k of URL_KEYS) {
+          for (const v of [n[k]].flat()) {
+            if (typeof v === "string" && !/^https?:\/\//.test(v)) bad.push(`${file}: ${k} = ${v}`);
+          }
+        }
+      }
+    }
+    expect(bad.slice(0, 20), `${bad.length} relative URL(s) in JSON-LD\n${bad.slice(0, 20).join("\n")}`).toEqual([]);
+  });
+
   test("/about and the localised aliases reach the About page", () => {
     /* /about/ is a static file (a Hugo alias cannot write the domain root on a
        multilingual site) and goes to English; the rest are aliases. */
@@ -413,4 +433,64 @@ test.describe("robots", () => {
 
 test("the build is not empty", () => {
   expect(htmlFiles().length, "no HTML under SITE_DIR — did the build run?").toBeGreaterThan(100);
+});
+
+/* Link previews (og:image) — a photography site whose shared links showed the
+   site logo on 462 dex pages, the model page and five of the seven gallery
+   sections, although every one of them has a photograph of its own. */
+test.describe("link previews", () => {
+  const LOGO = /Ping%C3%BCino|Pingüino/;
+  const ogImage = (html: string) => html.match(/<meta property="og:image" content="([^"]+)"/)?.[1] ?? "";
+  /** "…/Photo%20Name_hu_abc.jpg" → "Photo Name": the source photo behind a variant. */
+  const stem = (u: string) => decodeURIComponent(u.split("/").pop() ?? "").split("_hu_")[0].replace(/\.[^.]+$/, "");
+
+  test("the gallery sections, the models and every photographed species preview a photo", () => {
+    const bad: string[] = [];
+    const pages = ["gallery", "gallery/general", "gallery/dex", "gallery/projects", "gallery/portfolio", "gallery/archive"];
+    const listed = models().filter((m) => m.visibility === "public");
+    if (listed.length) pages.push("gallery/models");
+    for (const m of models()) pages.push(`gallery/models/${m.slug}`);
+    const caught = new Set(gallery().map((g) => String(g.species ?? "").toLowerCase()).filter(Boolean));
+    for (const s of dex()) if (caught.has(String(s.scientific).toLowerCase())) pages.push(`gallery/dex/${s.slug}`);
+    for (const lang of LANGS) {
+      for (const p of pages) {
+        const f = sitePath(lang, p, "index.html");
+        if (!fs.existsSync(f)) continue;
+        const img = ogImage(fs.readFileSync(f, "utf8"));
+        if (!img || LOGO.test(img)) bad.push(`/${lang}/${p}/: og:image ${img || "(none)"}`);
+      }
+    }
+    expect(bad.slice(0, 20), `${bad.length} page(s) preview the logo\n${bad.slice(0, 20).join("\n")}`).toEqual([]);
+  });
+
+  test("a species nobody has photographed never previews its Commons stand-in", () => {
+    /* The stand-in is mostly CC BY-SA; a link preview shows it with no
+       attribution, which the licence does not allow. Those pages keep the logo. */
+    const bad: string[] = [];
+    for (const lang of LANGS) {
+      for (const s of dex()) {
+        const f = sitePath(lang, "gallery", "dex", s.slug, "index.html");
+        if (!fs.existsSync(f)) continue;
+        const img = ogImage(fs.readFileSync(f, "utf8"));
+        if (/\/images\/dex\/reference\//.test(img)) bad.push(`/${lang}/gallery/dex/${s.slug}/: ${img}`);
+      }
+    }
+    expect(bad).toEqual([]);
+  });
+
+  test("a section's preview is the photo on its gallery-home card, and the gallery previews its hero", () => {
+    for (const lang of LANGS) {
+      const home = readSiteFile(path.join(lang, "gallery", "index.html"));
+      for (const section of ["projects", "general", "dex"]) {
+        const card = home.match(new RegExp(`href="[^"]*/gallery/${section}/" class="gallery-nav-card" style="background-image: url\\('([^']+)'\\)"`))?.[1];
+        expect(card, `${lang}: no ${section} card`).toBeTruthy();
+        const preview = ogImage(readSiteFile(path.join(lang, "gallery", section, "index.html")));
+        expect(stem(preview), `${lang}/gallery/${section}/: preview vs card`).toBe(stem(card!));
+      }
+      /* featured.html's hero on the gallery home = the portfolio's featured_image. */
+      const hero = home.match(/class="featured-card"[^>]*style="background-image: url\('([^']+)'\)"/)?.[1];
+      expect(stem(ogImage(home)), `${lang}/gallery/: preview vs hero`).toBe(stem(hero ?? ""));
+      expect(stem(ogImage(readSiteFile(path.join(lang, "gallery", "portfolio", "index.html")))), `${lang}/gallery/portfolio/`).toBe(stem(hero ?? ""));
+    }
+  });
 });

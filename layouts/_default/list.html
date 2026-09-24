@@ -12,61 +12,16 @@
 <nav class="gallery-nav">
   {{- $allImages := partialCached "gallery-images.html" . -}}
   {{- if $allImages -}}
-    {{- $metaAll := partialCached "gallery-meta.html" . -}}
-    {{- $lookup  := $metaAll.bySrc -}}
-
-    {{- /* Projects card — use projects_cover UUID or first project image */ -}}
-    {{- $projectImg := "" -}}
-    {{- with $.Params.projects_cover -}}
-      {{- with index $metaAll.byId . -}}
-        {{- $projectImg = $allImages.GetMatch (printf "images/gallery/%s" .src) -}}
-      {{- end -}}
-    {{- end -}}
-    {{- if not $projectImg -}}
-      {{- range $allImages -}}
-        {{- $meta := index $lookup (path.Base .Name) -}}
-        {{- if and (not $projectImg) $meta $meta.projects -}}
-          {{- $projectImg = . -}}
-        {{- end -}}
-      {{- end -}}
-    {{- end -}}
-    {{- if not $projectImg }}{{ $projectImg = index $allImages 0 }}{{ end -}}
+    {{- /* Each card's photo comes from gallery-section-cover.html — the same pick
+           the section page uses as its og:image, so a shared link to a section
+           shows the photo its card shows. projects_cover / general_cover /
+           dex_cover in this page's front matter pin it; otherwise the first
+           photo that fits the section. */ -}}
+    {{- $projectImg := partialCached "gallery-section-cover.html" "projects" "projects" site.Language.Lang -}}
     {{- $projectThumb := $projectImg.Filter (slice images.AutoOrient (images.Process "fill 600x400")) -}}
-
-    {{- /* General card — use general_cover UUID or first non-archive, non-portfolio image */ -}}
-    {{- $generalImg := "" -}}
-    {{- with $.Params.general_cover -}}
-      {{- with index $metaAll.byId . -}}
-        {{- $generalImg = $allImages.GetMatch (printf "images/gallery/%s" .src) -}}
-      {{- end -}}
-    {{- end -}}
-    {{- if not $generalImg -}}
-      {{- range $allImages -}}
-        {{- $meta := index $lookup (path.Base .Name) -}}
-        {{- if and (not $generalImg) $meta (ne ($meta.section | default "") "archive") (not $meta.portfolio) (not $meta.projects) -}}
-          {{- $generalImg = . -}}
-        {{- end -}}
-      {{- end -}}
-    {{- end -}}
-    {{- if not $generalImg }}{{ $generalImg = index $allImages 0 }}{{ end -}}
+    {{- $generalImg := partialCached "gallery-section-cover.html" "general" "general" site.Language.Lang -}}
     {{- $generalThumb := $generalImg.Filter (slice images.AutoOrient (images.Process "fill 600x400")) -}}
-
-    {{- /* Dex card — use dex_cover UUID or the first animal photo carrying a species */ -}}
-    {{- $dexImg := "" -}}
-    {{- with $.Params.dex_cover -}}
-      {{- with index $metaAll.byId . -}}
-        {{- $dexImg = $allImages.GetMatch (printf "images/gallery/%s" .src) -}}
-      {{- end -}}
-    {{- end -}}
-    {{- if not $dexImg -}}
-      {{- range $allImages -}}
-        {{- $meta := index $lookup (path.Base .Name) -}}
-        {{- if and (not $dexImg) $meta $meta.species (ne ($meta.section | default "") "archive") -}}
-          {{- $dexImg = . -}}
-        {{- end -}}
-      {{- end -}}
-    {{- end -}}
-    {{- if not $dexImg }}{{ $dexImg = index $allImages 0 }}{{ end -}}
+    {{- $dexImg := partialCached "gallery-section-cover.html" "dex" "dex" site.Language.Lang -}}
     {{- $dexThumb := $dexImg.Filter (slice images.AutoOrient (images.Process "fill 600x400")) -}}
 
     {{- /* NO Models card here, deliberately. /gallery/models/ is reachable from the

@@ -216,8 +216,13 @@
   {{- with $people }}
   "about": {{ . }},
   {{- end }}
+  {{- /* absURL: all-rights-reserved resolves to the site's own /<lang>/licensing/,
+         a site-relative path. Microdata resolves that against the page, JSON-LD
+         does not — Google reported it as an invalid `license` URL on exactly the
+         16 all-rights-reserved photos. A CC deed is already absolute and passes
+         through unchanged. */}}
   {{- with .LicenseUrl }}
-  "license": {{ . }},
+  "license": {{ . | absURL }},
   {{- end }}
   {{- with site.Params.licensingPage }}
   "acquireLicensePage": {{ . | absLangURL }},
