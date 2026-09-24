@@ -73,3 +73,12 @@ models:
         url: https://bsky.app/profile/lna-dev.net
       - name: github
         url: https://github.com/LNA-DEV
+  - slug: markus-penninger
+    name: Markus Penninger
+    visibility: public
+    consent: "2026-09-20"
+    cover: dd316803-244a-4a32-a0eb-25bac2c00810
+    bio:
+      en: Markus and I have been friends since high school. Most of these photos were taken spontaneously, in the moment like during our holiday together in northern Sweden.
+      de: Markus und ich sind seit der Schulzeit befreundet. Die meisten Bilder sind spontan entstanden, einfach aus der Situation heraus. Zum Beispiel während unseres gemeinsamen Urlaubs in Nordschweden.
+      sv: Markus och jag har varit vänner sedan skoltiden. De flesta bilderna är tagna spontant, i stunden. Till exempel under vår gemensamma semester i norra Sverige.

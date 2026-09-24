@@ -14326,6 +14326,21 @@ images:
     de: Schritt ins Ungewisse - junger Alpensteinbock blickt in die Kamera
     sv: Steget ut i det okända - ung alpstenbock tittar in i kameran
   license: all-rights-reserved
+- id: dd316803-244a-4a32-a0eb-25bac2c00810
+  src: What the Mountain Said - A Hiker with His Notebook in the Swedish Fjäll.jpg
+  category: portrait
+  section: general
+  title:
+    en: What the Mountain Said - A Hiker with His Notebook in the Swedish Fjäll
+    de: Was der Berg sprach - Wanderer mit Notizbuch im schwedischen Fjäll
+    sv: Vad bergen talade om - vandrare med anteckningsbok i svenska fjällen
+  alt:
+    en: A man in glasses and gloves looks down at a small notebook in his hands, wearing a black hoodie under an open green jacket. In the background, the lichen-covered rocks and moss of the Swedish fjäll lie under a cloudy sky.
+    de: Ein Mann mit Brille und Handschuhen blickt auf ein kleines Notizbuch in seinen Händen, er trägt einen schwarzen Hoodie unter einer offenen grünen Jacke. Im Hintergrund liegen die flechtenbewachsenen Felsen und das Moos des schwedischen Fjälls unter einem bewölkten Himmel.
+    sv: En man med glasögon och handskar tittar ner på en liten anteckningsbok i händerna. Han bär en svart huvtröja under en öppen grön jacka. I bakgrunden syns de lavklädda stenarna och mossan i de svenska fjällen under en molnig himmel.
+  license: all-rights-reserved
+  artist: Lukas Nagel
+  model: markus-penninger
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
