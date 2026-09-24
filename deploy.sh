@@ -40,7 +40,15 @@ npm test
 # The artefact, as before, with --panicOnWarning: the test build deliberately
 # collects every warning so the report can show them all at once, but here the
 # first one is reason enough to stop.
-hugo --panicOnWarning --printI18nWarnings --printPathWarnings
+#
+# --cleanDestinationDir empties public/ (everything that is not in static/)
+# before rendering. A plain `hugo` overwrites but never deletes, so every page
+# that stops being generated stays behind — a reworded photo title under
+# `hugo server` once left 14 half-typed photo pages there (`vad-f/`, …) with
+# localhost links in them, and `rsync --delete` would have shipped them. The
+# image cache is resources/_gen/, which this does not touch: the cost is copying
+# the ~1 GB of variants back out of it, seconds.
+hugo --cleanDestinationDir --panicOnWarning --printI18nWarnings --printPathWarnings
 
 # The one check that can catch a stale or development build in the artefact
 # itself: the same static project, run over the very files rsync is about to
@@ -52,6 +60,7 @@ SITE_DIR=public SITE_BASE=https://lna-dev.net npx playwright test --project stat
 publish /mnt/homepage/homepage-site-data
 
 # The Tor build has to come out of hugo and be reachable; that is the whole
-# requirement. No second test pass, no clearnet-leak policy.
-hugo -b "$ONION" --panicOnWarning --printI18nWarnings --printPathWarnings
+# requirement. No second test pass, no clearnet-leak policy. Cleaned for the same
+# reason as above: nothing of the clearnet build may survive into the onion one.
+hugo -b "$ONION" --cleanDestinationDir --panicOnWarning --printI18nWarnings --printPathWarnings
 publish /mnt/homepage/homepage-tor-site-data
