@@ -61,22 +61,34 @@ class BuildStub(unittest.TestCase):
         self.assertNotEqual(a, b)
         self.assertEqual(len(a[len("- id: "):]), 36)
 
-    def test_prose_is_written_as_an_en_map(self):
-        # The shape gallery-meta.html normalises every entry to, so adding a
-        # German title later is one more indented line, not a restructure.
-        lines = sg.build_stub("a.jpg", {"title": "Red Fox", "alt": "a fox"})
-        self.assertIn("  title:", lines)
-        self.assertIn("    en: Red Fox", lines)
-        self.assertIn("  alt:", lines)
-        self.assertIn("    en: a fox", lines)
+    def test_title_and_alt_are_empty_slots_in_all_three_languages(self):
+        # Typed in the data file, never taken from darktable
+        # (docs/concepts/gallery-metadata-yaml-only.md §4). An empty title stops
+        # the build, which is the reminder to write one.
+        lines = sg.build_stub("a.jpg")
+        for field in ("title", "alt"):
+            with self.subTest(field=field):
+                i = lines.index(f"  {field}:")
+                self.assertEqual(lines[i + 1:i + 4], ['    en: ""', '    de: ""', '    sv: ""'])
 
-    def test_alt_always_has_all_three_languages(self):
-        # A slot to type into, even when darktable wrote no alt text at all.
-        for editorial, en in (({}, '""'), ({"alt": "a fox"}, "a fox")):
-            with self.subTest(editorial=editorial):
-                lines = sg.build_stub("a.jpg", editorial)
-                i = lines.index("  alt:")
-                self.assertEqual(lines[i + 1:i + 4], [f"    en: {en}", '    de: ""', '    sv: ""'])
+    def test_the_stub_has_an_empty_tags_list(self):
+        self.assertIn("  tags: []", sg.build_stub("a.jpg"))
+
+    def test_no_prose_is_taken_from_the_file_even_when_it_has_some(self):
+        # The file's title is irrelevant now, and so are its alt text and caption.
+        lines = sg.build_stub("a.jpg", {
+            "title": "Red Fox", "alt": "a fox", "description": "a story",
+        })
+        joined = "\n".join(lines)
+        for text in ("Red Fox", "a fox", "a story"):
+            self.assertNotIn(text, joined)
+        self.assertNotIn("  description:", lines)
+
+    def test_only_license_and_artist_are_read_from_the_file(self):
+        self.assertEqual(sg.FILE_FIELDS, ("license", "artist"))
+
+    def test_the_artist_is_still_taken_from_the_file(self):
+        self.assertIn("  artist: Lukas Nagel", sg.build_stub("a.jpg", {"artist": "Lukas Nagel"}))
 
     def test_a_licence_key_is_written_as_is(self):
         lines = sg.build_stub("a.jpg", {"license": "cc-by-sa-4.0"})
@@ -108,14 +120,14 @@ class BuildStub(unittest.TestCase):
         lines = sg.build_stub("a.jpg", {"license": "Some Other Licence"})
         self.assertIn("  license: Some Other Licence", lines)
 
-    def test_prose_that_needs_quoting_gets_it(self):
-        lines = sg.build_stub("a.jpg", {"title": "Fox: a portrait"})
-        self.assertIn('    en: "Fox: a portrait"', lines)
+    def test_an_artist_that_needs_quoting_gets_it(self):
+        lines = sg.build_stub("a.jpg", {"artist": "Nagel: Lukas"})
+        self.assertIn('  artist: "Nagel: Lukas"', lines)
 
     def test_the_stub_parses_as_yaml(self):
         import json
         lines = sg.build_stub("Red Fox.jpg", {
-            "title": "Fox #3", "alt": "yes", "description": "a: b", "artist": "Lukas Nagel",
+            "license": "cc-by-sa-4.0", "artist": "Lukas Nagel #3",
         })
         # No PyYAML here either; assert the properties a bare scalar must have.
         for line in lines:

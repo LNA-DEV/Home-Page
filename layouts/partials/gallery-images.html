@@ -1,8 +1,30 @@
 {{- /*
   gallery-images.html
-  Returns all gallery image resources from assets/images/gallery/.
+  Returns all gallery image resources from assets/images/gallery/, each one
+  copied to the name the site publishes it under.
   Global resources are inherently language-independent — no cross-site lookup needed.
   Always call via partialCached.
+
+  The copy. Every resource that has an entry in data/gallery.yaml is passed
+  through `resources.Copy "images/gallery/<file>"`, where `file` is the photo's
+  English slug plus its extension, lowercased (gallery-meta.html). So the served
+  original is /images/gallery/three-masts-a-turkish-gulet-in-golden-light.jpg and
+  every variant Hugo renders from it is `three-masts-…_hu_<hash>.jpg` — never
+  the store filename, which is only a pointer and may be a camera counter
+  (docs/concepts/gallery-metadata-yaml-only.md §5). Verified on Hugo 0.166.0:
+
+    - the copy keeps `.Meta`, so the EXIF read in collect-images.html is unchanged;
+    - `.Name` still returns the SOURCE name ("/images/gallery/DSC_2632.jpg"), so
+      every lookup by `path.Base .Name` in gallery-meta's bySrc, and every
+      `GetMatch "images/gallery/<src>"`, keeps working untouched;
+    - `_hu_<hash>` depends on pixels and spec, not on the name, which is what let
+      scripts/gallery-cache-link.py keep the image cache warm across the switch.
+
+  A file with no entry in data/gallery.yaml is left out entirely — it has no
+  name to be published under, and it is not in the gallery until
+  scripts/sync-gallery.py gives it one. The result is still a typed
+  resource.Resources (appending to an empty `resources.Match` keeps the type),
+  so `.GetMatch` works on it even when it is empty.
 
   Note .Name on these resources is a full path with a leading slash
   ("/images/gallery/photo.jpg") — look photos up by bare filename with path.Base.
@@ -17,4 +39,11 @@
 {{- if not $images -}}
   {{- warnf "no gallery images found under assets/images/gallery — is the mount source in config/_default/module.yaml missing or wrong? (copy config/_default/module.yaml.example; see CLAUDE.md \"Build / Deploy\")" -}}
 {{- end -}}
-{{- return $images -}}
+{{- $meta := partialCached "gallery-meta.html" . -}}
+{{- $out := resources.Match "images/gallery/.no-such-file" -}}
+{{- range $img := $images -}}
+  {{- with index $meta.bySrc (path.Base $img.Name) -}}
+    {{- $out = $out | append ($img | resources.Copy (printf "images/gallery/%s" .file)) -}}
+  {{- end -}}
+{{- end -}}
+{{- return $out -}}

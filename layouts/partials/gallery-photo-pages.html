@@ -28,10 +28,9 @@
 {{- $c := partialCached "gallery-collected.html" . $lang -}}
 
 {{- range $c.all -}}
-  {{- /* The heading is the title, never the alt text. .DisplayTitle is the
-         title where one exists and the filename stem where it does not — see
-         collect-images.html. */ -}}
-  {{- $title := .DisplayTitle -}}
+  {{- /* The heading is the title, never the alt text. Every photo has one —
+         gallery-meta.html stops the build otherwise. */ -}}
+  {{- $title := .Title -}}
 
   {{- /* The meta description and the search index want the story where there is
          one and the alt text where there is not — which is exactly what

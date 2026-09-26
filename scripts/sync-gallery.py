@@ -9,16 +9,24 @@ This script keeps the two in lockstep:
     treated as an ERROR (likely a rename to fix by hand) — the script
     reports every such entry and exits non-zero WITHOUT modifying the file.
 
-  * If a photo on disk has no gallery.yaml entry, a minimal stub entry is
-    appended to the end of the `images:` list:
+  * If a photo on disk has no gallery.yaml entry, a stub entry is appended to
+    the end of the `images:` list:
 
         - id: <fresh uuid4>
           src: <filename>
           category: others
           section: general
+          title:  {en: "", de: "", sv: ""}     (written out as a block map)
+          alt:    {en: "", de: "", sv: ""}
+          tags: []
+          license: <key, from darktable's rights preset>
+          artist: <from the file, if it names one>
 
-    Nothing else is filled in — the Hugo build will error on such photos
-    until a license is added, which usefully flags them as needing work.
+    The title, alt text and tags are typed HERE, in all three languages — never
+    in darktable (docs/concepts/gallery-metadata-yaml-only.md §4). The build
+    stops on a photo without a title, which is the reminder to write one; the
+    filename can be anything, a camera counter included, because nothing a
+    reader sees is derived from it.
 
 Paths default to the repo layout (this script lives in <repo>/scripts/).
 The photos folder is read from the same place Hugo reads it -- the gallery
@@ -151,18 +159,24 @@ def list_disk_images(photos_dir):
     return names
 
 
+# The two fields still taken from the file when a stub is written. Neither is
+# prose and neither has a language: darktable stamps both from a preset on every
+# export, and a wrong licence still fails the build because it must be a key.
+# Title, alt, description and tags are NOT read — they are typed in the data file
+# (docs/concepts/gallery-metadata-yaml-only.md §4).
+FILE_FIELDS = ("license", "artist")
+
+
 def build_stub(filename, editorial=None):
     """One gallery.yaml entry for a photo that has none yet.
 
-    The editorial fields are read out of the file ONCE, here, by gallery_xmp.py —
-    darktable is where the first English title, alt text and licence are typed, and
-    this is the only moment the site looks at them. After this the data file is the
-    source of truth and a re-export cannot change what the site says about a photo
-    (docs/concepts/gallery-metadata-single-source.md §6).
-
-    Prose is written as an {en: …} map because that is the shape gallery-meta.html
-    normalises every entry to; writing it out explicitly means adding a German
-    title later is one more indented line, not a restructure.
+    `editorial` may carry `license` and `artist`, read out of the file ONCE, here,
+    by gallery_xmp.py; anything else in it is ignored. The prose and the tags get
+    empty slots instead: `title` and `alt` with all three languages present as
+    empty strings, so filling them in is typing into a slot rather than
+    remembering the shape, and `tags: []`. An empty title stops the build (in
+    gallery-meta.html), which is the reminder to write one; an empty alt is a
+    backlog item, not an error.
     """
     editorial = editorial or {}
     lines = [
@@ -171,20 +185,12 @@ def build_stub(filename, editorial=None):
         "  category: others",
         "  section: general",
     ]
-    for field in ("title", "alt", "description"):
-        value = editorial.get(field)
-        # alt is written even when darktable had none, with all three languages
-        # present as empty strings, so filling it in is typing into a slot rather
-        # than remembering the shape. An empty string resolves exactly like a
-        # missing key: collect-images.html falls back to `en` on any falsy value.
-        if field == "alt":
-            lines.append("  alt:")
-            lines.append(f"    en: {yaml_scalar(value or '')}")
-            lines.append('    de: ""')
-            lines.append('    sv: ""')
-        elif value:
-            lines.append(f"  {field}:")
-            lines.append(f"    en: {yaml_scalar(value)}")
+    for field in ("title", "alt"):
+        lines.append(f"  {field}:")
+        lines.append('    en: ""')
+        lines.append('    de: ""')
+        lines.append('    sv: ""')
+    lines.append("  tags: []")
     # dc:rights holds the licence's display NAME; a stub must carry the key, which
     # is all the build accepts. LICENSE_LINES does the translation. An unmapped
     # string is left verbatim, so it shows up as a build error naming the photo
@@ -249,11 +255,12 @@ def main(argv=None):
 
     # Build stub entries for the new files and insert before the block end.
     # One exiftool process for all of them, or none at all when it is not installed.
-    editorial = gallery_xmp.read(args.photos / name for name in new_files)
+    editorial = gallery_xmp.read((args.photos / name for name in new_files),
+                                 fields=FILE_FIELDS)
     if new_files and not gallery_xmp.available():
         print(
-            "NOTE: exiftool not found — stubs are written without the title, alt "
-            "text, license and artist darktable put in the file.",
+            "NOTE: exiftool not found — stubs are written without the license and "
+            "artist darktable put in the file.",
             file=sys.stderr,
         )
     additions = []

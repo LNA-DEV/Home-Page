@@ -1,5 +1,13 @@
-/* The published URL space of a build: every <loc> in the sitemaps and every item
- * <link> in every feed, path only.
+/* The published URL space of a build: every <loc> in the sitemaps, every item
+ * <link> in every feed, and every published original under /images/gallery/,
+ * path only.
+ *
+ * The originals are the one image URL meant to stay put — a variant's `_hu_<hash>`
+ * changes on every re-export by design — and since the build names them after
+ * the photo's English slug, a reworded title moves them. Listing them here makes
+ * that a conscious `npm run golden:update`, and urls.spec.ts accepts a retired
+ * one only when the nginx redirect map sends it somewhere live
+ * (docs/concepts/gallery-metadata-yaml-only.md §5).
  *
  * Shared by the golden-list test and by `npm run golden:update`, so the two can
  * never disagree about what counts as published. */
@@ -33,5 +41,12 @@ export function collectPublishedPaths(siteDir, siteBase) {
     }
   };
   walk(siteDir);
+
+  const gallery = path.join(siteDir, "images", "gallery");
+  if (fs.existsSync(gallery)) {
+    for (const f of fs.readdirSync(gallery)) {
+      if (!/_hu_[0-9a-f]+\./.test(f)) out.add(`/images/gallery/${f}`);
+    }
+  }
   return [...out].sort();
 }

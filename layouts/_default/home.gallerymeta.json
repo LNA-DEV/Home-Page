@@ -19,10 +19,11 @@
   clearnet and the onion build, or rsync ships it twice per deploy — and the
   embedding step has to be idempotent, which a changing input would defeat.
 
-  `title` is .Title, NOT .DisplayTitle: DisplayTitle falls back to the filename
-  stem so a page always has a heading, and for the 427 camera-code files that stem
-  is "P1002405". A heading has to print something; dc:title in a downloaded JPEG
-  is better left empty than filled with a camera counter.
+  `title` is .Title, which every photo has (gallery-meta.html stops the build
+  otherwise). Nothing in here is derived from the photo's filename: `src` is the
+  store file the embedding step copies the technical EXIF from, and `file` is the
+  name the build publishes it under (docs/concepts/gallery-metadata-yaml-only.md
+  §5) — the key the embedding step maps a served file back to its photo with.
 */ -}}
 {{- $c := partialCached "gallery-collected.html" . site.Language.Lang -}}
 {{- $records := slice -}}
@@ -30,6 +31,7 @@
   {{- $records = $records | append (dict
         "id" .Id
         "src" .Name
+        "file" .File
         "slug" .Slug
         "section" .Section
         "dateTaken" .DateTaken

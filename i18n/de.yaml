@@ -427,8 +427,6 @@
   translation: "Weiter"
 - id: photo_related
   translation: "Ähnliche Fotos"
-- id: photo_file
-  translation: "Datei"
 - id: photo_copy
   translation: "Link kopieren"
 - id: photo_copied

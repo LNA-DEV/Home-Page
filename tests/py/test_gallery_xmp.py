@@ -76,5 +76,41 @@ class FieldMap(unittest.TestCase):
         })
 
 
+class Subset(unittest.TestCase):
+    def test_only_the_requested_fields_survive(self):
+        # sync-gallery.py asks for license and artist and must never see a title.
+        records = gx.parse_records(exiftool_json(
+            Title="Red Fox", Notes="a fox", Rights="cc-by-sa-4.0", Creator="Lukas Nagel"))
+        self.assertEqual(gx.select(records, {"license": 1, "artist": 1}), {
+            "Red Fox.jpg": {"license": "cc-by-sa-4.0", "artist": "Lukas Nagel"}})
+
+    def test_a_file_with_none_of_the_requested_fields_is_omitted(self):
+        records = gx.parse_records(exiftool_json(Title="Red Fox"))
+        self.assertEqual(gx.select(records, {"license": 1}), {})
+
+
+class Keywords(unittest.TestCase):
+    def test_all_three_places_in_file_order(self):
+        out = gx.parse_keyword_records(exiftool_json(
+            Subject=["bavarianAlps", "fox"], Keywords="redFox", XPKeywords="zsl_sdr"))
+        self.assertEqual(out, {"Red Fox.jpg": ["bavarianAlps", "fox", "redFox", "zsl_sdr"]})
+
+    def test_delimited_strings_are_split_like_the_build_split_them(self):
+        out = gx.parse_keyword_records(exiftool_json(XPKeywords="a;b, c ;; ", Subject="d"))
+        self.assertEqual(out["Red Fox.jpg"], ["d", "a", "b", "c"])
+
+    def test_spelling_and_duplicates_are_kept(self):
+        # The caller decides what a duplicate means; the spelling is the point.
+        out = gx.parse_keyword_records(exiftool_json(Subject=["Fox"], Keywords=["fox"]))
+        self.assertEqual(out["Red Fox.jpg"], ["Fox", "fox"])
+
+    def test_a_file_without_tags_is_omitted(self):
+        self.assertEqual(gx.parse_keyword_records(exiftool_json()), {})
+        self.assertEqual(gx.parse_keyword_records("not json"), {})
+
+    def test_the_three_places_are_the_ones_the_build_read(self):
+        self.assertEqual(gx.KEYWORD_TAGS, ("XMP-dc:Subject", "IPTC:Keywords", "EXIF:XPKeywords"))
+
+
 if __name__ == "__main__":
     unittest.main()

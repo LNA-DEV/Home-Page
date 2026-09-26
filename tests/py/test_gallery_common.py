@@ -67,20 +67,23 @@ class YamlScalar(unittest.TestCase):
                 self.assert_roundtrip(value)
 
 
-class SourceName(unittest.TestCase):
-    def test_a_hugo_variant_maps_back_to_its_source(self):
-        self.assertEqual(gc.source_name("Red Fox_hu_1f1561eb0ac2d2ce.jpg"), "Red Fox.jpg")
+class PublishedBase(unittest.TestCase):
+    # A served file maps to its photo's published name — the manifest's `file`,
+    # the English slug — not to the store filename (gallery-metadata-yaml-only §5).
+    def test_a_hugo_variant_maps_back_to_its_published_original(self):
+        self.assertEqual(gc.published_base("red-fox-in-the-snow_hu_1f1561eb0ac2d2ce.jpg"),
+                         "red-fox-in-the-snow.jpg")
 
-    def test_an_untouched_original_is_returned_unchanged(self):
-        self.assertEqual(gc.source_name("Red Fox.jpg"), "Red Fox.jpg")
+    def test_a_published_original_is_returned_unchanged(self):
+        self.assertEqual(gc.published_base("red-fox-in-the-snow.jpg"), "red-fox-in-the-snow.jpg")
 
     def test_only_a_hex_hash_is_stripped(self):
         # The hash is hex, so "_hu_b" IS a variant marker and "_hu_z" is not.
-        self.assertEqual(gc.source_name("a_hu_b.jpg"), "a.jpg")
-        self.assertEqual(gc.source_name("a_hu_z.jpg"), "a_hu_z.jpg")
+        self.assertEqual(gc.published_base("a_hu_b.jpg"), "a.jpg")
+        self.assertEqual(gc.published_base("a_hu_z.jpg"), "a_hu_z.jpg")
 
-    def test_uppercase_extension_survives(self):
-        self.assertEqual(gc.source_name("Alpaca_hu_deadbeef01234567.JPG"), "Alpaca.JPG")
+    def test_the_extension_is_kept_as_published(self):
+        self.assertEqual(gc.published_base("alpaca_hu_deadbeef01234567.JPG"), "alpaca.JPG")
 
 
 class PhotosDirFromHugoMounts(unittest.TestCase):

@@ -43,22 +43,6 @@
        terms and a site-relative url all differ between them. */ -}}
 {{- $licenseIndex := partialCached "license-index.html" . $lang -}}
 
-{{- /* Tags the camera or the export chain wrote into dc:subject that must never
-       reach a reader (data/galleryTagIgnore.yaml). Applied to the union below AND
-       to the first-match-wins $keywords string the lightbox popup shows, so the
-       junk is gone from the grids, the RSS categories, the schema keywords and
-       the metadata the post-build embedding step writes into the served files.
-
-       Titles become a dict for an O(1) lookup: this partial is NOT cached at its
-       call sites and runs once per dex species page, so the tag loop below
-       executes a few hundred thousand times per build. */ -}}
-{{- $tagIgnore := hugo.Data.galleryTagIgnore | default dict -}}
-{{- $tagIgnoreSet := dict -}}
-{{- range $t := ($tagIgnore.titles | default slice) -}}
-  {{- $tagIgnoreSet = merge $tagIgnoreSet (dict (lower (trim $t " ")) true) -}}
-{{- end -}}
-{{- $tagIgnorePatterns := $tagIgnore.patterns | default slice -}}
-
 {{- range $image := $allImages -}}
   {{- $meta := index $lookup (path.Base $image.Name) -}}
   {{- if not $meta -}}
@@ -133,9 +117,7 @@
     {{- $focalLength := "" -}}
     {{- $cameraModel := "" -}}
     {{- $lensModel := "" -}}
-    {{- $keywords := "" -}}
     {{- $software := "" -}}
-    {{- $tagChunks := slice -}}
 
     {{- with $image.Meta -}}
       {{- $date = .Date -}}
@@ -143,48 +125,10 @@
       {{- if gt .Date.Year 2000 -}}
         {{- $dateTaken = .Date.Format "2006-01-02" -}}
       {{- end -}}
-      {{- /* Nothing editorial is read out of the file here any more — the
-             one-time import (docs/concepts/gallery-metadata-import.md) moved the
-             licence, alt, title and the seven dc:description captions into
-             data/gallery.yaml. What is left below is the technical data and the
-             tags, which stay darktable-owned by design. */ -}}
-      {{- with .Exif.subject -}}
-        {{- $keywords = . -}}
-      {{- end -}}
-      {{- if not $keywords -}}
-        {{- with .Exif.Subject -}}
-          {{- $keywords = . -}}
-        {{- end -}}
-      {{- end -}}
-      {{- if not $keywords -}}
-        {{- with .Exif.Keywords -}}
-          {{- $keywords = . -}}
-        {{- end -}}
-      {{- end -}}
-      {{- if not $keywords -}}
-        {{- with .XMP.Subject -}}
-          {{- $keywords = delimit . ", " -}}
-        {{- end -}}
-      {{- end -}}
-      {{- if not $keywords -}}
-        {{- with $meta.tags -}}
-          {{- $keywords = delimit . ", " -}}
-        {{- end -}}
-      {{- end -}}
-      {{- /* .Tags is the UNION of every source, unlike $keywords above, which is
-             first-match-wins because it is what the info popup displays. The
-             similarity scorer wants the richest vocabulary available: 352 photos
-             carry keywords only in EXIF/XMP and others only in the data file, so
-             preferring one source would throw away signal. */ -}}
-      {{- range $chunk := (slice .Exif.subject .Exif.Subject .Exif.Keywords .XMP.Subject) -}}
-        {{- with $chunk -}}
-          {{- if reflect.IsSlice . -}}
-            {{- $tagChunks = $tagChunks | append (delimit . ",") -}}
-          {{- else -}}
-            {{- $tagChunks = $tagChunks | append (printf "%v" .) -}}
-          {{- end -}}
-        {{- end -}}
-      {{- end -}}
+      {{- /* Nothing editorial is read out of the file here — only the technical
+             data below. The licence, alt, title and captions left with the first
+             import (docs/concepts/gallery-metadata-import.md), the tags with the
+             second (docs/concepts/gallery-metadata-yaml-only.md §3). */ -}}
       {{- with .Exif.FNumber -}}
         {{- $fStr := printf "%v" . -}}
         {{- if strings.Contains $fStr "/" -}}
@@ -249,70 +193,24 @@
       {{- end -}}
     {{- end -}}
 
-    {{- with $meta.tags -}}
-      {{- $tagChunks = $tagChunks | append (delimit . ",") -}}
-    {{- end -}}
-    {{- $tags := slice -}}
-    {{- range $chunk := $tagChunks -}}
-      {{- range $t := split (replace $chunk ";" ",") "," -}}
-        {{- $t = lower (trim $t " ") -}}
-        {{- if and $t (not (in $tags $t)) -}}
-          {{- $drop := index $tagIgnoreSet $t -}}
-          {{- if not $drop -}}
-            {{- range $pat := $tagIgnorePatterns -}}
-              {{- if findRE $pat $t -}}{{- $drop = true -}}{{- end -}}
-            {{- end -}}
-          {{- end -}}
-          {{- if not $drop -}}
-            {{- $tags = $tags | append $t -}}
-          {{- end -}}
-        {{- end -}}
-      {{- end -}}
-    {{- end -}}
+    {{- /* Tags come from data/gallery.yaml alone, already normalised by
+           gallery-meta.html. .Tags is the lowercased list everything that
+           compares or aggregates reads (photo page, RSS, schema keywords, the
+           similarity scorer, the embedded files); .Keywords is the stored
+           spelling (`bavarianAlps`), the string the lightbox popup prints. */ -}}
+    {{- $tags := $meta.tagsLower | default slice -}}
+    {{- $keywords := delimit ($meta.tags | default slice) ", " -}}
 
-    {{- /* Same blacklist over $keywords, which keeps its original casing and its
-           first-match-wins source because it is the string the info popup prints. */ -}}
-    {{- with $keywords -}}
-      {{- $kept := slice -}}
-      {{- range $t := split (replace . ";" ",") "," -}}
-        {{- $t = trim $t " " -}}
-        {{- $drop := index $tagIgnoreSet (lower $t) -}}
-        {{- if not $drop -}}
-          {{- range $pat := $tagIgnorePatterns -}}
-            {{- if findRE $pat $t -}}{{- $drop = true -}}{{- end -}}
-          {{- end -}}
-        {{- end -}}
-        {{- if and $t (not $drop) -}}
-          {{- $kept = $kept | append $t -}}
-        {{- end -}}
-      {{- end -}}
-      {{- $keywords = delimit $kept ", " -}}
-    {{- end -}}
-
-    {{- /* Override EXIF with data file values where available */ -}}
+    {{- /* Title: data file only, in this language with the English fallback.
+           gallery-meta.html has already stopped the build on a photo with no
+           title, so this is never empty — which is why there is no filename
+           fallback any more, and no separate DisplayTitle: the file's name is a
+           pointer and nothing a reader sees is derived from it
+           (docs/concepts/gallery-metadata-yaml-only.md §4). */ -}}
     {{- with $meta.title -}}
       {{- $title = index . $lang -}}
       {{- if not $title -}}{{- $title = index . "en" -}}{{- end -}}
     {{- end -}}
-
-    {{- /* Fallback: derive a title from the filename when none is set,
-           skipping camera-generated codes like P1002405 / DSC_0753 */ -}}
-    {{- if not $title -}}
-      {{- $stem := strings.TrimSuffix (path.Ext (path.Base $image.Name)) (path.Base $image.Name) -}}
-      {{- $stem = strings.TrimPrefix "archive--" $stem -}}
-      {{- if not (findRE `(?i)^[ _-]?[a-z]{0,4}[ _-]?\d{3,}([ _-][a-z0-9]+)*$` $stem) -}}
-        {{- $title = $stem -}}
-      {{- end -}}
-    {{- end -}}
-
-    {{- /* DisplayTitle is never empty. $title stays blank for camera-code
-           filenames so the grid does not caption a photo the author never named,
-           but a page heading, a nav link and a related-photo label all need
-           something to print — and the stem IS the name until the file is
-           renamed. Derived once here so those three never disagree. */ -}}
-    {{- $bare := path.Base $image.Name -}}
-    {{- $stemAll := strings.TrimPrefix "archive--" (strings.TrimSuffix (path.Ext $bare) $bare) -}}
-    {{- $displayTitle := $title | default $stemAll -}}
 
     {{- /* Alt text: data file only. There used to be an image-alt.html fallback
            onto the file's own XMP here, which served English to all three
@@ -392,8 +290,8 @@
       "Tags" $tags
       "Projects" ($meta.projects | default slice)
       "Name" (path.Base $image.Name)
+      "File" ($meta.file | default "")
       "Title" $title
-      "DisplayTitle" $displayTitle
       "Alt" $alt
       "Description" $description
       "Date" $date

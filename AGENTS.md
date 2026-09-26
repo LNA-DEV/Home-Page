@@ -25,20 +25,24 @@ python3 scripts/sync-gallery.py
 
 - A `src:` in the YAML with no file on disk is an **error**, not a fix: it usually
   means a rename to make by hand. The script reports every one and writes nothing.
-- A file on disk with no entry gets a stub appended, with a fresh UUID `id`, and
-  `title` / `alt` / `description` / `license` / `artist` pre-filled from what
-  darktable wrote into the JPEG (`scripts/gallery_xmp.py`, one exiftool process for
-  all new files; without exiftool the fields are simply left empty).
-- That file read happens **once, here**. Hugo does not look at those tags at build
-  time, so a later re-export cannot silently change what the site says about a
-  photo — the point of `docs/concepts/gallery-metadata-single-source.md`.
-- The prose fields are written as `{en: …}` maps, which is the shape everything
-  reads; adding a German title later is one more indented line. `license` is
-  written as a **key** (`cc-by-sa-4.0`), mapped from darktable's display string
-  through `data/licenseMap.yaml`.
+- A file on disk with no entry gets a stub appended, with a fresh UUID `id`,
+  **empty `title` and `alt` slots in all three languages**, `tags: []`, and only
+  `license` / `artist` pre-filled from darktable's preset in the JPEG
+  (`scripts/gallery_xmp.py`, one exiftool process for all new files; without
+  exiftool those two are simply left out).
+- **Title, alt text, description and tags are typed in `data/gallery.yaml`, never
+  in darktable** (`docs/concepts/gallery-metadata-yaml-only.md`). Whatever the file
+  carries in those fields is ignored, and the export filename can be anything —
+  the site publishes the photo under its English title's slug. Set darktable's
+  export conflict handling to "create unique filename", never "overwrite": camera
+  counters like `DSC_0001` repeat.
+- **The build stops on the new photo until `title.en` is written** — that is the
+  reminder. An empty alt is a backlog item, not an error.
+- `license` is written as a **key** (`cc-by-sa-4.0`), mapped from darktable's
+  display string through `data/licenseMap.yaml`.
 
-Left for a human: `category` (the stub says `others`), `section`, `project`,
-`portfolio`, `species`, and the German and Swedish prose.
+Left for a human: the title (all three languages), the alt text, the tags,
+`category` (the stub says `others`), `section`, `project`, `portfolio`, `species`.
 
 ### `scripts/gallery-embed-metadata.py` — the photo leaves for the web
 
@@ -56,11 +60,21 @@ exiftool "public/images/gallery/<some photo>.JPG"      # see what a visitor down
 
 - It reads `public/<lang>/gallery-metadata.json`, which Hugo renders — so **run
   `hugo` first**, and re-run it after any change to the gallery data or templates.
+- Every file is **cleared first** (all metadata but the ICC profile), then gets the
+  technical EXIF from the source and the editorial set from the manifest. Nothing
+  darktable, the camera or a phone left in the source survives unless it is
+  written again.
 - It is idempotent: a second run leaves every file byte-identical.
 - It aborts before writing anything if a published file maps to no photo, or if a
   source original is missing from the photo store.
-- `--check` is what stands between an untagged file and the live site. If it fails,
-  do not deploy — rerun the embedding step.
+- `--check` is what stands between a wrong file and the live site. It compares
+  every editorial field of every served file with the manifest, refuses any
+  metadata group outside its allowlist, and checks each published original's
+  image data against its store file (~25 s per build). If it fails, do not deploy — read what it names
+  (a stray group from a new camera belongs either in `ALLOWED_GROUPS` or cleared),
+  fix, rerun the embedding step.
+- After each rsync `deploy.sh` reloads the site's nginx container, so a changed
+  image redirect map (`/_nginx/gallery-image-redirects.map`) takes effect.
 
 Do **not** run `./deploy.sh` after either script. That is a separate, explicitly
 authorised step.
@@ -85,8 +99,8 @@ What it did, in one pass over `data/gallery.yaml` (`docs/concepts/gallery-metada
 
 `artist` was deliberately **not** imported: all 287 file values are `Lukas Nagel`,
 which is `site.Params.author.name` and already the fallback (`--artist` imports
-them if uniformity is ever preferred). Tags were not imported either — they stay
-darktable-owned and are read live at build time, by design.
+them if uniformity is ever preferred). Tags were not imported by this script; the
+second one-time import below did that.
 
 It removed the fallbacks with it, so from here on:
 
@@ -98,6 +112,32 @@ It removed the fallbacks with it, so from here on:
   editorial backlog, not a defect, and the script lists them.
 - `layouts/partials/image-alt.html` still exists, but only `sitemap.xml` uses it,
   for page-bundle images that are not gallery photos.
+
+### `scripts/gallery-import-tags.py` and `scripts/gallery-cache-link.py` — done, do not re-run
+
+The two one-time steps of `docs/concepts/gallery-metadata-yaml-only.md`, run on
+2026-09-26 and kept for the record. A second run of either prints that there is
+nothing to do.
+
+- **`gallery-import-tags.py`** moved the tags the build used to read out of the
+  files into `data/gallery.yaml`: 4,422 tags on 289 entries, in darktable's
+  camelCase spelling (`bavarianAlps`). The set and order came from Hugo's own
+  manifest, so the site showed exactly the same tags before and after — all three
+  `gallery-metadata.json` stayed byte-identical, before the template stopped
+  reading the files and after. Three German file tags (`Eidechse`,
+  `Eidechsenkampf`, `Schnecke`) that duplicated English YAML tags were then
+  deleted by hand. Tags are now typed in the YAML only.
+- **`gallery-cache-link.py`** kept the image cache warm when the build started
+  publishing under slug names: it hardlinked the 5,819 cached variants
+  `<store stem>_hu_<hash>.<ext>` to `<file slug>_hu_<hash>.<ext>` (the hash does not
+  depend on the name), so the switch reprocessed nothing. It only ever adds links.
+
+### A reworded English title
+
+The English title decides the photo's page URL **and** its image file names. After
+rewording one: add the old English page slug to the entry's `slugAliases:` (keeps
+the old page URL and, through the nginx redirect map, the old image URLs alive),
+then `npm run golden:update`.
 
 Running it again prints `Nothing to import` and changes nothing, which is the
 intended way to confirm the state. It refuses to run at all if `data/gallery.yaml`

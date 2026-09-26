@@ -12,7 +12,7 @@ import path from "node:path";
 import {
   REPO, LANGS, UUID_RE, asList,
   gallery, dex, licenseMap, i18nIds, manifests,
-  sitePath, readSiteFile, htmlFiles, attrValues,
+  sitePath, readSiteFile, htmlFiles, attrValues, SITE_BASE,
 } from "../support/site";
 
 test.describe("gallery.yaml", () => {
@@ -261,4 +261,143 @@ test.describe("photo pages", () => {
       expect(diff, `${LANGS[i]} has no page for ${diff.slice(0, 5).join(", ")}`).toEqual([]);
     }
   });
+});
+
+/* docs/concepts/gallery-metadata-yaml-only.md — the file carries pixels,
+   gallery.yaml carries everything else, and the store filename is a pointer
+   nothing a reader sees is derived from. */
+
+function stemOf(name: string): string {
+  return name.replace(/\.[^.]+$/, "");
+}
+
+function unescapeHtml(s: string): string {
+  return s.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
+    .replace(/&#39;|&#x27;/g, "'").replace(/&quot;/g, '"');
+}
+
+test.describe("the served image files", () => {
+  test("every file is named after its photo's English slug, never the store filename", () => {
+    const photos = (manifests().en as any).photos as any[];
+    const slugs = new Set(photos.map((p) => stemOf(p.file)));
+    const bad = fs.readdirSync(sitePath("images", "gallery")).filter((f) => {
+      const m = /^(.+?)(_hu_[0-9a-f]+)?\.[a-z]+$/.exec(f);
+      return !m || !slugs.has(m[1]);
+    });
+    expect(bad, `published under a name that is no photo's file slug — a template published a raw ` +
+      `resource instead of the copy from gallery-images.html:\n${bad.slice(0, 20).join("\n")}`).toEqual([]);
+  });
+
+  test("every photo's original is published under its file name", () => {
+    const photos = (manifests().en as any).photos as any[];
+    const missing = photos.filter((p) => !fs.existsSync(sitePath("images", "gallery", p.file)))
+      .map((p) => `${p.src} -> ${p.file}`);
+    expect(missing, missing.slice(0, 20).join("\n")).toEqual([]);
+  });
+
+  test("the file name is the English page slug, the same in every language", () => {
+    const en = (manifests().en as any).photos as any[];
+    const bad = en.filter((p) => stemOf(p.file) !== p.slug).map((p) => `${p.src}: ${p.file} vs ${p.slug}`);
+    expect(bad, bad.join("\n")).toEqual([]);
+    for (const lang of LANGS) {
+      const files = ((manifests()[lang] as any).photos as any[]).map((p) => p.file);
+      expect(files, `${lang}: file names differ from en`).toEqual(en.map((p) => p.file));
+    }
+  });
+});
+
+test.describe("the nginx redirect map", () => {
+  /* Read by the `map $gallery_stem …` block in both nginx.conf files of Web-Services.
+     A wrong line there does not fail a build — it fails a request, on the live
+     server — so its invariants are held here. */
+  function mapLines(): { key: string; value: string }[] {
+    const text = readSiteFile(path.join("_nginx", "gallery-image-redirects.map"));
+    const out: { key: string; value: string }[] = [];
+    for (const line of text.split("\n")) {
+      if (!line.trim() || line.startsWith("#")) continue;
+      const m = /^"((?:[^"\\]|\\.)*)" ([a-z0-9-]+);$/.exec(line);
+      expect(m, `not a map line nginx can read: ${line}`).toBeTruthy();
+      out.push({ key: m![1].replace(/\\(["\\])/g, "$1"), value: m![2] });
+    }
+    return out;
+  }
+
+  test("every old store filename redirects to its photo's current slug", () => {
+    const lines = new Map(mapLines().map((l) => [l.key.toLowerCase(), l.value]));
+    const bad: string[] = [];
+    for (const p of (manifests().en as any).photos as any[]) {
+      const stem = stemOf(p.src);
+      if (stem.toLowerCase() === stemOf(p.file)) continue;
+      if (lines.get(stem.toLowerCase()) !== stemOf(p.file)) bad.push(`${p.src}: ${lines.get(stem.toLowerCase())}`);
+    }
+    expect(bad, bad.slice(0, 20).join("\n")).toEqual([]);
+  });
+
+  test("every target is live, no key is live, and no key is claimed twice", () => {
+    /* nginx compares map strings ignoring case. A key equal to a live slug would
+       redirect a file that exists; a key claimed twice would send one photo's
+       old URLs to another photo. */
+    const live = new Set(((manifests().en as any).photos as any[]).map((p) => stemOf(p.file)));
+    const seen = new Map<string, string>();
+    const bad: string[] = [];
+    for (const { key, value } of mapLines()) {
+      if (!live.has(value)) bad.push(`${key} -> ${value}: not a live file slug`);
+      if (live.has(key.toLowerCase())) bad.push(`${key}: is a live file slug`);
+      const prev = seen.get(key.toLowerCase());
+      if (prev !== undefined) bad.push(`${key}: listed twice`);
+      seen.set(key.toLowerCase(), value);
+    }
+    expect(bad, bad.slice(0, 20).join("\n")).toEqual([]);
+  });
+
+  test("every key fits nginx's map_hash_bucket_size", () => {
+    /* Web-Services sets map_hash_bucket_size 256; a key that does not fit makes
+       nginx refuse the whole config ("could not build map_hash"). 200 bytes
+       leaves room for nginx's own overhead in the bucket. */
+    const long = mapLines().filter(({ key }) => Buffer.byteLength(key, "utf8") > 200).map(({ key }) => key);
+    expect(long, long.join("\n")).toEqual([]);
+  });
+});
+
+test.describe("photo pages carry the data file's tags and no filename", () => {
+  function realPage(lang: string, id: string): string | null {
+    const dir = sitePath(lang, "gallery", "photo");
+    const alias = path.join(dir, id, "index.html");
+    if (!fs.existsSync(alias)) return null;
+    const m = /url=([^"]+)"/.exec(fs.readFileSync(alias, "utf8"));
+    if (!m) return null;
+    const rel = new URL(m[1], SITE_BASE).pathname;
+    const file = path.join(sitePath(), decodeURIComponent(rel), "index.html");
+    return fs.existsSync(file) ? fs.readFileSync(file, "utf8") : null;
+  }
+
+  for (const lang of LANGS) {
+    test(`${lang}: the tag list is exactly the entry's tags`, () => {
+      const bad: string[] = [];
+      for (const e of gallery()) {
+        const html = realPage(lang, e.id!);
+        if (!html) { bad.push(`${e.src}: no page`); continue; }
+        const want: string[] = [];
+        for (const t of e.tags ?? []) {
+          const l = String(t).trim().toLowerCase();
+          if (l && !want.includes(l)) want.push(l);
+        }
+        const block = /<div class="photo-tags">[\s\S]*?<\/ul>/.exec(html)?.[0] ?? "";
+        const have = [...block.matchAll(/<li>([^<]*)<\/li>/g)].map((m) => unescapeHtml(m[1]));
+        if (JSON.stringify(have) !== JSON.stringify(want)) bad.push(`${e.src}: ${JSON.stringify(have)} != ${JSON.stringify(want)}`);
+      }
+      expect(bad, bad.slice(0, 10).join("\n")).toEqual([]);
+    });
+
+    test(`${lang}: no photo page prints its store filename`, () => {
+      const bad: string[] = [];
+      for (const e of gallery()) {
+        const html = realPage(lang, e.id!);
+        if (!html) continue;
+        const text = unescapeHtml(html.replace(/<(script|style)\b[\s\S]*?<\/\1>/g, "").replace(/<[^>]+>/g, " "));
+        if (text.includes(e.src!)) bad.push(e.src!);
+      }
+      expect(bad, bad.slice(0, 10).join("\n")).toEqual([]);
+    });
+  }
 });

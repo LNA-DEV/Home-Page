@@ -428,8 +428,6 @@
   translation: "Next"
 - id: photo_related
   translation: "Similar photos"
-- id: photo_file
-  translation: "File"
 - id: photo_copy
   translation: "Copy link"
 - id: photo_copied

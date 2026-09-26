@@ -117,14 +117,14 @@
 {{- /* Add gallery images. Through gallery-collected.html rather than the raw
        resources: the item title is printed and used as the thumbnail's alt text,
        and deriving it from path.Base gave every photo its filename — camera codes
-       included — in all three languages. .DisplayTitle is the resolved title, or
-       the filename stem where the photo has none. .DateTaken carries the same
+       included — in all three languages. .Title is the resolved title, which every
+       photo has. .DateTaken carries the same
        "EXIF date, year > 2000" rule this loop used to apply by hand. */ -}}
 {{- $galleryCollected := partialCached "gallery-collected.html" . site.Language.Lang -}}
 {{- range $galleryCollected.all -}}
   {{- if and (ne .Section "archive") .DateTaken -}}
     {{- $imageLink := printf "%s#%s" $galleryGeneral.RelPermalink .Id -}}
-    {{- $item := dict "type" "photo" "title" .DisplayTitle "date" .Date "permalink" $imageLink "page" $galleryGeneral "image" .image "description" "" -}}
+    {{- $item := dict "type" "photo" "title" .Title "date" .Date "permalink" $imageLink "page" $galleryGeneral "image" .image "description" "" -}}
     {{- $activityItems = $activityItems | append $item -}}
   {{- end -}}
 {{- end -}}

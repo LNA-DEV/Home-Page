@@ -72,7 +72,7 @@ The seven descriptions are two distinct texts: one about the Avesta Visentpark o
 
 ## 2. What deliberately does not move
 
-- **Tags.** They stay in Darktable and are read live at build time — the reasoning is main concept §3. Copying them here would create exactly the two-source situation this migration ends for the other fields.
+- **Tags.** They stay in Darktable and are read live at build time — the reasoning is main concept §3. Copying them here would create exactly the two-source situation this migration ends for the other fields. *(Superseded 2026-09-26: a second one-time import, `scripts/gallery-import-tags.py`, moved them after all — `gallery-metadata-yaml-only.md` §3.)*
 - **`artist`.** All 287 file values, like all 361 YAML values, are `Lukas Nagel`, which is also `site.Params.author.name`. `collect-images.html` already falls back to that, and it is config in git — not a file dependency. Importing 287 identical lines adds nothing but noise, so the recommendation is: import nothing, leave the 361 existing lines exactly as they are, drop only the `Exif.Artist` fallback. The alternative — import them all so every entry is explicit — is a one-line switch in the script if uniformity is preferred.
 - **Publisher.** A constant, and inconsistent in the files (`LNA-DEV` / `Lukas Nagel`). Not a per-photo field.
 - **Technical EXIF, GPS, serial numbers.** Never in YAML by design.

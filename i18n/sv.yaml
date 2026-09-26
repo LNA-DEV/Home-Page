@@ -417,8 +417,6 @@
   translation: "Nästa"
 - id: photo_related
   translation: "Liknande foton"
-- id: photo_file
-  translation: "Fil"
 - id: photo_copy
   translation: "Kopiera länk"
 - id: photo_copied

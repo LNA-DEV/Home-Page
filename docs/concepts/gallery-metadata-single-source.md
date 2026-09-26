@@ -11,7 +11,7 @@ Editorial metadata — title, alt text, licence, artist — is split today betwe
 
 | | |
 |---|---|
-| Source of truth | `data/gallery.yaml` for everything editorial. The source file for everything technical (camera, lens, exposure, date, software) — **and for tags**, see §3 |
+| Source of truth | `data/gallery.yaml` for everything editorial. The source file for everything technical (camera, lens, exposure, date, software) — **and for tags**, see §3 (*superseded 2026-09-26: tags are in the YAML too, `gallery-metadata-yaml-only.md`*) |
 | Source originals | **Never written to.** The photo store is Darktable's export target and a Nextcloud folder |
 | Published originals | **Stay published**, as today. The published *copy* in `public/` is tagged and stripped like every variant; the file in the store is not |
 | Where embedding happens | On the build output — every file under `public/images/gallery/`, the published copy of the original included |
@@ -101,6 +101,8 @@ It was considered — "import everything into `gallery.yaml`" is the alternative
 What *does* fit the model is an optional **override** for the rare case — `lens:` for an adapted manual lens that leaves EXIF empty — resolved YAML → EXIF, exactly as `alt` and `license` resolve today. An override is editorial; a mirror is not.
 
 ### Tags — the one editorial field that stays in the file
+
+> **Superseded 2026-09-26** by `gallery-metadata-yaml-only.md` §3: the tags were imported into `data/gallery.yaml` after all (4,422 on 289 photos, camelCase kept) and the build no longer reads them from the file; `data/galleryTagIgnore.yaml` is gone. The measurements below explain why that was reversed — both tools got used and grew two vocabularies. The same concept replaced this document's strip list for the published originals with clear-then-write (§6 there) and publishes every file under the photo's English slug (§5 there).
 
 Tags are typed by a person, which by the rule above would put them in YAML. They stay in Darktable anyway, for three reasons that do not apply to the title:
 

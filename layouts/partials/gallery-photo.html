@@ -189,7 +189,7 @@
       <li>
         <a href="{{ printf "%s%s/" $base .Slug }}">
           <img loading="lazy" src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}" alt="{{ .Alt }}" />
-          <span>{{ .DisplayTitle }}</span>
+          <span>{{ .Title }}</span>
         </a>
       </li>
       {{- end }}
@@ -204,10 +204,10 @@
   {{- if $nb }}
   <nav class="photo-nav" aria-label="{{ i18n "photo_appears_in" }}">
     {{- with $nb.prev }}{{- with index $c.byId . }}
-      <a class="photo-nav-prev" href="{{ printf "%s%s/" $base .Slug }}"><span>&larr; {{ i18n "photo_prev" }}</span><strong>{{ .DisplayTitle }}</strong></a>
+      <a class="photo-nav-prev" href="{{ printf "%s%s/" $base .Slug }}"><span>&larr; {{ i18n "photo_prev" }}</span><strong>{{ .Title }}</strong></a>
     {{- end }}{{- end }}
     {{- with $nb.next }}{{- with index $c.byId . }}
-      <a class="photo-nav-next" href="{{ printf "%s%s/" $base .Slug }}"><span>{{ i18n "photo_next" }} &rarr;</span><strong>{{ .DisplayTitle }}</strong></a>
+      <a class="photo-nav-next" href="{{ printf "%s%s/" $base .Slug }}"><span>{{ i18n "photo_next" }} &rarr;</span><strong>{{ .Title }}</strong></a>
     {{- end }}{{- end }}
   </nav>
   {{- end }}

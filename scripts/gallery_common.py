@@ -13,10 +13,12 @@ from pathlib import Path
 # config/_default/module.yaml by reading that file rather than duplicating the path.
 GALLERY_MOUNT_TARGET = "assets/images/gallery"
 
-# Hugo names a processed image "<stem>_hu_<hash><ext>" next to the untouched
+# Hugo names a processed image "<stem>_hu_<hash><ext>" next to the published
 # original "<stem><ext>". Stripping the marker therefore maps any file under
-# public/images/gallery/ back to its `src:` in data/gallery.yaml -- the published
-# original included, which matches with no substitution at all.
+# public/images/gallery/ back to the name its photo is published under -- the
+# `file` field of the gallery manifest (the English slug; see
+# docs/concepts/gallery-metadata-yaml-only.md §5), the original included, which
+# matches with no substitution at all.
 VARIANT_RE = re.compile(r"_hu_[0-9a-f]+(\.[^.]+)$")
 
 
@@ -62,8 +64,13 @@ PHOTOS_SETUP_HINT = (
 )
 
 
-def source_name(published_name):
-    """Map a file under public/images/gallery/ back to its `src:` in gallery.yaml."""
+def published_base(published_name):
+    """Map a file under public/images/gallery/ to its photo's published name.
+
+    That is the manifest's `file` (`three-masts-….jpg`), not the store filename:
+    the build publishes under the slug, and the manifest's `src` says which store
+    file it came from.
+    """
     return VARIANT_RE.sub(r"\1", published_name)
 
 

@@ -24,10 +24,23 @@ cd "$(dirname "$(readlink -f "$0")")"
 ONION="http://lnadevwj2vzomixiunv7i4lahwpoxh6zw56cxbce3uui5ijmwt4czpyd.onion"
 REMOTE="root@lna-dev.net"
 
+# Where the Web-Services deploy puts the two nginx compose projects that serve
+# the sites (Web-Services/homepage and Web-Services/homepage-tor).
+SERVICES="/home/lnadev/services-v2"
+
+# $1 = site directory on the server, $2 = compose project, $3 = its nginx service.
+#
+# The reload is for the gallery redirect map (/_nginx/gallery-image-redirects.map,
+# docs/concepts/gallery-metadata-yaml-only.md §5): nginx reads it only when it
+# loads its config, so a new map does nothing until the next reload. `nginx -t`
+# runs first and refuses a config that would not load — the reload never happens
+# then, the old config keeps serving, and `set -e` stops the deploy loudly. On a
+# deploy that did not change the map the reload is a graceful no-op.
 publish() {
   python3 scripts/gallery-embed-metadata.py
   python3 scripts/gallery-embed-metadata.py --check
   rsync -avz --delete public/ "${REMOTE}:$1"
+  ssh "$REMOTE" "cd ${SERVICES}/$2 && docker compose exec -T $3 sh -c 'nginx -t && nginx -s reload'"
 }
 
 # The gate. `npm test` runs all four layers of docs/concepts/testing.md against
@@ -57,10 +70,10 @@ hugo --cleanDestinationDir --panicOnWarning --printI18nWarnings --printPathWarni
 # set, the project drops its dependency on `build` and rebuilds nothing.
 SITE_DIR=public SITE_BASE=https://lna-dev.net npx playwright test --project static
 
-publish /mnt/homepage/homepage-site-data
+publish /mnt/homepage/homepage-site-data homepage homepage
 
 # The Tor build has to come out of hugo and be reachable; that is the whole
 # requirement. No second test pass, no clearnet-leak policy. Cleaned for the same
 # reason as above: nothing of the clearnet build may survive into the onion one.
 hugo -b "$ONION" --cleanDestinationDir --panicOnWarning --printI18nWarnings --printPathWarnings
-publish /mnt/homepage/homepage-tor-site-data
+publish /mnt/homepage/homepage-tor-site-data homepage-tor nginx

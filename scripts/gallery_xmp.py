@@ -1,10 +1,13 @@
-"""Read the five editorial fields darktable writes into an exported JPEG.
+"""Read the editorial fields darktable writes into an exported JPEG.
 
-One reader, two callers: `sync-gallery.py`, which pre-fills a new photo's stub in
-data/gallery.yaml from the file it was just handed, and the one-time import in
-docs/concepts/gallery-metadata-import.md, which does the same for the 648 photos
-that predate the stub enrichment. Keeping it in one place is the point — the two
-must never disagree about which tag an `alt:` comes from.
+One reader, three callers: `sync-gallery.py`, which pre-fills a new photo's
+`license` and `artist` from the file it was just handed (and nothing else — the
+prose and the tags are typed in data/gallery.yaml, see
+docs/concepts/gallery-metadata-yaml-only.md §4); and the two one-time imports,
+docs/concepts/gallery-metadata-import.md (the five fields below) and
+gallery-metadata-yaml-only.md §3 (the tags' spelling, `read_keywords`). Keeping it
+in one place is the point — they must never disagree about which tag a value
+comes from.
 
 The direction is always file → YAML, and always ONCE, at the moment a photo
 enters the data file. Hugo does not read these tags at build time any more (the
@@ -41,13 +44,26 @@ TAGS = {
 EXIFTOOL = "exiftool"
 
 
+# Where a tag list can sit in a file. These are the three places the build used to
+# read tags from (collect-images.html's `.Exif.subject` / `.Exif.Subject` /
+# `.Exif.Keywords` / `.XMP.Subject`): on 2026-09-26 the lowercase union of these
+# three plus the YAML equalled Hugo's `.Tags` on all 649 photos. Only the one-time
+# tag import (scripts/gallery-import-tags.py) reads them, and only for spelling.
+KEYWORD_TAGS = ("XMP-dc:Subject", "IPTC:Keywords", "EXIF:XPKeywords")
+
+
 def available():
     """True when exiftool is on PATH."""
     return shutil.which(EXIFTOOL) is not None
 
 
-def read(paths):
+def read(paths, fields=None):
     """Return {basename: {field: value}} for the given image paths.
+
+    `fields` limits the read to a subset of TAGS' keys; sync-gallery.py asks only
+    for `license` and `artist`, because the prose is typed in data/gallery.yaml
+    (docs/concepts/gallery-metadata-yaml-only.md §4). The default is all five,
+    which is what the one-time import used.
 
     Only non-empty values appear. Returns {} when exiftool is missing or fails —
     a stub with empty fields is a fine outcome, an aborted sync is not.
@@ -55,9 +71,10 @@ def read(paths):
     paths = [str(p) for p in paths]
     if not paths or not available():
         return {}
+    wanted = {f: TAGS[f] for f in (fields or TAGS)}
 
     args = [EXIFTOOL, "-j", "-charset", "UTF8", "-m", "-q"]
-    for tag in TAGS.values():
+    for tag in wanted.values():
         args.append("-" + tag)
     args.extend(paths)
 
@@ -67,7 +84,70 @@ def read(paths):
         return {}
     if not proc.stdout.strip():
         return {}
-    return parse_records(proc.stdout)
+    return select(parse_records(proc.stdout), wanted)
+
+
+def select(records, fields):
+    """Keep only the named fields of {basename: {field: value}}.
+
+    parse_records maps every field it knows; this drops the ones not asked for,
+    so a subset read cannot leak a value the caller deliberately does not want —
+    sync-gallery.py must never see a title, even from a file that has one.
+    """
+    out = {}
+    for name, values in records.items():
+        kept = {f: v for f, v in values.items() if f in fields}
+        if kept:
+            out[name] = kept
+    return out
+
+
+def read_keywords(paths):
+    """Return {basename: [tag, …]} — every tag a file carries, in file order.
+
+    The order is XMP dc:subject, then IPTC Keywords, then EXIF XPKeywords, and
+    within each the order the file stores. A delimited string ("a;b", "a, b") is
+    split the way collect-images.html split it. Duplicates are kept: the caller
+    decides what a duplicate means. Returns {} when exiftool is missing.
+    """
+    paths = [str(p) for p in paths]
+    if not paths or not available():
+        return {}
+    args = [EXIFTOOL, "-j", "-charset", "UTF8", "-charset", "filename=UTF8", "-m", "-q"]
+    args.extend("-" + tag for tag in KEYWORD_TAGS)
+    args.extend(paths)
+    try:
+        proc = subprocess.run(args, capture_output=True, text=True, check=False)
+    except OSError:
+        return {}
+    if not proc.stdout.strip():
+        return {}
+    return parse_keyword_records(proc.stdout)
+
+
+def parse_keyword_records(json_text):
+    """exiftool JSON → {basename: [tag, …]}. Split out so it tests without exiftool."""
+    try:
+        records = json.loads(json_text)
+    except json.JSONDecodeError:
+        return {}
+    out = {}
+    for record in records:
+        name = record.get("SourceFile", "").rsplit("/", 1)[-1]
+        tags = []
+        for tag in KEYWORD_TAGS:
+            value = record.get(tag.split(":", 1)[1])
+            if value is None:
+                continue
+            items = value if isinstance(value, list) else [value]
+            for item in items:
+                for part in str(item).replace(";", ",").split(","):
+                    part = part.strip()
+                    if part:
+                        tags.append(part)
+        if tags:
+            out[name] = tags
+    return out
 
 
 def parse_records(json_text):

@@ -16,6 +16,15 @@
   `.models` — the same normalisation for `model:`, the slug(s) of the people in
   the photo (data/models.yaml). Same rule: filter with `in $meta.models $slug`.
 
+  `.tags` / `.tagsLower` — `tags:` normalised IN PLACE to a slice: trimmed, empty
+  items dropped, de-duplicated ignoring case, the stored spelling kept
+  (`bavarianAlps`), plus a lowercased twin in the same order. This file is the
+  ONLY source of a photo's tags: they used to be unioned with the file's
+  dc:subject on every build, and the one-time import
+  (docs/concepts/gallery-metadata-yaml-only.md §3) moved those in here. Done
+  once per language here rather than in collect-images.html, which is not cached
+  and runs once per dex species page.
+
   `.title`, `.alt`, `.description` — normalised IN PLACE from string-or-map to a
   `{en, de, sv}` map, so a reader only ever has to handle one shape. A bare string
   means English; `title: Foo` and `title: {en: Foo}` are the same entry. They are
@@ -48,6 +57,15 @@
   holds the URLs it used to have. Set an explicit `slug:` to pin one language-
   neutrally and opt out of the whole mechanism.
 
+  `.fileSlug` / `.file` — the name the build PUBLISHES the photo's files under:
+  the English slug (`slug:` if pinned, else title.en folded with the English
+  table) and that plus the source's extension, lowercased
+  (`three-masts-a-turkish-gulet-in-golden-light.jpg`). Language-neutral on
+  purpose — one file, three pages — and unique, or the build stops.
+  gallery-images.html copies each resource to it, so no served URL carries the
+  store filename; `.src` stays the pointer to the store file and `.Name` on the
+  resource keeps returning it. See docs/concepts/gallery-metadata-yaml-only.md §5.
+
   `.slugAliases` — frozen former URL segments, normalised to a slice. Written once
   at the one-time filename→title migration and never recomputed;
   gallery-photo-pages.html emits each as a redirect, skipping any that equals the
@@ -59,8 +77,9 @@
   "over"). See the table itself for why each is wrong in the other's language.
 
   Hard-fails if any entry is missing an id — run scripts/add-gallery-ids.py to fix —
-  if an entry has no title in the current language and none in English, since it
-  would then have no URL, or if two entries resolve to the same slug, which would
+  if an entry has no title in the current language and none in English (a pinned
+  `slug:` does not excuse it: the title is the photo's name wherever it is printed,
+  and there is no filename fallback), or if two entries resolve to the same slug, which would
   make one page silently overwrite the other. Also hard-fails on a `model:` slug
   that names no record in data/models.yaml, and on a record without a valid
   `visibility:` — see the block above the range for why a person is the one join
@@ -74,6 +93,7 @@
 {{- $bySrc := dict -}}
 {{- $byId  := dict -}}
 {{- $seenSlugs := dict -}}
+{{- $seenFiles := dict -}}
 
 {{- /* Hugo scopes the partialCached store per language Site — verified on 0.166:
        a partial cached with NO variant key still returns the current language's
@@ -101,9 +121,7 @@
 {{- /* Written out in full rather than composed from a shared tail: `append` on a
        slice of slices appends the inner slice as one element, and the two tails
        are ten pairs. Keep the trailing block identical in both. */ -}}
-{{- $translit := slice -}}
-{{- if eq $lang "de" -}}
-  {{- $translit = slice
+{{- $translitDe := slice
         (slice "ä" "ae") (slice "ö" "oe") (slice "ü" "ue")
         (slice "Ä" "Ae") (slice "Ö" "Oe") (slice "Ü" "Ue")
         (slice "æ" "ae") (slice "Æ" "Ae") (slice "ø" "oe") (slice "Ø" "Oe")
@@ -111,9 +129,8 @@
         (slice "é" "e")  (slice "è" "e")  (slice "ê" "e")
         (slice "á" "a")  (slice "à" "a")  (slice "í" "i")  (slice "ó" "o")
         (slice "ú" "u")  (slice "ñ" "n")  (slice "ç" "c")
-  -}}
-{{- else -}}
-  {{- $translit = slice
+-}}
+{{- $translitFold := slice
         (slice "ä" "a")  (slice "ö" "o")  (slice "å" "a")
         (slice "Ä" "A")  (slice "Ö" "O")  (slice "Å" "A")
         (slice "ü" "u")  (slice "Ü" "U")  (slice "ß" "ss")
@@ -121,8 +138,8 @@
         (slice "é" "e")  (slice "è" "e")  (slice "ê" "e")
         (slice "á" "a")  (slice "à" "a")  (slice "í" "i")  (slice "ó" "o")
         (slice "ú" "u")  (slice "ñ" "n")  (slice "ç" "c")
-  -}}
-{{- end -}}
+-}}
+{{- $translit := cond (eq $lang "de") $translitDe $translitFold -}}
 
 {{- /* The closed set of model slugs, validated once. Unlike `species:`, an
        unknown `model:` is an ERROR rather than a warning: the slugs are a small
@@ -223,11 +240,15 @@
 
   {{- /* printf, not the raw value: an unquoted `slug: 007` is an int in YAML and
          would urlize to "7". */ -}}
+  {{- /* A title is required whether or not `slug:` pins the URL: the title is the
+         photo's name everywhere it is printed, and there is no fallback onto the
+         filename any more (docs/concepts/gallery-metadata-yaml-only.md §4) — the
+         file's name is only a pointer. */ -}}
+  {{- if not $titleHere -}}
+    {{- errorf "data/gallery.yaml: entry %q (id %s) has no title in %q and none in en — write `title:` (en, de, sv) for it" .src .id $lang -}}
+  {{- end -}}
   {{- $slug := printf "%v" (.slug | default "") -}}
   {{- if not $slug -}}
-    {{- if not $titleHere -}}
-      {{- errorf "data/gallery.yaml: entry %q (id %s) has no title in %q and none in en, so it has no URL — give it a title, or pin one with `slug:`" .src .id $lang -}}
-    {{- end -}}
     {{- $slug = $titleHere -}}
   {{- end -}}
   {{- range $pair := $translit -}}
@@ -241,6 +262,31 @@
     {{- errorf "data/gallery.yaml: %q and %q both resolve to the slug %q in %q — reword one title, or set an explicit `slug:` on one of them" . $src $slug $lang -}}
   {{- end -}}
   {{- $seenSlugs = merge $seenSlugs (dict $slug .src) -}}
+
+  {{- /* The name the build publishes this photo's files under — the ENGLISH slug
+         in every language, because it is one file on three pages and the copy
+         target must be byte-identical in all three builds
+         (docs/concepts/gallery-metadata-yaml-only.md §5). Descriptive for image
+         search, independent of whatever darktable called the file. Same rule as
+         the English page slug, so the two always match: `slug:` if pinned, else
+         title.en, folded with the English table. */ -}}
+  {{- $fileSlug := printf "%v" (.slug | default "") -}}
+  {{- if not $fileSlug -}}
+    {{- if reflect.IsMap $rawTitle -}}
+      {{- $fileSlug = or (index $rawTitle "en") $titleHere "" -}}
+    {{- else -}}
+      {{- $fileSlug = $titleHere -}}
+    {{- end -}}
+  {{- end -}}
+  {{- range $pair := $translitFold -}}
+    {{- $fileSlug = replace $fileSlug (index $pair 0) (index $pair 1) -}}
+  {{- end -}}
+  {{- $fileSlug = urlize $fileSlug -}}
+  {{- with index $seenFiles $fileSlug -}}
+    {{- errorf "data/gallery.yaml: %q and %q would both be published as %q — reword one English title, or set `slug:` on one of them" . $src $fileSlug -}}
+  {{- end -}}
+  {{- $seenFiles = merge $seenFiles (dict $fileSlug $src) -}}
+  {{- $file := printf "%s%s" $fileSlug (lower (path.Ext $src)) -}}
 
   {{- /* Frozen former URLs, emitted as redirects by gallery-photo-pages.html.
          Written once at the filename→title migration and never recomputed: an
@@ -267,7 +313,24 @@
     {{- end -}}
   {{- end -}}
 
-  {{- $entry := merge . (dict "projects" $projects "models" $models "slug" $slug "slugAliases" $aliases) -}}
+  {{- /* Tags: stored spelling for display (the lightbox popup), lowercased for
+         everything that compares or aggregates (photo page list, RSS categories,
+         schema keywords, the similarity scorer, the embedded files). printf,
+         because an unquoted `- 2026` is an int in YAML. */ -}}
+  {{- $tags := slice -}}
+  {{- $tagsLower := slice -}}
+  {{- $rawTags := $entryRaw.tags | default slice -}}
+  {{- if not (reflect.IsSlice $rawTags) }}{{ $rawTags = slice $rawTags }}{{ end -}}
+  {{- range $rawTags -}}
+    {{- $t := trim (printf "%v" .) " " -}}
+    {{- $l := lower $t -}}
+    {{- if and $t (not (in $tagsLower $l)) -}}
+      {{- $tags = $tags | append $t -}}
+      {{- $tagsLower = $tagsLower | append $l -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $entry := merge . (dict "projects" $projects "models" $models "slug" $slug "slugAliases" $aliases "tags" $tags "tagsLower" $tagsLower "fileSlug" $fileSlug "file" $file) -}}
   {{- $entry = merge $entry $prose -}}
   {{- $bySrc = merge $bySrc (dict .src $entry) -}}
   {{- $byId  = merge $byId  (dict .id  $entry) -}}

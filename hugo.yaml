@@ -58,6 +58,25 @@ outputFormats:
     baseName: gallery-metadata
     isPlainText: true
     notAlternative: true
+  # The nginx redirect map for renamed gallery images, rendered from
+  # layouts/_default/home.nginxmap.map: every old image file stem (the store
+  # filename, a former slug) -> the slug the build publishes the photo under now.
+  # Hugo can redirect pages through aliases but not images, so nginx does it from
+  # this list (docs/concepts/gallery-metadata-yaml-only.md §5, "The nginx side").
+  # Like securitytxt it sits at the domain root (`../`) and is emitted from
+  # `languages.en` only; it holds no baseURL, so the clearnet and onion builds
+  # write the same bytes. nginx refuses to serve /_nginx/ to a visitor.
+  nginxmap:
+    mediaType: text/x-nginx-conf
+    baseName: gallery-image-redirects
+    path: ../_nginx
+    isPlainText: true
+    notAlternative: true
+
+mediaTypes:
+  text/x-nginx-conf:
+    suffixes:
+      - map
 
 outputs:
   home:
@@ -84,6 +103,7 @@ languages:
         # A per-language `outputs` REPLACES the top-level one, so gallerymeta has
         # to be restated here or English alone would emit no manifest.
         - gallerymeta
+        - nginxmap
     params:
       description: I'm Lukas Nagel (LNA-DEV), sharing insights on development, tech, photography, and more on this page which serves as my digital hub.
       homeInfoParams:
