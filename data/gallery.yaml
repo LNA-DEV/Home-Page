@@ -14341,6 +14341,21 @@ images:
   license: all-rights-reserved
   artist: Lukas Nagel
   model: markus-penninger
+- id: 29c78cfa-ed08-4686-9bd0-70f2aa86dfda
+  src: Time for a Beer - German Man Standing Before a Beer Sign in Gamla Stan.jpg
+  category: others
+  section: general
+  title:
+    en: Time for a Beer - German Man Standing Before a Beer Sign in Gamla Stan
+    de: Zeit für ein Bier - Ein deutscher Mann steht vor einem Bierschild in der Altstadt Stockholms
+    sv: Tid för en bira - En tysk man står framför en ölskylt i Gamla stan
+  alt:
+    en: A smiling man with a beard, glasses and a top knot stands outside a pub in Gamla stan, Stockholm's old town, looking at a chalkboard of Swedish draught beers. Behind him a narrow cobbled lane runs between yellow and orange buildings under a blue sky with white clouds.
+    de: Ein lächelnder Mann mit Bart, Brille und Dutt steht vor einem Pub in Gamla stan, der Altstadt Stockholms, und blickt auf eine Kreidetafel mit schwedischen Fassbieren. Hinter ihm verläuft eine schmale Kopfsteinpflastergasse zwischen gelben und orangefarbenen Häusern unter einem blauen Himmel mit weißen Wolken.
+    sv: En leende man med skägg, glasögon och hårknut står utanför en pub i Gamla stan i Stockholm och tittar på en krittavla med svenska fatöl. Bakom honom löper en smal kullerstensgränd mellan gula och orange hus under en blå himmel med vita moln.
+  license: all-rights-reserved
+  artist: Lukas Nagel
+  model: markus-penninger
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
