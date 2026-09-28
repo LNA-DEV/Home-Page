@@ -1,0 +1,50 @@
+{
+ "developers": [
+  "Coldwood Interactive"
+ ],
+ "genres": [
+  {
+   "en": "puzzle-platformer",
+   "sv": "pusselplattformsspel"
+  },
+  {
+   "de": "Jump ’n’ Run",
+   "en": "platformer",
+   "sv": "plattformsspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Koop-Modus",
+   "en": "co-op mode",
+   "sv": "flerspelarläge"
+  }
+ ],
+ "publishers": [
+  "Electronic Arts"
+ ],
+ "released": "2018-06-09",
+ "steam": {
+  "de": "Wenn man sich von der Vergangenheit löst, werden neue Bindungen geknüpft.",
+  "en": "When you cut ties to the past, new bonds form. Build relationships with other Yarnys in local co-op or as a single player, fostering friendship and support as you journey together.",
+  "sv": "När du klipper banden till det förflutna bildas nya."
+ },
+ "steam_appid": 1225570,
+ "wikidata": "Q54875419",
+ "wikipedia": {
+  "de": {
+   "text": "Unravel ist ein 2016 erschienenes Videospiel, das vom schwedischen Entwicklerstudio Coldwood Interactive entwickelt und von Electronic Arts verlegt wurde. Erstmals der Öffentlichkeit vorgestellt wurde das Spiel am 15. Juni 2015 bei der Electronic Entertainment Expo, und schließlich am 9.",
+   "url": "https://de.wikipedia.org/wiki/Unravel_Two"
+  },
+  "en": {
+   "text": "Unravel Two is a 2018 puzzle-platform game developed by Swedish company Coldwood Interactive and published by Electronic Arts. The game is centered around two 'Yarnys', small anthropomorphic creatures made of yarn. It is the sequel to the 2016 game Unravel, and was released for PlayStation 4, Windows, and Xbox One in June 2018 and Nintendo Switch in March 2019.",
+   "url": "https://en.wikipedia.org/wiki/Unravel_Two"
+  }
+ }
+}

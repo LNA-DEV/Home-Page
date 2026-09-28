@@ -1,11 +1,10 @@
 <div class="gaming">
-  {{/* Same-title copies (e.g. one game on two platforms) are merged into a
-       single card; the data keeps them separate. See partials/gaming-merged.html. */}}
+  {{/* Copies that share a slug (e.g. one game on two platforms) are merged into
+       a single card; the data keeps them separate. See partials/gaming-merged.html. */}}
   {{ $games := partialCached "gaming-merged.html" . }}
 
-  {{/* Full platform names for the badge tooltips (brand names, not translated —
-       mirrors the $platformLabels dict used for the filter buttons). */}}
-  {{ $platformNames := dict "steam" "Steam" "switch" "Nintendo Switch" "3ds" "Nintendo 3DS" "ds" "Nintendo DS" "gog" "GOG" "epic" "Epic Games" "playstation" "PlayStation" "manual" "Manual" "other" "Other" }}
+  {{/* Full platform names for the badge tooltips (brand names, not translated). */}}
+  {{ $platformNames := partialCached "gaming-platforms.html" "names" }}
 
   {{/* --- Aggregate stats + distinct platforms (single pass over merged games) --- */}}
   {{ $totalMinutes := 0 }}
@@ -50,18 +49,12 @@
     {{ range sort $games "playtimeMinutes" "desc" }}
     {{ $game := . }}
 
-    {{/* Compact playtime badge: minutes below an hour, else hours (1 decimal under 10h). */}}
     {{ $mins := .playtimeMinutes | default 0 }}
-    {{ $badge := "" }}
-    {{ if lt $mins 60 }}
-      {{ $badge = printf "%d min" $mins }}
-    {{ else }}
-      {{ $h := div (float $mins) 60.0 }}
-      {{ $badge = printf "%s h" (lang.FormatNumberCustom (cond (lt $h 10.0) 1 0) $h) }}
-    {{ end }}
+    {{ $badge := partial "gaming-duration.html" $mins }}
 
-    <a class="game-card" id="{{ urlize .title }}"
-       {{ with .link }}href="{{ . }}" target="_blank" rel="noopener"{{ end }}
+    {{/* Every card leads to its game's page; the store link lives there now. */}}
+    <a class="game-card" id="{{ .slug }}"
+       {{ with site.GetPage (printf "/gaming/%s" .slug) }}href="{{ .RelPermalink }}"{{ end }}
        data-playtime="{{ $mins }}" data-lastplayed="{{ .lastPlayed }}"
        data-title="{{ .title | lower }}" data-platform="{{ delimit .platforms " " }}">
       <div class="game-card__cover">

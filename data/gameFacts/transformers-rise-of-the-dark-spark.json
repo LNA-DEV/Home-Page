@@ -1,0 +1,33 @@
+{
+ "developers": [
+  "Edge of Reality"
+ ],
+ "genres": [
+  {
+   "de": "Third-Person-Shooter",
+   "en": "third-person shooter",
+   "sv": "tredjepersonsskjutare"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  }
+ ],
+ "released": "2014-06-24",
+ "wikidata": "Q15732421",
+ "wikipedia": {
+  "en": {
+   "text": "Transformers: Rise of the Dark Spark is a video game based on the Transformers franchise, developed by Edge of Reality and WayForward, and published by Activision. It is the third and final entry in the Cybertron series, following War for Cybertron and Fall of Cybertron, and acts as a spin-off and crossover with the live-action Transformers films.",
+   "url": "https://en.wikipedia.org/wiki/Transformers:_Rise_of_the_Dark_Spark"
+  }
+ }
+}

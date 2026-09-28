@@ -1,0 +1,41 @@
+{
+ "developers": [
+  "Wargaming"
+ ],
+ "genres": [
+  {
+   "de": "Computer-Strategiespiel",
+   "en": "strategy video game",
+   "sv": "strategidatorspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  }
+ ],
+ "publishers": [
+  "Wargaming"
+ ],
+ "released": "2016-11-09",
+ "steam": {
+  "de": "Lasst in diesem kostenlosen 7-gegen-7-Online-Panzershooter Dampf ab! Steuert in 5–7 Minuten langen Gefechten Hunderte Panzer – vom Museumsklassiker bis zur hypothetischen Variante. Spielt allein oder zusammen mit einem Freund und genießt auch auf einfachen Geräten flüssige Action!",
+  "en": "Blow off steam and tank turrets in a free-to-play online 7v7 tank shooter! Drive hundreds of tanks, from museum classics to \"did-that-ever-exist?\" specials, in quick 5 to 7-minute brawls packed with metal mayhem. Play solo or team up with a friend and enjoy smooth action even on modest hardware!",
+  "sv": "Släpp loss stridsvagnarna och spräng fienden i ett free-to-play stridsvagnsspel online! Kör hundratals stridsvagnar, från museiklassiker till fantasieggande specialvagnar. Snabba strider på 5-7 minuter av pansarkaos. Spela själv eller med en vän och njut av smidig action även på enklare hårdvara!"
+ },
+ "steam_appid": 444200,
+ "wikidata": "Q16273519",
+ "wikipedia": {
+  "de": {
+   "text": "World of Tanks (WoT) ist ein 2010 erschienenes Massively Multiplayer Online Game des Spieleentwicklers Wargaming.net. Es enthält Elemente eines Third-Person- und Taktik-Shooters, dabei sind die Spielfiguren die namensgebenden Panzer. World of Tanks ist ein Free-to-play-Produkt, bei dem der Hersteller durch Mikrotransaktionen jährlich mehrere Millionen Euro Gewinn erwirtschaftet.",
+   "url": "https://de.wikipedia.org/wiki/World_of_Tanks:_Blitz"
+  },
+  "en": {
+   "text": "World of Tanks (WoT) is an armoured warfare-themed multiplayer online game developed by Wargaming, featuring 20th century (1910s–1970s) era combat vehicles. It is built upon a freemium business model where the game is free-to-play, but participants also have the option of paying a fee for use of \"premium\" features. The focus is on player vs. player gameplay with each player controlling an armored vehicle, from the interwar period to the Cold War era.",
+   "url": "https://en.wikipedia.org/wiki/World_of_Tanks_Blitz"
+  }
+ }
+}

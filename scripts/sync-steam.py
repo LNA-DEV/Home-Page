@@ -6,18 +6,27 @@ header comment in that file). This script owns exactly one slice of it: the
 entries with `platform: steam`. On every run it:
 
   * Fetches the owned-games library from the Steam Web API (IPlayerService).
-  * Optionally fetches per-game achievement progress (ISteamUserStats) and
-    downloads each game's portrait cover into assets/images/games/covers/.
+  * Optionally fetches every achievement of every game (ISteamUserStats: the
+    schema in en/de/sv, the player's unlocks, the global unlock percentages),
+    writes them to data/gameAchievements/steam-<appid>.json and the icons to
+    static/images/games/achievements/steam/<appid>/, and downloads each game's
+    portrait cover into assets/images/games/covers/.
   * Rebuilds the `platform: steam` entries from the live library — games newly
     owned are ADDED, games no longer in the library are PRUNED — and writes
     them as the LAST block in the file, below a marker it emits.
 
 Everything that is NOT `platform: steam` is left byte-for-byte untouched, so
 hand-added games (platform: gog / switch / manual / ...) are safe. Human-owned
-fields on a Steam entry (rating, genres, tags, notes) are preserved across
-syncs: they are read back out of the old entry and re-emitted verbatim, keyed
-by `appid`. (Keep those human fields to a single line each — that is how the
-script re-emits them.)
+fields on a Steam entry (extraMinutes, and the rating / genres / tags / notes
+that now belong in data/gamePages.yaml) are preserved across syncs: they are
+read back out of the old entry and re-emitted verbatim, keyed by `appid`. (Keep
+those human fields to a single line each — that is how the script re-emits
+them.)
+
+Every entry carries a `slug:` — the game's page URL. A game keeps the slug it
+was given the first time it was synced; a new game gets one from its title
+(scripts/gaming_common.py), and one whose slug another platform already uses
+joins that game's page. See docs/concepts/gaming-game-pages.md §2.
 
 The YAML is edited as raw text — there is no YAML dependency, matching
 add-book.py / sync-gallery.py. Standard library only.
@@ -46,6 +55,10 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import gaming_common  # noqa: E402
+
 REPO = Path(__file__).resolve().parent.parent
 DEFAULT_DATA = REPO / "data" / "gaming.yaml"
 DEFAULT_COVERS = REPO / "assets" / "images" / "games" / "covers"
@@ -60,7 +73,18 @@ STEAM_MARKER = "# ==== STEAM: auto-managed by scripts/sync-steam.py (regenerated
 
 # Human-owned fields on a Steam entry that must survive a resync. Re-emitted
 # verbatim (single line each) after the script-owned mechanical fields.
+# rating / genres / tags / notes belong in data/gamePages.yaml now, and the build
+# says so — but a sync never destroys what somebody typed, so they are kept here.
+# `slug` is not in this list: it is identity, emitted second, not a trailing line.
 HUMAN_FIELDS = ("rating", "genres", "tags", "notes", "extraMinutes")
+
+# Steam's language names for the three site languages.
+STEAM_LANGS = (("en", "english"), ("de", "german"), ("sv", "swedish"))
+
+
+class TransientError(Exception):
+    """A fetch that failed for a reason that may be gone next time (network,
+    5xx, rate limit). The game keeps yesterday's achievement counts and file."""
 
 
 # --------------------------------------------------------------------------- #
@@ -146,27 +170,108 @@ def steam_owned_games(api_key, steam_id):
     return (result.get("response") or {}).get("games") or []
 
 
-def steam_achievements(api_key, steam_id, appid):
-    """Return (unlocked, total) for a game, or None when it has no stats."""
-    params = {"appid": appid, "key": api_key, "steamid": steam_id}
-    url = "https://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v1/?" + \
-        urllib.parse.urlencode(params)
+def steam_api(path, params):
+    url = f"https://api.steampowered.com/{path}?" + urllib.parse.urlencode(params)
+    return http_get(url, accept_json=True)
+
+
+def steam_player_achievements(api_key, steam_id, appid):
+    """The player's achievement list for a game (apiname, achieved, unlocktime,
+    name, description), or None when the game has no stats. 400 means "no stats",
+    403 a private profile — both are answers, not failures. Anything else raises
+    TransientError, so the caller keeps what it had."""
     try:
-        result = http_get(url, accept_json=True)
-    except urllib.error.HTTPError:
-        # 400/403 for games without achievement stats, or a private profile.
-        return None
-    except Exception as exc:  # noqa: BLE001 - transient; treat as "no data"
-        print(f"  achievements fetch failed (appid {appid}): {exc}", file=sys.stderr)
-        return None
+        result = steam_api("ISteamUserStats/GetPlayerAchievements/v1/",
+                           {"appid": appid, "key": api_key, "steamid": steam_id, "l": "english"})
+    except urllib.error.HTTPError as exc:
+        if exc.code in (400, 403, 404):
+            return None
+        raise TransientError(f"HTTP {exc.code}") from exc
+    except Exception as exc:  # noqa: BLE001 - network: transient by definition
+        raise TransientError(str(exc)) from exc
     stats = result.get("playerstats") or {}
     if not stats.get("success"):
         return None
-    achs = stats.get("achievements")
-    if not achs:
-        return None
-    unlocked = sum(1 for a in achs if a.get("achieved"))
-    return unlocked, len(achs)
+    return stats.get("achievements") or None
+
+
+def steam_schema(api_key, appid, lang):
+    """The game's achievement schema in one Steam language (displayName,
+    description, icon, hidden). [] on any failure — the English fallback in the
+    player list and in the template covers a missing language."""
+    try:
+        result = steam_api("ISteamUserStats/GetSchemaForGame/v2/",
+                           {"key": api_key, "appid": appid, "l": lang})
+    except Exception:  # noqa: BLE001 - a missing translation is not an error
+        return []
+    return ((result.get("game") or {}).get("availableGameStats") or {}).get("achievements") or []
+
+
+def steam_global_percentages(appid):
+    """{apiname: percent of all players who unlocked it}. Public, no key."""
+    try:
+        result = steam_api("ISteamUserStats/GetGlobalAchievementPercentagesForApp/v2/",
+                           {"gameid": appid})
+    except Exception:  # noqa: BLE001 - a game without percentages still renders
+        return {}
+    out = {}
+    for a in (result.get("achievementpercentages") or {}).get("achievements") or []:
+        try:
+            out[a["name"]] = float(a["percent"])
+        except (KeyError, TypeError, ValueError):
+            continue
+    return out
+
+
+def build_steam_achievements(appid, player, schemas, percents):
+    """Pure: one Steam copy's achievements document and the icon URLs it needs.
+
+    `player`   GetPlayerAchievements' list — authoritative for WHICH achievements
+               exist and which are unlocked, so the page's row count always
+               equals the card's achievementsTotal;
+    `schemas`  {"en"|"de"|"sv": GetSchemaForGame list} — names, descriptions,
+               icons, the hidden flag, and the display order;
+    `percents` {apiname: global unlock percentage}.
+
+    Steam delivers no description for a hidden achievement at all, locked or
+    unlocked (checked 2026-09-28: 0 of 660), so those items simply have none."""
+    by_lang = {lang: {a.get("name"): a for a in schemas.get(lang) or []}
+               for lang, _ in STEAM_LANGS}
+    pmap = {p.get("apiname"): p for p in player if p.get("apiname")}
+    order = [a.get("name") for a in schemas.get("en") or [] if a.get("name") in pmap]
+    seen = set(order)
+    order += [k for k in pmap if k not in seen]
+
+    items, urls = [], []
+    for key in order:
+        s_en = by_lang["en"].get(key) or {}
+        p = pmap[key]
+        names = {"en": s_en.get("displayName") or p.get("name") or key}
+        descs = {"en": s_en.get("description") or p.get("description") or ""}
+        for lang in ("de", "sv"):
+            s = by_lang[lang].get(key) or {}
+            names[lang] = s.get("displayName") or ""
+            descs[lang] = s.get("description") or ""
+        item = {
+            "key": key,
+            "name": gaming_common.localised(names),
+            "hidden": bool(int(s_en.get("hidden") or 0)),
+        }
+        description = gaming_common.localised(descs)
+        if description:
+            item["description"] = description
+        if s_en.get("icon"):
+            item["icon"] = gaming_common.icon_ref("steam", appid, s_en["icon"])
+            urls.append(s_en["icon"])
+        if p.get("achieved"):
+            item["achieved"] = True
+            when = gaming_common.berlin_iso(p.get("unlocktime"))
+            if when:
+                item["unlocked"] = when
+        if key in percents:
+            item["percent"] = round(percents[key], 1)
+        items.append(item)
+    return {"platform": "steam", "id": str(appid), "achievements": items}, urls
 
 
 def download_cover(appid, title, covers_dir):
@@ -245,10 +350,11 @@ def chunk_human_lines(chunk):
     return keep
 
 
-def build_steam_entry(game, human_lines):
+def build_steam_entry(game, human_lines, slug):
     """Render one `platform: steam` YAML entry from fetched game metadata."""
     lines = [
         f"- title: {yaml_quote(game['title'])}",
+        f"  slug: {slug}",
         "  platform: steam",
         f"  appid: {game['appid']}",
         f"  playtimeMinutes: {game['playtimeMinutes']}",
@@ -280,21 +386,41 @@ def rebuild(raw, games):
     preamble, chunks = split_entries(lines)
 
     non_steam, old_human, old_appids = [], {}, set()
+    old_slugs, old_counts, taken = {}, {}, set()
     for chunk in chunks:
         if (chunk_field(chunk, "platform") or "").lower() == "steam":
             appid = chunk_field(chunk, "appid")
             if appid:
                 old_appids.add(appid)
                 old_human[appid] = chunk_human_lines(chunk)
+                old_slugs[appid] = chunk_field(chunk, "slug")
+                old_counts[appid] = (chunk_field(chunk, "achievementsUnlocked"),
+                                     chunk_field(chunk, "achievementsTotal"))
         else:
             non_steam.append(chunk)
+            if chunk_field(chunk, "slug"):
+                taken.add(chunk_field(chunk, "slug"))
 
     # Stable order => clean, idempotent diffs.
     games = sorted(games, key=lambda g: int(g["appid"]))
     new_appids = {str(g["appid"]) for g in games}
 
+    # A game whose achievements were not fetched this time (--no-achievements, or
+    # a transient failure) keeps the counts it had rather than silently losing
+    # them — its achievement file is kept too, and the two must agree.
+    carried = []
+    for g in games:
+        unlocked, total = old_counts.get(str(g["appid"]), (None, None))
+        if g.get("achievementsSkipped") and total:
+            g = dict(g, achievementsUnlocked=int(unlocked or 0), achievementsTotal=int(total))
+        carried.append(g)
+    games = carried
+
+    slugs, new_slugs, joined = gaming_common.assign_slugs(
+        games, lambda g: str(g["appid"]), old_slugs, taken)
+
     steam_blocks = [
-        build_steam_entry(g, old_human.get(str(g["appid"]), []))
+        build_steam_entry(g, old_human.get(str(g["appid"]), []), slugs[str(g["appid"])])
         for g in games
     ]
 
@@ -315,6 +441,8 @@ def rebuild(raw, games):
         "pruned": sorted(old_appids - new_appids, key=int),
         "updated": sorted(new_appids & old_appids, key=int),
         "manual": len(non_steam),
+        "new_slugs": new_slugs,
+        "joined": joined,
     }
     return out, summary
 
@@ -322,6 +450,29 @@ def rebuild(raw, games):
 # --------------------------------------------------------------------------- #
 # Fetch orchestration                                                          #
 # --------------------------------------------------------------------------- #
+def fetch_achievements(api_key, steam_id, entry):
+    """Fill `entry` with the achievement counts, the document and its icon URLs.
+    Five requests for a game with achievements: the player list, the schema in
+    three languages, the global percentages."""
+    appid = entry["appid"]
+    try:
+        player = steam_player_achievements(api_key, steam_id, appid)
+    except TransientError as exc:
+        print(f"  achievements fetch failed (appid {appid}): {exc} — keeping the old data",
+              file=sys.stderr)
+        entry["achievementsSkipped"] = True
+        return
+    if not player:
+        return
+    schemas = {lang: steam_schema(api_key, appid, name) for lang, name in STEAM_LANGS}
+    percents = steam_global_percentages(appid)
+    doc, urls = build_steam_achievements(appid, player, schemas, percents)
+    entry["achievementsUnlocked"] = sum(1 for p in player if p.get("achieved"))
+    entry["achievementsTotal"] = len(player)
+    entry["achievementDoc"] = doc
+    entry["achievementIcons"] = urls
+
+
 def fetch_games(api_key, steam_id, covers_dir, *, include_unplayed,
                 do_achievements, do_covers):
     raw_games = steam_owned_games(api_key, steam_id)
@@ -341,10 +492,10 @@ def fetch_games(api_key, steam_id, covers_dir, *, include_unplayed,
         if last:
             entry["lastPlayed"] = time.strftime("%Y-%m-%d", time.gmtime(last))
         if do_achievements:
-            ach = steam_achievements(api_key, steam_id, appid)
-            if ach:
-                entry["achievementsUnlocked"], entry["achievementsTotal"] = ach
+            fetch_achievements(api_key, steam_id, entry)
             time.sleep(0.3)  # be polite to the API
+        else:
+            entry["achievementsSkipped"] = True
         if do_covers:
             entry["cover"] = download_cover(appid, entry["title"], covers_dir)
         games.append(entry)
@@ -365,7 +516,8 @@ def main(argv=None):
     parser.add_argument("--include-unplayed", action="store_true",
                         help="Include owned games with 0 playtime (default: played only).")
     parser.add_argument("--no-achievements", action="store_true",
-                        help="Skip per-game achievement lookups (faster).")
+                        help="Skip per-game achievement lookups (faster). Every game keeps "
+                             "the counts and the achievement file it already had.")
     parser.add_argument("--no-covers", action="store_true",
                         help="Skip cover downloads.")
     parser.add_argument("--dry-run", action="store_true",
@@ -412,6 +564,15 @@ def main(argv=None):
           f"{summary['manual']} manual entries untouched.", file=sys.stderr)
     if summary["pruned"]:
         print("  pruned appids: " + ", ".join(summary["pruned"]), file=sys.stderr)
+    gaming_common.report_slugs(summary["new_slugs"], summary["joined"])
+
+    # Achievement files: written for every game fetched this time, kept for every
+    # game that was skipped (so the file and its carried-over counts agree), and
+    # removed for games that left the library or turned out to have none.
+    docs = {str(g["appid"]): g["achievementDoc"] for g in games if g.get("achievementDoc")}
+    urls = {str(g["appid"]): g["achievementIcons"] for g in games if g.get("achievementDoc")}
+    keep = set(docs) | {str(g["appid"]) for g in games if g.get("achievementsSkipped")}
+    gaming_common.write_achievement_docs("steam", docs, urls, keep, dry_run=args.dry_run)
 
     if args.dry_run:
         print("(dry-run: nothing written)", file=sys.stderr)

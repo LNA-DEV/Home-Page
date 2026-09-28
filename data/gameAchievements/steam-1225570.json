@@ -1,0 +1,418 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe „Zu neuen Ufern“ ab",
+    "en": "Complete Foreign shore"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/0e49c1166260d21711ef6a301d520c7ddbc04473.jpg",
+   "key": "Achievement_GOSCC_1",
+   "name": {
+    "de": "Neubeginn",
+    "en": "Start anew"
+   },
+   "percent": 41.4,
+   "unlocked": "2021-04-09T19:31:25+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe „Versteckspiel“ ab",
+    "en": "Complete Hideaway"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/5baddaf6327dcdb5ecd995a84c1d0cafe4576b79.jpg",
+   "key": "Achievement_GOSCC_2",
+   "name": {
+    "de": "In Sicherheit",
+    "en": "Be safe"
+   },
+   "percent": 31.8,
+   "unlocked": "2021-04-23T21:23:42+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe „Froschperspektive“ ab",
+    "en": "Complete Little frogs"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/538d9c4254fedcbefff19fd8c2ff0a60fac7c436.jpg",
+   "key": "Achievement_GOSCC_3",
+   "name": {
+    "de": "Unangepasst",
+    "en": "Don't conform"
+   },
+   "percent": 24.1,
+   "unlocked": "2021-04-23T22:04:47+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe „Stille Wasser“ ab",
+    "en": "Complete Nightswimming"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/17315d55621ab2c998b367f8e61b7f6d5f0ef604.jpg",
+   "key": "Achievement_GOSCC_4",
+   "name": {
+    "de": "Erkundungstour",
+    "en": "Go explore"
+   },
+   "percent": 20.5,
+   "unlocked": "2021-05-25T21:50:17+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe „Frisch ans Werk“ ab",
+    "en": "Complete Is that all there is"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/ae46a800af49b70749b91e31f580f54f8e35c416.jpg",
+   "key": "Achievement_GOSCC_5",
+   "name": {
+    "de": "Unter die Räder gekommen",
+    "en": "Get crushed"
+   },
+   "percent": 16.4,
+   "unlocked": "2021-06-02T23:00:16+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe „Asche zu Asche“ ab",
+    "en": "Complete Ashes to ashes"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/59bfde27facec8dd72e787bcf0c23966419507ad.jpg",
+   "key": "Achievement_GOSCC_6",
+   "name": {
+    "de": "Zerfallen",
+    "en": "Fall apart"
+   },
+   "percent": 13.1,
+   "unlocked": "2021-06-23T21:06:31+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe „Gegen den Strom“ ab",
+    "en": "Complete At the rapids"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/0f977ee565a6e46c6a5c59d917a0b5b6763672d6.jpg",
+   "key": "Achievement_GOSCC_7",
+   "name": {
+    "de": "Abgeprallt",
+    "en": "Bounce back"
+   },
+   "percent": 11.9,
+   "unlocked": "2021-06-24T11:40:09+02:00"
+  },
+  {
+   "description": {
+    "de": "Schließe „Versteckspiel“ in einem Versuch ab, ohne zu sterben",
+    "en": "Complete Hideaway in one go without dying"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/08c8d644968aa2ba9893d71632bc22d2ea8e07bc.jpg",
+   "key": "Achievement_GOSCC_8",
+   "name": {
+    "de": "Sicherheitsleine",
+    "en": "Safety rope"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "de": "Schließe „Froschperspektive“ in einem Versuch ab, ohne zu sterben",
+    "en": "Complete Little frogs in one go without dying"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/415186e61899ebe748371be6e5376c652456251e.jpg",
+   "key": "Achievement_GOSCC_9",
+   "name": {
+    "de": "Gruppenverantwortung",
+    "en": "Party responsibly"
+   },
+   "percent": 0.5
+  },
+  {
+   "description": {
+    "de": "Schließe „Stille Wasser“ in einem Versuch ab, ohne zu sterben",
+    "en": "Complete Nightswimming in one go without dying"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/e2bb7d6bff985c89f847f64128de560afa7fd2b7.jpg",
+   "key": "Achievement_GOSCC_10",
+   "name": {
+    "de": "Vom Haken",
+    "en": "Off the hook"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "de": "Schließe „Frisch ans Werk“ in einem Versuch ab, ohne zu sterben",
+    "en": "Complete Is that all there is in one go without dying"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/cd2b3b4ab920181d9689254dab84d7b211848921.jpg",
+   "key": "Achievement_GOSCC_11",
+   "name": {
+    "de": "Kein Sand im Getriebe",
+    "en": "No spanner in the works"
+   },
+   "percent": 0.4
+  },
+  {
+   "description": {
+    "de": "Schließe „Asche zu Asche“ in einem Versuch ab, ohne zu sterben",
+    "en": "Complete Ashes to ashes in one go without dying"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/5f994f0ba038c0de53b9668db16136f5d530137d.jpg",
+   "key": "Achievement_GOSCC_12",
+   "name": {
+    "de": "Feuerfest",
+    "en": "Fireproof"
+   },
+   "percent": 0.4
+  },
+  {
+   "description": {
+    "de": "Schließe „Gegen den Strom“ in einem Versuch ab, ohne zu sterben",
+    "en": "Complete At the rapids in one go without dying"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/aa8b6291899a8ac0245b069c4c45bb4b1f9eec41.jpg",
+   "key": "Achievement_GOSCC_13",
+   "name": {
+    "de": "Knochentrocken",
+    "en": "Dry as a bone"
+   },
+   "percent": 0.5
+  },
+  {
+   "description": {
+    "de": "Verdiene die Goldmedaille in „Versteckspiel“",
+    "en": "Earn the gold medal in Hideaway"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/ed3d297f09a173193f523765ed7c339473de4571.jpg",
+   "key": "Achievement_GOSCC_14",
+   "name": {
+    "de": "Aufs Dach gestiegen",
+    "en": "Roof runner"
+   },
+   "percent": 0.4
+  },
+  {
+   "description": {
+    "de": "Verdiene die Goldmedaille in „Froschperspektive“",
+    "en": "Earn the gold medal in Little frogs"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/7bea76c55ceddb5822a45a38407f63a1d2507ef3.jpg",
+   "key": "Achievement_GOSCC_15",
+   "name": {
+    "de": "Entschlüpft",
+    "en": "Absquatulate"
+   },
+   "percent": 0.4
+  },
+  {
+   "description": {
+    "de": "Verdiene die Goldmedaille in „Stille Wasser“",
+    "en": "Earn the gold medal in Nightswimming"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/fd086c5d64c42ebb7b3ae238483111c364261a5c.jpg",
+   "key": "Achievement_GOSCC_16",
+   "name": {
+    "de": "Fliegende Fische",
+    "en": "Flying fish"
+   },
+   "percent": 0.4
+  },
+  {
+   "description": {
+    "de": "Verdiene die Goldmedaille in „Frisch ans Werk“",
+    "en": "Earn the gold medal in Is that all there is"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/4045db1f9c6b7f3e60a0919fa66ae332ce474e01.jpg",
+   "key": "Achievement_GOSCC_17",
+   "name": {
+    "de": "Wie ein Uhrwerk",
+    "en": "Like clockwork"
+   },
+   "percent": 0.4
+  },
+  {
+   "description": {
+    "de": "Verdiene die Goldmedaille in „Asche zu Asche“",
+    "en": "Earn the gold medal in Ashes to ashes"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/0bea65a97219bd37841c99d1f60fff65235114bb.jpg",
+   "key": "Achievement_GOSCC_18",
+   "name": {
+    "de": "Stichflamme",
+    "en": "Flash fire"
+   },
+   "percent": 0.4
+  },
+  {
+   "description": {
+    "de": "Verdiene die Goldmedaille in „Gegen den Strom“",
+    "en": "Earn the gold medal in At the rapids"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/16f2bb5552474d29aa6c5817c983744931e6dfcf.jpg",
+   "key": "Achievement_GOSCC_19",
+   "name": {
+    "de": "Unter Strom",
+    "en": "At the rapidest"
+   },
+   "percent": 0.4
+  },
+  {
+   "description": {
+    "de": "Verdiene eine Medaille, indem du eine Zeit meisterst oder ein Level absolvierst, ohne zu sterben",
+    "en": "Earn a medal for achieving a time or not dying on any level"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/b3809aa175e1a87848851195b5c14bf46b811e16.jpg",
+   "key": "Achievement_GOSCC_20",
+   "name": {
+    "de": "Hochdekoriert",
+    "en": "Decorated"
+   },
+   "percent": 11.2
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe ein beliebiges Bonuslevel ab",
+    "en": "Complete any bonus level"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/151f47e66af4db7828fbfc17f82b8c11687ed701.jpg",
+   "key": "Achievement_GOSCC_21",
+   "name": {
+    "de": "Rettungsmission",
+    "en": "Rescuer"
+   },
+   "percent": 14.9,
+   "unlocked": "2021-06-02T23:07:54+02:00"
+  },
+  {
+   "description": {
+    "de": "Schließe alle Bonuslevels in weniger als 45 Minuten in einem Versuch ab",
+    "en": "Complete all of the bonus levels in under 45 minutes in one go"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/cfc1733647259bbcbfd1218938334c47893dbc65.jpg",
+   "key": "Achievement_GOSCC_22",
+   "name": {
+    "de": "Hart und schnell",
+    "en": "Hard and fast"
+   },
+   "percent": 0.4
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe ein Level im Koop-Modus ab",
+    "en": "Complete a level in co-op"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/1a2442bd8baf0a779280495b8547efd5c0a55344.jpg",
+   "key": "Achievement_GOSCC_23",
+   "name": {
+    "de": "Mit vereinten Kräften",
+    "en": "Better together"
+   },
+   "percent": 30.7,
+   "unlocked": "2021-04-09T19:31:25+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Passe einen Charakter an",
+    "en": "Customise a character"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/5af56454f0dd0341adbc43966f0397ccb9c26d49.jpg",
+   "key": "Achievement_GOSCC_24",
+   "name": {
+    "de": "Roter Faden",
+    "en": "New threads"
+   },
+   "percent": 56.3,
+   "unlocked": "2021-04-09T18:58:21+02:00"
+  },
+  {
+   "description": {
+    "de": "Gelange in „Gegen den Strom“ von der Insel mit den Tischen zurück zum Rettungsring",
+    "en": "Travel from the island with the tables back up to the lifebuoy in At the rapids"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/ee1233e4dd60018236c698efd3b794f4ade5d977.jpg",
+   "key": "Achievement_GOSCC_25",
+   "name": {
+    "de": "Stromaufwärts",
+    "en": "Don't go with the flow"
+   },
+   "percent": 0.5
+  },
+  {
+   "description": {
+    "de": "Gelange in 'Gegen den Strom' von einem Fass zum anderen, ohne das Wasser zu berühren",
+    "en": "Travel between the two barrels in At the rapids without touching the water"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/e7336cf1c11c20770bb1528c5ea4a95d504792d0.jpg",
+   "key": "Achievement_GOSCC_26",
+   "name": {
+    "de": "Aus der Luft gegriffen",
+    "en": "Airs and graces"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Gelange in „Asche zu Asche“ von einem Elch-Schild zum anderen, ohne Richtungseingaben zu nutzen",
+    "en": "Make it between the two moose signs in Ashes to ashes without using any directional inputs"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/de7993d34372adef603abf01d646596bd0ace976.jpg",
+   "key": "Achievement_GOSCC_27",
+   "name": {
+    "de": "Stilvoller Fall",
+    "en": "Falling with style"
+   },
+   "percent": 0.5
+  },
+  {
+   "description": {
+    "de": "Überlebe bei der Hechtverfolgung 5 Hechtattacken in Folge, ohne das Lasso zu benutzen",
+    "en": "Survive 5 pike attacks in a row without using your lasso in the pike chase"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1225570/62469d889e6edde0366ecaf846faf710ad296604.jpg",
+   "key": "Achievement_GOSCC_28",
+   "name": {
+    "de": "Lebendköder",
+    "en": "Live bait"
+   },
+   "percent": 0.8
+  }
+ ],
+ "id": "1225570",
+ "platform": "steam"
+}

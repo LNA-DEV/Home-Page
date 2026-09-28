@@ -1,221 +1,257 @@
-# Games I've played — a flat, unordered list, one entry per game.
+# Games I've played — a flat, unordered list, one entry per COPY of a game.
 # Modelled on data/reading.yaml. Multiple sources write here:
 #
 #   * hand-added entries — any `platform:` value that is NOT auto-managed
-#     (e.g. gog / switch / playstation / manual).
+#     (e.g. switch / 3ds / ds / playstation / manual).
 #   * Steam entries — auto-managed by scripts/sync-steam.py.
 #   * Epic entries  — auto-managed by scripts/sync-epic.py.
+#   * GOG entries   — auto-managed by scripts/sync-gog.py.
 #
 # The `platform` field is the discriminator. The Steam sync ONLY ever touches
 # entries with `platform: steam`: it rebuilds them from the live Steam library
 # (new games added, de-listed games pruned) and appends them below the marker
 # it emits. Everything else in this file is left byte-for-byte untouched, so
-# hand-added games are safe. Human-owned fields (rating, genres, tags, notes)
-# set on a Steam entry ARE preserved across syncs — the script merges them back
-# by `appid`. The Epic sync (scripts/sync-epic.py) does the same for `platform:
-# epic` entries, keyed by `appName`, merging Heroic-local + Epic-cloud playtime.
-# Each sync writes ITS block LAST, so whichever ran most recently sits at the
-# bottom; the other sync's block is preserved byte-for-byte. The GOG sync
-# (scripts/sync-gog.py) does the same for `platform: gog`.
+# hand-added games are safe. `extraMinutes` set on a Steam entry IS preserved
+# across syncs — the script merges it back by `appid`. The Epic and GOG syncs
+# do the same for their platforms, keyed by `appName`. Each sync writes ITS
+# block LAST, so whichever ran most recently sits at the bottom; the other
+# syncs' blocks are preserved byte-for-byte.
 #
 # The Heroic-local part of the Epic and GOG numbers comes from every machine that
 # runs Heroic, via one snapshot per device in sources/gaming-devices/ — so the
 # syncs can run on any of them without overwriting the others
 # (docs/concepts/gaming-devices.md).
 #
-# Fields (all optional except `title` + `platform`):
+# Every entry has a `slug:`, and copies with the same slug are ONE game: one
+# card on /gaming/ and one page at /<lang>/gaming/<slug>/. A sync writes the slug
+# once, when it first sees a game, and never changes it again — a Steam rename
+# does not move the URL. A hand-added entry needs its slug typed by hand
+# (lowercase, digits, hyphens); to put it on an existing game's page, use that
+# game's slug. Renaming a slug moves the page: see data/gamePages.yaml,
+# `slugAliases`. Full design: docs/concepts/gaming-game-pages.md.
+#
+# Fields (all optional except `title`, `slug` + `platform`):
 #   title                 game name
-#   platform              steam | epic | gog | switch | playstation | manual | ...
+#   slug                  page URL segment, and the key copies are merged on
+#   platform              steam | epic | gog | switch | 3ds | ds | playstation | manual | ...
 #   appid                 Steam AppID — stable key the Steam sync matches on (steam only)
-#   appName               Epic app codename — stable key the Epic sync matches on (epic only)
+#   appName               Epic codename / GOG product id — the key those syncs match on
 #   playtimeMinutes       total playtime in minutes (steam: playtime_forever)
 #   extraMinutes          optional hand-entered extra minutes (human) — ADDED to
 #                         playtimeMinutes in every UI total. Survives syncs.
 #   lastPlayed            "YYYY-MM-DD"
 #   achievementsUnlocked  number of unlocked achievements
-#   achievementsTotal     number of achievements the game has
+#   achievementsTotal     number of achievements the game has (the list itself is
+#                         in data/gameAchievements/<platform>-<id>.json)
 #   cover                 images/games/covers/<file> (committed, like book covers)
 #   link                  store / info URL
-#   rating                optional 1-5 (human)
-#   genres / tags         optional list (human)
-#   notes                 optional (human)
+#
+# Anything about the GAME rather than one copy of it — rating, notes, your own
+# description, a Wikidata pin — lives in data/gamePages.yaml, keyed by slug. A
+# rating / notes / genres / tags line here is a build error that says so.
 #
 # Hand-added example (copy, uncomment, set platform to something != steam):
 #
 # - title: "The Legend of Zelda: Breath of the Wild"
+#   slug: the-legend-of-zelda-breath-of-the-wild
 #   platform: switch
 #   playtimeMinutes: 12000
 #   lastPlayed: "2022-03-01"
 #   cover: "images/games/covers/breath-of-the-wild.jpg"
 #   link: "https://www.zelda.com/breath-of-the-wild/"
-#   rating: 5
-#   genres: ["action-adventure", "open-world"]
-#   notes: "First playthrough on launch."
 
 # ==== MANUAL: hand-added (no platform) =======================================
 
 - title: "Minecraft"
+  slug: minecraft
   cover: "images/games/covers/Minecraft.jpg"
   link: "https://www.minecraft.net/"
 
 # ==== SWITCH: hand-added (Nintendo Switch library) ===========================
 
 - title: "Mario Kart 8 Deluxe"
+  slug: mario-kart-8-deluxe
   platform: switch
   playtimeMinutes: 6300
   cover: "images/games/covers/Mario Kart 8 Deluxe.jpg"
   link: "https://en.wikipedia.org/wiki/Mario_Kart_8_Deluxe"
 
 - title: "Stardew Valley"
+  slug: stardew-valley
   platform: switch
   playtimeMinutes: 3600
   cover: "images/games/covers/Stardew Valley.jpg"
   link: "https://www.stardewvalley.net/"
 
 - title: "NoReload Heroes"
+  slug: noreload-heroes
   platform: switch
   playtimeMinutes: 540
   cover: "images/games/covers/NoReload Heroes.jpg"
   link: "https://store.steampowered.com/app/806770/"
 
 - title: "ARMS"
+  slug: arms
   platform: switch
   playtimeMinutes: 900
   cover: "images/games/covers/ARMS.jpg"
   link: "https://en.wikipedia.org/wiki/Arms_(video_game)"
 
 - title: "Splatoon 2"
+  slug: splatoon-2
   platform: switch
   playtimeMinutes: 4200
   cover: "images/games/covers/Splatoon 2.jpg"
   link: "https://en.wikipedia.org/wiki/Splatoon_2"
 
 - title: "FAST RMX"
+  slug: fast-rmx
   platform: switch
   playtimeMinutes: 600
   cover: "images/games/covers/FAST RMX.jpg"
   link: "https://en.wikipedia.org/wiki/Fast_RMX"
 
 - title: "Tetris 99"
+  slug: tetris-99
   platform: switch
   playtimeMinutes: 180
   cover: "images/games/covers/Tetris 99.jpg"
   link: "https://en.wikipedia.org/wiki/Tetris_99"
 
 - title: "Super Smash Bros. Ultimate"
+  slug: super-smash-bros-ultimate
   platform: switch
   playtimeMinutes: 1800
   cover: "images/games/covers/Super Smash Bros. Ultimate.jpg"
   link: "https://en.wikipedia.org/wiki/Super_Smash_Bros._Ultimate"
 
 - title: "Super Mario Odyssey"
+  slug: super-mario-odyssey
   platform: switch
   playtimeMinutes: 1200
   cover: "images/games/covers/Super Mario Odyssey.jpg"
   link: "https://en.wikipedia.org/wiki/Super_Mario_Odyssey"
 
 - title: "Pokkén Tournament DX"
+  slug: pokken-tournament-dx
   platform: switch
   playtimeMinutes: 600
   cover: "images/games/covers/Pokkén Tournament DX.jpg"
   link: "https://en.wikipedia.org/wiki/Pokk%C3%A9n_Tournament"
 
 - title: "The Way Remastered"
+  slug: the-way-remastered
   platform: switch
   playtimeMinutes: 540
   cover: "images/games/covers/The Way Remastered.jpg"
   link: "https://en.wikipedia.org/wiki/The_Way_(video_game)"
 
 - title: "The Legend of Zelda: Tears of the Kingdom"
+  slug: the-legend-of-zelda-tears-of-the-kingdom
   platform: switch
   playtimeMinutes: 1800
   cover: "images/games/covers/The Legend of Zelda: Tears of the Kingdom.jpg"
   link: "https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Tears_of_the_Kingdom"
 
 - title: "The Legend of Zelda: Breath of the Wild"
+  slug: the-legend-of-zelda-breath-of-the-wild
   platform: switch
   playtimeMinutes: 9000
   cover: "images/games/covers/The Legend of Zelda: Breath of the Wild.jpg"
   link: "https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild"
 
 - title: "#RaceDieRun"
+  slug: racedierun
   platform: switch
   playtimeMinutes: 120
   cover: "images/games/covers/RaceDieRun.jpg"
 
 - title: "Mario + Rabbids Kingdom Battle"
+  slug: mario-rabbids-kingdom-battle
   platform: switch
   playtimeMinutes: 1200
   cover: "images/games/covers/Mario + Rabbids Kingdom Battle.jpg"
   link: "https://en.wikipedia.org/wiki/Mario_%2B_Rabbids_Kingdom_Battle"
 
 - title: "Overcooked! 2"
+  slug: overcooked-2
   platform: switch
   playtimeMinutes: 600
   cover: "images/games/covers/Overcooked! 2.jpg"
   link: "https://store.steampowered.com/app/728880/"
 
 - title: "Fortnite"
+  slug: fortnite
   platform: switch
   playtimeMinutes: 6900
   cover: "images/games/covers/Fortnite.jpg"
   link: "https://www.fortnite.com/"
 
 - title: "ARK: Survival Evolved"
+  slug: ark-survival-evolved
   platform: switch
   playtimeMinutes: 3300
   cover: "images/games/covers/ARK: Survival Evolved.jpg"
   link: "https://store.steampowered.com/app/346110/"
 
 - title: "Pokémon: Let's Go, Eevee!"
+  slug: pokemon-let-s-go-eevee
   platform: switch
   playtimeMinutes: 2700
   cover: "images/games/covers/Pokémon: Let's Go, Eevee!.jpg"
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon:_Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!"
 
 - title: "Minecraft"
+  slug: minecraft
   platform: switch
   playtimeMinutes: 2700
   cover: "images/games/covers/Minecraft.jpg"
   link: "https://www.minecraft.net/"
 
 - title: "Pokémon Quest"
+  slug: pokemon-quest
   platform: switch
   playtimeMinutes: 2100
   cover: "images/games/covers/Pokémon Quest.jpg"
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Quest"
 
 - title: "Rocket League"
+  slug: rocket-league
   platform: switch
   playtimeMinutes: 1500
   cover: "images/games/covers/Rocket League.jpg"
   link: "https://www.rocketleague.com/"
 
 - title: "Ultimate Chicken Horse"
+  slug: ultimate-chicken-horse
   platform: switch
   playtimeMinutes: 1500
   cover: "images/games/covers/Ultimate Chicken Horse.jpg"
   link: "https://store.steampowered.com/app/386940/"
 
 - title: "Pokémon Shield"
+  slug: pokemon-shield
   platform: switch
   playtimeMinutes: 1200
   cover: "images/games/covers/Pokémon Shield.jpg"
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Sword_and_Shield"
 
 - title: "1-2-Switch"
+  slug: 1-2-switch
   platform: switch
   playtimeMinutes: 900
   cover: "images/games/covers/1-2-Switch.jpg"
   link: "https://en.wikipedia.org/wiki/1-2-Switch"
 
 - title: "Fallout Shelter"
+  slug: fallout-shelter
   platform: switch
   playtimeMinutes: 480
   cover: "images/games/covers/Fallout Shelter.jpg"
   link: "https://store.steampowered.com/app/588430/"
 
 - title: "Yono and the Celestial Elephants"
+  slug: yono-and-the-celestial-elephants
   platform: switch
   playtimeMinutes: 420
   cover: "images/games/covers/Yono and the Celestial Elephants.jpg"
@@ -224,6 +260,7 @@
 # ==== NINTENDO 3DS: hand-added (Nintendo 3DS / DS library) ====================
 
 - title: "Pokémon Alpha Sapphire"
+  slug: pokemon-alpha-sapphire
   platform: 3ds
   playtimeMinutes: 5961
   lastPlayed: "2016-01-07"
@@ -231,6 +268,7 @@
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Omega_Ruby_and_Alpha_Sapphire"
 
 - title: "Mario Kart 7"
+  slug: mario-kart-7
   platform: 3ds
   playtimeMinutes: 3234
   lastPlayed: "2016-03-12"
@@ -238,6 +276,7 @@
   link: "https://en.wikipedia.org/wiki/Mario_Kart_7"
 
 - title: "Pokémon Moon"
+  slug: pokemon-moon
   platform: 3ds
   playtimeMinutes: 3003
   lastPlayed: "2015-04-18"
@@ -245,6 +284,7 @@
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Sun_and_Moon"
 
 - title: "Super Smash Bros. for Nintendo 3DS"
+  slug: super-smash-bros-for-nintendo-3ds
   platform: 3ds
   playtimeMinutes: 2988
   lastPlayed: "2015-05-21"
@@ -252,6 +292,7 @@
   link: "https://en.wikipedia.org/wiki/Super_Smash_Bros._for_Nintendo_3DS_and_Wii_U"
 
 - title: "Super Mario Maker for Nintendo 3DS"
+  slug: super-mario-maker-for-nintendo-3ds
   platform: 3ds
   playtimeMinutes: 1291
   lastPlayed: "2015-06-25"
@@ -259,6 +300,7 @@
   link: "https://en.wikipedia.org/wiki/Super_Mario_Maker_for_Nintendo_3DS"
 
 - title: "Pokémon White 2"
+  slug: pokemon-white-2
   platform: 3ds
   playtimeMinutes: 1151
   lastPlayed: "2015-07-09"
@@ -266,6 +308,7 @@
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Black_2_and_White_2"
 
 - title: "Mario Party: Star Rush"
+  slug: mario-party-star-rush
   platform: 3ds
   playtimeMinutes: 852
   lastPlayed: "2015-08-14"
@@ -273,6 +316,7 @@
   link: "https://en.wikipedia.org/wiki/Mario_Party:_Star_Rush"
 
 - title: "StreetPass Mii Plaza"
+  slug: streetpass-mii-plaza
   platform: 3ds
   playtimeMinutes: 735
   lastPlayed: "2015-09-28"
@@ -280,6 +324,7 @@
   link: "https://en.wikipedia.org/wiki/StreetPass_Mii_Plaza"
 
 - title: "Animal Crossing: New Leaf"
+  slug: animal-crossing-new-leaf
   platform: 3ds
   playtimeMinutes: 672
   lastPlayed: "2015-10-03"
@@ -287,6 +332,7 @@
   link: "https://en.wikipedia.org/wiki/Animal_Crossing:_New_Leaf"
 
 - title: "Poochy & Yoshi's Woolly World"
+  slug: poochy-yoshi-s-woolly-world
   platform: 3ds
   playtimeMinutes: 583
   lastPlayed: "2015-11-16"
@@ -294,6 +340,7 @@
   link: "https://en.wikipedia.org/wiki/Yoshi%27s_Woolly_World"
 
 - title: "Pokémon HeartGold"
+  slug: pokemon-heartgold
   platform: 3ds
   playtimeMinutes: 545
   lastPlayed: "2015-01-07"
@@ -301,6 +348,7 @@
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_HeartGold_and_SoulSilver"
 
 - title: "Pokémon Y"
+  slug: pokemon-y
   platform: 3ds
   playtimeMinutes: 505
   lastPlayed: "2015-03-12"
@@ -308,6 +356,7 @@
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_X_and_Y"
 
 - title: "Mario Party DS"
+  slug: mario-party-ds
   platform: 3ds
   playtimeMinutes: 496
   lastPlayed: "2015-04-18"
@@ -315,6 +364,7 @@
   link: "https://en.wikipedia.org/wiki/Mario_Party_DS"
 
 - title: "New Super Mario Bros."
+  slug: new-super-mario-bros
   platform: 3ds
   playtimeMinutes: 466
   lastPlayed: "2015-05-21"
@@ -322,6 +372,7 @@
   link: "https://en.wikipedia.org/wiki/New_Super_Mario_Bros."
 
 - title: "The Legend of Zelda: Spirit Tracks"
+  slug: the-legend-of-zelda-spirit-tracks
   platform: 3ds
   playtimeMinutes: 450
   lastPlayed: "2015-06-25"
@@ -329,6 +380,7 @@
   link: "https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Spirit_Tracks"
 
 - title: "Mario Kart DS"
+  slug: mario-kart-ds
   platform: 3ds
   playtimeMinutes: 423
   lastPlayed: "2015-07-09"
@@ -336,6 +388,7 @@
   link: "https://en.wikipedia.org/wiki/Mario_Kart_DS"
 
 - title: "Super Mario 3D Land"
+  slug: super-mario-3d-land
   platform: 3ds
   playtimeMinutes: 423
   lastPlayed: "2015-08-14"
@@ -343,6 +396,7 @@
   link: "https://en.wikipedia.org/wiki/Super_Mario_3D_Land"
 
 - title: "Steel Diver: Sub Wars"
+  slug: steel-diver-sub-wars
   platform: 3ds
   playtimeMinutes: 307
   lastPlayed: "2015-09-28"
@@ -350,6 +404,7 @@
   link: "https://en.wikipedia.org/wiki/Steel_Diver"
 
 - title: "nintendogs + cats"
+  slug: nintendogs-cats
   platform: 3ds
   playtimeMinutes: 297
   lastPlayed: "2015-10-03"
@@ -357,6 +412,7 @@
   link: "https://en.wikipedia.org/wiki/Nintendogs_%2B_Cats"
 
 - title: "Pokémon Shuffle"
+  slug: pokemon-shuffle
   platform: 3ds
   playtimeMinutes: 270
   lastPlayed: "2015-11-16"
@@ -364,6 +420,7 @@
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Shuffle"
 
 - title: "Pokémon Rumble World"
+  slug: pokemon-rumble-world
   platform: 3ds
   playtimeMinutes: 85
   lastPlayed: "2015-01-07"
@@ -371,6 +428,7 @@
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Rumble_World"
 
 - title: "Pokémon Black"
+  slug: pokemon-black
   platform: 3ds
   playtimeMinutes: 78
   lastPlayed: "2015-03-12"
@@ -378,6 +436,7 @@
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Black_and_White"
 
 - title: "LEGO Pirates of the Caribbean"
+  slug: lego-pirates-of-the-caribbean
   platform: 3ds
   playtimeMinutes: 58
   lastPlayed: "2015-04-18"
@@ -385,6 +444,7 @@
   link: "https://en.wikipedia.org/wiki/Lego_Pirates_of_the_Caribbean:_The_Video_Game"
 
 - title: "Farm Life"
+  slug: farm-life
   platform: 3ds
   playtimeMinutes: 39
   lastPlayed: "2015-05-21"
@@ -393,6 +453,7 @@
 # ==== NINTENDO DS: hand-added (Nintendo DS library) ==========================
 
 - title: "Pokémon White 2"
+  slug: pokemon-white-2
   platform: ds
   playtimeMinutes: 7384
   lastPlayed: "2014-01-07"
@@ -400,6 +461,7 @@
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Black_2_and_White_2"
 
 - title: "Pokémon HeartGold"
+  slug: pokemon-heartgold
   platform: ds
   playtimeMinutes: 2433
   lastPlayed: "2014-03-12"
@@ -407,6 +469,7 @@
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_HeartGold_and_SoulSilver"
 
 - title: "LEGO Pirates of the Caribbean"
+  slug: lego-pirates-of-the-caribbean
   platform: ds
   playtimeMinutes: 1574
   lastPlayed: "2014-04-18"
@@ -414,62 +477,458 @@
   link: "https://en.wikipedia.org/wiki/Lego_Pirates_of_the_Caribbean:_The_Video_Game"
 
 - title: "Dolphins"
+  slug: dolphins
   platform: ds
   playtimeMinutes: 480
   lastPlayed: "2014-05-21"
   cover: "images/games/covers/Dolphins.jpg"
 
 - title: "Mario Kart DS"
+  slug: mario-kart-ds
   platform: ds
   lastPlayed: "2014-06-25"
   cover: "images/games/covers/Mario Kart DS.jpg"
   link: "https://en.wikipedia.org/wiki/Mario_Kart_DS"
 
 - title: "Farm Life"
+  slug: farm-life
   platform: ds
   lastPlayed: "2014-07-09"
   cover: "images/games/covers/Farm Life.jpg"
 
 - title: "Animal Life: Dinosaurs"
+  slug: animal-life-dinosaurs
   platform: ds
   lastPlayed: "2014-08-14"
   cover: "images/games/covers/Animal Life: Dinosaurs.jpg"
 
 - title: "Mario Party DS"
+  slug: mario-party-ds
   platform: ds
   lastPlayed: "2014-09-28"
   cover: "images/games/covers/Mario Party DS.jpg"
   link: "https://en.wikipedia.org/wiki/Mario_Party_DS"
 
 - title: "Pokémon Black"
+  slug: pokemon-black
   platform: ds
   lastPlayed: "2014-10-03"
   cover: "images/games/covers/Pokémon Black.jpg"
   link: "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Black_and_White"
 
 - title: "Catz"
+  slug: catz
   platform: ds
   lastPlayed: "2014-11-16"
   cover: "images/games/covers/Catz.jpg"
 
 - title: "WAS IST WAS: Versunkene Schätze"
+  slug: was-ist-was-versunkene-schatze
   platform: ds
   lastPlayed: "2014-02-22"
   cover: "images/games/covers/WAS IST WAS: Versunkene Schätze.jpg"
 
 - title: "The Legend of Zelda: Spirit Tracks"
+  slug: the-legend-of-zelda-spirit-tracks
   platform: ds
   lastPlayed: "2014-12-05"
   cover: "images/games/covers/The Legend of Zelda: Spirit Tracks.jpg"
   link: "https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Spirit_Tracks"
 
 - title: "New Super Mario Bros."
+  slug: new-super-mario-bros
   platform: ds
   lastPlayed: "2014-01-07"
   cover: "images/games/covers/New Super Mario Bros..jpg"
   link: "https://en.wikipedia.org/wiki/New_Super_Mario_Bros."
 
+- title: Death Coming
+  slug: death-coming
+  platform: epic
+  appName: 2333810845fd49a286baf29f9b58f9ae
+  playtimeMinutes: 5
+  cover: images/games/covers/Death Coming.jpg
+  link: "https://www.epicgames.com/store/product/death-coming"
+
+- title: Assassins Creed Syndicate
+  slug: assassins-creed-syndicate
+  platform: epic
+  appName: Albacore
+  playtimeMinutes: 7
+  cover: images/games/covers/Assassins Creed Syndicate.jpg
+  link: "https://www.epicgames.com/store/product/assassins-creed-syndicate"
+
+- title: Rayman Legends
+  slug: rayman-legends
+  platform: epic
+  appName: Anchovy
+  playtimeMinutes: 5
+  cover: images/games/covers/Rayman Legends.jpg
+  link: "https://www.epicgames.com/store/product/rayman-legends"
+
+- title: Q.U.B.E. 2
+  slug: q-u-b-e-2
+  platform: epic
+  appName: Auk
+  playtimeMinutes: 102
+  cover: images/games/covers/Q.U.B.E. 2.jpg
+  link: "https://www.epicgames.com/store/product/qube-2"
+
+- title: Towerfall Ascension
+  slug: towerfall-ascension
+  platform: epic
+  appName: Bichir
+  playtimeMinutes: 116
+  cover: images/games/covers/Towerfall Ascension.jpg
+  link: "https://www.epicgames.com/store/product/towerfall-ascension"
+
+- title: Faster Than Light
+  slug: faster-than-light
+  platform: epic
+  appName: Blowfish
+  playtimeMinutes: 1
+  cover: images/games/covers/Faster Than Light.png
+  link: "https://www.epicgames.com/store/product/faster-than-light"
+
+- title: Barony
+  slug: barony
+  platform: epic
+  appName: c98c4cd6d83a4524b4b22f13af95a104
+  playtimeMinutes: 4
+  cover: images/games/covers/Barony.jpg
+  link: "https://www.epicgames.com/store/product/barony"
+
+- title: Kingdom New Lands
+  slug: kingdom-new-lands
+  platform: epic
+  appName: cacao
+  playtimeMinutes: 80
+  cover: images/games/covers/Kingdom New Lands.jpg
+  link: "https://www.epicgames.com/store/product/kingdom-new-lands"
+
+- title: This War of Mine
+  slug: this-war-of-mine
+  platform: epic
+  appName: Cardinal
+  playtimeMinutes: 15
+  cover: images/games/covers/This War of Mine.jpg
+  link: "https://www.epicgames.com/store/product/this-war-of-mine"
+
+- title: Bad North Jotunn Edition
+  slug: bad-north-jotunn-edition
+  platform: epic
+  appName: Chives
+  playtimeMinutes: 5
+  cover: images/games/covers/Bad North Jotunn Edition.png
+  link: "https://www.epicgames.com/store/product/bad-north-jotunn-edition"
+
+- title: Ape Out
+  slug: ape-out
+  platform: epic
+  appName: Coley
+  playtimeMinutes: 8
+  cover: images/games/covers/Ape Out.jpg
+  link: "https://www.epicgames.com/store/product/ape-out"
+
+- title: Satisfactory
+  slug: satisfactory
+  platform: epic
+  appName: CrabEA
+  playtimeMinutes: 2484
+  lastPlayed: "2026-08-01"
+  cover: images/games/covers/Satisfactory.jpg
+  link: "https://www.epicgames.com/store/product/satisfactory"
+
+- title: Drawful 2
+  slug: drawful-2
+  platform: epic
+  appName: Daisy
+  playtimeMinutes: 9
+  cover: images/games/covers/Drawful 2.jpg
+  link: "https://www.epicgames.com/store/product/drawful-2"
+
+- title: Borderlands 2
+  slug: borderlands-2
+  platform: epic
+  appName: Dodo
+  playtimeMinutes: 13
+  cover: images/games/covers/Borderlands 2.jpg
+  link: "https://www.epicgames.com/store/product/borderlands-2"
+
+- title: SUPERHOT
+  slug: superhot
+  platform: epic
+  appName: Dory
+  playtimeMinutes: 96
+  cover: images/games/covers/SUPERHOT.jpg
+  link: "https://www.epicgames.com/store/product/superhot"
+
+- title: Totally Accurate Battle Simulator
+  slug: totally-accurate-battle-simulator
+  platform: epic
+  appName: Driftfish
+  playtimeMinutes: 11
+  cover: images/games/covers/Totally Accurate Battle Simulator.jpg
+  link: "https://www.epicgames.com/store/product/totally-accurate-battle-simulator"
+
+- title: Moonlighter
+  slug: moonlighter
+  platform: epic
+  appName: Eagle
+  playtimeMinutes: 1
+  cover: images/games/covers/Moonlighter.jpg
+  link: "https://www.epicgames.com/store/product/moonlighter"
+
+- title: Mutant Year Zero Road to Eden
+  slug: mutant-year-zero-road-to-eden
+  platform: epic
+  appName: Falcon
+  playtimeMinutes: 8
+  cover: images/games/covers/Mutant Year Zero Road to Eden.jpg
+  link: "https://www.epicgames.com/store/product/mutant-year-zero-road-to-eden"
+
+- title: Fortnite
+  slug: fortnite
+  platform: epic
+  appName: Fortnite
+  playtimeMinutes: 865
+  cover: images/games/covers/Fortnite.jpg
+  link: "https://www.epicgames.com/store/product/fortnite"
+
+- title: The Escapists 2
+  slug: the-escapists-2
+  platform: epic
+  appName: Fowl
+  playtimeMinutes: 417
+  cover: images/games/covers/The Escapists 2.jpg
+  link: "https://www.epicgames.com/store/product/the-escapists-2"
+
+- title: Enter the Gungeon
+  slug: enter-the-gungeon
+  platform: epic
+  appName: Garlic
+  playtimeMinutes: 49
+  cover: images/games/covers/Enter the Gungeon.jpg
+  link: "https://www.epicgames.com/store/product/enter-the-gungeon"
+
+- title: Oxenfree
+  slug: oxenfree
+  platform: epic
+  appName: Hibiscus
+  playtimeMinutes: 417
+  cover: images/games/covers/Oxenfree.jpg
+  link: "https://www.epicgames.com/store/product/oxenfree"
+
+- title: Just Cause 4
+  slug: just-cause-4
+  platform: epic
+  appName: Kakopo
+  playtimeMinutes: 15
+  cover: images/games/covers/Just Cause 4.jpg
+  link: "https://www.epicgames.com/store/product/just-cause-4"
+
+- title: "Sid Meier's Civilization VI"
+  slug: sid-meier-s-civilization-vi
+  platform: epic
+  appName: Kinglet
+  playtimeMinutes: 4
+  cover: "images/games/covers/Sid Meier's Civilization VI.jpg"
+  link: "https://www.epicgames.com/store/product/sid-meier-civilization-vi"
+
+- title: "Civilization VI : Aztec DLC"
+  slug: civilization-vi-aztec-dlc
+  platform: epic
+  appName: KingletAztec
+  playtimeMinutes: 4
+  cover: "images/games/covers/Civilization VI : Aztec DLC.jpg"
+  link: "https://www.epicgames.com/store/product/civilization-vi--aztec-dlc"
+
+- title: RUINER
+  slug: ruiner
+  platform: epic
+  appName: Laridae
+  playtimeMinutes: 15
+  cover: images/games/covers/RUINER.jpg
+  link: "https://www.epicgames.com/store/product/ruiner"
+
+- title: Hob
+  slug: hob
+  platform: epic
+  appName: Lyrebird
+  playtimeMinutes: 6
+  cover: images/games/covers/Hob.jpg
+  link: "https://www.epicgames.com/store/product/hob"
+
+- title: The Witness
+  slug: the-witness
+  platform: epic
+  appName: Magnolia
+  playtimeMinutes: 6
+  cover: images/games/covers/The Witness.jpg
+  link: "https://www.epicgames.com/store/product/the-witness"
+
+- title: Surviving Mars
+  slug: surviving-mars
+  platform: epic
+  appName: Ovenbird
+  playtimeMinutes: 3
+  cover: images/games/covers/Surviving Mars.jpg
+  link: "https://www.epicgames.com/store/product/surviving-mars"
+
+- title: Everything
+  slug: everything
+  platform: epic
+  appName: Pelican
+  playtimeMinutes: 52
+  cover: images/games/covers/Everything.png
+  link: "https://www.epicgames.com/store/product/everything"
+
+- title: The Escapists
+  slug: the-escapists
+  platform: epic
+  appName: Peony
+  playtimeMinutes: 1
+  link: "https://www.epicgames.com/store/product/the-escapists"
+
+- title: Metro 2033 Redux
+  slug: metro-2033-redux
+  platform: epic
+  appName: Petunia
+  playtimeMinutes: 445
+  cover: images/games/covers/Metro 2033 Redux.png
+  link: "https://www.epicgames.com/store/product/metro-2033-redux"
+
+- title: Celeste
+  slug: celeste
+  platform: epic
+  appName: Salt
+  playtimeMinutes: 758
+  lastPlayed: "2026-02-26"
+  cover: images/games/covers/Celeste.jpg
+  link: "https://www.epicgames.com/store/product/celeste"
+
+- title: Farming Simulator 19
+  slug: farming-simulator-19
+  platform: epic
+  appName: Stellula
+  playtimeMinutes: 54
+  cover: images/games/covers/Farming Simulator 19.jpg
+  link: "https://www.epicgames.com/store/product/farming-simulator-19"
+
+- title: Rocket League®
+  slug: rocket-league
+  platform: epic
+  appName: Sugar
+  playtimeMinutes: 170
+  cover: images/games/covers/Rocket League®.jpg
+  link: "https://www.epicgames.com/store/product/rocket-league"
+
+- title: "Anodyne 2: Return to Dust"
+  slug: anodyne-2-return-to-dust
+  platform: epic
+  appName: Tanzanite
+  playtimeMinutes: 6
+  cover: "images/games/covers/Anodyne 2: Return to Dust.jpg"
+  link: "https://www.epicgames.com/store/product/anodyne-2-return-to-dust"
+
+- title: ">observer_"
+  slug: observer
+  platform: epic
+  appName: Tumeric
+  playtimeMinutes: 9
+  cover: "images/games/covers/>observer_.jpg"
+  link: "https://www.epicgames.com/store/product/observer"
+
+- title: Nuclear Throne
+  slug: nuclear-throne
+  platform: epic
+  appName: Turaco
+  playtimeMinutes: 3
+  cover: images/games/covers/Nuclear Throne.jpg
+  link: "https://www.epicgames.com/store/product/nuclear-throne"
+
+- title: Hello Neighbor
+  slug: hello-neighbor
+  platform: epic
+  appName: Ursus
+  playtimeMinutes: 3
+  cover: images/games/covers/Hello Neighbor.jpg
+  link: "https://www.epicgames.com/store/product/hello-neighbor"
+
+- title: Costume Quest
+  slug: costume-quest
+  platform: epic
+  appName: Violetear
+  playtimeMinutes: 1
+  cover: images/games/covers/Costume Quest.jpg
+  link: "https://www.epicgames.com/store/product/costume-quest"
+
+- title: Faeria
+  slug: faeria
+  platform: epic
+  appName: Vulture
+  playtimeMinutes: 6
+  cover: images/games/covers/Faeria.jpg
+  link: "https://www.epicgames.com/store/product/faeria"
+
+- title: World War Z
+  slug: world-war-z
+  platform: epic
+  appName: Wombat
+  playtimeMinutes: 184
+  cover: images/games/covers/World War Z.jpg
+  link: "https://www.epicgames.com/store/product/world-war-z"
+
+# ==== GOG: auto-managed by scripts/sync-gog.py (regenerated each sync) ====
+
+- title: The Way
+  slug: the-way
+  platform: gog
+  appName: 1207667163
+  playtimeMinutes: 2
+  cover: images/games/covers/The Way.jpg
+
+- title: "Thronebreaker: The Witcher Tales"
+  slug: thronebreaker-the-witcher-tales
+  platform: gog
+  appName: 1297352383
+  playtimeMinutes: 28
+  lastPlayed: "2026-08-01"
+  achievementsUnlocked: 0
+  achievementsTotal: 39
+  cover: "images/games/covers/Thronebreaker: The Witcher Tales.jpg"
+
+- title: Hollow Knight
+  slug: hollow-knight
+  platform: gog
+  appName: 1308320804
+  playtimeMinutes: 3
+  cover: images/games/covers/Hollow Knight.jpg
+
+- title: Cyberpunk 2077
+  slug: cyberpunk-2077
+  platform: gog
+  appName: 1423049311
+  playtimeMinutes: 478
+  lastPlayed: "2026-08-01"
+  achievementsUnlocked: 1
+  achievementsTotal: 57
+  cover: images/games/covers/Cyberpunk 2077.jpg
+
+- title: Duck Paradox
+  slug: duck-paradox
+  platform: gog
+  appName: 1816031813
+  playtimeMinutes: 2
+  lastPlayed: "2025-11-22"
+  achievementsUnlocked: 0
+  achievementsTotal: 35
+  cover: images/games/covers/Duck Paradox.jpg
+
+# ==== STEAM: auto-managed by scripts/sync-steam.py (regenerated each sync) ====
+
 - title: Portal 2
+  slug: portal-2
   platform: steam
   appid: 620
   playtimeMinutes: 6
@@ -480,6 +939,7 @@
   link: "https://store.steampowered.com/app/620/"
 
 - title: Terraria
+  slug: terraria
   platform: steam
   appid: 105600
   playtimeMinutes: 4931
@@ -490,6 +950,7 @@
   link: "https://store.steampowered.com/app/105600/"
 
 - title: Tomb Raider
+  slug: tomb-raider
   platform: steam
   appid: 203160
   playtimeMinutes: 180
@@ -500,6 +961,7 @@
   link: "https://store.steampowered.com/app/203160/"
 
 - title: Castle Crashers
+  slug: castle-crashers
   platform: steam
   appid: 204360
   playtimeMinutes: 647
@@ -510,6 +972,7 @@
   link: "https://store.steampowered.com/app/204360/"
 
 - title: SpeedRunners
+  slug: speedrunners
   platform: steam
   appid: 207140
   playtimeMinutes: 59
@@ -520,6 +983,7 @@
   link: "https://store.steampowered.com/app/207140/"
 
 - title: "Beatbuddy: Tale of the Guardians"
+  slug: beatbuddy-tale-of-the-guardians
   platform: steam
   appid: 231040
   playtimeMinutes: 5
@@ -530,6 +994,7 @@
   link: "https://store.steampowered.com/app/231040/"
 
 - title: The Forest
+  slug: the-forest
   platform: steam
   appid: 242760
   playtimeMinutes: 540
@@ -540,6 +1005,7 @@
   link: "https://store.steampowered.com/app/242760/"
 
 - title: "TRANSFORMERS: Rise of the Dark Spark"
+  slug: transformers-rise-of-the-dark-spark
   platform: steam
   appid: 245760
   playtimeMinutes: 652
@@ -550,6 +1016,7 @@
   link: "https://store.steampowered.com/app/245760/"
 
 - title: "The Binding of Isaac: Rebirth"
+  slug: the-binding-of-isaac-rebirth
   platform: steam
   appid: 250900
   playtimeMinutes: 54
@@ -560,6 +1027,7 @@
   link: "https://store.steampowered.com/app/250900/"
 
 - title: Subnautica
+  slug: subnautica
   platform: steam
   appid: 264710
   playtimeMinutes: 3673
@@ -570,6 +1038,7 @@
   link: "https://store.steampowered.com/app/264710/"
 
 - title: Goat Simulator
+  slug: goat-simulator
   platform: steam
   appid: 265930
   playtimeMinutes: 62
@@ -580,6 +1049,7 @@
   link: "https://store.steampowered.com/app/265930/"
 
 - title: Brawlhalla
+  slug: brawlhalla
   platform: steam
   appid: 291550
   playtimeMinutes: 87
@@ -590,16 +1060,18 @@
   link: "https://store.steampowered.com/app/291550/"
 
 - title: "The Witcher 3: Wild Hunt - Complete Edition"
+  slug: the-witcher-3-wild-hunt-complete-edition
   platform: steam
   appid: 292030
-  playtimeMinutes: 6465
-  lastPlayed: "2026-09-18"
+  playtimeMinutes: 6582
+  lastPlayed: "2026-09-28"
   achievementsUnlocked: 36
   achievementsTotal: 78
   cover: "images/games/covers/The Witcher 3: Wild Hunt - Complete Edition.jpg"
   link: "https://store.steampowered.com/app/292030/"
 
 - title: Enter the Gungeon
+  slug: enter-the-gungeon
   platform: steam
   appid: 311690
   playtimeMinutes: 156
@@ -610,6 +1082,7 @@
   link: "https://store.steampowered.com/app/311690/"
 
 - title: Life is Strange™
+  slug: life-is-strange
   platform: steam
   appid: 319630
   playtimeMinutes: 1024
@@ -620,6 +1093,7 @@
   link: "https://store.steampowered.com/app/319630/"
 
 - title: Move or Die
+  slug: move-or-die
   platform: steam
   appid: 323850
   playtimeMinutes: 59
@@ -630,6 +1104,7 @@
   link: "https://store.steampowered.com/app/323850/"
 
 - title: ShellShock Live
+  slug: shellshock-live
   platform: steam
   appid: 326460
   playtimeMinutes: 248
@@ -640,6 +1115,7 @@
   link: "https://store.steampowered.com/app/326460/"
 
 - title: "ARK: Survival Evolved"
+  slug: ark-survival-evolved
   platform: steam
   appid: 346110
   playtimeMinutes: 38202
@@ -650,6 +1126,7 @@
   link: "https://store.steampowered.com/app/346110/"
 
 - title: Ultimate Chicken Horse
+  slug: ultimate-chicken-horse
   platform: steam
   appid: 386940
   playtimeMinutes: 446
@@ -660,6 +1137,7 @@
   link: "https://store.steampowered.com/app/386940/"
 
 - title: Rise of the Tomb Raider
+  slug: rise-of-the-tomb-raider
   platform: steam
   appid: 391220
   playtimeMinutes: 1
@@ -670,6 +1148,7 @@
   link: "https://store.steampowered.com/app/391220/"
 
 - title: Pony Island
+  slug: pony-island
   platform: steam
   appid: 405640
   playtimeMinutes: 152
@@ -680,6 +1159,7 @@
   link: "https://store.steampowered.com/app/405640/"
 
 - title: "ARK: Survival Of The Fittest"
+  slug: ark-survival-of-the-fittest
   platform: steam
   appid: 407530
   playtimeMinutes: 38
@@ -688,6 +1168,7 @@
   link: "https://store.steampowered.com/app/407530/"
 
 - title: Stardew Valley
+  slug: stardew-valley
   platform: steam
   appid: 413150
   playtimeMinutes: 6059
@@ -698,6 +1179,7 @@
   link: "https://store.steampowered.com/app/413150/"
 
 - title: Grow Up
+  slug: grow-up
   platform: steam
   appid: 426790
   playtimeMinutes: 448
@@ -708,6 +1190,7 @@
   link: "https://store.steampowered.com/app/426790/"
 
 - title: Aseprite
+  slug: aseprite
   platform: steam
   appid: 431730
   playtimeMinutes: 1555
@@ -716,6 +1199,7 @@
   link: "https://store.steampowered.com/app/431730/"
 
 - title: Wallpaper Engine
+  slug: wallpaper-engine
   platform: steam
   appid: 431960
   playtimeMinutes: 1555
@@ -726,6 +1210,7 @@
   link: "https://store.steampowered.com/app/431960/"
 
 - title: Paladins
+  slug: paladins
   platform: steam
   appid: 444090
   playtimeMinutes: 211
@@ -736,6 +1221,7 @@
   link: "https://store.steampowered.com/app/444090/"
 
 - title: World of Tanks Blitz
+  slug: world-of-tanks-blitz
   platform: steam
   appid: 444200
   playtimeMinutes: 14
@@ -744,6 +1230,7 @@
   link: "https://store.steampowered.com/app/444200/"
 
 - title: "The Elder Scrolls V: Skyrim Special Edition"
+  slug: the-elder-scrolls-v-skyrim-special-edition
   platform: steam
   appid: 489830
   playtimeMinutes: 914
@@ -754,6 +1241,7 @@
   link: "https://store.steampowered.com/app/489830/"
 
 - title: "theHunter: Call of the Wild™"
+  slug: thehunter-call-of-the-wild
   platform: steam
   appid: 518790
   playtimeMinutes: 2
@@ -764,6 +1252,7 @@
   link: "https://store.steampowered.com/app/518790/"
 
 - title: Darwin Project
+  slug: darwin-project
   platform: steam
   appid: 544920
   playtimeMinutes: 27
@@ -774,6 +1263,7 @@
   link: "https://store.steampowered.com/app/544920/"
 
 - title: "Life is Strange: Before the Storm"
+  slug: life-is-strange-before-the-storm
   platform: steam
   appid: 554620
   playtimeMinutes: 984
@@ -784,6 +1274,7 @@
   link: "https://store.steampowered.com/app/554620/"
 
 - title: "Monster Hunter: World"
+  slug: monster-hunter-world
   platform: steam
   appid: 582010
   playtimeMinutes: 119
@@ -794,6 +1285,7 @@
   link: "https://store.steampowered.com/app/582010/"
 
 - title: PixARK
+  slug: pixark
   platform: steam
   appid: 593600
   playtimeMinutes: 1889
@@ -804,6 +1296,7 @@
   link: "https://store.steampowered.com/app/593600/"
 
 - title: "Stick Fight: The Game"
+  slug: stick-fight-the-game
   platform: steam
   appid: 674940
   playtimeMinutes: 1978
@@ -814,6 +1307,7 @@
   link: "https://store.steampowered.com/app/674940/"
 
 - title: GRIS
+  slug: gris
   platform: steam
   appid: 683320
   playtimeMinutes: 234
@@ -824,6 +1318,7 @@
   link: "https://store.steampowered.com/app/683320/"
 
 - title: Generation Zero®
+  slug: generation-zero
   platform: steam
   appid: 704270
   playtimeMinutes: 3458
@@ -834,6 +1329,7 @@
   link: "https://store.steampowered.com/app/704270/"
 
 - title: Aimlabs
+  slug: aimlabs
   platform: steam
   appid: 714010
   playtimeMinutes: 99
@@ -844,6 +1340,7 @@
   link: "https://store.steampowered.com/app/714010/"
 
 - title: Phasmophobia
+  slug: phasmophobia
   platform: steam
   appid: 739630
   playtimeMinutes: 3239
@@ -854,6 +1351,7 @@
   link: "https://store.steampowered.com/app/739630/"
 
 - title: Realm Royale Reforged
+  slug: realm-royale-reforged
   platform: steam
   appid: 813820
   playtimeMinutes: 2308
@@ -864,6 +1362,7 @@
   link: "https://store.steampowered.com/app/813820/"
 
 - title: "Subnautica: Below Zero"
+  slug: subnautica-below-zero
   platform: steam
   appid: 848450
   playtimeMinutes: 886
@@ -874,6 +1373,7 @@
   link: "https://store.steampowered.com/app/848450/"
 
 - title: Pummel Party
+  slug: pummel-party
   platform: steam
   appid: 880940
   playtimeMinutes: 444
@@ -884,6 +1384,7 @@
   link: "https://store.steampowered.com/app/880940/"
 
 - title: Among Us
+  slug: among-us
   platform: steam
   appid: 945360
   playtimeMinutes: 2139
@@ -894,6 +1395,7 @@
   link: "https://store.steampowered.com/app/945360/"
 
 - title: Ori and the Will of the Wisps
+  slug: ori-and-the-will-of-the-wisps
   platform: steam
   appid: 1057090
   playtimeMinutes: 3
@@ -904,6 +1406,7 @@
   link: "https://store.steampowered.com/app/1057090/"
 
 - title: Fall Guys
+  slug: fall-guys
   platform: steam
   appid: 1097150
   playtimeMinutes: 1774
@@ -914,6 +1417,7 @@
   link: "https://store.steampowered.com/app/1097150/"
 
 - title: Horizon Zero Dawn™ Complete Edition
+  slug: horizon-zero-dawn-complete-edition
   platform: steam
   appid: 1151640
   playtimeMinutes: 8055
@@ -924,6 +1428,7 @@
   link: "https://store.steampowered.com/app/1151640/"
 
 - title: Apex Legends
+  slug: apex-legends
   platform: steam
   appid: 1172470
   playtimeMinutes: 1390
@@ -934,6 +1439,7 @@
   link: "https://store.steampowered.com/app/1172470/"
 
 - title: Enshrouded
+  slug: enshrouded
   platform: steam
   appid: 1203620
   playtimeMinutes: 3232
@@ -944,6 +1450,7 @@
   link: "https://store.steampowered.com/app/1203620/"
 
 - title: "Detroit: Become Human"
+  slug: detroit-become-human
   platform: steam
   appid: 1222140
   playtimeMinutes: 208
@@ -954,6 +1461,7 @@
   link: "https://store.steampowered.com/app/1222140/"
 
 - title: Unravel Two
+  slug: unravel-two
   platform: steam
   appid: 1225570
   playtimeMinutes: 476
@@ -964,6 +1472,7 @@
   link: "https://store.steampowered.com/app/1225570/"
 
 - title: "There is no game: Jam Edition 2015"
+  slug: there-is-no-game-jam-edition-2015
   platform: steam
   appid: 1241700
   playtimeMinutes: 19
@@ -974,6 +1483,7 @@
   link: "https://store.steampowered.com/app/1241700/"
 
 - title: "GWENT: The Witcher Card Game"
+  slug: gwent-the-witcher-card-game
   platform: steam
   appid: 1284410
   playtimeMinutes: 57
@@ -984,6 +1494,7 @@
   link: "https://store.steampowered.com/app/1284410/"
 
 - title: ROUNDS
+  slug: rounds
   platform: steam
   appid: 1557740
   playtimeMinutes: 1510
@@ -994,16 +1505,18 @@
   link: "https://store.steampowered.com/app/1557740/"
 
 - title: Core Keeper
+  slug: core-keeper
   platform: steam
   appid: 1621690
-  playtimeMinutes: 1487
-  lastPlayed: "2026-09-18"
+  playtimeMinutes: 1510
+  lastPlayed: "2026-09-27"
   achievementsUnlocked: 11
-  achievementsTotal: 55
+  achievementsTotal: 59
   cover: images/games/covers/Core Keeper.jpg
   link: "https://store.steampowered.com/app/1621690/"
 
 - title: Muck
+  slug: muck
   platform: steam
   appid: 1625450
   playtimeMinutes: 77
@@ -1014,6 +1527,7 @@
   link: "https://store.steampowered.com/app/1625450/"
 
 - title: Subnautica 2
+  slug: subnautica-2
   platform: steam
   appid: 1962700
   playtimeMinutes: 261
@@ -1022,6 +1536,7 @@
   link: "https://store.steampowered.com/app/1962700/"
 
 - title: "ARK: Survival Ascended"
+  slug: ark-survival-ascended
   platform: steam
   appid: 2399830
   playtimeMinutes: 3837
@@ -1032,6 +1547,7 @@
   link: "https://store.steampowered.com/app/2399830/"
 
 - title: Horizon Forbidden West™ Complete Edition
+  slug: horizon-forbidden-west-complete-edition
   platform: steam
   appid: 2420110
   playtimeMinutes: 2985
@@ -1042,348 +1558,11 @@
   link: "https://store.steampowered.com/app/2420110/"
 
 - title: GeoGuessr Steam Edition
+  slug: geoguessr-steam-edition
   platform: steam
   appid: 3478870
   playtimeMinutes: 4605
-  lastPlayed: "2026-09-04"
+  lastPlayed: "2026-09-24"
   achievementsUnlocked: 16
   achievementsTotal: 45
   link: "https://store.steampowered.com/app/3478870/"
-
-# ==== EPIC: auto-managed by scripts/sync-epic.py (regenerated each sync) ====
-
-- title: Death Coming
-  platform: epic
-  appName: 2333810845fd49a286baf29f9b58f9ae
-  playtimeMinutes: 5
-  cover: images/games/covers/Death Coming.jpg
-  link: "https://www.epicgames.com/store/product/death-coming"
-
-- title: Assassins Creed Syndicate
-  platform: epic
-  appName: Albacore
-  playtimeMinutes: 7
-  cover: images/games/covers/Assassins Creed Syndicate.jpg
-  link: "https://www.epicgames.com/store/product/assassins-creed-syndicate"
-
-- title: Rayman Legends
-  platform: epic
-  appName: Anchovy
-  playtimeMinutes: 5
-  cover: images/games/covers/Rayman Legends.jpg
-  link: "https://www.epicgames.com/store/product/rayman-legends"
-
-- title: Q.U.B.E. 2
-  platform: epic
-  appName: Auk
-  playtimeMinutes: 102
-  cover: images/games/covers/Q.U.B.E. 2.jpg
-  link: "https://www.epicgames.com/store/product/qube-2"
-
-- title: Towerfall Ascension
-  platform: epic
-  appName: Bichir
-  playtimeMinutes: 116
-  cover: images/games/covers/Towerfall Ascension.jpg
-  link: "https://www.epicgames.com/store/product/towerfall-ascension"
-
-- title: Faster Than Light
-  platform: epic
-  appName: Blowfish
-  playtimeMinutes: 1
-  cover: images/games/covers/Faster Than Light.png
-  link: "https://www.epicgames.com/store/product/faster-than-light"
-
-- title: Barony
-  platform: epic
-  appName: c98c4cd6d83a4524b4b22f13af95a104
-  playtimeMinutes: 4
-  cover: images/games/covers/Barony.jpg
-  link: "https://www.epicgames.com/store/product/barony"
-
-- title: Kingdom New Lands
-  platform: epic
-  appName: cacao
-  playtimeMinutes: 80
-  cover: images/games/covers/Kingdom New Lands.jpg
-  link: "https://www.epicgames.com/store/product/kingdom-new-lands"
-
-- title: This War of Mine
-  platform: epic
-  appName: Cardinal
-  playtimeMinutes: 15
-  cover: images/games/covers/This War of Mine.jpg
-  link: "https://www.epicgames.com/store/product/this-war-of-mine"
-
-- title: Bad North Jotunn Edition
-  platform: epic
-  appName: Chives
-  playtimeMinutes: 5
-  cover: images/games/covers/Bad North Jotunn Edition.png
-  link: "https://www.epicgames.com/store/product/bad-north-jotunn-edition"
-
-- title: Ape Out
-  platform: epic
-  appName: Coley
-  playtimeMinutes: 8
-  cover: images/games/covers/Ape Out.jpg
-  link: "https://www.epicgames.com/store/product/ape-out"
-
-- title: Satisfactory
-  platform: epic
-  appName: CrabEA
-  playtimeMinutes: 2484
-  lastPlayed: "2026-08-01"
-  cover: images/games/covers/Satisfactory.jpg
-  link: "https://www.epicgames.com/store/product/satisfactory"
-
-- title: Drawful 2
-  platform: epic
-  appName: Daisy
-  playtimeMinutes: 9
-  cover: images/games/covers/Drawful 2.jpg
-  link: "https://www.epicgames.com/store/product/drawful-2"
-
-- title: Borderlands 2
-  platform: epic
-  appName: Dodo
-  playtimeMinutes: 13
-  cover: images/games/covers/Borderlands 2.jpg
-  link: "https://www.epicgames.com/store/product/borderlands-2"
-
-- title: SUPERHOT
-  platform: epic
-  appName: Dory
-  playtimeMinutes: 96
-  cover: images/games/covers/SUPERHOT.jpg
-  link: "https://www.epicgames.com/store/product/superhot"
-
-- title: Totally Accurate Battle Simulator
-  platform: epic
-  appName: Driftfish
-  playtimeMinutes: 11
-  cover: images/games/covers/Totally Accurate Battle Simulator.jpg
-  link: "https://www.epicgames.com/store/product/totally-accurate-battle-simulator"
-
-- title: Moonlighter
-  platform: epic
-  appName: Eagle
-  playtimeMinutes: 1
-  cover: images/games/covers/Moonlighter.jpg
-  link: "https://www.epicgames.com/store/product/moonlighter"
-
-- title: Mutant Year Zero Road to Eden
-  platform: epic
-  appName: Falcon
-  playtimeMinutes: 8
-  cover: images/games/covers/Mutant Year Zero Road to Eden.jpg
-  link: "https://www.epicgames.com/store/product/mutant-year-zero-road-to-eden"
-
-- title: Fortnite
-  platform: epic
-  appName: Fortnite
-  playtimeMinutes: 865
-  cover: images/games/covers/Fortnite.jpg
-  link: "https://www.epicgames.com/store/product/fortnite"
-
-- title: The Escapists 2
-  platform: epic
-  appName: Fowl
-  playtimeMinutes: 417
-  cover: images/games/covers/The Escapists 2.jpg
-  link: "https://www.epicgames.com/store/product/the-escapists-2"
-
-- title: Enter the Gungeon
-  platform: epic
-  appName: Garlic
-  playtimeMinutes: 49
-  cover: images/games/covers/Enter the Gungeon.jpg
-  link: "https://www.epicgames.com/store/product/enter-the-gungeon"
-
-- title: Oxenfree
-  platform: epic
-  appName: Hibiscus
-  playtimeMinutes: 417
-  cover: images/games/covers/Oxenfree.jpg
-  link: "https://www.epicgames.com/store/product/oxenfree"
-
-- title: Just Cause 4
-  platform: epic
-  appName: Kakopo
-  playtimeMinutes: 15
-  cover: images/games/covers/Just Cause 4.jpg
-  link: "https://www.epicgames.com/store/product/just-cause-4"
-
-- title: "Sid Meier's Civilization VI"
-  platform: epic
-  appName: Kinglet
-  playtimeMinutes: 4
-  cover: "images/games/covers/Sid Meier's Civilization VI.jpg"
-  link: "https://www.epicgames.com/store/product/sid-meier-civilization-vi"
-
-- title: "Civilization VI : Aztec DLC"
-  platform: epic
-  appName: KingletAztec
-  playtimeMinutes: 4
-  cover: "images/games/covers/Civilization VI : Aztec DLC.jpg"
-  link: "https://www.epicgames.com/store/product/civilization-vi--aztec-dlc"
-
-- title: RUINER
-  platform: epic
-  appName: Laridae
-  playtimeMinutes: 15
-  cover: images/games/covers/RUINER.jpg
-  link: "https://www.epicgames.com/store/product/ruiner"
-
-- title: Hob
-  platform: epic
-  appName: Lyrebird
-  playtimeMinutes: 6
-  cover: images/games/covers/Hob.jpg
-  link: "https://www.epicgames.com/store/product/hob"
-
-- title: The Witness
-  platform: epic
-  appName: Magnolia
-  playtimeMinutes: 6
-  cover: images/games/covers/The Witness.jpg
-  link: "https://www.epicgames.com/store/product/the-witness"
-
-- title: Surviving Mars
-  platform: epic
-  appName: Ovenbird
-  playtimeMinutes: 3
-  cover: images/games/covers/Surviving Mars.jpg
-  link: "https://www.epicgames.com/store/product/surviving-mars"
-
-- title: Everything
-  platform: epic
-  appName: Pelican
-  playtimeMinutes: 52
-  cover: images/games/covers/Everything.png
-  link: "https://www.epicgames.com/store/product/everything"
-
-- title: The Escapists
-  platform: epic
-  appName: Peony
-  playtimeMinutes: 1
-  link: "https://www.epicgames.com/store/product/the-escapists"
-
-- title: Metro 2033 Redux
-  platform: epic
-  appName: Petunia
-  playtimeMinutes: 445
-  cover: images/games/covers/Metro 2033 Redux.png
-  link: "https://www.epicgames.com/store/product/metro-2033-redux"
-
-- title: Celeste
-  platform: epic
-  appName: Salt
-  playtimeMinutes: 758
-  lastPlayed: "2026-02-26"
-  cover: images/games/covers/Celeste.jpg
-  link: "https://www.epicgames.com/store/product/celeste"
-
-- title: Farming Simulator 19
-  platform: epic
-  appName: Stellula
-  playtimeMinutes: 54
-  cover: images/games/covers/Farming Simulator 19.jpg
-  link: "https://www.epicgames.com/store/product/farming-simulator-19"
-
-- title: Rocket League®
-  platform: epic
-  appName: Sugar
-  playtimeMinutes: 170
-  cover: images/games/covers/Rocket League®.jpg
-  link: "https://www.epicgames.com/store/product/rocket-league"
-
-- title: "Anodyne 2: Return to Dust"
-  platform: epic
-  appName: Tanzanite
-  playtimeMinutes: 6
-  cover: "images/games/covers/Anodyne 2: Return to Dust.jpg"
-  link: "https://www.epicgames.com/store/product/anodyne-2-return-to-dust"
-
-- title: ">observer_"
-  platform: epic
-  appName: Tumeric
-  playtimeMinutes: 9
-  cover: "images/games/covers/>observer_.jpg"
-  link: "https://www.epicgames.com/store/product/observer"
-
-- title: Nuclear Throne
-  platform: epic
-  appName: Turaco
-  playtimeMinutes: 3
-  cover: images/games/covers/Nuclear Throne.jpg
-  link: "https://www.epicgames.com/store/product/nuclear-throne"
-
-- title: Hello Neighbor
-  platform: epic
-  appName: Ursus
-  playtimeMinutes: 3
-  cover: images/games/covers/Hello Neighbor.jpg
-  link: "https://www.epicgames.com/store/product/hello-neighbor"
-
-- title: Costume Quest
-  platform: epic
-  appName: Violetear
-  playtimeMinutes: 1
-  cover: images/games/covers/Costume Quest.jpg
-  link: "https://www.epicgames.com/store/product/costume-quest"
-
-- title: Faeria
-  platform: epic
-  appName: Vulture
-  playtimeMinutes: 6
-  cover: images/games/covers/Faeria.jpg
-  link: "https://www.epicgames.com/store/product/faeria"
-
-- title: World War Z
-  platform: epic
-  appName: Wombat
-  playtimeMinutes: 184
-  cover: images/games/covers/World War Z.jpg
-  link: "https://www.epicgames.com/store/product/world-war-z"
-
-# ==== GOG: auto-managed by scripts/sync-gog.py (regenerated each sync) ====
-
-- title: The Way
-  platform: gog
-  appName: 1207667163
-  playtimeMinutes: 2
-  cover: images/games/covers/The Way.jpg
-
-- title: "Thronebreaker: The Witcher Tales"
-  platform: gog
-  appName: 1297352383
-  playtimeMinutes: 28
-  lastPlayed: "2026-08-01"
-  achievementsUnlocked: 0
-  achievementsTotal: 39
-  cover: "images/games/covers/Thronebreaker: The Witcher Tales.jpg"
-
-- title: Hollow Knight
-  platform: gog
-  appName: 1308320804
-  playtimeMinutes: 3
-  cover: images/games/covers/Hollow Knight.jpg
-
-- title: Cyberpunk 2077
-  platform: gog
-  appName: 1423049311
-  playtimeMinutes: 478
-  lastPlayed: "2026-08-01"
-  achievementsUnlocked: 1
-  achievementsTotal: 57
-  cover: images/games/covers/Cyberpunk 2077.jpg
-
-- title: Duck Paradox
-  platform: gog
-  appName: 1816031813
-  playtimeMinutes: 2
-  lastPlayed: "2025-11-22"
-  achievementsUnlocked: 0
-  achievementsTotal: 35
-  cover: images/games/covers/Duck Paradox.jpg

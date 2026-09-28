@@ -39,7 +39,6 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import re
 import sys
 import time
 import urllib.parse
@@ -54,6 +53,7 @@ from dex_common import (  # noqa: E402
     http_get,
     load_dex,
 )
+import wiki_common  # noqa: E402
 
 DELAY = 0.34  # seconds between outbound requests
 
@@ -255,39 +255,12 @@ def entity_id_values(entity, prop):
     return out
 
 
-# A chunk ending like this is an abbreviation, not a sentence end — without
-# this, "…including L. a. agilis" gets cut to "…including L. a."
-_ABBREV_END = re.compile(
-    r"(?:^|\s)(?:[A-Za-z]|sp|ssp|subsp|var|cf|etc|ca|vs|approx|Dr|St|bzw|ggf|u|z|d)\.$"
-)
-
-
-def split_sentences(text):
-    chunks = re.split(r"(?<=[.!?])\s+", text)
-    out = []
-    for chunk in chunks:
-        if out and _ABBREV_END.search(out[-1]):
-            out[-1] = f"{out[-1]} {chunk}"
-        else:
-            out.append(chunk)
-    return out
-
-
 def wikipedia_summary(title, lang):
-    if not title:
-        return ""
-    quoted = urllib.parse.quote(title.replace(" ", "_"), safe="")
-    data = http_get(f"https://{lang}.wikipedia.org/api/rest_v1/page/summary/{quoted}")
-    time.sleep(DELAY)
-    if not data:
-        return ""
-    extract = (data.get("extract") or "").strip()
-    if len(extract) < 50:
-        return ""
-    sentences = split_sentences(extract)
-    text = " ".join(sentences[:3])
-    if len(text) > 480:
-        text = " ".join(sentences[:2])
+    """The abridged summary — the trimming rule lives in wiki_common.py, shared
+    with scripts/game-enrich.py so a species and a game quote Wikipedia alike."""
+    text = wiki_common.wikipedia_summary(title, lang, http_get) if title else ""
+    if title:
+        time.sleep(DELAY)
     return text
 
 

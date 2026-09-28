@@ -1,0 +1,46 @@
+{
+ "developers": [
+  "Capcom"
+ ],
+ "genres": [
+  {
+   "de": "Action-Rollenspiel",
+   "en": "action role-playing game",
+   "sv": "actionrollspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  }
+ ],
+ "publishers": [
+  "Capcom"
+ ],
+ "released": "2018-01-26",
+ "steam": {
+  "de": "Willkommen in einer neuen Welt! In Monster Hunter: World, dem neusten Teil der Serie, erlebst du die ultimative Jagderfahrung – und musst alles geben, um in einer vor Überraschungen und Aufregung nur so wimmelnden Welt zu bestehen!",
+  "en": "Welcome to a new world! In Monster Hunter: World, the latest installment in the series, you can enjoy the ultimate hunting experience, using everything at your disposal to hunt monsters in a new world teeming with surprises and excitement.",
+  "sv": "Välkommen till en ny värld! I Monster Hunter: World, den senaste delen i serien, får du den ultimata jaktupplevelsen och kan använda allt i din arsenal för att jaga monster i en ny värld, full av överraskningar och spänning."
+ },
+ "steam_appid": 582010,
+ "wikidata": "Q30252256",
+ "wikipedia": {
+  "de": {
+   "text": "Monster Hunter: World ist ein von Capcom entwickeltes und veröffentlichtes Action-Rollenspiel. Es ist der fünfte Teil der Hauptreihe von Monster Hunter und erschien im Jahr 2018.",
+   "url": "https://de.wikipedia.org/wiki/Monster_Hunter:_World"
+  },
+  "en": {
+   "text": "Monster Hunter: World is a 2018 action role-playing game developed and published by Capcom. The fifth mainline installment in the Monster Hunter series, it was released worldwide for PlayStation 4 and Xbox One in January 2018, with a Windows version following in August 2018. In the game, the player takes the role of a Hunter, tasked to hunt down and either kill or trap monsters that roam in one of several environmental spaces.",
+   "url": "https://en.wikipedia.org/wiki/Monster_Hunter:_World"
+  }
+ }
+}

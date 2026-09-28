@@ -1,0 +1,50 @@
+{
+ "genres": [
+  {
+   "de": "Actionspiel",
+   "en": "action game",
+   "sv": "actionspel"
+  },
+  {
+   "de": "Adventure",
+   "en": "adventure video game",
+   "sv": "äventyrsspel"
+  },
+  {
+   "de": "Massively Multiplayer Online Game",
+   "en": "massively multiplayer online game",
+   "sv": "massively multiplayer online game"
+  },
+  {
+   "de": "Computer-Rollenspiel",
+   "en": "role-playing video game",
+   "sv": "datorrollspel"
+  },
+  {
+   "de": "Computer-Strategiespiel",
+   "en": "strategy video game",
+   "sv": "strategidatorspel"
+  },
+  {
+   "de": "Action-Adventure",
+   "en": "action-adventure game",
+   "sv": "actionäventyrsspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  }
+ ],
+ "released": "2017-08-29",
+ "steam": {
+  "de": "ARK The Survival of the Fittest ist ein Prototypen-Spin-off von Ark und staats bis zu 60 Kämpfer gegeneinander in einem schnelllebigen, actionverpackten Kampf ums Überleben, bei dem die Spieler letztendlich in einen endgültigen Showdown verwickelt werden führt ihre Dinosaurierarmeen in die Schlacht",
+  "en": "ARK: The Survival of the Fittest is a prototype spin-off of ARK: Survival Evolved, pitting up to 60 combatants against each other in a fast-paced, action-packed struggle for survival, where players are ultimately pushed into an epic final showdown leading their Dinosaur Armies into battle.",
+  "sv": "Ark: The Fittest Survival är en prototyp spin-off av Ark: överlevnad utvecklades, och pittar upp till 60 stridande mot varandra i en snabb, actionfylld kamp för överlevnad, där spelare i slutändan pressas in i en episk slutgiltig showdown leder deras dinosauriearméer i strid."
+ },
+ "steam_appid": 407530,
+ "wikidata": "Q120717463"
+}

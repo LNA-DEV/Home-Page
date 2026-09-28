@@ -1,0 +1,2101 @@
+{
+ "achievements": [
+  {
+   "description": {
+    "de": "Lege eine Meile (1,609 Kilometer) zu Fuß zurück.",
+    "en": "Travel a distance of 1 mile (1.609 kilometers) on foot"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/c92755a828d13513a1206c0a0d46e22486774c0e.jpg",
+   "key": "ach_001",
+   "name": {
+    "de": "Wanderer",
+    "en": "The Mile"
+   },
+   "percent": 86.5
+  },
+  {
+   "description": {
+    "de": "Lege 6,2 Meilen (10 Kilometer) zu Fuß zurück.",
+    "en": "Travel a distance of 6.2 miles (10 kilometers) on foot"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/c92755a828d13513a1206c0a0d46e22486774c0e.jpg",
+   "key": "ach_002",
+   "name": {
+    "de": "Die skandinavische Meile",
+    "en": "The Scandinavian Mile"
+   },
+   "percent": 56.7
+  },
+  {
+   "description": {
+    "de": "Lege 26,2 Meilen (42,195 Kilometer) zu Fuß zurück.",
+    "en": "Travel a distance of 26.2 miles (42.195 kilometers) on foot"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/c92755a828d13513a1206c0a0d46e22486774c0e.jpg",
+   "key": "ach_003",
+   "name": {
+    "de": "Der Marathon",
+    "en": "The Marathon"
+   },
+   "percent": 32.3
+  },
+  {
+   "description": {
+    "de": "Lege 100 Meilen (160,934 Kilometer) zu Fuß zurück.",
+    "en": "Travel a distance of 100 miles (160.934 kilometers) on foot"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/c92755a828d13513a1206c0a0d46e22486774c0e.jpg",
+   "key": "ach_004",
+   "name": {
+    "de": "Der Ultramarathon",
+    "en": "The Ultramarathon"
+   },
+   "percent": 15.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_005",
+   "name": {
+    "de": "Jäger",
+    "en": "Jäger Arc"
+   },
+   "percent": 1.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_006",
+   "name": {
+    "de": "Sommer",
+    "en": "Sommer Arc"
+   },
+   "percent": 1.4
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_007",
+   "name": {
+    "de": "Bhandari",
+    "en": "Bhandari Arc"
+   },
+   "percent": 1.3
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_008",
+   "name": {
+    "de": "Fleischer",
+    "en": "Fleischer Arc"
+   },
+   "percent": 1.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_009",
+   "name": {
+    "de": "Tressler",
+    "en": "Tressler Arc"
+   },
+   "percent": 1.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_010",
+   "name": {
+    "de": "Hope",
+    "en": "Hope Arc"
+   },
+   "percent": 1.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_011",
+   "name": {
+    "de": "Trampfine",
+    "en": "Trampfine Arc"
+   },
+   "percent": 1.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_012",
+   "name": {
+    "de": "Vualez",
+    "en": "Vualez Arc"
+   },
+   "percent": 1.4
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/0037a90dcd07107cc5cd5cb59ce44ee5e21b6c5e.jpg",
+   "key": "ach_013",
+   "name": {
+    "de": "Connors",
+    "en": "Connors Arc"
+   },
+   "percent": 1.4
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_014",
+   "name": {
+    "de": "Beatty",
+    "en": "Beatty Arc"
+   },
+   "percent": 1.4
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_015",
+   "name": {
+    "de": "Hirschfelden",
+    "en": "Hirschfelden Arc"
+   },
+   "percent": 1.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_016",
+   "name": {
+    "de": "Layton Lake District",
+    "en": "Layton Lake District Arc"
+   },
+   "percent": 1.3
+  },
+  {
+   "description": {
+    "de": "Triff ein Tier aus mehr als 50 Metern (55 Yards) Entfernung.",
+    "en": "Hit an animal from 50+ meters (55+ yards)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/d442bfc0ad4621af142efbccb8aa819b23136c02.jpg",
+   "key": "ach_017",
+   "name": {
+    "de": "Freizeitschütze",
+    "en": "Novice Marksman"
+   },
+   "percent": 81.0
+  },
+  {
+   "description": {
+    "de": "Triff ein Tier aus mehr als 100 Metern (110 Yards) Entfernung.",
+    "en": "Hit an animal from 100+ meters (110+ yards)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/d442bfc0ad4621af142efbccb8aa819b23136c02.jpg",
+   "key": "ach_018",
+   "name": {
+    "de": "Begabter Schütze",
+    "en": "Skilled Marksman"
+   },
+   "percent": 63.3
+  },
+  {
+   "description": {
+    "de": "Triff ein Tier aus mehr als 200 Metern (219 Yards) Entfernung.",
+    "en": "Hit an animal from 200+ meters (219+ yards)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/d442bfc0ad4621af142efbccb8aa819b23136c02.jpg",
+   "key": "ach_019",
+   "name": {
+    "de": "Meisterschütze",
+    "en": "Expert Marksman"
+   },
+   "percent": 39.9
+  },
+  {
+   "description": {
+    "de": "Triff ein Tier aus mehr als 400 Metern (438 Yards) Entfernung.",
+    "en": "Hit an animal from 400+ meters (438+ yards)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/d442bfc0ad4621af142efbccb8aa819b23136c02.jpg",
+   "key": "ach_020",
+   "name": {
+    "de": "Schützenkönig",
+    "en": "Legendary Marksman"
+   },
+   "percent": 7.6
+  },
+  {
+   "description": {
+    "de": "Erlege im Jagdrevier Hirschfelden oder im Layton Lake District einen Albinohirsch und verwerte ihn.",
+    "en": "Harvest an albino deer in Hirschfelden Hunting Reserve or the Layton Lake District"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_021",
+   "name": {
+    "de": "Moby Hirsch",
+    "en": "Moby Deer"
+   },
+   "percent": 3.0
+  },
+  {
+   "description": {
+    "de": "Erlege in jeder Unterregion des Jagdreviers Hirschfelden ein Tier und verwerte es.",
+    "en": "Harvest an animal in every subregion in Hirschfelden Hunting Reserve"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_022",
+   "name": {
+    "de": "Held von Hirschfelden",
+    "en": "Hero Of Hirschfelden"
+   },
+   "percent": 2.1
+  },
+  {
+   "description": {
+    "de": "Erlege in jeder Unterregion des Layton Lake District ein Tier und verwerte es.",
+    "en": "Harvest an animal in every subregion in Layton Lake District"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_023",
+   "name": {
+    "de": "Herr der Seen",
+    "en": "Lord Of The Lakes"
+   },
+   "percent": 2.6
+  },
+  {
+   "description": {
+    "de": "Finde 50 Spuren vom selben Tier.",
+    "en": "Find 50 tracks from the same animal"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/9b8fe3871ebab1d9965fd946dfc33565c0c53931.jpg",
+   "key": "ach_024",
+   "name": {
+    "de": "Weiter aufs Ziel zu",
+    "en": "Stay On Target"
+   },
+   "percent": 49.0
+  },
+  {
+   "description": {
+    "de": "Finde 100 Spuren vom selben Tier.",
+    "en": "Find 100 tracks from the same animal"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/9b8fe3871ebab1d9965fd946dfc33565c0c53931.jpg",
+   "key": "ach_025",
+   "name": {
+    "de": "Beharrlichkeit ist zwecklos",
+    "en": "Persistence Is Futile"
+   },
+   "percent": 25.7
+  },
+  {
+   "description": {
+    "de": "Entdecke zehn Tiere.",
+    "en": "Spot 10 animals"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/9b8fe3871ebab1d9965fd946dfc33565c0c53931.jpg",
+   "key": "ach_026",
+   "name": {
+    "de": "Sehen heißt Glauben",
+    "en": "Seeing Is Believing"
+   },
+   "percent": 44.2
+  },
+  {
+   "description": {
+    "de": "Entdecke 100 Tiere.",
+    "en": "Spot 100 animals"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/9b8fe3871ebab1d9965fd946dfc33565c0c53931.jpg",
+   "key": "ach_027",
+   "name": {
+    "de": "Pirscher",
+    "en": "Stalker"
+   },
+   "percent": 21.9
+  },
+  {
+   "description": {
+    "de": "Erlege verschiedene Tiere mit jeder der vier Waffenarten und verwerte sie.",
+    "en": "Harvest different animals using each of the four weapon types"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/3d2939cc1fba1192b348bd1397618b832e9c5bf7.jpg",
+   "key": "ach_028",
+   "name": {
+    "de": "Tausendsassa",
+    "en": "Jack Of All Trades"
+   },
+   "percent": 11.1
+  },
+  {
+   "description": {
+    "de": "Triff ein Tier, das kaum zu sehen ist.",
+    "en": "Hit an animal that is barely visible"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_029",
+   "name": {
+    "de": "Blindschuss",
+    "en": "Blind Shot"
+   },
+   "percent": 16.6
+  },
+  {
+   "description": {
+    "de": "Erlege ein verwundetes Tier und verwerte es.",
+    "en": "Harvest a wounded animal"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_030",
+   "name": {
+    "de": "Kein Tier wird zurückgelassen",
+    "en": "Leave No Animal Behind"
+   },
+   "percent": 83.0
+  },
+  {
+   "description": {
+    "de": "Benutze alle Lockpfeifen ein Mal.",
+    "en": "Use all callers once"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/b6fc4c2cc9914221060eeed23d4f2319ea19b313.jpg",
+   "key": "ach_032",
+   "name": {
+    "de": "Ruf der Wildnis",
+    "en": "Call Of The Wild"
+   },
+   "percent": 3.9
+  },
+  {
+   "description": {
+    "de": "Erlege bei Nacht ein Tier.",
+    "en": "Down an animal at night"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_033",
+   "name": {
+    "de": "Schlaflos",
+    "en": "Insomniac"
+   },
+   "percent": 34.4
+  },
+  {
+   "description": {
+    "de": "1000 einzigartige Tiere erschreckt",
+    "en": "Scared 1000 unique animals"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/c2468b1b6fd5708561bb072fbc98fbb4edf316d0.jpg",
+   "key": "ach_034",
+   "name": {
+    "de": "Vogelscheuche",
+    "en": "Scarecrow"
+   },
+   "percent": 26.0
+  },
+  {
+   "description": {
+    "de": "Besuche alle Regionen im Jagdrevier Hirschfelden & im Layton Lake District.",
+    "en": "Visit all regions in Hirschfelden Hunting Reserve and Layton Lake District"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/c92755a828d13513a1206c0a0d46e22486774c0e.jpg",
+   "key": "ach_035",
+   "name": {
+    "de": "Weltenbummler",
+    "en": "Globetrotter"
+   },
+   "percent": 1.7
+  },
+  {
+   "description": {
+    "de": "Triff ein Tier aus 15 Metern (16 Yards) Entfernung, das dich nicht entdeckt hat.",
+    "en": "Hit an animal while undetected within 15 meters (16 yards)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_037",
+   "name": {
+    "de": "Aus nächster Nähe",
+    "en": "Up Close And Personal"
+   },
+   "percent": 32.1
+  },
+  {
+   "description": {
+    "de": "Fotografiere jede Art von Trophäentier im Jagdrevier Hirschfelden & im Layton Lake District.",
+    "en": "Photograph every trophy animal species in Hirschfelden Hunting Reserve and Layton Lake District"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/b3a9d7b38028e3f7eecb1302067f14d97419a6f6.jpg",
+   "key": "ach_038",
+   "name": {
+    "de": "Wildtier-Paparazzi",
+    "en": "Wildlife Paparazzi"
+   },
+   "percent": 0.5
+  },
+  {
+   "description": {
+    "de": "Untersuche 100-mal Losung.",
+    "en": "Examine 100 droppings"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/9b8fe3871ebab1d9965fd946dfc33565c0c53931.jpg",
+   "key": "ach_039",
+   "name": {
+    "de": "Fäkalhumor",
+    "en": "Potty Humor"
+   },
+   "percent": 25.5
+  },
+  {
+   "description": {
+    "de": "Erlege ein Tier mit deinem letzten Schuss Munition.",
+    "en": "Down an animal with your last round of ammunition"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/d442bfc0ad4621af142efbccb8aa819b23136c02.jpg",
+   "key": "ach_040",
+   "name": {
+    "de": "Auf den letzten Drücker",
+    "en": "Make It Count"
+   },
+   "percent": 42.4
+  },
+  {
+   "description": {
+    "de": "Erziele beim Erlegen und Verwerten eines Tiers eine DIAMANT-Punktzahl.",
+    "en": "Earn a diamond rating on a harvested animal"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/4e9d81ab07f15d63e35dfcccd71e608244f17014.jpg",
+   "key": "ach_041",
+   "name": {
+    "de": "Diamanten sind für die Ewigkeit.",
+    "en": "Diamonds Are Forever"
+   },
+   "percent": 11.7
+  },
+  {
+   "description": {
+    "de": "Erziele beim Erlegen und Verwerten eines Tiers eine GOLD-Punktzahl.",
+    "en": "Earn a gold rating on a harvested animal"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/4e9d81ab07f15d63e35dfcccd71e608244f17014.jpg",
+   "key": "ach_042",
+   "name": {
+    "de": "Goldgräber",
+    "en": "Goldmember"
+   },
+   "percent": 36.8
+  },
+  {
+   "description": {
+    "de": "Erziele beim Erlegen und Verwerten eines Tiers eine SILBER-Punktzahl.",
+    "en": "Earn a silver rating on a harvested animal"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/4e9d81ab07f15d63e35dfcccd71e608244f17014.jpg",
+   "key": "ach_043",
+   "name": {
+    "de": "Silberstreif",
+    "en": "Silver Lining"
+   },
+   "percent": 55.4
+  },
+  {
+   "description": {
+    "de": "Erziele beim Erlegen und Verwerten eines Tiers eine BRONZE-Punktzahl.",
+    "en": "Earn a bronze rating on a harvested animal"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/4e9d81ab07f15d63e35dfcccd71e608244f17014.jpg",
+   "key": "ach_044",
+   "name": {
+    "de": "Zumindest versucht",
+    "en": "It's Something"
+   },
+   "percent": 64.7
+  },
+  {
+   "description": {
+    "de": "Entdecke jede Art von Trophäentier im Jagdrevier Hirschfelden & im Layton Lake District.",
+    "en": "Spot every trophy animal species in Hirschfelden Hunting Reserve and Layton Lake District"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_045",
+   "name": {
+    "de": "Löffelliste",
+    "en": "Bucket List"
+   },
+   "percent": 5.7
+  },
+  {
+   "description": {
+    "de": "Identifiziere den Ruf jeder Tierart im Jagdrevier Hirschfelden & im Layton Lake District.",
+    "en": "Identify a call from every animal species in Hirschfelden Hunting Reserve and Layton Lake District"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_046",
+   "name": {
+    "de": "Lauschangriff",
+    "en": "Eavesdropping"
+   },
+   "percent": 20.7
+  },
+  {
+   "description": {
+    "de": "Erlege ein Tier, wenn du einen erhöhten Puls hast.",
+    "en": "Down an animal while having an elevated heart rate"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_047",
+   "name": {
+    "de": "Nerven aus Stahl",
+    "en": "Nerves Of Steel"
+   },
+   "percent": 45.8
+  },
+  {
+   "description": {
+    "de": "Erlege ein Tier mit einem Gewehr, ohne ein Zielfernrohr zu benutzen.",
+    "en": "Down an animal with an unscoped rifle"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/3d2939cc1fba1192b348bd1397618b832e9c5bf7.jpg",
+   "key": "ach_048",
+   "name": {
+    "de": "Althergebrachte Methoden",
+    "en": "The Old Fashioned Way"
+   },
+   "percent": 22.4
+  },
+  {
+   "description": {
+    "de": "Erlege ein Tier aus jeder Stellung.",
+    "en": "Down an animal from each stance"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_049",
+   "name": {
+    "de": "Kopf, Schultern, Knie und Zehen",
+    "en": "Head, Shoulders, Knees, And Toes"
+   },
+   "percent": 29.8
+  },
+  {
+   "description": {
+    "de": "Erlege zehn Tiere mit einem Treffer ins Gehirn.",
+    "en": "Down 10 animals by hitting the brain"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/d442bfc0ad4621af142efbccb8aa819b23136c02.jpg",
+   "key": "ach_050",
+   "name": {
+    "de": "Dies ist kein Zombie-Spiel",
+    "en": "This Is Not A Zombie Game"
+   },
+   "percent": 4.8
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_053",
+   "name": {
+    "de": "Dr. Anatoly Barnjatschow",
+    "en": "Dr. Anatoly Barnyashev Arc"
+   },
+   "percent": 0.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/0037a90dcd07107cc5cd5cb59ce44ee5e21b6c5e.jpg",
+   "key": "ach_054",
+   "name": {
+    "de": "Dr. Columbus Neidell",
+    "en": "Dr. Columbus Neidell Arc"
+   },
+   "percent": 0.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/0037a90dcd07107cc5cd5cb59ce44ee5e21b6c5e.jpg",
+   "key": "ach_055",
+   "name": {
+    "de": "Dimitri \"Dimi\" Pushkin",
+    "en": "Dimitri \"Dimi\" Pushkin Arc"
+   },
+   "percent": 0.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_056",
+   "name": {
+    "de": "Georgy Grankin",
+    "en": "Georgy Grankin Arc"
+   },
+   "percent": 0.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_057",
+   "name": {
+    "de": "Katerina Khasavovna",
+    "en": "Katerina Khasavovna Arc"
+   },
+   "percent": 0.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/0037a90dcd07107cc5cd5cb59ce44ee5e21b6c5e.jpg",
+   "key": "ach_058",
+   "name": {
+    "de": "Dr. Svetlana Isakova",
+    "en": "Dr. Svetlana Isakova Arc"
+   },
+   "percent": 0.9
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_059",
+   "name": {
+    "de": "Nationalpark Medved-Taiga",
+    "en": "Medved-Taiga National Park Arc"
+   },
+   "percent": 0.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_060",
+   "name": {
+    "de": "Der Alphajäger",
+    "en": "The Apex Hunter"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Erlege ein Tier in jeder Unterregion des Nationalparks Medved-Taiga.",
+    "en": "Harvest an animal in every subregion in Medved-Taiga National Park"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_061",
+   "name": {
+    "de": "Zar der Taiga",
+    "en": "Tsar Of The Taiga"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "de": "Besuche alle Regionen im Nationalpark Medved-Taiga.",
+    "en": "Visit all regions in Medved-Taiga National Park"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/c92755a828d13513a1206c0a0d46e22486774c0e.jpg",
+   "key": "ach_062",
+   "name": {
+    "de": "Spurläufer",
+    "en": "Trailrunner"
+   },
+   "percent": 2.0
+  },
+  {
+   "description": {
+    "de": "Fotografiere jede Art von Trophäentier im Nationalpark Medved-Taiga.",
+    "en": "Photograph every trophy animal species in Medved-Taiga National Park"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/713987c9e9a08f75387102f1b77c9aafb1eb5069.jpg",
+   "key": "ach_063",
+   "name": {
+    "de": "Fotonarr",
+    "en": "Shutterbug"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "de": "Entdecke jede Art von Trophäentier im Nationalpark Medved-Taiga.",
+    "en": "Spot every trophy animal species in Medved-Taiga National Park"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/9b8fe3871ebab1d9965fd946dfc33565c0c53931.jpg",
+   "key": "ach_064",
+   "name": {
+    "de": "Genau da, genau da!",
+    "en": "Right There, Right There!"
+   },
+   "percent": 6.8
+  },
+  {
+   "description": {
+    "de": "Identifiziere den Ruf jeder Tierart im Nationalpark Medved-Taiga.",
+    "en": "Identify a call from every trophy animal species in Medved-Taiga National Park"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/9b8fe3871ebab1d9965fd946dfc33565c0c53931.jpg",
+   "key": "ach_065",
+   "name": {
+    "de": "Hirschflüsterer",
+    "en": "Deer Whisperer"
+   },
+   "percent": 10.0
+  },
+  {
+   "description": {
+    "de": "Sammle alle Abwurfstangen im Nationalpark Medved-Taiga.",
+    "en": "Collect all antler sheds in Medved-Taiga National Park"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/e0cf611abc1e4d0c38d6036b58e4f947d4b87715.jpg",
+   "key": "ach_066",
+   "name": {
+    "de": "Hüttenjäger",
+    "en": "Shed Hunter"
+   },
+   "percent": 0.5
+  },
+  {
+   "description": {
+    "de": "Finde alle Artefakte im Nationalpark Medved-Taiga.",
+    "en": "Find all artifacts in Medved-Taiga National Park"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/9b8fe3871ebab1d9965fd946dfc33565c0c53931.jpg",
+   "key": "ach_067",
+   "name": {
+    "de": "Paläontologie für Anfänger",
+    "en": "Paleontology 101"
+   },
+   "percent": 0.5
+  },
+  {
+   "description": {
+    "de": "Finde alle Höhlenmalereien im Nationalpark Medved-Taiga.",
+    "en": "Find all of the cave paintings in Medved-Taiga National Park"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/9b8fe3871ebab1d9965fd946dfc33565c0c53931.jpg",
+   "key": "ach_068",
+   "name": {
+    "de": "Kunstkritiker",
+    "en": "Art Critic"
+   },
+   "percent": 0.5
+  },
+  {
+   "description": {
+    "de": "Finde alle Fallen von Grankin im Nationalpark Medved-Taiga.",
+    "en": "Find all of Grankin's traps in Medved-Taiga National Park"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/9b8fe3871ebab1d9965fd946dfc33565c0c53931.jpg",
+   "key": "ach_069",
+   "name": {
+    "de": "Fallensteller",
+    "en": "Trapper"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "de": "Finde alle Nenzen-Monumente im Nationalpark Medved-Taiga.",
+    "en": "Find all of the Nenet monuments in Medved-Taiga National Park"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/9b8fe3871ebab1d9965fd946dfc33565c0c53931.jpg",
+   "key": "ach_070",
+   "name": {
+    "de": "Pilger",
+    "en": "Pilgrim"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "de": "Erlege 50 Moschustiere und verwerte sie.",
+    "en": "Harvest 50 Siberian musk deer"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/a286a6c5735222020b039a35ea7743bf4a297f7c.jpg",
+   "key": "ach_071",
+   "name": {
+    "de": "Kinder der Nacht",
+    "en": "Children Of The Night"
+   },
+   "percent": 0.7
+  },
+  {
+   "description": {
+    "de": "Erlege 50 eurasische Luchse und verwerte sie.",
+    "en": "Harvest 50 Eurasian lynx"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_072",
+   "name": {
+    "de": "Hallo, Luchsi",
+    "en": "Hello Lynxy"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "de": "Erlege 50 Braunbären und verwerte sie.",
+    "en": "Harvest 50 brown bears"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_073",
+   "name": {
+    "de": "Das Bärenminimum",
+    "en": "Bear Minimum"
+   },
+   "percent": 0.8
+  },
+  {
+   "description": {
+    "de": "Erlege 50 Rentiere und verwerte sie.",
+    "en": "Harvest 50 reindeer"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_074",
+   "name": {
+    "de": "Rudolfs Fluch",
+    "en": "Rudolf's Bane"
+   },
+   "percent": 1.0
+  },
+  {
+   "description": {
+    "de": "Erlege einen eurasischen Luchs, der gerade jagt oder frisst, und verwerte ihn.",
+    "en": "Harvest a Eurasian lynx that is hunting or eating"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_075",
+   "name": {
+    "de": "Den Jäger jagen",
+    "en": "Hunting The Hunter"
+   },
+   "percent": 1.8
+  },
+  {
+   "description": {
+    "de": "Erlege einen Braunbären mit einem einzigen Schuss aus maximal 25 Metern Entfernung und verwerte ihn.",
+    "en": "Harvest a brown bear with a single shot from a distance of less than 25 meters (27 yards)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_076",
+   "name": {
+    "de": "Bärische Umarmung",
+    "en": "Bear Hug"
+   },
+   "percent": 3.3
+  },
+  {
+   "description": {
+    "de": "Erlege fünf Rentiere aus der selben Herde und verwerte sie.",
+    "en": "Harvest 5 reindeer from the same herd"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_077",
+   "name": {
+    "de": "Einen nach dem anderen",
+    "en": "One By One"
+   },
+   "percent": 2.0
+  },
+  {
+   "description": {
+    "de": "Erlege ein sibirisches Moschustier per Schuss ins Herz und verwerte ihn.",
+    "en": "Harvest a Siberian musk deer with a heart shot"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_078",
+   "name": {
+    "de": "Echter Moschus",
+    "en": "True Musk"
+   },
+   "percent": 2.9
+  },
+  {
+   "description": {
+    "de": "Erlege im Nationalpark Medved-Taiga fünf Tiere aus einer Herde per Bogenschuss ins Herz und verwerte sie.",
+    "en": "Harvest 5 animals from the same herd with a single shot to the heart using a bow in Medved-Taiga National Park"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_079",
+   "name": {
+    "de": "Peppes Herausforderung",
+    "en": "Peppe's Challenge"
+   },
+   "percent": 0.5
+  },
+  {
+   "description": {
+    "de": "Erlege einen geisterfarbenen Braunbären mit einer Pistole.",
+    "en": "Harvest a spirit-colored brown bear with a handgun"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_080",
+   "name": {
+    "de": "Seelentier",
+    "en": "Spirit Animal"
+   },
+   "percent": 0.7
+  },
+  {
+   "description": {
+    "de": "Erlege einen eurasischen Luchs mit einem Bogen und verwerte ihn.",
+    "en": "Harvest a Eurasian lynx with a bow"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/d442bfc0ad4621af142efbccb8aa819b23136c02.jpg",
+   "key": "ach_081",
+   "name": {
+    "de": "Lass fliegen",
+    "en": "Let It Fly"
+   },
+   "percent": 1.7
+  },
+  {
+   "description": {
+    "de": "Erlege ein Rentier mit einer Schrotflinte und verwerte es. Erziele dabei einen Effizienzbonus von 100%.",
+    "en": "Harvest a reindeer with a shotgun and a 100% quick kill bonus"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/d442bfc0ad4621af142efbccb8aa819b23136c02.jpg",
+   "key": "ach_082",
+   "name": {
+    "de": "Flinte!",
+    "en": "Shotgun!"
+   },
+   "percent": 1.3
+  },
+  {
+   "description": {
+    "de": "Erlege ein sibirisches Moschustier mit einem einzigen Gewehrschuss aus mindestens 250 Metern Entfernung und verwerte ihn.",
+    "en": "Harvest a Siberian musk deer with a single shot from a rifle from a distance of more than 250 meters (274 yards)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/d442bfc0ad4621af142efbccb8aa819b23136c02.jpg",
+   "key": "ach_083",
+   "name": {
+    "de": "Scharfschütze",
+    "en": "Deadeye"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "de": "Erlege im Nationalparks Medved-Taiga von einem Jagdgebäude aus ein Tier und verwerte es.",
+    "en": "Harvest an animal from a hunting structure in Medved-Taiga National Park"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_084",
+   "name": {
+    "en": "Camper"
+   },
+   "percent": 1.7
+  },
+  {
+   "description": {
+    "de": "Finde alle Sehenswürdigkeiten im Nationalpark Medved-Taiga.",
+    "en": "Find all of the landmarks in Medved-Taiga National Park"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/e0cf611abc1e4d0c38d6036b58e4f947d4b87715.jpg",
+   "key": "ach_085",
+   "name": {
+    "en": "Tourist"
+   },
+   "percent": 0.5
+  },
+  {
+   "description": {
+    "de": "Finde alle Expeditionsnotizen im Nationalpark Medved-Taiga.",
+    "en": "Find all expedition notes in Medved-Taiga National Park"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/e0cf611abc1e4d0c38d6036b58e4f947d4b87715.jpg",
+   "key": "ach_086",
+   "name": {
+    "de": "Detektiv",
+    "en": "Detective"
+   },
+   "percent": 0.5
+  },
+  {
+   "description": {
+    "de": "Erlege 50 Damhirsche und verwerte sie.",
+    "en": "Harvest 50 Fallow deer"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_087",
+   "name": {
+    "de": "Damhirsch-Dämel",
+    "en": "Fallow Fanatic"
+   },
+   "percent": 2.3
+  },
+  {
+   "description": {
+    "de": "Erlege 50 Rothirsche und verwerte sie.",
+    "en": "Harvest 50 red deer"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_088",
+   "name": {
+    "de": "Hirschteufel",
+    "en": "Deer Devil"
+   },
+   "percent": 2.8
+  },
+  {
+   "description": {
+    "de": "Erlege 50 Rehe und verwerte sie.",
+    "en": "Harvest 50 roe deer"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_089",
+   "name": {
+    "de": "Reh-Krieger",
+    "en": "Roe Warrior"
+   },
+   "percent": 2.2
+  },
+  {
+   "description": {
+    "de": "Erlege 50 Wisente und verwerte sie.",
+    "en": "Harvest 50 European bison"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_090",
+   "name": {
+    "de": "Je größer sie sind ...",
+    "en": "The Bigger They Come..."
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "de": "Erlege 50 Rotfüchse und verwerte sie.",
+    "en": "Harvest 50 red foxes"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_091",
+   "name": {
+    "de": "Fuchsfieber",
+    "en": "Fox Fever"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Erlege 50 Weißwedelhirsche und verwerte sie.",
+    "en": "Harvest 50 whitetail deer"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_092",
+   "name": {
+    "de": "Weißwedeljäger",
+    "en": "Whitetail Hunter"
+   },
+   "percent": 3.0
+  },
+  {
+   "description": {
+    "de": "Erlege 50 Schwarzwedelhirsche und verwerte sie.",
+    "en": "Harvest 50 blacktail deer"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_093",
+   "name": {
+    "de": "Schwarzwedelpirscher",
+    "en": "Blacktail Stalker"
+   },
+   "percent": 2.1
+  },
+  {
+   "description": {
+    "de": "Erlege 50 Roosevelt-Wapitis und verwerte sie.",
+    "en": "Harvest 50 Roosevelt elk"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_094",
+   "name": {
+    "de": "Wapiti-Wunderkind",
+    "en": "Elk Enthusiast"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Erlege 50 Kojoten und verwerte sie.",
+    "en": "Harvest 50 coyotes"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_095",
+   "name": {
+    "de": "Kojotenruf",
+    "en": "Coyote Calling"
+   },
+   "percent": 0.7
+  },
+  {
+   "description": {
+    "de": "Erlege 50 Elch und verwerte sie.",
+    "en": "Harvest 50 moose"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_096",
+   "name": {
+    "de": "Lang lebe der König",
+    "en": "Long Live The King!"
+   },
+   "percent": 3.8
+  },
+  {
+   "description": {
+    "de": "Erlege 50 Wildschweine und verwerte sie.",
+    "en": "Harvest 50 wild boars"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_097",
+   "name": {
+    "de": "Den Schinken nach Hause bringen",
+    "en": "Bringing Home The Bacon"
+   },
+   "percent": 1.8
+  },
+  {
+   "description": {
+    "de": "Erlege 50 Schwarzbären und verwerte sie.",
+    "en": "Harvest 50 black bears"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_098",
+   "name": {
+    "de": "Vom Bären gebissen",
+    "en": "Bear Bug"
+   },
+   "percent": 2.6
+  },
+  {
+   "description": {
+    "de": "Finde Futterspuren, Trinkspuren und Ruhespuren einer Herde Damhirsche.",
+    "en": "Find a feeding track, drinking track and a resting track made by a fallow deer"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/e0cf611abc1e4d0c38d6036b58e4f947d4b87715.jpg",
+   "key": "ach_099",
+   "name": {
+    "de": "Wahre Hingabe",
+    "en": "True Dedication"
+   },
+   "percent": 7.2
+  },
+  {
+   "description": {
+    "de": "Entdecke 12 einzigartige Rothirsche einer Herde.",
+    "en": "Spot 12 unique red deer from a distance of less than 25 m (27 yards)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/9b8fe3871ebab1d9965fd946dfc33565c0c53931.jpg",
+   "key": "ach_100",
+   "name": {
+    "de": "Hirschsichtung",
+    "en": "Deer Spotting"
+   },
+   "percent": 1.4
+  },
+  {
+   "description": {
+    "de": "Erlege einen männliches und einen weibliches Reh aus einer Herde und verwerte sie.",
+    "en": "Harvest a male and a female roe deer from the same herd"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_101",
+   "name": {
+    "de": "Romantische Nächte",
+    "en": "Date Night"
+   },
+   "percent": 7.3
+  },
+  {
+   "description": {
+    "de": "Erlege einen Wisent per Bogenschuss ins Herz und verwerte ihn.",
+    "en": "Harvest a European bison with a single shot to the heart using a bow"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_102",
+   "name": {
+    "de": "Amor",
+    "en": "Cupid"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Erlege von einem Aussichtspunkt aus einen Rotfuchs und verwerte ihn.",
+    "en": "Harvest a red fox from a surveyed lookout point"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_103",
+   "name": {
+    "de": "Fuchssichtung",
+    "en": "Fox Watch"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Erlege von einem Jagdgebäude aus einen Weißwedelhirsche mit einem Bogen.",
+    "en": "Harvest a whitetail deer from a hunting structure using a bow"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/d442bfc0ad4621af142efbccb8aa819b23136c02.jpg",
+   "key": "ach_104",
+   "name": {
+    "de": "Tod von oben",
+    "en": "Death From Above"
+   },
+   "percent": 1.0
+  },
+  {
+   "description": {
+    "de": "Erlege einen Schwarzwedelhirsch aus mindestens 150 Metern Entfernung mit einem einzigen Gewehrschuss mit offenem Visier.",
+    "en": "Harvest a blacktail deer with a single shot from a rifle using only iron sights from a distance of more than 150 meters (164 yards)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/a286a6c5735222020b039a35ea7743bf4a297f7c.jpg",
+   "key": "ach_105",
+   "name": {
+    "de": "Altmodisch",
+    "en": "Old Fashioned"
+   },
+   "percent": 0.5
+  },
+  {
+   "description": {
+    "de": "Identifiziere den Brunftschrei eines Roosevelt-Wapitis aus maximal 25 Metern Entfernung.",
+    "en": "Identify a mating call from a Roosevelt elk from a distance of less than 25 meters (27 yards)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/9b8fe3871ebab1d9965fd946dfc33565c0c53931.jpg",
+   "key": "ach_106",
+   "name": {
+    "de": "Wapiti-Gerede",
+    "en": "Elk Talk"
+   },
+   "percent": 0.8
+  },
+  {
+   "description": {
+    "de": "Erlege zwei Kojoten aus einem Rudel mit einer Schrotflinte und verwerte sie.",
+    "en": "Harvest two coyotes from the same pack with a shotgun"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_107",
+   "name": {
+    "de": "Seite an Seite",
+    "en": "Side By Side"
+   },
+   "percent": 0.9
+  },
+  {
+   "description": {
+    "de": "Erlege einen Elch und verwerte ihn. Erziele dabei einen Effizienzbonus und bestehe die Verwertungsprüfung.",
+    "en": "Harvest a moose with Quick Kill bonus and pass the harvest check."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_108",
+   "name": {
+    "de": "Streng nach Vorschrift",
+    "en": "By The Book"
+   },
+   "percent": 17.2
+  },
+  {
+   "description": {
+    "de": "Erlege bei Nacht ein Wildschwein mit einer Pistole.",
+    "en": "Harvest a wild boar at night with a handgun"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_109",
+   "name": {
+    "de": "Eber auf Abwegen",
+    "en": "Boars Night Out"
+   },
+   "percent": 1.3
+  },
+  {
+   "description": {
+    "de": "Erlege einen blonden, einen braunen und einen zimtbraunen Schwarzbären und verwerte sie.",
+    "en": "Harvest a blond, brown, and cinnamon-colored black bear"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_110",
+   "name": {
+    "de": "Mantel vieler Farben",
+    "en": "Coat Of Many Colors"
+   },
+   "percent": 3.1
+  },
+  {
+   "description": {
+    "de": "Schließe alle Missionen der Savanne von Vurhonga ab.",
+    "en": "Complete all the Vurhonga Savanna Mission arcs"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_115",
+   "name": {
+    "de": "Savanne von Vurhonga",
+    "en": "Vurhonga Savanna Arc"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "de": "Beende alle Missionen des Wildhüters.",
+    "en": "Complete the Warden Mission arcs"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_116",
+   "name": {
+    "de": "Missionen des Wildhüters",
+    "en": "Warden Missions Arc"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "de": "Beende alle Missionen für Maria Mboweni.",
+    "en": "Complete Maria Mboweni's mission arc"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_117",
+   "name": {
+    "de": "Mboweni",
+    "en": "Mboweni Arc"
+   },
+   "percent": 0.8
+  },
+  {
+   "description": {
+    "de": "Beende alle Missionen für Flip Ospreay.",
+    "en": "Complete Flip Ospreay's mission arc"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_118",
+   "name": {
+    "de": "Ospreay",
+    "en": "Ospreay Arc"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "de": "Schließe alle Missionen für Dana Maritz ab.",
+    "en": "Complete Dana Maritz's mission arc"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_119",
+   "name": {
+    "de": "Maritz",
+    "en": "Maritz Arc"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "de": "Schließe alle Missionen des Bruders ab.",
+    "en": "Complete Brother's mission arc"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_120",
+   "name": {
+    "de": "Bruder",
+    "en": "Brother Arc"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "de": "Erlege und verwerte alle Tierarten der Savanne von Vurhonga.",
+    "en": "Harvest every animal species in Vurhonga Savanna"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_121",
+   "name": {
+    "de": "Erfahrener Leitender Wildhüter",
+    "en": "An Experienced Senior Warden"
+   },
+   "percent": 5.4
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_122",
+   "name": {
+    "de": "Njabulos Trauer",
+    "en": "Njabulo's Sorrow"
+   },
+   "percent": 2.7
+  },
+  {
+   "description": {
+    "de": "Entdecke 50 Kleine Kudus.",
+    "en": "Spot 50 lesser kudu"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_123",
+   "name": {
+    "de": "Tarnung",
+    "en": "Camouflage"
+   },
+   "percent": 1.4
+  },
+  {
+   "description": {
+    "de": "Erlege einen Kaffernbüffel mit der King 470DB und verwerte ihn.",
+    "en": "Harvest a cape buffalo downed by the King 470DB"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_124",
+   "name": {
+    "de": "Würdiger Gegner für den Witwenmacher",
+    "en": "A Match for the Widowmaker"
+   },
+   "percent": 2.0
+  },
+  {
+   "description": {
+    "de": "Erlege 25 Springböcke und verwerte sie.",
+    "en": "Harvest 25 springbok"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_125",
+   "name": {
+    "en": "Springbok City"
+   },
+   "percent": 2.3
+  },
+  {
+   "description": {
+    "de": "Erlege ein Tier in jeder Unterregion der Savanne von Vurhonga.",
+    "en": "Harvest an animal in every subregion in Vurhonga Savanna"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_126",
+   "name": {
+    "de": "Der Löwe von Vurhonga",
+    "en": "The Lion of Vurhonga"
+   },
+   "percent": 1.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_127",
+   "name": {
+    "de": "Ave María, es funktioniert!",
+    "en": "Ave María, it works!"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "de": "Schließe alle Missionen für Carolina Vargas ab.",
+    "en": "Complete Carolina Vargas' mission arc"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_128",
+   "name": {
+    "de": "Die Wahrheit liegt in der Milanesa",
+    "en": "The Truth is in the Milanesa"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "de": "Erreiche eines von Carolinas Herausforderungszielen.",
+    "en": "Complete one of Carolina's Challenge Targets"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/d442bfc0ad4621af142efbccb8aa819b23136c02.jpg",
+   "key": "ach_129",
+   "name": {
+    "de": "Ins Schwarze",
+    "en": "Hitting the Mark"
+   },
+   "percent": 1.0
+  },
+  {
+   "description": {
+    "de": "Erreiche alle Herausforderungsziele von Carolina.",
+    "en": "Complete all of Carolina's Challenge Targets"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/d442bfc0ad4621af142efbccb8aa819b23136c02.jpg",
+   "key": "ach_130",
+   "name": {
+    "de": "Carolinas beste Treffer",
+    "en": "Carolina's Greatest Hits, Shot-For-Shot"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "de": "Schließe die Trophäensammlung im Parque Fernando ab.",
+    "en": "Complete Parque Fernando's Trophy Collection"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_131",
+   "name": {
+    "de": "Das Beste aus dem Parque Fernando",
+    "en": "A Sample of Parque Fernando's Finest"
+   },
+   "percent": 0.5
+  },
+  {
+   "description": {
+    "de": "Erlege sieben einzigartige Tierarten im Parque Fernando.",
+    "en": "Harvest seven unique animal species in Parque Fernando"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_132",
+   "name": {
+    "de": "Ein Jagdrevier von Weltrang",
+    "en": "A World Class Hunting Reserve"
+   },
+   "percent": 2.2
+  },
+  {
+   "description": {
+    "de": "Schließe alle Missionen für Vicente Vargas ab.",
+    "en": "Complete Vicente Vargas' mission arc"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_133",
+   "name": {
+    "de": "Vicente Vargas",
+    "en": "Vicente Vargas Arc"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "de": "Schließe alle Missionen für Beatriz Cabrera ab.",
+    "en": "Complete Beatriz Cabrera's mission arc"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_134",
+   "name": {
+    "de": "Chinita",
+    "en": "Chinita Arc"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "de": "Schließe alle Missionen für Matias Mateo ab.",
+    "en": "Complete Matias Mateo's mission arc"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_135",
+   "name": {
+    "de": "Matmat",
+    "en": "Matmat Arc"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "de": "Schließe alle Missionen für Dr. Mariana Luna ab.",
+    "en": "Complete Dr. Mariana Luna's mission arc"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_136",
+   "name": {
+    "de": "Dr. Mariana",
+    "en": "Dr. Mariana Luna Arc"
+   },
+   "percent": 0.7
+  },
+  {
+   "description": {
+    "de": "Schließe alle Missionen für Juliana Ferrari ab.",
+    "en": "Complete Juliana Ferrari's mission arc"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_137",
+   "name": {
+    "de": "Juliana Ferrari",
+    "en": "Juliana Ferrari Arc"
+   },
+   "percent": 0.5
+  },
+  {
+   "description": {
+    "de": "Schließe alle Missionen von Sandy Murray ab.",
+    "en": "Complete Sandy Murray's mission arc"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_138",
+   "name": {
+    "de": "Sandy Murray",
+    "en": "Sandy Murray Arc"
+   },
+   "percent": 1.0
+  },
+  {
+   "description": {
+    "de": "Schließe alle Missionen von Oscar Freeman ab.",
+    "en": "Complete Oscar Freeman's mission arc"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_139",
+   "name": {
+    "de": "Oscar Freeman",
+    "en": "Oscar Freeman Arc"
+   },
+   "percent": 0.8
+  },
+  {
+   "description": {
+    "de": "Schließe alle Missionen von Kayla Johnson ab.",
+    "en": "Complete Kayla Johnson's mission arc"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_140",
+   "name": {
+    "de": "Kayla Johnson",
+    "en": "Kayla Johnson Arc"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "de": "Schließe alle Missionen von Hank Pepper ab.",
+    "en": "Complete Hank Pepper's mission arc"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_141",
+   "name": {
+    "de": "Hank Pepper",
+    "en": "Hank Pepper Arc"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "de": "Schließe alle Missionen von Bev Parker ab.",
+    "en": "Complete Bev Parker's mission arc"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_142",
+   "name": {
+    "de": "Bev Parker",
+    "en": "Bev Parker Arc"
+   },
+   "percent": 0.8
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/c92755a828d13513a1206c0a0d46e22486774c0e.jpg",
+   "key": "ach_143",
+   "name": {
+    "de": "Funke, Feuersbrunst, Asche",
+    "en": "A spark, a blaze, ashes"
+   },
+   "percent": 3.7
+  },
+  {
+   "description": {
+    "de": "Schließe die Hauptmissionen des Yukon Valley ab.",
+    "en": "Complete the Yukon Valley main mission arc"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_144",
+   "name": {
+    "de": "Näher am Alaskaner",
+    "en": "A Step Closer to Sourdough"
+   },
+   "percent": 3.0
+  },
+  {
+   "description": {
+    "de": "Schließe alle Missionen des Yukon Valley ab.",
+    "en": "Complete all the Yukon Valley mission arcs"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_145",
+   "name": {
+    "de": "Yukon Valley",
+    "en": "Yukon Valley Arc"
+   },
+   "percent": 0.5
+  },
+  {
+   "description": {
+    "de": "Erlege deinen ersten Grizzlybären und verwerte ihn.",
+    "en": "Harvest your first grizzly bear"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_146",
+   "name": {
+    "de": "Bärenstarke Erfahrung",
+    "en": "Grizzled Veteran"
+   },
+   "percent": 10.6
+  },
+  {
+   "description": {
+    "de": "Erlege einen Albino-Grauwolf und verwerte ihn.",
+    "en": "Harvest an albino gray wolf"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_147",
+   "name": {
+    "de": "Geist",
+    "en": "Ghost"
+   },
+   "percent": 0.8
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_148",
+   "name": {
+    "de": "Ein roter Teppich",
+    "en": "A Reddish Carpet"
+   },
+   "percent": 1.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_149",
+   "name": {
+    "de": "Glauben",
+    "en": "Faith"
+   },
+   "percent": 0.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_150",
+   "name": {
+    "de": "Fragwürdiger Deal",
+    "en": "Shady Dealings"
+   },
+   "percent": 0.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_151",
+   "name": {
+    "de": "Auf dass Gerechtigkeit waltet",
+    "en": "Justice is served"
+   },
+   "percent": 1.4
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_152",
+   "name": {
+    "de": "Cuatro Colinas",
+    "en": "Cuatro Colinas Arc"
+   },
+   "percent": 0.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_153",
+   "name": {
+    "de": "Ruhmreicher Grand Slam",
+    "en": "The Slam of Glory"
+   },
+   "percent": 0.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_154",
+   "name": {
+    "de": "Hybris",
+    "en": "Hubris"
+   },
+   "percent": 0.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_155",
+   "name": {
+    "en": "Tradition"
+   },
+   "percent": 0.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_156",
+   "name": {
+    "de": "Engagement",
+    "en": "Commitment"
+   },
+   "percent": 0.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_157",
+   "name": {
+    "de": "Wiedergeburt",
+    "en": "Rebirth"
+   },
+   "percent": 0.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_158",
+   "name": {
+    "de": "Opportunismus",
+    "en": "Opportunism"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "de": "Erlege 50 Truthähne und verwerte sie.",
+    "en": "Harvest 50 turkeys"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_159",
+   "name": {
+    "de": "Krächz",
+    "en": "Gobble gobble"
+   },
+   "percent": 2.3
+  },
+  {
+   "description": {
+    "de": "Erlege zehn Tiere mit einem Treffer des Alexander-Langbogens ins Herz.",
+    "en": "Down 10 animals by hitting them in the heart with the Alexander Longbow in a single shot"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_160",
+   "name": {
+    "de": "Herzensbrecher",
+    "en": "You give love a bad name"
+   },
+   "percent": 0.4
+  },
+  {
+   "description": {
+    "de": "Erlege und verwerte einen DIAMANT-Truthahn.",
+    "en": "Harvest a diamond turkey"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_161",
+   "name": {
+    "de": "Erntedank!",
+    "en": "Thanksgiving!"
+   },
+   "percent": 2.3
+  },
+  {
+   "description": {
+    "de": "Schieße ein Foto der Dinosaurierabdrücke.",
+    "en": "Take a picture of the dinosaur footprints"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/c92755a828d13513a1206c0a0d46e22486774c0e.jpg",
+   "key": "ach_162",
+   "name": {
+    "de": "Uralte Relikte",
+    "en": "When they ruled the earth"
+   },
+   "percent": 0.5
+  },
+  {
+   "description": {
+    "de": "Erlege ein Präriebison mit einem einzigen Schuss des Alexander-Langbogens.",
+    "en": "Down a plains bison with one single shot using the Alexander Longbow"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/6c3e52ec04bcf23a56962556cd36416fd0338885.jpg",
+   "key": "ach_163",
+   "name": {
+    "de": "Schwergewicht",
+    "en": "Heavy Weight"
+   },
+   "percent": 0.9
+  },
+  {
+   "description": {
+    "de": "Schließe die Mission \"Gefährliche Reaktion\" ab.",
+    "en": "Complete the mission 'A Dangerous Reaction'"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_164",
+   "name": {
+    "de": "Das stellen wir lieber wieder auf",
+    "en": "Better put this back up"
+   },
+   "percent": 6.6
+  },
+  {
+   "description": {
+    "de": "Schließe die Mission \"Bärenspuren\" ab.",
+    "en": "Complete the mission 'Bear with Me'"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_165",
+   "name": {
+    "de": "Bärenspuren",
+    "en": "Bear with Me"
+   },
+   "percent": 5.0
+  },
+  {
+   "description": {
+    "de": "Schließe die Mission \"Alte Stätten\" ab.",
+    "en": "Complete the mission 'Old Haunts'"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_166",
+   "name": {
+    "en": "Sabotage"
+   },
+   "percent": 3.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_167",
+   "name": {
+    "de": "Bärendienst",
+    "en": "Bear... with Her!"
+   },
+   "percent": 2.8
+  },
+  {
+   "description": {
+    "de": "Schließe die Mission \"Aufstieg\" ab.",
+    "en": "Complete the mission 'The Ascent'"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/518790/1b209dd881d8cf567b0cbbef985a760dec3e870d.jpg",
+   "key": "ach_168",
+   "name": {
+    "de": "Aufgestiegen",
+    "en": "Ascended"
+   },
+   "percent": 2.5
+  }
+ ],
+ "id": "518790",
+ "platform": "steam"
+}

@@ -1,0 +1,61 @@
+{
+ "developers": [
+  "Quantic Dream"
+ ],
+ "genres": [
+  {
+   "de": "Action-Adventure",
+   "en": "action-adventure game",
+   "sv": "actionäventyrsspel"
+  },
+  {
+   "de": "interaktiver Film",
+   "en": "interactive film",
+   "sv": "interaktiv film"
+  },
+  {
+   "de": "Cyberpunk-Computerspiel",
+   "en": "cyberpunk video game",
+   "sv": "cyberpunkdatorspel"
+  },
+  {
+   "de": "Adventure",
+   "en": "adventure video game",
+   "sv": "äventyrsspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "publishers": [
+  "Sony Interactive Entertainment",
+  "Quantic Dream"
+ ],
+ "released": "2018-05-25",
+ "steam": {
+  "de": "Detroit: Become Human legt das Schicksal der Menschheit und Androiden in Ihre Hände. Jede Entscheidung, die Sie treffen, wirkt sich auf den Ausgang des Spiels aus – mit einer der kompliziertesten verzweigten Storys, die je geschaffen wurden.",
+  "en": "Detroit: Become Human puts the destiny of both mankind and androids in your hands, taking you to a near future where machines have become more intelligent than humans. Every choice you make affects the outcome of the game, with one of the most intricately branching narratives ever created.",
+  "sv": "Detroit: Become Human lägger både människoartens och androidernas öde i dina händer. Alla val du gör påverkar hur spelet utvecklas, tack vare en av de mest invecklade flergrenade berättelserna som någonsin skapats."
+ },
+ "steam_appid": 1222140,
+ "wikidata": "Q21246348",
+ "wikipedia": {
+  "de": {
+   "text": "Detroit: Become Human ist ein vom französischen Entwicklerstudio Quantic Dream zuerst exklusiv für die PlayStation 4 entwickeltes und von Sony Interactive Entertainment veröffentlichtes Action-Adventure. Am 12. Dezember 2019 wurde das Spiel im Epic Games Store für Windows veröffentlicht.",
+   "url": "https://de.wikipedia.org/wiki/Detroit:_Become_Human"
+  },
+  "en": {
+   "text": "Detroit: Become Human is a 2018 interactive drama adventure game developed by Quantic Dream and published by Sony Interactive Entertainment. It was released for the PlayStation 4 in May 2018. Quantic Dream released a port for Windows under license from Sony in December 2019.",
+   "url": "https://en.wikipedia.org/wiki/Detroit:_Become_Human"
+  },
+  "sv": {
+   "text": "Detroit: Become Human är ett äventyrsspel utvecklat av Quantic Dream och utgivet av Sony Interactive Entertainment. Det släpptes för PlayStation 4 i maj 2018. Quantic Dream släppte en portering för Windows under licens från Sony i december 2019.",
+   "url": "https://sv.wikipedia.org/wiki/Detroit:_Become_Human"
+  }
+ }
+}

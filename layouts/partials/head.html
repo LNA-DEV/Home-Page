@@ -2,13 +2,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 {{- /* Which pages are indexable is decided in robots-indexable.html, which
-       sitemap.xml asks too. A taxonomy or term page is the one noindexed kind
-       that still says `follow`: its links lead to the pages that ARE indexed
-       (docs/concepts/tag-pages.md §2). */ -}}
+       sitemap.xml asks too. Two noindexed kinds still say `follow`: a taxonomy
+       or term page, whose links lead to the pages that ARE indexed
+       (docs/concepts/tag-pages.md §2), and a page that sets `robotsFollow` — the
+       game pages (game-pages.html), whose store and Wikipedia links are
+       ordinary links. */ -}}
 {{- $production := hugo.IsProduction | or (eq site.Params.env "production") -}}
 {{- if and $production (partial "robots-indexable.html" .) }}
 <meta name="robots" content="index, follow">
-{{- else if and $production (in (slice "taxonomy" "term") .Kind) }}
+{{- else if and $production (or (in (slice "taxonomy" "term") .Kind) (eq .Params.robotsFollow true)) }}
 <meta name="robots" content="noindex, follow">
 {{- else }}
 <meta name="robots" content="noindex, nofollow">
@@ -364,6 +366,25 @@
 <script src="/packages/leaflet/leaflet.js" defer></script>
 {{ $dexMapJs := resources.Get "js/dex-map.js" | js.Build (dict "minify" true) | resources.Fingerprint }}
 <script src="{{ $dexMapJs.RelPermalink }}" defer></script>
+{{- else if eq .Params.Theme "game" }}
+{{- /* A game page: the achievement filter/sort is small and always there. The
+       screenshot lightbox is PhotoSwipe — most of a 60 KB bundle — so it, and its
+       stylesheet, load only on a page that has screenshots to open. */}}
+{{ $achvJs := resources.Get "js/game-achievements.js" | js.Build (dict "minify" true) | resources.Fingerprint }}
+<script src="{{ $achvJs.RelPermalink }}" defer></script>
+{{- with .Params.game_slug }}{{ if partialCached "game-screenshots-list.html" . . }}
+{{ $pswpCss := resources.Get "css/photoswipe/photoswipe.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $pswpCss.RelPermalink }}">
+{{ $shotsParams := dict
+  "closeTitle" (i18n "closeTitle")
+  "zoomTitle" (i18n "zoomTitle")
+  "arrowPrevTitle" (i18n "arrowPrevTitle")
+  "arrowNextTitle" (i18n "arrowNextTitle")
+  "errorMsg" (i18n "errorMsg")
+}}
+{{ $shotsJs := resources.Get "js/game-screenshots.js" | js.Build (dict "minify" true "params" $shotsParams) | resources.Fingerprint }}
+<script src="{{ $shotsJs.RelPermalink }}" defer></script>
+{{- end }}{{ end }}
 {{- end }}
 
 {{/*  Newsletter — pill picker on any page embedding the {{< newsletter >}} shortcode  */}}

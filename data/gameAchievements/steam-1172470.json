@@ -1,0 +1,181 @@
+{
+ "achievements": [
+  {
+   "description": {
+    "de": "Spielerstufe 50 erreichen",
+    "en": "Reach player level 50"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1172470/cde23ba5b41f315f5d399064ed0bb9ff51fc1342.jpg",
+   "key": "THE_PLAYER_0",
+   "name": {
+    "de": "Der Spieler",
+    "en": "The Player"
+   },
+   "percent": 23.9
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Rüste 2 beliebige legendäre Ausrüstungsobjekte gleichzeitig aus",
+    "en": "Equip any 2 legendary equipment items at the same time"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1172470/dc4f9a6c122b4890a3852818cb14430a7ae692b9.jpg",
+   "key": "DECKED_OUT_1",
+   "name": {
+    "de": "Ausgestattet",
+    "en": "Decked Out"
+   },
+   "percent": 28.9,
+   "unlocked": "2021-05-06T20:08:04+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Einen Teamkameraden respawnen",
+    "en": "Respawn a teammate"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1172470/03754c9a8c98ec9362e245a8bd0e8cdbb2e22aea.jpg",
+   "key": "TEAM_PLAYER_2",
+   "name": {
+    "de": "Teamspieler",
+    "en": "Team Player"
+   },
+   "percent": 39.9,
+   "unlocked": "2021-05-10T21:51:24+02:00"
+  },
+  {
+   "description": {
+    "de": "Voll ausgestattete Waffe ausrüsten",
+    "en": "Equip a fully kitted weapon"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1172470/8a11ed285547d9d5e04d3278c61255058da5cfce.jpg",
+   "key": "FULLY_KITTED_3",
+   "name": {
+    "de": "Voll ausgestattet",
+    "en": "Fully Kitted"
+   },
+   "percent": 42.2
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "5 Mal der Jumpmaster sein",
+    "en": "Be the Jumpmaster 5 times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1172470/2828944fd7bb6f31f3f26c957d2dd2aea1e5d3ab.jpg",
+   "key": "JUMPMASTER_4",
+   "name": {
+    "en": "Jumpmaster"
+   },
+   "percent": 46.8,
+   "unlocked": "2020-12-08T16:24:21+01:00"
+  },
+  {
+   "description": {
+    "de": "Mit 8 unterschiedlichen Legenden 5.000 Schaden verursachen",
+    "en": "Deal 5,000 damage with 8 different Legends"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1172470/6f44b7a073fb4fe324f9f12b527a910046f2809c.jpg",
+   "key": "WELL_ROUNDED_5",
+   "name": {
+    "de": "Ausgewogen",
+    "en": "Well-Rounded"
+   },
+   "percent": 16.6
+  },
+  {
+   "description": {
+    "de": "Kill-Spitzenreiter werden",
+    "en": "Become the Kill Leader"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1172470/88c298423ddcf009d522b6833086bb51f9ee4fe6.jpg",
+   "key": "KILL_LEADER_6",
+   "name": {
+    "de": "Kill-Spitzenreiter",
+    "en": "Kill Leader"
+   },
+   "percent": 41.3
+  },
+  {
+   "description": {
+    "de": "Ein Spiel als Angriffscharakter gewinnen",
+    "en": "Win a game as an assault character"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1172470/65bc35fdbe07c89fe3e3b06ab3079e6fc143cc38.jpg",
+   "key": "APEX_OFFENSE_7",
+   "name": {
+    "de": "Apex-Angriff",
+    "en": "Apex Assault"
+   },
+   "percent": 31.5
+  },
+  {
+   "description": {
+    "de": "Ein Spiel als Regulierungscharakter gewinnen",
+    "en": "Win a game as a controller character"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1172470/31a63848bdf4ae32577c6d2bd35e4db6875033a0.jpg",
+   "key": "APEX_DEFENSE_8",
+   "name": {
+    "de": "Apex-Regulierung",
+    "en": "Apex Controller"
+   },
+   "percent": 17.6
+  },
+  {
+   "description": {
+    "de": "Ein Spiel als Unterstützungscharakter gewinnen",
+    "en": "Win a game as a support character"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1172470/527fbb4017b393f13d34bacb1fe58bcc616a1c27.jpg",
+   "key": "APEX_SUPPORT_9",
+   "name": {
+    "de": "Apex-Unterstützung",
+    "en": "Apex Support"
+   },
+   "percent": 27.8
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Ein Spiel als Aufklärungscharakter gewinnen",
+    "en": "Win a game as a recon character"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1172470/aab5291d3cad6c61b4c013494e3b87b9e59db9b1.jpg",
+   "key": "APEX_RECON_10",
+   "name": {
+    "de": "Apex-Aufklärung",
+    "en": "Apex Recon"
+   },
+   "percent": 32.2,
+   "unlocked": "2020-12-08T16:05:11+01:00"
+  },
+  {
+   "description": {
+    "de": "Ein Spiel mit 8 verschiedenen Legenden gewinnen",
+    "en": "Win a game with 8 different Legends"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1172470/b0f02c79abaea0b5be9a953d07d01dbbf0ebc45a.jpg",
+   "key": "APEX_LEGEND_11",
+   "name": {
+    "de": "Apex-Legende",
+    "en": "Apex Legend"
+   },
+   "percent": 15.1
+  }
+ ],
+ "id": "1172470",
+ "platform": "steam"
+}

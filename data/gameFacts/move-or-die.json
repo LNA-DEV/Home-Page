@@ -1,0 +1,46 @@
+{
+ "developers": [
+  "Those Awesome Guys"
+ ],
+ "genres": [
+  {
+   "de": "Puzzle-Computerspiel",
+   "en": "puzzle video game",
+   "sv": "pusselspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  },
+  {
+   "de": "Koop-Modus",
+   "en": "co-op mode",
+   "sv": "flerspelarläge"
+  }
+ ],
+ "publishers": [
+  "Those Awesome Guys"
+ ],
+ "released": "2016-01-21",
+ "steam": {
+  "de": "Move or Die ist ein absurd schnelles, lokales und online 4-Spieler Partyspiel, bei dem sich die Spielmechanik alle 20 Sekunden ändert. Dieses Spiel wird eure Freundschaft auf eine harte Probe stellen.",
+  "en": "Move or Die is an absurdly fast-paced 4-player local and online party game where the mechanics change every 20 seconds! It's THE friendship-ruining game."
+ },
+ "steam_appid": 323850,
+ "wikidata": "Q23303467",
+ "wikipedia": {
+  "en": {
+   "text": "Move or Die is a multiplayer party platformer indie game developed by Romanian indie studio Those Awesome Guys. Move or Die was released on Microsoft Windows on 21 January 2016 and was released on PlayStation 4 on 5 March 2019.",
+   "url": "https://en.wikipedia.org/wiki/Move_or_Die"
+  }
+ }
+}

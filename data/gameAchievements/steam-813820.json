@@ -1,0 +1,326 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "de": "Eliminiere als Krieger einen gegnerischen Spieler.",
+    "en": "Eliminate an enemy player as a Warrior."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/813820/13c0b046293471ae7eff545610934437f4e66da0.jpg",
+   "key": "GOAL_ID_1602",
+   "name": {
+    "de": "Krieger – Neuling",
+    "en": "Novice Warrior"
+   },
+   "percent": 20.2,
+   "unlocked": "2020-04-30T21:05:00+02:00"
+  },
+  {
+   "description": {
+    "de": "Eliminiere als Ingenieur einen gegnerischen Spieler.",
+    "en": "Get 50 eliminations as a Warrior."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/813820/3093915d710613d24445424de5aa2b48bc0358c5.jpg",
+   "key": "GOAL_ID_1607",
+   "name": {
+    "de": "Ingenieur – Neuling",
+    "en": "Master Warrior"
+   },
+   "percent": 3.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/813820/7bd61f2bc48cccc13146e24451413a51ab984f00.jpg",
+   "key": "GOAL_ID_1603",
+   "name": {
+    "de": "Assassine – Neuling",
+    "en": "Novice Engineer"
+   },
+   "percent": 2.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/813820/4abd4716842b607c666dd3b898026b3016598a65.jpg",
+   "key": "GOAL_ID_1608",
+   "name": {
+    "de": "Magier – Neuling",
+    "en": "Master Engineer"
+   },
+   "percent": 0.9
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Eliminiere als Jäger einen gegnerischen Spieler.",
+    "en": "Eliminate an enemy player as an Assassin."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/813820/d90943ec4e92e8778e59102046d5c8eafdafc9d3.jpg",
+   "key": "GOAL_ID_1604",
+   "name": {
+    "de": "Jäger – Neuling",
+    "en": "Novice Assassin"
+   },
+   "percent": 25.8,
+   "unlocked": "2020-10-23T16:57:28+02:00"
+  },
+  {
+   "description": {
+    "de": "Erziele als Krieger 50 Eliminierungen.",
+    "en": "Get 50 eliminations as an Assassin."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/813820/39b8076a605b886a7a3440158f8bd3f435a07113.jpg",
+   "key": "GOAL_ID_1609",
+   "name": {
+    "de": "Krieger – Meister",
+    "en": "Master Assassin"
+   },
+   "percent": 5.4
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erziele als Ingenieur 50 Eliminierungen.",
+    "en": "Eliminate an enemy player as a Mage."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/813820/ceada43b12c9c83b816af35612e874892e70023f.jpg",
+   "key": "GOAL_ID_1605",
+   "name": {
+    "de": "Ingenieur – Meister",
+    "en": "Novice Mage"
+   },
+   "percent": 18.2,
+   "unlocked": "2020-04-30T21:25:17+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erziele als Assassine 50 Eliminierungen.",
+    "en": "Get 50 eliminations as a Mage."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/813820/80d6ccff9781772a09ac1655928b3fe47efd0df7.jpg",
+   "key": "GOAL_ID_1610",
+   "name": {
+    "de": "Assassine – Meister",
+    "en": "Master Mage"
+   },
+   "percent": 3.6,
+   "unlocked": "2020-12-06T01:18:12+01:00"
+  },
+  {
+   "description": {
+    "de": "Erziele als Magier 50 Eliminierungen.",
+    "en": "Eliminate an enemy player as a Hunter."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/813820/d53a96dca89a370f7f12122a5fe00eb835b2face.jpg",
+   "key": "GOAL_ID_1606",
+   "name": {
+    "de": "Magier – Meister",
+    "en": "Novice Hunter"
+   },
+   "percent": 17.8
+  },
+  {
+   "description": {
+    "de": "Erziele als Jäger 50 Eliminierungen.",
+    "en": "Get 50 eliminations as a Hunter."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/813820/c57241f0e35188965893a853ac43afbe6adf2781.jpg",
+   "key": "GOAL_ID_1611",
+   "name": {
+    "de": "Jäger – Meister",
+    "en": "Master Hunter"
+   },
+   "percent": 3.5
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Überlebe als Hühnchen.",
+    "en": "Loot Armor Potions 20 times."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/813820/b812ab703270ceed173ccb2feaa6a6d44230a1c7.jpg",
+   "key": "GOAL_ID_1643",
+   "name": {
+    "de": "Die große Flatter",
+    "en": "20-Piece"
+   },
+   "percent": 20.2,
+   "unlocked": "2020-05-23T20:36:15+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schmiede deine erste legendäre Waffe.",
+    "en": "Get a Crown Royale."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/813820/2468d872d732b628e9903b7f781d26667bd47ffe.jpg",
+   "key": "GOAL_ID_1644",
+   "name": {
+    "de": "Schmied – Neuling",
+    "en": "Realm Royalty"
+   },
+   "percent": 18.0,
+   "unlocked": "2020-12-05T22:43:04+01:00"
+  },
+  {
+   "description": {
+    "de": "Sammle 20-mal Rüstungstränke.",
+    "en": "Get 10 Crown Royales."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/813820/42920617d70f77f5f9dcdb3a5888d5e56d84e455.jpg",
+   "key": "GOAL_ID_1645",
+   "name": {
+    "de": "20-Piece",
+    "en": "Royale Master"
+   },
+   "percent": 5.4
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erziele ein Crown Royale.",
+    "en": "Forge 100 Items."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/813820/632f86ea854723d4116873c5d702a4efb5c4f2d8.jpg",
+   "key": "GOAL_ID_1646",
+   "name": {
+    "de": "Realm Royalty",
+    "en": "Master Smith"
+   },
+   "percent": 7.3,
+   "unlocked": "2021-06-27T14:52:01+02:00"
+  },
+  {
+   "description": {
+    "de": "Erziele 10 Crown Royale.",
+    "en": "Get a Legendary Item in every slot."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/813820/724919bc7010e9326d06e7ecaacb29128461b54c.jpg",
+   "key": "GOAL_ID_1647",
+   "name": {
+    "de": "Royale Meister",
+    "en": "Geared Out"
+   },
+   "percent": 10.6
+  },
+  {
+   "description": {
+    "de": "Schmiede 100 Gegenstände.",
+    "en": "Chicken a player from more than 800 feet away."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/813820/341a0a3ffce14b8f453aa2d862d601c5926840a2.jpg",
+   "key": "GOAL_ID_1657",
+   "name": {
+    "de": "Schmied – Meister",
+    "en": "Longshot Foghorn"
+   },
+   "percent": 6.4
+  },
+  {
+   "description": {
+    "de": "Rüste in jedem Platz einen legendären Gegenstand aus.",
+    "en": "Get a Crown Royales with 3 different classes."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/813820/734df110be931d9351641aaf0154b1851ecf9cb9.jpg",
+   "key": "GOAL_ID_1651",
+   "name": {
+    "de": "Voll ausgerüstet",
+    "en": "Jack of All Trades"
+   },
+   "percent": 4.3
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Eliminiere einen Spieler mit deinem Dolch.",
+    "en": "Eliminate an enemy player with your dagger."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/813820/e7f163fbdb1234166e39b2ce2c53112478a82df0.jpg",
+   "key": "GOAL_ID_1648",
+   "name": {
+    "de": "Auf Messers Schneide",
+    "en": "Knife Edge Death Match"
+   },
+   "percent": 8.9,
+   "unlocked": "2022-05-27T21:35:29+02:00"
+  },
+  {
+   "description": {
+    "de": "Eliminiere in einem Match mehr als 10 Spieler.",
+    "en": "Eliminate more than 10 players in a single match."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/813820/a925903bc999bc30d5dc0ac15fba09ba78fb2f6d.jpg",
+   "key": "GOAL_ID_1649",
+   "name": {
+    "de": "Dezimierung",
+    "en": "Decimation"
+   },
+   "percent": 5.2
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Gewinne ein Match in einer 4er-Gruppe, ohne dass ein Spieler stirbt.",
+    "en": "Win a match as a team of 4 without losing a single player."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/813820/7a10e179143cdf13681e6acbe333ee53038d4ad7.jpg",
+   "key": "GOAL_ID_1650",
+   "name": {
+    "de": "Absolute Einheit",
+    "en": "Absolute Unit"
+   },
+   "percent": 8.7,
+   "unlocked": "2021-01-09T23:25:59+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Verwandle einen Spieler aus mehr als 800 Einheiten Entfernung in ein Hühnchen.",
+    "en": "Forge your first Legendary Weapon."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/813820/a6dd1983c1e3eef5cdf55d7a674d6333803859df.jpg",
+   "key": "GOAL_ID_1642",
+   "name": {
+    "de": "Hühnchenator",
+    "en": "Novice Smith"
+   },
+   "percent": 20.6,
+   "unlocked": "2020-04-30T21:20:59+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Survive after becoming a chicken."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/813820/f3987bf6943241d2491ee35c958709be5404541c.jpg",
+   "key": "GOAL_ID_1641",
+   "name": {
+    "en": "Great Eggscape"
+   },
+   "percent": 34.1,
+   "unlocked": "2020-04-30T21:04:41+02:00"
+  }
+ ],
+ "id": "813820",
+ "platform": "steam"
+}

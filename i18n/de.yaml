@@ -93,6 +93,63 @@
   translation: "Alle"
 - id: moreGames
   translation: "Mehr Spiele"
+# Gaming — eine Seite pro Spiel (layouts/partials/game-detail.html)
+- id: game_meta_description
+  translation: "Spielzeit und Erfolge in {{ .title }} ({{ .platforms }})."
+- id: game_about
+  translation: "Über das Spiel"
+- id: game_notes
+  translation: "Notizen"
+- id: game_screenshots
+  translation: "Screenshots"
+- id: game_screenshot_alt
+  translation: "Screenshot {{ .n }} von {{ .total }} aus {{ .title }}"
+- id: game_rating
+  translation: "Bewertet mit {{ .rating }} von 5"
+- id: game_genre
+  translation:
+    one: "Genre"
+    other: "Genres"
+- id: game_mode
+  translation:
+    one: "Spielmodus"
+    other: "Spielmodi"
+- id: game_developer
+  translation:
+    one: "Entwicklung"
+    other: "Entwicklung"
+- id: game_publisher
+  translation:
+    one: "Publisher"
+    other: "Publisher"
+- id: game_released
+  translation: "Erschienen"
+- id: game_store_link
+  translation: "{{ .store }} ↗"
+- id: game_steam_store
+  translation: "dem Steam-Shop"
+- id: game_source_steam
+  translation: "Beschreibung aus {{ .source }}."
+- id: game_achievements
+  translation: "Erfolge"
+- id: game_achv_progress
+  translation: "{{ .unlocked }} von {{ .total }} Erfolgen freigeschaltet"
+- id: game_achv_filter_unlocked
+  translation: "Freigeschaltet"
+- id: game_achv_filter_locked
+  translation: "Gesperrt"
+- id: game_achv_sort_default
+  translation: "Standard"
+- id: game_achv_sort_rarity
+  translation: "Seltenste zuerst"
+- id: game_achv_unlocked
+  translation: "Freigeschaltet"
+- id: game_achv_locked
+  translation: "Gesperrt"
+- id: game_achv_hidden
+  translation: "Versteckter Erfolg — {{ .store }} veröffentlicht keine Beschreibung."
+- id: game_achv_pct_title
+  translation: "Anteil aller Spielenden, die ihn freigeschaltet haben"
 
 # Activity feed
 - id: activity_type_post

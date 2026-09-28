@@ -1,0 +1,199 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/683320/0ab3b42637b2d42cb41e58ec08f06e1c554b81ca.jpg",
+   "key": "Z1_DISCOVER_RED",
+   "name": {
+    "de": "Rot",
+    "en": "Red"
+   },
+   "percent": 88.8,
+   "unlocked": "2023-09-29T20:18:08+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/683320/f188808f73bd056384ba384c50c04467481eaec8.jpg",
+   "key": "Z1_DENIAL",
+   "name": {
+    "de": "Verleugnung",
+    "en": "Denial"
+   },
+   "percent": 8.0
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/683320/306abd4cfb176a4f9c734afa99cdf35086e29cfe.jpg",
+   "key": "Z2_DISCOVER_GREEN",
+   "name": {
+    "de": "Grün",
+    "en": "Green"
+   },
+   "percent": 65.1,
+   "unlocked": "2023-09-29T21:27:45+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/683320/8d2ec20b3e476af3be1fada287155e264fe59803.jpg",
+   "key": "Z2_ANGER",
+   "name": {
+    "de": "Zorn",
+    "en": "Anger"
+   },
+   "percent": 7.8
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/683320/7bd4e670a6f403d8507b10948f47b059bc950ab1.jpg",
+   "key": "Z3_DISCOVER_BLUE",
+   "name": {
+    "de": "Blau",
+    "en": "Blue"
+   },
+   "percent": 52.7,
+   "unlocked": "2023-09-29T22:06:22+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/683320/a2b43b24acd2f83a149c92cb16a18ae79a4bd067.jpg",
+   "key": "Z3_BARGAINING",
+   "name": {
+    "de": "Verhandlung",
+    "en": "Bargaining"
+   },
+   "percent": 7.8
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/683320/7cd00af83733b8fea182480e45a159cca39d739d.jpg",
+   "key": "Z4_DISCOVER_YELLOW",
+   "name": {
+    "de": "Gelb",
+    "en": "Yellow"
+   },
+   "percent": 45.2,
+   "unlocked": "2023-09-30T12:23:19+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/683320/b8603c6709e52de4140c255a620a7e7818088edf.jpg",
+   "key": "Z4_DEPRESSION",
+   "name": {
+    "en": "Depression"
+   },
+   "percent": 16.3,
+   "unlocked": "2023-09-30T12:13:27+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/683320/a93d2e10b87021e934ecd7bf377cd9323dedea8e.jpg",
+   "key": "Z5_ACCEPTANCE",
+   "name": {
+    "de": "Akzeptanz",
+    "en": "Acceptance"
+   },
+   "percent": 25.4,
+   "unlocked": "2023-09-30T13:24:02+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe das Spiel ab",
+    "en": "Finish the game"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/683320/babd54e574ed82137bfbc80a76a51a9c0987be90.jpg",
+   "key": "Z6_ENDGAME",
+   "name": {
+    "de": "Ende",
+    "en": "The End"
+   },
+   "percent": 38.1,
+   "unlocked": "2023-09-30T13:33:27+02:00"
+  },
+  {
+   "description": {
+    "de": "Finde alle Erinnerungsstücke",
+    "en": "Find all mementos"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/683320/a528587aa8737fbe7f5037db73795c73ad51bbe5.jpg",
+   "key": "Z6_ALLCOLLECTIBLES",
+   "name": {
+    "de": "Erinnerungsstücke",
+    "en": "Mementos"
+   },
+   "percent": 5.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/683320/bdeead7a90b6f5ce193777e0dcecec4d5e15f1c5.jpg",
+   "key": "Z6_EXTRAENDING",
+   "name": {
+    "de": "Kindheit",
+    "en": "Childhood"
+   },
+   "percent": 5.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/683320/e5b4e7fdf845edef105f1ca55b643d8c58f86923.jpg",
+   "key": "Z2_AVOID_SANDSTORM",
+   "name": {
+    "de": "Sandsturm",
+    "en": "Sandstorm"
+   },
+   "percent": 7.0
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/683320/b9cc1fd2030d765dc493e1853b70a31767adb3bb.jpg",
+   "key": "Z3_KODAMA_APPLES",
+   "name": {
+    "de": "Äpfel",
+    "en": "Apples"
+   },
+   "percent": 12.6
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/683320/12a6b733baf805118a8551345ec08bba2ecc16bd.jpg",
+   "key": "Z4_AVOID_EEL",
+   "name": {
+    "de": "Aal",
+    "en": "Eel"
+   },
+   "percent": 9.2,
+   "unlocked": "2023-09-30T12:28:07+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/683320/0f13c54c508f6ed74193fbae924ad1fd15a60916.jpg",
+   "key": "Z5_SING_SPECIAL",
+   "name": {
+    "de": "Magische Vögel",
+    "en": "Magic fowls"
+   },
+   "percent": 6.0
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/683320/74a704db94bee84791862a6704a1fe0bd2ab9930.jpg",
+   "key": "Z2_INUKSUIT",
+   "name": {
+    "de": "Inukkleidung",
+    "en": "Inuksuit"
+   },
+   "percent": 8.7
+  }
+ ],
+ "id": "683320",
+ "platform": "steam"
+}

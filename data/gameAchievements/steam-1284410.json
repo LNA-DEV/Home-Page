@@ -1,0 +1,648 @@
+{
+ "achievements": [
+  {
+   "description": {
+    "de": "Füge Einheiten in einem Multiplayer-Spiel insgesamt 30 Schaden zu.",
+    "en": "Deal a total of 30 damage to units in one multiplayer game."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/8e2983b82e6ac32c40b275f775d9b8cc30d4896b.jpg",
+   "key": "Agressor",
+   "name": {
+    "de": "Aggressor",
+    "en": "Agressor"
+   },
+   "percent": 26.1
+  },
+  {
+   "description": {
+    "de": "Transmutiere eine Karte.",
+    "en": "Transmute a card."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/102eccf80ba823c8014b22f4d919ddc1a9b96f2d.jpg",
+   "key": "Alchemist",
+   "name": {
+    "en": "Alchemist"
+   },
+   "percent": 11.7
+  },
+  {
+   "description": {
+    "de": "Habe 4 Artefakte im Spiel.",
+    "en": "Have 4 artifacts in play at any time."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/8a9b00952b00878c71c05824dc967a473c3c2e07.jpg",
+   "key": "Artifanatic",
+   "name": {
+    "de": "Artefanatiker",
+    "en": "Artifanatic"
+   },
+   "percent": 5.2
+  },
+  {
+   "description": {
+    "de": "Befehlige mindestens 3 Einheiten in einem Zug.",
+    "en": "Order at least 3 units in a single turn."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/6afb42fbc3d0a31c8b219f2ac243bcf5908697ab.jpg",
+   "key": "ArtOfWar",
+   "name": {
+    "de": "Die Kunst des Krieges",
+    "en": "Art Of War"
+   },
+   "percent": 29.2
+  },
+  {
+   "description": {
+    "de": "Spiele in einer einzigen Partie eine Karte von 5 verschiedenen Fraktionen aus.",
+    "en": "Play a card from 5 different factions during a match."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/52a1aa2be9b1de1546d307194b64d5ec4d42f946.jpg",
+   "key": "BaptizedWithFire",
+   "name": {
+    "de": "Feuertaufe",
+    "en": "Baptized With Fire"
+   },
+   "percent": 8.1
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe das Grundlagen-Tutorial ab.",
+    "en": "Complete the basic tutorial."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/0fe4cde62c9de3ec2409bbfd5b24672c9a9fba0c.jpg",
+   "key": "BasicsMastered",
+   "name": {
+    "de": "Grundlagen gemeistert",
+    "en": "Basics Mastered"
+   },
+   "percent": 52.9,
+   "unlocked": "2024-12-14T14:57:52+01:00"
+  },
+  {
+   "description": {
+    "de": "Spiele eine Bronze- und eine Goldkarte in einem Multiplayer-Spiel aus.",
+    "en": "Play a bronze and a gold card in a multiplayer game."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/bc60c8a95f584847f915fe7dea0b0b5aa942fa81.jpg",
+   "key": "Blacksmith",
+   "name": {
+    "de": "Schmied",
+    "en": "Blacksmith"
+   },
+   "percent": 38.0
+  },
+  {
+   "description": {
+    "de": "Spiele in einem Zug 5 Karten aus.",
+    "en": "Play 5 cards in a single turn."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/52a1aa2be9b1de1546d307194b64d5ec4d42f946.jpg",
+   "key": "Blitz",
+   "name": {
+    "en": "Blitz"
+   },
+   "percent": 8.8
+  },
+  {
+   "description": {
+    "de": "Sammle 50 einzigartige Karten von einer Fraktion.",
+    "en": "Collect 50 unique cards from 1 faction."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/25c63eea97bd088b8deab17654a91778cf9242c1.jpg",
+   "key": "CatchEmAll",
+   "name": {
+    "de": "Sammle sie alle!",
+    "en": "CatchEmAll"
+   },
+   "percent": 25.3
+  },
+  {
+   "description": {
+    "de": "Gewinne ein Multiplayer-Spiel ohne eine Goldkarte in deinem Deck.",
+    "en": "Win a multiplayer game without Golden cards in your deck."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/305232c13044e882b85240d78c9751bf74ebd7d1.jpg",
+   "key": "CommonDenominator",
+   "name": {
+    "de": "Gemeinsamer Nenner",
+    "en": "Common Denominator"
+   },
+   "percent": 2.5
+  },
+  {
+   "description": {
+    "de": "Zerstöre mindestens 3 Einheiten mit einer einzigen Karte.",
+    "en": "Destroy 3 or more units with single card."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/8f9022912be6195b33e0892f9dd2213c3fc0ee30.jpg",
+   "key": "Destroyer",
+   "name": {
+    "de": "Zerstörer",
+    "en": "Destroyer"
+   },
+   "percent": 20.2
+  },
+  {
+   "description": {
+    "de": "Erhalte mindestens einen Anführer von jeder Fraktion.",
+    "en": "Obtain at least one leader from each faction."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/de1e5a84c2bde338b55911cfd58f1e5f806124fe.jpg",
+   "key": "FantasticFive",
+   "name": {
+    "de": "Die fantastischen Fünf",
+    "en": "Fantastic Five"
+   },
+   "percent": 4.6
+  },
+  {
+   "description": {
+    "de": "Schließe 3 Onlinespiele ab.",
+    "en": "Finish 3 online matches."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/2d6bed0408c4d14b0d2364ca57deef1e770cf9fe.jpg",
+   "key": "GlovesOff",
+   "name": {
+    "de": "Ohne Samthandschuhe",
+    "en": "Gloves Off"
+   },
+   "percent": 30.8
+  },
+  {
+   "description": {
+    "de": "Erschöpfe dein Deck bis zur letzten Karte.",
+    "en": "Fully deplete your deck."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/78329ec584b0713876e344608ae1c317e74ad7b1.jpg",
+   "key": "GoAllIn",
+   "name": {
+    "de": "Voller Einsatz",
+    "en": "Go All In"
+   },
+   "percent": 7.3
+  },
+  {
+   "description": {
+    "de": "Sende 50-mal ein \"GG\" (Gutes Spiel).",
+    "en": "Send \"GG\" 50 times."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/734110c1e2d83364a5f37098bddb3d02e18a5598.jpg",
+   "key": "GreatestAdmirer",
+   "name": {
+    "de": "Größte Verehrer",
+    "en": "Greatest Admirer"
+   },
+   "percent": 11.0
+  },
+  {
+   "description": {
+    "de": "Gewinne eine Partie mit 2 verbliebenen Karten in deiner Hand.",
+    "en": "Win a game with 2 cards remaining in hand."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/4713518a2f90dd7149f7589bd121bb6c81e97589.jpg",
+   "key": "HadEnoughYet",
+   "name": {
+    "de": "Noch nicht genug?",
+    "en": "Had Enough Yet"
+   },
+   "percent": 14.2
+  },
+  {
+   "description": {
+    "de": "Erreiche Ansehen 1.",
+    "en": "Reach Prestige 1."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/83fee81e1a2c777c628cd49e48aed7f99223145e.jpg",
+   "key": "HallOfHeroes",
+   "name": {
+    "de": "Halle der Helden",
+    "en": "Hall Of Heroes"
+   },
+   "percent": 8.1
+  },
+  {
+   "description": {
+    "de": "Beginne eine Runde mit 10 Punkten auf dem Schlachtfeld.",
+    "en": "Start a round with 10 points on the board."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/89e45c2e238e92da435686f92314dfe86671e67d.jpg",
+   "key": "HeadStart",
+   "name": {
+    "de": "Vorsprung",
+    "en": "Head Start"
+   },
+   "percent": 5.7
+  },
+  {
+   "description": {
+    "de": "Schließe ein Multiplayer-Spiel mit Unentschieden ab.",
+    "en": "Get a draw in a multiplayer game."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/98e9ac8ea32d5f982695bff732c09df54bdb222a.jpg",
+   "key": "HeadToHead",
+   "name": {
+    "de": "Kopf an Kopf",
+    "en": "Head To Head"
+   },
+   "percent": 15.2
+  },
+  {
+   "description": {
+    "de": "Gewinne eine Partie, ohne eine gegnerische Einheit zu zerstören.",
+    "en": "Win a battle without killing any of the opponent's units."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/482e0da3732cf9cfecc8317b21a3607a9f970c34.jpg",
+   "key": "HeartOfGold",
+   "name": {
+    "de": "Herz aus Gold",
+    "en": "Heart Of Gold"
+   },
+   "percent": 20.1
+  },
+  {
+   "description": {
+    "de": "Fülle die gegnerische Seite des Schlachtfelds mit Gefahren.",
+    "en": "Fill your opponent's side of the board with row effects."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/5bedf0b0a871b9ae41c5e98e62c2c6d51d2fbdf9.jpg",
+   "key": "HurricaneSeason",
+   "name": {
+    "de": "Wetterwarnung",
+    "en": "Hurricane Season"
+   },
+   "percent": 15.3
+  },
+  {
+   "description": {
+    "de": "Gewinne eine Runde nur mit Befehl-Einheiten.",
+    "en": "Win a round with only Order units."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/2dbe4d91c0ec031b4b72cab775563bca9fada841.jpg",
+   "key": "IronFist",
+   "name": {
+    "de": "Mit eiserner Faust",
+    "en": "Iron Fist"
+   },
+   "percent": 14.5
+  },
+  {
+   "description": {
+    "de": "Spiele ein Ranglistenspiel.",
+    "en": "Play one ranked game."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/3f1392b710e18acfca206bdea90716ab2ee7b38b.jpg",
+   "key": "KickinUpDust",
+   "name": {
+    "de": "Auseinandersetzung",
+    "en": "Kickin' Up Dust"
+   },
+   "percent": 35.3
+  },
+  {
+   "description": {
+    "de": "Verbessere in einem Multiplayer-Spiel eine Einheit auf über 30 Stärke.",
+    "en": "Boost unit to over a 30 points in a multiplayer game."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/f34e0ca1324459d8012b2ed94d5e064ed62bb8b2.jpg",
+   "key": "Leviathan",
+   "name": {
+    "en": "Leviathan"
+   },
+   "percent": 8.7
+  },
+  {
+   "description": {
+    "de": "Sei mit 3 Karten im Vorteil.",
+    "en": "Have card advantage of 3 cards."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/6b596c27e451b0fcdfd094bb18d300622a46d0e7.jpg",
+   "key": "MasterTactician",
+   "name": {
+    "de": "Meisterstratege",
+    "en": "Master Tactician"
+   },
+   "percent": 13.6
+  },
+  {
+   "description": {
+    "de": "Erreiche Stufe 15.",
+    "en": "Reach level 15."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/8a74291861e5502bc2e1ef8c7209f2c78528be56.jpg",
+   "key": "Milestone",
+   "name": {
+    "de": "Meilenstein",
+    "en": "Milestone"
+   },
+   "percent": 16.8
+  },
+  {
+   "description": {
+    "de": "Zerstöre eine immune Einheit.",
+    "en": "Destroy a unit that is Immune."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/bd8ac9f72bf8cbf188b288a0ef96138e9e512e66.jpg",
+   "key": "MissionImpossible",
+   "name": {
+    "de": "Unmöglich gibt's nicht",
+    "en": "Mission Impossible"
+   },
+   "percent": 8.6
+  },
+  {
+   "description": {
+    "de": "Erreiche Stufe 40.",
+    "en": "Reach level 40."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/672090fb1f32cfdb989596c91259419e934e41fc.jpg",
+   "key": "Munchkin",
+   "name": {
+    "en": "Munchkin"
+   },
+   "percent": 9.6
+  },
+  {
+   "description": {
+    "de": "Zerstöre eine legendäre gegnerische Einheit mit einer gewöhnlichen verbündeten Einheit.",
+    "en": "Destroy a Legendary enemy with a Common ally."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/8fbbf87edd470b24aeb2776015351263cee975c3.jpg",
+   "key": "NapoleonComplex",
+   "name": {
+    "de": "Napoleon-Komplex",
+    "en": "Napoleon Complex"
+   },
+   "percent": 19.0
+  },
+  {
+   "description": {
+    "de": "Gewinne 3 Multiplayer-Spiele hintereinander.",
+    "en": "Have a winstreak of 3 in any multiplayer game mode."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/c8cfac0efa2372fb43c629aab7dc88eae7bd0dd7.jpg",
+   "key": "Next",
+   "name": {
+    "de": "Nächster!",
+    "en": "Next"
+   },
+   "percent": 20.9
+  },
+  {
+   "description": {
+    "de": "Lasse mindestens 5 Karten in einer Partie auferstehen.",
+    "en": "Resurrect at least 5 cards in a match."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/b28b7bbcff4d6319413661c9b9c766ce8d342a7d.jpg",
+   "key": "NoManLeftBehind",
+   "name": {
+    "de": "Keiner bleibt zurück",
+    "en": "No Man Left Behind"
+   },
+   "percent": 6.5
+  },
+  {
+   "description": {
+    "de": "Mahle 50 Karten.",
+    "en": "Mill 50 cards."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/61891672340349841843810dfeba99556e9630da.jpg",
+   "key": "NothingWasted",
+   "name": {
+    "de": "Nichts verschwenden",
+    "en": "Nothing Wasted"
+   },
+   "percent": 14.8
+  },
+  {
+   "description": {
+    "de": "Gewinne die letzte Runde eines Multiplayer-Spiels mit mindestens 50 Punkten.",
+    "en": "Win the final round of a multiplayer game by 50 or more points."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/6a740adeabe589e34bee4c1f90c03f162f708bf4.jpg",
+   "key": "Overkill",
+   "name": {
+    "de": "Über die Stränge",
+    "en": "Overkill"
+   },
+   "percent": 9.5
+  },
+  {
+   "description": {
+    "de": "Zerstöre eine Einheit mit Eifer, bevor sie ausgelöst wird.",
+    "en": "Destroy a unit with Zeal before its triggered."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/3ce03637f4957ec8b1da0e06c881859f7e36a5ca.jpg",
+   "key": "QuickBefore",
+   "name": {
+    "de": "Schnell, bevor ...",
+    "en": "Quick, Before-"
+   },
+   "percent": 17.8
+  },
+  {
+   "description": {
+    "de": "Kontrolliere mindestens 5 Karten mit derselben Stärke.",
+    "en": "Control at least 5 cards with the same power."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/5ddc8507954780ef176c1fb854e3c385fc92f39a.jpg",
+   "key": "Quintuplets",
+   "name": {
+    "de": "Fünflinge",
+    "en": "Quintuplets"
+   },
+   "percent": 19.0
+  },
+  {
+   "description": {
+    "de": "Rüste einen Anführer-Skin, ein Avatar, einen Rahmen und einen Titel aus.",
+    "en": "Equip a vanity leader skin, an avatar, a border and a title."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/24b07cf33e93c9698b401a614ad01df80beb1a47.jpg",
+   "key": "ReadyForBattle",
+   "name": {
+    "de": "Bereit für die Schlacht",
+    "en": "Ready For Battle"
+   },
+   "percent": 12.5
+  },
+  {
+   "description": {
+    "de": "Zerstöre eine verdammte gegnerische Einheit mit einer verdammten verbündeten Einheit.",
+    "en": "Destroy a Doomed enemy with a Doomed ally."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/ef3e7aa3a4654d1effe615a677e32b44b60cd3b5.jpg",
+   "key": "RomeoAndJuliet",
+   "name": {
+    "de": "Romeo und Julia",
+    "en": "Romeo And Juliet"
+   },
+   "percent": 7.6
+  },
+  {
+   "description": {
+    "de": "Besitze mindestens 150 Premium-Karten.",
+    "en": "Own at least 150 premium cards."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/c79e6c2f3845a478e94c96e5d3f023f6a23f18e3.jpg",
+   "key": "Shiny",
+   "name": {
+    "de": "Ohh ... Glitzerkarten!",
+    "en": "Shiny!"
+   },
+   "percent": 8.6
+  },
+  {
+   "description": {
+    "de": "Zerstöre 100 Fässer.",
+    "en": "Smash 100 kegs."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/97fa0351ddef2456bc9b877deb56a704572d451b.jpg",
+   "key": "Smashsmash",
+   "name": {
+    "de": "Mensch mach Krachbersti?",
+    "en": "Uman make smashsmash?!"
+   },
+   "percent": 9.2
+  },
+  {
+   "description": {
+    "de": "Spiele 15 Sonderkarten aus und gewinne eine Partie.",
+    "en": "Win a game using 15 special cards."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/3976f7b199eb49807a04927f9e44b846755c8c89.jpg",
+   "key": "Specialist",
+   "name": {
+    "de": "Samt und sonders",
+    "en": "Specialist"
+   },
+   "percent": 4.9
+  },
+  {
+   "description": {
+    "de": "Gewinne eine Runde und die Partie, nachdem dein Gegner mit 20 Punkten Vorsprung gewonnen hatte.",
+    "en": "Win a round and game, after losing by 20 points."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/1086430e2cf2ba904343a51c15596b530b0865cd.jpg",
+   "key": "TablesTurned",
+   "name": {
+    "de": "Das Blatt hat sich gewendet",
+    "en": "Tables Turned"
+   },
+   "percent": 16.1
+  },
+  {
+   "description": {
+    "de": "Gewinne einen Standardkampf, ohne auch nur eine einzige Karte neu zu ziehen.",
+    "en": "Win a Regular Battle without redrawing any cards."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/850d748bf87227230ea1266dc9c0c35aee5937d7.jpg",
+   "key": "ThanksButNoThanks",
+   "name": {
+    "de": "Danke, aber nein danke",
+    "en": "Thanks, but No Thanks"
+   },
+   "percent": 13.4
+  },
+  {
+   "description": {
+    "de": "Spiele die maximale Anzahl Einheiten in einer einzigen Reihe aus.",
+    "en": "Play a maximum number of units into any single row."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/213ea07bd5aced1c52d7dba6e09e8b423a394520.jpg",
+   "key": "TheMoreTheMerrier",
+   "name": {
+    "de": "Viel hilft viel",
+    "en": "The More The Merrier"
+   },
+   "percent": 18.3
+  },
+  {
+   "description": {
+    "de": "Erreiche Rang 20.",
+    "en": "Reach Rank 20."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/645d8ffe28ce3b6e5ad2719e8d10b1f995678178.jpg",
+   "key": "Trouper",
+   "name": {
+    "de": "Alter Hase",
+    "en": "Trouper"
+   },
+   "percent": 9.3
+  },
+  {
+   "description": {
+    "de": "Generiere 5 verbündete Einheiten in einem Zug.",
+    "en": "Spawn five allies in a single turn."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/de6004594887fbfee2795e3a9d4e1feb25cad927.jpg",
+   "key": "WeAreLegion",
+   "name": {
+    "de": "Wir sind Legion",
+    "en": "We Are Legion"
+   },
+   "percent": 11.9
+  },
+  {
+   "description": {
+    "de": "Benutze 10 Ladungen in einem Zug.",
+    "en": "Use 10 order charges in a single turn."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1284410/0b7a4369fde1dd499221f7db810c28c9402ee889.jpg",
+   "key": "YourWishIsOurCommand",
+   "name": {
+    "de": "Euer Wunsch ist mir Befehl",
+    "en": "Your wish is our command"
+   },
+   "percent": 5.0
+  }
+ ],
+ "id": "1284410",
+ "platform": "steam"
+}

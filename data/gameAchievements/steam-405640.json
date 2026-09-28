@@ -1,0 +1,292 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "de": "Spiel zum Abstürzen gebracht",
+    "en": "Crashed the game."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/405640/12d09b19cbe5260464340c19f04a1f578c8c708a.jpg",
+   "key": "ACH_PROGRESS_1",
+   "name": {
+    "de": "Keine Kapitulation",
+    "en": "No Surrender"
+   },
+   "percent": 89.1,
+   "unlocked": "2020-11-05T19:25:50+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Pony Laser freigeschalten",
+    "en": "Unlocked Pony Lasers."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/405640/1a77003131f86a17e40a183389c9167afe0eed8b.jpg",
+   "key": "ACH_PROGRESS_2",
+   "name": {
+    "de": "Es gibt bessere Option als diese",
+    "en": "There Are Better Options Than These"
+   },
+   "percent": 80.6,
+   "unlocked": "2020-11-05T19:38:54+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Die erste Kerndatei zerstört",
+    "en": "Destroyed the first Core File."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/405640/af8f3fafa4934aca9628450185640166f7edf0f7.jpg",
+   "key": "ACH_PROGRESS_3",
+   "name": {
+    "de": "Zusammenbruch",
+    "en": "Meltdown"
+   },
+   "percent": 75.1,
+   "unlocked": "2020-11-07T17:46:15+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Ponyflügel freigeschalten",
+    "en": "Unlocked Pony Wings."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/405640/a0337a6dcef5be44236299feec0cf192a022beac.jpg",
+   "key": "ACH_PROGRESS_4",
+   "name": {
+    "de": "Genieß die Flügel",
+    "en": "Enjoy The Wings"
+   },
+   "percent": 68.3,
+   "unlocked": "2020-11-07T17:57:56+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Die zweite Kerndatei zerstört",
+    "en": "Destroyed the second Core File."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/405640/e980d854ad9797f5c3017e05d4de2ded6297dba1.jpg",
+   "key": "ACH_PROGRESS_5",
+   "name": {
+    "de": "Sicherheitsverstoß",
+    "en": "Security Breach"
+   },
+   "percent": 58.9,
+   "unlocked": "2020-11-12T18:58:40+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Töte Louey",
+    "en": "Killed Louey."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/405640/4b67fd1173c13f3fbd564c4309d90c9858a043e1.jpg",
+   "key": "ACH_PROGRESS_6",
+   "name": {
+    "de": "Du hast Louey getötet",
+    "en": "You Killed Louey"
+   },
+   "percent": 53.5,
+   "unlocked": "2020-11-12T19:23:44+01:00"
+  },
+  {
+   "description": {
+    "de": "Die dritte Kerndatei zerstört",
+    "en": "Destroyed the third Core File."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/405640/18df479516ae161b11566fd61bc951ef24d2bacd.jpg",
+   "key": "ACH_PROGRESS_7",
+   "name": {
+    "de": "Sieg?",
+    "en": "Victory?"
+   },
+   "percent": 51.5
+  },
+  {
+   "description": {
+    "de": "Fliehe aus der Arcade-Maschine",
+    "en": "Escaped the arcade."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/405640/80adfa8879c139b20156a7f366eaff88132f06b9.jpg",
+   "key": "ACH_PROGRESS_8",
+   "name": {
+    "de": "Flucht",
+    "en": "Escape"
+   },
+   "percent": 51.3
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erfahre ein Geheimnis deiner Vergangenheit",
+    "en": "Learned a secret of your past."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/405640/d2dddf3f265260e2be3037e51d8c047e3132eef5.jpg",
+   "key": "ACH_FLASHBACK_1",
+   "name": {
+    "de": "Erblicke…",
+    "en": "Behold..."
+   },
+   "percent": 70.4,
+   "unlocked": "2020-11-05T19:35:28+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erfahre ein weiteres Geheimnis deiner Vergangenheit",
+    "en": "Learned another secret of your past."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/405640/1143fa6e02762cde8ca206f23b35245d7b446276.jpg",
+   "key": "ACH_FLASHBACK_2",
+   "name": {
+    "de": "Ein kurzer Blick",
+    "en": "A Glimpse"
+   },
+   "percent": 42.9,
+   "unlocked": "2020-11-07T18:11:11+01:00"
+  },
+  {
+   "description": {
+    "de": "Erfahre ein drittes Geheimnis deiner Vergangenheit",
+    "en": "Learned a third secret of your past."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/405640/04d9f3d87af9da2e5c7a20aef1d2e396c58870ec.jpg",
+   "key": "ACH_FLASHBACK_3",
+   "name": {
+    "de": "Die Wahrheit",
+    "en": "The Truth"
+   },
+   "percent": 20.1
+  },
+  {
+   "description": {
+    "de": "Erfahre jedes Geheimnis deiner Vergangenheit",
+    "en": "Learned every secret of your past."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/405640/567122ecdfe35251e9f1b6ff9556c59966e6e322.jpg",
+   "key": "ACH_FLASHBACK_4",
+   "name": {
+    "de": "Die ganze Wahrheit",
+    "en": "The Full Truth"
+   },
+   "percent": 8.0
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Dein erstes Ticket gefunden",
+    "en": "Found your first ticket."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/405640/e7a80327767d23f4efb281567d198e7ee24c5ff1.jpg",
+   "key": "ACH_TICKETS_1",
+   "name": {
+    "de": "Fahrscheine, bitte",
+    "en": "That's The Ticket!"
+   },
+   "percent": 90.1,
+   "unlocked": "2020-11-05T19:22:02+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "3 Tickets gefunden",
+    "en": "Found 3 tickets."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/405640/65b3236b7a6174ca1b6375fe06e43e763b48c935.jpg",
+   "key": "ACH_TICKETS_2",
+   "name": {
+    "de": "TRI-cket",
+    "en": "Ticked Off"
+   },
+   "percent": 78.7,
+   "unlocked": "2020-11-05T19:32:31+01:00"
+  },
+  {
+   "description": {
+    "de": "7 Tickets gefunden",
+    "en": "Found 7 tickets."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/405640/d9ed31684a50904b74871570c54595d657d39b1f.jpg",
+   "key": "ACH_TICKETS_3",
+   "name": {
+    "de": "Ticket-Jäger",
+    "en": "Ticket Hunter"
+   },
+   "percent": 40.3
+  },
+  {
+   "description": {
+    "de": "14 Tickets gefunden",
+    "en": "Found 14 tickets."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/405640/54651334087da7089e3c42efec96139afe687361.jpg",
+   "key": "ACH_TICKETS_4",
+   "name": {
+    "en": "Jiminy Ticket"
+   },
+   "percent": 13.2
+  },
+  {
+   "description": {
+    "de": "Alle 24 Tickets gefunden",
+    "en": "Found all 24 tickets."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/405640/41847866ef2e27d4a3b8d9508f7386596230d246.jpg",
+   "key": "ACH_TICKETS_5",
+   "name": {
+    "de": "Meister der Ticket",
+    "en": "Ticket Master"
+   },
+   "percent": 9.1
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/405640/955380b5cef8063dd37f9a83373ce97c75aa1436.jpg",
+   "key": "ACH_SECRET_1",
+   "name": {
+    "de": "I AM ERROR",
+    "en": "I Am Error"
+   },
+   "percent": 10.9
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/405640/f5458922f1dcde3dea76e4e05334f0e6e3d96e13.jpg",
+   "key": "ACH_SECRET_2",
+   "name": {
+    "en": "Glitch City"
+   },
+   "percent": 10.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/405640/1bea2637c2bbb6dd900f259a7f673efd1d8454f2.jpg",
+   "key": "ACH_SECRET_3",
+   "name": {
+    "de": "Für den Kreuzzug",
+    "en": "For The Crusade"
+   },
+   "percent": 21.8
+  }
+ ],
+ "id": "405640",
+ "platform": "steam"
+}

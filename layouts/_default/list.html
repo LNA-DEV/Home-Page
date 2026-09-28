@@ -113,6 +113,22 @@
 </section>
 {{- else if eq .Params.Theme "travel-list" }}
 {{- partial "travel-list.html" . }}
+{{- else if eq .Params.Theme "gaming-home" }}
+{{- /* /gaming/: the page body (the gamingList grid) and nothing else. Its
+       child pages — one per game, from content/gaming/_content.*.gotmpl — are
+       reached through the grid; PaperMod's post-entry list below would print
+       every one of them a second time. Same markup the page had as a leaf
+       bundle, so the switch to a section changed nothing visible. */}}
+<article class="post-single">
+  <header class="post-header">
+    {{- partial "breadcrumbs.html" . }}
+    <h1 class="post-title entry-hint-parent">{{ .Title }}</h1>
+    {{- with .Description }}
+    <div class="post-description">{{ . }}</div>
+    {{- end }}
+  </header>
+  <div class="post-content">{{ .Content }}</div>
+</article>
 {{- else }}
 {{- if not .IsHome | and .Title }}
 <header class="page-header">

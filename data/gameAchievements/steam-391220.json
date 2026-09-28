@@ -1,0 +1,1932 @@
+{
+ "achievements": [
+  {
+   "description": {
+    "de": "Erledigen Sie einen Feind im Nahkampf mit einer Flasche.",
+    "en": "Melee kill an enemy using a bottle"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/5cb2c2984f03fc1acd72126741b4141ebbc239f1.jpg",
+   "key": "NEW_ACHIEVEMENT_3_1",
+   "name": {
+    "de": "Kneipenschlägerei",
+    "en": "Bar Brawl"
+   },
+   "percent": 8.8
+  },
+  {
+   "description": {
+    "de": "Führen Sie 25 lautlose Spezial-Kills mit dem Messer durch.",
+    "en": "Perform 25 special stealth kills with the knife"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/918bba7906d55ceff7179ded663d499a4fcf6c84.jpg",
+   "key": "NEW_ACHIEVEMENT_3_2",
+   "name": {
+    "de": "Klinge der Gerechtigkeit",
+    "en": "Blade of Justice"
+   },
+   "percent": 11.2
+  },
+  {
+   "description": {
+    "de": "Erledigen Sie einen Feind lautlos, während er eine Unterhaltung führt.",
+    "en": "Stealth kill an enemy while he is having a conversation"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/e72255f733a5f96c047f0a4f48235cac61264b67.jpg",
+   "key": "NEW_ACHIEVEMENT_3_3",
+   "name": {
+    "de": "Einseitige Konversation",
+    "en": "One-Sided Conversation"
+   },
+   "percent": 78.7
+  },
+  {
+   "description": {
+    "de": "Erledigen Sie 5 Feinde mit einem einzigen Giftpfeil.",
+    "en": "Kill 5 enemies with one Poison Arrow"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/a5ddf90242e00ae9f0d3770233044513cc72e719.jpg",
+   "key": "NEW_ACHIEVEMENT_3_4",
+   "name": {
+    "de": "Chemische Kriegsführung",
+    "en": "Chemical Warfare"
+   },
+   "percent": 2.5
+  },
+  {
+   "description": {
+    "de": "Stellen Sie 5 Ausrüstungsteile her.",
+    "en": "Craft 5 pieces of Equipment"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/156a249356ab081ebfc615cdb83e64f4cfc22346.jpg",
+   "key": "NEW_ACHIEVEMENT_3_6",
+   "name": {
+    "de": "Handwerkerin",
+    "en": "Craftswoman"
+   },
+   "percent": 42.7
+  },
+  {
+   "description": {
+    "de": "Erledigen Sie einen Feind durch einen Kopftreffer mit einem Pfeil aus über 25 m Entfernung.",
+    "en": "Headshot an enemy with an arrow from a distance beyond 25m"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/41c903cf5015e43af86f318084d23355e6fd024a.jpg",
+   "key": "NEW_ACHIEVEMENT_3_7",
+   "name": {
+    "de": "Englische Ahnen",
+    "en": "English Pedigree"
+   },
+   "percent": 56.1
+  },
+  {
+   "description": {
+    "de": "Stellen Sie 25 Exemplare jedes verfügbaren Spezialpfeiltyps her (Feuer, Granate, Gift).",
+    "en": "Craft 25 of each special arrow type (Fire, Grenade, Poison)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/ba0aa64a9d637f15778b7088e4230efba4218f87.jpg",
+   "key": "NEW_ACHIEVEMENT_3_8",
+   "name": {
+    "de": "Pfeilmeister",
+    "en": "Master Fletcher"
+   },
+   "percent": 8.9
+  },
+  {
+   "description": {
+    "de": "Erreichen Sie die maximale Sprachbeherrschung in einer Sprache.",
+    "en": "Reach max proficiency in one language"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/ab7e4ec64042f2cd83692d669c3a92d4de2a5aa0.jpg",
+   "key": "NEW_ACHIEVEMENT_3_9",
+   "name": {
+    "de": "Fließend",
+    "en": "Fluent"
+   },
+   "percent": 35.6
+  },
+  {
+   "description": {
+    "de": "Ertränken Sie 3 Feinde mit einer Wasser-Exekution.",
+    "en": "Drown 3 enemies using a water finisher"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/f9b001ad4ddda26a5c325c5db9b429dd3a70c9ca.jpg",
+   "key": "NEW_ACHIEVEMENT_3_11",
+   "name": {
+    "de": "Blubb-blubb-blubb",
+    "en": "Glub Glub Glub"
+   },
+   "percent": 40.9
+  },
+  {
+   "description": {
+    "de": "Spüren Sie 40 Überlebensverstecke auf.",
+    "en": "Unearth 40 Survival Caches"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/bf96d1cbc1fe0e08253a775ac52d7f633702ef91.jpg",
+   "key": "NEW_ACHIEVEMENT_3_13",
+   "name": {
+    "de": "Scharfes Auge",
+    "en": "Keen Eye"
+   },
+   "percent": 13.1
+  },
+  {
+   "description": {
+    "de": "Erledigen Sie 6 Feinde mit dem Revolver, ohne nachzuladen.",
+    "en": "Kill 6 enemies with the Revolver without reloading"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/a8c4276967c944d61ef481496bb4ee27320b5034.jpg",
+   "key": "NEW_ACHIEVEMENT_3_14",
+   "name": {
+    "de": "Gekonnt ist gekonnt",
+    "en": "Laying Down The Law"
+   },
+   "percent": 4.4
+  },
+  {
+   "description": {
+    "de": "Übersetzen Sie einen Monolithen.",
+    "en": "Translate one Monolith"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/9d00583f11f3afdc8c567a7ef7e89ec601c8f16f.jpg",
+   "key": "NEW_ACHIEVEMENT_3_16",
+   "name": {
+    "de": "Die Vergangenheit lesen",
+    "en": "Reading the Past"
+   },
+   "percent": 79.4
+  },
+  {
+   "description": {
+    "de": "Stürzen Sie 5 Feinde im Nahkampf von einer Kante.",
+    "en": "Melee 5 enemies off a ledge"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/9cd15f482db699216f0b34c030f529fd3e591fbc.jpg",
+   "key": "NEW_ACHIEVEMENT_3_19",
+   "name": {
+    "de": "Abtrünnig",
+    "en": "Renegade"
+   },
+   "percent": 6.7
+  },
+  {
+   "description": {
+    "de": "Erledigen Sie innerhalb von 10 Sekunden 5 Feinde mit einem beliebigen Gewehr.",
+    "en": "Kill 5 enemies within 10 seconds using any rifle"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/b0225d19c90a273daeeb5101ca68b7cdf336a32b.jpg",
+   "key": "NEW_ACHIEVEMENT_3_20",
+   "name": {
+    "de": "Verlässlicher alter Freund",
+    "en": "A Trusty Old Friend"
+   },
+   "percent": 22.2
+  },
+  {
+   "description": {
+    "de": "Erledigen Sie 10 Feinde, indem Sie ihnen ins Bein schießen.",
+    "en": "Kill 10 enemies by shooting them in the leg"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/3564701196a32e07e83d8afb99eddde2b546d56c.jpg",
+   "key": "NEW_ACHIEVEMENT_3_23",
+   "name": {
+    "de": "Gefallene",
+    "en": "Fall Guys"
+   },
+   "percent": 53.0
+  },
+  {
+   "description": {
+    "de": "Erledigen Sie 3 Feinde mit einem einzigen Schuss aus einer Schrotflinte.",
+    "en": "Kill 3 enemies with 1 Shotgun blast"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/529b671e8763b0471418995caa01cbe8dccd5fc3.jpg",
+   "key": "NEW_ACHIEVEMENT_3_24",
+   "name": {
+    "de": "Dreifachbedrohung",
+    "en": "Triple Threat"
+   },
+   "percent": 2.7
+  },
+  {
+   "description": {
+    "de": "Besiegen Sie mindestens zwei Feinde mit einem einzigen Molotowcocktail.",
+    "en": "Defeat two enemies or more using a single Molotov Cocktail"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/339510faecd509cad2d54081ce4a2fa7f9f4bc5b.jpg",
+   "key": "NEW_ACHIEVEMENT_3_25",
+   "name": {
+    "de": "Feuerteufel",
+    "en": "Firestarter"
+   },
+   "percent": 48.4
+  },
+  {
+   "description": {
+    "de": "Erledigen Sie ein Tier mit einer Sprengladung.",
+    "en": "Kill any animal with an explosive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/6f325120cc8dfced80ea98b8a4f0f276197424b7.jpg",
+   "key": "NEW_ACHIEVEMENT_3_27",
+   "name": {
+    "de": "War das wirklich nötig??",
+    "en": "Was That Really Necessary?"
+   },
+   "percent": 16.5
+  },
+  {
+   "description": {
+    "de": "Erhalten Sie alle Upgrades einer Waffe.",
+    "en": "Fully upgrade one weapon"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/75abe2278d17d715ff113c11d5a349e2862eb474.jpg",
+   "key": "NEW_ACHIEVEMENT_3_28",
+   "name": {
+    "de": "Waffenschmiede",
+    "en": "Weaponsmith"
+   },
+   "percent": 39.0
+  },
+  {
+   "description": {
+    "de": "Schießen Sie eine Flasche aus der Luft herunter.",
+    "en": "Shoot a bottle out of the air"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/d09a31c12de8cf6ead1c322b7514d1ba9410b892.jpg",
+   "key": "NEW_ACHIEVEMENT_3_29",
+   "name": {
+    "de": "Trickschuss",
+    "en": "Trick Shot"
+   },
+   "percent": 5.8
+  },
+  {
+   "description": {
+    "de": "Schießen Sie mit einem Feuerpfeil ein Huhn aus der Luft.",
+    "en": "Shoot a chicken out of the air with a fire arrow"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/631e192d9312421a2cdc15bd37be383531d58403.jpg",
+   "key": "NEW_ACHIEVEMENT_3_30",
+   "name": {
+    "de": "Grillhähnchen",
+    "en": "Rotisserie"
+   },
+   "percent": 2.4
+  },
+  {
+   "description": {
+    "de": "Schließen Sie einen Punktangriff-Level mit einem Kartenbonus von mindestens 200 % ab.",
+    "en": "Complete a level in Score Attack with a card bonus of 200% or more"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/6e39cc385c817b9af780e32d4c3761e228fe9e94.jpg",
+   "key": "NEW_ACHIEVEMENT_3_31",
+   "name": {
+    "de": "Mein eigener schlimmster Feind",
+    "en": "My Own Worst Enemy"
+   },
+   "percent": 1.5
+  },
+  {
+   "description": {
+    "de": "Schließen Sie einen Punktangriff-Level mithilfe von 5 Karten ab.",
+    "en": "Complete a level in Score Attack using 5 cards"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/3a9390667d08554325f48381d917198fbd984107.jpg",
+   "key": "NEW_ACHIEVEMENT_17_0",
+   "name": {
+    "de": "Eiserner Wille",
+    "en": "Iron Will"
+   },
+   "percent": 1.9
+  },
+  {
+   "description": {
+    "de": "Schließen Sie 3 Wiederholungsherausforderungen in einem Punktangriff-Level ab.",
+    "en": "Complete 3 Replay Challenges in one Score Attack level"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/6c8db5c839a862adaf27a68d28d9d7149d511ed1.jpg",
+   "key": "NEW_ACHIEVEMENT_17_1",
+   "name": {
+    "de": "War das schon alles??",
+    "en": "That All You Got?"
+   },
+   "percent": 1.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/391220/41d5cc4750374477ace84a1179bfaffe8b0f171f.jpg",
+   "key": "NEW_ACHIEVEMENT_17_2",
+   "name": {
+    "de": "Die Auserwählten",
+    "en": "The Chosen Few"
+   },
+   "percent": 11.4
+  },
+  {
+   "description": {
+    "de": "Kaufen Sie alle Objekte aus dem Vorratsschuppen.",
+    "en": "Purchase all items from the Supply Shack"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/07236cf637f7715bd7f21374c1a4090e4bc523dc.jpg",
+   "key": "NEW_ACHIEVEMENT_17_3",
+   "name": {
+    "de": "Einkaufseifer",
+    "en": "Avid Shopper"
+   },
+   "percent": 8.1
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/391220/729b7368eaa4cc475f945ffe8491f4ebf3156b0f.jpg",
+   "key": "NEW_ACHIEVEMENT_17_5",
+   "name": {
+    "de": "In Vaters Fußstapfen",
+    "en": "Following in Father's Footsteps"
+   },
+   "percent": 88.8
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/391220/db4bfc738d3e9e8a9c433255c9cd1d0dc99b7f42.jpg",
+   "key": "NEW_ACHIEVEMENT_17_6",
+   "name": {
+    "de": "Härter, als sie aussieht",
+    "en": "Tougher Than She Looks"
+   },
+   "percent": 82.1
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/391220/516f8a82c465f177cce4879021ef3e4a6aa5a17c.jpg",
+   "key": "NEW_ACHIEVEMENT_17_7",
+   "name": {
+    "de": "Merkwürdige Bekanntschaft",
+    "en": "Strange Acquaintance"
+   },
+   "percent": 66.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/391220/2420252c7cff98c44fd9aadbed06a5d723126b16.jpg",
+   "key": "NEW_ACHIEVEMENT_17_8",
+   "name": {
+    "de": "Der sichere Weg",
+    "en": "Taking the High Road"
+   },
+   "percent": 53.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/391220/3871c4ec70d21f3e2e09f6419d6cb5ea90165a31.jpg",
+   "key": "NEW_ACHIEVEMENT_17_9",
+   "name": {
+    "de": "Eine helfende Hand",
+    "en": "A Helping Hand"
+   },
+   "percent": 51.4
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/391220/eaada28a6a07e6a46065ea357e59c57c1643724b.jpg",
+   "key": "NEW_ACHIEVEMENT_17_10",
+   "name": {
+    "de": "Der Schlüssel zu allem",
+    "en": "The Key To It All"
+   },
+   "percent": 49.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/391220/2fac6a6982d7ee37e87ce7ccdead0e27cbf75552.jpg",
+   "key": "NEW_ACHIEVEMENT_17_11",
+   "name": {
+    "de": "Um jeden Preis",
+    "en": "Whatever It Takes"
+   },
+   "percent": 47.0
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/391220/4272651fa63058090334d9c27d1f6d417af02d9a.jpg",
+   "key": "NEW_ACHIEVEMENT_17_12",
+   "name": {
+    "de": "Der wenig benutzte Weg",
+    "en": "The Road Less Travelled"
+   },
+   "percent": 46.7
+  },
+  {
+   "description": {
+    "de": "Beenden Sie das Spiel auf einem beliebigen Schwierigkeitsgrad.",
+    "en": "Finish the game on any difficulty"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/615b353173ecd6f9f8f04711bbf3513d6a0c240e.jpg",
+   "key": "NEW_ACHIEVEMENT_17_13",
+   "name": {
+    "de": "Der Preis der Wahrheit",
+    "en": "The Price of Truth"
+   },
+   "percent": 42.2
+  },
+  {
+   "description": {
+    "de": "Beenden Sie das Spiel auf dem Schwierigkeitsgrad 'Überlebender'.",
+    "en": "Finish the game on Survivor difficulty"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/a16dff84ce45d564c0a2f145405ec978829b820b.jpg",
+   "key": "NEW_ACHIEVEMENT_17_14",
+   "name": {
+    "de": "Ultimativer Überlebender",
+    "en": "Ultimate Survivor"
+   },
+   "percent": 3.6
+  },
+  {
+   "description": {
+    "de": "Besuchen Sie eine Beerdigung.",
+    "en": "Attend a funeral"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/381e8656ef63abdb29ad7e12b6855113ed13ae0e.jpg",
+   "key": "NEW_ACHIEVEMENT_17_15",
+   "name": {
+    "de": "Respekt zollen",
+    "en": "Paying Respects"
+   },
+   "percent": 17.5
+  },
+  {
+   "description": {
+    "de": "Tauchen Sie in einen Brunnen.",
+    "en": "Dive into a well"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/7a190403611d2c8945550e673a67a63992c483c9.jpg",
+   "key": "NEW_ACHIEVEMENT_17_17",
+   "name": {
+    "de": "Für meinen nächsten Trick ...",
+    "en": "For My Next Trick..."
+   },
+   "percent": 2.2
+  },
+  {
+   "description": {
+    "de": "Finden Sie den besten Platz im Haus.",
+    "en": "Find the best seat in the house"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/fb66dcb8d26d78d0cb2a59ef933dbc454ef23236.jpg",
+   "key": "NEW_ACHIEVEMENT_17_18",
+   "name": {
+    "de": "Ruhepause",
+    "en": "Quiet Time"
+   },
+   "percent": 4.4
+  },
+  {
+   "description": {
+    "de": "Wiederholen Sie 5 verschiedene Levels, ohne Schaden zu nehmen.",
+    "en": "Replay 5 different levels without taking any damage"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/39d02a15438b6337f2748ef4861f7bc747933663.jpg",
+   "key": "NEW_ACHIEVEMENT_17_21",
+   "name": {
+    "de": "Unantastbar",
+    "en": "Untouchable"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "de": "Erlegen Sie ein Wildschwein mit einem Molotowcocktail.",
+    "en": "Kill a razorback boar using a Molotov cocktail"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/e93aa3b9a773f50d5a2859daaf18b6c467a918a7.jpg",
+   "key": "NEW_ACHIEVEMENT_17_22",
+   "name": {
+    "de": "Schinken!",
+    "en": "Bacon!"
+   },
+   "percent": 3.0
+  },
+  {
+   "description": {
+    "de": "Erlegen Sie 50 Tiere im Jägerin-Outfit.",
+    "en": "Kill 50 animals while wearing the Huntress outfit"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/3c711db4f817578db88698a5c8d7d386af8d3b64.jpg",
+   "key": "NEW_ACHIEVEMENT_17_23",
+   "name": {
+    "de": "Jägerin",
+    "en": "Huntress"
+   },
+   "percent": 1.9
+  },
+  {
+   "description": {
+    "de": "Gewinnen Sie 15 Kämpfe, nachdem Sie das Spiel abgeschlossen haben.",
+    "en": "Beat 15 combat encounters after completing the game"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/50ad59de686f335c309aee162e42de62974ab64d.jpg",
+   "key": "NEW_ACHIEVEMENT_17_24",
+   "name": {
+    "de": "Sibirischer Waldhüter",
+    "en": "Siberian Ranger"
+   },
+   "percent": 2.5
+  },
+  {
+   "description": {
+    "de": "Schließen Sie ein beliebiges Herausforderungsgrab ab.",
+    "en": "Complete any Challenge Tomb"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/5991b92d12f99af3264ee3a6c66caf0ce3f9878c.jpg",
+   "key": "NEW_ACHIEVEMENT_17_26",
+   "name": {
+    "de": "Herausfordernd",
+    "en": "Challenging"
+   },
+   "percent": 66.0
+  },
+  {
+   "description": {
+    "de": "Meistern Sie 100 % des Gesamtspiels.",
+    "en": "Achieve 100% game completion"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/f0d2a5e0e47fcfb55be9f88419b30067ba9a2f61.jpg",
+   "key": "NEW_ACHIEVEMENT_17_27",
+   "name": {
+    "de": "Jeden Stein umdrehen",
+    "en": "No Stone Unturned"
+   },
+   "percent": 4.6
+  },
+  {
+   "description": {
+    "de": "Schließen Sie jeden Punktangriff-Level mit einer Gold-Wertung ab.",
+    "en": "Complete every level in Score Attack with a gold score"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/df4f845d8ba8fc609ba76b0379f8b079f1dd9a47.jpg",
+   "key": "NEW_ACHIEVEMENT_17_28",
+   "name": {
+    "de": "Goldenes Kind",
+    "en": "Golden Child"
+   },
+   "percent": 1.0
+  },
+  {
+   "description": {
+    "de": "Führen Sie einen manuellen Seilrutschen-Übergang aus.",
+    "en": "Perform a manual zip line transfer"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/a98d5a9c6ee310ad8ee7a9f689e2d615f3b51aba.jpg",
+   "key": "NEW_ACHIEVEMENT_17_16",
+   "name": {
+    "de": "Seilrutschen-Fan",
+    "en": "Zipper"
+   },
+   "percent": 18.5
+  },
+  {
+   "description": {
+    "de": "Führen Sie einen Tauchsprung von mindestens 2,5 Sekunden Länge aus.",
+    "en": "Perform a 2.5 second or longer swan dive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/50739ac6df8811367e2e1c0f14ae53e58c15e3a5.jpg",
+   "key": "NEW_ACHIEVEMENT_17_31",
+   "name": {
+    "de": "Mut zum Risiko",
+    "en": "No Guts, No Glory"
+   },
+   "percent": 8.7
+  },
+  {
+   "description": {
+    "de": "Heilen Sie sich 3 Mal während eines Kampfs.",
+    "en": "Heal yourself in combat 3 times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/42380cfcc43c1c24b9913d4a5840be37dcf2e52f.jpg",
+   "key": "NEW_ACHIEVEMENT_18_0",
+   "name": {
+    "de": "Schnelle Genesung",
+    "en": "Rapid Recovery"
+   },
+   "percent": 65.3
+  },
+  {
+   "description": {
+    "de": "Besiegen Sie einen Schwertkämpfer der Unsterblichen nur mit Nahkampfangriffen und einer Exekution.",
+    "en": "Defeat a Deathless Swordsman using only melee attacks and a finisher"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/714e26a6fe02861bcc3a03ef7b96daeafb4451c2.jpg",
+   "key": "NEW_ACHIEVEMENT_18_1",
+   "name": {
+    "de": "Furchtlos",
+    "en": "Fearless"
+   },
+   "percent": 26.3
+  },
+  {
+   "description": {
+    "de": "Erzielen Sie 25 Kopftreffer mit dem Repetiergewehr.",
+    "en": "Get 25 headshots using the Bolt-Action Rifle"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/d6b4292d68ddc5bf4f7672f9cf3e7ecdc4fb32f1.jpg",
+   "key": "NEW_ACHIEVEMENT_18_2",
+   "name": {
+    "de": "Scharfschütze",
+    "en": "Dead Ringer"
+   },
+   "percent": 3.3
+  },
+  {
+   "description": {
+    "de": "Schießen Sie 15 Hirschen ins Herz.",
+    "en": "Shoot 15 deer in the heart"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/f7c840b0bce0ab552a7d8a834f7a96e4c9fc4b8c.jpg",
+   "key": "NEW_ACHIEVEMENT_18_4",
+   "name": {
+    "de": "Schnell und schmerzlos",
+    "en": "Quick and Painless"
+   },
+   "percent": 1.8
+  },
+  {
+   "description": {
+    "de": "Schließen Sie alle Herausforderungsgräber in einem Spiel ab.",
+    "en": "Complete all Challenge Tombs in one playthrough"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/45d1b1b0d1f0a253d970c8e7a96a7bdc0ffde413.jpg",
+   "key": "NEW_ACHIEVEMENT_18_5",
+   "name": {
+    "de": "Grabräuber",
+    "en": "Tomb Raider"
+   },
+   "percent": 14.8
+  },
+  {
+   "description": {
+    "de": "Schließen Sie 3 Missionen ab.",
+    "en": "Complete 3 Missions"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/fd09433bcf40815a5cbfe5511721cd78db0be352.jpg",
+   "key": "NEW_ACHIEVEMENT_18_6",
+   "name": {
+    "de": "Guter Samariter",
+    "en": "Good Samaritan"
+   },
+   "percent": 37.6
+  },
+  {
+   "description": {
+    "de": "Schließen Sie jede Mission ab.",
+    "en": "Complete every Mission"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/ee52c7ecfa0b4a6d7a5171c146e5a0459990eff6.jpg",
+   "key": "NEW_ACHIEVEMENT_18_7",
+   "name": {
+    "de": "Frau des Volkes",
+    "en": "Woman of the People"
+   },
+   "percent": 10.1
+  },
+  {
+   "description": {
+    "de": "Schließen Sie 5 Herausforderungen ab.",
+    "en": "Complete 5 Challenges"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/72af73498a8571080ce3770909b0756542130d64.jpg",
+   "key": "NEW_ACHIEVEMENT_18_8",
+   "name": {
+    "de": "Auf der Suche nach Ärger",
+    "en": "Looking for Trouble"
+   },
+   "percent": 16.3
+  },
+  {
+   "description": {
+    "de": "Schließen Sie alle Herausforderungen ab.",
+    "en": "Complete every Challenge"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/51fd150ada4bba2e8d4e5fe75c79eaabe12c3d9e.jpg",
+   "key": "NEW_ACHIEVEMENT_18_9",
+   "name": {
+    "de": "Zwanghaft",
+    "en": "Compulsive"
+   },
+   "percent": 4.9
+  },
+  {
+   "description": {
+    "de": "Sammeln Sie 25 % aller Erzählungsobjekte (Relikte, Wandgemälde und Dokumente).",
+    "en": "Collect 25% of all narrative assets (relics, murals, and documents)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/b1620fc366f44330cc2405a4d9ca48248dfc8b45.jpg",
+   "key": "NEW_ACHIEVEMENT_18_10",
+   "name": {
+    "de": "Wahrheitssuche",
+    "en": "Truth Seeker"
+   },
+   "percent": 52.2
+  },
+  {
+   "description": {
+    "de": "Sammeln Sie 75 % aller Erzählungsobjekte (Relikte, Wandgemälde und Dokumente).",
+    "en": "Collect 75% of all narrative assets (relics, murals, and documents)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/43357061079f2283ab558bc00bae8b44eb8989e0.jpg",
+   "key": "NEW_ACHIEVEMENT_18_11",
+   "name": {
+    "de": "Stimmen der Vergangenheit",
+    "en": "Voices of the Past"
+   },
+   "percent": 15.1
+  },
+  {
+   "description": {
+    "de": "Erhalten Sie alle Fähigkeiten einer Kategorie.",
+    "en": "Purchase all skills in one category"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/d1dc8b67ca0867792cdbd9b3fcb311bff0c1f7b1.jpg",
+   "key": "NEW_ACHIEVEMENT_3_21",
+   "name": {
+    "de": "Selbstverbesserungsjunkie",
+    "en": "Self-Improvement Junkie"
+   },
+   "percent": 25.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/391220/018969c9b5d4562fb0ec265b7ddf2d5f93483744.jpg",
+   "key": "NEW_ACHIEVEMENT_18_13",
+   "name": {
+    "de": "Ein ziemlicher Sturz",
+    "en": "Quite A Tumble"
+   },
+   "percent": 82.1
+  },
+  {
+   "description": {
+    "de": "Sammeln Sie 150 Karten.",
+    "en": "Collect 150 cards"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/620615d083f3a4246c81611709644e59bc1b0e25.jpg",
+   "key": "NEW_ACHIEVEMENT_18_14",
+   "name": {
+    "de": "Ein echter Sammler",
+    "en": "Quite the Collector"
+   },
+   "percent": 33.6
+  },
+  {
+   "description": {
+    "de": "Sammeln Sie 300 Karten.",
+    "en": "Collect 300 cards"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/b195a41f9780efa024de4cb7b3387037e93cf3e1.jpg",
+   "key": "NEW_ACHIEVEMENT_18_15",
+   "name": {
+    "de": "Die gehören in ein Museum",
+    "en": "These Belong in A Museum"
+   },
+   "percent": 1.5
+  },
+  {
+   "description": {
+    "de": "Schließen Sie 10 verschiedene Punktangriff-Levels mit einer Gold-Wertung ab.",
+    "en": "Complete 10 different levels in Score Attack with a gold score"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/296d1be25a9b3285baae7b7474dee18c54cf8d67.jpg",
+   "key": "NEW_ACHIEVEMENT_18_16",
+   "name": {
+    "de": "Gut begonnen ist halb gewonnen",
+    "en": "Well Begun Is Half Done"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Schließen Sie einen Punktangriff-Level mit einer Gold-Wertung ab.",
+    "en": "Complete a level in Score Attack with a gold score"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/ab7b107893bebfedee9996475e59ceea9965aff2.jpg",
+   "key": "NEW_ACHIEVEMENT_18_17",
+   "name": {
+    "de": "Vergoldet",
+    "en": "Gilded"
+   },
+   "percent": 1.9
+  },
+  {
+   "description": {
+    "de": "Schließen Sie jeden Punktangriff-Level mit Bronze-Wertung oder höher ab.",
+    "en": "Complete every level in Score Attack with a bronze score or better"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/e08d19eff3136b2de8ce5dd90e830a8518013b7b.jpg",
+   "key": "NEW_ACHIEVEMENT_18_18",
+   "name": {
+    "de": "Weiter so",
+    "en": "Way to Go"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Sprechen Sie mit Nadia, bevor Sie das Gottlose Tal verlassen.",
+    "en": "Baba Yaga: Speak to Nadia again before leaving the Wicked Vale"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/99de18ab49d1fbff844365b718a90f1f0bbf320c.jpg",
+   "key": "NEW_ACHIEVEMENT_18_19",
+   "name": {
+    "de": "Liebevolles 'Auf Wiedersehen'",
+    "en": "Fond Farewell"
+   },
+   "percent": 24.0
+  },
+  {
+   "description": {
+    "de": "Ausdauer-Herausforderung: Sammeln Sie mindestens 10 Artefakte.",
+    "en": "Endurance Challenge: Collect at least 10 Artifacts"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/26bc0e8b76e00b083d4cd5db0e7d3a882eb37060.jpg",
+   "key": "NEW_ACHIEVEMENT_18_20",
+   "name": {
+    "de": "Meister-Archäologe",
+    "en": "Master Archaeologist"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "de": "Ausdauer-Herausforderung: Öffnen Sie 5 Kodizes oder Sarkophage.",
+    "en": "Endurance Challenge: Open 5 Codices or Sarcophagi"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/9c2b0601a386c4299747c90ef454fd8009b5e6f3.jpg",
+   "key": "NEW_ACHIEVEMENT_18_22",
+   "name": {
+    "de": "Räuber",
+    "en": "Raider"
+   },
+   "percent": 1.3
+  },
+  {
+   "description": {
+    "de": "Ausdauer-Herausforderung: Öffnen Sie 5 Kodizes oder Sarkophage, ohne in eine Falle zu tappen.",
+    "en": "Endurance Challenge: Open 5 Codices or Sarcophagi without getting caught in a trap"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/06dc49884bb0757d9e149882a4ee8b14f6ca2886.jpg",
+   "key": "NEW_ACHIEVEMENT_18_23",
+   "name": {
+    "de": "Geschickter Räuber",
+    "en": "Skillful Raider"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Ausdauer-Herausforderung: Zerstören Sie 3 Decken-Stachelfallen, nachdem Sie in ihnen gefangen waren.",
+    "en": "Endurance Challenge: Destroy 3 ceiling spike traps after being caught in them"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/238de45cac0c19a40f4938b65bbd228a9b46ca91.jpg",
+   "key": "NEW_ACHIEVEMENT_18_24",
+   "name": {
+    "de": "Schnelle Reflexe",
+    "en": "Fast Reflexes"
+   },
+   "percent": 1.3
+  },
+  {
+   "description": {
+    "de": "Ausdauer-Herausf.: Essen Sie das Fleisch von 5 mit Feuer erlegten Vögeln, Eichhörnchen o. Kaninchen.",
+    "en": "Endurance Challenge: Eat the meat of 5 birds, squirrels, or rabbits that were killed with fire"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/1fb7f659f0e498b74d994f5dba88d0f051dc3e0c.jpg",
+   "key": "NEW_ACHIEVEMENT_18_26",
+   "name": {
+    "de": "Gut durch",
+    "en": "Well Done"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "de": "Ausdauer-Herausforderung: Essen Sie das Fleisch von 5 Wölfen, die mit Giftschaden erlegt wurden.",
+    "en": "Endurance Challenge: Eat the meat of 5 wolves that were killed with poison damage"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/c6333fa74a212aff0b03eab9047ab309fc97dce6.jpg",
+   "key": "NEW_ACHIEVEMENT_18_27",
+   "name": {
+    "de": "Schmeckt trotzdem gut",
+    "en": "Still Tastes Good"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "de": "Ausdauer-Herausforderung: Entkommen Sie an Tag 1 aus dem Wald, ohne Artefakte zu bergen.",
+    "en": "Endurance Challenge: Escape the forest on day 1, without recovering any artifacts"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/d135c19b731effd6e4febcb9f725d7ef3ed24a21.jpg",
+   "key": "NEW_ACHIEVEMENT_18_28",
+   "name": {
+    "de": "Nein, danke",
+    "en": "Nope"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "de": "Ausdauer-Herausforderung: Entkommen Sie nach 7 Überlebenstagen aus dem Wald.",
+    "en": "Endurance Challenge: Escape the forest after surviving for 7 days"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/7272ca3290bcad6ebbfc2b0e1f962898197c5da2.jpg",
+   "key": "NEW_ACHIEVEMENT_18_29",
+   "name": {
+    "de": "Urlaub",
+    "en": "Vacation"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "de": "Ausdauer-Herausf.: Entkommen Sie nach 10 Überlebenstagen mit mindestens 10 Artefakten aus dem Wald.",
+    "en": "Endurance Challenge: Escape the forest after surviving 10 days, with at least 10 Artifacts"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/a11298ee5b4605757158180381a6d2da7b808634.jpg",
+   "key": "NEW_ACHIEVEMENT_18_30",
+   "name": {
+    "de": "Großartiger Fang",
+    "en": "Great Haul"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "de": "Ausdauer-Herausforderung: Überleben Sie 5 Tage lang.",
+    "en": "Endurance Challenge: Survive for 5 days"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/4692c03fcff96b8bd882139e9f207d42ff5fab47.jpg",
+   "key": "NEW_ACHIEVEMENT_18_31",
+   "name": {
+    "de": "Camping-Profi",
+    "en": "Happy Camper"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "de": "Ausdauer-Herausforderung: Überleben Sie 7 Tage lang.",
+    "en": "Endurance Challenge: Survive for 7 days"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/65b437248b61ca745650f2a7310743c1cc28df15.jpg",
+   "key": "NEW_ACHIEVEMENT_21_0",
+   "name": {
+    "de": "Rückzug in die Natur",
+    "en": "Nature Retreat"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "de": "Ausdauer-Herausforderung: Überleben Sie 10 Tage lang.",
+    "en": "Endurance Challenge: Survive for 10 days"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/531929b357984d06731c2e59c37d7cef49169b24.jpg",
+   "key": "NEW_ACHIEVEMENT_21_1",
+   "name": {
+    "de": "Die freie Natur",
+    "en": "Great Outdoors"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "de": "Ausdauer-Herausforderung: Wenn Sie frieren, wärmen Sie sich auf, indem Sie sich ins Feuer stellen.",
+    "en": "Endurance Challenge: Warm up from freezing by standing in fire"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/ba63aab3a2e3842799283fdb61dae9d2b61edd3e.jpg",
+   "key": "NEW_ACHIEVEMENT_21_2",
+   "name": {
+    "de": "Auch eine Möglichkeit",
+    "en": "One Way to Do It"
+   },
+   "percent": 1.5
+  },
+  {
+   "description": {
+    "de": "Ausdauer-Herausforderung: Finden Sie 5 Krypten.",
+    "en": "Endurance Challenge: Locate 5 crypts"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/d69db6552e679940d1aa5aa0d17c0d3f4ed85f37.jpg",
+   "key": "NEW_ACHIEVEMENT_21_3",
+   "name": {
+    "de": "Wer braucht eine Karte??",
+    "en": "Who Needs a Map?"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Retten Sie Nadia vor Trinity.",
+    "en": "Baba Yaga: Rescue Nadia from Trinity"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/b3e73097410e35e27d4329ba22298e0c0eb719cb.jpg",
+   "key": "NEW_ACHIEVEMENT_21_4",
+   "name": {
+    "de": "Verstecken",
+    "en": "Hide and Seek"
+   },
+   "percent": 50.2
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Betreten Sie das Gottlose Tal.",
+    "en": "Baba Yaga: Enter the Wicked Vale"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/333840dc54975b7c2dfeccdc23371ce8ed762017.jpg",
+   "key": "NEW_ACHIEVEMENT_21_5",
+   "name": {
+    "de": "Alle Hoffnung aufgeben",
+    "en": "Abandon All Hope"
+   },
+   "percent": 43.3
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Treten Sie der Hexe entgegen und überleben Sie.",
+    "en": "Baba Yaga: Face the Witch and live"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/98af7e598018e6501146e6f5a21ef01caa66866d.jpg",
+   "key": "NEW_ACHIEVEMENT_21_6",
+   "name": {
+    "de": "Ein Moment der Klarheit",
+    "en": "A Moment of Clarity"
+   },
+   "percent": 43.0
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Stellen Sie das Gegengift her.",
+    "en": "Baba Yaga: Craft the Antidote"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/585e08c06e42410bf410d4bdc2f991baaace9ebf.jpg",
+   "key": "NEW_ACHIEVEMENT_21_7",
+   "name": {
+    "de": "Amateur-Chemiker",
+    "en": "Amateur Chemist"
+   },
+   "percent": 38.8
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Aktivieren Sie den alten Lift.",
+    "en": "Baba Yaga: Activate the Ancient Lift"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/9765e8048d70f102f59b91348983db0c64abda87.jpg",
+   "key": "NEW_ACHIEVEMENT_21_8",
+   "name": {
+    "de": "Letzte Fahrt im Hexenhaus",
+    "en": "Last Ride of the Witch House"
+   },
+   "percent": 32.2
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Demaskieren Sie Baba Yaga.",
+    "en": "Baba Yaga: Unmask Baba Yaga"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/eb106d300e40f58eb55387ea51ae14d7c2275e9d.jpg",
+   "key": "NEW_ACHIEVEMENT_21_9",
+   "name": {
+    "de": "Die Wahrheit hinter dem Mythos",
+    "en": "Truth Behind the Myth"
+   },
+   "percent": 31.9
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Schließen Sie die Herausforderung im Gottlosen Tal ab.",
+    "en": "Baba Yaga: Complete the Challenge in the Wicked Vale"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/e3570fa52ed9be374bf2efc0562c10bbacf1d440.jpg",
+   "key": "NEW_ACHIEVEMENT_21_10",
+   "name": {
+    "de": "Vasilisas Laternen",
+    "en": "Vasilisa's Lanterns"
+   },
+   "percent": 12.4
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Spüren Sie alle Überlebensverstecke im Gottlosen Tal auf.",
+    "en": "Baba Yaga: Unearth all Survival Caches in the Wicked Vale"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/c2d4b4ea12a64278cbb6c1a79ed7c1721e732517.jpg",
+   "key": "NEW_ACHIEVEMENT_21_11",
+   "name": {
+    "de": "Die Flaschen der Hexe",
+    "en": "The Witch Bottles"
+   },
+   "percent": 9.0
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Sammeln Sie 50 % aller Dokumente im Gottlosen Tal.",
+    "en": "Baba Yaga: Collect 50% of the Documents in the Wicked Vale"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/d9e3d4a4388980dd633fd18c79d5abf70d7d312a.jpg",
+   "key": "NEW_ACHIEVEMENT_21_12",
+   "name": {
+    "de": "Jahreszeit der Hexe",
+    "en": "Season of the Witch"
+   },
+   "percent": 23.6
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Sammeln Sie alle Dokumente im Gottlosen Tal.",
+    "en": "Baba Yaga: Collect all of the Documents in the Wicked Vale"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/1afc26ad6aeae3ce07639da33e4da0c3d6aa61fa.jpg",
+   "key": "NEW_ACHIEVEMENT_21_13",
+   "name": {
+    "de": "Vollständige Geschichte der Hexerei",
+    "en": "Complete History of Witchcraft"
+   },
+   "percent": 7.7
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Schließen Sie einen 'Gottloses Tal'-Punktangriff mit einer Gold-Wertung ab.",
+    "en": "Baba Yaga: Complete a Wicked Vale Score Attack with a gold score"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/601c393530af3e7eb5f5f70317f491c4a8931914.jpg",
+   "key": "NEW_ACHIEVEMENT_21_14",
+   "name": {
+    "de": "Hexenjagd",
+    "en": "Witch-Hunt"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Schließen Sie alle 'Gottloses Tal'-Punktangriffe mit einer Gold-Wertung ab.",
+    "en": "Baba Yaga: Complete every Wicked Vale Score Attack with a gold score"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/e1d8c6ee5d7a269cc7205e4ee7e88f068d7dd710.jpg",
+   "key": "NEW_ACHIEVEMENT_21_15",
+   "name": {
+    "de": "Hexenprüfungen",
+    "en": "Witch Trials"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Versuchen Sie irgendeinen 'Gottloses Tal'-Punktangriff.",
+    "en": "Baba Yaga: Attempt any Wicked Vale Score Attack"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/0296e5544fd45f19e3c6b898af363c1b294f6d0e.jpg",
+   "key": "NEW_ACHIEVEMENT_21_16",
+   "name": {
+    "de": "Hexerei für Einsteiger",
+    "en": "Witchcraft for Beginners"
+   },
+   "percent": 1.4
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Rüsten Sie das Traumstachel- und das Geisterkostüm-Outfit zusammen aus.",
+    "en": "Baba Yaga: Equip the Dreamstinger and Wraithskin outfit together"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/5556dc5c2d872a0170d995eaab4048e85ec76fc9.jpg",
+   "key": "NEW_ACHIEVEMENT_21_17",
+   "name": {
+    "de": "Die Hexe und ihr Kleiderschrank",
+    "en": "Witch's Wardrobe"
+   },
+   "percent": 7.9
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Verwirren Sie einen Feind mit dem Traumstachel.",
+    "en": "Baba Yaga: Confuse an enemy with the Dreamstinger"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/dcd7f6a876e64f20793a00369a2ec19ee1e1e023.jpg",
+   "key": "NEW_ACHIEVEMENT_21_18",
+   "name": {
+    "de": "Hexendiener",
+    "en": "Servant of the Witch"
+   },
+   "percent": 5.6
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Verwirren Sie 3 Feinde mit einem einzigen Schuss aus dem Traumstachel.",
+    "en": "Baba Yaga: Confuse 3 enemies with one shot from the Dreamstinger"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/ce807064221e4bdf16ae9eb28187f17fca32feca.jpg",
+   "key": "NEW_ACHIEVEMENT_21_19",
+   "name": {
+    "de": "Überzeugendes Argument",
+    "en": "Persuasive Argument"
+   },
+   "percent": 2.9
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Verwirren Sie 10 Feinde mit dem Traumstachel.",
+    "en": "Baba Yaga: Confuse 10 enemies with the Dreamstinger"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/ecf236ccb454139e9b10c989aaf073e8ecf785ce.jpg",
+   "key": "NEW_ACHIEVEMENT_21_20",
+   "name": {
+    "de": "Bravos Vermächtnis",
+    "en": "Bravo's Legacy"
+   },
+   "percent": 3.0
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Erledigen Sie 10 Feinde, während Sie das Geisterkostüm-Outfit tragen.",
+    "en": "Baba Yaga: Kill 10 enemies while wearing the Wraithskin outfit"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/2ad899f0fa7dde2219b0add13becd38aa242be2a.jpg",
+   "key": "NEW_ACHIEVEMENT_21_21",
+   "name": {
+    "de": "Dämonin im Dunkeln",
+    "en": "Demon in the Dark"
+   },
+   "percent": 6.8
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Erledigen Sie 50 Feinde, während Sie das Geisterkostüm-Outfit tragen.",
+    "en": "Baba Yaga: Kill 50 enemies while wearing the Wraithskin outfit"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/8be00364497f30aec54cfb593ae40fbef82de8a7.jpg",
+   "key": "NEW_ACHIEVEMENT_21_22",
+   "name": {
+    "de": "Der Geist von Sibirien",
+    "en": "The Wraith of Siberia"
+   },
+   "percent": 4.9
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Stürzen Sie aus dem Lift zu Tode.",
+    "en": "Baba Yaga: Fall to your death from the Lift"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/40cf57acdc839eeb6be7124356904a486c106f66.jpg",
+   "key": "NEW_ACHIEVEMENT_21_23",
+   "name": {
+    "de": "Je höher der Aufzug",
+    "en": "Henny Penny"
+   },
+   "percent": 6.8
+  },
+  {
+   "description": {
+    "de": "Ausdauer-Herausforderung: Sammeln Sie mindestens 5 Artefakte.",
+    "en": "Endurance Challenge: Collect at least 5 Artifacts"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/6b14773f4936517c046bf6663d21708e7c8329d8.jpg",
+   "key": "NEW_ACHIEVEMENT_21_25",
+   "name": {
+    "de": "Archäologe",
+    "en": "Archaeologist"
+   },
+   "percent": 2.0
+  },
+  {
+   "description": {
+    "de": "Baba Yaga: Fahren Sie mit dem Lift zurück zur anderen Seite.",
+    "en": "Baba Yaga: Ride the Lift back to the other side"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/0d5b661084c1739db431236275d8e7993282c9df.jpg",
+   "key": "NEW_ACHIEVEMENT_21_26",
+   "name": {
+    "de": "Warum das Huhn das Tal überquerte",
+    "en": "Why the Chicken Crossed the Vale"
+   },
+   "percent": 12.4
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/391220/c5c7a2db86185d3a984d4f6e0415acdeb446a10c.jpg",
+   "key": "NEW_ACHIEVEMENT_21_27",
+   "name": {
+    "de": "Enthüllung der Wahrheit",
+    "en": "Uncovering the Truth"
+   },
+   "percent": 1.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/391220/a41597d12a246a3baa1caab1ada9833cc70b8d16.jpg",
+   "key": "NEW_ACHIEVEMENT_21_28",
+   "name": {
+    "de": "Feuer unterm Hintern",
+    "en": "Give a Man a Fire"
+   },
+   "percent": 1.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/391220/6fd3f13e4d33bcbd4364005d75b02adc60f31724.jpg",
+   "key": "NEW_ACHIEVEMENT_21_29",
+   "name": {
+    "de": "Für den Kampf gerüstet",
+    "en": "Armed For Bear"
+   },
+   "percent": 1.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/391220/0c9e2c1fc5918670d0704e28e2ec99695ee2f935.jpg",
+   "key": "NEW_ACHIEVEMENT_21_30",
+   "name": {
+    "de": "Wirbelndes Blatt",
+    "en": "Spinning Leaf"
+   },
+   "percent": 1.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/391220/1282a3205ab8e9b528c5856e063f6f45814acb4a.jpg",
+   "key": "NEW_ACHIEVEMENT_21_31",
+   "name": {
+    "de": "Legendärer Waffenschmied",
+    "en": "Legendary Gunsmith"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "de": "'Kalte Finsternis'-Herausforderung: Retten Sie 6 Gefangene.",
+    "en": "Cold Darkness Challenge: Rescue 6 prisoners"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/4daed50ff0c5df5bb25c896dba689d90b49a48b8.jpg",
+   "key": "NEW_ACHIEVEMENT_30_0",
+   "name": {
+    "de": "Die Rettung",
+    "en": "To the Rescue"
+   },
+   "percent": 1.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/391220/7b857c29897028164923ef60b609831599f1e481.jpg",
+   "key": "NEW_ACHIEVEMENT_30_1",
+   "name": {
+    "de": "Perfektionist",
+    "en": "Perfectionist"
+   },
+   "percent": 1.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/391220/4468b34aa2ef856d68c8b407c8f7cc9624077511.jpg",
+   "key": "NEW_ACHIEVEMENT_30_2",
+   "name": {
+    "de": "Epidemiologe",
+    "en": "Epidemiologist"
+   },
+   "percent": 1.9
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/391220/8d1865e33ab993bd26ec3893485283face51dcf4.jpg",
+   "key": "NEW_ACHIEVEMENT_30_3",
+   "name": {
+    "de": "Stürmischer Ozean",
+    "en": "An Ocean in Storm"
+   },
+   "percent": 1.3
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/391220/e8513732d0a70fa8a8b4370463578a932efaf883.jpg",
+   "key": "NEW_ACHIEVEMENT_30_4",
+   "name": {
+    "de": "Kampfspezialist",
+    "en": "Combat Specialist"
+   },
+   "percent": 1.3
+  },
+  {
+   "description": {
+    "de": "Blutbande: Sammeln Sie alle Dokumente im Croft-Anwesen.",
+    "en": "Blood Ties: Collect all of the Documents in Croft Manor"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/5827f8d142f17c727bf950393eeef6aa018ca72e.jpg",
+   "key": "NEW_ACHIEVEMENT_30_5",
+   "name": {
+    "de": "Komplette Familiengeschichte",
+    "en": "Complete Family History"
+   },
+   "percent": 5.8
+  },
+  {
+   "description": {
+    "de": "Laras Albtraum: Zerstören Sie einen Schädel der Wut.",
+    "en": "Lara's Nightmare: Destroy a Skull of Rage"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/c25ac9831559e778d21ea5428aac94c04b640ea7.jpg",
+   "key": "NEW_ACHIEVEMENT_30_6",
+   "name": {
+    "de": "Den Albtraum betreten",
+    "en": "Enter the Nightmare"
+   },
+   "percent": 6.3
+  },
+  {
+   "description": {
+    "de": "Laras Albtraum: Besiegen Sie 100 Feinde.",
+    "en": "Lara's Nightmare: Defeat 100 enemies"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/f1aa2212292fed5faa2e8a8778ff5f12d82a8b34.jpg",
+   "key": "NEW_ACHIEVEMENT_30_7",
+   "name": {
+    "de": "Sich der Angst stellen",
+    "en": "Fight the Fear"
+   },
+   "percent": 3.9
+  },
+  {
+   "description": {
+    "de": "Blutbande: Sammeln Sie alle Relikte im Croft-Anwesen.",
+    "en": "Blood Ties: Collect all of the Relics in Croft Manor"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/145430a9224b10aa9fdc7fea9ef69f0dbd3064c5.jpg",
+   "key": "NEW_ACHIEVEMENT_30_8",
+   "name": {
+    "de": "Hausplünderer",
+    "en": "Home Raider"
+   },
+   "percent": 4.5
+  },
+  {
+   "description": {
+    "de": "Blutbande: Erlangen Sie den Hauptschlüssel.",
+    "en": "Blood Ties: Acquire the Master Key"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/c3267785692cb979681a654469379f7546788ffb.jpg",
+   "key": "NEW_ACHIEVEMENT_30_9",
+   "name": {
+    "de": "Schlüssel zur Vergangenheit",
+    "en": "Key to the Past"
+   },
+   "percent": 13.8
+  },
+  {
+   "description": {
+    "de": "Blutbande: Finden Sie die Wahrheit über das Croft-Anwesen heraus.",
+    "en": "Blood Ties: Find truth of Croft Manor"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/9d4e8938a4aec2b0d2ab92bc62bdd746ef52acd9.jpg",
+   "key": "NEW_ACHIEVEMENT_30_10",
+   "name": {
+    "de": "Vermächtnis",
+    "en": "Legacy"
+   },
+   "percent": 11.6
+  },
+  {
+   "description": {
+    "de": "Blutbande: Öffnen Sie Lord Crofts Safe.",
+    "en": "Blood Ties: Open Lord Croft's Safe"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/bbd273966fef52624435bd6a87f687f96ed82da8.jpg",
+   "key": "NEW_ACHIEVEMENT_30_11",
+   "name": {
+    "de": "Meisterdetektiv",
+    "en": "Master Detective"
+   },
+   "percent": 12.7
+  },
+  {
+   "description": {
+    "de": "Blutbande: Sammeln Sie 50 % aller Dokumente im Croft-Anwesen.",
+    "en": "Blood Ties: Collect 50% of the Documents in Croft Manor"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/9a9e43657f9a85ca43a777c95b69b8ebd7c825f1.jpg",
+   "key": "NEW_ACHIEVEMENT_30_12",
+   "name": {
+    "de": "Das sind die Crofts",
+    "en": "Meet the Crofts"
+   },
+   "percent": 13.4
+  },
+  {
+   "description": {
+    "de": "Blutbande: Sammeln Sie 50 % aller Relikte im Croft-Anwesen.",
+    "en": "Blood Ties: Collect 50% of the Relics in Croft Manor"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/5caa3f05cef10e484ee732976c29b3254b6964cb.jpg",
+   "key": "NEW_ACHIEVEMENT_30_13",
+   "name": {
+    "de": "Reliktjäger",
+    "en": "Relic Hunter"
+   },
+   "percent": 13.6
+  },
+  {
+   "description": {
+    "de": "Laras Albtraum: Besiegen Sie den Albtraum.",
+    "en": "Lara's Nightmare: Defeat the Nightmare"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/d1ba33013823bdd675f9cb915a4bd013aeb888ae.jpg",
+   "key": "NEW_ACHIEVEMENT_30_14",
+   "name": {
+    "de": "Süße Träume",
+    "en": "Sweet Dreams"
+   },
+   "percent": 3.2
+  },
+  {
+   "description": {
+    "de": "Koop-Ausdauer-Herausforderung: Essen Sie mit Ihrer Partnerin das Fleisch von 3 Bären.",
+    "en": "Endurance Co-op Challenge: Eat the meat of 3 bears with your partner"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/65ea94f05aeca6ceafe1e627980724d15dd25040.jpg",
+   "key": "NEW_ACHIEVEMENT_30_15",
+   "name": {
+    "de": "Festmahl für zwei",
+    "en": "A Feast for Two"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "de": "Koop-Ausdauer-Herausforderung: Essen Sie mit Ihrer Partnerin das Fleisch von 3 Wölfen.",
+    "en": "Endurance Co-op Challenge: Eat the meat of 3 wolves with your partner"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/f3d12d1435cf13226900fd1faa52d1f275231e8a.jpg",
+   "key": "NEW_ACHIEVEMENT_30_16",
+   "name": {
+    "de": "Dinner für zwei",
+    "en": "A Dinner for Two"
+   },
+   "percent": 1.4
+  },
+  {
+   "description": {
+    "de": "Koop-Ausdauer-Herausforderung: Essen Sie mit Ihrer Partnerin Fleisch von 5 Kaninchen/Eichhörnchen.",
+    "en": "Endurance Co-op Challenge: Eat the meat of 5 rabbits or squirrels with your partner"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/822a34565a478ff02cbf77cf5d48efa861bb796b.jpg",
+   "key": "NEW_ACHIEVEMENT_30_17",
+   "name": {
+    "de": "Snack für zwei",
+    "en": "A Snack for Two"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "de": "Koop-Ausdauer-Herausforderung: Entkommen Sie mit 5 Artefakten aus dem Wald.",
+    "en": "Endurance Co-op Challenge: Escape the forest with 5 Artifacts"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/c4252db9243e6e6453dcb51beb3db694e1850b8e.jpg",
+   "key": "NEW_ACHIEVEMENT_30_18",
+   "name": {
+    "de": "Abenteuerfreunde",
+    "en": "Adventure Friends"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Koop-Ausdauer-Herausforderung: Entkommen Sie mit 5 mittleren und großen Artefakten aus dem Wald.",
+    "en": "Endurance Co-op Challenge: Escape the forest with 5 Medium and Large Artifacts"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/8351b502cd01ae4845e44fb0ba29b62370f5aa50.jpg",
+   "key": "NEW_ACHIEVEMENT_30_19",
+   "name": {
+    "de": "Beste Abenteuerfreunde",
+    "en": "Adventure Besties"
+   },
+   "percent": 1.0
+  },
+  {
+   "description": {
+    "de": "Koop-Ausdauer-Herausforderung: Töten Sie zusammen 10 gefährliche Tiere in einer einzigen Expedition.",
+    "en": "Endurance Co-op Challenge: Kill a combined total of 10 dangerous animals in a single Expedition"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/c5a9ab21c2ece85ca3879c0d1a87a28aa4c64966.jpg",
+   "key": "NEW_ACHIEVEMENT_30_20",
+   "name": {
+    "de": "Schwestern der Artemis",
+    "en": "Sisters of Artemis"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Koop-Ausdauer-Herausforderung: Töten Sie zusammen insgesamt 25 Feinde in einer einzigen Expedition.",
+    "en": "Endurance Co-op Challenge: Kill a combined total of 25 enemies in a single Expedition"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/9fc8186f700d9ad67a2e2f512b58e1f508dedb58.jpg",
+   "key": "NEW_ACHIEVEMENT_30_21",
+   "name": {
+    "de": "Schwestern der Athene",
+    "en": "Sisters of Athena"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Koop-Ausdauer-Herausforderung: Entkommen Sie dem Wald nach 7 Tagen, ohne Wiederbelebung einzusetzen.",
+    "en": "Endurance Co-op Challenge: Escape the forest after 7 days without using a single revive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/584cd9864d51c119d297cf65c1492f8c2308317b.jpg",
+   "key": "NEW_ACHIEVEMENT_30_22",
+   "name": {
+    "de": "Team-Überleben",
+    "en": "Team Survival"
+   },
+   "percent": 1.0
+  },
+  {
+   "description": {
+    "de": "Koop-Ausdauer-Herausforderung: Beleben Sie einen Spieler wieder.",
+    "en": "Endurance Co-op Challenge: Revive a player"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/c76de0955253a398b1deabf10ebd3c2cd5771473.jpg",
+   "key": "NEW_ACHIEVEMENT_30_23",
+   "name": {
+    "de": "Hilf mir doch",
+    "en": "Pick-Me-Up"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Koop-Ausdauer-Herausforderung: Beleben Sie einen Spieler 3 Mal in einer einzigen Expedition wieder.",
+    "en": "Endurance Co-op Challenge: Revive a player 3 times in a single expedition"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/9098682859ffc91aaf49ac45717d63a00d8cd0a6.jpg",
+   "key": "NEW_ACHIEVEMENT_30_24",
+   "name": {
+    "de": "Niemand bleibt zurück",
+    "en": "No One Left Behind"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Koop-Ausdauer-Herausforderung: Erledigen Sie einen Feind, der Ihre Partnerin im Nahkampf angreift.",
+    "en": "Endurance Co-op Challenge: Kill an enemy melee attacking your partner"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/cad1b0a7e92d11a2209f5d662bfd53c0365f3cb4.jpg",
+   "key": "NEW_ACHIEVEMENT_30_25",
+   "name": {
+    "de": "Lass sie in Frieden!",
+    "en": "Get Away from Her!"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Koop-Ausdauer-Herausforderung: Entkommen Sie nach 7 Tagen mit mindestens 10 Artefakten aus dem Wald.",
+    "en": "Endurance Co-op Challenge: Escape the forest after surviving for 7 days with at least 10 Artifacts"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/17817a3414ab4000dcdb9ac3e76257e0f1d27f23.jpg",
+   "key": "NEW_ACHIEVEMENT_30_26",
+   "name": {
+    "de": "Gemeinsame Zeit",
+    "en": "Bonding Time"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Koop-Ausdauer-Herausforderung: Bleiben Sie mindestens einen Tag über 60 Meter voneinander entfernt.",
+    "en": "Endurance Co-op Challenge: Spend at least one day more than 60 meters apart"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/84f3ff2f645417433ce60c664a847f5a91a2760d.jpg",
+   "key": "NEW_ACHIEVEMENT_30_27",
+   "name": {
+    "de": "Zeit für sich",
+    "en": "Alone Time"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Koop-Ausdauer-Herausforderung: Erledigen Sie 5 Feinde, die von Ihrer Partnerin markiert wurden.",
+    "en": "Endurance Co-op Challenge: Kill 5 enemies that have been marked by your partner"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/476459a1c3053bafdd0bf0805512383e98ae9bbb.jpg",
+   "key": "NEW_ACHIEVEMENT_30_28",
+   "name": {
+    "de": "Kommunikationsfähigkeiten",
+    "en": "Communication Skills"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Koop-Ausdauer-Herausforderung: Entkommen Sie nach 10 Tagen mit 20 oder mehr Artefakten aus dem Wald.",
+    "en": "Endurance Co-op Challenge: Escape the forest after surviving 10 days with at least 20 Artifacts"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/0804ac5135245a93486ebf89d8ac77dad838d79c.jpg",
+   "key": "NEW_ACHIEVEMENT_30_29",
+   "name": {
+    "de": "Meister und Lehrling",
+    "en": "Master and Apprentice"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Koop-Ausdauer-Herausforderung: Sichern Sie nachts in einer einzigen Expedition 3 Feindlager.",
+    "en": "Endurance Co-op Challenge: Clear 3 Enemy Camps at night in a single expedition"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/902f28bfc952a13f8e30223bc614bfb8c78a5fa8.jpg",
+   "key": "NEW_ACHIEVEMENT_30_30",
+   "name": {
+    "de": "Im Dunkel der Nacht",
+    "en": "For the Night is Dark"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Koop-Ausdauer-Herausforderung: Wärmen Sie sich am Lagerfeuer Ihrer Partnerin, wenn Sie erfrieren.",
+    "en": "Endurance Co-op Challenge: Warm up from freezing by standing next to a campfire lit by your partner"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/6026799b202d53ce7b02c1845b6398b435a07bf3.jpg",
+   "key": "NEW_ACHIEVEMENT_30_31",
+   "name": {
+    "de": "Teamarbeit",
+    "en": "Teamwork"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Koop-Ausdauer-Herausforderung: Sammeln Sie ein Artefakt, während Ihre Partnerin außer Gefecht ist.",
+    "en": "Endurance Co-op Challenge: Collect an Artifact while your partner is down"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/336e4889a94bcfdfbe9d21090fa108b69bb3c5db.jpg",
+   "key": "NEW_ACHIEVEMENT_31_0",
+   "name": {
+    "de": "\"Teamarbeit\"",
+    "en": "\"Teamwork\""
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Koop-Ausdauer-Herausforderung: Essen Sie mit Ihrer Partnerin, während eine von Ihnen verhungert.",
+    "en": "Endurance Co-op Challenge: Eat with your partner while at least one of you is starving"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/4af7122fcf408fd410f28fd4e0618c576e8dbb29.jpg",
+   "key": "NEW_ACHIEVEMENT_31_1",
+   "name": {
+    "de": "Sag \"Aaah\"",
+    "en": "Say \"Aaah\""
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "de": "Beenden Sie das Spiel auf dem Schwierigkeitsgrad",
+    "en": "Finish the game on Extreme Survivor difficulty"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/391220/e6348266fe530d8f23920e68f64608584f956fa0.jpg",
+   "key": "NEW_ACHIEVEMENT_31_2",
+   "name": {
+    "de": "Extrem-Überlebender",
+    "en": "Extreme Survivor"
+   },
+   "percent": 1.6
+  }
+ ],
+ "id": "391220",
+ "platform": "steam"
+}

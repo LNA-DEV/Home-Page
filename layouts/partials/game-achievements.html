@@ -1,0 +1,124 @@
+{{- /*
+  game-achievements.html
+  One copy's achievements: a summary, filter/sort controls, and one row each.
+
+  Usage: partial "game-achievements.html" (dict
+           "doc" <data/gameAchievements/<platform>-<id>.json>
+           "store" "Steam"            — the platform's display name
+           "heading" true|false       — name the store in the heading, when a
+                                        game has achievement lists on two stores
+           "lang" $lang)
+
+  Default order: unlocked first, newest first; then locked, most common first —
+  what you did, then what you could do next. The controls (filter all /
+  unlocked / locked, sort default / rarity / A–Z) are client-side,
+  assets/js/game-achievements.js, and rendered `hidden` so a visitor without
+  JavaScript is not handed buttons that do nothing.
+
+  A locked icon is the unlocked icon greyed by CSS: one file per achievement,
+  not two (docs/concepts/gaming-game-pages.md §3). Icons are committed under
+  static/images/games/achievements/ and served from this site — no request
+  leaves it, which is what keeps the page usable on the Tor build.
+
+  Steam delivers no description for a hidden achievement, locked or unlocked;
+  such a row says so instead of leaving a blank line.
+*/ -}}
+{{- $doc := .doc -}}
+{{- $lang := .lang | default site.Language.Lang -}}
+{{- $store := .store -}}
+{{- $items := $doc.achievements | default slice -}}
+
+{{- $done := slice -}}
+{{- $open := slice -}}
+{{- range $i, $a := $items -}}
+  {{- $ts := 0 -}}
+  {{- with $a.unlocked }}{{ $ts = (time.AsTime .).Unix }}{{ end -}}
+  {{- $row := dict "a" $a "i" $i "ts" $ts "pct" (float ($a.percent | default -1)) -}}
+  {{- if $a.achieved }}{{ $done = $done | append $row }}{{ else }}{{ $open = $open | append $row }}{{ end -}}
+{{- end -}}
+{{- $rows := (sort $done "ts" "desc") | append (sort $open "pct" "desc") -}}
+{{- $total := len $items -}}
+{{- $unlocked := len $done -}}
+{{- $share := 0.0 -}}
+{{- if gt $total 0 }}{{ $share = mul (div (float $unlocked) (float $total)) 100 }}{{ end -}}
+
+<section class="game-achievements" data-achievements aria-labelledby="achv-{{ $doc.platform }}-{{ $doc.id }}">
+  <h2 id="achv-{{ $doc.platform }}-{{ $doc.id }}">
+    {{- i18n "game_achievements" -}}
+    {{- if .heading }} · {{ $store }}{{ end -}}
+  </h2>
+
+  <div class="game-achv-summary">
+    <span class="game-achv-summary__count"><strong>{{ $unlocked }}</strong> / {{ $total }}</span>
+    <div class="game-achv-summary__track" role="img" aria-label="{{ i18n "game_achv_progress" (dict "unlocked" $unlocked "total" $total) }}">
+      <span style="width: {{ printf "%.1f" $share }}%"></span>
+    </div>
+    <span class="game-achv-summary__pct">{{ lang.FormatNumber 0 $share }} %</span>
+  </div>
+
+  <div class="gaming-controls game-achv-controls" hidden>
+    <div class="gaming-filter">
+      <button type="button" class="gaming-btn is-active" data-achv-filter="all">{{ i18n "allPlatforms" }}</button>
+      <button type="button" class="gaming-btn" data-achv-filter="unlocked">{{ i18n "game_achv_filter_unlocked" }}</button>
+      <button type="button" class="gaming-btn" data-achv-filter="locked">{{ i18n "game_achv_filter_locked" }}</button>
+    </div>
+    <div class="gaming-sort">
+      <button type="button" class="gaming-btn is-active" data-achv-sort="default">{{ i18n "game_achv_sort_default" }}</button>
+      <button type="button" class="gaming-btn" data-achv-sort="rarity">{{ i18n "game_achv_sort_rarity" }}</button>
+      <button type="button" class="gaming-btn" data-achv-sort="alpha">{{ i18n "sortAlpha" }}</button>
+    </div>
+  </div>
+
+  <ol class="game-achv-list">
+    {{- range $n, $row := $rows }}
+    {{- $a := $row.a }}
+    {{- $name := partial "dex-text.html" (dict "field" $a.name "lang" $lang) | default $a.key }}
+    {{- $desc := partial "dex-text.html" (dict "field" $a.description "lang" $lang) }}
+    <li class="game-achv{{ if not $a.achieved }} is-locked{{ end }}"
+        data-state="{{ cond (eq $a.achieved true) "unlocked" "locked" }}"
+        data-order="{{ $n }}" data-pct="{{ $row.pct }}" data-name="{{ lower $name }}">
+      <span class="game-achv__icon">
+        {{- /* A static file, not a Hugo resource. Every resources.Get file lands
+               in one LRU cache partition capped by COUNT (Hugo's dynacache: about
+               4,000 entries; memory is irrelevant, HUGO_MEMORYLIMIT does not move
+               it). The site already sends ~1,200 files through it; the ~3,100
+               icons pushed it over, evicted resources were re-created on their
+               next use and published a second time, and Hugo warned "Duplicate
+               target paths" for all 150 dex range files and a varying handful of
+               icons. Measured: fine at 3,104 icons, broken at 3,145; fine again
+               with all icons but the gallery mount emptied. The icons need no
+               processing, so static/ is where they belong anyway. The fileExists
+               check covers the few icons Steam no longer serves. */}}
+        {{- with $a.icon }}{{ if fileExists (printf "static/%s" .) }}
+        <img src="{{ printf "/%s" . | relURL }}" alt="" width="48" height="48" loading="lazy" decoding="async">
+        {{- end }}{{ end }}
+      </span>
+      <div class="game-achv__text">
+        <span class="game-achv__name">{{ $name }}</span>
+        {{- with $desc }}
+        <span class="game-achv__desc">{{ . }}</span>
+        {{- else }}{{ if $a.hidden }}
+        <span class="game-achv__desc game-achv__desc--hidden">{{ i18n "game_achv_hidden" (dict "store" $store) }}</span>
+        {{- end }}{{ end }}
+      </div>
+      <div class="game-achv__meta">
+        {{- if $a.achieved }}
+          {{- with $a.unlocked }}
+          <time class="game-achv__when" datetime="{{ . }}">{{ time.Format ":date_medium" (time.AsTime .) }}</time>
+          {{- else }}
+          <span class="game-achv__when">{{ i18n "game_achv_unlocked" }}</span>
+          {{- end }}
+        {{- else }}
+          <span class="game-achv__when game-achv__when--locked">{{ i18n "game_achv_locked" }}</span>
+        {{- end }}
+        {{- if ge $row.pct 0.0 }}
+        <span class="game-achv__pct" title="{{ i18n "game_achv_pct_title" }}">
+          <span class="game-achv__pct-track"><span style="width: {{ printf "%.1f" $row.pct }}%"></span></span>
+          {{ lang.FormatNumber 1 $row.pct }} %
+        </span>
+        {{- end }}
+      </div>
+    </li>
+    {{- end }}
+  </ol>
+</section>

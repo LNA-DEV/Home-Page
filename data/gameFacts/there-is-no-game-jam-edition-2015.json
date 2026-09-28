@@ -1,0 +1,34 @@
+{
+ "developers": [
+  "Draw Me A Pixel"
+ ],
+ "genres": [
+  {
+   "de": "Gelegenheitsspiel",
+   "en": "casual game",
+   "sv": "casualspel"
+  },
+  {
+   "de": "Adventure",
+   "en": "adventure video game",
+   "sv": "äventyrsspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "publishers": [
+  "Draw Me A Pixel"
+ ],
+ "released": "2020-03-18",
+ "steam": {
+  "en": "A little game that’s not a game, winner of an old game jam that nobody’s ever heard of. So DON'T INSTALL IT!"
+ },
+ "steam_appid": 1241700,
+ "wikidata": "Q116771363"
+}

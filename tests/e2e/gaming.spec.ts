@@ -75,3 +75,51 @@ test("a hidden game is nowhere on the page", async ({ page }) => {
   const leaked = ignored.filter((t) => shown.includes(t.trim().toLowerCase()));
   expect(leaked, `hidden in data/gamingIgnore.yaml but still a tile: ${leaked.join(", ")}`).toEqual([]);
 });
+
+/* ---- the game pages (docs/concepts/gaming-game-pages.md) ---- */
+
+test("a card opens its game's page", async ({ page }) => {
+  const card = page.locator(".game-card").first();
+  const title = (await card.locator(".game-card__title").innerText()).trim();
+  await card.click();
+  await expect(page).toHaveURL(/\/en\/gaming\/[a-z0-9-]+\/$/);
+  await expect(page.locator("h1")).toHaveText(title);
+});
+
+/** The first game page that has an achievement list with locked AND unlocked rows. */
+async function pageWithAchievements(page: import("@playwright/test").Page): Promise<string> {
+  const fs = await import("node:fs");
+  const path = await import("node:path");
+  const { REPO, gaming } = await import("../support/site");
+  for (const c of gaming()) {
+    if (c.platform !== "steam" || !c.achievementsTotal) continue;
+    if (!(c.achievementsUnlocked > 0 && c.achievementsUnlocked < c.achievementsTotal)) continue;
+    if (fs.existsSync(path.join(REPO, "data", "gameAchievements", `steam-${c.appid}.json`))) {
+      return `/en/gaming/${c.slug}/`;
+    }
+  }
+  test.skip(true, "no game with a partly unlocked achievement list");
+  return "";
+}
+
+test("the achievement list filters and sorts", async ({ page }) => {
+  await page.goto(await pageWithAchievements(page));
+  const block = page.locator("[data-achievements]").first();
+  const controls = block.locator(".game-achv-controls");
+  await expect(controls).toBeVisible(); // hidden until the script runs
+
+  const rows = block.locator(".game-achv");
+  const total = await rows.count();
+
+  await controls.locator('[data-achv-filter="locked"]').click();
+  const visible = block.locator(".game-achv:visible");
+  expect(await visible.count()).toBeLessThan(total);
+  expect(await visible.evaluateAll((els) => els.every((e) => (e as HTMLElement).dataset.state === "locked"))).toBe(true);
+
+  await controls.locator('[data-achv-filter="all"]').click();
+  await controls.locator('[data-achv-sort="rarity"]').click();
+  const pcts = await rows.evaluateAll((els) =>
+    els.map((e) => parseFloat((e as HTMLElement).dataset.pct!)).filter((p) => p >= 0));
+  expect(pcts).toEqual([...pcts].sort((a, b) => a - b));
+  expect(await visible.count()).toBe(total);
+});

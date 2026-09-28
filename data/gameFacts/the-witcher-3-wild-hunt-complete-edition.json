@@ -1,0 +1,53 @@
+{
+ "developers": [
+  "CD Projekt RED"
+ ],
+ "genres": [
+  {
+   "de": "Action-Rollenspiel",
+   "en": "action role-playing game",
+   "sv": "actionrollspel"
+  },
+  {
+   "de": "Fantasie-Computerspiel",
+   "en": "fantasy video game",
+   "sv": "fantasydatorspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "publishers": [
+  "CD Projekt RED",
+  "cdp.pl",
+  "Namco",
+  "Warner Bros. Games"
+ ],
+ "released": "2015-05-19",
+ "steam": {
+  "de": "Du bist Geralt von Riva, Monsterschlächter und Söldner. Du erkundest einen vom Krieg zerrütteten und von Monstern befallenen Kontinent. Dein aktueller Auftrag? Finde Ciri, das Kind der Prophezeiung – eine lebende Waffe mit der Macht, die Welt zu verändern.",
+  "en": "You are Geralt of Rivia, mercenary monster slayer. Before you stands a war-torn, monster-infested continent you can explore at will. Your current contract? Tracking down Ciri — the Child of Prophecy, a living weapon that can alter the shape of the world.",
+  "sv": "Du är Geralt av Rivia, monsterjägare mot betalning. En krigsdrabbad, monsterhärjad kontinent ligger för dina fötter. Ditt nästa uppdrag är att hitta profetians barn Ciri – ett levande vapen som kan forma hela världens öde."
+ },
+ "steam_appid": 292030,
+ "wikidata": "Q4267401",
+ "wikipedia": {
+  "de": {
+   "text": "The Witcher 3: Wild Hunt ist ein Action-Rollenspiel des polnischen Entwicklerstudios CD Projekt RED, welches am 19. Mai 2015 veröffentlicht wurde. Es erzählt die Geschichte um Gerald von Riva weiter und setzt somit The Witcher (2007) und The Witcher 2: Assassins of Kings (2011) fort.",
+   "url": "https://de.wikipedia.org/wiki/The_Witcher_3:_Wild_Hunt"
+  },
+  "en": {
+   "text": "The Witcher 3: Wild Hunt‍ is a 2015 action role-playing game developed and published by CD Projekt. It is the sequel to the 2011 game The Witcher 2: Assassins of Kings and the third game in The Witcher video game series, played in an open world with a third-person perspective. The games follow the Witcher series of fantasy novels by Polish author Andrzej Sapkowski.",
+   "url": "https://en.wikipedia.org/wiki/The_Witcher_3:_Wild_Hunt"
+  },
+  "sv": {
+   "text": "The Witcher 3: Wild Hunt är ett actionrollspel som utspelar sig i en öppen spelvärld, utvecklat och utgivet av den polska datorspelsutvecklaren CD Projekt RED. Spelet offentliggjordes i februari 2013 och släpptes den 19 maj 2015 till Microsoft Windows, Playstation 4 och Xbox One. En version till Nintendo Switch släpptes 2019.",
+   "url": "https://sv.wikipedia.org/wiki/The_Witcher_3:_Wild_Hunt"
+  }
+ }
+}

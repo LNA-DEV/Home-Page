@@ -1,0 +1,44 @@
+{
+ "developers": [
+  "Landfall West"
+ ],
+ "genres": [
+  {
+   "de": "Actionspiel",
+   "en": "action game",
+   "sv": "actionspel"
+  },
+  {
+   "de": "Kampfspiel",
+   "en": "fighting game",
+   "sv": "fightingspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  }
+ ],
+ "publishers": [
+  "Landfall Games"
+ ],
+ "released": "2017-09-28",
+ "steam": {
+  "en": "Stick Fight is a physics-based couch/online fighting game where you battle it out as the iconic stick figures from the golden age of the internet."
+ },
+ "steam_appid": 674940,
+ "wikidata": "Q56451333",
+ "wikipedia": {
+  "de": {
+   "text": "Stick Fight: The Game ist ein Ragdoll-Fighting-Game aus dem Jahr 2017.",
+   "url": "https://de.wikipedia.org/wiki/Stick_Fight:_The_Game"
+  },
+  "en": {
+   "text": "Stick Fight: The Game is an action fighting multiplayer-only video game developed and published by Landfall Games on Steam on September 28, 2017. Later, the game was ported to Nintendo Switch, PlayStation, Xbox and Android.",
+   "url": "https://en.wikipedia.org/wiki/Stick_Fight:_The_Game"
+  }
+ }
+}

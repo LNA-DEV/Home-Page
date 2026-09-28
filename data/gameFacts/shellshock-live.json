@@ -1,0 +1,60 @@
+{
+ "developers": [
+  "kChamp Games"
+ ],
+ "genres": [
+  {
+   "de": "Actionspiel",
+   "en": "action game",
+   "sv": "actionspel"
+  },
+  {
+   "de": "Artilleryspiel",
+   "en": "artillery game",
+   "sv": "artillerispel"
+  },
+  {
+   "de": "Computer-Strategiespiel",
+   "en": "strategy video game",
+   "sv": "strategidatorspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  },
+  {
+   "de": "Koop-Modus",
+   "en": "co-op mode",
+   "sv": "flerspelarläge"
+  }
+ ],
+ "publishers": [
+  "kChamp Games"
+ ],
+ "released": "2015-03-11",
+ "steam": {
+  "de": "Vernichte deine Freunde mit Hunderten Waffen zum Aufwerten, die mit deinem individualisierbaren Panzer in diesem actiongeladenen Online-Mehrspieler-Panzerspiel abgefeuert werden. Erreiche höhere Stufen, indem du EP verdienst, und schalte neue Panzer, Waffen und Ausrüstungsgegenstände frei.",
+  "en": "Demolish your friends with hundreds of upgradable weapons shot from your customizable tank in this action-packed online multiplayer tanks game. Earn XP to level up and unlock new tanks, weapons, and gear. Fight against or alongside your friends for strategic team or free-for-all matches."
+ },
+ "steam_appid": 326460,
+ "wikidata": "Q23303316",
+ "wikipedia": {
+  "de": {
+   "text": "ShellShock Live ist ein Mehrspieler-Artillery-Spiel, das vom südkalifornischen Ein-Mann-Studio kChamp Games entwickelt und zunächst als Flash-Spiel, seit 2015 als eigenständige Software für PC, Spielkonsolen und Smartphones veröffentlicht wurde.",
+   "url": "https://de.wikipedia.org/wiki/ShellShock_Live"
+  },
+  "en": {
+   "text": "ShellShock Live is a multiplayer artillery strategy video game developed and published by kChamp Games based in California, United States. It is the successor of two flash games in the ShellShock Live series released between 2010 and 2012 by the same developer. It was released on platforms such as Microsoft Windows, Mac, Linux, Xbox One, and PlayStation 4 and is now available on mobile platforms Android and iOS as of May 12, 2022.",
+   "url": "https://en.wikipedia.org/wiki/ShellShock_Live"
+  }
+ }
+}

@@ -1,0 +1,60 @@
+{
+ "developers": [
+  "The Behemoth"
+ ],
+ "genres": [
+  {
+   "de": "Beat ’em up",
+   "en": "beat 'em up",
+   "sv": "beat 'em up"
+  },
+  {
+   "de": "Hack and Slash",
+   "en": "hack and slash",
+   "sv": "hack 'n slash"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  },
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Koop-Modus",
+   "en": "co-op mode",
+   "sv": "flerspelarläge"
+  }
+ ],
+ "publishers": [
+  "Xbox Game Studios",
+  "Sony Interactive Entertainment"
+ ],
+ "released": "2008-08-27",
+ "steam": {
+  "de": "Hacken, schneiden und schlagen Sie sich Ihren Weg zum Sieg in diesem preisgekrönten 2D-Arcade-Adventure von The Behemoth!",
+  "en": "Hack, slash, and smash your way to victory in this award winning 2D arcade adventure from The Behemoth!"
+ },
+ "steam_appid": 204360,
+ "wikidata": "Q640567",
+ "wikipedia": {
+  "de": {
+   "text": "Castle Crashers ist ein 2D-Beat-’em-up des Entwicklerstudios The Behemoth. Die Xbox-360-Version ist am 27. August 2008 in Deutschland erschienen, die PlayStation-3-Version erst am 3.",
+   "url": "https://de.wikipedia.org/wiki/Castle_Crashers"
+  },
+  "en": {
+   "text": "Castle Crashers is a beat 'em up video game developed and published by The Behemoth for the Xbox 360. It was originally released on August 27, 2008 by Microsoft Game Studios via Xbox Live Arcade as part of the Xbox Live Summer of Arcade. A PlayStation 3 version was released in North America on August 31, 2010, and November 3, 2010, in Europe via the PlayStation Network.",
+   "url": "https://en.wikipedia.org/wiki/Castle_Crashers"
+  },
+  "sv": {
+   "text": "Castle Crashers är ett beat 'em up-spel utvecklat av The Behemoth. Spelet blev först annonserat på Comic-Con 2006, och spelet släpptes till Xbox Live Arcade den 27 augusti, 2008, för 1200 Microsoft Points. En planerad version för PlayStation 3 beräknas släppas under 2010.",
+   "url": "https://sv.wikipedia.org/wiki/Castle_Crashers"
+  }
+ }
+}

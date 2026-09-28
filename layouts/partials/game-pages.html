@@ -1,0 +1,72 @@
+{{- /*
+  Content adapter: one page per game, per language, at /<lang>/gaming/<slug>/.
+
+  Every game shown on /gaming/ gets one — data/gamingIgnore.yaml removes a game
+  from the grid and from here alike, because both read gaming-merged.html. There
+  is one adapter FILE per language (content/gaming/_content.*.gotmpl) because
+  Hugo scopes an adapter to the language of its filename. The slug is
+  language-neutral, so the three pages share a URL segment and are paired
+  through `translationKey` — a TOP-LEVEL key of AddPage, like `aliases`,
+  `sitemap` and `build`; inside `params` Hugo ignores it.
+
+  The page body is the description the chain in game-description.html picks, so
+  `.Plain` gives the site search something to find. Rendering is dispatched by
+  params.theme = "game" in page.html and single.html → game-detail.html.
+
+  Indexing (docs/concepts/gaming-game-pages.md §8): most of what these pages say
+  is Wikipedia's or the store's, which does not rank and should not try to. So
+  they are `noindex, follow` and out of sitemap.xml, but stay in the site search
+  — noindex is about search engines, not about the visitor who types a title.
+  $indexable is the one switch: make it a per-game condition (own text, notes,
+  screenshots) once there is something of the owner's own worth indexing.
+*/ -}}
+{{- $lang := .Site.Language.Lang -}}
+{{- $names := partialCached "gaming-platforms.html" "names" -}}
+{{- /* Once per build, not once per language: the same folders, the same warning. */ -}}
+{{- if eq $lang "en" }}{{ partial "game-screenshot-check.html" . }}{{ end -}}
+{{- range partialCached "gaming-merged.html" . -}}
+  {{- $game := . -}}
+  {{- $indexable := false -}}
+  {{- $desc := partial "game-description.html" (dict "game" $game "lang" $lang) -}}
+  {{- $facts := partial "game-facts.html" (dict "slug" .slug "lang" $lang) -}}
+
+  {{- $platforms := slice -}}
+  {{- range .platforms }}{{ $platforms = $platforms | append (index $names . | default (. | title)) }}{{ end -}}
+
+  {{- /* The meta description collapses whitespace before truncating; plainify
+         over the markdown source, because markdownify is a build error in a
+         content adapter (the site is not initialised yet). */ -}}
+  {{- $meta := $desc.text | plainify | replaceRE `\s+` " " | strings.TrimSpace | truncate 160 -}}
+  {{- if not $meta -}}
+    {{- $meta = i18n "game_meta_description" (dict "title" .title "platforms" (delimit $platforms ", ")) -}}
+  {{- end -}}
+
+  {{- /* Absolute: Hugo prefixes it with the language, so each page redirects its
+         own language's old URL. */ -}}
+  {{- $aliases := slice -}}
+  {{- range .page.slugAliases | default slice }}{{ $aliases = $aliases | append (printf "/gaming/%v/" .) }}{{ end -}}
+
+  {{- $.AddPage (dict
+        "path" .slug
+        "kind" "page"
+        "title" .title
+        "description" $meta
+        "content" (dict "mediaType" "text/markdown" "value" $desc.text)
+        "translationKey" (printf "game-%s" .slug)
+        "aliases" $aliases
+        "sitemap" (dict "disable" (not $indexable))
+        "params" (dict
+          "theme" "game"
+          "game_slug" .slug
+          "game_wikidata" $facts.wikidata
+          "game_genres" $facts.genres
+          "game_platforms" $platforms
+          "robotsNoIndex" (not $indexable)
+          "robotsFollow" true
+          "searchHidden" false
+          "hideMeta" true
+          "hideNewsletter" true
+          "disableShare" true
+        )
+      ) -}}
+{{- end -}}

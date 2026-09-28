@@ -1,0 +1,49 @@
+{
+ "developers": [
+  "Endnight Games"
+ ],
+ "genres": [
+  {
+   "de": "Survival Horror",
+   "en": "survival horror",
+   "sv": "survival horror"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  },
+  {
+   "de": "Koop-Modus",
+   "en": "co-op mode",
+   "sv": "flerspelarläge"
+  }
+ ],
+ "publishers": [
+  "Endnight Games"
+ ],
+ "released": "2018-04-30",
+ "steam": {
+  "en": "As the lone survivor of a passenger jet crash, you find yourself in a mysterious forest battling to stay alive against a society of cannibalistic mutants. Build, explore, survive in this terrifying first person survival horror simulator."
+ },
+ "steam_appid": 242760,
+ "wikidata": "Q16267841",
+ "wikipedia": {
+  "de": {
+   "text": "The Forest ist ein 2018 erschienenes Survival-Horror-Spiel für Windows und PlayStation 4. Im Debüt des kanadischen Entwicklers Endnight Games schlüpft der Spieler in die Rolle eines Überlebenden eines Flugzeugabsturzes. Auf einer abgelegenen Halbinsel versucht er alleine oder mit bis zu sieben Mitspielern in der Natur zu überleben und seinen Sohn zu finden, den Angehörige eines Kannibalenstamms von der Absturzstelle entführt haben.",
+   "url": "https://de.wikipedia.org/wiki/The_Forest_(Computerspiel)"
+  },
+  "en": {
+   "text": "The Forest is a survival horror video game developed and published by Endnight Games. Its core gameplay loop consists of a non-linear open-world survival experience built around traditional video game survival mechanics extended by the game's signature threat management system in which players must survive against the Cannibals and Mutants that inhabit the environment by gathering resources, crafting weapons and traps, constructing defensive fortifications, and engaging in or avoiding combat.",
+   "url": "https://en.wikipedia.org/wiki/The_Forest_(video_game)"
+  }
+ }
+}

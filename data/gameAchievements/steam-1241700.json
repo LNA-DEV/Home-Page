@@ -1,0 +1,98 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "en": "You made the right choice."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1241700/8f57215e53c404b29e0b43abd100a78b7357a374.jpg",
+   "key": "TINGJAM_FRIEND_YES",
+   "name": {
+    "en": "Let's be friends"
+   },
+   "percent": 78.7,
+   "unlocked": "2021-06-23T18:20:41+02:00"
+  },
+  {
+   "description": {
+    "en": "You made the right choice."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1241700/8f2d30f3be8e02187f1921a7bce09e21be0ba6f8.jpg",
+   "key": "TINGJAM_FRIEND_NO",
+   "name": {
+    "en": "Not nice at all"
+   },
+   "percent": 60.8
+  },
+  {
+   "description": {
+    "en": "I was expecting a word, you know, something that makes sense. But you think you’re smart."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1241700/b1faff5023b7dd2e34026848418c7a605694d5d9.jpg",
+   "key": "TINGJAM_GAME_NOTFIRST",
+   "name": {
+    "en": "Bad student"
+   },
+   "percent": 49.7
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "While the speaker is moving around, press it within 3 seconds."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1241700/d2e8c4304b2a882b14f8be59f1adaeac7482c288.jpg",
+   "key": "TINGJAM_SHARPSHOOTER",
+   "name": {
+    "en": "Sharpshooter"
+   },
+   "percent": 46.7,
+   "unlocked": "2021-06-23T18:13:31+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Break all the bricks before the program says \"Goat.\""
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1241700/c6d1d534964e94505f14c214f8fc573c436986b5.jpg",
+   "key": "TINGJAM_BREAK_OUT_MASTER",
+   "name": {
+    "en": "Breakout master"
+   },
+   "percent": 69.9,
+   "unlocked": "2021-06-23T11:56:47+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Use the metal crate to bounce one of the letters from the title up and down 10 times in a row without letting it hit the ground."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1241700/5d417a1664880111c94098f294e8781467c1a50a.jpg",
+   "key": "TINGJAM_READY_FOR_CIRCUS",
+   "name": {
+    "en": "Ready for the circus!"
+   },
+   "percent": 50.6,
+   "unlocked": "2021-06-23T11:53:24+02:00"
+  },
+  {
+   "description": {
+    "en": "You should be ashamed of yourself!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1241700/af29b7bbb7d16467ca9c4f766d3acdd25df3a218.jpg",
+   "key": "TINGJAM_BAD_IN_SCIENCE",
+   "name": {
+    "en": "Animal cruelty"
+   },
+   "percent": 40.3
+  }
+ ],
+ "id": "1241700",
+ "platform": "steam"
+}

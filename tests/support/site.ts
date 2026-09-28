@@ -62,6 +62,19 @@ export const dex = memo<any[]>(() => readYaml("data/dex.yaml").species ?? []);
 export const models = memo<any[]>(() => readYaml("data/models.yaml").models ?? []);
 export const licenseMap = memo<Record<string, any>>(() => readYaml("data/licenseMap.yaml"));
 
+/* The game library: one entry per COPY (data/gaming.yaml), the per-game editorial
+   records (data/gamePages.yaml), and the titles hidden from every view. */
+export const gaming = memo<any[]>(() => readYaml("data/gaming.yaml") ?? []);
+export const gamePages = memo<any[]>(() => readYaml("data/gamePages.yaml")?.games ?? []);
+export const gamingIgnore = memo<Set<string>>(
+  () => new Set(((readYaml("data/gamingIgnore.yaml")?.titles ?? []) as any[]).map((t) => String(t).trim().toLowerCase())),
+);
+
+/** The slugs that get a page: every copy not hidden by gamingIgnore.yaml. */
+export const shownGameSlugs = memo<string[]>(() => [
+  ...new Set(gaming().filter((c) => !gamingIgnore().has(String(c.title).trim().toLowerCase())).map((c) => String(c.slug))),
+]);
+
 /* The site config. `params.author` and `params.schema.sameAs` define the owner as
    one schema.org Person; the structured-data tests assert the pages against it. */
 export const hugoConfig = memo<any>(() => readYaml("hugo.yaml"));

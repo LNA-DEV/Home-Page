@@ -18,6 +18,8 @@
 {{- partial "dex-detail.html" . }}
 {{- else if eq .Params.Theme "model" }}
 {{- partial "model-detail.html" . }}
+{{- else if eq .Params.Theme "game" }}
+{{- partial "game-detail.html" . }}
 {{- else if eq .Params.Theme "gallery-project" }}
 {{- partial "gallery-breadcrumb.html" . }}
 {{- partial "title.html" . }}

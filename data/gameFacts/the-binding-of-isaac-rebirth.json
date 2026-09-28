@@ -1,0 +1,56 @@
+{
+ "developers": [
+  "Nicalis"
+ ],
+ "genres": [
+  {
+   "de": "Action-Adventure",
+   "en": "action-adventure game",
+   "sv": "actionäventyrsspel"
+  },
+  {
+   "en": "roguelite"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Koop-Modus",
+   "en": "co-op mode",
+   "sv": "flerspelarläge"
+  },
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  }
+ ],
+ "publishers": [
+  "Crayon"
+ ],
+ "released": "2014-11-04",
+ "steam": {
+  "en": "The Binding of Isaac: Rebirth is a randomly generated action RPG shooter with heavy Rogue-like elements. Following Isaac on his journey players will find bizarre treasures that change Isaac’s form giving him super human abilities and enabling him to fight off droves of mysterious creatures, discover secrets and fight his way to safety."
+ },
+ "steam_appid": 250900,
+ "wikidata": "Q16267631",
+ "wikipedia": {
+  "de": {
+   "text": "The Binding of Isaac: Rebirth ist ein Remake des Computerspiels The Binding of Isaac und wurde erstmals am 4. November 2014 veröffentlicht.",
+   "url": "https://de.wikipedia.org/wiki/The_Binding_of_Isaac:_Rebirth"
+  },
+  "en": {
+   "text": "The Binding of Isaac: Rebirth is a 2014 roguelike action-adventure game designed by Edmund McMillen and developed and published by Nicalis. Rebirth was released for Linux, Microsoft Windows, macOS, PlayStation 4 and PlayStation Vita in November 2014, for Xbox One, New Nintendo 3DS and Wii U in July 2015, for iOS in January 2017, for Nintendo Switch in March 2017, and for PlayStation 5 and Xbox Series X/S in November 2021, and Nintendo Switch 2 in November 2026.",
+   "url": "https://en.wikipedia.org/wiki/The_Binding_of_Isaac:_Rebirth"
+  },
+  "sv": {
+   "text": "The Binding of Isaac: Rebirth är ett indie-actionäventyrsspel från 2014, designat av Edmund McMillen och utvecklat av Nicalis. Spelet är en förbättrad version av The Binding of Isaac från 2011 med nytt innehåll.",
+   "url": "https://sv.wikipedia.org/wiki/The_Binding_of_Isaac:_Rebirth"
+  }
+ }
+}

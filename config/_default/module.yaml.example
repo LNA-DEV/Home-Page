@@ -19,3 +19,11 @@ mounts:
   - source: /absolute/path/to/your/photo/store
     target: assets/images/gallery
     disableWatch: true
+  # Optional: game screenshots, one folder per game slug (the `slug:` in
+  # data/gaming.yaml), e.g. <store>/stardew-valley/2024-03-01_12-00-00.png.
+  # Without this mount the game pages simply have no screenshot section; a folder
+  # that matches no game is a build warning. Same rules as above: a real
+  # directory, not a symlink. See docs/concepts/gaming-game-pages.md §7.
+  # - source: /absolute/path/to/your/screenshot/store
+  #   target: assets/images/games/screenshots
+  #   disableWatch: true

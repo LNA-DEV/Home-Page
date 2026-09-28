@@ -1,0 +1,466 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "de": "Starte dein erstes Spiel",
+    "en": "Start your first game"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/12ec18fcb5196b25ae48169b24383bace8c0238d.jpg",
+   "key": "ACH_FIRST_GAME",
+   "name": {
+    "de": "Viel Glück!",
+    "en": "Goodluck!"
+   },
+   "percent": 43.9,
+   "unlocked": "2020-12-02T20:21:38+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Gewinne dein erstes Minispiel",
+    "en": "Win your first minigame"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/9bfa5b590322aa93d8c861873061f6ed42e9bcd3.jpg",
+   "key": "ACH_WIN_FIRST_MINIGAME",
+   "name": {
+    "de": "Das erste von vielen!",
+    "en": "The First of Many!"
+   },
+   "percent": 91.0,
+   "unlocked": "2020-12-02T20:29:37+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erziele dein erstes Tor",
+    "en": "Get your first goal"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/26b7495d45ac68fa55b3e9d111d130bbb087b36b.jpg",
+   "key": "ACH_FIRST_GOAL",
+   "name": {
+    "de": "So glänzend",
+    "en": "So Shiny"
+   },
+   "percent": 85.4,
+   "unlocked": "2020-12-02T20:30:08+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Gewinne dein erstes Spiel",
+    "en": "Win your first game"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/e6636de2786581780725499a2b37eab8b383605e.jpg",
+   "key": "ACH_WIN_FIRST_GAME",
+   "name": {
+    "de": "Du bist der Gewinner",
+    "en": "You Are The Winner"
+   },
+   "percent": 46.6,
+   "unlocked": "2020-12-02T21:01:39+01:00"
+  },
+  {
+   "description": {
+    "de": "Erleide keinen Schaden im Minispiel „Sengende Scheinwerfer“",
+    "en": "Take no damage in 'Searing Spotlights' minigame"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/92c85b1d2e0c1bf3a87448ab8dce6402c545ac44.jpg",
+   "key": "ACH_DAMAGE_SPOTLIGHTS",
+   "name": {
+    "de": "Ein verwegener Teufel",
+    "en": "A Daring Devil"
+   },
+   "percent": 12.7
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Jage dich im Minispiel „Strategische Schockwelle“ versehentlich in die Luft",
+    "en": "Accidentally blew yourself up in the 'Strategic Shockwave' minigame"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/d80de9dbe5d276a5113af04f8fe4a53ddd25952c.jpg",
+   "key": "ACH_MADE_A_MISTAKE",
+   "name": {
+    "de": "Du hast einen Fehler gemacht",
+    "en": "You Made a Mistake"
+   },
+   "percent": 63.4,
+   "unlocked": "2021-01-30T19:16:25+01:00"
+  },
+  {
+   "description": {
+    "de": "Triff drei Spieler mit der ferngesteuerten Aubergine",
+    "en": "Hit three players with the remote control eggplant"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/5b869cdc931a954ba2856fed3b2fad5f93a0ce30.jpg",
+   "key": "ACH_THE_TRIFECTA",
+   "name": {
+    "de": "Hattrick",
+    "en": "The Trifecta"
+   },
+   "percent": 11.1
+  },
+  {
+   "description": {
+    "de": "Spieße drei Spieler mit dem Raketenspieß auf",
+    "en": "Skewer three players with the rocket skewer item"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/4801cff1a8eca7ce9ea87327263df1f0addf2e74.jpg",
+   "key": "ACH_EXTRA_MEAT",
+   "name": {
+    "de": "Extra-Fleisch",
+    "en": "Extra Meat"
+   },
+   "percent": 9.4
+  },
+  {
+   "description": {
+    "de": "Werder Erster in jedem Minispiel",
+    "en": "Place first in every minigame"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/778b643933d2019f5e071b7eb026205c162601eb.jpg",
+   "key": "ACH_MINIGAME_MASTER",
+   "name": {
+    "de": "Minispiel-Meister",
+    "en": "Minigame Master"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "de": "Werde Letzter in jedem Minispiel",
+    "en": "Place last in every minigame"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/b4711174744f91f4a9398a023f2cd935e6739ab2.jpg",
+   "key": "ACH_UNLUCKY",
+   "name": {
+    "de": "Pech",
+    "en": "Unlucky"
+   },
+   "percent": 0.9
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erreiche mehr als 10 Punkten in „Höhen-Hinterhalt“",
+    "en": "Score over 10 in 'Altitude Attack'"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/17992ea01b0940328c96f8294eb3fa8b90b12ebf.jpg",
+   "key": "ACH_ALTITUDE_ATTACK",
+   "name": {
+    "de": "Höhenflieger",
+    "en": "Altitude Achiever"
+   },
+   "percent": 10.6,
+   "unlocked": "2026-03-14T19:50:11+01:00"
+  },
+  {
+   "description": {
+    "de": "Erziele einen Doppel-Kill in „Scheunen-Schlägerei“",
+    "en": "Get a double kill in 'Barn Brawl'"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/0a070cb03718380c9026631a14e78c094471305e.jpg",
+   "key": "ACH_BARN_BRAWL",
+   "name": {
+    "de": "Zwei Vögel",
+    "en": "Two Birds"
+   },
+   "percent": 20.0
+  },
+  {
+   "description": {
+    "de": "Überlebe 50 Sekunden lang in „Knallharte Kugeln“",
+    "en": "Survive for 50 seconds in 'Bullet Barrage'"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/1f55e9ef5bd5f53f798f2ac289fc399081eb928e.jpg",
+   "key": "ACH_BULLET_BARRAGE",
+   "name": {
+    "de": "Weich aus",
+    "en": "Dodge This"
+   },
+   "percent": 6.0
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Kontrolliere mehr als 50 % in „Elementare Eskalation“",
+    "en": "Control over 50% of the area in 'Elemental Escalation'"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/b2c910bf29d8c0dc5e0e9180074100252f9e916d.jpg",
+   "key": "ACH_ELEMENTAL_ESCALATION",
+   "name": {
+    "de": "Elementar",
+    "en": "Elementfull"
+   },
+   "percent": 37.8,
+   "unlocked": "2021-01-30T19:13:42+01:00"
+  },
+  {
+   "description": {
+    "de": "Töte jeden anderen Spieler als Blitzträger in „Donnerndes Drama“",
+    "en": "As the lightning holder kill every other player in 'Thunderous Trench'"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/b234a3e1fb33e5b215aaf773d9763d12484ab341.jpg",
+   "key": "ACH_THUNDEROUS_TRENCH",
+   "name": {
+    "de": "Blitzableiter",
+    "en": "Lightning Rod"
+   },
+   "percent": 20.3
+  },
+  {
+   "description": {
+    "de": "Schalte 10 Spieler in einer Runde „Explosive Entsorgung“ aus",
+    "en": "Knockout 10 players in one game of 'Explosive Exchange'"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/ded4882bd7fc1518e95ec2f4e7d666674dfd2dcb.jpg",
+   "key": "ACH_EXPLOSIVE_EXCHANGE",
+   "name": {
+    "de": "Sterne sehen",
+    "en": "Seeing Stars"
+   },
+   "percent": 4.7
+  },
+  {
+   "description": {
+    "de": "Schließe „Rostige Raser“ ab, ohne von der Strecke zu fallen",
+    "en": "Complete 'Rusty Racers' without falling off the track"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/e5096f2cf606a6ab44146c160e1bb7bbc4ddd5a4.jpg",
+   "key": "ACH_RUSTY_RACERS",
+   "name": {
+    "de": "Straßenkrieger",
+    "en": "Road Warrior"
+   },
+   "percent": 12.6
+  },
+  {
+   "description": {
+    "de": "Überlebe mindestens 50 Sekunden in „Flinker Flug“",
+    "en": "Survive for at least 50 seconds in 'Sorcerers Sprint'"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/8520db98677d40fb4ec85a443addf320751cbb90.jpg",
+   "key": "ACH_SORCERERS_SPRINT",
+   "name": {
+    "de": "Die Nadel einfädeln",
+    "en": "Thread The Needle"
+   },
+   "percent": 23.7
+  },
+  {
+   "description": {
+    "de": "Werde in „Schlängelnde Spuren“ vom Zug erfasst",
+    "en": "Got hit by the train in 'Temporal Trails'"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/9501fcdda548cdab0c75b2e951896ac6c9b5164c.jpg",
+   "key": "ACH_TEMPORAL_TRAILS",
+   "name": {
+    "de": "Zu langsam",
+    "en": "Too Slow"
+   },
+   "percent": 19.5
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schlage 5 Spieler in einer Partie „Schnee-Schleudern“ runter",
+    "en": "Knock off 5 players in one game of 'Snowy Spin'"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/e0bdcc7be113e1b1166199a4fab251047fad2948.jpg",
+   "key": "ACH_SNOWY_SPIN",
+   "name": {
+    "de": "Rollmeister",
+    "en": "Rolling Master"
+   },
+   "percent": 19.6,
+   "unlocked": "2022-09-11T16:02:13+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Töte 5 Spieler in Folge in „Schnelle Säbel“",
+    "en": "Get a 5 player kill streak in 'Speedy Sabers'"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/bae2fef0740f2c66fedc0991732ee6d45b9c00c7.jpg",
+   "key": "ACH_SPEEDY_SABERS",
+   "name": {
+    "de": "Zerhackt in Bits",
+    "en": "Chopped To Bits"
+   },
+   "percent": 45.3,
+   "unlocked": "2021-03-30T21:05:19+02:00"
+  },
+  {
+   "description": {
+    "de": "Fliege in „Planende Panzer“ aus dem Bildschirm",
+    "en": "Get launched off screen in 'Tunneling Tanks'"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/170c2585ab28a484fed2ff7054d7cea8582e9049.jpg",
+   "key": "ACH_TUNNELING_TANKS",
+   "name": {
+    "de": "Sternenmann",
+    "en": "Starman"
+   },
+   "percent": 48.2
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Finde den Schatz in „Sandige Suche“",
+    "en": "Find the treasure in 'Sandy Search'"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/e261d36f84e95780653d818779539d5afbe1e8c4.jpg",
+   "key": "ACH_SANDY_SEARCH",
+   "name": {
+    "de": "Plünderer",
+    "en": "Raider"
+   },
+   "percent": 32.0,
+   "unlocked": "2021-01-30T19:05:27+01:00"
+  },
+  {
+   "description": {
+    "de": "Stirb im „Acid-Atoll“, ohne ein Fass zu werfen",
+    "en": "Died in 'Acidic Atoll' without throwing a barrel"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/99d32c9359c4c3f3b9d05ae329d15fd1d6659c41.jpg",
+   "key": "ACH_ACIDIC_ATOLL",
+   "name": {
+    "de": "Tödlicher Ausrutscher",
+    "en": "Fatal Slip"
+   },
+   "percent": 21.0
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Gewinne „Magma & Magier“ gewinnen, ohne Schaden zu nehmen",
+    "en": "Win 'Magma & Mages' without taking damage"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/40b534b1d4b6858c8c0a1c6b34a1f953e59ed0d1.jpg",
+   "key": "ACH_MAGMA_MAGES",
+   "name": {
+    "de": "Der Boden ist Lava",
+    "en": "Floor is Lava"
+   },
+   "percent": 14.2,
+   "unlocked": "2026-03-14T19:33:38+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Sammle 40 Schlüssel in „Launisches Labyrinth“",
+    "en": "Collect 40 keys in 'Morphing Maze' minigame"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/a86cfe5805fcca647106aa5e1681e9e769aa6aa8.jpg",
+   "key": "ACH_WINTER_MAZE",
+   "name": {
+    "de": "Hamsterer",
+    "en": "Hoarder"
+   },
+   "percent": 44.0,
+   "unlocked": "2020-12-02T20:29:11+01:00"
+  },
+  {
+   "description": {
+    "de": "Überlebe 60 Sekunden lang in „Bröselnde Blöcke“",
+    "en": "Survive in 'Breaking Blocks' for 60 seconds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/45479041e86de66364993be6635260f279646569.jpg",
+   "key": "ACH_BREAKING_BLOCKS",
+   "name": {
+    "de": "Schnell bewegen",
+    "en": "Move Quick"
+   },
+   "percent": 47.7
+  },
+  {
+   "description": {
+    "de": "Stiehl das letzte Geschenk eines Spielerstapels in „Geschenke gaunern“",
+    "en": "Steal the last gift in a players pile in 'Grifting Gifts'"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/1dab624861f59c30f02c2e14e0211ec2ce0dcfd9.jpg",
+   "key": "ACH_GRIFTING_GIFTS",
+   "name": {
+    "de": "Von den Armen stehlen",
+    "en": "Steal From The Poor"
+   },
+   "percent": 57.6
+  },
+  {
+   "description": {
+    "de": "Schließe „Schlitternder Sprint“ ab, ohne ins Wasser zu fallen",
+    "en": "Complete 'Slippery Sprint' without falling in the water"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/964a0a4d1dcd71ae16fbdb0ee3dba4880576ccd1.jpg",
+   "key": "ACH_SLIPPERY_SPRINT",
+   "name": {
+    "de": "Leichtfuß",
+    "en": "Light Foot"
+   },
+   "percent": 29.8
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erreiche mehr als 5 Punkten in „Bälle-Bataillon“",
+    "en": "Score over 5 in 'Bouncing Balls'"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/c859fe8543690dec0999b2505268f544858e4b40.jpg",
+   "key": "ACH_BOUNCING_BALLS",
+   "name": {
+    "de": "Schnelle Reaktion",
+    "en": "Quick Reactions"
+   },
+   "percent": 39.7,
+   "unlocked": "2021-01-30T19:20:25+01:00"
+  },
+  {
+   "description": {
+    "de": "Schließe „Geschenke-Greifer“ ab, ohne Kohle zu sammeln",
+    "en": "Complete 'Gift Grab' without collecting coal"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/880940/108a80d01833f8e4a5bab216324425ab57a572b0.jpg",
+   "key": "ACH_GIFT_GRAB",
+   "name": {
+    "de": "Keine Diamanten",
+    "en": "No Diamonds"
+   },
+   "percent": 6.3
+  }
+ ],
+ "id": "880940",
+ "platform": "steam"
+}

@@ -1,0 +1,1183 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast alle Errungenschaften von Horizon Zero Dawn erlangt.",
+    "en": "Obtained all Horizon Zero Dawn achievements.",
+    "sv": "Du har fått alla achievements i Horizon Zero Dawn."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/90105bcb9db3651e3830bf56a45834eab69ac01d.jpg",
+   "key": "NEW_ACHIEVEMENT_3_0",
+   "name": {
+    "de": "Alle Errungenschaften erlangt",
+    "en": "All achievements obtained",
+    "sv": "Fick alla achievements"
+   },
+   "percent": 2.5,
+   "unlocked": "2021-06-22T21:31:16+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast 10 Maschinen durch Tarn-Kills erledigt.",
+    "en": "Performed a stealth kill on 10 machines.",
+    "sv": "Dödade 10 maskiner obemärkt."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/5d65440e26762aacc11dd98ff61691061120921a.jpg",
+   "key": "NEW_ACHIEVEMENT_3_1",
+   "name": {
+    "de": "Tarn-Kill an 10 Maschinen",
+    "en": "Stealth killed 10 machines",
+    "sv": "Dödade 10 maskiner obemärkt"
+   },
+   "percent": 62.3,
+   "unlocked": "2020-09-30T21:45:12+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast 3 Gegner mit einem Schlag von oben erledigt.",
+    "en": "Killed 3 enemies using the Strike from Above skill.",
+    "sv": "Dödade 3 fiender med färdigheten slag ovanifrån."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/e6899af06e731bbe898de9814113a712997589cf.jpg",
+   "key": "NEW_ACHIEVEMENT_3_2",
+   "name": {
+    "de": "3 Schläge von oben",
+    "en": "3 Strikes From Above",
+    "sv": "3 slag ovanifrån"
+   },
+   "percent": 35.6,
+   "unlocked": "2020-10-26T19:47:45+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast 10 Bauteile von Maschinen im Kampf entfernt.",
+    "en": "Detached 10 components from machines during combat.",
+    "sv": "Lossade 10 komponenter från maskiner under strid."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/31f8f4469a483bf8f27110f186d88797ca7e6d98.jpg",
+   "key": "NEW_ACHIEVEMENT_3_3",
+   "name": {
+    "de": "10 Bauteile abgerissen",
+    "en": "Tore off 10 components",
+    "sv": "Slet loss 10 komponenter"
+   },
+   "percent": 73.0,
+   "unlocked": "2020-09-30T21:29:29+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast 10 brennende oder eingefrorene Maschinen mit Feuer- beziehungsweise Eisschwäche erledigt.",
+    "en": "Killed 10 machines weak to Fire while burning, or weak to Freeze while frozen.",
+    "sv": "Dödade 10 eldsvaga maskiner medan de brann, eller fryssvaga maskiner medan de var frysta."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/9a61ea9030720bd4c7e24ef317fdd4e27c4aa426.jpg",
+   "key": "NEW_ACHIEVEMENT_3_4",
+   "name": {
+    "de": "10 anfällige Maschinen erledigt",
+    "en": "10 Vulnerable machine kills",
+    "sv": "Dödade 10 sårbara maskiner"
+   },
+   "percent": 43.5,
+   "unlocked": "2020-10-24T13:48:41+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast 5 schwere Waffen von Maschinen im Kampf entfernt.",
+    "en": "Detached 5 heavy weapons from machines during combat.",
+    "sv": "Lossade 5 tunga vapen från maskiner under strid."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/443817224273003cab44ba5540785b5d118a8bf9.jpg",
+   "key": "NEW_ACHIEVEMENT_3_5",
+   "name": {
+    "de": "5 schwere Waffen abgerissen",
+    "en": "Tore off 5 heavy weapons",
+    "sv": "Slet loss 5 tunga vapen"
+   },
+   "percent": 36.2,
+   "unlocked": "2020-11-02T12:43:10+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/be1cd82b540a778a0468625b2b09f066107e87db.jpg",
+   "key": "NEW_ACHIEVEMENT_3_6",
+   "name": {
+    "de": "7 Maschinenarten überbrückt",
+    "en": "7 types of machine overridden",
+    "sv": "7 sorters maskiner kontrollerade"
+   },
+   "percent": 27.9,
+   "unlocked": "2020-10-22T17:47:53+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast 30 menschliche Gegner per Kopfschuss erledigt.",
+    "en": "Killed 30 human enemies by landing headshots on them.",
+    "sv": "Dödade 30 mänskliga fiender med huvudträffar."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/7c5dceffcbc21028a87bfe146e9499c6a54cb220.jpg",
+   "key": "NEW_ACHIEVEMENT_3_7",
+   "name": {
+    "de": "Kopfschuss an 30 menschlichen Gegnern",
+    "en": "Headshot 30 human enemies",
+    "sv": "Huvudträff på 30 mänskliga fiender"
+   },
+   "percent": 50.2,
+   "unlocked": "2020-10-11T19:19:11+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast alle Graser-Attrappen im Nora-Gebiet gefunden und niedergeschlagen.",
+    "en": "Found and knocked over all of the Grazer training dummies in the Nora region.",
+    "sv": "Hittade och välte alla träningströskor i noraregionen."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/f8f70f59168f72f9674bb8504af309753a454323.jpg",
+   "key": "NEW_ACHIEVEMENT_3_8",
+   "name": {
+    "de": "23 Graser-Attrappen niedergeschlagen",
+    "en": "Downed 23 Grazer dummies",
+    "sv": "Välte 23 träningströskor"
+   },
+   "percent": 3.9,
+   "unlocked": "2020-10-22T18:04:53+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast eine Waffenspule oder ein Outfit-Gewebe an einer modifizierbaren Waffe oder einem modifizierbaren Outfit angewendet.",
+    "en": "Used a Weapon Coil or Outfit Weave on a modifiable weapon or outfit.",
+    "sv": "Använde en vapenspole eller klädväv på modifierbara vapen eller kläder."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/c84b5025e82c7d35e10422fda00526d8584bb0fa.jpg",
+   "key": "NEW_ACHIEVEMENT_3_9",
+   "name": {
+    "de": "Erste Modifikation",
+    "en": "First Modification",
+    "sv": "Första modifikationen"
+   },
+   "percent": 76.6,
+   "unlocked": "2020-09-27T17:27:56+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/99b6c36db80353a0a96cb9e68ef4e895e2d9d841.jpg",
+   "key": "NEW_ACHIEVEMENT_3_10",
+   "name": {
+    "de": "Alle Beschaffungsmaschinen erledigt",
+    "en": "All Acquisition machines killed",
+    "sv": "Alla samlarmaskiner dödade"
+   },
+   "percent": 26.8,
+   "unlocked": "2020-10-28T21:00:05+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/05cb1a7463ac5dccdd08f576c3a39635a0ca23d4.jpg",
+   "key": "NEW_ACHIEVEMENT_3_11",
+   "name": {
+    "de": "Alle Aufklärermaschinen erledigt",
+    "en": "All Recon machines killed",
+    "sv": "Dödade alla rekningsmaskiner"
+   },
+   "percent": 48.8,
+   "unlocked": "2020-10-10T20:45:03+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/3535c6875b56f7b92dade9600f14a04bad312ac9.jpg",
+   "key": "NEW_ACHIEVEMENT_3_12",
+   "name": {
+    "de": "Alle Kampfmaschinen erledigt",
+    "en": "All Combat machines killed",
+    "sv": "Alla stridsmaskiner dödade"
+   },
+   "percent": 32.8,
+   "unlocked": "2020-11-02T12:31:44+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/2caa29529604c43fe5d6fde1e91b45995a483ec8.jpg",
+   "key": "NEW_ACHIEVEMENT_3_13",
+   "name": {
+    "de": "Alle Transportmaschinen erledigt",
+    "en": "All Transport machines killed",
+    "sv": "Alla transportmaskiner dödade"
+   },
+   "percent": 25.7,
+   "unlocked": "2020-11-01T17:34:49+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast Spielerstufe 10 erreicht.",
+    "en": "Reached player level 10.",
+    "sv": "Kom till spelarnivå 10."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/08d0ed982a3e4cb7e21af538952a715a2c0c9e50.jpg",
+   "key": "NEW_ACHIEVEMENT_3_14",
+   "name": {
+    "de": "Stufe 10 erreicht",
+    "en": "Reached level 10",
+    "sv": "Kom till nivå 10"
+   },
+   "percent": 68.5,
+   "unlocked": "2020-09-30T21:48:30+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast Spielerstufe 25 erreicht.",
+    "en": "Reached player level 25.",
+    "sv": "Kom till spelarnivå 25."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/86a4047fbef325e23bb1dc6137d95721b31d3d38.jpg",
+   "key": "NEW_ACHIEVEMENT_3_15",
+   "name": {
+    "de": "Stufe 25 erreicht",
+    "en": "Reached level 25",
+    "sv": "Kom till nivå 25"
+   },
+   "percent": 44.1,
+   "unlocked": "2020-10-24T13:19:36+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast Spielerstufe 40 erreicht.",
+    "en": "Reached player level 40.",
+    "sv": "Kom till spelarnivå 40."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/003cbae3ff16d6a3699ca294f2fcac5726d91cc9.jpg",
+   "key": "NEW_ACHIEVEMENT_3_16",
+   "name": {
+    "de": "Stufe 40 erreicht",
+    "en": "Reached level 40",
+    "sv": "Kom till nivå 40"
+   },
+   "percent": 31.9,
+   "unlocked": "2020-11-01T18:48:35+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast Spielerstufe 50 erreicht.",
+    "en": "Reached player level 50.",
+    "sv": "Kom till spelarnivå 50."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/cb0c325de2066ed70e52a9516770eca5c9e0cb8a.jpg",
+   "key": "NEW_ACHIEVEMENT_3_17",
+   "name": {
+    "de": "Stufe 50 erreicht",
+    "en": "Reached level 50",
+    "sv": "Kom till nivå 50"
+   },
+   "percent": 24.7,
+   "unlocked": "2020-12-04T18:33:55+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast alle verfügbaren Fertigkeiten erlernt.",
+    "en": "Learned all available skills.",
+    "sv": "Lärt in alla tillgängliga färdigheter."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/cbe29104038a9597e1704f82f75b8e006a49844e.jpg",
+   "key": "NEW_ACHIEVEMENT_3_18",
+   "name": {
+    "de": "Alle Fertigkeiten erlernt",
+    "en": "All Skills learned",
+    "sv": "Alla färdigheter inlärda"
+   },
+   "percent": 16.2,
+   "unlocked": "2020-12-11T17:22:40+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/4b976c2b97e49cdd05bc52f6dc07141ef5fde3b6.jpg",
+   "key": "NEW_ACHIEVEMENT_3_19",
+   "name": {
+    "de": "Erster Langhals überbrückt",
+    "en": "First Tallneck Overridden",
+    "sv": "Första långhalsen kontrollerad"
+   },
+   "percent": 63.8,
+   "unlocked": "2020-10-02T21:04:17+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/f0dbbe7f56b7d7ce4d167b973ce52bed7be8e5db.jpg",
+   "key": "NEW_ACHIEVEMENT_3_20",
+   "name": {
+    "de": "Erstes Banditenlager geräumt",
+    "en": "First Bandit Camp cleared",
+    "sv": "Första banditlägret rensat"
+   },
+   "percent": 58.8,
+   "unlocked": "2020-10-02T22:40:49+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/930e2190c56abc089cb2f494d0de080a08e900f6.jpg",
+   "key": "NEW_ACHIEVEMENT_3_21",
+   "name": {
+    "de": "Erster Kern überbrückt",
+    "en": "First Core Overridden",
+    "sv": "Första kärnan kontrollerad"
+   },
+   "percent": 49.1,
+   "unlocked": "2020-10-10T21:40:33+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/301cf72015beba18a1a49107c2b34caae971e23e.jpg",
+   "key": "NEW_ACHIEVEMENT_3_22",
+   "name": {
+    "de": "Alle Sonnen in einem Gebiet",
+    "en": "All Suns at one Ground",
+    "sv": "Alla solar på en jaktmark"
+   },
+   "percent": 31.7,
+   "unlocked": "2020-10-27T19:29:01+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/b7d3a4e83be969329c5618329b02addbf54e36c4.jpg",
+   "key": "NEW_ACHIEVEMENT_3_23",
+   "name": {
+    "de": "Glutsonnen in einem Gebiet",
+    "en": "Blazing Suns at one Ground",
+    "sv": "Strålande solar på en jaktmark"
+   },
+   "percent": 26.9,
+   "unlocked": "2020-10-27T19:29:01+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/026f374cfd885c77d09dc0b91031511fcefd3907.jpg",
+   "key": "NEW_ACHIEVEMENT_3_24",
+   "name": {
+    "de": "Erste verdorbene Zone geräumt",
+    "en": "First Corrupted Zone cleared",
+    "sv": "Första korrupta zonen rensad"
+   },
+   "percent": 61.9,
+   "unlocked": "2020-10-03T20:51:26+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/9d3eb63c85ee8721950b1dfa01792acd05028463.jpg",
+   "key": "NEW_ACHIEVEMENT_3_25",
+   "name": {
+    "de": "Alle Langhälse überbrückt",
+    "en": "All Tallnecks Overridden",
+    "sv": "Alla långhalsar kontrollerade"
+   },
+   "percent": 27.7,
+   "unlocked": "2020-11-28T17:52:03+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/728c83468523ce3c7d94d225dfe60b96e37fb517.jpg",
+   "key": "NEW_ACHIEVEMENT_3_26",
+   "name": {
+    "de": "Alle Banditenlager geräumt",
+    "en": "Cleared all the Bandit Camps",
+    "sv": "Rensade alla banditläger"
+   },
+   "percent": 17.4,
+   "unlocked": "2020-11-28T13:41:00+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/0f0a39410f86932e2ab679a09279c21840c772cc.jpg",
+   "key": "NEW_ACHIEVEMENT_3_27",
+   "name": {
+    "de": "Alle Kerne überbrückt",
+    "en": "All Cores Overridden",
+    "sv": "Alla kärnor kontrollerade"
+   },
+   "percent": 22.9,
+   "unlocked": "2020-11-02T15:34:24+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/a3337b29ffb28c928d1f195afe9ce56eeccb2588.jpg",
+   "key": "NEW_ACHIEVEMENT_3_28",
+   "name": {
+    "de": "Alle Sonnen in allen Gebieten",
+    "en": "All Suns at all Grounds",
+    "sv": "Alla solar på alla jaktmarker"
+   },
+   "percent": 14.7,
+   "unlocked": "2020-10-28T20:15:29+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/530dab13faa073a04fc656a32a47996be0be3106.jpg",
+   "key": "NEW_ACHIEVEMENT_3_29",
+   "name": {
+    "de": "Glutsonnen in allen Gebieten",
+    "en": "Blazing Suns at all Grounds",
+    "sv": "Strålande solar på alla jaktmarker"
+   },
+   "percent": 14.3,
+   "unlocked": "2020-10-28T20:18:37+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/ad947537fdeeb7d18bb1ca2cad630ef263ebd83d.jpg",
+   "key": "NEW_ACHIEVEMENT_3_30",
+   "name": {
+    "de": "Alle verdorbenen Zonen geräumt",
+    "en": "All Corrupted Zones cleared",
+    "sv": "Alla korrupta zoner rensade"
+   },
+   "percent": 13.8,
+   "unlocked": "2020-12-02T19:32:25+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/976135a764088a7b1216e14c4c27da64ccb7735d.jpg",
+   "key": "NEW_ACHIEVEMENT_3_31",
+   "name": {
+    "de": "Alle Maschinen katalogisiert",
+    "en": "All machines catalogued",
+    "sv": "Alla maskiner skannade"
+   },
+   "percent": 21.9,
+   "unlocked": "2020-11-28T14:29:16+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/1a12f2c26ab15a959ccfb2a552056e7c05e8af4d.jpg",
+   "key": "NEW_ACHIEVEMENT_4_0",
+   "name": {
+    "de": "Erstes Panorama gefunden",
+    "en": "First Vantage found",
+    "sv": "Första Utsiktsplatsen hittad"
+   },
+   "percent": 42.3,
+   "unlocked": "2020-09-30T21:06:44+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/baed0d11fa8cbcff075d270af69bc64c72aea294.jpg",
+   "key": "NEW_ACHIEVEMENT_4_1",
+   "name": {
+    "de": "Erste Metallblume gefunden",
+    "en": "First Metal Flower found",
+    "sv": "Första metallblomman hittad"
+   },
+   "percent": 58.1,
+   "unlocked": "2020-09-30T20:25:11+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/b277b09e77e4918810fa9a513c4cc510131d81f5.jpg",
+   "key": "NEW_ACHIEVEMENT_4_2",
+   "name": {
+    "de": "Erste Banuk-Figur gefunden",
+    "en": "First Banuk Figure found",
+    "sv": "Första banukfiguren hittad"
+   },
+   "percent": 26.2,
+   "unlocked": "2020-10-22T18:15:22+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/3d7bd04093eb1a052e4d6d78f64972ac8a732ba4.jpg",
+   "key": "NEW_ACHIEVEMENT_4_3",
+   "name": {
+    "de": "Erstes altes Gefäß gefunden",
+    "en": "First Ancient Vessel found",
+    "sv": "Första gamla kärlet hittat"
+   },
+   "percent": 62.5,
+   "unlocked": "2020-10-02T22:51:56+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/32c133de2bdf2184377c13469f771b3763ad5fa0.jpg",
+   "key": "NEW_ACHIEVEMENT_4_4",
+   "name": {
+    "de": "Alle Panoramen gefunden",
+    "en": "All Vantages found",
+    "sv": "Alla Utsiktsplatser hittade"
+   },
+   "percent": 12.0,
+   "unlocked": "2020-12-01T21:13:01+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/85d8a080a0d1f9ee0706b14974fdd3dff9648712.jpg",
+   "key": "NEW_ACHIEVEMENT_4_5",
+   "name": {
+    "de": "Alle Metallblumen gefunden",
+    "en": "All Metal Flowers found",
+    "sv": "Alla metallblommor hittade"
+   },
+   "percent": 12.0,
+   "unlocked": "2020-12-01T21:38:02+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/68d58cfc697f81e797d0818abb333c8a6edfb094.jpg",
+   "key": "NEW_ACHIEVEMENT_4_6",
+   "name": {
+    "de": "Alle Banuk-Figuren gefunden",
+    "en": "All Banuk Figures found",
+    "sv": "Alla banukfigurer hittade"
+   },
+   "percent": 13.1,
+   "unlocked": "2020-12-01T21:29:22+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/025d4186d17ec0a407d0a58e49262ead64bb6d72.jpg",
+   "key": "NEW_ACHIEVEMENT_4_7",
+   "name": {
+    "de": "Alle alten Gefäße gefunden",
+    "en": "All Ancient Vessels found",
+    "sv": "Alla gamla kärl hittade"
+   },
+   "percent": 15.1,
+   "unlocked": "2020-11-28T14:28:15+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/7152dcc4562794676e78dbf6dd8d9e467fd73702.jpg",
+   "key": "NEW_ACHIEVEMENT_4_8",
+   "name": {
+    "de": "Schildweberin-Outfit erhalten",
+    "en": "Got the Shield-Weaver outfit",
+    "sv": "Fick sköldvävarkläderna"
+   },
+   "percent": 22.5,
+   "unlocked": "2020-12-05T18:39:47+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/9950549a295443199c0fd740b0f955206a275815.jpg",
+   "key": "NEW_ACHIEVEMENT_4_9",
+   "name": {
+    "de": "Rosts Lehren gefolgt",
+    "en": "Followed Rost's teachings",
+    "sv": "Lärde av Rost"
+   },
+   "percent": 90.1,
+   "unlocked": "2020-09-27T15:12:34+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/2e323bf0c90dbf7788ad2cacdb110e9751e6d0a4.jpg",
+   "key": "NEW_ACHIEVEMENT_4_10",
+   "name": {
+    "de": "Den Sägezahn bezwungen",
+    "en": "Defeated the Sawtooth",
+    "sv": "Besegrade sågtanden"
+   },
+   "percent": 80.1,
+   "unlocked": "2020-09-27T17:10:16+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/8e67f4a23ec702cb271fb177c083b401f9ca54bd.jpg",
+   "key": "NEW_ACHIEVEMENT_4_11",
+   "name": {
+    "de": "Bei der Erprobung triumphiert",
+    "en": "Triumphed in the Proving",
+    "sv": "Segrade i prövningen"
+   },
+   "percent": 76.1,
+   "unlocked": "2020-09-28T21:11:33+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/f8835e41b68641822ac0e61f545231c2b9579e18.jpg",
+   "key": "NEW_ACHIEVEMENT_4_12",
+   "name": {
+    "de": "Die Verderbnis zurückgeschlagen",
+    "en": "Fought back the corruption",
+    "sv": "Kämpade tillbaka korruptionen"
+   },
+   "percent": 56.4,
+   "unlocked": "2020-10-24T11:28:59+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/61e252d83fe771ddea795820a65ec8f91d7adb07.jpg",
+   "key": "NEW_ACHIEVEMENT_4_13",
+   "name": {
+    "de": "Von der fernen Vergangenheit erfahren",
+    "en": "Learned of the ancient past",
+    "sv": "Lärde dig om det förflutna"
+   },
+   "percent": 40.3,
+   "unlocked": "2020-11-28T16:05:26+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/e3401805aa852d9138cb0eb8e9fa01d83c533703.jpg",
+   "key": "NEW_ACHIEVEMENT_4_14",
+   "name": {
+    "de": "Das Eklipse-Netzwerk gecrasht",
+    "en": "Crashed the Eclipse network",
+    "sv": "Kraschade Eklips-nätverket"
+   },
+   "percent": 35.5,
+   "unlocked": "2020-12-03T19:17:08+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/97ae8e14bddf8847517de6de4b3a9dd5de3802ed.jpg",
+   "key": "NEW_ACHIEVEMENT_4_15",
+   "name": {
+    "de": "Die Wahrheit herausgefunden",
+    "en": "Discovered the truth",
+    "sv": "Upptäckte sanningen"
+   },
+   "percent": 34.2,
+   "unlocked": "2020-12-03T21:37:09+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/ad28ab8b0678fe602b13884144c3da9d254f12c6.jpg",
+   "key": "NEW_ACHIEVEMENT_4_16",
+   "name": {
+    "de": "Die Belagerung der Urmutter beendet",
+    "en": "Broke the siege of All-Mother",
+    "sv": "Hävde belägringen mot Allmoder"
+   },
+   "percent": 33.4,
+   "unlocked": "2020-12-05T16:14:00+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/f4db2103fda0d84da245259ca7b6e00e72ac36c5.jpg",
+   "key": "NEW_ACHIEVEMENT_4_17",
+   "name": {
+    "de": "Eine starke Waffe entdeckt",
+    "en": "Recovered a powerful weapon",
+    "sv": "Hittade ett kraftfullt vapen"
+   },
+   "percent": 32.5,
+   "unlocked": "2020-12-05T17:45:37+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/bd7b43caca5f8e2a028df57d3b0a4863c7d90a50.jpg",
+   "key": "NEW_ACHIEVEMENT_4_18",
+   "name": {
+    "de": "Von allen Verbündeten unterstützt",
+    "en": "All allies joined",
+    "sv": "Alla allierade anslöt sig"
+   },
+   "percent": 10.1,
+   "unlocked": "2020-12-06T22:23:54+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/611f678eae006a37b60ff9929a2f5a1cd59470e1.jpg",
+   "key": "NEW_ACHIEVEMENT_4_19",
+   "name": {
+    "de": "Die Kriegsmaschinen-Bedrohung beendet",
+    "en": "Ended the war machine threat",
+    "sv": "Stoppade krigsmaskinerna"
+   },
+   "percent": 30.4,
+   "unlocked": "2020-12-06T23:16:42+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/336a3cce2428a0bd28ccb90e7448a7d0855967bf.jpg",
+   "key": "NEW_ACHIEVEMENT_4_20",
+   "name": {
+    "de": "Siegreich mit der Kriegsherrin",
+    "en": "Victorious with the War-Chief",
+    "sv": "Seger med krigshövdingen"
+   },
+   "percent": 54.8,
+   "unlocked": "2020-10-17T14:07:38+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/8fa5c379b29b28d78af9f0c654eb73559dc70016.jpg",
+   "key": "NEW_ACHIEVEMENT_4_21",
+   "name": {
+    "de": "Meridian vor dem Feind gerettet",
+    "en": "Saved Meridian from its foe",
+    "sv": "Räddade Meridian från fienden"
+   },
+   "percent": 36.8,
+   "unlocked": "2020-11-28T12:27:50+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/94bb0c6f2ef1ea1d612fed157c34d72505f98734.jpg",
+   "key": "NEW_ACHIEVEMENT_4_22",
+   "name": {
+    "de": "Den Überläufern geholfen",
+    "en": "Aided the defectors",
+    "sv": "Hjälpte avfällingarna"
+   },
+   "percent": 22.2,
+   "unlocked": "2020-12-04T18:38:56+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/c795e904cb9ca023dcd8f9e5694ae174e30aa789.jpg",
+   "key": "NEW_ACHIEVEMENT_4_23",
+   "name": {
+    "de": "Rotschlund mit Talanah gejagt",
+    "en": "Hunted Redmaw with Talanah",
+    "sv": "Jagade Rödgap med Talanah"
+   },
+   "percent": 21.0,
+   "unlocked": "2020-11-02T13:06:15+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Ein Neues Spiel+ in beliebiger Schwierigkeit abgeschlossen.",
+    "en": "Completed a New Game+ playthrough on any difficulty.",
+    "sv": "Slutförde nytt spel+ på valfri svårighetsgrad."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/8ae4165b6952a3934d1c1169a12bf3907a86c36e.jpg",
+   "key": "NEW_ACHIEVEMENT_4_24",
+   "name": {
+    "de": "Neues Spiel+ abgeschlossen",
+    "en": "New Game+ Completed",
+    "sv": "Slutförde nytt spel+"
+   },
+   "percent": 3.6,
+   "unlocked": "2021-03-07T00:51:58+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Ein Neues Spiel+ in der Schwierigkeitsstufe Ultraschwer abgeschlossen.",
+    "en": "Completed a New Game+ playthrough on Ultra Hard difficulty.",
+    "sv": "Slutförde nytt spel+ på svårighetsgrad ultrasvårt."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/5686dc18c850e20ed6b3b568128b69b7fa290f29.jpg",
+   "key": "NEW_ACHIEVEMENT_4_25",
+   "name": {
+    "de": "Ultraschwer abgeschlossen",
+    "en": "Ultra Hard Completed",
+    "sv": "Slutförde ultrasvårt"
+   },
+   "percent": 2.9,
+   "unlocked": "2021-06-22T21:31:16+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/b676e39cb103ec73f35b05e9203578e2f1ce8487.jpg",
+   "key": "NEW_ACHIEVEMENT_4_26",
+   "name": {
+    "de": "Den Schamanenpfad genommen",
+    "en": "Took the Shaman's Path",
+    "sv": "Följde Schamanspåret"
+   },
+   "percent": 25.4,
+   "unlocked": "2020-12-11T15:16:43+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/1d05576e0a0d6c29778bc7f4e62319c77011d608.jpg",
+   "key": "NEW_ACHIEVEMENT_4_27",
+   "name": {
+    "de": "Werak-Herausforderung gewonnen",
+    "en": "Won the Werak Challenge",
+    "sv": "Vann werakutmaningen"
+   },
+   "percent": 22.4,
+   "unlocked": "2020-12-11T18:20:41+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/06d70e12c3d7e9b82f7ba6e42c0d1422ba05a6fe.jpg",
+   "key": "NEW_ACHIEVEMENT_4_28",
+   "name": {
+    "de": "Zweite Expedition abgeschlossen",
+    "en": "Completed the Second Expedition",
+    "sv": "Slutförde den andra expeditionen"
+   },
+   "percent": 20.8,
+   "unlocked": "2021-01-16T13:11:54+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/7568e6f745b6019b1eff3b55642306dfa1e8e64e.jpg",
+   "key": "NEW_ACHIEVEMENT_4_29",
+   "name": {
+    "de": "Den Berg bezwungen",
+    "en": "Conquered the Mountain",
+    "sv": "Erövrade berget"
+   },
+   "percent": 20.3,
+   "unlocked": "2021-01-16T14:41:47+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/232269e67d23a95e9fee9633662980bd61cbf512.jpg",
+   "key": "NEW_ACHIEVEMENT_4_30",
+   "name": {
+    "de": "Die Flut vertrieben",
+    "en": "Drained the Flood",
+    "sv": "Dränerade översvämningen"
+   },
+   "percent": 18.2,
+   "unlocked": "2020-12-10T17:11:44+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/3146c377085a5cc8dd6f8ab1e57583cd397c1356.jpg",
+   "key": "NEW_ACHIEVEMENT_4_31",
+   "name": {
+    "de": "Ikries Herausforderung bestanden",
+    "en": "Won Ikrie's Challenge",
+    "sv": "Vann Ikries utmaning"
+   },
+   "percent": 7.3,
+   "unlocked": "2021-01-09T14:06:50+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1151640/33e27108b703ca5d85fc78690ec871bb6324f4e2.jpg",
+   "key": "NEW_ACHIEVEMENT_5_0",
+   "name": {
+    "de": "Komplett verbesserte Waffen",
+    "en": "Fully Improved Weapons",
+    "sv": "Färdigförbättrade vapen"
+   },
+   "percent": 14.4,
+   "unlocked": "2021-01-17T14:34:24+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast alle Nebenquests und Aufträge in The Frozen Wilds abgeschlossen.",
+    "en": "Completed all side quests and errands in the Frozen Wilds.",
+    "sv": "Klarade alla sidouppdrag och ärenden i The Frozen Wilds."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/0df385594d888999cdc1e3c23440066ab63b36a4.jpg",
+   "key": "NEW_ACHIEVEMENT_5_1",
+   "name": {
+    "de": "Alle Quests abgeschlossen",
+    "en": "All Quests completed",
+    "sv": "Slutförde alla uppdrag"
+   },
+   "percent": 7.6,
+   "unlocked": "2021-01-17T14:33:22+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast die Langhals-, Banditenlager- und Jagdgebiet-Quests im Schnitt abgeschlossen.",
+    "en": "Completed the Tallneck, Bandit Camp and Hunting Ground in the Cut.",
+    "sv": "Slutförde långhalsen, banditlägret och jaktmarken i Såret."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/17b90a1732db3f7beb61e573095fe72dda4e1bca.jpg",
+   "key": "NEW_ACHIEVEMENT_5_2",
+   "name": {
+    "de": "Alle Aktivitäten abgeschlossen",
+    "en": "All Activities completed",
+    "sv": "Slutförde alla aktiviteter"
+   },
+   "percent": 7.0,
+   "unlocked": "2021-01-25T19:54:55+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast eine Modifikation am Speer befestigt.",
+    "en": "Applied a modification to your spear.",
+    "sv": "Utrustade spjutet med en modifikation."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/c42be88477e87a1ccc5d311f6e58dd2e61e171fd.jpg",
+   "key": "NEW_ACHIEVEMENT_5_3",
+   "name": {
+    "de": "Erste Speer-Modifikation",
+    "en": "First Spear Modification",
+    "sv": "Första spjutmodifikationen"
+   },
+   "percent": 20.7,
+   "unlocked": "2021-01-14T18:11:14+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast 5 Gegner mit der Absprungschlag-Fertigkeit erledigt.",
+    "en": "Killed 5 enemies using the Dismount Strike skill.",
+    "sv": "Dödade 5 fiender med färdigheten Avstigsslag."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/815640cd326a8e42bed59260c089edc7805cc624.jpg",
+   "key": "NEW_ACHIEVEMENT_5_4",
+   "name": {
+    "de": "5 Absprungschläge",
+    "en": "5 Dismount Strikes",
+    "sv": "5 Avstigsslag"
+   },
+   "percent": 4.9,
+   "unlocked": "2020-12-08T20:11:54+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast Maschinenreparatur oder Reitmaschine reparieren an 5 Maschinenarten benutzt.",
+    "en": "Used the Machine Repair or Mount Repair skill on 5 different types of machine.",
+    "sv": "Använde färdigheten Maskinlagning eller Laga ridmaskin på 5 olika sorters maskiner."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/7c9c421046a6c1fb2f61f324b4804733bee972d7.jpg",
+   "key": "NEW_ACHIEVEMENT_5_5",
+   "name": {
+    "de": "5 Maschinenarten repariert",
+    "en": "5 Machine Types Repaired",
+    "sv": "Lagade 5 maskintyper"
+   },
+   "percent": 5.5,
+   "unlocked": "2020-12-08T20:12:36+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast 15 Versenger erlegt.",
+    "en": "Killed 15 Scorcher machines.",
+    "sv": "Dödade 15 brännare."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/4cf01a5370233ebbca42f2b2f88f96989944e0f9.jpg",
+   "key": "NEW_ACHIEVEMENT_5_6",
+   "name": {
+    "de": "15 Versenger erlegt",
+    "en": "Killed 15 Scorchers",
+    "sv": "Dödade 15 brännare"
+   },
+   "percent": 7.0,
+   "unlocked": "2021-01-25T19:57:37+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast 10 Frostklauen erlegt.",
+    "en": "Killed 10 Frostclaw machines.",
+    "sv": "Dödade 10 frostklor."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/6542206709bf75d221fd4cd3001c778cdf4c7acd.jpg",
+   "key": "NEW_ACHIEVEMENT_5_7",
+   "name": {
+    "de": "10 Frostklauen erlegt",
+    "en": "Killed 10 Frostclaws",
+    "sv": "Dödade 10 frostklor"
+   },
+   "percent": 8.7,
+   "unlocked": "2021-01-25T19:54:15+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast 6 Feuerklauen erlegt.",
+    "en": "Killed 6 Fireclaw machines.",
+    "sv": "Dödade 6 eldklor."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/e015f11c992471ab48810ad8926563e73abb9eae.jpg",
+   "key": "NEW_ACHIEVEMENT_5_8",
+   "name": {
+    "de": "6 Feuerklauen erlegt",
+    "en": "Killed 6 Fireclaws",
+    "sv": "Dödade 6 eldklor"
+   },
+   "percent": 11.5,
+   "unlocked": "2021-01-17T13:36:20+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast alle Kontrolltürme durch Überbrücken oder Zerstören deaktiviert.",
+    "en": "Disabled all Control Towers by overriding or destroying them.",
+    "sv": "Avaktiverade alla kontrolltorn genom att kontrollera eller förstöra dem."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/ba51a21c0b455d9bbd83e69cdaf1675de7a7e172.jpg",
+   "key": "NEW_ACHIEVEMENT_5_9",
+   "name": {
+    "de": "Alle Kontrolltürme deaktiviert",
+    "en": "All Control Towers disabled",
+    "sv": "Avaktiverade alla kontrolltorn"
+   },
+   "percent": 13.6,
+   "unlocked": "2021-01-14T19:29:43+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast alle Pigmente im Schnitt gefunden.",
+    "en": "Found all of the Pigments in the Cut.",
+    "sv": "Hittade alla pigment i Såret."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/607730dd459eed753ab5ee5696625e65709c49d2.jpg",
+   "key": "NEW_ACHIEVEMENT_5_10",
+   "name": {
+    "de": "Alle Pigmente gefunden",
+    "en": "All Pigments found",
+    "sv": "Alla pigment hittade"
+   },
+   "percent": 11.4,
+   "unlocked": "2021-01-14T19:25:06+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast alle Tierfiguren im Schnitt gefunden.",
+    "en": "Found all of the Animal Figurines in the Cut.",
+    "sv": "Hittade alla djurfiguriner i Såret."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/21e64e677f9857e688f55b5f2dec0a3dee1c367d.jpg",
+   "key": "NEW_ACHIEVEMENT_5_11",
+   "name": {
+    "de": "Alle Tierfiguren gefunden",
+    "en": "All Animal Figurines found",
+    "sv": "Hittade alla djurfiguriner"
+   },
+   "percent": 11.5,
+   "unlocked": "2021-01-14T17:55:18+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast Blauglanz für eine Spezialwaffe oder ein besonderes Outfit eingetauscht.",
+    "en": "Traded Bluegleam for a special weapon or outfit.",
+    "sv": "Bytte blåglim mot speciella kläder eller vapen."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/88ab46c99be02d10d004dd51970ad4a3ec62d125.jpg",
+   "key": "NEW_ACHIEVEMENT_5_12",
+   "name": {
+    "de": "Erster Blauglanz-Handel",
+    "en": "First Bluegleam Trade",
+    "sv": "Första blåglimsbytet"
+   },
+   "percent": 22.7,
+   "unlocked": "2020-12-10T17:35:56+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast alle neuen Fertigkeiten in The Frozen Wilds erlernt.",
+    "en": "Learned all of the new skills in the Frozen Wilds.",
+    "sv": "Bemästrade alla nya färdigheter i The Frozen Wilds."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/15b779381cfe09ac865106502f3195a2950225a8.jpg",
+   "key": "NEW_ACHIEVEMENT_5_13",
+   "name": {
+    "de": "Alle The Frozen Wilds-Fertigkeiten",
+    "en": "All Frozen Wilds Skills",
+    "sv": "Alla färdigheter i Frozen Wilds"
+   },
+   "percent": 14.7,
+   "unlocked": "2020-12-06T23:18:59+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast Spielerstufe 60 erreicht.",
+    "en": "Reached player level 60.",
+    "sv": "Kom till spelarnivå 60."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1151640/0daa2f3b00e2e3cccf7eeedff42d6491275d27a3.jpg",
+   "key": "NEW_ACHIEVEMENT_5_14",
+   "name": {
+    "de": "Stufe 60 erreicht",
+    "en": "Reached Level 60",
+    "sv": "Kom till nivå 60"
+   },
+   "percent": 11.0,
+   "unlocked": "2021-01-17T14:02:44+01:00"
+  }
+ ],
+ "id": "1151640",
+ "platform": "steam"
+}

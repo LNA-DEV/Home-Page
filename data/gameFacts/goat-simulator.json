@@ -1,0 +1,53 @@
+{
+ "developers": [
+  "Coffee Stain Studios"
+ ],
+ "genres": [
+  {
+   "de": "Simulationsspiel",
+   "en": "simulation video game",
+   "sv": "simulationsdatorspel"
+  },
+  {
+   "de": "Actionspiel",
+   "en": "action game",
+   "sv": "actionspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  }
+ ],
+ "publishers": [
+  "Coffee Stain Publishing"
+ ],
+ "released": "2014-04-01",
+ "steam": {
+  "en": "Goat Simulator is the latest in high-tech Goat Simulation technology."
+ },
+ "steam_appid": 265930,
+ "wikidata": "Q15984890",
+ "wikipedia": {
+  "de": {
+   "text": "Goat Simulator („Ziegen-Simulator“) ist ein 2014 veröffentlichtes Actionspiel von Coffee Stain Studios. Mit Goat Simulator 3 erschien 2022 ein Nachfolger.",
+   "url": "https://de.wikipedia.org/wiki/Goat_Simulator"
+  },
+  "en": {
+   "text": "Goat Simulator is an action video game developed and published by Coffee Stain Studios. The game was released for Windows in April 2014, and ports for Linux and OS X were released in June 2014. Mobile versions for Android and iOS were released in September 2014.",
+   "url": "https://en.wikipedia.org/wiki/Goat_Simulator"
+  },
+  "sv": {
+   "text": "Goat Simulator är ett simulationsdatorspel utvecklat av Coffee Stain Studios. Spelet gavs ut till Microsoft Windows via Steam den 1 april 2014, medan Mac OS- och Linux-versionen av spelet är för närvarande under utveckling. 2014 släpptes spelet på IOS och Android.",
+   "url": "https://sv.wikipedia.org/wiki/Goat_Simulator"
+  }
+ }
+}

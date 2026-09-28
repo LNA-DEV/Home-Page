@@ -1,0 +1,43 @@
+{{- /*
+  game-facts.html
+  The fetched facts of one game (data/gameFacts/<slug>.json, written by
+  scripts/game-enrich.py), resolved into the page language.
+
+  Usage: partial "game-facts.html" (dict "slug" $slug "lang" $lang)
+  Returns: {genres, modes: [label], developers, publishers: [name], year,
+            wikidata, raw} — every field empty when the game has no facts file.
+
+  Genres and game modes are Wikidata items whose labels were fetched in en, de
+  and sv; a missing translation falls back to English through dex-text.html,
+  the same rule as every other piece of per-language prose on the site.
+*/ -}}
+{{- $lang := .lang | default site.Language.Lang -}}
+{{- $raw := dict -}}
+{{- with hugo.Data.gameFacts -}}
+  {{- with index . $.slug }}{{ $raw = . }}{{ end -}}
+{{- end -}}
+{{- /* Wikidata writes an English or Swedish label in lower case ("platform
+       game"); in a list of facts it reads as the start of an entry.
+       The partial result goes through a variable: `{{ with partial … }}` is
+       Hugo's partial-DECORATOR syntax, not a conditional. */ -}}
+{{- $genres := slice -}}
+{{- range $raw.genres | default slice -}}
+  {{- $label := partial "dex-text.html" (dict "field" . "lang" $lang) -}}
+  {{- with $label }}{{ $genres = $genres | append (strings.FirstUpper .) }}{{ end -}}
+{{- end -}}
+{{- $modes := slice -}}
+{{- range $raw.modes | default slice -}}
+  {{- $label := partial "dex-text.html" (dict "field" . "lang" $lang) -}}
+  {{- with $label }}{{ $modes = $modes | append (strings.FirstUpper .) }}{{ end -}}
+{{- end -}}
+{{- $year := "" -}}
+{{- with $raw.released }}{{ $year = substr (printf "%v" .) 0 4 }}{{ end -}}
+{{- return dict
+      "genres" ($genres | uniq)
+      "modes" ($modes | uniq)
+      "developers" ($raw.developers | default slice)
+      "publishers" ($raw.publishers | default slice)
+      "year" $year
+      "wikidata" ($raw.wikidata | default "")
+      "raw" $raw
+-}}

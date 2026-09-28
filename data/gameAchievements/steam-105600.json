@@ -1,0 +1,1754 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "en": "Chop down your first tree."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/0fbb33098c9da39d1d4771d8209afface9c46e81.jpg",
+   "key": "TIMBER",
+   "name": {
+    "en": "Timber!!"
+   },
+   "percent": 87.0,
+   "unlocked": "2020-04-03T20:08:23+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Build a house suitable enough for your first town NPC, such as the guide, to move into."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/65bbc5ea6a030b963d9a06e5e1b315c3872837a3.jpg",
+   "key": "NO_HOBO",
+   "name": {
+    "en": "No Hobo"
+   },
+   "percent": 70.9,
+   "unlocked": "2020-04-03T21:24:03+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Obtain your first hammer via crafting or otherwise."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/4760436e9973519098bb2cc419339d24e56af139.jpg",
+   "key": "OBTAIN_HAMMER",
+   "name": {
+    "en": "Stop! Hammer Time!"
+   },
+   "percent": 66.4,
+   "unlocked": "2020-04-03T21:36:13+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Mine your first nugget of ore with a pickaxe."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/57b929ffd1a732ffc49abc6c53387e08bac4cbbb.jpg",
+   "key": "OOO_SHINY",
+   "name": {
+    "en": "Ooo! Shiny!"
+   },
+   "percent": 77.2,
+   "unlocked": "2020-04-03T20:16:10+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Discover and smash your first heart crystal underground."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/8243e4a0f7f803cd06cf37d64d11e04697afe30c.jpg",
+   "key": "HEART_BREAKER",
+   "name": {
+    "en": "Heart Breaker"
+   },
+   "percent": 59.7,
+   "unlocked": "2020-04-04T13:49:44+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Obtain an anvil made from iron or lead."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/f727271437793b278c809a067fa2334ea2846f34.jpg",
+   "key": "HEAVY_METAL",
+   "name": {
+    "en": "Heavy Metal"
+   },
+   "percent": 54.1,
+   "unlocked": "2020-04-03T21:58:32+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Discover a golden chest underground and take a peek at its contents."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/6705287adc42e2741d632c2d714424b2aa3e5716.jpg",
+   "key": "I_AM_LOOT",
+   "name": {
+    "en": "I Am Loot!"
+   },
+   "percent": 65.0,
+   "unlocked": "2020-04-04T13:45:20+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Craft a mana crystal out of fallen stars, and consume it."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/738ca7765e32895918979d31d600d19254b14190.jpg",
+   "key": "STAR_POWER",
+   "name": {
+    "en": "Star Power"
+   },
+   "percent": 58.7,
+   "unlocked": "2020-04-04T19:54:13+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Equip your first grappling hook."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/0e2a5e080563ce9c30cf3b45dd155d18640f0bf6.jpg",
+   "key": "HOLD_ON_TIGHT",
+   "name": {
+    "en": "Hold on Tight!"
+   },
+   "percent": 51.5,
+   "unlocked": "2020-04-14T21:39:34+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Defeat the Eye of Cthulhu, an ocular menace who only appears at night."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/b10b068163125e13444e2cdb145c1a200c7ad607.jpg",
+   "key": "EYE_ON_YOU",
+   "name": {
+    "en": "Eye on You"
+   },
+   "percent": 51.9,
+   "unlocked": "2020-04-04T23:24:33+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Using explosives or your trusty hammer, smash a Shadow Orb or Crimson Heart in the evil parts of your world."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/7f9006b20f6615ef0e93c72cade8fb26c3818db7.jpg",
+   "key": "SMASHING_POPPET",
+   "name": {
+    "en": "Smashing, Poppet!"
+   },
+   "percent": 51.1,
+   "unlocked": "2020-04-09T20:54:15+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Defeat the Eater of Worlds, a massive worm whom dwells in the corruption."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/624b8391794e2f02f067295d634d648d6cb0e4a9.jpg",
+   "key": "WORM_FODDER",
+   "name": {
+    "en": "Worm Fodder"
+   },
+   "percent": 35.3,
+   "unlocked": "2020-04-22T20:13:23+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Defeat the Brain of Cthulhu, an enourmous demon brain which haunts the creeping crimson."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/53b00566871f426e2e2a341de81b143c0fd1be9d.jpg",
+   "key": "MASTERMIND",
+   "name": {
+    "en": "Mastermind"
+   },
+   "percent": 35.5,
+   "unlocked": "2020-04-09T21:42:28+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Discover a large bee's hive deep in the jungle."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/b4b56f2efddc04d7c234de521f58a9ee9e697327.jpg",
+   "key": "WHERES_MY_HONEY",
+   "name": {
+    "en": "Where's My Honey?"
+   },
+   "percent": 41.5,
+   "unlocked": "2020-04-11T20:52:37+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Defeat the Queen Bee, the matriarch of the jungle hives."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/a8ed027c602baf83e6f3d59ba074eec87b1dd2d7.jpg",
+   "key": "STING_OPERATION",
+   "name": {
+    "en": "Sting Operation"
+   },
+   "percent": 39.9,
+   "unlocked": "2020-04-11T21:01:23+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Defeat Skeletron, the cursed guardian of the dungeon."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/11b9d704b496f6586f952e93c2158d38dd169377.jpg",
+   "key": "BONED",
+   "name": {
+    "en": "Boned"
+   },
+   "percent": 43.5,
+   "unlocked": "2020-04-07T21:23:51+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Steal a key from the dungeon's undead denizens, and unlock one of their precious golden chests."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/ba1daa2f08355bf11e2494b01db49f47fa4f43c7.jpg",
+   "key": "DUNGEON_HEIST",
+   "name": {
+    "en": "Dungeon Heist"
+   },
+   "percent": 40.7,
+   "unlocked": "2020-04-07T21:30:40+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Spelunk deep enough to reach the molten underworld."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/58efa6a9a0ae6a955c6a82874961b08c8e4def60.jpg",
+   "key": "ITS_GETTING_HOT_IN_HERE",
+   "name": {
+    "en": "It's Getting Hot in Here"
+   },
+   "percent": 49.8,
+   "unlocked": "2020-04-06T20:45:31+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Craft a molten pickaxe using the hottest of materials."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/bbb5c58dea957db42faaa276c697599f0354f06c.jpg",
+   "key": "MINER_FOR_FIRE",
+   "name": {
+    "en": "Miner for Fire"
+   },
+   "percent": 28.4,
+   "unlocked": "2020-04-19T15:59:31+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Defeat the Wall of Flesh, the master and core of the world who arises after a great, burning sacrifice."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/02ba42d3df19dc2cd81a6bf4ee29c7ce446e4360.jpg",
+   "key": "STILL_HUNGRY",
+   "name": {
+    "en": "Still Hungry"
+   },
+   "percent": 39.4,
+   "unlocked": "2020-04-17T22:28:31+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Unleash the ancient spirits of light and darkness across your world, enabling much stronger foes and showering the world with dazzling treasures (and rainbows!)."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/dc65c66c704560c7a940fab6d5023490f7102fb3.jpg",
+   "key": "ITS_HARD",
+   "name": {
+    "en": "It's Hard!"
+   },
+   "percent": 39.2,
+   "unlocked": "2020-04-17T22:28:42+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Smash a demon or crimson altar with a powerful, holy hammer."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/c3917d676fc752415849de9f132549d05ba0ca4c.jpg",
+   "key": "BEGONE_EVIL",
+   "name": {
+    "en": "Begone, Evil!"
+   },
+   "percent": 37.5,
+   "unlocked": "2020-04-17T22:46:48+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Mine a powerful ore that has been newly blessed upon your world."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/9d573b4067856938a1c13c9c93f3dec66c0c3f72.jpg",
+   "key": "EXTRA_SHINY",
+   "name": {
+    "en": "Extra Shiny!"
+   },
+   "percent": 35.7,
+   "unlocked": "2020-04-19T16:02:25+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Equip a pair of wings."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/55cb91ab9841f538742277b897189ab19aaefc8b.jpg",
+   "key": "HEAD_IN_THE_CLOUDS",
+   "name": {
+    "en": "Head in the Clouds"
+   },
+   "percent": 50.3,
+   "unlocked": "2020-04-19T16:45:11+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Obtain a boss-summoning item."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/e5e0bffeb00c720091439eb8336fea7d77f147c5.jpg",
+   "key": "LIKE_A_BOSS",
+   "name": {
+    "en": "Like a Boss"
+   },
+   "percent": 51.9,
+   "unlocked": "2020-04-04T14:18:57+02:00"
+  },
+  {
+   "description": {
+    "en": "Defeat the three nocturnal mechanical menaces: the Twins, the Destroyer, and Skeletron Prime."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/27536dd7b5ee4de46b85be337d0c792d685b14f5.jpg",
+   "key": "BUCKETS_OF_BOLTS",
+   "name": {
+    "en": "Buckets of Bolts"
+   },
+   "percent": 30.9
+  },
+  {
+   "description": {
+    "en": "Craft a drax or pickaxe axe using hallowed bars, and the souls of the three mechanical bosses."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/d3955ec8610cc6a7229866780451467ab0e5c5a2.jpg",
+   "key": "DRAX_ATTAX",
+   "name": {
+    "en": "Drax Attax"
+   },
+   "percent": 22.9
+  },
+  {
+   "description": {
+    "en": "Mine chlorophyte, an organic ore found deep among the thickest of flora."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/2a4c26b8eca5e09cabcd64a50b76115d2679796a.jpg",
+   "key": "PHOTOSYNTHESIS",
+   "name": {
+    "en": "Photosynthesis"
+   },
+   "percent": 28.9
+  },
+  {
+   "description": {
+    "en": "Consume a life fruit, which grows in the thick of subterranean jungle grass."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/e54172f81aaaac5bdabededcb8e52b8c2d2f7f8e.jpg",
+   "key": "GET_A_LIFE",
+   "name": {
+    "en": "Get a Life"
+   },
+   "percent": 32.5
+  },
+  {
+   "description": {
+    "en": "Defeat Plantera, the overgrown monstrosity of the jungle's depths."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/4b52e1dd35f600a9f82f7958abe2a467d68351e7.jpg",
+   "key": "THE_GREAT_SOUTHERN_PLANTKILL",
+   "name": {
+    "en": "The Great Southern Plantkill"
+   },
+   "percent": 29.6
+  },
+  {
+   "description": {
+    "en": "Breach the impenetrable walls of the jungle temple."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/cd11c08ea1a436e8156e1d3ebeccd1c9ba5cb22f.jpg",
+   "key": "TEMPLE_RAIDER",
+   "name": {
+    "en": "Temple Raider"
+   },
+   "percent": 26.6
+  },
+  {
+   "description": {
+    "en": "Defeat Golem, the stone-faced ritualistic idol of the lihzahrd tribe."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/3d8a29010ed3e22203cb4f0d52167c88f9c91a5c.jpg",
+   "key": "LIHZAHRDIAN_IDOL",
+   "name": {
+    "en": "Lihzahrdian Idol"
+   },
+   "percent": 28.6
+  },
+  {
+   "description": {
+    "en": "Obtain a rare treasure from a difficult monster in the dungeon."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/45884dee9cec706f27db75fbe4567da42d235836.jpg",
+   "key": "ROBBING_THE_GRAVE",
+   "name": {
+    "en": "Robbing the Grave"
+   },
+   "percent": 31.2
+  },
+  {
+   "description": {
+    "en": "Unlock one of the dungeon's large, mysterious chests with a special key."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/c7415e2bf7cbef15558b41c70bb1e306e5682e27.jpg",
+   "key": "BIG_BOOTY",
+   "name": {
+    "en": "Big Booty"
+   },
+   "percent": 21.6
+  },
+  {
+   "description": {
+    "en": "Defeat Duke Fishron, mutant terror of the sea."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/3efe3c4fcbfa43a355df16292f307232559fb3ec.jpg",
+   "key": "FISH_OUT_OF_WATER",
+   "name": {
+    "en": "Fish Out of Water"
+   },
+   "percent": 22.5
+  },
+  {
+   "description": {
+    "en": "Defeat the Ancient Cultist, fanatical leader of the dungeon coven."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/b9436b13653d95dd441c8a96213e6a4dfbc6b72f.jpg",
+   "key": "OBSESSIVE_DEVOTION",
+   "name": {
+    "en": "Obsessive Devotion"
+   },
+   "percent": 26.5
+  },
+  {
+   "description": {
+    "en": "Defeat the four celestial towers of the moon."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/da3155b9d24c435c244f7c099914586bac0b9853.jpg",
+   "key": "STAR_DESTROYER",
+   "name": {
+    "en": "Star Destroyer"
+   },
+   "percent": 23.2
+  },
+  {
+   "description": {
+    "en": "Defeat the Moon Lord."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/c91f1b034b7ce14a89a377320eddaf29f18143f1.jpg",
+   "key": "CHAMPION_OF_TERRARIA",
+   "name": {
+    "en": "Champion of Terraria"
+   },
+   "percent": 24.7
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Survive a blood moon, a nocturnal event where the rivers run red and monsters swarm aplenty."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/ce64b32e5385e779e3c615b2f36a966f8cdf4405.jpg",
+   "key": "BLOODBATH",
+   "name": {
+    "en": "Bloodbath"
+   },
+   "percent": 51.6,
+   "unlocked": "2020-04-04T21:03:48+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Defeat King Slime, the lord of all things slimy."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/839662b6bd88d0babf10cb9e7d5bafd9d89f3efc.jpg",
+   "key": "SLIPPERY_SHINOBI",
+   "name": {
+    "en": "Slippery Shinobi"
+   },
+   "percent": 43.7,
+   "unlocked": "2020-04-06T20:12:08+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Triumph over a goblin invasion, a ragtag regiment of crude, barbaric, pointy-eared warriors and their shadowflame sorcerers."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/984d8201f226319980b9a5f13b0a17455587d187.jpg",
+   "key": "GOBLIN_PUNTER",
+   "name": {
+    "en": "Goblin Punter"
+   },
+   "percent": 46.2,
+   "unlocked": "2020-04-10T20:19:26+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Triumph over a pirate invasion, a group of pillagers from the sea out for your booty... and your life!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/ce10d46dae4218e320e2ae46188507aa39ddf12b.jpg",
+   "key": "WALK_THE_PLANK",
+   "name": {
+    "en": "Walk the Plank"
+   },
+   "percent": 32.2,
+   "unlocked": "2020-04-19T13:27:42+02:00"
+  },
+  {
+   "description": {
+    "en": "Survive a solar eclipse, a day darker than night filled with creatures of horror."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/b528155244502c33c5bf0b8d8cee3e08e9637216.jpg",
+   "key": "KILL_THE_SUN",
+   "name": {
+    "en": "Kill the Sun"
+   },
+   "percent": 30.8
+  },
+  {
+   "description": {
+    "en": "Triumph over the frost legion, a festive family of maniacal snowman mobsters."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/f00bc8242a3fe3ba2c682ae50eaf9c9a14fe95be.jpg",
+   "key": "DO_YOU_WANT_TO_SLAY_A_SNOWMAN",
+   "name": {
+    "en": "Do You Want to Slay a Snowman?"
+   },
+   "percent": 13.8
+  },
+  {
+   "description": {
+    "en": "Triumph over a martian invasion, when beings from out of this world come to scramble your brains and probe you in uncomfortable places."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/c3e587ad5f2dea6f18e3b1dbda3ae258f70edf9c.jpg",
+   "key": "TIN_FOIL_HATTER",
+   "name": {
+    "en": "Tin-Foil Hatter"
+   },
+   "percent": 24.7
+  },
+  {
+   "description": {
+    "en": "Reach the 15th wave of a pumpkin moon, where evil lurks among the autumn harvest."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/86778a8e3b31dc11c21491bf0fb49364efa586aa.jpg",
+   "key": "BALEFUL_HARVEST",
+   "name": {
+    "en": "Baleful Harvest"
+   },
+   "percent": 19.7
+  },
+  {
+   "description": {
+    "en": "Reach the 15th wave of a frost moon, where the festive season quickly degrades into madness."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/c8da134d01c965ca92dffdeba235f04174e0841e.jpg",
+   "key": "ICE_SCREAM",
+   "name": {
+    "en": "Ice Scream"
+   },
+   "percent": 13.0
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Survive the slime rain, where gelatinous organisms fall from the sky in droves."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/d033499586f55832b7ca093fc07077c6d64dfb57.jpg",
+   "key": "STICKY_SITUATION",
+   "name": {
+    "en": "Sticky Situation"
+   },
+   "percent": 37.8,
+   "unlocked": "2020-04-07T21:04:13+02:00"
+  },
+  {
+   "description": {
+    "en": "Have all possible town NPCs living in your world."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/bb38f0b5c56803197bd87c5de580ede512a0ae59.jpg",
+   "key": "REAL_ESTATE_AGENT",
+   "name": {
+    "en": "Real Estate Agent"
+   },
+   "percent": 16.3
+  },
+  {
+   "description": {
+    "en": "Fire a Bee Gun while wearing a full set of Bee Armor."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/03d53ce253896b4ca711a08fd8dee0f6cb557cad.jpg",
+   "key": "NOT_THE_BEES",
+   "name": {
+    "en": "Not the Bees!"
+   },
+   "percent": 9.2
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Stumble into a spider cavern in the underground."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/d9aeb5789d29be12161f43cb7a6a6e7afb045116.jpg",
+   "key": "JEEPERS_CREEPERS",
+   "name": {
+    "en": "Jeepers Creepers"
+   },
+   "percent": 48.3,
+   "unlocked": "2020-04-20T21:14:51+02:00"
+  },
+  {
+   "description": {
+    "en": "Build or encounter a glowing mushroom field above the surface."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/2f0d702bad1430791b379ff1735f6bf2ba7e9eb1.jpg",
+   "key": "FUNKYTOWN",
+   "name": {
+    "en": "Funkytown"
+   },
+   "percent": 27.6
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "You can only go down from here!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/db6d01c34f6ad734293be8ce9d587e9d0b5faf51.jpg",
+   "key": "INTO_ORBIT",
+   "name": {
+    "en": "Into Orbit"
+   },
+   "percent": 42.0,
+   "unlocked": "2020-04-06T21:14:35+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "The only way is up!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/ef421de200597d9553957957bb16b1504a25c752.jpg",
+   "key": "ROCK_BOTTOM",
+   "name": {
+    "en": "Rock Bottom"
+   },
+   "percent": 25.7,
+   "unlocked": "2020-04-06T20:56:16+02:00"
+  },
+  {
+   "description": {
+    "en": "Do battle against the Twins, the Destroyer, and Skeletron Prime simultaneously and emerge victorious."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/d8d3d50b2216d47c33e307972056d8fd8471d54e.jpg",
+   "key": "MECHA_MAYHEM",
+   "name": {
+    "en": "Mecha Mayhem"
+   },
+   "percent": 13.1
+  },
+  {
+   "description": {
+    "en": "Defeat every type of slime there is!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/7528c2a19d58be44828e538579f2c422b35537f5.jpg",
+   "key": "GELATIN_WORLD_TOUR",
+   "name": {
+    "en": "Gelatin World Tour"
+   },
+   "percent": 15.3
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Equip armor or vanity clothing in all three social slots."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/a21ac001c8eb0eece9a498b094d5c1f8e121727a.jpg",
+   "key": "FASHION_STATEMENT",
+   "name": {
+    "en": "Fashion Statement"
+   },
+   "percent": 48.0,
+   "unlocked": "2020-04-18T19:49:26+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Defeat an enemy by running it over with a minecart."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/a959913d98f2195136a4c8acd11b98281e2109e4.jpg",
+   "key": "VEHICULAR_MANSLAUGHTER",
+   "name": {
+    "en": "Vehicular Manslaughter"
+   },
+   "percent": 49.0,
+   "unlocked": "2020-04-16T22:23:44+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Destroy a total of 10,000 tiles."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/c57a4c06ecbc2ec8fe5af0b1d4cb8cbfe8821a10.jpg",
+   "key": "BULLDOZER",
+   "name": {
+    "en": "Bulldozer"
+   },
+   "percent": 39.5,
+   "unlocked": "2020-04-09T22:19:35+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Kill Tim."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/472bdbff627e1e346f0cff906bc698abde36f9c0.jpg",
+   "key": "THERE_ARE_SOME_WHO_CALL_HIM",
+   "name": {
+    "en": "There are Some Who Call Him..."
+   },
+   "percent": 33.8,
+   "unlocked": "2020-04-14T21:29:04+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Kill a nymph."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/5a07dc5b30fe19e1675d03b89ef2cdd1856d6157.jpg",
+   "key": "DECEIVER_OF_FOOLS",
+   "name": {
+    "en": "Deceiver of Fools"
+   },
+   "percent": 34.6,
+   "unlocked": "2022-01-28T21:00:10+01:00"
+  },
+  {
+   "description": {
+    "en": "Obtain a Terra Blade, forged from the finest blades of light and darkness."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/4256db7a8c24e4bfa312b6768d1af19873883b02.jpg",
+   "key": "SWORD_OF_THE_HERO",
+   "name": {
+    "en": "Sword of the Hero"
+   },
+   "percent": 24.3
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Survive a long fall with just a sliver of health remaining."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/8fe7fc557c8573f9bf353c82387dd18c4f20c9ab.jpg",
+   "key": "LUCKY_BREAK",
+   "name": {
+    "en": "Lucky Break"
+   },
+   "percent": 42.6,
+   "unlocked": "2020-04-06T15:11:52+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Throw a yoyo."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/efd06080d5ca93192d2c1dda6e9cf92b424e461e.jpg",
+   "key": "THROWING_LINES",
+   "name": {
+    "en": "Throwing Lines"
+   },
+   "percent": 46.1,
+   "unlocked": "2020-04-04T23:14:17+02:00"
+  },
+  {
+   "description": {
+    "en": "Equip a dye in every possible dye slot."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/1aa1fffcccddc0cf50f4da93914ad18e59e92c23.jpg",
+   "key": "DYE_HARD",
+   "name": {
+    "en": "Dye Hard"
+   },
+   "percent": 14.5
+  },
+  {
+   "description": {
+    "en": "Obtain the Terrarian."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/7cf7f0f0a17e1bfdb864857698458a548454f944.jpg",
+   "key": "SICK_THROW",
+   "name": {
+    "en": "Sick Throw"
+   },
+   "percent": 21.1
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Spend over 1 gold being treated by the nurse."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/af50c3b5549094e0f99d20f04ff6ed4e5fda6889.jpg",
+   "key": "FREQUENT_FLYER",
+   "name": {
+    "en": "The Frequent Flyer"
+   },
+   "percent": 28.3,
+   "unlocked": "2020-04-19T13:22:10+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Equip a mount."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/da6e31f8c70f22252c7d5c7ec6882093499146f9.jpg",
+   "key": "THE_CAVALRY",
+   "name": {
+    "en": "The Cavalry"
+   },
+   "percent": 42.6,
+   "unlocked": "2020-04-09T21:45:19+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Obtain a minishark."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/8ae7da8ea8eb7fd920f499fb762e7efb24fae8fc.jpg",
+   "key": "COMPLETELY_AWESOME",
+   "name": {
+    "en": "Completely Awesome"
+   },
+   "percent": 30.9,
+   "unlocked": "2020-04-18T19:44:40+02:00"
+  },
+  {
+   "description": {
+    "en": "Kill the groom."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/67c95d83892c06d5d3cfb9070e0260da72500d4a.jpg",
+   "key": "TIL_DEATH",
+   "name": {
+    "en": "Til Death..."
+   },
+   "percent": 36.6
+  },
+  {
+   "description": {
+    "en": "Kill Doctor Bones."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/3060f4ae13f56fbb3f78e36371aaa039f4b2c9bf.jpg",
+   "key": "ARCHAEOLOGIST",
+   "name": {
+    "en": "Archaeologist"
+   },
+   "percent": 20.3
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Kill pinky."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/f00eae3408364653eefe9a6e9283a1610ae8643b.jpg",
+   "key": "PRETTY_IN_PINK",
+   "name": {
+    "en": "Pretty in Pink"
+   },
+   "percent": 49.7,
+   "unlocked": "2020-04-10T20:30:12+02:00"
+  },
+  {
+   "description": {
+    "en": "Fire a rainbow gun while riding on a unicorn."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/bc685bc68f0fa00ba3a78d0302a03b593d328bd2.jpg",
+   "key": "RAINBOWS_AND_UNICORNS",
+   "name": {
+    "en": "Rainbows and Unicorns"
+   },
+   "percent": 7.4
+  },
+  {
+   "description": {
+    "en": "Command nine summoned minions simultaneously."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/3b575ae17236ef4fda976015685e0e2c55b4c2e4.jpg",
+   "key": "YOU_AND_WHAT_ARMY",
+   "name": {
+    "en": "You and What Army?"
+   },
+   "percent": 13.6
+  },
+  {
+   "description": {
+    "en": "Obtain a rainbow rod."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/6c21f8ead465f9cd90c7b4d936239467c334bd5c.jpg",
+   "key": "PRISMANCER",
+   "name": {
+    "en": "Prismancer"
+   },
+   "percent": 12.0
+  },
+  {
+   "description": {
+    "en": "Build a house in a mushroom biome and have the Truffle move in."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/5bcc7dd72c781448be7f89fab335d7c789defc92.jpg",
+   "key": "IT_CAN_TALK",
+   "name": {
+    "en": "It Can Talk?!"
+   },
+   "percent": 20.4
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Become a victim to a nasty underground trap."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/280b95017555560b63ea0a44dbdb3a38e86cd7cd.jpg",
+   "key": "WATCH_YOUR_STEP",
+   "name": {
+    "en": "Watch Your Step!"
+   },
+   "percent": 59.0,
+   "unlocked": "2020-04-04T21:25:25+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Travel a total of 26.2 miles on foot."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/c624a2f9b28c26d804f22337d4c46efffc2d4563.jpg",
+   "key": "MARATHON_MEDALIST",
+   "name": {
+    "en": "Marathon Medalist"
+   },
+   "percent": 45.2,
+   "unlocked": "2020-04-06T15:09:55+02:00"
+  },
+  {
+   "description": {
+    "en": "Obtain a golden fishing rod."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/31bf55f9458e34e287fdda09870667d8aefb40d9.jpg",
+   "key": "GLORIOUS_GOLDEN_POLE",
+   "name": {
+    "en": "Glorious Golden Pole"
+   },
+   "percent": 13.4
+  },
+  {
+   "description": {
+    "en": "Complete your 1st quest for the angler."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/b973018a8927f10e575b7c26f3be471d36770a18.jpg",
+   "key": "SERVANT_IN_TRAINING",
+   "name": {
+    "en": "Servant-in-Training"
+   },
+   "percent": 20.9
+  },
+  {
+   "description": {
+    "en": "Complete your 10th quest for the angler."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/d3c8364503839510538d9689703a49ebf7871354.jpg",
+   "key": "GOOD_LITTLE_SLAVE",
+   "name": {
+    "en": "Good Little Slave"
+   },
+   "percent": 12.7
+  },
+  {
+   "description": {
+    "en": "Complete your 25th quest for the angler."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/8c6376252ce0e24852d8182d85e005a892e7a36c.jpg",
+   "key": "TROUT_MONKEY",
+   "name": {
+    "en": "Trout Monkey"
+   },
+   "percent": 9.7
+  },
+  {
+   "description": {
+    "en": "Complete your 50th quest for the angler."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/d165c8707e2896057eff47fbb9042dc88acc4ca7.jpg",
+   "key": "FAST_AND_FISHIOUS",
+   "name": {
+    "en": "Fast and Fishious"
+   },
+   "percent": 6.9
+  },
+  {
+   "description": {
+    "en": "Complete a grand total of 200 quests for the angler."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/0efea1bf7f4a5adf079263c1db65cf6d9445ae87.jpg",
+   "key": "SUPREME_HELPER_MINION",
+   "name": {
+    "en": "Supreme Helper Minion!"
+   },
+   "percent": 3.0
+  },
+  {
+   "description": {
+    "en": "Attain maximum health and mana possible without accessories or buffs."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/6fafd5617f5f2c23a0ffeefc2799d2fbb5a7c801.jpg",
+   "key": "TOPPED_OFF",
+   "name": {
+    "en": "Topped Off"
+   },
+   "percent": 26.6
+  },
+  {
+   "description": {
+    "en": "Defeat every boss in Terraria."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/98a47ac6d34f74f0f4d8651a929701bd2aa4ae42.jpg",
+   "key": "SLAYER_OF_WORLDS",
+   "name": {
+    "en": "Slayer of Worlds"
+   },
+   "percent": 21.0
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Survive your character's first full night."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/6a5b944787cc9f1dab1dd661e409ce97996d412b.jpg",
+   "key": "YOU_CAN_DO_IT",
+   "name": {
+    "en": "You Can Do It!"
+   },
+   "percent": 77.5,
+   "unlocked": "2020-04-03T20:27:30+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Equip armor in all three armor slots: head, chest, and feet."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/4982fd3ed36214f5c68280e4502a48f6a2e857cc.jpg",
+   "key": "MATCHING_ATTIRE",
+   "name": {
+    "en": "Matching Attire"
+   },
+   "percent": 68.1,
+   "unlocked": "2020-04-03T22:01:37+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Craft your first work bench."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/e76f23d7116ce2a3ddb73611a58207094f2fed35.jpg",
+   "key": "BENCHED",
+   "name": {
+    "en": "Benched"
+   },
+   "percent": 63.5,
+   "unlocked": "2020-05-18T21:41:12+02:00"
+  },
+  {
+   "description": {
+    "en": "Defeat the Empress of Light, responsible for all those flashy lights and glitter."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/ae620dba9905fffad026095e82548c0cddb31b94.jpg",
+   "key": "DEFEAT_EMPRESS_OF_LIGHT",
+   "name": {
+    "en": "Fae Flayer"
+   },
+   "percent": 15.5
+  },
+  {
+   "description": {
+    "en": "Defeat Queen Slime, giving the coup-de-grace to the sovereign of all that jiggles."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/6091aa5a41f25af23b6c408d9669bc0bb8aa067b.jpg",
+   "key": "DEFEAT_QUEEN_SLIME",
+   "name": {
+    "en": "Just Desserts"
+   },
+   "percent": 21.6
+  },
+  {
+   "description": {
+    "en": "Defeat the Dreadnautilus, murderous mollusk lurking beneath the surface of the sanguine seas."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/f36753b1fe186f04edf1a7ae791b85f70b07302b.jpg",
+   "key": "DEFEAT_DREADNAUTILUS",
+   "name": {
+    "en": "Don't Dread on Me"
+   },
+   "percent": 9.7
+  },
+  {
+   "description": {
+    "en": "Repel the strongest forces the Old One's Army can muster."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/2c1f94b506fc34b6f3cb805c08b1b19484e4c5aa.jpg",
+   "key": "DEFEAT_OLD_ONES_ARMY_TIER3",
+   "name": {
+    "en": "Hero of Etheria"
+   },
+   "percent": 12.2
+  },
+  {
+   "description": {
+    "en": "Obtain the Zenith, the culmination of a journey forged into the ultimate sword."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/ad65c49e080605670ce5dee3e94c5863e5dcdb76.jpg",
+   "key": "GET_ZENITH",
+   "name": {
+    "en": "Infinity +1 Sword"
+   },
+   "percent": 17.8
+  },
+  {
+   "description": {
+    "en": "Obtain the Terraspark Boots, forged from the finest boots of fire and ice."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/50bae94af5dffa4d3f41d242aefaa84b34a6df1a.jpg",
+   "key": "GET_TERRASPARK_BOOTS",
+   "name": {
+    "en": "Boots of the Hero"
+   },
+   "percent": 18.5
+  },
+  {
+   "description": {
+    "en": "Fly a kite on a windy day."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/fb4a164d117f4e02e2e84b0803d25f5c39a147ba.jpg",
+   "key": "FLY_A_KITE_ON_A_WINDY_DAY",
+   "name": {
+    "en": "A Rather Blustery Day"
+   },
+   "percent": 15.3
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Enter a misty graveyard filled with the surly dead."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/a3e4fc9470751bf2eec49a0d9fc3409a110328ec.jpg",
+   "key": "FOUND_GRAVEYARD",
+   "name": {
+    "en": "Quiet Neighborhood"
+   },
+   "percent": 41.4,
+   "unlocked": "2021-09-25T20:27:05+02:00"
+  },
+  {
+   "description": {
+    "en": "Drop a lure in a pool of lava for a pre-fried haul!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/b69c78cee817dbe14238c10c042bf478003a9c27.jpg",
+   "key": "GO_LAVA_FISHING",
+   "name": {
+    "en": "Hot Reels!"
+   },
+   "percent": 9.0
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Trick a gnome into turning into stone!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/0d7088cea84ce1cdbb400285318dd138ffac3a21.jpg",
+   "key": "TURN_GNOME_TO_STATUE",
+   "name": {
+    "en": "Heliophobia"
+   },
+   "percent": 28.3,
+   "unlocked": "2021-12-11T14:09:57+01:00"
+  },
+  {
+   "description": {
+    "en": "Meet with a tenant who's as happy as they possibly can be!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/16ad9b0660dbb63a04c9866f5e09f6337dd194af.jpg",
+   "key": "TALK_TO_NPC_AT_MAX_HAPPINESS",
+   "name": {
+    "en": "Leading Landlord"
+   },
+   "percent": 19.2
+  },
+  {
+   "description": {
+    "en": "Deliver headpats to the town pet."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/89ae5fc62de83ed0c5b472dba2434a2f91940bd1.jpg",
+   "key": "PET_THE_PET",
+   "name": {
+    "en": "Feeling Petty"
+   },
+   "percent": 32.5
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Encounter a fairy."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/98424268ca1fe5748753b891affa4c20c4ab5147.jpg",
+   "key": "FIND_A_FAIRY",
+   "name": {
+    "en": "Hey! Listen!"
+   },
+   "percent": 45.7,
+   "unlocked": "2021-02-06T22:26:12+01:00"
+  },
+  {
+   "description": {
+    "en": "What you're celebrating doesn't matter, just throw a party already!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/9f723603a35018b1701fd21a222ee26a60ca845c.jpg",
+   "key": "THROW_A_PARTY",
+   "name": {
+    "en": "Jolly Jamboree"
+   },
+   "percent": 26.6
+  },
+  {
+   "description": {
+    "en": "You were so preoccupied with whether or not you could open the chest that you didn't stop to think if you should."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/0dfe1e75f8432cd357cefa8190a11693a2786dc0.jpg",
+   "key": "DIE_TO_DEAD_MANS_CHEST",
+   "name": {
+    "en": "Dead Men Tell No Tales"
+   },
+   "percent": 29.9
+  },
+  {
+   "description": {
+    "en": "Defeat Deerclops, the chilly one-eyed monstrosity from a foreign land."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/8bbfcf168e0034054d479a72d30e2fe36354f2cc.jpg",
+   "key": "DEFEAT_DEERCLOPS",
+   "name": {
+    "en": "An Eye For An Eye"
+   },
+   "percent": 15.7
+  },
+  {
+   "description": {
+    "en": "Obtain Golden Delight, the highest quality meal made from the highest quality . . . ingredients."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/a66cea955e671d290bad146559a3bd060eaf794a.jpg",
+   "key": "GET_GOLDEN_DELIGHT",
+   "name": {
+    "en": "Feast of Midas"
+   },
+   "percent": 5.9
+  },
+  {
+   "description": {
+    "en": "Delay death from drowning by drinking water. It doesn't make much sense, but you did what you had to do."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/8e1b99704b1f4c6b22d7debe3860f8490abca351.jpg",
+   "key": "DRINK_BOTTLED_WATER_WHILE_DROWNING",
+   "name": {
+    "en": "Unusual Survival Strategies"
+   },
+   "percent": 4.3
+  },
+  {
+   "description": {
+    "en": "Obtain the Cell Phone. You'll never leave home without it again."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/bcf6b104b2bccd4a5f781fc3983bd42b5fb1eea2.jpg",
+   "key": "GET_CELL_PHONE",
+   "name": {
+    "en": "Black Mirror"
+   },
+   "percent": 10.1
+  },
+  {
+   "description": {
+    "en": "Obtain the Ankh Shield, the finest protection from unpleasant maladies and ailments."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/820ecf21246cb8acb0a293fb5781b479c46bc441.jpg",
+   "key": "GET_ANKH_SHIELD",
+   "name": {
+    "en": "Ankhumulation Complete"
+   },
+   "percent": 11.8
+  },
+  {
+   "description": {
+    "en": "Invoked the wrath of the God of Torches, and survived long enough to earn its blessing."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/a3ec24fea5772694e7b994a5435736c48a310e50.jpg",
+   "key": "GAIN_TORCH_GODS_FAVOR",
+   "name": {
+    "en": "Torch God"
+   },
+   "percent": 10.5
+  },
+  {
+   "description": {
+    "en": "Some very special seeds can lead to unique and rewarding experiences. Can you find one?"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/ee1bf7006604da48b973c5d793c9b13b68ea7b63.jpg",
+   "key": "PLAY_ON_A_SPECIAL_SEED",
+   "name": {
+    "en": "A Rare Realm"
+   },
+   "percent": 12.5
+  },
+  {
+   "description": {
+    "en": "Find all of the Slime Pets and have them move in!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/e1c0a92f692a92243f7fd948781488c65aa07e21.jpg",
+   "key": "ALL_TOWN_SLIMES",
+   "name": {
+    "en": "The Great Slime Mitosis"
+   },
+   "percent": 6.0
+  },
+  {
+   "description": {
+    "en": "Shimmer an item into another item. What other transmutations can you find?"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/2e8221bd7bc11ac180bf2949a1a57bb5649b8cce.jpg",
+   "key": "TRANSMUTE_ITEM",
+   "name": {
+    "en": "A Shimmer In The Dark"
+   },
+   "percent": 20.0
+  },
+  {
+   "description": {
+    "en": "Completely purify all Corruption, Crimson, and Hallow from your world, until the Dryad is satisfied!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/aeb266a1824b439683465935d418490151b96213.jpg",
+   "key": "PURIFY_ENTIRE_WORLD",
+   "name": {
+    "en": "And Good Riddance!"
+   },
+   "percent": 2.8
+  },
+  {
+   "description": {
+    "en": "Fly a Kwad Racer into outer space."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/266154858cd3adc18282e0c3f4a7b192d901e572.jpg",
+   "key": "TO_INFINITY_AND_BEYOND",
+   "name": {
+    "en": "To Infinity... and Beyond!"
+   },
+   "percent": 5.4
+  },
+  {
+   "description": {
+    "en": "Catalogue every creature in the world."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/f3351f5cde10910d02ffefb118b5b62519609f60.jpg",
+   "key": "BOOK_WORM",
+   "name": {
+    "en": "Book Worm"
+   },
+   "percent": 1.0
+  },
+  {
+   "description": {
+    "en": "Prove your worth against the Moon Lord's worst."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/5cbdb2ef87620f6c1a58c79d90e8fa13df64f7b4.jpg",
+   "key": "BOULDER_LORD",
+   "name": {
+    "en": "Boulder Lord"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "en": "Defeated the combined form of the 3 mechanical giants."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/d2cc2fa90e9d5237dcafa061b3a32593b81ec3d0.jpg",
+   "key": "QUEEN_MACHINE",
+   "name": {
+    "en": "Queen Machine"
+   },
+   "percent": 0.8
+  },
+  {
+   "description": {
+    "en": "Take a ride in your final resting place."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/cd3425358bd2760cdf49ef15d0598fce9235f786.jpg",
+   "key": "ROLLIN_IN_YOUR_GRAVE",
+   "name": {
+    "en": "Rollin’ In Your Grave"
+   },
+   "percent": 0.8
+  },
+  {
+   "description": {
+    "en": "Dawn the garb of a vampire and get a sunburn."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/0f7433fb1db6414bd4f5e10965c38ee5078fa3cc.jpg",
+   "key": "FEAR_THE_SUN",
+   "name": {
+    "en": "Fear The Sun"
+   },
+   "percent": 0.5
+  },
+  {
+   "description": {
+    "en": "Survive the dreaded rain of boulders."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/07ee1d2989607c794babd086d660ada8810314fe.jpg",
+   "key": "ITS_SHALING_OUTSIDE",
+   "name": {
+    "en": "It’s Shaling Outside"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "en": "Die as a hardcore character and survive to tell the tale."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/a37354ac72189e0fc5004d9fcfb6fc152639c55f.jpg",
+   "key": "EXTRA_LIFE",
+   "name": {
+    "en": "Extra Life"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "en": "“Accidentally” kill a friend with your tombstone."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/b820762ec697085af4cab77a1ba10d4bd44bf457.jpg",
+   "key": "GRAVE_MISTAKE",
+   "name": {
+    "en": "Grave Mistake"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "en": "Jam out on a six stringed instrument."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/7ee84aed998d979b5a23472e8d979114d7787a27.jpg",
+   "key": "SPICY_LICKS",
+   "name": {
+    "en": "Spicy Licks"
+   },
+   "percent": 3.9
+  },
+  {
+   "description": {
+    "en": "Find the ultra rare Rod of Discord."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/d219db52b6812007c8794d10ca58960d599767c1.jpg",
+   "key": "ORGANIZED_CHAOS",
+   "name": {
+    "en": "Organized Chaos"
+   },
+   "percent": 2.2
+  },
+  {
+   "description": {
+    "en": "Spot the sun on a “cool” day."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/f82e79301ae9bbdb2d95a69527ac5ab44faf00a2.jpg",
+   "key": "ON_FLEEK",
+   "name": {
+    "en": "On Fleek"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "en": "Discover a friendly boulder."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/60f21cf3ca3149c7c61d15dd1042d7a0ad71cfbc.jpg",
+   "key": "FORTUNE_FAVORS_THE_BOULD",
+   "name": {
+    "en": "Fortune Favors the Bould"
+   },
+   "percent": 7.2
+  },
+  {
+   "description": {
+    "en": "Get your villagers fully combat ready."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/d608a4a962f21ec31d762587303cb46eeab53970.jpg",
+   "key": "TRAINING_DAY",
+   "name": {
+    "en": "Training Day"
+   },
+   "percent": 2.8
+  },
+  {
+   "description": {
+    "en": "Become a Moon Lord impersonator."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/2a2fb4ec7df42bb9851e13f8ec88746b970cd5bd.jpg",
+   "key": "MINI_ME",
+   "name": {
+    "en": "Mini-Me"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "en": "Scare your villagers with a stink bug sword."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/288472afaebc9d01595540fe2446ee7a43abc1df.jpg",
+   "key": "TERRARIST",
+   "name": {
+    "en": "Terrarist"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "en": "Give any villager a new look."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/cd103cb3f0c7a67c6a7cb658832b350d459a4e52.jpg",
+   "key": "NEW_DIGS",
+   "name": {
+    "en": "New Digs"
+   },
+   "percent": 3.6
+  },
+  {
+   "description": {
+    "en": "Embark on a one way trip into outer space."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/033c42ec01776eda64cdc4aac53c4251afa6ce13.jpg",
+   "key": "MY_PEOPLE_NEED_ME",
+   "name": {
+    "en": "My People Need Me"
+   },
+   "percent": 0.8
+  },
+  {
+   "description": {
+    "en": "Bring back the original title screen."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/04998850ce652bde23901e5a4a5838d03d88c725.jpg",
+   "key": "GOING_OLDSCHOOL",
+   "name": {
+    "en": "Going Oldschool"
+   },
+   "percent": 10.2
+  },
+  {
+   "description": {
+    "en": "Craft the final upgrade to the Cell Phone."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/48d887d78e3360c3291684a75d5f3beb40ec5ddf.jpg",
+   "key": "SEA_YOU_LATER",
+   "name": {
+    "en": "Sea You Later"
+   },
+   "percent": 2.1
+  },
+  {
+   "description": {
+    "en": "Research 50% of all items in Journey Mode."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/9f6daa8811878bef7e34a7e0b147f1795985ca44.jpg",
+   "key": "TRASH_COMPACTOR",
+   "name": {
+    "en": "Trash Compactor"
+   },
+   "percent": 0.5
+  },
+  {
+   "description": {
+    "en": "Support sustainable logging by planting 100 acorns."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/c3427a13a22c146f2f17b459c6a9de89818ab809.jpg",
+   "key": "CONSERVATIONIST",
+   "name": {
+    "en": "Conservationist"
+   },
+   "percent": 3.0
+  },
+  {
+   "description": {
+    "en": "Give the Dryad a can of Joja Cola."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/105600/c1ac7ace184cd9e9bc13fd463e8449eea9b227c0.jpg",
+   "key": "INTERDIMENSIONAL_RECYCLING",
+   "name": {
+    "en": "Interdimensional Recycling"
+   },
+   "percent": 1.3
+  }
+ ],
+ "id": "105600",
+ "platform": "steam"
+}

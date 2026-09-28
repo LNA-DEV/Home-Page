@@ -1,0 +1,66 @@
+{
+ "developers": [
+  "Snail"
+ ],
+ "genres": [
+  {
+   "de": "Action-Adventure",
+   "en": "action-adventure game",
+   "sv": "actionäventyrsspel"
+  },
+  {
+   "de": "Massively Multiplayer Online Game",
+   "en": "massively multiplayer online game",
+   "sv": "massively multiplayer online game"
+  },
+  {
+   "de": "Actionspiel",
+   "en": "action game",
+   "sv": "actionspel"
+  },
+  {
+   "de": "Sandbox-Spiel",
+   "en": "sandbox game",
+   "sv": "sandlådespel"
+  },
+  {
+   "de": "Computer-Rollenspiel",
+   "en": "role-playing video game",
+   "sv": "datorrollspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  }
+ ],
+ "publishers": [
+  "Snail"
+ ],
+ "released": "2018",
+ "steam": {
+  "de": "Willkommen in PixARK, einer weiten wilden Welt voller gefährlicher Dinosaurier, magischen Wesen und endlosen Abenteuern!",
+  "en": "Enter a world of mystery, danger, ancient dinosaurs, mythical beasts, and cubes! Work by yourself or with a tribe of others to gather materials, craft useful items, tame wild creatures, and build huge bases to survive in PixARK!",
+  "sv": "Välkommen tilVälkommen till PixARK, en gigantisk, vild värld fylld med brutala dinosaurier, magiska varelser och ändlöst äventyr!"
+ },
+ "steam_appid": 593600,
+ "wikidata": "Q51317914",
+ "wikipedia": {
+  "de": {
+   "text": "PixArk ist ein Survival-Aufbauspiel, das im März 2018 in der Early Access für Microsoft Windows und Xbox One erscheinen soll. Veröffentlicht werden soll das Spiel außerdem auf der PlayStation 4 und der Nintendo Switch. Das Spiel lässt sich sowohl im Einzel- als auch im Mehrspielermodus spielen.",
+   "url": "https://de.wikipedia.org/wiki/PixARK"
+  },
+  "en": {
+   "text": "PixARK is a survival video game that was released on March 27, 2018 in early access for Microsoft Windows. A spin-off of Ark: Survival Evolved, the game can be played in both single-player and multiplayer modes.",
+   "url": "https://en.wikipedia.org/wiki/PixARK"
+  }
+ }
+}

@@ -1,0 +1,186 @@
+{
+ "achievements": [
+  {
+   "description": {
+    "en": "Collect a total of 2000 Beatpoints"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/231040/51d3d8149a9f01ff65988a67571379d2b3e33735.jpg",
+   "key": "Count_Beatpoints",
+   "name": {
+    "en": "Gatherer"
+   },
+   "percent": 5.9
+  },
+  {
+   "description": {
+    "en": "Destroy 200 containers"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/231040/214d28c8f0b57791865652102e0ad9880e788415.jpg",
+   "key": "Count_Containers",
+   "name": {
+    "en": "Mad on Health"
+   },
+   "percent": 9.4
+  },
+  {
+   "description": {
+    "en": "Jump through Snarestreams 100 times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/231040/bf37d02747767fb57900fdc07591722a71bcd040.jpg",
+   "key": "Count_Snarejumps",
+   "name": {
+    "en": "Snare Jumper"
+   },
+   "percent": 17.2
+  },
+  {
+   "description": {
+    "en": "Accomplish 20 Rhythm Combo's"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/231040/5f2979c5b770eb857a597e3c02554d162dfc9c55.jpg",
+   "key": "Count_Rhythm",
+   "name": {
+    "en": "In the Rhythm"
+   },
+   "percent": 9.5
+  },
+  {
+   "description": {
+    "en": "Defeat 100 Soldiers"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/231040/874146860eece054ea5705045e1bf170fcc4b05a.jpg",
+   "key": "Count_Soldiers",
+   "name": {
+    "en": "Champion"
+   },
+   "percent": 6.5
+  },
+  {
+   "description": {
+    "en": "Complete the Elite Training in the Camp"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/231040/4910fd048310c33ca4c0d0102be224a9a29356f5.jpg",
+   "key": "Challenge_Dash",
+   "name": {
+    "en": "Dash Maniac"
+   },
+   "percent": 6.8
+  },
+  {
+   "description": {
+    "en": "Defeat the captured Parasites in level 4 without getting hit"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/231040/7181b15b86c3adea1d7d2ec6e648aa12e3fef5aa.jpg",
+   "key": "Challenge_Arena",
+   "name": {
+    "en": "Untouchable"
+   },
+   "percent": 1.7
+  },
+  {
+   "description": {
+    "en": "Unlock all the Extras"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/231040/c64f5d0695775c8754069ac61d493bba0d6fef0a.jpg",
+   "key": "Challenge_Unlock",
+   "name": {
+    "en": "Art Collector"
+   },
+   "percent": 1.5
+  },
+  {
+   "description": {
+    "en": "Complete the game in under 3 hours"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/231040/a7d453ba43d7318787dc84c957667242265330b5.jpg",
+   "key": "Challenge_Time",
+   "name": {
+    "en": "Fast Forward"
+   },
+   "percent": 1.5
+  },
+  {
+   "description": {
+    "en": "Complete level 1"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/231040/e3f7b76394d7e283e0e29300ae52d0a1c6fa263f.jpg",
+   "key": "Level_1",
+   "name": {
+    "en": "Beatbuddy Swing"
+   },
+   "percent": 27.1
+  },
+  {
+   "description": {
+    "en": "Complete level 2"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/231040/d71b4cd652817297465c8c8327c9cf7ff78ca08b.jpg",
+   "key": "Level_2",
+   "name": {
+    "en": "Love Swing"
+   },
+   "percent": 14.2
+  },
+  {
+   "description": {
+    "en": "Complete level 3"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/231040/d240d8a64d168dec368cdb772e19818bdc220222.jpg",
+   "key": "Level_3",
+   "name": {
+    "en": "Lost In Yesterday"
+   },
+   "percent": 8.7
+  },
+  {
+   "description": {
+    "en": "Complete level 4"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/231040/2a44449eb3f561a043f135999645414a0b417259.jpg",
+   "key": "Level_4",
+   "name": {
+    "en": "I'm Your Star"
+   },
+   "percent": 6.6
+  },
+  {
+   "description": {
+    "en": "Complete level 5"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/231040/e6e92ae9c400cd2c09c4aaab13e0445a5bdb4885.jpg",
+   "key": "Level_5",
+   "name": {
+    "en": "Stingin' Swing"
+   },
+   "percent": 5.6
+  },
+  {
+   "description": {
+    "en": "Complete level 6"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/231040/d3addc8beeb78df0cb5ae1279b4faaa70b5db5b8.jpg",
+   "key": "Level_6",
+   "name": {
+    "en": "You Are The One"
+   },
+   "percent": 5.0
+  }
+ ],
+ "id": "231040",
+ "platform": "steam"
+}

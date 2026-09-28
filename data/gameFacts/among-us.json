@@ -1,0 +1,66 @@
+{
+ "genres": [
+  {
+   "de": "Party-Computerspiel",
+   "en": "party video game",
+   "sv": "partydatorspel"
+  },
+  {
+   "en": "social deduction video game"
+  },
+  {
+   "de": "Science-Fiction-Computerspiel",
+   "en": "science fiction video game",
+   "sv": "science fiction-spel"
+  },
+  {
+   "de": "Gelegenheitsspiel",
+   "en": "casual game",
+   "sv": "casualspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  },
+  {
+   "de": "Koop-Modus",
+   "en": "co-op mode",
+   "sv": "flerspelarläge"
+  },
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Couch-Koop",
+   "en": "local co-op",
+   "sv": "lokalt co-op"
+  }
+ ],
+ "released": "2018-06-15",
+ "steam": {
+  "de": "Ein Partyspiel, online und lokal, um Teamarbeit und Verrat für 4–15 Spieler ... im Weltraum!",
+  "en": "An online and local party game of teamwork and betrayal for 4-15 players...in space!"
+ },
+ "steam_appid": 945360,
+ "wikidata": "Q96417649",
+ "wikipedia": {
+  "de": {
+   "text": "Among Us ist ein Online-Mehrspieler-Deduktionsspiel, das von dem US-amerikanischen Indie-Studio Innersloth entwickelt und auf Android, iOS, Windows, der Nintendo Switch, der PlayStation 4, PlayStation 5, Xbox One und Xbox Series X veröffentlicht wurde. Erstmals veröffentlicht wurde das Spiel am 15. Juni 2018.",
+   "url": "https://de.wikipedia.org/wiki/Among_Us"
+  },
+  "en": {
+   "text": "Among Us is a 2018 online multiplayer social deduction game developed and published by the American game studio Innersloth. The game allows for cross-platform play; it was released on iOS and Android devices in June 2018 and on Windows later that year in November. It was ported to the Nintendo Switch in December 2020 and on the PlayStation 4, PlayStation 5, Xbox One and Xbox Series X/S in December 2021.",
+   "url": "https://en.wikipedia.org/wiki/Among_Us"
+  },
+  "sv": {
+   "text": "Among Us är ett onlinespel för flera spelare som utvecklats och publicerats av den amerikanska spelstudion InnerSloth. Spelet släpptes den 15 juni 2018 och är tillgängligt på PC, Android, IOS, Playstation, Xbox och Nintendo Switch. Spelet utspelar sig på ett rymdskepp där spelarna slumpmässigt tilldelas rollen som antingen besättningsmedlem (crewmate) eller bedragare (impostor).",
+   "url": "https://sv.wikipedia.org/wiki/Among_Us"
+  }
+ }
+}

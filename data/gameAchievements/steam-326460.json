@@ -1,0 +1,770 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "en": "Play 5 rounds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/2b703716d37eca05ea8808506244e68d3751d1dc.jpg",
+   "key": "play5",
+   "name": {
+    "en": "Player"
+   },
+   "percent": 76.6,
+   "unlocked": "2017-05-27T21:41:25+02:00"
+  },
+  {
+   "description": {
+    "en": "Play 20 rounds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/61b00ff42d1befe4842ccf7447b9eec3ef913ae6.jpg",
+   "key": "play50",
+   "name": {
+    "en": "Committed"
+   },
+   "percent": 54.4
+  },
+  {
+   "description": {
+    "en": "Play 100 rounds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/bab689695db9eedb2a4cfe6c6a87a315d6df4abb.jpg",
+   "key": "play500",
+   "name": {
+    "en": "Dedicated"
+   },
+   "percent": 23.8
+  },
+  {
+   "description": {
+    "en": "Play 500 rounds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/ada74a6b10eaf271837244a6d2f646f8c2be2f3c.jpg",
+   "key": "play5000",
+   "name": {
+    "en": "Devoted"
+   },
+   "percent": 4.7
+  },
+  {
+   "description": {
+    "en": "Play 2,000 rounds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/ea859f78a81a8fc02a9c84415521ef248d7af25b.jpg",
+   "key": "play10000",
+   "name": {
+    "en": "Ultimate Player"
+   },
+   "percent": 0.6
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Win 5 rounds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/7e6bf072834815d54fd0618242586f7003ab6f6d.jpg",
+   "key": "win5",
+   "name": {
+    "en": "Big Winner"
+   },
+   "percent": 60.5,
+   "unlocked": "2020-05-23T21:47:44+02:00"
+  },
+  {
+   "description": {
+    "en": "Win 20 rounds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/2be460b08e391d7014fe97fbd9752815a4458a4a.jpg",
+   "key": "win50",
+   "name": {
+    "en": "Great Success"
+   },
+   "percent": 35.1
+  },
+  {
+   "description": {
+    "en": "Win 100 rounds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/dfda58a7f3ff6f90876d7eca2838be87aa5cb70e.jpg",
+   "key": "win500",
+   "name": {
+    "en": "Victor"
+   },
+   "percent": 11.4
+  },
+  {
+   "description": {
+    "en": "Win 500 rounds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/a4d5606bc718d14afbd7a8840f05ce6fdec40768.jpg",
+   "key": "win5000",
+   "name": {
+    "en": "Triumph"
+   },
+   "percent": 1.7
+  },
+  {
+   "description": {
+    "en": "Win 2,000 rounds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/aa175079401206fa2ef3f507702eaec986c6683c.jpg",
+   "key": "win10000",
+   "name": {
+    "en": "Ultimate Champion"
+   },
+   "percent": 0.1
+  },
+  {
+   "description": {
+    "en": "Attempt missions 100 times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/ba203db249599ebfe84f827a66e7e260ac68361e.jpg",
+   "key": "mis_play100",
+   "name": {
+    "en": "Perseverance"
+   },
+   "percent": 15.2
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Complete 15 missions"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/5f188978255e4bb8088650981220ee031f7e31c7.jpg",
+   "key": "mis_win15",
+   "name": {
+    "en": "Following Orders"
+   },
+   "percent": 41.0,
+   "unlocked": "2020-10-09T23:25:25+02:00"
+  },
+  {
+   "description": {
+    "en": "Complete 45 missions"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/7dd474548114b5eecabcc757c1e03f1da6a34f3e.jpg",
+   "key": "mis_win45",
+   "name": {
+    "en": "Call the Shots"
+   },
+   "percent": 16.0
+  },
+  {
+   "description": {
+    "en": "Complete 75 missions"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/37a6f0caaec4326138f51055dc10529f14964696.jpg",
+   "key": "mis_win75",
+   "name": {
+    "en": "Duty Calls"
+   },
+   "percent": 9.0
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Earn 1,000 XP"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/39a1066f2352311a0ca78f6e8551feac3b8afbd1.jpg",
+   "key": "xp1000",
+   "name": {
+    "en": "XP Grabber"
+   },
+   "percent": 69.8,
+   "unlocked": "2020-05-23T21:47:44+02:00"
+  },
+  {
+   "description": {
+    "en": "Earn 10,000 XP"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/bc0998b406709f7386bc44b3a46a67e212c33f9d.jpg",
+   "key": "xp10000",
+   "name": {
+    "en": "XP Acculumator"
+   },
+   "percent": 26.9
+  },
+  {
+   "description": {
+    "en": "Earn 100,000 XP"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/f0776fcfaf83270564f3a969b0a27f37bca59993.jpg",
+   "key": "xp100000",
+   "name": {
+    "en": "XP Collector"
+   },
+   "percent": 2.8
+  },
+  {
+   "description": {
+    "en": "Earn 1,000,000 XP"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/2af9bb0ec4dca32ed85f96e4a189f37ca4ee5c71.jpg",
+   "key": "xp1000000",
+   "name": {
+    "en": "XP Hoarder"
+   },
+   "percent": 0.1
+  },
+  {
+   "description": {
+    "en": "Hit two enemies in one shot"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/5dba173f7399f6894b50ac7fe90de767ff2368fd.jpg",
+   "key": "x2_hit_1",
+   "name": {
+    "en": "Two Birds"
+   },
+   "percent": 66.5
+  },
+  {
+   "description": {
+    "en": "Hit two enemies in one shot 10 times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/29139a1d69de207fc2316aeeba5c10cb95f03f77.jpg",
+   "key": "x2_hit_10",
+   "name": {
+    "en": "Twenty Birds"
+   },
+   "percent": 47.8
+  },
+  {
+   "description": {
+    "en": "Hit two enemies in one shot 100 times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/ab0905f2b6cd828089450814b767552713846ab1.jpg",
+   "key": "x2_hit_100",
+   "name": {
+    "en": "Two Hundred Birds"
+   },
+   "percent": 31.6
+  },
+  {
+   "description": {
+    "en": "Hit three enemies in one shot"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/5626124a71b39c1662cef1eca890f187d75c2c24.jpg",
+   "key": "x3_hit_1",
+   "name": {
+    "en": "Triple Threat"
+   },
+   "percent": 37.4
+  },
+  {
+   "description": {
+    "en": "Hit three enemies in one shot 10 times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/920e9c79a5bfc649aa3984482e029645f96dec14.jpg",
+   "key": "x3_hit_10",
+   "name": {
+    "en": "Max Efficiency"
+   },
+   "percent": 33.5
+  },
+  {
+   "description": {
+    "en": "Destroy 50 enemy tanks"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/57e0f9cb0d4aef2f8db5103a6d4e54a1ae3b38ba.jpg",
+   "key": "kill_100",
+   "name": {
+    "en": "Serial Killer"
+   },
+   "percent": 26.3
+  },
+  {
+   "description": {
+    "en": "Destroy 200 enemy tanks"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/c2a6bd73cf860d8f2b658ac0e22e94e0711b0550.jpg",
+   "key": "kill_500",
+   "name": {
+    "en": "Mass Murderer"
+   },
+   "percent": 8.4
+  },
+  {
+   "description": {
+    "en": "Destroy 1,000 enemy tanks"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/255571b0b9922096df2e82dd5ea6a4635ddc4423.jpg",
+   "key": "kill_2500",
+   "name": {
+    "en": "Tank Genocide"
+   },
+   "percent": 0.9
+  },
+  {
+   "description": {
+    "en": "Deal 200+ damage in one shot"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/19f002fc02711cc77b66b97663a47b6898241b84.jpg",
+   "key": "dmg_1shot_200",
+   "name": {
+    "en": "Ouch!"
+   },
+   "percent": 29.6
+  },
+  {
+   "description": {
+    "en": "Deal 300+ damage in one shot"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/165c8712daf9768643c10e1c9d16581942b63fcd.jpg",
+   "key": "dmg_1shot_300",
+   "name": {
+    "en": "Yowzers!"
+   },
+   "percent": 21.0
+  },
+  {
+   "description": {
+    "en": "Pick up 50 crates"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/197dfeef8063b1558057ab8f79581aa21e5f2639.jpg",
+   "key": "crate50",
+   "name": {
+    "en": "Scavenger"
+   },
+   "percent": 18.9
+  },
+  {
+   "description": {
+    "en": "Pick up 250 crates"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/2662902a6fcd71497da5d2f6ad94e3feb10d88dd.jpg",
+   "key": "crate250",
+   "name": {
+    "en": "King of the Loot"
+   },
+   "percent": 4.0
+  },
+  {
+   "description": {
+    "en": "Save up 250 Gears"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/0b07c6647fbedbc7ed382b22718a6e25c91f312d.jpg",
+   "key": "savegear_250",
+   "name": {
+    "en": "Filthy Rich"
+   },
+   "percent": 18.3
+  },
+  {
+   "description": {
+    "en": "Save up 1,000 Gears"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/f0b86e4cf38233d67c3f1158773e0956afa28f81.jpg",
+   "key": "savegear_1000",
+   "name": {
+    "en": "Rolling In It"
+   },
+   "percent": 2.4
+  },
+  {
+   "description": {
+    "en": "Save up 2,500 Gears"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/19c53c96024a87f6f7c8e130fcfbbf7e9bd26c5a.jpg",
+   "key": "savegear_2500",
+   "name": {
+    "en": "Scrooge McTank"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "en": "Beat the dev (kChamp) OR beat a lv.100 who has the achievement"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/a0c19b3e1aac3817be069594c33e740b72066de1.jpg",
+   "key": "beatkchamp",
+   "name": {
+    "en": "Dev Destroyer"
+   },
+   "percent": 8.4
+  },
+  {
+   "description": {
+    "en": "Win 25 Deathmatch rounds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/90225b14864f7c0170fc264c4ad191f3965d1c58.jpg",
+   "key": "win_dm_100",
+   "name": {
+    "en": "Deathmatch Veteran"
+   },
+   "percent": 28.6
+  },
+  {
+   "description": {
+    "en": "Win 25 Points rounds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/7dd27c86a6c832e908d259f6066ebda4c58805b5.jpg",
+   "key": "win_pt_100",
+   "name": {
+    "en": "Points Veteran"
+   },
+   "percent": 0.8
+  },
+  {
+   "description": {
+    "en": "Win 25 Assassin rounds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/dd0dcfceb95d0c2ef9fa8641367229b24aa80381.jpg",
+   "key": "win_as_100",
+   "name": {
+    "en": "Assassin Veteran"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "en": "Win 25 Juggernaut rounds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/ed17f3d7466eee0247b4a896cbff574ab4f97677.jpg",
+   "key": "win_jg_100",
+   "name": {
+    "en": "Juggernaut Veteran"
+   },
+   "percent": 1.8
+  },
+  {
+   "description": {
+    "en": "Assassinate 50 enemy tanks"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/03eaaa6a261ce5eba39bc5074e1914c460fc4a71.jpg",
+   "key": "as_50",
+   "name": {
+    "en": "Hit Man"
+   },
+   "percent": 0.8
+  },
+  {
+   "description": {
+    "en": "Assassinate 250 enemy tanks"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/60105a121db538347ee0013bcf36ab88f3a975da.jpg",
+   "key": "as_250",
+   "name": {
+    "en": "Follow the Creed"
+   },
+   "percent": 0.3
+  },
+  {
+   "description": {
+    "en": "Win an 8 player round as the Juggernaut"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/b4cfeea278c5261dbdd319badef8d19696e4d349.jpg",
+   "key": "winas8pjg",
+   "name": {
+    "en": "Beast"
+   },
+   "percent": 3.8
+  },
+  {
+   "description": {
+    "en": "Land 5 Portal Skill Shots"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/63783b670a7dda75ec613538ffe670be0596d675.jpg",
+   "key": "ss_ptl_5",
+   "name": {
+    "en": "Dimensional"
+   },
+   "percent": 37.5
+  },
+  {
+   "description": {
+    "en": "Land 25 Portal Skill Shots"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/768b3a5301d35b474ba4228ac2b90ef26abea1cc.jpg",
+   "key": "ss_ptl_25",
+   "name": {
+    "en": "The Cake is a Lie"
+   },
+   "percent": 12.3
+  },
+  {
+   "description": {
+    "en": "Land 100 Portal Skill Shots"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/718683d31d68115454b258581a8a91888dd239c0.jpg",
+   "key": "ss_ptl_100",
+   "name": {
+    "en": "Space-Time God"
+   },
+   "percent": 2.3
+  },
+  {
+   "description": {
+    "en": "Land 5 Buff Skill Shots"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/89ec2b36208a4f12de138d34b8a9cdcea3fb0625.jpg",
+   "key": "ss_buf_5",
+   "name": {
+    "en": "Double Damage"
+   },
+   "percent": 42.1
+  },
+  {
+   "description": {
+    "en": "Land 25 Buff Skill Shots"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/57a6bc129c49b0d0eb64d1e53d96d1456335b84b.jpg",
+   "key": "ss_buf_25",
+   "name": {
+    "en": "Opportunist"
+   },
+   "percent": 16.2
+  },
+  {
+   "description": {
+    "en": "Land 100 Buff Skill Shots"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/deea0e51a028eed46fc13ebc30c1cd0665a7509d.jpg",
+   "key": "ss_buf_100",
+   "name": {
+    "en": "Mr. X2"
+   },
+   "percent": 4.2
+  },
+  {
+   "description": {
+    "en": "Land 5 Bumper Skill Shots"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/6522a7c0afc2d677dbfafe8335ddef7efbe83d80.jpg",
+   "key": "ss_bmp_5",
+   "name": {
+    "en": "Bouncy"
+   },
+   "percent": 43.9
+  },
+  {
+   "description": {
+    "en": "Land 25 Bumper Skill Shots"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/2f6cb12df6ce938ac55cae313af20bd32f2210bb.jpg",
+   "key": "ss_bmp_25",
+   "name": {
+    "en": "Ricochet"
+   },
+   "percent": 20.3
+  },
+  {
+   "description": {
+    "en": "Land 100 Bumper Skill Shots"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/f3e8137402f032b5b9fcdcd4abd00ddd37d6a70c.jpg",
+   "key": "ss_bmp_100",
+   "name": {
+    "en": "Master of Geometry"
+   },
+   "percent": 7.3
+  },
+  {
+   "description": {
+    "en": "Win 25 Rebound rounds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/56475eac2a17174b6d09f5e90564d2a17830f86a.jpg",
+   "key": "win_rb_100",
+   "name": {
+    "en": "Rebound Veteran"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "en": "Win 25 Marksman rounds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/3f1cbcd9dd8c888b272a74a9d652f1757f808c14.jpg",
+   "key": "win_mm_100",
+   "name": {
+    "en": "Marksman Veteran"
+   },
+   "percent": 0.8
+  },
+  {
+   "description": {
+    "en": "Win 25 Charge rounds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/284389159f0b643b116bb3ce78bc02e7a4d3810b.jpg",
+   "key": "win_ch_100",
+   "name": {
+    "en": "Charge Veteran"
+   },
+   "percent": 0.3
+  },
+  {
+   "description": {
+    "en": "Win 25 Shoccer rounds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/28c8873ec49c6cf84735080cda3a40e8fe1830be.jpg",
+   "key": "win_sc_100",
+   "name": {
+    "en": "Shoccer Veteran"
+   },
+   "percent": 0.3
+  },
+  {
+   "description": {
+    "en": "Land a shot that hits both side bumpers"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/6f261724101ac203bf3ca9d811807dfc70d87075.jpg",
+   "key": "ss_bothbmp_1",
+   "name": {
+    "en": "Around the World"
+   },
+   "percent": 7.3
+  },
+  {
+   "description": {
+    "en": "Land a shot that hits a bumper, a portal, and an X2"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/4e95237f115aa0472c190de43e3d278c9ec93f20.jpg",
+   "key": "ss_tripleplay_1",
+   "name": {
+    "en": "Triple Play"
+   },
+   "percent": 2.0
+  },
+  {
+   "description": {
+    "en": "Survive 25 shots in Marksman"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/c862ecae0a27b422cb5496badfffc599cbd7da24.jpg",
+   "key": "mm_survive_25",
+   "name": {
+    "en": "Bullseye"
+   },
+   "percent": 6.1
+  },
+  {
+   "description": {
+    "en": "Win a 16 player tournament"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/079e9c5abcfa0ebf0355cc0f968484d67166ab0a.jpg",
+   "key": "win_tourney_1",
+   "name": {
+    "en": "Bracketeer"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "en": "Destroy 5 tanks with a drone"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/903061d8aa16fd3423485a6d86a602f2eb2e9943.jpg",
+   "key": "dronekill_5",
+   "name": {
+    "en": "Autonomous Combat"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "en": "Heal allies 25 times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/d5d85b2256a1111a966cf499f69aebd81d8f4248.jpg",
+   "key": "heal_ally_25",
+   "name": {
+    "en": "Medic"
+   },
+   "percent": 0.2
+  },
+  {
+   "description": {
+    "en": "Complete and claim 5 daily challenges"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/4997ab78cd8e39d0ab2102c628213347ddbd856f.jpg",
+   "key": "complete_task_5",
+   "name": {
+    "en": "Weekday Warrior"
+   },
+   "percent": 9.0
+  },
+  {
+   "description": {
+    "en": "Complete and claim 50 daily challenges"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/8008b2e3e33a06cbd80cb58c02c9be81fd17b291.jpg",
+   "key": "complete_task_50",
+   "name": {
+    "en": "Daily Dominator"
+   },
+   "percent": 1.4
+  },
+  {
+   "description": {
+    "en": "Unlock 5 Daily Dogtags"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/326460/197fefba3f45e0e4bac144523786deb4fa43dc45.jpg",
+   "key": "unlock_daily_5",
+   "name": {
+    "en": "Doggone-It"
+   },
+   "percent": 0.2
+  }
+ ],
+ "id": "326460",
+ "platform": "steam"
+}

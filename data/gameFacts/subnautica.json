@@ -1,0 +1,50 @@
+{
+ "developers": [
+  "Unknown Worlds Entertainment"
+ ],
+ "genres": [
+  {
+   "de": "Action-Adventure",
+   "en": "action-adventure game",
+   "sv": "actionäventyrsspel"
+  },
+  {
+   "de": "Survival-Spiel",
+   "en": "survival game",
+   "sv": "överlevnadsspel"
+  },
+  {
+   "de": "Adventure",
+   "en": "adventure video game",
+   "sv": "äventyrsspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "publishers": [
+  "Unknown Worlds Entertainment"
+ ],
+ "released": "2014-12-16",
+ "steam": {
+  "de": "Tauche ein in die Tiefen einer ausserirdischen Unterwasserwelt voller Wunder und Gefahren. Baue Ausrüstung, fahre U-Boot, entwische Raubtieren und terraforme die Welt. Erkunde kunterbunte Korallenriffe, Vulkane, Höhlensysteme und noch viel mehr. Aber versuche dabei am Leben zu bleiben!",
+  "en": "Descend into the depths of an alien underwater world filled with wonder and peril. Craft equipment, pilot submarines and out-smart wildlife to explore lush coral reefs, volcanoes, cave systems, and more - all while trying to survive."
+ },
+ "steam_appid": 264710,
+ "wikidata": "Q21039915",
+ "wikipedia": {
+  "de": {
+   "text": "Subnautica ist ein 2018 veröffentlichtes Survival-Spiel des US-amerikanischen Studios Unknown Worlds Entertainment. In dem Einzelspieler-Titel schlüpft der Spieler in die Rolle eines Raumschiff-Besatzungsmitgliedes, das auf einem weitestgehend von Wasser bedeckten Planeten abstürzt. Das Spiel wurde im Dezember 2014 im Rahmen eines Early-Access-Programms auf Steam veröffentlicht, 2016 folgte das Game Preview für die Xbox One.",
+   "url": "https://de.wikipedia.org/wiki/Subnautica"
+  },
+  "en": {
+   "text": "Subnautica is a 2018 action-adventure survival game developed and published by Unknown Worlds Entertainment. The player controls Ryley Robinson, a survivor of a spaceship crash on an alien oceanic planet, which they are free to explore. The main objectives are to find essential resources, survive the local flora and fauna, and find a way to escape the planet.",
+   "url": "https://en.wikipedia.org/wiki/Subnautica"
+  }
+ }
+}

@@ -3,10 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   {{- /* The same predicate head.html's meta robots uses: a page that tells a
-         crawler `noindex` must not also be submitted to it. Hugo's embedded
-         sitemap filters on .Sitemap.Disable; this template never did, and the
-         rule here is broader anyway (docs/concepts/tag-pages.md §2). */ -}}
-  {{- range .Data.Pages }}
+         crawler `noindex` must not also be submitted to it
+         (docs/concepts/tag-pages.md §2). And `sitemap: {disable: true}`, which
+         Hugo's embedded sitemap honours and this override of it must too — the
+         game pages set both (game-pages.html). */ -}}
+  {{- range where .Data.Pages "Sitemap.Disable" "!=" true }}
   {{- if partial "robots-indexable.html" . }}
   <url>
     <loc>{{ .Permalink }}</loc>

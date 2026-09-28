@@ -1,0 +1,17 @@
+{{- /*
+  game-screenshots-list.html
+  The owner's screenshots of one game: every image in
+  assets/images/games/screenshots/<slug>/, sorted by file name — Steam and the
+  Switch both name a screenshot by its capture time, so that is chronological.
+
+  That folder is a machine-local mount (config/_default/module.yaml, like the
+  gallery's photo store), so a checkout without it simply has no screenshots.
+  Usage: partialCached "game-screenshots-list.html" $slug $slug
+*/ -}}
+{{- $out := slice -}}
+{{- range sort (resources.Match (printf "images/games/screenshots/%s/*" .)) "Name" -}}
+  {{- if in (slice "image/jpeg" "image/png" "image/webp") .MediaType.Type -}}
+    {{- $out = $out | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- return $out -}}

@@ -1,0 +1,16 @@
+{{- /*
+  Full platform names, for badge tooltips, store links and headings. Brand names,
+  not translated. One dict for the grid and the game pages, so a new platform is
+  named in one place. Usage: index (partialCached "gaming-platforms.html" "names") $slug
+*/ -}}
+{{- return dict
+  "steam" "Steam"
+  "switch" "Nintendo Switch"
+  "3ds" "Nintendo 3DS"
+  "ds" "Nintendo DS"
+  "gog" "GOG"
+  "epic" "Epic Games"
+  "playstation" "PlayStation"
+  "manual" "Manual"
+  "other" "Other"
+-}}

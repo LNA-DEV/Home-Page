@@ -94,6 +94,63 @@
   translation: "All"
 - id: moreGames
   translation: "More games"
+# Gaming — one page per game (layouts/partials/game-detail.html)
+- id: game_meta_description
+  translation: "Playtime and achievements for {{ .title }} ({{ .platforms }})."
+- id: game_about
+  translation: "About the game"
+- id: game_notes
+  translation: "Notes"
+- id: game_screenshots
+  translation: "Screenshots"
+- id: game_screenshot_alt
+  translation: "Screenshot {{ .n }} of {{ .total }} from {{ .title }}"
+- id: game_rating
+  translation: "Rated {{ .rating }} out of 5"
+- id: game_genre
+  translation:
+    one: "Genre"
+    other: "Genres"
+- id: game_mode
+  translation:
+    one: "Game mode"
+    other: "Game modes"
+- id: game_developer
+  translation:
+    one: "Developer"
+    other: "Developers"
+- id: game_publisher
+  translation:
+    one: "Publisher"
+    other: "Publishers"
+- id: game_released
+  translation: "Released"
+- id: game_store_link
+  translation: "{{ .store }} ↗"
+- id: game_steam_store
+  translation: "the Steam store"
+- id: game_source_steam
+  translation: "Description from {{ .source }}."
+- id: game_achievements
+  translation: "Achievements"
+- id: game_achv_progress
+  translation: "{{ .unlocked }} of {{ .total }} achievements unlocked"
+- id: game_achv_filter_unlocked
+  translation: "Unlocked"
+- id: game_achv_filter_locked
+  translation: "Locked"
+- id: game_achv_sort_default
+  translation: "Default"
+- id: game_achv_sort_rarity
+  translation: "Rarest first"
+- id: game_achv_unlocked
+  translation: "Unlocked"
+- id: game_achv_locked
+  translation: "Locked"
+- id: game_achv_hidden
+  translation: "Hidden achievement — {{ .store }} publishes no description."
+- id: game_achv_pct_title
+  translation: "Share of all players who have unlocked it"
 
 # Activity feed
 - id: activity_type_post

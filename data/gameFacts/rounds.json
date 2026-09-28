@@ -1,0 +1,34 @@
+{
+ "genres": [
+  {
+   "de": "Jump ’n’ Run",
+   "en": "platformer",
+   "sv": "plattformsspel"
+  },
+  {
+   "de": "Shooter",
+   "en": "shooter game",
+   "sv": "skjutspel"
+  },
+  {
+   "de": "Rogue-like",
+   "en": "roguelike",
+   "sv": "roguelike"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  }
+ ],
+ "released": "2021-04-01",
+ "steam": {
+  "de": "Rounds ist ein Rogue-lite-Shooter, bei dem zwei Spieler in ständig turbulenter werdenden Gefechten gegeneinander antreten. Nach jeder Runde schaltet der Verlierer gewiefte Verstärkungen frei, mit denen er seine Figur verbessern und dem Gegner die Stirn bieten kann.",
+  "en": "Rounds is a 1v1 rogue-lite shooter where each round gets more intense. The losing player of each round unlocks clever upgrades to create a better build to counter their opponent."
+ },
+ "steam_appid": 1557740,
+ "wikidata": "Q122373196"
+}

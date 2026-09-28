@@ -1,0 +1,56 @@
+{
+ "developers": [
+  "Blue Mammoth Games"
+ ],
+ "genres": [
+  {
+   "de": "Actionspiel",
+   "en": "action game",
+   "sv": "actionspel"
+  },
+  {
+   "de": "Kampfspiel",
+   "en": "fighting game",
+   "sv": "fightingspel"
+  },
+  {
+   "de": "Jump ’n’ Run",
+   "en": "platformer",
+   "sv": "plattformsspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  },
+  {
+   "de": "Koop-Modus",
+   "en": "co-op mode",
+   "sv": "flerspelarläge"
+  },
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "released": "2014-04-30",
+ "steam": {
+  "en": "An epic platform fighter for up to 8 players online or local. Try casual free-for-alls, ranked matches, or invite friends to a private room. And it's free! Play cross-platform with millions of players on PlayStation, Xbox, Nintendo Switch, iOS, Android & Steam! Frequent updates. Over sixty Legends."
+ },
+ "steam_appid": 291550,
+ "wikidata": "Q22262001",
+ "wikipedia": {
+  "de": {
+   "text": "Brawlhalla ist ein kostenloses Kampf-Computerspiel, das von Blue Mammoth Games für Microsoft Windows, macOS, PlayStation 4, Xbox One und Nintendo Switch entwickelt wurde.",
+   "url": "https://de.wikipedia.org/wiki/Brawlhalla"
+  },
+  "en": {
+   "text": "Brawlhalla is a free-to-play platform fighting game developed by Blue Mammoth Games. It was originally released for macOS, PlayStation 4 and Windows in 2017, with ports for Nintendo Switch, Xbox One, Android and iOS released later. Full cross-play is supported across all platforms.",
+   "url": "https://en.wikipedia.org/wiki/Brawlhalla"
+  }
+ }
+}

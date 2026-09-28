@@ -1,0 +1,55 @@
+{
+ "developers": [
+  "Mediatonic"
+ ],
+ "genres": [
+  {
+   "de": "Jump ’n’ Run",
+   "en": "platformer",
+   "sv": "plattformsspel"
+  },
+  {
+   "de": "Battle Royale",
+   "en": "battle royale game",
+   "sv": "Battle royale-spel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  },
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "publishers": [
+  "Devolver Digital"
+ ],
+ "released": "2020-08-04",
+ "steam": {
+  "de": "Fall Guys ist ein kostenloses, plattformübergreifendes massives Multiplayer-Party-Royale-Spiel. Tritt auf absurden Hindernisparcours gegen deine Freunde an oder baue dein eigenes chaotisches Rennen, um es mit der Community zu teilen.",
+  "en": "Fall Guys is a free, cross-platform massively multiplayer party royale game. Clumsily compete in absurd obstacle courses with friends or build your very own chaotic course to share with the community.",
+  "sv": "Fall Guys är ett gratis, plattformsoberoende, massivt multiplayer party royale-spel där du och dina medtävlande tävlar genom eskalerande rundor av absurt hinderbanakaos tills en lycklig segrare återstår!"
+ },
+ "steam_appid": 1097150,
+ "wikidata": "Q85760410",
+ "wikipedia": {
+  "de": {
+   "text": "Fall Guys ist ein Battle-Royale-Videospiel, das von Mediatonic entwickelt und im August 2020 von Devolver Digital für Microsoft Windows und PlayStation 4 veröffentlicht wurde. Das Spiel greift Elemente der Spieleshows Takeshi’s Castle und WipeOut auf. Im Juni 2022 wurde Fall Guys auch für Nintendo Switch, PlayStation 5, Xbox One und Xbox Series veröffentlicht und ist seitdem kostenfrei spielbar.",
+   "url": "https://de.wikipedia.org/wiki/Fall_Guys"
+  },
+  "en": {
+   "text": "Fall Guys is a 2020 free-to-play platform battle royale game developed by Mediatonic and originally published by Devolver Digital for the PlayStation 4 and Windows. It was acquired by Epic Games and subsequently made free-to-play on 21 June 2022 and released on additional platforms including Nintendo Switch, PlayStation 5, Xbox One and Xbox Series X/S, with full cross-platform play support among all platforms.",
+   "url": "https://en.wikipedia.org/wiki/Fall_Guys"
+  },
+  "sv": {
+   "text": "Fall Guys är ett free-to-play plattforms- och tävlingsspel som släpptes den 3 augusti 2020 till Playstation 4 och Windows. Spelet utvecklades av Mediatonic och utgavs av Devolver Digital. Den 21 juni 2021 släpptes spelet även till Nintendo Switch, Playstation 5, Xbox One och Xbox Series X/S.",
+   "url": "https://sv.wikipedia.org/wiki/Fall_Guys"
+  }
+ }
+}

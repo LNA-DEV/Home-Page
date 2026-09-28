@@ -1,0 +1,22 @@
+{{- /*
+  game-screenshot-check.html
+  Warns about a screenshot folder whose name is no game's slug — a typo, or a
+  game that was renamed or hidden, whose screenshots would otherwise silently
+  never appear. A warning stops the deploy like every other one.
+
+  An empty or missing screenshot store is NOT a warning, unlike the gallery's:
+  no screenshots is the normal state of most games, and of a fresh checkout.
+  Runs once per build, from the English adapter (game-pages.html).
+*/ -}}
+{{- $slugs := slice -}}
+{{- range partialCached "gaming-merged.html" . }}{{ $slugs = $slugs | append .slug }}{{ end -}}
+{{- $folders := slice -}}
+{{- range resources.Match "images/games/screenshots/*/*" -}}
+  {{- $parts := split (strings.TrimPrefix "/" .Name) "/" -}}
+  {{- if ge (len $parts) 5 }}{{ $folders = $folders | append (index $parts 3) }}{{ end -}}
+{{- end -}}
+{{- range $folders | uniq -}}
+  {{- if not (in $slugs .) -}}
+    {{- warnf "screenshots: the folder %q matches no game page — it has to be named after a slug in data/gaming.yaml (a game hidden by data/gamingIgnore.yaml has no page either)" . -}}
+  {{- end -}}
+{{- end -}}

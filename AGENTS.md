@@ -245,6 +245,18 @@ stay byte-for-byte unchanged (same convention as `add-book.py` /
   `--no-achievements`) `achievementsUnlocked` / `achievementsTotal` via
   `ISteamUserStats/GetPlayerAchievements` (silently skipped for games with no
   stats or a private profile).
+- Gives a game it sees for the first time a **`slug:`** (second line of the
+  entry) and keeps every existing one forever — the slug is the game's page URL.
+  The dry run prints each new slug, and says when it **joins** a game already on
+  another platform (the same game on Switch and Steam becomes one page).
+- Unless `--no-achievements`, writes **every achievement** of every game to
+  `data/gameAchievements/steam-<appid>.json` — names and descriptions in
+  en/de/sv where Steam has them, the unlock time (Europe/Berlin), the global
+  unlock percentage — and downloads the icons into
+  `static/images/games/achievements/steam/<appid>/`. Both are committed. A few
+  icons Steam no longer serves at all are reported in one line per game; the
+  page shows an empty tile for those. A game whose achievements could not be
+  fetched keeps yesterday's counts and file.
 - Downloads each game's portrait cover (`library_600x900`, falling back to
   `header.jpg`) into `assets/images/games/covers/<appid>.jpg`, skipping files
   that already exist (`--no-covers` to skip entirely).
@@ -255,9 +267,11 @@ stay byte-for-byte unchanged (same convention as `add-book.py` /
 
 ### What it deliberately leaves for a human
 
-- `rating`, `genres`, `tags`, `notes` — subjective. Add them by hand to a Steam
-  entry and they are **preserved across future syncs** (re-emitted verbatim,
-  matched by `appid`). Keep each to a single line — that's how they're re-added.
+- `rating`, `notes`, your own description — subjective, and about the **game**
+  rather than one copy of it, so they live in `data/gamePages.yaml`, keyed by
+  slug, which no script writes. (A `rating:` or `notes:` line on an entry in
+  `gaming.yaml` is still preserved by the sync, but the build stops and says to
+  move it.) `extraMinutes` stays on the entry and survives syncs.
 - Any non-Steam game — the sync never touches entries whose `platform` isn't
   `steam`.
 
@@ -292,10 +306,12 @@ stay byte-for-byte unchanged (same convention as `add-book.py` /
 
 4. **Eyeball the diff**: `git diff data/gaming.yaml` — confirm hand-added and
    non-Steam entries are untouched and the covers under
-   `assets/images/games/covers/` look right.
+   `assets/images/games/covers/` look right. The Steam block moves to the bottom
+   of the file on every run, so the diff is larger than what changed; the
+   `data/gameAchievements/` diff is the real one — mostly `percent` lines.
 
-5. **Sanity-check the build**: `hugo` should succeed. (Nothing renders the data
-   yet, but the file must still parse.)
+5. **Sanity-check the build**: `hugo` should succeed. A new game gets a new page
+   in three languages, so `npm test` then asks for `npm run golden:update`.
 
 Do **not** run `./deploy.sh` — deployment is a separate step the user authorizes
 explicitly.
@@ -305,6 +321,63 @@ explicitly.
 Copy the commented template at the top of `data/gaming.yaml`, uncomment it, and
 set `platform:` to something other than `steam` (e.g. `switch`, `gog`,
 `manual`). The Steam sync will leave it alone.
+
+Give it a **`slug:`** — lowercase letters, digits, single hyphens; the build
+refuses an entry without one. To put it on the page of a game you already have
+on another platform, use **that** game's slug: copies with one slug are one
+game. Then `npm run golden:update` for the new page's three URLs.
+
+## Game pages: facts, descriptions, screenshots
+
+Every game on `/gaming/` has a page at `/<lang>/gaming/<slug>/`. Design:
+`docs/concepts/gaming-game-pages.md`; the data model: the *Gaming* section of
+`CLAUDE.md`. What a person writes goes in **`data/gamePages.yaml`**, keyed by
+slug — see its header for every field. Nothing else is typed by hand.
+
+### `scripts/game-enrich.py` — genres, developer, Wikipedia and store text
+
+Writes `data/gameFacts/<slug>.json`, nothing else. Stdlib only, never runs git.
+
+```
+python3 scripts/game-enrich.py --dry-run     # what it would fetch
+python3 scripts/game-enrich.py               # all games, ~8 minutes (store rate limit)
+python3 scripts/game-enrich.py --missing     # only games without a facts file
+python3 scripts/game-enrich.py --only stardew-valley
+```
+
+- **Steam games resolve on their own** — Wikidata knows their Steam app id. So
+  a Steam game is enriched with no help.
+- **Everything else needs a Wikidata pin.** Switch, 3DS, DS, Epic and GOG
+  copies have no id Wikidata can be asked about, and a title search finds
+  convincing wrong hits, so the script **never** writes one. Run
+  `python3 scripts/game-enrich.py --propose`: it prints, per game without an
+  item, the video-game items whose label matches — first one uncommented,
+  alternatives commented out, `[exact]` / `[check]` marks. Check each against
+  the game (year, platform), paste the right ones into `data/gamePages.yaml`
+  (`wikidata: Q…`, or `wikidata: none` for a game Wikidata does not have, so it
+  stops being proposed), then `--missing`.
+- **A game not owned on Steam** still gets the Steam store blurb when its item
+  carries a Steam app id; `steam_appid:` in `gamePages.yaml` pins one by hand.
+- **The description shown** is the first of: your own text, Wikipedia, the
+  Steam store — in the page's language first, then English. Your own text goes in
+  `gamePages.yaml` `description:` (a string for English, or `{en, de, sv}`).
+- The facts file is **overwritten** per game on every run; never edit it.
+  Rerun after pinning, or when Wikipedia has changed; nothing needs it to run
+  regularly.
+
+### Screenshots
+
+A machine-local folder, mounted like the gallery's photo store: add the
+commented screenshot lines from `config/_default/module.yaml.example` to your
+`config/_default/module.yaml` with your folder as `source` (a real directory,
+not a symlink). Inside it, **one folder per game slug** —
+`stardew-valley/2024-03-01_12-00-00.png` — and the files are shown in name
+order. Steam keeps screenshots under
+`~/.local/share/Steam/userdata/<id>/760/remote/<appid>/screenshots/`; copy
+rather than mount those, since Steam's folder names are app ids, not slugs.
+Only resized JPEG variants are published — never the original — and a folder
+that matches no game is a build warning (so a stopped deploy). Rebuilding
+generates the variants once; they are cached like every other image.
 
 ## Syncing games from Epic
 
@@ -349,6 +422,8 @@ calls it `artifactId`).
   entries** (played games added, others pruned) as the last block in the file,
   under a marker it emits. 0-playtime games are excluded by default
   (`--include-unplayed` to keep them).
+- Like the Steam sync, gives a new game a `slug:` once and keeps it forever; an
+  Epic copy of a game you already own elsewhere joins that game's page.
 
 ### What it deliberately leaves out / for a human
 
@@ -419,7 +494,13 @@ edits, owns only the `platform: gog` entries.
   Refreshes it (GOG's token endpoint is a GET), then per owned game GETs the
   authoritative playtime (`gameplay.gog.com/games/{id}/users/{uid}/sessions` →
   `time_sum`) and, for played games (unless `--no-achievements`), achievements
-  (`gameplay.gog.com/clients/{id}/users/{uid}/achievements`).
+  (`gameplay.gog.com/clients/{id}/users/{uid}/achievements`) — written in full to
+  `data/gameAchievements/gog-<appName>.json`, icons to
+  `static/images/games/achievements/gog/<appName>/`, exactly like the Steam sync.
+  GOG's documented response has no global unlock percentage; if the live one
+  carries `rarity` it is used, otherwise the page shows none. Achievements not
+  fetched this run keep their old counts and file.
+- Like the Steam sync, gives a new game a `slug:` once and keeps it forever.
 - **Merges** with the **prefer-cloud** rule
   (`playtimeMinutes = max(cloud, max over devices)`, `lastPlayed` = the newest any
   device recorded),

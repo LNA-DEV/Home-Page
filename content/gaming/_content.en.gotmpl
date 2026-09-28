@@ -1,0 +1,8 @@
+{{- /*
+  Content adapter for the en game pages.
+
+  Hugo scopes a content adapter to the language of its filename, so there is one
+  file per language and the shared body lives in layouts/partials/game-pages.html
+  — it receives this adapter context and calls .AddPage on it.
+*/ -}}
+{{- partial "game-pages.html" . -}}

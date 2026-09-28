@@ -1,0 +1,60 @@
+{
+ "developers": [
+  "Deck Nine"
+ ],
+ "genres": [
+  {
+   "de": "Adventure",
+   "en": "adventure video game",
+   "sv": "äventyrsspel"
+  },
+  {
+   "de": "interaktiver Film",
+   "en": "interactive film",
+   "sv": "interaktiv film"
+  },
+  {
+   "de": "Grafik-Adventure",
+   "en": "graphic adventure game",
+   "sv": "grafiskt äventyrsspel"
+  },
+  {
+   "de": "Videospiel mit LGBT+-Charakter",
+   "en": "video game with LGBT character",
+   "sv": "datorspel med HBTQ-figur"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "publishers": [
+  "Square Enix",
+  "Feral Interactive"
+ ],
+ "released": "2017-08-31",
+ "steam": {
+  "de": "Life is Strange: Before the Storm ist eine dreiteilige und eigenständige Abenteuergeschichte, die sich drei Jahre vor den Geschehnissen des ersten Spiels ereignet. Du spielst die rebellische Chloe Price, die in dieser dramatischen Geschichte unerwartet Freundschaft mit Rachel Amber schließt.",
+  "en": "Life is Strange: Before the Storm is a new three part standalone story adventure set three years before the events of the first game. This time play as Chloe Price, a rebel who forms an unlikely friendship with Rachel Amber in a dramatic new story in the BAFTA award winning franchise."
+ },
+ "steam_appid": 554620,
+ "wikidata": "Q30242632",
+ "wikipedia": {
+  "de": {
+   "text": "Life Is Strange: Before the Storm ist ein in drei Episoden unterteiltes 3D-Adventure des US-amerikanischen Entwicklers Deck Nine Games, dessen erste Episode am 31. August 2017 vom japanischen Publisher Square Enix für PlayStation 4 und Xbox One sowie für Windows-PCs auf Steam veröffentlicht wurde. Life Is Strange: Before the Storm ist das Prequel zu Life Is Strange, das 2015 erschien, und der zweite Teil der Life-Is-Strange-Computerspielreihe.",
+   "url": "https://de.wikipedia.org/wiki/Life_Is_Strange:_Before_the_Storm"
+  },
+  "en": {
+   "text": "Life Is Strange: Before the Storm is a 2017 episodic adventure game in the Life is Strange series, developed by Deck Nine and published by Square Enix. It serves as a prequel to the original game, focusing on 16-year-old Chloe Price and her relationship with schoolmate Rachel Amber. Gameplay concerns itself mostly with the use of branching dialogues and interacting with the environment.",
+   "url": "https://en.wikipedia.org/wiki/Life_Is_Strange:_Before_the_Storm"
+  },
+  "sv": {
+   "text": "Life Is Strange: Before the Storm är ett episodiskt äventyrsspel utvecklat av Deck Nine och utgivet av Square Enix. Spelet består av tre episoder släppta under 2017 och finns tillgängligt för Microsoft Windows, Playstation 4 och Xbox One. Spelet är en uppföljare till Life Is Strange och handlar om sextonåriga Chloe Price och hennes förhållande med skolkamraten Rachel Amber.",
+   "url": "https://sv.wikipedia.org/wiki/Life_Is_Strange:_Before_the_Storm"
+  }
+ }
+}

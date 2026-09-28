@@ -1,0 +1,387 @@
+{
+ "achievements": [
+  {
+   "description": {
+    "de": "Schnapp dir deinen Gegner 100 mal mit dem goldenen Haken.",
+    "en": "Grapple 100 opponents using the golden hook."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/366a785d852bc3f9ea34c3e43ae7ae785b70b23b.jpg",
+   "key": "grappled_opponent",
+   "name": {
+    "de": "Hab' dich!",
+    "en": "Gotcha!"
+   },
+   "percent": 33.0
+  },
+  {
+   "description": {
+    "de": "Überhole 1000 Gegner.",
+    "en": "Overtake 1000 opponents."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/8d0202b1c9336b13214a46be6a7398b201060124.jpg",
+   "key": "overtaken_opponent",
+   "name": {
+    "de": "Wir sehen uns!",
+    "en": "See Ya!"
+   },
+   "percent": 42.2
+  },
+  {
+   "description": {
+    "de": "Greife 10 Gegner in der Luft an.",
+    "en": "Tackle 10 opponents mid-air."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/5f4813b3b51680a25f7c1e1ec2e7e10b0aa4d107.jpg",
+   "key": "air_tackles",
+   "name": {
+    "de": "Springen, kicken",
+    "en": "Dive, Kick"
+   },
+   "percent": 18.9
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/207140/ff11941ea2988b82bab1d91d9b76875d37e806b5.jpg",
+   "key": "bomb_multiple_opponents",
+   "name": {
+    "de": "Zwei Vögel, ein Stein",
+    "en": "Two Birds, One Stone"
+   },
+   "percent": 53.0
+  },
+  {
+   "description": {
+    "de": "Berühre für 5 Sekunden nicht den Boden.",
+    "en": "Don't touch the floor for 5 seconds."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/3e63171477425a9a8cf354d6777ac2005d76c70d.jpg",
+   "key": "in_air_5",
+   "name": {
+    "de": "König des Schwungs",
+    "en": "King of Swing"
+   },
+   "percent": 66.8
+  },
+  {
+   "description": {
+    "de": "Berühre für 10 Sekunden nicht den Boden.",
+    "en": "Don't touch the floor for 10 seconds."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/25816f81676791f94fa31d8ad3a1ab1175d00fb8.jpg",
+   "key": "in_air_10",
+   "name": {
+    "de": "Sultan des Schwungs",
+    "en": "Sultan of Swing"
+   },
+   "percent": 28.9
+  },
+  {
+   "description": {
+    "de": "Berühre für 30 Sekunden nicht den Boden.",
+    "en": "Don't touch the floor for 30 seconds."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/6cb1dafe07f210a93d3f38eea1748371065db223.jpg",
+   "key": "in_air_30",
+   "name": {
+    "de": "Ultimativer Schwung-Lord",
+    "en": "Ultimate Swing Lord"
+   },
+   "percent": 4.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/207140/f51545215797aa9076e3c3793d8f8027bf506581.jpg",
+   "key": "grapple_revenge",
+   "name": {
+    "de": "Rache und rennen!",
+    "en": "Vengeance, and running!"
+   },
+   "percent": 34.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/207140/7e39cfc3c8dcb5bb09b1dd4ff5149b18cf3b20cc.jpg",
+   "key": "far_away_grapple",
+   "name": {
+    "de": "Vom unteren Stadtviertel",
+    "en": "From Way Downtown"
+   },
+   "percent": 32.8
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/207140/e593f58c2410eccbd682e455a5f589a747078524.jpg",
+   "key": "rocket_suicide",
+   "name": {
+    "de": "Nach hinten losgegangen",
+    "en": "Backfired"
+   },
+   "percent": 69.9,
+   "unlocked": "2021-02-27T16:34:19+01:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/207140/0799af81961fb10f86548d54e96284f4e7d1c389.jpg",
+   "key": "trigger_roulette",
+   "name": {
+    "en": "Get Lucky"
+   },
+   "percent": 26.4
+  },
+  {
+   "description": {
+    "de": "Weiche dem goldenen Haken 10 mal aus.",
+    "en": "Dodge the Golden Hook 10 times."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/2872bf8899fc2a722253bad246edb62538520500.jpg",
+   "key": "dodged_hooks",
+   "name": {
+    "de": "Krasse Moves!",
+    "en": "Smooth Moves!"
+   },
+   "percent": 19.8
+  },
+  {
+   "description": {
+    "de": "Blocke 10 Raketen mit Kisten ab.",
+    "en": "Block 10 Rockets with Crates."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/6eca15d11cc4ce8e12a733a3008c4ac3996be641.jpg",
+   "key": "rockets_blocked",
+   "name": {
+    "en": "Super Crate Blox"
+   },
+   "percent": 2.5
+  },
+  {
+   "description": {
+    "de": "Platziere 10 mal eine Kiste auf dem Kopf deines Gegners.",
+    "en": "Drop a Crate on an opponent's head 10 times."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/23db83e3513de7efe6386715d78fbfc81222a53f.jpg",
+   "key": "dropped_crates_on_heads",
+   "name": {
+    "de": "Kopf einziehen!",
+    "en": "Mind Your Head!"
+   },
+   "percent": 58.1
+  },
+  {
+   "description": {
+    "de": "Triff drei Gegner mit einem Feuerball.",
+    "en": "Hit 3 opponents with one fireball."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/a494ed618469197f6b6e2140c2680d5b14f2bd4a.jpg",
+   "key": "fireball_strike",
+   "name": {
+    "en": "Strike!"
+   },
+   "percent": 25.4
+  },
+  {
+   "description": {
+    "de": "Friere drei Gegner mit einem Strahl ein.",
+    "en": "Freeze 3 opponents with one ray."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/c6423a78e0d0cc6e6fd8d58ed2a3dd1747513858.jpg",
+   "key": "triple_freeze",
+   "name": {
+    "de": "Tiefgefroren mal drei!",
+    "en": "Triple Freeze!"
+   },
+   "percent": 23.1
+  },
+  {
+   "description": {
+    "de": "Behalte den Superspeed für eine volle Sekunde.",
+    "en": "Maintain superspeed for a full second."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/b1ebf01fe6a2ca500595ba07e1c5c2a504f7e676.jpg",
+   "key": "superspeed",
+   "name": {
+    "de": "Superschnell",
+    "en": "Super Speed"
+   },
+   "percent": 18.0
+  },
+  {
+   "description": {
+    "de": "Wirf einen Feuerball mit einer Schockwelle zurück!",
+    "en": "Deflect a fireball with a shockwave."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/b1d2bcc3785cb7fe438964b596461ea9161d02fd.jpg",
+   "key": "fireball_reflect",
+   "name": {
+    "de": "Reflektiert!",
+    "en": "Deflected!"
+   },
+   "percent": 21.0
+  },
+  {
+   "description": {
+    "de": "Aufstieg zur Anfängerliga.",
+    "en": "Promote to the Beginner League."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/8fb725392d3f66b4167cc4e711149c6c4a06e99e.jpg",
+   "key": "beginner_league",
+   "name": {
+    "de": "Erster Aufstieg",
+    "en": "Ranking Up!"
+   },
+   "percent": 12.2
+  },
+  {
+   "description": {
+    "de": "Aufstieg zur Bronzeliga.",
+    "en": "Promote to the Bronze League."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/37a1eb48392fa310774cb38879753646fcdc79c9.jpg",
+   "key": "bronze_league",
+   "name": {
+    "de": "Es wird ernst!",
+    "en": "Getting Serious!"
+   },
+   "percent": 0.9
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schalte Ranglistenspiele frei.",
+    "en": "Unlock Ranked matches."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/4495f9fea165fbf991d04f9e37df1368aa5be7d9.jpg",
+   "key": "ranked_matches",
+   "name": {
+    "de": "Bereit für die Rangliste",
+    "en": "Ready for Ranked"
+   },
+   "percent": 62.4,
+   "unlocked": "2021-02-27T16:17:49+01:00"
+  },
+  {
+   "description": {
+    "de": "Erreiche die maximale EP-Anzahl.",
+    "en": "Reach max XP."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/0421742b84e164fe2d41b569bcbb9b02cf29162c.jpg",
+   "key": "max_xp_earned",
+   "name": {
+    "en": "100%"
+   },
+   "percent": 1.4
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/207140/29607d1dc7924cc9f9b333fea6e0468a035f590d.jpg",
+   "key": "golden_ranked_win",
+   "name": {
+    "en": "ez git gud"
+   },
+   "percent": 1.0
+  },
+  {
+   "description": {
+    "de": "Blocke 10 goldene Haken mit Kisten ab.",
+    "en": "Block 10 golden hooks with crates."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/ed5574ea4b76dc9bffa419e42b281df13e33b4e3.jpg",
+   "key": "blocked_hook_by_crates",
+   "name": {
+    "de": "Hakenblock",
+    "en": "Hook Block"
+   },
+   "percent": 4.7
+  },
+  {
+   "description": {
+    "de": "Schließe das erste Kapitel der Kampagne ab.",
+    "en": "Beat the first Chapter in Story."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/89ad493920bee0165bbc8ebd1afcb2d0881cb520.jpg",
+   "key": "sp_any_diff_chapter_0",
+   "name": {
+    "de": "Ein Rennen gegen Zeit",
+    "en": "A Race against Time"
+   },
+   "percent": 23.7
+  },
+  {
+   "description": {
+    "de": "Schließe das zweite Kapitel der Kampagne ab.",
+    "en": "Beat the second Chapter in Story."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/c33401e59cfb18fb0f740b8793b1c3a703cf589c.jpg",
+   "key": "sp_any_diff_chapter_1",
+   "name": {
+    "de": "Polizist bittet um Verstärkung",
+    "en": "Officer requesting Backup"
+   },
+   "percent": 19.0
+  },
+  {
+   "description": {
+    "de": "Schließe das dritte Kapitel der Kampagne ab.",
+    "en": "Beat the third Chapter in Story."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/6019d72d03a2e161e4de7f00bdd1993d2041a651.jpg",
+   "key": "sp_any_diff_chapter_2",
+   "name": {
+    "de": "Das überaus gefährliche Spiel",
+    "en": "The most dangerous Game"
+   },
+   "percent": 16.9
+  },
+  {
+   "description": {
+    "de": "Schließe das letzte Kapitel der Kampagne ab.",
+    "en": "Beat the final Chapter in Story."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/8cee850cedf569898438087019870924a0d9cbb2.jpg",
+   "key": "sp_any_diff_chapter_3",
+   "name": {
+    "de": "Willkommen in New Rush City",
+    "en": "Welcome to New Rush City"
+   },
+   "percent": 15.5
+  },
+  {
+   "description": {
+    "de": "Schließe alle Kapitel der Kampagne mit dem höchsten Schwierigkeitsgrad Unfair ab.",
+    "en": "Beat all Chapters on Unfair difficulty."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/207140/7475e1f951a7d0916137128b4abc5d9df44aafd0.jpg",
+   "key": "sp_unfair_chapter_3",
+   "name": {
+    "de": "Der König von New Rush City",
+    "en": "The King of New Rush City"
+   },
+   "percent": 2.4
+  }
+ ],
+ "id": "207140",
+ "platform": "steam"
+}

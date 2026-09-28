@@ -1,0 +1,547 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #1 in Episode 1: Erwacht",
+    "en": "Complete the optional graffiti #1 in Episode 1: Awake"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/43f2388fe1c078d8cca7e7d3e3fcf657730780b0.jpg",
+   "key": "E1_S01A_GRAFFITIRV",
+   "name": {
+    "de": "Erholungsvandalismus",
+    "en": "Recreational Vandalism"
+   },
+   "percent": 69.2,
+   "unlocked": "2019-08-02T16:51:24+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #2 in Episode 1: Erwacht",
+    "en": "Complete the optional graffiti #2 in Episode 1: Awake"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/997ea9a70ede96d3db7d564eb9aef8e029f2c282.jpg",
+   "key": "E1_S01B_BLANKSPOT",
+   "name": {
+    "de": "Ich säge was, was du nicht siehst",
+    "en": "I See U Saw"
+   },
+   "percent": 74.7,
+   "unlocked": "2019-08-02T17:11:34+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #3 in Episode 1: Erwacht",
+    "en": "Complete the optional graffiti #3 in Episode 1: Awake"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/62b076e4f11848ffed4704e2e58fe8d71900b47f.jpg",
+   "key": "E1_S02A_GRAFFITIWALL",
+   "name": {
+    "de": "Das letzte Einhorn",
+    "en": "The Last Unicorn"
+   },
+   "percent": 54.4,
+   "unlocked": "2020-02-16T17:01:40+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #4 in Episode 1: Erwacht",
+    "en": "Complete the optional graffiti #4 in Episode 1: Awake"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/da6c3259b2645d7984e0724a799386630b179211.jpg",
+   "key": "E1_S02_GRAFFITITOOLBOX",
+   "name": {
+    "de": "Hör mal, wer da nagelt",
+    "en": "Home Unimprovement"
+   },
+   "percent": 33.4,
+   "unlocked": "2020-02-21T20:38:27+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #5 in Episode 1: Erwacht",
+    "en": "Complete the optional graffiti #5 in Episode 1: Awake"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/0aa70b73dc93b88b302c4fd93adccbb55ccf7a4e.jpg",
+   "key": "E1_S04_GRAFFITIRANGUS",
+   "name": {
+    "de": "Rock-Idol",
+    "en": "Rock Idol"
+   },
+   "percent": 31.5,
+   "unlocked": "2020-02-16T17:45:16+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #6 in Episode 1: Erwacht",
+    "en": "Complete the optional graffiti #6 in Episode 1: Awake"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/bd8c27d3d105773fa6847fdd89a4bd3897b75e5c.jpg",
+   "key": "E1_S04D_GRAFFITITEMPESTPOSTER",
+   "name": {
+    "en": "Dramatis Personae"
+   },
+   "percent": 43.2,
+   "unlocked": "2020-02-16T18:15:18+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #7 in Episode 1: Erwacht",
+    "en": "Complete the optional graffiti #7 in Episode 1: Awake"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/7961bc28946079731b37ccb9afbabc4a853d68ee.jpg",
+   "key": "E1_S05_GRAFFITIEXIT",
+   "name": {
+    "de": "Hobo-Eintopf",
+    "en": "Mulligan Stew"
+   },
+   "percent": 32.2,
+   "unlocked": "2020-02-21T20:41:41+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #8 in Episode 1: Erwacht",
+    "en": "Complete the optional graffiti #8 in Episode 1: Awake"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/0045798d2acd50e1b005b699e06fe915758e44c1.jpg",
+   "key": "E1_S06_GRAFFITISTATUE",
+   "name": {
+    "de": "Pioniergeist",
+    "en": "Pioneer Spirit"
+   },
+   "percent": 46.9,
+   "unlocked": "2020-02-16T18:44:08+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #9 in Episode 1: Erwacht",
+    "en": "Complete the optional graffiti #9 in Episode 1: Awake"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/e68b525d77c8df3e910ce5e25ae863c3a1cf43fa.jpg",
+   "key": "E1_S08_SIGNGRAFFITI",
+   "name": {
+    "de": "Blick der Wut ins Gesicht",
+    "en": "Face Your Anger"
+   },
+   "percent": 23.9,
+   "unlocked": "2020-02-16T20:07:32+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #10 in Episode 1: Erwacht",
+    "en": "Complete the optional graffiti #10 in Episode 1: Awake"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/3fbe16b51ddbae07702fffbb162b427d1c0cd002.jpg",
+   "key": "E1_S09_GRAFFITIDREAM",
+   "name": {
+    "de": "Klarschreiben",
+    "en": "Lucid Writing"
+   },
+   "percent": 23.7,
+   "unlocked": "2020-02-22T21:27:34+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Beende Episode 1: Erwacht",
+    "en": "Complete Episode 1: Awake"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/d72566c2ddf3c79370cab0fb96667e15e0ad2676.jpg",
+   "key": "EndOfEpisode1",
+   "name": {
+    "de": "Erwache, liebes Herz",
+    "en": "Awake, Dear Heart"
+   },
+   "percent": 71.5,
+   "unlocked": "2020-02-16T20:25:38+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #1 in Episode 2: Schöne Neue Welt",
+    "en": "Complete the optional graffiti #1 in Episode 2: Brave New World"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/e67a677907a4261d70979b431df5aa272729182b.jpg",
+   "key": "E2_S01D_LIGHTGRAFFITI",
+   "name": {
+    "de": "Bühnenhandschrift",
+    "en": "Stagehandwriting"
+   },
+   "percent": 27.5,
+   "unlocked": "2020-02-22T21:56:38+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #2 in Episode 2: Schöne Neue Welt",
+    "en": "Complete the optional graffiti #2 in Episode 2: Brave New World"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/a2b2045f1930bcad22227fd6770639d56b553f24.jpg",
+   "key": "E2_S02_HOODGRAFFITI",
+   "name": {
+    "de": "Radikal Piratikal",
+    "en": "Radical Piratical"
+   },
+   "percent": 41.4,
+   "unlocked": "2020-02-17T20:32:48+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #3 in Episode 2: Schöne Neue Welt",
+    "en": "Complete the optional graffiti #3 in Episode 2: Brave New World"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/cb18fe394123ecbbfd5e9de5f96679ed35eea2d7.jpg",
+   "key": "E2_S02_GRAFFITITRUCK",
+   "name": {
+    "de": "Gefühle auf Rädern",
+    "en": "Feels on Wheels"
+   },
+   "percent": 61.3,
+   "unlocked": "2020-02-20T15:47:36+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #4 in Episode 2: Schöne Neue Welt",
+    "en": "Complete the optional graffiti #4 in Episode 2: Brave New World"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/e2f89682bb3f84c893c4a90fa39269aa137f0028.jpg",
+   "key": "E2_S02_SHACKGRAFFITO",
+   "name": {
+    "de": "Kanonenwand",
+    "en": "Canon Wall"
+   },
+   "percent": 49.5,
+   "unlocked": "2020-02-20T16:11:16+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #5 in Episode 2: Schöne Neue Welt",
+    "en": "Complete the optional graffiti #5 in Episode 2: Brave New World"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/1d238525e3eddd4a52664bb6c133eeecd3a41d78.jpg",
+   "key": "E2_S03_RVGRAFFITI",
+   "name": {
+    "de": "Wunschliste",
+    "en": "Wishlist"
+   },
+   "percent": 56.1,
+   "unlocked": "2020-02-20T16:21:33+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #7 in Episode 2: Schöne Neue Welt",
+    "en": "Complete the optional graffiti #7 in Episode 2: Brave New World"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/4958c8d30f953f870feed6add497c969d26ca30e.jpg",
+   "key": "E2_S04A_GRAFFITICONCRETE",
+   "name": {
+    "de": "Hart vorgehen",
+    "en": "Tread Harshly"
+   },
+   "percent": 32.1,
+   "unlocked": "2020-02-23T11:15:18+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #6 in Episode 2: Schöne Neue Welt",
+    "en": "Complete the optional graffiti #6 in Episode 2: Brave New World"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/6dd942f0a24bbef90dff299d50f7a9144436063f.jpg",
+   "key": "E2_S04A_GRAFFITISAMUELDOOR",
+   "name": {
+    "de": "Freundliche Waldfreunde",
+    "en": "Friendly Forest Friends"
+   },
+   "percent": 37.7,
+   "unlocked": "2020-02-20T16:54:38+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #8 in Episode 2: Schöne Neue Welt",
+    "en": "Complete the optional graffiti #8 in Episode 2: Brave New World"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/44db45977700376b96a752174c027587a4316d4b.jpg",
+   "key": "E2_S04B_ELIOTGRAFFITI",
+   "name": {
+    "de": "Dauerrekord",
+    "en": "Permanent Record"
+   },
+   "percent": 17.6,
+   "unlocked": "2020-02-22T21:58:07+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #9 in Episode 2: Schöne Neue Welt",
+    "en": "Complete the optional graffiti #9 in Episode 2: Brave New World"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/0cf1ea03bcbab350931c10fb96f3c283677de51a.jpg",
+   "key": "E2_S05_MIRRORGRAFFITI",
+   "name": {
+    "de": "Preis der Eitelkeit",
+    "en": "Vanity Fare"
+   },
+   "percent": 44.6,
+   "unlocked": "2020-02-20T17:40:10+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #10 in Episode 2: Schöne Neue Welt",
+    "en": "Complete the optional graffiti #10 in Episode 2: Brave New World"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/70f8e3888e6905ff03c962e3b22b85a7e3603e43.jpg",
+   "key": "E2_S07_JAMESGRAFFITI",
+   "name": {
+    "de": "Mermal der Bestie",
+    "en": "Creature Feature"
+   },
+   "percent": 34.0,
+   "unlocked": "2020-02-20T19:08:35+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Beende Episode 2: Schöne Neue Welt",
+    "en": "Complete Episode 2: Brave New World"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/7191749e2bcc193e3f2f83d1b2cd888552583547.jpg",
+   "key": "EndOfEpisode2",
+   "name": {
+    "de": "Oh, Wunder!",
+    "en": "O, Wonder!"
+   },
+   "percent": 61.2,
+   "unlocked": "2020-02-20T19:18:23+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #1 in Episode 3: Die Hölle ist Leer",
+    "en": "Complete the optional graffiti #1 in Episode 3: Hell Is Empty"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/eac968c0f5cf09e3d2f416f152fab50741e54f3c.jpg",
+   "key": "E3_S01B_MAPGRAFFITI",
+   "name": {
+    "en": "American Graffiti"
+   },
+   "percent": 45.6,
+   "unlocked": "2020-02-20T20:05:58+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #2 in Episode 3: Die Hölle ist Leer",
+    "en": "Complete the optional graffiti #2 in Episode 3: Hell Is Empty"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/3cfe72e8be1b6b794ea75d157082c79f91833f6d.jpg",
+   "key": "E3_S01_PLANNERGRAFFITI",
+   "name": {
+    "en": "Extra Credit"
+   },
+   "percent": 47.0,
+   "unlocked": "2020-02-20T20:04:16+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #3 in Episode 3: Die Hölle ist Leer",
+    "en": "Complete the optional graffiti #3 in Episode 3: Hell Is Empty"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/57ef478c40f060041e5eb9c9d1f4136cdc1b6997.jpg",
+   "key": "E3_S02A_GRAFFITIPHOTO",
+   "name": {
+    "de": "Peer-Review",
+    "en": "Peer Review"
+   },
+   "percent": 26.0,
+   "unlocked": "2020-02-20T20:25:56+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #4 in Episode 3: Die Hölle ist Leer",
+    "en": "Complete the optional graffiti #4 in Episode 3: Hell Is Empty"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/8c837db26323bbf7015731d424d62960789f416d.jpg",
+   "key": "E3_S02C_GRAFFITICALENDAR",
+   "name": {
+    "de": "Monatliches Meisterwerk",
+    "en": "Monthly Masterpiece"
+   },
+   "percent": 38.0,
+   "unlocked": "2020-02-20T20:34:10+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #5 in Episode 3: Die Hölle ist Leer",
+    "en": "Complete the optional graffiti #5 in Episode 3: Hell Is Empty"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/9dfbbe8c914d92838d5727318d2901f1d8380767.jpg",
+   "key": "E3_S03_GOBULEGRAFFITI",
+   "name": {
+    "de": "Verspucken",
+    "en": "Spit Take"
+   },
+   "percent": 27.9,
+   "unlocked": "2020-02-22T21:54:40+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #6 in Episode 3: Die Hölle ist Leer",
+    "en": "Complete the optional graffiti #6 in Episode 3: Hell Is Empty"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/bd54718a33ae3f730303844a8f43c4ee59aa76b8.jpg",
+   "key": "E3_S04A_VENDINGMACHINEGRAFFITI",
+   "name": {
+    "de": "Automanisch",
+    "en": "Venting Machine"
+   },
+   "percent": 20.5,
+   "unlocked": "2020-02-23T11:20:39+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #7 in Episode 3: Die Hölle ist Leer",
+    "en": "Complete the optional graffiti #7 in Episode 3: Hell Is Empty"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/1b83acdc8e45bee11e6b7be930af6621c3c6d5df.jpg",
+   "key": "E3_S04A_GRAFFITIPOSTER",
+   "name": {
+    "de": "Hallo Schwester",
+    "en": "Hello Nurse"
+   },
+   "percent": 28.9,
+   "unlocked": "2020-02-22T21:17:37+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #8 in Episode 3: Die Hölle ist Leer",
+    "en": "Complete the optional graffiti #8 in Episode 3: Hell Is Empty"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/82e029c2203d198cf961e0a56aa8882e1b01013a.jpg",
+   "key": "E3_S04_GRAFFITINORTHCAST",
+   "name": {
+    "de": "Zusatz in Satzform",
+    "en": "A Penned Appendage"
+   },
+   "percent": 32.5,
+   "unlocked": "2020-02-21T17:40:55+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #9 in Episode 3: Die Hölle ist Leer",
+    "en": "Complete the optional graffiti #9 in Episode 3: Hell Is Empty"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/b7a828afd9c37ec84f6c5a33040fa83bbf8257f2.jpg",
+   "key": "E3_S05_GRAFFITI",
+   "name": {
+    "de": "Malerisch Betrunken",
+    "en": "Drunk Drawer"
+   },
+   "percent": 48.8,
+   "unlocked": "2020-02-21T18:12:37+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Male das optionale Graffiti #10 in Episode 3: Die Hölle ist Leer",
+    "en": "Complete the optional graffiti #10 in Episode 3: Hell Is Empty"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/a861978f6d6f007d3a577c3b2fb05b0a3146bdbf.jpg",
+   "key": "E3_S07_CARVE",
+   "name": {
+    "de": "Verkorkst",
+    "en": "Messed Up"
+   },
+   "percent": 19.0,
+   "unlocked": "2020-02-22T21:49:50+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Beende Episode 3: Die Hölle ist Leer",
+    "en": "Complete Episode 3: Hell Is Empty"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/0a96bcf45ee37420c9742896d3cd9b81bbfe8544.jpg",
+   "key": "EndOfEpisode3",
+   "name": {
+    "de": "Alle Teufel sind hier",
+    "en": "All the Devils are Here"
+   },
+   "percent": 55.5,
+   "unlocked": "2020-02-21T19:38:28+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe Episode 1, Episode 2 und Episode 3 von Life is Strange: Before the Storm ab",
+    "en": "Complete Episode 1, Episode 2 and Episode 3 of Life is Strange: Before the Storm"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/554620/317a85e36711924dfc70ce2710c30bd43bc243fe.jpg",
+   "key": "CompleteEps123",
+   "name": {
+    "de": "Vor dem Sturm",
+    "en": "Before the Storm"
+   },
+   "percent": 55.5,
+   "unlocked": "2020-02-21T19:38:29+01:00"
+  }
+ ],
+ "id": "554620",
+ "platform": "steam"
+}

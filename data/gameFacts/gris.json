@@ -1,0 +1,46 @@
+{
+ "developers": [
+  "Nomada Studio"
+ ],
+ "genres": [
+  {
+   "de": "Jump ’n’ Run",
+   "en": "platformer",
+   "sv": "plattformsspel"
+  },
+  {
+   "de": "Adventure",
+   "en": "adventure video game",
+   "sv": "äventyrsspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "publishers": [
+  "Devolver Digital"
+ ],
+ "released": "2018-12-13",
+ "steam": {
+  "de": "Gris ist ein hoffnungsvolles, junges Mädchen, das in seiner Welt verloren ist – befasst mit einer schmerzhaften Erfahrung.",
+  "en": "Gris is a hopeful young girl lost in her own world, dealing with a painful experience in her life. Her journey through sorrow is manifested in her dress, which grants new abilities to better navigate her faded reality.",
+  "sv": "Gris handlar om en ung flicka som försvunnit in i sin egen värld, där hon bearbetar ett trauma från det förflutna. Resan genom sorgen återspeglas i hennes klänning, som ger henne nya färdigheter att ta sig fram genom den gråa verkligheten med."
+ },
+ "steam_appid": 683320,
+ "wikidata": "Q59769284",
+ "wikipedia": {
+  "de": {
+   "text": "Gris ist ein rätsellastiges Jump-’n’-Run- und Action-Adventure des spanischen Indie-Studios Nomada Studio, das 2018 vom US-amerikanischen Publisher Devolver Digital veröffentlicht wurde.",
+   "url": "https://de.wikipedia.org/wiki/Gris_(Computerspiel)"
+  },
+  "en": {
+   "text": "Gris is a 2018 platform-adventure game by Spanish developer Nomada Studio and published by Devolver Digital. The game was released for macOS, Nintendo Switch, and Windows in December 2018, for iOS in August 2019, for PlayStation 4 in November 2019, for Android in April 2020, for Amazon Luna in November 2021, and for PlayStation 5, Xbox One and Xbox Series X/S in December 2022. The game has sold over 3 million copies.",
+   "url": "https://en.wikipedia.org/wiki/Gris"
+  }
+ }
+}

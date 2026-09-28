@@ -1,0 +1,544 @@
+{
+ "achievements": [
+  {
+   "description": {
+    "en": "Eat an enemy"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/734ca9fc6227746e0666ac47dee18be3ea6326be.jpg",
+   "key": "ACH_MINOR_CANNIBALISM",
+   "name": {
+    "en": "Minor Cannibalism"
+   },
+   "percent": 39.2
+  },
+  {
+   "description": {
+    "en": "Eat an entire family"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/ed5d1d030a150ed183518f00e3d9ca463e3fad27.jpg",
+   "key": "ACH_MAJOR_CANNIBALISM",
+   "name": {
+    "en": "Major Cannibalism"
+   },
+   "percent": 12.0
+  },
+  {
+   "description": {
+    "en": "Share a food or drink item in MP"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/50874cd0d10cee854abfe4fb88707d03ffca91ed.jpg",
+   "key": "ACH_BE_NICE",
+   "name": {
+    "en": "Be Nice"
+   },
+   "percent": 37.6
+  },
+  {
+   "description": {
+    "en": "Share a weapon in MP"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/f06ae7f3a107e7ac3236b5ad128cc7d71a771e6d.jpg",
+   "key": "ACH_BE_EXTREMELY_NICE",
+   "name": {
+    "en": "Be Extremely Nice"
+   },
+   "percent": 16.3
+  },
+  {
+   "description": {
+    "en": "Craft all items"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/e219e86629b669ce2016cde21eeed42fb08bb7c0.jpg",
+   "key": "ACH_CRAFTY",
+   "name": {
+    "en": "Crafty"
+   },
+   "percent": 2.1
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/242760/f805d2c8182856df38cbf6f631006103e2e0e9d7.jpg",
+   "key": "ACH_BAD_FATHER",
+   "name": {
+    "en": "Bad father"
+   },
+   "percent": 1.7
+  },
+  {
+   "description": {
+    "en": "Kill all animal types and display heads"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/845d9db161bf2fa9249aeefce57a247ba9c98e25.jpg",
+   "key": "ACH_TROPHY_HUNTER",
+   "name": {
+    "en": "Trophy Hunter"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "en": "Grow all plant types"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/60de1f12f93ae03526289c15677649ab6ea66ea0.jpg",
+   "key": "ACH_GARDENER",
+   "name": {
+    "en": "Green Thumb"
+   },
+   "percent": 12.1
+  },
+  {
+   "description": {
+    "en": "Play through entire game without killing or eating animals. Alone in Single Player or together in Multiplayer."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/58391f820e3097917a740fc24fb0c8b553eb812e.jpg",
+   "key": "ACH_VEGAN",
+   "name": {
+    "en": "Vegan"
+   },
+   "percent": 2.7
+  },
+  {
+   "description": {
+    "en": "Craft 10 medicine items"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/33796e7fc574d4d47b7aaff351184c1ec3430152.jpg",
+   "key": "ACH_NATUROPATH",
+   "name": {
+    "en": "Naturopath"
+   },
+   "percent": 9.7
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Sleep on yacht"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/aa04ad7ec0f9dc9a453ebbd5381d718f5a5308fe.jpg",
+   "key": "ACH_5_STAR_HOTEL",
+   "name": {
+    "en": "5 Star Hotel"
+   },
+   "percent": 27.6,
+   "unlocked": "2021-05-16T21:26:29+02:00"
+  },
+  {
+   "description": {
+    "en": "Explore all caves"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/4b55ed3e3bd94b804c963a5d83ef44a35bb6c28f.jpg",
+   "key": "ACH_SPELUNKER",
+   "name": {
+    "en": "Spelunker"
+   },
+   "percent": 1.9
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Revive one co-op player"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/8eb601d40f536e83119e3b4636614e8bbbfba5ed.jpg",
+   "key": "ACH_FIRST_RESPONDER",
+   "name": {
+    "en": "First Responder"
+   },
+   "percent": 57.1,
+   "unlocked": "2021-05-18T21:40:23+02:00"
+  },
+  {
+   "description": {
+    "en": "Revive 10 co-op players"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/6cbbd2827b79fd126a8d0b4b274776c78087ece6.jpg",
+   "key": "ACH_MEDIC",
+   "name": {
+    "en": "Medic"
+   },
+   "percent": 20.1
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/242760/ff5bf9e2b2e9113963528a5f4478547e81f543a0.jpg",
+   "key": "ACH_BUILD_GAZEBO",
+   "name": {
+    "en": "You should be looking for Timmy"
+   },
+   "percent": 15.1
+  },
+  {
+   "description": {
+    "en": "Use the compass"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/865c3ee6aee314f3edd8977924949e2ec8ce1ef1.jpg",
+   "key": "ACH_BOY_SCOOT",
+   "name": {
+    "en": "Boy Scout"
+   },
+   "percent": 33.4
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Sleep with another player (group sleep)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/a7ba44fef9a65738173d3b7f6d5abfe16736c587.jpg",
+   "key": "ACH_GROUP_SLEEP",
+   "name": {
+    "en": "Camp Out"
+   },
+   "percent": 72.2,
+   "unlocked": "2021-05-16T20:56:19+02:00"
+  },
+  {
+   "description": {
+    "en": "Killed downed enemy with rock"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/c060f34e47625887becb527809ca377f0c784bed.jpg",
+   "key": "ACH_KILL_DOWNED_ENEMY",
+   "name": {
+    "en": "Splatter"
+   },
+   "percent": 3.9
+  },
+  {
+   "description": {
+    "en": "Build a super long wall"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/2eea8993c62b6f261acef8969738ded974fef2e1.jpg",
+   "key": "ACH_LONG_WALL",
+   "name": {
+    "en": "Longest Wall"
+   },
+   "percent": 6.5
+  },
+  {
+   "description": {
+    "en": "Chop up 50 bodies"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/3762c5a564867e433560c4f11ef6621d5c881557.jpg",
+   "key": "ACH_CHOP_BODIES",
+   "name": {
+    "en": "Choppy Chop"
+   },
+   "percent": 19.0
+  },
+  {
+   "description": {
+    "en": "Make and wear stealth armour"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/df033012a1d45537821936dd7b8d16d39903e96e.jpg",
+   "key": "ACH_STEALTH_ARMOR",
+   "name": {
+    "en": "Unseen"
+   },
+   "percent": 36.1
+  },
+  {
+   "description": {
+    "en": "Kill 6 or more fish with a stick of dynamite. Alone in Single Player or together in Multiplayer."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/c191ce92ab7f86d32a8e747001689bcbe11a045c.jpg",
+   "key": "ACH_FISH_DYNAMITED",
+   "name": {
+    "en": "Commercial Fisherman"
+   },
+   "percent": 6.1
+  },
+  {
+   "description": {
+    "en": "Finish Game"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/519b16b82a539478198db74007f55801a3d669ab.jpg",
+   "key": "ACH_SURVIVE_THE_FOREST",
+   "name": {
+    "en": "Survive The Forest"
+   },
+   "percent": 17.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/242760/765a83fa484c44da37e2009e21946fcb6250f38e.jpg",
+   "key": "ACH_DRINK_COFFEE",
+   "name": {
+    "en": "Daily Grind"
+   },
+   "percent": 19.0
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/242760/ab21b218561e84341f04013d9774600c52c627b6.jpg",
+   "key": "ACH_GROSS_DRINK",
+   "name": {
+    "en": "Gross!"
+   },
+   "percent": 4.2
+  },
+  {
+   "description": {
+    "en": "In Single Player, kill 100 cannibals"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/0de46ef232fe4a154696c2dc50c87723e65eca51.jpg",
+   "key": "ACH_KILL_CANNIBALS",
+   "name": {
+    "en": "Serial Killer"
+   },
+   "percent": 24.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/242760/a4fb32195feeec78642a00566b7116e6b55a166b.jpg",
+   "key": "ACH_SPRINKLERS",
+   "name": {
+    "en": "Make It Rain"
+   },
+   "percent": 12.4
+  },
+  {
+   "description": {
+    "en": "Find all missing passengers"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/ea77874ddc95495e3872f422ced260af3edd8d94.jpg",
+   "key": "ACH_FIND_PASSENGERS",
+   "name": {
+    "en": "Get Closure"
+   },
+   "percent": 1.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/242760/42d8a71cb24b2ae56471fc78743f772dfcd858f5.jpg",
+   "key": "ACH_VENDING_MACHINES",
+   "name": {
+    "en": "Big Spender"
+   },
+   "percent": 19.4
+  },
+  {
+   "description": {
+    "en": "Kill shark. Alone in Single Player or together in Multiplayer."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/ee28df9cb727bdf5516e08e72ed25da65b730ccc.jpg",
+   "key": "ACH_KILL_SHARK",
+   "name": {
+    "en": "Bite me!"
+   },
+   "percent": 4.0
+  },
+  {
+   "description": {
+    "en": "Kill a bunny. Alone in Single Player or together in Multiplayer."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/3face1e571b505d739b6bc53a5b55464b4b0da95.jpg",
+   "key": "ACH_KILL_BUNNY",
+   "name": {
+    "en": "Monster"
+   },
+   "percent": 41.0
+  },
+  {
+   "description": {
+    "en": "Collect all cassette tapes!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/c4416e9855c46791e5789caca5462d676d6d64dc.jpg",
+   "key": "ACH_COLLECT_CASSETTES",
+   "name": {
+    "en": "Gabe Fan"
+   },
+   "percent": 16.5
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Survive 1 night"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/30eb0635f7d109dc3ba0570dd842a48cd89ddcf9.jpg",
+   "key": "ACH_DAYS_SURVIVED_1",
+   "name": {
+    "en": "First Night"
+   },
+   "percent": 83.7,
+   "unlocked": "2021-05-16T20:56:29+02:00"
+  },
+  {
+   "description": {
+    "en": "Eat all mushroom types"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/39388095eca01c8246bb5edaf1543e6a8bbea972.jpg",
+   "key": "ACH_EAT_ALL_MUSHROOMS",
+   "name": {
+    "en": "You are a fun guy"
+   },
+   "percent": 2.9
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Survive 5 nights"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/dec3c04a54b1296bb4fe2fb7925f0be2eaf3afa4.jpg",
+   "key": "ACH_DAYS_SURVIVED_5",
+   "name": {
+    "en": "Survivalist"
+   },
+   "percent": 55.0,
+   "unlocked": "2021-05-24T21:49:47+02:00"
+  },
+  {
+   "description": {
+    "en": "Kill bird with arrow"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/8e865e68827121c67f0acf5f3410f961a9b1d496.jpg",
+   "key": "ACH_SHOOT_BIRDS",
+   "name": {
+    "en": "Birdseye"
+   },
+   "percent": 37.0
+  },
+  {
+   "description": {
+    "en": "Pass 50,000 steps"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/bd5138af999f971f761cc1323b4e7142d1cd86b0.jpg",
+   "key": "ACH_MARATHON_STEPS",
+   "name": {
+    "en": "Step Master"
+   },
+   "percent": 2.1
+  },
+  {
+   "description": {
+    "en": "Set off 20 bombs"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/19ec70f1214a4fc2e7d163e4359bf776c3249219.jpg",
+   "key": "ACH_USED_BOMBS",
+   "name": {
+    "en": "Demolition Man"
+   },
+   "percent": 21.3
+  },
+  {
+   "description": {
+    "en": "Repair a shelter"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/01e6d888ceefa3f3b630555c1513b88033abac50.jpg",
+   "key": "ACH_REPAIR_SHELTER",
+   "name": {
+    "en": "Handyman"
+   },
+   "percent": 9.4
+  },
+  {
+   "description": {
+    "en": "Collect all robot pieces"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/6a51e7c27a77948be025bff214ae9dddcb77809c.jpg",
+   "key": "ACH_COLLECT_ROBOT",
+   "name": {
+    "en": "Good Father"
+   },
+   "percent": 5.0
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Cut down 100 trees"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/4a0ec5f553512f6e2c96b31bed972041511b08f3.jpg",
+   "key": "ACH_CHOP_TREES_100",
+   "name": {
+    "en": "Climate Change"
+   },
+   "percent": 43.9,
+   "unlocked": "2021-05-24T21:28:22+02:00"
+  },
+  {
+   "description": {
+    "en": "Cut down 1000 trees"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/ef34dead222f1eea2e22aedd5dd25932896c2b2b.jpg",
+   "key": "ACH_CHOP_TREES_1000",
+   "name": {
+    "en": "Don't Save The Forest"
+   },
+   "percent": 3.9
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "In Single Player, don't kill any cannibals for more than 10 days in a row"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/376e41dd139db18be6489d62ed665133c20832b5.jpg",
+   "key": "ACH_DAYS_WITHOUT_KILLS",
+   "name": {
+    "en": "Pacifist"
+   },
+   "percent": 21.3,
+   "unlocked": "2021-06-03T21:28:07+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Knock down 6 or more trees with 1 explosive. Alone in Single Player or together in Multiplayer."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/eea660682925cf835ae2158d4a548f8d2e04680d.jpg",
+   "key": "ACH_TREES_DYNAMITED",
+   "name": {
+    "en": "Demolition Expert"
+   },
+   "percent": 14.6,
+   "unlocked": "2021-05-24T21:41:45+02:00"
+  },
+  {
+   "description": {
+    "en": "Catch fish with a trap. Alone in Single Player or together in Multiplayer."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/242760/4368753c8ddbb3a3ef1436219ed3f5921069dc0d.jpg",
+   "key": "ACH_TRAP_FISH",
+   "name": {
+    "en": "Fisherman"
+   },
+   "percent": 1.8
+  }
+ ],
+ "id": "242760",
+ "platform": "steam"
+}

@@ -1,0 +1,510 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast die Dossiers von allen ARK Spezies gefunden!",
+    "en": "You found the Dossiers of each of ARK's initial Specimens!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/f47a182d6c67b84c63146ac6aabaef006996969d.jpg",
+   "key": "ACHIEVEMENT_1",
+   "name": {
+    "de": "Veteran Paläontologe",
+    "en": "Veteran Paleontologist"
+   },
+   "percent": 4.4,
+   "unlocked": "2019-08-15T13:34:45+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast ARKs ersten Wächter besiegt!",
+    "en": "You defeated ARK's first Guardian!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/da3eb971150a52b896f7cc836475fa572ee91803.jpg",
+   "key": "ACHIEVEMENT_2",
+   "name": {
+    "de": "Überlebensveteran",
+    "en": "Veteran Survivor"
+   },
+   "percent": 10.6,
+   "unlocked": "2018-11-26T20:27:40+01:00"
+  },
+  {
+   "description": {
+    "de": "Du hast persönlich alle Artefakte gesammelt!",
+    "en": "You personally retrieved all the Artifacts!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/a778afa57b9b53f708bedce6a143041df56ff428.jpg",
+   "key": "NEW_ACHIEVEMENT_4",
+   "name": {
+    "de": "Artefakt Archäologe",
+    "en": "Artifact Archaeologist"
+   },
+   "percent": 4.6
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast ARKs zweiten Wächter besiegt!",
+    "en": "You defeated ARK's second Guardian!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/641692e1e8e5ffaa2edefe325952a937f020ac1d.jpg",
+   "key": "ACHIEVEMENT_5",
+   "name": {
+    "de": "Überlebensexperte",
+    "en": "Expert Survivor"
+   },
+   "percent": 10.8,
+   "unlocked": "2019-08-16T23:18:02+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast ARKs dritten Wächter besiegt!",
+    "en": "You defeated ARK's third Guardian!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/a44f8321c6b517fb0ec5621bea97d6e579ca6a26.jpg",
+   "key": "ACHIEVEMENT_6",
+   "name": {
+    "de": "Überlebensmeister",
+    "en": "Master Survivor"
+   },
+   "percent": 9.9,
+   "unlocked": "2019-08-16T22:57:34+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast die drei ARK-Wächter der besiegt! Aber...",
+    "en": "You've defeated ARK's three Guardians! And yet..."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/3f21b0a4d4e18341eb772243be481cc0ab0b0bc6.jpg",
+   "key": "ACHIEVEMENT_7",
+   "name": {
+    "de": "Entwickelter Überlebender",
+    "en": "Survivor Evolved"
+   },
+   "percent": 8.5,
+   "unlocked": "2019-08-16T23:18:03+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast 24 Stunden in ARK überlebt!",
+    "en": "You Survived a full day and night on the ARK!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/892bf2ea58f5ef129dbce5d72e27dbdd5dfe04e1.jpg",
+   "key": "ACHIEVEMENT_8",
+   "name": {
+    "de": "Dein erster Tag...",
+    "en": "Your first day..."
+   },
+   "percent": 57.2,
+   "unlocked": "2017-11-25T22:04:32+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast einen Dinosaurier gezähmt!",
+    "en": "You Tamed a Dinosaur!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/ade46b00d4d735c6570183bc2359f1a1a3f9ba6d.jpg",
+   "key": "ACHIEVEMENT_9",
+   "name": {
+    "de": "Dein erster Dino...",
+    "en": "Your first Dino..."
+   },
+   "percent": 56.1,
+   "unlocked": "2017-11-25T20:26:50+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du bist auf einem Dinosaurier geritten!",
+    "en": "You Rode a Dinosaur!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/e2e2722ff05e0a428470c4ba4b1437d4d3a93e64.jpg",
+   "key": "ACHIEVEMENT_10",
+   "name": {
+    "de": "Dein erster Ritt...",
+    "en": "Your first Ride..."
+   },
+   "percent": 54.4,
+   "unlocked": "2017-08-27T18:08:26+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast den höchsten Level erreicht!",
+    "en": "You reached the Maximum Survivor Level!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/0fef3c830db19261c7eb3d75123f7081c7e0c4a6.jpg",
+   "key": "ACHIEVEMENT_11",
+   "name": {
+    "de": "Maximaler Überlebender",
+    "en": "Maximum Survivor"
+   },
+   "percent": 16.3,
+   "unlocked": "2017-11-27T19:36:04+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Einer deiner Dinosaurier hat den höchsten Level erreicht!",
+    "en": "One of your Dinosaurs reached Maximum Level!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/9f6167d4875e547c2f0f1bf42d7b1271e8b3f48f.jpg",
+   "key": "ACHIEVEMENT_12",
+   "name": {
+    "de": "Maximaler Dinosaurier",
+    "en": "Maximum Dinosaur"
+   },
+   "percent": 17.4,
+   "unlocked": "2018-11-26T19:23:19+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du bist auf dem Rücken eines T-Rex geritten!",
+    "en": "You rode on the back of a T-Rex!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/247d075cfe51f7b8770dcf095f3a46093b933311.jpg",
+   "key": "ACHIEVEMENT_13",
+   "name": {
+    "de": "Rex Reiter",
+    "en": "Rex Rider"
+   },
+   "percent": 30.1,
+   "unlocked": "2017-11-27T20:03:03+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du bist auf dem Rücken eines Giganotosaurus geritten!",
+    "en": "You rode on the back of a Giganotosaurus!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/297eed8533d2bb5f81cb9d06a7c51d4d07ab3bc3.jpg",
+   "key": "ACHIEVEMENT_14",
+   "name": {
+    "de": "Giga Reiter",
+    "en": "Giga Rider"
+   },
+   "percent": 16.8,
+   "unlocked": "2018-03-12T19:20:56+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast mehr als 80% der Karte aufgedeckt!",
+    "en": "You uncovered more than 80% of the Mini-Map!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/f0ee97afa296446f76278e5887172d88bfa31f0d.jpg",
+   "key": "ACHIEVEMENT_15",
+   "name": {
+    "de": "Kartograf",
+    "en": "Map Maker"
+   },
+   "percent": 16.4,
+   "unlocked": "2018-11-26T19:55:53+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast den höchsten Gipfel der ARK erklommen!",
+    "en": "You've reached the highest mountain peak of the ARK!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/39ece92d568a328354dac30a97307124fae72cac.jpg",
+   "key": "ACHIEVEMENT_16",
+   "name": {
+    "de": "Höchster Gipfel",
+    "en": "Highest Peak"
+   },
+   "percent": 8.4,
+   "unlocked": "2018-11-26T19:06:33+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast den Grund des ARK Ozeans erreicht!",
+    "en": "You've reached the bottom of the ARK's oceans!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/a863a8888759e6bb6e6a898e2b51439c96b6595e.jpg",
+   "key": "ACHIEVEMENT_17",
+   "name": {
+    "de": "Tiefste Tiefe",
+    "en": "Lowest Depth"
+   },
+   "percent": 14.0,
+   "unlocked": "2018-11-26T18:54:57+01:00"
+  },
+  {
+   "description": {
+    "de": "Du hast dich selber vom Sumpffieber geheilt!",
+    "en": "You've cured yourself of Swamp Fever!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/a9d81eb667fe8a02b4dc66273ff44b82c5f38118.jpg",
+   "key": "ACHIEVEMENT_18",
+   "name": {
+    "de": "Allheilmittel",
+    "en": "Cure-All"
+   },
+   "percent": 5.1
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du bist vom ARK aufgestiegen, Gamma Level!",
+    "en": "You Ascended off the ARK, at Gamma level!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/5557aa5664022dc69bb9f04b71387fb236be5bb5.jpg",
+   "key": "ACHIEVEMENT_19",
+   "name": {
+    "de": "Gamma Aufstieg",
+    "en": "Gamma Ascension"
+   },
+   "percent": 4.7,
+   "unlocked": "2018-11-26T19:10:02+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du bist vom ARK aufgestiegen, Beta Level!",
+    "en": "You Ascended off the ARK, at Beta level!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/0a1cb604ce8d4e1850ecda46aae541a391db2906.jpg",
+   "key": "ACHIEVEMENT_20",
+   "name": {
+    "de": "Beta Aufstieg",
+    "en": "Beta Ascension"
+   },
+   "percent": 3.7,
+   "unlocked": "2018-11-26T19:16:15+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du bist vom ARK aufgestiegen, Alpha Level!",
+    "en": "You Ascended off the ARK, at Alpha level!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/8735c5dac035212f8bc6fbb27daeabeb62a9b749.jpg",
+   "key": "ACHIEVEMENT_21",
+   "name": {
+    "de": "Alpha Aufstieg",
+    "en": "Alpha Ascension"
+   },
+   "percent": 5.7,
+   "unlocked": "2018-11-26T19:14:22+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast 10% aller Entdeckernotizen auf dieser Insel gefunden!",
+    "en": "You discovered 10% of the Explorer Notes on the ARK!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/3bf875d1f03d8a55f43820395ab747b6870aa319.jpg",
+   "key": "ACHIEVEMENT_22",
+   "name": {
+    "de": "Entdecker Anfänger",
+    "en": "Beginner Explorer"
+   },
+   "percent": 11.5,
+   "unlocked": "2019-08-13T16:49:15+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast 20% aller Entdeckernotizen auf dieser Insel gefunden!",
+    "en": "You've discovered 20% of the Explorer Notes on the ARK!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/37e9ffa808eb6a190b10c6d31f98e9c4744caa07.jpg",
+   "key": "ACHIEVEMENT_23",
+   "name": {
+    "de": "Erfahrener Entdecker",
+    "en": "Experienced Explorer"
+   },
+   "percent": 6.9,
+   "unlocked": "2019-08-15T12:46:36+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast 30% aller Entdeckernotizen auf dieser Insel gefunden!",
+    "en": "You've discovered 30% of the Explorer Notes on the ARK!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/9bf8891eb75d52a90a0fc4af9ca21611f25a8ce0.jpg",
+   "key": "ACHIEVEMENT_24",
+   "name": {
+    "de": "Abenteuerlicher Entdecker",
+    "en": "Adventurous Explorer"
+   },
+   "percent": 5.3,
+   "unlocked": "2019-08-15T13:20:30+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast 40% aller Entdeckernotizen auf dieser Insel gefunden!",
+    "en": "You've discovered 40% of the Explorer Notes on the ARK!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/ae8f1d3a9a90ef163ea679bc11c7a26589bc909f.jpg",
+   "key": "ACHIEVEMENT_25",
+   "name": {
+    "de": "Fleißiger Entdecker",
+    "en": "Studious Explorer"
+   },
+   "percent": 4.7,
+   "unlocked": "2019-08-15T13:27:43+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast 50% aller Entdeckernotizen auf dieser Insel gefunden!",
+    "en": "You've discovered 50% of the Explorer Notes on the ARK!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/8a6dcd0ac13938eb4439b06a5f608274c703a86f.jpg",
+   "key": "ACHIEVEMENT_26",
+   "name": {
+    "de": "Entdecker Veteran",
+    "en": "Veteran Explorer"
+   },
+   "percent": 4.5,
+   "unlocked": "2019-08-15T13:33:45+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast 60% aller Entdeckernotizen auf dieser Insel gefunden!",
+    "en": "You've discovered 60% of the Explorer Notes on the ARK!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/06cd8040e5279bdf8008b629056fa3c41f795f58.jpg",
+   "key": "ACHIEVEMENT_27",
+   "name": {
+    "de": "Geübter Entdecker",
+    "en": "Adept Explorer"
+   },
+   "percent": 4.4,
+   "unlocked": "2019-08-15T13:52:41+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast 70% aller Entdeckernotizen auf dieser Insel gefunden!",
+    "en": "You've discovered 70% of the Explorer Notes on the ARK!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/14d251f897106aef09fbeefc8e5ad367cfecb181.jpg",
+   "key": "ACHIEVEMENT_28",
+   "name": {
+    "de": "Professioneller Entdecker",
+    "en": "Professional Explorer"
+   },
+   "percent": 4.3,
+   "unlocked": "2019-08-15T14:11:36+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast 80% aller Entdeckernotizen auf dieser Insel gefunden!",
+    "en": "You've discovered 80% of the Explorer Notes on the ARK!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/c007c22ff0cdcaa44e86ae5bdf0c4ffadb8ce6eb.jpg",
+   "key": "ACHIEVEMENT_29",
+   "name": {
+    "de": "Entdecker Experte",
+    "en": "Expert Explorer"
+   },
+   "percent": 4.3,
+   "unlocked": "2019-08-15T14:18:57+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast 90% aller Entdeckernotizen auf dieser Insel gefunden!",
+    "en": "You've discovered 90% of the Explorer Notes on the ARK!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/ea6c5a74e74af9e5ea35570efc3e01a5180f8dc2.jpg",
+   "key": "ACHIEVEMENT_30",
+   "name": {
+    "de": "Meisterhafter Entdecker",
+    "en": "Master Explorer"
+   },
+   "percent": 4.2,
+   "unlocked": "2019-08-15T14:32:59+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Du hast alle Entdeckernotizen auf dieser Insel gefunden!",
+    "en": "You've discovered 100% of the Explorer Notes on the ARK!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/0f5efce4d6780c9a700051a3da2adb8cd26aa023.jpg",
+   "key": "ACHIEVEMENT_31",
+   "name": {
+    "de": "Perfekter Entdecker",
+    "en": "Perfect Explorer"
+   },
+   "percent": 4.0,
+   "unlocked": "2019-08-16T23:18:10+02:00"
+  },
+  {
+   "description": {
+    "de": "Du hast alle zähmbaren Kreaturen des ARK´s gezähmt!",
+    "en": "You tamed all of the domesticable creatures on the ARK!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/505f33e322eb33289f28eac5e6c4772142053921.jpg",
+   "key": "ACHIEVEMENT_32",
+   "name": {
+    "de": "Meisterhafter Zoologe",
+    "en": "Master Zoologist"
+   },
+   "percent": 3.0
+  },
+  {
+   "description": {
+    "de": "Besiege die Wächter auf The Center!",
+    "en": "You defeated the Guardians of The Center!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/346110/ca12906cdce5c19b7ace3692d53e0daf4a1f8f7b.jpg",
+   "key": "ACHIEVEMENT_33",
+   "name": {
+    "de": "Überlebender von The Center",
+    "en": "Survivor of The Center"
+   },
+   "percent": 4.1
+  }
+ ],
+ "id": "346110",
+ "platform": "steam"
+}

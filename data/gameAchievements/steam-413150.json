@@ -1,0 +1,721 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "de": "Verdiene 15.000 G",
+    "en": "Earn 15,000g"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/dac82a85ceb1493bb2155d41890b4a6099f5eaa5.jpg",
+   "key": "a0",
+   "name": {
+    "de": "Grünschnabel",
+    "en": "Greenhorn"
+   },
+   "percent": 62.8,
+   "unlocked": "2020-02-24T15:41:02+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Verdiene 50.000 G",
+    "en": "Earn 50,000g"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/2a5c84271214a05435ea1c7a60bacc1cbbc5fa5a.jpg",
+   "key": "1",
+   "name": {
+    "de": "Cowboy",
+    "en": "Cowpoke"
+   },
+   "percent": 55.5,
+   "unlocked": "2020-06-06T13:41:25+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Verdiene 250.000 G",
+    "en": "Earn 250,000g"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/b81de530e1de874a4add0b690d372df3ffc44ea2.jpg",
+   "key": "2",
+   "name": {
+    "de": "Heimstätter",
+    "en": "Homesteader"
+   },
+   "percent": 44.4,
+   "unlocked": "2020-06-24T21:33:29+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Verdiene 1.000.000 G",
+    "en": "Earn 1,000,000g"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/f96dbf78eebf05e027d1ca2fb25296a7db8f2036.jpg",
+   "key": "3",
+   "name": {
+    "de": "Millionär",
+    "en": "Millionaire"
+   },
+   "percent": 32.4,
+   "unlocked": "2020-12-23T23:56:48+01:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/413150/0db49d4d468db3597bdbbd5c42296de05b02dc5d.jpg",
+   "key": "4",
+   "name": {
+    "de": "Legende",
+    "en": "Legend"
+   },
+   "percent": 11.6
+  },
+  {
+   "description": {
+    "de": "Vervollständige die Museumskollektion",
+    "en": "Complete the museum collection."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/2ea2e98c122084b05cc8a0b60bf8c08050a10cfb.jpg",
+   "key": "5",
+   "name": {
+    "de": "Eine vollständige Sammlung",
+    "en": "A Complete Collection"
+   },
+   "percent": 7.2
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Freunde dich mit jemandem an, bis die Zuneigung 5 Herzen erreicht.",
+    "en": "Reach a 5-heart friend level with someone."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/73b81a2c4c59bfdf3d87bab03cb2932b4953fe18.jpg",
+   "key": "6",
+   "name": {
+    "de": "Ein neuer Freund",
+    "en": "A New Friend"
+   },
+   "percent": 40.5,
+   "unlocked": "2020-06-14T21:26:04+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Freunde dich mit jemandem an, bis die Zuneigung 10 Herzen erreicht.",
+    "en": "Reach a 10-heart friend level with someone."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/da975460e6ca17e1cf397d598d4eb9c65502f786.jpg",
+   "key": "7",
+   "name": {
+    "de": "Beste Freunde",
+    "en": "Best Friends"
+   },
+   "percent": 32.1,
+   "unlocked": "2020-12-23T21:07:20+01:00"
+  },
+  {
+   "description": {
+    "de": "Erreiche mit 8 Personen jeweils eine Zuneigung von 10 Herzen.",
+    "en": "Reach a 10-heart friend level with 8 people."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/c0330b9f16d6491c4ac9569270d9edce2ce3cd7a.jpg",
+   "key": "9",
+   "name": {
+    "de": "Der beliebte Bauer",
+    "en": "The Beloved Farmer"
+   },
+   "percent": 13.6
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erreiche mit 4 Personen jeweils eine Zuneigung von 5 Herzen.",
+    "en": "Reach a 5-heart friend level with 4 people."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/dafe0ceff688bebb1c8554cbfa478e9826eb7074.jpg",
+   "key": "11",
+   "name": {
+    "de": "Cliquen",
+    "en": "Cliques"
+   },
+   "percent": 28.8,
+   "unlocked": "2020-06-25T20:33:26+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erreiche mit 10 Personen jeweils eine Zuneigung von 5 Herzen.",
+    "en": "Reach a 5-heart friend level with 10 people."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/8d54a60fa7642a6f48eeccc39821bce1cfc0a55d.jpg",
+   "key": "12",
+   "name": {
+    "de": "Vernetzt",
+    "en": "Networking"
+   },
+   "percent": 22.4,
+   "unlocked": "2020-07-31T21:46:47+02:00"
+  },
+  {
+   "description": {
+    "de": "Erreiche mit 20 Personen jeweils eine Zuneigung von 5 Herzen.",
+    "en": "Reach a 5-heart friend level with 20 people."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/e594c58534bf0d583e853db55bbef754c6ce80d4.jpg",
+   "key": "13",
+   "name": {
+    "de": "Populär",
+    "en": "Popular"
+   },
+   "percent": 16.3
+  },
+  {
+   "description": {
+    "de": "Bereite 10 verschiedene Rezepte zu.",
+    "en": "Cook 10 different recipes."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/a3409b4511b671ee8ecaedd6dfcd5c80f99d7432.jpg",
+   "key": "15",
+   "name": {
+    "de": "Koch",
+    "en": "Cook"
+   },
+   "percent": 12.4
+  },
+  {
+   "description": {
+    "de": "Bereite 25 verschiedene Rezepte zu.",
+    "en": "Cook 25 different recipes."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/2666e6c58519e6ed2ca512c09f12bbb315c7fb47.jpg",
+   "key": "16",
+   "name": {
+    "de": "Souschef",
+    "en": "Sous Chef"
+   },
+   "percent": 7.2
+  },
+  {
+   "description": {
+    "de": "Bereite alle Rezepte zu.",
+    "en": "Cook every recipe."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/47390740c5c22acfb653d69df43cec2d6805a0fc.jpg",
+   "key": "17",
+   "name": {
+    "de": "Gourmetkoch",
+    "en": "Gourmet Chef"
+   },
+   "percent": 3.2
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erweitere dein Haus.",
+    "en": "Upgrade your house."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/67f2c064873468b80c57218f0992c15f7d2fe83e.jpg",
+   "key": "18",
+   "name": {
+    "de": "Ausbauen",
+    "en": "Moving Up"
+   },
+   "percent": 42.8,
+   "unlocked": "2020-06-08T22:05:33+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erweitere dein Haus auf die maximale Größe.",
+    "en": "Upgrade your house to the maximum size."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/62714a3e361e1def16aac1dcd1e482dcf2fc3ce0.jpg",
+   "key": "19",
+   "name": {
+    "de": "Das große Leben",
+    "en": "Living Large"
+   },
+   "percent": 26.9,
+   "unlocked": "2021-11-26T12:15:35+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Stelle 15 verschiedene Gegenstände her.",
+    "en": "Craft 15 different items."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/354c8650487d1359012892dd35ac23c7d83f4266.jpg",
+   "key": "20",
+   "name": {
+    "en": "D.I.Y."
+   },
+   "percent": 37.7,
+   "unlocked": "2020-06-29T21:08:59+02:00"
+  },
+  {
+   "description": {
+    "de": "Stelle 30 verschiedene Gegenstände her.",
+    "en": "Craft 30 different items."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/b20a49e94c49ef54d009da987d56b0f9b74447ae.jpg",
+   "key": "21",
+   "name": {
+    "de": "Handwerker",
+    "en": "Artisan"
+   },
+   "percent": 22.8
+  },
+  {
+   "description": {
+    "de": "Stelle alle Gegenstände her.",
+    "en": "Craft every item."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/dbdadb45ca89cb24ce68025395b9642a84d9efbd.jpg",
+   "key": "22",
+   "name": {
+    "de": "Handwerksmeister",
+    "en": "Craft Master"
+   },
+   "percent": 2.5
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Fange 10 verschiedene Fische.",
+    "en": "Catch 10 different fish."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/e3c6269d906e909415d31d5b7962166c0951509d.jpg",
+   "key": "24",
+   "name": {
+    "de": "Fischer",
+    "en": "Fisherman"
+   },
+   "percent": 57.7,
+   "unlocked": "2020-02-23T10:20:53+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Fange 24 verschiedene Fische.",
+    "en": "Catch 24 different fish."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/2400541f7661159b571cf767db7af4bd1125341a.jpg",
+   "key": "25",
+   "name": {
+    "de": "Alter Seemann",
+    "en": "Ol' Mariner"
+   },
+   "percent": 42.9,
+   "unlocked": "2020-06-08T20:53:51+02:00"
+  },
+  {
+   "description": {
+    "de": "Fange alle Fische.",
+    "en": "Catch every fish."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/398b5f107e5c81252d168cb5807ece5b147f1cd4.jpg",
+   "key": "26",
+   "name": {
+    "de": "Meisterangler",
+    "en": "Master Angler"
+   },
+   "percent": 4.8
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Fange 100 Fische.",
+    "en": "Catch 100 fish."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/cdc37596680321cfc1f5aef5f6c02e8384d07d62.jpg",
+   "key": "27",
+   "name": {
+    "de": "Massiver Fang",
+    "en": "Mother Catch"
+   },
+   "percent": 49.5,
+   "unlocked": "2020-02-24T20:00:12+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Spende dem Museum 40 verschiedene Gegenstände.",
+    "en": "Donate 40 different items to the museum."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/2c8433424f9e87d55b64b1ddbdcef1ea75d36d4c.jpg",
+   "key": "28",
+   "name": {
+    "de": "Fundgrube",
+    "en": "Treasure Trove"
+   },
+   "percent": 44.4,
+   "unlocked": "2020-06-14T21:30:23+02:00"
+  },
+  {
+   "description": {
+    "de": "Vollende 10 'Aushilfe gesucht'-Anfragen.",
+    "en": "Complete 10 'Help Wanted' requests."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/ac76efc80def3d8a94b0deb8afa50acd635acb0d.jpg",
+   "key": "29",
+   "name": {
+    "de": "Laufbursche",
+    "en": "Gofer"
+   },
+   "percent": 31.1
+  },
+  {
+   "description": {
+    "de": "Vollende 40 'Aushilfe gesucht'-Anfragen.",
+    "en": "Complete 40 'Help Wanted' requests."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/8d54bc99fbb7cdcd3039509fc09439ad60f6907a.jpg",
+   "key": "30",
+   "name": {
+    "de": "Große Hilfe",
+    "en": "A Big Help"
+   },
+   "percent": 11.6
+  },
+  {
+   "description": {
+    "de": "Verschicke 15 Stück von jeder Nutzpflanze.",
+    "en": "Ship 15 of each crop."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/b64a25c56092e41337b442b3dc70a38d5c81108a.jpg",
+   "key": "31",
+   "name": {
+    "de": "Polykultur",
+    "en": "Polyculture"
+   },
+   "percent": 3.3
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Verschicke 300 Stück von einer Nutzpflanze.",
+    "en": "Ship 300 of one crop."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/204eb62019fa81c54d4dafa83c05c8e16fe7fde1.jpg",
+   "key": "32",
+   "name": {
+    "de": "Monokultur",
+    "en": "Monoculture"
+   },
+   "percent": 33.3,
+   "unlocked": "2020-10-10T16:27:57+02:00"
+  },
+  {
+   "description": {
+    "de": "Verschicke alle Gegenstände.",
+    "en": "Ship every item."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/8f8570bf331dbf36612c6148531d640a30fd4f0f.jpg",
+   "key": "34",
+   "name": {
+    "de": "Volle Lieferung",
+    "en": "Full Shipment"
+   },
+   "percent": 4.0
+  },
+  {
+   "description": {
+    "de": "Spiele „König der Prärie“ durch.",
+    "en": "Beat 'Journey Of The Prairie King'."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/ebf1911710ceec0f68dfcb7ea1bf1df956707df8.jpg",
+   "key": "Achievement_PrairieKing",
+   "name": {
+    "de": "König der Prärie",
+    "en": "Prairie King"
+   },
+   "percent": 1.8
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erreiche die unterste Ebene der Minen.",
+    "en": "Reach the lowest level of the mines."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/d013c91bc0788fd047be29bf04447c4ada43b57c.jpg",
+   "key": "Achievement_TheBottom",
+   "name": {
+    "de": "Das untere Ende",
+    "en": "The Bottom"
+   },
+   "percent": 43.2,
+   "unlocked": "2020-06-14T20:17:20+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Baue das Gemeinschaftszentrum wieder auf.",
+    "en": "Restore the Pelican Town Community Center."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/fdd74e80dbb3a7f2581461ab160ffd34ad000990.jpg",
+   "key": "Achievement_LocalLegend",
+   "name": {
+    "de": "Örtliche Legende",
+    "en": "Local Legend"
+   },
+   "percent": 22.7,
+   "unlocked": "2020-07-31T20:58:32+02:00"
+  },
+  {
+   "description": {
+    "de": "Werde ein Mitglied der Joja Co. und erwerbe alle Erweiterung der Gemeindeentwicklung.",
+    "en": "Become a Joja Co. member and purchase all the community development perks."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/2e7140faedb46bc0b0794b5b38bade8ff4debd8f.jpg",
+   "key": "Achievement_Joja",
+   "name": {
+    "de": "Joja Co. Mitglied des Jahres",
+    "en": "Joja Co. Member Of The Year"
+   },
+   "percent": 6.8
+  },
+  {
+   "description": {
+    "de": "Finde jede Sternenfrucht.",
+    "en": "Find every stardrop."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/cb59574016b73e80f11a25b5d8e1ed10f6738fd6.jpg",
+   "key": "Achievement_Stardrop",
+   "name": {
+    "de": "Das Geheimnis der Sternenfrüchte",
+    "en": "Mystery Of The Stardrops"
+   },
+   "percent": 4.3
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/413150/96db8c41b815b841ce2b044d38c710a65a48fe9d.jpg",
+   "key": "Achievement_FectorsChallenge",
+   "name": {
+    "de": "Fector‘s Herausforderung",
+    "en": "Fector's Challenge"
+   },
+   "percent": 1.3
+  },
+  {
+   "description": {
+    "de": "Heirate und habe 2 Kinder.",
+    "en": "Get married and have two kids."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/00f51abad272ecd908b31265cbc38bcfd66d0ea5.jpg",
+   "key": "Achievement_FullHouse",
+   "name": {
+    "de": "Volles Haus",
+    "en": "Full House"
+   },
+   "percent": 7.6
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erreiche Stufe 10 einer Fähigkeit.",
+    "en": "Reach level 10 in a skill."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/1ec2b88c7f5e482edfc962a649360b40c38a4401.jpg",
+   "key": "Achievement_SingularTalent",
+   "name": {
+    "de": "Einzigartiges Talent",
+    "en": "Singular Talent"
+   },
+   "percent": 40.9,
+   "unlocked": "2020-07-10T21:43:50+02:00"
+  },
+  {
+   "description": {
+    "de": "Erreiche Stufe 10 für jede Fähigkeit.",
+    "en": "Reach level 10 in every skill."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/2e8c31c242d2da8d4e0938696c7f65ea7a5af934.jpg",
+   "key": "Achievement_MasterOfTheFiveWays",
+   "name": {
+    "de": "Meister der 5 Wege",
+    "en": "Master Of The Five Ways"
+   },
+   "percent": 18.0
+  },
+  {
+   "description": {
+    "de": "Schließe alle Ziele der Abenteurer-Gilde Monsterjagd ab.",
+    "en": "Complete all of the Adventure Guild Monster Slayer goals."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/2ac9a6d3c6a5592acfb29d2d22d6e1f919f14b41.jpg",
+   "key": "Achievement_KeeperOfTheMysticRings",
+   "name": {
+    "de": "Beschützer des Tals",
+    "en": "Protector Of The Valley"
+   },
+   "percent": 4.3
+  },
+  {
+   "description": {
+    "de": "Lese jedes Buch.",
+    "en": "Read every book."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/aa688a9a6e544d1f56bfc81870eeadbcbf77f6e3.jpg",
+   "key": "35",
+   "name": {
+    "de": "Belesen",
+    "en": "Well-Read"
+   },
+   "percent": 3.4
+  },
+  {
+   "description": {
+    "de": "Sieh einen Film.",
+    "en": "See a movie."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/c4e52cbeaed5567f23837b9555a26c68f6054a39.jpg",
+   "key": "36",
+   "name": {
+    "de": "Zwei Daumen hoch",
+    "en": "Two Thumbs Up"
+   },
+   "percent": 9.6
+  },
+  {
+   "description": {
+    "de": "Erreiche den 1. Platz im Sternentautal Jahrmarkt-Wettbewerb.",
+    "en": "Get 1st place in the Stardew Valley Fair competition."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/250df742936beb7f08190873ff251edcc7ce5cfd.jpg",
+   "key": "37",
+   "name": {
+    "de": "Blaues Band",
+    "en": "Blue Ribbon"
+   },
+   "percent": 18.5
+  },
+  {
+   "description": {
+    "de": "Erfreu den Gouverneur.",
+    "en": "Delight the Governor."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/544ed7db7ee3328cd09404329cb25926794e4830.jpg",
+   "key": "38",
+   "name": {
+    "de": "Eine unvergessliche Suppe",
+    "en": "An Unforgettable Soup"
+   },
+   "percent": 12.8
+  },
+  {
+   "description": {
+    "de": "Hilf deinen Waldnachbarn dabei, ihre Familie zu vergrößern.",
+    "en": "Help your forest neighbors grow their family."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/eb08a0d235fbc862f7d01fbe8b20bc88c42e4225.jpg",
+   "key": "39",
+   "name": {
+    "de": "Gute Nachbarn",
+    "en": "Good Neighbors"
+   },
+   "percent": 4.2
+  },
+  {
+   "description": {
+    "de": "Erreiche den Grund der \"gefährlichen\" Minen.",
+    "en": "Reach the bottom of the 'dangerous' mines."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/845aff6e771d5a67a82d110f4da22917608eed70.jpg",
+   "key": "41",
+   "name": {
+    "de": "Gefahr in der Tiefe",
+    "en": "Danger In The Deep"
+   },
+   "percent": 6.1
+  },
+  {
+   "description": {
+    "de": "Erhalte die mächtigste Waffe.",
+    "en": "Obtain the most powerful weapon."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/324468db74bf9d9c6eb566ea8575e9717cc56cf8.jpg",
+   "key": "42",
+   "name": {
+    "de": "Unendliche Macht",
+    "en": "Infinite Power"
+   },
+   "percent": 8.3
+  },
+  {
+   "description": {
+    "de": "Erreiche den Gipfel.",
+    "en": "Reach the summit."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/841758389f584b7abc1c83c3e6688ebecdd5ac22.jpg",
+   "key": "44",
+   "name": {
+    "de": "Perfektion",
+    "en": "Perfection"
+   },
+   "percent": 2.2
+  },
+  {
+   "description": {
+    "de": "Erreiche die Ingwerinsel.",
+    "en": "Reach Ginger Island."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/413150/c27841b3907d4cb18d12509f473964760a30b702.jpg",
+   "key": "40",
+   "name": {
+    "de": "Ein fernes Ufer",
+    "en": "A Distant Shore"
+   },
+   "percent": 17.3
+  }
+ ],
+ "id": "413150",
+ "platform": "steam"
+}

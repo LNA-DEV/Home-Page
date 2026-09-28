@@ -1,0 +1,63 @@
+{
+ "genres": [
+  {
+   "de": "Survival-Spiel",
+   "en": "survival game",
+   "sv": "överlevnadsspel"
+  },
+  {
+   "de": "Rogue-like",
+   "en": "roguelike",
+   "sv": "roguelike"
+  },
+  {
+   "de": "Actionspiel",
+   "en": "action game",
+   "sv": "actionspel"
+  },
+  {
+   "de": "Adventure",
+   "en": "adventure video game",
+   "sv": "äventyrsspel"
+  },
+  {
+   "de": "Action-Adventure",
+   "en": "action-adventure game",
+   "sv": "actionäventyrsspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  },
+  {
+   "de": "Koop-Modus",
+   "en": "co-op mode",
+   "sv": "flerspelarläge"
+  },
+  {
+   "de": "Player versus Player",
+   "en": "player versus player",
+   "sv": "player versus player"
+  },
+  {
+   "de": "Player versus Environment",
+   "en": "player versus environment",
+   "sv": "player versus environment"
+  },
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "released": "2021-06-05",
+ "steam": {
+  "en": "Muck is a survival-roguelike. Collect resources, find items & build a base to survive for as long as you can."
+ },
+ "steam_appid": 1625450,
+ "wikidata": "Q107303071"
+}

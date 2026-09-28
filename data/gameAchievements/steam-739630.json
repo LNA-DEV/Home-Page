@@ -1,0 +1,650 @@
+{
+ "achievements": [
+  {
+   "description": {
+    "en": "Reach Prestige III"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/4d83ccadeea7132b96366dd64dbb386202ab7f3a.jpg",
+   "key": "ACH_REACH_PRESTIGE_THREE",
+   "name": {
+    "en": "III"
+   },
+   "percent": 2.0
+  },
+  {
+   "description": {
+    "en": "Successfully identify your first Banshee and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/b61cf1bf211ae9493e556949d6b4b39f6410a4ec.jpg",
+   "key": "ACH_IDENTIFY_BANSHEE",
+   "name": {
+    "en": "Banshee Discovered"
+   },
+   "percent": 21.9
+  },
+  {
+   "description": {
+    "en": "Successfully identify your first Demon  and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/cabd4cc09cabf3c13b527f686d3d506615e458d2.jpg",
+   "key": "ACH_IDENTIFY_DEMON",
+   "name": {
+    "en": "Demon Discovered"
+   },
+   "percent": 18.4
+  },
+  {
+   "description": {
+    "en": "Successfully identify your first Deogen and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/7a5213b9988e9630c68f46d0b88c8d6850e400ff.jpg",
+   "key": "ACH_IDENTIFY_DEOGEN",
+   "name": {
+    "en": "Deogen Discovered"
+   },
+   "percent": 16.8
+  },
+  {
+   "description": {
+    "en": "Successfully identify your first Goryo and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/cc56589c066bc7ef7196a5aa1a725f464c3bbaed.jpg",
+   "key": "ACH_IDENTIFY_GORYO",
+   "name": {
+    "en": "Goryo Discovered"
+   },
+   "percent": 18.9
+  },
+  {
+   "description": {
+    "en": "Successfully identify your first Hantu and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/29e713557abd037d1d06559ccbd7c3ce7e32106b.jpg",
+   "key": "ACH_IDENTIFY_HANTU",
+   "name": {
+    "en": "Hantu Discovered"
+   },
+   "percent": 21.8
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Successfully identify your first Jinn and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/111b6e04164e79b12ce3c08aed0970eb44f1dbe6.jpg",
+   "key": "ACH_IDENTIFY_JINN",
+   "name": {
+    "en": "Jinn Discovered"
+   },
+   "percent": 20.0,
+   "unlocked": "2023-11-19T20:24:26+01:00"
+  },
+  {
+   "description": {
+    "en": "Successfully identify your first Mare and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/31d490c691d4bd99a4e78b34163f5f186109185c.jpg",
+   "key": "ACH_IDENTIFY_MARE",
+   "name": {
+    "en": "Mare Discovered"
+   },
+   "percent": 20.6
+  },
+  {
+   "description": {
+    "en": "Successfully identify your first Moroi and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/97ba2ccc3cc84404981394ada6d8c1d6f12a8bb5.jpg",
+   "key": "ACH_IDENTIFY_Moroi",
+   "name": {
+    "en": "Moroi Discovered"
+   },
+   "percent": 19.7
+  },
+  {
+   "description": {
+    "en": "Successfully identify your first Myling and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/169d7023c389aa2507e25a932fc9526a9c5e21a4.jpg",
+   "key": "ACH_IDENTIFY_MYLING",
+   "name": {
+    "en": "Myling Discovered"
+   },
+   "percent": 20.8
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Successfully identify your first Obake and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/61ac93deec410268a0c56d028d2a514ad9df659d.jpg",
+   "key": "ACH_IDENTIFY_Obake",
+   "name": {
+    "en": "Obake Discovered"
+   },
+   "percent": 21.5,
+   "unlocked": "2023-11-19T20:54:19+01:00"
+  },
+  {
+   "description": {
+    "en": "Successfully identify your first Oni and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/70ae7720e760a0488700103300c49578f35332ba.jpg",
+   "key": "ACH_IDENTIFY_ONI",
+   "name": {
+    "en": "Oni Discovered"
+   },
+   "percent": 21.6
+  },
+  {
+   "description": {
+    "en": "Successfully identify your first Onryo and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/e769ac90c013236cc9a42318112c3186c597148e.jpg",
+   "key": "ACH_IDENTIFY_ONRYO",
+   "name": {
+    "en": "Onryo Discovered"
+   },
+   "percent": 19.5
+  },
+  {
+   "description": {
+    "en": "Successfully identify your first Phantom and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/95c491517cb7037d296c5f3bb002f3cd79859dd1.jpg",
+   "key": "ACH_IDENTIFY_PHANTOM",
+   "name": {
+    "en": "Phantom Discovered"
+   },
+   "percent": 20.7
+  },
+  {
+   "description": {
+    "en": "Successfully identify your first Poltergeist and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/8f0eee4b8ee2dd7f82c521dcaa6cfba7da4b169b.jpg",
+   "key": "ACH_IDENTIFY_POLTERGEIST",
+   "name": {
+    "en": "Poltergeist Discovered"
+   },
+   "percent": 20.9
+  },
+  {
+   "description": {
+    "en": "Successfully identify your first Raiju and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/fa94d0e7a3ba509826754e962e603d7bd6f90f51.jpg",
+   "key": "ACH_IDENTIFY_RAIJU",
+   "name": {
+    "en": "Raiju Discovered"
+   },
+   "percent": 20.4
+  },
+  {
+   "description": {
+    "en": "Successfully identify your first Revenant and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/ee94ee6a058807c8bb712750f6a8b5ea053f5c01.jpg",
+   "key": "ACH_IDENTIFY_REVENANT",
+   "name": {
+    "en": "Revenant Discovered"
+   },
+   "percent": 22.3
+  },
+  {
+   "description": {
+    "en": "Successfully identify your first Shade and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/1757ad92e164428122ecaa6eeaff11e2d96d40a8.jpg",
+   "key": "ACH_IDENTIFY_SHADE",
+   "name": {
+    "en": "Shade Discovered"
+   },
+   "percent": 22.5
+  },
+  {
+   "description": {
+    "en": "Successfully identify your first Spirit and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/7198cdb15c3e3e4b7963e372635461ae1b8d0fa7.jpg",
+   "key": "ACH_IDENTIFY_SPIRIT",
+   "name": {
+    "en": "Spirit Discovered"
+   },
+   "percent": 21.6
+  },
+  {
+   "description": {
+    "en": "Successfully identify your first Thaye and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/74b25aa3b137110bbbb4d9f76a6520a048ef36f2.jpg",
+   "key": "ACH_IDENTIFY_THAYE",
+   "name": {
+    "en": "Thaye Discovered"
+   },
+   "percent": 21.1
+  },
+  {
+   "description": {
+    "en": "Successfully identify The Mimic for the first time"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/1954408b1556093d54fb752f2bae220b06af9753.jpg",
+   "key": "ACH_IDENTIFY_THE_MIMIC",
+   "name": {
+    "en": "The Mimic Discovered"
+   },
+   "percent": 17.2
+  },
+  {
+   "description": {
+    "en": "Successfully identify The Twins for the first time"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/236713a46691022704a749c5587084ed2e476b9f.jpg",
+   "key": "ACH_IDENTIFY_THE_TWINS",
+   "name": {
+    "en": "The Twins Discovered"
+   },
+   "percent": 20.5
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Successfully identify your first Wraith and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/f71d6b5fbc77a9cd18eacccf817141821a185e02.jpg",
+   "key": "ACH_IDENTIFY_WRAITH",
+   "name": {
+    "en": "Wraith Discovered"
+   },
+   "percent": 21.7,
+   "unlocked": "2023-11-19T20:10:57+01:00"
+  },
+  {
+   "description": {
+    "en": "Successfully identify your first Yokai and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/c68cb898a26bed8e947984cd48ea1a3dcb7a5939.jpg",
+   "key": "ACH_IDENTIFY_YOKAI",
+   "name": {
+    "en": "Yokai Discovered"
+   },
+   "percent": 20.1
+  },
+  {
+   "description": {
+    "en": "Successfully identify your first Yurei and survive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/716d3b1b084135c62756dc1a08a4f93bba4ec7d4.jpg",
+   "key": "ACH_IDENTIFY_YUREI",
+   "name": {
+    "en": "Yurei Discovered"
+   },
+   "percent": 21.2
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Reach Prestige I"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/e287eb3f199bee75d03623a08a7400d071338773.jpg",
+   "key": "ACH_REACH_PRESTIGE_ONE",
+   "name": {
+    "en": "I"
+   },
+   "percent": 29.9,
+   "unlocked": "2023-11-19T19:45:38+01:00"
+  },
+  {
+   "description": {
+    "en": "Reach Prestige II"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/ba27e33411be290690a150c13d055f089ac19c1e.jpg",
+   "key": "ACH_REACH_PRESTIGE_TWO",
+   "name": {
+    "en": "II"
+   },
+   "percent": 3.1
+  },
+  {
+   "description": {
+    "en": "Complete 100 contracts"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/a09916158949971ee43f51786ed1d2b670383616.jpg",
+   "key": "ACH_COMPLETE_100_CONTRACTS",
+   "name": {
+    "en": "Boss"
+   },
+   "percent": 9.7
+  },
+  {
+   "description": {
+    "en": "Complete 50 contracts"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/29b991089b39f5bbce4f1bae45bf8dfc09578915.jpg",
+   "key": "ACH_COMPLETE_50_CONTRACTS",
+   "name": {
+    "en": "Professional"
+   },
+   "percent": 15.6
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Complete 10 contracts"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/0d8c5c8ff15a3f1a4b0394413c7a843dc296ae04.jpg",
+   "key": "ACH_COMPLETE_10_CONTRACTS",
+   "name": {
+    "en": "Rookie"
+   },
+   "percent": 31.0,
+   "unlocked": "2025-10-10T21:50:09+02:00"
+  },
+  {
+   "description": {
+    "en": "Spend $1"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/6e407474aa59188d1176d03a414e9a06f4844927.jpg",
+   "key": "ACH_SPEND_ONE_DOLLAR",
+   "name": {
+    "en": "Chump Change"
+   },
+   "percent": 41.5
+  },
+  {
+   "description": {
+    "en": "Spend $10,000"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/d7bf840d381edf858e9259502cda46746d0c7307.jpg",
+   "key": "ACH_SPEND_TEN_THOUSAND_DOLLARS",
+   "name": {
+    "en": "Fat Stack"
+   },
+   "percent": 20.6
+  },
+  {
+   "description": {
+    "en": "Spend $50,000"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/18723e066c3829fb9d98d5bfbbccd3b081dd14e3.jpg",
+   "key": "ACH_SPEND_FIFTY_THOUSAND_DOLLARS",
+   "name": {
+    "en": "Cash Cow"
+   },
+   "percent": 13.5
+  },
+  {
+   "description": {
+    "en": "Spend $100,000"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/31ca8c9de0797442b84c343416f67a10b8391537.jpg",
+   "key": "ACH_SPEND_ONE_HUNDRED_THOUSAND_DOLLARS",
+   "name": {
+    "en": "Break The Bank"
+   },
+   "percent": 9.6
+  },
+  {
+   "description": {
+    "en": "Complete Training"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/d2428ab16a81fc728c4b195600ea545b142df736.jpg",
+   "key": "ACH_SPEND_COMPLETE_TRAINING",
+   "name": {
+    "en": "No More Training Wheels"
+   },
+   "percent": 6.5
+  },
+  {
+   "description": {
+    "en": "Complete 50 optional objectives"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/080a3fa2509ce041b437c0638b73af787c7fa760.jpg",
+   "key": "ACH_COMPLETE_FIFTY_OPTIONAL_OBJECTIVES",
+   "name": {
+    "en": "Extra Mile"
+   },
+   "percent": 18.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/739630/5a2b252e499be555410f5667a079b77919c75fc3.jpg",
+   "key": "ACH_WITNESS_POLTERGEIST_ABILITY",
+   "name": {
+    "en": "They're here"
+   },
+   "percent": 24.4
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/739630/ed2d08f4f65a4c66d9af48a925c1b2a0be04e3b7.jpg",
+   "key": "ACH_COMPLETE_YOUR_FIRST_CONTRACT",
+   "name": {
+    "en": "Work Experience"
+   },
+   "percent": 59.6,
+   "unlocked": "2023-11-19T20:11:24+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/739630/a80a631f45e77315345d5d5ae97e11460f243ff8.jpg",
+   "key": "ACH_GET_KILLED_BY_A_BANSHEE_IN_MULTIPLAYER",
+   "name": {
+    "en": "The Bait"
+   },
+   "percent": 18.3,
+   "unlocked": "2025-10-10T21:09:36+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/739630/576fbf4e5c6c1f2bc985ea000324cec9447e1b07.jpg",
+   "key": "ACH_DOOM_SLAYED",
+   "name": {
+    "en": "Doom Slayed"
+   },
+   "percent": 2.0
+  },
+  {
+   "description": {
+    "en": "Obtain the Bronze Apocalypse Trophy"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/53c3f35cededceeddebe49ebfa1d856f3fb0c97d.jpg",
+   "key": "ACH_BRONZE_HUNTER",
+   "name": {
+    "en": "Bronze Hunter"
+   },
+   "percent": 1.5
+  },
+  {
+   "description": {
+    "en": "Obtain the Silver Apocalypse Trophy"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/ff58ea63417f6d24b75481a665f9554dd6637406.jpg",
+   "key": "ACH_SILVER_HUNTER",
+   "name": {
+    "en": "Silver Hunter"
+   },
+   "percent": 1.3
+  },
+  {
+   "description": {
+    "en": "Obtain the Gold Apocalypse Trophy"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/81d9067ea4df89a4da3b10e9a7f07b585b324fda.jpg",
+   "key": "ACH_GOLD_HUNTER",
+   "name": {
+    "en": "Gold Hunter"
+   },
+   "percent": 1.3
+  },
+  {
+   "description": {
+    "en": "Unlock all tier one equipment"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/1c2dc558c9d2b07651283a5e88f41814c3cf7a79.jpg",
+   "key": "ACH_UNLOCK_TIER_ONE_EQUIPMENT",
+   "name": {
+    "en": "Bare Essentials"
+   },
+   "percent": 25.9
+  },
+  {
+   "description": {
+    "en": "Unlock all tier two equipment"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/f01981e1470ad4c017bf63f2b5041bf5c01bc9e5.jpg",
+   "key": "ACH_UNLOCK_TIER_TWO_EQUIPMENT",
+   "name": {
+    "en": "Tools of the Trade"
+   },
+   "percent": 8.5
+  },
+  {
+   "description": {
+    "en": "Unlock all tier three equipment"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/9282b51b3ffac2fbdcdf9c43e53d22097d380280.jpg",
+   "key": "ACH_UNLOCK_TIER_THREE_EQUIPMENT",
+   "name": {
+    "en": "Fully Loaded"
+   },
+   "percent": 5.1
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/739630/b8ee65cd65aaa641b46c4088a21eed493af5ca38.jpg",
+   "key": "ACH_COMPLETE_A_PERFECT_GAME",
+   "name": {
+    "en": "Flawless Execution"
+   },
+   "percent": 15.8
+  },
+  {
+   "description": {
+    "en": "Create a custom difficulty"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/fc3d23405ec0446647b8030bd17786be06b109a7.jpg",
+   "key": "ACH_CREATE_A_CUSTOM_DIFFICULTY",
+   "name": {
+    "en": "Director"
+   },
+   "percent": 11.9
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/739630/905525e54d5e41dfcb58458aaa7161fd7efd3ec0.jpg",
+   "key": "ACH_ESCAPE_A_REVENANT",
+   "name": {
+    "en": "Escape Artist"
+   },
+   "percent": 7.8
+  },
+  {
+   "description": {
+    "en": "Complete 30 daily tasks"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/46ff874110e49cf282cccceaf1d19d009ab4307a.jpg",
+   "key": "ACH_COMPLETE_30_DAILY_TASKS",
+   "name": {
+    "en": "Dedicated"
+   },
+   "percent": 14.1
+  },
+  {
+   "description": {
+    "en": "Complete 10 weekly tasks"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/7d3bac94dbdaa8e05388b43bb3f58bc0a1e12d90.jpg",
+   "key": "ACH_COMPLETE_10_WEEKLY_TASKS",
+   "name": {
+    "en": "Devoted"
+   },
+   "percent": 4.8
+  },
+  {
+   "description": {
+    "en": "Complete a weekly challenge mode"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/e368adf26cbdfba2193d0981a93b371539733a91.jpg",
+   "key": "ACH_COMPLETE_A_WEEKLY_CHALLENGE_MODE",
+   "name": {
+    "en": "Challenger Approaching"
+   },
+   "percent": 11.2
+  },
+  {
+   "description": {
+    "en": "Complete the weekly challenge mode 5 times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/e502eb4618fb68c6e0766279652262dd41c910ca.jpg",
+   "key": "ACH_COMPLETE_THE_WEEKLY_CHALLENGE_MODE_FIVE_TIMES",
+   "name": {
+    "en": "Rise to the Challenge"
+   },
+   "percent": 3.4
+  },
+  {
+   "description": {
+    "en": "Complete the weekly challenge mode 10 times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/739630/560b78571d50064a8ac92297687942b5290c25ce.jpg",
+   "key": "ACH_COMPLETE_THE_WEEKLY_CHALLENGE_MODE_TEN_TIMES",
+   "name": {
+    "en": "Taking All Challenges"
+   },
+   "percent": 1.7
+  }
+ ],
+ "id": "739630",
+ "platform": "steam"
+}

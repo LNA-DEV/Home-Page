@@ -28,9 +28,14 @@ entries with `platform: epic`. On every run it:
 
 Everything that is NOT `platform: epic` is left byte-for-byte untouched, so
 hand-added games and the Steam block (platform: steam) are safe. Human-owned
-fields on an Epic entry (rating, genres, tags, notes) are preserved across syncs:
-they are read back out of the old entry and re-emitted verbatim, keyed by
-`appName`. (Keep those human fields to a single line each.)
+fields on an Epic entry (extraMinutes, and the rating / genres / tags / notes
+that now belong in data/gamePages.yaml) are preserved across syncs: they are
+read back out of the old entry and re-emitted verbatim, keyed by `appName`.
+(Keep those human fields to a single line each.)
+
+Every entry carries a `slug:` — the game's page URL, frozen the first time the
+game is synced. A new Epic game whose slug a Steam or Switch copy already uses
+joins that game's page (scripts/gaming_common.py).
 
 Achievements are intentionally omitted — Epic closed the achievement-progress API
 in Jan 2025 and nothing usable is available (see the plan / AGENTS.md).
@@ -65,7 +70,10 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-import gaming_devices
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import gaming_common  # noqa: E402
+import gaming_devices  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 DEFAULT_DATA = REPO / "data" / "gaming.yaml"
@@ -419,10 +427,11 @@ def build_games(heroic_dir, user_json, covers_dir, *, snapshots, include_unplaye
 # --------------------------------------------------------------------------- #
 # Raw-text YAML rebuild (no YAML dependency)                                    #
 # --------------------------------------------------------------------------- #
-def build_epic_entry(game, human_lines):
+def build_epic_entry(game, human_lines, slug):
     """Render one `platform: epic` YAML entry from merged game metadata."""
     lines = [
         f"- title: {yaml_quote(game['title'])}",
+        f"  slug: {slug}",
         "  platform: epic",
         f"  appName: {yaml_quote(game['app_name'])}",
         f"  playtimeMinutes: {game['playtimeMinutes']}",
@@ -452,22 +461,29 @@ def rebuild(raw, games):
     preamble, chunks = split_entries(lines)
 
     non_epic, old_human, old_keys = [], {}, set()
+    old_slugs, taken = {}, set()
     for chunk in chunks:
         is_epic = (chunk_field(chunk, "platform") or "").lower() == "epic"
         key = chunk_field(chunk, "appName") if is_epic else None
         if is_epic and key:
             old_keys.add(key)
             old_human[key] = chunk_human_lines(chunk)
+            old_slugs[key] = chunk_field(chunk, "slug")
         else:
             # Non-epic, or a hand-added epic row without an appName — preserve it.
             non_epic.append(chunk)
+            if chunk_field(chunk, "slug"):
+                taken.add(chunk_field(chunk, "slug"))
 
     # Stable order (by app_name) => clean, idempotent diffs.
     games = sorted(games, key=lambda g: g["app_name"].lower())
     new_keys = {g["app_name"] for g in games}
 
+    slugs, new_slugs, joined = gaming_common.assign_slugs(
+        games, lambda g: g["app_name"], old_slugs, taken)
+
     epic_blocks = [
-        build_epic_entry(g, old_human.get(g["app_name"], []))
+        build_epic_entry(g, old_human.get(g["app_name"], []), slugs[g["app_name"]])
         for g in games
     ]
 
@@ -488,6 +504,8 @@ def rebuild(raw, games):
         "pruned": sorted(old_keys - new_keys),
         "updated": sorted(new_keys & old_keys),
         "manual": len(non_epic),
+        "new_slugs": new_slugs,
+        "joined": joined,
     }
     return out, summary
 
@@ -568,6 +586,7 @@ def main(argv=None):
           f"{summary['manual']} non-Epic/manual entries untouched.", file=sys.stderr)
     if summary["pruned"]:
         print("  pruned: " + ", ".join(summary["pruned"]), file=sys.stderr)
+    gaming_common.report_slugs(summary["new_slugs"], summary["joined"])
 
     if args.dry_run:
         print("(dry-run: nothing written)", file=sys.stderr)

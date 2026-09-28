@@ -1,0 +1,33 @@
+{
+ "developers": [
+  "Ubisoft Reflections"
+ ],
+ "genres": [
+  {
+   "de": "Adventure",
+   "en": "adventure video game",
+   "sv": "äventyrsspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "released": "2016-08-16",
+ "steam": {
+  "de": "BUD wieder zurück in einer akrobatischen Reise zum Mond. Nimm die Herausforderung an und nimm teil an dem Abenteuer auf diesem unbekannten Planeten, auf dem man geht, fliegt, springt und reitet.",
+  "en": "Leaping from mind-boggling heights, bouncing off Champolines, soaring inches from floating islands, BUD can do it all - that look of mild terror, that’s his daredevil face. Help the adorable little robot collect MOM’s scattered ship parts and return them to the moon."
+ },
+ "steam_appid": 426790,
+ "wikidata": "Q25209367",
+ "wikipedia": {
+  "en": {
+   "text": "Grow Up is an adventure platform video game developed by Ubisoft Reflections and published by Ubisoft. The game, which is the sequel to 2015's Grow Home, was released on 16 August 2016 for Microsoft Windows, PlayStation 4, and Xbox One. Atari acquired the IP rights to Grow Home and Grow Up from Ubisoft in 2025.",
+   "url": "https://en.wikipedia.org/wiki/Grow_Up_(video_game)"
+  }
+ }
+}

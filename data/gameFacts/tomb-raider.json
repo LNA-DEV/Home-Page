@@ -1,0 +1,52 @@
+{
+ "developers": [
+  "Crystal Dynamics",
+  "Eidos Montreal",
+  "Nixxes Software"
+ ],
+ "genres": [
+  {
+   "de": "Action-Adventure",
+   "en": "action-adventure game",
+   "sv": "actionäventyrsspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  },
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "publishers": [
+  "Square Enix",
+  "Eidos Interactive"
+ ],
+ "released": "2013-03-05",
+ "steam": {
+  "de": "Tomb Raider erzählt die aufregende Geschichte von Lara Croft und ihrem Aufstieg zur knallharten Überlebenskünstlerin.",
+  "en": "Tomb Raider explores the intense origin story of Lara Croft and her ascent from a young woman to a hardened survivor."
+ },
+ "steam_appid": 203160,
+ "wikidata": "Q1757876",
+ "wikipedia": {
+  "de": {
+   "text": "Tomb Raider ist ein Videospiel aus dem Action-Adventure-Genre. Es handelt sich um den insgesamt zehnten Teil der Tomb-Raider-Serie und um den vierten Beitrag des US-amerikanischen Studios Crystal Dynamics zu dieser Reihe. Der Titel wurde am 5.",
+   "url": "https://de.wikipedia.org/wiki/Tomb_Raider_(Computerspiel,_2013)"
+  },
+  "en": {
+   "text": "Tomb Raider is a 2013 action-adventure game developed by Crystal Dynamics and published by Square Enix. It is the tenth main entry and a reboot of the Tomb Raider series, acting as the first instalment in the Survivor trilogy that reconstructs the origins of Lara Croft. The game was released for PlayStation 3, Windows, and Xbox 360 on 5 March 2013.",
+   "url": "https://en.wikipedia.org/wiki/Tomb_Raider_(2013_video_game)"
+  },
+  "sv": {
+   "text": "Tomb Raider är ett actionäventyrsspel utvecklat av Crystal Dynamics och utgivet av Square Enix. Tomb Raider är den tionde delen i Tomb Raider-serien, och en reboot som lägger tonvikten på spelarfiguren Lara Crofts ursprung. Tomb Raider släpptes den 5 mars 2013 till Microsoft Windows, Playstation 3 och Xbox 360, den 23 januari 2014 till OS X och den 27 april 2016 till Linux.",
+   "url": "https://sv.wikipedia.org/wiki/Tomb_Raider_(datorspel_2013)"
+  }
+ }
+}
