@@ -55,6 +55,21 @@
          the dex and model adapters, whose slug is language-neutral, and silently
          wrong here, where the three languages have three different slugs. It left
          all 648 photos in all three languages with no hreflang cluster at all. */}}
+  {{- /* The photo's tags as `phototags` terms — one page per tag under
+         /gallery/tags/ (docs/concepts/tag-pages.md §4). Three things are
+         load-bearing:
+         - they go IN `params`. As a top-level key of .AddPage — where aliases,
+           build and translationKey go — Hugo ignores them without a word.
+         - the LOWERCASED .Tags, never the stored spelling: 12 tags are stored in
+           two spellings across photos (naturePhotography / naturephotography),
+           Hugo merges them into one term and titles it after whichever page it
+           meets first.
+         - none for an archive photo. A tag page is a slice of /gallery/general/,
+           and the archive is where retired shots go. Its tags stay on its page
+           as plain text. */ -}}
+  {{- $phototags := slice -}}
+  {{- if ne .Section "archive" -}}{{- $phototags = .Tags | default slice -}}{{- end -}}
+
   {{- $page := dict
         "path" .Slug
         "kind" "page"
@@ -68,6 +83,7 @@
           "photo_id" .Id
           "hideMeta" true
           "searchHidden" false
+          "phototags" $phototags
         )
       -}}
   {{- $.AddPage $page -}}

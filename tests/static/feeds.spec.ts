@@ -11,7 +11,7 @@ import path from "node:path";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import {
-  SITE_BASE, SITE_DIR, LANGS, xmlFiles, readSiteFile, servedPaths, sitePath,
+  SITE_BASE, SITE_DIR, LANGS, xmlFiles, readSiteFile, servedPaths, sitePath, isTaxonomyUrl,
 } from "../support/site";
 
 const run = promisify(execFile);
@@ -115,6 +115,37 @@ test.describe("sitemap", () => {
       }
     }
     expect(bad.slice(0, 10), `${bad.length} alias page(s) in the sitemap\n${bad.slice(0, 10).join("\n")}`).toEqual([]);
+  });
+
+  test("no listed page says noindex", () => {
+    /* head.html and sitemap.xml ask the same predicate (robots-indexable.html);
+       this is its promise stated from the output side. Submitting a page while
+       telling the crawler not to index it is the conflict Search Console reports
+       as "Submitted URL marked noindex". */
+    const bad: string[] = [];
+    for (const lang of LANGS) {
+      const xml = readSiteFile(path.join(lang, "sitemap.xml"));
+      for (const m of xml.matchAll(/<loc>([^<]+)<\/loc>/g)) {
+        const p = decodeURIComponent(new URL(m[1]).pathname);
+        const file = sitePath(p.replace(/^\//, "") + "index.html");
+        if (!fs.existsSync(file)) continue;
+        if (/name="robots"[^>]*content="[^"]*noindex/i.test(fs.readFileSync(file, "utf8"))) {
+          bad.push(`${lang}: ${m[1]}`);
+        }
+      }
+    }
+    expect(bad.slice(0, 20), `${bad.length} noindexed page(s) in the sitemap\n${bad.slice(0, 20).join("\n")}`).toEqual([]);
+  });
+
+  test("no taxonomy page is listed", () => {
+    const bad: string[] = [];
+    for (const lang of LANGS) {
+      const xml = readSiteFile(path.join(lang, "sitemap.xml"));
+      for (const m of xml.matchAll(/<loc>([^<]+)<\/loc>/g)) {
+        if (isTaxonomyUrl(decodeURIComponent(new URL(m[1]).pathname))) bad.push(`${lang}: ${m[1]}`);
+      }
+    }
+    expect(bad.slice(0, 20), `${bad.length} taxonomy page(s) in the sitemap\n${bad.slice(0, 20).join("\n")}`).toEqual([]);
   });
 });
 

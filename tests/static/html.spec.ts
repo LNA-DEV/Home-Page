@@ -10,7 +10,7 @@ import path from "node:path";
 import {
   SITE_BASE, LANGS,
   htmlFiles, readSiteFile, eachHtml, servedPaths, urlOf, jsonLdBlocks, pageKind,
-  hugoConfig, frontMatter, models, sitePath, gallery, dex,
+  hugoConfig, frontMatter, models, sitePath, gallery, dex, isTaxonomyUrl, metaRobots,
 } from "../support/site";
 import fs from "node:fs";
 
@@ -428,6 +428,41 @@ test.describe("robots", () => {
       if (!/name="robots"[^>]*content="[^"]*noindex/i.test(html)) bad.push(file);
     }
     expect(bad.slice(0, 20), `${bad.length} redirect page(s) without noindex\n${bad.slice(0, 20).join("\n")}`).toEqual([]);
+  });
+
+  test("every taxonomy and term page is noindex, follow", () => {
+    /* Post tags, categories and photo tags alike, pagination included: a
+       listing page is for the visitor already on the site. `follow`, because its
+       links lead to pages that ARE indexed (docs/concepts/tag-pages.md §2). */
+    const bad: string[] = [];
+    let seen = 0;
+    for (const { file, html } of eachHtml()) {
+      if (!isTaxonomyUrl(urlOf(file)) || /http-equiv="refresh"/.test(html)) continue;
+      seen++;
+      const robots = metaRobots(html);
+      if (robots !== "noindex,follow") bad.push(`${file}: "${robots}"`);
+    }
+    expect(seen, "no taxonomy pages found — did the prefixes move?").toBeGreaterThan(0);
+    expect(bad.slice(0, 20), `${bad.length} taxonomy page(s) not noindex, follow\n${bad.slice(0, 20).join("\n")}`).toEqual([]);
+  });
+
+  test("the pages meant to rank still say index, follow", () => {
+    /* The other side of the predicate: one of each kind of page the site wants
+       found, so a rule that noindexes too much fails here rather than in Search
+       Console a month later. */
+    const want = new Map<string, string>([["home", "en/index.html"]]);
+    for (const file of htmlFiles()) {
+      const kind = pageKind(file);
+      if (["post", "gallery-photo", "dex-species", "profile"].includes(kind) && !want.has(kind)) {
+        if (!/http-equiv="refresh"/.test(readSiteFile(file))) want.set(kind, file);
+      }
+    }
+    expect([...want.keys()].sort()).toEqual(["dex-species", "gallery-photo", "home", "post", "profile"]);
+    const bad = [...want.values()]
+      .map((f) => [f, metaRobots(readSiteFile(f))])
+      .filter(([, r]) => r !== "index,follow")
+      .map(([f, r]) => `${f}: "${r}"`);
+    expect(bad, bad.join("\n")).toEqual([]);
   });
 });
 

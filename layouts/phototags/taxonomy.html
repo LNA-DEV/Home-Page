@@ -1,0 +1,23 @@
+{{- define "main" }}
+{{- /*
+  Every photo tag: /<lang>/gallery/tags/. Alphabetical, each with its count.
+
+  Reached from the breadcrumb of every tag page and linked from nowhere else —
+  not from the gallery home, for the reason the models section has no card
+  there: an unindexed list of hashtags does not earn the gallery's front door.
+  See docs/concepts/tag-pages.md §5.
+*/ -}}
+<header class="page-header gallery-page-header">
+  {{- partial "gallery-breadcrumb.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}
+  <div class="post-description">{{ . }}</div>
+  {{- end }}
+</header>
+
+<ul class="phototags-index">
+  {{- range .Data.Terms.Alphabetical }}
+  <li><a href="{{ .Page.RelPermalink }}" rel="tag">#{{ lower .Page.Title }}<span class="phototags-index__count">{{ .Count }}</span></a></li>
+  {{- end }}
+</ul>
+{{- end }}

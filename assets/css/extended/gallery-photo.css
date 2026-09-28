@@ -243,6 +243,25 @@
   color: var(--secondary);
 }
 
+/* A tag with a /gallery/tags/ page is a link. The padding moves from the pill
+   onto the link, so the whole pill is the click target rather than the word. A
+   tag without a page — every tag of an archive photo — stays the plain pill. */
+.photo-tags li:has(> a) {
+  padding: 0;
+}
+
+.photo-tags li a {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: inherit;
+  color: var(--primary);
+}
+
+.photo-tags li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
 .photo-appears-in li a {
   font-size: 14px;
   padding: 4px 12px;

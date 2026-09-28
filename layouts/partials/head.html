@@ -1,8 +1,15 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-{{- if hugo.IsProduction | or (eq site.Params.env "production") | and (ne .Params.robotsNoIndex true) | and (ne .Params.Theme "gallery-page-hidden") }}
+{{- /* Which pages are indexable is decided in robots-indexable.html, which
+       sitemap.xml asks too. A taxonomy or term page is the one noindexed kind
+       that still says `follow`: its links lead to the pages that ARE indexed
+       (docs/concepts/tag-pages.md §2). */ -}}
+{{- $production := hugo.IsProduction | or (eq site.Params.env "production") -}}
+{{- if and $production (partial "robots-indexable.html" .) }}
 <meta name="robots" content="index, follow">
+{{- else if and $production (in (slice "taxonomy" "term") .Kind) }}
+<meta name="robots" content="noindex, follow">
 {{- else }}
 <meta name="robots" content="noindex, nofollow">
 {{- end }}

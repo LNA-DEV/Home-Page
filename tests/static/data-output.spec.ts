@@ -383,7 +383,9 @@ test.describe("photo pages carry the data file's tags and no filename", () => {
           if (l && !want.includes(l)) want.push(l);
         }
         const block = /<div class="photo-tags">[\s\S]*?<\/ul>/.exec(html)?.[0] ?? "";
-        const have = [...block.matchAll(/<li>([^<]*)<\/li>/g)].map((m) => unescapeHtml(m[1]));
+        /* The text of each item, whether it is a link to its /gallery/tags/ page
+           or plain (an archive photo's) — tags.spec.ts checks which is which. */
+        const have = [...block.matchAll(/<li>([\s\S]*?)<\/li>/g)].map((m) => unescapeHtml(m[1].replace(/<[^>]*>/g, "")));
         if (JSON.stringify(have) !== JSON.stringify(want)) bad.push(`${e.src}: ${JSON.stringify(have)} != ${JSON.stringify(want)}`);
       }
       expect(bad, bad.slice(0, 10).join("\n")).toEqual([]);

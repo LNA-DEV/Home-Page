@@ -194,10 +194,35 @@ export function jsonLdBlocks(html: string): string[] {
   return [...html.matchAll(re)].map((m) => m[1]);
 }
 
+/** The URL prefix of every taxonomy's pages, language segment excluded: the
+ *  plural name ("/tags/"), or its `permalinks.taxonomy` override
+ *  ("/gallery/tags/"). Hugo's two defaults when hugo.yaml declares none. */
+export const taxonomyPrefixes = memo<string[]>(() => {
+  const cfg = hugoConfig() ?? {};
+  const plurals = Object.values(cfg.taxonomies ?? { tag: "tags", category: "categories" }) as string[];
+  return plurals.map((pl) => {
+    const own = cfg.permalinks?.taxonomy?.[pl];
+    return own ? `/${String(own).replace(/^\/|\/$/g, "")}/` : `/${pl}/`;
+  });
+});
+
+/** Is this URL path ("/en/tags/privacy/") a taxonomy or term page? */
+export function isTaxonomyUrl(u: string): boolean {
+  const rest = u.replace(/^\/[a-z]{2}(?=\/)/, "");
+  return taxonomyPrefixes().some((p) => rest.startsWith(p));
+}
+
+/** The content of the page's meta robots, whitespace removed ("noindex,follow"). */
+export function metaRobots(html: string): string {
+  return (html.match(/<meta name="robots" content="([^"]*)"/i)?.[1] ?? "").replace(/\s/g, "");
+}
+
 /** The page's theme param, as the body/article markup exposes it — falls back to
  *  a path heuristic, because not every theme writes a marker. */
 export function pageKind(file: string): string {
   const u = urlOf(file);
+  /* Before the /gallery/ rules: photo tags live at /gallery/tags/. */
+  if (isTaxonomyUrl(u)) return "taxonomy";
   if (/\/gallery\/photo\//.test(u)) return "gallery-photo";
   if (/\/gallery\/dex\/[^/]+\//.test(u)) return "dex-species";
   if (/\/gallery\/models\/[^/]+\//.test(u)) return "model";

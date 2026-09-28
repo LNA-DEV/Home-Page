@@ -44,6 +44,12 @@ python3 scripts/sync-gallery.py
 Left for a human: the title (all three languages), the alt text, the tags,
 `category` (the stub says `others`), `section`, `project`, `portfolio`, `species`.
 
+Every tag of a non-archive photo becomes a page at `/<lang>/gallery/tags/<tag>/`
+(noindexed, lowercased, no threshold — `docs/concepts/tag-pages.md`), so a new
+tag is a new page. Never tag a person by name: the build stops on a tag that
+spells a model's slug or name — credit people with `model:` (see *Adding a
+model*).
+
 ### `scripts/gallery-embed-metadata.py` — the photo leaves for the web
 
 The post-build pass that writes the metadata into the files the site serves and
@@ -817,7 +823,7 @@ if the request was to take the images down, it is the photo store and
 
 ### What the build will refuse
 
-All four are hard errors naming the file and the value, not warnings — unlike a
+All five are hard errors naming the file and the value, not warnings — unlike a
 `species:` that matches no dex entry, which only warns. A person losing a credit
 or a visibility setting silently is not an acceptable failure mode, and the slugs
 are a small closed set, so a miss is always a typo:
@@ -833,6 +839,11 @@ are a small closed set, so a miss is always a typo:
   records claiming one would make a page silently overwrite the other.
 - **A `cover:` that is not a gallery photo id** — *data/models.yaml: model
   "jane-doe" has cover "…", which is not a gallery photo id*.
+- **A tag that spells a model's slug or name** — *data/gallery.yaml: photo
+  "DSC_2340.jpg" has the tag "janedoe", which names model "jane-doe"*. Checked
+  for every record, `hidden` included: a tag would put the name on the photo
+  page, into the file's keywords and onto a `/gallery/tags/` page of its own,
+  around the record's `visibility:`. Remove the tag; `model:` is the credit.
 
 Do **not** run `./deploy.sh` — deployment is a separate step the user authorizes
 explicitly.

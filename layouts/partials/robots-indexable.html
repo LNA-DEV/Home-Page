@@ -1,0 +1,30 @@
+{{- /*
+  robots-indexable.html — does this page belong in a search index?
+
+  The one predicate behind BOTH the meta robots in head.html and the page list in
+  sitemap.xml, so the two cannot disagree. They used to be kept in step by hand:
+  a `robotsNoIndex` page stayed out of the sitemap only because it also carried
+  `build: {list: never}`.
+
+  No for:
+    - every taxonomy and term page — post tags, categories, photo tags, in all
+      three languages. A listing page is for the visitor already on the site; it
+      has no text of its own and competes with the pages it lists. See
+      docs/concepts/tag-pages.md §2.
+    - `robotsNoIndex: true` (an unlisted album, an unlisted model page)
+    - theme `gallery-page-hidden`
+
+  Deliberately environment-blind: head.html adds its own production check, and
+  the sitemap is only read in production anyway.
+
+  Returns a bool.
+*/ -}}
+{{- $ok := true -}}
+{{- if in (slice "taxonomy" "term") .Kind -}}
+  {{- $ok = false -}}
+{{- else if eq .Params.robotsNoIndex true -}}
+  {{- $ok = false -}}
+{{- else if eq .Params.Theme "gallery-page-hidden" -}}
+  {{- $ok = false -}}
+{{- end -}}
+{{- return $ok -}}

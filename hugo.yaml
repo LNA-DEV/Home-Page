@@ -21,6 +21,25 @@ buildFuture: false
 buildExpired: true
 timeout: 600s
 copyright: "🄯 [various licenses](/licensing/)"
+
+# Declaring `taxonomies` REPLACES Hugo's default set, so the two the posts use are
+# restated. `phototags` is the gallery's own: the tags of every non-archive photo,
+# set as a page param by the photo content adapter (gallery-photo-pages.html) and
+# kept apart from the posts' curated `tags` — docs/concepts/tag-pages.md §3. Every
+# page of every taxonomy is noindex, follow and out of the sitemap
+# (layouts/partials/robots-indexable.html).
+taxonomies:
+  tag: tags
+  category: categories
+  phototag: phototags
+# Photo tags live under the gallery. Only the URL moves: the pages' logical
+# `.Path` stays /phototags/…, which is why head.html's `/gallery` check does not
+# see them.
+permalinks:
+  taxonomy:
+    phototags: /gallery/tags/
+  term:
+    phototags: /gallery/tags/:slug/
 # paginate: 3
 
 markup:

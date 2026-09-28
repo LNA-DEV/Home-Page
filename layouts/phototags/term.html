@@ -1,0 +1,72 @@
+{{- define "main" }}
+{{- /*
+  One photo tag: /<lang>/gallery/tags/<tag>/. See docs/concepts/tag-pages.md §5.
+
+  An index of photo PAGES, not a second gallery: thumbnail, title, link — the
+  related-strip tile from gallery-photo.html, reusing the 600px variant every
+  photo already has, so this page adds no image processing. No lightbox, no like
+  counters, no captions: the page's job is to route to the photo pages, which
+  carry all of that and are the pages meant to be found. It is noindex, follow
+  (robots-indexable.html). A gallery.html tile is ~3.1 KB against ~540 B here,
+  and there are ~6,800 tiles per language across all tag pages.
+
+  The tag is printed as it was passed — lowercased, like the photo page's tag
+  list. `.Title` is Hugo's capitalised form of that same string, so lowering it
+  gives the term back exactly.
+*/ -}}
+{{- $c := partialCached "gallery-collected.html" . site.Language.Lang -}}
+{{- $tag := lower .Title -}}
+
+{{- /* Portfolio first, newest first within each band — the model strip's order.
+       .Pages is the photo pages carrying this term; each one's photo is an O(1)
+       lookup in the collected gallery, and the tile links the page itself. */ -}}
+{{- $portfolio := slice -}}
+{{- $rest := slice -}}
+{{- range .Pages -}}
+  {{- $url := .RelPermalink -}}
+  {{- with index $c.byId .Params.photo_id -}}
+    {{- $item := dict "url" $url "photo" . "Date" .Date -}}
+    {{- if .Portfolio -}}
+      {{- $portfolio = $portfolio | append $item -}}
+    {{- else -}}
+      {{- $rest = $rest | append $item -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $items := slice -}}
+{{- with $portfolio }}{{ $items = $items | append (sort . "Date" "desc") }}{{ end -}}
+{{- with $rest }}{{ $items = $items | append (sort . "Date" "desc") }}{{ end -}}
+
+<header class="page-header gallery-page-header">
+  {{- /* By hand rather than gallery-breadcrumb.html: a term's logical parent is
+         the taxonomy page, not the gallery section, so .Parent would skip the
+         Gallery crumb. */}}
+  <nav class="gallery-breadcrumb" aria-label="Breadcrumb">
+    {{- with site.GetPage "/gallery" }}
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <span>/</span>
+    {{- end }}
+    {{- with .Parent }}
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <span>/</span>
+    {{- end }}
+    <span>#{{ $tag }}</span>
+  </nav>
+  <h1>#{{ $tag }}</h1>
+  <div class="post-description">{{ i18n "photoCount" (len $items) }}</div>
+</header>
+
+<section class="photo-related photo-tag-grid">
+  <ul>
+    {{- range $i, $it := $items }}
+    {{- $t := $it.photo.image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
+    <li>
+      <a href="{{ $it.url }}">
+        <img {{ if ge $i 8 }}loading="lazy" {{ end }}src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}" alt="{{ $it.photo.Alt }}" />
+        <span>{{ $it.photo.Title }}</span>
+      </a>
+    </li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}

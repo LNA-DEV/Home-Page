@@ -83,7 +83,8 @@
   make one page silently overwrite the other. Also hard-fails on a `model:` slug
   that names no record in data/models.yaml, and on a record without a valid
   `visibility:` — see the block above the range for why a person is the one join
-  that must not degrade to a warning.
+  that must not degrade to a warning — and on a tag that spells a model's slug or
+  name, which would route around that visibility setting.
 
   Usage:
     {{ $metaAll := partialCached "gallery-meta.html" . }}
@@ -154,6 +155,7 @@
        photos themselves still need a decision. `visibility: hidden` is the
        tombstone. See data/models.yaml. */ -}}
 {{- $modelSlugs := dict -}}
+{{- $modelTagForms := dict -}}
 {{- $visibilities := slice "public" "unlisted" "hidden" -}}
 {{- range $record := (hugo.Data.models.models | default slice) -}}
   {{- /* printf, not the raw value: YAML resolves an unquoted `slug: 007` or
@@ -182,6 +184,17 @@
       {{- errorf "data/models.yaml: model %q has no `name:` — the display name lives here and nowhere else (only a `hidden` record may omit it)" $mslug -}}
     {{- end -}}
     {{- $modelSlugs = merge $modelSlugs (dict $mslug true) -}}
+
+    {{- /* The spellings a tag naming this person would take — the slug and the
+           name, with hyphens, spaces or neither — for the guard in the tag loop
+           below. Every record, whatever its visibility: a hidden tombstone still
+           has its slug, and that is the one form a tag could leak it in. */ -}}
+    {{- $forms := slice $mslug (replace $mslug "-" "") (replace $mslug "-" " ") -}}
+    {{- with $record.name -}}
+      {{- $n := lower (printf "%v" .) -}}
+      {{- $forms = $forms | append $n (replace $n " " "") (replace $n " " "-") -}}
+    {{- end -}}
+    {{- range $forms }}{{ $modelTagForms = merge $modelTagForms (dict . $mslug) }}{{ end -}}
   {{- end -}}
 {{- end -}}
 
@@ -324,6 +337,15 @@
   {{- range $rawTags -}}
     {{- $t := trim (printf "%v" .) " " -}}
     {{- $l := lower $t -}}
+    {{- /* A tag must not name a model. People are credited through `model:`,
+           whose visibility decides whether their name appears at all; a tag is
+           an uncontrolled free-text channel into the same output — the photo
+           page, the embedded keywords, and a /gallery/tags/<tag>/ page with the
+           name as its URL and H1. A tripwire for the obvious spellings, not a
+           guarantee (docs/concepts/tag-pages.md §6). */ -}}
+    {{- with index $modelTagForms $l -}}
+      {{- errorf "data/gallery.yaml: photo %q has the tag %q, which names model %q — credit a person with `model:`, never with a tag" $entryRaw.src $t . -}}
+    {{- end -}}
     {{- if and $t (not (in $tagsLower $l)) -}}
       {{- $tags = $tags | append $t -}}
       {{- $tagsLower = $tagsLower | append $l -}}

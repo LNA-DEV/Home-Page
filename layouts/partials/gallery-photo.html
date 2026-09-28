@@ -145,7 +145,17 @@
   <p class="photo-description" itemprop="description">{{ . }}</p>
   {{- end }}
 
-  {{ partial "photo-meta.html" (dict "photo" $photo "models" $models "download" $dl "source" .Permalink "permalink" (printf "%s%s/" $base $photo.Id)) }}
+  {{- /* tag → its /gallery/tags/ page, from Hugo's own term list for this page:
+         a link exists exactly when its page does, and an archive photo, which
+         carries no terms, keeps its tags as plain text. The terms were passed
+         lowercased (gallery-photo-pages.html); .Title is Hugo's capitalised form
+         of that string, so lowering it gives the tag back. */ -}}
+  {{- $tagLinks := dict -}}
+  {{- range .GetTerms "phototags" -}}
+    {{- $tagLinks = merge $tagLinks (dict (lower .Title) .RelPermalink) -}}
+  {{- end -}}
+
+  {{ partial "photo-meta.html" (dict "photo" $photo "models" $models "download" $dl "tagLinks" $tagLinks "source" .Permalink "permalink" (printf "%s%s/" $base $photo.Id)) }}
 
   {{- $projects := slice -}}
   {{- $metaAll := partialCached "gallery-meta.html" . -}}

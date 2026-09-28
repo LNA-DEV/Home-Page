@@ -19,12 +19,16 @@
                 same credit line and the same size ladder the lightbox dialog
                 shows, as static markup that needs no JavaScript at all. See
                 docs/concepts/gallery-download-dialog.md §7.
+    tagLinks  — tag → URL of its /gallery/tags/ page, optional. A tag with an
+                entry becomes a rel="tag" link, the rest stay plain text — which
+                is every tag of an archive photo (docs/concepts/tag-pages.md §5).
     source    — this photo page's own canonical URL, optional; the credit line's
                 source link
     permalink — the uuid permalink, optional; the copy button hangs off it
 */ -}}
 {{- $photo := .photo -}}
 {{- $models := .models | default slice -}}
+{{- $tagLinks := .tagLinks | default dict -}}
 {{- $permalink := .permalink | default "" -}}
 {{- $dl := .download -}}
 {{- $source := .source | default "" -}}
@@ -217,6 +221,6 @@
 {{- with $photo.Tags }}
 <div class="photo-tags">
   <h2>{{ i18n "photo_tags" }}</h2>
-  <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+  <ul>{{ range $t := . }}<li>{{ with index $tagLinks $t }}<a href="{{ . }}" rel="tag">{{ $t }}</a>{{ else }}{{ $t }}{{ end }}</li>{{ end }}</ul>
 </div>
 {{- end }}
