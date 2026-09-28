@@ -5,18 +5,24 @@ data/gaming.yaml is a flat list of games written by MULTIPLE sources (see the
 header comment in that file). This script owns exactly one slice of it: the
 entries with `platform: epic`. On every run it:
 
-  * Reads the Epic library + local playtime that Heroic already cached on disk
-    (no login — Heroic did the auth). Two files under the Heroic config dir:
-      - store_cache/legendary_library.json  -> owned games (title, cover, link)
-      - store/timestamp.json                -> playtime for games launched via
-                                               Heroic (minutes), keyed by app_name
+  * Reads the Epic library Heroic already cached on disk (no login — Heroic did
+    the auth): store_cache/legendary_library.json -> owned games (title, cover,
+    link).
+  * Reads the Heroic-launched playtime of EVERY device from the snapshots in
+    sources/gaming-devices/ (scripts/gaming_devices.py), after refreshing this
+    machine's own snapshot from its store/timestamp.json. Heroic never uploads
+    Epic playtime, so a session played on another machine exists only in that
+    machine's snapshot. A run writes only this machine's snapshot, never
+    another device's — any machine can run the sync without overwriting the
+    others (docs/concepts/gaming-devices.md).
   * Optionally reaches Epic's cloud for the *historical* playtime recorded by the
     official Epic launcher (the part Heroic never sees). It reuses the OAuth
     refresh token Heroic stored (legendaryConfig/legendary/user.json), refreshes
     it, and reads library-service's per-account playtime endpoint.
-  * MERGES the two: a play session is launched by exactly one client, so the two
-    sources are disjoint and the true total is `heroic + cloud` (matched on the
-    Epic app_name). It then rebuilds the `platform: epic` entries (played games
+  * MERGES them: a play session is launched by exactly one client on exactly one
+    machine, so the sources are disjoint and the true total is
+    `sum over devices + cloud` (matched on the Epic app_name); lastPlayed is the
+    newest any device recorded. It then rebuilds the `platform: epic` entries (played games
     added, others pruned) and writes them as the LAST block in the file, below a
     marker it emits.
 
@@ -39,6 +45,10 @@ ago), open Heroic once to re-auth, then rerun — or pass --no-cloud to use only
 the Heroic-local data. A manual token can be supplied via EPIC_REFRESH_TOKEN /
 EPIC_ACCOUNT_ID (env or a gitignored .env file).
 
+Device: GAMING_DEVICE in the same .env names this machine's snapshot (or pass
+--device). A machine whose Heroic has played games but no device id stops the
+run. The script writes files only; git stays manual.
+
 Usage:
     python3 scripts/sync-epic.py --no-cloud --dry-run   # Heroic-local only, preview
     python3 scripts/sync-epic.py --dry-run              # + Epic cloud history, preview
@@ -54,6 +64,8 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
+
+import gaming_devices
 
 REPO = Path(__file__).resolve().parent.parent
 DEFAULT_DATA = REPO / "data" / "gaming.yaml"
@@ -217,35 +229,9 @@ def resolve_heroic_config(explicit):
 # --------------------------------------------------------------------------- #
 # Collector 1: Heroic-local (no auth)                                          #
 # --------------------------------------------------------------------------- #
-def collect_heroic(heroic_dir):
-    """Return {app_name: {title, cover_url, store_url, minutes, lastPlayed}} for
-    the owned Epic library, overlaid with Heroic-launched playtime."""
-    games = {}
-    lib_path = heroic_dir / "store_cache" / "legendary_library.json"
-    library = json.loads(lib_path.read_text(encoding="utf-8")).get("library", [])
-    for g in library:
-        app = g.get("app_name")
-        if not app:
-            continue
-        games[app] = {
-            "app_name": app,
-            "title": g.get("title") or app,
-            "cover_url": g.get("art_square") or g.get("art_cover"),
-            "store_url": g.get("store_url") or "",
-            "minutes": 0,
-            "lastPlayed": None,
-        }
-    # Overlay Heroic-launched playtime. timestamp.json is keyed by app id across
-    # ALL runners (Epic/GOG/Amazon); the `app in games` guard keeps only Epic.
-    ts_path = heroic_dir / "store" / "timestamp.json"
-    if ts_path.exists():
-        for app, info in json.loads(ts_path.read_text(encoding="utf-8")).items():
-            if app in games:
-                games[app]["minutes"] += int(info.get("totalPlayed") or 0)  # already minutes
-                last = (info.get("lastPlayed") or "")[:10]
-                if last:
-                    games[app]["lastPlayed"] = last
-    return games
+# The owned library comes from this machine's Heroic
+# (gaming_devices.read_library); the Heroic-launched playtime of every device
+# from the snapshots (gaming_devices.collect). See build_games / main.
 
 
 # --------------------------------------------------------------------------- #
@@ -371,37 +357,54 @@ def download_cover(url, title, covers_dir):
 # --------------------------------------------------------------------------- #
 # Merge + fetch orchestration                                                  #
 # --------------------------------------------------------------------------- #
-def merge_games(heroic, cloud):
-    """Merge Heroic-local games with cloud playtime (both keyed by app_name).
-    The two sources are disjoint, so playtime sums. Cloud-only records with no
-    library entry (delisted) are dropped — we can't render them without a title."""
+def merge_games(library, devices, cloud):
+    """Merge the owned library, every device's Heroic playtime and the cloud
+    playtime, all keyed by app_name. `devices` is gaming_devices.per_game():
+    {app: [(device, record), ...]}.
+
+    A session is launched by exactly one client on exactly one machine, and
+    Heroic never uploads Epic playtime, so every source is disjoint and the
+    minutes sum; lastPlayed is the newest any device recorded (the cloud carries
+    none). A game only in a snapshot — bought and played on another machine, not
+    yet in this machine's library cache — takes its title/cover/link from the
+    first snapshot that has it. Cloud-only records with neither (delisted) are
+    dropped — we can't render them without a title."""
     merged = []
-    for app, g in heroic.items():
+    for app in sorted(set(library) | set(devices)):
+        recs = [rec for _device, rec in devices.get(app, [])]
+        meta = library.get(app) or recs[0]
         merged.append({
             "app_name": app,
-            "title": g["title"],
-            "playtimeMinutes": g["minutes"] + cloud.get(app, 0),
-            "lastPlayed": g["lastPlayed"],  # cloud carries no lastPlayed
-            "cover_url": g["cover_url"],
-            "store_url": g["store_url"],
+            "title": meta["title"],
+            "playtimeMinutes": sum(rec["minutes"] for rec in recs) + cloud.get(app, 0),
+            "lastPlayed": gaming_devices.newest(rec.get("lastPlayed") for rec in recs),
+            "cover_url": meta.get("cover"),
+            "store_url": meta.get("link") or "",
         })
-    orphan = sorted(set(cloud) - set(heroic))
+    orphan = sorted(set(cloud) - set(library) - set(devices))
     if orphan:
         print(f"  note: {len(orphan)} cloud playtime record(s) have no library entry "
               "(delisted/removed) — skipped.", file=sys.stderr)
     return merged
 
 
-def build_games(heroic_dir, user_json, covers_dir, *, include_unplayed, do_cloud,
-                do_covers, refresh_token=None, account_id=None):
-    heroic = collect_heroic(heroic_dir)
-    print(f"Heroic library: {len(heroic)} owned Epic games.", file=sys.stderr)
+def build_games(heroic_dir, user_json, covers_dir, *, snapshots, include_unplayed,
+                do_cloud, do_covers, refresh_token=None, account_id=None):
+    library = gaming_devices.read_library(heroic_dir, "epic")
+    print(f"Heroic library: {len(library)} owned Epic games.", file=sys.stderr)
+    devices = gaming_devices.per_game(snapshots, "epic")
+    print(f"Device snapshots: {len(devices)} Epic games with Heroic playtime "
+          f"across {len(snapshots)} device(s).", file=sys.stderr)
+    for app, names in gaming_devices.copied_config_suspects(snapshots, "epic"):
+        print(f"  warning: {app} has the same minutes and lastPlayed on "
+              f"{' and '.join(names)} — a copied Heroic config? Epic sums devices, so "
+              "those minutes would count twice.", file=sys.stderr)
     cloud = {}
     if do_cloud:
         cloud = collect_cloud(user_json, refresh_token=refresh_token, account_id=account_id)
         print(f"Epic cloud: {len(cloud)} games with recorded playtime.", file=sys.stderr)
 
-    merged = merge_games(heroic, cloud)
+    merged = merge_games(library, devices, cloud)
     games = []
     for g in merged:
         if g["playtimeMinutes"] <= 0 and not include_unplayed:
@@ -509,6 +512,10 @@ def main(argv=None):
     parser.add_argument("--env-file", type=Path, action="append", default=None,
                         help="Load EPIC_REFRESH_TOKEN / EPIC_ACCOUNT_ID from this file "
                              "(repeatable). Default: .env in the repo root and the cwd.")
+    parser.add_argument("--device", default=None,
+                        help="This machine's device id (default: GAMING_DEVICE from env/.env).")
+    parser.add_argument("--devices-dir", type=Path, default=gaming_devices.DEFAULT_DEVICES_DIR,
+                        help="Where the device snapshots live (default: sources/gaming-devices/).")
     parser.add_argument("--data", type=Path, default=DEFAULT_DATA)
     parser.add_argument("--covers", type=Path, default=DEFAULT_COVERS)
     args = parser.parse_args(argv)
@@ -530,8 +537,21 @@ def main(argv=None):
 
     user_json = args.user_json or (heroic_dir / "legendaryConfig" / "legendary" / "user.json")
 
+    # This machine's snapshot first — before any network call and before the data
+    # file is touched, so a missing device id or a shrinking snapshot stops here.
+    try:
+        device = gaming_devices.resolve_device(args.device)
+        snapshots, changed = gaming_devices.collect(
+            heroic_dir, args.devices_dir, device, write=not args.dry_run)
+    except gaming_devices.DeviceError as exc:
+        print(f"! {exc}", file=sys.stderr)
+        return 1
+    print(gaming_devices.describe(snapshots, device, changed, dry_run=args.dry_run),
+          file=sys.stderr)
+
     games = build_games(
         heroic_dir, user_json, args.covers,
+        snapshots=snapshots,
         include_unplayed=args.include_unplayed,
         do_cloud=not args.no_cloud,
         do_covers=not args.no_covers,

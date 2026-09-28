@@ -8,14 +8,17 @@ Epic, has no Steam-style public API, so it reads what the **Heroic** launcher ha
 already cached on disk and (optionally) reaches GOG's cloud with the OAuth token
 Heroic stored. On every run it:
 
-  * Reads the GOG library + local playtime Heroic already cached (no login):
-      - store_cache/gog_library.json  -> owned games (title, cover), keyed by
-                                         app_name (the numeric GOG product id)
-      - store/timestamp.json          -> playtime for games launched via Heroic
-                                         (minutes), keyed by app id (cross-runner)
-      - gog_store/saveTimestamps.json -> GOG cloud-save sync time, used as a
-                                         lastPlayed FALLBACK for games that have
-                                         playtime but an empty timestamp.json date
+  * Reads the GOG library Heroic already cached (no login):
+    store_cache/gog_library.json -> owned games (title, cover), keyed by
+    app_name (the numeric GOG product id).
+  * Reads the Heroic-local playtime and lastPlayed of EVERY device from the
+    snapshots in sources/gaming-devices/ (scripts/gaming_devices.py), after
+    refreshing this machine's own snapshot from its store/timestamp.json — with
+    the GOG cloud-save sync time (gog_store/saveTimestamps.json) as the
+    lastPlayed fallback for games whose timestamp.json date is empty. A run
+    writes only this machine's snapshot, never another device's — any machine
+    can run the sync without overwriting the others
+    (docs/concepts/gaming-devices.md).
   * Optionally reaches GOG's cloud (unless --no-cloud) by reusing the GOG refresh
     token Heroic stored (gog_store/auth.json, under the Galaxy client id):
       - gameplay.gog.com .../sessions      -> `time_sum`, the authoritative total
@@ -31,12 +34,16 @@ human fields to a single line each.)
 
 THREE deliberate differences from sync-epic.py:
 
-  1. Playtime is PREFER-CLOUD, NOT summed. Epic's two sources are disjoint so it
+  1. Playtime is PREFER-CLOUD, NOT summed. Epic's sources are disjoint so it
      adds them. GOG is the opposite: Heroic *pushes* its sessions up to GOG, so the
-     cloud `time_sum` already includes Heroic-launched time. We take
-     max(cloud, local) — summing would double-count.
-  2. Achievements ARE set (GOG exposes them; Epic's API is closed). Expect this
-     sparse until games run through GOG's achievement service (Comet).
+     cloud `time_sum` already includes Heroic-launched time — and Heroic also
+     pulls that total back down into a device's timestamp.json. We take
+     max(cloud, max over devices) — summing, across sources or across devices,
+     would double-count. With --no-cloud and more than one device, the result is
+     therefore a lower bound.
+  2. Achievements ARE set (GOG exposes them; Epic's API is closed), for every
+     game played anywhere — on any device or per the cloud's own time_sum.
+     Expect this sparse until games run through GOG's achievement service (Comet).
   3. The cloud is a PER-GAME fan-out (one request per owned game for playtime,
      one per played game for achievements) — GOG has no aggregate endpoint like
      Epic's. --no-cloud stays the fast, no-network path.
@@ -51,6 +58,10 @@ once to re-auth, then rerun — or pass --no-cloud to use only the Heroic-local 
 A manual token can be supplied via GOG_REFRESH_TOKEN / GOG_USER_ID (env or a
 gitignored .env file).
 
+Device: GAMING_DEVICE in the same .env names this machine's snapshot (or pass
+--device). A machine whose Heroic has played games but no device id stops the
+run. The script writes files only; git stays manual.
+
 Usage:
     python3 scripts/sync-gog.py --no-cloud --dry-run   # Heroic-local only, preview
     python3 scripts/sync-gog.py --dry-run              # + GOG cloud playtime/achv, preview
@@ -62,11 +73,12 @@ import json
 import os
 import re
 import sys
-import time
 import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
+
+import gaming_devices
 
 REPO = Path(__file__).resolve().parent.parent
 DEFAULT_DATA = REPO / "data" / "gaming.yaml"
@@ -101,9 +113,6 @@ GOG_MARKER = "# ==== GOG: auto-managed by scripts/sync-gog.py (regenerated each 
 
 # Human-owned fields on a GOG entry that must survive a resync.
 HUMAN_FIELDS = ("rating", "genres", "tags", "notes", "extraMinutes")
-
-# GOG library rows that are not real games (redistributables / DLC roots).
-SKIP_APP_NAMES = {"gog-redist"}
 
 
 # --------------------------------------------------------------------------- #
@@ -226,68 +235,10 @@ def resolve_heroic_config(explicit):
 # --------------------------------------------------------------------------- #
 # Collector 1: Heroic-local (no auth)                                          #
 # --------------------------------------------------------------------------- #
-def _save_date(raw):
-    """Convert a GOG cloud-save unix timestamp (seconds, possibly fractional, as a
-    str or number) to a 'YYYY-MM-DD' UTC date string, or None if unparseable. UTC
-    to match the sliced 'Z' timestamps in store/timestamp.json."""
-    try:
-        ts = float(raw)
-    except (TypeError, ValueError):
-        return None
-    if ts <= 0:
-        return None
-    return time.strftime("%Y-%m-%d", time.gmtime(ts))
-
-
-def collect_heroic(heroic_dir):
-    """Return {app_name: {title, cover_url, minutes, lastPlayed}} for the owned GOG
-    library (real games only), overlaid with Heroic-launched playtime."""
-    games = {}
-    lib_path = heroic_dir / "store_cache" / "gog_library.json"
-    library = json.loads(lib_path.read_text(encoding="utf-8")).get("games", [])
-    for g in library:
-        app = g.get("app_name")
-        if not app or app in SKIP_APP_NAMES:
-            continue
-        if (g.get("install") or {}).get("is_dlc"):
-            continue
-        games[app] = {
-            "app_name": app,
-            "title": g.get("title") or app,
-            "cover_url": g.get("art_square") or g.get("art_cover"),
-            "minutes": 0,
-            "lastPlayed": None,
-        }
-    # Overlay Heroic-launched playtime. timestamp.json is keyed by app id across
-    # ALL runners (Epic/GOG/Amazon); the `app in games` guard keeps only GOG.
-    ts_path = heroic_dir / "store" / "timestamp.json"
-    if ts_path.exists():
-        for app, info in json.loads(ts_path.read_text(encoding="utf-8")).items():
-            if app in games:
-                games[app]["minutes"] = int(info.get("totalPlayed") or 0)  # already minutes
-                last = (info.get("lastPlayed") or "")[:10]
-                if last:
-                    games[app]["lastPlayed"] = last
-    # lastPlayed fallback. Heroic often records playtime for a game but leaves
-    # `lastPlayed` empty (typically when the total was reconciled from GOG's cloud,
-    # which carries no date — and GOG's playtime API exposes no dates either). Use
-    # the GOG cloud-save sync time as a proxy: it flushes on exit, so it lands
-    # within seconds of the real last-played time. Only fills games still missing a
-    # date, and only reaches games that use GOG cloud saves.
-    saves_path = heroic_dir / "gog_store" / "saveTimestamps.json"
-    if saves_path.exists():
-        try:
-            saves = json.loads(saves_path.read_text(encoding="utf-8"))
-        except (OSError, ValueError):
-            saves = {}
-        for app, info in saves.items():
-            g = games.get(app)
-            if not g or g["lastPlayed"]:
-                continue
-            date = _save_date((info or {}).get("saves"))
-            if date:
-                g["lastPlayed"] = date
-    return games
+# The owned library (real games only — no DLC, no redistributables) comes from
+# this machine's Heroic (gaming_devices.read_library); the Heroic-local playtime
+# and lastPlayed of every device, including the cloud-save date fallback, from
+# the snapshots (gaming_devices.collect). See build_games / main.
 
 
 # --------------------------------------------------------------------------- #
@@ -328,12 +279,15 @@ def _gameplay_get(url, access_token):
         raise
 
 
-def collect_cloud(auth_json_path, app_names, *, want_achievements,
+def collect_cloud(auth_json_path, app_names, *, want_achievements, played=frozenset(),
                   refresh_token=None, user_id=None):
     """Return {app_name: {"minutes": int, "ach_unlocked": int|None,
     "ach_total": int|None}} from GOG's cloud, or {} on auth failure (so the run
     degrades to Heroic-local). Playtime is fetched for every app; achievements
-    only for apps flagged in `want_achievements` (played games)."""
+    (when `want_achievements`) for every game played anywhere — on some device
+    (`played`) or per the cloud's own time_sum, fetched just before, which is
+    what reaches a game played only through GOG Galaxy or on a machine whose
+    snapshot is not here yet."""
     if not refresh_token:
         try:
             refresh_token, user_id = read_gog_token(auth_json_path)
@@ -378,7 +332,7 @@ def collect_cloud(auth_json_path, app_names, *, want_achievements,
         except Exception as exc:  # noqa: BLE001 - per-game degrade
             print(f"  cloud: playtime fetch failed for {app} ({exc}); using local.",
                   file=sys.stderr)
-        if want_achievements and app in want_achievements:
+        if want_achievements and (app in played or rec["minutes"] > 0):
             try:
                 ach = _gameplay_get(GOG_ACHIEVEMENTS_URL.format(app=app, uid=user_id),
                                     access_token)
@@ -440,42 +394,66 @@ def download_cover(url, title, covers_dir):
 # --------------------------------------------------------------------------- #
 # Merge + fetch orchestration                                                  #
 # --------------------------------------------------------------------------- #
-def build_games(heroic_dir, auth_json, covers_dir, *, include_unplayed, do_cloud,
-                do_achievements, do_covers, refresh_token=None, user_id=None):
-    heroic = collect_heroic(heroic_dir)
-    print(f"Heroic library: {len(heroic)} owned GOG games (real, non-DLC).", file=sys.stderr)
+def merge_games(library, devices, cloud):
+    """Merge the owned library, every device's Heroic-local numbers and the cloud,
+    all keyed by app_name. `devices` is gaming_devices.per_game():
+    {app: [(device, record), ...]}.
+
+    PREFER-CLOUD, never summed: the cloud time_sum already contains every Heroic
+    session, and a device's local total may itself be that cloud total (Heroic
+    pulls it down), so playtime is max(cloud, max over devices). lastPlayed is
+    the newest any device recorded (the cloud carries none). A game only in a
+    snapshot takes its title/cover from the first snapshot that has it."""
+    merged = []
+    for app in sorted(set(library) | set(devices)):
+        recs = [rec for _device, rec in devices.get(app, [])]
+        meta = library.get(app) or recs[0]
+        c = cloud.get(app, {})
+        local = max((rec["minutes"] for rec in recs), default=0)
+        merged.append({
+            "app_name": app,
+            "title": meta["title"],
+            "playtimeMinutes": max(int(c.get("minutes") or 0), local),
+            "lastPlayed": gaming_devices.newest(rec.get("lastPlayed") for rec in recs),
+            "ach_unlocked": c.get("ach_unlocked"),
+            "ach_total": c.get("ach_total"),
+            "cover_url": meta.get("cover"),
+        })
+    return merged
+
+
+def build_games(heroic_dir, auth_json, covers_dir, *, snapshots, include_unplayed,
+                do_cloud, do_achievements, do_covers, refresh_token=None, user_id=None):
+    library = gaming_devices.read_library(heroic_dir, "gog")
+    print(f"Heroic library: {len(library)} owned GOG games (real, non-DLC).", file=sys.stderr)
+    devices = gaming_devices.per_game(snapshots, "gog")
+    print(f"Device snapshots: {len(devices)} GOG games with Heroic-local data "
+          f"across {len(snapshots)} device(s).", file=sys.stderr)
 
     cloud = {}
     if do_cloud:
-        # Achievements only for games we already know are played (local playtime),
-        # to keep the per-game fan-out reasonable.
-        played_local = {a for a, g in heroic.items() if g["minutes"] > 0}
+        played = {app for app, recs in devices.items()
+                  if any(rec["minutes"] > 0 for _device, rec in recs)}
         cloud = collect_cloud(
-            auth_json, set(heroic),
-            want_achievements=played_local if do_achievements else set(),
+            auth_json, set(library) | set(devices),
+            want_achievements=do_achievements, played=played,
             refresh_token=refresh_token, user_id=user_id,
         )
         n_pt = sum(1 for r in cloud.values() if r["minutes"] > 0)
         n_ach = sum(1 for r in cloud.values() if r["ach_total"])
         print(f"GOG cloud: {n_pt} games with playtime, {n_ach} with achievements.",
               file=sys.stderr)
+    elif len(snapshots) > 1:
+        print("  note: --no-cloud with more than one device: GOG playtime is the highest "
+              "local total, a lower bound — the cloud is what adds the devices up.",
+              file=sys.stderr)
 
     games = []
-    for app, g in heroic.items():
-        c = cloud.get(app, {})
-        # PREFER-CLOUD, not summed: cloud time_sum already contains Heroic sessions.
-        minutes = max(int(c.get("minutes") or 0), g["minutes"])
-        if minutes <= 0 and not include_unplayed:
+    for game in merge_games(library, devices, cloud):
+        if game["playtimeMinutes"] <= 0 and not include_unplayed:
             continue
-        game = {
-            "app_name": app,
-            "title": g["title"],
-            "playtimeMinutes": minutes,
-            "lastPlayed": g["lastPlayed"],  # cloud carries no lastPlayed
-            "ach_unlocked": c.get("ach_unlocked"),
-            "ach_total": c.get("ach_total"),
-        }
-        game["cover"] = download_cover(g["cover_url"], g["title"], covers_dir) if do_covers else None
+        game["cover"] = (download_cover(game["cover_url"], game["title"], covers_dir)
+                         if do_covers else None)
         games.append(game)
 
     print(f"Kept {len(games)} GOG games "
@@ -582,6 +560,10 @@ def main(argv=None):
     parser.add_argument("--env-file", type=Path, action="append", default=None,
                         help="Load GOG_REFRESH_TOKEN / GOG_USER_ID from this file "
                              "(repeatable). Default: .env in the repo root and the cwd.")
+    parser.add_argument("--device", default=None,
+                        help="This machine's device id (default: GAMING_DEVICE from env/.env).")
+    parser.add_argument("--devices-dir", type=Path, default=gaming_devices.DEFAULT_DEVICES_DIR,
+                        help="Where the device snapshots live (default: sources/gaming-devices/).")
     parser.add_argument("--data", type=Path, default=DEFAULT_DATA)
     parser.add_argument("--covers", type=Path, default=DEFAULT_COVERS)
     args = parser.parse_args(argv)
@@ -603,8 +585,21 @@ def main(argv=None):
 
     auth_json = args.auth_json or (heroic_dir / "gog_store" / "auth.json")
 
+    # This machine's snapshot first — before any network call and before the data
+    # file is touched, so a missing device id or a shrinking snapshot stops here.
+    try:
+        device = gaming_devices.resolve_device(args.device)
+        snapshots, changed = gaming_devices.collect(
+            heroic_dir, args.devices_dir, device, write=not args.dry_run)
+    except gaming_devices.DeviceError as exc:
+        print(f"! {exc}", file=sys.stderr)
+        return 1
+    print(gaming_devices.describe(snapshots, device, changed, dry_run=args.dry_run),
+          file=sys.stderr)
+
     games = build_games(
         heroic_dir, auth_json, args.covers,
+        snapshots=snapshots,
         include_unplayed=args.include_unplayed,
         do_cloud=not args.no_cloud,
         do_achievements=not args.no_achievements,
