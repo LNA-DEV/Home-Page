@@ -1,0 +1,762 @@
+{
+ "achievements": [
+  {
+   "description": {
+    "en": "Collect 2400 Essence and hear the Seer's final words"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/7a0c8efbdb58e04438086ed3215740bb2db9753afa709826409dac26c972e73e_gac_60.png",
+   "key": "ASCENSION",
+   "name": {
+    "en": "Ascension"
+   },
+   "percent": 13.6
+  },
+  {
+   "description": {
+    "en": "Collect 600 Essence"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/5b1341a6c442fb48d725a7cec015698a1117c69d0e8db255ed63cbd0e2e5b90d_gac_60.png",
+   "key": "ATTUNEMENT",
+   "name": {
+    "en": "Attunement"
+   },
+   "percent": 31.8
+  },
+  {
+   "description": {
+    "en": "Collect 1800 Essence and awaken the Dream Nail"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/6a1b384416db9d96ebfe46c8c22d0b7873c4a18378d78fd0302ccb50f462e6a0_gac_60.png",
+   "key": "AWAKENING",
+   "name": {
+    "en": "Awakening"
+   },
+   "percent": 23.0
+  },
+  {
+   "description": {
+    "en": "Banish the Grimm Troupe from Hallownest"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/0056a272d80a142c91f48d91c60ac51120d7dcdde727ad46c878e6603d10e2c1_gac_60.png",
+   "key": "BANISHMENT",
+   "name": {
+    "en": "Banishment"
+   },
+   "percent": 5.6
+  },
+  {
+   "description": {
+    "en": "Destroy Herrah the Beast"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/35f39740833efd52a86a465ad7f95bcb822c022e6315df0146534688fcbbef02_gac_60.png",
+   "key": "BEAST",
+   "name": {
+    "en": "Beast"
+   },
+   "percent": 32.5
+  },
+  {
+   "description": {
+    "en": "Acquire all Charms and receive Salubra's blessing"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/107ad3ff551b7a2d4238153b3a24f363c7c6e78aa6df81ba4e4159369d5084e2_gac_60.png",
+   "key": "BLESSED",
+   "name": {
+    "en": "Blessed"
+   },
+   "percent": 14.1
+  },
+  {
+   "description": {
+    "en": "Defeat the Broken Vessel"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/8a5fddddff9ad4efec7ba8760e3111f054e08ca923b957fd9768ed34ad1dcbf4_gac_60.png",
+   "key": "BROKEN_VESSEL",
+   "name": {
+    "en": "Release"
+   },
+   "percent": 35.0
+  },
+  {
+   "description": {
+    "en": "Acquire your first Charm"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/9ea205bd16ddea353a969154f25dbce3fbfea3931620cb76633517945ee3c180_gac_60.png",
+   "key": "CHARMED",
+   "name": {
+    "en": "Charmed"
+   },
+   "percent": 63.5
+  },
+  {
+   "description": {
+    "en": "Defeat the Collector"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/1194076b95cbb3d11ffea9c2d9d9de69cc4734be36974e52460a2359857ba3cc_gac_60.png",
+   "key": "COLLECTOR",
+   "name": {
+    "en": "Obsession"
+   },
+   "percent": 24.5
+  },
+  {
+   "description": {
+    "en": "Complete the Trial of the Warrior"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/7ee8368f665e2f5cc3e131bc973379a38dcbe4d7fd7c210396215619e0502da2_gac_60.png",
+   "key": "COLOSSEUM_1",
+   "name": {
+    "en": "Warrior"
+   },
+   "percent": 30.9
+  },
+  {
+   "description": {
+    "en": "Complete the Trial of the Conqueror"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/aa60341919b8eadd45c0e0f9504a30381da422c23c4d67ff0d033da5b3d9e316_gac_60.png",
+   "key": "COLOSSEUM_2",
+   "name": {
+    "en": "Conqueror"
+   },
+   "percent": 27.3
+  },
+  {
+   "description": {
+    "en": "Complete the Trial of the Fool"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/2f37c7954e4eb72e3b39a4a09d264ef944da7d39b24b0070b0833e8484ac2709_gac_60.png",
+   "key": "COLOSSEUM_3",
+   "name": {
+    "en": "Fool"
+   },
+   "percent": 12.6
+  },
+  {
+   "description": {
+    "en": "Achieve 100% game completion and finish the game"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/f0b7763457e2755a2a8f4019d49f9a49a4b6f601b24a387bdf10c00401e6a8a2_gac_60.png",
+   "key": "COMPLETION",
+   "name": {
+    "en": "Completion"
+   },
+   "percent": 11.8
+  },
+  {
+   "description": {
+    "en": "Achieve 112% game completion and finish the game."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/00533b488fa77c333dc27153a76fad3b4c3e00d310a6f3222c1a897a53d072a3_gac_60.png",
+   "key": "COMPLETIONGG",
+   "name": {
+    "en": "Pure Completion"
+   },
+   "percent": 2.3
+  },
+  {
+   "description": {
+    "en": "Defeat the Lost Kin"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/b52c689c10e97e44dff0bbfd982444d0592f7b5055a2c3ae4e5965a5de192b4c_gac_60.png",
+   "key": "DREAM_BROKEN_VESSEL",
+   "name": {
+    "en": "Peace"
+   },
+   "percent": 22.5
+  },
+  {
+   "description": {
+    "en": "Defeat the Failed Champion"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/a8270c0fa51bcabd917cf65e5e40660960fdd42ce727e0fb17a3e3684a288836_gac_60.png",
+   "key": "DREAM_FK",
+   "name": {
+    "en": "Strength"
+   },
+   "percent": 18.0
+  },
+  {
+   "description": {
+    "en": "Defeat the Soul Tyrant"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/ba280e660607da8ad51f79f0f1cf2335706a61762758392819e2cd4779dee43b_gac_60.png",
+   "key": "DREAM_SOUL_MASTER_DEFEAT",
+   "name": {
+    "en": "Mortality"
+   },
+   "percent": 15.4
+  },
+  {
+   "description": {
+    "en": "Defeat the Dung Defender"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/b2ca86a8735e08ff68d9386b1007280a2162c9f4a741979b77ebde1ed21faee3_gac_60.png",
+   "key": "DUNG_DEFENDER",
+   "name": {
+    "en": "Honour"
+   },
+   "percent": 35.9
+  },
+  {
+   "description": {
+    "en": "Acquire half of Hallownest's Charms"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/044379bfb11aafa31b0fa4b297c0fc15a8bb7cf50ba56dca8bc86ecde7e0218b_gac_60.png",
+   "key": "ENCHANTED",
+   "name": {
+    "en": "Enchanted"
+   },
+   "percent": 34.1
+  },
+  {
+   "description": {
+    "en": "Ascend the Pantheon of Hallownest and take your place at its peak"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/1e0fada8a31d33609bdd07c92a2a6d34bba6ef2bc6abfe919bb70a9aec0a0bdb_gac_60.png",
+   "key": "ENDINGD",
+   "name": {
+    "en": "Embrace the Void"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "en": "Defeat the Hollow Knight and become the Vessel"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/ccc8eacd6145f7dee34a82e3a7de2775490a5d7fd16b1e6b3cce2c4280b5039d_gac_60.png",
+   "key": "ENDING_A",
+   "name": {
+    "en": "The Hollow Knight"
+   },
+   "percent": 16.9
+  },
+  {
+   "description": {
+    "en": "Defeat the Hollow Knight with Hornet by your side"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/1ed2e3dc2a896c2454ede144125fa447d46cfc83820fcd05714003602fcb924c_gac_60.png",
+   "key": "ENDING_B",
+   "name": {
+    "en": "Sealed Siblings"
+   },
+   "percent": 10.9
+  },
+  {
+   "description": {
+    "en": "Defeat the Radiance and consume the light"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/9890eecd78013427333328369daca7c0f648acd3bbfda031a3a554d337c167eb_gac_60.png",
+   "key": "ENDING_C",
+   "name": {
+    "en": "Dream No More"
+   },
+   "percent": 11.3
+  },
+  {
+   "description": {
+    "en": "Defeat the False Knight"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/5c3ccae7518ddc6e6f682abe7909033f99724277e58de5aee0899cd0e4826f72_gac_60.png",
+   "key": "FK_DEFEAT",
+   "name": {
+    "en": "Falsehood"
+   },
+   "percent": 54.0
+  },
+  {
+   "description": {
+    "en": "Defeat Grey Prince Zote"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/73b069bb62b2a51531d54ddd4d40d2c59b545165d4bf447d54dafdb4705cc002_gac_60.png",
+   "key": "GREY_PRINCE",
+   "name": {
+    "en": "Dark Romance"
+   },
+   "percent": 16.4
+  },
+  {
+   "description": {
+    "en": "Defeat Troupe Leader Grimm"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/500e65b642c335d93f1c5713d6f8ecc0a020ea9e09bf2c53f2d20b67ff5327a6_gac_60.png",
+   "key": "GRIMM",
+   "name": {
+    "en": "Grand Performance"
+   },
+   "percent": 18.8
+  },
+  {
+   "description": {
+    "en": "Rescue half of the imprisoned grubs"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/f0241f1e8c1be17dcdf11a32be99b0385fd68e1d4435d3003b69c0867ec40ad9_gac_60.png",
+   "key": "GRUBFRIEND",
+   "name": {
+    "en": "Grubfriend"
+   },
+   "percent": 32.8
+  },
+  {
+   "description": {
+    "en": "Defeat Hornet in Greenpath"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/00b516ef27958363530919858f5a066acca1824246f6e8c28b43eae1af47de58_gac_60.png",
+   "key": "HORNET_1",
+   "name": {
+    "en": "Test of Resolve"
+   },
+   "percent": 52.2
+  },
+  {
+   "description": {
+    "en": "Defeat Hornet in Kingdom's Edge"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/293b229eda50597eb26a193d821533168151d1eb9be715ed64514cb01d896d92_gac_60.png",
+   "key": "HORNET_2",
+   "name": {
+    "en": "Proof of Resolve"
+   },
+   "percent": 31.6
+  },
+  {
+   "description": {
+    "en": "Record all of Hallownest's creatures in the Hunter's Journal"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/266ea983764de9aec82bad6fe68ad9d3b6dc830914d8268799389eb0b33986c0_gac_60.png",
+   "key": "HUNTER_1",
+   "name": {
+    "en": "Keen Hunter"
+   },
+   "percent": 4.7
+  },
+  {
+   "description": {
+    "en": "Receive the Hunter's Mark"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/10471000507152da3951d17cf054344d30ffba382c2cd32b0f788d3e79e0cba5_gac_60.png",
+   "key": "HUNTER_2",
+   "name": {
+    "en": "True Hunter"
+   },
+   "percent": 4.2
+  },
+  {
+   "description": {
+    "en": "Defeat the Mantis Lords"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/010a691f9e4e40268cf06871d3cee3218579c8d48f0d4fc276cbf2af1afd97e9_gac_60.png",
+   "key": "MANTIS_LORDS",
+   "name": {
+    "en": "Respect"
+   },
+   "percent": 37.7
+  },
+  {
+   "description": {
+    "en": "Acquire a map of each area"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/ac92bef70eaabde5c93bcdd365903929a61ade4a3ff706c9f08e557858b8d075_gac_60.png",
+   "key": "MAP",
+   "name": {
+    "en": "Cartographer"
+   },
+   "percent": 30.3
+  },
+  {
+   "description": {
+    "en": "Acquire all Mask Shards"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/1c4030d4437570f452e4c79058ee662293f5c36f973aa215da972ad999d6e843_gac_60.png",
+   "key": "MASKED",
+   "name": {
+    "en": "Masked"
+   },
+   "percent": 14.0
+  },
+  {
+   "description": {
+    "en": "Rescue all of the imprisoned grubs"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/ea00fd2d3b914a6119ff9f07266509544965c82296d6d91df3c949101e05e4b7_gac_60.png",
+   "key": "METAMORPHOSIS",
+   "name": {
+    "en": "Metamorphosis"
+   },
+   "percent": 20.6
+  },
+  {
+   "description": {
+    "en": "Bring peace to the Grey Mourner"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/b0660c35127b9a830208603faceedad3723ca976ebf843bd060096cd318c1258_gac_60.png",
+   "key": "MOURNER",
+   "name": {
+    "en": "Solace"
+   },
+   "percent": 13.8
+  },
+  {
+   "description": {
+    "en": "Aid the Herald in moving on"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/bbc760b75118f9bb099fcc6bba8d78d828afb73fe942617e5168399f0b689484_gac_60.png",
+   "key": "MR_MUSHROOM",
+   "name": {
+    "en": "Passing of the Age"
+   },
+   "percent": 3.5
+  },
+  {
+   "description": {
+    "en": "Slay the Nailsmith with the Pure Nail"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/3440bf5a5ba732eb436681c7d313b43367e5afe5443bebf584c70a2274730d33_gac_60.png",
+   "key": "NAILSMITH_KILL",
+   "name": {
+    "en": "Purity"
+   },
+   "percent": 14.1
+  },
+  {
+   "description": {
+    "en": "Allow the Nailsmith to find a new calling"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/fad76e616f5884868994b704a5b53c54ff8e37d86d7b9e6f36ce53455eff9fd7_gac_60.png",
+   "key": "NAILSMITH_SPARE",
+   "name": {
+    "en": "Happy Couple"
+   },
+   "percent": 6.3
+  },
+  {
+   "description": {
+    "en": "Leave Zote to die"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/4ab35fdafe7ee5ea19698cbd2e63faa2eafaec9d2c54981f6a43d81899f687a3_gac_60.png",
+   "key": "NEGLECT",
+   "name": {
+    "en": "Neglect"
+   },
+   "percent": 2.9
+  },
+  {
+   "description": {
+    "en": "Defeat the Nightmare King and complete the Ritual"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/6a863b3805ad3f41fc2b5ff3ef4c2858287747818be902611d29cb7872af7ec5_gac_60.png",
+   "key": "NIGHTMARE_GRIMM",
+   "name": {
+    "en": "Ritual"
+   },
+   "percent": 8.4
+  },
+  {
+   "description": {
+    "en": "Complete the Pantheon of the Master"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/711c75daa7368c70b40707e3a0d5146378bacc8bfc399169d8657bd0971babbc_gac_60.png",
+   "key": "PANTHEON1",
+   "name": {
+    "en": "Brotherhood"
+   },
+   "percent": 8.8
+  },
+  {
+   "description": {
+    "en": "Complete the Pantheon of the Painter"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/45de5cca687181ac3a4494441ea205354ff8cae90ec9b181b954d7a5760c2133_gac_60.png",
+   "key": "PANTHEON2",
+   "name": {
+    "en": "Inspiration"
+   },
+   "percent": 8.0
+  },
+  {
+   "description": {
+    "en": "Complete the Pantheon of the Sage"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/f4b5d60e007b8532ec2cd4d07b23c62fd696f223d612daf2fc8da63f02e16f84_gac_60.png",
+   "key": "PANTHEON3",
+   "name": {
+    "en": "Focus"
+   },
+   "percent": 5.1
+  },
+  {
+   "description": {
+    "en": "Complete the Pantheon of the Knight"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/56e14cc5f2f3c5514c7d37969cf3e6a94d028b84d544a0aa09b06d72e6539fcc_gac_60.png",
+   "key": "PANTHEON4",
+   "name": {
+    "en": "Soul & Shade"
+   },
+   "percent": 3.6
+  },
+  {
+   "description": {
+    "en": "Acquire 4 Mask Shards"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/b65b21732073d4afa47392766b3b39f39d253e9e470d5684ea326ef7fd4297b0_gac_60.png",
+   "key": "PROTECTED",
+   "name": {
+    "en": "Protected"
+   },
+   "percent": 41.1
+  },
+  {
+   "description": {
+    "en": "Spend a final moment with Quirrel"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/467cb75de7fce219eb80921d76c0093b46a3ac26855ac2c7c18aff5dd8963301_gac_60.png",
+   "key": "QUIRREL_EPILOGUE",
+   "name": {
+    "en": "Witness"
+   },
+   "percent": 17.6
+  },
+  {
+   "description": {
+    "en": "Acquire 3 Vessel Fragments"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/72d959f86d07280f6a60e7443292ea4958820f18bbaabd9bd6dc2ba3008e2010_gac_60.png",
+   "key": "SOULFUL",
+   "name": {
+    "en": "Soulful"
+   },
+   "percent": 37.2
+  },
+  {
+   "description": {
+    "en": "Defeat the Soul Master"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/fe362774bf7ccc4949048f08ab0f2c66c61887d852d1db93ffdd918be2da9a75_gac_60.png",
+   "key": "SOUL_MASTER_DEFEAT",
+   "name": {
+    "en": "Illumination"
+   },
+   "percent": 39.5
+  },
+  {
+   "description": {
+    "en": "Complete the game in under 10 hours"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/dd8ae9bf671fba6054380775097a3c0e8ec705944a66c3dee60f008e85edc365_gac_60.png",
+   "key": "SPEEDRUN_1",
+   "name": {
+    "en": "Speedrun 1"
+   },
+   "percent": 2.4
+  },
+  {
+   "description": {
+    "en": "Complete the game in under 5 hours"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/21c6594f3a79c8593f676bdd37c845137f5d8a556ccd965e585f2626358dfcf9_gac_60.png",
+   "key": "SPEEDRUN_2",
+   "name": {
+    "en": "Speedrun 2"
+   },
+   "percent": 1.8
+  },
+  {
+   "description": {
+    "en": "Achieve 100% game completion and finish the game in under 20 hours"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/af49d4260dd1ac2c2b6373ccf0aa6b9458f348b750efe3fd04c66f6ed4eac37a_gac_60.png",
+   "key": "SPEED_COMPLETION",
+   "name": {
+    "en": "Speed Completion"
+   },
+   "percent": 2.0
+  },
+  {
+   "description": {
+    "en": "Open all of Hallownest's Stag Stations and discover the Stag Nest"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/e3bfa1333d43eaa0a297f07889121bbe8440620d27194853df01ce14c561fe44_gac_60.png",
+   "key": "STAG_STATION_ALL",
+   "name": {
+    "en": "Hope"
+   },
+   "percent": 26.3
+  },
+  {
+   "description": {
+    "en": "Open half of Hallownest's Stag Stations"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/171833ba45655f969504d6ae9a6b88f339fa6a090f9aafad3e667e26979c42f3_gac_60.png",
+   "key": "STAG_STATION_HALF",
+   "name": {
+    "en": "Connection"
+   },
+   "percent": 42.2
+  },
+  {
+   "description": {
+    "en": "Finish the game in Steel Soul mode"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/aaf551988cba6a8ea86556e53cc8f9a54698f67eb0bf3880966724b3c453c09d_gac_60.png",
+   "key": "STEELSOUL",
+   "name": {
+    "en": "Steel Soul"
+   },
+   "percent": 1.5
+  },
+  {
+   "description": {
+    "en": "Achieve 100% game completion and finish the game in Steel Soul mode"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/648ca961a2781443da447974d1395220bb37bfabd0311b6927cb599503069db1_gac_60.png",
+   "key": "STEELSOUL_COMPLETION",
+   "name": {
+    "en": "Steel Heart"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "en": "Destroy Monomon the Teacher"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/e11527ecb664b776f599ac451b15a2feba97300085586d25f4a307760a6227cf_gac_60.png",
+   "key": "TEACHER",
+   "name": {
+    "en": "Teacher"
+   },
+   "percent": 31.0
+  },
+  {
+   "description": {
+    "en": "Defeat the Traitor Lord"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/c0a2540e0b17fdba98db1be98229d47ebb1ef9f2ebf00fdc8d53e989eae690a4_gac_60.png",
+   "key": "TRAITOR_LORD",
+   "name": {
+    "en": "Execution"
+   },
+   "percent": 26.3
+  },
+  {
+   "description": {
+    "en": "Remember the past and unite the Abyss"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/6670aa6a22f51facbcc6a047052b1b8def8e15fa88c70c971e52e58520e3455f_gac_60.png",
+   "key": "VOID",
+   "name": {
+    "en": "Void"
+   },
+   "percent": 17.0
+  },
+  {
+   "description": {
+    "en": "Destroy Lurien the Watcher"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/a18b214c74220ac66ddb8cbcbe728f7a5015d23abb7bbc786ee3b2ca891aa973_gac_60.png",
+   "key": "WATCHER",
+   "name": {
+    "en": "Watcher"
+   },
+   "percent": 30.7
+  },
+  {
+   "description": {
+    "en": "Defeat White Defender"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/be94f057f9a278f5cdd2fb1cd81ca58edd2511f9227969de2785d08b73f3d313_gac_60.png",
+   "key": "WHITE_DEFENDER",
+   "name": {
+    "en": "Memory"
+   },
+   "percent": 11.5
+  },
+  {
+   "description": {
+    "en": "Acquire all Vessel Fragments"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1308320804/fc03c95209911c5bf8b6c7b4d8c98636848dee9e54a1b11b7d0df9b81425bbea_gac_60.png",
+   "key": "WORLDSOUL",
+   "name": {
+    "en": "Worldsoul"
+   },
+   "percent": 19.7
+  },
+  {
+   "description": {
+    "en": "Defeat Zote in the Colosseum of Fools"
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1308320804/99073acd29e50de634888503285b85e5b38578f8d0f1cd22e3066916c2752559_gac_60.png",
+   "key": "ZOTE",
+   "name": {
+    "en": "Rivalry"
+   },
+   "percent": 22.3
+  }
+ ],
+ "id": "1308320804",
+ "platform": "gog"
+}

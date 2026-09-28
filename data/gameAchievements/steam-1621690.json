@@ -76,7 +76,7 @@
     "de": "Aus der Tiefe!",
     "en": "From the Depths!"
    },
-   "percent": 28.9
+   "percent": 28.8
   },
   {
    "achieved": true,
@@ -162,7 +162,7 @@
     "de": "An Schicksals Haken",
     "en": "Completely Hooked"
    },
-   "percent": 9.4
+   "percent": 9.3
   },
   {
    "description": {
@@ -176,7 +176,7 @@
     "de": "Natur-Nanny",
     "en": "Nature Nurturer"
    },
-   "percent": 15.3
+   "percent": 15.2
   },
   {
    "description": {
@@ -245,7 +245,7 @@
     "de": "Pfiffiger Forscher",
     "en": "Crafty Explorer"
    },
-   "percent": 8.7
+   "percent": 8.6
   },
   {
    "hidden": true,
@@ -333,7 +333,7 @@
     "de": "Geprüfter Chefkoch",
     "en": "Certified Chef"
    },
-   "percent": 6.8
+   "percent": 6.7
   },
   {
    "achieved": true,
@@ -540,7 +540,7 @@
     "de": "Das Brüllen der Flammen",
     "en": "Roar of the Flames"
    },
-   "percent": 17.1
+   "percent": 17.0
   },
   {
    "hidden": true,
@@ -599,7 +599,7 @@
     "de": "Beam mich hoch",
     "en": "Beam Me Up"
    },
-   "percent": 36.7,
+   "percent": 36.6,
    "unlocked": "2026-07-25T21:00:31+02:00"
   },
   {
@@ -634,7 +634,7 @@
     "de": "Flüstern des Nihil",
     "en": "Whisper of the Void"
    },
-   "percent": 3.4
+   "percent": 3.3
   },
   {
    "hidden": true,
@@ -664,7 +664,7 @@
     "de": "Der Titanen-Atem",
     "en": "The Titan Breath"
    },
-   "percent": 3.1
+   "percent": 3.0
   },
   {
    "description": {
@@ -692,7 +692,7 @@
     "de": "Hü-hott",
     "en": "Giddy Up"
    },
-   "percent": 0.7
+   "percent": 0.6
   },
   {
    "hidden": true,

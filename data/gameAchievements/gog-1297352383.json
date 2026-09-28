@@ -1,0 +1,474 @@
+{
+ "achievements": [
+  {
+   "description": {
+    "en": "Complete the main story line for Aedirn."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1297352383/b6a67ed596bfe40ed505e23c28b79d3509a8fb360e0b84e6c7270bf006c15380_gac_60.png",
+   "key": "AedirnCompleted",
+   "name": {
+    "en": "Among the Ashes"
+   },
+   "percent": 56.4
+  },
+  {
+   "description": {
+    "en": "Own at least one copy of each non-Reynard, non-Gascon unit."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1297352383/db4b04a95a11b72e5900dcf2b165298fe719c805ed1726f855511d22646b34fe_gac_60.png",
+   "key": "AllEquals",
+   "name": {
+    "en": "One Big Happy Family"
+   },
+   "percent": 15.5
+  },
+  {
+   "description": {
+    "en": "Play 5 or more characters in one battle."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1297352383/df1cebba22c78c1eb9c9b4d7b4409fcd540cc65edb5caab5e2e9c7843c526d80_gac_60.png",
+   "key": "AmongFriends",
+   "name": {
+    "en": "In Good Company"
+   },
+   "percent": 51.2
+  },
+  {
+   "description": {
+    "en": "Complete the main story line for Angren."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1297352383/453c89dde8cf84625aafec2c0c21c5a206c1e8c07b460ec6a350fb71a16844df_gac_60.png",
+   "key": "AngrenCompleted",
+   "name": {
+    "en": "Witcher to the Rescue"
+   },
+   "percent": 45.1
+  },
+  {
+   "description": {
+    "en": "Obtain all weapons."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1297352383/f37c95bc98aaac7523e87d6108052520982feff073f08d76ece1634bb7dd0619_gac_60.png",
+   "key": "ArmsRace",
+   "name": {
+    "en": "Arms Race"
+   },
+   "percent": 7.8
+  },
+  {
+   "description": {
+    "en": "Unlock all of Raynard's Buildings."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1297352383/888c3ffcbeced1fb3de711f09bfafba4deaaedcc5b01d3453b56087b64f10a4f_gac_60.png",
+   "key": "Attention",
+   "name": {
+    "en": "A-ten-hut!"
+   },
+   "percent": 41.9
+  },
+  {
+   "description": {
+    "en": "Recruit Barnabus Beckenbauer into your army."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1297352383/7360fc7721db5fce9c1be54d5867b9331b9d2762a0f83a46ae50618338a69ee3_gac_60.png",
+   "key": "BarnabyBeckenbauerRecruited",
+   "name": {
+    "en": "Out of the sizzlixer into the fire"
+   },
+   "percent": 43.2
+  },
+  {
+   "description": {
+    "en": "Finish the Thronebreaker campaign."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1297352383/be5738cec4908877df759c3c2aef06f955424551274faffca6b7b1771e4b7c2d_gac_60.png",
+   "key": "CampaignCompleted",
+   "name": {
+    "en": "Return of the Queen"
+   },
+   "percent": 38.1
+  },
+  {
+   "description": {
+    "en": "Collect 15 Treasure Maps."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1297352383/a5384048fafd0a88189f48bcbfac18ed3da496b955e6e6db88df8ab03c43f25b_gac_60.png",
+   "key": "Cartographer",
+   "name": {
+    "en": "Cartographer"
+   },
+   "percent": 31.2
+  },
+  {
+   "description": {
+    "en": "Obtain 10 trinkets."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1297352383/407ff7cff5e123561517998b88e045b76ef7379421d30923de22ec3be11dc195_gac_60.png",
+   "key": "Collector",
+   "name": {
+    "en": "Hoarder"
+   },
+   "percent": 66.9
+  },
+  {
+   "description": {
+    "en": "Fully upgrade your army camp."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1297352383/76866bd5c3637315405e4dd76a16d96e570e3586948645492a0f9633f1de2c9b_gac_60.png",
+   "key": "Constructor",
+   "name": {
+    "en": "Army Camp Tycoon"
+   },
+   "percent": 40.1
+  },
+  {
+   "description": {
+    "en": "Unlock all of Gascon's Buildings."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1297352383/c7e60e764890d3b3b0334eb5d26225897a9b6d0dbbedde7c327aba3de7d47af1_gac_60.png",
+   "key": "DogsOfWar",
+   "name": {
+    "en": "Dogs of War"
+   },
+   "percent": 41.6
+  },
+  {
+   "description": {
+    "en": "Defeat Eldain."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1297352383/4cbf4fe45be1f9d882e81812237c89ea04ec621522a2fc32d61bdb9f8a751d7f_gac_60.png",
+   "key": "EldainDefeated",
+   "name": {
+    "en": "Lord of the Moulderwood"
+   },
+   "percent": 55.5
+  },
+  {
+   "description": {
+    "en": "Recruit Eyck into your army."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1297352383/e50a1bffd9452cc63f86313367f21c0b80d21232bb69523dffc3b261b1e8cb99_gac_60.png",
+   "key": "EyckRecruited",
+   "name": {
+    "en": "For the Good Book states..."
+   },
+   "percent": 47.1
+  },
+  {
+   "description": {
+    "en": "Gather 5,000 wood throughout the game."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1297352383/012111f80ba9c5653ae420530e31c18f846c253db05bd37aaee38add65cd42a4_gac_60.png",
+   "key": "ForLater",
+   "name": {
+    "en": "I'll probably need this later..."
+   },
+   "percent": 66.6
+  },
+  {
+   "description": {
+    "en": "Find an Easter Egg."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1297352383/565119e00f2f763866bce684c73302d725a864d00fdd65a97a214419bcbc52f0_gac_60.png",
+   "key": "FourthWall",
+   "name": {
+    "en": "Through the Fourth Wall"
+   },
+   "percent": 27.3
+  },
+  {
+   "description": {
+    "en": "Recruit 200 Soldiers."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1297352383/688ce3208936a271a92ecf89f6c02c8fd23b917f743300f999f4e8a91212ec21_gac_60.png",
+   "key": "GeneralLevy",
+   "name": {
+    "en": "I want YOU for the Lyrian Army"
+   },
+   "percent": 60.4
+  },
+  {
+   "description": {
+    "en": "Defeat Gernichora."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1297352383/9fc0554ca6f285a2bd56b8f81b11858f0d13219211c4b41a1afe0a3b2a8a4684_gac_60.png",
+   "key": "GernichoraDefeated",
+   "name": {
+    "en": "Gvaern Ichaer"
+   },
+   "percent": 39.5
+  },
+  {
+   "description": {
+    "en": "Train your first Gascon Unit."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1297352383/ed2ae6adea5bec236a959bc7c26e19f6104b109ff167f2b5b6e8708dd9137ae8_gac_60.png",
+   "key": "Hounds",
+   "name": {
+    "en": "Dog Trainer"
+   },
+   "percent": 41.3
+  },
+  {
+   "description": {
+    "en": "Win a non-Puzzle Battle with less than 10 damage taken in total."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1297352383/96aaa55485e783bb59622688cd0c3620a40f0cefff6ce773993779973fbf7d8c_gac_60.png",
+   "key": "Hurt",
+   "name": {
+    "en": "Was that supposed to hurt?"
+   },
+   "percent": 76.4
+  },
+  {
+   "description": {
+    "en": "Recruit Isbel into your army."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1297352383/7afd7378b1eae066e70ce8f9967de444669bcf5b9c13482decb919aa77f73465_gac_60.png",
+   "key": "IsabelRecruited",
+   "name": {
+    "en": "1. Do no harm"
+   },
+   "percent": 47.7
+  },
+  {
+   "description": {
+    "en": "Defeat Kelltulis the dragon."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1297352383/1323993e70aad7db79d5293d4e8e4dd71eddb0166875f6bc1b310fc492d99916_gac_60.png",
+   "key": "KeltullisDefeated",
+   "name": {
+    "en": "Perfectly harmless..."
+   },
+   "percent": 49.7
+  },
+  {
+   "description": {
+    "en": "Kill count Caldwell."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1297352383/9752ee3bd2e1aaab61b19443c2a35fc6ef2c6db0b3cef9897586026f948ee94a_gac_60.png",
+   "key": "KillCaldwell",
+   "name": {
+    "en": "Revenge is best served cold..."
+   },
+   "percent": 46.5
+  },
+  {
+   "description": {
+    "en": "Complete the main story line for Lyria."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1297352383/3a9459511e7d5a9194fff9c7c0b4be21b8e5cd1a1dff27314789ad3d1318dd74_gac_60.png",
+   "key": "LyriaCompleted",
+   "name": {
+    "en": "Never give up, never surrender!"
+   },
+   "percent": 67.8
+  },
+  {
+   "description": {
+    "en": "Complete the main story line for Mahakam."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1297352383/baceca683d794705ba70cce167922fee831399cc7326489af2b6e080cef198ff_gac_60.png",
+   "key": "MahakamCompleted",
+   "name": {
+    "en": "We have the high ground!"
+   },
+   "percent": 50.4
+  },
+  {
+   "description": {
+    "en": "Kill the Manticore."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1297352383/c826ebf8e337a9c77b0ccf2d0bcf78fb39d4cd081972677c8a22a3475389b908_gac_60.png",
+   "key": "ManticoreDefeated",
+   "name": {
+    "en": "Distillation of Filth"
+   },
+   "percent": 50.8
+  },
+  {
+   "description": {
+    "en": "Win a non-Puzzle Battle without any of your units being killed."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1297352383/72b305eecadf9fca2fb37ccfc58281d80f465fb0f506c4846da082bd7dec04ad_gac_60.png",
+   "key": "NoKills",
+   "name": {
+    "en": "All Present and Accounted For"
+   },
+   "percent": 83.1
+  },
+  {
+   "description": {
+    "en": "Train your first Raynard Unit."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1297352383/d18beb527cd066384dc56bf2b7f7a56b3dc949d3350e93cbf60283669d265526_gac_60.png",
+   "key": "Officer",
+   "name": {
+    "en": "At ease, Private!"
+   },
+   "percent": 46.0
+  },
+  {
+   "description": {
+    "en": "Use Meve to trigger allies' Loyal abilities 100 times."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1297352383/0e80c38d0210e9775523dc58d3f77baa9fbd4a563f68bc0b41eef86c0ed5f891_gac_60.png",
+   "key": "OneMoreTime",
+   "name": {
+    "en": "Once more! Again!"
+   },
+   "percent": 67.6
+  },
+  {
+   "description": {
+    "en": "Pray at 10 Shrines."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1297352383/6b05d156bcd48453ce0cccb78d81d204c3a3fae9c841ae64964a482511e80150_gac_60.png",
+   "key": "Pilgrim",
+   "name": {
+    "en": "Pilgrim"
+   },
+   "percent": 53.5
+  },
+  {
+   "description": {
+    "en": "Kill 9 enemies simultaneously."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1297352383/bd01cef91bf6c7cf9d21c4e6a33e94cb6ef90f7e1ec90df763adc4ad1f7251f1_gac_60.png",
+   "key": "PlaytimesOver",
+   "name": {
+    "en": "Party's over!"
+   },
+   "percent": 52.7
+  },
+  {
+   "description": {
+    "en": "Earn 10,000 or more gold."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1297352383/8b4f5ca13d4a60b3b7fd5c8e13e76955f94f1a21f104b598bcd7f1f440452fc6_gac_60.png",
+   "key": "Plutocracy",
+   "name": {
+    "en": "Plutocracy"
+   },
+   "percent": 73.2
+  },
+  {
+   "description": {
+    "en": "End a round with a score of over 300."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1297352383/b09cefda6302655784591ac3e11c3246ffbd53a9d57c24223d7969c13f9140d8_gac_60.png",
+   "key": "Power",
+   "name": {
+    "en": "I have the power!"
+   },
+   "percent": 29.8
+  },
+  {
+   "description": {
+    "en": "Complete 20 Puzzles."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1297352383/60815322b4f3e724bccce60ad0a51cd999c7302296a7bed25c752c03f5dcfb66_gac_60.png",
+   "key": "Puzzles",
+   "name": {
+    "en": "Those gears are turning..."
+   },
+   "percent": 49.4
+  },
+  {
+   "description": {
+    "en": "Complete the main story line for Rivia."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1297352383/ad282ce511571146f558e56db9d46ada4e3f2aa3804483ce9860a485fa7a45eb_gac_60.png",
+   "key": "RiviaCompleted",
+   "name": {
+    "en": "There's no place like home..."
+   },
+   "percent": 39.5
+  },
+  {
+   "description": {
+    "en": "Find all golden chests."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1297352383/645688967133ab1ebfa2c42ae46bfc8d7e2941cda990b8ca0e0f744bde47192b_gac_60.png",
+   "key": "TaxCollector",
+   "name": {
+    "en": "Tax Collector"
+   },
+   "percent": 12.9
+  },
+  {
+   "description": {
+    "en": "Recruit the dog into your army."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1297352383/1e27dba06dd4b7ebe527c0313a0335efe216cd334d5e83762982b7e037ba72d2_gac_60.png",
+   "key": "TheDogRecruited",
+   "name": {
+    "en": "Arf! Arf! Grrr..."
+   },
+   "percent": 61.4
+  },
+  {
+   "description": {
+    "en": "Read all spymaster letters."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1297352383/41daf6c6bc2644f9e9250f370bb152968a56cef306dabc5f0f5e2edde636bcc3_gac_60.png",
+   "key": "TopSecret",
+   "name": {
+    "en": "Burn After Reading"
+   },
+   "percent": 18.5
+  },
+  {
+   "description": {
+    "en": "Finish the Thronebreaker tutorial."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1297352383/8ef7d36ef596a566e7c3cbd6ff3e661b5ae52fcfb721b8ca6ef825ab98ab60ee_gac_60.png",
+   "key": "TutorialCompleted",
+   "name": {
+    "en": "I'll show them!"
+   },
+   "percent": 99.8
+  }
+ ],
+ "id": "1297352383",
+ "platform": "gog"
+}

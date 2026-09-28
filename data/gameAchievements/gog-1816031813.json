@@ -1,0 +1,426 @@
+{
+ "achievements": [
+  {
+   "description": {
+    "en": "Complete a Loop"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/2b81ee49cc6640ceee551468f4404c95b6bb0811b9c5ee3f70dbc1dd40343a54_gac_60.png",
+   "key": "01",
+   "name": {
+    "en": "Not again"
+   },
+   "percent": 7.0
+  },
+  {
+   "description": {
+    "en": "Reach the ending scene"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/ba881d0748c38e652ee012f22d79d1b300418ba9683a11a38fa82ef1bdaa07c9_gac_60.png",
+   "key": "02",
+   "name": {
+    "en": "The beginning"
+   },
+   "percent": 2.2
+  },
+  {
+   "description": {
+    "en": "Reach the Disco Dimension"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/5bca4e1c6cd548aad9776944b1e02184947c13120dc362f67bca9dfbba555167_gac_60.png",
+   "key": "03",
+   "name": {
+    "en": "Disco!"
+   },
+   "percent": 9.2
+  },
+  {
+   "description": {
+    "en": "Reach the Duckwash Dimension"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/0ad7c4fe0224d29552a9cf437b78d14faad83610c1c3b4d0bb6dcd23a99de1fc_gac_60.png",
+   "key": "04",
+   "name": {
+    "en": "Duckwash!"
+   },
+   "percent": 9.1
+  },
+  {
+   "description": {
+    "en": "Unlock all Blue Upgrade Ducklings"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/2a29117f18a4f03f5f882fe550b72b685b9b8db3b3c7d9e8ba13253698bb833a_gac_60.png",
+   "key": "05",
+   "name": {
+    "en": "Blue Ducklings!"
+   },
+   "percent": 6.0
+  },
+  {
+   "description": {
+    "en": "Unlock all Pink Upgrades Ducklings"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/42ca39a0129d1f9f559ad4037be02ebcf0e2ed5bba5e5a90409ca53d80e9eee3_gac_60.png",
+   "key": "06",
+   "name": {
+    "en": "Pink Ducklings!"
+   },
+   "percent": 5.5
+  },
+  {
+   "description": {
+    "en": "Unlock all Yellow Upgrades Ducklings"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/b270e7e883e1412d6d06403e9bf37313018898e512b2f9d205d426d8c8e53125_gac_60.png",
+   "key": "07",
+   "name": {
+    "en": "Yellow Ducklings!"
+   },
+   "percent": 4.3
+  },
+  {
+   "description": {
+    "en": "Unlock All Upgrade Ducklings"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/757b939c9033f154db43361d2089216057f5cd91e7290c3b3b0948cf9c77e755_gac_60.png",
+   "key": "08",
+   "name": {
+    "en": "Mommy Duck"
+   },
+   "percent": 3.8
+  },
+  {
+   "description": {
+    "en": "Complete the Rift Slasher"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/e93d7bdc36c8a87989784b91a9a7b63e0b43c711703ca03661b2e9cdd41c5188_gac_60.png",
+   "key": "09",
+   "name": {
+    "en": "Rift Slasher"
+   },
+   "percent": 4.9
+  },
+  {
+   "description": {
+    "en": "Complete the Mini Discoball"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/f3c1a55df7d0a4ef1289e814e4529104c1a2c51926ac9355e78348b8423f56d0_gac_60.png",
+   "key": "10",
+   "name": {
+    "en": "Mini Discoball"
+   },
+   "percent": 2.3
+  },
+  {
+   "description": {
+    "en": "Complete the Pocket Duckinator"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "11",
+   "name": {
+    "en": "Pocket Duckinator"
+   },
+   "percent": 2.0
+  },
+  {
+   "description": {
+    "en": "Defeat El Alicanteronte"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/33f1ec3472ff0af690dc3f4002394132ea5865406283eb29d7303e4083e3fa0a_gac_60.png",
+   "key": "12",
+   "name": {
+    "en": "El Alicanteronte"
+   },
+   "percent": 7.1
+  },
+  {
+   "description": {
+    "en": "Defeat El Rey Patoteca"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "13",
+   "name": {
+    "en": "El Rey Patoteca"
+   },
+   "percent": 2.4
+  },
+  {
+   "description": {
+    "en": "Defeat El Pato Paradoja"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "14",
+   "name": {
+    "en": "El Pato Paradoja"
+   },
+   "percent": 2.2
+  },
+  {
+   "description": {
+    "en": "Kill 100 Enemies"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "15",
+   "name": {
+    "en": "Quack Slayer"
+   },
+   "percent": 40.5
+  },
+  {
+   "description": {
+    "en": "Kill 1,000 Enemies"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "16",
+   "name": {
+    "en": "Quack Destroyer"
+   },
+   "percent": 9.3
+  },
+  {
+   "description": {
+    "en": "Kill 10,000 Enemies"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "17",
+   "name": {
+    "en": "Quack Annihilation"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "en": "Die 10 Times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "18",
+   "name": {
+    "en": "Btw your bullets kill you too…"
+   },
+   "percent": 44.9
+  },
+  {
+   "description": {
+    "en": "Die 100 Times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "19",
+   "name": {
+    "en": "Watch the bullet!"
+   },
+   "percent": 4.6
+  },
+  {
+   "description": {
+    "en": "Shoot 1,000 Bullets"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "20",
+   "name": {
+    "en": "Bullet Quacker"
+   },
+   "percent": 11.0
+  },
+  {
+   "description": {
+    "en": "Shoot 10,000 Bullets"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "21",
+   "name": {
+    "en": "Bullet Quackstorm"
+   },
+   "percent": 1.7
+  },
+  {
+   "description": {
+    "en": "Shoot 50,000 Bullets"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "22",
+   "name": {
+    "en": "Bullet Quacktory"
+   },
+   "percent": 0.5
+  },
+  {
+   "description": {
+    "en": "Get a Highscore of 100 in the Target Practice Minigame"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "23",
+   "name": {
+    "en": "Target Quacktitioner"
+   },
+   "percent": 0.9
+  },
+  {
+   "description": {
+    "en": "Reach Round 20 in Survival Mode"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "24",
+   "name": {
+    "en": "Survive the Quack"
+   },
+   "percent": 0.4
+  },
+  {
+   "description": {
+    "en": "Reach Round 40 in Survival Mode"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "25",
+   "name": {
+    "en": "Survival Quackspert"
+   },
+   "percent": 0.3
+  },
+  {
+   "description": {
+    "en": "Buy all companion quarks in a single survival mode game"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "26",
+   "name": {
+    "en": "Quack Squad"
+   },
+   "percent": 0.3
+  },
+  {
+   "description": {
+    "en": "Kill 200 Enemies in a single Run"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "27",
+   "name": {
+    "en": "Quacksmasher"
+   },
+   "percent": 13.8
+  },
+  {
+   "description": {
+    "en": "Kill 500 Enemies in a single Run"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "28",
+   "name": {
+    "en": "Duckstruction"
+   },
+   "percent": 6.3
+  },
+  {
+   "description": {
+    "en": "Kill 1,000 Enemies in a single Run"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "29",
+   "name": {
+    "en": "Quacktastrophe"
+   },
+   "percent": 4.0
+  },
+  {
+   "description": {
+    "en": "Stack 20 Lives at once"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "30",
+   "name": {
+    "en": "Duck Dynasty"
+   },
+   "percent": 0.9
+  },
+  {
+   "description": {
+    "en": "Die 20 Times in a single Run"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "31",
+   "name": {
+    "en": "In-Duck-structible"
+   },
+   "percent": 2.8
+  },
+  {
+   "description": {
+    "en": "Complete a loop in under 10 Minutes"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "32",
+   "name": {
+    "en": "Quick Quack"
+   },
+   "percent": 3.9
+  },
+  {
+   "description": {
+    "en": "Complete a loop in under 5 Minutes"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "33",
+   "name": {
+    "en": "Quickest Quack"
+   },
+   "percent": 0.9
+  },
+  {
+   "description": {
+    "en": "Reach Loop 10"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "34",
+   "name": {
+    "en": "Quackpocalypse"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "en": "Beat the game in Impossible Mode"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1816031813/4a0514f7c90f41948502894b264e89ecf6885cf0b050271867a661f476d3e8bc_gac_60.png",
+   "key": "35",
+   "name": {
+    "en": "Moving on"
+   },
+   "percent": 0.3
+  }
+ ],
+ "id": "1816031813",
+ "platform": "gog"
+}

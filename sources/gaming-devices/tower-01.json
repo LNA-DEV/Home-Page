@@ -1,13 +1,13 @@
 {
-  "device": "pc",
+  "device": "tower-01",
   "schema": 1,
   "stores": {
     "epic": {
       "CrabEA": {
         "cover": "https://cdn1.epicgames.com/item/crab/Epic_Satisfactory_Offer_Portrait_Image_1200x1600_1200x1600-207b681d739649b08f69546a21f9c3bc",
-        "lastPlayed": "2026-08-01",
+        "lastPlayed": "2026-09-28",
         "link": "https://www.epicgames.com/store/product/satisfactory",
-        "minutes": 9,
+        "minutes": 158,
         "title": "Satisfactory"
       },
       "Salt": {

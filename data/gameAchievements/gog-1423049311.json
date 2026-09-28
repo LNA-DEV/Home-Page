@@ -1,0 +1,692 @@
+{
+ "achievements": [
+  {
+   "description": {
+    "en": "Save President Myers."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/89fd88b59687c4bacfa041ce0368e9fc101ca2584aa8f53a405bf3114262cbb1_gac_60.jpg",
+   "key": "AllThePresidentsMen",
+   "name": {
+    "en": "All the President's Men"
+   },
+   "percent": 25.4
+  },
+  {
+   "description": {
+    "en": "Complete all gigs and NCPD Scanner Hustles in City Center."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/ec6b384c53e7ed65d95cffefc51311b3cba4af25a49c2fe89f002f024a021e90_gac_60.jpg",
+   "key": "Bladerunner",
+   "name": {
+    "en": "City Lights"
+   },
+   "percent": 10.1
+  },
+  {
+   "description": {
+    "en": "Complete Kerry Eurodyne's storyline."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1423049311/d4cc547e423e71a14839cf78766454a7081ffdf0f2d0a119d55a69c681344716_gac_60.jpg",
+   "key": "BornToBeWild",
+   "name": {
+    "en": "To Bad Decisions!"
+   },
+   "percent": 18.4
+  },
+  {
+   "description": {
+    "en": "Watch Bushido X with Rogue."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1423049311/0dde2090dcde2839e97cca2cbd9042c2f99210d7ceddf34ebf9bb8dc79872d7a_gac_60.jpg",
+   "key": "BushidoAndChill",
+   "name": {
+    "en": "Bushido and Chill"
+   },
+   "percent": 40.2
+  },
+  {
+   "description": {
+    "en": "Install at least one implant in each system and body part."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/f436a3c5d68ab2f5c16cef2b44ddf5179197b50e03a7339d861a95ae95588482_gac_60.jpg",
+   "key": "Cyberjunkie",
+   "name": {
+    "en": "Full Body Conversion"
+   },
+   "percent": 47.2
+  },
+  {
+   "description": {
+    "en": "Kill or incapacitate an enemy who threw a grenade at you."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/0a7ac25fe13db80f423def91056c3e20e8918fcc9e926013c6cdec361ef82bef_gac_60.jpg",
+   "key": "Denied",
+   "name": {
+    "en": "Right Back At Ya"
+   },
+   "percent": 76.9
+  },
+  {
+   "description": {
+    "en": "Complete every Gig in Dogtown."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/218a92ca5bd5c793905afd01bf8eb98ee4a6f47446bed0bd1e4febb64681f00c_gac_60.jpg",
+   "key": "DirtyWork",
+   "name": {
+    "en": "Dirty Deeds"
+   },
+   "percent": 9.9
+  },
+  {
+   "description": {
+    "en": "Become Dogtown's most wanted criminal."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/d3e8fc2b5b9922e32cdae2c71f172bbf4aeada99732baf583ee42a161cba0475_gac_60.jpg",
+   "key": "DogtownLaw",
+   "name": {
+    "en": "The APB is Not Enough"
+   },
+   "percent": 4.8
+  },
+  {
+   "description": {
+    "en": "Steal the Arasaka medical truck or deliver 10 vehicles to El Capitan."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/6e25cbe3879dc12acd1e164c294ed8c415eb75558856db37ed1f97fe067edbc7_gac_60.jpg",
+   "key": "EasyComeEasyGo",
+   "name": {
+    "en": "Easy Come, Easy Go"
+   },
+   "percent": 11.4
+  },
+  {
+   "description": {
+    "en": "Complete River Ward's storyline."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1423049311/a6663ba52af3d584cca916e741f82d690b1300f21659241651293acd89fafbeb_gac_60.jpg",
+   "key": "FollowingTheRiver",
+   "name": {
+    "en": "To Protect and Serve"
+   },
+   "percent": 35.3
+  },
+  {
+   "description": {
+    "en": "Find all the tarot graffiti for the job Fool on the Hill."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/0bd38752411ff0ed5abd874e2d520e76a4345146b1e3417288a5f8e6e17a0238_gac_60.jpg",
+   "key": "Fortuneteller",
+   "name": {
+    "en": "The Wandering Fool"
+   },
+   "percent": 27.9
+  },
+  {
+   "description": {
+    "en": "Buy all vehicles available for purchase."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/76c10359036591a80417d9fff343de230e05836d7eb31af3d0fb6313067b2c1e_gac_60.jpg",
+   "key": "Gearhead",
+   "name": {
+    "en": "Autojock"
+   },
+   "percent": 7.4
+  },
+  {
+   "description": {
+    "en": "Find all fast travel dataterms."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/9a8fe6b36fb5967d30742412598d15674b6d49d53f5371c6d0de490bcfd77b40_gac_60.jpg",
+   "key": "GetMeThereScottie",
+   "name": {
+    "en": "Frequent Flyer"
+   },
+   "percent": 16.5
+  },
+  {
+   "description": {
+    "en": "Kill or incapacitate 3 enemies in quick succession with a revolver or pistol in close combat."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/a0f5c51f62f1d5f45384593c20145e1643f4143b3906784467aa76442e4839bb_gac_60.jpg",
+   "key": "GunKata",
+   "name": {
+    "en": "Gun Fu"
+   },
+   "percent": 37.0
+  },
+  {
+   "description": {
+    "en": "Shoot an enemy grenade in midair with a revolver."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/48963fe6b9c37cb60a50967d9d8d62f879c62f4402b27b62bc72ce6c592d662d_gac_60.jpg",
+   "key": "Gunslinger",
+   "name": {
+    "en": "Gunslinger"
+   },
+   "percent": 9.7
+  },
+  {
+   "description": {
+    "en": "Craft 3 Legendary items."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/91712141145ae4555284691f677fdb5e15aeb37ff8042cb4f4e5f950955ff1a1_gac_60.jpg",
+   "key": "HandyMan",
+   "name": {
+    "en": "Master Crafter"
+   },
+   "percent": 32.5
+  },
+  {
+   "description": {
+    "en": "Eliminate three bosses from the \"Increased criminal activity\" category."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/73a8633623135bc0774c58d0145e518876f47e87181a3127fb428624fd1758e0_gac_60.jpg",
+   "key": "HydraIsDead",
+   "name": {
+    "en": "Judgement Day"
+   },
+   "percent": 5.6
+  },
+  {
+   "description": {
+    "en": "Complete all Cyberpsycho Sightings."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/0e9858074126df22d9e560fde24d4db77e34217bb8d77533e6b9b2fe3fcd902a_gac_60.jpg",
+   "key": "IAmMaxTac",
+   "name": {
+    "en": "I Am The Law"
+   },
+   "percent": 28.6
+  },
+  {
+   "description": {
+    "en": "Defeat the Chimera."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1423049311/fb13175812544ecfe7c03693c47c753bd7db53690752add05eefb06dabaabe47_gac_60.jpg",
+   "key": "IHateSpider",
+   "name": {
+    "en": "Arachnophobia"
+   },
+   "percent": 25.0
+  },
+  {
+   "description": {
+    "en": "Complete “Run This Town”."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1423049311/a785f696b77ea5f52a9436ba386c391d0b37b94e8cd82259f05367f89a087d28_gac_60.jpg",
+   "key": "Kingmaker",
+   "name": {
+    "en": "Spin Doctor"
+   },
+   "percent": 14.4
+  },
+  {
+   "description": {
+    "en": "Fulfill Songbird's request."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1423049311/f968caa32be10221339c05e7b1f10cbfdd5ab2de7094e82259808d544d7c2843_gac_60.jpg",
+   "key": "KingOfTheCups",
+   "name": {
+    "en": "King of Cups"
+   },
+   "percent": 3.6
+  },
+  {
+   "description": {
+    "en": "Refuse Songbird's request."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1423049311/6b6e56b578620472514bde7775681f11802196a791f6df101e2013a4905dd301_gac_60.jpg",
+   "key": "KingOfThePentacles",
+   "name": {
+    "en": "King of Pentacles"
+   },
+   "percent": 5.1
+  },
+  {
+   "description": {
+    "en": "Take Songbird home."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1423049311/c86d39ae1be267935c0e08259f5651590dfe956677c6d1a4dc59b5646fba5127_gac_60.jpg",
+   "key": "KingOfTheSwords",
+   "name": {
+    "en": "King of Swords"
+   },
+   "percent": 6.3
+  },
+  {
+   "description": {
+    "en": "Take Songbird to the stars."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1423049311/d0f4e4b0f59e70888bf0e1a6429739e6a7ffe5375eb56b4cb45cf17ad11070e4_gac_60.jpg",
+   "key": "KingOfTheWands",
+   "name": {
+    "en": "King of Wands"
+   },
+   "percent": 9.8
+  },
+  {
+   "description": {
+    "en": "Complete all gigs and NCPD Scanner Hustles in Heywood."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/f639393cc541551a0fb211e728782f3b8f267be9ecc5d6309027228133f05bb7_gac_60.jpg",
+   "key": "LikeFatherLikeSon",
+   "name": {
+    "en": "Mean Streets"
+   },
+   "percent": 11.3
+  },
+  {
+   "description": {
+    "en": "Complete all gigs and NCPD Scanner Hustles in Westbrook."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/440a8a536233aad9345c59765a8ed1ba0c17a84d648701570863f478db2be0af_gac_60.jpg",
+   "key": "LittleTokyo",
+   "name": {
+    "en": "Little Tokyo"
+   },
+   "percent": 9.0
+  },
+  {
+   "description": {
+    "en": "Complete a Breach Protocol with a minimum of 3 daemons uploaded."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/7f9e4bed5b5dad800e0ffeae69b7717506f012ababb7afc1986754aec44d4a9b_gac_60.jpg",
+   "key": "MasterRunner",
+   "name": {
+    "en": "Christmas Tree Attack"
+   },
+   "percent": 49.5
+  },
+  {
+   "description": {
+    "en": "Kill or incapacitate 50 enemies while time is slowed."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/b9c807c508c8a21928739149d327b06768347f3bdbed189bb6c3849aa36e8dfe_gac_60.jpg",
+   "key": "MaxPain",
+   "name": {
+    "en": "The Quick and the Dead"
+   },
+   "percent": 27.3
+  },
+  {
+   "description": {
+    "en": "Perform the Distract Enemies quickhack 30 times without drawing attention to yourself."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/dfb0826ff07438ef0949e5e1e87ff9dbf60fd5330b672d4a2d694da830519677_gac_60.jpg",
+   "key": "MustBeTheRats",
+   "name": {
+    "en": "Must Be Rats"
+   },
+   "percent": 15.3
+  },
+  {
+   "description": {
+    "en": "Collect all items that once belonged to Johnny Silverhand."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/eb8b49044ebdb576584237969ce25a1311e0c246c3264535795eb85f711a7f24_gac_60.jpg",
+   "key": "NeverFadeAway",
+   "name": {
+    "en": "Breathtaking"
+   },
+   "percent": 22.7
+  },
+  {
+   "description": {
+    "en": "Complete all gigs and NCPD Scanner Hustles in the Badlands."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/c8daf8f0a76f5b18cfce9cc1bd8d9c5caf8ab47e01585e3e6abd278509ad6800_gac_60.jpg",
+   "key": "NoMansLand",
+   "name": {
+    "en": "The Wasteland"
+   },
+   "percent": 8.2
+  },
+  {
+   "description": {
+    "en": "Kill or incapacitate 3 enemies with one \"Detonate Grenade\" quickhack."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/d10aa5fb801b988d1f99990039c04ae9bace4093b860d56892d5940536819f0d_gac_60.jpg",
+   "key": "NotTheMobile",
+   "name": {
+    "en": "Daemon In The Shell"
+   },
+   "percent": 6.3
+  },
+  {
+   "description": {
+    "en": "Complete Panam Palmer's storyline."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1423049311/9526670f439d4f6bda2a5e99ce278e144a89240efb1352133bf2a972a96f67ae_gac_60.jpg",
+   "key": "QueenOfTheHighway",
+   "name": {
+    "en": "Life of the Road"
+   },
+   "percent": 49.7
+  },
+  {
+   "description": {
+    "en": "Unlock all Perks in the Relic Perk tree."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/1ba4b8de570d5128d4327f15f9bbf5f5ef18e06a07a0f7d069923f2223005920_gac_60.jpg",
+   "key": "RelicMaster",
+   "name": {
+    "en": "Relic Ruler"
+   },
+   "percent": 6.2
+  },
+  {
+   "description": {
+    "en": "Use a dialogue option related to V's life path 10 times."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/809c4411985150ec8cd5ff038edcbe8908ec863709d1aeb9cba99f5fef0244c0_gac_60.jpg",
+   "key": "Roleplayer",
+   "name": {
+    "en": "Stanislavski's Method"
+   },
+   "percent": 63.4
+  },
+  {
+   "description": {
+    "en": "Reach the max level in any skill."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/c38a77e318477c0f5df368ae6f0539704832e4e84dafd0f276c236b94a1187a7_gac_60.jpg",
+   "key": "Specialist",
+   "name": {
+    "en": "Ten out of Ten"
+   },
+   "percent": 20.9
+  },
+  {
+   "description": {
+    "en": "Let Johnny Silverhand keep your body."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1423049311/45c542ef24638a676d19b41342751c6dc61a0757c48b9c70d381743f67aae696_gac_60.jpg",
+   "key": "Temperance",
+   "name": {
+    "en": "Temperance"
+   },
+   "percent": 13.8
+  },
+  {
+   "description": {
+    "en": "While Berserk cyberware is active, perform a Superhero Landing to kill or incapacitate 2 enemies."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/10680fd0c46dab2b355fce39630e9d43186dca6cc3af742017b20d3ad51c1210_gac_60.jpg",
+   "key": "ThatIsSoHardForTheKnees",
+   "name": {
+    "en": "Rough Landing"
+   },
+   "percent": 7.4
+  },
+  {
+   "description": {
+    "en": "Help Takemura avenge the death of Saburo Arasaka."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1423049311/16332d6aa5d678d04fa2cae5f45835c93ad3fccac81e8f2d296ca087c1309af9_gac_60.jpg",
+   "key": "TheDevil",
+   "name": {
+    "en": "The Devil"
+   },
+   "percent": 7.7
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Become a mercenary."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1423049311/0135ee86141b743170ac368d56a1145bdecf130dea96af14ed8b9de50549f6e5_gac_60.jpg",
+   "key": "TheFool",
+   "name": {
+    "en": "The Fool"
+   },
+   "percent": 94.0,
+   "unlocked": "2021-08-07T22:43:33+02:00"
+  },
+  {
+   "description": {
+    "en": "Find Alt Cunningham."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1423049311/ba47168256c8912f222e2914720a20ff6e3c0ec354113534aee3cdfa5d8c19f3_gac_60.jpg",
+   "key": "TheHermit",
+   "name": {
+    "en": "The Hermit"
+   },
+   "percent": 59.9
+  },
+  {
+   "description": {
+    "en": "Talk with Hanako Arasaka."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1423049311/bb9a7988543215b0b2a0d52e7a6d93e6a73973db65db926d367ae6d04913d09d_gac_60.jpg",
+   "key": "TheHightPriestess",
+   "name": {
+    "en": "The High Priestess"
+   },
+   "percent": 54.7
+  },
+  {
+   "description": {
+    "en": "Steal the Relic."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1423049311/a3f5a7a3abc27f352d233221fe310c1322887474750ad7a6836136b190e34701_gac_60.jpg",
+   "key": "TheLovers",
+   "name": {
+    "en": "The Lovers"
+   },
+   "percent": 77.7
+  },
+  {
+   "description": {
+    "en": "Leave Night City with the Aldecaldos."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1423049311/02279fe189b19ba97f6b955fe60c9df82a8a0582454b12b0ee9663e1c68f9256_gac_60.jpg",
+   "key": "TheStar",
+   "name": {
+    "en": "The Star"
+   },
+   "percent": 22.1
+  },
+  {
+   "description": {
+    "en": "Become a legend of the Afterlife."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1423049311/241214ec232d6066daac4d52cab40544c109deb652a77443a5ee45f1d91840fa_gac_60.jpg",
+   "key": "TheSun",
+   "name": {
+    "en": "The Sun"
+   },
+   "percent": 18.6
+  },
+  {
+   "description": {
+    "en": "Complete \"Things Done Changed\"."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1423049311/e88f973747ba17a05bd0c582325b7523cc3753fb941775cc06c1ecad43129bd3_gac_60.jpg",
+   "key": "TheTower",
+   "name": {
+    "en": "The Tower"
+   },
+   "percent": 6.7
+  },
+  {
+   "description": {
+    "en": "Interrogate Anders Hellman."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1423049311/9e0f24949ff686923be5aa94ef648419e77845a4ae7def04a973fc4d9ad4c746_gac_60.jpg",
+   "key": "TheWheelOfFortune",
+   "name": {
+    "en": "The Wheel of Fortune"
+   },
+   "percent": 63.6
+  },
+  {
+   "description": {
+    "en": "Complete the main storyline."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/6300d1d0467b659556d2bba3d4cd83475ee099f2f77d615b17cb2d041cb9b3c9_gac_60.jpg",
+   "key": "TheWorld",
+   "name": {
+    "en": "The World"
+   },
+   "percent": 43.4
+  },
+  {
+   "description": {
+    "en": "Complete all gigs and NCPD Scanner Hustles in Pacifica."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/455b10aa612e34affbee98a1650dba0106352805bdc96c9c5e50678fa1052ba6_gac_60.jpg",
+   "key": "ThisIsPacifica",
+   "name": {
+    "en": "Greetings from Pacifica!"
+   },
+   "percent": 9.3
+  },
+  {
+   "description": {
+    "en": "Complete all gigs and NCPD Scanner Hustles in Santo Domingo."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/384f210e3a0b49070e69f82e7f4ee2f2a96ad8c7ef01aea162e53c886945fdd4_gac_60.jpg",
+   "key": "TradeUnion",
+   "name": {
+    "en": "The Jungle"
+   },
+   "percent": 12.4
+  },
+  {
+   "description": {
+    "en": "Kill or incapacitate 300 enemies using ranged weapons."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/b64aab3ea245cc0d9e9e88bc3239b9378a9c9386dd8ad86926433c76d8b4433b_gac_60.jpg",
+   "key": "TrueSoldier",
+   "name": {
+    "en": "True Soldier"
+   },
+   "percent": 55.1
+  },
+  {
+   "description": {
+    "en": "Kill or incapacitate 100 enemies using melee weapons."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/5d62c7c23d575f15e5c1ca8d3e5c0a2e50596f15b0b0d2144a906b37796d1693_gac_60.jpg",
+   "key": "TrueWarrior",
+   "name": {
+    "en": "True Warrior"
+   },
+   "percent": 33.2
+  },
+  {
+   "description": {
+    "en": "Kill or incapacitate 2 enemies with the same sniper rifle shot."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/7b23fffaef3c2c3361fd1f235985a43720add4da3c288a68d459495f3fc94452_gac_60.jpg",
+   "key": "TwoHeadsOneBullet",
+   "name": {
+    "en": "Two Heads, One Bullet"
+   },
+   "percent": 33.1
+  },
+  {
+   "description": {
+    "en": "Complete Judy Alvarez's storyline."
+   },
+   "hidden": true,
+   "icon": "images/games/achievements/gog/1423049311/c9e9149c818231f8774580a6462741df40fdfd9821510f101c24590d8f9374b7_gac_60.jpg",
+   "key": "UnderPressure",
+   "name": {
+    "en": "Judy vs Night City"
+   },
+   "percent": 38.0
+  },
+  {
+   "description": {
+    "en": "After reviving with Second Heart, kill or incapacitate the enemy who killed you within 5 seconds."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/efc16020a2aa067802a90363cf763144827f1f2719c6624618f36d2db356aa3c_gac_60.jpg",
+   "key": "VForVendetta",
+   "name": {
+    "en": "V for Vendetta"
+   },
+   "percent": 19.1
+  },
+  {
+   "description": {
+    "en": "Complete all gigs and NCPD Scanner Hustles in Watson."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/3e0bce9b84b0ad7dd160032f3dc264b180c3e752ba225c88f61db8b124675b2b_gac_60.jpg",
+   "key": "YipMan",
+   "name": {
+    "en": "It's Elementary"
+   },
+   "percent": 10.0
+  },
+  {
+   "description": {
+    "en": "Reach max Street Cred."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/gog/1423049311/b25340986c77b1582ccbdf22d24b392337151d5820b8027b6da76cb7b4689f85_gac_60.jpg",
+   "key": "YouKnowWhoIAm",
+   "name": {
+    "en": "Legend of The Afterlife"
+   },
+   "percent": 48.7
+  }
+ ],
+ "id": "1423049311",
+ "platform": "gog"
+}
