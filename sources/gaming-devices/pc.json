@@ -1,0 +1,42 @@
+{
+  "device": "pc",
+  "schema": 1,
+  "stores": {
+    "epic": {
+      "CrabEA": {
+        "cover": "https://cdn1.epicgames.com/item/crab/Epic_Satisfactory_Offer_Portrait_Image_1200x1600_1200x1600-207b681d739649b08f69546a21f9c3bc",
+        "lastPlayed": "2026-08-01",
+        "link": "https://www.epicgames.com/store/product/satisfactory",
+        "minutes": 9,
+        "title": "Satisfactory"
+      },
+      "Salt": {
+        "cover": "https://cdn1.epicgames.com/item/b671fbc7be424e888c9346a9a6d3d9db/CodeRedemption_Celeste-340x440-873dacb76be8c59d659757b4b5284a611_1200x1600-9e39079f1ce19738e65d349a8bc98650",
+        "lastPlayed": "2026-02-26",
+        "link": "https://www.epicgames.com/store/product/celeste",
+        "minutes": 14,
+        "title": "Celeste"
+      }
+    },
+    "gog": {
+      "1297352383": {
+        "cover": "https://images.gog.com/c31eab675785d490ac4e3f35014315371765c7bd66284363f8bcf721cbddad4f.jpg?namespace=gamesdb",
+        "lastPlayed": "2026-08-01",
+        "minutes": 28,
+        "title": "Thronebreaker: The Witcher Tales"
+      },
+      "1423049311": {
+        "cover": "https://images.gog.com/8b37ef624d6f8a4092c43daed92660cde499434f8c0a2078f342bc34f4e752f2.jpg?namespace=gamesdb",
+        "lastPlayed": "2026-08-01",
+        "minutes": 478,
+        "title": "Cyberpunk 2077"
+      },
+      "1816031813": {
+        "cover": "https://images.gog.com/81b4b2de2c1bd47cfef075448627c4aa036b86523eea96529de116d4f1082f98.jpg?namespace=gamesdb",
+        "lastPlayed": "2025-11-22",
+        "minutes": 2,
+        "title": "Duck Paradox"
+      }
+    }
+  }
+}

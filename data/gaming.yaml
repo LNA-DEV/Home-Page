@@ -15,7 +15,13 @@
 # by `appid`. The Epic sync (scripts/sync-epic.py) does the same for `platform:
 # epic` entries, keyed by `appName`, merging Heroic-local + Epic-cloud playtime.
 # Each sync writes ITS block LAST, so whichever ran most recently sits at the
-# bottom; the other sync's block is preserved byte-for-byte.
+# bottom; the other sync's block is preserved byte-for-byte. The GOG sync
+# (scripts/sync-gog.py) does the same for `platform: gog`.
+#
+# The Heroic-local part of the Epic and GOG numbers comes from every machine that
+# runs Heroic, via one snapshot per device in sources/gaming-devices/ — so the
+# syncs can run on any of them without overwriting the others
+# (docs/concepts/gaming-devices.md).
 #
 # Fields (all optional except `title` + `platform`):
 #   title                 game name

@@ -321,25 +321,29 @@ Playtime is split by which client launched the game, and the two never overlap:
 - **Historical** play through the **official Epic launcher** lives only on Epic's
   **cloud**.
 - Play through **Heroic** lives only in Heroic's **local** files (Heroic never
-  uploads it to Epic).
+  uploads it to Epic) — on whichever machine ran it. Each machine's share is in
+  its own device snapshot (see *Gaming devices* below).
 
-A session is launched by exactly one client, so the totals are disjoint and the
-true per-game total is `heroic + cloud`, matched on the Epic `appName` (the
-codename like `Salt` / `CrabEA`; the cloud endpoint calls it `artifactId`).
+A session is launched by exactly one client on exactly one machine, so the
+totals are disjoint and the true per-game total is `Σ devices + cloud`, matched
+on the Epic `appName` (the codename like `Salt` / `CrabEA`; the cloud endpoint
+calls it `artifactId`).
 
 ### What the script does
 
 - **Heroic-local (always, no login):** reads the owned library
   (`store_cache/legendary_library.json` → title, `appName`, portrait cover URL,
-  store link) and Heroic-launched playtime + `lastPlayed` (`store/timestamp.json`,
-  minutes). The Heroic config dir is auto-detected (Flatpak
-  `~/.var/app/com.heroicgameslauncher.hgl/config/heroic`, then native
-  `~/.config/heroic`; override with `--heroic-config`).
+  store link), refreshes this machine's device snapshot from its Heroic-launched
+  playtime + `lastPlayed` (`store/timestamp.json`, minutes), and reads every
+  device's snapshot from `sources/gaming-devices/`. The Heroic config dir is
+  auto-detected (Flatpak `~/.var/app/com.heroicgameslauncher.hgl/config/heroic`,
+  then native `~/.config/heroic`; override with `--heroic-config`).
 - **Epic cloud (unless `--no-cloud`):** reuses the Epic OAuth refresh token Heroic
   already stored (`legendaryConfig/legendary/user.json`) — **no separate login**.
   It refreshes that token and GETs `library-service`'s per-account playtime
   endpoint for the historical official-launcher hours (seconds → minutes).
-- **Merges** the two (`playtimeMinutes = heroic + cloud`), downloads each game's
+- **Merges** them (`playtimeMinutes = Σ devices + cloud`, `lastPlayed` = the
+  newest any device recorded), downloads each game's
   portrait cover into `assets/images/games/covers/<Title>.<ext>` (skipping ones
   that exist; `--no-covers` to skip), and **rebuilds only the `platform: epic`
   entries** (played games added, others pruned) as the last block in the file,
@@ -405,16 +409,20 @@ edits, owns only the `platform: gog` entries.
 
 - **Heroic-local (always, no login):** owned library
   (`store_cache/gog_library.json` → title, `appName` = numeric GOG product id,
-  portrait cover URL; skips DLC/redist) and Heroic-launched playtime + `lastPlayed`
-  (`store/timestamp.json`, minutes). Heroic config dir auto-detected (Flatpak first,
-  then `~/.config/heroic`; `--heroic-config` to override).
+  portrait cover URL; skips DLC/redist); this machine's device snapshot refreshed
+  from its Heroic-launched playtime + `lastPlayed` (`store/timestamp.json`,
+  minutes, with the cloud-save date as fallback), and every device's snapshot
+  read from `sources/gaming-devices/`. Heroic config dir auto-detected (Flatpak
+  first, then `~/.config/heroic`; `--heroic-config` to override).
 - **GOG cloud (unless `--no-cloud`):** reuses the GOG OAuth refresh token Heroic
   stored (`gog_store/auth.json`, under the Galaxy client id) — **no separate login**.
   Refreshes it (GOG's token endpoint is a GET), then per owned game GETs the
   authoritative playtime (`gameplay.gog.com/games/{id}/users/{uid}/sessions` →
   `time_sum`) and, for played games (unless `--no-achievements`), achievements
   (`gameplay.gog.com/clients/{id}/users/{uid}/achievements`).
-- **Merges** with the **prefer-cloud** rule (`playtimeMinutes = max(cloud, local)`),
+- **Merges** with the **prefer-cloud** rule
+  (`playtimeMinutes = max(cloud, max over devices)`, `lastPlayed` = the newest any
+  device recorded),
   downloads covers into `assets/images/games/covers/<Title>.<ext>` (skips existing;
   `--no-covers`), and **rebuilds only the `platform: gog` entries** (played added,
   others pruned) as the last block, under a marker it emits. 0-playtime games
@@ -424,9 +432,13 @@ edits, owns only the `platform: gog` entries.
 
 - **Playtime is prefer-cloud, NOT summed.** Heroic *pushes* its GOG sessions up to
   GOG, so the cloud `time_sum` already contains them — summing would double-count.
-- **Achievements ARE set** (GOG exposes them). Expect them sparse until games run
-  through GOG's achievement service (Comet); Heroic's local achievement cache is
-  often empty.
+  Heroic also pulls that total back down into a device's local file, so across
+  devices the local numbers take the max too; with `--no-cloud` and two devices
+  the result is a lower bound.
+- **Achievements ARE set** (GOG exposes them), for every game played anywhere —
+  on any device or per the cloud's own `time_sum`. Expect them sparse until games
+  run through GOG's achievement service (Comet); Heroic's local achievement cache
+  is often empty.
 - The cloud is a **per-game fan-out** (~one request per owned game), not a single
   aggregate call — the slow part; `--no-cloud` is the fast, no-network path.
 
@@ -468,6 +480,64 @@ The cloud half uses GOG's undocumented Galaxy endpoints (`auth.gog.com`,
 `gameplay.gog.com`) with your own token — the same thing Heroic / gogdl do. Your own
 data, read-only. The OAuth client id/secret baked into the script is the well-known
 public Galaxy constant, not a secret.
+
+## Gaming devices (more than one Heroic machine)
+
+Heroic records some things only on the machine that ran the game: every Epic
+session, and every Epic/GOG `lastPlayed`. So each machine with Heroic keeps a
+**snapshot** of its own local data in `sources/gaming-devices/<device>.json`,
+and the Epic/GOG syncs merge all of them. A run writes **only its own device's
+snapshot** — the syncs can run on any machine without overwriting the others.
+Module and CLI: `scripts/gaming_devices.py`. Design:
+`docs/concepts/gaming-devices.md`.
+
+### Workflow — the same on every machine
+
+```
+git pull
+scripts/sync-games.sh
+git diff                 # sources/gaming-devices/<device>.json, data/gaming.yaml, covers
+git commit … && git push
+```
+
+No script runs git; that stays manual. Forgetting the pull loses nothing — the
+other machine's newest sessions just arrive at the next run after a pull. If
+`data/gaming.yaml` conflicts (both machines committed without pulling in
+between), take either side and run the sync again: the file is derived from the
+snapshots, which never conflict.
+
+### New machine, once
+
+1. Clone the repository.
+2. `.env` in the repo root with `GAMING_DEVICE=<slug>` (lowercase, e.g.
+   `laptop`) plus `STEAM_API_KEY` / `STEAM_ID` — `sync-games.sh` runs all three
+   syncs and stops at the first that fails.
+3. Log Heroic in to Epic and GOG **fresh**. Never copy a Heroic config over from
+   another machine: its `timestamp.json` would bring that machine's totals, and
+   Epic (which sums devices) would count them twice. The Epic sync warns when
+   two devices report the same minutes and `lastPlayed` for a game.
+
+A machine whose Heroic has played games but no `GAMING_DEVICE` stops the run —
+silently skipping it would drop its playtime from the site.
+
+### The commands
+
+```
+python3 scripts/gaming_devices.py status            # one line per device
+python3 scripts/gaming_devices.py check             # what sync-games.sh runs first; writes nothing
+python3 scripts/gaming_devices.py export --rotate   # after a Heroic reinstall
+python3 scripts/gaming_devices.py export --force    # accept a shrink without rotating
+```
+
+- **Heroic reinstalled** → the export refuses to write a snapshot in which a
+  game lost minutes or vanished, and the sync stops before anything is written.
+  `export --rotate` freezes the old file as `<device>-until-<date>.json` (still
+  merged, never written again) and starts a fresh `<device>.json`.
+- **Retired machine** → nothing to do. Its snapshot stays and keeps counting.
+  Deleting a snapshot is how playtime would leave the site.
+- The snapshot is an **allowlist** (`title`, `minutes`, `lastPlayed` as a date,
+  `cover`, `link`) — no tokens, paths, host names or clock times, because the
+  repository is public. A snapshot with any other key is refused on read.
 
 ## Working on the photo dex
 
