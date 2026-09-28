@@ -1,0 +1,230 @@
+{
+ "achievements": [
+  {
+   "description": {
+    "en": "Post a scene wallpaper to the Workshop."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/431960/7aaf59fd3b8eaecdaea8077b57fbabc07bbec1fe.jpg",
+   "key": "POST_SCENE_WALLPAPER",
+   "name": {
+    "en": "High aspirations"
+   },
+   "percent": 2.3
+  },
+  {
+   "description": {
+    "en": "Post a video wallpaper to the Workshop."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/431960/8dcf7978482f1f876e10df9eea85cc6065157118.jpg",
+   "key": "POST_VIDEO_WALLPAPER",
+   "name": {
+    "en": "Video makers"
+   },
+   "percent": 2.0
+  },
+  {
+   "description": {
+    "en": "Post a web wallpaper to the Workshop."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/431960/d59c9b544a728f228d5df90908af2f655d9acc67.jpg",
+   "key": "POST_WEB_WALLPAPER",
+   "name": {
+    "en": "The internet on a disk"
+   },
+   "percent": 1.0
+  },
+  {
+   "description": {
+    "en": "Create a local application-type wallpaper."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/431960/72d89124d705f27fb7c4dca0cc7e534f1cc6396c.jpg",
+   "key": "POST_APP_WALLPAPER",
+   "name": {
+    "en": "Press any key"
+   },
+   "percent": 1.0
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Use a 2D scene template."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/431960/67fa04833f1c94ee1a1d967cec39c67a9b0f4cee.jpg",
+   "key": "USE_TEMPLATE_2D",
+   "name": {
+    "en": "Creativity according to instructions"
+   },
+   "percent": 6.1,
+   "unlocked": "2021-02-28T13:31:47+01:00"
+  },
+  {
+   "description": {
+    "en": "Use a 3D scene template."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/431960/e26fc45fc1f5959bdf1cd91e386881b6eb3b8009.jpg",
+   "key": "USE_TEMPLATE_3D",
+   "name": {
+    "en": "Working with 3D models"
+   },
+   "percent": 3.7
+  },
+  {
+   "description": {
+    "en": "Post a Steam screenshot with a Workshop wallpaper open."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/431960/96e1eabf52d8b57aa6276ccaed8d23ab97bff45b.jpg",
+   "key": "SCREENSHOT_WITH_WORKSHOP_WALLPAPER",
+   "name": {
+    "en": "Sharing is caring"
+   },
+   "percent": 7.2
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Use 10 different wallpapers from the Workshop."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/431960/1c2250cab3953159e542b9ff4bd5be9ec75c9f61.jpg",
+   "key": "SUBSCRIBE_10_WALLPAPERS",
+   "name": {
+    "en": "Trying something new"
+   },
+   "percent": 83.8,
+   "unlocked": "2021-02-08T09:04:56+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Favorite 10 different wallpapers from the Workshop."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/431960/dafacb580ba40cf8ef509ff9861f3ade9057397f.jpg",
+   "key": "FAVORITE_10_WALLPAPERS",
+   "name": {
+    "en": "Keeping an eye on this one"
+   },
+   "percent": 10.0,
+   "unlocked": "2021-02-28T00:08:16+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Cause 1 fatal error or trigger 128 warnings in the editor."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/431960/1f519ad16689ebdd4860d548f0979ada9e739ef5.jpg",
+   "key": "PEST",
+   "name": {
+    "en": "Pest"
+   },
+   "percent": 33.3,
+   "unlocked": "2021-03-05T18:21:23+01:00"
+  },
+  {
+   "description": {
+    "en": "30 lives"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/431960/f9aa5e3dd5e28e9e1275369ecfea3961f449f53c.jpg",
+   "key": "KON_CODE",
+   "name": {
+    "en": "k0n4m1"
+   },
+   "percent": 5.4
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Use 25 different wallpapers from the Workshop."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/431960/4f48b4262e14e6b25f09d7df1e00392b8c65d0f2.jpg",
+   "key": "SUBSCRIBE_25_WALLPAPERS",
+   "name": {
+    "en": "Getting the hang of it"
+   },
+   "percent": 68.8,
+   "unlocked": "2021-02-08T09:31:23+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Use 50 different wallpapers from the Workshop."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/431960/09f51531c6243518225293fcdc81c8894ba7def6.jpg",
+   "key": "SUBSCRIBE_50_WALLPAPERS",
+   "name": {
+    "en": "Hard to pick just one"
+   },
+   "percent": 54.8,
+   "unlocked": "2021-02-08T10:58:27+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Use 100 different wallpapers from the Workshop."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/431960/53c2189431308f46ef77d0c5eb1ecac697d703a6.jpg",
+   "key": "SUBSCRIBE_100_WALLPAPERS",
+   "name": {
+    "en": "Out of disk space"
+   },
+   "percent": 40.1,
+   "unlocked": "2021-02-08T13:32:56+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Favorite 20 different Workshop wallpapers."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/431960/b94c0f896de24c4bb8fc3a040f5e62a6df69d8d0.jpg",
+   "key": "FAVORITE_25_WALLPAPERS",
+   "name": {
+    "en": "Found some good ones"
+   },
+   "percent": 6.8,
+   "unlocked": "2021-02-28T00:35:12+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Favorite 30 different Workshop wallpapers."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/431960/893e157fe5efed6fb37e012e80079b2b07e902ef.jpg",
+   "key": "FAVORITE_50_WALLPAPERS",
+   "name": {
+    "en": "Fair collection"
+   },
+   "percent": 5.4,
+   "unlocked": "2021-02-28T12:59:19+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Favorite 50 different Workshop wallpapers."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/431960/8e56c301216c03a675b4441942fa143ced7c9ee8.jpg",
+   "key": "FAVORITE_100_WALLPAPERS",
+   "name": {
+    "en": "Wallpaper Connoisseur"
+   },
+   "percent": 4.1,
+   "unlocked": "2021-03-04T14:20:59+01:00"
+  }
+ ],
+ "id": "431960",
+ "platform": "steam"
+}

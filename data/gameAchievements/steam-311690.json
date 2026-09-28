@@ -1,0 +1,683 @@
+{
+ "achievements": [
+  {
+   "description": {
+    "de": "Sammle fünf Meistergeschosse in einem Durchlauf.",
+    "en": "Collect five Master Rounds in one run"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/d261b1122ad73b068978b1a401406c4fe08ca6d7.jpg",
+   "key": "COLLECT_FIVE_MASTERY_TOKENS",
+   "name": {
+    "de": "Bleigott",
+    "en": "Lead God"
+   },
+   "percent": 10.6
+  },
+  {
+   "description": {
+    "de": "Gib viel für die Akquisitionsabteilung aus",
+    "en": "Spend big at the Acquisitions Department"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/afd470fdb99d16dcdc2efb705b7673dd5802484f.jpg",
+   "key": "SPEND_META_CURRENCY",
+   "name": {
+    "de": "Mäzen",
+    "en": "Patron"
+   },
+   "percent": 26.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/311690/54d36086989ff2f3a320f481162670b7930ffa17.jpg",
+   "key": "COMPLETE_GAME_WITH_ENCHANTED_GUN",
+   "name": {
+    "de": "Waffenspiel",
+    "en": "Gun Game"
+   },
+   "percent": 6.0
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/311690/ef80cbe750dc9ecd37e238af04a5512c79b373b5.jpg",
+   "key": "BEAT_FLOOR_SIX",
+   "name": {
+    "en": "Gungeon Master"
+   },
+   "percent": 10.0
+  },
+  {
+   "description": {
+    "de": "Erstelle die Patrone, die die Vergangenheit abschießen kann",
+    "en": "Construct the Bullet that can kill the Past"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/4d09e6d767bdd13119f85dfca38492fed788f6b3.jpg",
+   "key": "BUILD_BULLET",
+   "name": {
+    "de": "Waffenschmied",
+    "en": "Gunsmith"
+   },
+   "percent": 16.1
+  },
+  {
+   "description": {
+    "de": "Schieße vier Vergangenheiten ab",
+    "en": "Complete all 4 main character Pasts"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/21f6990aaa546bc08cf72cf1734bab7fa9f67405.jpg",
+   "key": "BEAT_PAST_ALL",
+   "name": {
+    "de": "Historiker",
+    "en": "Historian"
+   },
+   "percent": 12.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/311690/48fdfbf0fe39b04bc576ba4ee79ea31bc7585ba2.jpg",
+   "key": "BEAT_PAST_ROGUE",
+   "name": {
+    "de": "Flügelmann",
+    "en": "Wingman"
+   },
+   "percent": 13.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/311690/fcde74bf33d000961ff5ac824917bb9bfd7faf17.jpg",
+   "key": "BEAT_PAST_CONVICT",
+   "name": {
+    "de": "Doppeltes Risiko",
+    "en": "Double Jeopardy"
+   },
+   "percent": 13.4
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/311690/e5ecaa89003589d3644c944a3e5506db959ca060.jpg",
+   "key": "BEAT_PAST_MARINE",
+   "name": {
+    "de": "Truppführer",
+    "en": "Squad Captain"
+   },
+   "percent": 14.0
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/311690/d8d67287e3b676c62befd3c37749002929937c86.jpg",
+   "key": "BEAT_PAST_GUIDE",
+   "name": {
+    "de": "Tödlichste Beute",
+    "en": "Deadliest Game"
+   },
+   "percent": 14.0
+  },
+  {
+   "description": {
+    "de": "Besiege den Boss der Fünften Kammer",
+    "en": "Defeat the Boss of the Fifth Chamber"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/399958e7da1d37b0dcc49f5c4dc438529b898a16.jpg",
+   "key": "BEAT_FLOOR_FIVE",
+   "name": {
+    "de": "Bezwinger",
+    "en": "Slayer"
+   },
+   "percent": 21.0
+  },
+  {
+   "description": {
+    "de": "Schaffe die Erste Kammer 50 Mal",
+    "en": "Clear the First Chamber 50 Times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/b71289a8da4626740479e6b4d6ef6a8de85e19b1.jpg",
+   "key": "BEAT_FLOOR_ONE_MULTI",
+   "name": {
+    "de": "Burgaufmischer",
+    "en": "Castle Crasher"
+   },
+   "percent": 18.6
+  },
+  {
+   "description": {
+    "de": "Schaffe die Zweite Kammer 40 Mal",
+    "en": "Clear the Second Chamber 40 Times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/6a4824994afec59b980a94543551086868056249.jpg",
+   "key": "BEAT_FLOOR_TWO_MULTI",
+   "name": {
+    "de": "Verliestaucher",
+    "en": "Dungeon Diver"
+   },
+   "percent": 13.4
+  },
+  {
+   "description": {
+    "de": "Schaffe die Dritte Kammer 30 Mal",
+    "en": "Clear the Third Chamber 30 Times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/c503fa74b11b8fa1efd6016a59b664164b73e26b.jpg",
+   "key": "BEAT_FLOOR_THREE_MULTI",
+   "name": {
+    "de": "Minenmeister",
+    "en": "Mine Master"
+   },
+   "percent": 11.5
+  },
+  {
+   "description": {
+    "de": "Schaffe die Vierte Kammer 20 Mal",
+    "en": "Clear the Fourth Chamber 20 Times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/d9b72683b96dfdfe18c496e21d2508fb97a47535.jpg",
+   "key": "BEAT_FLOOR_FOUR_MULTI",
+   "name": {
+    "de": "Aushöhler",
+    "en": "Hollowed Out"
+   },
+   "percent": 10.3
+  },
+  {
+   "description": {
+    "de": "Schaffe die Fünfte Kammer 10 Mal",
+    "en": "Clear the Fifth Chamber 10 Times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/832636a148d6623d1ac0b5e5b7bf14058433f22e.jpg",
+   "key": "BEAT_FLOOR_FIVE_MULTI",
+   "name": {
+    "de": "Schmiedefürst",
+    "en": "Forger"
+   },
+   "percent": 10.6
+  },
+  {
+   "description": {
+    "de": "Trage eine große Menge Geld mit dir herum",
+    "en": "Carry a large amount of money at once"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/7d1efd88f39899878b4e6e90311c966e50063708.jpg",
+   "key": "HAVE_MANY_COINS",
+   "name": {
+    "de": "Größter Geldbeutel",
+    "en": "Biggest Wallet"
+   },
+   "percent": 19.0
+  },
+  {
+   "description": {
+    "de": "Vermiss die ersten fünf Kammern für den verirrten Abenteurer",
+    "en": "Map the first Five Chambers for the lost adventurer"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/914eae722958d456a53033a39daabcc41cf1b25b.jpg",
+   "key": "MAP_MAIN_FLOORS",
+   "name": {
+    "de": "Hilfsvermesser",
+    "en": "Cartographer's Assistant"
+   },
+   "percent": 11.1
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/311690/c7ad5641861af3c4552ab01b03e043a004c3a5fd.jpg",
+   "key": "REACH_SEWERS",
+   "name": {
+    "de": "Gitterhalle",
+    "en": "Grate Hall"
+   },
+   "percent": 31.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/311690/398e5f612500dc25c2bc51ad2557e6fc1fb932b9.jpg",
+   "key": "REACH_CATHEDRAL",
+   "name": {
+    "de": "Ehrfurcht vor den Toten",
+    "en": "Reverence for the Dead"
+   },
+   "percent": 15.7
+  },
+  {
+   "description": {
+    "de": "Liefere den Ersatzarm des Golems ab",
+    "en": "Deliver the Golem's replacement arm"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/cc5d4ff174250d64864935cf81baccb142cf4cc4.jpg",
+   "key": "COMPLETE_GOLEM_ARM",
+   "name": {
+    "de": "Arm dran",
+    "en": "Re-Armed"
+   },
+   "percent": 12.6
+  },
+  {
+   "description": {
+    "de": "Schließe Fflintes Herausforderungen ab",
+    "en": "Complete Frifle's Challenges"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/cfc9f5617cb12ce575b38476ff80380a8b23c90b.jpg",
+   "key": "COMPLETE_FRIFLE_MULTI",
+   "name": {
+    "de": "Verrückte Geschichte",
+    "en": "Weird Tale"
+   },
+   "percent": 4.0
+  },
+  {
+   "description": {
+    "de": "Gewinne Winchesters Spiel 3 Mal",
+    "en": "Ace Winchester's game 3 times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/05db7384bedca7933c0a24c63e062733fbfa86d3.jpg",
+   "key": "ACE_WINCHESTER_MULTI",
+   "name": {
+    "de": "Tricksschuss",
+    "en": "Trickshot"
+   },
+   "percent": 7.0
+  },
+  {
+   "description": {
+    "de": "Gewinne 5 Mal eine Wette gegen den König",
+    "en": "Win a wager against the Gunsling King 5 times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/3a6bf881009f71fd81086058f36f823bd6ee9606.jpg",
+   "key": "COMPLETE_GUNSLING_MULTI",
+   "name": {
+    "de": "Königliche Zockerei",
+    "en": "Hedge Slinger"
+   },
+   "percent": 13.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/311690/ea97c5238431f888add00150d1b1f06487ae965e.jpg",
+   "key": "UNLOCK_BULLET",
+   "name": {
+    "de": "Echtes Geschoss",
+    "en": "Case Closed"
+   },
+   "percent": 10.3
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/311690/ba219ca81c3f288cf055f5831806215acdc91185.jpg",
+   "key": "UNLOCK_ROBOT",
+   "name": {
+    "de": "Biep",
+    "en": "Beep"
+   },
+   "percent": 11.1
+  },
+  {
+   "description": {
+    "de": "Öffne die Abkürzung zur Zweiten Kammer",
+    "en": "Open the shortcut to the Second Chamber"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/536eca32b93b51de8003767a802eb1803263cee7.jpg",
+   "key": "UNLOCK_FLOOR_TWO_SHORTCUT",
+   "name": {
+    "de": "Abwärts",
+    "en": "Going Down"
+   },
+   "percent": 21.1
+  },
+  {
+   "description": {
+    "de": "Öffne die Abkürzung zur Dritten Kammer",
+    "en": "Open the shortcut to the Third Chamber"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/df38831776ed678e6c9fc586b8269eb1a6397279.jpg",
+   "key": "UNLOCK_FLOOR_THREE_SHORTCUT",
+   "name": {
+    "de": "Weiter abwärts",
+    "en": "Going Downer"
+   },
+   "percent": 12.3
+  },
+  {
+   "description": {
+    "de": "Öffne die Abkürzung zur Vierten Kammer",
+    "en": "Open the shortcut to the Fourth Chamber"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/e49e25cdb7bc19f2e7a20f5c06a1872558ade7ec.jpg",
+   "key": "UNLOCK_FLOOR_FOUR_SHORTCUT",
+   "name": {
+    "de": "Ganz tief abwärts",
+    "en": "Going Downest"
+   },
+   "percent": 9.4
+  },
+  {
+   "description": {
+    "de": "Öffne die Abkürzung zur Fünften Kammer",
+    "en": "Open the shortcut to the Fifth Chamber"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/a3d93d7274e7dd14893af458605392ae94fa79c2.jpg",
+   "key": "UNLOCK_FLOOR_FIVE_SHORTCUT",
+   "name": {
+    "de": "Letzter Halt",
+    "en": "Last Stop"
+   },
+   "percent": 8.2
+  },
+  {
+   "description": {
+    "de": "Räche Manuel",
+    "en": "Avenge Manuel"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/e62fda5537ecb727897e674c70ec0116e2c7ff93.jpg",
+   "key": "BEAT_MANFREDS_RIVAL",
+   "name": {
+    "de": "Vereidigter Schütze",
+    "en": "Sworn Gun"
+   },
+   "percent": 16.4
+  },
+  {
+   "description": {
+    "de": "Schließe die Einführung ab",
+    "en": "Complete the Tutorial"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/702142e5e40f298ae00141ede1fd1c807967a54d.jpg",
+   "key": "BEAT_TUTORIAL",
+   "name": {
+    "de": "Gungeon-Akolyth",
+    "en": "Gungeon Acolyte"
+   },
+   "percent": 84.4
+  },
+  {
+   "description": {
+    "de": "Bevölkere die Bresche",
+    "en": "Populate the Breach"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/3299ad59a39c53c63cb951be8ec87fc036f59590.jpg",
+   "key": "POPULATE_BREACH",
+   "name": {
+    "de": "Große Halle",
+    "en": "Great Hall"
+   },
+   "percent": 8.1
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/311690/356aa655558bac7075fb9917c1ea88f0e1237b87.jpg",
+   "key": "PREFIRE_ON_MIMIC",
+   "name": {
+    "de": "Nicht nur eine Kiste",
+    "en": "Not Just A Box"
+   },
+   "percent": 27.4
+  },
+  {
+   "description": {
+    "de": "Töte einen eingefrorenen Gegner, indem du in ihn rollst",
+    "en": "Kill a frozen enemy by rolling into it"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/15173932bd92da8443fd60db090904fa570fe499.jpg",
+   "key": "KILL_FROZEN_ENEMY_WITH_ROLL",
+   "name": {
+    "de": "Sprengmeister",
+    "en": "Demolition Man"
+   },
+   "percent": 11.8
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/311690/6584c7ad02e595b3cde781948e845c1342c43b77.jpg",
+   "key": "PUSH_TABLE_INTO_PIT",
+   "name": {
+    "de": "Ich wusste, jemand würde es tun",
+    "en": "I Knew Someone Would Do It"
+   },
+   "percent": 24.8,
+   "unlocked": "2025-03-15T23:17:32+01:00"
+  },
+  {
+   "description": {
+    "de": "Stiehl 10 Sachen",
+    "en": "Steal 10 things"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/3913b485f4dc9a67dce2ff81f69db3d4c40bd55d.jpg",
+   "key": "STEAL_MULTI",
+   "name": {
+    "de": "Verschwindibus",
+    "en": "Woodsie Lord"
+   },
+   "percent": 5.1
+  },
+  {
+   "description": {
+    "de": "Töte einen Boss, nachdem du ihn mit Glitter bedeckt hast",
+    "en": "Kill a boss after covering it with glitter"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/e1ab59ebc8753bd75232b132f081514cd3f17473.jpg",
+   "key": "KILL_BOSS_WITH_GLITTER",
+   "name": {
+    "de": "Tagverpatzer",
+    "en": "Day Ruiner"
+   },
+   "percent": 21.0
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/311690/c111c9be5591ee205144159e558cdf40d6b7cf66.jpg",
+   "key": "FALL_IN_END_TIMES",
+   "name": {
+    "de": "Löwensprung",
+    "en": "Lion Leap"
+   },
+   "percent": 16.8
+  },
+  {
+   "description": {
+    "de": "Töte 100 Gegner durch fallende Kronleuchter",
+    "en": "Kill 100 enemies by dropping chandeliers"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/e3c10aec4bc7b1255d670a477df4f326b0e15f3e.jpg",
+   "key": "KILL_WITH_CHANDELIER_MULTI",
+   "name": {
+    "de": "Geldgrube",
+    "en": "Money Pit"
+   },
+   "percent": 5.4
+  },
+  {
+   "description": {
+    "de": "Töte 100 Gegner, während du in einem Minenwagen fährst",
+    "en": "Kill 100 enemies while riding in a mine cart"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/ab30d369b608afee26e68255afdd08bf17a6b8ff.jpg",
+   "key": "KILL_IN_MINE_CART_MULTI",
+   "name": {
+    "de": "Lorenpilot",
+    "en": "Rider"
+   },
+   "percent": 3.4
+  },
+  {
+   "description": {
+    "de": "Töte 100 Gegner durch Schubsen in eine Grube",
+    "en": "Kill 100 enemies by knocking them into pits"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/63a4c8fd55d214251744845a9c5c4cce1ba95673.jpg",
+   "key": "KILL_WITH_PITS_MULTI",
+   "name": {
+    "de": "Grubenfürst",
+    "en": "Pit Lord"
+   },
+   "percent": 18.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/311690/0a3d21f75bf9c64c1464385ba2eb64c7efa0efc4.jpg",
+   "key": "DIE_IN_PAST",
+   "name": {
+    "de": "Zeitparadoxon",
+    "en": "Time Paradox"
+   },
+   "percent": 10.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/311690/da82dcc4389fce5b86b3a35a1d3a7ef1fc286353.jpg",
+   "key": "BEAT_A_JAMMED_BOSS",
+   "name": {
+    "de": "Exorzist",
+    "en": "Exorcist"
+   },
+   "percent": 12.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/311690/85398bf3841874ba99550c562850eb55488867a7.jpg",
+   "key": "REACH_BLACK_MARKET",
+   "name": {
+    "de": "Die Losung",
+    "en": "The Password"
+   },
+   "percent": 11.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/311690/0ea1dd7d904199e2606e98951d6064def6965e74.jpg",
+   "key": "HAVE_MAX_CURSE",
+   "name": {
+    "de": "Verklemmt",
+    "en": "Jammed"
+   },
+   "percent": 11.1
+  },
+  {
+   "description": {
+    "de": "Kipp ständig was um, denn Schusswaffen sind was für Umkipper",
+    "en": "Always be flipping. Guns are for flippers"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/74047d5f492b511c765baa82402a93af95777fb0.jpg",
+   "key": "FLIP_TABLES_MULTI",
+   "name": {
+    "de": "Ausflippmodus",
+    "en": "Rage Mode"
+   },
+   "percent": 14.1
+  },
+  {
+   "description": {
+    "de": "Schließe das Spiel im Bestienmodus ab",
+    "en": "Complete the game with Beast Mode on"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/8c8c0959839151918f28b2b4d1150e72839dd86b.jpg",
+   "key": "COMPLETE_GAME_WITH_BEAST_MODE",
+   "name": {
+    "de": "Bestienmeister",
+    "en": "Beast Master"
+   },
+   "percent": 8.3
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/311690/0805736e3ec13486759028a66d5452853d2948a1.jpg",
+   "key": "BEAT_PAST_ROBOT",
+   "name": {
+    "de": "Terminiert",
+    "en": "Terminated"
+   },
+   "percent": 8.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/311690/6e534853d4e95d7abfbc5a89e7d66d362c6b67cc.jpg",
+   "key": "BEAT_PAST_BULLET",
+   "name": {
+    "de": "Heldenkugel",
+    "en": "Hero of Gun"
+   },
+   "percent": 8.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/311690/fdc56be5b82a3bfa96e1d73b5a72b831d7860d32.jpg",
+   "key": "COMPLETE_GAME_WITH_CHALLENGE_MODE",
+   "name": {
+    "de": "Herausforderer",
+    "en": "Challenger"
+   },
+   "percent": 4.5
+  },
+  {
+   "description": {
+    "de": "Töte einen fortgeschrittenen Boss",
+    "en": "Defeat an Advanced Boss"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/1f59a05a01a92671bd64f74e52af81a78ed4cf2e.jpg",
+   "key": "BEAT_ADVANCED_DRAGUN",
+   "name": {
+    "de": "Fortgeschrittener Bezwinger",
+    "en": "Advanced Slayer"
+   },
+   "percent": 5.8
+  },
+  {
+   "description": {
+    "de": "Rache",
+    "en": "Take Revenge"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/4c6af52d9f92e53e274fa883ab6c78f69010eebe.jpg",
+   "key": "BEAT_METAL_GEAR_RAT",
+   "name": {
+    "de": "Raffiniert",
+    "en": "Resourceful"
+   },
+   "percent": 8.0
+  },
+  {
+   "description": {
+    "de": "Schließe Tonics Prüfung ab",
+    "en": "Complete Tonic's Challenge"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/311690/7232b1e7fd25e6361b1ad1b708bbba9b694655aa.jpg",
+   "key": "COMPLETE_GAME_WITH_TURBO_MODE",
+   "name": {
+    "de": "Schlittenhund",
+    "en": "Sledge-Dog"
+   },
+   "percent": 7.1
+  }
+ ],
+ "id": "311690",
+ "platform": "steam"
+}

@@ -1,0 +1,184 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "de": "Besiege irgendeinen Boss, ohne Magie anzuwenden.",
+    "en": "Defeat any end boss without using any magic."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/204360/a70982120497710c9073d41ce4b666522fbec23a.jpg",
+   "key": "ACH_MELEEISBEST",
+   "name": {
+    "de": "Nahkampf ist am besten",
+    "en": "Melee Is Best"
+   },
+   "percent": 46.6,
+   "unlocked": "2020-10-31T17:44:15+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Sammel in einem Mehrspielerspiel alle vier Küsse der Prinzessin ein",
+    "en": "Collect all 4 princesses' kisses in a multiplayer game."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/204360/2d6079d9839b913c263b04addce2b80b0e90e54e.jpg",
+   "key": "ACH_KISS",
+   "name": {
+    "de": "Ka Uh Es Es",
+    "en": "Kay Eye Ess Ess"
+   },
+   "percent": 4.6,
+   "unlocked": "2023-11-04T21:46:23+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Beende das Spiel mit irgendeinem Charakter.",
+    "en": "Complete the game using any character."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/204360/b16f1fb46ef9b7456032b53bb58f55bfd4596dc1.jpg",
+   "key": "ACH_TRADITIONAL",
+   "name": {
+    "de": "Traditionell",
+    "en": "Traditional"
+   },
+   "percent": 21.5,
+   "unlocked": "2023-11-04T21:41:52+01:00"
+  },
+  {
+   "description": {
+    "de": "Besiege irgendeinen Boss, indem du einen seiner Untertanen spielst.",
+    "en": "Defeat any boss by playing one of his own minions."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/204360/cec6631e15a809787c6a1f65164e46c84b160240.jpg",
+   "key": "ACH_THETRAITOR",
+   "name": {
+    "de": "Der Verräter",
+    "en": "The Traitor"
+   },
+   "percent": 7.6
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Bewege dich durch die Verlassene Mühle, ohne ein Hindernis zu treffen.",
+    "en": "Navigate the Abandoned Mill without hitting any obstacles."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/204360/78339a8e62f9891dfd97d205c090ac28c6d0a627.jpg",
+   "key": "ACH_DEERTRAINER",
+   "name": {
+    "de": "Hirschtrainer",
+    "en": "Deer Trainer"
+   },
+   "percent": 21.8,
+   "unlocked": "2020-11-05T20:31:45+01:00"
+  },
+  {
+   "description": {
+    "de": "Beende das Heimatschloss durch Barbarenbossgebiete ohne Feinde anzugreifen.",
+    "en": "Complete the Home Castle through Barbarian Boss areas without attacking any foes."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/204360/4e46c6ad4029efe324e24a4cde7184bea1fa8512.jpg",
+   "key": "ACH_CONOBJECTOR",
+   "name": {
+    "de": "Gewissensverweigerer",
+    "en": "Conscientious Objector"
+   },
+   "percent": 2.4
+  },
+  {
+   "description": {
+    "de": "Schleuder einen Ritter mit höchster Kraft mit einem Katapult.",
+    "en": "Using a catapult, fling a knight with maximum power."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/204360/c7025e363d2899c7b4984c58d553d692de9c7acf.jpg",
+   "key": "ACH_MAXFIREPOWR",
+   "name": {
+    "de": "Höchste Feuerkraft",
+    "en": "Maximum Firepower"
+   },
+   "percent": 27.0
+  },
+  {
+   "description": {
+    "de": "Sammel alle Tierkugeln.",
+    "en": "Collect all the animal orbs."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/204360/9c546b6a060c7092c93a308e315f38f2d468727d.jpg",
+   "key": "ACH_ANMLTRAINER",
+   "name": {
+    "de": "Tiertrainer",
+    "en": "Animal Handler"
+   },
+   "percent": 3.0
+  },
+  {
+   "description": {
+    "de": "Gewinne 40 online Arenaspiele",
+    "en": "Win 40 Arena Online Matches."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/204360/129acacff51fa3e5f7f1167c2847828bdad1eda1.jpg",
+   "key": "ACH_ARENAMASTER",
+   "name": {
+    "de": "Arenameister",
+    "en": "Arena Master"
+   },
+   "percent": 1.4
+  },
+  {
+   "description": {
+    "de": "Überlebe im Modus „Verschwinde, Barbar“ bis Minute 2:30.",
+    "en": "Survive until 2:30 in a Back Off Barbarian match."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/204360/e5ef4ab7952566494b02109edd263cc567a4cf98.jpg",
+   "key": "ACH_GLORK",
+   "name": {
+    "de": "Sieg über die Zeit",
+    "en": "The Final Countdown"
+   },
+   "percent": 1.6
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Finde zehn vergrabene Gegenstände und grabe sie aus.",
+    "en": "Find and dig up ten buried items."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/204360/2b893729cd1e2190587c752825691c1e7b9efa8f.jpg",
+   "key": "ACH_TREASURHNTR",
+   "name": {
+    "de": "Schatzjäger",
+    "en": "Treasure Hunter"
+   },
+   "percent": 22.9,
+   "unlocked": "2023-11-04T20:50:20+01:00"
+  },
+  {
+   "description": {
+    "de": "Belebe in einem 4-Spieler-Spiel jeden deiner Kameraden mindestens ein Mal wieder.",
+    "en": "In a 4 player game, resuscitate each of your fallen comrades at least once."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/204360/c9ec9f3f637725701493a07e522342e9b84ee9b1.jpg",
+   "key": "ACH_MEDIC",
+   "name": {
+    "de": "Sani!",
+    "en": "Medic!"
+   },
+   "percent": 10.2
+  }
+ ],
+ "id": "204360",
+ "platform": "steam"
+}

@@ -1,0 +1,53 @@
+{
+ "developers": [
+  "Kinetic Games"
+ ],
+ "genres": [
+  {
+   "de": "Survival Horror",
+   "en": "survival horror",
+   "sv": "survival horror"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  },
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Koop-Modus",
+   "en": "co-op mode",
+   "sv": "flerspelarläge"
+  }
+ ],
+ "publishers": [
+  "Kinetic Games"
+ ],
+ "released": "2020-09-18",
+ "steam": {
+  "en": "Phasmophobia is a 4 player online co-op psychological horror. Paranormal activity is on the rise and it’s up to you and your team to use all the ghost-hunting equipment at your disposal in order to gather as much evidence as you can."
+ },
+ "steam_appid": 739630,
+ "wikidata": "Q99990957",
+ "wikipedia": {
+  "de": {
+   "text": "Phasmophobia ist ein Independent-Supernatural-Investigation-Horror-Computerspiel, das von Kinetic Games entwickelt wird. Eine erste Early-Access-Version, die Unterstützung für Virtual-Reality-Headsets anbietet, wurde über Steam veröffentlicht. 2024 folgte das öfter verzögerte Konsolen-Update, das Phasmophobia dann auch für die Xbox Series und die PlayStation 5 anbot.",
+   "url": "https://de.wikipedia.org/wiki/Phasmophobia"
+  },
+  "en": {
+   "text": "Phasmophobia is a 2020 paranormal horror game developed and was published by British indie game studio Kinetic Games. The game became available in early access for Microsoft Windows with virtual reality support in September 2020. In the game, one to four players take on the role of ghost hunters who work to complete a contract where they must identify the type of ghost haunting a designated site and complete other optional objectives.",
+   "url": "https://en.wikipedia.org/wiki/Phasmophobia_(video_game)"
+  },
+  "sv": {
+   "text": "Phasmophobia är ett utforskande skräckspel utvecklat och publicerat av den brittiska indiespelsstudion Kinetic Games. Spelet blev tillgängligt i 'Early Access' via Steam för Microsoft Windows med stöd för VR i september 2020. Spelet fick ett stort tillflöde av popularitet på grund av att många kända Twitch-streamers och YouTubers spelade det, främst under Halloween-säsongen.",
+   "url": "https://sv.wikipedia.org/wiki/Phasmophobia"
+  }
+ }
+}

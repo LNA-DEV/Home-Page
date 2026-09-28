@@ -1,0 +1,557 @@
+{
+ "achievements": [
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/82bfe4861ab7fe41c2e15c1145e5bbc0dc900a51.jpg",
+   "key": "48",
+   "name": {
+    "de": "ÜBERLEBENDE",
+    "en": "SURVIVORS",
+    "sv": "ÖVERLEVARE"
+   },
+   "percent": 7.0
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erstes Kapitel spielen",
+    "en": "Play the first chapter",
+    "sv": "Spela första kapitlet."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1222140/708ce8cefbf25bef1cf0c860ce765cfeeb795a59.jpg",
+   "key": "1",
+   "name": {
+    "de": "VIELEN DANK",
+    "en": "THANK YOU",
+    "sv": "TACK"
+   },
+   "percent": 87.9,
+   "unlocked": "2025-08-03T12:46:45+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/82bfe4861ab7fe41c2e15c1145e5bbc0dc900a51.jpg",
+   "key": "47",
+   "name": {
+    "de": "DAS SIND UNSERE GESCHICHTEN",
+    "en": "THESE ARE OUR STORIES",
+    "sv": "DET HÄR ÄR VÅRA BERÄTTELSER"
+   },
+   "percent": 4.2
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/4f558537c7846963f9cab2f7f489f6034d168dfe.jpg",
+   "key": "2",
+   "name": {
+    "de": "MISSION ERFÜLLT",
+    "en": "MISSION ACCOMPLISHED",
+    "sv": "UPPDRAG SLUTFÖRT"
+   },
+   "percent": 86.8,
+   "unlocked": "2025-08-03T12:46:45+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/001d3062e54db74c34ea567a0e1748e4e245daf3.jpg",
+   "key": "3",
+   "name": {
+    "de": "GEHEIMNISSE",
+    "en": "SECRETS",
+    "sv": "HEMLIGHETER"
+   },
+   "percent": 70.8,
+   "unlocked": "2025-08-03T13:27:25+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/4f558537c7846963f9cab2f7f489f6034d168dfe.jpg",
+   "key": "4",
+   "name": {
+    "de": "ABWEICHLER GEFUNDEN",
+    "en": "DEVIANT LOCATED",
+    "sv": "AVVIKARE LOKALISERAD"
+   },
+   "percent": 66.0,
+   "unlocked": "2025-08-03T14:59:05+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/001d3062e54db74c34ea567a0e1748e4e245daf3.jpg",
+   "key": "5",
+   "name": {
+    "de": "WIR SIND FREI",
+    "en": "WE ARE FREE",
+    "sv": "VI ÄR FRIA"
+   },
+   "percent": 65.7,
+   "unlocked": "2025-08-03T15:09:43+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/9d397ff2425007d41714fc8ff4aa98e1f2e58fc0.jpg",
+   "key": "6",
+   "name": {
+    "de": "VERTEIDIGE DICH",
+    "en": "DEFEND YOURSELF",
+    "sv": "FÖRSVARA DIG"
+   },
+   "percent": 41.3
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/9d397ff2425007d41714fc8ff4aa98e1f2e58fc0.jpg",
+   "key": "7",
+   "name": {
+    "de": "SELBSTKONTROLLE",
+    "en": "SELF-CONTROL",
+    "sv": "SJÄLVBEHÄRSKNING"
+   },
+   "percent": 39.4,
+   "unlocked": "2025-08-03T15:15:57+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/4f558537c7846963f9cab2f7f489f6034d168dfe.jpg",
+   "key": "8",
+   "name": {
+    "de": "GESTÄNDNIS",
+    "en": "CONFESSION",
+    "sv": "ERKÄNNANDE"
+   },
+   "percent": 43.2,
+   "unlocked": "2025-08-03T15:29:49+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/001d3062e54db74c34ea567a0e1748e4e245daf3.jpg",
+   "key": "9",
+   "name": {
+    "de": "UNTERSCHLUPF",
+    "en": "SHELTER",
+    "sv": "HUSRUM"
+   },
+   "percent": 48.4,
+   "unlocked": "2025-08-03T15:54:06+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/4f558537c7846963f9cab2f7f489f6034d168dfe.jpg",
+   "key": "10",
+   "name": {
+    "de": "KENNE DEINEN PARTNER",
+    "en": "KNOW YOUR PARTNER",
+    "sv": "KÄNN DIN PARTNER"
+   },
+   "percent": 47.3,
+   "unlocked": "2025-08-03T16:27:36+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/001d3062e54db74c34ea567a0e1748e4e245daf3.jpg",
+   "key": "11",
+   "name": {
+    "de": "LAUF, KARA, LAUF",
+    "en": "RUN KARA RUN",
+    "sv": "SPRING, KARA, SPRING"
+   },
+   "percent": 57.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/4f558537c7846963f9cab2f7f489f6034d168dfe.jpg",
+   "key": "12",
+   "name": {
+    "de": "SCHNAPP IHN DIR",
+    "en": "CATCH IT",
+    "sv": "FÅNGAD"
+   },
+   "percent": 13.1
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/4f558537c7846963f9cab2f7f489f6034d168dfe.jpg",
+   "key": "13",
+   "name": {
+    "de": "HANK RETTEN",
+    "en": "SAVE HANK",
+    "sv": "RÄDDA HANK"
+   },
+   "percent": 42.0
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/8b37bebb32a4d19b9658ef5715bd3edb439d4b65.jpg",
+   "key": "14",
+   "name": {
+    "de": "FLUCHT AUS DEM HAUS",
+    "en": "ESCAPE THE MANOR",
+    "sv": "FLY FRÅN HUSET"
+   },
+   "percent": 51.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/4f558537c7846963f9cab2f7f489f6034d168dfe.jpg",
+   "key": "15",
+   "name": {
+    "de": "GNADENLOS",
+    "en": "RUTHLESS",
+    "sv": "SKONINGSLÖS"
+   },
+   "percent": 26.4
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/b60ea21b50a40b9b13dae881ab713d12130223ff.jpg",
+   "key": "16",
+   "name": {
+    "de": "ZWEIFEL",
+    "en": "DOUBTS",
+    "sv": "TVIVEL"
+   },
+   "percent": 30.4
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/9d397ff2425007d41714fc8ff4aa98e1f2e58fc0.jpg",
+   "key": "17",
+   "name": {
+    "de": "JERICHOS HELD",
+    "en": "JERICHO'S HERO",
+    "sv": "JERICHOS HJÄLTE"
+   },
+   "percent": 48.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/4f558537c7846963f9cab2f7f489f6034d168dfe.jpg",
+   "key": "18",
+   "name": {
+    "de": "NUR EINE MASCHINE",
+    "en": "JUST A MACHINE",
+    "sv": "BARA EN MASKIN"
+   },
+   "percent": 7.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/001d3062e54db74c34ea567a0e1748e4e245daf3.jpg",
+   "key": "19",
+   "name": {
+    "de": "EIN LÄCHELN AUF IHREM GESICHT",
+    "en": "A SMILE ON HER FACE",
+    "sv": "ETT LEENDE PÅ LÄPPARNA"
+   },
+   "percent": 47.9
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/9d397ff2425007d41714fc8ff4aa98e1f2e58fc0.jpg",
+   "key": "20",
+   "name": {
+    "de": "WENN EIN PLAN FUNKTIONIERT",
+    "en": "WHEN A PLAN COMES TOGETHER",
+    "sv": "NÄR BITARNA FALLER PÅ PLATS"
+   },
+   "percent": 17.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/4f558537c7846963f9cab2f7f489f6034d168dfe.jpg",
+   "key": "21",
+   "name": {
+    "de": "KURZER BLICK AUF JERICHO",
+    "en": "A GLIMPSE OF JERICHO",
+    "sv": "EN GLIMT AV JERICHO"
+   },
+   "percent": 8.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/77466141ae5b80688a9c0dfa35fdc82a02dd495e.jpg",
+   "key": "22",
+   "name": {
+    "de": "EIN ZEICHEN SETZEN",
+    "en": "SEND A MESSAGE",
+    "sv": "SKICKA ETT BUDSKAP"
+   },
+   "percent": 36.1
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/9d397ff2425007d41714fc8ff4aa98e1f2e58fc0.jpg",
+   "key": "23",
+   "name": {
+    "de": "BRENNE ALLES NIEDER",
+    "en": "BURN THE PLACE",
+    "sv": "BRÄNN ALLT"
+   },
+   "percent": 9.4
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/001d3062e54db74c34ea567a0e1748e4e245daf3.jpg",
+   "key": "24",
+   "name": {
+    "de": "HIER GIBT ES NICHTS ZU SEHEN",
+    "en": "NOTHING TO SEE HERE",
+    "sv": "INGET ATT SE HÄR"
+   },
+   "percent": 41.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/9d397ff2425007d41714fc8ff4aa98e1f2e58fc0.jpg",
+   "key": "25",
+   "name": {
+    "de": "KONFRONTATION",
+    "en": "CONFRONTATION",
+    "sv": "KONFRONTATION"
+   },
+   "percent": 21.3
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/9d397ff2425007d41714fc8ff4aa98e1f2e58fc0.jpg",
+   "key": "26",
+   "name": {
+    "de": "NICHT ZURÜCKWEICHEN",
+    "en": "STAND YOUR GROUND",
+    "sv": "STÅ KVAR"
+   },
+   "percent": 21.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/4f558537c7846963f9cab2f7f489f6034d168dfe.jpg",
+   "key": "27",
+   "name": {
+    "de": "PRIORITÄTEN",
+    "en": "PRIORITIES",
+    "sv": "PRIORITETER"
+   },
+   "percent": 9.8
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/4f558537c7846963f9cab2f7f489f6034d168dfe.jpg",
+   "key": "28",
+   "name": {
+    "de": "VERWANDTSCHAFT",
+    "en": "KINSHIP",
+    "sv": "SLÄKTSKAP"
+   },
+   "percent": 41.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/4f558537c7846963f9cab2f7f489f6034d168dfe.jpg",
+   "key": "29",
+   "name": {
+    "de": "BLUTHUND",
+    "en": "BLOODHOUND",
+    "sv": "BLODHUND"
+   },
+   "percent": 42.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/708ce8cefbf25bef1cf0c860ce765cfeeb795a59.jpg",
+   "key": "30",
+   "name": {
+    "de": "DREI IN JERICHO",
+    "en": "THREE AT JERICHO",
+    "sv": "TRE I JERICHO"
+   },
+   "percent": 40.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/708ce8cefbf25bef1cf0c860ce765cfeeb795a59.jpg",
+   "key": "31",
+   "name": {
+    "de": "VERBRANNTE ERDE",
+    "en": "SCORCHED EARTH",
+    "sv": "BRÄND JORD"
+   },
+   "percent": 41.3
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/9d397ff2425007d41714fc8ff4aa98e1f2e58fc0.jpg",
+   "key": "32",
+   "name": {
+    "de": "BEFREIUNG",
+    "en": "LIBERATION",
+    "sv": "BEFRIELSE"
+   },
+   "percent": 18.3
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/9d397ff2425007d41714fc8ff4aa98e1f2e58fc0.jpg",
+   "key": "33",
+   "name": {
+    "de": "MORALISCHER SIEG",
+    "en": "MORAL VICTORY",
+    "sv": "MORALISK SEGER"
+   },
+   "percent": 18.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/001d3062e54db74c34ea567a0e1748e4e245daf3.jpg",
+   "key": "34",
+   "name": {
+    "de": "DEM TOD ENTKOMMEN",
+    "en": "ESCAPE DEATH",
+    "sv": "FLY DÖDEN"
+   },
+   "percent": 7.3
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/001d3062e54db74c34ea567a0e1748e4e245daf3.jpg",
+   "key": "35",
+   "name": {
+    "de": "SICHERER HAFEN",
+    "en": "SAFE HARBOR",
+    "sv": "I SÄKERHET"
+   },
+   "percent": 16.3
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/4f558537c7846963f9cab2f7f489f6034d168dfe.jpg",
+   "key": "36",
+   "name": {
+    "de": "EINE ARMEE WIE ICH",
+    "en": "AN ARMY OF ME",
+    "sv": "EN ARMÉ AV MIG"
+   },
+   "percent": 30.8
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/4f558537c7846963f9cab2f7f489f6034d168dfe.jpg",
+   "key": "37",
+   "name": {
+    "de": "MISSION ABGESCHLOSSEN",
+    "en": "MISSION COMPLETE",
+    "sv": "UPPDRAG AVKLARAT"
+   },
+   "percent": 6.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/4f558537c7846963f9cab2f7f489f6034d168dfe.jpg",
+   "key": "38",
+   "name": {
+    "de": "MEINE ENTSCHEIDUNG",
+    "en": "MY TURN TO DECIDE",
+    "sv": "MIN TUR ATT BESTÄMMA"
+   },
+   "percent": 28.1
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/4f558537c7846963f9cab2f7f489f6034d168dfe.jpg",
+   "key": "39",
+   "name": {
+    "de": "GEFÜGIG",
+    "en": "COMPLIANT",
+    "sv": "LYDIG"
+   },
+   "percent": 11.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/4f558537c7846963f9cab2f7f489f6034d168dfe.jpg",
+   "key": "40",
+   "name": {
+    "de": "EINER VON UNS",
+    "en": "ONE OF US",
+    "sv": "EN AV OSS"
+   },
+   "percent": 36.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/5b45a85131c22b6b99d1acd19511526142f83114.jpg",
+   "key": "41",
+   "name": {
+    "de": "UNBESIEGT",
+    "en": "UNDEFEATED",
+    "sv": "OBESEGRAD"
+   },
+   "percent": 33.9
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/5b45a85131c22b6b99d1acd19511526142f83114.jpg",
+   "key": "42",
+   "name": {
+    "de": "BÜCHERWURM",
+    "en": "BOOKWORM",
+    "sv": "BOKMAL"
+   },
+   "percent": 1.3
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/3e76abe8949d38b6bb04c9e4032f298b548d0bef.jpg",
+   "key": "43",
+   "name": {
+    "de": "PARTNER",
+    "en": "PARTNERS",
+    "sv": "PARTNER"
+   },
+   "percent": 30.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/1718d9190159cfc5eef9777af6fffa68972f92d6.jpg",
+   "key": "44",
+   "name": {
+    "de": "GLÜCKLICHE FAMILIE",
+    "en": "HAPPY FAMILY",
+    "sv": "GLAD FAMILJ"
+   },
+   "percent": 17.1
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/3e76abe8949d38b6bb04c9e4032f298b548d0bef.jpg",
+   "key": "45",
+   "name": {
+    "de": "ICH KOMME WIEDER",
+    "en": "I'LL BE BACK",
+    "sv": "JAG KOMMER TILLBAKA"
+   },
+   "percent": 1.3
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1222140/82bfe4861ab7fe41c2e15c1145e5bbc0dc900a51.jpg",
+   "key": "46",
+   "name": {
+    "de": "DAS IST MEINE GESCHICHTE",
+    "en": "THIS IS MY STORY",
+    "sv": "DET HÄR ÄR MIN BERÄTTELSE"
+   },
+   "percent": 40.2
+  }
+ ],
+ "id": "1222140",
+ "platform": "steam"
+}

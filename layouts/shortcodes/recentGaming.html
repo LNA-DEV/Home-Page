@@ -7,7 +7,7 @@
 {{ $lang := .Page.Site.Language.Lang }}
 {{ $gamingUrl := printf "/%s/gaming/" $lang }}
 
-{{/* Merge same-title copies (e.g. one game on two platforms) so a title can't
+{{/* Merge the copies of a game (e.g. one game on two platforms) so a game can't
      show up twice. See partials/gaming-merged.html. */}}
 {{ $all := partialCached "gaming-merged.html" . }}
 
@@ -28,7 +28,9 @@
 <div class="recent-gaming">
   {{ range $games }}
   {{ $game := . }}
-  {{ $gameUrl := printf "%s#%s" $gamingUrl (urlize $game.title) }}
+  {{/* The game's own page; the grid anchor only if the page is somehow missing. */}}
+  {{ $gameUrl := printf "%s#%s" $gamingUrl $game.slug }}
+  {{ with site.GetPage (printf "/gaming/%s" $game.slug) }}{{ $gameUrl = .RelPermalink }}{{ end }}
   <div class="recent-gaming__tile">
     <div class="recent-gaming__cover">
       <a href="{{ $gameUrl }}">

@@ -1,24 +1,49 @@
 {{/*
-  Collapses gaming entries that share a `title` into one UI item.
+  Collapses the copies in data/gaming.yaml into one item per GAME.
 
-  The data (data/gaming.yaml) intentionally keeps one entry per copy of a game
-  (e.g. the same title owned on both `switch` and `steam`). For display we merge
-  copies that share a title into a single card:
+  The data keeps one entry per copy of a game (the same game owned on `switch`
+  and on `steam` is two entries). Copies that share a `slug` are one game: one
+  card on /gaming/ and one page at /<lang>/gaming/<slug>/. The slug, not the
+  title, is the key — stores disagree about titles (`Rocket League®` on Epic,
+  `Rocket League` on the Switch), and a slug is written once and never
+  recomputed, so a store renaming a game moves neither the card nor the URL.
+  See docs/concepts/gaming-game-pages.md §2.
 
-    playtimeMinutes      -> summed across all copies, plus each copy's optional
-                            extraMinutes (hand-entered untracked/estimated time)
-    lastPlayed           -> newest of the copies
-    achievements(Un/T)   -> taken from the copy with the most unlocked
-    platforms            -> all distinct platforms of the copies (for filtering)
-    cover / link / rating -> first non-empty across the copies
+  Per game:
+    slug / title          the title is data/gamePages.yaml's `title` if set, else
+                          the first copy in a fixed order — hand-added, steam, gog,
+                          epic. Not file order: every sync moves its own block to
+                          the bottom of the file on every run.
+    playtimeMinutes       summed across all copies, plus each copy's optional
+                          extraMinutes (hand-entered untracked/estimated time)
+    lastPlayed            newest of the copies
+    achievements(Un/T)    taken from the copy with the most unlocked
+    platforms             all distinct platforms of the copies (for filtering)
+    cover / link          first non-empty across the copies, in the same order
+    rating                from data/gamePages.yaml
+    copies                every copy, in that order, with its own minutes, link,
+                          counts and `achievementsKey` (steam-<appid> / gog-<appName>,
+                          the file name in data/gameAchievements/) — the page needs
+                          them per platform
+    page                  the data/gamePages.yaml record, or an empty dict
 
-  Returns a slice of dicts with the same field names the single-entry markup
-  used, plus `platforms` (a slice). hugo.Data is global / language-independent,
-  so callers should invoke this via `partialCached`.
+  It also validates both files, once per build (it is always partialCached, and
+  hugo.Data is language-independent): a copy without a slug, a malformed slug,
+  two copies of ONE platform under one slug (two different games merged by
+  accident), a rating / notes / genres / tags line on a copy (those live in
+  gamePages.yaml now), a gamePages.yaml record for a slug no copy has, a
+  duplicate record, and a slugAlias that is a live slug or claimed twice.
+  `errorf` fails the build but does not stop the template, so every check leaves
+  the data in a shape the rest of the partial can still walk.
 */}}
+{{ $slugRE := `^[a-z0-9]+(-[a-z0-9]+)*$` }}
+{{ $moved := slice "rating" "notes" "genres" "tags" }}
+{{ $syncedOrder := slice "steam" "gog" "epic" }}
+
 {{/* Titles listed in data/gamingIgnore.yaml are hidden from every gaming view
-     (grid, stats, recent-played) even though they stay in data/gaming.yaml.
-     The match is case-insensitive and whitespace-trimmed, otherwise exact. */}}
+     (grid, stats, recent-played, pages) even though they stay in
+     data/gaming.yaml. The match is case-insensitive and whitespace-trimmed,
+     otherwise exact, and applies per copy. */}}
 {{ $ignore := slice }}
 {{ with hugo.Data.gamingIgnore.titles }}
   {{ range . }}
@@ -26,18 +51,91 @@
   {{ end }}
 {{ end }}
 
-{{ $titles := slice }}
+{{/* --- Copies: validate, and collect the slugs of the shown ones in file order --- */}}
+{{ $allSlugs := slice }}
+{{ $shownSlugs := slice }}
+{{ $seen := dict }}
 {{ range hugo.Data.gaming }}
-  {{ if not (in $ignore (lower (trim .title " "))) }}
-    {{ $titles = $titles | append .title }}
+  {{ $copy := . }}
+  {{ $platform := .platform | default "other" }}
+  {{ $slug := printf "%v" (.slug | default "") }}
+  {{ range $moved }}
+    {{ if isset $copy . }}
+      {{ errorf "data/gaming.yaml: %q (%s) has a `%s:` line — per-game fields live in data/gamePages.yaml now, under `slug: %s`" $copy.title $platform . $slug }}
+    {{ end }}
+  {{ end }}
+  {{ if not $slug }}
+    {{ errorf "data/gaming.yaml: %q (%s) has no `slug:` — every copy needs one (lowercase, digits, hyphens); see the header of data/gaming.yaml" .title $platform }}
+  {{ else if not (findRE $slugRE $slug) }}
+    {{ errorf "data/gaming.yaml: %q (%s) has the slug %q — only lowercase letters, digits and single hyphens" .title $platform $slug }}
+  {{ else }}
+    {{ $key := printf "%s|%s" $slug $platform }}
+    {{ with index $seen $key }}
+      {{ errorf "data/gaming.yaml: %q and %q are both %s copies with the slug %q — two different games merged by accident; give one of them another slug" . $copy.title $platform $slug }}
+    {{ else }}
+      {{ $seen = merge $seen (dict $key $copy.title) }}
+    {{ end }}
+    {{ $allSlugs = $allSlugs | append $slug }}
+    {{ if not (in $ignore (lower (trim .title " "))) }}
+      {{ $shownSlugs = $shownSlugs | append $slug }}
+    {{ end }}
   {{ end }}
 {{ end }}
-{{ $titles = $titles | uniq }}
+{{ $shownSlugs = $shownSlugs | uniq }}
 
+{{/* --- data/gamePages.yaml: one record per game, keyed by slug --- */}}
+{{ $pages := dict }}
+{{ $aliasOwner := dict }}
+{{ range hugo.Data.gamePages.games | default slice }}
+  {{ $rec := . }}
+  {{ $slug := printf "%v" (.slug | default "") }}
+  {{ if not $slug }}
+    {{ errorf "data/gamePages.yaml: a record has no `slug:`" }}
+  {{ else if not (in $allSlugs $slug) }}
+    {{ errorf "data/gamePages.yaml: %q is the slug of no copy in data/gaming.yaml" $slug }}
+  {{ else if index $pages $slug }}
+    {{ errorf "data/gamePages.yaml: %q has two records" $slug }}
+  {{ else }}
+    {{ $pages = merge $pages (dict $slug $rec) }}
+  {{ end }}
+  {{ with .rating }}
+    {{ if or (lt (int .) 1) (gt (int .) 5) }}
+      {{ errorf "data/gamePages.yaml: %q has rating %v — ratings are 1 to 5" $slug . }}
+    {{ end }}
+  {{ end }}
+  {{ range .slugAliases | default slice }}
+    {{ $alias := printf "%v" . }}
+    {{ if not (findRE $slugRE $alias) }}
+      {{ errorf "data/gamePages.yaml: %q has the slugAlias %q — only lowercase letters, digits and single hyphens" $slug $alias }}
+    {{ else if in $allSlugs $alias }}
+      {{ errorf "data/gamePages.yaml: %q lists %q as a slugAlias, but that is a live slug — the redirect would overwrite a page" $slug $alias }}
+    {{ else if index $aliasOwner $alias }}
+      {{ errorf "data/gamePages.yaml: the slugAlias %q is claimed by both %q and %q" $alias (index $aliasOwner $alias) $slug }}
+    {{ else }}
+      {{ $aliasOwner = merge $aliasOwner (dict $alias $slug) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* --- One item per shown game --- */}}
 {{ $merged := slice }}
-{{ range $titles }}
-  {{ $title := . }}
-  {{ $group := where hugo.Data.gaming "title" $title }}
+{{ range $shownSlugs }}
+  {{ $slug := . }}
+  {{ $page := index $pages $slug | default dict }}
+
+  {{/* The shown copies of this game, hand-added first, then steam, gog, epic. */}}
+  {{ $group := slice }}
+  {{ range hugo.Data.gaming }}
+    {{ if and (eq (printf "%v" (.slug | default "")) $slug) (not (in $ignore (lower (trim .title " ")))) }}
+      {{ $group = $group | append . }}
+    {{ end }}
+  {{ end }}
+  {{ $ordered := slice }}
+  {{ range $group }}{{ if not (in $syncedOrder (.platform | default "other")) }}{{ $ordered = $ordered | append . }}{{ end }}{{ end }}
+  {{ range $syncedOrder }}
+    {{ $p := . }}
+    {{ range $group }}{{ if eq (.platform | default "other") $p }}{{ $ordered = $ordered | append . }}{{ end }}{{ end }}
+  {{ end }}
 
   {{ $sumMinutes := 0 }}
   {{ $lastPlayed := "" }}
@@ -47,12 +145,14 @@
   {{ $achT := 0 }}
   {{ $cover := "" }}
   {{ $link := "" }}
-  {{ $rating := 0 }}
+  {{ $copies := slice }}
 
-  {{ range $group }}
-    {{ $sumMinutes = add $sumMinutes (add (.playtimeMinutes | default 0) (.extraMinutes | default 0)) }}
+  {{ range $ordered }}
+    {{ $platform := .platform | default "other" }}
+    {{ $minutes := add (.playtimeMinutes | default 0) (.extraMinutes | default 0) }}
+    {{ $sumMinutes = add $sumMinutes $minutes }}
     {{ with .lastPlayed }}{{ if gt . $lastPlayed }}{{ $lastPlayed = . }}{{ end }}{{ end }}
-    {{ $platforms = $platforms | append (.platform | default "other") }}
+    {{ $platforms = $platforms | append $platform }}
     {{ $u := int (.achievementsUnlocked | default 0) }}
     {{ if gt $u $bestUnlocked }}
       {{ $bestUnlocked = $u }}
@@ -61,10 +161,26 @@
     {{ end }}
     {{ if and (eq $cover "") .cover }}{{ $cover = .cover }}{{ end }}
     {{ if and (eq $link "") .link }}{{ $link = .link }}{{ end }}
-    {{ if and (eq $rating 0) .rating }}{{ $rating = .rating }}{{ end }}
+    {{ $achKey := "" }}
+    {{ if and (eq $platform "steam") .appid }}{{ $achKey = printf "steam-%v" .appid }}{{ end }}
+    {{ if and (eq $platform "gog") .appName }}{{ $achKey = printf "gog-%v" .appName }}{{ end }}
+    {{ $copies = $copies | append (dict
+        "platform" $platform
+        "title" .title
+        "minutes" $minutes
+        "lastPlayed" (.lastPlayed | default "")
+        "link" (.link | default "")
+        "achievementsUnlocked" (int (.achievementsUnlocked | default 0))
+        "achievementsTotal" (int (.achievementsTotal | default 0))
+        "achievementsKey" $achKey
+    ) }}
   {{ end }}
 
+  {{ $title := (index $ordered 0).title }}
+  {{ with $page.title }}{{ $title = . }}{{ end }}
+
   {{ $merged = $merged | append (dict
+      "slug" $slug
       "title" $title
       "playtimeMinutes" $sumMinutes
       "lastPlayed" $lastPlayed
@@ -73,7 +189,9 @@
       "achievementsTotal" $achT
       "cover" $cover
       "link" $link
-      "rating" $rating
+      "rating" (int ($page.rating | default 0))
+      "copies" $copies
+      "page" $page
   ) }}
 {{ end }}
 {{ return $merged }}

@@ -1,0 +1,528 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "de": "Spiel 10 Spiele",
+    "en": "Play 10 games",
+    "sv": "Spela 10 spel"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/45c9322e679083ec61b8dfeef88e1a2f50ee02e7.jpg",
+   "key": "Gettin_the_Hang_of_It",
+   "name": {
+    "de": "Auf dem Weg zum Meister",
+    "en": "Gettin' the Hang of It",
+    "sv": "Börjar få kläm på det"
+   },
+   "percent": 51.2,
+   "unlocked": "2021-02-27T16:05:17+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Spiel 30 Spiele",
+    "en": "Play 30 games",
+    "sv": "Spela 30 spel"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/9682511728c8b550ec9bf5124dbbbba993969ab1.jpg",
+   "key": "Seasoned_Vet",
+   "name": {
+    "de": "Könner",
+    "en": "Seasoned Vet",
+    "sv": "Erfaren veteran"
+   },
+   "percent": 22.3,
+   "unlocked": "2021-03-29T22:34:28+02:00"
+  },
+  {
+   "description": {
+    "de": "Spiel 100 Spiele",
+    "en": "Play 100 games",
+    "sv": "Spela 100 spel"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/66887e25f55ab1970ba071af97c2bf050c7520c0.jpg",
+   "key": "Ultimate_Expert",
+   "name": {
+    "de": "Ulimativer Experte",
+    "en": "Ultimate Expert",
+    "sv": "Ultimat expert"
+   },
+   "percent": 4.1
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Spiel 10 Spiele online",
+    "en": "Play 10 games online",
+    "sv": "Spela 10 spel online"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/bbed9b926bd8e8c5af88d5d27216de72c4d4da28.jpg",
+   "key": "Techie",
+   "name": {
+    "de": "Nerd",
+    "en": "Techie"
+   },
+   "percent": 45.4,
+   "unlocked": "2021-02-27T16:05:17+01:00"
+  },
+  {
+   "description": {
+    "de": "Spiel 50 Spiele online",
+    "en": "Play 50 games online",
+    "sv": "Spela 50 spel online"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/0aa0b4dd8b9bb49928635008b7ed09d7c5cdbd15.jpg",
+   "key": "Showoff",
+   "name": {
+    "de": "Angeber",
+    "en": "Showoff"
+   },
+   "percent": 9.9
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Mit Freunden vor Ort online spielen",
+    "en": "Play online with a local friend",
+    "sv": "Spela online med en lokal vän"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/1f04eb18188f905e0aa21165d813e840195d3259.jpg",
+   "key": "Takin_On_the_World",
+   "name": {
+    "de": "Weltherrscher",
+    "en": "Takin' On the World!",
+    "sv": "Tar sig an världen!"
+   },
+   "percent": 5.6,
+   "unlocked": "2021-03-29T20:56:19+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Platziere 200 Fallen",
+    "en": "Place 200 traps",
+    "sv": "Sätt 200 fällor"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/f01cd9aacbc2ee372837b75d040f9c241dd92b1b.jpg",
+   "key": "Trappist",
+   "name": {
+    "en": "Trappist",
+    "sv": "Fäll-sättare"
+   },
+   "percent": 18.8,
+   "unlocked": "2021-10-10T14:04:12+02:00"
+  },
+  {
+   "description": {
+    "de": "Platziere 1000 Fallen",
+    "en": "Place 1000 traps",
+    "sv": "Sätt 1000 fällor"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/a6f2dced2a7579e92c72e5a553ebd87fcc366918.jpg",
+   "key": "Threat_to_Public_Security",
+   "name": {
+    "de": "Gefahr für die öffentliche Sicherheit",
+    "en": "Threat to Public Security",
+    "sv": "Hot mot den allmänna säkerheten"
+   },
+   "percent": 2.4
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Level freischalten",
+    "en": "Unlock a level",
+    "sv": "Lås upp en nivå"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/d9cc3b320e5c6f4f64e0925bc0cfcc5ba8f7d18d.jpg",
+   "key": "Young_Explorer",
+   "name": {
+    "de": "Junger Entdecker",
+    "en": "Young Explorer",
+    "sv": "Ung upptäckare"
+   },
+   "percent": 62.1,
+   "unlocked": "2021-02-27T15:37:21+01:00"
+  },
+  {
+   "description": {
+    "de": "Alle Level freischalten",
+    "en": "Unlock all levels",
+    "sv": "Lås upp alla nivåer"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/8079bd877d9bc85b759eed08cc2166a374cdef1b.jpg",
+   "key": "Magellan",
+   "name": {
+    "en": "Magellan"
+   },
+   "percent": 5.7
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Charakter freischalten",
+    "en": "Unlock a character",
+    "sv": "Lås upp en karaktär"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/78edd86fa38ae959bf98e1ee233073901638d3c9.jpg",
+   "key": "A_New_Friend_Appears",
+   "name": {
+    "de": "Ein neuer Freund am Horizont",
+    "en": "A New Friend Appears",
+    "sv": "En ny vän visar sig"
+   },
+   "percent": 32.5,
+   "unlocked": "2021-03-26T22:16:30+01:00"
+  },
+  {
+   "description": {
+    "de": "Alle Chraktere freischalten",
+    "en": "Unlock all characters",
+    "sv": "Lås upp alla karaktärer"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/3541f40c94333e2de5a4a0148039c6b7c92dbb98.jpg",
+   "key": "Building_A_Community",
+   "name": {
+    "de": "Gesellschaft entsteht",
+    "en": "Building A Community",
+    "sv": "Bygger ett samhälle"
+   },
+   "percent": 7.5
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Outfits freischalten",
+    "en": "Unlock an outfit",
+    "sv": "Lås upp en utstyrsel"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/1aa050f8b2a60f50337f8ea486a0a77b95db4501.jpg",
+   "key": "Gettin_Fancy",
+   "name": {
+    "de": "Immer cooler",
+    "en": "Gettin' Fancy",
+    "sv": "Börjar bli utsmyckad"
+   },
+   "percent": 52.8,
+   "unlocked": "2021-02-27T15:15:13+01:00"
+  },
+  {
+   "description": {
+    "de": "Alle Outfits freischalten",
+    "en": "Unlock all outfits",
+    "sv": "Lås upp alla utstyrslar"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/7c55f60732a7632f436ee62005961ec0b6e72c64.jpg",
+   "key": "Full_Wardrobe",
+   "name": {
+    "de": "Volle Gaderobe",
+    "en": "Full Wardrobe",
+    "sv": "Full garderob"
+   },
+   "percent": 2.2
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Falle 100mal in den Abgrund",
+    "en": "Fall into the void 100 times",
+    "sv": "Trilla i tomrummet 100 gånger"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/c5d2cde5f5c7f46d53275eafac4334f1437524e9.jpg",
+   "key": "Wilhelm_Audition",
+   "name": {
+    "de": "Talentsuche",
+    "en": "Wilhelm Audition",
+    "sv": "Wilhelm audition"
+   },
+   "percent": 41.0,
+   "unlocked": "2021-03-26T22:12:00+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Leute 100mal mit Fallen töten",
+    "en": "Kill people with traps 100 times",
+    "sv": "Döda folk med fällor 100 gånger"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/a87b57762c79d8c40e0eb2bb07b4d6f0bc159a2e.jpg",
+   "key": "Animal_Cruelty",
+   "name": {
+    "de": "Tierquälerei",
+    "en": "Animal Cruelty",
+    "sv": "Djurplågeri"
+   },
+   "percent": 60.8,
+   "unlocked": "2021-02-27T16:12:05+01:00"
+  },
+  {
+   "description": {
+    "de": "Jemanden 100mal mit Pfeilen töten",
+    "en": "Kill someone with an arrow 100 times",
+    "sv": "Döda någon med en pil 100 gånger"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/e7f2a3bff6a17bc470dd8fb74c1ec1ae1d565462.jpg",
+   "key": "Archer",
+   "name": {
+    "de": "Bogenschütze",
+    "en": "Archer",
+    "sv": "Bågskytt"
+   },
+   "percent": 11.6
+  },
+  {
+   "description": {
+    "de": "Jemanden 100mal mit Schüssen des Hockey-Pucks töten",
+    "en": "Kill someone with a hockey puck shooter 100 times",
+    "sv": "Döda någon med en hockeypuckskjutmaskin 100 gånger"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/646b68e6762dc26c082bbb3c0e6aad9c5eb76c3d.jpg",
+   "key": "Goon",
+   "name": {
+    "de": "Rowdy",
+    "en": "Goon",
+    "sv": "Galning"
+   },
+   "percent": 4.8
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Zehnmal auf Stacheldraht sterben",
+    "en": "Die on barbed wire 10 times",
+    "sv": "Dö på taggtråd 10 gånger"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/73c7b8441aa3bdd1bfefdcc9707f4108cb63bf9b.jpg",
+   "key": "Not_So_Sharp",
+   "name": {
+    "de": "Nicht so heiß",
+    "en": "Not So Sharp",
+    "sv": "Inte så vass"
+   },
+   "percent": 63.3,
+   "unlocked": "2021-03-21T21:36:31+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "1000 Sprünge an die Wand",
+    "en": "Wall jump 1000 times",
+    "sv": "Vägghoppa 1000 gånger"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/1469fb6c14504a4926b1afe0fa2c4863df690551.jpg",
+   "key": "Neat_and_Nimble",
+   "name": {
+    "de": "Auf Zack",
+    "en": "Neat and Nimble",
+    "sv": "Snygg och smidig"
+   },
+   "percent": 28.2,
+   "unlocked": "2021-03-29T21:04:18+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Füge zwei Blöcke mit Kleber zusammen",
+    "en": "Attach two blocks together with glue",
+    "sv": "Fäst ihop två block med lim"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/808e8faa879edaf0bfed4a1433dc870e25b7224e.jpg",
+   "key": "Craftsperson",
+   "name": {
+    "de": "Handwerker",
+    "en": "Craftsperson",
+    "sv": "Hantverkare"
+   },
+   "percent": 77.0,
+   "unlocked": "2021-02-27T15:28:53+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Klebe vier Blöcke zusammen",
+    "en": "Glue four blocks together",
+    "sv": "Limma ihop fyra block"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/7e8c34c3f2c1d5b050ffffcb68f38ee32849a97c.jpg",
+   "key": "Engineer",
+   "name": {
+    "de": "Ingenieur",
+    "en": "Engineer",
+    "sv": "Ingenjör"
+   },
+   "percent": 69.4,
+   "unlocked": "2021-02-27T15:28:53+01:00"
+  },
+  {
+   "description": {
+    "de": "Erhalte 10 Autopsie-Punkte",
+    "en": "Get 10 post-mortem points",
+    "sv": "Få 10 efter döden-poäng"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/bea9c4cde3d8a6c71d327673bc12b4fd2268c4c7.jpg",
+   "key": "Necromancer_Dancer",
+   "name": {
+    "de": "Totenbeschwörer",
+    "en": "Necromancer Dancer",
+    "sv": "Nekromantdansare"
+   },
+   "percent": 5.8
+  },
+  {
+   "description": {
+    "de": "Nutze den Teleporter 50mal",
+    "en": "Teleport 50 times",
+    "sv": "Teleportera 50 gånger"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/91a224614ba8831f182b9d7afdaf18eca98e00f5.jpg",
+   "key": "Space_Time_Cadet",
+   "name": {
+    "de": "Spacecowboy",
+    "en": "Space-Time Cadet",
+    "sv": "Rumtidskadett"
+   },
+   "percent": 7.8
+  },
+  {
+   "description": {
+    "de": "Nimm 20-mal Sudden death ein",
+    "en": "Enter sudden death 20 times",
+    "sv": "Gå till sudden death 20 gånger"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/06393762bf1c3f950633b539e1b145a92aedb955.jpg",
+   "key": "Clutch_Performer",
+   "name": {
+    "de": "Genial unter Strom",
+    "en": "Clutch Performer",
+    "sv": "Kopplingsartist"
+   },
+   "percent": 1.7
+  },
+  {
+   "description": {
+    "de": "Erhalte 50 Münzen",
+    "en": "Get 50 coins",
+    "sv": "Få 50 mynt"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/226aaf078bf7576a4fdfe105865928719b141324.jpg",
+   "key": "Greedy_McGreedster",
+   "name": {
+    "de": "Gierschlund",
+    "en": "Greedy McGreedster"
+   },
+   "percent": 8.6
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Stirb mit Münze 10mal",
+    "en": "Die with the coin 10 times",
+    "sv": "Dö med myntet 10 gånger"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/8d61d80ea379b933e4f3ebd84b518d9d655e1f56.jpg",
+   "key": "Droppin_Bills",
+   "name": {
+    "de": "Verschwender",
+    "en": "Droppin' Bills",
+    "sv": "Tappar räkningar"
+   },
+   "percent": 36.1,
+   "unlocked": "2021-03-29T21:05:06+02:00"
+  },
+  {
+   "description": {
+    "de": "Erziele 50 Comeback-Punkte",
+    "en": "Score 50 comeback points",
+    "sv": "Få 50 comeback poäng"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/073827211e157bc724c0d972a8e92d4dc0653c46.jpg",
+   "key": "Comeback_Kid",
+   "name": {
+    "de": "Comback-Kid",
+    "en": "Comeback Kid",
+    "sv": "Comeback grabb"
+   },
+   "percent": 1.0
+  },
+  {
+   "description": {
+    "de": "Erziele 100 Solo-Punkte",
+    "en": "Score 100 solo points",
+    "sv": "Få 100 solo poäng"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/bb254bafaf566b5d067997fc9d9115bb28601c7c.jpg",
+   "key": "Solo_Master",
+   "name": {
+    "de": "Solo-Meister",
+    "en": "Solo Master",
+    "sv": "Solomästare"
+   },
+   "percent": 4.6
+  },
+  {
+   "description": {
+    "de": "Stirb 50mal im schwarzen Loch",
+    "en": "Die 50 times in a black hole",
+    "sv": "Dö 50 gånger i ett svart hål"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/ab2c512ca92542d4141442462cb903d7d52a2521.jpg",
+   "key": "Spaghetti_Award",
+   "name": {
+    "de": "Spaghetti-Auszeichnung",
+    "en": "Spaghetti Award",
+    "sv": "Spaghettipris"
+   },
+   "percent": 13.6
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Gewinne ohne besonderen Punkte",
+    "en": "Win without any special points",
+    "sv": "Vinn utan några speciella poäng"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/386940/7f8048dca462f56398c8465183f3bc475a56d2b4.jpg",
+   "key": "Back_to_the_Basics",
+   "name": {
+    "de": "Zurück zu den Basics",
+    "en": "Back to the Basics",
+    "sv": "Tillbaka till grunderna"
+   },
+   "percent": 20.3,
+   "unlocked": "2026-05-16T18:38:35+02:00"
+  }
+ ],
+ "id": "386940",
+ "platform": "steam"
+}

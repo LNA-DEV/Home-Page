@@ -1,0 +1,15 @@
+{
+ "match": "steam-appid",
+ "released": "2001",
+ "steam": {
+  "en": "Aseprite is a pixel-art tool to create 2D animations, sprites, and any kind of graphics for games."
+ },
+ "steam_appid": 431730,
+ "wikidata": "Q65620047",
+ "wikipedia": {
+  "en": {
+   "text": "Aseprite is a proprietary, source-available image editor designed primarily for pixel art drawing and animation. It runs on Windows, macOS, and Linux, and features different tools for image and animation editing such as layers, frames, tilemap support, command-line interface, Lua scripting, among others. It is developed by Igara Studio S.A.",
+   "url": "https://en.wikipedia.org/wiki/Aseprite"
+  }
+ }
+}

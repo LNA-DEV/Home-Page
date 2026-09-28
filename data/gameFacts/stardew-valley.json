@@ -1,0 +1,69 @@
+{
+ "developers": [
+  "ConcernedApe LLC",
+  "Eric Barone"
+ ],
+ "genres": [
+  {
+   "de": "Simulationsspiel",
+   "en": "simulation video game",
+   "sv": "simulationsdatorspel"
+  },
+  {
+   "de": "Computer-Rollenspiel",
+   "en": "role-playing video game",
+   "sv": "datorrollspel"
+  },
+  {
+   "de": "Lebenssimulation",
+   "en": "life simulation game",
+   "sv": "livssimulatorspel"
+  },
+  {
+   "en": "farming simulation game"
+  },
+  {
+   "en": "farm life sim",
+   "sv": "Jordbrukssimulator"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  }
+ ],
+ "publishers": [
+  "Chucklefish",
+  "ConcernedApe LLC",
+  "505 Games"
+ ],
+ "released": "2016-02-26",
+ "steam": {
+  "de": "Dein Großvater hat dir sein altes Farmgrundstück in Stardew Valley hinterlassen. Ausgestattet mit Werkzeugen, die ihre besten Tage hinter sich haben, und ein paar Münzen beginnst du ein neues Leben. Kannst du von dem leben, was dir das Land zu bieten hat und die überwucherten Felder zu einer blühenden Landschaft machen?",
+  "en": "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home?"
+ },
+ "steam_appid": 413150,
+ "wikidata": "Q23013817",
+ "wikipedia": {
+  "de": {
+   "text": "Stardew Valley ist ein Computerspiel, das die Genres Simulationsspiel und Rollenspiel vereint. Es wurde von Eric Barone entwickelt und 2016 vom britischen Publisher Chucklefish veröffentlicht. Über alle Plattformen hinweg hat sich Stardew Valley über 30 Millionen Mal verkauft und gehört damit zu den meistverkauften Computerspielen.",
+   "url": "https://de.wikipedia.org/wiki/Stardew_Valley"
+  },
+  "en": {
+   "text": "Stardew Valley is a 2016 farm life simulation video game developed by Eric \"ConcernedApe\" Barone. Players take the role of a character who inherits their deceased grandfather's dilapidated farm. The game is open-ended, with players managing the farm by clearing land, growing seasonal crops, and raising animals.",
+   "url": "https://en.wikipedia.org/wiki/Stardew_Valley"
+  },
+  "sv": {
+   "text": "Stardew Valley är ett Indiespel inom genren simulator-rollspel, som är skapat av Eric \"ConcernedApe\" Barone och publicerades av Chucklefish. Spelet släpptes för Microsoft Windows i februari 2016, en version till OS X, Linux, Playstation 4 och Xbox One släpptes senare samma år. En Nintendo Switch-version släpptes i oktober 2017.",
+   "url": "https://sv.wikipedia.org/wiki/Stardew_Valley"
+  }
+ }
+}

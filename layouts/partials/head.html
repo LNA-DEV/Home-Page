@@ -3,6 +3,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 {{- if hugo.IsProduction | or (eq site.Params.env "production") | and (ne .Params.robotsNoIndex true) | and (ne .Params.Theme "gallery-page-hidden") }}
 <meta name="robots" content="index, follow">
+{{- else if .Params.robotsFollow }}
+{{- /* A page that should not be in the index but whose links should still be
+       followed — the game pages (game-pages.html): their store and Wikipedia
+       links are ordinary links, and nofollow would say otherwise. */}}
+<meta name="robots" content="noindex, follow">
 {{- else }}
 <meta name="robots" content="noindex, nofollow">
 {{- end }}
@@ -357,6 +362,25 @@
 <script src="/packages/leaflet/leaflet.js" defer></script>
 {{ $dexMapJs := resources.Get "js/dex-map.js" | js.Build (dict "minify" true) | resources.Fingerprint }}
 <script src="{{ $dexMapJs.RelPermalink }}" defer></script>
+{{- else if eq .Params.Theme "game" }}
+{{- /* A game page: the achievement filter/sort is small and always there. The
+       screenshot lightbox is PhotoSwipe — most of a 60 KB bundle — so it, and its
+       stylesheet, load only on a page that has screenshots to open. */}}
+{{ $achvJs := resources.Get "js/game-achievements.js" | js.Build (dict "minify" true) | resources.Fingerprint }}
+<script src="{{ $achvJs.RelPermalink }}" defer></script>
+{{- with .Params.game_slug }}{{ if partialCached "game-screenshots-list.html" . . }}
+{{ $pswpCss := resources.Get "css/photoswipe/photoswipe.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $pswpCss.RelPermalink }}">
+{{ $shotsParams := dict
+  "closeTitle" (i18n "closeTitle")
+  "zoomTitle" (i18n "zoomTitle")
+  "arrowPrevTitle" (i18n "arrowPrevTitle")
+  "arrowNextTitle" (i18n "arrowNextTitle")
+  "errorMsg" (i18n "errorMsg")
+}}
+{{ $shotsJs := resources.Get "js/game-screenshots.js" | js.Build (dict "minify" true "params" $shotsParams) | resources.Fingerprint }}
+<script src="{{ $shotsJs.RelPermalink }}" defer></script>
+{{- end }}{{ end }}
 {{- end }}
 
 {{/*  Newsletter — pill picker on any page embedding the {{< newsletter >}} shortcode  */}}

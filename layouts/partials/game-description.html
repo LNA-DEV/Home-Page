@@ -1,0 +1,55 @@
+{{- /*
+  game-description.html
+  The description a game page shows, and where it came from.
+
+  Usage: partial "game-description.html" (dict "game" $game "lang" $lang)
+         ($game is one item of gaming-merged.html)
+  Returns: {text, source ("own" | "wikipedia" | "steam" | ""), url, lang}
+
+  The priority chain (docs/concepts/gaming-game-pages.md §5.1), language before
+  source, English last:
+
+      own(L) → wikipedia(L) → steam(L) → own(en) → wikipedia(en) → steam(en)
+
+  `own` is the owner's text in data/gamePages.yaml; `wikipedia` the abridged
+  article of that language's own Wikipedia (CC BY-SA, credited on the page);
+  `steam` the store's short description (publisher copy, no licence — a short
+  quote with a source link, which is why it comes after Wikipedia). Every
+  candidate is stored in data/gameFacts/, so the order below is the whole
+  decision: swapping two lines of $order changes it, no refetch.
+
+  The credit travels with the text: an English fallback on the German page
+  credits the English article, exactly as the dex does.
+*/ -}}
+{{- $game := .game -}}
+{{- $lang := .lang | default site.Language.Lang -}}
+{{- $facts := dict -}}
+{{- with hugo.Data.gameFacts -}}
+  {{- with index . $game.slug }}{{ $facts = . }}{{ end -}}
+{{- end -}}
+{{- $own := $game.page.description | default "" -}}
+{{- if and $own (not (reflect.IsMap $own)) }}{{ $own = dict "en" (printf "%v" $own) }}{{ end -}}
+{{- $wp := $facts.wikipedia | default dict -}}
+{{- $steam := $facts.steam | default dict -}}
+{{- $steamURL := "" -}}
+{{- with $facts.steam_appid }}{{ $steamURL = printf "https://store.steampowered.com/app/%v/" . }}{{ end -}}
+
+{{- $langs := slice $lang -}}
+{{- if ne $lang "en" }}{{ $langs = $langs | append "en" }}{{ end -}}
+
+{{- $out := dict "text" "" "source" "" "url" "" "lang" "" -}}
+{{- range $langs -}}
+  {{- $l := . -}}
+  {{- $ownText := "" -}}
+  {{- if reflect.IsMap $own }}{{ $ownText = index $own $l | default "" }}{{ end -}}
+  {{- $wpRec := index $wp $l | default dict -}}
+  {{- $order := slice
+        (dict "text" $ownText "source" "own" "url" "" "lang" $l)
+        (dict "text" ($wpRec.text | default "") "source" "wikipedia" "url" ($wpRec.url | default "") "lang" $l)
+        (dict "text" (index $steam $l | default "") "source" "steam" "url" $steamURL "lang" $l)
+  -}}
+  {{- range $order -}}
+    {{- if and .text (not $out.text) }}{{ $out = . }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $out -}}

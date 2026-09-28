@@ -1,0 +1,362 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "de": "Gewinne 5:0.",
+    "en": "Win 5-0"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/d95cfa8133694d6b4a6d5cec3653d4efe6eb754a.jpg",
+   "key": "ACH_ACE",
+   "name": {
+    "de": "Ass",
+    "en": "Ace"
+   },
+   "percent": 15.3,
+   "unlocked": "2025-04-04T21:56:23+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Gewinne 3 Matches hintereinander.",
+    "en": "Win 3 matches in a row"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/a9b2d67d1fd0a2a6cd117c1c1af082957c0447d4.jpg",
+   "key": "ACH_THREE",
+   "name": {
+    "de": "Drei auf einen Streich!",
+    "en": "Three in a row!"
+   },
+   "percent": 34.9,
+   "unlocked": "2024-06-16T14:58:10+02:00"
+  },
+  {
+   "description": {
+    "de": "Wehre innerhalb von 10 Sekunden 10 Angriffe ab.",
+    "en": "Block 10 times in 10 seconds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/e5123898603e7fdd6500ca8e8a63f889adca97ff.jpg",
+   "key": "ACH_IMPENETRABLE",
+   "name": {
+    "de": "Undurchdringlich",
+    "en": "Impenetrable"
+   },
+   "percent": 23.8
+  },
+  {
+   "description": {
+    "de": "Verursache mit einer Kugel 500 SCH.",
+    "en": "Deal 500 DMG with one bullet"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/b0061e8d99bd447d92942b0354405bff9c513f86.jpg",
+   "key": "ACH_DESTROYER",
+   "name": {
+    "de": "Weltenzerstörer",
+    "en": "Destroyer of worlds"
+   },
+   "percent": 14.0
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Fülle den Bildschirm mit 30 deiner Kugeln gleichzeitig.",
+    "en": "Have 30 of your own bullets on screen at the same time"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/89794310574b51809b43df2c60f7afbbbbc4bfaa.jpg",
+   "key": "ACH_BEEKEEPER",
+   "name": {
+    "de": "Imker",
+    "en": "Beekeeper"
+   },
+   "percent": 26.8,
+   "unlocked": "2024-10-18T21:12:56+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Wähle mindestens 3 seltene Karten in einem Match.",
+    "en": "Pick 3 or more rare cards in one match"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/58a02b867c24f924ae1d128a96dc52cffb9c7f73.jpg",
+   "key": "ACH_EXPENSIVE",
+   "name": {
+    "de": "Kostspielige Neigungen",
+    "en": "Expensive taste"
+   },
+   "percent": 23.6,
+   "unlocked": "2024-06-16T14:54:33+02:00"
+  },
+  {
+   "description": {
+    "de": "Erreiche 1.000 LP.",
+    "en": "Reach 1000 HP"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/163e9099c885a9c316610a3eecc60b612ab901cf.jpg",
+   "key": "ACH_TITAN",
+   "name": {
+    "en": "Titan"
+   },
+   "percent": 13.8
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Heile 500 LP in einer Runde.",
+    "en": "Heal 500 HP in one round"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/377a4dd464ec09243dbddff329b0a557979df474.jpg",
+   "key": "ACH_HEALER",
+   "name": {
+    "de": "Heiler",
+    "en": "Healer"
+   },
+   "percent": 34.8,
+   "unlocked": "2024-06-16T14:59:41+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Feuere eine Kugel mit mehr als 350 % des Projektiltempos ab.",
+    "en": "Fire a bullet with over 350% projectile speed"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/3975c8fde067d5d8b61c65a1268c30c94659ef19.jpg",
+   "key": "ACH_HYPERSONIC",
+   "name": {
+    "de": "Hyperschall",
+    "en": "Hypersonic"
+   },
+   "percent": 43.7,
+   "unlocked": "2024-10-18T20:56:56+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Nutze 4 Karten, durch die beim Abwehren ein Effekt ausgelöst wird.",
+    "en": "Have 4 cards that interact with your block"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/0a1234c03b71c4788541f4ae4cd7c94050664609.jpg",
+   "key": "ACH_SHIELDMASTERY",
+   "name": {
+    "de": "Schildmeister",
+    "en": "Shieldmastery"
+   },
+   "percent": 31.7,
+   "unlocked": "2024-06-16T14:54:33+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Gewinne ein Match.",
+    "en": "Win a match"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/849c37eda4098dcb577aaf2b47617d3bc4b0fb2b.jpg",
+   "key": "ACH_VICTORY",
+   "name": {
+    "de": "Sieg",
+    "en": "Victory"
+   },
+   "percent": 47.0,
+   "unlocked": "2024-06-16T14:52:28+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Gewinne 10 Runden, indem dein Gegner rausfliegt",
+    "en": "Win 10 rounds by your opponent falling out"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/4e7db7f037189c1a54c1343b5bd359b5cdf2138c.jpg",
+   "key": "ACH_ACCIDENTAL",
+   "name": {
+    "de": "Zufällig gewonnen",
+    "en": "Accidental Winner"
+   },
+   "percent": 27.6,
+   "unlocked": "2025-03-28T18:55:43+01:00"
+  },
+  {
+   "description": {
+    "de": "Gewinne 20 Matches",
+    "en": "Win 20 matches"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/d1367e27b474bba64d8951393ff37965d2b16f7e.jpg",
+   "key": "ACH_WINNER",
+   "name": {
+    "de": "Gewinner",
+    "en": "Winner"
+   },
+   "percent": 8.0
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Setze 20-mal „Frostscheppern“ ein",
+    "en": "Use Frost Slam 20 times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/ef26b6aff982f2a18b4026aa9b6ed99207d9dfe4.jpg",
+   "key": "ACH_FROSTY",
+   "name": {
+    "de": "Eisig",
+    "en": "Frosty"
+   },
+   "percent": 12.2,
+   "unlocked": "2025-04-04T21:02:11+02:00"
+  },
+  {
+   "description": {
+    "de": "Gewinne 50 Matches",
+    "en": "Win 50 Matches"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/76a9ff11c1633f92a09a3ff0bf5e9229c0d35c1c.jpg",
+   "key": "ACH_CHAMPION",
+   "name": {
+    "en": "Champion"
+   },
+   "percent": 3.1
+  },
+  {
+   "description": {
+    "de": "Setze in einem einzigen Match dreimal „Dämonischer Pakt“ ein",
+    "en": "Use Demonic Pact 3 times in a single match"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/7cb251d2696752411f0417b774bef9502211484c.jpg",
+   "key": "ACH_DEMON",
+   "name": {
+    "de": "Dämon",
+    "en": "Demon"
+   },
+   "percent": 11.9
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Setze in einem einzigen Match dreimal „Fernbedienung“ ein",
+    "en": "Use Remote 3 times in a single match"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/9e428a822b0c89fd5246ff66005fa5951b73136c.jpg",
+   "key": "ACH_INCONTROL",
+   "name": {
+    "de": "Unter Kontrolle",
+    "en": "In Control"
+   },
+   "percent": 14.7,
+   "unlocked": "2025-04-04T21:43:39+02:00"
+  },
+  {
+   "description": {
+    "de": "Setze in einem einzigen Match dreimal „Teleportation“ ein",
+    "en": "Use Teleport 3 times in a single match"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/c3eed90dc27856c204a7363134e6fff660bd6cea.jpg",
+   "key": "ACH_TELEPORTER",
+   "name": {
+    "en": "Teleporter"
+   },
+   "percent": 12.0
+  },
+  {
+   "description": {
+    "de": "Setze in einem einzigen Match dreimal „Supernova“ ein",
+    "en": "Use Supernova 3 times in a single match"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/4ccf62c6d557d3cb86361fb21c09ff9c18d99177.jpg",
+   "key": "ACH_STAR",
+   "name": {
+    "en": "Star"
+   },
+   "percent": 11.9
+  },
+  {
+   "description": {
+    "de": "Verliere 0 zu 5",
+    "en": "Lose 0-5"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/362812567ebd747e7dbf37a0d02e6173db479658.jpg",
+   "key": "ACH_JOKER",
+   "name": {
+    "de": "Lachnummer",
+    "en": "Joker"
+   },
+   "percent": 12.3
+  },
+  {
+   "description": {
+    "de": "Setze in einem einzigen Match dreimal „Ausstrahlung“ ein",
+    "en": "Use Radiance 3 times in a single match"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/bc78c9cb4a463e7de69ced8e35429d91c5c652de.jpg",
+   "key": "ACH_RADIENT",
+   "name": {
+    "de": "Strahlend",
+    "en": "Radient"
+   },
+   "percent": 11.7
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Setze „Phönix“ ein",
+    "en": "Use Phoenix"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/03cdab4c9649ecacb658d810eef1b38482464a5a.jpg",
+   "key": "ACH_PHOENIX",
+   "name": {
+    "de": "Phönix",
+    "en": "Phoenix"
+   },
+   "percent": 14.2,
+   "unlocked": "2025-04-04T21:05:09+02:00"
+  },
+  {
+   "description": {
+    "de": "Löse eine Abwehr mit „Schilde hochfahren“ aus",
+    "en": "Trigger a block with Shields Up"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/cd060eab768a2901c07399b0bc6b059d3d7c24c1.jpg",
+   "key": "ACH_SHIELDUP",
+   "name": {
+    "de": "Auf die Barrikaden",
+    "en": "Shield Up"
+   },
+   "percent": 6.6
+  },
+  {
+   "description": {
+    "de": "Setze „Säge“ ein",
+    "en": "Use Saw"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1557740/c8da32575bf6f29347e05577933353df1052618b.jpg",
+   "key": "ACH_SHARP",
+   "name": {
+    "de": "Scharf",
+    "en": "Sharp"
+   },
+   "percent": 12.5
+  }
+ ],
+ "id": "1557740",
+ "platform": "steam"
+}

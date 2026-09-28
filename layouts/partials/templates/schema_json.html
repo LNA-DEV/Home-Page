@@ -110,6 +110,31 @@
   "publisher": {{ $personRef }}
 }
 </script>
+{{- else if (eq .Params.Theme "game") }}
+{{- /* A game page (game-pages.html): a WebPage about a VideoGame. Undated, so no
+       invented datePublished, and no `author` — the description is Wikipedia's or
+       the store's, not the owner's, which is the false-authorship trap the dex
+       and the photo pages each had to climb out of. The facts come from the page
+       params the adapter set, so the <head> does not re-resolve them. The pages
+       are noindex today; this costs nothing and is right the day they are not. */ -}}
+{{- $game := dict "@type" "VideoGame" "name" (.Title | plainify) -}}
+{{- with .Params.game_genres }}{{ $game = merge $game (dict "genre" .) }}{{ end -}}
+{{- with .Params.game_platforms }}{{ $game = merge $game (dict "gamePlatform" .) }}{{ end -}}
+{{- with .Params.game_wikidata }}{{ $game = merge $game (dict "sameAs" (printf "https://www.wikidata.org/wiki/%s" .)) }}{{ end -}}
+{{- $page := dict
+      "@context" "https://schema.org"
+      "@type" "WebPage"
+      "name" (.Title | plainify)
+      "url" .Permalink
+      "inLanguage" .Language.Lang
+      "about" $game
+      "isPartOf" $website
+      "publisher" $personRef
+-}}
+{{- with .Description }}{{ $page = merge $page (dict "description" (. | plainify)) }}{{ end -}}
+<script type="application/ld+json">
+{{ $page }}
+</script>
 {{- else if (eq .Params.Theme "model") }}
 {{- /* ProfilePage with mainEntity: Person is the schema.org shape for exactly
        this page. Without a branch here it falls through to the BlogPosting one

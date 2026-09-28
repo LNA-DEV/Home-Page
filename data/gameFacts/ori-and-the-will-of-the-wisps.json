@@ -1,0 +1,51 @@
+{
+ "developers": [
+  "Moon Studios"
+ ],
+ "genres": [
+  {
+   "de": "Jump ’n’ Run",
+   "en": "platformer",
+   "sv": "plattformsspel"
+  },
+  {
+   "de": "Metroidvania",
+   "en": "Metroidvania",
+   "sv": "metroidvania"
+  },
+  {
+   "de": "Action-Adventure",
+   "en": "action-adventure game",
+   "sv": "actionäventyrsspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "publishers": [
+  "Xbox Game Studios"
+ ],
+ "released": "2020-03-11",
+ "steam": {
+  "de": "Begib dich auf eine abenteuerliche Reise durch eine riesige, exotische Welt voller gigantischer Gegner und anspruchsvoller Rätsel, um das Rätsel um Oris wahre Bestimmung zu lüften.",
+  "en": "Play the critically acclaimed masterpiece. Embark on a new journey in a vast, exotic world where you’ll encounter towering enemies and challenging puzzles on your quest to unravel Ori’s destiny.",
+  "sv": "Ge dig ut på ett nytt äventyr för att ta reda på Oris syfte i en spännande värld full av tornande fiender och kluriga pussel."
+ },
+ "steam_appid": 1057090,
+ "wikidata": "Q30325568",
+ "wikipedia": {
+  "de": {
+   "text": "Ori and the Will of the Wisps ist ein von Moon Studios entwickeltes Metroidvania-Jump-’n’-Run für Microsoft Windows und Xbox One. Publisher des Spiels ist Xbox Game Studios. Ori and the Will of the Wisps, dessen Entwicklung bei der Electronic Entertainment Expo 2017 angekündigt wurde, ist der Nachfolger zu Ori and the Blind Forest.",
+   "url": "https://de.wikipedia.org/wiki/Ori_and_the_Will_of_the_Wisps"
+  },
+  "en": {
+   "text": "Ori and the Will of the Wisps is a 2020 Metroidvania video game developed by Moon Studios and published by Xbox Game Studios. Announced during E3 2017, the title is a direct sequel to 2015's Ori and the Blind Forest, and was released in March 2020 for Windows and Xbox One. A Nintendo Switch version was released in September 2020 by Iam8bit, and a version optimized for Xbox Series X/S was released as its launch title in November 2020.",
+   "url": "https://en.wikipedia.org/wiki/Ori_and_the_Will_of_the_Wisps"
+  }
+ }
+}

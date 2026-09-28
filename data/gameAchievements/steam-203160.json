@@ -1,0 +1,699 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "de": "Finden Sie 25 % aller Dokumente.",
+    "en": "Find 25% of all documents."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/2d7b3857cc63cac88922754116a6c40744cf6d11.jpg",
+   "key": "NEW_ACHIEVEMENT_2_0",
+   "name": {
+    "de": "Bücherwurm",
+    "en": "Bookworm"
+   },
+   "percent": 54.6,
+   "unlocked": "2021-04-23T18:21:55+02:00"
+  },
+  {
+   "description": {
+    "de": "Finden Sie 75 % aller Dokumente.",
+    "en": "Find 75% of all documents."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/e862c13fd3b4c9e127d6d5de4c845818f289d218.jpg",
+   "key": "NEW_ACHIEVEMENT_2_1",
+   "name": {
+    "de": "Historiker",
+    "en": "Historian"
+   },
+   "percent": 22.0
+  },
+  {
+   "description": {
+    "de": "Sammeln Sie 25 % aller Reliquien.",
+    "en": "Collect 25% of all relics."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/95c9bba38eef2b1c661630475b9542588270401a.jpg",
+   "key": "NEW_ACHIEVEMENT_2_2",
+   "name": {
+    "de": "Reliquienjäger",
+    "en": "Relic Hunter"
+   },
+   "percent": 44.0
+  },
+  {
+   "description": {
+    "de": "Sammeln Sie 75 % aller Reliquien.",
+    "en": "Collect 75% of all relics."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/b0cfe2d347d6b904fdccb110bc4c285e113d327e.jpg",
+   "key": "NEW_ACHIEVEMENT_2_3",
+   "name": {
+    "de": "Archäologe",
+    "en": "Archaeologist"
+   },
+   "percent": 16.9
+  },
+  {
+   "description": {
+    "de": "Finden Sie 25 % aller Geocaches.",
+    "en": "Find 25% of GPS caches."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/8f2c3e28aa648485cbe1ab7eab495235e8b99f03.jpg",
+   "key": "NEW_ACHIEVEMENT_2_4",
+   "name": {
+    "de": "Auf der Suche nach Ärger",
+    "en": "Looking for Trouble"
+   },
+   "percent": 32.6
+  },
+  {
+   "description": {
+    "de": "Finden Sie 75 % aller Geocaches.",
+    "en": "Find 75% of GPS caches."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/80c682cbd5bf30890e579f041dca762cf17645c4.jpg",
+   "key": "NEW_ACHIEVEMENT_2_5",
+   "name": {
+    "de": "Die Taschen voller Caches",
+    "en": "Bag Full O' Cache"
+   },
+   "percent": 12.9
+  },
+  {
+   "description": {
+    "de": "Finden Sie alle Dokumente, Reliquien und Geocaches.",
+    "en": "Find all documents, relics and GPS caches."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/247973cdf4f9da1dd6430e074aa417d368784256.jpg",
+   "key": "NEW_ACHIEVEMENT_2_6",
+   "name": {
+    "de": "Jeden Stein umdrehen",
+    "en": "No Stone Left Unturned"
+   },
+   "percent": 8.2
+  },
+  {
+   "description": {
+    "de": "Sammeln Sie 5000 Bergungsgüter.",
+    "en": "Collect 5000 pieces of salvage."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/4a0b651d9e3080af3c3bce240153fef731bc45a5.jpg",
+   "key": "NEW_ACHIEVEMENT_2_7",
+   "name": {
+    "de": "Langfinger",
+    "en": "Scrounger"
+   },
+   "percent": 44.4
+  },
+  {
+   "description": {
+    "de": "Plündern Sie 200 Feinde aus.",
+    "en": "Loot 200 enemies."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/bd0b8c172e965f22488f79ea50d9c6fa370a0225.jpg",
+   "key": "NEW_ACHIEVEMENT_2_8",
+   "name": {
+    "de": "Wählerisch",
+    "en": "Picky"
+   },
+   "percent": 43.9
+  },
+  {
+   "description": {
+    "de": "Erhalten Sie alle Fähigkeiten einer Kategorie.",
+    "en": "Purchase all skills in one category."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/b75f6232948cb470afb5eadfedc96b5d1caef581.jpg",
+   "key": "NEW_ACHIEVEMENT_2_9",
+   "name": {
+    "de": "Kluges Mädchen",
+    "en": "Clever Girl"
+   },
+   "percent": 35.4
+  },
+  {
+   "description": {
+    "de": "Erhalten Sie alle Fähigkeiten aus allen Kategorien.",
+    "en": "Purchase all skills in all categories."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/94936d299f2fa2c63a089edf8f4ac1e25b4aaf15.jpg",
+   "key": "NEW_ACHIEVEMENT_2_10",
+   "name": {
+    "de": "Tödlich",
+    "en": "Lethal"
+   },
+   "percent": 12.5
+  },
+  {
+   "description": {
+    "de": "Erhalten Sie alle Modifizierungen und Upgrades einer Waffe.",
+    "en": "Fully mod and completely upgrade any weapon."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/3ebfcf6160f19e8df8fb14ade3b64170a3f1ea96.jpg",
+   "key": "NEW_ACHIEVEMENT_2_11",
+   "name": {
+    "de": "Jetzt wird's ernst",
+    "en": "Now We're Getting Serious"
+   },
+   "percent": 23.2
+  },
+  {
+   "description": {
+    "de": "Führen Sie an allen Waffen sämtliche Modifizierungen und Upgrades durch.",
+    "en": "Fully mod and completely upgrade all weapons."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/fe65495d80cfafb69f44e9e960efaf58c962f3c4.jpg",
+   "key": "NEW_ACHIEVEMENT_2_12",
+   "name": {
+    "de": "Der Profi",
+    "en": "The Professional"
+   },
+   "percent": 8.5
+  },
+  {
+   "description": {
+    "de": "Töten und weiden Sie 10 große Tiere (Hirsche, Wildschweine, Wölfe) aus.",
+    "en": "Kill and loot 10 large animals (deer, boar, wolves)."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/4e76053118561c33cffd4cbf8c757dcc26aa92c1.jpg",
+   "key": "NEW_ACHIEVEMENT_2_13",
+   "name": {
+    "de": "Großwildjäger",
+    "en": "Big Game Hunter"
+   },
+   "percent": 43.1
+  },
+  {
+   "description": {
+    "de": "Töten und weiden Sie 10 kleine Tiere (Hasen, Hühner, Ratten) aus.",
+    "en": "Kill and loot 10 small animals (rabbits, chickens, rats)."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/8ca881392ffd18e344cc936e0e3bc9d325d90305.jpg",
+   "key": "NEW_ACHIEVEMENT_2_14",
+   "name": {
+    "de": "Schmeckt wie Hühnchen!",
+    "en": "Tastes Like Chicken!"
+   },
+   "percent": 20.9
+  },
+  {
+   "description": {
+    "de": "Töten Sie 10 fliegende Tiere (Krähen und Möwen) und weiden Sie sie aus.",
+    "en": "Kill and loot 10 flying animals (crows and gulls)."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/821601f2c61cef86621fc72b3df184940ba50993.jpg",
+   "key": "NEW_ACHIEVEMENT_2_15",
+   "name": {
+    "de": "Federhalter",
+    "en": "Feather Duster"
+   },
+   "percent": 6.8
+  },
+  {
+   "description": {
+    "de": "Führen Sie 50 Kopfschuss-Kills im Einzelspieler-Modus aus.",
+    "en": "Perform 50 headshot kills in the single player campaign."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/7ec37bf1d7c5ebf76b46af0ba511b226ee31dcac.jpg",
+   "key": "NEW_ACHIEVEMENT_2_16",
+   "name": {
+    "de": "Scharfschütze",
+    "en": "Sharp Shooter"
+   },
+   "percent": 53.7
+  },
+  {
+   "description": {
+    "de": "Töten Sie 50 Feinde mit dem Bogen.",
+    "en": "Kill 50 enemies with the bow."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/7b89798ea907792e582302ee75112f259831e105.jpg",
+   "key": "NEW_ACHIEVEMENT_2_17",
+   "name": {
+    "de": "Raubtier",
+    "en": "Predator"
+   },
+   "percent": 54.7
+  },
+  {
+   "description": {
+    "de": "Töten Sie 75 Feinde mit dem Gewehr.",
+    "en": "Kill 75 enemies with the rifle."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/fe2bdde1f70d5a81dda93a0d8ce85577e0a88b98.jpg",
+   "key": "NEW_ACHIEVEMENT_2_18",
+   "name": {
+    "de": "Harmonisierung",
+    "en": "Equalizer"
+   },
+   "percent": 32.4
+  },
+  {
+   "description": {
+    "de": "Töten Sie 40 Feinde mit der Schrotflinte.",
+    "en": "Kill 40 enemies with the shotgun."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/3f1543b828d99194bd935535f2710e03cf98929d.jpg",
+   "key": "NEW_ACHIEVEMENT_2_19",
+   "name": {
+    "de": "Schwarze Witwe",
+    "en": "Widowmaker"
+   },
+   "percent": 19.9
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Töten Sie 35 Feinde mit der Pistole.",
+    "en": "Kill 35 enemies with the pistol."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/99dc58ae0f4f014df74a27d8cbff7eb70d382bb8.jpg",
+   "key": "NEW_ACHIEVEMENT_2_20",
+   "name": {
+    "de": "Revolverheld",
+    "en": "Gunslinger"
+   },
+   "percent": 49.0,
+   "unlocked": "2021-04-23T18:30:18+02:00"
+  },
+  {
+   "description": {
+    "de": "Zwingen Sie einen Feind dazu, Dynamit fallen zu lassen, das beim Explodieren zwei Personen tötet.",
+    "en": "Force an enemy to drop dynamite that kills two people when exploding."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/2eb6b630f57baca9c8b58ae90c997f8d95e07ea4.jpg",
+   "key": "NEW_ACHIEVEMENT_2_21",
+   "name": {
+    "de": "Epische Fehlleistung",
+    "en": "Epic Fumble"
+   },
+   "percent": 42.5
+  },
+  {
+   "description": {
+    "de": "Ziehen Sie 5 Feinde mit dem Seil von Vorsprüngen.",
+    "en": "Rope pull 5 enemies off edges."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/bfb3146960ab7fb70652ce541f9f60ac76934590.jpg",
+   "key": "NEW_ACHIEVEMENT_2_22",
+   "name": {
+    "de": "Hier rüber!",
+    "en": "Get Over Here!"
+   },
+   "percent": 2.4
+  },
+  {
+   "description": {
+    "de": "Töten Sie 25 ahnungslose Feinde.",
+    "en": "Kill 25 unaware enemies."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/759b1656f928c2b45d4903f0169579176955038d.jpg",
+   "key": "NEW_ACHIEVEMENT_2_23",
+   "name": {
+    "en": "Opportunist"
+   },
+   "percent": 51.3
+  },
+  {
+   "description": {
+    "de": "Führen Sie 15 Exekutionen durch.",
+    "en": "Perform 15 finishers."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/28b90a466ebe27d98fb9be96b2130a78c265c7c1.jpg",
+   "key": "NEW_ACHIEVEMENT_2_24",
+   "name": {
+    "de": "Skrupellos",
+    "en": "Down and Dirty"
+   },
+   "percent": 36.2
+  },
+  {
+   "description": {
+    "de": "Schießen Sie 10 Feinde von Seilrutschen herunter.",
+    "en": "Shoot 10 enemies off zip lines."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/10c0306843fd9bd1b911268249fb76dec3447476.jpg",
+   "key": "NEW_ACHIEVEMENT_2_25",
+   "name": {
+    "de": "Zielwasser",
+    "en": "Deadeye"
+   },
+   "percent": 5.0
+  },
+  {
+   "description": {
+    "de": "Setzen Sie 25 Feinde mit dem Ausweich-Konter außer Gefecht.",
+    "en": "Incapacitate 25 enemies with dodge counter."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/cfc6345840030be759ea9a6ad24da84a006fb2a4.jpg",
+   "key": "NEW_ACHIEVEMENT_2_26",
+   "name": {
+    "de": "Ehemaliger Abenteurer",
+    "en": "Former Adventurer"
+   },
+   "percent": 2.1
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Meistern Sie ein optionales Grab.",
+    "en": "Complete one optional tomb."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/b0fc73a9c40cef572789689e90db90749ab0c55b.jpg",
+   "key": "NEW_ACHIEVEMENT_2_27",
+   "name": {
+    "de": "Kluges Köpfchen",
+    "en": "One Smart Cookie"
+   },
+   "percent": 56.7,
+   "unlocked": "2021-02-16T16:58:01+01:00"
+  },
+  {
+   "description": {
+    "de": "Meistern Sie alle optionalen Gräber.",
+    "en": "Complete all optional tombs."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/d396939f20a60815d080e20a1ab6e50365028c45.jpg",
+   "key": "NEW_ACHIEVEMENT_2_28",
+   "name": {
+    "de": "Schlauer Fuchs",
+    "en": "Intellectually Superior"
+   },
+   "percent": 15.1
+  },
+  {
+   "description": {
+    "de": "Meistern Sie eine Herausforderung.",
+    "en": "Complete one challenge."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/18619efd603f830ffaccead2070e8c21f2fe843a.jpg",
+   "key": "NEW_ACHIEVEMENT_2_29",
+   "name": {
+    "de": "Unerledigte Geschäfte",
+    "en": "Unfinished Business"
+   },
+   "percent": 26.2
+  },
+  {
+   "description": {
+    "de": "Meistern Sie alle Herausforderungen.",
+    "en": "Complete all challenges."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/5b576ff8f67b573af4e6d7bfcb0e100d3cef0ad3.jpg",
+   "key": "NEW_ACHIEVEMENT_2_30",
+   "name": {
+    "de": "Unfassbar!",
+    "en": "Inconceivable!"
+   },
+   "percent": 6.6
+  },
+  {
+   "description": {
+    "de": "Schließen Sie das Spiel ab.",
+    "en": "Complete the game."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/4e3a977c724fa07d4692f33b2dd28ffa16e02666.jpg",
+   "key": "NEW_ACHIEVEMENT_2_31",
+   "name": {
+    "de": "Überlebenskünstler",
+    "en": "A Survivor Is Born"
+   },
+   "percent": 42.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/203160/7efd8e6506625d06ba0a63512a90f0da70ce0d5d.jpg",
+   "key": "NEW_ACHIEVEMENT_3_0",
+   "name": {
+    "de": "Es hat Boom gemacht",
+    "en": "Boom Goes the Dynamite"
+   },
+   "percent": 15.4
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/203160/d7a549434552bd4b5cac97d887cda1c8b6356e05.jpg",
+   "key": "NEW_ACHIEVEMENT_3_1",
+   "name": {
+    "de": "Krabbenkrieg",
+    "en": "Crab Cakes"
+   },
+   "percent": 26.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/203160/f8cdb21594dd94c785079a7894827dcb1af64428.jpg",
+   "key": "NEW_ACHIEVEMENT_3_2",
+   "name": {
+    "de": "Quasselstrippe",
+    "en": "Chatterbox"
+   },
+   "percent": 2.2
+  },
+  {
+   "description": {
+    "de": "Schließen Sie jeweils ein Spiel in allen Multiplayer-Modi ab.",
+    "en": "Complete a match in all multiplayer modes."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/aaeb9bc5746be0a6fa327a7d37b4281d9dacd4ab.jpg",
+   "key": "NEW_ACHIEVEMENT_3_3",
+   "name": {
+    "de": "Abenteurer",
+    "en": "Adventurer"
+   },
+   "percent": 2.0
+  },
+  {
+   "description": {
+    "de": "Töten Sie 20 feindliche Spieler im Multiplayer-Modus mit einem Geschütz.",
+    "en": "Kill 20 enemy players in multiplayer using a turret."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/09b5542e0ea37413b95c388f71923358014eebb0.jpg",
+   "key": "NEW_ACHIEVEMENT_3_4",
+   "name": {
+    "de": "Artillerist",
+    "en": "Artilleryman"
+   },
+   "percent": 1.8
+  },
+  {
+   "description": {
+    "de": "Töten Sie im Multiplayer-Modus einen Feind, der an einer Seilrutsche hängt.",
+    "en": "Kill a zip-lining enemy player in multiplayer."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/1d37e0aa2e1e613fd62dfc411ebfec4d292abef9.jpg",
+   "key": "NEW_ACHIEVEMENT_3_5",
+   "name": {
+    "de": "Ab mit dir!",
+    "en": "Down Boy!"
+   },
+   "percent": 2.2
+  },
+  {
+   "description": {
+    "de": "Fangen Sie im Multiplayer-Modus einen Spieler in einer Seilfalle.",
+    "en": "Catch a player in a snare trap in multiplayer."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/61a6987034d2aa0d7cd4e84013cdfc61106d73e9.jpg",
+   "key": "NEW_ACHIEVEMENT_3_6",
+   "name": {
+    "de": "Gefangen",
+    "en": "Entrapment"
+   },
+   "percent": 4.0
+  },
+  {
+   "description": {
+    "de": "Überleben Sie 10 Explosionen im Multiplayer-Modus.",
+    "en": "Survive 10 explosions in multiplayer."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/fea29f77cee2c8730488abe62b06e1cc518ad92e.jpg",
+   "key": "NEW_ACHIEVEMENT_3_7",
+   "name": {
+    "de": "Auf der Flucht",
+    "en": "Escapist"
+   },
+   "percent": 2.2
+  },
+  {
+   "description": {
+    "de": "Beleben Sie einen Teamkollegen in einem Multiplayer-Spiel wieder.",
+    "en": "Revive a teammate in a multiplayer match."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/8587ee066025f0750e67b5a618e76a55b1266146.jpg",
+   "key": "NEW_ACHIEVEMENT_3_8",
+   "name": {
+    "de": "Guter Samariter",
+    "en": "Good Samaritan"
+   },
+   "percent": 2.2
+  },
+  {
+   "description": {
+    "de": "Gewinnen Sie ein Ranglisten-Spiel in jedem Multiplayer-Modus.",
+    "en": "Win a ranked match in every multiplayer mode."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/ff27adec28e9028700b285f54097737340c27498.jpg",
+   "key": "NEW_ACHIEVEMENT_3_9",
+   "name": {
+    "de": "Alleskönner",
+    "en": "I'm all that!"
+   },
+   "percent": 1.8
+  },
+  {
+   "description": {
+    "de": "Im Multiplayer-Modus der Einzige im Team sein, der nicht tot oder außer Gefecht gesetzt ist.",
+    "en": "In multiplayer, be the only player on your team that isn't dead or downed."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/9af19c07c2dd3b979521acf7db430aad41bd689a.jpg",
+   "key": "NEW_ACHIEVEMENT_3_10",
+   "name": {
+    "de": "Letzter Überlebender",
+    "en": "Sole Survivor"
+   },
+   "percent": 6.0
+  },
+  {
+   "description": {
+    "de": "Töten Sie im Multiplayer-Modus 10 Feinde mit Ihrem Nahkampfangriff.",
+    "en": "Kill 10 multiplayer enemies using your melee attack."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/5a955b0e3deb706c39ae3649e428c4532ef88777.jpg",
+   "key": "NEW_ACHIEVEMENT_3_11",
+   "name": {
+    "de": "Das Licht ausknipsen",
+    "en": "Lights Out"
+   },
+   "percent": 2.0
+  },
+  {
+   "description": {
+    "de": "Töten Sie zwei Feinde im Multiplayer-Modus mit einer einzigen Sprengladung.",
+    "en": "Kill 2 multiplayer enemies with a single explosive."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/9edb0b2c45d1a608470e8a957ee118a5fb8e201d.jpg",
+   "key": "NEW_ACHIEVEMENT_3_12",
+   "name": {
+    "de": "Sprengmeister",
+    "en": "Master Blaster"
+   },
+   "percent": 2.1
+  },
+  {
+   "description": {
+    "de": "Entgehen Sie im Multiplayer-Modus drei Mal dem Tod  durch Einsatz Ihres Steigklemmenantriebs.",
+    "en": "In multiplayer, escape death 3 times by using the rope ascender."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/32850aa031b032d2d915107e87c0e064a9069cbe.jpg",
+   "key": "NEW_ACHIEVEMENT_3_13",
+   "name": {
+    "de": "Affentempo",
+    "en": "Monkey Around"
+   },
+   "percent": 1.8
+  },
+  {
+   "description": {
+    "de": "Kaufen Sie sich einen neuen Charakter im Multiplayer-Modus.",
+    "en": "Purchase a new multiplayer character."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/649b6b04d84db9250db157c568b718c12b8f3012.jpg",
+   "key": "NEW_ACHIEVEMENT_3_14",
+   "name": {
+    "de": "Narzisstisch",
+    "en": "Narcissistic"
+   },
+   "percent": 2.9
+  },
+  {
+   "description": {
+    "de": "Erreichen Sie Stufe 10 im Multiplayer-Modus.",
+    "en": "Reach level 10 in multiplayer."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/156b01a179015f87cbbb1c94724dd96655459436.jpg",
+   "key": "NEW_ACHIEVEMENT_3_15",
+   "name": {
+    "de": "Auf meinem Weg nach oben",
+    "en": "On My Way Up"
+   },
+   "percent": 3.0
+  },
+  {
+   "description": {
+    "de": "Kaufen Sie jedes Upgrade und jeden Charakter im Multiplayer-Modus.",
+    "en": "Buy every upgrade and character in multiplayer."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/58032d9dd63b82e9b40a1c7aafcd09fec803e88f.jpg",
+   "key": "NEW_ACHIEVEMENT_3_16",
+   "name": {
+    "de": "Kaufrausch",
+    "en": "Shopaholic"
+   },
+   "percent": 1.8
+  },
+  {
+   "description": {
+    "de": "Erreichen Sie Stufe 60 im Multiplayer-Modus.",
+    "en": "Reach level 60 in multiplayer."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/203160/3dd943f389c12dec9bdad9670b9a9511157cd1c7.jpg",
+   "key": "NEW_ACHIEVEMENT_3_17",
+   "name": {
+    "de": "Wahre Hingabe",
+    "en": "True Commitment"
+   },
+   "percent": 1.8
+  }
+ ],
+ "id": "203160",
+ "platform": "steam"
+}

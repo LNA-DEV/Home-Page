@@ -1,0 +1,44 @@
+{
+ "developers": [
+  "Crystal Dynamics"
+ ],
+ "genres": [
+  {
+   "de": "Action-Adventure",
+   "en": "action-adventure game",
+   "sv": "actionäventyrsspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "publishers": [
+  "Square Enix"
+ ],
+ "released": "2015-11-10",
+ "steam": {
+  "de": "Rise of the Tomb Raider: 20 Year Celebration enthält das Basisspiel sowie den Season Pass mit allen neuen Inhalten. Erkunde und verteidige Croft Manor in der neuen „Blood Ties“-Geschichte, verteidige es dann in „Lara’s Nightmare” gegen eine Zombieinvasion.",
+  "en": "Rise of the Tomb Raider: 20 Year Celebration includes the base game and Season Pass featuring all-new content. Explore Croft Manor in the new “Blood Ties” story, then defend it against a zombie invasion in “Lara’s Nightmare”."
+ },
+ "steam_appid": 391220,
+ "wikidata": "Q17154489",
+ "wikipedia": {
+  "de": {
+   "text": "Rise of the Tomb Raider ist ein Action-Adventure-Videospiel. Es ist der elfte Titel in der Tomb-Raider-Serie und darin fünfte Teil, der von Crystal Dynamics entwickelt bzw. zweite Teil, der von Square Enix publiziert wurde. Das Spiel erschien zunächst zeitexklusiv für die Xbox One und die Xbox 360.",
+   "url": "https://de.wikipedia.org/wiki/Rise_of_the_Tomb_Raider"
+  },
+  "en": {
+   "text": "Rise of the Tomb Raider is a 2015 action-adventure game developed by Crystal Dynamics and published by Microsoft Studios and Square Enix. The game is the eleventh main entry in the Tomb Raider series, the sequel to 2013's Tomb Raider, and is the second instalment in the Survivor trilogy.",
+   "url": "https://en.wikipedia.org/wiki/Rise_of_the_Tomb_Raider"
+  },
+  "sv": {
+   "text": "Rise of the Tomb Raider är ett actionäventyrsspel, det tionde spelet i serien Tomb Raider och uppföljaren till Tomb Raider (2013). Det är utvecklat av spelföretaget Crystal Dynamics och utgivet av Square Enix. Spelet släpptes i november 2015 till Xbox 360 och Xbox One.",
+   "url": "https://sv.wikipedia.org/wiki/Rise_of_the_Tomb_Raider"
+  }
+ }
+}

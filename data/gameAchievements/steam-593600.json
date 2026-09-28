@@ -1,0 +1,612 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "en": "Explorered the DoomLand"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/a35c8487f8f2594de601481261d109be0e9a9e38.jpg",
+   "key": "13",
+   "name": {
+    "en": "Explorer"
+   },
+   "percent": 25.4,
+   "unlocked": "2018-03-30T20:58:13+02:00"
+  },
+  {
+   "description": {
+    "en": "Take those treasure away"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/6c13cead1f78b0f62725a8bf6efcc42ab4c81690.jpg",
+   "key": "12",
+   "name": {
+    "en": "Unjust Enrichment"
+   },
+   "percent": 8.0
+  },
+  {
+   "description": {
+    "en": "Collected your first cloth"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/7d9e9c01590a10f7bcaf970151c67ac51a70689b.jpg",
+   "key": "11",
+   "name": {
+    "en": "Fashion"
+   },
+   "percent": 17.3
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "A poor creature was killed by you"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/b2fd05b7199e1c60a4de15d8eb62293b65616f4f.jpg",
+   "key": "15",
+   "name": {
+    "en": "First Show"
+   },
+   "percent": 42.9,
+   "unlocked": "2018-04-06T20:41:56+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Get a good partner"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/dd68af54b5d4c36f44cfe6e7da987e883776dc91.jpg",
+   "key": "16",
+   "name": {
+    "en": "First Partner"
+   },
+   "percent": 37.5,
+   "unlocked": "2018-04-06T20:33:36+02:00"
+  },
+  {
+   "description": {
+    "en": "Rex is not the most dangerous animal,but you are"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/d2c14f7dc8052d3a4af0e61201a67bd1f536c1de.jpg",
+   "key": "17",
+   "name": {
+    "en": "Enemies of Rex"
+   },
+   "percent": 7.9
+  },
+  {
+   "description": {
+    "en": "Quetzalcoatius is the one you must needed"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/4e8cf9c7309b28edab8f6905ee1bc162b155fa3e.jpg",
+   "key": "18",
+   "name": {
+    "en": "King of the Sky"
+   },
+   "percent": 5.0
+  },
+  {
+   "description": {
+    "en": "Now you have killed the strongest creature in this plant."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/f2e42512e1c2ecb552abc26e2a1165c0de7edd9a.jpg",
+   "key": "19",
+   "name": {
+    "en": "KingSlayer"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "en": "You are the strongest man in this plant"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/fbab3c207b26e49c95c81f09e9f7b7eff4d145c3.jpg",
+   "key": "20",
+   "name": {
+    "en": "Strong Man"
+   },
+   "percent": 8.4
+  },
+  {
+   "description": {
+    "en": "Killed a Behemoth"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/0860015073749836e244791fc20828da151b8a76.jpg",
+   "key": "40",
+   "name": {
+    "en": "Behemoth Hunter"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "en": "Killed a Large Sea Slime(Ruins)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/46f80525d6727f6d44272b234fce7cb9ada00dc6.jpg",
+   "key": "41",
+   "name": {
+    "en": "Sea Slime Hunter"
+   },
+   "percent": 0.7
+  },
+  {
+   "description": {
+    "en": "Killed a Mummy King(Ruins)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/fe99d3267e9b8691e46aae03b96166cd7418d492.jpg",
+   "key": "42",
+   "name": {
+    "en": "Mummy King Hunter"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "en": "Killed a Ice Fairy(Ruins)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/788decd6f7f803bbf3cc212b3dc74096bb390d1f.jpg",
+   "key": "43",
+   "name": {
+    "en": "Ice Fairy Hunter"
+   },
+   "percent": 6.1
+  },
+  {
+   "description": {
+    "en": "Get a Mediterranean blueprint"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/0e6ca8aa72be4c82596f75e66b3a8769763aa340.jpg",
+   "key": "45",
+   "name": {
+    "en": "Mediterranean Blueprint"
+   },
+   "percent": 7.9
+  },
+  {
+   "description": {
+    "en": "Get a Bamboo blueprint"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/aa4f0b8fa85c644a2e003bbe447cdb839ccf0de5.jpg",
+   "key": "46",
+   "name": {
+    "en": "Bamboo Blueprint"
+   },
+   "percent": 4.7
+  },
+  {
+   "description": {
+    "en": "Get a MagicAcademy blueprint"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/a6e5d56da635ebb7b25d9dc2dde1e201db3e2dd1.jpg",
+   "key": "47",
+   "name": {
+    "en": "MagicAcademy Blueprint"
+   },
+   "percent": 4.9
+  },
+  {
+   "description": {
+    "en": "Get a Weastern blueprint"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/ec5ba8276c4adebd2725e16f92f2803be081f9ad.jpg",
+   "key": "48",
+   "name": {
+    "en": "Weastern Blueprint"
+   },
+   "percent": 12.2
+  },
+  {
+   "description": {
+    "en": "Get a Executive blueprint"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/aa89681b0670068bc1e4c29caff839edd43f7190.jpg",
+   "key": "49",
+   "name": {
+    "en": "Executive Blueprint"
+   },
+   "percent": 4.4
+  },
+  {
+   "description": {
+    "en": "Get a Scuba Equipment"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/aa38c34515e71b4102b1d3f6ec64c8dbfe4dd708.jpg",
+   "key": "50",
+   "name": {
+    "en": "Scuba Equipment"
+   },
+   "percent": 1.5
+  },
+  {
+   "description": {
+    "en": "Get a ArmadilloShell Equipment"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/319e01b585e5984319116629b7c7ec5dbed7deff.jpg",
+   "key": "51",
+   "name": {
+    "en": "ArmadilloShell Equipment"
+   },
+   "percent": 2.3
+  },
+  {
+   "description": {
+    "en": "Get a MolePick"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/98a42cbc07ca2557cf088abdd37fee27bc3242b5.jpg",
+   "key": "52",
+   "name": {
+    "en": "MolePick"
+   },
+   "percent": 2.7
+  },
+  {
+   "description": {
+    "en": "Get a FlashStick"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/ab60677c46c909d7755825a7a7c401772d2467ad.jpg",
+   "key": "53",
+   "name": {
+    "en": "FlashStick"
+   },
+   "percent": 3.3
+  },
+  {
+   "description": {
+    "en": "Dig the Ruins in Grassland and get a Ruins cube"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/1630d9ef50c621589b7fb13c87cb10ab15809714.jpg",
+   "key": "54",
+   "name": {
+    "en": "GrassLand Ruins"
+   },
+   "percent": 0.7
+  },
+  {
+   "description": {
+    "en": "Dig the Ruins in Desert and get a Ruins cube"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/5441e8fb9313dce6b37d480f5760560ad3702697.jpg",
+   "key": "55",
+   "name": {
+    "en": "Desert Ruins"
+   },
+   "percent": 0.8
+  },
+  {
+   "description": {
+    "en": "Dig the Ruins in Frozenland and get a Ruins cube"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/296d7195416be77e2e827c56635fbb0607d561ed.jpg",
+   "key": "56",
+   "name": {
+    "en": "Frozen Ruins"
+   },
+   "percent": 0.9
+  },
+  {
+   "description": {
+    "en": "Dig the Ruins in Swamp and get a Ruins cube"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/ae46c62bd34c0dd9a2f9192719f3c6e4870250f7.jpg",
+   "key": "57",
+   "name": {
+    "en": "Swamp Ruins"
+   },
+   "percent": 0.7
+  },
+  {
+   "description": {
+    "en": "Dig the Ruins in Swamp underground and get a Ruins cube"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/a699b06b30b271b04ba2d5cb232ad0d791698911.jpg",
+   "key": "58",
+   "name": {
+    "en": "Dungeon Ruins"
+   },
+   "percent": 0.7
+  },
+  {
+   "description": {
+    "en": "Dig the Ruins in Ocean and get a Ruins cube"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/c7ed6f1020778556e6db698c1c334895ea83bfd5.jpg",
+   "key": "59",
+   "name": {
+    "en": "Ocean Ruins"
+   },
+   "percent": 0.7
+  },
+  {
+   "description": {
+    "en": "Tamed a Sauropod"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/248120dcb69b0538efb9cd7a0933d7f403f74956.jpg",
+   "key": "60",
+   "name": {
+    "en": "Sauropod"
+   },
+   "percent": 2.4
+  },
+  {
+   "description": {
+    "en": "Killed a Cyclops"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/10e1a2137dd3eadf2e72b83688384d4fa20ed862.jpg",
+   "key": "61",
+   "name": {
+    "en": "Cyclops"
+   },
+   "percent": 6.4
+  },
+  {
+   "description": {
+    "en": "Tmade a BabyTreant"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/9c352358799144872034def7055158034d64c6fd.jpg",
+   "key": "63",
+   "name": {
+    "en": "BabyTreant"
+   },
+   "percent": 1.7
+  },
+  {
+   "description": {
+    "en": "Get something from the Supply Crate"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/e7b59e6fc95cd537f53476ab913f999df7349d9c.jpg",
+   "key": "66",
+   "name": {
+    "en": "SupplyCrate"
+   },
+   "percent": 16.6
+  },
+  {
+   "description": {
+    "en": "Open a highest level Chest in Ruins"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/287746858b4afe0dfd9003646b88ac8ea8888154.jpg",
+   "key": "67",
+   "name": {
+    "en": "Treasure"
+   },
+   "percent": 2.0
+  },
+  {
+   "description": {
+    "en": "Explorered the DoomLand"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/9c33ecea7638249e12ad993bb1dec4a21b720d13.jpg",
+   "key": "68",
+   "name": {
+    "en": "Explorer:Dark"
+   },
+   "percent": 24.0
+  },
+  {
+   "description": {
+    "en": "Explorered the DoomLand"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/21f9be5f292198bc2d749173a4ab0d27ad689461.jpg",
+   "key": "69",
+   "name": {
+    "en": "Explorer:Forzen"
+   },
+   "percent": 20.4
+  },
+  {
+   "description": {
+    "en": "Collected Fusible Crystal!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/f33913ad8d73ac95ca881d4f9d72b8339b92ea95.jpg",
+   "key": "72",
+   "name": {
+    "en": "Fusible Crystal Collector"
+   },
+   "percent": 0.1
+  },
+  {
+   "description": {
+    "en": "Successfully hunted Mega Phiomia! You are simply the Hope of the Entire Village!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/7cd34097a9fd26afa67d29f30f8632e47fcd52a9.jpg",
+   "key": "75",
+   "name": {
+    "en": "Local Legend"
+   },
+   "percent": 0.1
+  },
+  {
+   "description": {
+    "en": "Collected Shatter Core!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/a6e4b6fc9e9d0ad4094708b9fc56488c05a9a0a5.jpg",
+   "key": "73",
+   "name": {
+    "en": "Shatter Core Collector"
+   },
+   "percent": 0.0
+  },
+  {
+   "description": {
+    "en": "Collected Fission Mica Mineral! This peculiar mineral is worth studying!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/6f136d5a471984db53fc1f11bc9f931e65bdd464.jpg",
+   "key": "74",
+   "name": {
+    "en": "Fission Researcher"
+   },
+   "percent": 0.0
+  },
+  {
+   "description": {
+    "en": "Successfully defeated Armoredrat,the first step to victory!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/60503b1aef1c8f09b4b2f94a58bbcf864373e699.jpg",
+   "key": "76",
+   "name": {
+    "en": "Tunnel Buster"
+   },
+   "percent": 0.1
+  },
+  {
+   "description": {
+    "en": "Successfully defeated Largespider,making the wilds better!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/3c9f2396dccab9d9174f0fd068607e275cbaab52.jpg",
+   "key": "77",
+   "name": {
+    "en": "Venom Recycler"
+   },
+   "percent": 0.0
+  },
+  {
+   "description": {
+    "en": "Successfully defeated Cobaltstarsaeki,the Cobalt Star forces are falling apart!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/2c3a3de8d41ed3ab931909375a5445661614f7ac.jpg",
+   "key": "78",
+   "name": {
+    "en": "Cobalt Star General"
+   },
+   "percent": 0.0
+  },
+  {
+   "description": {
+    "en": "Successfully destroyed Mechanicalworm,such a massive machine was also destroyed by you!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/73f1a8d293b847f9d1c97e7a28c2d2978a596951.jpg",
+   "key": "79",
+   "name": {
+    "en": "Mechanical Terminator"
+   },
+   "percent": 0.0
+  },
+  {
+   "description": {
+    "en": "Successfully defeated Fenrir,restoring peace to the earth's surface!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/622f13925bb33e0f65461ae3ff97a4a4a19c6f48.jpg",
+   "key": "80",
+   "name": {
+    "en": "Frost Sentinel"
+   },
+   "percent": 0.0
+  },
+  {
+   "description": {
+    "en": "Successfully defeated Firebat,granting a certain soul eternal peace!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/dc8ab25efc83307fca46ea6ed147684c15d4cae2.jpg",
+   "key": "81",
+   "name": {
+    "en": "Blaze & Sky Monarch"
+   },
+   "percent": 0.0
+  },
+  {
+   "description": {
+    "en": "Successfully defeated Crazydoctor,you are the true King of Science!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/12b5fd746e5be6fe3e84ff47705bbcdd2aa55357.jpg",
+   "key": "82",
+   "name": {
+    "en": "Wild Science Overlord"
+   },
+   "percent": 0.0
+  },
+  {
+   "description": {
+    "en": "Successfully destroyed Queenhornet,you defeated the supreme leader of Cobalt Star!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/647f2e1c5597867b9b18a90bbac86c4bf692b12d.jpg",
+   "key": "83",
+   "name": {
+    "en": "Queen Slayer"
+   },
+   "percent": 0.0
+  },
+  {
+   "description": {
+    "en": "Successfully defeated Venerthorn, you seem to have grown black wings!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/ce8544e43effb539e88cb0fbdb03351e7fbbffe5.jpg",
+   "key": "84",
+   "name": {
+    "en": "Onyx Wings"
+   },
+   "percent": 0.0
+  },
+  {
+   "description": {
+    "en": "Successfully defeated Venom,you are becoming immune to all poisons!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/162229835b50d7fff55909f3b2277cad9a09252a.jpg",
+   "key": "85",
+   "name": {
+    "en": "Immune to All Poisons"
+   },
+   "percent": 0.0
+  },
+  {
+   "description": {
+    "en": "Final battle! Successfully defeated Supervisor,you ultimately saved the world!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/593600/4d2ac1259301a33a55ebe91d8e4e7231ccdb018f.jpg",
+   "key": "86",
+   "name": {
+    "en": "Origin Savior"
+   },
+   "percent": 0.0
+  }
+ ],
+ "id": "593600",
+ "platform": "steam"
+}

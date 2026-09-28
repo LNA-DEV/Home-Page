@@ -1,0 +1,34 @@
+{
+ "genres": [
+  {
+   "de": "Actionspiel",
+   "en": "action game",
+   "sv": "actionspel"
+  },
+  {
+   "de": "Gelegenheitsspiel",
+   "en": "casual game",
+   "sv": "casualspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  }
+ ],
+ "released": "2018-09-20",
+ "steam": {
+  "de": "Pummel Party ist ein Online- und lokales Multiplayer-Partyspiel für 4–8 Spieler. Vermöble deine Freunde oder die KI mit einer Vielzahl absurder Gegenstände im Brettmodus und zerstöre in der einzigartigen Sammlung von Minispielen Freundschaften.",
+  "en": "Pummel Party is a 4-8 player online and local-multiplayer party game. Pummel friends or AI using a wide array of absurd items in the board mode and compete to destroy friendships in the unique collection of minigames."
+ },
+ "steam_appid": 880940,
+ "wikidata": "Q111737413"
+}

@@ -1,0 +1,352 @@
+/* One page per game — layouts/partials/game-detail.html and
+   game-achievements.html. PaperMod theme variables only, so light and dark both
+   work; the badge, bar and star colours are the grid's (gamingList.css). */
+
+.game-single h2 {
+  font-size: 1.25rem;
+  margin: 2rem 0 0.8rem;
+}
+
+/* --- Head: cover beside title, platforms, facts, store links --- */
+.game-hero {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  margin-top: 0.5rem;
+}
+
+.game-hero__cover {
+  aspect-ratio: 2 / 3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--tertiary);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.game-hero__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+}
+
+.game-hero__info .post-title {
+  margin: 0 0 0.6rem;
+}
+
+.game-platforms,
+.game-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.8rem;
+}
+
+.game-platform {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  /* --entry is the page colour in the light theme; the border keeps the chip. */
+  border: 1px solid var(--border);
+  background: var(--entry);
+  font-size: 0.82rem;
+  color: var(--secondary);
+}
+
+.game-platform svg,
+.game-playtime__store svg {
+  width: 14px;
+  height: 14px;
+  flex: none;
+}
+
+.game-hero__rating {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.game-facts {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+}
+
+.game-facts > div {
+  display: grid;
+  grid-template-columns: 8.5rem 1fr;
+  gap: 0.6rem;
+}
+
+.game-facts dt {
+  color: var(--secondary);
+}
+
+.game-facts dd {
+  margin: 0;
+}
+
+.game-links a {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--tertiary);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.game-links a:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* --- Playtime --- */
+.game-playtime__total {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.game-playtime__total strong {
+  font-size: 1.4rem;
+}
+
+.game-playtime__last {
+  color: var(--secondary);
+  font-size: 0.9rem;
+}
+
+.game-playtime__copies {
+  list-style: none;
+  padding: 0;
+  margin: 0.6rem 0 0;
+  display: grid;
+  gap: 0.25rem;
+  max-width: 22rem;
+  font-size: 0.9rem;
+}
+
+.game-playtime__copies li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.game-playtime__store {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--secondary);
+}
+
+/* --- Description --- */
+.game-description .post-content {
+  margin: 0;
+}
+
+.game-source {
+  font-size: 0.8rem;
+  color: var(--secondary);
+  margin-top: 0.4rem;
+}
+
+/* --- Screenshots --- */
+.game-shots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.6rem;
+}
+
+.game-shot {
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--tertiary);
+  aspect-ratio: 16 / 9;
+}
+
+.game-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  transition: transform 0.2s ease;
+}
+
+.game-shot:hover img {
+  transform: scale(1.03);
+}
+
+/* --- Achievements --- */
+.game-achv-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.9rem;
+}
+
+.game-achv-summary__count strong {
+  font-size: 1.3rem;
+}
+
+.game-achv-summary__track,
+.game-achv__pct-track {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--tertiary);
+  overflow: hidden;
+}
+
+.game-achv-summary__track {
+  max-width: 18rem;
+}
+
+.game-achv-summary__track span,
+.game-achv__pct-track span {
+  display: block;
+  height: 100%;
+  background: #66c0f4; /* Steam-blue, as on the grid card */
+}
+
+.game-achv-summary__pct {
+  color: var(--secondary);
+  font-size: 0.9rem;
+}
+
+.game-achv-controls {
+  margin-bottom: 0.9rem;
+}
+
+/* `hidden` is the no-JavaScript state of the controls and the filtered-out state
+   of a row; both rules below set `display`, which would otherwise override it. */
+.game-achv-controls[hidden],
+.game-achv[hidden] {
+  display: none;
+}
+
+.game-achv-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.game-achv {
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  gap: 0.8rem;
+  align-items: center;
+  padding: 0.5rem 0.7rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--entry);
+  /* 641 rows on the longest list: let the browser skip laying out the ones
+     nobody has scrolled to. */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 64px;
+}
+
+.game-achv__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--tertiary);
+}
+
+.game-achv__icon img {
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin: 0;
+}
+
+.game-achv.is-locked .game-achv__icon img {
+  filter: grayscale(1);
+  opacity: 0.45;
+}
+
+.game-achv__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.game-achv__name {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.game-achv.is-locked .game-achv__name {
+  color: var(--secondary);
+}
+
+.game-achv__desc {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  line-height: 1.35;
+}
+
+.game-achv__desc--hidden {
+  font-style: italic;
+}
+
+.game-achv__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  font-size: 0.78rem;
+  color: var(--secondary);
+  white-space: nowrap;
+}
+
+.game-achv__pct {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.game-achv__pct-track {
+  width: 60px;
+  flex: none;
+}
+
+@media (max-width: 600px) {
+  .game-hero {
+    grid-template-columns: 120px 1fr;
+    gap: 1rem;
+  }
+
+  .game-facts > div {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .game-achv {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .game-achv__icon,
+  .game-achv__icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .game-achv__meta {
+    grid-column: 2;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

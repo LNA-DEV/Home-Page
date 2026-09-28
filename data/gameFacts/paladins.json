@@ -1,0 +1,39 @@
+{
+ "developers": [
+  "Hi-Rez Studios"
+ ],
+ "genres": [
+  {
+   "de": "Helden-Shooter",
+   "en": "hero shooter"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  }
+ ],
+ "publishers": [
+  "Hi-Rez Studios"
+ ],
+ "released": "2016",
+ "steam": {
+  "de": "Spiele noch heute mit mehr als 25 Millionen anderen Spielern Paladins, den team-basierten Fantasy-Shooter. Schwinge Waffen, wirke Zauber, entwickle deinen ganz eigenen Spielstil und werde zu einem legendären Champion von Paladins.",
+  "en": "Paladins is the ultimate fantasy team-based shooter experience, with over 50 customizable Champions fighting in 5v5 action across a diverse Realm of modes and maps!"
+ },
+ "steam_appid": 444090,
+ "wikidata": "Q27870279",
+ "wikipedia": {
+  "de": {
+   "text": "Paladins ist ein Free-to-play-Fantasy-Ego-Shooter im Stil einer Multiplayer Online Battle Arena, der am 8. Mai 2018 für Microsoft Windows, MacOS, PlayStation 4 und Xbox One offiziell veröffentlicht wurde.",
+   "url": "https://de.wikipedia.org/wiki/Paladins"
+  },
+  "en": {
+   "text": "Paladins: Champions of the Realm is a 2018 free-to-play online hero shooter video game by Hi-Rez Studios. The game was developed by Evil Mojo, an internal studio of Hi-Rez and was released on May 8, 2018, for Microsoft Windows, PlayStation 4, and Xbox One, followed by a Nintendo Switch version released on June 12, 2018.",
+   "url": "https://en.wikipedia.org/wiki/Paladins_(video_game)"
+  }
+ }
+}

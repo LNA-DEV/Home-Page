@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  {{- range .Data.Pages }}
+  {{- /* `sitemap: {disable: true}` is honoured by Hugo's built-in sitemap, and so
+         must be by this override of it. The game pages set it (they are
+         noindex — game-pages.html); a noindex URL in the sitemap tells a crawler
+         two opposite things at once. */}}
+  {{- range where .Data.Pages "Sitemap.Disable" "!=" true }}
   <url>
     <loc>{{ .Permalink }}</loc>
     {{- if not .Lastmod.IsZero }}

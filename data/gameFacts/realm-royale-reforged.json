@@ -1,0 +1,40 @@
+{
+ "developers": [
+  "Hi-Rez Studios"
+ ],
+ "genres": [
+  {
+   "de": "Battle Royale",
+   "en": "battle royale game",
+   "sv": "Battle royale-spel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  }
+ ],
+ "publishers": [
+  "Hi-Rez Studios"
+ ],
+ "released": "2018",
+ "steam": {
+  "de": "Schließe dich über 20 Millionen Spielern an und erlebe eine neue Art Battle Royale in Realm Royale Reforged! Wähle deine Klasse, schmiede tödliche Waffen und meistere mächtige Fertigkeiten, um zum letzten Überlebenden zu werden. Schwing dich auf dein Pferd und erkunde die prächtige Fantasiewelt.",
+  "en": "Join 20+ million players and experience a new kind of battle royale in Realm Royale Reforged! Choose your class, forge deadly weapons, and master powerful abilities to be the last champion standing. Mount up alone or with a team to explore a fantasy world while outrunning the deadly fog."
+ },
+ "steam_appid": 813820,
+ "wikidata": "Q55068106",
+ "wikipedia": {
+  "de": {
+   "text": "Realm Royale Reforged war ein kostenlos spielbares Battle-Royale-Computerspiel aus dem Jahr 2018, das auf dem Spiel Paladins basiert und von dem US-amerikanischen Entwicklerstudio Hi-Rez Studios veröffentlicht wurde. Das Spiel hieß vorher Paladins: Battlegrounds. Am 18.",
+   "url": "https://de.wikipedia.org/wiki/Realm_Royale_Reforged"
+  },
+  "en": {
+   "text": "Realm Royale was a free-to-play third-person shooter battle royale game developed by Heroic Leap Games and published by Hi-Rez Studios. The game featured multiple character classes each with unique abilities. It is a spin-off of the hero shooter Paladins, where it originated as a game mode known as \"Battlegrounds\".",
+   "url": "https://en.wikipedia.org/wiki/Realm_Royale"
+  }
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "developers": [
+  "Unknown Worlds Entertainment"
+ ],
+ "genres": [
+  {
+   "de": "Survival-Spiel",
+   "en": "survival game",
+   "sv": "överlevnadsspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "publishers": [
+  "Unknown Worlds Entertainment"
+ ],
+ "released": "2019-01-30",
+ "steam": {
+  "de": "Tauche in ein eisiges Unterwasserabenteuer ein. Below Zero spielt zwei Jahre nach dem ersten Subnautica. Kehre auf den Planeten 4546B zurück, um eine tödliche Vertuschung aufzudecken. Überlebe die Bedingungen, indem du Basen baust, Werkzeuge herstellst & dich der Welt von Subnautica hingibst.",
+  "en": "Dive into a freezing underwater adventure on an alien planet. Below Zero is set two years after the original Subnautica. Return to Planet 4546B to uncover the truth behind a deadly cover-up. Survive by building habitats, crafting tools, & diving deeper into the world of Subnautica."
+ },
+ "steam_appid": 848450,
+ "wikidata": "Q56432842",
+ "wikipedia": {
+  "de": {
+   "text": "Subnautica ist ein 2018 veröffentlichtes Survival-Spiel des US-amerikanischen Studios Unknown Worlds Entertainment. In dem Einzelspieler-Titel schlüpft der Spieler in die Rolle eines Raumschiff-Besatzungsmitgliedes, das auf einem weitestgehend von Wasser bedeckten Planeten abstürzt. Das Spiel wurde im Dezember 2014 im Rahmen eines Early-Access-Programms auf Steam veröffentlicht, 2016 folgte das Game Preview für die Xbox One.",
+   "url": "https://de.wikipedia.org/wiki/Subnautica:_Below_Zero"
+  },
+  "en": {
+   "text": "Subnautica: Below Zero is an open-world survival action-adventure video game developed and published by Unknown Worlds Entertainment. The game is a spin-off to Subnautica.",
+   "url": "https://en.wikipedia.org/wiki/Subnautica:_Below_Zero"
+  }
+ }
+}

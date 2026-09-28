@@ -1,0 +1,64 @@
+{
+ "developers": [
+  "Don’t Nod"
+ ],
+ "genres": [
+  {
+   "de": "Grafik-Adventure",
+   "en": "graphic adventure game",
+   "sv": "grafiskt äventyrsspel"
+  },
+  {
+   "de": "LSBTTQ-basierendes Videospiel",
+   "en": "LGBT-themed video game"
+  },
+  {
+   "de": "Videospiel mit LGBT+-Charakter",
+   "en": "video game with LGBT character",
+   "sv": "datorspel med HBTQ-figur"
+  },
+  {
+   "de": "interaktiver Film",
+   "en": "interactive film",
+   "sv": "interaktiv film"
+  },
+  {
+   "de": "Science-Fiction-Computerspiel",
+   "en": "science fiction video game",
+   "sv": "science fiction-spel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "publishers": [
+  "Square Enix",
+  "Feral Interactive"
+ ],
+ "released": "2015-01-30",
+ "steam": {
+  "de": "Episode 1 jetzt GRATIS! Life Is Strange ist ein preisgekröntes und von Kritikern gefeiertes Abenteuerspiel in Episoden, das dem Spieler erlaubt, die Zeit zurückzudrehen und so Vergangenheit, Gegenwart und Zukunft zu beeinflussen.",
+  "en": "Episode 1 now FREE! Life is Strange is an award-winning and critically acclaimed episodic adventure game that allows the player to rewind time and affect the past, present and future."
+ },
+ "steam_appid": 319630,
+ "wikidata": "Q18536861",
+ "wikipedia": {
+  "de": {
+   "text": "Life Is Strange ist ein in fünf Episoden unterteiltes 3D-Adventure des französischen Entwicklers Dontnod Entertainment, dessen erste Episode im Januar 2015 vom japanischen Publisher Square Enix für Windows-PCs und verschiedene Konsolen veröffentlicht wurde. Das Spiel begründete die gleichnamige, Stand 2026 siebenteilige Computerspielreihe.",
+   "url": "https://de.wikipedia.org/wiki/Life_Is_Strange"
+  },
+  "en": {
+   "text": "Life Is Strange is an episodic adventure game developed by Dontnod Entertainment and published by Square Enix. The first installment of the Life Is Strange series, the game was released in five episodes periodically throughout 2015 for PlayStation 3, PlayStation 4, Windows, Xbox 360, and Xbox One. It was ported to OS X and Linux in 2016, and iOS and Android in 2017 and 2018 respectively.",
+   "url": "https://en.wikipedia.org/wiki/Life_Is_Strange_(video_game)"
+  },
+  "sv": {
+   "text": "Life Is Strange är ett episodiskt äventyrsspel utvecklat av Dontnod Entertainment och publicerat av Square Enixs europeiska filial. Spelet som är det första i Life is Strange-serien släpptes i fem avsnitt med jämna mellanrum under 2015 för Playstation 3, Playstation 4, Windows, Xbox 360 och Xbox One. Det har även blivit portat till OS X och Linux 2016 samt iOS och Android 2017–2018.",
+   "url": "https://sv.wikipedia.org/wiki/Life_Is_Strange"
+  }
+ }
+}

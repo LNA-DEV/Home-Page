@@ -20,6 +20,7 @@ const PAGES: Record<string, string> = {
   "models-home": "/en/gallery/models/",
   feed: "/en/feed/",
   gaming: "/en/gaming/",
+  game: "/en/gaming/portal-2/",
   search: "/en/search/",
   about: "/en/lukas-nagel/",
 };

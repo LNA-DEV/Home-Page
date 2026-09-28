@@ -1,0 +1,30 @@
+{
+ "genres": [
+  {
+   "de": "Action-Adventure",
+   "en": "action-adventure game",
+   "sv": "actionäventyrsspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "released": "2016-01-04",
+ "steam": {
+  "de": "Pony Island ist ein spannendes Rätsel-Spiel in Verkleidung. Du befindest dich in Limbo, gefangen in einer bösartigen, defekten Arcade-Maschine, welche vom Teufel persönlich entwickelt wurde. Es ist kein Spiel über Ponys.",
+  "en": "Pony Island is a suspense puzzle game in disguise. You are in limbo, trapped in a malevolent and malfunctioning arcade machine devised by the devil himself. It is not a game about ponies."
+ },
+ "steam_appid": 405640,
+ "wikidata": "Q22122562",
+ "wikipedia": {
+  "en": {
+   "text": "Pony Island is a 2016 video game developed and published by Canadian indie developer Daniel Mullins. As a metafictional game, the game has the player interact with what appears to be an old arcade cabinet game called \"Pony Island\". The player soon discovers the game is corrupted by Lucifer himself, who is trying to claim the player's soul.",
+   "url": "https://en.wikipedia.org/wiki/Pony_Island"
+  }
+ }
+}

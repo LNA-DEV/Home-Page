@@ -1,0 +1,37 @@
+# Everything about a GAME that a person writes — one record per game page,
+# keyed by the slug its copies carry in data/gaming.yaml. Every field is
+# optional, and a game without a record here still gets its page.
+#
+# No script ever writes this file. The syncs own data/gaming.yaml, game-enrich.py
+# owns data/gameFacts/, and anything typed here survives all of them.
+#
+#   slug          required; must be the slug of a copy in data/gaming.yaml
+#                 (an unknown one is a build error — it is always a typo)
+#   title         overrides the title of the copies, for a game whose stores
+#                 disagree about its name (`Rocket League®` / `Rocket League`)
+#   description   your own text about the game. Beats every fetched source in
+#                 its language (docs/concepts/gaming-game-pages.md §5.1). A bare
+#                 string means English, or give {en, de, sv}.
+#   rating        1–5
+#   notes         a personal note, shown under the description. String (= en)
+#                 or {en, de, sv}, English fallback.
+#   wikidata      pins the Wikidata item (Q…) game-enrich.py reads the facts and
+#                 the Wikipedia text from, or `none` for a game that has none.
+#                 Steam games resolve on their own; everything else needs a pin —
+#                 `python3 scripts/game-enrich.py --propose` prints candidates.
+#   steam_appid   the Steam app id to take the store description from, for a
+#                 game not owned on Steam whose Wikidata item has none
+#   slugAliases   slugs this game's page used to have. Each becomes a redirect in
+#                 all three languages. Renaming a slug: change it on every copy in
+#                 gaming.yaml and here, and add the old one to this list.
+#
+# Example:
+#
+# - slug: stardew-valley
+#   description:
+#     de: "Ein Bauernhof, ein Dorf und kein Zeitdruck — …"
+#   rating: 5
+#   notes: "Two full years on the Switch before the Steam copy."
+#   slugAliases: []
+
+games: []

@@ -1,0 +1,957 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "de": "Beende Episode 1: Chrysalis",
+    "en": "Finish Episode 1: Chrysalis"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/b5678a10f4ac8d7403f2dab2eef17df1c1780b15.jpg",
+   "key": "AC_1",
+   "name": {
+    "en": "Chrysalis"
+   },
+   "percent": 50.0,
+   "unlocked": "2019-06-22T20:41:11+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #1 in Episode 1: Chrysalis",
+    "en": "Take optional photo #1 in Episode 1: Chrysalis"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/8be7a4efc0ac66e1f1fa557e4c9756fea5b09b6c.jpg",
+   "key": "AC_2",
+   "name": {
+    "de": "Makroskop",
+    "en": "Macro Eyes"
+   },
+   "percent": 67.8,
+   "unlocked": "2019-06-21T19:41:55+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #2 in Episode 1: Chrysalis",
+    "en": "Take optional photo #2 in Episode 1: Chrysalis"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/be3a7777567fd42cdf28dfb95bea3d05c0b837ca.jpg",
+   "key": "AC_3",
+   "name": {
+    "de": "Weitwinkel",
+    "en": "Wide Angles"
+   },
+   "percent": 14.2,
+   "unlocked": "2020-07-16T15:11:17+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #3 in Episode 1: Chrysalis",
+    "en": "Take optional photo #3 in Episode 1: Chrysalis"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/41cee253adf327ecb526ab9d4b494d8bd0d4b8be.jpg",
+   "key": "AC_4",
+   "name": {
+    "de": "Teleobjektiv",
+    "en": "Telephotogenic"
+   },
+   "percent": 21.9,
+   "unlocked": "2020-07-16T15:13:24+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #4 in Episode 1: Chrysalis",
+    "en": "Take optional photo #4 in Episode 1: Chrysalis"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/4e071e534c0d8509b3159702dd0a2c5701710a3e.jpg",
+   "key": "AC_5",
+   "name": {
+    "de": "Nahaufnahme",
+    "en": "Close-Ups"
+   },
+   "percent": 14.0,
+   "unlocked": "2020-07-16T15:14:57+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #5 in Episode 1: Chrysalis",
+    "en": "Take optional photo #5 in Episode 1: Chrysalis"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/3668d1c09fd65c1b7f03a6bb3b2eb6f90d3ea30d.jpg",
+   "key": "AC_6",
+   "name": {
+    "de": "Rote Augen",
+    "en": "Red Eye"
+   },
+   "percent": 41.8,
+   "unlocked": "2019-06-21T20:40:20+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #6 in Episode 1: Chrysalis",
+    "en": "Take optional photo #6 in Episode 1: Chrysalis"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/78a5f8b70dbfe9f38f63f96fa41fe6c4bb832c2a.jpg",
+   "key": "AC_7",
+   "name": {
+    "de": "Scharfstellen",
+    "en": "Focused"
+   },
+   "percent": 16.8,
+   "unlocked": "2020-07-16T15:24:56+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #7 in Episode 1: Chrysalis",
+    "en": "Take optional photo #7 in Episode 1: Chrysalis"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/69c4fc832be9a287a973f2537cb5dae4612bf142.jpg",
+   "key": "AC_8",
+   "name": {
+    "de": "Reingezoomt",
+    "en": "Zoomed In"
+   },
+   "percent": 14.6,
+   "unlocked": "2020-07-16T15:26:50+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #8 in Episode 1: Chrysalis",
+    "en": "Take optional photo #8 in Episode 1: Chrysalis"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/a6af61b703a22752c681cd5155794584811938d7.jpg",
+   "key": "AC_9",
+   "name": {
+    "de": "Brennpunkt",
+    "en": "Focal Pointed"
+   },
+   "percent": 14.4,
+   "unlocked": "2020-07-16T15:28:11+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #9 in Episode 1: Chrysalis",
+    "en": "Take optional photo #9 in Episode 1: Chrysalis"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/c7a22e9a37606dbb2705681ee722fd93b5f2d887.jpg",
+   "key": "AC_10",
+   "name": {
+    "de": "Maximale Blende",
+    "en": "Maximum Aperture"
+   },
+   "percent": 13.3,
+   "unlocked": "2020-07-16T15:34:25+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #10 in Episode 1: Chrysalis",
+    "en": "Take optional photo #10 in Episode 1: Chrysalis"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/ea8d7eb74a8b2a8b4f17f3d1e9ac56aeeddec829.jpg",
+   "key": "AC_11",
+   "name": {
+    "de": "Lichtfleck",
+    "en": "Light Leak"
+   },
+   "percent": 21.9,
+   "unlocked": "2020-07-16T15:30:42+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße alle optionalen Fotos in Episode 1: Chrysalis",
+    "en": "Take all optional photos in Episode 1: Chrysalis"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/858f1c7518f908496e85131c36ede2099407f393.jpg",
+   "key": "AC_12",
+   "name": {
+    "de": "Visionär",
+    "en": "Visionary"
+   },
+   "percent": 7.9,
+   "unlocked": "2020-07-16T15:34:25+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Beende Episode 2: Out of Time",
+    "en": "Finish Episode 2: Out of Time"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/3ae2297e3023e3060205a90abf8accf8550c670f.jpg",
+   "key": "AC_13",
+   "name": {
+    "en": "Out of Time"
+   },
+   "percent": 30.1,
+   "unlocked": "2019-06-22T23:19:10+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #1 in Episode 2: Out of Time",
+    "en": "Take optional photo #1 in Episode 2: Out of Time"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/79f9bb20daadc082b3b40a809a794abd3aea70b9.jpg",
+   "key": "AC_14",
+   "name": {
+    "de": "Gesichtsfeld",
+    "en": "Field Of View"
+   },
+   "percent": 27.1,
+   "unlocked": "2019-06-22T21:13:03+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #2 in Episode 2: Out of Time",
+    "en": "Take optional photo #2 in Episode 2: Out of Time"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/0f70ccdfeea622f9951ba8646518178355617efb.jpg",
+   "key": "AC_15",
+   "name": {
+    "de": "Volle Belichtung",
+    "en": "Full Exposure"
+   },
+   "percent": 14.9,
+   "unlocked": "2019-06-22T21:20:59+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #3 in Episode 2: Out of Time",
+    "en": "Take optional photo #3 in Episode 2: Out of Time"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/9a9b159ea0f4cf0b10a7f89e42fac9599cba40e4.jpg",
+   "key": "AC_16",
+   "name": {
+    "de": "Prozessor",
+    "en": "Processor"
+   },
+   "percent": 11.1,
+   "unlocked": "2019-06-22T21:31:41+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #4 in Episode 2: Out of Time",
+    "en": "Take optional photo #4 in Episode 2: Out of Time"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/3c5bc8b57bb88622093dc9819a110c12ad2db136.jpg",
+   "key": "AC_17",
+   "name": {
+    "de": "Bildstabilisator",
+    "en": "Image Stabilizer"
+   },
+   "percent": 14.5,
+   "unlocked": "2020-07-16T15:37:36+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #5 in Episode 2: Out of Time",
+    "en": "Take optional photo #5 in Episode 2: Out of Time"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/2043cc53b3d7f93169b1101399d3205b309f1cf6.jpg",
+   "key": "AC_18",
+   "name": {
+    "de": "Komprimiert",
+    "en": "Compressed"
+   },
+   "percent": 20.9,
+   "unlocked": "2020-07-16T15:39:07+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #6 in Episode 2: Out of Time",
+    "en": "Take optional photo #6 in Episode 2: Out of Time"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/11f65edac2f6d76f57941325bb244e6f7c2fed4a.jpg",
+   "key": "AC_19",
+   "name": {
+    "de": "Verpixelt",
+    "en": "Pixelated"
+   },
+   "percent": 14.4,
+   "unlocked": "2020-07-16T15:41:23+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #7 in Episode 2: Out of Time",
+    "en": "Take optional photo #7 in Episode 2: Out of Time"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/fef56c783fe25ead520cb28ce3fd71645bae1137.jpg",
+   "key": "AC_20",
+   "name": {
+    "de": "Kontrastumfang",
+    "en": "Dynamic Range"
+   },
+   "percent": 29.5,
+   "unlocked": "2019-06-22T22:07:53+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #8 in Episode 2: Out of Time",
+    "en": "Take optional photo #8 in Episode 2: Out of Time"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/27b930a85acad7bbc4d3598271c9064b70232bd6.jpg",
+   "key": "AC_21",
+   "name": {
+    "de": "Koloriert",
+    "en": "Colorized"
+   },
+   "percent": 18.6,
+   "unlocked": "2019-06-22T22:22:08+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #9 in Episode 2: Out of Time",
+    "en": "Take optional photo #9 in Episode 2: Out of Time"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/f7b472fdf42a7d8d22cbf6af00c82e4ac86045c3.jpg",
+   "key": "AC_22",
+   "name": {
+    "de": "In Szene gesetzt",
+    "en": "Meter Made"
+   },
+   "percent": 15.4,
+   "unlocked": "2020-07-16T15:46:33+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #10 in Episode 2: Out of Time",
+    "en": "Take optional photo #10 in Episode 2: Out of Time"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/9f4167429e53e8158fe17c46636b167b49534bcd.jpg",
+   "key": "AC_23",
+   "name": {
+    "de": "Auflösungsrevolution",
+    "en": "Resolution Revolution"
+   },
+   "percent": 24.0,
+   "unlocked": "2019-06-22T22:46:25+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße alle optionalen Fotos in Episode 2: Out of Time",
+    "en": "Take all optional photos in Episode 2: Out of Time"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/62bb3c03b3bef6ece8f9ec26c64840028fdae64c.jpg",
+   "key": "AC_24",
+   "name": {
+    "de": "Labormeister",
+    "en": "Lab Master"
+   },
+   "percent": 7.3,
+   "unlocked": "2020-07-16T15:46:33+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Beende Episode 3: Chaos Theory",
+    "en": "Finish Episode 3: Chaos Theory"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/8f7ca10b51cdcf2601de6873dfefbec58b4e66d1.jpg",
+   "key": "AC_25",
+   "name": {
+    "en": "Chaos Theory"
+   },
+   "percent": 27.0,
+   "unlocked": "2019-07-18T15:44:29+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #1 in Episode 3: Chaos Theory",
+    "en": "Take optional photo #1 in Episode 3: Chaos Theory"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/5c585c1d7c1ffa01dbddf26dd0ff179ab0595236.jpg",
+   "key": "AC_26",
+   "name": {
+    "de": "Parallaxe",
+    "en": "Parallax View"
+   },
+   "percent": 7.1,
+   "unlocked": "2020-07-16T15:52:49+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #2 in Episode 3: Chaos Theory",
+    "en": "Take optional photo #2 in Episode 3: Chaos Theory"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/d21a4f6bba1741227caf374b9ded3f82060feeab.jpg",
+   "key": "AC_27",
+   "name": {
+    "de": "Präzisionsobjektiv",
+    "en": "Lenscrafted"
+   },
+   "percent": 9.3,
+   "unlocked": "2020-07-16T15:54:24+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #3 in Episode 3: Chaos Theory",
+    "en": "Take optional photo #3 in Episode 3: Chaos Theory"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/c97fbadcd8355aca73d1f41c4ecf6e4c05a82438.jpg",
+   "key": "Ac_28",
+   "name": {
+    "de": "Gute Reflexe",
+    "en": "The Reflex"
+   },
+   "percent": 21.0,
+   "unlocked": "2019-07-18T15:44:29+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #4 in Episode 3: Chaos Theory",
+    "en": "Take optional photo #4 in Episode 3: Chaos Theory"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/05ecab32bd8e0fe348cf589b2cc7660194e5cd0d.jpg",
+   "key": "AC_29",
+   "name": {
+    "de": "Histogrammausgleich",
+    "en": "Histogrammar"
+   },
+   "percent": 20.9,
+   "unlocked": "2020-07-16T15:59:10+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #5 in Episode 3: Chaos Theory",
+    "en": "Take optional photo #5 in Episode 3: Chaos Theory"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/f065e4ba203f84d850a35e3e5a2dc56190766d23.jpg",
+   "key": "AC_30",
+   "name": {
+    "en": "Bokeh"
+   },
+   "percent": 10.1,
+   "unlocked": "2020-07-16T16:10:02+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #6 in Episode 3: Chaos Theory",
+    "en": "Take optional photo #6 in Episode 3: Chaos Theory"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/c9b72927ca64251af7cfbfe1ea1c7ec8816ebef6.jpg",
+   "key": "AC_31",
+   "name": {
+    "de": "Lochblende",
+    "en": "Pinholed"
+   },
+   "percent": 18.7,
+   "unlocked": "2020-07-16T16:14:13+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #7 in Episode 3: Chaos Theory",
+    "en": "Take optional photo #7 in Episode 3: Chaos Theory"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/ac2bf674c7536171b148cefa854dff0a97913a9a.jpg",
+   "key": "AC_32",
+   "name": {
+    "de": "Originales Original",
+    "en": "RAW Strength"
+   },
+   "percent": 8.3,
+   "unlocked": "2020-07-16T16:20:46+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #8 in Episode 3: Chaos Theory",
+    "en": "Take optional photo #8 in Episode 3: Chaos Theory"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/e417112bc0442452f94cb1fbc127a98514bbd393.jpg",
+   "key": "AC_33",
+   "name": {
+    "de": "Bildsucher",
+    "en": "Viewfinder"
+   },
+   "percent": 10.8,
+   "unlocked": "2020-07-16T16:26:42+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #9 in Episode 3: Chaos Theory",
+    "en": "Take optional photo #9 in Episode 3: Chaos Theory"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/a56b319fdf21e8a159ea4999810278739465cb64.jpg",
+   "key": "AC_34",
+   "name": {
+    "de": "Optastisch",
+    "en": "Optican"
+   },
+   "percent": 12.4,
+   "unlocked": "2020-07-16T16:27:16+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #10 in Episode 3: Chaos Theory",
+    "en": "Take optional photo #10 in Episode 3: Chaos Theory"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/b85c7dec6032c9328237c6ace62b6b28547c6dc4.jpg",
+   "key": "AC_35",
+   "name": {
+    "de": "Blitzlicht!",
+    "en": "Flash!"
+   },
+   "percent": 20.3,
+   "unlocked": "2019-07-18T15:44:29+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße alle optionalen Fotos in Episode 3: Chaos Theory",
+    "en": "Take all optional photos in Episode 3: Chaos Theory"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/ed449ef2ee9da8b12cfba5dd0193d97478f1f9e1.jpg",
+   "key": "AC_36",
+   "name": {
+    "de": "Durchs Objektiv",
+    "en": "Camera Eye"
+   },
+   "percent": 6.0,
+   "unlocked": "2020-07-16T16:27:17+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Beende Episode 4: Dark Room",
+    "en": "Finish Episode 4: Dark Room"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/222d03444cc4f674cb5906610a0fe5666b30c0c3.jpg",
+   "key": "AC_37",
+   "name": {
+    "en": "Dark Room"
+   },
+   "percent": 24.5,
+   "unlocked": "2019-07-18T18:43:44+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #1 in Episode 4: Dark Room",
+    "en": "Take optional photo #1 in Episode 4: Dark Room"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/0eab5cc0568612b3cf56a67770c624f7f37e2ae0.jpg",
+   "key": "AC_38",
+   "name": {
+    "de": "Atmosphärisch",
+    "en": "Ambient"
+   },
+   "percent": 16.3,
+   "unlocked": "2019-07-18T15:44:29+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #2 in Episode 4: Dark Room",
+    "en": "Take optional photo #2 in Episode 4: Dark Room"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/0e5d6b65d567a80894bbddcc4feb03bf6aca78c1.jpg",
+   "key": "AC_39",
+   "name": {
+    "de": "Zeitraffer",
+    "en": "Time-Lapsed"
+   },
+   "percent": 15.6,
+   "unlocked": "2020-07-16T16:38:17+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #3 in Episode 4: Dark Room",
+    "en": "Take optional photo #3 in Episode 4: Dark Room"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/f75513790c065e704a5f9d42aa79ea1e584bfdde.jpg",
+   "key": "AC_40",
+   "name": {
+    "de": "Kalibrierung",
+    "en": "Balance"
+   },
+   "percent": 10.7,
+   "unlocked": "2020-07-16T16:35:01+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #4 in Episode 4: Dark Room",
+    "en": "Take optional photo #4 in Episode 4: Dark Room"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/c3b0e71649971d8cff6ce8a529c9693879cb55be.jpg",
+   "key": "AC_41",
+   "name": {
+    "de": "Messsucher",
+    "en": "Rangefinder"
+   },
+   "percent": 12.5,
+   "unlocked": "2020-07-16T16:36:22+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #5 in Episode 4: Dark Room",
+    "en": "Take optional photo #5 in Episode 4: Dark Room"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/e133df8c91fb909e619f7815c4b17b1515995dba.jpg",
+   "key": "AC_42",
+   "name": {
+    "de": "Gamma",
+    "en": "Gamma Value"
+   },
+   "percent": 7.9,
+   "unlocked": "2020-07-16T16:39:46+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #6 in Episode 4: Dark Room",
+    "en": "Take optional photo #6 in Episode 4: Dark Room"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/d7e1b3b351bcf76bb4c97b0b8c85d01bda0c3dc0.jpg",
+   "key": "AC_43",
+   "name": {
+    "de": "Dioptrik-Dichte",
+    "en": "Dioptric Power"
+   },
+   "percent": 13.9,
+   "unlocked": "2020-07-16T16:42:35+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #7 in Episode 4: Dark Room",
+    "en": "Take optional photo #7 in Episode 4: Dark Room"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/23294cbc3cd13edc693adc5f0c48a974e203f561.jpg",
+   "key": "AC_44",
+   "name": {
+    "en": "Fisheye"
+   },
+   "percent": 12.3,
+   "unlocked": "2019-07-18T17:53:20+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #8 in Episode 4: Dark Room",
+    "en": "Take optional photo #8 in Episode 4: Dark Room"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/95b10f9ab58e93b1229fc25a43a045c92083062d.jpg",
+   "key": "AC_45",
+   "name": {
+    "de": "Manuell belichtet",
+    "en": "Manually Exposed"
+   },
+   "percent": 22.7,
+   "unlocked": "2019-07-18T17:59:31+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #9 in Episode 4: Dark Room",
+    "en": "Take optional photo #9 in Episode 4: Dark Room"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/db57fee62fe7d8a8dc06a8c8c675d33579848fa5.jpg",
+   "key": "AC_46",
+   "name": {
+    "de": "Diashow",
+    "en": "Slideshow"
+   },
+   "percent": 9.3,
+   "unlocked": "2020-07-16T16:48:01+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #10 in Episode 4: Dark Room",
+    "en": "Take optional photo #10 in Episode 4: Dark Room"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/73f8f635a04d14235e27c37d51ebc5c429628ec2.jpg",
+   "key": "AC_47",
+   "name": {
+    "de": "Stativ",
+    "en": "Tripod"
+   },
+   "percent": 6.0,
+   "unlocked": "2020-07-16T16:46:38+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße alle optionalen Fotos in Episode 4: Dark Room",
+    "en": "Take all optional photos in Episode 4: Dark Room"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/d5fbe0030ff30643847b93d3e2608daf71e4ef0a.jpg",
+   "key": "AC_48",
+   "name": {
+    "de": "Fotonarr",
+    "en": "Shutterbug"
+   },
+   "percent": 5.5,
+   "unlocked": "2020-07-16T16:48:01+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Beende Episode 5: Polarized",
+    "en": "Finish Episode 5: Polarized"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/381657a2d8789ca6c2caa432bda1a91f7e3749b1.jpg",
+   "key": "AC_49",
+   "name": {
+    "en": "Polarized"
+   },
+   "percent": 23.4,
+   "unlocked": "2019-07-19T21:20:42+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #1 in Episode 5: Polarized",
+    "en": "Take optional photo #1 in Episode 5: Polarized"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/ed4a90ffb187e5fca043de93488cc00b6930b48a.jpg",
+   "key": "AC_50",
+   "name": {
+    "de": "Weißes Glühen",
+    "en": "Incandescent"
+   },
+   "percent": 8.5,
+   "unlocked": "2020-07-16T16:50:37+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #2 in Episode 5: Polarized",
+    "en": "Take optional photo #2 in Episode 5: Polarized"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/8fc07759ff7ca65d478de1c6eb276ad1d2c9b864.jpg",
+   "key": "AC_51",
+   "name": {
+    "de": "Nachtsicht",
+    "en": "Night Vision"
+   },
+   "percent": 10.5,
+   "unlocked": "2020-07-16T16:53:47+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #3 in Episode 5: Polarized",
+    "en": "Take optional photo #3 in Episode 5: Polarized"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/56913b8f4413b63f4e480441160689f8b0a3e08e.jpg",
+   "key": "AC_52",
+   "name": {
+    "de": "Fotomontage",
+    "en": "Framed"
+   },
+   "percent": 20.4,
+   "unlocked": "2019-07-19T19:46:37+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #4 in Episode 5: Polarized",
+    "en": "Take optional photo #4 in Episode 5: Polarized"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/50bb82f9aef0e7b3f19ab4a66f21eca9cc43e887.jpg",
+   "key": "AC_53",
+   "name": {
+    "de": "Camera obscura",
+    "en": "Camera Obscura"
+   },
+   "percent": 7.5,
+   "unlocked": "2019-07-19T20:12:36+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #5 in Episode 5: Polarized",
+    "en": "Take optional photo #5 in Episode 5: Polarized"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/7484c2263a428074d24a124783118cc2509d801f.jpg",
+   "key": "AC_54",
+   "name": {
+    "de": "Vergrößerung",
+    "en": "Blowup"
+   },
+   "percent": 8.8,
+   "unlocked": "2020-07-16T17:01:49+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #6 in Episode 5: Polarized",
+    "en": "Take optional photo #6 in Episode 5: Polarized"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/d6fbe4262d28b7ef6b03e84dab26c8a53da72040.jpg",
+   "key": "AC_55",
+   "name": {
+    "en": "Iris"
+   },
+   "percent": 7.6,
+   "unlocked": "2020-07-16T17:03:35+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #7 in Episode 5: Polarized",
+    "en": "Take optional photo #7 in Episode 5: Polarized"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/b68679501032dbdc0d624314d9ab2b1e5fa92111.jpg",
+   "key": "AC_56",
+   "name": {
+    "en": "Sensor"
+   },
+   "percent": 11.8,
+   "unlocked": "2019-07-19T20:45:21+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #8 in Episode 5: Polarized",
+    "en": "Take optional photo #8 in Episode 5: Polarized"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/fcc6a23a01d88e86847e294887534258645e4f1a.jpg",
+   "key": "AC_57",
+   "name": {
+    "de": "Ausgestellt",
+    "en": "On Display"
+   },
+   "percent": 5.9,
+   "unlocked": "2020-07-16T17:11:57+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #9 in Episode 5: Polarized",
+    "en": "Take optional photo #9 in Episode 5: Polarized"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/d1b630e1a1b9576e90fb13cef169e06818864080.jpg",
+   "key": "AC_58",
+   "name": {
+    "de": "Belichtungsmesser",
+    "en": "Light Meter"
+   },
+   "percent": 5.7,
+   "unlocked": "2020-07-16T17:42:50+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße das optionale Foto #10 in Episode 5: Polarized",
+    "en": "Take optional photo #10 in Episode 5: Polarized"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/225940db6a576d2aee4884206923ba7876a63947.jpg",
+   "key": "AC_59",
+   "name": {
+    "de": "Silhouetten",
+    "en": "Silhouettes"
+   },
+   "percent": 11.0,
+   "unlocked": "2020-07-16T17:54:58+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schieße alle optionalen Fotos in Episode 5: Polarized",
+    "en": "Take all optional photos in Episode 5: Polarized"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/319630/8cbb71fcd474fae4dbbe137819a55fba3bd05560.jpg",
+   "key": "AC_60",
+   "name": {
+    "de": "Selfie-Bewusstsein",
+    "en": "Selfie Awareness"
+   },
+   "percent": 5.1,
+   "unlocked": "2020-07-16T17:54:58+02:00"
+  }
+ ],
+ "id": "319630",
+ "platform": "steam"
+}

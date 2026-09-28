@@ -1,0 +1,55 @@
+{
+ "genres": [
+  {
+   "de": "Gelegenheitsspiel",
+   "en": "casual game",
+   "sv": "casualspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Player versus Player",
+   "en": "player versus player",
+   "sv": "player versus player"
+  },
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  },
+  {
+   "de": "Koop-Modus",
+   "en": "co-op mode",
+   "sv": "flerspelarläge"
+  },
+  {
+   "de": "Battle Royale",
+   "en": "battle royale game",
+   "sv": "Battle royale-spel"
+  }
+ ],
+ "released": "2013-05-09",
+ "steam": {
+  "de": "Erkunde die Welt mit GeoGuessr Steam Edition! Tritt gegen andere an, steige in den Divisionen auf und beweise dein Geografiewissen. Reise zu atemberaubenden Orten, analysiere Hinweise und triff deine beste Schätzung. Quickplay Duels ist unbegrenzt kostenlos spielbar.",
+  "en": "Explore the world with GeoGuessr Steam Edition! Compete against others, climb divisions, and prove your geography skills. Travel to stunning locations, analyze clues, and make your best guess. Quickplay Duels is unlimited Free-to-play.",
+  "sv": "Utforska världen med GeoGuessr Steam Edition! Tävla mot andra, klippa dig genom divisionerna och bevisa dina geografikunskaper. Res till hänförande platser, analysera ledtrådar och gör din bästa gissning. Quickplay Duels är obegränsat och gratis att spela."
+ },
+ "steam_appid": 3478870,
+ "wikidata": "Q13576160",
+ "wikipedia": {
+  "de": {
+   "text": "GeoGuessr ist ein Geographie-Computerspiel. Es wurde vom schwedischen IT-Berater Anton Wallén entwickelt und am 9. Mai 2013 veröffentlicht.",
+   "url": "https://de.wikipedia.org/wiki/GeoGuessr"
+  },
+  "en": {
+   "text": "GeoGuessr is a geography game in which players try to deduce locations from Google Street View imagery. The game includes various modes, such as single-player and multiplayer and a tournament mode has recently been added.",
+   "url": "https://en.wikipedia.org/wiki/GeoGuessr"
+  }
+ }
+}

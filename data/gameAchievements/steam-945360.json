@@ -1,0 +1,431 @@
+{
+ "achievements": [
+  {
+   "description": {
+    "de": "Schaffe den ersten Kill",
+    "en": "Get your first kill"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/28d77d90c1978829c159eae6fe799a191c34be83.jpg",
+   "key": "kills_first",
+   "name": {
+    "de": "AUF DEN GESCHMACK KOMMEN",
+    "en": "A TASTE FOR IT"
+   },
+   "percent": 46.2
+  },
+  {
+   "description": {
+    "de": "Schaffe 5 Kills insgesamt",
+    "en": "Get 5 total kills"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/f2b99effc0a886290c7b86e1d13bf8fb8df9552c.jpg",
+   "key": "kills_easy",
+   "name": {
+    "en": "KILLER"
+   },
+   "percent": 32.0
+  },
+  {
+   "description": {
+    "de": "Schaffe 50 Kills insgesamt",
+    "en": "Get 50 total kills"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/c56c94c6016eaa474ba59118c0c70b814156fe20.jpg",
+   "key": "kills_medium",
+   "name": {
+    "de": "MÖRDER",
+    "en": "ASSASSIN"
+   },
+   "percent": 5.1
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/945360/6a0dd8539784b692366028f41774673397d04c13.jpg",
+   "key": "kills_hard",
+   "name": {
+    "de": "GEISSEL",
+    "en": "SCOURGE"
+   },
+   "percent": 1.5
+  },
+  {
+   "description": {
+    "de": "Erledige 10 Aufgaben insgesamt",
+    "en": "Complete 10 total tasks"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/11d6a7da14eaa7036982b4375ea7caba288339ce.jpg",
+   "key": "task_complete_easy",
+   "name": {
+    "de": "PRAKTIKANT",
+    "en": "INTERN"
+   },
+   "percent": 44.7
+  },
+  {
+   "description": {
+    "de": "Erledige 100 Aufgaben insgesamt",
+    "en": "Complete 100 total tasks"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/fb8ff2604057a9cc13acf74166c52ff945354803.jpg",
+   "key": "task_complete_medium",
+   "name": {
+    "en": "MANAGER"
+   },
+   "percent": 17.0
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/945360/c7782fd07440b564df902fb0d80daa292f06ee9e.jpg",
+   "key": "task_complete_hard",
+   "name": {
+    "de": "PROJEKTLEITER",
+    "en": "TASKMASTER"
+   },
+   "percent": 3.4
+  },
+  {
+   "description": {
+    "de": "Gewinne 3 Spiele in der Skeld",
+    "en": "Win 3 games on Skeld"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/1c1b96b03b075eb3b42e368ebbdf257e19ef9087.jpg",
+   "key": "wins_skeld",
+   "name": {
+    "de": "VÖLLIG LOSGELÖST",
+    "en": "A SHIP ADRIFT"
+   },
+   "percent": 41.2
+  },
+  {
+   "description": {
+    "de": "Gewinne 3 Spiele in MIRA",
+    "en": "Win 3 games on MIRA"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/144c10dcf276eaffe8a7c03553c7d8a63c0de116.jpg",
+   "key": "wins_mira",
+   "name": {
+    "de": "ALLES ABGERIEGELT",
+    "en": "CORPORATE LOCKDOWN"
+   },
+   "percent": 9.1
+  },
+  {
+   "description": {
+    "de": "Gewinne 3 Spiele auf Polus",
+    "en": "Win 3 games on Polus"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/4d3d812ce857674d5013fb8c499bfacfd063277c.jpg",
+   "key": "wins_polus",
+   "name": {
+    "de": "UNIRDISCH",
+    "en": "UNEARTHED"
+   },
+   "percent": 15.4
+  },
+  {
+   "description": {
+    "de": "Gewinne 3 Spiele im Airship",
+    "en": "Win 3 games on The Airship"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/78c3fd6c3f272601db4023d546f4e0879c3880c3.jpg",
+   "key": "wins_airship",
+   "name": {
+    "de": "TOPPAT-BESATZUNG",
+    "en": "TOPPAT CREWMATES"
+   },
+   "percent": 4.9
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/945360/9c5048637cd0aecf7f9fcd4ac4f46c0d0c1d7541.jpg",
+   "key": "survive_two_impostors",
+   "name": {
+    "de": "NIE GEAHNT",
+    "en": "NEVER SUSPECT A THING"
+   },
+   "percent": 25.6
+  },
+  {
+   "description": {
+    "de": "Gewinne ein Spiel, indem du als Besatzungsmitglied alle Aufgaben erledigst",
+    "en": "Win a game by completing all tasks as a crewmate"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/6d277eed63e041a20b28e090f8d258f84bb71daf.jpg",
+   "key": "win_all_tasks",
+   "name": {
+    "de": "GUT GESCHMIERT",
+    "en": "A WELL-OILED MACHINE"
+   },
+   "percent": 28.3
+  },
+  {
+   "description": {
+    "de": "Gewinne ein Spiel, indem du als Verräter ein kritisches System sabotierst",
+    "en": "Win a game by sabotaging a critical system as Impostor."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/6062188e86a7cf3c7ef46f0b3e575861a26bbb46.jpg",
+   "key": "win_sabotage",
+   "name": {
+    "en": "SABOTEUR"
+   },
+   "percent": 12.5
+  },
+  {
+   "description": {
+    "de": "Gewinne ein Spiel, indem du als Verräter die gesamte Besatzung tötest",
+    "en": "Win a game by killing all crewmates as Impostor."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/cbf1cacf0178c63aa2f8545030d53b5f9891aeb0.jpg",
+   "key": "win_kills",
+   "name": {
+    "de": "SCHLITZER",
+    "en": "SLASHER"
+   },
+   "percent": 33.6
+  },
+  {
+   "description": {
+    "de": "Überlebe und gewinne ein Spiel als Besatzungsmitglied",
+    "en": "Survive and win a game as a crewmate"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/36b531782d1eba6166eb54769d36f42a3e87ace0.jpg",
+   "key": "survive_crewmate",
+   "name": {
+    "de": "ÜBERLEBENDER",
+    "en": "SURVIVOR"
+   },
+   "percent": 48.7
+  },
+  {
+   "description": {
+    "de": "Gewinne ein Spiel als Verräter durch Abstimmung",
+    "en": "Win a game by vote as Impostor"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/e2bf2b4ca2e03bbf1b48a9a8c72dd2fde4ee7e68.jpg",
+   "key": "win_impostor_vote",
+   "name": {
+    "de": "ÜBERREDUNGSKÜNSTLER",
+    "en": "SMOOTH TALKER"
+   },
+   "percent": 24.3
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/945360/c486b2f15c031a9929e6193a334c8f947b326009.jpg",
+   "key": "card_first_try",
+   "name": {
+    "de": "UNMÖGLICHE AUFGABE",
+    "en": "IMPOSSIBLE TASK"
+   },
+   "percent": 40.4
+  },
+  {
+   "description": {
+    "de": "Schaffe einen Kill während einer Lichtsabotage",
+    "en": "Get a kill during a lights sabotage"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/6d53ce190945abd26dc4d5cf265cda396196e736.jpg",
+   "key": "kill_during_lights",
+   "name": {
+    "de": "LICHT AUS",
+    "en": "LIGHTS OUT"
+   },
+   "percent": 25.8
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/945360/bf78b9db17985ba127345ac32258f3116ed7ec00.jpg",
+   "key": "die_during_medscan",
+   "name": {
+    "de": "NUR EIN SCAN",
+    "en": "WATCH ME SCAN"
+   },
+   "percent": 7.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/945360/cb4695fda4b61e880404ba5051185a1c154e6156.jpg",
+   "key": "fix_own_sabotage",
+   "name": {
+    "de": "HALBVERRÄTER",
+    "en": "CREWPOSTOR"
+   },
+   "percent": 27.8
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/945360/f5a1d827b0b4c4709d3a16a6e5a309a302ca4187.jpg",
+   "key": "three_kills_before_meeting",
+   "name": {
+    "en": "H U N G E R"
+   },
+   "percent": 5.2
+  },
+  {
+   "description": {
+    "de": "Gewinne ein Spiel als Besatzung, in dem alle nur für Verräter gestimmt haben",
+    "en": "Win a game as crew with your only votes being for the Impostor"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/970151abaa23e371daaea0423122126184346103.jpg",
+   "key": "win_always_correct_votes",
+   "name": {
+    "en": "SHERLOCK"
+   },
+   "percent": 43.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/945360/d98da75d64e92504c70b54339a17ab98b8b732fa.jpg",
+   "key": "no_vents_impostor_win",
+   "name": {
+    "de": "SCHICHT IM SCHACHT",
+    "en": "CIRCUMVENTER"
+   },
+   "percent": 29.1
+  },
+  {
+   "description": {
+    "de": "Überlebe ein Spiel als Besatzung im Versteckspiel-Modus",
+    "en": "Survive a Game as Crew in Hide n Seek Mode"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/7428551173ce6c4ba93f2b0c7acd226ce208e18a.jpg",
+   "key": "hns_survive_crewmate",
+   "name": {
+    "de": "VERBORGENES TALENT",
+    "en": "HIDDEN TALENT"
+   },
+   "percent": 9.6
+  },
+  {
+   "description": {
+    "de": "Töte die gesamte Besatzung als Verräter im Versteckspiel-Modus",
+    "en": "Kill all hiders as impostor in Hide n Seek Mode"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/2529465727f1115c5d69e58bb5f7df53aa11c03f.jpg",
+   "key": "hns_impostor_kill_all",
+   "name": {
+    "de": "KEIN AUSGANG",
+    "en": "NO ESCAPE"
+   },
+   "percent": 7.1
+  },
+  {
+   "description": {
+    "de": "Erledige alle deine Aufgaben im Versteckspiel-Modus",
+    "en": "Do all your tasks in Hide n Seek Mode"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/9dca2128c2fc0bab1dac0b075daabfb5bc2312db.jpg",
+   "key": "hns_complete_all_tasks",
+   "name": {
+    "de": "UNTER DRUCK ARBEITEN",
+    "en": "PERFORM UNDER PRESSURE"
+   },
+   "percent": 5.4
+  },
+  {
+   "description": {
+    "de": "Töte jemanden, getarnt als diese Person",
+    "en": "Kill Someone while disguised as them"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/8f9010c15a71df86b2750757565f7217f05261b2.jpg",
+   "key": "kill_while_shifted",
+   "name": {
+    "de": "VERTRAUE NIEMANDEM",
+    "en": "TRUST NO ONE"
+   },
+   "percent": 8.5
+  },
+  {
+   "description": {
+    "de": "Verhindere als Schutzengel einen Mord",
+    "en": "Block a kill as a guardian angel"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/90221101a3a9b33c742711741e0585c887f7d791.jpg",
+   "key": "block_kill_as_guardian",
+   "name": {
+    "de": "LASS MICH DEIN ENGEL SEIN",
+    "en": "I CAN BE YOUR ANGLE"
+   },
+   "percent": 9.4
+  },
+  {
+   "description": {
+    "de": "10 Siege als Verstecker im Versteckspiel-Modus",
+    "en": "10 wins as a hider in Hide n Seek Mode"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/12a62b22955b0aeac6f250a7e736dc0e82e1d5e7.jpg",
+   "key": "hns_crewmate_wins_easy",
+   "name": {
+    "de": "DU KANNST NICHT WEGLAUFEN",
+    "en": "YOU CAN'T RUN"
+   },
+   "percent": 3.3
+  },
+  {
+   "description": {
+    "de": "50 Siege als Verstecker im Versteckspiel-Modus",
+    "en": "50 wins as a hider in Hide n Seek Mode"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/78f031450563a755346a47c36531806df024c0be.jpg",
+   "key": "hns_crewmate_wins_hard",
+   "name": {
+    "de": "ABER DU KANNST DICH VERSTECKEN",
+    "en": "BUT YOU CAN HIDE"
+   },
+   "percent": 0.8
+  },
+  {
+   "description": {
+    "de": "100 Morde als Sucher im Versteckspiel-Modus",
+    "en": "100 kills as a seeker in Hide n Seek Mode"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/bef1f16697da915b6edb6546ef86a48ef461b19d.jpg",
+   "key": "hns_impostor_kills_easy",
+   "name": {
+    "de": "DU KANNST WEGLAUFEN",
+    "en": "YOU CAN RUN"
+   },
+   "percent": 0.7
+  },
+  {
+   "description": {
+    "de": "200 Morde als Sucher im Versteckspiel-Modus",
+    "en": "200 kills as a seeker in Hide n Seek Mode"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/945360/cd35efbab2dec93d23dd90eb296cc95bd6373e29.jpg",
+   "key": "hns_impostor_kills_hard",
+   "name": {
+    "de": "ABER DU KANNST DICH NICHT VERSTECKEN",
+    "en": "BUT YOU CAN'T HIDE"
+   },
+   "percent": 0.5
+  }
+ ],
+ "id": "945360",
+ "platform": "steam"
+}

@@ -1,0 +1,578 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "en": "Win 1 ranked Duel"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/16f657cc17e3470d64799cf7857cc6e7063bfdd8.jpg",
+   "key": "duelWinsTotal1",
+   "name": {
+    "en": "Duelist I"
+   },
+   "percent": 23.6,
+   "unlocked": "2025-05-17T13:58:15+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Win 10 ranked Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/8e96d82710ed0f02f75b83d9210942157a9dc637.jpg",
+   "key": "duelWinsTotal2",
+   "name": {
+    "en": "Duelist II"
+   },
+   "percent": 10.4,
+   "unlocked": "2025-05-17T16:59:11+02:00"
+  },
+  {
+   "description": {
+    "en": "Win 100 ranked Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/6b1fa4c8fb85279a14f9910fbc668e200ef77a64.jpg",
+   "key": "duelWinsTotal3",
+   "name": {
+    "en": "Duelist III"
+   },
+   "percent": 0.9
+  },
+  {
+   "description": {
+    "en": "Win 250 ranked Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/5cbd3144c53bb7e7d5a026b4564e535613544e0f.jpg",
+   "key": "duelWinsTotal4",
+   "name": {
+    "en": "Duelist IV"
+   },
+   "percent": 0.4
+  },
+  {
+   "description": {
+    "en": "Win 500 ranked Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/7ae9dc47527a9b456946f34f7b48c394bdd23de0.jpg",
+   "key": "duelWinsTotal5",
+   "name": {
+    "en": "Duelist V"
+   },
+   "percent": 0.2
+  },
+  {
+   "description": {
+    "en": "Win 1000 ranked Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/7c106f16c27eeab97e7f32cf1ce53f1f37b1e047.jpg",
+   "key": "duelWinsTotal6",
+   "name": {
+    "en": "Duelist VI"
+   },
+   "percent": 0.2
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Win 1 ranked Moving Duel"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/eefd85835fda211f007fc3a6bbc8d37e5ac61864.jpg",
+   "key": "duelWinsMoving1",
+   "name": {
+    "en": "Moving Duelist I"
+   },
+   "percent": 23.6,
+   "unlocked": "2025-05-17T13:58:15+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Win 10 ranked Moving Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/7243ca7cc27b0c5d453c5e1d5a85ec817bbb8da7.jpg",
+   "key": "duelWinsMoving2",
+   "name": {
+    "en": "Moving Duelist II"
+   },
+   "percent": 10.3,
+   "unlocked": "2025-05-17T16:59:11+02:00"
+  },
+  {
+   "description": {
+    "en": "Win 100 ranked Moving Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/d7ee8d5d791ee74f4cb497005f140daffc6adb16.jpg",
+   "key": "duelWinsMoving3",
+   "name": {
+    "en": "Moving Duelist III"
+   },
+   "percent": 0.7
+  },
+  {
+   "description": {
+    "en": "Win 250 ranked Moving Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/d23e7a307a966ab3eb1860ac06d1c4f2a8e7982f.jpg",
+   "key": "duelWinsMoving4",
+   "name": {
+    "en": "Moving Duelist IV"
+   },
+   "percent": 0.3
+  },
+  {
+   "description": {
+    "en": "Win 500 ranked Moving Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/a32b40360729695bf9c4b8fa12b1be0e919eb24d.jpg",
+   "key": "duelWinsMoving5",
+   "name": {
+    "en": "Moving Duelist V"
+   },
+   "percent": 0.2
+  },
+  {
+   "description": {
+    "en": "Win 1 ranked No Move Duel"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/759a7627f32f3fe1b01711432c84ecddd82c9735.jpg",
+   "key": "duelWinsNoMove1",
+   "name": {
+    "en": "No Move Duelist I"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "en": "Win 10 ranked No Move Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/5a0074ce34c8e1f0443d81b317a4428e26267c85.jpg",
+   "key": "duelWinsNoMove2",
+   "name": {
+    "en": "No Move Duelist II"
+   },
+   "percent": 0.8
+  },
+  {
+   "description": {
+    "en": "Win 100 ranked No Move Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/84526cf4623fc4d8354c6aef2304528eb76d3760.jpg",
+   "key": "duelWinsNoMove3",
+   "name": {
+    "en": "No Move Duelist III"
+   },
+   "percent": 0.3
+  },
+  {
+   "description": {
+    "en": "Win 250 ranked No Move Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/f9ae3b62c5e0ddb76ac47ce3ced798f4d5649942.jpg",
+   "key": "duelWinsNoMove4",
+   "name": {
+    "en": "No Move Duelist IV"
+   },
+   "percent": 0.2
+  },
+  {
+   "description": {
+    "en": "Win 500 ranked No Move Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/cfac9f929231b43106d58ce868596ee12c2ccec5.jpg",
+   "key": "duelWinsNoMove5",
+   "name": {
+    "en": "No Move Duelist V"
+   },
+   "percent": 0.2
+  },
+  {
+   "description": {
+    "en": "Win 1 ranked NMPZ Duel"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/e9e332ef7d8752968f7aa94263f6cdf20621e016.jpg",
+   "key": "duelWinsNmpz1",
+   "name": {
+    "en": "NMPZ Duelist I"
+   },
+   "percent": 0.3
+  },
+  {
+   "description": {
+    "en": "Win 10 ranked NMPZ Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/5c2f14283edd671443516950ac72a98b6ae420a9.jpg",
+   "key": "duelWinsNmpz2",
+   "name": {
+    "en": "NMPZ Duelist II"
+   },
+   "percent": 0.2
+  },
+  {
+   "description": {
+    "en": "Win 100 ranked NMPZ Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/4ace89e398aa8086dedc461a897fd20f942c4cb7.jpg",
+   "key": "duelWinsNmpz3",
+   "name": {
+    "en": "NMPZ Duelist III"
+   },
+   "percent": 0.2
+  },
+  {
+   "description": {
+    "en": "Win 250 ranked NMPZ Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/c1e20bf9a9fc9cbf306004b2acb8825bade587ec.jpg",
+   "key": "duelWinsNmpz4",
+   "name": {
+    "en": "NMPZ Duelist IV"
+   },
+   "percent": 0.2
+  },
+  {
+   "description": {
+    "en": "Win 500 ranked NMPZ duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/d2173d313b7d6aea79de7d6e340e53fe62f42120.jpg",
+   "key": "duelWinsNmpz5",
+   "name": {
+    "en": "NMPZ Duelist V"
+   },
+   "percent": 0.2
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Win 1 ranked Duel flawlessly"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/6fde71f75d76fbea5936e59f62db937460d7e24a.jpg",
+   "key": "duelWinsFlawless1",
+   "name": {
+    "en": "Ace I"
+   },
+   "percent": 18.2,
+   "unlocked": "2025-05-17T13:58:15+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Win 10 ranked Duels flawlessly"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/99c1de099624806ed80bb2120c9628e6fd740a99.jpg",
+   "key": "duelWinsFlawless2",
+   "name": {
+    "en": "Ace II"
+   },
+   "percent": 3.9,
+   "unlocked": "2025-06-08T19:52:05+02:00"
+  },
+  {
+   "description": {
+    "en": "Win 100 ranked Duels flawlessly"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/d85425cf79b0d6ef92d2a275132ae15376279420.jpg",
+   "key": "duelWinsFlawless3",
+   "name": {
+    "en": "Ace III"
+   },
+   "percent": 0.2
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Get a perfect guess"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/6c0133efa9ece453dccbe9dfb46c8b1a91e5f153.jpg",
+   "key": "perfectRounds1",
+   "name": {
+    "en": "Spot On! I"
+   },
+   "percent": 9.1,
+   "unlocked": "2025-07-13T01:24:53+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Get 10 perfect guesses"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/7004259ed8d1e7c52ad51dd6dd334f618fd77bbc.jpg",
+   "key": "perfectRounds2",
+   "name": {
+    "en": "Spot On! II"
+   },
+   "percent": 1.4,
+   "unlocked": "2025-08-15T00:21:27+02:00"
+  },
+  {
+   "description": {
+    "en": "Get 100 perfect guesses"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/acd9553965b9427f5fae12a1aa1ffa432e3ca41e.jpg",
+   "key": "perfectRounds3",
+   "name": {
+    "en": "Spot On! III"
+   },
+   "percent": 0.3
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Win 1 Quickplay Solo Duel flawlessly"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/284a1543238bdb106b055e1c59bf8e6c23e105d7.jpg",
+   "key": "quickplayWinsFlawless1",
+   "name": {
+    "en": "Quickplay Ace I"
+   },
+   "percent": 33.3,
+   "unlocked": "2026-02-01T20:44:05+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Win 10 Quickplay Solo Duels flawlessly"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/d7d7c418cb5137ad1a3fe4c60ffa73b36ac0bdb4.jpg",
+   "key": "quickplayWinsFlawless2",
+   "name": {
+    "en": "Quickplay Ace II"
+   },
+   "percent": 6.5,
+   "unlocked": "2026-02-21T22:24:31+01:00"
+  },
+  {
+   "description": {
+    "en": "Win 100 Quickplay Solo Duels flawlessly"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/97fb43ea6114266eeb4d88dd10455a9b92be3fb8.jpg",
+   "key": "quickplayWinsFlawless3",
+   "name": {
+    "en": "Quickplay Ace III"
+   },
+   "percent": 0.2
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Win 1 Quickplay Duel"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/3e88984475a22e590817b3b670b0eacf25acfdf8.jpg",
+   "key": "quickplayDuelsWins1",
+   "name": {
+    "en": "Quickplay Duelist I"
+   },
+   "percent": 37.3,
+   "unlocked": "2026-03-14T17:24:47+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Win 10 Quickplay Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/288894aa6b6422e8dae88693c2a4120431f95c84.jpg",
+   "key": "quickplayDuelsWins2",
+   "name": {
+    "en": "Quickplay Duelist II"
+   },
+   "percent": 14.7,
+   "unlocked": "2026-03-14T17:24:47+01:00"
+  },
+  {
+   "description": {
+    "en": "Win 100 Quickplay Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/fc81758d1e46a3102a5f39767cb78e179f156791.jpg",
+   "key": "quickplayDuelsWins3",
+   "name": {
+    "en": "Quickplay Duelist III"
+   },
+   "percent": 0.7
+  },
+  {
+   "description": {
+    "en": "Win 250 Quickplay Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/6cf587b978e6d01ebe76b1688e70f27ec03fc907.jpg",
+   "key": "quickplayDuelsWins4",
+   "name": {
+    "en": "Quickplay Duelist IV"
+   },
+   "percent": 0.2
+  },
+  {
+   "description": {
+    "en": "Win 500 Quickplay Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/046c35f9c6cb33f69ef9daf59be5a1b07b2d29d2.jpg",
+   "key": "quickplayDuelsWins5",
+   "name": {
+    "en": "Quickplay Duelist V"
+   },
+   "percent": 0.1
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Win 1 Unranked Team Duel"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/3d9c4fe07a2a1f6b16cc7e31727ce52ff2536818.jpg",
+   "key": "teamDuelsWins1",
+   "name": {
+    "en": "Unranked Team Duelist I"
+   },
+   "percent": 30.6,
+   "unlocked": "2025-12-30T21:29:26+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Win 10 Unranked Team Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/3982b80ac7054e400ff1a371560e2f314f2191c2.jpg",
+   "key": "teamDuelsWins2",
+   "name": {
+    "en": "Unranked Team Duelist II"
+   },
+   "percent": 9.8,
+   "unlocked": "2026-02-08T21:03:47+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Win 100 Unranked Team Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/8df0adb784a1904bae73eed6f67d02df8372cb36.jpg",
+   "key": "teamDuelsWins3",
+   "name": {
+    "en": "Unranked Team Duelist III"
+   },
+   "percent": 0.6,
+   "unlocked": "2026-09-04T23:53:13+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "en": "Win 250 Unranked Team Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/e0908da914c74a3c772cbf053197d816d4ff13d9.jpg",
+   "key": "teamDuelsWins4",
+   "name": {
+    "en": "Unranked Team Duelist IV"
+   },
+   "percent": 0.2,
+   "unlocked": "2026-09-04T23:53:13+02:00"
+  },
+  {
+   "description": {
+    "en": "Win 500 Unranked Team Duels"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/f08016e25be6bb4d6e0d34c808f66e9b9fecd6a2.jpg",
+   "key": "teamDuelsWins5",
+   "name": {
+    "en": "Unranked Team Duelist V"
+   },
+   "percent": 0.1
+  },
+  {
+   "description": {
+    "en": "Play the Daily Challenge, World or win a Ranked Duel 7 days in a row"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/3ff5855f0732bf35ead6fdf1a7531c3f0c2a5f3b.jpg",
+   "key": "dcStreak1",
+   "name": {
+    "en": "Daily Streak I"
+   },
+   "percent": 0.7
+  },
+  {
+   "description": {
+    "en": "Play the Daily Challenge, World or win a Ranked Duel 30 days in a row"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/9390596efc993b6388f269667a073440dca16817.jpg",
+   "key": "dcStreak2",
+   "name": {
+    "en": "Daily Streak II"
+   },
+   "percent": 0.1
+  },
+  {
+   "description": {
+    "en": "Play the Daily Challenge, World or win a Ranked Duel 100 days in a row"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/4758158655ac8ea496bb44ad309fcc6a51081607.jpg",
+   "key": "dcStreak3",
+   "name": {
+    "en": "Daily Streak III"
+   },
+   "percent": 0.1
+  },
+  {
+   "description": {
+    "en": "Play the Daily Challenge, World or win a Ranked Duel 365 days in a row"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/a5b426de1d7cdd75a938b747b44fbb4b9b8d9752.jpg",
+   "key": "dcStreak4",
+   "name": {
+    "en": "Daily Streak IV"
+   },
+   "percent": 0.0
+  },
+  {
+   "description": {
+    "en": "Play the Daily Challenge, World or win a Ranked Duel a 1000 days in a row"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/3478870/660e40de12ceb03b44eeb95cc217c289ab835e59.jpg",
+   "key": "dcStreak5",
+   "name": {
+    "en": "Daily Streak V"
+   },
+   "percent": 0.0
+  }
+ ],
+ "id": "3478870",
+ "platform": "steam"
+}

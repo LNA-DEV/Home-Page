@@ -1,0 +1,51 @@
+{
+ "developers": [
+  "CD Projekt RED"
+ ],
+ "genres": [
+  {
+   "de": "Fantasie-Computerspiel",
+   "en": "fantasy video game",
+   "sv": "fantasydatorspel"
+  },
+  {
+   "de": "digitales Sammelkartenspiel",
+   "en": "collectible card video game",
+   "sv": "digitalt samlarkortsspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  },
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "publishers": [
+  "CD Projekt"
+ ],
+ "released": "2018-10-23",
+ "steam": {
+  "de": "Führe mächtige Helden von The Witcher in epische Online-PvP-Kartenschlachten!",
+  "en": "Command mighty Witcher-world heroes in epic online PvP card battles!",
+  "sv": "Styr mäktiga hjältar från Witcher-världen i episka kortdueller online!"
+ },
+ "steam_appid": 1284410,
+ "wikidata": "Q24591290",
+ "wikipedia": {
+  "de": {
+   "text": "Gwent: The Witcher Card Game ist ein Online-Sammelkartenspiel mit Free-to-play-Geschäftsmodell von CD Projekt RED für Microsoft Windows, PlayStation 4 und Xbox One. Das Spiel basiert auf dem gleichnamigen Kartenspiel aus The Witcher 3: Wild Hunt. Gwent wurde im Juni 2016 auf der Spielemesse E3 angekündigt.",
+   "url": "https://de.wikipedia.org/wiki/Gwent:_The_Witcher_Card_Game"
+  },
+  "en": {
+   "text": "Gwent: The Witcher Card Game is a 2018 digital collectible card game by CD Projekt. It was released free-to-play first for Windows, PlayStation 4, and Xbox One in 2018, and for iOS in 2019, Android in 2020, and macOS in 2021. Gwent's name is derived from the card game of the same name featured in Andrzej Sapkowski's The Witcher novels and playable in The Witcher 3: Wild Hunt video game.",
+   "url": "https://en.wikipedia.org/wiki/Gwent:_The_Witcher_Card_Game"
+  }
+ }
+}

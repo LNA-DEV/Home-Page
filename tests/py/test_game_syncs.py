@@ -161,5 +161,167 @@ class SharedShape(unittest.TestCase):
         self.assertIn("extraMinutes", steam.HUMAN_FIELDS)
 
 
+SWITCH = """\
+- title: "Stardew Valley"
+  slug: stardew-valley
+  platform: switch
+  playtimeMinutes: 3600
+"""
+
+
+def steam_game(appid=413150, title="Stardew Valley", **over):
+    g = {"appid": appid, "title": title, "playtimeMinutes": 900}
+    g.update(over)
+    return g
+
+
+class Slugs(unittest.TestCase):
+    """A slug is a page URL: written once, second line of the entry, never
+    recomputed (docs/concepts/gaming-game-pages.md §2)."""
+
+    def test_a_new_game_gets_a_slug_from_its_title_on_the_second_line(self):
+        out, summary = steam.rebuild(MANUAL, [steam_game(620, "Portal 2")])
+        self.assertIn('- title: Portal 2\n  slug: portal-2\n  platform: steam', out)
+        self.assertEqual(summary["new_slugs"], [("620", "portal-2")])
+
+    def test_a_steam_rename_keeps_the_slug(self):
+        first, _ = steam.rebuild(MANUAL, [steam_game(319630, "Life is Strange")])
+        second, summary = steam.rebuild(first, [steam_game(319630, "Life is Strange™ Remastered")])
+        self.assertIn("  slug: life-is-strange\n", second)
+        self.assertEqual(summary["new_slugs"], [])
+
+    def test_a_hand_edited_slug_survives(self):
+        first, _ = steam.rebuild(MANUAL, [steam_game(620, "Portal 2")])
+        edited = first.replace("slug: portal-2", "slug: portal-two")
+        second, _ = steam.rebuild(edited, [steam_game(620, "Portal 2")])
+        self.assertIn("slug: portal-two", second)
+        self.assertNotIn("slug: portal-2\n", second)
+
+    def test_a_copy_on_another_platform_is_joined_and_reported(self):
+        out, summary = steam.rebuild(SWITCH, [steam_game()])
+        self.assertEqual(out.count("slug: stardew-valley"), 2)
+        self.assertEqual(summary["joined"], [("413150", "stardew-valley")])
+
+    def test_two_games_of_one_platform_never_share_a_slug(self):
+        out, _ = steam.rebuild("", [steam_game(1, "DOOM"), steam_game(2, "DOOM")])
+        self.assertIn("slug: doom\n", out)
+        self.assertIn("slug: doom-2\n", out)
+
+    def test_epic_and_gog_write_slugs_too(self):
+        text, _ = epic.rebuild(SWITCH, [{"app_name": "Sugar", "title": "Rocket League®",
+                                         "playtimeMinutes": 5}])
+        self.assertIn("- title: Rocket League®\n  slug: rocket-league\n  platform: epic", text)
+        text, summary = gog.rebuild(SWITCH, [{"app_name": "1", "title": "Stardew Valley",
+                                              "playtimeMinutes": 5}])
+        self.assertEqual(summary["joined"], [("1", "stardew-valley")])
+
+    def test_a_second_run_is_byte_identical_with_slugs(self):
+        once, _ = steam.rebuild(SWITCH, [steam_game()])
+        twice, _ = steam.rebuild(once, [steam_game()])
+        self.assertEqual(once, twice)
+
+
+class SkippedAchievements(unittest.TestCase):
+    """A game whose achievements were not fetched keeps its counts — its file is
+    kept too, and the card and the page must keep agreeing."""
+
+    def test_steam_carries_the_old_counts_over(self):
+        first, _ = steam.rebuild("", [steam_game(achievementsUnlocked=10, achievementsTotal=49)])
+        second, _ = steam.rebuild(first, [steam_game(achievementsSkipped=True)])
+        self.assertIn("achievementsUnlocked: 10\n  achievementsTotal: 49", second)
+
+    def test_a_fetched_game_takes_the_new_counts(self):
+        first, _ = steam.rebuild("", [steam_game(achievementsUnlocked=10, achievementsTotal=49)])
+        second, _ = steam.rebuild(first, [steam_game(achievementsUnlocked=11, achievementsTotal=49)])
+        self.assertIn("achievementsUnlocked: 11", second)
+
+    def test_gog_carries_the_old_counts_over(self):
+        g = {"app_name": "7", "title": "Hollow Knight", "playtimeMinutes": 5,
+             "ach_unlocked": 3, "ach_total": 63}
+        first, _ = gog.rebuild("", [g])
+        second, _ = gog.rebuild(first, [dict(g, ach_unlocked=None, ach_total=None, ach_skipped=True)])
+        self.assertIn("achievementsUnlocked: 3\n  achievementsTotal: 63", second)
+
+
+class SteamAchievementDocument(unittest.TestCase):
+    PLAYER = [
+        {"apiname": "B", "achieved": 1, "unlocktime": 1549926843, "name": "Bee", "description": "b"},
+        {"apiname": "A", "achieved": 0, "unlocktime": 0, "name": "Ay", "description": "a"},
+        {"apiname": "C", "achieved": 1, "unlocktime": 0, "name": "Cee", "description": ""},
+    ]
+    SCHEMAS = {
+        "en": [
+            {"name": "A", "displayName": "Ay", "description": "a", "hidden": 0,
+             "icon": "https://cdn.example/apps/1/aaa.jpg"},
+            {"name": "B", "displayName": "Bee", "description": "b", "hidden": 0,
+             "icon": "https://cdn.example/apps/1/bbb.jpg"},
+            {"name": "C", "displayName": "Cee", "hidden": 1,
+             "icon": "https://cdn.example/apps/1/ccc.jpg"},
+        ],
+        "de": [{"name": "A", "displayName": "Äh", "description": "a"},
+               {"name": "B", "displayName": "Bee", "description": "b-de"}],
+        "sv": [],
+    }
+
+    def doc(self):
+        return steam.build_steam_achievements(1, self.PLAYER, self.SCHEMAS, {"A": 12.345, "B": 50})
+
+    def test_one_row_per_player_achievement_in_schema_order(self):
+        doc, _ = self.doc()
+        self.assertEqual([a["key"] for a in doc["achievements"]], ["A", "B", "C"])
+
+    def test_only_real_translations_are_stored(self):
+        doc, _ = self.doc()
+        a, b, _ = doc["achievements"]
+        self.assertEqual(a["name"], {"en": "Ay", "de": "Äh"})
+        self.assertEqual(b["name"], {"en": "Bee"})  # German equals English: no German
+        self.assertEqual(b["description"], {"en": "b", "de": "b-de"})
+
+    def test_hidden_achievements_have_no_description(self):
+        doc, _ = self.doc()
+        c = doc["achievements"][2]
+        self.assertTrue(c["hidden"])
+        self.assertNotIn("description", c)
+
+    def test_unlocks_are_dated_in_berlin_and_zero_means_unknown(self):
+        doc, _ = self.doc()
+        a, b, c = doc["achievements"]
+        self.assertNotIn("achieved", a)
+        # 2019-02-11 23:14:03 UTC is already the 12th in Berlin.
+        self.assertEqual(b["unlocked"], "2019-02-12T00:14:03+01:00")
+        self.assertTrue(c["achieved"])
+        self.assertNotIn("unlocked", c)
+
+    def test_percentages_are_rounded_and_icons_are_local_refs(self):
+        doc, urls = self.doc()
+        a = doc["achievements"][0]
+        self.assertEqual(a["percent"], 12.3)
+        self.assertEqual(a["icon"], "images/games/achievements/steam/1/aaa.jpg")
+        self.assertEqual(len(urls), 3)
+
+
+class GogAchievementDocument(unittest.TestCase):
+    ITEMS = [
+        {"achievement_key": "K1", "name": "First", "description": "d", "visible": True,
+         "image_url_unlocked": "https://images.gog.com/x_gac_60.jpg",
+         "image_url_locked": "https://images.gog.com/y_gac_60.jpg",
+         "date_unlocked": "2024-03-01T10:00:00+0000", "rarity": 42.123},
+        {"achievement_key": "K2", "name": "Secret", "description": "", "visible": False,
+         "image_url_unlocked": "", "image_url_locked": "https://images.gog.com/z_gac_60.jpg",
+         "date_unlocked": None},
+    ]
+
+    def test_fields_map_to_the_shared_shape(self):
+        doc, urls = gog.build_gog_achievements("1207664663", self.ITEMS)
+        first, secret = doc["achievements"]
+        self.assertTrue(first["achieved"])
+        self.assertEqual(first["unlocked"], "2024-03-01T11:00:00+01:00")
+        self.assertEqual(first["percent"], 42.1)
+        self.assertTrue(secret["hidden"])
+        self.assertEqual(secret["icon"], "images/games/achievements/gog/1207664663/z_gac_60.jpg")
+        self.assertEqual(len(urls), 2)
+        self.assertNotIn("percent", secret)
+
+
 if __name__ == "__main__":
     unittest.main()

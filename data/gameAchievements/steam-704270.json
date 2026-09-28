@@ -1,0 +1,1071 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige deine erste Maschine.",
+    "en": "Destroy your first machine."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/d96fdd4421312b70d8940d3c91b2ea8098505c00.jpg",
+   "key": "ach_001",
+   "name": {
+    "en": "First Blood"
+   },
+   "percent": 94.7,
+   "unlocked": "2023-10-14T16:30:31+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige 500 Maschinen.",
+    "en": "Destroy 500 machines."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/ae276302afff4afc890d6dbf1da5b47d833d410f.jpg",
+   "key": "ach_003",
+   "name": {
+    "de": "Dezimierung",
+    "en": "Decimation"
+   },
+   "percent": 19.8,
+   "unlocked": "2024-10-03T17:11:31+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige einen Gegner mit einem aus mehr als 300 m abgefeuerten Schuss.",
+    "en": "Destroy an enemy with a shot fired from 300 meters away."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/76b3010b855462783098e04d8b523e3c45ff1b3e.jpg",
+   "key": "ach_008",
+   "name": {
+    "de": "Scharfschütze",
+    "en": "Marksman"
+   },
+   "percent": 14.4,
+   "unlocked": "2024-09-27T22:43:39+02:00"
+  },
+  {
+   "description": {
+    "de": "Locke einen Gegner mit einem Ghettoblaster an.",
+    "en": "Use a boombox to lure an enemy."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/ae276302afff4afc890d6dbf1da5b47d833d410f.jpg",
+   "key": "ach_010",
+   "name": {
+    "de": "Sirenengesang",
+    "en": "Siren Call"
+   },
+   "percent": 20.7
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige mehr als eine Maschine auf einmal mit dem Granatgevär m/49 oder einer Handgranate.",
+    "en": "Destroy more than one machine at the same time using the m/49 Granatgevär or a hand grenade."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/1f88e791badf1cbf773d37d5d293016729b29b9e.jpg",
+   "key": "ach_011",
+   "name": {
+    "en": "Splash Damage"
+   },
+   "percent": 31.2,
+   "unlocked": "2024-10-05T18:48:54+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige 20 Maschinen mit Faustfeuerwaffen.",
+    "en": "Use handgun to destroy 20 machines."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/1f88e791badf1cbf773d37d5d293016729b29b9e.jpg",
+   "key": "ach_012",
+   "name": {
+    "de": "Revolverheld",
+    "en": "Gunslinger"
+   },
+   "percent": 54.4,
+   "unlocked": "2023-10-14T21:19:23+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige 40 Maschinen mit Flinten.",
+    "en": "Use shotguns to destroy 40 machines."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/1f88e791badf1cbf773d37d5d293016729b29b9e.jpg",
+   "key": "ach_013",
+   "name": {
+    "en": "Operator"
+   },
+   "percent": 24.6,
+   "unlocked": "2025-08-08T21:26:54+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige 60 Maschinen mit Maschinenpistolen.",
+    "en": "Use submachine guns to destroy 60 machines."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/f7e9dd32981e27d7f0b4bc216bd2b9dba807fbcd.jpg",
+   "key": "ach_014",
+   "name": {
+    "en": "Gangster"
+   },
+   "percent": 19.2,
+   "unlocked": "2024-09-15T18:26:33+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige 80 Maschinen mit Sturmgewehren.",
+    "en": "Use assault rifles to destroy 80 machines."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/1f88e791badf1cbf773d37d5d293016729b29b9e.jpg",
+   "key": "ach_015",
+   "name": {
+    "de": "Kommandosoldat",
+    "en": "Commando"
+   },
+   "percent": 24.7,
+   "unlocked": "2024-09-15T16:43:24+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige 20 Maschinen mit Jagdgewehren.",
+    "en": "Use hunting rifles to destroy 20 machines."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/f7e9dd32981e27d7f0b4bc216bd2b9dba807fbcd.jpg",
+   "key": "ach_016",
+   "name": {
+    "de": "Jäger",
+    "en": "Hunter"
+   },
+   "percent": 39.3,
+   "unlocked": "2024-09-28T18:18:44+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige 15 Maschinen mit Sprengstoff.",
+    "en": "Use explosives to destroy 15 machines."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/1f88e791badf1cbf773d37d5d293016729b29b9e.jpg",
+   "key": "ach_017",
+   "name": {
+    "de": "Pionier",
+    "en": "Sapper"
+   },
+   "percent": 24.2,
+   "unlocked": "2024-10-11T20:35:35+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige 20 Ticks.",
+    "en": "Destroy 20 Ticks."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/ae276302afff4afc890d6dbf1da5b47d833d410f.jpg",
+   "key": "ach_018",
+   "name": {
+    "de": "Du bist eine Krankheit und ich die Medizin",
+    "en": "You're A Disease And I'm The Cure"
+   },
+   "percent": 45.5,
+   "unlocked": "2024-09-15T17:21:14+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige 30 Seeker.",
+    "en": "Destroy 30 Seekers."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/ae276302afff4afc890d6dbf1da5b47d833d410f.jpg",
+   "key": "ach_019",
+   "name": {
+    "de": "Hasta la vista, baby!",
+    "en": "Hasta La Vista Baby"
+   },
+   "percent": 19.4,
+   "unlocked": "2024-10-03T17:43:42+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige 80 Runner.",
+    "en": "Destroy 80 Runners."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/ae276302afff4afc890d6dbf1da5b47d833d410f.jpg",
+   "key": "ach_020",
+   "name": {
+    "de": "Ich hab nur leider keinen Kaugummi",
+    "en": "All Out Of Bubblegum"
+   },
+   "percent": 41.9,
+   "unlocked": "2023-10-20T21:57:10+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige 30 Hunter.",
+    "en": "Destroy 30 Hunters."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/ae276302afff4afc890d6dbf1da5b47d833d410f.jpg",
+   "key": "ach_021",
+   "name": {
+    "de": "Na los doch",
+    "en": "Go Ahead, Make My Day"
+   },
+   "percent": 28.3,
+   "unlocked": "2024-09-15T18:26:33+02:00"
+  },
+  {
+   "description": {
+    "de": "Erledige 15 Harvester.",
+    "en": "Destroy 15 Harvesters."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/ae276302afff4afc890d6dbf1da5b47d833d410f.jpg",
+   "key": "ach_022",
+   "name": {
+    "de": "Yippie ya-yay",
+    "en": "Yippee-Ki-Yay"
+   },
+   "percent": 10.3
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige 15 Tanks.",
+    "en": "Destroy 15 Tanks."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/e42d6acab78bbf3f69e72b30506c1003032e9eda.jpg",
+   "key": "ach_023",
+   "name": {
+    "de": "Auf euch wartet meine kleine Freundin",
+    "en": "Say Hello To My Little Friend"
+   },
+   "percent": 14.1,
+   "unlocked": "2024-10-13T15:15:48+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige 3 Maschinen, ohne selbst Schaden zu nehmen.",
+    "en": "Destroy 3 machines without taking damage."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/ae276302afff4afc890d6dbf1da5b47d833d410f.jpg",
+   "key": "ach_024",
+   "name": {
+    "de": "Angriff ist die beste Verteidigung",
+    "en": "Offence Is The Best Defence"
+   },
+   "percent": 85.2,
+   "unlocked": "2023-10-14T18:29:19+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Locke 8 Maschinen auf einmal mit derselben Signalfackel an.",
+    "en": "Have 8 machines simultaneously lured to the same flare."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/ae276302afff4afc890d6dbf1da5b47d833d410f.jpg",
+   "key": "ach_027",
+   "name": {
+    "de": "Heiße Ware",
+    "en": "Hot Property"
+   },
+   "percent": 32.0,
+   "unlocked": "2023-10-15T17:49:22+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige 20 Gegner mit schallgedämpften Waffen.",
+    "en": "Use suppressed weapons to destroy 20 enemies."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/1f88e791badf1cbf773d37d5d293016729b29b9e.jpg",
+   "key": "ach_028",
+   "name": {
+    "de": "Unheimlich heimlich",
+    "en": "Real Sneaky Like"
+   },
+   "percent": 43.1,
+   "unlocked": "2025-08-02T22:13:33+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige einen Seeker mit einem Granatgevär m/49.",
+    "en": "Shoot a Seeker with the m/49 Granatgevär."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/1f88e791badf1cbf773d37d5d293016729b29b9e.jpg",
+   "key": "ach_030",
+   "name": {
+    "en": "Overkill"
+   },
+   "percent": 19.5,
+   "unlocked": "2024-10-11T20:35:35+02:00"
+  },
+  {
+   "description": {
+    "de": "Erledige einen Hunter mit einem einzigen Schuss.",
+    "en": "Destroy a Hunter with a single shot."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/39e86ed5b69f6d6b1f086602146419334c062b7b.jpg",
+   "key": "ach_031",
+   "name": {
+    "de": "Die schnelle Lösung",
+    "en": "One Shot"
+   },
+   "percent": 17.0
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schalte 5 Unterschlüpfe frei.",
+    "en": "Unlock 5 safehouses."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/2e9f45c723385aeb11cc4f5bf50aa89b39d58d6b.jpg",
+   "key": "ach_034",
+   "name": {
+    "de": "Kaffeekränzchen",
+    "en": "Fika Club"
+   },
+   "percent": 62.1,
+   "unlocked": "2023-10-14T20:59:03+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Lege 90 km zu Fuß zurück.",
+    "en": "Travel 90 km on foot."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/66680d4fa495a6f13cf1ee3c3d7284de4e9e046d.jpg",
+   "key": "ach_036",
+   "name": {
+    "de": "Gustafslauf",
+    "en": "Gustafsloppet"
+   },
+   "percent": 26.2,
+   "unlocked": "2024-09-15T17:02:22+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Höre dir 5 verschiedene Anrufbeantworter an.",
+    "en": "Listen to the messages left on 5 different answering machines."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/2e9f45c723385aeb11cc4f5bf50aa89b39d58d6b.jpg",
+   "key": "ach_039",
+   "name": {
+    "en": "I Just Called To Say I Love You"
+   },
+   "percent": 41.0,
+   "unlocked": "2023-10-15T15:43:25+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Besteige 3 verschiedene Leuchttürme.",
+    "en": "Climb to the top of 3 different lighthouses."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/66680d4fa495a6f13cf1ee3c3d7284de4e9e046d.jpg",
+   "key": "ach_040",
+   "name": {
+    "en": "Light My Fire"
+   },
+   "percent": 4.8,
+   "unlocked": "2024-10-13T18:14:59+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Lies 10 verschiedene Sprichwörter in Wohnhäusern.",
+    "en": "Read 10 different sayings in homes."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/66680d4fa495a6f13cf1ee3c3d7284de4e9e046d.jpg",
+   "key": "ach_042",
+   "name": {
+    "de": "Volkes Weisheit",
+    "en": "Folk Wisdom"
+   },
+   "percent": 9.9,
+   "unlocked": "2024-10-05T17:47:16+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erbeute 80 Gegenstände.",
+    "en": "Find and take 80 items from the world."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/1f92aa443b3205dda9f9efac51ae0113367fb3b8.jpg",
+   "key": "ach_045",
+   "name": {
+    "de": "Plünderer",
+    "en": "Scavenger"
+   },
+   "percent": 87.5,
+   "unlocked": "2023-10-14T17:47:01+02:00"
+  },
+  {
+   "description": {
+    "de": "Sammle alle Maschinenbaupläne.",
+    "en": "Collect all machine blueprints."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/1f92aa443b3205dda9f9efac51ae0113367fb3b8.jpg",
+   "key": "ach_048",
+   "name": {
+    "de": "Ingenieur",
+    "en": "Engineer"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "de": "Sammle alle Gartenzwerge.",
+    "en": "Collect all garden gnomes."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/1f92aa443b3205dda9f9efac51ae0113367fb3b8.jpg",
+   "key": "ach_049",
+   "name": {
+    "de": "Gärtner",
+    "en": "Gardener"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Sammle alle Kassetten.",
+    "en": "Collect all mixtapes."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/1f92aa443b3205dda9f9efac51ae0113367fb3b8.jpg",
+   "key": "ach_050",
+   "name": {
+    "en": "DJ"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Sammle alle Dalapferde.",
+    "en": "Collect all souvenirs."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/1f92aa443b3205dda9f9efac51ae0113367fb3b8.jpg",
+   "key": "ach_051",
+   "name": {
+    "en": "Tourist"
+   },
+   "percent": 1.1
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Entdecke 50 Orte.",
+    "en": "Discover 50 locations."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/66680d4fa495a6f13cf1ee3c3d7284de4e9e046d.jpg",
+   "key": "ach_052",
+   "name": {
+    "de": "Entdecker",
+    "en": "Explorer"
+   },
+   "percent": 23.8,
+   "unlocked": "2024-09-15T17:03:43+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Entdecke 5 Bunker.",
+    "en": "Discover 5 bunkers."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/66680d4fa495a6f13cf1ee3c3d7284de4e9e046d.jpg",
+   "key": "ach_053",
+   "name": {
+    "de": "Tunnelratte",
+    "en": "Tunnel Rat"
+   },
+   "percent": 14.4,
+   "unlocked": "2024-09-28T18:18:44+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Sammle 200 Bekleidungsgegenstände.",
+    "en": "Collect 200 items of apparel."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/00e51b174ff3f2d8a368019e35203c5c2a8b66a1.jpg",
+   "key": "ach_056",
+   "name": {
+    "de": "Modefreak",
+    "en": "Fashionista"
+   },
+   "percent": 10.0,
+   "unlocked": "2024-12-27T21:27:52+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Birg ein Sichtmodul von einer Maschine.",
+    "en": "Scavenge a vision module from a machine."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/1a290759e13a5529151413efe852ea5ce71cc950.jpg",
+   "key": "ach_058",
+   "name": {
+    "de": "Ersatzteile",
+    "en": "Spare Parts"
+   },
+   "percent": 45.5,
+   "unlocked": "2023-10-14T21:11:18+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Bringe eine Modifikation an einer Waffe an.",
+    "en": "Attach a mod to a weapon."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/1f88e791badf1cbf773d37d5d293016729b29b9e.jpg",
+   "key": "ach_059",
+   "name": {
+    "en": "Modder"
+   },
+   "percent": 74.2,
+   "unlocked": "2023-10-14T20:22:36+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Statte eine Level-5-Waffe mit Level-5-Modifikationen aus.",
+    "en": "Fully equip a level 5 weapon with level 5 mods."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/39e86ed5b69f6d6b1f086602146419334c062b7b.jpg",
+   "key": "ach_060",
+   "name": {
+    "de": "Durchladen!",
+    "en": "Lock & Load"
+   },
+   "percent": 9.9,
+   "unlocked": "2024-10-11T22:28:12+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe alle Intro-Missionen ab.",
+    "en": "Complete all Intro Missions."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/f8caf4c38ea1569174dd3ee9e48fdc9f99646d98.jpg",
+   "key": "ach_061",
+   "name": {
+    "de": "Die Flut",
+    "en": "Grey Dawn"
+   },
+   "percent": 56.8,
+   "unlocked": "2023-10-14T22:17:44+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe die Hauptmission „Sand im Getriebe“ ab.",
+    "en": "Complete the Main Mission \"A Wrench in the Works\"."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/cc8c7678f0726cf7715cfaffeaefe7229b219c71.jpg",
+   "key": "ach_062",
+   "name": {
+    "de": "Wenn es blutet",
+    "en": "If It Bleeds, We Can Kill It."
+   },
+   "percent": 7.4,
+   "unlocked": "2024-10-05T17:47:16+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe die Hauptmission „Leere Räume“ ab.",
+    "en": "Complete the Main Mission \"Empty Spaces\"."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/cc8c7678f0726cf7715cfaffeaefe7229b219c71.jpg",
+   "key": "ach_063",
+   "name": {
+    "de": "Elementar",
+    "en": "Elementary"
+   },
+   "percent": 12.7,
+   "unlocked": "2024-09-28T15:19:37+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe die Hauptmission „Der Feind meines Feindes“ ab.",
+    "en": "Complete the Main Mission \"The Enemy of my Enemy\"."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/b2de5be3ec2d753c263fa16e79624d83d5ff7ddc.jpg",
+   "key": "ach_064",
+   "name": {
+    "de": "Mein Freund",
+    "en": "My Friend"
+   },
+   "percent": 8.1,
+   "unlocked": "2024-10-05T18:48:54+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe die Hauptmission „Hinter dem Vorhang“ ab.",
+    "en": "Complete the Main Mission \"Behind the Curtain\"."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/6c1868203f5a751039aa33d7e4caac490297db0c.jpg",
+   "key": "ach_065",
+   "name": {
+    "de": "Der Phoenix steigt auf",
+    "en": "Rise Of The Phoenix"
+   },
+   "percent": 7.6,
+   "unlocked": "2024-10-05T19:02:38+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Zerstöre 10 Relais-Antennen.",
+    "en": "Destroy 10 relay beacons."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/f8caf4c38ea1569174dd3ee9e48fdc9f99646d98.jpg",
+   "key": "ach_066",
+   "name": {
+    "de": "Notabschaltung",
+    "en": "Kill Switch"
+   },
+   "percent": 20.5,
+   "unlocked": "2024-09-15T16:18:46+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe 25 Nebenmissionen ab.",
+    "en": "Complete 25 Side Missions."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/f8caf4c38ea1569174dd3ee9e48fdc9f99646d98.jpg",
+   "key": "ach_069",
+   "name": {
+    "de": "Mensch der Tat",
+    "en": "Go-Getter"
+   },
+   "percent": 9.8,
+   "unlocked": "2024-10-11T22:28:12+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe alle Hauptmissionen ab.",
+    "en": "Complete all Main Missions."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/f8caf4c38ea1569174dd3ee9e48fdc9f99646d98.jpg",
+   "key": "ach_071",
+   "name": {
+    "en": "It's The Final Countdown"
+   },
+   "percent": 6.0,
+   "unlocked": "2024-10-05T19:02:53+02:00"
+  },
+  {
+   "description": {
+    "de": "Erbeute etwas, während du eine Augenklappe trägst.",
+    "en": "Loot something while wearing an eyepatch."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/1f92aa443b3205dda9f9efac51ae0113367fb3b8.jpg",
+   "key": "ach_074",
+   "name": {
+    "de": "Ich will ein mächtiger Pirat werden!",
+    "en": "I Want To Be A Mighty Pirate!"
+   },
+   "percent": 6.7
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erstelle einen zweiten Charakter.",
+    "en": "Create a second character."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/00e51b174ff3f2d8a368019e35203c5c2a8b66a1.jpg",
+   "key": "ach_081",
+   "name": {
+    "de": "Zweiter Spieler",
+    "en": "Player Two"
+   },
+   "percent": 20.4,
+   "unlocked": "2023-10-14T17:38:22+02:00"
+  },
+  {
+   "description": {
+    "de": "Verfüge gleichzeitig über zwei Charaktere mit verschiedenen aktiven Spezialisierungen.",
+    "en": "Have two separate characters with different active specializations."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/00e51b174ff3f2d8a368019e35203c5c2a8b66a1.jpg",
+   "key": "ach_083",
+   "name": {
+    "de": "Aufbaustudium",
+    "en": "Postgraduate"
+   },
+   "percent": 2.4
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Füge einem Gegner, den ein anderer Spieler erledigt, mehr als 50 % des Schadens zu.",
+    "en": "Deal more than 50% of the damage to an enemy killed by another player."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/428059cc5add2d69a35170fc72caec94cc3a3a2b.jpg",
+   "key": "ach_086",
+   "name": {
+    "de": "Vorlage",
+    "en": "Assist"
+   },
+   "percent": 56.9,
+   "unlocked": "2023-10-14T18:29:19+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe die Mission „Nicht allein“ ab.",
+    "en": "Complete the mission \"Not Alone\"."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/f8caf4c38ea1569174dd3ee9e48fdc9f99646d98.jpg",
+   "key": "ach_100",
+   "name": {
+    "de": "Andere Überlebende",
+    "en": "Other Survivors"
+   },
+   "percent": 8.8,
+   "unlocked": "2024-12-27T21:55:31+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe die Mission „Für die Kranken und Verletzten“ ab.",
+    "en": "Complete the mission \"For the Sick and the Injured\"."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/f8caf4c38ea1569174dd3ee9e48fdc9f99646d98.jpg",
+   "key": "ach_101",
+   "name": {
+    "de": "Wir sind ausgebucht",
+    "en": "We're Fully Booked"
+   },
+   "percent": 8.2,
+   "unlocked": "2024-12-27T22:21:29+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe die Mission „Nichts bis auf den Schnee“ ab.",
+    "en": "Complete the mission \"Nothing but the Snow\"."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/f8caf4c38ea1569174dd3ee9e48fdc9f99646d98.jpg",
+   "key": "ach_102",
+   "name": {
+    "de": "Draußen in der Ferne",
+    "en": "Outside in the Distance"
+   },
+   "percent": 7.3,
+   "unlocked": "2025-02-07T22:21:11+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe die Mission „Der Höllenschlund“ ab.",
+    "en": "Complete the mission \"The Hellmouth\"."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/1287f03686b047aacdc9805513e3dcd00513495e.jpg",
+   "key": "ach_103",
+   "name": {
+    "de": "Verborgene Geheimnisse",
+    "en": "Secrets Locked Away"
+   },
+   "percent": 6.8,
+   "unlocked": "2025-08-02T22:58:49+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schließe die Mission „Der Widerstand“ ab.",
+    "en": "Complete the mission \"The Resistance\"."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/cc8c7678f0726cf7715cfaffeaefe7229b219c71.jpg",
+   "key": "ach_104",
+   "name": {
+    "de": "Der Beschützer des Widerstandes",
+    "en": "Protector of the Resistance"
+   },
+   "percent": 6.4,
+   "unlocked": "2025-08-02T23:25:39+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige je eine der folgenden Maschinen der Apokalypse-Klasse: Tick, Runner, Hunter und Tank.",
+    "en": "Destroy one of each Apocalypse Class machine: Tick, Runner, Hunter and Tank."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/1642dbc9468b25f34b6ca58dc9f056e3f7a86ff7.jpg",
+   "key": "ach_105",
+   "name": {
+    "de": "Evolution",
+    "en": "Adapt and Evolve"
+   },
+   "percent": 12.4,
+   "unlocked": "2024-10-05T15:56:00+02:00"
+  },
+  {
+   "description": {
+    "de": "Finde alle Audio-Aufzeichnungen auf Himfjäll.",
+    "en": "Find all the audio logs on Himfjäll."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/1f92aa443b3205dda9f9efac51ae0113367fb3b8.jpg",
+   "key": "ach_106",
+   "name": {
+    "de": "Tonspuren",
+    "en": "Vestiges"
+   },
+   "percent": 1.0
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/704270/00e51b174ff3f2d8a368019e35203c5c2a8b66a1.jpg",
+   "key": "ach_107",
+   "name": {
+    "de": "Hier ist Pauli!",
+    "en": "Here's Pauli!"
+   },
+   "percent": 1.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/704270/00e51b174ff3f2d8a368019e35203c5c2a8b66a1.jpg",
+   "key": "ach_108",
+   "name": {
+    "de": "Zimmer 237",
+    "en": "Room 237"
+   },
+   "percent": 1.8
+  },
+  {
+   "description": {
+    "de": "Fahre in unter 40 Sekunden die Skipiste hinunter.",
+    "en": "Get from start to finish on the ski slope in under 40 seconds."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/3ee7d7aa34dbc5a88a814cdc0278e1faf1d6f646.jpg",
+   "key": "ach_109",
+   "name": {
+    "de": "Tempo auf der Piste",
+    "en": "Unorthodox Skiing"
+   },
+   "percent": 2.0
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/704270/6f72b728ccfcb478c6c3be096714c13b17339970.jpg",
+   "key": "ach_110",
+   "name": {
+    "de": "Er ist irgendwo da draußen",
+    "en": "He's Out There"
+   },
+   "percent": 10.5,
+   "unlocked": "2024-12-13T20:36:54+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/704270/6f72b728ccfcb478c6c3be096714c13b17339970.jpg",
+   "key": "ach_111",
+   "name": {
+    "de": "Privatgrundstück",
+    "en": "Private Property"
+   },
+   "percent": 8.5,
+   "unlocked": "2024-12-13T20:59:28+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/704270/6f72b728ccfcb478c6c3be096714c13b17339970.jpg",
+   "key": "ach_112",
+   "name": {
+    "de": "Die Summe seiner Teile",
+    "en": "The Sum of its Parts"
+   },
+   "percent": 7.2,
+   "unlocked": "2024-12-13T21:36:24+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/704270/6f72b728ccfcb478c6c3be096714c13b17339970.jpg",
+   "key": "ach_113",
+   "name": {
+    "de": "Hat Spaß gemacht",
+    "en": "It's Been Fun"
+   },
+   "percent": 6.4,
+   "unlocked": "2024-12-13T22:27:20+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/704270/68509741da0e18ab0c461a9f5a101a62ea7e7a08.jpg",
+   "key": "ach_114",
+   "name": {
+    "de": "Bis hierher und nicht weiter",
+    "en": "End of the Road"
+   },
+   "percent": 6.3,
+   "unlocked": "2024-12-13T22:27:20+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/704270/6f72b728ccfcb478c6c3be096714c13b17339970.jpg",
+   "key": "ach_115",
+   "name": {
+    "de": "Räder aus Feuer",
+    "en": "Wheels of Fortune"
+   },
+   "percent": 3.6,
+   "unlocked": "2024-12-27T21:26:24+01:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/704270/6f72b728ccfcb478c6c3be096714c13b17339970.jpg",
+   "key": "ach_116",
+   "name": {
+    "de": "Wir sind der Widerstand",
+    "en": "We are the Resistance"
+   },
+   "percent": 2.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/704270/6f72b728ccfcb478c6c3be096714c13b17339970.jpg",
+   "key": "ach_117",
+   "name": {
+    "de": "Versuch und Irrtum",
+    "en": "Trial and Error"
+   },
+   "percent": 2.4
+  },
+  {
+   "description": {
+    "de": "Finde alle 10 Überlebenden-Notizen und alle 10 Liebesbriefe.",
+    "en": "Find all 20 \"Survivor's Notes\" and \"Love Letters\" Collectibles."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/4ae882e8e9e746b31601c6965591fb7de605f746.jpg",
+   "key": "ach_118",
+   "name": {
+    "de": "Die uns vorausgegangen sind",
+    "en": "The Ones That Came Before Us"
+   },
+   "percent": 0.9
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Besiege einen Rivalen.",
+    "en": "Defeat a Rival."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/915d584a515bd6300e242a11c0494bb0e2e924b9.jpg",
+   "key": "ach_119",
+   "name": {
+    "de": "Nicht heute, FNIX!",
+    "en": "Not Today, FNIX!"
+   },
+   "percent": 12.9,
+   "unlocked": "2024-12-13T21:22:41+01:00"
+  },
+  {
+   "description": {
+    "de": "Bringe 20 Autos mit einer Nahkampfwaffe zur Explosion.",
+    "en": "Use a melee weapon to blow up 20 cars."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/6b0fbf8e73f529c20f7e2063d39b054d217c3b1d.jpg",
+   "key": "ach_120",
+   "name": {
+    "de": "Außer Rand und Band",
+    "en": "Running Wild"
+   },
+   "percent": 1.0
+  },
+  {
+   "description": {
+    "de": "Zerstöre 15 Seeker mit einem Jagd- oder Scharfschützengewehr.",
+    "en": "Use a hunting or sniper rifle to destroy 15 Seekers."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/704270/915d584a515bd6300e242a11c0494bb0e2e924b9.jpg",
+   "key": "ach_121",
+   "name": {
+    "de": "Aus der Ferne",
+    "en": "From a Distance"
+   },
+   "percent": 5.1
+  }
+ ],
+ "id": "704270",
+ "platform": "steam"
+}

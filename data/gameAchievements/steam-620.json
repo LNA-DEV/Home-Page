@@ -1,0 +1,821 @@
+{
+ "achievements": [
+  {
+   "description": {
+    "de": "Überstehen Sie die manuelle Überbrückung.",
+    "en": "Survive the manual override",
+    "sv": "Överlev den manuella åsidosättningen"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/SURVIVE_CONTAINER_RIDE.jpg",
+   "key": "ACH.SURVIVE_CONTAINER_RIDE",
+   "name": {
+    "de": "Weckruf",
+    "en": "Wake Up Call",
+    "sv": "Väckarklocka"
+   },
+   "percent": 74.1
+  },
+  {
+   "description": {
+    "de": "Treten Sie GLaDOS erneut gegenüber.",
+    "en": "Reunite with GLaDOS",
+    "sv": "Återförenas med GLaDOS"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/WAKE_UP.jpg",
+   "key": "ACH.WAKE_UP",
+   "name": {
+    "de": "Du Monster",
+    "en": "You Monster",
+    "sv": "Ditt monster"
+   },
+   "percent": 64.8
+  },
+  {
+   "description": {
+    "de": "Absolvieren Sie den ersten Test mit dem Wärmeleitstrahl.",
+    "en": "Complete the first Thermal Discouragement Beam test",
+    "sv": "Slutför det första testet med värmeavskräckningsstrålen"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/LASER.jpg",
+   "key": "ACH.LASER",
+   "name": {
+    "de": "Hitzewellen",
+    "en": "Undiscouraged",
+    "sv": "Oavskräckt"
+   },
+   "percent": 62.7
+  },
+  {
+   "description": {
+    "de": "Schließen Sie den ersten Test mit einer Flutlichtbrücke ab.",
+    "en": "Complete the first Hard Light Bridge test",
+    "sv": "Slutför det första bro av hårt ljus-testet"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/BRIDGE.jpg",
+   "key": "ACH.BRIDGE",
+   "name": {
+    "de": "Überbrückung",
+    "en": "Bridge Over Troubling Water",
+    "sv": "Bro över mörka vatten"
+   },
+   "percent": 53.3
+  },
+  {
+   "description": {
+    "de": "Erkämpfen Sie sich freie Bahn.",
+    "en": "Make a break for it",
+    "sv": "Gör ett rymningsförsök"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/BREAK_OUT.jpg",
+   "key": "ACH.BREAK_OUT",
+   "name": {
+    "de": "Durchbruch",
+    "en": "SaBOTour",
+    "sv": "SaBOTör"
+   },
+   "percent": 46.5
+  },
+  {
+   "description": {
+    "de": "Drücken Sie den Knopf!",
+    "en": "Press the button!",
+    "sv": "Tryck på knappen!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/STALEMATE_ASSOCIATE.jpg",
+   "key": "ACH.STALEMATE_ASSOCIATE",
+   "name": {
+    "de": "Partner im Patt",
+    "en": "Stalemate Associate",
+    "sv": "Dödlägespersonal"
+   },
+   "percent": 45.5
+  },
+  {
+   "description": {
+    "de": "Bringen Sie die Wissenschaft einen Schritt weiter.",
+    "en": "Carry science forward",
+    "sv": "För vetenskapen framåt"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/ADDICTED_TO_SPUDS.jpg",
+   "key": "ACH.ADDICTED_TO_SPUDS",
+   "name": {
+    "de": "Tolle Knolle",
+    "en": "Tater Tote",
+    "sv": "Potatistransport"
+   },
+   "percent": 41.0
+  },
+  {
+   "description": {
+    "de": "Bewältigen Sie das Rückstoßgel.",
+    "en": "Master the Repulsion Gel",
+    "sv": "Bemästra repulsionsgelén"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/BLUE_GEL.jpg",
+   "key": "ACH.BLUE_GEL",
+   "name": {
+    "de": "Schwerkraft aufgehoben",
+    "en": "Vertically Unchallenged",
+    "sv": "Vertikalt överbegåvad"
+   },
+   "percent": 42.9
+  },
+  {
+   "description": {
+    "de": "Bewältigen Sie das Beschleunigungsgel.",
+    "en": "Master the Propulsion Gel",
+    "sv": "Bemästra framdrivningsgelén"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/ORANGE_GEL.jpg",
+   "key": "ACH.ORANGE_GEL",
+   "name": {
+    "de": "Von 0 auf 100",
+    "en": "Stranger Than Friction",
+    "sv": "Friktionsfritt"
+   },
+   "percent": 39.4
+  },
+  {
+   "description": {
+    "de": "Absolvieren Sie den ersten Test mit Verwandlungsgel.",
+    "en": "Complete the first Conversion Gel test",
+    "sv": "Slutför det första testet med konverteringsgelé"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/WHITE_GEL.jpg",
+   "key": "ACH.WHITE_GEL",
+   "name": {
+    "de": "Weiße Pracht",
+    "en": "White Out",
+    "sv": "Vitvaror"
+   },
+   "percent": 38.3
+  },
+  {
+   "description": {
+    "de": "Bewältigen Sie den Transportschacht.",
+    "en": "Master the Excursion Funnel",
+    "sv": "Bemästra exkursionsflödet"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/TRACTOR_BEAM.jpg",
+   "key": "ACH.TRACTOR_BEAM",
+   "name": {
+    "de": "Mit dem Strom schwimmen",
+    "en": "Tunnel of Funnel",
+    "sv": "Flödesöverflöd"
+   },
+   "percent": 35.1
+  },
+  {
+   "description": {
+    "de": "Führen Sie denselben Test zweimal aus.",
+    "en": "Do the same test twice",
+    "sv": "Gör samma test två gånger"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/TRIVIAL_TEST.jpg",
+   "key": "ACH.TRIVIAL_TEST",
+   "name": {
+    "de": "Doppelt hält besser",
+    "en": "Dual Pit Experiment",
+    "sv": "Dubbelt stupexperiment"
+   },
+   "percent": 37.0
+  },
+  {
+   "description": {
+    "de": "Ja, das ist genau der besagte Teil.",
+    "en": "This is that part",
+    "sv": "Det är nu det gäller"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/WHEATLEY_TRIES_TO.jpg",
+   "key": "ACH.WHEATLEY_TRIES_TO",
+   "name": {
+    "de": "Hier werden Sie getötet.",
+    "en": "The Part Where He Kills You",
+    "sv": "Det är nu han tänkte döda dig"
+   },
+   "percent": 34.4
+  },
+  {
+   "description": {
+    "de": "Das ist einfach so passiert.",
+    "en": "That just happened",
+    "sv": "Det där hände verkligen"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/SHOOT_THE_MOON.jpg",
+   "key": "ACH.SHOOT_THE_MOON",
+   "name": {
+    "de": "Mondsüchtig",
+    "en": "Lunacy",
+    "sv": "Galenskap"
+   },
+   "percent": 34.1
+  },
+  {
+   "description": {
+    "de": "Platzieren Sie einen Würfel auf einer Schaltfläche, ohne den Würfel zu berühren.",
+    "en": "Place a cube on a button without touching the cube",
+    "sv": "Lägg en kub på en knapp utan att nudda kuben"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/BOX_HOLE_IN_ONE.jpg",
+   "key": "ACH.BOX_HOLE_IN_ONE",
+   "name": {
+    "de": "Sanft abgelegt",
+    "en": "Drop Box",
+    "sv": "Släppfest"
+   },
+   "percent": 28.9
+  },
+  {
+   "description": {
+    "de": "Absolvieren Sie Testkammer 10 in unter 70 Sekunden.",
+    "en": "Complete Test Chamber 10 in 70 seconds",
+    "sv": "Slutför testkammare 10 på 70 sekunder"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/SPEED_RUN_LEVEL.jpg",
+   "key": "ACH.SPEED_RUN_LEVEL",
+   "name": {
+    "de": "Zeitraffer",
+    "en": "Overclocker",
+    "sv": "Överklockare"
+   },
+   "percent": 4.0
+  },
+  {
+   "description": {
+    "de": "Zeigen Sie der Grube, wo es langgeht.",
+    "en": "Show that pit who's boss",
+    "sv": "Visa det där stupet vem som bestämmer"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/COMPLIANT.jpg",
+   "key": "ACH.COMPLIANT",
+   "name": {
+    "de": "Ich bin hier der Boss",
+    "en": "Pit Boss",
+    "sv": "Vilket stuuuup?"
+   },
+   "percent": 7.9
+  },
+  {
+   "description": {
+    "de": "Verstoßen Sie gegen die Regeln in Testkammer 07.",
+    "en": "Break the rules in Test Chamber 07",
+    "sv": "Bryt mot reglerna i testkammare 07"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/SAVE_CUBE.jpg",
+   "key": "ACH.SAVE_CUBE",
+   "name": {
+    "de": "Massenerhaltung",
+    "en": "Preservation of Mass",
+    "sv": "Bevarande av massa"
+   },
+   "percent": 24.4
+  },
+  {
+   "description": {
+    "de": "Schießen Sie einen Turm mithilfe einer Katapultplattform in die Luft.",
+    "en": "Use an Aerial Faith Plate to launch a turret",
+    "sv": "Använd en luftfärdsplatta till att slunga iväg ett stridstorn"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/LAUNCH_TURRET.jpg",
+   "key": "ACH.LAUNCH_TURRET",
+   "name": {
+    "de": "Alle Türme fliegen hoch",
+    "en": "Pturretdactyl",
+    "sv": "Tornsvala"
+   },
+   "percent": 8.7
+  },
+  {
+   "description": {
+    "de": "Finden Sie das verborgene Signal in einem der Verstecke des Rattenmenschen.",
+    "en": "Find the hidden signal in one of the Rat Man's dens",
+    "sv": "Hitta den dolda signalen i ett av råttmannens gömställen"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/CLEAN_UP.jpg",
+   "key": "ACH.CLEAN_UP",
+   "name": {
+    "de": "Geheimzeichen",
+    "en": "Final Transmission",
+    "sv": "Sista sändningen"
+   },
+   "percent": 5.4
+  },
+  {
+   "description": {
+    "de": "Befolgen Sie GLaDOS Fluchtvorschlag.",
+    "en": "Take GLaDOS' escape advice",
+    "sv": "Ta fasta på GLaDOS flykttips"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/REENTER_TEST_CHAMBERS.jpg",
+   "key": "ACH.REENTER_TEST_CHAMBERS",
+   "name": {
+    "de": "Guter Zuhörer",
+    "en": "Good Listener",
+    "sv": "Bra lyssnare"
+   },
+   "percent": 28.4
+  },
+  {
+   "description": {
+    "de": "Stellen Sie sich in einen Detektor defekter Türme.",
+    "en": "Stand in a defective turret detector",
+    "sv": "Ställ dig framför detektorn på ett defekt stridstorn"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/NOT_THE_DROID.jpg",
+   "key": "ACH.NOT_THE_DROID",
+   "name": {
+    "de": "Einsam gescannt",
+    "en": "Scanned Alone",
+    "sv": "Skanningens ögonblick"
+   },
+   "percent": 34.7
+  },
+  {
+   "description": {
+    "de": "Retten Sie einen Turm aus seiner misslichen Lage.",
+    "en": "Save a turret from redemption",
+    "sv": "Rädda ett stridstorn från botgörelse"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/SAVE_REDEMPTION_TURRET.jpg",
+   "key": "ACH.SAVE_REDEMPTION_TURRET",
+   "name": {
+    "de": "Nur nichts nachtragen",
+    "en": "No Hard Feelings",
+    "sv": "Allt är förlåtet"
+   },
+   "percent": 31.1
+  },
+  {
+   "description": {
+    "de": "Fangen Sie eine blau gefärbte Box, bevor sie den Boden berührt.",
+    "en": "Catch a blue-painted box before it touches the ground",
+    "sv": "Fånga in en blåmålad låda innan den nuddar marken"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/CATCH_CRAZY_BOX.jpg",
+   "key": "ACH.CATCH_CRAZY_BOX",
+   "name": {
+    "de": "Ein guter Fang",
+    "en": "Schrodinger's Catch",
+    "sv": "Schrödingers låda"
+   },
+   "percent": 6.9
+  },
+  {
+   "description": {
+    "de": "Entdecken Sie das fehlende Experiment.",
+    "en": "Discover the missing experiment",
+    "sv": "Hitta det saknade experimentet"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/NO_BOAT.jpg",
+   "key": "ACH.NO_BOAT",
+   "name": {
+    "de": "Schiff über Bord",
+    "en": "Ship Overboard",
+    "sv": "Skepp o'nej"
+   },
+   "percent": 10.7
+  },
+  {
+   "description": {
+    "de": "Untersuchen Sie alle Glastüren zu den Testkammern.",
+    "en": "Examine all the vitrified test chamber doors",
+    "sv": "Undersök alla förglasade testkammardörrar"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/A3_DOORS.jpg",
+   "key": "ACH.A3_DOORS",
+   "name": {
+    "de": "Durchblick",
+    "en": "Door Prize",
+    "sv": "Utgångspris"
+   },
+   "percent": 7.2
+  },
+  {
+   "description": {
+    "de": "Finden Sie ein verborgenes Porträt.",
+    "en": "Find a hidden portrait",
+    "sv": "Hitta ett dolt porträtt"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/PORTRAIT.jpg",
+   "key": "ACH.PORTRAIT",
+   "name": {
+    "de": "Porträt einer Dame",
+    "en": "Portrait of a Lady",
+    "sv": "Porträtt av en dam"
+   },
+   "percent": 11.6
+  },
+  {
+   "description": {
+    "de": "Weigern Sie sich, den ersten Test in Teil 8 zu lösen.",
+    "en": "Refuse to solve the first test in Chapter 8",
+    "sv": "Vägra lösa det första testet i kapitel 8"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/DEFIANT.jpg",
+   "key": "ACH.DEFIANT",
+   "name": {
+    "de": "Nicht mit mir",
+    "en": "You Made Your Point",
+    "sv": "Jaja, jag fattar"
+   },
+   "percent": 6.6
+  },
+  {
+   "description": {
+    "de": "Zerschlagen Sie 11 Monitore in einer Testkammer.",
+    "en": "Break 11 test chamber monitors",
+    "sv": "Slå sönder 11 testkammares monitorer"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/BREAK_MONITORS.jpg",
+   "key": "ACH.BREAK_MONITORS",
+   "name": {
+    "de": "Durchschlagender Erfolg",
+    "en": "Smash TV",
+    "sv": "Skärmdump"
+   },
+   "percent": 3.7
+  },
+  {
+   "description": {
+    "de": "Feiern Sie Ihren Erfolg bei der Koop-Kalibrierung.",
+    "en": "Celebrate your cooperative calibration success",
+    "sv": "Fira dina framgångar inom samarbetskalibrering"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/HI_FIVE_YOUR_PARTNER.jpg",
+   "key": "ACH.HI_FIVE_YOUR_PARTNER",
+   "name": {
+    "de": "Hoch die Tassen",
+    "en": "High Five",
+    "sv": "High-five"
+   },
+   "percent": 58.6
+  },
+  {
+   "description": {
+    "de": "Absolvieren Sie alle Testkammern im Koop-Abschnitt „Teamaufbau“.",
+    "en": "Complete all test chambers in the Team Building co-op course",
+    "sv": "Slutför alla testkammare på samarbetsbanan Laganda"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/TEAM_BUILDING.jpg",
+   "key": "ACH.TEAM_BUILDING",
+   "name": {
+    "de": "Teamaufbau",
+    "en": "Team Building",
+    "sv": "Laganda"
+   },
+   "percent": 49.4
+  },
+  {
+   "description": {
+    "de": "Absolvieren Sie alle Testkammern im Koop-Abschnitt „Masse und Geschwindigkeit“.",
+    "en": "Complete all test chambers in the Mass and Velocity co-op course",
+    "sv": "Slutför alla testkammare på samarbetsbanan Massa och hastighet"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/MASS_AND_VELOCITY.jpg",
+   "key": "ACH.MASS_AND_VELOCITY",
+   "name": {
+    "de": "Vertrauensbildung",
+    "en": "Confidence Building",
+    "sv": "Bygga upp förtroende"
+   },
+   "percent": 40.9
+  },
+  {
+   "description": {
+    "de": "Absolvieren Sie alle Testkammern im Koop-Abschnitt „Lichtbrücken“.",
+    "en": "Complete all test chambers in the Hard-Light Surfaces co-op course",
+    "sv": "Slutför alla testkammare på samarbetsbanan Hårt ljus"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/HUG_NAME.jpg",
+   "key": "ACH.HUG_NAME",
+   "name": {
+    "de": "Brückenschlag",
+    "en": "Bridge Building",
+    "sv": "Bygga broar"
+   },
+   "percent": 32.0
+  },
+  {
+   "description": {
+    "de": "Absolvieren Sie alle Testkammern im Koop-Abschnitt „Transportschächte“.",
+    "en": "Complete all test chambers in the Excursion Funnels co-op course",
+    "sv": "Slutför alla testkammare på samarbetsbanan Exkursionsflöde"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/EXCURSION_FUNNELS.jpg",
+   "key": "ACH.EXCURSION_FUNNELS",
+   "name": {
+    "de": "Hindernislauf",
+    "en": "Obstacle Building",
+    "sv": "Bygga hinder"
+   },
+   "percent": 26.3
+  },
+  {
+   "description": {
+    "de": "Absolvieren Sie alle Testkammern in allen Abschnitten des Koop-Modus.",
+    "en": "Complete all test chambers in all courses of co-op",
+    "sv": "Slutför alla testkammare på alla banor i samarbetsläget"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/NEW_BLOOD.jpg",
+   "key": "ACH.NEW_BLOOD",
+   "name": {
+    "de": "Retter der Wissenschaft",
+    "en": "You Saved Science",
+    "sv": "Du räddade vetenskapen"
+   },
+   "percent": 21.2
+  },
+  {
+   "description": {
+    "de": "Lassen Sie in Testkammer 6 im Koop-Abschnitt „Masse und Geschwindigkeit“ keinen Würfel fallen.",
+    "en": "Never lose a cube in Chamber 6 of the Mass and Velocity co-op course",
+    "sv": "Tappa aldrig en kub i kammare 6 på samarbetsbanan Massa och hastighet"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/NICE_CATCH.jpg",
+   "key": "ACH.NICE_CATCH",
+   "name": {
+    "de": "Gut festhalten",
+    "en": "Iron Grip",
+    "sv": "Järngrepp"
+   },
+   "percent": 3.6
+  },
+  {
+   "description": {
+    "de": "Vollführen Sie nach Belieben alle 8 Gesten in Koop.",
+    "en": "Perform all 8 gestures of your own volition in co-op",
+    "sv": "Utför alla 8 gesterna på eget initiativ i samarbetsspel"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/TAUNTS.jpg",
+   "key": "ACH.TAUNTS",
+   "name": {
+    "de": "Große Gesten",
+    "en": "Gesticul-8",
+    "sv": "Gestvänligt"
+   },
+   "percent": 27.1
+  },
+  {
+   "description": {
+    "de": "Tanzen Sie in Koop vor einem Turm, der von einer Flutlichtbrücke blockiert wird.",
+    "en": "Dance in front of a turret blocked by a hard light bridge in co-op",
+    "sv": "Dansa framför ett stridstorn som blockeras av en bro av hårt ljus i samarbetsspel"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/YOU_MONSTER.jpg",
+   "key": "ACH.YOU_MONSTER",
+   "name": {
+    "de": "Unerreicht",
+    "en": "Can't Touch This",
+    "sv": "Dansa i neon"
+   },
+   "percent": 9.8
+  },
+  {
+   "description": {
+    "de": "Entfernen Sie in Koop die Brücke unter Ihrem Partner und lassen Sie ihn während einer Geste in die Schmiere fallen.",
+    "en": "Drop your co-op partner in goo while they are gesturing by removing the bridge under them",
+    "sv": "När din partner gestikulerar på en bro, flytta den för att låta hen falla ner i geggan"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/PARTNER_DROP.jpg",
+   "key": "ACH.PARTNER_DROP",
+   "name": {
+    "de": "Bodenlos",
+    "en": "Empty Gesture",
+    "sv": "Tomma gester"
+   },
+   "percent": 4.6
+  },
+  {
+   "description": {
+    "de": "Finden Sie in Koop den versteckten Begleiterwürfel in der Testkammer.",
+    "en": "Find the hidden companion cube in co-op test chamber",
+    "sv": "Hitta den dolda sällskapskuben i samarbetstestkammaren"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/PARTY_OF_THREE.jpg",
+   "key": "ACH.PARTY_OF_THREE",
+   "name": {
+    "de": "Der Dritte im Bunde",
+    "en": "Party of Three",
+    "sv": "3vligt sällskap"
+   },
+   "percent": 3.6
+  },
+  {
+   "description": {
+    "de": "Platzieren Sie in Koop in Portal unter Ihrem Partner, während er eine Geste vollführt.",
+    "en": "Place a portal under your co-op partner while they are gesturing",
+    "sv": "Placera en portal under din samarbetspartner som håller på att göra en gest"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/PORTAL_TAUNT.jpg",
+   "key": "ACH.PORTAL_TAUNT",
+   "name": {
+    "de": "Reingefallen",
+    "en": "Narbacular Drop"
+   },
+   "percent": 5.8
+  },
+  {
+   "description": {
+    "de": "Absolvieren Sie nach dem Koop-Modus die Kalibrierungsstrecke mit einem Freund, der nie zuvor gespielt hat.",
+    "en": "After completing co-op, complete Calibration Course online with a friend who hasn’t played before",
+    "sv": "Efter att ha slutfört co-op, slutför Kalibreringsbanan online med en vän som aldrig har spelat förut"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/TEACHER.jpg",
+   "key": "ACH.TEACHER",
+   "name": {
+    "de": "Portalausbilder",
+    "en": "Professor Portal",
+    "sv": "Portalprofessor"
+   },
+   "percent": 5.9
+  },
+  {
+   "description": {
+    "de": "Vollführen Sie in Koop 2 Fluggesten, bevor Sie den Boden berühren.",
+    "en": "Perform 2 aerial gestures before touching the ground in co-op",
+    "sv": "Utför 2 luftgester innan du nuddar mark i ett samarbetsspel"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/WITH_STYLE.jpg",
+   "key": "ACH.WITH_STYLE",
+   "name": {
+    "de": "Luftübung",
+    "en": "Air Show",
+    "sv": "Luftshow"
+   },
+   "percent": 33.2
+  },
+  {
+   "description": {
+    "de": "Absolvieren Sie Testkammer 3 in Koop-Abschnitt „Brückenschlag“, ohne dabei mehr als 5 Portale zu platzieren.",
+    "en": "Complete Chamber 3 in the Hard-Light Surfaces co-op course using only 5 total portal placements",
+    "sv": "Slutför kammare 3 på i samarbetsbanan Hårt ljus med bara 5 portalplaceringar totalt"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/LIMITED_PORTALS.jpg",
+   "key": "ACH.LIMITED_PORTALS",
+   "name": {
+    "de": "Sparsamer Umgang",
+    "en": "Portal Conservation Society",
+    "sv": "Föreningen Bevara portalerna"
+   },
+   "percent": 2.8
+  },
+  {
+   "description": {
+    "de": "Durchqueren Sie in Koop 4 verschiedene Portale, ohne den Boden zu berühren.",
+    "en": "Enter 4 different portals without touching the ground in co-op",
+    "sv": "Gå igenom 4 olika portaler utan att nudda mark i ett samarbetsspel"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/FOUR_PORTALS.jpg",
+   "key": "ACH.FOUR_PORTALS",
+   "name": {
+    "de": "Vier auf einen Streich",
+    "en": "Four Ring Circus",
+    "sv": "Luft under ringarna"
+   },
+   "percent": 6.8
+  },
+  {
+   "description": {
+    "de": "Absolvieren Sie 3 beliebige Koop-Testkammern in „Masse und Geschwindigkeit“ in weniger als 60 Sekunden.",
+    "en": "Solve 3 co-op chambers in the Mass and Velocity course in under 60 seconds each",
+    "sv": "Lös 3 samarbetskammare på Massa och hastighetsbanan på under 60 sekunder var"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/SPEED_RUN_COOP.jpg",
+   "key": "ACH.SPEED_RUN_COOP",
+   "name": {
+    "de": "Flotter Dreier",
+    "en": "Triple Crown",
+    "sv": "Tre kronor"
+   },
+   "percent": 3.0
+  },
+  {
+   "description": {
+    "de": "Absolvieren Sie in Koop Abschnitt 4, ohne dass Sie oder Ihr Partner sterben.",
+    "en": "Complete Course 4 with neither you nor your co-op partner dying",
+    "sv": "Slutför bana 4 utan att du eller din samarbetspartner dör"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/STAYING_ALIVE.jpg",
+   "key": "ACH.STAYING_ALIVE",
+   "name": {
+    "de": "Überlebenskünstler",
+    "en": "Still Alive",
+    "sv": "Lever än"
+   },
+   "percent": 2.4
+  },
+  {
+   "description": {
+    "de": "Verspotten Sie GLaDOS in allen 5 Koop-Abschnitten vor einer Kamera.",
+    "en": "Taunt GLaDOS in front of a camera in each of the five co-op courses",
+    "sv": "Håna GLaDOS framför en kamera på var och en av de fem samarbetsbanorna"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/TAUNT_CAMERA.jpg",
+   "key": "ACH.TAUNT_CAMERA",
+   "name": {
+    "de": "Suchst du Ärger?",
+    "en": "Asking for Trouble",
+    "sv": "Be om trubbel"
+   },
+   "percent": 8.9
+  },
+  {
+   "description": {
+    "de": "Gewinnen Sie nacheinander 3 Koop-Partien „Schere, Stein, Papier“.",
+    "en": "Win 3 co-op games of rock-paper-scissors in a row",
+    "sv": "Vinn 3 samarbetsomgångar av sten-sax-påse i rad"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/ROCK_CRUSHES_ROBOT.jpg",
+   "key": "ACH.ROCK_CRUSHES_ROBOT",
+   "name": {
+    "de": "Schere, Stein, Portal",
+    "en": "Rock Portal Scissors",
+    "sv": "Sten sax portal"
+   },
+   "percent": 9.8
+  },
+  {
+   "description": {
+    "de": "Umarmen Sie 3 verschiedene Personen Ihrer Freundesliste, während Sie im Koop-Modus sind.",
+    "en": "While playing co-op, hug 3 different people on your friends list",
+    "sv": "Krama 3 olika personer på din vänlista under samarbetsspel"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/SPREAD_THE_LOVE.jpg",
+   "key": "ACH.SPREAD_THE_LOVE",
+   "name": {
+    "de": "Dicke Freunde",
+    "en": "Friends List With Benefits",
+    "sv": "Vänlista med bonus"
+   },
+   "percent": 4.5
+  },
+  {
+   "description": {
+    "de": "Verlieren Sie niemals einen Kubus in Kammer 6 des Bewegungsgel-Koop-Kurses.",
+    "en": "Never lose a cube in Chamber 6 of the Mobility Gels co-op course",
+    "sv": "Tappa aldrig bort en kub i Kammare 6 på Mobility Gels samarbetsbana"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/620/732c9e4da3ecf83bffbe9626a5bb40e461d0c634.jpg",
+   "key": "ACH.SUMMER_SALE",
+   "name": {
+    "de": "Talentshow",
+    "en": "Talent Show",
+    "sv": "Talangshow"
+   },
+   "percent": 2.7
+  }
+ ],
+ "id": "620",
+ "platform": "steam"
+}

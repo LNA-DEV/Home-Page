@@ -1,0 +1,62 @@
+{
+ "developers": [
+  "Guerrilla Games",
+  "Sony Interactive Entertainment"
+ ],
+ "genres": [
+  {
+   "de": "Action-Rollenspiel",
+   "en": "action role-playing game",
+   "sv": "actionrollspel"
+  },
+  {
+   "de": "Science-Fiction-Computerspiel",
+   "en": "science fiction video game",
+   "sv": "science fiction-spel"
+  },
+  {
+   "de": "postapokalyptisches Videospiel",
+   "en": "post-apocalyptic video game",
+   "sv": "postapokalyptiskt datorspel"
+  },
+  {
+   "de": "Actionspiel",
+   "en": "action game",
+   "sv": "actionspel"
+  },
+  {
+   "de": "Action-Adventure",
+   "en": "action-adventure game",
+   "sv": "actionäventyrsspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "publishers": [
+  "Sony Interactive Entertainment"
+ ],
+ "released": "2022-02-18",
+ "steam": {
+  "de": "Erlebe Horizon Forbidden West™ vollständig mit Bonus-Inhalten und der \"Burning Shores\"-Erweiterung. Das Add-on Burning Shores enthält zusätzliche Inhalte für Aloys Abenteuer, darunter neue Handlungsstränge, Charaktere und Erlebnisse in einem atemberaubenden, gefährlichen Gebiet.",
+  "en": "Experience the epic Horizon Forbidden West™ in its entirety with bonus content and the Burning Shores expansion included. The Burning Shores add-on contains additional content for Aloy’s adventure, including new storylines, characters, and experiences in a stunning yet hazardous new area.",
+  "sv": "Upplev det episka Horizon Forbidden West™ i sin helhet med bonusinnehåll och expansionen Burning Shores. Tillägget Burning Shores innehåller mer innehåll till Aloys äventyr, däribland nya berättelser, karaktärer och ett vackert men farligt nytt område."
+ },
+ "steam_appid": 2420110,
+ "wikidata": "Q96216443",
+ "wikipedia": {
+  "de": {
+   "text": "Horizon Forbidden West ist ein von Guerrilla Games entwickeltes Action-Rollenspiel. Das Spiel wurde am 18. Februar 2022 von Sony Interactive Entertainment für PlayStation 4 und PlayStation 5 veröffentlicht.",
+   "url": "https://de.wikipedia.org/wiki/Horizon_Forbidden_West"
+  },
+  "en": {
+   "text": "Horizon Forbidden West is a 2022 action role-playing game developed by Guerrilla Games and published by Sony Interactive Entertainment. The sequel to Horizon Zero Dawn (2017), the game is set in a post-apocalyptic version of the Western United States, recovering from the aftermath of an extinction event caused by a rogue robot swarm. The player, assuming control of Aloy, must venture into the Forbidden West to find the source of a mysterious plague that kills all it infects.",
+   "url": "https://en.wikipedia.org/wiki/Horizon_Forbidden_West"
+  }
+ }
+}

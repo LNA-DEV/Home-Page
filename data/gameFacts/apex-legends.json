@@ -1,0 +1,61 @@
+{
+ "developers": [
+  "Respawn Entertainment",
+  "Panic Button",
+  "Iron Galaxy Studios"
+ ],
+ "genres": [
+  {
+   "de": "Ego-Shooter",
+   "en": "first-person shooter",
+   "sv": "förstapersonsskjutare"
+  },
+  {
+   "de": "Battle Royale",
+   "en": "battle royale game",
+   "sv": "Battle royale-spel"
+  },
+  {
+   "de": "Taktik-Shooter",
+   "en": "tactical shooter",
+   "sv": "taktisk skjutare"
+  },
+  {
+   "de": "Helden-Shooter",
+   "en": "hero shooter"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  }
+ ],
+ "publishers": [
+  "Electronic Arts"
+ ],
+ "released": "2019-02-04",
+ "steam": {
+  "de": "Apex Legends ist der preisgekrönte Free-to-Play Helden-Shooter von Respawn Entertainment. Meistere einen wachsenden Kader legendärer Charaktere mit mächtigen Fähigkeiten & erlebe das strategische Squadspiel und innovative Gameplay der nächsten Evolutionsstufe des Helden-Shooters & von Battle Royale.",
+  "en": "Apex Legends is the award-winning, free-to-play Hero Shooter from Respawn Entertainment. Master an ever-growing roster of legendary characters with powerful abilities, and experience strategic squad play and innovative gameplay in the next evolution of Hero Shooter and Battle Royale.",
+  "sv": "Apex Legends är en prisbelönt, kostnadsfri Hero Shooter från Respawn Entertainment. Bemästra en ständigt växande samling legendarer med kraftfulla förmågor. Upplev strategiskt lagspel och innovativ spelmekanik. Det här är nästa stora steg i genrerna Hero Shooter och Battle Royale."
+ },
+ "steam_appid": 1172470,
+ "wikidata": "Q61478103",
+ "wikipedia": {
+  "de": {
+   "text": "Apex Legends ist ein Free-to-play-Spiel aus dem Battle-Royale-Genre, das von Respawn Entertainment entwickelt und von Electronic Arts veröffentlicht wurde. Das Setting basiert auf dem Titanfall-Universum. Das Spiel wurde am 4.",
+   "url": "https://de.wikipedia.org/wiki/Apex_Legends"
+  },
+  "en": {
+   "text": "Apex Legends is a 2019 battle royale-hero shooter video game developed by Respawn Entertainment and published by Electronic Arts, set in the same science fiction universe as Respawn's Titanfall series. It is offered free-to-play and is continuously updated under the games as a service model; the game was originally released for PlayStation 4, Windows, and Xbox One in February 2019 and was followed by versions for Nintendo Switch in 2021 and both PlayStation 5 and Xbox Series X/S in 2022, and Nintendo Switch 2 in 2025.",
+   "url": "https://en.wikipedia.org/wiki/Apex_Legends"
+  },
+  "sv": {
+   "text": "Apex Legends är ett så kallat battle royale-spel utvecklat av Respawn Entertainment och utgivet av Electronic Arts. Spelet släpptes till Windows, Xbox One och PlayStation 4 den 4 februari 2019 utan något tidigare tillkännagivande eller information. 2021 släpptes spelet till Nintendo Switch.",
+   "url": "https://sv.wikipedia.org/wiki/Apex_Legends"
+  }
+ }
+}

@@ -1,0 +1,724 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/c83e6ebe2352a87d3ae5fd4a1b080b4068d662cb.jpg",
+   "key": "DefeatGlurch",
+   "name": {
+    "de": "Eine schleimige Begegnung",
+    "en": "A Slimey Encounter"
+   },
+   "percent": 64.4,
+   "unlocked": "2026-07-24T22:03:27+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/321db7a2cc66966374da032b0e5d296fbede6c24.jpg",
+   "key": "DefeatGhorm",
+   "name": {
+    "de": "Davongekrabbelt",
+    "en": "Bugging Out"
+   },
+   "percent": 53.5,
+   "unlocked": "2026-07-26T20:40:08+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/c9ebacc069e05b18adc3c2bfc478adce62683b1d.jpg",
+   "key": "DefeatHivemother",
+   "name": {
+    "de": "Pass auf, wohin du trittst",
+    "en": "Watch Your Step"
+   },
+   "percent": 43.8
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/7d2d099a8912754d915a07991f74230ae97af18f.jpg",
+   "key": "DefeatAzeos",
+   "name": {
+    "de": "Vom Himmel herab!",
+    "en": "From the Skies!"
+   },
+   "percent": 37.5,
+   "unlocked": "2026-08-07T22:13:38+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/6b774d715b66440b53bad0ef061b97d17029b078.jpg",
+   "key": "DefeatMalugaz",
+   "name": {
+    "de": "Du bist ein Zauberer",
+    "en": "You're a Wizard"
+   },
+   "percent": 44.1,
+   "unlocked": "2026-07-26T21:55:19+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/36e00a87708f510f05766b4ea1fad2f03d6590fb.jpg",
+   "key": "DefeatIvy",
+   "name": {
+    "de": "Toxischer Charakter",
+    "en": "Toxic Personality"
+   },
+   "percent": 29.1
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/bd59b8a88a07b0d319453b297b2732b124b0a7f9.jpg",
+   "key": "DefeatOmoroth",
+   "name": {
+    "de": "Aus der Tiefe!",
+    "en": "From the Depths!"
+   },
+   "percent": 28.9
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/19de23f029fbcead9088b756f57f5eb0f4018ae3.jpg",
+   "key": "DefeatMorpha",
+   "name": {
+    "de": "Vorsicht, Rutschgefahr",
+    "en": "Slippery When Wet"
+   },
+   "percent": 23.5,
+   "unlocked": "2026-09-18T21:33:52+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/d9713663134a56cadfa00de670b943f4a777b441.jpg",
+   "key": "DefeatRaAkar",
+   "name": {
+    "de": "Stinknormale Wüste",
+    "en": "Just Deserts"
+   },
+   "percent": 25.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/3df3956b001aa6072c585d098ad78476a16f7177.jpg",
+   "key": "DefeatIgneous",
+   "name": {
+    "de": "Durchgebrannt",
+    "en": "Burning Through"
+   },
+   "percent": 18.2
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/fe1c778c7193dd48ba352b7a106aa9160940fc56.jpg",
+   "key": "DefeatKingSlime",
+   "name": {
+    "de": "Schlüpfriger Shinobi",
+    "en": "Slippery Shinobi"
+   },
+   "percent": 34.7,
+   "unlocked": "2026-07-25T21:46:52+02:00"
+  },
+  {
+   "description": {
+    "de": "100 Fertigkeitspunkt für Bergbau erhalten",
+    "en": "Gained 100 skill points in mining"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/6be0c43f57f49be36b9ebe6f6d47bbb9a7dc49d6.jpg",
+   "key": "MaxedOutMining",
+   "name": {
+    "de": "Wer andern eine Grube gräbt",
+    "en": "Diggy Diggy Hole"
+   },
+   "percent": 7.6
+  },
+  {
+   "description": {
+    "de": "100 Fertigkeitspunkt für Kochen erhalten",
+    "en": "Gained 100 skill points in cooking"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/93dd70f1ffdcb2d1f6b4b053919a67311c5fb9b8.jpg",
+   "key": "MaxedOutCooking",
+   "name": {
+    "de": "Alles Käse!",
+    "en": "Cheese it!"
+   },
+   "percent": 8.4
+  },
+  {
+   "description": {
+    "de": "100 Fertigkeitspunkt für Angeln erhalten",
+    "en": "Gained 100 skill points in fishing"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/b9a21c0c100df00cbf9dc188cf726365fe0302bc.jpg",
+   "key": "MaxedOutFishing",
+   "name": {
+    "de": "An Schicksals Haken",
+    "en": "Completely Hooked"
+   },
+   "percent": 9.4
+  },
+  {
+   "description": {
+    "de": "100 Fertigkeitspunkt für Gärtnern erhalten",
+    "en": "Gained 100 skill points in gardening"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/f6f3b944f4b2cf72521cb68753879358ff2bbb3e.jpg",
+   "key": "MaxedOutGardening",
+   "name": {
+    "de": "Natur-Nanny",
+    "en": "Nature Nurturer"
+   },
+   "percent": 15.3
+  },
+  {
+   "description": {
+    "de": "100 Fertigkeitspunkt für Nahkampf erhalten",
+    "en": "Gained 100 skill points in melee"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/5339fd744449f6d19f629769113af910950320b0.jpg",
+   "key": "MaxedOutMelee",
+   "name": {
+    "de": "... Stich wie eine Biene",
+    "en": "...Sting like a bee"
+   },
+   "percent": 8.6
+  },
+  {
+   "description": {
+    "de": "100 Fertigkeitspunkt für Fernkampf erhalten",
+    "en": "Gained 100 skill points in range"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/5be3d984882590ca294e72d546dd7f3755ea38c7.jpg",
+   "key": "MaxedOutRange",
+   "name": {
+    "en": "Robin Hood"
+   },
+   "percent": 8.6
+  },
+  {
+   "description": {
+    "de": "100 Fertigkeitspunkt für Vitalität erhalten",
+    "en": "Gained 100 skill points in vitality"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/b5d0894e4e322f1e95c2ae8e225eddc4753c15df.jpg",
+   "key": "MaxedOutVitality",
+   "name": {
+    "de": "Gesundheitsbewusst",
+    "en": "Health Conscious"
+   },
+   "percent": 8.1
+  },
+  {
+   "description": {
+    "de": "100 Fertigkeitspunkt für Laufen erhalten",
+    "en": "Gained 100 skill points in running"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/ba838f9493a90f02a8eeacbb88ecbf4a779456c8.jpg",
+   "key": "MaxedOutRunning",
+   "name": {
+    "de": "Tanze wie ein Schmetterling ...",
+    "en": "Float like a butterfly..."
+   },
+   "percent": 9.1
+  },
+  {
+   "description": {
+    "de": "100 Fertigkeitspunkt für Fertigung erhalten",
+    "en": "Gained 100 skill points in crafting"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/2dc1ba288e5b987462123e75aa96a80a613f7fc5.jpg",
+   "key": "MaxedOutCrafting",
+   "name": {
+    "de": "Pfiffiger Forscher",
+    "en": "Crafty Explorer"
+   },
+   "percent": 8.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/2e74eba331dda6a1bf625a4d4fc58e6608a1d3c6.jpg",
+   "key": "ObtainTheOracleDeck",
+   "name": {
+    "de": "Das Herz der Karten",
+    "en": "The Heart of the Cards"
+   },
+   "percent": 5.0
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/37a9a48c4e6855497ccc306190efaa7f76ca2bb9.jpg",
+   "key": "ObtainRuneSong",
+   "name": {
+    "de": "Das Runenlied",
+    "en": "The Rune Song"
+   },
+   "percent": 14.8
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/74295fa2cc0951ab9d192fe2dc2f742265b4dc24.jpg",
+   "key": "ObtainPhantomSpark",
+   "name": {
+    "de": "Der Phantomfunke",
+    "en": "The Phantom Spark"
+   },
+   "percent": 12.8
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/73d6dd386a7e4731372819033634202d70569de5.jpg",
+   "key": "ObtainSoulSeeker",
+   "name": {
+    "de": "Der Seelensucher",
+    "en": "The Soul Seeker"
+   },
+   "percent": 9.4
+  },
+  {
+   "description": {
+    "de": "Mit großer Larve sprechen",
+    "en": "Talked to a Big Larva"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/562b44bff95542e37f6c500c98b2c4f7bba9ece5.jpg",
+   "key": "TalkToBigLarva",
+   "name": {
+    "de": "Kaffeekränzchen",
+    "en": "Gossip Group"
+   },
+   "percent": 3.4
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/acd196c8320d4a51ea6202558205cabcf7d67fa7.jpg",
+   "key": "CatchStarlightNautilus",
+   "name": {
+    "de": "Legendäres Fossil",
+    "en": "Legendary Fossil"
+   },
+   "percent": 10.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/6c31610182e7b70469a2cb0b2585288c24a795f5.jpg",
+   "key": "GainOver200MovementSpeed",
+   "name": {
+    "de": "In Eile",
+    "en": "In a Rush"
+   },
+   "percent": 6.4
+  },
+  {
+   "description": {
+    "de": "100 Rezepte im Kochbuch entdecken",
+    "en": "Discovered 100 recipes in the cook book"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/81792a6d816764e9a7862377e4432d494f8c48aa.jpg",
+   "key": "Discover100CookBookRecipes",
+   "name": {
+    "de": "Geprüfter Chefkoch",
+    "en": "Certified Chef"
+   },
+   "percent": 6.8
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Goldene Pflanze ernten",
+    "en": "Harvested a golden plant"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/ceaa7905b394534841e2254e551933831ccd21dc.jpg",
+   "key": "HarvestGoldenIngredient",
+   "name": {
+    "en": "Farmer Midas"
+   },
+   "percent": 27.0,
+   "unlocked": "2026-07-25T21:02:11+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/620b772c6502ea0f4b3c30eabe1584d31a69b613.jpg",
+   "key": "SitOnCavelingToiletWithACrown",
+   "name": {
+    "de": "Ein Thron für einen König",
+    "en": "A Throne Fit for a King"
+   },
+   "percent": 4.7,
+   "unlocked": "2026-07-25T23:47:01+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Ring der Felsen und Ring der Steine ausrüsten",
+    "en": "Equipped the Ring of Rock and Ring of Stone"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/ac3541dfb85361f0b48ddb9fb2f1f6375559b06a.jpg",
+   "key": "EquipRingOfRockAndStone",
+   "name": {
+    "de": "Fels und Stein!",
+    "en": "Rock and Stone!"
+   },
+   "percent": 39.4,
+   "unlocked": "2026-07-26T21:42:46+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/acb4d17b9ae3b2ab431cf4aef23a98a9253f9dd2.jpg",
+   "key": "KeyArtCharacter",
+   "name": {
+    "de": "Nachahmer-Syndrom",
+    "en": "Impersonator Syndrome"
+   },
+   "percent": 2.1
+  },
+  {
+   "description": {
+    "de": "10 Kirschbäume gepflanzt",
+    "en": "Planted 10 Cherry Trees"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/271b150753c5abe11d9377c0d3bc2601ae4a4cd6.jpg",
+   "key": "CherryBlossomTrees",
+   "name": {
+    "de": "5 Zentimeter pro Sekunde",
+    "en": "5 Centimeters Per Second"
+   },
+   "percent": 3.3
+  },
+  {
+   "description": {
+    "de": "Spiele die Melodie des Unwetters",
+    "en": "Play the Tune of Tempest"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/f6a73bbdacbdae27111dafa8dc56d2a293169764.jpg",
+   "key": "StormSong",
+   "name": {
+    "de": "Ein seltsames Lied",
+    "en": "A Strange Song"
+   },
+   "percent": 4.1
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Brüte dein erstes Haustier aus einem Ei aus",
+    "en": "Hatched your first pet from an egg"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/5096542fc83ba0a5f5b14cfa0f4e34ab67bf28b4.jpg",
+   "key": "FirstPet",
+   "name": {
+    "de": "Dein Allererstes",
+    "en": "Your Very First"
+   },
+   "percent": 52.3,
+   "unlocked": "2026-07-24T22:37:00+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/89bc8cd1608db71981bb514ae8f68f376262d658.jpg",
+   "key": "DefeatAtlanteanWorm",
+   "name": {
+    "de": "Thalassophobie",
+    "en": "Thalassophobia"
+   },
+   "percent": 14.5
+  },
+  {
+   "description": {
+    "de": "Lagere alle Farbvariationen einer Haustier-Art in einer Kiste",
+    "en": "Stored all color variations of one pet type in a chest"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/d43dbb3866b654312c0a13770f21cbc6ab507a5e.jpg",
+   "key": "PetColors",
+   "name": {
+    "de": "Ich will sie alle haben!",
+    "en": "I want ’em all!"
+   },
+   "percent": 5.1
+  },
+  {
+   "description": {
+    "de": "Füttere ein Nutztier",
+    "en": "Fed cattle"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/f04b2d74c0a864471f955c3bd8101c2759e5e8fa.jpg",
+   "key": "FeedCattle",
+   "name": {
+    "de": "Ein gutes Leben",
+    "en": "A Good Life"
+   },
+   "percent": 30.3
+  },
+  {
+   "description": {
+    "de": "Erreiche die maximale Stufe eines Haustiers",
+    "en": "Reached max level on a pet"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/bb48e8648b60e504c3ca012be10a43ae6908e7c7.jpg",
+   "key": "PetMaxLevel",
+   "name": {
+    "de": "Na-Tier-Talent",
+    "en": "Pet Prodigy"
+   },
+   "percent": 26.8
+  },
+  {
+   "description": {
+    "de": "100 Fertigkeitspunkte der Magie erhalten",
+    "en": "Gained 100 skill points in magic"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/beceaeb19b4ddfc4b66580a611a38caaade7cb49.jpg",
+   "key": "MaxedOutMagic",
+   "name": {
+    "de": "Ein Zauberer kommt nie zu spät",
+    "en": "A Wizard Is Never Late"
+   },
+   "percent": 3.7
+  },
+  {
+   "description": {
+    "de": "100 Fertigkeitspunkte der Beschwörung erhalten",
+    "en": "Gained 100 skill points in summoning"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/2c14a3bd3f30be6fa9b806feeff0d971db9a500e.jpg",
+   "key": "MaxedOutSummoning",
+   "name": {
+    "de": "Komm' nicht in die Nähe des Mediums!",
+    "en": "Stay Away From The Summoner!"
+   },
+   "percent": 3.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/10d7c1d3ddac573edfa3e535de0828c15bd3bc79.jpg",
+   "key": "DefeatDruidra",
+   "name": {
+    "de": "Das Lied des Waldes",
+    "en": "Song of the Woods"
+   },
+   "percent": 18.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/bd5d3810fb240aaee6d708ade13cca46d091e40c.jpg",
+   "key": "DefeatCrydra",
+   "name": {
+    "de": "Das Heulen des Meeres",
+    "en": "Howl of the Sea"
+   },
+   "percent": 17.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/d09f4b7b6d7a05aa395c203b05b7c6512aba7f0c.jpg",
+   "key": "DefeatPyrdra",
+   "name": {
+    "de": "Das Brüllen der Flammen",
+    "en": "Roar of the Flames"
+   },
+   "percent": 17.1
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/7b150d49529247c7e10f371bf88add36048db54e.jpg",
+   "key": "DefeatCoreCommander",
+   "name": {
+    "de": "Abgesandter einer sterbenden Welt",
+    "en": "Visitor From A Dying World"
+   },
+   "percent": 15.3
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/25045d558cb8371b5459e821bc76be1db629fed2.jpg",
+   "key": "DefeatUrschleim",
+   "name": {
+    "de": "Kambrisches Ungetüm",
+    "en": "Cambrian Behemoth"
+   },
+   "percent": 10.4
+  },
+  {
+   "description": {
+    "de": "8 oder mehr aktive Unterlinge wurden besessen",
+    "en": "Had 8 or more active minions"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/e9d3f93093cfe2197ebb5f0e8f209b722e2a252a.jpg",
+   "key": "SummonManyMinions",
+   "name": {
+    "de": "Legionskommandant",
+    "en": "Legion Commander"
+   },
+   "percent": 4.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/10fa161e8cf9ef96a6ff4d3f0c2b5e83dda9c387.jpg",
+   "key": "ObtainStormbringer",
+   "name": {
+    "de": "Im Besitz von Legenden",
+    "en": "Wielder of Legends"
+   },
+   "percent": 9.9
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Ein Wegpunkt wurde verwendet",
+    "en": "Used a waypoint"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/541a68b3c591538c1b23b132c42fa0696ee26d71.jpg",
+   "key": "UseWayPoint",
+   "name": {
+    "de": "Beam mich hoch",
+    "en": "Beam Me Up"
+   },
+   "percent": 36.7,
+   "unlocked": "2026-07-25T21:00:31+02:00"
+  },
+  {
+   "description": {
+    "de": "100 Fertigkeitspunkte für Explosion wurden erhalten",
+    "en": "Gained 100 skill points in explosions"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/e01c293b03bb4747e8aa384f9d9ea4194a32eaf3.jpg",
+   "key": "MaxedOutExplosives",
+   "name": {
+    "de": "Explosions-Meisterung",
+    "en": "Explosion Mastery"
+   },
+   "percent": 2.3
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/3f5bb0c595936aaee0ca654d49b472915b0dd1d5.jpg",
+   "key": "DefeatNimruza",
+   "name": {
+    "de": "Verstummte Sinfonie",
+    "en": "Silence the Symphony"
+   },
+   "percent": 8.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/7200080a86532a558d896aab59309bd7b7caf8af.jpg",
+   "key": "DefeatOblidra",
+   "name": {
+    "de": "Flüstern des Nihil",
+    "en": "Whisper of the Void"
+   },
+   "percent": 3.4
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/fddf27435c08010390f8cd20b18583f2b0d75d49.jpg",
+   "key": "DefeatSahabar",
+   "name": {
+    "de": "Kalkulierte Prophezeiung",
+    "en": "Calculated Prophecy"
+   },
+   "percent": 3.9
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/f239e04e1a13e88aec97546479e7061f123f3675.jpg",
+   "key": "ObtainCredenceOfRuin",
+   "name": {
+    "de": "Die Kredenz des Ruins",
+    "en": "The Credence of Ruin"
+   },
+   "percent": 1.8
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/d3a1e95ff0576e8c7e283424403db3e422bc5ad6.jpg",
+   "key": "ObtainTitanBreath",
+   "name": {
+    "de": "Der Titanen-Atem",
+    "en": "The Titan Breath"
+   },
+   "percent": 3.1
+  },
+  {
+   "description": {
+    "de": "Enterhaken und Forschers-Eitelkeit-Set ausgerüstet",
+    "en": "Equipped a Hookshot and the Explorer's vanity set"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/73280d345ee5bf3f5ac5146669d40b4cedfc959a.jpg",
+   "key": "EquipExplorer",
+   "name": {
+    "de": "Glück und Glorie",
+    "en": "Fortune and Glory"
+   },
+   "percent": 0.0
+  },
+  {
+   "description": {
+    "de": "Auf ein gesatteltes Nutztier aufgestiegen",
+    "en": "Saddle-straddle-skedaddled cattle"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/f2dc2c170867edfcf487c075db91ca81d1ea3cce.jpg",
+   "key": "Mount",
+   "name": {
+    "de": "Hü-hott",
+    "en": "Giddy Up"
+   },
+   "percent": 0.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1621690/16b905897e784fa0ea756b89b59ce85853e7a2a1.jpg",
+   "key": "ObtainLegendaryScepter",
+   "name": {
+    "de": "Das Schleierkreuz",
+    "en": "The Veil Crux"
+   },
+   "percent": 0.1
+  },
+  {
+   "description": {
+    "de": "3 verschiedene Typen an Go-Karts in einer Kiste gelagert",
+    "en": "Stored 3 different kinds of Go-Karts in a chest"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1621690/260b1bcd6bbf6e5eb04f2e9cd994a1614613b18a.jpg",
+   "key": "Vehicles",
+   "name": {
+    "de": "Renngarage",
+    "en": "Racer's Garage"
+   },
+   "percent": 0.1
+  }
+ ],
+ "id": "1621690",
+ "platform": "steam"
+}

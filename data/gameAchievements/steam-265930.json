@@ -1,0 +1,1660 @@
+{
+ "achievements": [
+  {
+   "description": {
+    "de": "Schlag die Gruppe mit dem Todesbrocken.",
+    "en": "Hit the party with the Boulder of Death."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/fc8f73a7ba7231905e682feba0e08b5c8b6f2b07.jpg",
+   "key": "ACH_BOULDER_OF_DEATH",
+   "name": {
+    "de": "Todesbrocken",
+    "en": "Boulder of Death"
+   },
+   "percent": 31.4
+  },
+  {
+   "description": {
+    "de": "Finde das Sanctum 1 Wanderer-Denkmal",
+    "en": "Find the Sanctum 1 Walker Statue"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/7e713e027e2001cd7379ec532ce29a71b49de94e.jpg",
+   "key": "ACH_WALKER_S1",
+   "name": {
+    "de": "Passant",
+    "en": "Pedestrian"
+   },
+   "percent": 29.2
+  },
+  {
+   "description": {
+    "de": "Finde das Sanctum 2 Wanderer-Denkmal",
+    "en": "Find the Sanctum 2 Walker Statue"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/ab936c5792221f531eb7c8da3512055a1005141f.jpg",
+   "key": "ACH_WALKER_S2",
+   "name": {
+    "de": "LOEK Master",
+    "en": "LOEK master"
+   },
+   "percent": 40.4
+  },
+  {
+   "description": {
+    "de": "Werde Master des Ziegenturms.",
+    "en": "Become the master of the goat tower."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/baeac1703ddc0a180e8db99f444217220b54fd8a.jpg",
+   "key": "ACH_FINALLY",
+   "name": {
+    "de": "ENDLICH",
+    "en": "FINALLY"
+   },
+   "percent": 54.5
+  },
+  {
+   "description": {
+    "de": "Alles unter der Sonne wird dein Köngreich.",
+    "en": "Everything the light touches is your kingdom."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/3eb454e134028c802ff72f5d0d014e505de79dde.jpg",
+   "key": "ACH_GOAT_OF_THE_HILL",
+   "name": {
+    "de": "Ziege des Hügels",
+    "en": "Goat of the hill"
+   },
+   "percent": 11.6
+  },
+  {
+   "description": {
+    "de": "Goathenge in den Müll",
+    "en": "Thrash the Goathenge"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/5a93b6a0b4dcaac4beb6fd5d350f3090ec33a3ae.jpg",
+   "key": "ACH_GOATHENGE",
+   "name": {
+    "de": "Wozu ist das gut?",
+    "en": "What is its purpose?"
+   },
+   "percent": 46.7
+  },
+  {
+   "description": {
+    "de": "Wir sind alle Teufel und schicken diese Welt zur Hölle.",
+    "en": "We are each our own devil, and we make this world our hell."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/8a7687d29568c8f829b289d0790a4daa9745732a.jpg",
+   "key": "ACH_DEVILGOAT",
+   "name": {
+    "de": "Böse Ziege",
+    "en": "Devil Goat"
+   },
+   "percent": 33.7
+  },
+  {
+   "description": {
+    "de": "Tue nichts Böses.",
+    "en": "Do no evil."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/761d4d1b6ac541b840a5a7cd619d637ae7076a72.jpg",
+   "key": "ACH_ANGELGOAT",
+   "name": {
+    "de": "Engelsziege",
+    "en": "Angel Goat"
+   },
+   "percent": 52.3
+  },
+  {
+   "description": {
+    "en": "Visit 5 trampolines in one jump, bouncing on each trampoline once."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/0c8a3526b08111b810c8bcbffb4cd7b026a99e2f.jpg",
+   "key": "ACH_ALLTRAMPOLINES",
+   "name": {
+    "en": "Around the World on 5 Trampolines"
+   },
+   "percent": 4.4
+  },
+  {
+   "description": {
+    "de": "Opfere 3 Gegenstände des Sanctum.",
+    "en": "Sacrifice the 3 Sanctum items."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/72cf99837dee360af57c01ed2660498be9175b97.jpg",
+   "key": "ACH_SANCTUMSACRIFICE",
+   "name": {
+    "de": "Sanctum 3 hervorbringen?",
+    "en": "Trying to bring forth Sanctum 3?"
+   },
+   "percent": 5.5
+  },
+  {
+   "description": {
+    "de": "Ooops, das Spiel ist abgestürzt.",
+    "en": "Ooops, the game seems to have crashed."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/5e618c0c36a419452b9cfe20c3a28fdb61abb6de.jpg",
+   "key": "ACH_CRASH",
+   "name": {
+    "de": "Unfreiwillige QA",
+    "en": "Involuntary QA"
+   },
+   "percent": 22.3
+  },
+  {
+   "description": {
+    "de": "10 Punkte in Flappy Ziege.",
+    "en": "Score 10 points in Flappy Goat."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/2e180cfc8575db2cc3bd0d2d13771619b72bc386.jpg",
+   "key": "ACH_FLAPPY_GOAT_TEN",
+   "name": {
+    "de": "Der Flap Master",
+    "en": "The Flapmaster"
+   },
+   "percent": 3.2
+  },
+  {
+   "description": {
+    "de": "Mache 10 Salto vorwärts auf einen Streich.",
+    "en": "Do 10 front flips in one trick."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/44da1c5258c50d36a21bdbd18edba57b51b998cf.jpg",
+   "key": "ACH_TEN_FLIPS",
+   "name": {
+    "de": "Ich glaube nicht, dass das funktioniert",
+    "en": "I can't believe that worked"
+   },
+   "percent": 13.0
+  },
+  {
+   "description": {
+    "de": "Ziehe eine Person mit der Zunge auf das Laufband.",
+    "en": "Drag a person into the treadmill with your tongue."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/4efc9e28f6fda087812eacea72418f31b4cfe815.jpg",
+   "key": "ACH_NPC_TREADMILL",
+   "name": {
+    "de": "Cardio tötet deine Gewinne",
+    "en": "Cardio kills your gains"
+   },
+   "percent": 16.3
+  },
+  {
+   "description": {
+    "de": "Reise ins All!",
+    "en": "Travel to space!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/448085e1f388006e266ed5bb3732b54c95c95549.jpg",
+   "key": "ACH_RYMDSKEPP",
+   "name": {
+    "en": "Rymdskepp i Rymden"
+   },
+   "percent": 17.6
+  },
+  {
+   "description": {
+    "de": "Finde alle Trophäen von Goat Ville!",
+    "en": "Find all the trophies in Goat Ville!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/459340c31af41f247d71948b6eb7169e248e9358.jpg",
+   "key": "ACH_ALL_COLLECTIBLES",
+   "name": {
+    "de": "Gib dein Bestes",
+    "en": "Try Hard"
+   },
+   "percent": 4.7
+  },
+  {
+   "description": {
+    "de": "Gewinne die Meisterschaft!",
+    "en": "Win the title bout!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/ecda2ee8b6097eb99bf1f3cc17c4dc67569cb2dd.jpg",
+   "key": "ACH_RIPPED_GOAT",
+   "name": {
+    "en": "Alexander Goatstafsson"
+   },
+   "percent": 47.8
+  },
+  {
+   "description": {
+    "de": "Werde Königin von Goat Ville",
+    "en": "Become the Queen of Goat Ville"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/a45beb00bcb2c794a536c7a09d17ff538048d986.jpg",
+   "key": "ACH_GOAT_QUEEN",
+   "name": {
+    "de": "Ziegenkönigin",
+    "en": "Goat Queen"
+   },
+   "percent": 49.6
+  },
+  {
+   "description": {
+    "en": "Bounce 100 times on mattresses within 30 seconds."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/76022987fa3525c16dfaee1aa22b0381ce6568ae.jpg",
+   "key": "ACH_MATTRESS_MADNESS",
+   "name": {
+    "en": "Mattress Madness"
+   },
+   "percent": 4.9
+  },
+  {
+   "description": {
+    "de": "Leck den Segler.",
+    "en": "Lick the Hanging Glider."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/89f0f21cfcfa0008016a10b26fdb3bcaf65a522d.jpg",
+   "key": "ACH_MILE_HIGH_CLUB",
+   "name": {
+    "en": "Mile High Club"
+   },
+   "percent": 8.9
+  },
+  {
+   "description": {
+    "de": "Verhindere, dass der Hinterwäldler je wieder fährt.",
+    "en": "Make sure the Hillbilly never drives again."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/2cb6ca09634fb0764a6df7aec0e45062f5738f16.jpg",
+   "key": "ACH_DODGE_THIS",
+   "name": {
+    "de": "Ausweichen",
+    "en": "Dodge This"
+   },
+   "percent": 10.9
+  },
+  {
+   "description": {
+    "de": "Trete etwas in der Luft, während du einen Rückwärtssalto ausführst",
+    "en": "Kick something in the air while doing a backflip"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/400e09e87ad1ad15c51d714f0fd688f03665c2d9.jpg",
+   "key": "ACH_KICK_BACKFLIP",
+   "name": {
+    "en": "Flip-Kick"
+   },
+   "percent": 3.9
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Ramme den Eimer in eine Person",
+    "en": "Knock a bucket into a person"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/6cdc01ae601f026e4d1a7ddb1319ee3ffb51a02e.jpg",
+   "key": "ACH_MAX_MLG",
+   "name": {
+    "en": "Maximum MLG Big Plays"
+   },
+   "percent": 35.2,
+   "unlocked": "2019-04-17T17:38:20+02:00"
+  },
+  {
+   "description": {
+    "de": "Trete eine Person in ein Auto",
+    "en": "Kick a person into a car"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/53521e9b49cb9703ef45bad12159204ba490226d.jpg",
+   "key": "ACH_POWERHOOF",
+   "name": {
+    "de": "Powerhuf SCHMETTERBALL",
+    "en": "Powerhoof SMASH"
+   },
+   "percent": 4.8
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Lass 10 Gaskanister gleichzeitig explodieren",
+    "en": "Have 10 gas cannisters explode at the same time"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/beab844383325453b8bfcc70eeb596976d104dd7.jpg",
+   "key": "ACH_DEMOGOAT",
+   "name": {
+    "de": "Demoziege",
+    "en": "Demogoat"
+   },
+   "percent": 48.6,
+   "unlocked": "2019-04-17T17:46:25+02:00"
+  },
+  {
+   "description": {
+    "de": "Schwinge die Axt mit deiner Zunge",
+    "en": "Wield an axe with your tongue"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/96256c05ca3030c4c1bab7e2b2eb1b86b3e6909e.jpg",
+   "key": "ACH_JOHNNY",
+   "name": {
+    "de": "Jetzt kommt Jonny!",
+    "en": "Here's Johnny!"
+   },
+   "percent": 16.5
+  },
+  {
+   "description": {
+    "de": "Feuerwerfer",
+    "en": "Burn people from afar"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/e1dbc99a952d20f0befb33717aff9a24f6336c9f.jpg",
+   "key": "ACH_MAGE_FAVO",
+   "name": {
+    "de": "Der Zauberlehrling",
+    "en": "The mage's favourite"
+   },
+   "percent": 8.4
+  },
+  {
+   "description": {
+    "de": "Gesamten Wandlauf-Quest beenden",
+    "en": "Finish all wallrun quest"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/2f030350ce9302bdfd5ecd3557eb0e88836d6cd0.jpg",
+   "key": "ACH_GOATFALL",
+   "name": {
+    "de": "Standby für Ziegenfall",
+    "en": "Stand by for Goatfall"
+   },
+   "percent": 50.6
+  },
+  {
+   "description": {
+    "de": "Alle manuellen Quests beenden",
+    "en": "Finish all manual quests"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/24e2ce408eb76a4759f7e522552206096f8612ad.jpg",
+   "key": "ACH_TONYGOAT",
+   "name": {
+    "de": "Tony Ziege",
+    "en": "Tony Goat"
+   },
+   "percent": 4.5
+  },
+  {
+   "description": {
+    "de": "Male ein Farbenwirbelsturm",
+    "en": "Paint with all the colors of the wind"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/cab787c431f8a21f32f43bb612685f8ffa634e2b.jpg",
+   "key": "ACH_TORNADO_GOAT",
+   "name": {
+    "de": "Die Wilde",
+    "en": "The Savage"
+   },
+   "percent": 6.9
+  },
+  {
+   "description": {
+    "de": "Gib ein Konzert",
+    "en": "Hold your own concert"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/ac933b6f29e8a27751de6af160c3199dc590e8e6.jpg",
+   "key": "ACH_DEADGOA7",
+   "name": {
+    "de": "Ziegen und Sachen",
+    "en": "Goats 'n' Stuff"
+   },
+   "percent": 36.3
+  },
+  {
+   "description": {
+    "de": "Reingelatscht? Igitt",
+    "en": "Why did you step in that? Yuck"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/6ad50655da6aef521cd8097527bf31480cc6055a.jpg",
+   "key": "ACH_REPULSIVE_GOAT",
+   "name": {
+    "de": "Verdauung",
+    "en": "Disgusting"
+   },
+   "percent": 26.4
+  },
+  {
+   "description": {
+    "en": "srsly"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/16f91691a7b9c6c0cb718ad198e4e67a674ced62.jpg",
+   "key": "ACH_HITCHHIKER",
+   "name": {
+    "de": "Keine Panik",
+    "en": "Don't Panic"
+   },
+   "percent": 5.4
+  },
+  {
+   "description": {
+    "de": "Fahre das Boot im Zuckerrausch",
+    "en": "Ride the boat while on a sugar rush"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/6aa0fc859d429d82a2f0fe7423f32952cbdb2e2d.jpg",
+   "key": "ACH_SUGAR_LORD",
+   "name": {
+    "de": "Kolumbianischer Zuckerkönig",
+    "en": "Columbian Sugar Lord"
+   },
+   "percent": 3.5
+  },
+  {
+   "description": {
+    "de": "Finde alle Blöcke",
+    "en": "Find all the blocks"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/57d0ebf43890bec27c28aa865a796f075595f3f1.jpg",
+   "key": "ACH_BUILDER_GOAT",
+   "name": {
+    "de": "Bauarbeiter-Ziege",
+    "en": "Builder Goat"
+   },
+   "percent": 4.1
+  },
+  {
+   "description": {
+    "de": "Erreiche die Spitze beim Hindernisparcour",
+    "en": "Get on top of the Parkour obstacle course"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/ef89e74f421274ebdbe5f3986cec3fec8c8cf91a.jpg",
+   "key": "ACH_GOAT_BUILT",
+   "name": {
+    "de": "Ziegenbau",
+    "en": "GoatBuilt"
+   },
+   "percent": 7.0
+  },
+  {
+   "description": {
+    "de": "Kaufe alle Hüte",
+    "en": "Buy all hats"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/277f583feb16dd022db92a8c773c7e5e107eff87.jpg",
+   "key": "ACH_HAT_SIMULATOR",
+   "name": {
+    "de": "Hutsimulator",
+    "en": "Hat Simulator"
+   },
+   "percent": 3.2
+  },
+  {
+   "description": {
+    "de": "Komme ohne Fahrstuhl auf den Wolkenkratzer",
+    "en": "Get up on the skyscraper without using the elevator"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/745e156be3f301ac0fe2986eaa9e948501fdf652.jpg",
+   "key": "ACH_ASAMU_ELEVATOR",
+   "name": {
+    "de": "Eine Geschichte über meinen Aufzug",
+    "en": "A Story about my elevator"
+   },
+   "percent": 16.0
+  },
+  {
+   "description": {
+    "de": "Bekämpfe die Schildkröten",
+    "en": "Fight the turtles"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/e51747ec9e5cf9a1f39cbc07588e3dd534a9539d.jpg",
+   "key": "ACH_TURDLE",
+   "name": {
+    "de": "Ling Ling in die Schlacht gehen",
+    "en": "Ling Ling into battle go"
+   },
+   "percent": 25.0
+  },
+  {
+   "description": {
+    "de": "Fahre 60 Sekunden auf einem Fahrrad",
+    "en": "Ride a bike for 60 sec"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/73be43bd174455d6aafe106730db6605eef1a391.jpg",
+   "key": "ACH_ONE_BALL",
+   "name": {
+    "de": "Ein Ball",
+    "en": "One Ball"
+   },
+   "percent": 4.0
+  },
+  {
+   "description": {
+    "de": "Rieche so und seh so aus",
+    "en": "Smell and look like one"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/00b79684bf6e37d233b4e611703851600851fff0.jpg",
+   "key": "ACH_NECKBEARD",
+   "name": {
+    "de": "Nackenbart",
+    "en": "Neckbeard"
+   },
+   "percent": 3.0
+  },
+  {
+   "description": {
+    "de": "Knacke den Jackpot.",
+    "en": "Hit The jackpot."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/ef1d557140798f40033667196d27b77778072466.jpg",
+   "key": "ACH_JACKPOT",
+   "name": {
+    "de": "Vegas, Baby!",
+    "en": "Vegas, baby!"
+   },
+   "percent": 7.6
+  },
+  {
+   "description": {
+    "de": "Finde in Level 2 alle Gegenstände",
+    "en": "Find all the trophies in Goat City Bay."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/ce1928aec8beb731ac03bbd8d7ffc76b8f647702.jpg",
+   "key": "ACH_ALL_COLLECTIBLES_LEVEL_2",
+   "name": {
+    "de": "Ich liebe Ziegen",
+    "en": "I freaking love goats"
+   },
+   "percent": 2.9
+  },
+  {
+   "description": {
+    "de": "Leck die Achterbahn mit 6 angehängten Batterien",
+    "en": "Lick the rollercoaster with 6 batteries attached"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/2fecbe5b14b1b23476e895de531b637a9ec60ede.jpg",
+   "key": "ACH_ROLLER_COASTER",
+   "name": {
+    "de": "Ist das ein Ziege?",
+    "en": "Is that a goat?"
+   },
+   "percent": 3.5
+  },
+  {
+   "description": {
+    "de": "Erreiche in SteamWorld-Ziege eine Tiefe von 200.",
+    "en": "Get to a depth of 200 in SteamWorld Goat."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/82abc40f8e1d7dcbb9605924f7beae588114d9a8.jpg",
+   "key": "ACH_DIG",
+   "name": {
+    "de": "SteamWorld-Ziege",
+    "en": "SteamWorld Goat"
+   },
+   "percent": 2.5
+  },
+  {
+   "description": {
+    "de": "Geh mit einem Reiter auf dem Rücken auf das Katapult",
+    "en": "Go on the catapult with a rider on your back"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/ae96ed9793e5c2cc14870e3653405d7c1a6a9ab6.jpg",
+   "key": "ACH_VALKYRIE",
+   "name": {
+    "de": "Wallküre",
+    "en": "Valkyrie"
+   },
+   "percent": 4.3
+  },
+  {
+   "description": {
+    "de": "Ich entschuldige mich für meine Ziege",
+    "en": "I'm sorry about my goat"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/ef87aae18e8a29571cbe949cf3dafe19dc9ed0a7.jpg",
+   "key": "ACH_UNCLEGOAT",
+   "name": {
+    "de": "Eine Geschichte über meine Ziege",
+    "en": "A story about my goat"
+   },
+   "percent": 28.4
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 101",
+    "en": "Reach level 101"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/9e861e5251dedb4b7886a2ddb69d6020a6102d1e.jpg",
+   "key": "ACH_LEVEL_101",
+   "name": {
+    "de": "Besser als Warlords of Dredmor",
+    "en": "Better than Warlords of Dredmor"
+   },
+   "percent": 2.4
+  },
+  {
+   "description": {
+    "de": "Richte viel Schaden an. Mit deinem Hintern.",
+    "en": "Do a lot of hurt. With your butt."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/a7a815716d601c50a9f100eefb333674519d748e.jpg",
+   "key": "ACH_BUTTSLAM",
+   "name": {
+    "de": "Po tut weh",
+    "en": "Butthurt"
+   },
+   "percent": 19.8
+  },
+  {
+   "description": {
+    "de": "Besuche alle Zonen auf dem MMO Level",
+    "en": "Visit all zones on the MMO level"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/ed36d40533b2d2019934301b780e658bf2b1eae2.jpg",
+   "key": "ACH_ALL_MMO_ZONES",
+   "name": {
+    "en": "Sällskapsresan"
+   },
+   "percent": 5.1
+  },
+  {
+   "description": {
+    "de": "Gib Steve Works die Äpfel",
+    "en": "Give Steve Works the apples"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/0abd616a7b83ce7f086d33ccd35b3cb60ca8152d.jpg",
+   "key": "ACH_STEVES_QUEST",
+   "name": {
+    "de": "Steves Quest",
+    "en": "Steve's Quest"
+   },
+   "percent": 18.4
+  },
+  {
+   "description": {
+    "de": "Lecke einen Freund",
+    "en": "Lick a friend"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/058c14c2f53f7db3f55b9468c807dad84ad24584.jpg",
+   "key": "ACH_BFF",
+   "name": {
+    "en": "BFF"
+   },
+   "percent": 2.1
+  },
+  {
+   "description": {
+    "de": "Tournier-Mutator freischalten",
+    "en": "Unlock the jousting mutator"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/2890d7901418667dd1d2ac3f8a1fba1ec4cc89d4.jpg",
+   "key": "ACH_JOUST",
+   "name": {
+    "de": "Tournier-Ziege",
+    "en": "Jousting Goat"
+   },
+   "percent": 15.8
+  },
+  {
+   "description": {
+    "de": "Meerjungfrau-Mutator freischalten",
+    "en": "Unlock the mermaid mutator"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/f3f20061d1a8bd4f6b600f09cb7e0cfe41cb13f7.jpg",
+   "key": "ACH_MERMAID",
+   "name": {
+    "de": "Meerjungfrau-Ziege",
+    "en": "Mermaid Goat"
+   },
+   "percent": 5.1
+  },
+  {
+   "description": {
+    "de": "Zeitrad-Mutator freischalten",
+    "en": "Unlock the wheel of time mutator"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/aa4537da5aaa2508eb2ce2f75d4c2c911c50c39d.jpg",
+   "key": "ACH_WHEELGOAT",
+   "name": {
+    "de": "Ziege im Laufrad",
+    "en": "Wheel Goat"
+   },
+   "percent": 4.8
+  },
+  {
+   "description": {
+    "de": "OMG IST ES DAS, WAS ICH DENKE?",
+    "en": "OMG IS THAT WHAT I THINK IT IS?"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/68bbf1932018131f164ee239b67ed10484c47494.jpg",
+   "key": "ACH_OLDGOAT",
+   "name": {
+    "de": "Alte Ziege",
+    "en": "Old Goat"
+   },
+   "percent": 7.9
+  },
+  {
+   "description": {
+    "de": "Mutator ExcaliZiege freischalten",
+    "en": "Unlock the ExcaliGoat mutator"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/00885e4b2c2cf67a3aac729df8e3570fc2d6ad89.jpg",
+   "key": "ACH_EXCALIGOAT",
+   "name": {
+    "de": "ExcaliZiege",
+    "en": "ExcaliGoat"
+   },
+   "percent": 4.1
+  },
+  {
+   "description": {
+    "en": "Jörgen."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/7f2debb57e356600240ad84a3538f73a184b0ce6.jpg",
+   "key": "ACH_BEAR",
+   "name": {
+    "en": "Jörgen"
+   },
+   "percent": 7.1
+  },
+  {
+   "description": {
+    "de": "Mutator Schwerkraft-Ziege freischalten",
+    "en": "Unlock the gravity goat mutator"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/648fc72ae5e133db2bf1a9686179a1335e86bcfa.jpg",
+   "key": "ACH_GRAVITYGOAT",
+   "name": {
+    "de": "Schwerkraft-Ziege",
+    "en": "Gravity Goat"
+   },
+   "percent": 4.8
+  },
+  {
+   "description": {
+    "de": "Werde hinterhältig in die Falle gelockt",
+    "en": "Get deviously trapped again"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/48c25c729e02fa8995d1a2837361ae755778d69d.jpg",
+   "key": "ACH_TRAPAGAIN",
+   "name": {
+    "de": "Nicht schon wieder...",
+    "en": "Not again..."
+   },
+   "percent": 5.5
+  },
+  {
+   "description": {
+    "de": "Viel Spaß auf der Fahrt",
+    "en": "Enjoy your trip"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/eb4adaecf95edd19c671d1041abc4d04982d6e15.jpg",
+   "key": "ACH_BOATRIDE",
+   "name": {
+    "de": "Bootsfahrt",
+    "en": "Boat ride"
+   },
+   "percent": 10.0
+  },
+  {
+   "description": {
+    "de": "Spring auf das Launchpad",
+    "en": "Jump on the launchpad"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/fbbefd5845c0a447928416a4bc4a053109d38269.jpg",
+   "key": "ACH_GOATPAD",
+   "name": {
+    "de": "Musik Non Stop",
+    "en": "Music Non Stop"
+   },
+   "percent": 3.3
+  },
+  {
+   "description": {
+    "de": "Mäh, mäh mit dem Chor",
+    "en": "Baa with the choir"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/72a8bb914c42412599bb7f376c012aa158bbf4ff.jpg",
+   "key": "ACH_ELFSTREETBOYS",
+   "name": {
+    "en": "Elfstreet Boys"
+   },
+   "percent": 3.8
+  },
+  {
+   "description": {
+    "de": "Demoliere den Serverraum",
+    "en": "Trash the server room"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/53cf35e4d0e452f9dc1d2a2855c737f7aeb829a3.jpg",
+   "key": "ACH_VOLUNTARYQA",
+   "name": {
+    "de": "Freiwillig QA",
+    "en": "Voluntary  QA"
+   },
+   "percent": 4.3
+  },
+  {
+   "description": {
+    "de": "Schlag den Kerlen gegen das Knie",
+    "en": "Inflate that guy's knee"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/14eb6d0035e826bdeee5d9658e37269c1cf61602.jpg",
+   "key": "ACH_INFLATEKNEE",
+   "name": {
+    "de": "Ein Mann, zwei Schüsse und eine Religion",
+    "en": "One man, two shots and a religion"
+   },
+   "percent": 8.0
+  },
+  {
+   "description": {
+    "de": "Wirf den Zwerg Bilbo in die Lava",
+    "en": "Throw the dwarf Bilbo into the lava"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/cb488b72e5ff463ce5f8da2979897a2da14fae0f.jpg",
+   "key": "ACH_UNNECESSARYJOURNEY",
+   "name": {
+    "de": "Eine unnötige Reise",
+    "en": "An Unnecessary Journey"
+   },
+   "percent": 2.4
+  },
+  {
+   "description": {
+    "de": "Zeig einen Kartentrick beim Zauberkünstler",
+    "en": "Do a card trick at the magician"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/7b5d05baa8a12aa763385b18bad64915b01861bc.jpg",
+   "key": "ACH_MAGICIAN",
+   "name": {
+    "de": "Show stehlen",
+    "en": "Steal the show"
+   },
+   "percent": 3.2
+  },
+  {
+   "description": {
+    "de": "Wie fängst du Ziegen?",
+    "en": "How do you catch goats?"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/059074efb55c28dd429ce18e233502a458b09ee6.jpg",
+   "key": "ACH_GOATA_GET_EM_ALL",
+   "name": {
+    "de": "Schnapp' sie dir alle!",
+    "en": "Goatta catch 'em all!"
+   },
+   "percent": 3.0
+  },
+  {
+   "description": {
+    "de": "Verbrenne sie!",
+    "en": "Burn them!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/fe78f7c43e8921b1b7f29fd730b91f3db77befb4.jpg",
+   "key": "ACH_WITCHBURN",
+   "name": {
+    "en": "Malleus Maleficarum"
+   },
+   "percent": 11.4
+  },
+  {
+   "description": {
+    "de": "Finde alle Trophäen des MMO Level.",
+    "en": "Find all the trophies on the MMO Level."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/73489383981e1244b42166f1e4bfa9f4fe5d7b13.jpg",
+   "key": "ACH_ALL_COLLECTIBLES_MMO",
+   "name": {
+    "de": "Hassliebe",
+    "en": "Love or Hate?"
+   },
+   "percent": 2.1
+  },
+  {
+   "description": {
+    "de": "Er bricht nie dann aus, wenn du es willst.",
+    "en": "It never erupts when you want it to."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/8774a51e66bccaa6a3473b91a5a96201e36555a8.jpg",
+   "key": "ACH_TROLL_GEISER",
+   "name": {
+    "de": "Island erleben",
+    "en": "The Icelandic Experience"
+   },
+   "percent": 3.9
+  },
+  {
+   "description": {
+    "en": "Craft all the weapons in one game"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/508f03db90b423eea63ac6c3b942e9d8484a7150.jpg",
+   "key": "ACH_CRAFTALLWEAPONS",
+   "name": {
+    "en": "The goa'th amendment"
+   },
+   "percent": 5.7
+  },
+  {
+   "description": {
+    "en": "Craft all items in one game"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/dee18d34666409029fb6b7162c141c43ad975e32.jpg",
+   "key": "ACH_CRAFTALL",
+   "name": {
+    "en": "Survivalist"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "en": "Survive 10 days"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/4f938b542ebd80961b23c0f6e207bb1053c052e0.jpg",
+   "key": "ACH_SURVIVELIFE",
+   "name": {
+    "en": "Survive for your life"
+   },
+   "percent": 2.2
+  },
+  {
+   "description": {
+    "en": "Crystallize and break 30 zombies in one game"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/d597d61b5b8532f703d29ef53dfb29bcde19b614.jpg",
+   "key": "ACH_SHATTER",
+   "name": {
+    "en": "Shattered dreams"
+   },
+   "percent": 1.7
+  },
+  {
+   "description": {
+    "en": "Kill 20 zombies in one game"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/657eb6c6696d64fc9f1f3cbb56211223bf2a98a9.jpg",
+   "key": "ACH_KILLZOMBIES",
+   "name": {
+    "en": "Zombie slayer"
+   },
+   "percent": 2.9
+  },
+  {
+   "description": {
+    "en": "Eat 50 food items in one game"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/9212b8b7a007c1c6c4a0fbbfd5916e9491947806.jpg",
+   "key": "ACH_NOSTARVE",
+   "name": {
+    "en": "Don't starve"
+   },
+   "percent": 1.9
+  },
+  {
+   "description": {
+    "en": "Paraglide in the air for 1 minute"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/e96a41629c752287ffaed9cb9c21399ca2f1b248.jpg",
+   "key": "ACH_PARACHUTE",
+   "name": {
+    "en": "Hang tight"
+   },
+   "percent": 2.3
+  },
+  {
+   "description": {
+    "en": "Kill 7 zombies with one minifun"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/fd700b23eb886a153dfe944c237576a9a8910604.jpg",
+   "key": "ACH_MINIGUN",
+   "name": {
+    "en": "Too much fun"
+   },
+   "percent": 3.3
+  },
+  {
+   "description": {
+    "en": "Hit 5 zombies in one bullet dive"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/32fa58b10ccc50623a13d2e56c58779f2c8a2cc8.jpg",
+   "key": "ACH_BULLETDIVE",
+   "name": {
+    "en": "Goat from above"
+   },
+   "percent": 2.0
+  },
+  {
+   "description": {
+    "en": "Hit 4 at once with a voodoo bomb"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/5fb12a9e4ed9ed20399a64188ac1adb528c6baf5.jpg",
+   "key": "ACH_LOOKATIT",
+   "name": {
+    "en": "Look at it go!"
+   },
+   "percent": 2.3
+  },
+  {
+   "description": {
+    "en": "Play GoatSimSim for 5 minutes"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/6496f7e16198c0e7d158ad077bb2038a93c16656.jpg",
+   "key": "ACH_I_AM_GOAT",
+   "name": {
+    "en": "I Am Goat"
+   },
+   "percent": 1.9
+  },
+  {
+   "description": {
+    "en": "Beat the whiplash course without getting wet"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/96d2d3dedecdca228466d504f033b57537657c7d.jpg",
+   "key": "ACH_BIG_IN_JAPAN",
+   "name": {
+    "en": "Big in japan"
+   },
+   "percent": 1.9
+  },
+  {
+   "description": {
+    "en": "Make the stew taste as good as HUMANLY possible"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/022504f9d287cb72d1cbcbbb36e220d7f3a0764f.jpg",
+   "key": "ACH_MASTER_CHEF",
+   "name": {
+    "en": "Masterchef"
+   },
+   "percent": 2.8
+  },
+  {
+   "description": {
+    "en": "Clear 25 survival quests in one game"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/a322b05ebe31322e3ff48c13f873e12bbc3c4572.jpg",
+   "key": "ACH_A_NEW_CHALLENGER",
+   "name": {
+    "en": "A new challenger has appeared"
+   },
+   "percent": 1.7
+  },
+  {
+   "description": {
+    "en": "Use the slippery slide to land in the kiddie pool"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/a787cd9a24877e8be888e5564b2dc09f050c4eae.jpg",
+   "key": "ACH_WARM_BATH",
+   "name": {
+    "en": "Warm bath"
+   },
+   "percent": 1.8
+  },
+  {
+   "description": {
+    "en": "Find all the trophies in GoatZ"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/81bb9cd85fe377d190d69566e00d88b07f6359b8.jpg",
+   "key": "ACH_ALL_COLLECTIBLES_ZOMBIE",
+   "name": {
+    "en": "Hoarder"
+   },
+   "percent": 1.7
+  },
+  {
+   "description": {
+    "en": "Are you bread?"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/fc5d223714f7fce75fba6f4ad985b19702fd5288.jpg",
+   "key": "ACH_I_AM_BREAD",
+   "name": {
+    "en": "I am Bread"
+   },
+   "percent": 4.4
+  },
+  {
+   "description": {
+    "en": "Find all the trophies on the Payday Level."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/55139a0bc44060be0513d0d91bda85f2a2938079.jpg",
+   "key": "ACH_ALL_COLLECTIBLE_HEIST",
+   "name": {
+    "en": "The Big Score"
+   },
+   "percent": 1.9
+  },
+  {
+   "description": {
+    "en": "Win 3 hands at a Blackjack table."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/1d875ce016a0534e9208f9d735b623b3dd685e8f.jpg",
+   "key": "ACH_BLACKJACK",
+   "name": {
+    "en": "What’s the count?"
+   },
+   "percent": 1.8
+  },
+  {
+   "description": {
+    "en": "Just finish that one LAST job."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/e7b7ca986bd135dcfce0590b7d4e898706cd5701.jpg",
+   "key": "ACH_ALL_PRANKS",
+   "name": {
+    "en": "Retirement"
+   },
+   "percent": 2.7
+  },
+  {
+   "description": {
+    "en": "Show off your vehicle air control skills in the desert."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/a098f12a8b1ab7dca09bf15268ee881a57805377.jpg",
+   "key": "ACH_BOOST_FLYING",
+   "name": {
+    "en": "Rocket League"
+   },
+   "percent": 1.8
+  },
+  {
+   "description": {
+    "en": "A Trip to the Moon."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/72513d283d58319728e35201237177c51c8c0e1c.jpg",
+   "key": "ACH_TO_THE_MOON",
+   "name": {
+    "en": "Le Voyage Dans la Lune."
+   },
+   "percent": 2.6
+  },
+  {
+   "description": {
+    "en": "Use a cannon to travel to the Island in the Sky."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/c7ac0cdc58f54d6c69cef29e2062112212589925.jpg",
+   "key": "ACH_ISLAND_IN_THE_AIR",
+   "name": {
+    "en": "Itsamee!"
+   },
+   "percent": 2.2
+  },
+  {
+   "description": {
+    "en": "Throw 5 police officers into prison."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/ef0e8c2fe6489781c798c001f0bd206676a945b2.jpg",
+   "key": "ACH_IMPRISON_POLICE",
+   "name": {
+    "en": "Suppress the Suppressor"
+   },
+   "percent": 1.8
+  },
+  {
+   "description": {
+    "en": "Wear 30 masks at once."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/50d6cab3a196ea97638e54a5c3bb44ecd1c71b66.jpg",
+   "key": "ACH_MASKS",
+   "name": {
+    "en": "Plentiful masquerade"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "en": "Listen to the whole pan flute song."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/58529302bcd96a9a3bd2fac88decef6513f6670e.jpg",
+   "key": "ACH_PAN_FLUTE",
+   "name": {
+    "en": "The Song of my People"
+   },
+   "percent": 1.7
+  },
+  {
+   "description": {
+    "en": "Enable the hydraulic cars."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/3c5d657e61947e85e9f69d85de1ddfa29ced08ac.jpg",
+   "key": "ACH_HYDRAULIC_CARS",
+   "name": {
+    "en": "Bounce it!"
+   },
+   "percent": 1.9
+  },
+  {
+   "description": {
+    "en": "Charm a cow using Valentino Salami."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/69a3c728f0c88c326c42c7c9cb27112ace98d052.jpg",
+   "key": "ACH_CHARM_COW",
+   "name": {
+    "en": "The Cow Whisperer"
+   },
+   "percent": 2.6
+  },
+  {
+   "description": {
+    "en": "Use Dolph Spaghetti to lift a crewmember on top of the tallest building."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/73a3a9b4a198a16102bf40535d7e95891ed7e69a.jpg",
+   "key": "ACH_DOLPH_LIFT",
+   "name": {
+    "en": "You raise me up!"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "en": "Hogtie 50 NPCs."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/bd9d3bad1cf2e7e03f35675749ff2a7f3a5dfb0b.jpg",
+   "key": "ACH_CABLE_TIE",
+   "name": {
+    "en": "Fifty Shades of NPC"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "en": "Spray the dancers using Humphrey Ciabatta."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/956ad90ea5d2844c4d14c9ce55b0156de45147c4.jpg",
+   "key": "ACH_CAMEL_DANCERS",
+   "name": {
+    "en": "Camel Cavalry"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "en": "Lick all crew members together to form a Goatipede."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/b6b76984326b40ddff732d43a1c533094a2245bf.jpg",
+   "key": "ACH_CREW_LICK",
+   "name": {
+    "en": "Goatipede"
+   },
+   "percent": 1.8
+  },
+  {
+   "description": {
+    "en": "Gather the crew for some drive-in movies."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/0b7b91af3624d30746e04d76111dc9a92dc9c627.jpg",
+   "key": "ACH_CREW_BIO",
+   "name": {
+    "en": "Goatfellas"
+   },
+   "percent": 1.7
+  },
+  {
+   "description": {
+    "en": "Place a Hogtied NPC on the train tracks."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/8e8686b59a630e108acde398f51c6079931b29f7.jpg",
+   "key": "ACH_NPC_TRAIN",
+   "name": {
+    "en": "Dastardly"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "en": "Headbutt someone out of their car, then run them over!"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/ac2fa2de94b92a7235e22c51a4fcfa8155b81796.jpg",
+   "key": "ACH_GTA",
+   "name": {
+    "en": "Goat Theft Auto"
+   },
+   "percent": 2.0
+  },
+  {
+   "description": {
+    "en": "Pickup a photon sword as father or good goat."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/fa580c983542c888fb7a7265e4a06274dc7d3efb.jpg",
+   "key": "ACH_JEDI_SITH",
+   "name": {
+    "en": "Use the sword, goat"
+   },
+   "percent": 1.7
+  },
+  {
+   "description": {
+    "en": "Destroy all freighters."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/d2e6f46c0843438641903979fe9c4485dea0e4a3.jpg",
+   "key": "ACH_NOT_AFRIGHT",
+   "name": {
+    "en": "Be not afreight"
+   },
+   "percent": 1.4
+  },
+  {
+   "description": {
+    "en": "Blow up all pirate ships."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/6143a21eecef40e53c9085acbd396155fd13e9e7.jpg",
+   "key": "ACH_RULER_OF_SKIES",
+   "name": {
+    "en": "Ruler of the seven skies"
+   },
+   "percent": 1.4
+  },
+  {
+   "description": {
+    "en": "Shoot down 30 police ships."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/d15da2e4f717e6480d81dbb496d376d9f4186eb6.jpg",
+   "key": "ACH_BACON_MARAUDER",
+   "name": {
+    "en": "Bacon marauder"
+   },
+   "percent": 1.4
+  },
+  {
+   "description": {
+    "en": "Destroy 100 asteroids."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/e087c8d96c529985fd2a144a500c58bea058fa35.jpg",
+   "key": "ACH_MINER_INCONVENIENCE",
+   "name": {
+    "en": "Miner inconvenience"
+   },
+   "percent": 1.4
+  },
+  {
+   "description": {
+    "en": "Headbutt all alien eggs."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/59389ef11abbfadabe5d6a44da4049bd92c25aa5.jpg",
+   "key": "ACH_ALIEN_OR_EGG",
+   "name": {
+    "en": "What came first? The alien or the egg?"
+   },
+   "percent": 1.5
+  },
+  {
+   "description": {
+    "en": "Complete centrifuge event."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/13ccc96657397b46d1ee710195bbde269691331b.jpg",
+   "key": "ACH_PUKE_MACHINE",
+   "name": {
+    "en": "The puke machine"
+   },
+   "percent": 2.7
+  },
+  {
+   "description": {
+    "en": "Find 10 trophies."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/ab2fb98763c971e6efd951e181d6573de9b5c88c.jpg",
+   "key": "ACH_SWEET_COLLECTION",
+   "name": {
+    "en": "Sweet collection!"
+   },
+   "percent": 1.8
+  },
+  {
+   "description": {
+    "en": "Find 20 trophies."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/1ff8a382a2f148102adff435861278f554fdd7f1.jpg",
+   "key": "ACH_LIMITED_EDITION",
+   "name": {
+    "en": "Wow is that a limited edition?"
+   },
+   "percent": 1.5
+  },
+  {
+   "description": {
+    "en": "Find all trophies in Space."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/1e85cb6a3fab8135a8f2e1bbc608406b32da4a9b.jpg",
+   "key": "ACH_NERD",
+   "name": {
+    "en": "NERD!"
+   },
+   "percent": 1.4
+  },
+  {
+   "description": {
+    "en": "I wanna be a baahlionaire."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/e63598e61537a240b3b6630cca02437f4288afb0.jpg",
+   "key": "ACH_BAAHLIONAIRE",
+   "name": {
+    "en": "Gather $1000000"
+   },
+   "percent": 1.9
+  },
+  {
+   "description": {
+    "en": "Mine 10 pieces of channitatium."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/6510e531a639a944778322cf62bd22b41e7bec70.jpg",
+   "key": "ACH_CAPTAIN_INDUSTRY",
+   "name": {
+    "en": "Captain industry"
+   },
+   "percent": 1.8
+  },
+  {
+   "description": {
+    "en": "Find all the pony horses."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/09f55609e1fd494e4cd26c9bd183f56b4fa60a9c.jpg",
+   "key": "ACH_MY_LITTLE_BRONY",
+   "name": {
+    "en": "My little brony"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "en": "Complete test chambers."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/683acca9b7283f7ca01f8a025f61301b454d075f.jpg",
+   "key": "ACH_TESTAHOLIC",
+   "name": {
+    "en": "Testaholic"
+   },
+   "percent": 1.9
+  },
+  {
+   "description": {
+    "en": "Run wild with the podracer."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/b62bed0f9fa933ff3eae62edb6a9ec3062c3bf5e.jpg",
+   "key": "ACH_ITS_WORKING",
+   "name": {
+    "en": "It's working... IT'S WORKING!"
+   },
+   "percent": 2.9
+  },
+  {
+   "description": {
+    "en": "Headbutt Lawrence S.Windler in his lair."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/169a5991b70d00159fcad56af1c38faacb903155.jpg",
+   "key": "ACH_FUND_THIS",
+   "name": {
+    "en": "Fund this!"
+   },
+   "percent": 2.2
+  },
+  {
+   "description": {
+    "en": "Visit the badehaus."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/7ed506ddfa66a7aea8a73d4f3fecf1a68ced128d.jpg",
+   "key": "ACH_SPLISH_SPLASH",
+   "name": {
+    "en": "splishy splashy wibbly wobbly timey wimey"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "en": "Wrap a garl'eek in tinfoil."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/01ff51a88a0c02d4ad16a04a9b94d3886ffaf7fb.jpg",
+   "key": "ACH_GRILL_PREP",
+   "name": {
+    "en": "Ready for the grill"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "en": "Tag 10 walls."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/6bb809a71dc193058c10a05d83bd5c128020a765.jpg",
+   "key": "ACH_CANVAS_WORLD",
+   "name": {
+    "en": "The world is your canvas"
+   },
+   "percent": 1.7
+  },
+  {
+   "description": {
+    "en": "Put a money crate in the mining shredder."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/ed6fa3c36e178dc6e4b931ae26ad8e3bc4d4418e.jpg",
+   "key": "ACH_SPEND_TO_MAKE",
+   "name": {
+    "en": "Spend money to make money"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "en": "Wear 30 things as a hat at the same time."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/265930/c787a2630f7f21dcfe5801f4b639c53b84bf789f.jpg",
+   "key": "ACH_FEDORABLE",
+   "name": {
+    "en": "That's Fedorable"
+   },
+   "percent": 1.5
+  }
+ ],
+ "id": "265930",
+ "platform": "steam"
+}

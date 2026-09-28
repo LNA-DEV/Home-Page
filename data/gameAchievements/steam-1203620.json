@@ -1,0 +1,778 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "de": "Besiege den Wächter des ersten Elixierbrunnens.",
+    "en": "Defeat the guardian of the first elixir well."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/c398f65f0e7cd06bd0f1d2a9c936b08a219856e0.jpg",
+   "key": "ACHI_3bf8c19a-da15-4e56-9c37-9360c31c2333",
+   "name": {
+    "de": "Donnernder Erfolg",
+    "en": "Thundering success"
+   },
+   "percent": 72.9,
+   "unlocked": "2024-02-16T20:47:43+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Besiege den Brut-Irrlichtwyrm",
+    "en": "Defeat the shroud wyvern."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/7ce3e22e1173963583959a91468b120f66662be3.jpg",
+   "key": "ACHI_85f72f0e-b544-4715-9f2b-3ba42ca7feb3",
+   "name": {
+    "de": "Entthront",
+    "en": "Dethroned"
+   },
+   "percent": 37.8,
+   "unlocked": "2024-12-06T22:06:42+01:00"
+  },
+  {
+   "description": {
+    "de": "Finde alle vergessenen „Wache des Nordens“-Ausrüstungsteile.",
+    "en": "Find all forgotten \"guard of the north\" armor pieces."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/3e56f7960be028d56ef641ea90bc418e2a3db993.jpg",
+   "key": "ACHI_0e49d616-525e-4124-9dee-e8e81fc4408d",
+   "name": {
+    "de": "Bruchstücke der Vergangenheit",
+    "en": "Pieces of the past"
+   },
+   "percent": 16.6
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erschaffe einen Flammenaltar.",
+    "en": "Create a flame altar."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/fb9c2ec7a1931dc461db7d7187d000879875e095.jpg",
+   "key": "ACHI_3c075214-f87e-48b8-b72a-c7833d57118e",
+   "name": {
+    "de": "Ein wahres Zuhause",
+    "en": "A place to call home"
+   },
+   "percent": 84.8,
+   "unlocked": "2024-02-12T20:35:31+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Stelle einen Gleiter her (oder erhalte ihn anderweitig)",
+    "en": "Craft or obtain a glider."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/08e86a9f6fe0428fe4e9a333498f22597b1fd3bd.jpg",
+   "key": "ACHI_bd29a8fc-25de-4d8a-8522-fe1e94cf38a4",
+   "name": {
+    "de": "Freier Fall",
+    "en": "Freefall"
+   },
+   "percent": 76.5,
+   "unlocked": "2024-02-12T20:49:38+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Stelle einen Greifhaken her (oder erhalte ihn anderweitig)",
+    "en": "Craft or obtain a grappling hook."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/f8c376e69afe8881abe2c2ccefd046a7bff6046d.jpg",
+   "key": "ACHI_ad0f5f62-d12c-4f22-99bd-6500fc1dea64",
+   "name": {
+    "de": "Abkürzung",
+    "en": "Shortcut"
+   },
+   "percent": 77.8,
+   "unlocked": "2024-02-12T21:15:29+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Stelle einen einfachen Gegenstand her.",
+    "en": "Craft a simple item."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/b14547c51751556eb86986f0e11bd8eb702c0895.jpg",
+   "key": "ACHI_24ddabef-6f56-4e60-b012-41b63402497c",
+   "name": {
+    "de": "Und so beginnt es",
+    "en": "Thus it begins"
+   },
+   "percent": 90.8,
+   "unlocked": "2024-02-12T20:43:46+01:00"
+  },
+  {
+   "description": {
+    "de": "Besorge dir einen Geistergleiter.",
+    "en": "Obtain a ghost glider."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/a10bf1cc79350a5c44584824da4099c40166d3aa.jpg",
+   "key": "ACHI_b9c50cda-271c-4a4f-a423-c7667452503f",
+   "name": {
+    "de": "Geflügelter Sieg",
+    "en": "Winged Victory"
+   },
+   "percent": 27.4
+  },
+  {
+   "description": {
+    "de": "Finde alle Flammenschreine und Refugien in den Hochweiden.",
+    "en": "Find all flame shrines and sanctums in the Springlands."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/0b13ea48246c87e9c209a0864f9a0605515f2edc.jpg",
+   "key": "ACHI_31af8ebe-8f9d-48fb-ae35-c3282bf29e3b",
+   "name": {
+    "de": "Funken der Hochweiden",
+    "en": "Spark of the Springlands"
+   },
+   "percent": 2.4
+  },
+  {
+   "description": {
+    "de": "Finde alle Flammenschreine und Refugien im Düsterdickicht.",
+    "en": "Find all flame shrines and sanctums in the Revelwoods."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/49fb214cc436552116579615d16c389bad443d84.jpg",
+   "key": "ACHI_5905c28e-d7f0-47c9-9f9c-c29ef7414e65",
+   "name": {
+    "de": "Funken des Düsterdickichts",
+    "en": "Spark of the Revelwoods"
+   },
+   "percent": 1.7
+  },
+  {
+   "description": {
+    "de": "Finde alle Flammenschreine und Refugien auf den Nomaden-Anhöhen.",
+    "en": "Find all flame shrines and sanctums in the Nomad Highlands."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/421981ccfadc83e72d3eb97f2bfd5c65c73077ab.jpg",
+   "key": "ACHI_369b1706-07bd-4708-94f0-d9b059ae0fb0",
+   "name": {
+    "de": "Funken der Nomaden-Anhöhen",
+    "en": "Spark of the Nomad Highlands"
+   },
+   "percent": 1.3
+  },
+  {
+   "description": {
+    "de": "Finde alle Flammenschreine und  Refugien im Ödland.",
+    "en": "Find all flame shrines and sanctums in the Kindlewastes."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/1f6f846f9d7c76461970ea1c4458cfdb8dd88b68.jpg",
+   "key": "ACHI_eb0277bb-89ca-422a-a7f0-8af6e180348f",
+   "name": {
+    "de": "Funken des Ödlandes",
+    "en": "Spark of the Kindlewastes"
+   },
+   "percent": 1.5
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Baue jedes wertvolle Material auf den Hochweiden ab.",
+    "en": "Mine every valuable material in the Springlands."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/5e1e799d036a80da36242100167ca1f306a70cd3.jpg",
+   "key": "ACHI_1f8281f9-d0ae-41c6-89bd-90ed9e1e7062",
+   "name": {
+    "de": "Maulwurf der Hochweiden",
+    "en": "Mole of the Springlands"
+   },
+   "percent": 71.6,
+   "unlocked": "2024-02-16T22:11:22+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Baue jedes wertvolle Material im Düsterdickicht ab.",
+    "en": "Mine every valuable material in the Revelwoods."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/cc6f11432e25df02f984f93f9313e6cad41a1935.jpg",
+   "key": "ACHI_c7e093f3-e8a6-4cb3-bcaa-459f42c8b783",
+   "name": {
+    "de": "Maulwurf des Düsterdickichts",
+    "en": "Mole of the Revelwoods"
+   },
+   "percent": 41.5,
+   "unlocked": "2024-03-22T22:00:30+01:00"
+  },
+  {
+   "description": {
+    "de": "Baue jedes wertvolle Material auf den Nomaden-Anhöhen ab.",
+    "en": "Mine every valuable material in the Nomad Highlands."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/481a155e27e881b809d3a1216d2b2654c388049a.jpg",
+   "key": "ACHI_db3a3375-c3de-4f3e-a4cc-3fcbad903b6a",
+   "name": {
+    "de": "Maulwurf der Nomaden-Anhöhen",
+    "en": "Mole of the Nomad Highlands"
+   },
+   "percent": 30.0
+  },
+  {
+   "description": {
+    "de": "Baue jedes wertvolle Material im Ödland ab.",
+    "en": "Mine every valuable material in the Kindlewastes."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/447990f3465e3e5059447578d2b1308d59a1ad03.jpg",
+   "key": "ACHI_3b0bdd62-d91d-495c-9038-bed06f2977a7",
+   "name": {
+    "de": "Maulwurf des Ödlandes",
+    "en": "Mole of the Kindlewastes"
+   },
+   "percent": 26.3
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Baue zum ersten Mal von Terrain ab.",
+    "en": "Mine terrain for the first time."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/d17970fa2e341021d5011263d7b86213d85e7571.jpg",
+   "key": "ACHI_4953e443-f1cc-46f7-9b83-99aa61b3843d",
+   "name": {
+    "de": "Setze ein Zeichen",
+    "en": "Leave a mark"
+   },
+   "percent": 83.9,
+   "unlocked": "2024-02-16T22:21:01+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Untersuche alle Obelisken in den Hochweiden.",
+    "en": "Read all obelisks in the Springlands."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/f6b41707744836e4ebf87d43ca6c16890c83cc41.jpg",
+   "key": "ACHI_3f7c1fe5-526e-4913-9105-401b04a03fac",
+   "name": {
+    "de": "Geheimniswahrer der Hochweiden",
+    "en": "Springlands secret keeper"
+   },
+   "percent": 40.9,
+   "unlocked": "2024-02-23T22:53:13+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Untersuche alle Obelisken im Düsterdickicht.",
+    "en": "Read all obelisks in the Revelwoods."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/d75e4d6e1d68e316e3c9a97aae5f996cad399604.jpg",
+   "key": "ACHI_4faf244f-0478-4560-ae74-19f4456760ed",
+   "name": {
+    "de": "Geheimniswahrer des Düsterdickichts",
+    "en": "Revelwoods secret keeper"
+   },
+   "percent": 23.5,
+   "unlocked": "2025-05-18T12:10:09+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Untersuche alle Obelisken auf den Nomaden-Anhöhen.",
+    "en": "Read all obelisks in the Nomad Highlands."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/23fac7ff3e12777512ce607f18dcb6376e71de02.jpg",
+   "key": "ACHI_45b3b6ac-7131-4c10-a8b5-67c3763da997",
+   "name": {
+    "de": "Geheimniswahrer der Nomaden-Anhöhen",
+    "en": "Nomad Highlands secret keeper"
+   },
+   "percent": 21.1,
+   "unlocked": "2024-12-07T21:40:41+01:00"
+  },
+  {
+   "description": {
+    "de": "Untersuche alle Obelisken im Ödland.",
+    "en": "Read all obelisks in the Kindlewastes."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/4d8d4ebeeafbc829f9720b1340e4f0ff3213c5fc.jpg",
+   "key": "ACHI_97b9e264-ca8d-423c-8818-9b3c8365b053",
+   "name": {
+    "de": "Geheimniswahrer des Ödlandes",
+    "en": "Kindlewastes secret keeper"
+   },
+   "percent": 13.0
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erreiche Stufe 2.",
+    "en": "Reach level 2."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/71cb041e3f8cde24d4307a6944c83f0a80fc0551.jpg",
+   "key": "ACHI_bd0c0828-7d59-4d74-b274-66d5c9bde3a8",
+   "name": {
+    "de": "Etwas richtig machen",
+    "en": "Doing something right"
+   },
+   "percent": 95.5,
+   "unlocked": "2024-02-12T20:16:47+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erreiche Stufe 5.",
+    "en": "Reach level 5."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/852628f18b7624b92c641f9062909b08935607d7.jpg",
+   "key": "ACHI_1137a2ea-3f08-47db-8c57-e10b8d2be838",
+   "name": {
+    "de": "Auf dem Weg",
+    "en": "On the way"
+   },
+   "percent": 64.4,
+   "unlocked": "2024-02-17T21:18:17+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erreiche Stufe 10.",
+    "en": "Reach level 10."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/ca7add0c69545896b5d170440968246e5979985c.jpg",
+   "key": "ACHI_bd2895f6-3849-48c0-a4bf-2e390e834e76",
+   "name": {
+    "de": "Die Dinge fügen sich",
+    "en": "Things come together"
+   },
+   "percent": 48.5,
+   "unlocked": "2024-11-22T21:14:44+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erreiche Stufe 15.",
+    "en": "Reach level 15."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/cc70ec1bbdca20a5bdb4059fb62d5243d5a1dde7.jpg",
+   "key": "ACHI_670f5c41-0834-401c-8d3f-ef8f80b9d93d",
+   "name": {
+    "de": "Man gewöhnt sich daran",
+    "en": "Getting a feel for it"
+   },
+   "percent": 39.5,
+   "unlocked": "2024-12-07T21:40:41+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erreiche Stufe 20.",
+    "en": "Reach level 20."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/6a201ee937bba641bb44c986ed62137272543444.jpg",
+   "key": "ACHI_e915dda6-87f6-42c6-8fde-b61b66215fb6",
+   "name": {
+    "de": "Wir sind weit gekommen",
+    "en": "How far we have come"
+   },
+   "percent": 32.1,
+   "unlocked": "2025-05-18T20:46:02+02:00"
+  },
+  {
+   "description": {
+    "de": "Erreiche Stufe 25.",
+    "en": "Reach level 25."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/eb688d88194c6beca0a60d599c3ed2b6e28db811.jpg",
+   "key": "ACHI_36add8fa-6f4b-4fc4-9b32-a442600f75c2",
+   "name": {
+    "de": "Beeindruckende Reise",
+    "en": "Impressive journey"
+   },
+   "percent": 25.3
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schalte die erste Fähigkeit frei.",
+    "en": "Unlocked the first skill."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/2c8cf8810f1f2880ecf20ffb4cc45cd7c3e63bc0.jpg",
+   "key": "ACHI_17ce5b30-b3de-4320-9b31-97b6f11b9c7c",
+   "name": {
+    "de": "Gelehrter",
+    "en": "Erudite"
+   },
+   "percent": 87.6,
+   "unlocked": "2024-02-16T21:04:05+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Die Warte in den Hochweiden erreicht.",
+    "en": "Reached an ancient spire in the Springlands."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/024fd28224f53931eac1eadb7941481e57493240.jpg",
+   "key": "ACHI_0247d74e-954f-4144-ba90-dba9c71f5831",
+   "name": {
+    "de": "Hochweiden-Sterngucker",
+    "en": "Springlands stargazer"
+   },
+   "percent": 74.2,
+   "unlocked": "2024-02-16T21:21:43+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Die Warte im Düsterdickicht erreicht.",
+    "en": "Reached the ancient spire in the Revelwoods."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/863af7c83e6774a61333853b1c53f1af99110d06.jpg",
+   "key": "ACHI_1a86595a-da61-44ad-b447-f0ed9faaf8b0",
+   "name": {
+    "de": "Düsterdickicht-Sterngucker",
+    "en": "Revelwoods stargazer"
+   },
+   "percent": 50.9,
+   "unlocked": "2024-02-17T21:19:57+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Die Warte auf den Nomaden-Anhöhen erreicht.",
+    "en": "Reached the ancient spire in the Nomad Highlands."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/70a19450e5b9a83678c98b84ff09478f1643917a.jpg",
+   "key": "ACHI_416e1b4f-56df-4200-a3c6-9964edcac70a",
+   "name": {
+    "de": "Nomaden-Anhöhen-Sterngucker",
+    "en": "Nomad Highlands stargazer"
+   },
+   "percent": 36.0,
+   "unlocked": "2024-12-07T20:54:31+01:00"
+  },
+  {
+   "description": {
+    "de": "Die Warte im Ödland erreicht.",
+    "en": "Reached the ancient spire in the Kindlewastes."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/40690cc6b3409d6227ca914147325880163a42c2.jpg",
+   "key": "ACHI_f96f5d22-102a-4e13-aea5-0e28bae5c3be",
+   "name": {
+    "de": "Ödland-Sterngucker",
+    "en": "Kindlewastes stargazer"
+   },
+   "percent": 29.3
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Den ersten Elixierbrunnen gemeistert.",
+    "en": "Cleared the first elixir well."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/668532154abc7ed7a7fe512330f1e9764cd0a165.jpg",
+   "key": "ACHI_f471903a-7c5f-4850-9272-cced5be79cec",
+   "name": {
+    "de": "Gut gemacht!",
+    "en": "Well done!"
+   },
+   "percent": 72.9,
+   "unlocked": "2024-02-16T20:48:09+01:00"
+  },
+  {
+   "description": {
+    "de": "Beseitige alle Miasmawurzeln in den Hochweiden.",
+    "en": "Clear the Springlands of all shroud roots."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/df038c6efe61d2ad7989353daf531e2646c5b630.jpg",
+   "key": "ACHI_32913a06-f9d7-452d-99b3-b8e4f0b84438",
+   "name": {
+    "de": "Hochweiden-Gärtner",
+    "en": "Springland weeding"
+   },
+   "percent": 20.5
+  },
+  {
+   "description": {
+    "de": "Beseitige alle Miasmawurzeln im Düsterdickicht.",
+    "en": "Clear the Revelwood of all shroud roots."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/bbf6ca1e06bbc0491c390e58533081372e7c11b3.jpg",
+   "key": "ACHI_6ba4a3eb-ba71-44ca-aaaa-ad5599696d5f",
+   "name": {
+    "de": "Düsterdickicht-Gärtner",
+    "en": "Revelwood weeding"
+   },
+   "percent": 13.9
+  },
+  {
+   "description": {
+    "de": "Beseitige alle Miasmawurzeln auf den Nomaden-Anhöhen.",
+    "en": "Clear the Nomad Highlands from all shroud roots."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/d8defd483067a55df149d4d7f190a2e5b1a21cac.jpg",
+   "key": "ACHI_d41c5d2d-bb09-4045-ab6e-59e5c2c08ea6",
+   "name": {
+    "de": "Nomaden-Anhöhen-Gärtner",
+    "en": "Nomad Highlands weeding"
+   },
+   "percent": 9.6
+  },
+  {
+   "description": {
+    "de": "Beseitige alle Miasmawurzeln im Ödland.",
+    "en": "Clear the Kindlewastes of all shroud roots."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/13826cf72acd1074a7d98c268b81c5e3e9ab2882.jpg",
+   "key": "ACHI_d4a67af1-9128-43cd-ab4f-4a76dedea063",
+   "name": {
+    "de": "Ödland-Gärtner",
+    "en": "Kindlewastes weeding"
+   },
+   "percent": 7.4
+  },
+  {
+   "description": {
+    "de": "Erreiche Stufe 30.",
+    "en": "Reach level 30."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/85ee1a216021a3aa2aa6719f277855ce987455ce.jpg",
+   "key": "ACHI_301de1cc-2d52-4177-9f41-eaed5cb79976",
+   "name": {
+    "de": "Monumentaler Aufstieg",
+    "en": "Climbing to new heights"
+   },
+   "percent": 13.0
+  },
+  {
+   "description": {
+    "de": "Erreiche Stufe 35.",
+    "en": "Reach level 35."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/86049c0f4dd18de3cdd5e90a367efb55bd3d7d91.jpg",
+   "key": "ACHI_a285ea4b-2cbc-4b72-ade3-510634c7605c",
+   "name": {
+    "de": "Auf dem Gipfel",
+    "en": "Reaching the top"
+   },
+   "percent": 8.8
+  },
+  {
+   "description": {
+    "de": "Beseitige alle Miasmawurzeln in den Albapracht-Gipfeln.",
+    "en": "Clear the Albaneve Summits of all shroud roots."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/8503943568a5591398a71e4ee14c680ca4bcf2c6.jpg",
+   "key": "ACHI_04eda6eb-77ce-465d-b430-44b9ede3e956",
+   "name": {
+    "de": "Gipfel-Gärtner",
+    "en": "Albaneve Summits weeding"
+   },
+   "percent": 2.2
+  },
+  {
+   "description": {
+    "de": "Die Warte in den Albapracht-Gipfeln erreicht.",
+    "en": "Reached the ancient spire in the Albaneve Summits."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/d1157544c3cb7052e13a82d2ac7dc2b6fb01edfb.jpg",
+   "key": "ACHI_3ed03563-6c4b-4a95-9cbb-66de50dd44f3",
+   "name": {
+    "de": "Albapracht-Gipfel Sterngucker",
+    "en": "Albaneve Summits stargazer"
+   },
+   "percent": 16.3
+  },
+  {
+   "description": {
+    "de": "Baue jedes wertvolle Material in den Albapracht-Gipfeln ab.",
+    "en": "Mine every valuable material in the Albaneve Summits."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/f2f9d8005b33e5832b0d4635a605c6b4d7a37eea.jpg",
+   "key": "ACHI_a9f25910-4869-4cee-b73b-7ed73b137e24",
+   "name": {
+    "de": "Maulwurf der Albapracht-Gipfel",
+    "en": "Mole of the Albaneve Summits"
+   },
+   "percent": 13.5
+  },
+  {
+   "description": {
+    "de": "Untersuche alle Obelisken in den Albapracht-Gipfeln.",
+    "en": "Read all obelisks in the Albaneve Summits."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/07658eb36cf1aec6b162923ced14ea5730cb1524.jpg",
+   "key": "ACHI_d3f96a27-d2f0-42f0-a1cb-221826568a47",
+   "name": {
+    "de": "Geheimniswahrer der Albapracht-Gipfel",
+    "en": "Albaneve Summits secret keeper"
+   },
+   "percent": 3.4
+  },
+  {
+   "description": {
+    "de": "Finde alle Flammenschreine und Heiligtümer in den Albapracht-Gipfeln.",
+    "en": "Find all flame shrines and sanctums in the Albaneve Summits."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/cc3695e24c6534bb1c380ec16056a8205d1244f8.jpg",
+   "key": "ACHI_0099d687-8ebd-4fb3-98c9-8c0fe6a50d31",
+   "name": {
+    "de": "Funke der Albapracht-Gipfel",
+    "en": "Spark of the Albaneve Summits"
+   },
+   "percent": 0.9
+  },
+  {
+   "description": {
+    "de": "Besiege den Drachen.",
+    "en": "Defeat the dragon."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/8aa434bcbde6ae7762b764d8e5942157602d7c93.jpg",
+   "key": "ACHI_72c6f8c3-3538-46b3-8b02-648f45f5baa1",
+   "name": {
+    "de": "König des Berges",
+    "en": "King of the mountain"
+   },
+   "percent": 8.4
+  },
+  {
+   "description": {
+    "de": "Finde alle Flammenschreine und Heiligtümer im Wogschimmer-Grund.",
+    "en": "Find all flame shrines and sanctums in the Veilwater Basin."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/f8102e260199b6d0ef239f9d5872f9fde9dddd61.jpg",
+   "key": "ACHI_b03ecafe-da33-40f2-8dda-b893ace804af",
+   "name": {
+    "de": "Funken des Wogschimmer-Grunds",
+    "en": "Spark of the Veilwater Basin"
+   },
+   "percent": 0.4
+  },
+  {
+   "description": {
+    "de": "Baue jedes wertvolle Material im Wogschimmer-Grund ab.",
+    "en": "Mine every valuable material in the Veilwater Basin."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/3b2b5cbb649af465486a8f66115220451c083c26.jpg",
+   "key": "ACHI_bd170aab-ac5e-445d-ace9-0c7e0bdcd4b6",
+   "name": {
+    "de": "Maulwurf des Wogschimmer-Grunds",
+    "en": "Mole of the Veilwater Basin"
+   },
+   "percent": 4.5
+  },
+  {
+   "description": {
+    "de": "Untersuche alle Obelisken im Wogschimmer-Grund.",
+    "en": "Read all obelisks in the Veilwater Basin."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/bd3a1377e59a09da6ca4671d0024bcd233a99a77.jpg",
+   "key": "ACHI_b8af6745-255b-4461-8044-bd52fc89d452",
+   "name": {
+    "de": "Geheimniswahrer des Wogschimmer-Grunds",
+    "en": "Veilwater Basin secret keeper"
+   },
+   "percent": 1.7
+  },
+  {
+   "description": {
+    "de": "Erreiche Stufe 40.",
+    "en": "Reach level 40."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/8b4fb172bdd517fe7cafad85a3bebb02e529173e.jpg",
+   "key": "ACHI_9b98e763-dba3-4722-8ed7-3fd42eb95100",
+   "name": {
+    "de": "Bereit für neue Länder",
+    "en": "Ready for new lands"
+   },
+   "percent": 3.9
+  },
+  {
+   "description": {
+    "de": "Erreiche Stufe 45.",
+    "en": "Reach level 45."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/5b442307411ccc8e57a11ff0afa7ca889291fded.jpg",
+   "key": "ACHI_6e3b6d3c-4372-4a12-a3ea-b354e1ef1ee9",
+   "name": {
+    "de": "Auf zu neuen Horizonten",
+    "en": "Onto new horizons"
+   },
+   "percent": 2.2
+  },
+  {
+   "description": {
+    "de": "Die Warte im Wogschimmer-Grund erreicht.",
+    "en": "Reached the ancient spire in the Veilwater Basin."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/4a83831a55d296dcb1f4815b744bb86880431af2.jpg",
+   "key": "ACHI_292324ab-856d-4ba8-8130-270f56ac8a33",
+   "name": {
+    "de": "Wogschimmer-Grund-Sternengucker",
+    "en": "Veilwater Basin stargazer"
+   },
+   "percent": 8.6
+  },
+  {
+   "description": {
+    "de": "Beseitige alle Miasmawurzeln im Wogschimmer-Grund.",
+    "en": "Clear the Veilwater Basin of all shroud roots."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/c771aabbec8df4e87700d79edb41b2b2a1622779.jpg",
+   "key": "ACHI_0566056a-c2da-4f59-8c0d-e2c96212eec1",
+   "name": {
+    "de": "Wogschimmer-Gärtner",
+    "en": "Veilwater Basin weeding"
+   },
+   "percent": 0.9
+  }
+ ],
+ "id": "1203620",
+ "platform": "steam"
+}

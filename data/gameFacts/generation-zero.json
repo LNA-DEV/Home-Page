@@ -1,0 +1,51 @@
+{
+ "developers": [
+  "Avalanche Studios Group"
+ ],
+ "genres": [
+  {
+   "de": "Survival-Spiel",
+   "en": "survival game",
+   "sv": "överlevnadsspel"
+  },
+  {
+   "de": "Ego-Shooter",
+   "en": "first-person shooter",
+   "sv": "förstapersonsskjutare"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  }
+ ],
+ "publishers": [
+  "Avalanche Studios Group"
+ ],
+ "released": "2019",
+ "steam": {
+  "de": "Generation Zero ist ein Schleich-Action-Shooter, in dem du dir Guerillagefechte mit tödlichen mechanischen Gegnern lieferst. Erkunde eine gewaltige offene Karte, inspiriert vom Schweden zur Zeit des Kalten Krieges. Werde Teil des Widerstands -allein oder mit bis zu drei Freunden in nahtlosem Co-op.",
+  "en": "Generation Zero is a stealth-action shooter where you wage guerilla warfare against lethal mechanical enemies. Explore a vast open world map inspired by the Swedish Cold War era, take part in the resistance alone or with up to three friends in seamless co-op.",
+  "sv": "Generation Zero är ett stealth-actionskjutspel där du för gerillakrig mot dödliga mekaniska fiender. Utforska en stor öppen världskarta inspirerad av det svenska kalla krigets tid, anslut till motståndsrörelsen ensam eller med upp till tre vänner i samarbetsläge."
+ },
+ "steam_appid": 704270,
+ "wikidata": "Q62535002",
+ "wikipedia": {
+  "en": {
+   "text": "Generation Zero is a first-person shooter video game developed and self-published by Avalanche Studios, under the brand Systemic Reaction. The game was announced in June 2018 and released on PlayStation 4, PC and Xbox One on March 26, 2019.",
+   "url": "https://en.wikipedia.org/wiki/Generation_Zero_(video_game)"
+  },
+  "sv": {
+   "text": "Generation Zero är ett datorspel för PC, Xbox One och Playstation 4, utvecklat av Avalanche Studios och utgivet den 26 mars 2019.",
+   "url": "https://sv.wikipedia.org/wiki/Generation_Zero"
+  }
+ }
+}

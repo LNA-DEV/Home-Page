@@ -1,0 +1,70 @@
+{
+ "developers": [
+  "Valve Corporation"
+ ],
+ "genres": [
+  {
+   "de": "Puzzle-Computerspiel",
+   "en": "puzzle video game",
+   "sv": "pusselspel"
+  },
+  {
+   "de": "Ego-Shooter",
+   "en": "first-person shooter",
+   "sv": "förstapersonsskjutare"
+  },
+  {
+   "de": "Science-Fiction-Computerspiel",
+   "en": "science fiction video game",
+   "sv": "science fiction-spel"
+  },
+  {
+   "de": "postapokalyptisches Videospiel",
+   "en": "post-apocalyptic video game",
+   "sv": "postapokalyptiskt datorspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  },
+  {
+   "de": "Koop-Modus",
+   "en": "co-op mode",
+   "sv": "flerspelarläge"
+  }
+ ],
+ "publishers": [
+  "Valve Corporation"
+ ],
+ "released": "2011-04-18",
+ "steam": {
+  "de": "Die „Initiative für endloses Testen“ wurde erweitert, um Ihnen die Erstellung von Koop-Puzzles für Sie und Ihre Freunde zu ermöglichen.",
+  "en": "The \"Perpetual Testing Initiative\" has been expanded to allow you to design co-op puzzles for you and your friends!",
+  "sv": "\"Perpetual Testing-\"initiativet har utökats så att du nu kan designa co-op-pussel till dig och dina vänner!"
+ },
+ "steam_appid": 620,
+ "wikidata": "Q279446",
+ "wikipedia": {
+  "de": {
+   "text": "Portal 2 ist ein Computerspiel von Valve und der Nachfolger von Portal. Das Spiel wurde am 5. März 2010 angekündigt und am 19.",
+   "url": "https://de.wikipedia.org/wiki/Portal_2"
+  },
+  "en": {
+   "text": "Portal 2 is a 2011 first person puzzle-platform game developed by Valve for Windows, macOS, Linux, PlayStation 3, and Xbox 360. The retail versions and PlayStation 3 and Xbox 360 versions were distributed by Electronic Arts. A port for the Nintendo Switch was released as part of the Portal: Companion Collection in June 2022.",
+   "url": "https://en.wikipedia.org/wiki/Portal_2"
+  },
+  "sv": {
+   "text": "Portal 2 är ett datorspel (pusselspel), som utvecklats av Valve Corporation. Portal 2 är uppföljaren till det kritikerrosade Portal. Spelet började säljas 19 april 2011, till Windows, Mac OS, Xbox 360 och Playstation 3.",
+   "url": "https://sv.wikipedia.org/wiki/Portal_2"
+  }
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "developers": [
+  "Expansive Worlds"
+ ],
+ "genres": [
+  {
+   "de": "Jagd Videospiel",
+   "en": "hunting video game",
+   "sv": "jaktspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  }
+ ],
+ "publishers": [
+  "Avalanche Studios Group"
+ ],
+ "released": "2017-02-16",
+ "steam": {
+  "de": "Erlebe ein außergewöhnlich stimmungsvolles Jagdspiel in einer realistischen offenen Welt und freue dich auf regelmäßige Updates, die in Zusammenarbeit mit den Spielern entstehen. Tauche in die Einzelspielerkampagne ab oder teile das Jagderlebnis mit Freunden.",
+  "en": "Discover an atmospheric hunting game like no other in this realistic, stunning open world – regularly updated in collaboration with the community. Immerse yourself in the single player campaign, or share the ultimate hunting experience with friends.",
+  "sv": "Upptäck ett stämningsfullt jaktspel utan like i den här realistiska, fantastiska öppna världen som regelbundet uppdateras med hjälp av communityn. Fördjupa dig i enspelarkampanjen eller dela den ultimata jaktupplevelsen med vänner."
+ },
+ "steam_appid": 518790,
+ "wikidata": "Q29964519"
+}

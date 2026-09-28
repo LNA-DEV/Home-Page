@@ -1,0 +1,45 @@
+{
+ "developers": [
+  "Unknown Worlds Entertainment"
+ ],
+ "genres": [
+  {
+   "de": "Action-Adventure",
+   "en": "action-adventure game",
+   "sv": "actionäventyrsspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  }
+ ],
+ "publishers": [
+  "Krafton"
+ ],
+ "released": "2026-05-14",
+ "steam": {
+  "de": "Subnautica 2 ist ein Unterwasser-Überlebensabenteuer von Unknown Worlds, das dich auf eine neue außerirdische Welt führt. Spiele allein oder mit bis zu drei Freunden im Koop, baue Basen, stelle Werkzeuge her und passe dich an, um zu überleben. Erkunde die Tiefen und enthülle ihre Geheimnisse.",
+  "en": "Subnautica 2 is an underwater survival adventure set on an all-new alien world, developed by Unknown Worlds. Play alone or with friends in 4-player co-op. Adapt to survive by building custom bases and crafting tools. Explore the unknown to uncover the mysteries hidden within the depths."
+ },
+ "steam_appid": 1962700,
+ "wikidata": "Q124464991",
+ "wikipedia": {
+  "de": {
+   "text": "Subnautica 2 ist ein sich im Early Access befindendes Computerspiel von Unknown Worlds Entertainment. Das Survival-Spiel ist die Fortsetzung des 2018 veröffentlichten Subnautica und mit dem 2021 erschienenen Spin-off Below Zero der dritte Titel der Serie.",
+   "url": "https://de.wikipedia.org/wiki/Subnautica_2"
+  },
+  "en": {
+   "text": "Subnautica 2 is an action-adventure survival game developed by Unknown Worlds Entertainment. It is a sequel to 2018's Subnautica and the third game in the series after 2021's Subnautica: Below Zero. The game was released in early access on May 14, 2026.",
+   "url": "https://en.wikipedia.org/wiki/Subnautica_2"
+  }
+ }
+}

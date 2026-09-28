@@ -1,0 +1,538 @@
+{
+ "achievements": [
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1057090/74ed77f296a8b35dbcf22b11d34231c80b9111aa.jpg",
+   "key": "1",
+   "name": {
+    "de": "Das war knapp",
+    "en": "Close Call",
+    "sv": "Nära ögat"
+   },
+   "percent": 81.1
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1057090/e4ae6440d4fe20b685b88c3c21090f256662e178.jpg",
+   "key": "3",
+   "name": {
+    "de": "Aufs Horn genommen",
+    "en": "Take the Bug by the Horn",
+    "sv": "Ta baggen vid hornet"
+   },
+   "percent": 60.1
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1057090/9855a8cbe880e47b63e9c25066c566353eaca6df.jpg",
+   "key": "4",
+   "name": {
+    "de": "Laserscharf",
+    "en": "Laser Brain",
+    "sv": "Galaxhjärna"
+   },
+   "percent": 38.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1057090/8f88188ce4eb399dea59bdf2d948d226ec7bcee8.jpg",
+   "key": "7",
+   "name": {
+    "de": "Trautes Heim",
+    "en": "Home Sweet Home",
+    "sv": "Hem ljuva hem"
+   },
+   "percent": 56.9
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1057090/f7b776dcd68d44c8da67ce438c0868ae8bd2921e.jpg",
+   "key": "8",
+   "name": {
+    "de": "Möge das Wasser fließen",
+    "en": "Let the Waters Flow",
+    "sv": "Först till kvarn"
+   },
+   "percent": 52.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1057090/852fb89bb08498c08b156a687fd8669e857f6231.jpg",
+   "key": "9",
+   "name": {
+    "de": "Frostige Flucht",
+    "en": "Icy Escape",
+    "sv": "Iskall flykt"
+   },
+   "percent": 40.9
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1057090/0746c904fe1d0b09df86b5c4c758137333a85b53.jpg",
+   "key": "10",
+   "name": {
+    "de": "Dunkler Triumph",
+    "en": "Dark Triumph",
+    "sv": "Ur spindelns nät"
+   },
+   "percent": 41.8
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1057090/276b7d2794a158ac7f904c63ec232c3d57a51e83.jpg",
+   "key": "11",
+   "name": {
+    "de": "Ruhe des Wächters",
+    "en": "Guardian's Rest",
+    "sv": "Väktarens vila"
+   },
+   "percent": 41.9
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1057090/ce5f6b574e97092e7eb3208e0a8ed528513bfca3.jpg",
+   "key": "12",
+   "name": {
+    "de": "Treibsand",
+    "en": "Quick Sand",
+    "sv": "Kvick sand"
+   },
+   "percent": 39.3
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1057090/844551cb49466f12af50d6da161785b80188fd75.jpg",
+   "key": "13",
+   "name": {
+    "de": "Steinhart",
+    "en": "Stone Cold",
+    "sv": "Krossad sten"
+   },
+   "percent": 37.6
+  },
+  {
+   "description": {
+    "de": "Schließe das Spiel ab",
+    "en": "Complete the Game",
+    "sv": "Klara av spelet"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/cc8f182366d844e24f6086192167806296cc3e95.jpg",
+   "key": "14",
+   "name": {
+    "de": "Schicksal",
+    "en": "Destiny",
+    "sv": "Ödet"
+   },
+   "percent": 37.7
+  },
+  {
+   "description": {
+    "de": "Schließe das Spiel auf „Schwerer Modus“ ab",
+    "en": "Complete Hard Mode",
+    "sv": "Klara av Svårt läge"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/2169bfbb9da23dbf99857732f489d4e6b6f83951.jpg",
+   "key": "15",
+   "name": {
+    "de": "Hardcore-Fan",
+    "en": "Hardcore Fan",
+    "sv": "Målmedveten"
+   },
+   "percent": 5.3
+  },
+  {
+   "description": {
+    "de": "Schalte alle Fähigkeiten frei",
+    "en": "Unlock all Abilities",
+    "sv": "Lås upp alla förmågor"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/202fa2934452404d14ae97d5ce4b01f82b6b28f0.jpg",
+   "key": "16",
+   "name": {
+    "de": "Handwerkszeug",
+    "en": "Tools of the Trade",
+    "sv": "Vältränad"
+   },
+   "percent": 27.1
+  },
+  {
+   "description": {
+    "de": "Verbessere alle Fähigkeiten",
+    "en": "Upgrade all Abilities",
+    "sv": "Uppgradera alla förmågor"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/c2b4a352a78a26d5013876ea2b398b6f03b582f0.jpg",
+   "key": "17",
+   "name": {
+    "de": "Naturtalent",
+    "en": "Mad Skills",
+    "sv": "Väl tränad"
+   },
+   "percent": 21.8
+  },
+  {
+   "description": {
+    "de": "Verbessere alle Splitterplätze",
+    "en": "Upgrade all Shard Slots",
+    "sv": "Uppgradera alla skärvplatser"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/5f251f70c2c510a7e4c776cbac33f8035fd68601.jpg",
+   "key": "18",
+   "name": {
+    "de": "Zum Platzen voll",
+    "en": "Fully Slotted",
+    "sv": "Allt har sin plats"
+   },
+   "percent": 32.5
+  },
+  {
+   "description": {
+    "de": "Schalte alle Splitter frei",
+    "en": "Unlock all Shards",
+    "sv": "Lås upp alla skärvor"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/45979f8128d6f6cb321a001fa6e2ce6827597381.jpg",
+   "key": "19",
+   "name": {
+    "de": "Splitterjäger",
+    "en": "Shard Hunter",
+    "sv": "Skärvsamlare"
+   },
+   "percent": 17.5
+  },
+  {
+   "description": {
+    "de": "Verbessere alle Splitter",
+    "en": "Upgrade all Shards",
+    "sv": "Uppgradera alla skärvor"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/7795e943f3fd0297875b01a60a0079ed37932c03.jpg",
+   "key": "20",
+   "name": {
+    "de": "Splitterspezialist",
+    "en": "Shard Specialist",
+    "sv": "Skärvputsare"
+   },
+   "percent": 11.6
+  },
+  {
+   "description": {
+    "de": "Maximiere deine Energie",
+    "en": "Max out Energy",
+    "sv": "Maxa din energi"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/da864a78f953a0a8005f912accd0ce44fe242fbb.jpg",
+   "key": "22",
+   "name": {
+    "de": "Mächtig",
+    "en": "Powerful",
+    "sv": "Energisk"
+   },
+   "percent": 18.0
+  },
+  {
+   "description": {
+    "de": "Kaufe alle Karten von Lupo",
+    "en": "Buy all Maps from Lupo",
+    "sv": "Köp alla kartor från Lupo"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/24c2fb88591435a489dcb3e9ff55ff8790320b5a.jpg",
+   "key": "23",
+   "name": {
+    "de": "Kartografenlehrling",
+    "en": "Cartographer's Protégé",
+    "sv": "Hit med kartan"
+   },
+   "percent": 21.3
+  },
+  {
+   "description": {
+    "de": "Schließe alle Geisterschreine ab",
+    "en": "Complete all Spirit Shrines",
+    "sv": "Klara av alla andetempel"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/ceacd673d7fcec5596349a04df7304917592b856.jpg",
+   "key": "24",
+   "name": {
+    "de": "Heller Schrein",
+    "en": "Shrine Bright",
+    "sv": "Tempelriddare"
+   },
+   "percent": 32.6
+  },
+  {
+   "description": {
+    "de": "Finde alle Sammelobjekte",
+    "en": "Find all Collectibles",
+    "sv": "Hitta alla samlarobjekt"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/1eabb86714930dd5f0df9f65542fe536b1bceff9.jpg",
+   "key": "25",
+   "name": {
+    "de": "Fundbüro",
+    "en": "Lost and Found",
+    "sv": "Nyfiken"
+   },
+   "percent": 10.4
+  },
+  {
+   "description": {
+    "de": "Schließe die Handelssequenz-Quest ab",
+    "en": "Complete the Trade Sequence Quest",
+    "sv": "Klara av hela handelsuppdraget"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/beae6626bed5b054c17adfe34829302e63320501.jpg",
+   "key": "26",
+   "name": {
+    "de": "Zeichen des Händlers",
+    "en": "Mark of the Trader",
+    "sv": "Handlare"
+   },
+   "percent": 21.9
+  },
+  {
+   "description": {
+    "de": "Schließe jede Nebenquest ab",
+    "en": "Complete every Side Quest",
+    "sv": "Klara av alla sidouppdrag"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/34008e6ea394c26dfee20bd8a4fe38025efa47ca.jpg",
+   "key": "27",
+   "name": {
+    "de": "Komplettierer",
+    "en": "Completionist",
+    "sv": "Ingen uppgift för liten"
+   },
+   "percent": 18.5
+  },
+  {
+   "description": {
+    "de": "Schließe alle Projekte der Brunnenquelllichtung ab",
+    "en": "Complete all Wellspring Glades Projects",
+    "sv": "Klara av alla projekt i Källgläntan"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/1a10e3b4580400c7cdcf3496d60b9a1c4a8959ce.jpg",
+   "key": "28",
+   "name": {
+    "de": "Handwerker",
+    "en": "Fixer Upper",
+    "sv": "Byggmästare"
+   },
+   "percent": 19.3
+  },
+  {
+   "description": {
+    "de": "Schließe alle Geisterprüfungen ab",
+    "en": "Complete all Spirit Trials",
+    "sv": "Klara av alla andelopp"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/4b757fc2875e0ac25ba9804bc341d4915151c2c0.jpg",
+   "key": "29",
+   "name": {
+    "de": "Temposünder",
+    "en": "Speed Demon",
+    "sv": "Full fart"
+   },
+   "percent": 11.6
+  },
+  {
+   "description": {
+    "de": "Maximiere deine Gesundheit",
+    "en": "Max out Life",
+    "sv": "Maxa din livskraft"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/2148acf9851477fdac2b02d06ad59c66024bfef5.jpg",
+   "key": "21",
+   "name": {
+    "de": "Kerngesund",
+    "en": "Healthy",
+    "sv": "Hälsosam"
+   },
+   "percent": 19.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1057090/158e4204936c9cd6167116b5c4c4b3efcbfe1b2c.jpg",
+   "key": "30",
+   "name": {
+    "de": "Unerreichbar",
+    "en": "Untouchable",
+    "sv": "Hal som en ål"
+   },
+   "percent": 2.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1057090/b30bfd1ac86a8dde13b13392e73ed22dd4c272d1.jpg",
+   "key": "31",
+   "name": {
+    "de": "Frühes Ableben",
+    "en": "Timely Demise",
+    "sv": "Snabbt slut"
+   },
+   "percent": 41.8
+  },
+  {
+   "description": {
+    "de": "Jongliere 3 oder mehr Projektile für über 5 Sekunden in der Luft",
+    "en": "Juggle 3 or More Projectiles in the Air for Over 5 Seconds",
+    "sv": "Jonglera minst 3 projektiler i luften i mer än 5 sekunder"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/1a97b387a53a3a315382a03e3225c3d437156975.jpg",
+   "key": "32",
+   "name": {
+    "de": "Jongleur",
+    "en": "Juggling Act",
+    "sv": "Många bollar i luften"
+   },
+   "percent": 51.6
+  },
+  {
+   "description": {
+    "de": "Besiege 5 Feinde, ohne den Boden zu berühren",
+    "en": "Defeat 5 Enemies Without Touching the Ground",
+    "sv": "Besegra 5 fiender utan att vidröra marken"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/d03e4877b67033b2bde8420ed54e95e6373d8058.jpg",
+   "key": "33",
+   "name": {
+    "de": "Versucht’s doch",
+    "en": "Bring it On",
+    "sv": "Skeppsbrott"
+   },
+   "percent": 39.3
+  },
+  {
+   "description": {
+    "de": "Berühre kein verdorbenes Wasser",
+    "en": "Avoid Touching any Corrupted Water",
+    "sv": "Vidrör inget fördärvat vatten"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/4bb0a7351ba91480be7a0787a0aab33991065226.jpg",
+   "key": "34",
+   "name": {
+    "de": "Auf dem Trockenen",
+    "en": "High and Dry",
+    "sv": "Badkruka"
+   },
+   "percent": 2.7
+  },
+  {
+   "description": {
+    "de": "Besiege 3 Feinde mit einem einzigen Stachel",
+    "en": "Defeat 3 Enemies with a Single Spike",
+    "sv": "Besegra 3 fiender med ett enda spjut"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/75d7264351fcdde06dcdddd43cbf38d294f50276.jpg",
+   "key": "35",
+   "name": {
+    "de": "Schadensstachel",
+    "en": "Damage Spike",
+    "sv": "Spjutspetsteknik"
+   },
+   "percent": 13.4
+  },
+  {
+   "description": {
+    "de": "Besiege 10 Feinde mit Umweltgefahren",
+    "en": "Defeat 10 Enemies using Environmental Hazards",
+    "sv": "Besegra 10 fiender med hjälp av omgivningen"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/77411c2cdc7f03cb6e3983c9a83c53b3c137cdd9.jpg",
+   "key": "37",
+   "name": {
+    "de": "War ich das etwa?",
+    "en": "Did I Do That?",
+    "sv": "Var det jag?"
+   },
+   "percent": 62.7
+  },
+  {
+   "description": {
+    "de": "Schließe das Spiel ab, ohne einen Splitter anzulegen",
+    "en": "Beat the Game Without Equipping a Shard",
+    "sv": "Klara av spelet utan att utrusta några skärvor"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/db2a49df80cb30fcef5eed077d9e5d2260e38868.jpg",
+   "key": "38",
+   "name": {
+    "de": "Splitterlos",
+    "en": "Shardless",
+    "sv": "Skärvlös"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "de": "Schließe das Spiel ab, ohne Geisterlicht zu verbrauchen",
+    "en": "Beat the Game Without Spending any Spirit Light",
+    "sv": "Klara av spelet utan att använda andeljus"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/7b53c62cb1643d51e201839fec18b09721d9f84b.jpg",
+   "key": "39",
+   "name": {
+    "de": "Lichtlos",
+    "en": "Lightless",
+    "sv": "Totalt mörker"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "de": "Schließe das Spiel in unter 4 Stunden ab",
+    "en": "Complete the Game in Under 4 Hours",
+    "sv": "Klara av spelet på mindre än 4 timmar"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/cbd6b887d331f1bb23513ac049226e5448cff86c.jpg",
+   "key": "40",
+   "name": {
+    "de": "Wie die Zeit vergeht",
+    "en": "Look at the Time",
+    "sv": "Tiden går fort"
+   },
+   "percent": 1.7
+  },
+  {
+   "description": {
+    "de": "Schließe das Spiel ab, ohne zu sterben",
+    "en": "Complete the Game without Dying",
+    "sv": "Klara av spelet utan att dö"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1057090/2bb95d094d3cf7cfcd618ee7df7bc3b94e1e1cd6.jpg",
+   "key": "41",
+   "name": {
+    "de": "Unsterblich",
+    "en": "Immortal",
+    "sv": "Odödlig"
+   },
+   "percent": 1.5
+  }
+ ],
+ "id": "1057090",
+ "platform": "steam"
+}

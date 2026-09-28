@@ -1,0 +1,201 @@
+{
+ "achievements": [
+  {
+   "description": {
+    "de": "Erreiche mit einer Klasse Level 50",
+    "en": "Reach level 50 with a Class"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/544920/62722f2f43087c6b04916dc4458f038591c5439a.jpg",
+   "key": "ACH_LEVEL50",
+   "name": {
+    "en": "Superstar"
+   },
+   "percent": 0.7
+  },
+  {
+   "description": {
+    "de": "Gewinne 10 Matches (benutzerdefinierte Spiele und Training ausgenommen)",
+    "en": "Win 10 matches (excludes Custom or Training)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/544920/64224dac50298acc1313bf07a2fed604ced1a1d8.jpg",
+   "key": "ACH_WIN10",
+   "name": {
+    "de": "Besser als Freiheit",
+    "en": "Better than Freedom"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Besiege 100 Gegner (benutzerdefinierte Spiele und Training ausgenommen)",
+    "en": "Eliminate 100 opponents (excludes Custom or Training)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/544920/510d438534861a36ad49e669b3b102188d06f34d.jpg",
+   "key": "ACH_KILL100",
+   "name": {
+    "de": "Wer zählt schon?",
+    "en": "I Lost Track"
+   },
+   "percent": 0.9
+  },
+  {
+   "description": {
+    "de": "Besiege deinen ersten Gegner (benutzerdefinierte Spiele und Training ausgenommen)",
+    "en": "Eliminate your first opponent (excludes Custom or Training)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/544920/2393e971d92515b027a907a6a3977ee0ebd05baf.jpg",
+   "key": "ACH_KILL1",
+   "name": {
+    "de": "Das erste Mal vergisst man nicht",
+    "en": "Everyone Remembers Their First"
+   },
+   "percent": 9.5
+  },
+  {
+   "description": {
+    "de": "Gewinne ein Match (benutzerdefinierte Spiele und Training ausgenommen)",
+    "en": "Win a match (excludes Custom or Training)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/544920/6efef00f90523bb43eedaa8df76d61b0013fb042.jpg",
+   "key": "ACH_WIN1",
+   "name": {
+    "de": "Lebe einen weiteren Tag",
+    "en": "Live for Another Day"
+   },
+   "percent": 5.2
+  },
+  {
+   "description": {
+    "de": "Rüste einen legendären Waffenskin aus",
+    "en": "Equip a legendary weapon skin"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/544920/a680c53a1ae4425265f3765f02d67d4fe029ea0e.jpg",
+   "key": "ACH_LEG_WEAPON",
+   "name": {
+    "de": "Besser als verbotene Ware",
+    "en": "Better than Contraband"
+   },
+   "percent": 2.0
+  },
+  {
+   "description": {
+    "de": "Schließe 30 tägliche Herausforderungen ab",
+    "en": "Complete 30 daily challenges"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/544920/6c8bbf5158c6ead4e48fd4a8c3053db34a4fd3e2.jpg",
+   "key": "ACH_DAILY30",
+   "name": {
+    "de": "Gut genährt",
+    "en": "Eating Well"
+   },
+   "percent": 0.8
+  },
+  {
+   "description": {
+    "de": "Triff mit dem Bogen aus min. 75 m Entfernung (benutzerdefinierte Spiele und Training ausgenommen)",
+    "en": "Shoot an opponent from at least 75m with the Bow (excludes Custom or Training)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/544920/8d3bb8fdb6994ae60ec1fbac54569278c3e5e387.jpg",
+   "key": "ACH_DIST75",
+   "name": {
+    "de": "Der beste Zug des Spiels",
+    "en": "Play of the Game"
+   },
+   "percent": 2.3
+  },
+  {
+   "description": {
+    "de": "Richte in deiner Karriere 100.000 Schaden an (benutzerdefinierte Spiele und Training ausgenommen)",
+    "en": "Deal 100,000 damage throughout your career (excludes Custom or Training)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/544920/a1d7c1024f79b1bf5d15f230645af797fb29beb4.jpg",
+   "key": "ACH_DMG100K",
+   "name": {
+    "de": "Ich mach das für die Fans",
+    "en": "I Do it for the Fans"
+   },
+   "percent": 0.9
+  },
+  {
+   "description": {
+    "de": "Besiege 3 Gegner in einem Match (benutzerdefinierte Spiele und Training ausgenommen)",
+    "en": "Eliminate 3 opponents in a single match (excludes Custom or Training)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/544920/dda083a01a175b2f10d55e8049844cd60cb51eb0.jpg",
+   "key": "ACH_KILL31G",
+   "name": {
+    "de": "Ihr seid hier mit mir eingesperrt",
+    "en": "You're Locked in Here With Me"
+   },
+   "percent": 3.7
+  },
+  {
+   "description": {
+    "de": "Durchsuche 50 Plünderkisten (benutzerdefinierte Spiele und Training ausgenommen)",
+    "en": "Search 50 Loot Chests (excludes Custom or Training)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/544920/9f54dcc32d77778424b75b90d089dc0df39e1824.jpg",
+   "key": "ACH_CHEST50",
+   "name": {
+    "de": "Sammler",
+    "en": "Scavenger"
+   },
+   "percent": 2.1
+  },
+  {
+   "description": {
+    "de": "Erreiche mit 3 verschiedenen Klassen Level 10",
+    "en": "Reach level 10 with 3 different Classes"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/544920/1d4864fdc5b26de6de8838a10b87d35b09b3b9f0.jpg",
+   "key": "ACH_LEVEL10ALL",
+   "name": {
+    "de": "Bindungsangst",
+    "en": "Commitment Issues"
+   },
+   "percent": 0.7
+  },
+  {
+   "description": {
+    "de": "Untersuche Hinweise von 10 Gegnern (benutzerdefinierte Spiele und Training ausgenommen)",
+    "en": "Inspect Clues from 10 different opponents (excludes Custom or Training)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/544920/dbaa50e6f11909cca8baf51b4da7b1ac3b5d9b74.jpg",
+   "key": "ACH_TRACK10",
+   "name": {
+    "de": "Die Jagd hat begonnen",
+    "en": "The Hunt is On"
+   },
+   "percent": 3.8
+  },
+  {
+   "description": {
+    "de": "Wehre 10 gegnerische Pfeile ab (benutzerdefinierte Spiele und Training ausgenommen)",
+    "en": "Deflect 10 opponents' Arrows (excludes Custom or Training)"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/544920/4cc5ebb8afdcd67912ad8a532f5bc04b5372be77.jpg",
+   "key": "ACH_DEFLECT10",
+   "name": {
+    "de": "Angeber",
+    "en": "Show Off"
+   },
+   "percent": 0.9
+  }
+ ],
+ "id": "544920",
+ "platform": "steam"
+}

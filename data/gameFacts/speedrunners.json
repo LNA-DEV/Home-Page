@@ -1,0 +1,39 @@
+{
+ "genres": [
+  {
+   "de": "Jump ’n’ Run",
+   "en": "platformer",
+   "sv": "plattformsspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  }
+ ],
+ "released": "2013-08-26",
+ "steam": {
+  "de": "Ein mörderisches Mehrspieler-Parkourlauf-Spiel, das 4 Spieler auf einander losgehen lässt, lokal und/oder online. Renne, springe, schwinge herum und nutze hinterlistige Waffen und Pick-Ups, um deine Gegner von der Bildfläche verschwinden zu lassen!",
+  "en": "Cut-throat multiplayer running game that pits 4 players against each other, locally and/or online. Run, jump, swing around, and use devious weapons and pick-ups to knock opponents off-screen! One of the most competitive games you'll ever play."
+ },
+ "steam_appid": 207140,
+ "wikidata": "Q21190218",
+ "wikipedia": {
+  "de": {
+   "text": "SpeedRunners ist ein Multiplayer-Rennspiel, das von DoubleDutch Games entwickelt und von tinyBuild veröffentlicht wurde. Ursprünglich ein kostenloses Webbrowserspiel mit dem Titel SpeedRunner und später ein Xbox-360-Spiel mit dem Namen SpeedRunner HD auf der Xbox Live Arcade, wurde SpeedRunners am 26. August 2013 auf Steam im Early Access und am 19.",
+   "url": "https://de.wikipedia.org/wiki/SpeedRunners"
+  },
+  "en": {
+   "text": "SpeedRunners is a multiplayer side-scrolling racing game developed by DoubleDutch Games and published by tinyBuild. Originally a free web browser game titled SpeedRunner and later an Xbox 360 game by the name SpeedRunner HD on Xbox Live Arcade, SpeedRunners was released on Steam on 26 August 2013 into Steam Early Access, and as a full game on 19 April 2016. SpeedRunners was released on Xbox One in June 2017 as a Games with Gold title.",
+   "url": "https://en.wikipedia.org/wiki/SpeedRunners"
+  }
+ }
+}

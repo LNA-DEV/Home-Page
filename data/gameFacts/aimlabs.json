@@ -1,0 +1,36 @@
+{
+ "genres": [
+  {
+   "de": "Ego-Shooter",
+   "en": "first-person shooter",
+   "sv": "förstapersonsskjutare"
+  },
+  {
+   "de": "Simulation",
+   "en": "simulation",
+   "sv": "simulering"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "released": "2023-06-16",
+ "steam": {
+  "de": "Die ultimative Trainingslösung für FPS/TPS: Aim Lab verbindet modernstes Performance-Tracking und Analyse mit Machine Learning, damit du schneller besser werden kannst.",
+  "en": "Aimlabs is the aim trainer of choice for over 50 Million players, from beginners to esports pros. Our unique aim analysis optimizes your gameplay, targets your weaknesses & builds key skills for any FPS game! Time to warm up with our unlimited scenarios & rank up in-game!",
+  "sv": "Den ultimata lösningen för skjutspelsträning: Aim Lab kombinerar nyskapande prestationsloggning och statistikverktyg med maskininlärning för att snabbt göra dig bättre."
+ },
+ "steam_appid": 714010,
+ "wikidata": "Q120808873",
+ "wikipedia": {
+  "en": {
+   "text": "Aimlabs, formerly Aim Lab, is an aim-training platform developed and published by State Space Labs, Inc.. It provides players with the tools to practice and optimize their gameplay in first and third-person shooter settings. Aimlabs is available for Windows, Xbox, PlayStation 5, iOS, and Android, and uses machine learning and performance analytics to provide personalized training feedback.",
+   "url": "https://en.wikipedia.org/wiki/Aimlabs"
+  }
+ }
+}

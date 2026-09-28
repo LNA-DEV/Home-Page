@@ -1,0 +1,31 @@
+{
+ "developers": [
+  "Bethesda Game Studios"
+ ],
+ "genres": [
+  {
+   "de": "Computer-Rollenspiel",
+   "en": "role-playing video game",
+   "sv": "datorrollspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "publishers": [
+  "Bethesda Softworks"
+ ],
+ "released": "2016-10-27",
+ "steam": {
+  "de": "Die mit über 200 „Spiel des Jahres“-Auszeichnungen prämierte The Elder Scrolls V: Skyrim Special Edition erweckt epische Fantasy in atemberaubendem Detail zum Leben. Die Special Edition enthält das gefeierte Spiel sowie Add-ons mit brandneuen Funktionen.",
+  "en": "Winner of more than 200 Game of the Year Awards, The Elder Scrolls V: Skyrim Special Edition brings the epic fantasy to life in stunning detail. The Special Edition includes the critically acclaimed game and add-ons with all-new features.",
+  "sv": "The Elder Scrolls V: Skyrim Special Edition har vunnit fler än 200 utmärkelser som Game of the Year och väcker denna storslagna fantasyvärld till liv med fantastiska detaljer. Special Edition innehåller det kritikerrosade spelet och tilläggen med helt nya funktioner."
+ },
+ "steam_appid": 489830,
+ "wikidata": "Q31602948"
+}

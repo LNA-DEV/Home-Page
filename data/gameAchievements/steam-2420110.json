@@ -1,0 +1,1098 @@
+{
+ "achievements": [
+  {
+   "description": {
+    "de": "Alle „Horizon Forbidden West“-Errungenschaften erlangt.",
+    "en": "Obtained all Horizon Forbidden West Achievements.",
+    "sv": "Fått alla prestationer i Horizon Forbidden West."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/cc2b435f695c2b264f0a85e998b8f15d3e5b466d.jpg",
+   "key": "Trophy000",
+   "name": {
+    "de": "Alle Errungenschaften erlangt",
+    "en": "All Achievements Obtained",
+    "sv": "Fått alla prestationer"
+   },
+   "percent": 4.8
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Spielerstufe 20 erreicht.",
+    "en": "Reached player level 20.",
+    "sv": "Kommit till spelarnivå 20."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/77e33757ae8a6f1137dd15c24a98d83fcb8d628c.jpg",
+   "key": "Trophy001",
+   "name": {
+    "de": "Stufe 20 erreicht",
+    "en": "Reached Level 20",
+    "sv": "Kommit till nivå 20"
+   },
+   "percent": 59.6,
+   "unlocked": "2024-08-05T20:15:51+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Spielerstufe 30 erreicht.",
+    "en": "Reached player level 30.",
+    "sv": "Kommit till spelarnivå 30."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/ba5ae4dadf0eef683baf254f2ab7eb6aa4687eb1.jpg",
+   "key": "Trophy002",
+   "name": {
+    "de": "Stufe 30 erreicht",
+    "en": "Reached Level 30",
+    "sv": "Kommit till nivå 30"
+   },
+   "percent": 51.9,
+   "unlocked": "2024-08-17T20:09:28+02:00"
+  },
+  {
+   "description": {
+    "de": "Spielerstufe 50 erreicht.",
+    "en": "Reached player level 50.",
+    "sv": "Kommit till spelarnivå 50."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/f73ffd8ea0c683487fd0dd80a80d81bb567c9a87.jpg",
+   "key": "Trophy003",
+   "name": {
+    "de": "Stufe 50 erreicht",
+    "en": "Reached Level 50",
+    "sv": "Kommit till nivå 50"
+   },
+   "percent": 36.6
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/3631f296fae2e10eed2899d9a2636c5933974828.jpg",
+   "key": "Trophy004",
+   "name": {
+    "de": "Den Schrecken erreicht",
+    "en": "Reached the Daunt",
+    "sv": "Kommit till Modlösa"
+   },
+   "percent": 80.7,
+   "unlocked": "2024-07-26T22:48:40+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/9eb836854444f43950dfa84a176f543de7d75824.jpg",
+   "key": "Trophy005",
+   "name": {
+    "de": "Den Weg zur Gesandtschaft gesichert",
+    "en": "Secured Passage to the Embassy",
+    "sv": "Säkrat vägen till stämman"
+   },
+   "percent": 74.9,
+   "unlocked": "2024-07-28T13:31:40+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/c6db39c32f43c0199ba6b75235d8cd0da528ae91.jpg",
+   "key": "Trophy006",
+   "name": {
+    "de": "Der Gesandtschaft beigewohnt",
+    "en": "Attended the Embassy",
+    "sv": "Närvarat på stämman"
+   },
+   "percent": 72.3,
+   "unlocked": "2024-07-28T17:38:19+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/741e99c1a88cb613073e2dc319a6a19ee940fe2e.jpg",
+   "key": "Trophy007",
+   "name": {
+    "de": "Die Basis eingerichtet",
+    "en": "Established the Base",
+    "sv": "Etablerat en bas"
+   },
+   "percent": 62.6,
+   "unlocked": "2024-08-04T19:20:29+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/178d0f08e6e80ef195b51589cecb5728706a1e6c.jpg",
+   "key": "Trophy008",
+   "name": {
+    "de": "AETHER beschafft",
+    "en": "Recovered AETHER",
+    "sv": "Hämtat Aither"
+   },
+   "percent": 54.6,
+   "unlocked": "2024-08-15T00:15:13+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/5595a4d5bb25ec327df987d1ffe8d2cdff6ed6c7.jpg",
+   "key": "Trophy009",
+   "name": {
+    "de": "POSEIDON beschafft",
+    "en": "Recovered POSEIDON",
+    "sv": "Hämtat Poseidon"
+   },
+   "percent": 52.7,
+   "unlocked": "2024-08-16T23:44:51+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/4c4d05b67bfa617b6fc905c89d01c91573218618.jpg",
+   "key": "Trophy010",
+   "name": {
+    "de": "DEMETER beschafft",
+    "en": "Recovered DEMETER",
+    "sv": "Hämtat Demeter"
+   },
+   "percent": 50.1,
+   "unlocked": "2024-08-17T22:53:17+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/51dd1790ec1f721342e84dafda758807deae3c69.jpg",
+   "key": "Trophy011",
+   "name": {
+    "de": "Beta geborgen",
+    "en": "Recovered Beta",
+    "sv": "Hämtat Beta"
+   },
+   "percent": 55.1,
+   "unlocked": "2024-08-15T01:38:20+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/a9420aabcd37a9baa208ccdf248ef1f0a201a351.jpg",
+   "key": "Trophy012",
+   "name": {
+    "de": "Faros Schicksal enthüllt",
+    "en": "Discovered Faro's Fate",
+    "sv": "Upptäckt Faros öde"
+   },
+   "percent": 46.6,
+   "unlocked": "2024-08-18T16:25:37+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/962ce7428584968ed72328a42d355d9a60ed3952.jpg",
+   "key": "Trophy013",
+   "name": {
+    "de": "Auf den Flügeln der Zehn geflogen",
+    "en": "Flew on the Wings of the Ten",
+    "sv": "Flugit på De tios vingar"
+   },
+   "percent": 44.1
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/dabba5c5c240d370110703ee14cc678819ae792e.jpg",
+   "key": "Trophy014",
+   "name": {
+    "de": "Nemesis entdeckt",
+    "en": "Discovered Nemesis",
+    "sv": "Upptäckt Nemesis"
+   },
+   "percent": 40.4
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/a1650f1996c23cfb67501af1cee4eea924c95a0c.jpg",
+   "key": "Trophy015",
+   "name": {
+    "de": "Einen Wüsten-Kommandanten ausgewählt",
+    "en": "Chose a Desert Commander",
+    "sv": "Valt en ökenbefälhavare"
+   },
+   "percent": 37.2,
+   "unlocked": "2024-08-16T21:10:19+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/ba984a39c0a2c710694621e9663a54f8cfa7ba16.jpg",
+   "key": "Trophy016",
+   "name": {
+    "de": "Den Schrecken gerettet",
+    "en": "Saved the Daunt",
+    "sv": "Räddat Modlösa"
+   },
+   "percent": 49.1,
+   "unlocked": "2024-08-04T16:50:04+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/8218fdb6de68a1761931b12791378a176e558deb.jpg",
+   "key": "Trophy017",
+   "name": {
+    "de": "Kotallo geholfen",
+    "en": "Aided Kotallo",
+    "sv": "Hjälpt Kotallo"
+   },
+   "percent": 35.9
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/415a9462bf3e301083c240aeedd6655de3d9ec6a.jpg",
+   "key": "Trophy018",
+   "name": {
+    "de": "Die Landgötter geheilt",
+    "en": "Healed the Land-gods",
+    "sv": "Läkt landgudarna"
+   },
+   "percent": 37.6,
+   "unlocked": "2024-08-18T00:08:21+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/a54bb4917014a6565611e2fd0c35f95e05dde0e3.jpg",
+   "key": "Trophy019",
+   "name": {
+    "de": "Alvas Daten geborgen",
+    "en": "Recovered Alva's Data",
+    "sv": "Hämtat Alvas data"
+   },
+   "percent": 31.2
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/8e9f824f8e39465bbb652b24fbf7c3065f23c947.jpg",
+   "key": "Trophy020",
+   "name": {
+    "de": "Ersten Langhals überbrückt",
+    "en": "First Tallneck Overridden",
+    "sv": "Tagit kontroll över första långhalsen"
+   },
+   "percent": 67.2,
+   "unlocked": "2024-07-28T18:30:45+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/b483a3b78792a0cc00d925bc1d1fa244174e9c0c.jpg",
+   "key": "Trophy021",
+   "name": {
+    "de": "Alle Langhälse überbrückt",
+    "en": "All Tallnecks Overridden",
+    "sv": "Tagit kontroll över alla långhalsar"
+   },
+   "percent": 33.6
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/b92b1127420c24f76c1c5ce472e4e119a5683792.jpg",
+   "key": "Trophy022",
+   "name": {
+    "de": "Erstes Rebellenlager abgeschlossen",
+    "en": "First Rebel Camp Completed",
+    "sv": "Slutfört första rebellägret"
+   },
+   "percent": 59.2,
+   "unlocked": "2024-07-28T18:07:05+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/67e47f11b10a5e2618f262f73ab524a983a4b119.jpg",
+   "key": "Trophy023",
+   "name": {
+    "de": "Asera besiegt",
+    "en": "Defeated Asera",
+    "sv": "Besegrat Asera"
+   },
+   "percent": 26.1
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/6f8878e07d36f7b1d77192df99a14bb6a254e6e0.jpg",
+   "key": "Trophy024",
+   "name": {
+    "de": "Ersten Kern überbrückt",
+    "en": "First Core Overridden",
+    "sv": "Tagit kontroll över första kärnan"
+   },
+   "percent": 55.0,
+   "unlocked": "2024-08-04T11:10:58+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/0b9bb2d812a48cd1479bd6c974764490aed10daf.jpg",
+   "key": "Trophy025",
+   "name": {
+    "de": "Alle Kerne überbrückt",
+    "en": "All Cores Overridden",
+    "sv": "Tagit kontroll över alla kärnor"
+   },
+   "percent": 28.9
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/ab568f5201e4db02622e2e3bca6ce22e00718c95.jpg",
+   "key": "Trophy026",
+   "name": {
+    "de": "3 Streifen in einem Jagdgebiet erhalten",
+    "en": "Obtained 3 Stripes at a Hunting Ground",
+    "sv": "Fått 3 galoner i en jaktmark"
+   },
+   "percent": 33.8
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/9f379fe8da0584ff074da11c074f3652dfdaa725.jpg",
+   "key": "Trophy027",
+   "name": {
+    "de": "Alle 3 Streifen in allen Jagdgebieten erhalten",
+    "en": "Obtained 3 Stripes at All Hunting Grounds",
+    "sv": "Fått 3 galoner i alla jaktmarker"
+   },
+   "percent": 11.8
+  },
+  {
+   "description": {
+    "de": "Mindestens eine Beschaffungsmaschine von jeder Art erledigt.",
+    "en": "Killed at least one of every type of Acquisition machine.",
+    "sv": "Dödat minst en av varje typ av samlarmaskin."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/d7a3875c33270ac7c4225d29095ddc45243e8ee5.jpg",
+   "key": "Trophy028",
+   "name": {
+    "de": "Alle Beschaffungsmaschinen erledigt",
+    "en": "All Acquisition Machines Killed",
+    "sv": "Dödat alla samlarmaskiner"
+   },
+   "percent": 33.9
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Mindestens eine Aufklärermaschine von jeder Art erledigt.",
+    "en": "Killed at least one of every type of Reconnaissance machine.",
+    "sv": "Dödat minst en av varje typ av spaningsmaskin."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/569bccafdf7e85239f14c4c4c9da1499fdf60db4.jpg",
+   "key": "Trophy029",
+   "name": {
+    "de": "Alle Aufklärermaschinen erledigt",
+    "en": "All Recon Machines Killed",
+    "sv": "Dödat alla spaningsmaskiner"
+   },
+   "percent": 51.0,
+   "unlocked": "2024-08-18T21:22:24+02:00"
+  },
+  {
+   "description": {
+    "de": "Mindestens eine Kampfmaschine von jeder Art erledigt.",
+    "en": "Killed at least one of every type of Combat machine.",
+    "sv": "Dödat minst en av varje typ av stridsmaskin."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/6f4cedfc60a035b041b7745dba59895e193840ab.jpg",
+   "key": "Trophy030",
+   "name": {
+    "de": "Alle Kampfmaschinen erledigt",
+    "en": "All Combat Machines Killed",
+    "sv": "Dödat alla stridsmaskiner"
+   },
+   "percent": 38.6
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Mindestens eine Transportmaschine von jeder Art erledigt.",
+    "en": "Killed at least one of every type of Transport machine.",
+    "sv": "Dödat minst en av varje typ av transportmaskin."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/66a254975bbe5770b7d57e20808cd7c1d251164a.jpg",
+   "key": "Trophy031",
+   "name": {
+    "de": "Alle Transportmaschinen erledigt",
+    "en": "All Transport Machines Killed",
+    "sv": "Dödat alla transportmaskiner"
+   },
+   "percent": 49.3,
+   "unlocked": "2024-08-17T20:22:05+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/afcbcc4aa9e52dc5e1fe181f60ec256f43c1448b.jpg",
+   "key": "Trophy032",
+   "name": {
+    "de": "Alle normalen Reitmaschinen geritten",
+    "en": "Rode All Regular Mounts",
+    "sv": "Ridit på alla vanliga ridmaskiner"
+   },
+   "percent": 28.9
+  },
+  {
+   "description": {
+    "de": "Jeder Maschinenart begegnet und mit Fokus gescannt.",
+    "en": "Encountered and Focus scanned every type of machine.",
+    "sv": "Mött och Fokusskannat alla maskintyper."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/1cf1250f4ca615a6c052f44f1db1fccb22257b58.jpg",
+   "key": "Trophy033",
+   "name": {
+    "de": "Alle Maschinenarten gescannt",
+    "en": "All Machine Types Scanned",
+    "sv": "Skannat alla maskintyper"
+   },
+   "percent": 21.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/debe016a266e59b742f386534fceff02ccf4ea2a.jpg",
+   "key": "Trophy034",
+   "name": {
+    "de": "Einen langen Gleitflug abgeschlossen",
+    "en": "Completed a Long Glide",
+    "sv": "Glidit långt"
+   },
+   "percent": 24.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/4b4af80c782f9d537a75f9130ef181560623c295.jpg",
+   "key": "Trophy035",
+   "name": {
+    "de": "2 Flug-Reitmaschinen-Quests abgeschlossen",
+    "en": "Completed 2 Flying Mount Quests",
+    "sv": "Slutfört 2 flyguppdrag"
+   },
+   "percent": 25.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/5eeb137b3b2920e35f11c66e0576899a5bea5fb3.jpg",
+   "key": "Trophy036",
+   "name": {
+    "de": "2 Maschinenrennen gewonnen",
+    "en": "Won 2 Gauntlet Runs",
+    "sv": "Vunnit 2 kapplopp"
+   },
+   "percent": 17.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/03e4f9b5cd8d559f19051214afb9ff0de92a102a.jpg",
+   "key": "Trophy037",
+   "name": {
+    "de": "Beuteverträge-Satz abgeschlossen",
+    "en": "Completed a Set of Salvage Contracts",
+    "sv": "Fullbordat en serie samlarkontrakt"
+   },
+   "percent": 49.3
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/e0b2de4b008b84ca467f8a9690e2af2f63a7717a.jpg",
+   "key": "Trophy038",
+   "name": {
+    "de": "4 Rebellen-Außenposten abgeschlossen",
+    "en": "Completed 4 Rebel Outposts",
+    "sv": "Rensat 4 rebellutposter"
+   },
+   "percent": 43.8,
+   "unlocked": "2024-08-17T19:24:27+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/c1178ce30fd29a774a01e548d6b7829e1acb9f2c.jpg",
+   "key": "Trophy039",
+   "name": {
+    "de": "3 Reliktruinen abgeschlossen",
+    "en": "Completed 3 Relic Ruins",
+    "sv": "Slutfört 3 relikruiner"
+   },
+   "percent": 41.1
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/d0e46cf4dbc9d9d3610ec40ecf512134be401c06.jpg",
+   "key": "Trophy040",
+   "name": {
+    "de": "Arena-Herausforderungssatz abgeschlossen",
+    "en": "Completed Arena Challenge Set",
+    "sv": "Slutfört arenautmaningsserie"
+   },
+   "percent": 26.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/0cce375211ba9d5c7ff65e3f43854e1f4db8ceb4.jpg",
+   "key": "Trophy041",
+   "name": {
+    "de": "Maschinen-Streit-Herausforderer besiegt",
+    "en": "Defeated Machine Strike Challengers",
+    "sv": "Vunnit i maskinknuff"
+   },
+   "percent": 15.5
+  },
+  {
+   "description": {
+    "de": "Eine Waffe aus jeder Waffenklasse erlangt.",
+    "en": "Obtained 1 weapon from every weapon class.",
+    "sv": "Fått 1 vapen från varje vapenklass."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/e8f78509532814deeca94f656788d7c56357d75d.jpg",
+   "key": "Trophy042",
+   "name": {
+    "de": "Alle Waffenklassen erlangt",
+    "en": "Obtained All Weapon Classes",
+    "sv": "Fått alla vapenklasser"
+   },
+   "percent": 37.6
+  },
+  {
+   "description": {
+    "de": "Jeden Elementzustand mindestens einmal auf Feinde angewendet.",
+    "en": "Inflicted every elemental state on an enemy at least once.",
+    "sv": "Försatt fiender i varje typ av elementtillstånd minst en gång."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/412bcf599784fc6e8c94fd7331d9dc9d34c88716.jpg",
+   "key": "Trophy043",
+   "name": {
+    "de": "Alle Elementzustände benutzt",
+    "en": "Used all Elemental States",
+    "sv": "Använt alla elementtillstånd"
+   },
+   "percent": 50.0
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "3 verschiedene freischaltbare Nahkampf-Kombos erfolgreich durchgeführt.",
+    "en": "Successfully performed 3 different unlockable melee combos.",
+    "sv": "Fullbordat 3 olika upplåsbara närstridskombinationer."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/3c426f590df40b7803f4e250b0a09d095a2fa820.jpg",
+   "key": "Trophy044",
+   "name": {
+    "de": "3 Nahkampf-Kombos durchgeführt",
+    "en": "Performed 3 Melee Combos",
+    "sv": "Fullbordat 3 närstridskombinationer"
+   },
+   "percent": 48.3,
+   "unlocked": "2024-08-07T20:23:38+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "10 Maschinen durch Tarn-Kills erledigt.",
+    "en": "Performed a stealth kill on 10 machines.",
+    "sv": "Smygdödat 10 maskiner."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/fe22d4e86400a1d49e8fd34d7055954da1c2cfb7.jpg",
+   "key": "Trophy045",
+   "name": {
+    "de": "10 Maschinen durch Tarn-Kill getötet",
+    "en": "Stealth Killed 10 Machines",
+    "sv": "Smygdödat 10 maskiner"
+   },
+   "percent": 74.4,
+   "unlocked": "2024-07-27T22:47:16+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "100 Bauteile von Maschinen entfernt.",
+    "en": "Detached 100 components from machines.",
+    "sv": "Lossat 100 komponenter från maskiner."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/ee476b1699d64ae4fe8971f1d1470d46751cd22e.jpg",
+   "key": "Trophy046",
+   "name": {
+    "de": "100 Bauteile abgerissen",
+    "en": "Tore off 100 Components",
+    "sv": "Slitit loss 100 komponenter"
+   },
+   "percent": 61.8,
+   "unlocked": "2024-08-02T18:22:44+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "5 verschiedene schwere Waffen aufgehoben.",
+    "en": "Picked up 5 different heavy weapons.",
+    "sv": "Plockat upp 5 olika tunga vapen."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/45ffb7062dc32454949d9118445d8a48f0bec283.jpg",
+   "key": "Trophy047",
+   "name": {
+    "de": "5 schwere Waffen aufgehoben",
+    "en": "Picked up 5 Heavy Weapons",
+    "sv": "Plockat upp 5 tunga vapen"
+   },
+   "percent": 46.8,
+   "unlocked": "2024-08-18T15:27:40+02:00"
+  },
+  {
+   "description": {
+    "de": "Überbrückungen für 10 verschiedene Maschinenarten freigeschaltet und benutzt.",
+    "en": "Unlocked and used the overrides for 10 different types of machine.",
+    "sv": "Låst upp och använt kontroller för 10 olika maskintyper."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/c432029d82a4f7645552ed3dc8c10e369f897191.jpg",
+   "key": "Trophy048",
+   "name": {
+    "de": "10 Maschinenarten überbrückt",
+    "en": "10 Types of Machine Overridden",
+    "sv": "Kontrollerat 10 maskintyper"
+   },
+   "percent": 21.0
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/47a2c067e92b2b51f063e69a6590875e4b8e501f.jpg",
+   "key": "Trophy049",
+   "name": {
+    "de": "Das Fortdauern bezwungen",
+    "en": "Defeated the Enduring",
+    "sv": "Besegrat den Orubbliga"
+   },
+   "percent": 16.4
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/8571126d1b28b3ccf620c94c0beed5d59597d3ee.jpg",
+   "key": "Trophy050",
+   "name": {
+    "de": "Einen Mut-Stoß vollständig verbessert",
+    "en": "Fully Upgraded a Valor Surge",
+    "sv": "Uppgraderat ett energirus till max"
+   },
+   "percent": 52.5
+  },
+  {
+   "description": {
+    "de": "3 Waffen vollständig verbessert.",
+    "en": "Fully upgraded 3 weapons.",
+    "sv": "Uppgraderat 3 vapen till max."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/f302b49e65cfb61bea92b1458d67c83319d2acc6.jpg",
+   "key": "Trophy051",
+   "name": {
+    "de": "3 Waffen verbessert",
+    "en": "Upgraded 3 Weapons",
+    "sv": "Uppgraderat 3 vapen"
+   },
+   "percent": 57.8
+  },
+  {
+   "description": {
+    "de": "3 verschiedene Outfits vollständig verbessert.",
+    "en": "Fully upgraded 3 different outfits.",
+    "sv": "Uppgraderat 3 olika klädesuppsättningar till max."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/4760e256a23633f08beac0e525293e0a8156d875.jpg",
+   "key": "Trophy052",
+   "name": {
+    "de": "3 Outfits verbessert",
+    "en": "Upgraded 3 Outfits",
+    "sv": "Uppgraderat 3 klädesuppsättningar"
+   },
+   "percent": 31.5
+  },
+  {
+   "description": {
+    "de": "Proviantbeutel, Trankbeutel, Rohstoffbeutel, Fallenbeutel und jeden Munitionsbeutel mindestens einmal verbessert.",
+    "en": "Upgraded the Food Pouch, Potion Pouch, Resource Pouch, Trap Pouch, and any ammo pouch at least once.",
+    "sv": "Uppgraderat matsäcken, brygdsäcken, resurssäcken, fällsäcken och en ammunitionssäck minst en gång."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/7240e6b85328924c03a5e2535c7bcc36d818beda.jpg",
+   "key": "Trophy053",
+   "name": {
+    "de": "Jede Beutelart verbessert",
+    "en": "Upgraded Every Pouch Type",
+    "sv": "Uppgraderat varje säcktyp"
+   },
+   "percent": 36.6
+  },
+  {
+   "description": {
+    "de": "Eine Waffe eines beliebigen Rangs mit 2 Spulen ausgerüstet.",
+    "en": "Equipped a weapon of any tier with 2 coils.",
+    "sv": "Utrustat ett valfritt vapen med 2 spolar."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/ed9388294ba4568267fd8271f444dda0acd6f8b4.jpg",
+   "key": "Trophy054",
+   "name": {
+    "de": "Waffe mit Spulen verbessert",
+    "en": "Enhanced Weapon with Coils",
+    "sv": "Förbättrat vapen med spolar"
+   },
+   "percent": 48.4
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/2ba3ef8e371e5b1b3f3c5c7ab1ff4d3d9e8235d0.jpg",
+   "key": "Trophy055",
+   "name": {
+    "de": "3 Waffentechniken freigeschaltet",
+    "en": "Unlocked 3 Weapon Techniques",
+    "sv": "Låst upp 3 vapentekniker"
+   },
+   "percent": 54.5
+  },
+  {
+   "description": {
+    "de": "Alle verfügbaren Fertigkeiten eines Baumes erlernt.",
+    "en": "Learned all available skills on one tree.",
+    "sv": "Lärt in alla tillgängliga färdigheter i ett träd."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/f1fabb1837bb61b00f94afdf5602bfc9813e2c34.jpg",
+   "key": "Trophy056",
+   "name": {
+    "de": "Fertigkeitenbaum erlernt",
+    "en": "Skill Tree Learned",
+    "sv": "Lärt in färdighetsträd"
+   },
+   "percent": 32.8
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/c34af53c735a486648cbdd9229a8fe4b7fa9a4e7.jpg",
+   "key": "Trophy057",
+   "name": {
+    "de": "5 verschiedene Sammelobjekte erlangt",
+    "en": "Recovered 5 Different Collectables",
+    "sv": "Hittat 5 olika samlarobjekt"
+   },
+   "percent": 40.5,
+   "unlocked": "2024-08-07T21:45:07+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/a5554f4fbdb4ee8206404aa8db82948d5419b640.jpg",
+   "key": "Trophy058",
+   "name": {
+    "de": "Färbeblumen verwendet",
+    "en": "Used Dye Flowers",
+    "sv": "Använt färgblommor"
+   },
+   "percent": 26.8,
+   "unlocked": "2024-07-28T18:42:18+02:00"
+  },
+  {
+   "description": {
+    "de": "Einen „Neues Spiel+“-Durchgang in beliebiger Schwierigkeit abgeschlossen.",
+    "en": "Completed a New Game+ playthrough on any difficulty.",
+    "sv": "Klarade Nytt spel+ på valfri svårighetsgrad."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/7dcd1a4160a324955a53fb7ec1ae10b94efb6f2a.jpg",
+   "key": "Trophy059",
+   "name": {
+    "de": "Neues Spiel+ abgeschlossen",
+    "en": "Completed New Game+",
+    "sv": "Klarade Nytt spel+"
+   },
+   "percent": 4.7
+  },
+  {
+   "description": {
+    "de": "Einen neuen oder „Neues Spiel+“-Durchgang in „Ultraschwer“-Schwierigkeit abgeschlossen.",
+    "en": "Completed a new or New Game+ playthrough on Ultra Hard difficulty.",
+    "sv": "Klarade en ny genomspelning eller Nytt spel+ på svårighetsgraden Ultrasvårt."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/8aaa64b27ddbe34c2eac72821084f340050e4766.jpg",
+   "key": "Trophy060",
+   "name": {
+    "de": "Ultraschwer abgeschlossen",
+    "en": "Completed Ultra Hard",
+    "sv": "Klarade Ultrasvårt"
+   },
+   "percent": 3.9
+  },
+  {
+   "description": {
+    "de": "Alle Spezialwaffen, Farben und Gesichtsbemalungen von Neues Spiel+ erhalten.",
+    "en": "Obtained all New Game+ weapons, dyes, and face paints.",
+    "sv": "Fick alla vapen, färger och ansiktsmålningar i Nytt spel+."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/2c2fce2119bc44b4eb1b557cc6a6be8150f52f25.jpg",
+   "key": "Trophy061",
+   "name": {
+    "de": "Alle Belohnungen von Neues Spiel+ erlangt.",
+    "en": "Obtained All New Game+ Rewards",
+    "sv": "Fick alla belöningar i Nytt spel+"
+   },
+   "percent": 3.1
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/5489c2d37afeb9d5456f72cd75bf0a6b5817e71a.jpg",
+   "key": "Trophy062",
+   "name": {
+    "de": "Alle Quests abgeschlossen",
+    "en": "All Quests Completed",
+    "sv": "Alla uppdrag klarade"
+   },
+   "percent": 13.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/04c02ad1844b7de52105c1355e9b6015ead6adb0.jpg",
+   "key": "Trophy063",
+   "name": {
+    "de": "Die Auferstehung entdeckt",
+    "en": "Discovered the Ascension",
+    "sv": "Upptäckte uppstigningen"
+   },
+   "percent": 29.0
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/7709e8e7988be9d87f450ca52fe3e649cd313756.jpg",
+   "key": "Trophy064",
+   "name": {
+    "de": "Londra konfrontiert",
+    "en": "Confronted Londra",
+    "sv": "Konfronterade Londra"
+   },
+   "percent": 27.4
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/ba498e32ee53f47ad7b726ce0fd4f48700b12003.jpg",
+   "key": "Trophy065",
+   "name": {
+    "de": "Den Quen geholfen",
+    "en": "Aided the Quen",
+    "sv": "Hjälpte quenerna"
+   },
+   "percent": 18.1
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/42e7da2c7b35649df18b94fa18eb752541033dbe.jpg",
+   "key": "Trophy066",
+   "name": {
+    "de": "Londra und seinen Horus besiegt",
+    "en": "Defeated Londra and His Horus",
+    "sv": "Besegrade Londra och hans Horus"
+   },
+   "percent": 26.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/5a61195b685238c8239bcf2c2e262e7a768687ee.jpg",
+   "key": "Trophy067",
+   "name": {
+    "de": "Alle neuen Fertigkeiten erlernt",
+    "en": "All New Skills Learned",
+    "sv": "Alla nya färdigheter inlärda"
+   },
+   "percent": 9.9
+  },
+  {
+   "description": {
+    "de": "Spielerstufe 60 erreicht.",
+    "en": "Reached player level 60.",
+    "sv": "Kom till spelarnivå 60."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/ba3860e14d30d5d30ee5dfa320a628c56ad52da3.jpg",
+   "key": "Trophy068",
+   "name": {
+    "de": "Stufe 60 erreicht",
+    "en": "Reached Level 60",
+    "sv": "Kom till nivå 60"
+   },
+   "percent": 27.7
+  },
+  {
+   "description": {
+    "de": "Brimglanz genutzt, um 1 Outfit und 1 Waffe zu kaufen.",
+    "en": "Used Brimshine to purchase 1 outfit and 1 weapon.",
+    "sv": "Använde surglans för att köpa 1 uppsättning kläder och 1 vapen."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/1599180d4931ea428f4a03ebaed63f78f7bc4748.jpg",
+   "key": "Trophy069",
+   "name": {
+    "de": "Brimglanz genutzt",
+    "en": "Used Brimshine",
+    "sv": "Använde surglans"
+   },
+   "percent": 13.2
+  },
+  {
+   "description": {
+    "de": "Eine Waffe mit einer Elite-Spule oder ein Outfit mit einem Elite-Gewebe ausgerüstet.",
+    "en": "Equipped an elite coil on a weapon or an elite weave on an outfit.",
+    "sv": "Utrustade en elitspole på ett vapen eller en elitväv på en uppsättning kläder."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/894a8060b90810d1755919a9f9a35857d22e2ee1.jpg",
+   "key": "Trophy070",
+   "name": {
+    "de": "Elite-Spule oder -Gewebe ausgerüstet",
+    "en": "Equipped an Elite Coil or Weave",
+    "sv": "Utrustade elitspole eller -väv"
+   },
+   "percent": 24.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/64abd940719f98a304e037710a3157325e61b99f.jpg",
+   "key": "Trophy071",
+   "name": {
+    "de": "Phantomhandschuh verbessert",
+    "en": "Specter Gauntlet Upgraded",
+    "sv": "Gengångarhandske uppgraderad"
+   },
+   "percent": 18.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/4395f8d1bc72b78ddefb5a944218893f4bd058e6.jpg",
+   "key": "Trophy072",
+   "name": {
+    "de": "Kern von Brutstätte-THETA überbrückt",
+    "en": "Cauldron THETA Core Overridden",
+    "sv": "Tog kontroll över degel Theta"
+   },
+   "percent": 15.4
+  },
+  {
+   "description": {
+    "de": "In „Burning Shores“ jeder neuen Maschinenart begegnet und sie mit dem Fokus gescannt.",
+    "en": "Encountered and Focus scanned every new machine in the Burning Shores.",
+    "sv": "Mötte och Fokusskannade alla nya maskintyper i Burning Shores."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/95f8ba59eb0a776d35e43e170e43f4fe17d92a66.jpg",
+   "key": "Trophy073",
+   "name": {
+    "de": "Alle neuen Maschinen gescannt",
+    "en": "All New Machines Scanned",
+    "sv": "Alla nya maskiner skannade"
+   },
+   "percent": 19.9
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/f49eb6861e3c925f998fac2b7a79843c68cba7bf.jpg",
+   "key": "Trophy074",
+   "name": {
+    "de": "„Dinos in Zahlen“-Quiz abgeschlossen",
+    "en": "Completed the Dino Digits Quiz",
+    "sv": "Svarade på Dinosiffror-frågorna"
+   },
+   "percent": 11.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/2420110/3adb2f9ccf605a4df543d6ba4dc861f1e3abb410.jpg",
+   "key": "Trophy075",
+   "name": {
+    "de": "Schatz der Stöberer erlangt",
+    "en": "Recovered the Delvers' Trove",
+    "sv": "Hittade utgrävarnas skatt"
+   },
+   "percent": 7.3
+  },
+  {
+   "description": {
+    "de": "Alle Luftaufnahmen entdeckt und abgeschlossen.",
+    "en": "Discovered and completed all Aerial Captures.",
+    "sv": "Hittade och slutförde alla luftinspelningar."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/7257b1814e3b21d5f87521c47c535f3813504044.jpg",
+   "key": "Trophy076",
+   "name": {
+    "de": "Alle Luftaufnahmen erlangt",
+    "en": "Recovered All Aerial Captures",
+    "sv": "Hittade alla luftinspelningar"
+   },
+   "percent": 8.0
+  },
+  {
+   "description": {
+    "de": "Greifschlag bei 5 verschiedenen Maschinen angewandt.",
+    "en": "Used Grapple Strike on 5 unique machines.",
+    "sv": "Använde krokkastarslag på 5 unika maskiner."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/7b6da31d0b0b9b239c70b5a6dce25621d20f7f52.jpg",
+   "key": "Trophy077",
+   "name": {
+    "de": "Greifschlag bei Maschinen angewandt",
+    "en": "Used Grapple Strike on Machines",
+    "sv": "Använde krokkastarslag på maskiner"
+   },
+   "percent": 28.1
+  },
+  {
+   "description": {
+    "de": "Beim Gleiten 5 Maschinen mit dem Phantomhandschuh erledigt.",
+    "en": "Killed 5 machines with the Specter Gauntlet while gliding.",
+    "sv": "Dödade 5 maskiner med gengångarhandsken när du glidflög."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/0939e43545fa01fc68560ebc7c4a0738e19819aa.jpg",
+   "key": "Trophy078",
+   "name": {
+    "de": "Maschinen beim Gleiten erledigt",
+    "en": "Killed Machines While Gliding",
+    "sv": "Dödade maskiner under glidflygning"
+   },
+   "percent": 4.8
+  },
+  {
+   "description": {
+    "de": "5 Gallbäuche und 50 Stachelbruten erledigt.",
+    "en": "Killed 5 Bileguts and 50 Stingspawn.",
+    "sv": "Dödade 5 gallmagar och 50 sticksvärmare."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/2420110/5cd46b82316bb19b1b7308f7ea7ad7ae1cb42876.jpg",
+   "key": "Trophy079",
+   "name": {
+    "de": "Gallbäuche und Stachelbruten erledigt",
+    "en": "Killed Bileguts and Stingspawn",
+    "sv": "Dödade gallmagar och sticksvärmare"
+   },
+   "percent": 12.9
+  }
+ ],
+ "id": "2420110",
+ "platform": "steam"
+}

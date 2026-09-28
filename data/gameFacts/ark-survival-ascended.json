@@ -1,0 +1,65 @@
+{
+ "developers": [
+  "Studio Wildcard"
+ ],
+ "genres": [
+  {
+   "de": "Actionspiel",
+   "en": "action game",
+   "sv": "actionspel"
+  },
+  {
+   "de": "Action-Adventure",
+   "en": "action-adventure game",
+   "sv": "actionäventyrsspel"
+  },
+  {
+   "de": "Survival-Spiel",
+   "en": "survival game",
+   "sv": "överlevnadsspel"
+  },
+  {
+   "de": "Massively Multiplayer Online Role-Playing Game",
+   "en": "massively multiplayer online role-playing game",
+   "sv": "MMORPG"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  },
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Koop-Modus",
+   "en": "co-op mode",
+   "sv": "flerspelarläge"
+  }
+ ],
+ "publishers": [
+  "Studio Wildcard"
+ ],
+ "released": "2023-10-26",
+ "steam": {
+  "de": "Ark wird in dieser nächsten Generation der Videospieltechnologie mit Unreal Engine 5 von Grund auf neu gestaltet! Bilden Sie einen Stamm, zahm und züchten Hunderte von einzigartigen Dinosauriern und Urkreaturen, erforschen, bauen, bauen und kämpfen Sie sich auf die Spitze der Lebensmittelkette.",
+  "en": "ARK is reimagined from the ground-up into the next-generation of video game technology with Unreal Engine 5! Form a tribe, tame & breed hundreds of unique dinosaurs and primeval creatures, explore, craft, build, and fight your way to the top of the food-chain. Your new world awaits!"
+ },
+ "steam_appid": 2399830,
+ "wikidata": "Q118252143",
+ "wikipedia": {
+  "de": {
+   "text": "Ark: Survival Ascended ist ein von Studio Wildcard entwickeltes Survival-Computerspiel. Es handelt sich um ein Remaster des 2017 erschienenen Ark: Survival Evolved. Die Early-Access-Version des Spiels wurde am 25.",
+   "url": "https://de.wikipedia.org/wiki/Ark:_Survival_Ascended"
+  },
+  "en": {
+   "text": "Ark: Survival Ascended is an action-adventure survival video game developed by Studio Wildcard. It is a remaster of the 2017 game Ark: Survival Evolved. The game was released in early access for Windows on October 27, 2023, Xbox Series X/S on November 21, 2023, and PlayStation 5 on November 30, 2023.",
+   "url": "https://en.wikipedia.org/wiki/Ark:_Survival_Ascended"
+  }
+ }
+}

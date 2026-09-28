@@ -1,0 +1,1061 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/6078587189483353f06f48d0eefdaaa0791e9e13.jpg",
+   "key": "LILAC",
+   "name": {
+    "de": "Flieder und Stachelbeeren",
+    "en": "Lilac and Gooseberries"
+   },
+   "percent": 60.1,
+   "unlocked": "2021-02-08T21:42:35+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/07bae88f1ee9b856ddfc1d8e28ae7eedd4bcde95.jpg",
+   "key": "FRIEND_IN_NEED",
+   "name": {
+    "de": "Ein Freund in Not",
+    "en": "A Friend in Need"
+   },
+   "percent": 30.4,
+   "unlocked": "2025-10-10T17:59:46+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/652e39d4e750183a390a4e9f2f99018c1b335a20.jpg",
+   "key": "NECROMANCER",
+   "name": {
+    "de": "Nekromant",
+    "en": "Necromancer"
+   },
+   "percent": 29.0,
+   "unlocked": "2026-03-24T22:00:45+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/883f82ffa933d6d12da3e8733f340b082a08c325.jpg",
+   "key": "FAMILY_COUNSELOR",
+   "name": {
+    "de": "Familienberatung",
+    "en": "Family Counselor"
+   },
+   "percent": 37.3,
+   "unlocked": "2025-08-17T21:01:17+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/97246533609245ba270e7a8eb39a64d319ce5011.jpg",
+   "key": "SOMETHING_MORE",
+   "name": {
+    "de": "Etwas mehr",
+    "en": "Something More"
+   },
+   "percent": 24.5,
+   "unlocked": "2026-09-11T22:30:23+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/46b0b574e6334d81211e0c3db1539d3a76364144.jpg",
+   "key": "XENONAUT",
+   "name": {
+    "en": "Xenonaut"
+   },
+   "percent": 23.4,
+   "unlocked": "2026-09-12T22:17:55+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/53e0820b82445eeafe38f4991b947ed6ef64406d.jpg",
+   "key": "THE_KING",
+   "name": {
+    "de": "Der König ist tot",
+    "en": "The King is Dead"
+   },
+   "percent": 22.0,
+   "unlocked": "2026-09-14T21:08:17+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Beende das Spiel in einer beliebigen Schwierigkeitsstufe.",
+    "en": "Finish the game on any difficulty."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/bc1da5cdbd6e323308f012851cf4c3f6a1439c3f.jpg",
+   "key": "PASSED_THE_TRIAL",
+   "name": {
+    "de": "Prüfung bestanden",
+    "en": "Passed the Trial"
+   },
+   "percent": 22.0,
+   "unlocked": "2026-09-14T21:33:58+02:00"
+  },
+  {
+   "description": {
+    "de": "Schließe das Spiel auf dem Schwierigkeitsgrad \"Blut, Schweiß und Tränen\" oder \"Todesmarsch\" ab.",
+    "en": "Finish the game on the \"Blood and Broken Bones!\" or \"Death March!\" difficulty levels."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/cba4abe872ecb92a755cbc9cf1ffa708b7aef42e.jpg",
+   "key": "RAN_THE_GAUNTLET",
+   "name": {
+    "de": "Spur abgeschlossen",
+    "en": "Ran the Gauntlet"
+   },
+   "percent": 6.5
+  },
+  {
+   "description": {
+    "de": "Schließe das Spiel auf dem Schwierigkeitsgrad \"Todesmarsch\" ab.",
+    "en": "Finish the game on the \"Death March!\" difficulty level."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/03afa403f58958f72f7540345ba16a3439d1f830.jpg",
+   "key": "WALKED_THE_PATH",
+   "name": {
+    "de": "Spur geschafft",
+    "en": "Walked the Path"
+   },
+   "percent": 3.6
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/a3418fb0090f1efbeb5012dc4af5c944518df6a6.jpg",
+   "key": "THE_PROFESSIONAL",
+   "name": {
+    "de": "Geralt - Der Profi",
+    "en": "Geralt: The Professional"
+   },
+   "percent": 10.1
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/31a0391e642217dcabcefd4c55ba32539d45c516.jpg",
+   "key": "MAKER",
+   "name": {
+    "de": "Königsmacher",
+    "en": "Kingmaker"
+   },
+   "percent": 24.7,
+   "unlocked": "2026-03-28T22:15:03+01:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/19eae932cd305251be54b13048e158063ade7351.jpg",
+   "key": "ASSASSIN",
+   "name": {
+    "de": "Königsmörder",
+    "en": "Assassin of Kings"
+   },
+   "percent": 15.1,
+   "unlocked": "2026-09-13T00:33:37+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/bdd4d0466a3aca46ff416c3f3ee72d5a1ab4e777.jpg",
+   "key": "FRIENDS_WITH_BENEFITS",
+   "name": {
+    "de": "Freunde mit gewissen Vorzügen",
+    "en": "Friends With Benefits"
+   },
+   "percent": 33.8,
+   "unlocked": "2025-08-17T16:25:59+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/1a0b226212540b6d2d03c751abf1f5794a44b821.jpg",
+   "key": "FULL_CREW",
+   "name": {
+    "de": "Volles Haus",
+    "en": "Full Crew"
+   },
+   "percent": 19.0,
+   "unlocked": "2026-07-19T14:09:22+02:00"
+  },
+  {
+   "description": {
+    "de": "Erwirb alle Fertigkeiten in einem Fertigkeitenbaum.",
+    "en": "Acquire all the Abilities in one tree."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/433ba53ca210c08419c7166f3c07aa45c854936a.jpg",
+   "key": "DENDROLOGIST",
+   "name": {
+    "de": "Dendrologe",
+    "en": "Dendrologist"
+   },
+   "percent": 7.5
+  },
+  {
+   "description": {
+    "de": "Verwende zwanzigmal das Axii-Zeichen, um die Gegner zu zwingen, sich gegenseitig zu töten.",
+    "en": "Use the Axii Sign to force one opponent to kill another. Do this 20 times."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/a0e870df280a9b606a55c13398c6c631c70d4cf9.jpg",
+   "key": "ENEMY_OF_MY_ENEMY",
+   "name": {
+    "de": "Der Feind meines Feindes",
+    "en": "The Enemy of My Enemy"
+   },
+   "percent": 2.6
+  },
+  {
+   "description": {
+    "de": "Töte 10 Gegner, indem du sie mit dem Aard-Zeichen aus großer Höhe herabstößt.",
+    "en": "Kill 10 opponents by knocking them off somewhere high with the Aard Sign."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/f1258da57e56a1bca7b68d6bbf824c5ba102e6f9.jpg",
+   "key": "HUMPTY_DUMPTY",
+   "name": {
+    "de": "Goggelmoggel",
+    "en": "Humpty Dumpty"
+   },
+   "percent": 2.0
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Töte 50 Gegner mithilfe der Umwelt, etwa mit Sumpfgas, Insekten oder Objekten.",
+    "en": "Kill 50 opponents using the environment (e.g. swamp gas, insects or objects)."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/dd53b81dd01f0e5e192a3dd74f3be85d2d352887.jpg",
+   "key": "ENVIRONMENTALLY_UNFRIENDLY",
+   "name": {
+    "de": "Umweltunfreundlich",
+    "en": "Environmentally Unfriendly"
+   },
+   "percent": 28.8,
+   "unlocked": "2026-03-29T20:07:02+02:00"
+  },
+  {
+   "description": {
+    "de": "Führe 10 effektive Gegenangriffe nacheinander aus, ohne getroffen zu werden und ohne zu parieren.",
+    "en": "Perform 10 effective counterattacks in a row without getting hit or parrying."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/e5c0ea87e4b1d9044cbc51e10735a3b0750c4f65.jpg",
+   "key": "KAER_MORHEN_TRAINED",
+   "name": {
+    "de": "Ausbildung alter Schule",
+    "en": "Kaer Morhen Trained"
+   },
+   "percent": 4.1
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Töte im Kampf 5 Gegner, ohne Schaden zu nehmen (außer Vergiftungsschaden) und ohne Quen einzusetzen.",
+    "en": "Kill 5 foes in a fight without taking damage (except for Toxicity) and without using the Quen Sign."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/e6ab11c635a0e099b82943671ef77433f338fd64.jpg",
+   "key": "CANT_TOUCH_THIS",
+   "name": {
+    "de": "Finesse",
+    "en": "Can't Touch This!"
+   },
+   "percent": 42.6,
+   "unlocked": "2025-09-26T21:23:46+02:00"
+  },
+  {
+   "description": {
+    "de": "Entzünde zehnmal das Gas einer Drachentraum-Bombe durch einen brennenden Gegner.",
+    "en": "Ignite the gas produced by a Dragon's Dream bomb using a burning opponent. Do this 10 times."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/03ce4a6f6131fdf139f2701f41de357140e34afe.jpg",
+   "key": "THE_EVILEST_THING",
+   "name": {
+    "de": "Das größte Übel ...",
+    "en": "That Is the Evilest Thing"
+   },
+   "percent": 3.1
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Fülle alle Mutagene-Plätze.",
+    "en": "Fill all mutagen slots."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/460a057757aa460c17cb4f9a47edb64b80d82baa.jpg",
+   "key": "MUTANT",
+   "name": {
+    "en": "Mutant"
+   },
+   "percent": 26.1,
+   "unlocked": "2026-09-12T21:52:27+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Töte mindestens 5 Gegner in weniger als 10 Sekunden.",
+    "en": "Kill at least 5 opponents in under 10 seconds."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/76e5ab1da1c29adf03f4bafe14f1dc098bd3ecc7.jpg",
+   "key": "BUTCHER_OF_BLAVIKEN",
+   "name": {
+    "de": "Schlächter von Blaviken",
+    "en": "Butcher of Blaviken"
+   },
+   "percent": 50.9,
+   "unlocked": "2025-08-17T16:00:03+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/2f1359c55f3ead5c6cfcc7ad19d4ffad4b583680.jpg",
+   "key": "TRIPLE_THREAT",
+   "name": {
+    "de": "Dreifache Gefahr",
+    "en": "Triple Threat"
+   },
+   "percent": 31.1,
+   "unlocked": "2025-11-04T20:03:09+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Besiege Olaf, Skelliges Meister des unbewaffneten Kampfs.",
+    "en": "Defeat Olaf, the Skellige champion of unarmed combat."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/78baf8e4d8b11dc11e874b8821293d4e19f2f098.jpg",
+   "key": "BRAWLER",
+   "name": {
+    "de": "Schlägertyp",
+    "en": "Brawler"
+   },
+   "percent": 15.4,
+   "unlocked": "2026-03-28T18:37:21+01:00"
+  },
+  {
+   "description": {
+    "de": "Lass einen Gegner bluten, vergifte ihn zugleich und äschere ihn ein. Mache dies zehnmal.",
+    "en": "Make an opponent suffer from bleeding, poisoning and burning simultaneously. Do this 10 times."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/225ea779283e0e6168ad010e14a43346974adac3.jpg",
+   "key": "OVERKILL",
+   "name": {
+    "de": "Zu viel des Guten",
+    "en": "Overkill"
+   },
+   "percent": 3.0
+  },
+  {
+   "description": {
+    "de": "Töte 50 humanoide Gegner durch einen Kopfschuss mit der Armbrust.",
+    "en": "Kill 50 human and nonhuman opponents by striking them in the head with a crossbow bolt."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/f242418c2ce272157e918a1c3ac4a00ba41b0f04.jpg",
+   "key": "MASTER_MARKSMAN",
+   "name": {
+    "de": "Meisterschütze",
+    "en": "Master Marksman"
+   },
+   "percent": 1.8
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/305ccec5f9c42bf46f5b83bd6fc2a4602188b3d5.jpg",
+   "key": "WHAT_WAS_THAT",
+   "name": {
+    "de": "Was war das?",
+    "en": "What Was That?"
+   },
+   "percent": 3.0
+  },
+  {
+   "description": {
+    "de": "Erledige zwei Monsteraufträge, ohne Zeichen, Tränke, Mutagene, Öle oder Bomben einzusetzen.",
+    "en": "Kill 2 monsters you have a contract on without using Signs, potions, mutagens, oils or bombs."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/7f481d90fd7d0a1164b6df055c2f97d299d8b91c.jpg",
+   "key": "EVEN_ODDS",
+   "name": {
+    "de": "Faire Chancen",
+    "en": "Even Odds"
+   },
+   "percent": 9.5
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Entdecke 100 Schnellreisepunkte.",
+    "en": "Discover 100 fast travel points."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/7259b0914d17ab810cf8d328bde32fee451274af.jpg",
+   "key": "GLOBETROTTER",
+   "name": {
+    "de": "Weltenbummler",
+    "en": "Globetrotter"
+   },
+   "percent": 24.4,
+   "unlocked": "2026-02-07T12:38:12+01:00"
+  },
+  {
+   "description": {
+    "de": "Zerstöre alle Monsternester in der Region Velen/Novigrad oder in Skellige.",
+    "en": "Destroy all monster nests in the Velen / Novigrad region, or in Skellige."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/5d71ca10e0422dee6e1cf69ea9bd94609b22e085.jpg",
+   "key": "PEST_CONTROL",
+   "name": {
+    "de": "Seuchenkontrolle",
+    "en": "Pest Control"
+   },
+   "percent": 8.4
+  },
+  {
+   "description": {
+    "de": "Sammle alle Gwint-Karten, die in der Grundversion des Spiels verfügbar sind.",
+    "en": "Acquire all gwent cards available in the base version of the game."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/1e6f6151af80b51f081ecc5b711a25fda9b16998.jpg",
+   "key": "CARD_COLLECTOR",
+   "name": {
+    "de": "Kartensammler",
+    "en": "Card Collector"
+   },
+   "percent": 4.8
+  },
+  {
+   "description": {
+    "de": "Besiege Tybalt und gewinne das Gwint-Turnier, das in der Passiflora abgehalten wird.",
+    "en": "Defeat Tybalt and win the gwent tournament held at the Passiflora."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/8281c490cee74176cb65792dafb2a0a43370be7d.jpg",
+   "key": "GWENT_MASTER",
+   "name": {
+    "de": "Gwintmeister",
+    "en": "Gwent Master"
+   },
+   "percent": 11.1
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erlerne 12 Trankrezepte.",
+    "en": "Learn 12 potion formulae."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/cc738e3d91875361de309e67d887dab9dd684851.jpg",
+   "key": "LETS_COOK",
+   "name": {
+    "de": "Trankmeister",
+    "en": "Let's Cook!"
+   },
+   "percent": 44.7,
+   "unlocked": "2021-02-09T14:24:34+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Sammle die Rezepte für 6 verschiedene Bombentypen.",
+    "en": "Collect the formulae for 6 different bomb types."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/0a0e169c93d95d9d44ebce034df859daba1d56fd.jpg",
+   "key": "BOMBARDIER",
+   "name": {
+    "de": "Artillerist",
+    "en": "Bombardier"
+   },
+   "percent": 32.7,
+   "unlocked": "2025-08-23T13:53:26+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Lies 30 Bücher, Tagebücher oder andere Dokumente.",
+    "en": "Read 30 books, journals or other documents."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/ac3230e2cf5420c9aec901bab804f59b55421f88.jpg",
+   "key": "BOOKWORM",
+   "name": {
+    "de": "Bücherwurm",
+    "en": "Bookworm"
+   },
+   "percent": 39.9,
+   "unlocked": "2025-08-09T21:23:01+02:00"
+  },
+  {
+   "description": {
+    "de": "Finde und rüste alle Elemente des Sets einer Hexerausrüstung aus.",
+    "en": "Find and equip all the elements of one set of witcher gear."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/720fb19b6f8513203187ad68b8894a4ce54418be.jpg",
+   "key": "ARMED_AND_DANGEROUS",
+   "name": {
+    "de": "Gefährlich gerüstet",
+    "en": "Armed and Dangerous"
+   },
+   "percent": 17.1
+  },
+  {
+   "description": {
+    "de": "Verfüge über jeden möglichen Ort-der-Macht-Bonus zur selben Zeit.",
+    "en": "Have all possible Place of Power bonuses active at the same time."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/0511acb3579013edc90b1bd7e0446aa3f53b3fae.jpg",
+   "key": "POWER_OVERWHELMING",
+   "name": {
+    "de": "Überwältigende Macht",
+    "en": "Power Overwhelming"
+   },
+   "percent": 5.1
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige alle Faustkampf-Quests in Velen, Skellige and Novigrad.",
+    "en": "Complete all fistfighting quests in Velen, Skellige and Novigrad."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/f94f1bdb9686f1cc38369bd48649a5e9c05d1839.jpg",
+   "key": "BRAWL_MASTER",
+   "name": {
+    "de": "Faustkampfmeister",
+    "en": "Brawl Master"
+   },
+   "percent": 13.7,
+   "unlocked": "2026-03-28T20:15:01+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Gewinne alle Pferderennen  im Spiel.",
+    "en": "Win all the horse races in the game."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/449b8d58103ca7ed90f4cdbf2cc76d434cbb3172.jpg",
+   "key": "FAST_AND_FURIOUS",
+   "name": {
+    "de": "Flott und furios",
+    "en": "Fast and Furious"
+   },
+   "percent": 9.8,
+   "unlocked": "2026-09-11T21:51:42+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erreiche die Charakterstufe 35.",
+    "en": "Reach character development level 35."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/d40d29f01f627f0cab311e249a401ff507e496fc.jpg",
+   "key": "MUNCHKIN",
+   "name": {
+    "en": "Munchkin"
+   },
+   "percent": 24.1,
+   "unlocked": "2026-09-12T00:31:20+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Zerstöre 10 Monsternester mithilfe von Bomben.",
+    "en": "Destroy 10 monster nests using bombs."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/18278d6acee5b23a5c479908b58ba0d384084ea4.jpg",
+   "key": "FIRE_IN_THE_HOLE",
+   "name": {
+    "de": "Feuerfalle",
+    "en": "Fire in the Hole"
+   },
+   "percent": 25.0,
+   "unlocked": "2025-08-24T17:25:16+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Besiege einen Gegner im Faustkampf, ohne Schaden zu nehmen.",
+    "en": "Defeat an opponent in a fistfight without taking any damage."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/892ee6bff989959ea26f353157a1e48f33c9e968.jpg",
+   "key": "FIST_OF_THE_SOUTH_STAR",
+   "name": {
+    "de": "Faust des Südsterns",
+    "en": "Fist of the South Star"
+   },
+   "percent": 49.4,
+   "unlocked": "2025-07-09T21:00:57+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Gewinne eine Runde Gwint, bei der du nur neutrale Karten verwendest.",
+    "en": "Win a round of gwent using only neutral cards."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/bb2a8ee492a0eb86885c7e3969a6e0f7b4b2468a.jpg",
+   "key": "GERALT_AND_FRIENDS",
+   "name": {
+    "de": "Geralt und Freunde",
+    "en": "Geralt and Friends"
+   },
+   "percent": 16.4,
+   "unlocked": "2025-08-16T21:53:51+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Spiele in einer Runde Gwint drei Heldenkarten und gewinne das Spiel.",
+    "en": "Play three hero cards in one round of gwent and win the match."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/5fb8fc4d48ea8ff21226716cd8e0f6f18ab21980.jpg",
+   "key": "ALL_IN",
+   "name": {
+    "de": "Geh aufs Ganze",
+    "en": "All In"
+   },
+   "percent": 15.3,
+   "unlocked": "2025-09-19T19:29:35+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige den Kreischlingsauftrag.",
+    "en": "Complete the contract on the shrieker."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/15ba42e467dd64b4d4be2d2d686a7d5e5cadbd5a.jpg",
+   "key": "SHRIEKER",
+   "name": {
+    "de": "Kreischling",
+    "en": "Shrieker"
+   },
+   "percent": 30.3,
+   "unlocked": "2025-08-17T22:11:14+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige den Sarasti-Auftrag.",
+    "en": "Complete the contract on Sarasti."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/6bad719fc32da9534c2381b23f35f53c0998640e.jpg",
+   "key": "FEARLESS_VAMPIRE_SLAYER",
+   "name": {
+    "de": "Furchtloser Vampirjäger",
+    "en": "Fearless Vampire Slayer"
+   },
+   "percent": 22.4,
+   "unlocked": "2025-08-11T22:43:59+02:00"
+  },
+  {
+   "description": {
+    "de": "Erledige den Waldgeist-Auftrag.",
+    "en": "Complete the contract on the Woodland Spirit."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/592b0ea4f7c32493db460f0b22b4ef895f1f60c1.jpg",
+   "key": "WOODLAND_SPIRIT",
+   "name": {
+    "de": "Geist des Waldes",
+    "en": "Woodland Spirit"
+   },
+   "percent": 12.6
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige den Morvudd-Auftrag.",
+    "en": "Complete the contract on Morvudd."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/a965adb6e79d3db464162c16c77f57b6e57afb03.jpg",
+   "key": "FIEND_OR_FOE",
+   "name": {
+    "de": "Freund oder Feind?",
+    "en": "Fiend or Foe?"
+   },
+   "percent": 18.1,
+   "unlocked": "2026-03-12T21:46:11+01:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erledige den Therazane-Auftrag.",
+    "en": "Complete the contract on Therazane."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/62d76aa7f2f5f04d9554ab81dc115e7b2ecb99f1.jpg",
+   "key": "ASHES_TO_ASHES",
+   "name": {
+    "de": "Asche zu Asche",
+    "en": "Ashes to Ashes"
+   },
+   "percent": 19.7,
+   "unlocked": "2025-10-10T17:40:56+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Löse das Doppler-Problem in Novigrad.",
+    "en": "Resolve the doppler problem in Novigrad."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/6b408f870900feec6124e5bc7953c01f399c7fd7.jpg",
+   "key": "THE_DOPPLER_EFFECT",
+   "name": {
+    "de": "Der Doppler-Effekt",
+    "en": "The Doppler Effect"
+   },
+   "percent": 23.6,
+   "unlocked": "2025-08-23T13:05:11+02:00"
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/291cd726ee742ada9498be3b020e697fd5eedf91.jpg",
+   "key": "EP1_1",
+   "name": {
+    "de": "Das Ding küsse ich nicht",
+    "en": "I'm Not Kissing That"
+   },
+   "percent": 18.8,
+   "unlocked": "2026-09-14T22:06:26+02:00"
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/50eddb5a3a6a5c6bf26abee1818279c204a8cc17.jpg",
+   "key": "EP1_2",
+   "name": {
+    "de": "Genießen wir die gute Zeit!",
+    "en": "Let the Good Times Roll!"
+   },
+   "percent": 8.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/84b4c4faf61763647718f5aa0d72c8a0ae304cfb.jpg",
+   "key": "EP1_3",
+   "name": {
+    "de": "Kaufrausch",
+    "en": "Shopaholic"
+   },
+   "percent": 9.5
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/9e07c312af37292c5901eb2d8fa9cd5dca1dedf3.jpg",
+   "key": "EP1_4",
+   "name": {
+    "de": "Kurator der Albträume",
+    "en": "Curator of Nightmares"
+   },
+   "percent": 10.9
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/091f8005a05b18b335683f639c2f145b6a416067.jpg",
+   "key": "EP1_5",
+   "name": {
+    "en": "Pacta Sunt Servanda"
+   },
+   "percent": 16.4
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/095d742e3027646a854f3b2511e2c8f4c25862c7.jpg",
+   "key": "EP1_6",
+   "name": {
+    "de": "Einer gegen alle",
+    "en": "When It's Many Against One…"
+   },
+   "percent": 2.6
+  },
+  {
+   "description": {
+    "de": "Töte 3 Gegner mit ihren eigenen Pfeilen.",
+    "en": "Kill 3 opponents with their own arrows."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/79ab71bb3164e20c2bb15a128aecfd3ecadab1ce.jpg",
+   "key": "EP1_7",
+   "name": {
+    "de": "Zurück an den Absender",
+    "en": "Return to Sender"
+   },
+   "percent": 3.4
+  },
+  {
+   "description": {
+    "de": "Stehe unter dem Einfluss von sieben Tränken oder Absuden zugleich.",
+    "en": "Be under the influence of seven potions or decoctions at the same time."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/9aac1ac17f7e357ecd0b2e7cefaf7e5d07814677.jpg",
+   "key": "EP1_8",
+   "name": {
+    "de": "Ich kann jederzeit aufhören",
+    "en": "Can Quit Anytime I Want"
+   },
+   "percent": 3.8
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/f1e4073f57743bb8dfc4d60817edd44eb03de8e1.jpg",
+   "key": "EP1_9",
+   "name": {
+    "de": "Entdornte Wildrose",
+    "en": "Wild Rose Dethorned"
+   },
+   "percent": 6.8
+  },
+  {
+   "description": {
+    "de": "Sammle alle ophirischen Rüstungs- und Pferdegegenstände und mindestens ein ophirisches Schwert.",
+    "en": "Collect all available Ofieri armor and horse gear, and at least one Ofieri sword."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/1e2d9cf257ccfe34ec86448675e338c0c504f3ce.jpg",
+   "key": "EP1_10",
+   "name": {
+    "de": "Ich trug Ophiri, bevor es in Mode kam",
+    "en": "I Wore Ofieri Before It Was Cool"
+   },
+   "percent": 2.7
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/9c66ebb6c151916c7686630f02b49f42cb20ee8e.jpg",
+   "key": "EP1_11",
+   "name": {
+    "de": "Muuhrd und Totschlag",
+    "en": "Moo-rderer"
+   },
+   "percent": 2.9
+  },
+  {
+   "achieved": true,
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/0664ea245ca8bff2c019d2e461fd0a038baad590.jpg",
+   "key": "EP1_12",
+   "name": {
+    "de": "Geiler Stil, Alter!",
+    "en": "Rad Steez, Bro!"
+   },
+   "percent": 13.2,
+   "unlocked": "2026-09-11T21:09:23+02:00"
+  },
+  {
+   "description": {
+    "de": "Gewinne eine Partie Gwint mit einer Gesamtstärke von mindestens 187.",
+    "en": "Win a round of gwent with a total strength of at least 187."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/149dd41b2197904091bcc8d36529a3cb6340d217.jpg",
+   "key": "EP1_13",
+   "name": {
+    "de": "Mörderblatt",
+    "en": "Killed It"
+   },
+   "percent": 5.5
+  },
+  {
+   "description": {
+    "de": "Reise zum Herzogtum Toussaint.",
+    "en": "Travel to the Duchy of Toussaint."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/d8374b28d93ef6b6feca2e82bcedd6b715679681.jpg",
+   "key": "EP2_1",
+   "name": {
+    "de": "Der Hexer im Süden",
+    "en": "The Witcher's Gone South"
+   },
+   "percent": 19.1
+  },
+  {
+   "description": {
+    "de": "Lass dich mit den Orden von Vitis Vinifera auszeichnen.",
+    "en": "Be decorated with the Order of Vitis Vinifera."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/2e8fb1c91b87aacb66367127083dd0fe1b92fd32.jpg",
+   "key": "EP2_2",
+   "name": {
+    "de": "Der Held von Toussaint",
+    "en": "Last Action Hero"
+   },
+   "percent": 13.0
+  },
+  {
+   "description": {
+    "de": "Lass dich in Toussaint einbuchten.",
+    "en": "Serve time in Toussaint."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/5075db2ffa46de3c230de477c8fc931b743f6eab.jpg",
+   "key": "EP2_3",
+   "name": {
+    "de": "Verurteilt in Toussaint",
+    "en": "Kling of the Clink"
+   },
+   "percent": 3.0
+  },
+  {
+   "description": {
+    "de": "Erziele in allen Disziplinen des Ritterturniers einen makellosen Sieg.",
+    "en": "Obtain a flawless victory in all the competitions during the knights' tourney."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/b57d937008fa24399f9e148bfd9ddf764d9973c1.jpg",
+   "key": "EP2_4",
+   "name": {
+    "de": "Ein denkwürdiger Ritter",
+    "en": "A Knight to Remember"
+   },
+   "percent": 11.4
+  },
+  {
+   "description": {
+    "de": "Lass dir von der Dame vom See Aerondight geben.",
+    "en": "Be given Aerondight by the Lady of the Lake."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/fc36a7914ebf20e8e541ebd708dee34edcbb7c59.jpg",
+   "key": "EP2_5",
+   "name": {
+    "de": "Inbild der fünf Rittertugenden",
+    "en": "Embodiment of the Five Virtues"
+   },
+   "percent": 12.0
+  },
+  {
+   "description": {
+    "de": "Schöpfe alle Möglichkeiten aus, Corvo Bianco instandzusetzen.",
+    "en": "Use all available options for developing Corvo Bianco."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/da6dabfb0424a0fc16bb508c4dfd70510168ad88.jpg",
+   "key": "EP2_6",
+   "name": {
+    "de": "Zu Hause ist es am schönsten",
+    "en": "Playing House"
+   },
+   "percent": 13.2
+  },
+  {
+   "description": {
+    "de": "Finde alle Großmeister-Schemas jeder Hexerschule.",
+    "en": "Find all grandmaster diagrams for each witcher school."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/0e352549ec74cc3012d20266ffecf67ba7d3daa7.jpg",
+   "key": "EP2_7",
+   "name": {
+    "de": "Jeden Stein umgedreht",
+    "en": "Turned Every Stone"
+   },
+   "percent": 7.6
+  },
+  {
+   "description": {
+    "de": "Sammle alle Karten des Skellige-Kartensatzes.",
+    "en": "Collect all the cards in the Skellige deck."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/6b5685d92e6435d574e3fc33552ad3d8d4830189.jpg",
+   "key": "EP2_8",
+   "name": {
+    "de": "Ein Gwint-Problem",
+    "en": "I Have a Gwent Problem"
+   },
+   "percent": 7.0
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/6aa435136c0dd0027b1aaeb4d45039520bad5c11.jpg",
+   "key": "EP2_9",
+   "name": {
+    "de": "Blut und Wein",
+    "en": "The Grapes of Wrath Stomped"
+   },
+   "percent": 9.6
+  },
+  {
+   "description": {
+    "de": "Schalte den Bonus für das Anlegen aller Ausrüstungselemente einer Hexerschule frei.",
+    "en": "Unlock the bonus for equipping all the witcher gear elements from one School."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/f117ec5bce5ef47bddbf5cd6425a9df1d97bc1f5.jpg",
+   "key": "EP2_10",
+   "name": {
+    "de": "Volle Synergie",
+    "en": "Dressed to Kill"
+   },
+   "percent": 9.5
+  },
+  {
+   "description": {
+    "de": "Entwickle eine Mutation.",
+    "en": "Develop a mutation."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/292030/d03aa746e0bc11026aab5916d0e6663be256ef4c.jpg",
+   "key": "EP2_11",
+   "name": {
+    "de": "Waffe \"H\"",
+    "en": "Weapon \"W\""
+   },
+   "percent": 14.8
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/96b81977f5938a42d86afe8efa87a69e0d302573.jpg",
+   "key": "EP2_12",
+   "name": {
+    "en": "Hasta la Vista™"
+   },
+   "percent": 2.2
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/292030/91928a571176513cf75824dee99f2c3ef6339484.jpg",
+   "key": "EP2_13",
+   "name": {
+    "de": "David und Golyat",
+    "en": "David and Golyat"
+   },
+   "percent": 3.2
+  }
+ ],
+ "id": "292030",
+ "platform": "steam"
+}

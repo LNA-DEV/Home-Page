@@ -1,0 +1,526 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "de": "Teile eine Umarmung mit einem Charakter",
+    "en": "Share a hug with a Fall Guy"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/8f762c857b26e3ffcaaab3fa61de5b5745efa2fc.jpg",
+   "key": "ACH_GRAB_PLAYER",
+   "name": {
+    "de": "Freundschaftsspiel",
+    "en": "Fall Bae"
+   },
+   "percent": 77.4,
+   "unlocked": "2020-08-04T16:35:33+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Qualifiziere dich in deiner ersten Runde",
+    "en": "Qualify from your first round"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/3d724416fa62a663ada18f5616c61645af3c16af.jpg",
+   "key": "ACH_QUALIFY_1_ROUND",
+   "name": {
+    "de": "Ein kleiner Schritt",
+    "en": "One small trip"
+   },
+   "percent": 95.3,
+   "unlocked": "2020-08-04T16:22:19+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Gewinne deine erste Episode",
+    "en": "Win your first Episode"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/0cfac5b17b939eb4fbd0a804e2a3e22900a018da.jpg",
+   "key": "ACH_WIN_1_EPISODE",
+   "name": {
+    "de": "Sieg!",
+    "en": "Victory!"
+   },
+   "percent": 37.5,
+   "unlocked": "2020-09-13T20:18:52+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Qualifiziere dich in einer Rennrunde, obwohl du mehr als 10-mal hingefallen bist",
+    "en": "Qualify from a racing round despite falling over more than 10 times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/e212b3293c8c9d92c58722ed728ef55673d722fc.jpg",
+   "key": "ACH_FALL_10_QUALIFY_RACE",
+   "name": {
+    "de": "Blaue Flecken",
+    "en": "Face First"
+   },
+   "percent": 76.8,
+   "unlocked": "2020-08-04T16:34:29+02:00"
+  },
+  {
+   "description": {
+    "de": "Schalte 50 kosmetische Teile aus dem Shop frei",
+    "en": "Unlock 50 cosmetic items from the store"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/cdaff2be293691eeca0c93b907f0a8c383e87d7e.jpg",
+   "key": "ACH_FASHIONISTA",
+   "name": {
+    "de": "Mode-Ikone",
+    "en": "Fall Guy Fashionista"
+   },
+   "percent": 5.7
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schalte 10 kosmetische Teile aus dem Shop frei",
+    "en": "Unlock 10 cosmetic items from the store"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/6ae705f06582bfeb5fb6e2a8572cb95fef733a9b.jpg",
+   "key": "ACH_SHOPPING_SPREE",
+   "name": {
+    "de": "Kaufrausch",
+    "en": "Shopping Spree"
+   },
+   "percent": 26.5,
+   "unlocked": "2020-08-20T20:19:39+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Rüste dein erstes kosmetisches Teil aus",
+    "en": "Equip your first cosmetic item"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/941c5ae15e1e19ea6d29e4684bf5fb2c98c56712.jpg",
+   "key": "ACH_SNOWFLAKE",
+   "name": {
+    "de": "Schneeflocke",
+    "en": "Snowflake"
+   },
+   "percent": 95.8,
+   "unlocked": "2020-08-04T16:41:45+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Rüste eine Körperfarbe, ein Muster, ein oberes und ein unteres Kostümteil aus, die ungewöhnlich oder besser sind",
+    "en": "Equip an uncommon or better Body Colour, Pattern, Upper and Lower Costume piece"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/b4247f23803cfdf9263e7ef544a564ef19b1bd40.jpg",
+   "key": "ACH_BARGAIN_BUCKET",
+   "name": {
+    "de": "Schnäppchenjagd",
+    "en": "Bargain Bucket"
+   },
+   "percent": 38.9,
+   "unlocked": "2020-08-25T19:58:45+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Rüste eine Körperfarbe, ein Muster, ein oberes und ein unteres Kostümteil aus, die selten oder besser sind",
+    "en": "Equip a rare or legendary Body Colour, Pattern, Upper and Lower Costume piece"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/c692615f8ca4d9aa77541f46de3d4167c57c6f1a.jpg",
+   "key": "ACH_MAD_TRENDY",
+   "name": {
+    "de": "Trendbewusstsein",
+    "en": "Mad Trendy"
+   },
+   "percent": 22.1,
+   "unlocked": "2020-09-27T20:27:44+02:00"
+  },
+  {
+   "description": {
+    "de": "Rüste eine Körperfarbe, ein Muster, ein oberes und ein unteres Kostümteil aus, die legendär sind",
+    "en": "Equip a legendary Body Colour, Pattern, Upper and Lower Costume piece"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/385953a4bd1d3de54e110d42d10262dfe8f83a04.jpg",
+   "key": "ACH_HEAD_TURNER",
+   "name": {
+    "de": "Blickfang",
+    "en": "Head Turner"
+   },
+   "percent": 15.8
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Rüste dein erstes legendäres Anpassungsteil aus",
+    "en": "Equip your first legendary customization item"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/5b18fb71ef8a0db78dd66e4d65f2b5d7cdb1d596.jpg",
+   "key": "ACH_CATWALK_MODEL",
+   "name": {
+    "de": "Reif für den Laufsteg",
+    "en": "Catwalk Model"
+   },
+   "percent": 43.3,
+   "unlocked": "2020-08-13T17:15:24+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erreiche in einer Saison Prestigestufe 10",
+    "en": "Reach lvl 10 fame during a season"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/97e90e90e9a9d13d4b11ab5ae92a5b6fab427366.jpg",
+   "key": "ACH_FAME_TIER_1",
+   "name": {
+    "de": "Vielversprechend",
+    "en": "One to Watch"
+   },
+   "percent": 59.0,
+   "unlocked": "2020-08-14T17:46:47+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erreiche in einer Saison Prestigestufe 25",
+    "en": "Reach lvl 25 fame during a season"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/bfefc104137d24bc0a2262c67a714c029fbaf91f.jpg",
+   "key": "ACH_FAME_TIER_2",
+   "name": {
+    "de": "Bekannter Name",
+    "en": "Household Name"
+   },
+   "percent": 21.1,
+   "unlocked": "2020-08-25T21:19:57+02:00"
+  },
+  {
+   "description": {
+    "de": "Erreiche in einer Saison Prestigestufe 40",
+    "en": "Reach lvl 40 fame during a season"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/0730e8e013d49edfd5048ff8f91416c19ca1198d.jpg",
+   "key": "ACH_FAME_TIER_3",
+   "name": {
+    "de": "Star der Show",
+    "en": "Star of the Show"
+   },
+   "percent": 9.7
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Qualifizieren Sie sich, ohne einmal umzufallen",
+    "en": "Qualify from a round without falling over even once"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/2929d781ff65bc163bff2d1fd4da154bc7cc8e72.jpg",
+   "key": "ACH_FLAWLESS_VICTORY",
+   "name": {
+    "de": "Makellos",
+    "en": "Flawless Victory"
+   },
+   "percent": 79.8,
+   "unlocked": "2020-08-04T17:20:06+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erreiche den ersten Platz in einer Rennrunde",
+    "en": "Get first place in a racing round"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/a830ebaa8176e37a4ec366ca57d79e48d384d52b.jpg",
+   "key": "ACH_RACING_TIER_1",
+   "name": {
+    "de": "Der Meute voraus",
+    "en": "Ahead of the Pack"
+   },
+   "percent": 44.8,
+   "unlocked": "2020-08-14T17:35:13+02:00"
+  },
+  {
+   "description": {
+    "de": "Erreiche 5-mal den ersten Platz in einer Rennrunde",
+    "en": "Get first place in a racing round 5 times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/177c3c4d47555491bc9fa4b6598611c229780593.jpg",
+   "key": "ACH_RACING_TIER_2",
+   "name": {
+    "de": "Ganz schön flott",
+    "en": "Quite Dashing"
+   },
+   "percent": 16.8
+  },
+  {
+   "description": {
+    "de": "Erreiche 20-mal den ersten Platz in einer Rennrunde",
+    "en": "Get first place in a racing round 20 times"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/1e247d2ab5ad67b41b1273d4c988a7f5fd375d3c.jpg",
+   "key": "ACH_RACING_TIER_3",
+   "name": {
+    "de": "Held der Strecke",
+    "en": "Track Star"
+   },
+   "percent": 5.2
+  },
+  {
+   "description": {
+    "de": "Gewinne 5 Episoden in Folge",
+    "en": "Win 5 Episodes in a row"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/2ce3c92cf67d1b5011004ec578a75f90211de3bf.jpg",
+   "key": "ACH_INFALLIBLE",
+   "name": {
+    "de": "Unschlagbar",
+    "en": "Infallible"
+   },
+   "percent": 2.2
+  },
+  {
+   "description": {
+    "de": "Gewinne 7 Episoden",
+    "en": "Win 7 Episodes"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/c0a16886e30584db9cc79f888dfa7645417c02b9.jpg",
+   "key": "ACH_WIN_EPISODES_TIER_2",
+   "name": {
+    "de": "Spitzenplätze",
+    "en": "Top Tier"
+   },
+   "percent": 12.3
+  },
+  {
+   "description": {
+    "de": "Gewinne 20 Episoden",
+    "en": "Win 20 Episodes"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/4c66e42104a71988f28da21e53044173cad8a587.jpg",
+   "key": "ACH_WIN_EPISODES_TIER_3",
+   "name": {
+    "de": "Gold-Guy",
+    "en": "Golden Guy"
+   },
+   "percent": 5.5
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Qualifiziere dich in 100 Runden",
+    "en": "Qualify from 100 rounds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/6fedec6cf154e16bd06654e66923f50ddc13ca9f.jpg",
+   "key": "ACH_QUALIFY_ROUND_TIER_2",
+   "name": {
+    "de": "Ein riesiger Sprung",
+    "en": "One giant leap"
+   },
+   "percent": 38.3,
+   "unlocked": "2020-08-15T22:00:42+02:00"
+  },
+  {
+   "description": {
+    "de": "Qualifiziere dich in 500 Runden",
+    "en": "Qualify from 500 rounds"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/df23806be92e610617669251d9986fd18c7b6013.jpg",
+   "key": "ACH_QUALIFY_ROUND_TIER_3",
+   "name": {
+    "de": "Rennveteran",
+    "en": "Veteran Status"
+   },
+   "percent": 9.2
+  },
+  {
+   "description": {
+    "de": "Gewinne eine Episode mit einem ausgerüsteten individuellen Jubel",
+    "en": "Win an Episode with a custom Celebration equipped"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/47e918286a11ce57e3b03cb682654e8875892fda.jpg",
+   "key": "ACH_SHOW_OFF",
+   "name": {
+    "de": "Show-Profi",
+    "en": "Show Off"
+   },
+   "percent": 12.4
+  },
+  {
+   "description": {
+    "de": "Gewinne eine Episode als Mitglied einer Gruppe aus 3 oder mehr Spielern",
+    "en": "Win an Episode as part of a party of 3 or more players"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/c27f2694add6a076d5d16052b18ef70a1d49e0ff.jpg",
+   "key": "ACH_SQUAD_GOALS",
+   "name": {
+    "de": "Teamziele",
+    "en": "Squad Goals"
+   },
+   "percent": 18.8
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Qualifiziere dich, nachdem eine Runde in die Verlängerung gegangen ist",
+    "en": "Qualify after a round goes to overtime"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/90ef4df8e426dffa3387e1057923e4bde3276956.jpg",
+   "key": "ACH_DOWN_TO_THE_WIRE",
+   "name": {
+    "de": "Auf den letzten Drücker",
+    "en": "Down to the Wire"
+   },
+   "percent": 52.2,
+   "unlocked": "2020-08-10T18:22:48+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Qualifiziere dich in einem Teamspiel mit einer Punktzahl von 1",
+    "en": "Qualify from a team game with a score of 1"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/1926f6c17321b510c7cccb8bdbe81ca75d5bb03f.jpg",
+   "key": "ACHI_BARELY_MADE_IT",
+   "name": {
+    "de": "Geringstmögliche Mühe",
+    "en": "Low Baller"
+   },
+   "percent": 33.3,
+   "unlocked": "2020-08-10T18:28:50+02:00"
+  },
+  {
+   "description": {
+    "de": "Nutze ein Emote, kurz bevor du Erster in einer Rennrunde wirst",
+    "en": "Perform an emote just before coming first in a race round"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/bcb92a8cc06392bc908ee53f81d92f5ea2052172.jpg",
+   "key": "ACH_BIG_TEASE",
+   "name": {
+    "de": "Schluss-Spott",
+    "en": "Big Tease"
+   },
+   "percent": 7.6
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Sammle insgesamt 1 Stunde Sturzzeit",
+    "en": "Clock up 1 hour total time falling"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/56740ad4f3907a06a4996f7533a211b750742799.jpg",
+   "key": "ACH_BIG_AIR",
+   "name": {
+    "de": "Luftkunststücke",
+    "en": "Big Air"
+   },
+   "percent": 19.5,
+   "unlocked": "2020-10-03T14:10:49+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Remple insgesamt 1000-mal andere Charaktere an",
+    "en": "Bump into other Fall Guys 1000 times in total"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/334ed948653a64916e990511c22ddcf744d0b6b4.jpg",
+   "key": "ACH_STUMBLE_CHUMS",
+   "name": {
+    "de": "Stolpernde Kollegen",
+    "en": "Stumble Chums"
+   },
+   "percent": 73.0,
+   "unlocked": "2020-08-10T20:46:16+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Falle mindestens 3 Sekunden lang, bevor du auf dem Kopf landest",
+    "en": "Fall for at least 3 seconds before landing on your head"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/2e3edc7469ff41899c1089db6ff0ea7bc8be7d3e.jpg",
+   "key": "ACH_STYLE_POINTS",
+   "name": {
+    "de": "Stilpunkte",
+    "en": "Style Points"
+   },
+   "percent": 72.3,
+   "unlocked": "2020-08-10T18:06:29+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schubse jemanden um",
+    "en": "Knock someone over"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/126fc7a3ed8d39b50e631babd615e292ff705669.jpg",
+   "key": "ACH_BIG_BULLY",
+   "name": {
+    "de": "Echter Rüpel",
+    "en": "Big Bully"
+   },
+   "percent": 93.0,
+   "unlocked": "2020-08-04T16:38:37+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Remple beim Rollen auf dem Boden 3 Leute an, bevor du aufstehst",
+    "en": "Bump into 3 people while rolling on the ground before getting up"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/7b106815100483b54d50b5fd72b2a22a3742ebd9.jpg",
+   "key": "ACH_TROUBLEMAKER",
+   "name": {
+    "de": "Unruhestifter",
+    "en": "Troublemaker"
+   },
+   "percent": 91.6,
+   "unlocked": "2020-08-04T17:09:32+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erreiche die Endgeschwindigkeit",
+    "en": "Reach terminal velocity"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1097150/d24b693833335e41e966a043477af7da81d5b577.jpg",
+   "key": "ACH_FALL_THROTTLE",
+   "name": {
+    "de": "Fallgas",
+    "en": "Fall Throttle"
+   },
+   "percent": 84.3,
+   "unlocked": "2020-08-04T16:33:04+02:00"
+  }
+ ],
+ "id": "1097150",
+ "platform": "steam"
+}

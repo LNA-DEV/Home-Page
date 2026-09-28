@@ -1,0 +1,67 @@
+{
+ "developers": [
+  "Guerrilla Games",
+  "Sony Interactive Entertainment"
+ ],
+ "genres": [
+  {
+   "de": "Action-Rollenspiel",
+   "en": "action role-playing game",
+   "sv": "actionrollspel"
+  },
+  {
+   "de": "Science-Fiction-Computerspiel",
+   "en": "science fiction video game",
+   "sv": "science fiction-spel"
+  },
+  {
+   "de": "postapokalyptisches Videospiel",
+   "en": "post-apocalyptic video game",
+   "sv": "postapokalyptiskt datorspel"
+  },
+  {
+   "de": "Actionspiel",
+   "en": "action game",
+   "sv": "actionspel"
+  },
+  {
+   "de": "Action-Adventure",
+   "en": "action-adventure game",
+   "sv": "actionäventyrsspel"
+  }
+ ],
+ "match": "steam-appid+edition-of",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "publishers": [
+  "Sony Interactive Entertainment",
+  "PlayStation PC LLC"
+ ],
+ "released": "2017-02-28",
+ "steam": {
+  "de": "Erlebe die legendäre Reise von Aloy und enthülle die Geheimnisse einer Erde der Zukunft, die von Maschinen beherrscht wird. Setze vernichtende taktische Angriffe gegen deine Beute ein und erkunde in diesem preisgekrönten Action-Rollenspiel eine majestätische offene Welt!",
+  "en": "Experience Aloy’s legendary quest to unravel the mysteries of a future Earth ruled by Machines. Use devastating tactical attacks against your prey and explore a majestic open world in this award-winning action RPG!",
+  "sv": "Upplev Aloys legendariska resa för att avslöja mysterierna i en värld som härskas av dödliga maskiner. Använd förödande taktiska attacker mot ditt byte och utforska en storslagen värld i det här prisbelönta actionrollspelet!"
+ },
+ "steam_appid": 1151640,
+ "wikidata": "Q20155528",
+ "wikipedia": {
+  "de": {
+   "text": "Horizon Zero Dawn ist ein vom niederländischen Entwicklerstudio Guerrilla Games entwickeltes Action-Rollenspiel.",
+   "url": "https://de.wikipedia.org/wiki/Horizon_Zero_Dawn"
+  },
+  "en": {
+   "text": "Horizon Zero Dawn is a 2017 action role-playing game developed by Guerrilla Games and published by Sony Interactive Entertainment. The first instalment in the Horizon video game series, it is set in a post-apocalyptic United States where large robotic machines dominate the Earth while humans live in primitive tribes with varying levels of technological development. The game follows Aloy, a young huntress who sets out to uncover her past.",
+   "url": "https://en.wikipedia.org/wiki/Horizon_Zero_Dawn"
+  },
+  "sv": {
+   "text": "Horizon Zero Dawn är ett actionrollspel utvecklat av Guerrilla Games och utgivet av Sony Computer Entertainment till Playstation 4.",
+   "url": "https://sv.wikipedia.org/wiki/Horizon_Zero_Dawn"
+  }
+ }
+}

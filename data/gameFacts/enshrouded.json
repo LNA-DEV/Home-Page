@@ -1,0 +1,50 @@
+{
+ "developers": [
+  "Keen Games"
+ ],
+ "genres": [
+  {
+   "de": "Survival-Spiel",
+   "en": "survival game",
+   "sv": "överlevnadsspel"
+  },
+  {
+   "de": "Computer-Rollenspiel",
+   "en": "role-playing video game",
+   "sv": "datorrollspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Koop-Modus",
+   "en": "co-op mode",
+   "sv": "flerspelarläge"
+  }
+ ],
+ "publishers": [
+  "Keen Games"
+ ],
+ "released": "2024-01-24",
+ "steam": {
+  "de": "Du bist Flameborn, die letzte Hoffnung eines sterbenden Volks. Erwache und überlebe das Grauen des verderben bringenden Nebels. Brich in eine gewaltige Welt auf, überwinde mächtige Bosse, baue prachtvolle Hallen und gehe deinen Weg in diesem Koop-Survival-Action-RPG für bis zu 16 Spieler.",
+  "en": "You are Flameborn, last ember of hope of a dying race. Awaken, survive the terror of a corrupting fog, and reclaim the lost beauty of your kingdom. Venture into a vast world, vanquish punishing bosses, build grand halls and forge your path in this co-op survival action RPG for up to 16 players."
+ },
+ "steam_appid": 1203620,
+ "wikidata": "Q122914994",
+ "wikipedia": {
+  "de": {
+   "text": "Enshrouded ist ein Survival-Action-Rollenspiel, das von Keen Games entwickelt wird und am 24. Januar 2024 im Early Access auf Steam veröffentlicht wurde. Für den 15.",
+   "url": "https://de.wikipedia.org/wiki/Enshrouded"
+  },
+  "en": {
+   "text": "Enshrouded is a survival and action role-playing game by Keen Games for Microsoft Windows. It launched in early access in January 2024 for PC, and is scheduled for a full release in October 2026 for PC and PlayStation 5, and in early 2027 for Xbox Series X and Series S.",
+   "url": "https://en.wikipedia.org/wiki/Enshrouded"
+  }
+ }
+}

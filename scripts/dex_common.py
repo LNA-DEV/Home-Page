@@ -324,6 +324,18 @@ def _parse_block(lines, idx, indent):
     return mapping, idx
 
 
+def load_yaml(path):
+    """Read any file in the subset this reader understands (nested mappings,
+    block and flow sequences, plain and quoted scalars) -> its root value, or
+    None if the file is absent. game-enrich.py reads data/gaming.yaml and
+    data/gamePages.yaml with it."""
+    path = Path(path)
+    if not path.exists():
+        return None
+    root, _ = _parse_block(path.read_text(encoding="utf-8").splitlines(), 0, 0)
+    return root
+
+
 def load_dex(path=DEX_PATH):
     """Read data/dex.yaml -> list of species dicts (empty list if absent)."""
     if not path.exists():

@@ -25,9 +25,17 @@ Heroic stored. On every run it:
 
 Everything that is NOT `platform: gog` is left byte-for-byte untouched, so the
 Steam block, the Epic block, and hand-added games are all safe. Human-owned fields
-on a GOG entry (rating, genres, tags, notes) are preserved across syncs: read back
-out of the old entry and re-emitted verbatim, keyed by `appName`. (Keep those
-human fields to a single line each.)
+on a GOG entry (extraMinutes, and the rating / genres / tags / notes that now
+belong in data/gamePages.yaml) are preserved across syncs: read back out of the
+old entry and re-emitted verbatim, keyed by `appName`. (Keep those human fields
+to a single line each.)
+
+Every entry carries a `slug:` — the game's page URL, frozen the first time the
+game is synced (scripts/gaming_common.py). The achievements the cloud returns
+are also written out in full, to data/gameAchievements/gog-<appName>.json with
+their icons under static/images/games/achievements/gog/<appName>/. GOG's
+documented response carries no global unlock percentage; a `rarity` field is
+used if the live one has it, otherwise the page shows none.
 
 THREE deliberate differences from sync-epic.py:
 
@@ -67,6 +75,10 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import gaming_common  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 DEFAULT_DATA = REPO / "data" / "gaming.yaml"
@@ -370,7 +382,8 @@ def collect_cloud(auth_json_path, app_names, *, want_achievements,
     out = {}
     total = len(app_names)
     for i, app in enumerate(sorted(app_names), 1):
-        rec = {"minutes": 0, "ach_unlocked": None, "ach_total": None}
+        rec = {"minutes": 0, "ach_unlocked": None, "ach_total": None,
+               "ach_items": None, "ach_fetched": False}
         try:
             sess = _gameplay_get(GOG_SESSIONS_URL.format(app=app, uid=user_id), access_token)
             if sess:
@@ -383,12 +396,14 @@ def collect_cloud(auth_json_path, app_names, *, want_achievements,
                 ach = _gameplay_get(GOG_ACHIEVEMENTS_URL.format(app=app, uid=user_id),
                                     access_token)
                 items = (ach or {}).get("items") or []
+                rec["ach_fetched"] = True
                 if items:
                     rec["ach_total"] = len(items)
                     rec["ach_unlocked"] = sum(1 for a in items if a.get("date_unlocked"))
+                    rec["ach_items"] = items
             except Exception as exc:  # noqa: BLE001 - per-game degrade
-                print(f"  cloud: achievements fetch failed for {app} ({exc}); skipping.",
-                      file=sys.stderr)
+                print(f"  cloud: achievements fetch failed for {app} ({exc}); "
+                      "keeping the old data.", file=sys.stderr)
         out[app] = rec
         if i % 25 == 0 or i == total:
             print(f"  cloud: {i}/{total} games queried…", file=sys.stderr)
@@ -474,7 +489,13 @@ def build_games(heroic_dir, auth_json, covers_dir, *, include_unplayed, do_cloud
             "lastPlayed": g["lastPlayed"],  # cloud carries no lastPlayed
             "ach_unlocked": c.get("ach_unlocked"),
             "ach_total": c.get("ach_total"),
+            # Not fetched this run (--no-cloud, --no-achievements, a game not
+            # played locally, a failed request): keep the counts and file it had.
+            "ach_skipped": not c.get("ach_fetched"),
         }
+        if c.get("ach_items"):
+            game["achievementDoc"], game["achievementIcons"] = \
+                build_gog_achievements(app, c["ach_items"])
         game["cover"] = download_cover(g["cover_url"], g["title"], covers_dir) if do_covers else None
         games.append(game)
 
@@ -483,13 +504,51 @@ def build_games(heroic_dir, auth_json, covers_dir, *, include_unplayed, do_cloud
     return games
 
 
+def build_gog_achievements(app, items):
+    """Pure: one GOG copy's achievements document and the icon URLs it needs,
+    from the `items` of gameplay.gog.com's achievements endpoint.
+
+    GOG's order is kept. `visible: false` is GOG's hidden flag. The icon is
+    `image_url_unlocked`, which GOG only fills once anybody has earned it, else
+    the locked variant; the page greys a locked icon itself either way. The
+    documented response has no percentage — `rarity` is taken if it is there."""
+    out, urls = [], []
+    for a in items:
+        key = str(a.get("achievement_key") or a.get("achievement_id") or "")
+        if not key:
+            continue
+        item = {
+            "key": key,
+            "name": gaming_common.localised({"en": a.get("name") or key}),
+            "hidden": a.get("visible") is False,
+        }
+        description = gaming_common.localised({"en": a.get("description") or ""})
+        if description:
+            item["description"] = description
+        url = a.get("image_url_unlocked") or a.get("image_url_locked")
+        if url:
+            item["icon"] = gaming_common.icon_ref("gog", app, url)
+            urls.append(url)
+        if a.get("date_unlocked"):
+            item["achieved"] = True
+            when = gaming_common.berlin_iso(a["date_unlocked"])
+            if when:
+                item["unlocked"] = when
+        rarity = a.get("rarity")
+        if isinstance(rarity, (int, float)) and not isinstance(rarity, bool):
+            item["percent"] = round(float(rarity), 1)
+        out.append(item)
+    return {"platform": "gog", "id": str(app), "achievements": out}, urls
+
+
 # --------------------------------------------------------------------------- #
 # Raw-text YAML rebuild (no YAML dependency)                                    #
 # --------------------------------------------------------------------------- #
-def build_gog_entry(game, human_lines):
+def build_gog_entry(game, human_lines, slug):
     """Render one `platform: gog` YAML entry from merged game metadata."""
     lines = [
         f"- title: {yaml_quote(game['title'])}",
+        f"  slug: {slug}",
         "  platform: gog",
         f"  appName: {yaml_quote(game['app_name'])}",
         f"  playtimeMinutes: {game['playtimeMinutes']}",
@@ -520,22 +579,41 @@ def rebuild(raw, games):
     preamble, chunks = split_entries(lines)
 
     non_gog, old_human, old_keys = [], {}, set()
+    old_slugs, old_counts, taken = {}, {}, set()
     for chunk in chunks:
         is_gog = (chunk_field(chunk, "platform") or "").lower() == "gog"
         key = chunk_field(chunk, "appName") if is_gog else None
         if is_gog and key:
             old_keys.add(key)
             old_human[key] = chunk_human_lines(chunk)
+            old_slugs[key] = chunk_field(chunk, "slug")
+            old_counts[key] = (chunk_field(chunk, "achievementsUnlocked"),
+                               chunk_field(chunk, "achievementsTotal"))
         else:
             # Non-gog, or a hand-added gog row without an appName — preserve it.
             non_gog.append(chunk)
+            if chunk_field(chunk, "slug"):
+                taken.add(chunk_field(chunk, "slug"))
 
     # Stable order (by app_name) => clean, idempotent diffs.
     games = sorted(games, key=lambda g: g["app_name"].lower())
     new_keys = {g["app_name"] for g in games}
 
+    # Achievements not fetched this run keep the counts they had, so they keep
+    # agreeing with the achievement file that is kept for them too.
+    carried = []
+    for g in games:
+        unlocked, total = old_counts.get(g["app_name"], (None, None))
+        if g.get("ach_skipped") and total:
+            g = dict(g, ach_unlocked=int(unlocked or 0), ach_total=int(total))
+        carried.append(g)
+    games = carried
+
+    slugs, new_slugs, joined = gaming_common.assign_slugs(
+        games, lambda g: g["app_name"], old_slugs, taken)
+
     gog_blocks = [
-        build_gog_entry(g, old_human.get(g["app_name"], []))
+        build_gog_entry(g, old_human.get(g["app_name"], []), slugs[g["app_name"]])
         for g in games
     ]
 
@@ -556,6 +634,8 @@ def rebuild(raw, games):
         "pruned": sorted(old_keys - new_keys),
         "updated": sorted(new_keys & old_keys),
         "manual": len(non_gog),
+        "new_slugs": new_slugs,
+        "joined": joined,
     }
     return out, summary
 
@@ -622,6 +702,12 @@ def main(argv=None):
           f"{summary['manual']} non-GOG/manual entries untouched.", file=sys.stderr)
     if summary["pruned"]:
         print("  pruned: " + ", ".join(summary["pruned"]), file=sys.stderr)
+    gaming_common.report_slugs(summary["new_slugs"], summary["joined"])
+
+    docs = {g["app_name"]: g["achievementDoc"] for g in games if g.get("achievementDoc")}
+    urls = {g["app_name"]: g["achievementIcons"] for g in games if g.get("achievementDoc")}
+    keep = set(docs) | {g["app_name"] for g in games if g.get("ach_skipped")}
+    gaming_common.write_achievement_docs("gog", docs, urls, keep, dry_run=args.dry_run)
 
     if args.dry_run:
         print("(dry-run: nothing written)", file=sys.stderr)

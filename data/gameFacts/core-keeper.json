@@ -1,0 +1,42 @@
+{
+ "genres": [
+  {
+   "de": "Adventure",
+   "en": "adventure video game",
+   "sv": "äventyrsspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Koop-Modus",
+   "en": "co-op mode",
+   "sv": "flerspelarläge"
+  }
+ ],
+ "publishers": [
+  "Fireshine Games"
+ ],
+ "released": "2022-03-08",
+ "steam": {
+  "de": "Erforsche eine endlose Höhle voller Kreaturen, Relikte und Ressourcen in einem Bergbau-Sandbox-Abenteuer für 1-8 Spieler. Schürfe, baue, kämpfe, fertige Gegenstände an und betreibe Landwirtschaft, um das Geheimnis des uralten KERNS zu lüften.",
+  "en": "Explore a vast cavern of creatures, relics and resources in a mining sandbox adventure for 1-8 players. Mine, build, fight, craft and farm to unravel the mystery of the ancient Core."
+ },
+ "steam_appid": 1621690,
+ "wikidata": "Q111226203",
+ "wikipedia": {
+  "en": {
+   "text": "Core Keeper is a survival game and sandbox game developed by Pugstorm and published by Fireshine Games. Set in a procedurally generated underground world, the game combines mining, crafting, farming, automation, and combat while supporting single-player and cooperative multiplayer for up to eight players.",
+   "url": "https://en.wikipedia.org/wiki/Core_Keeper"
+  },
+  "sv": {
+   "text": "Core Keeper är ett sandboxspel från svenska Pugstorm som sålt över en miljon exemplar och listats som ett av världens bästa co-opmanagementspel av Polygon och PCGamer.",
+   "url": "https://sv.wikipedia.org/wiki/Core_Keeper"
+  }
+ }
+}

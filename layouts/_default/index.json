@@ -17,6 +17,12 @@
 {{- with site.GetPage "/travel" -}}
     {{- $.Scratch.Add "index" (dict "title" .Title "content" (printf "%s. %s" .Title .Description) "permalink" .Permalink "summary" .Description) -}}
 {{- end -}}
+{{- /* /gaming/ became a section when the game pages arrived (it was a leaf page,
+       and so a RegularPage, before). The games themselves are regular pages and
+       in the index on their own; the overview needs adding like /travel. */ -}}
+{{- with site.GetPage "/gaming" -}}
+    {{- $.Scratch.Add "index" (dict "title" .Title "content" (printf "%s. %s" .Title .Description) "permalink" .Permalink "summary" .Description) -}}
+{{- end -}}
 {{- /* Only when a public record actually has photos -- the section is built from
        data/models.yaml and can legitimately be empty, and a search hit landing on
        an empty grid is the same mistake as a nav card onto one. */ -}}

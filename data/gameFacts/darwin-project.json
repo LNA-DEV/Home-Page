@@ -1,0 +1,44 @@
+{
+ "developers": [
+  "Scavengers Studio"
+ ],
+ "genres": [
+  {
+   "de": "Battle Royale",
+   "en": "battle royale game",
+   "sv": "Battle royale-spel"
+  },
+  {
+   "de": "Third-Person-Shooter",
+   "en": "third-person shooter",
+   "sv": "tredjepersonsskjutare"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  }
+ ],
+ "publishers": [
+  "Scavengers Studio"
+ ],
+ "released": "2018-03-10",
+ "steam": {
+  "en": "In Darwin Project, ten inmates must survive the elements, track each other, fight, craft tools, and use their social skills to be the last one standing. It's a unique take on battle royale with a Show Director to influence the match and Spectator Interactions to create a one-of-a-kind game show."
+ },
+ "steam_appid": 544920,
+ "wikidata": "Q52737229",
+ "wikipedia": {
+  "de": {
+   "text": "Darwin Project ist ein Battle-Royale-Computerspiel aus dem Jahr 2020 für Microsoft Windows, Xbox One und PlayStation 4. Das Spiel war bereits seit Januar 2018 im Early Access spielbar und wechselte im März des gleichen Jahres zu einem Free-to-play-Modell.",
+   "url": "https://de.wikipedia.org/wiki/Darwin_Project_(Computerspiel)"
+  },
+  "en": {
+   "text": "Darwin Project is a free-to-play multiplayer online battle royale game developed and published by Scavengers Studio. It was released on January 14, 2020, for Microsoft Windows, Xbox One, and PlayStation 4.",
+   "url": "https://en.wikipedia.org/wiki/Darwin_Project"
+  }
+ }
+}

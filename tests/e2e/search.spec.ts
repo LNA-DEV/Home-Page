@@ -22,4 +22,8 @@ test("the index holds the branch pages that nothing links to", async ({ page, pr
   const urls: string[] = (Array.isArray(index) ? index : index.items ?? []).map((e: any) => e.permalink ?? e.uri ?? "");
   expect(urls.some((u) => u.includes("/gallery/models/")), "/gallery/models/ is not in the search index").toBe(true);
   expect(urls.some((u) => u.includes("/travel")), "/travel is not in the search index").toBe(true);
+  /* /gaming/ became a section when the game pages arrived, and a section is not
+     in site.RegularPages; the games themselves are. */
+  expect(urls.some((u) => /\/en\/gaming\/$/.test(u)), "/gaming/ is not in the search index").toBe(true);
+  expect(urls.some((u) => /\/en\/gaming\/[a-z0-9-]+\/$/.test(u)), "no game page is in the search index").toBe(true);
 });

@@ -1,0 +1,24 @@
+{
+ "genres": [
+  {
+   "de": "Rythmusspiel",
+   "en": "rhythm game",
+   "sv": "rytmspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  }
+ ],
+ "released": "2013-08-06",
+ "steam": {
+  "de": "Auferwacht aus seinem Schlaf, begibt sich Beatbuddy auf eine Reise durch üppige, handgezeichnete Landschaften um seine Gefährten und seine eigene Unsterblichkeit zu retten. Beatbuddy interagiert mit der lebhaften, atmenden Umgebung die zu dem Beat eines exklusiven Soundtracks pulsiert.",
+  "en": "Awakened from his slumber, Beatbuddy journeys through lush hand-painted environments on a quest to save his companions and his own immortality. Beatbuddy interacts with the living breathing environment that pulses to the beat of an original soundtrack, aiding him as he unlocks new paths and solves puzzles."
+ },
+ "steam_appid": 231040,
+ "wikidata": "Q71732131"
+}

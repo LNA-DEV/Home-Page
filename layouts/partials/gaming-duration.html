@@ -1,0 +1,14 @@
+{{- /*
+  A playtime in minutes as a compact label: minutes below an hour, else hours,
+  with one decimal under 10 h. "45 min", "3,5 h" / "3.5 h", "120 h".
+  Usage: partial "gaming-duration.html" $minutes
+*/ -}}
+{{- $mins := int (. | default 0) -}}
+{{- $out := "" -}}
+{{- if lt $mins 60 -}}
+  {{- $out = printf "%d min" $mins -}}
+{{- else -}}
+  {{- $h := div (float $mins) 60.0 -}}
+  {{- $out = printf "%s h" (lang.FormatNumberCustom (cond (lt $h 10.0) 1 0) $h) -}}
+{{- end -}}
+{{- return $out -}}

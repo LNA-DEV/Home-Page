@@ -1,0 +1,70 @@
+{
+ "developers": [
+  "Engine Software",
+  "505 Games",
+  "Re-Logic"
+ ],
+ "genres": [
+  {
+   "de": "Action-Adventure",
+   "en": "action-adventure game",
+   "sv": "actionäventyrsspel"
+  },
+  {
+   "de": "Sandbox-Spiel",
+   "en": "sandbox game",
+   "sv": "sandlådespel"
+  },
+  {
+   "de": "Computer-Rollenspiel",
+   "en": "role-playing video game",
+   "sv": "datorrollspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  },
+  {
+   "de": "Koop-Modus",
+   "en": "co-op mode",
+   "sv": "flerspelarläge"
+  }
+ ],
+ "publishers": [
+  "505 Games",
+  "Re-Logic",
+  "Pipeworks Software",
+  "Spike Chunsoft"
+ ],
+ "released": "2011-05-16",
+ "steam": {
+  "de": "Graben, kämpfen, erforschen und bauen Sie! Nichts ist unmöglich in diesem Action-geladenen Abenteuerspiel. Auch erhältlich als Viererpaket!",
+  "en": "Dig, fight, explore, build! Nothing is impossible in this action-packed adventure game. Four Pack also available!",
+  "sv": "Gräv, slåss, utforska, bygg! Ingenting är omöjligt i detta action-packade äventyrsspel. Fyrpack finns också tillgängligt!"
+ },
+ "steam_appid": 105600,
+ "wikidata": "Q332697",
+ "wikipedia": {
+  "de": {
+   "text": "Terraria ist ein Sandbox- und Open-World-Spiel, das im Jahr 2011 über die Plattform Steam von vier unabhängigen Entwicklern unter dem Namen „Re-Logic“ veröffentlicht wurde. Es ist hauptsächlich in einem 2D-Grafikstil gehalten, hat jedoch teilweise eine dritte Dimension integriert, welche sich allerdings im wesentlichen Spielablauf kaum bemerkbar macht.",
+   "url": "https://de.wikipedia.org/wiki/Terraria"
+  },
+  "en": {
+   "text": "Terraria is a 2011 action-adventure video game developed by Re-Logic and published by 505 Games. As a sandbox game, Terraria has no set goals. After creating the player character and choosing the game's difficulty, the player is placed in a two-dimensional, procedurally generated world where they explore, fight enemies, gather resources, and craft equipment.",
+   "url": "https://en.wikipedia.org/wiki/Terraria"
+  },
+  "sv": {
+   "text": "Terraria är ett indie-plattformsspel med moment av äventyr, rollspel och worldbuilder-spel från 2011 utvecklat av Re-Logic. Spelet bygger på en Open world-princip (sandlåda/sandbox) och är ett icke-linjärt spel. Terraria släpptes från början endast på PC, men har efter hand lanserats på flera andra format.",
+   "url": "https://sv.wikipedia.org/wiki/Terraria"
+  }
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "developers": [
+  "Studio Wildcard",
+  "Virtual Basement LLC"
+ ],
+ "genres": [
+  {
+   "de": "Action-Adventure",
+   "en": "action-adventure game",
+   "sv": "actionäventyrsspel"
+  },
+  {
+   "de": "Survival-Spiel",
+   "en": "survival game",
+   "sv": "överlevnadsspel"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Mehrspieler",
+   "en": "multiplayer video game",
+   "sv": "flerspelarspel"
+  },
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Koop-Modus",
+   "en": "co-op mode",
+   "sv": "flerspelarläge"
+  }
+ ],
+ "publishers": [
+  "Studio Wildcard"
+ ],
+ "released": "2017-08-29",
+ "steam": {
+  "de": "Stell dir vor, du strandest ohne Essen oder Kleidung auf einer geheimnisvollen Insel. Um zu überleben, musst du jagen, Früchte anpflanzen und ernten, Gegenstände herstellen und dir einen Unterschlupf bauen. Mit etwas Geschick und List kannst du Dinosaurier und andere urzeitliche Kreaturen in ARK erlegen oder zähmen, züchten und reiten.",
+  "en": "Stranded on the shores of a mysterious island, you must learn to survive. Use your cunning to kill or tame the primeval creatures roaming the land, and encounter other players to survive, dominate... and escape!"
+ },
+ "steam_appid": 346110,
+ "wikidata": "Q20031747",
+ "wikipedia": {
+  "de": {
+   "text": "Ark: Survival Evolved ist ein von Studio Wildcard entwickeltes Survival-Computerspiel, das im August 2017 für PC, PlayStation 4 und Xbox One veröffentlicht wurde. 2018 wurde das Spiel auch für Android, iOS und Nintendo Switch veröffentlicht. Es gilt, in einer Welt voller frei streunender Dinos zu überleben.",
+   "url": "https://de.wikipedia.org/wiki/Ark:_Survival_Evolved"
+  },
+  "en": {
+   "text": "Ark: Survival Evolved is a 2017 action-adventure survival video game developed by Studio Wildcard. In the game, players must survive being stranded on one of several maps filled with roaming dinosaurs, fictional fantasy monsters, and other prehistoric animals, natural hazards, and potentially hostile human players.",
+   "url": "https://en.wikipedia.org/wiki/Ark:_Survival_Evolved"
+  }
+ }
+}

@@ -1,0 +1,918 @@
+{
+ "achievements": [
+  {
+   "description": {
+    "de": "Verdiene insgesamt 25.000 Gold.",
+    "en": "Earn a total of 25,000 Gold."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/373dc9f73958a286390010e9b939d1b7954e5e29.jpg",
+   "key": "ACH_1_GoldEarnedBronze",
+   "name": {
+    "de": "Bargeld",
+    "en": "Cash Money"
+   },
+   "percent": 9.8
+  },
+  {
+   "description": {
+    "de": "Verdiene insgesamt 50.000 Gold.",
+    "en": "Earn a total of 50,000 Gold."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/7226ec1d41594f43264f83e91a4accfca07f031e.jpg",
+   "key": "ACH_2_GoldEarnedSilver",
+   "name": {
+    "de": "Tiefe Taschen",
+    "en": "Deep Pockets"
+   },
+   "percent": 6.2
+  },
+  {
+   "description": {
+    "de": "Verdiene insgesamt 100.000 Gold.",
+    "en": "Earn a total of 100,000 Gold."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/fffc35135a266c82ca66c882a76da75a43d04f02.jpg",
+   "key": "ACH_3_GoldEarnedGold",
+   "name": {
+    "de": "Der Midas-Touch",
+    "en": "The Midas Touch"
+   },
+   "percent": 3.9
+  },
+  {
+   "description": {
+    "de": "Erreiche Konto-Level 10.",
+    "en": "Reach account level 10."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/bd87513cfc24b5a6f320ed0de9cb64f38385039c.jpg",
+   "key": "ACH_4_AccountLevelBronze",
+   "name": {
+    "de": "Nur noch ein Spiel!",
+    "en": "Just One More Game!"
+   },
+   "percent": 28.9
+  },
+  {
+   "description": {
+    "de": "Erreiche Konto-Level 20.",
+    "en": "Reach account level 20."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/7f80f59de12318625a83c83e5c45bb03dc86635f.jpg",
+   "key": "ACH_5_AccountLevelBronze2",
+   "name": {
+    "de": "Das Große 2-0",
+    "en": "The Big 2-0"
+   },
+   "percent": 13.4
+  },
+  {
+   "description": {
+    "de": "Erreiche Konto-Level 30.",
+    "en": "Reach account level 30."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/4ed58d51ee3bd2d69405c3b397a943413551c016.jpg",
+   "key": "ACH_6_AccountLevelSilver",
+   "name": {
+    "de": "Die Zeit vergeht wie im Flug, wenn man Spaß hat",
+    "en": "Time Flies When You're Having Fun"
+   },
+   "percent": 7.6
+  },
+  {
+   "description": {
+    "de": "Erreiche Konto-Level 40.",
+    "en": "Reach account level 40."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/8de18f778ad0dd6055eccac3106681604493de73.jpg",
+   "key": "ACH_7_AccountLevelGold",
+   "name": {
+    "de": "Fühlt sich an wie das erste Mal",
+    "en": "Feels Like the First Time"
+   },
+   "percent": 5.0
+  },
+  {
+   "description": {
+    "de": "Es la hora del martillo",
+    "en": "Reach level 10 with a Grapple Hammer Legend."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/4fa04625c9122432c67dec54c465ed2caf0b7f4e.jpg",
+   "key": "ACH_8_HammerHeroLevel10",
+   "name": {
+    "de": "Es ist Hammerzeit",
+    "en": "It's Hammer Time"
+   },
+   "percent": 6.1
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 10 mit einer Schwertlegende.",
+    "en": "Reach level 10 with a Sword Legend."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/390e0edd0c1daf89274df7f7e22c9f5bf2e56954.jpg",
+   "key": "ACH_9_SwordHeroLevel10",
+   "name": {
+    "de": "Schnittkante",
+    "en": "Cutting Edge"
+   },
+   "percent": 8.7
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 10 mit einer Blaster-Legende.",
+    "en": "Reach level 10 with a Blasters Legend."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/14118704dd66bbaaa549ca9581411cffa49a1e4f.jpg",
+   "key": "ACH_10_PistolHeroLevel10",
+   "name": {
+    "en": "Pew Pew Pew"
+   },
+   "percent": 6.6
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 10 mit einer Raketenlanzenlegende.",
+    "en": "Reach level 10 with a Rocket Lance Legend."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/1a01cc6e81440de0110c59b6292a0cd192825eb4.jpg",
+   "key": "ACH_11_LanceHeroLevel10",
+   "name": {
+    "en": "Sir Lances-a-lot"
+   },
+   "percent": 7.0
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 10 mit einer Speerlegende.",
+    "en": "Reach level 10 with a Spear Legend."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/f821c0eb699028549c8cabbc64a33d93c9b0ea7a.jpg",
+   "key": "ACH_12_SpearHeroLevel10",
+   "name": {
+    "de": "Auf den Punkt gebracht",
+    "en": "Getting to the Point"
+   },
+   "percent": 10.4
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 10 mit einer Katar-Legende.",
+    "en": "Reach level 10 with a Katars Legend."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/4e7c47d88a8158d48047f23b762e72a795af508a.jpg",
+   "key": "ACH_13_KatarsHeroLevel10",
+   "name": {
+    "de": "Es schneidet, es würfelt",
+    "en": "It Slices, It Dices"
+   },
+   "percent": 7.4
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 10 mit einer Axtlegende.",
+    "en": "Reach level 10 with an Axe Legend."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/c52063265004a72471e9cdc01c848715598af808.jpg",
+   "key": "ACH_14_AxeHeroLevel10",
+   "name": {
+    "de": "Kein Axt-ident",
+    "en": "Not an Axe-ident"
+   },
+   "percent": 6.0
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 10 mit einer Bogenlegende.",
+    "en": "Reach level 10 with a Bow Legend."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/4c9d966ce50f7556bbec8b7c9962d9b789dce756.jpg",
+   "key": "ACH_15_BowHeroLevel10",
+   "name": {
+    "de": "Deine Feinde zum Zittern bringen",
+    "en": "Making Your Foes Quiver"
+   },
+   "percent": 7.2
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 10 mit einer Handschuhlegende.",
+    "en": "Reach level 10 with a Gauntlets Legend."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/73f7f13739bc0178eabdb81354055cff5cd78b55.jpg",
+   "key": "ACH_16_FistsHeroLevel10",
+   "name": {
+    "de": "Schlagring-Sandwich",
+    "en": "Knuckle Sandwich"
+   },
+   "percent": 8.4
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 10 mit einer Sensenlegende.",
+    "en": "Reach level 10 with a Scythe Legend."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/70e1c1da378c20a631877d8796a3e2d1c7da43cd.jpg",
+   "key": "ACH_17_ScytheHeroLevel10",
+   "name": {
+    "de": "Gärtnern mit einem schwarzen Daumen",
+    "en": "Gardening with a Black Thumb"
+   },
+   "percent": 7.6
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Spiele ein Matchmaking-Spiel.",
+    "en": "Play a matchmaking game."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/74a940c399f4135fb22102766d350f19eeddecca.jpg",
+   "key": "ACH_21_PlayMatchmakingBronze",
+   "name": {
+    "de": "Willkommen bei Brawlhalla!",
+    "en": "Welcome to Brawlhalla!"
+   },
+   "percent": 62.6,
+   "unlocked": "2021-02-10T17:10:45+01:00"
+  },
+  {
+   "description": {
+    "de": "Spiele 30 Matchmaking-Spiele.",
+    "en": "Play 30 matchmaking games."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/666388d6ae1ec663503293b276b94c1a61b73a7f.jpg",
+   "key": "ACH_19_PlayMatchmakingSilver",
+   "name": {
+    "de": "Matchmaker, mach mir ein Match",
+    "en": "Matchmaker, Make Me a Match"
+   },
+   "percent": 20.7
+  },
+  {
+   "description": {
+    "de": "Spiele 3 Spiele in der Jeder-gegen-Jeden-Matchmaking-Warteschlange.",
+    "en": "Play 3 games in the Free-for-All matchmaking queue."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/5cbd036d46398dfc1b990e3725ae4b6255936f70.jpg",
+   "key": "ACH_18_PlayFFA",
+   "name": {
+    "de": "Vier sind eine Party",
+    "en": "Four's a Party"
+   },
+   "percent": 29.4
+  },
+  {
+   "description": {
+    "de": "Spiele 3 Spiele in der Ranglistenspiel-1v1-Matchmaking-Warteschlange.",
+    "en": "Play 3 games in the Ranked 1v1 matchmaking queue."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/ba6d910335cf2af3d7aeae891d8cee4cf7797125.jpg",
+   "key": "ACH_20_PlayRanked",
+   "name": {
+    "de": "Die Ruhe vor dem Sturm",
+    "en": "Calm Before the Storm"
+   },
+   "percent": 22.2
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Spiele 3 Spiele in der Freundschaftsspiel-2v2-Matchmaking-Warteschlange.",
+    "en": "Play 3 games in the Friendly 2v2 matchmaking queue."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/8543cd9c1347be8655d5e62ae4823940abb851c7.jpg",
+   "key": "ACH_22_Play2v2Unranked",
+   "name": {
+    "de": "Unsere Kräfte gebündelt",
+    "en": "Our Powers Combined"
+   },
+   "percent": 24.1,
+   "unlocked": "2021-02-10T17:17:40+01:00"
+  },
+  {
+   "description": {
+    "de": "Spiele 3 Spiele in der Ranglistenspiel-2v2-Matchmaking-Warteschlange.",
+    "en": "Play 3 games in the Ranked 2v2 matchmaking queue."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/4e6de434f9a0c28c397a1201a8f78c108b8aab72.jpg",
+   "key": "ACH_23_Play2v2Ranked",
+   "name": {
+    "de": "Bis dass der KO uns scheidet",
+    "en": "Til KO Do Us Part"
+   },
+   "percent": 18.1
+  },
+  {
+   "description": {
+    "de": "Spiele 3 Spiele in der Brawl-der-Woche-Matchmaking-Warteschlange.",
+    "en": "Play 3 games in the Brawl of the Week matchmaking queue."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/c55413d89375dbe54dd49d0d1b180e08d7ff9bf7.jpg",
+   "key": "ACH_24_PlayBotW",
+   "name": {
+    "de": "Das machen wir nächste Woche wieder",
+    "en": "Let's Do This Again Next Week"
+   },
+   "percent": 8.9
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Schlage 25 Gegner in Matchmaking-Spielen KO.",
+    "en": "KO 25 opponents in matchmaking games."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/a73dda12cb4c019ea3efa177f1734e5cd85dee68.jpg",
+   "key": "ACH_25_KillBronze",
+   "name": {
+    "de": "Wir sehen uns",
+    "en": "See Ya"
+   },
+   "percent": 32.4,
+   "unlocked": "2021-04-18T18:37:35+02:00"
+  },
+  {
+   "description": {
+    "de": "Schlage 500 Gegner in Matchmaking-Spielen KO.",
+    "en": "KO 500 opponents in matchmaking games."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/2abc68f6de2db6e1ccdcfc69ba37dbf9dd54e519.jpg",
+   "key": "ACH_26_KillSilver",
+   "name": {
+    "de": "Home-Run-König",
+    "en": "Home Run King"
+   },
+   "percent": 8.2
+  },
+  {
+   "description": {
+    "de": "Schlage 1.000 Gegner in Matchmaking-Spielen KO.",
+    "en": "KO 1,000 opponents in matchmaking games."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/889c35ffa1566cae601dbe03fcd192c9fa66a068.jpg",
+   "key": "ACH_27_KillGold",
+   "name": {
+    "de": "Ich glaube, dass du fliegen kannst",
+    "en": "I Believe You Can Fly"
+   },
+   "percent": 5.6
+  },
+  {
+   "description": {
+    "de": "Gewinne 10 Matchmaking-Spiele.",
+    "en": "Win 10 matchmaking games."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/938a45b3e30658454579099fac857646037088a5.jpg",
+   "key": "ACH_28_Wins1",
+   "name": {
+    "de": "Gerade erst angefangen",
+    "en": "Just Getting Started"
+   },
+   "percent": 25.3
+  },
+  {
+   "description": {
+    "de": "Gewinne 100 Matchmaking-Spiele.",
+    "en": "Win 100 matchmaking games."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/800099f0015110e6132703da62d6a552f3b46fd4.jpg",
+   "key": "ACH_29_Wins2",
+   "name": {
+    "de": "Erlebe mich!",
+    "en": "Witness Me!"
+   },
+   "percent": 8.7
+  },
+  {
+   "description": {
+    "de": "Gewinne 250 Matchmaking-Spiele.",
+    "en": "Win 250 matchmaking games."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/92cefadc947c16c6c3328a5def7cf3bc0869d092.jpg",
+   "key": "ACH_30_Wins3",
+   "name": {
+    "de": "Alles was ich tue, ist gewinnen",
+    "en": "All I Do Is Win"
+   },
+   "percent": 5.4
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 5 mit 2 Legenden.",
+    "en": "Reach level 5 with 2 Legends."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/c057595324f67245f53f2c2c00d8c3b5bf78481c.jpg",
+   "key": "ACH_31_2HeroesLevel5",
+   "name": {
+    "de": "Übung macht den Meister",
+    "en": "Practice Makes Perfect"
+   },
+   "percent": 22.1
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 10 mit 5 Legenden.",
+    "en": "Reach level 10 with 5 Legends."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/f8d2607fc2be8505a5255b944b8da59db0063612.jpg",
+   "key": "ACH_32_5HeroesLevel10",
+   "name": {
+    "de": "Sie wachsen so schnell",
+    "en": "They Grow Up So Fast"
+   },
+   "percent": 5.2
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 10 mit 10 Legenden.",
+    "en": "Reach level 10 with 10 Legends."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/44b635afd88f9139eb54cb00f611fd8fd04e5e5f.jpg",
+   "key": "ACH_33_10HeroesLevel10",
+   "name": {
+    "de": "Die Arbeit leisten",
+    "en": "Putting in Work"
+   },
+   "percent": 3.1
+  },
+  {
+   "description": {
+    "de": "Erziele 10 Doppel-KOs in Matchmaking-Spielen.",
+    "en": "Get 10 Double KOs in matchmaking games."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/5b38a313bc759f7710f4ea6419a00e85a5815866.jpg",
+   "key": "ACH_34_DoubleKill25",
+   "name": {
+    "de": "Doppelt so schön",
+    "en": "Twice as Nice"
+   },
+   "percent": 12.5
+  },
+  {
+   "description": {
+    "de": "Schlage einen Gegner in Matchmaking-Spielen 30 Mal mit einem geworfenen Gegenstand KO.",
+    "en": "KO an opponent with a thrown item 30 times in matchmaking games."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/6fad7a52e33b6b4a625fb7b71a5c4db3beb2c956.jpg",
+   "key": "ACH_35_KillThrowsBronze",
+   "name": {
+    "de": "Geh lang!",
+    "en": "Go Long!"
+   },
+   "percent": 6.5
+  },
+  {
+   "description": {
+    "de": "Gewinne 3 Mal ein Ranglistenspiel 1v1, ohne ein Leben zu verlieren.",
+    "en": "Win a Ranked 1v1 game without losing any lives 3 times."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/a6d7515fc1342101b13b2ad968b8c6ad0bb13fbe.jpg",
+   "key": "ACH_36_3Stock",
+   "name": {
+    "de": "Das kann man nicht anfassen",
+    "en": "Can't Touch This"
+   },
+   "percent": 11.2
+  },
+  {
+   "description": {
+    "de": "Schlage einen Gegner in Matchmaking-Spielen 10 Mal mit durch die Schwerkraft aufgehobenen schweren Angriff KO.",
+    "en": "KO an opponent with a Gravity-Canceled Heavy Attack 10 times in matchmaking games."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/4c03b1675d84457b4a5599569b38f0f8cde7f415.jpg",
+   "key": "ACH_37_GavityCancelSigKillsBronze",
+   "name": {
+    "de": "Der Surpri-Saac Newton",
+    "en": "The Surpri-saac Newton"
+   },
+   "percent": 6.5
+  },
+  {
+   "description": {
+    "de": "Drücke nach 66 verschiedenen Matchmaking-Spielen die Schaltfläche „Sag: GG!“.",
+    "en": "Press the \"Say: GG!\" button after 66 different matchmaking games."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/146a0b27cd087760da0ad9cbb135fa188850faa3.jpg",
+   "key": "ACH_38_SayGGBronze",
+   "name": {
+    "de": "Töte sie mit Freundlichkeit",
+    "en": "Kill Them with Kindness"
+   },
+   "percent": 6.5
+  },
+  {
+   "description": {
+    "de": "Gewinne 5 Mal ein Ranglistenspiel 1v1 mit rotem Schaden auf deinem letzten Vorrat (Tie-Breaker-Siege zählen nicht).",
+    "en": "Win a Ranked 1v1 game with red damage on your last stock 5 times (Tie Breaker wins do not count)."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/972c6bfc5579a0590784c4ffed066805ecec30b3.jpg",
+   "key": "ACH_39_RedLastStockKillsBronze",
+   "name": {
+    "de": "Und die Menge tobt!",
+    "en": "And the Crowd Goes Wild!"
+   },
+   "percent": 5.7
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 10 mit einer Kanonenlegende.",
+    "en": "Reach level 10 with a Cannon Legend"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/e1f6cf9264ee1d95a7eec4afca723b1850298f53.jpg",
+   "key": "ACH_40_CannonHeroLevel10",
+   "name": {
+    "de": "Kanonenfutter",
+    "en": "Cannon Fodder"
+   },
+   "percent": 3.2
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 10 mit einer Orb-Legende",
+    "en": "Reach level 10 with an Orb Legend"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/eed27ff60b42102c899cbf2fe3503ed211fe92a5.jpg",
+   "key": "ACH_41_OrbHeroLevel10",
+   "name": {
+    "de": "In Orb-it gestartet",
+    "en": "Launched into Orb-it"
+   },
+   "percent": 4.2
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 10 mit einer Großschwertlegende.",
+    "en": "Reach level 10 with a Greatsword Legend"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/21510e984dee8e83e5604364ea93d513d1fa32ed.jpg",
+   "key": "ACH_42_GreatswordHeroLevel10",
+   "name": {
+    "de": "Großer Metallbrocken",
+    "en": "Big Hunk of Metal"
+   },
+   "percent": 3.2
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 25 mit 3 Legenden.",
+    "en": "Reach level 25 with 3 Legends"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/bf64ec0b737a12c845130f2f5613453df5e02949.jpg",
+   "key": "ACH_43_3HeroesLevel25",
+   "name": {
+    "de": "Jetzt kann ich Schwarz im Strikeout verwenden",
+    "en": "Now I Can Use Black in Strikeout"
+   },
+   "percent": 1.5
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 5 mit 50 Legenden.",
+    "en": "Reach level 5 with 50 Legends"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/478deb6cb9c0c1373bef6992973dd4b137ef05c9.jpg",
+   "key": "ACH_44_5HeroesLevel50",
+   "name": {
+    "de": "Alleskönner",
+    "en": "Jack of All Trades"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "de": "Schlage in Matchmaking-Spielen 10 Gegner mit gleitenden Markenzeichen-Angriffen KO.",
+    "en": "KO 10 opponents with Slide-Charged Signature Attacks in matchmaking games"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/a4d6f58d29605666912e97a6cd0022d7c8e4e9ba.jpg",
+   "key": "ACH_45_SlideChargeSigKillsBronze",
+   "name": {
+    "de": "Fallen mit Stil",
+    "en": "Falling with Style"
+   },
+   "percent": 3.5
+  },
+  {
+   "description": {
+    "de": "Triff in einem Matchmaking-Spiel mehrere Gegner mit einer einzigen Hüpfbombe.",
+    "en": "Hit multiple opponents with a single Bouncy Bomb in a matchmaking game"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/7119fc71d45a5b1b1deb15e2a9e552890f1f29e0.jpg",
+   "key": "ACH_46_BouncyBombMultiHit",
+   "name": {
+    "en": "BOMBHALLA!!"
+   },
+   "percent": 9.3
+  },
+  {
+   "description": {
+    "de": "Erziele 6 KOs in einem einzelnen Ranglistenspiel 2v2 oder Freundschaftsspiel 2v2.",
+    "en": "Get 6 KOs in a single Ranked 2v2 or Friendly 2v2 game"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/9bda3c5ee419f25f9f01966d8fb8c801b8dec5b9.jpg",
+   "key": "ACH_47_SixKOsInTeamGame",
+   "name": {
+    "de": "Trage das Team",
+    "en": "Carry the Team"
+   },
+   "percent": 7.2
+  },
+  {
+   "description": {
+    "de": "Schlage in Matchmaking-Spielen 25 Gegner KO, indem du in Bodenhammer-Attacken springst.",
+    "en": "KO 25 opponents by dash-jumping into a Ground Pound Attack in matchmaking games"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/9866913287e453d2491f62c3aa2dd3b42927346e.jpg",
+   "key": "ACH_48_DashJumpGroundPoundKO",
+   "name": {
+    "de": "Wandreiniger",
+    "en": "Wall Cleaner"
+   },
+   "percent": 1.5
+  },
+  {
+   "description": {
+    "de": "Erreiche Welle 26 im Hordenmodus, wobei der Schaden auf 100 % oder weniger eingestellt ist.",
+    "en": "Reach Wave 26 in Horde mode with Damage set to 100% or lower"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/1eea15af16b7eb0e0ea61aa978c71d0b16d1eb83.jpg",
+   "key": "ACH_49_HordeSilver",
+   "name": {
+    "de": "Zur Hölle und zurück",
+    "en": "To Hell and Back"
+   },
+   "percent": 0.5
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 10 mit einer Kampfstiefellegende.",
+    "en": "Reach level 10 with a Battle Boots Legend."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/acad33e459394bf4ec32db8a074b86300c39d9e6.jpg",
+   "key": "ACH_50_BootsHeroLevel10",
+   "name": {
+    "de": "Schau dir meine frischen Kicks an",
+    "en": "Check Out My Fresh Kicks"
+   },
+   "percent": 2.6
+  },
+  {
+   "description": {
+    "de": "Triff deine Gegner in einem Matchmaking-Spiel 4 Mal mit demselben Spike-Ball.",
+    "en": "Hit opponents with the same Spike Ball 4 times in a matchmaking game."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/a145ff55f61772c3314835c395b2655fe9e7f2e8.jpg",
+   "key": "ACH_51_SpikeBallQuadHit",
+   "name": {
+    "de": "Von deinem Gesicht abtropfen",
+    "en": "Dribbling off Your Face"
+   },
+   "percent": 2.0
+  },
+  {
+   "description": {
+    "de": "Fange 15 Hüpfbomben im Bombenfangtraining hintereinander, ohne Frame-Stepping zu verwenden.",
+    "en": "Catch 15 Bouncy Bombs in a row in Catch Bombs Training without frame-stepping."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/04e55ad92816bbf4bf357f88c99d88ae1b6b9860.jpg",
+   "key": "ACH_52_CatchBombsBronze",
+   "name": {
+    "de": "Hohe Einsätze, heiße Kartoffel",
+    "en": "High Stakes Hot Potato"
+   },
+   "percent": 0.3
+  },
+  {
+   "description": {
+    "de": "Triff deine Gegner mit allen 6 Markenzeichenangriffen einer Legende in 10 verschiedenen Matchmaking-Spielen.",
+    "en": "Hit opponents with all 6 of a Legend's Signature Attacks in 10 different matchmaking games."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/f5fca4c1ba0dddb470b928f974f17290dc1949dd.jpg",
+   "key": "ACH_53_SixSigsSingleMatch",
+   "name": {
+    "de": "Hit für den Zyklus",
+    "en": "Hit for the Cycle"
+   },
+   "percent": 1.5
+  },
+  {
+   "description": {
+    "de": "Kaufe einen himmelgeschmiedeten Artikel im Store.",
+    "en": "Buy a Skyforged item from the store."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/000c28664690fddd8db08d56f16f2c2491eb1091.jpg",
+   "key": "ACH_54_BuySkyforged",
+   "name": {
+    "de": "Du willst mir erzählen, dass der Himmel das geschmiedet hat?",
+    "en": "You're Telling Me the Sky Forged This?"
+   },
+   "percent": 2.8
+  },
+  {
+   "description": {
+    "de": "Kaufe einen goldgeschmiedeten Artikel im Store.",
+    "en": "Buy a Goldforged item from the store."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/94a652321d4cba9a7f481636fed8b5923ee85e5c.jpg",
+   "key": "ACH_55_BuyGoldforged",
+   "name": {
+    "de": "Ich würde lieber SHINAYYY sein",
+    "en": "I'd Rather Be SHINAYYY"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 40 mit einer Legende.",
+    "en": "Reach level 40 with a Legend."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/d3eb2d9a46c375c22b796320dab18914b2d60131.jpg",
+   "key": "ACH_56_1HeroLevel40",
+   "name": {
+    "de": "Etablierte Haupt",
+    "en": "Established Main"
+   },
+   "percent": 1.3
+  },
+  {
+   "description": {
+    "de": "Erreiche Konto-Level 50.",
+    "en": "Reach account level 50."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/8b5f61394a237f03bd0ed7230eb88acd50045790.jpg",
+   "key": "ACH_57_AccountLevelExpansion2",
+   "name": {
+    "de": "Auf halbem Weg! Richtig!?",
+    "en": "Halfway There! Right!?"
+   },
+   "percent": 2.9
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 10 mit einer Chakram-Legende.",
+    "en": "Reach level 10 with a Chakram Legend."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/3717dfb855b406f73c8ab6178ac4a8f82265ca70.jpg",
+   "key": "ACH_58_ChakramHeroLevel10",
+   "name": {
+    "de": "Der geteilte Unterschied",
+    "en": "The Split Difference"
+   },
+   "percent": 0.5
+  },
+  {
+   "description": {
+    "de": "Verliere ein Ranglistenspiel 1v1, entscheide dich für ein Rematch, wechsle die Legende und gewinne das Rematch.",
+    "en": "Lose a Ranked 1v1 match, opt into a rematch, change Legend, and win the rematch."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/87d7220cce455e6beb8326b0b91d051c882d26b4.jpg",
+   "key": "ACH_59_LoseRematchSwitchWin",
+   "name": {
+    "en": "Sandbagger"
+   },
+   "percent": 1.3
+  },
+  {
+   "description": {
+    "de": "Gewinne 10 Best-of-3-Serien im Matchmaking.",
+    "en": "Win 10 best-of-3 series in matchmaking."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/b4268b8824d9b6b65f6e9906a65a6d50b94a20ac.jpg",
+   "key": "ACH_60_WinRematchSeries10",
+   "name": {
+    "de": "Download abgeschlossen",
+    "en": "Download Complete"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "de": "Schlage 50 Gegner mit durch die Schwerkraft aufgehobenen leichten Angriffen KO.",
+    "en": "KO 50 opponents with Gravity-Canceled Light Attacks."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/bc050677a82826e23475c5a08c5262ea54ce54de.jpg",
+   "key": "ACH_61_GavityCancelLightKillsSilver",
+   "name": {
+    "de": "Leichter als Luft",
+    "en": "Lighter than Air"
+   },
+   "percent": 0.1
+  },
+  {
+   "description": {
+    "de": "Schlage 10 Gegner in Ranglistenspiel 1v1 ausschließlich mit leichten Angriffen KO.",
+    "en": "KO 10 opponents in Ranked 1v1 matches using only Light Attacks."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/f24d03f3b4d36ae0a3e5745d181a7f233b9ffb3d.jpg",
+   "key": "ACH_62_Ranked1v1LightOnlyKO10",
+   "name": {
+    "de": "Keine Spam-Zone",
+    "en": "No Spam Zone"
+   },
+   "percent": 1.3
+  },
+  {
+   "description": {
+    "de": "Erziele 5 dreifache KOs.",
+    "en": "Get 5 Triple KOs."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/32a7056304e06877f68825ebde95a43ccd3a1346.jpg",
+   "key": "ACH_63_TripleKill5",
+   "name": {
+    "de": "Dreimal so schön",
+    "en": "Thrice as Nice"
+   },
+   "percent": 0.2
+  },
+  {
+   "description": {
+    "de": "Triff 3 Gegner 10 Mal mit einem einzigen Markenzeichenangriff.",
+    "en": "Hit 3 opponents with a single Signature Attack 10 times."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/71231970ef5f5bfa632f2a6f0545221b04882c82.jpg",
+   "key": "ACH_64_TripleHitSig5",
+   "name": {
+    "de": "Kehre ALLE Beine",
+    "en": "Sweep ALL the Legs"
+   },
+   "percent": 0.3
+  },
+  {
+   "description": {
+    "de": "Erreiche Level 25 mit Legenden mit 8 verschiedenen Waffen.",
+    "en": "Reach level 25 with Legends using 8 different Weapons."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/291550/e4a80ed788bcf4c22741db13d157db01de08bd64.jpg",
+   "key": "ACH_65_Level25Weapons8",
+   "name": {
+    "de": "Rauferei 25/8",
+    "en": "Brawling 25/8"
+   },
+   "percent": 0.4
+  }
+ ],
+ "id": "291550",
+ "platform": "steam"
+}

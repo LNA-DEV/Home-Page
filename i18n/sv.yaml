@@ -93,6 +93,63 @@
   translation: "Alla"
 - id: moreGames
   translation: "Fler spel"
+# Gaming — en sida per spel (layouts/partials/game-detail.html)
+- id: game_meta_description
+  translation: "Speltid och prestationer i {{ .title }} ({{ .platforms }})."
+- id: game_about
+  translation: "Om spelet"
+- id: game_notes
+  translation: "Anteckningar"
+- id: game_screenshots
+  translation: "Skärmdumpar"
+- id: game_screenshot_alt
+  translation: "Skärmdump {{ .n }} av {{ .total }} från {{ .title }}"
+- id: game_rating
+  translation: "Betyg {{ .rating }} av 5"
+- id: game_genre
+  translation:
+    one: "Genre"
+    other: "Genrer"
+- id: game_mode
+  translation:
+    one: "Spelläge"
+    other: "Spellägen"
+- id: game_developer
+  translation:
+    one: "Utvecklare"
+    other: "Utvecklare"
+- id: game_publisher
+  translation:
+    one: "Utgivare"
+    other: "Utgivare"
+- id: game_released
+  translation: "Utgiven"
+- id: game_store_link
+  translation: "{{ .store }} ↗"
+- id: game_steam_store
+  translation: "Steam-butiken"
+- id: game_source_steam
+  translation: "Beskrivning från {{ .source }}."
+- id: game_achievements
+  translation: "Prestationer"
+- id: game_achv_progress
+  translation: "{{ .unlocked }} av {{ .total }} prestationer upplåsta"
+- id: game_achv_filter_unlocked
+  translation: "Upplåsta"
+- id: game_achv_filter_locked
+  translation: "Låsta"
+- id: game_achv_sort_default
+  translation: "Standard"
+- id: game_achv_sort_rarity
+  translation: "Ovanligaste först"
+- id: game_achv_unlocked
+  translation: "Upplåst"
+- id: game_achv_locked
+  translation: "Låst"
+- id: game_achv_hidden
+  translation: "Dold prestation — {{ .store }} publicerar ingen beskrivning."
+- id: game_achv_pct_title
+  translation: "Andel av alla spelare som har låst upp den"
 
 # Activity feed
 - id: activity_type_post

@@ -1,0 +1,51 @@
+{
+ "developers": [
+  "Dodge Roll"
+ ],
+ "genres": [
+  {
+   "de": "Shoot ’em up",
+   "en": "shoot 'em up",
+   "sv": "shoot 'em up"
+  },
+  {
+   "de": "Rogue-like",
+   "en": "roguelike",
+   "sv": "roguelike"
+  }
+ ],
+ "match": "steam-appid",
+ "modes": [
+  {
+   "de": "Einzelspieler",
+   "en": "single-player video game",
+   "sv": "enspelarspel"
+  },
+  {
+   "de": "Koop-Modus",
+   "en": "co-op mode",
+   "sv": "flerspelarläge"
+  }
+ ],
+ "publishers": [
+  "Devolver Digital"
+ ],
+ "released": "2016-04-05",
+ "steam": {
+  "de": "Enter the Gungeon ist ein Baller-Dungeoncrawler, bei dem eine Gruppe von reumütigen Außenseitern durch Schießen, Plündern, Ausweichrollen und das Umkippen von Tischen die persönliche Erlösung zu finden versucht.",
+  "en": "Enter the Gungeon is a bullet hell dungeon crawler following a band of misfits seeking to shoot, loot, dodge roll and table-flip their way to personal absolution by reaching the legendary Gungeon’s ultimate treasure: the gun that can kill the past.",
+  "sv": "Enter the Gungeon är en sanslöst ösig dungeon crawler där en brokig skara försöker meja och väja sig fram till Gungeons välskyddade skatt: vapnet som kan utplåna det förflutna."
+ },
+ "steam_appid": 311690,
+ "wikidata": "Q23759338",
+ "wikipedia": {
+  "de": {
+   "text": "Enter the Gungeon ist ein von Dodge Roll entwickeltes und von Devolver Digital veröffentlichtes Videospiel. Es handelt sich um ein Bullet-Hell-Rogue-like im Pixelstil. Das Spiel wurde am 5.",
+   "url": "https://de.wikipedia.org/wiki/Enter_the_Gungeon"
+  },
+  "en": {
+   "text": "Enter the Gungeon is a 2016 bullet hell roguelike video game developed by American studio Dodge Roll and published by Devolver Digital. Set in the firearms-themed Gungeon, gameplay follows several player characters called Gungeoneers as they traverse procedurally generated rooms to find a gun that can \"kill the past\". The Gungeoneers fight against bullet-shaped enemies, which are fought using both conventional and exotic weapons.",
+   "url": "https://en.wikipedia.org/wiki/Enter_the_Gungeon"
+  }
+ }
+}

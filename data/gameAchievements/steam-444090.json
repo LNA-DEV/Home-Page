@@ -1,0 +1,839 @@
+{
+ "achievements": [
+  {
+   "achieved": true,
+   "description": {
+    "de": "10 Double-Kills.",
+    "en": "10 Double Kills."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/4036d97873afc221470f31d0d2e37860d7f0c4c5.jpg",
+   "key": "GOAL_ID_1200",
+   "name": {
+    "de": "Double-Kills – Bronze",
+    "en": "Double Kills Bronze"
+   },
+   "percent": 43.1,
+   "unlocked": "2020-09-20T19:29:46+02:00"
+  },
+  {
+   "description": {
+    "de": "50 Double-Kills.",
+    "en": "50 Double Kills."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/8dd0a8e0201aea8b75173d7fad40c725276e006e.jpg",
+   "key": "GOAL_ID_1211",
+   "name": {
+    "de": "Double-Kills – Silber",
+    "en": "Double Kills Silver"
+   },
+   "percent": 20.1
+  },
+  {
+   "description": {
+    "de": "100 Double-Kills.",
+    "en": "100 Double Kills"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/a698eb124ba35920894e068d6c6ef31361f616b4.jpg",
+   "key": "GOAL_ID_1212",
+   "name": {
+    "de": "Double-Kills – Gold",
+    "en": "Double Kills Gold"
+   },
+   "percent": 12.8
+  },
+  {
+   "description": {
+    "de": "200 Double-Kills.",
+    "en": "200 Double Kills."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/82297c6db48b3665198532749f3cda66fe2b8d8a.jpg",
+   "key": "GOAL_ID_1213",
+   "name": {
+    "de": "Double-Kills – Platin",
+    "en": "Double Kills Platinum"
+   },
+   "percent": 7.7
+  },
+  {
+   "description": {
+    "de": "400 Double-Kills.",
+    "en": "400 Double Kills."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/2d818ec4011ba5270fd29ab062aa4ca3353ed2d0.jpg",
+   "key": "GOAL_ID_1214",
+   "name": {
+    "de": "Double-Kills – Diamant",
+    "en": "Double Kills Diamond"
+   },
+   "percent": 4.4
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "1 Champion auf Meisterstufe 5.",
+    "en": "1 Champion at Mastery 5."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/01065246634affb293f5fb16e0fccf2cab1837fe.jpg",
+   "key": "GOAL_ID_1201",
+   "name": {
+    "de": "Champion-Meisterung I",
+    "en": "Champion Mastery I"
+   },
+   "percent": 44.5,
+   "unlocked": "2020-09-25T20:50:23+02:00"
+  },
+  {
+   "description": {
+    "de": "2 Champions auf Meisterstufe 5.",
+    "en": "2 Champions at Mastery 5."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/9288e407656b76bab67927dd100ee35fe32aac62.jpg",
+   "key": "GOAL_ID_1202",
+   "name": {
+    "de": "Champion-Meisterung II",
+    "en": "Champion Mastery II"
+   },
+   "percent": 31.1
+  },
+  {
+   "description": {
+    "de": "3 Champions auf Meisterstufe 5.",
+    "en": "3 Champions at Mastery 5."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/865044c6969dd99197c00e64ec1db08a049645ed.jpg",
+   "key": "GOAL_ID_1203",
+   "name": {
+    "de": "Champion-Meisterung III",
+    "en": "Champion Mastery III"
+   },
+   "percent": 24.3
+  },
+  {
+   "description": {
+    "de": "4 Champions auf Meisterstufe 5.",
+    "en": "4 Champions at Mastery 5."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/db8613552c11b2ade9fbe688fb2a60b4dfb8c1ab.jpg",
+   "key": "GOAL_ID_1204",
+   "name": {
+    "de": "Champion-Meisterung IV",
+    "en": "Champion Mastery IV"
+   },
+   "percent": 19.6
+  },
+  {
+   "description": {
+    "de": "5 Champions auf Meisterstufe 5.",
+    "en": "5 Champions at Mastery 5."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/00fd26d19d36e080a2549af7218f1c3c07704706.jpg",
+   "key": "GOAL_ID_1205",
+   "name": {
+    "de": "Champion-Meisterung V",
+    "en": "Champion Mastery V"
+   },
+   "percent": 17.2
+  },
+  {
+   "description": {
+    "de": "6 Champions auf Meisterstufe 5.",
+    "en": "6 Champions at Mastery 5."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/00fd26d19d36e080a2549af7218f1c3c07704706.jpg",
+   "key": "GOAL_ID_1206",
+   "name": {
+    "de": "Champion-Meisterung VI",
+    "en": "Champion Mastery VI"
+   },
+   "percent": 15.2
+  },
+  {
+   "description": {
+    "de": "7 Champions auf Meisterstufe 5.",
+    "en": "7 Champions at Mastery 5."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/0f5144f00ab81962f8180414107f291510c64943.jpg",
+   "key": "GOAL_ID_1207",
+   "name": {
+    "de": "Champion-Meisterung VII",
+    "en": "Champion Mastery VII"
+   },
+   "percent": 13.6
+  },
+  {
+   "description": {
+    "de": "8 Champions auf Meisterstufe 5.",
+    "en": "8 Champions at Mastery 5."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/201d00d5a1c02324a2d67c0379fa69311d69e4a2.jpg",
+   "key": "GOAL_ID_1208",
+   "name": {
+    "de": "Champion-Meisterung VIII",
+    "en": "Champion Mastery VIII"
+   },
+   "percent": 12.3
+  },
+  {
+   "description": {
+    "de": "9 Champions auf Meisterstufe 5.",
+    "en": "9 Champions at Mastery 5."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/ad95a7d26de7115cee6e1b2617f36edc3f4ad923.jpg",
+   "key": "GOAL_ID_1209",
+   "name": {
+    "de": "Champion-Meisterung IX",
+    "en": "Champion Mastery IX"
+   },
+   "percent": 11.3
+  },
+  {
+   "description": {
+    "de": "10 Champions auf Meisterstufe 5.",
+    "en": "10 Champions at Mastery 5."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/58d52ca3d0d5f8f887993e803fb13a233c290db3.jpg",
+   "key": "GOAL_ID_1210",
+   "name": {
+    "de": "Champion-Meisterung X",
+    "en": "Champion Mastery X"
+   },
+   "percent": 10.4
+  },
+  {
+   "description": {
+    "de": "Überlebe mehr als 50 Kämpfe mit weniger als 10% Gesundheit.",
+    "en": "Survive more than 50 battles with less than 10% health."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/26fa2e9a80299549fd053f2ce2e1fa454a79e8a3.jpg",
+   "key": "GOAL_ID_1215",
+   "name": {
+    "de": "Überlebender",
+    "en": "Survivor"
+   },
+   "percent": 21.1
+  },
+  {
+   "description": {
+    "de": "Lande 5 Kopfschüsse hintereinander, ohne einen zu verfehlen.",
+    "en": "Land 5 headshots in a row without missing."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/594f85aabb3e6cdc1233a89f9ad8f069f7fa5cf2.jpg",
+   "key": "GOAL_ID_1216",
+   "name": {
+    "de": "Zwischen die Augen",
+    "en": "Boom Headshot"
+   },
+   "percent": 38.4
+  },
+  {
+   "description": {
+    "de": "Spiele mit einem Spieler deiner Freundesliste 5 Stunden lang in einer Gruppe.",
+    "en": "Play 5 hours with a player from your friends list in your party."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/03cd2279adfc9817a14b5828cdc329df3ce46f0e.jpg",
+   "key": "GOAL_ID_1217",
+   "name": {
+    "de": "Freunde für immer – Bronze",
+    "en": "Bronze Friends Forever"
+   },
+   "percent": 18.0
+  },
+  {
+   "description": {
+    "de": "Spiele mit einem Spieler deiner Freundesliste 10 Stunden lang in einer Gruppe.",
+    "en": "Play 10 hours with a player from your friends list in your party."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/9acb1e7446713dcf6581b861785651331af10d13.jpg",
+   "key": "GOAL_ID_1218",
+   "name": {
+    "de": "Freunde für immer – Silber",
+    "en": "Silver Friends Forever"
+   },
+   "percent": 12.2
+  },
+  {
+   "description": {
+    "de": "Spiele mit einem Spieler deiner Freundesliste 25 Stunden lang in einer Gruppe.",
+    "en": "Play 25 hours with a player from your friends list in your party."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/038aa9d588d7e9d5c5006e4ed97b65065bf0c5b9.jpg",
+   "key": "GOAL_ID_1219",
+   "name": {
+    "de": "Freunde für immer – Gold",
+    "en": "Friends Forever Gold"
+   },
+   "percent": 6.7
+  },
+  {
+   "description": {
+    "de": "Spiele mit einem Spieler deiner Freundesliste 100 Stunden lang in einer Gruppe.",
+    "en": "Play 100 hours with a player from your friends list in your party."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/9429a5322d859981df9c3458980644ce9dfcfea1.jpg",
+   "key": "GOAL_ID_1220",
+   "name": {
+    "de": "Freunde für immer – Platin",
+    "en": "Friends Forever Platinum"
+   },
+   "percent": 3.3
+  },
+  {
+   "description": {
+    "de": "Spiele mit einem Spieler deiner Freundesliste 250 Stunden lang in einer Gruppe.",
+    "en": "Play 250 hours with a player from your friends list in your party."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/3742aefde732046742331672659634e9f2aaa925.jpg",
+   "key": "GOAL_ID_1221",
+   "name": {
+    "de": "Freunde für immer – Diamant",
+    "en": "Friends Forever Diamond"
+   },
+   "percent": 2.7
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Spiele 1 Match als Teil einer Gruppe.",
+    "en": "Play a match while in a party."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/ce84e4af630bd74fc9f88a2fdb7def9fbbe07ce0.jpg",
+   "key": "GOAL_ID_1222",
+   "name": {
+    "de": "Teamarbeit – Bronze",
+    "en": "Teamed Up Bronze"
+   },
+   "percent": 49.0,
+   "unlocked": "2020-09-25T20:45:14+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Spiele 10 Matches als Teil einer Gruppe.",
+    "en": "Play 10 matches while in a party."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/1e8f0dfd4f659aec615bb32f2c6a1a8d86e2488c.jpg",
+   "key": "GOAL_ID_1223",
+   "name": {
+    "de": "Teamarbeit – Silber",
+    "en": "Teamed Up Silver"
+   },
+   "percent": 32.7,
+   "unlocked": "2020-09-27T21:15:42+02:00"
+  },
+  {
+   "description": {
+    "de": "Spiele 20 Matches als Teil einer Gruppe.",
+    "en": "Play 20 matches while in a party."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/03ff3fdf36e781c6a1ac20fef95b711c9c8ccd0e.jpg",
+   "key": "GOAL_ID_1224",
+   "name": {
+    "de": "Teamarbeit – Gold",
+    "en": "Teamed Up Gold"
+   },
+   "percent": 24.7
+  },
+  {
+   "description": {
+    "de": "Spiele 50 Matches als Teil einer Gruppe.",
+    "en": "Play 50 matches while in a party."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/b61efc81e68a80751fc6bb407ce07328dbc9de50.jpg",
+   "key": "GOAL_ID_1225",
+   "name": {
+    "de": "Teamarbeit – Platin",
+    "en": "Teamed Up Platinum"
+   },
+   "percent": 14.9
+  },
+  {
+   "description": {
+    "de": "Spiele 100 Matches als Teil einer Gruppe.",
+    "en": "Play 100 matches while in a party."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/6bd2753be2cae8cb5bd8b66d79c8ab0a1e61fec4.jpg",
+   "key": "GOAL_ID_1226",
+   "name": {
+    "de": "Teamarbeit – Diamant",
+    "en": "Teamed Up Diamond"
+   },
+   "percent": 9.1
+  },
+  {
+   "description": {
+    "de": "Erreiche Stufe 30 in der Paladins-Beta.",
+    "en": "Reach level 30 during the Paladins Beta."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/acab57ddb90b85a1ceff4c436252b35a0b3cd4e6.jpg",
+   "key": "GOAL_ID_1227",
+   "name": {
+    "de": "Beta-Spieler",
+    "en": "Beta Player"
+   },
+   "percent": 5.9
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Gewinne ein Match, in dem das gegnerische Team keinen Punkt erzielt.",
+    "en": "Win a match where the enemy team scored no points."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/23d85cdd0dbc93fc02dfc6cf245f844e622cda00.jpg",
+   "key": "GOAL_ID_1228",
+   "name": {
+    "de": "Unbezwingbar",
+    "en": "Untouched"
+   },
+   "percent": 68.6,
+   "unlocked": "2020-09-20T18:47:57+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Füge in einem Match jedem gegnerischen Champion Schaden zu, bevor sie dich treffen.",
+    "en": "Deal damage to every enemy champion in a match before any of them damage you."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/d175bbd23a425d44322274b02e494d95d8bdf3ec.jpg",
+   "key": "GOAL_ID_1229",
+   "name": {
+    "de": "Fragen kommen später",
+    "en": "Questions Later"
+   },
+   "percent": 32.7,
+   "unlocked": "2020-09-20T18:45:28+02:00"
+  },
+  {
+   "description": {
+    "de": "Töte einen gegnerischen Champion, nachdem er dich getötet hat.",
+    "en": "Kill an enemy champion after they had already killed you."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/97d06c23ee46b54d7fcff57797438ae1bd8f078f.jpg",
+   "key": "GOAL_ID_1230",
+   "name": {
+    "de": "Aus dem Grab",
+    "en": "From The Grave"
+   },
+   "percent": 37.1
+  },
+  {
+   "description": {
+    "de": "Töte mehr als 20 gegnerische Champions in einem einzigen Belagerungs-Match.",
+    "en": "Kill more than 20 enemy champions in a single match."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/832ce3d9260049e9ee32d543eaa97fcb02ad293c.jpg",
+   "key": "GOAL_ID_1231",
+   "name": {
+    "de": "Teamstütze",
+    "en": "Hard Carry"
+   },
+   "percent": 36.8
+  },
+  {
+   "description": {
+    "de": "Schließe das Paladins-Tutorial ab.",
+    "en": "Complete the Paladins Tutorial."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/53b42d551effbac743d7952772f4f953861f4cb6.jpg",
+   "key": "GOAL_ID_1246",
+   "name": {
+    "de": "Durchtrainiert",
+    "en": "Well Trained"
+   },
+   "percent": 51.1
+  },
+  {
+   "description": {
+    "de": "Töte einen gegnerischen Spieler, der gerade eine Killsträhne von mindestens 15 hat.",
+    "en": "Kill an enemy player who is on a 15 killstreak or higher."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/50e279f46c45a20ee21d2ab2e98da7a50958c9ac.jpg",
+   "key": "GOAL_ID_1256",
+   "name": {
+    "de": "Kopfgeldjäger",
+    "en": "Bounty Hunter"
+   },
+   "percent": 10.8
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Töte einen Spieler, der sich höher als 100 Einheiten in der Luft befindet.",
+    "en": "Kill a player in the air who is over 100 units above the ground."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/ad093dad4f891e11ade6e574eb7be2f100b8fcf6.jpg",
+   "key": "GOAL_ID_1340",
+   "name": {
+    "de": "Luftabwehr",
+    "en": "Counter-Air Defense"
+   },
+   "percent": 62.6,
+   "unlocked": "2020-09-20T19:09:06+02:00"
+  },
+  {
+   "description": {
+    "de": "Erziele nach Ende einer Runde einen Todesstoß.",
+    "en": "Get a killing blow after the round has ended."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/38b9d311fbfbd797b58ff59a039b6320b78e60ed.jpg",
+   "key": "GOAL_ID_1250",
+   "name": {
+    "de": "Gib 110 Prozent",
+    "en": "Give 110 Percent"
+   },
+   "percent": 40.7
+  },
+  {
+   "description": {
+    "de": "Stirb durch eine Gefahrenquelle in der Umgebung.",
+    "en": "Die to an environmental hazard."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/a2b85251ade7987741b25e47fa0eb7c4b0b24e4f.jpg",
+   "key": "GOAL_ID_1251",
+   "name": {
+    "de": "Extremforscher",
+    "en": "Gone Spelunking"
+   },
+   "percent": 40.4
+  },
+  {
+   "description": {
+    "de": "Verursache in einem Match mehr als 100.000 Schaden.",
+    "en": "Deal more than 100,000 damage during a match."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/b2890bdcbdbb7586fd0aa4b2421ee323b35c3f26.jpg",
+   "key": "GOAL_ID_1257",
+   "name": {
+    "de": "Große Nummer",
+    "en": "I Like Big Numbers"
+   },
+   "percent": 41.1
+  },
+  {
+   "description": {
+    "de": "Überlebe als einziger Spieler in einem Match.",
+    "en": "Be the only player alive in a match."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/92a2021822493825b914a77b81347cfd8823c80b.jpg",
+   "key": "GOAL_ID_1249",
+   "name": {
+    "de": "Letzter Überlebender",
+    "en": "Last One Standing"
+   },
+   "percent": 3.6
+  },
+  {
+   "description": {
+    "de": "Schalte 100 Karten frei.",
+    "en": "Unlock 100 Cards."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/3274afb0f20d259cb20c90770bc2ea2e0bd038e4.jpg",
+   "key": "GOAL_ID_1248",
+   "name": {
+    "de": "Meistersammler",
+    "en": "Master Collector"
+   },
+   "percent": 19.0
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Töte einen gegnerischen Spieler, während du 50 LP oder weniger hast.",
+    "en": "Kill an enemy player while you are at or below 50 Health."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/29d3aad90277b664453efa16b2b4dac29b69be53.jpg",
+   "key": "GOAL_ID_1255",
+   "name": {
+    "de": "So nicht",
+    "en": "Not Like This"
+   },
+   "percent": 57.5,
+   "unlocked": "2020-09-20T18:52:48+02:00"
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Töte einen Spieler durch eine Gefahrenquelle in der Umgebung.",
+    "en": "Kill a player with an environmental hazard."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/206528f32c81f03fa1ff2598da9e9c42796c26e3.jpg",
+   "key": "GOAL_ID_1252",
+   "name": {
+    "de": "Und tschüss",
+    "en": "Send Off"
+   },
+   "percent": 40.9,
+   "unlocked": "2020-09-20T19:36:27+02:00"
+  },
+  {
+   "description": {
+    "de": "Töte einen gegnerischen Spieler aus über 300 Einheiten Entfernung.",
+    "en": "Kill an enemy player from over 300 units away."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/d75c669155979d00a4f6acc76ab872bf83bdb4b4.jpg",
+   "key": "GOAL_ID_1253",
+   "name": {
+    "en": "Sniper"
+   },
+   "percent": 15.8
+  },
+  {
+   "description": {
+    "de": "Schalte Ranglistenspiele frei.",
+    "en": "Unlock Ranked"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/5fca9052bf9e5d4b105b17bd5caebe69d3f0b52f.jpg",
+   "key": "GOAL_ID_1366",
+   "name": {
+    "de": "Ein neuer Herausforderer",
+    "en": "A New Challenger"
+   },
+   "percent": 18.9
+  },
+  {
+   "description": {
+    "de": "Absorbiere in einem Match mehr als 100.000 Schaden.",
+    "en": "Shield over 100,000 damage in a match"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/e615dd82d6b8bfc3889972d171ec4765e803148b.jpg",
+   "key": "GOAL_ID_1369",
+   "name": {
+    "de": "Kugelsicher",
+    "en": "Bullet Sponge"
+   },
+   "percent": 10.3
+  },
+  {
+   "description": {
+    "de": "Heile in einem Match mehr als 100.000 LP.",
+    "en": "Heal over 100,000 health in a match"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/e36a1c09a88c6d8fda6180212c9b92fcbb76209a.jpg",
+   "key": "GOAL_ID_1368",
+   "name": {
+    "de": "Feldchirurg",
+    "en": "Surgeon General"
+   },
+   "percent": 7.3
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erhalte an 7 aufeinanderfolgenden Tagen eine tägliche Belohnung.",
+    "en": "Get a daily reward 7 days in a row"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/2144dfb23cfe051a65a5bbf8e82e1fe24e90d304.jpg",
+   "key": "GOAL_ID_1415",
+   "name": {
+    "de": "Weltenbürger",
+    "en": "Citizen of the Realm"
+   },
+   "percent": 20.1,
+   "unlocked": "2020-09-27T21:07:10+02:00"
+  },
+  {
+   "description": {
+    "de": "Erstelle dein eigenes Deck.",
+    "en": "Build your own custom loadout"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/04f2aeb50074642032c5cafa173a769229833919.jpg",
+   "key": "GOAL_ID_1416",
+   "name": {
+    "de": "Das ist mein Stil",
+    "en": "This is My Style"
+   },
+   "percent": 29.7
+  },
+  {
+   "description": {
+    "de": "Spiele mehr als 300 Matches.",
+    "en": "Play over 300 matches"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/c4e508004755d9dbbde46d5583711e459d91f7d3.jpg",
+   "key": "GOAL_ID_1409",
+   "name": {
+    "de": "Spielsüchtig",
+    "en": "Battle Thirsty"
+   },
+   "percent": 5.4
+  },
+  {
+   "description": {
+    "de": "Verdiene insgesamt mehr als 500.000 Gold.",
+    "en": "Earn over 500,000 Gold over your play history"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/d598c73589144ccabab08edf21256608a75c02a0.jpg",
+   "key": "GOAL_ID_1413",
+   "name": {
+    "de": "Der Sieger erhält die Beute",
+    "en": "To the Victor go the Spoils"
+   },
+   "percent": 6.6
+  },
+  {
+   "description": {
+    "de": "Verdiene insgesamt mehr als 1.000.000 Gold.",
+    "en": "Earn over 1,000,000 Gold over your play history"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/b06dd02daeb72fd2177d35f38c20bca7b9a6705f.jpg",
+   "key": "GOAL_ID_1414",
+   "name": {
+    "de": "Millionär",
+    "en": "Millionaire"
+   },
+   "percent": 3.4
+  },
+  {
+   "achieved": true,
+   "description": {
+    "de": "Erziele in einem Match eine 20er-Killsträhne.",
+    "en": "Reach a 20 kill streak in a match"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/f512e73a7c47e3104623754aca8bf497d0749f4a.jpg",
+   "key": "GOAL_ID_1394",
+   "name": {
+    "de": "Unaufhaltbar",
+    "en": "Unstoppable"
+   },
+   "percent": 38.6,
+   "unlocked": "2020-09-20T19:16:44+02:00"
+  },
+  {
+   "description": {
+    "de": "Gib über 100.000 Credits für Match-Gegenstände aus.",
+    "en": "Spend over 100,000 Credits in the item store over all your matches"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/eaea8728a2ed94806d53113586ca23dd3fe98ab8.jpg",
+   "key": "GOAL_ID_1395",
+   "name": {
+    "de": "Großinvestor",
+    "en": "Big Spender"
+   },
+   "percent": 17.3
+  },
+  {
+   "description": {
+    "de": "Werde Meister in der Rangliste.",
+    "en": "Reach Master in Ranked"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/1efc8e03954a2a0b3cedbcc07d84a8977f718cf1.jpg",
+   "key": "GOAL_ID_1418",
+   "name": {
+    "de": "Spitzenjob",
+    "en": "Pinnacle"
+   },
+   "percent": 1.0
+  },
+  {
+   "description": {
+    "de": "Dein Paladins-Konto ist mindestens 1 Jahr alt.",
+    "en": "Have a Paladins account over 1 year old"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/5eb33a6ff9f4ea8ab73960af92f72668c33b135f.jpg",
+   "key": "GOAL_ID_1417",
+   "name": {
+    "de": "Zeitzeuge",
+    "en": "Witness to History"
+   },
+   "percent": 23.7
+  },
+  {
+   "description": {
+    "de": "Mindestens 30 Champions auf Meisterstufe 10 oder höher.",
+    "en": "Have over 30 different champions at mastery level 10 or higher"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/6a1e38fde89b96a308fd184dd01c328c0a322f0b.jpg",
+   "key": "GOAL_ID_1410",
+   "name": {
+    "de": "Vielfalt ist das Salz in der Suppe",
+    "en": "Variety is the Spice of Life"
+   },
+   "percent": 1.6
+  },
+  {
+   "description": {
+    "de": "Mindestens 30 Champions auf Meisterstufe 15 oder höher.",
+    "en": "Have over 30 different champions at mastery level 15 or higher"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/c8c2e02b10b9f9de7c219ac6bcc5114087c46f4d.jpg",
+   "key": "GOAL_ID_1411",
+   "name": {
+    "de": "Der Ehrgeizige",
+    "en": "The Dedicated"
+   },
+   "percent": 1.2
+  },
+  {
+   "description": {
+    "de": "Mindestens 30 Champions auf Meisterstufe 20 oder höher.",
+    "en": "Have over 30 different champions at mastery level 20 or higher"
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/444090/c839740865367ba351e725090bb28b16fcb99b45.jpg",
+   "key": "GOAL_ID_1412",
+   "name": {
+    "de": "Der Wahnsinnige",
+    "en": "The Insane"
+   },
+   "percent": 1.1
+  }
+ ],
+ "id": "444090",
+ "platform": "steam"
+}
