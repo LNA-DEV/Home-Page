@@ -674,15 +674,15 @@
   cover: images/games/covers/Brawlhalla.jpg
   link: "https://store.steampowered.com/app/291550/"
 
-- title: "The Witcher 3: Wild Hunt - Complete Edition"
+- title: "The Witcher 3: Wild Hunt — Remastered"
   slug: the-witcher-3-wild-hunt-complete-edition
   platform: steam
   appid: 292030
-  playtimeMinutes: 6582
-  lastPlayed: "2026-09-28"
+  playtimeMinutes: 6664
+  lastPlayed: "2026-09-29"
   achievementsUnlocked: 36
   achievementsTotal: 78
-  cover: "images/games/covers/The Witcher 3: Wild Hunt - Complete Edition.jpg"
+  cover: "images/games/covers/The Witcher 3: Wild Hunt — Remastered.jpg"
   link: "https://store.steampowered.com/app/292030/"
 
 - title: Enter the Gungeon
@@ -1276,7 +1276,7 @@
   slug: satisfactory
   platform: epic
   appName: CrabEA
-  playtimeMinutes: 2642
+  playtimeMinutes: 2633
   lastPlayed: "2026-09-28"
   cover: images/games/covers/Satisfactory.jpg
   link: "https://www.epicgames.com/store/product/satisfactory"
@@ -1444,7 +1444,7 @@
   slug: celeste
   platform: epic
   appName: Salt
-  playtimeMinutes: 772
+  playtimeMinutes: 758
   lastPlayed: "2026-02-26"
   cover: images/games/covers/Celeste.jpg
   link: "https://www.epicgames.com/store/product/celeste"

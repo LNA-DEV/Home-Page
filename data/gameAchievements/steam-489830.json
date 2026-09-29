@@ -61,7 +61,7 @@
     "de": "Diplomatische Immunität",
     "en": "Diplomatic Immunity"
    },
-   "percent": 22.1,
+   "percent": 22.2,
    "unlocked": "2019-06-18T00:16:57+02:00"
   },
   {
@@ -214,7 +214,7 @@
     "de": "Das Auge von Magnus",
     "en": "The Eye of Magnus"
    },
-   "percent": 16.3
+   "percent": 16.4
   },
   {
    "description": {
@@ -410,7 +410,7 @@
     "de": "Schlangenzunge",
     "en": "Snake Tongue"
    },
-   "percent": 22.9
+   "percent": 23.0
   },
   {
    "description": {
@@ -494,7 +494,7 @@
     "de": "Kunst kommt von Können",
     "en": "Artificer"
    },
-   "percent": 26.2
+   "percent": 26.3
   },
   {
    "description": {
@@ -564,7 +564,7 @@
     "de": "Weltenbummler",
     "en": "Explorer"
    },
-   "percent": 23.3
+   "percent": 23.4
   },
   {
    "description": {
@@ -621,7 +621,7 @@
     "de": "Drachenseele",
     "en": "Dragon Soul"
    },
-   "percent": 49.5,
+   "percent": 49.6,
    "unlocked": "2019-06-17T20:35:54+02:00"
   },
   {
@@ -753,7 +753,7 @@
     "de": "Jenseits des Todes",
     "en": "Beyond Death"
    },
-   "percent": 14.0
+   "percent": 14.1
   },
   {
    "description": {
@@ -879,7 +879,7 @@
     "de": "Elterlicher Stolz",
     "en": "Proud Parent"
    },
-   "percent": 16.0
+   "percent": 16.1
   },
   {
    "description": {
