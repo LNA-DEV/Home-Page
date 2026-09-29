@@ -821,6 +821,7 @@
 /de/gallery/photo/zwischen-den-veilchen-zauneidechse-aufgerichtet-auf-einem-stein/
 /de/gallery/photo/zwischen-den-wolken-ein-verschneiter-gipfel-hinter-den-ruecken/
 /de/gallery/photo/zwischen-den-zweigen-verloren-ein-kleiner-vogel-in-der-kahlen-krone/
+/de/gallery/photo/zwischen-eisernen-farnen-eine-sommerpause-auf-einer-stockholmer-parkbank/
 /de/gallery/photo/zwischen-schnee-und-gras-eine-alm-im-vorfruehling/
 /de/gallery/photo/zwischen-zwei-schultern-das-tal-im-letzten-licht/
 /de/gallery/portfolio/
@@ -1225,6 +1226,7 @@
 /en/gallery/photo/alone-on-the-field-cow-in-the-autumn-valley/
 /en/gallery/photo/along-the-escarpment-road-and-rail-on-the-karst-edge/
 /en/gallery/photo/along-the-underside-the-bridge-curving-toward-the-pylons/
+/en/gallery/photo/among-iron-ferns-a-summer-pause-on-a-stockholm-park-bench/
 /en/gallery/photo/among-the-plumes-bindweed-in-the-knotweed/
 /en/gallery/photo/among-the-violets-sand-lizard-raised-on-a-stone/
 /en/gallery/photo/antenna-dome-and-cross-the-wendelstein-summit/
@@ -2098,6 +2100,7 @@
 /images/gallery/alone-on-the-field-cow-in-the-autumn-valley.jpg
 /images/gallery/along-the-escarpment-road-and-rail-on-the-karst-edge.jpg
 /images/gallery/along-the-underside-the-bridge-curving-toward-the-pylons.jpg
+/images/gallery/among-iron-ferns-a-summer-pause-on-a-stockholm-park-bench.jpg
 /images/gallery/among-the-plumes-bindweed-in-the-knotweed.jpg
 /images/gallery/among-the-violets-sand-lizard-raised-on-a-stone.jpg
 /images/gallery/antenna-dome-and-cross-the-wendelstein-summit.jpg
@@ -2911,6 +2914,7 @@
 /sv/gallery/photo/bla-timme-i-bodrum-foren-pa-en-gulet-i-skymningen/
 /sv/gallery/photo/bla-timme-nedanfor-bayersk-by-under-rosa-himmel/
 /sv/gallery/photo/bla-tistlar-martorn-i-grusbadden/
+/sv/gallery/photo/bland-ormbunkar-av-jarn-en-sommarpaus-pa-en-parkbank-i-stockholm/
 /sv/gallery/photo/bland-violerna-sandodla-upprest-pa-en-sten/
 /sv/gallery/photo/bland-vipporna-snarvinda-i-parkslidet/
 /sv/gallery/photo/blatt-och-violett-humla-pa-blaeld/

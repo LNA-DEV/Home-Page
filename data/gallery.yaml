@@ -18772,7 +18772,7 @@ images:
   model: markus-penninger
 - id: 29c78cfa-ed08-4686-9bd0-70f2aa86dfda
   src: Time for a Beer - German Man Standing Before a Beer Sign in Gamla Stan.jpg
-  category: others
+  category: portrait
   section: general
   tags:
   - environmentalPortrait
@@ -18795,6 +18795,35 @@ images:
     en: A smiling man with a beard, glasses and a top knot stands outside a pub in Gamla stan, Stockholm's old town, looking at a chalkboard of Swedish draught beers. Behind him a narrow cobbled lane runs between yellow and orange buildings under a blue sky with white clouds.
     de: Ein lächelnder Mann mit Bart, Brille und Dutt steht vor einem Pub in Gamla stan, der Altstadt Stockholms, und blickt auf eine Kreidetafel mit schwedischen Fassbieren. Hinter ihm verläuft eine schmale Kopfsteinpflastergasse zwischen gelben und orangefarbenen Häusern unter einem blauen Himmel mit weißen Wolken.
     sv: En leende man med skägg, glasögon och hårknut står utanför en pub i Gamla stan i Stockholm och tittar på en krittavla med svenska fatöl. Bakom honom löper en smal kullerstensgränd mellan gula och orange hus under en blå himmel med vita moln.
+  license: all-rights-reserved
+  artist: Lukas Nagel
+  model: markus-penninger
+- id: 07eba528-5cfb-4a4d-ae85-5d6f0eaa3599
+  src: _DSC5598_12917.jpg
+  category: portrait
+  section: general
+  title:
+    en: "Among Iron Ferns - A Summer Pause on a Stockholm Park Bench"
+    de: "Zwischen eisernen Farnen - Eine Sommerpause auf einer Stockholmer Parkbank"
+    sv: "Bland ormbunkar av järn - En sommarpaus på en parkbänk i Stockholm"
+  alt:
+    en: "A bearded man with glasses and a top knot sits on an ornate green cast-iron park bench in Stockholm, looking to the side in the summer sun. He wears a white T-shirt and navy striped track pants. Orange dahlias and leafy plants fill the blurred foreground, and the leaves of tall trees fill the background."
+    de: "Ein bärtiger Mann mit Brille und Dutt sitzt auf einer verzierten grünen Parkbank aus Gusseisen in Stockholm und blickt in der Sommersonne zur Seite. Er trägt ein weißes T-Shirt und eine dunkelblaue Jogginghose mit Streifen. Orangefarbene Dahlien und grüne Pflanzen füllen den unscharfen Vordergrund, im Hintergrund das Laub hoher Bäume."
+    sv: "En skäggig man med glasögon och hårknut sitter på en utsmyckad grön parkbänk av gjutjärn i Stockholm och blickar åt sidan i sommarsolen. Han bär en vit t-shirt och mörkblå randiga träningsbyxor, och bredvid honom står en vattenflaska. Orange dahlior och gröna växter fyller den oskarpa förgrunden, och lövverket från höga träd fyller bakgrunden."
+  tags:
+  - dahlias
+  - environmentalPortrait
+  - outdoorPortrait
+  - parkBench
+  - peoplePhotography
+  - photo
+  - photography
+  - portrait
+  - portraitPhotography
+  - stockholm
+  - sweden
+  - swedishSummer
+  - visitStockholm
   license: all-rights-reserved
   artist: Lukas Nagel
   model: markus-penninger
