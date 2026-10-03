@@ -19061,6 +19061,39 @@ images:
   license: all-rights-reserved
   artist: Lukas Nagel
   model: markus-penninger
+- id: ec3c580c-2a31-4340-aa2a-7329188ba0fd
+  src: _DSC5879_13479.jpg
+  category: portrait
+  section: general
+  title:
+    en: "An Eye for Little Things - Photographing a Boot Planter on a Luleå Sidewalk"
+    de: "Ein Auge für die kleinen Dinge - Mann fotografiert einen Blumenschuh auf einem Gehweg in Luleå"
+    sv: "Ett öga för de små tingen - man fotograferar en känga som blivit blomkruka på en trottoar i Luleå"
+  alt:
+    en: "A man in a white T-shirt and track pants, his hair in a top knot, crouches on the pavement and photographs a pair of ivy-planted boots with a small compact camera in the northern Swedish city of Luleå."
+    de: "Ein Mann mit weißem Shirt, Jogginghose und Dutt hockt auf dem Gehweg und fotografiert mit einer kleinen Kompaktkamera ein Paar mit Efeu bepflanzte Stiefel in der nordschwedischen Stadt Luleå."
+    sv: "En man i vit t-shirt, träningsbyxor och hårknut sitter på huk på trottoaren i den nordsvenska staden Luleå och fotograferar ett par kängor fulla av murgröna med en liten kompaktkamera."
+  tags:
+    - photo
+    - photography
+    - portrait
+    - environmentalPortrait
+    - candid
+    - streetPhotography
+    - photographerAtWork
+    - sweden
+    - scandinavia
+    - norrbotten
+    - luleå
+    - swedishSummer
+    - digicam
+    - upcycling
+    - ivy
+    - urbanNature
+    - theLittleThings
+  license: all-rights-reserved
+  artist: Lukas Nagel
+  model: markus-penninger
 projects:
 - slug: above-the-clouds
   title: Above the Clouds

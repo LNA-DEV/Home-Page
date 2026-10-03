@@ -341,6 +341,7 @@
 /de/gallery/photo/durchs-gelb-ein-dorf-hinter-dem-bluehenden-feld/
 /de/gallery/photo/durchs-moos-gedrueckt-ein-junger-fliegenpilz/
 /de/gallery/photo/durchs-violett-insektenhotel-hinter-der-lobelie/
+/de/gallery/photo/ein-auge-fuer-die-kleinen-dinge-mann-fotografiert-einen-blumenschuh-auf-einem-gehweg-in-lulea/
 /de/gallery/photo/ein-band-aus-orange-ein-berg-am-ende-des-tages/
 /de/gallery/photo/ein-beet-voller-primeln-lila-und-gelb-in-der-fruehlingssonne/
 /de/gallery/photo/ein-blatt-ein-seerosenblatt-im-klaren-flachwasser/
@@ -1237,6 +1238,7 @@
 /en/gallery/photo/among-iron-ferns-a-summer-pause-on-a-stockholm-park-bench/
 /en/gallery/photo/among-the-plumes-bindweed-in-the-knotweed/
 /en/gallery/photo/among-the-violets-sand-lizard-raised-on-a-stone/
+/en/gallery/photo/an-eye-for-little-things-photographing-a-boot-planter-on-a-lulea-sidewalk/
 /en/gallery/photo/antenna-dome-and-cross-the-wendelstein-summit/
 /en/gallery/photo/antenna-in-the-haze-the-wendelstein-through-layers-of-air/
 /en/gallery/photo/approach-in-brick-a-swedish-castle-at-the-end-of-the-path/
@@ -2118,6 +2120,7 @@
 /images/gallery/among-iron-ferns-a-summer-pause-on-a-stockholm-park-bench.jpg
 /images/gallery/among-the-plumes-bindweed-in-the-knotweed.jpg
 /images/gallery/among-the-violets-sand-lizard-raised-on-a-stone.jpg
+/images/gallery/an-eye-for-little-things-photographing-a-boot-planter-on-a-lulea-sidewalk.jpg
 /images/gallery/antenna-dome-and-cross-the-wendelstein-summit.jpg
 /images/gallery/antenna-in-the-haze-the-wendelstein-through-layers-of-air.jpg
 /images/gallery/approach-in-brick-a-swedish-castle-at-the-end-of-the-path.jpg
@@ -3032,6 +3035,7 @@
 /sv/gallery/photo/ett-hal-intill-staden-ett-stenbrott-fran-luften/
 /sv/gallery/photo/ett-helt-trad-i-blom-appelblom-mot-blatt/
 /sv/gallery/photo/ett-horn-uppat-brun-ko-med-tungan-ute/
+/sv/gallery/photo/ett-oga-for-de-sma-tingen-man-fotograferar-en-kanga-som-blivit-blomkruka-pa-en-trottoar-i-lulea/
 /sv/gallery/photo/ett-segel-och-en-skyline-kopenhamn-tvars-over-oresund/
 /sv/gallery/photo/ett-spar-till-stugan-vintersol-over-dalen/
 /sv/gallery/photo/fallet-nara-det-stortande-vattnet/
