@@ -18857,6 +18857,39 @@ images:
   license: all-rights-reserved
   artist: Lukas Nagel
   model: markus-penninger
+- id: 2db337fc-aac0-4b88-89f6-360a79ccd296
+  src: _DSC5700_13121.jpg
+  category: portrait
+  section: general
+  title:
+    en: "Morning in the Wild - Hiker Brushing His Teeth in the Swedish Fjäll"
+    de: "Morgen in der Wildnis - Wanderer putzt sich die Zähne im schwedischen Fjäll"
+    sv: "Morgon i vildmarken - vandrare borstar tänderna i svenska fjällen"
+  alt:
+    en: "A man with glasses, a beard and a top knot squints sleepily into the sun while brushing his teeth with a wooden toothbrush. He wears a black hoodie. Behind him a small mountain stream rushes over boulders through the Swedish fjäll landscape."
+    de: "Ein Mann mit Brille, Bart und Dutt blinzelt verschlafen in die Sonne, während er sich mit einer Holzzahnbürste die Zähne putzt. Er trägt einen schwarzen Hoodie. Hinter ihm rauscht ein kleiner Gebirgsbach über Felsbrocken durch die nordschwedische Fjäll-Landschaft."
+    sv: "En man med glasögon, skägg och hårknut borstar tänderna med en tandborste av trä och kisar lite morgontrött mot solen. Han bär en svart huvtröja. Bakom honom forsar en liten fjällbäck över stenarna genom det nordsvenska fjällandskapet."
+  tags:
+    - photo
+    - photography
+    - portrait
+    - portraitPhotography
+    - environmentalPortrait
+    - outdoorPortrait
+    - candid
+    - sweden
+    - fjäll
+    - fjällen
+    - swedishSummer
+    - mountains
+    - mountainStream
+    - hiking
+    - outdoors
+    - morningRoutine
+    - brushingTeeth
+  license: all-rights-reserved
+  artist: Lukas Nagel
+  model: markus-penninger
 projects:
 - slug: above-the-clouds
   title: Above the Clouds

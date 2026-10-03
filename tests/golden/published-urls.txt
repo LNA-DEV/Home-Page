@@ -555,6 +555,7 @@
 /de/gallery/photo/metall-und-blatt-blaufluegel-prachtlibelle-rastet-auf-einer-weide/
 /de/gallery/photo/mittagsfahrt-weisse-ente-auf-dem-klaren-fluss/
 /de/gallery/photo/mitten-im-meckern-ziege-ruft-ueber-die-weide/
+/de/gallery/photo/morgen-in-der-wildnis-wanderer-putzt-sich-die-zaehne-im-schwedischen-fjaell/
 /de/gallery/photo/morgen-ueber-dem-nebelmeer-wiese-grat-und-wolke/
 /de/gallery/photo/morgengleiten-fischadler-im-ersten-licht-unter-einem-bewaldeten-grat/
 /de/gallery/photo/morgenwache-fischadler-ueberblickt-das-moor-vom-wipfel-aus/
@@ -1499,6 +1500,7 @@
 /en/gallery/photo/molten-sky-orange-clouds-above-the-evening-sea/
 /en/gallery/photo/morning-above-the-sea-of-fog-meadow-ridge-and-cloud/
 /en/gallery/photo/morning-glide-osprey-riding-the-first-light-below-a-forested-ridge/
+/en/gallery/photo/morning-in-the-wild-hiker-brushing-his-teeth-in-the-swedish-fjall/
 /en/gallery/photo/morning-watch-osprey-scanning-the-bog-from-a-treetop/
 /en/gallery/photo/mouth-full-young-cow-walking-through-the-grass/
 /en/gallery/photo/new-among-the-spent-calendula-and-its-seed-heads/
@@ -2374,6 +2376,7 @@
 /images/gallery/molten-sky-orange-clouds-above-the-evening-sea.jpg
 /images/gallery/morning-above-the-sea-of-fog-meadow-ridge-and-cloud.jpg
 /images/gallery/morning-glide-osprey-riding-the-first-light-below-a-forested-ridge.jpg
+/images/gallery/morning-in-the-wild-hiker-brushing-his-teeth-in-the-swedish-fjall.jpg
 /images/gallery/morning-watch-osprey-scanning-the-bog-from-a-treetop.jpg
 /images/gallery/mouth-full-young-cow-walking-through-the-grass.jpg
 /images/gallery/new-among-the-spent-calendula-and-its-seed-heads.jpg
@@ -3238,6 +3241,7 @@
 /sv/gallery/photo/moln-pa-marken-en-lag-bank-over-den-snoiga-slatten/
 /sv/gallery/photo/molnet-sjunker-ner-vinterdal-under-ett-drivande-skikt/
 /sv/gallery/photo/molnfabrik-cumulus-som-kokar-upp-bakom-kammen/
+/sv/gallery/photo/morgon-i-vildmarken-vandrare-borstar-tanderna-i-svenska-fjallen/
 /sv/gallery/photo/morgon-ovanfor-dimhavet-ang-kam-och-moln/
 /sv/gallery/photo/morgonglid-fiskgjuse-som-rider-pa-forsta-ljuset-nedanfor-en-skogkladd-as/
 /sv/gallery/photo/morgonvakt-fiskgjuse-som-spanar-over-myren-fran-en-tradtopp/
