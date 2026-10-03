@@ -438,6 +438,7 @@
 /de/gallery/photo/geschichtetes-licht-abendwolken-ueber-einer-offenen-wiese/
 /de/gallery/photo/geschmolzener-himmel-orange-wolken-ueber-dem-abendmeer/
 /de/gallery/photo/gespiegeltes-paar-kanadagaense-am-blauen-wasser/
+/de/gallery/photo/gipfelkoenig-wanderer-steht-neben-einem-steinmann-im-schwedischen-fjaell/
 /de/gallery/photo/gischt-und-stein-der-rheinfall-im-abendlicht/
 /de/gallery/photo/glatter-fels-offene-bucht-sommer-in-den-schwedischen-schaeren/
 /de/gallery/photo/glocke-und-hoerner-kuh-blickt-in-die-kamera/
@@ -1453,6 +1454,7 @@
 /en/gallery/photo/island-of-one-solitary-pine-in-the-moorland-glow/
 /en/gallery/photo/islands-in-the-turquoise-the-inn-beside-the-motorway/
 /en/gallery/photo/its-always-cozy-in-the-sun-spring-lamb-curled-up-in-a-sunlit-meadow/
+/en/gallery/photo/king-of-the-hill-hiker-standing-by-a-summit-cairn-in-the-swedish-fjall/
 /en/gallery/photo/king-of-the-peasants-grey-heron-claiming-the-highest-branch/
 /en/gallery/photo/lakeside-post-white-duck-on-the-grassy-bank/
 /en/gallery/photo/landed-soap-bubbles-resting-on-the-sand/
@@ -2329,6 +2331,7 @@
 /images/gallery/island-of-one-solitary-pine-in-the-moorland-glow.jpg
 /images/gallery/islands-in-the-turquoise-the-inn-beside-the-motorway.jpg
 /images/gallery/its-always-cozy-in-the-sun-spring-lamb-curled-up-in-a-sunlit-meadow.jpg
+/images/gallery/king-of-the-hill-hiker-standing-by-a-summit-cairn-in-the-swedish-fjall.jpg
 /images/gallery/king-of-the-peasants-grey-heron-claiming-the-highest-branch.jpg
 /images/gallery/lakeside-post-white-duck-on-the-grassy-bank.jpg
 /images/gallery/landed-soap-bubbles-resting-on-the-sand.jpg
@@ -3177,6 +3180,7 @@
 /sv/gallery/photo/kor-vid-havet-flocken-vilar-pa-den-svenska-vastkusten/
 /sv/gallery/photo/korsbarsvitt-blom-pa-en-vargren/
 /sv/gallery/photo/korset-pa-klippan-toppkam-ovanfor-de-grona-dalarna/
+/sv/gallery/photo/kung-pa-tappan-vandrare-vid-ett-topprose-i-svenska-fjallen/
 /sv/gallery/photo/kustflock-kor-langs-den-klippiga-stranden/
 /sv/gallery/photo/kvall-vid-forsen-slatt-vatten-mellan-klipporna/
 /sv/gallery/photo/kvall-vid-inn-flodkrok-under-kalkvaggarna/

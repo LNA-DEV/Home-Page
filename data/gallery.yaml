@@ -18890,6 +18890,40 @@ images:
   license: all-rights-reserved
   artist: Lukas Nagel
   model: markus-penninger
+- id: 77f727e4-5834-4fcc-8d8f-f1568de7ade9
+  src: _DSC5779_26737.jpg
+  category: portrait
+  section: general
+  title:
+    en: "King of the Hill - Hiker Standing by a Summit Cairn in the Swedish Fjäll"
+    de: "Gipfelkönig - Wanderer steht neben einem Steinmann im schwedischen Fjäll"
+    sv: "Kung på täppan - vandrare vid ett toppröse i svenska fjällen"
+  alt:
+    en: "A bearded hiker in glasses, a green jacket, a black hoodie with the hood pulled up and blue track pants stands on lichen-covered rocks beside a summit cairn, holding a compact camera. Beyond lies the Swedish fjäll under an overcast sky, with patches of snow on the distant mountains."
+    de: "Ein bärtiger Wanderer mit Brille, grüner Jacke, schwarzem Hoodie mit aufgesetzter Kapuze und blauer Trainingshose steht auf flechtenbewachsenen Felsen neben einem Steinmann am Gipfel und hält eine Kompaktkamera in der Hand. Dahinter erstreckt sich das schwedische Fjäll unter bewölktem Himmel, mit Schneefeldern auf den fernen Bergen."
+    sv: "En skäggig vandrare med glasögon, grön jacka, svart huvtröja med luvan uppdragen och blå träningsbyxor står på lavklädda stenar bredvid ett toppröse och håller en kompaktkamera i handen. Bakom breder det svenska fjällandskapet ut sig under en mulen himmel, med snöfläckar på bergen längre bort."
+  tags:
+    - photo
+    - photography
+    - mountains
+    - sweden
+    - fjäll
+    - environmentalPortrait
+    - portrait
+    - portraitPhotography
+    - cairn
+    - summit
+    - hiking
+    - fjällen
+    - swedishSummer
+    - outdoorPortrait
+    - outdoors
+    - hiker
+    - scandinavia
+    - friluftsliv
+  license: all-rights-reserved
+  artist: Lukas Nagel
+  model: markus-penninger
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
