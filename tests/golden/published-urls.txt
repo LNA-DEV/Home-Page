@@ -269,6 +269,7 @@
 /de/gallery/photo/der-bach-bleibt-offen-blaue-stunde-im-schneetal/
 /de/gallery/photo/der-baum-am-ende-des-feldes-sonnenuntergang-ueber-der-wiese/
 /de/gallery/photo/der-baum-ueber-dem-mais-letzte-farbe-des-abends/
+/de/gallery/photo/der-berg-hoert-zu-wanderer-raucht-im-kargen-fjaell/
 /de/gallery/photo/der-bretterweg-ein-steg-in-den-sommersee/
 /de/gallery/photo/der-dunkle-gipfel-ein-bewaldeter-berg-unter-den-alpen/
 /de/gallery/photo/der-findling-und-die-rinne-sommer-an-der-stromschnelle/
@@ -1735,6 +1736,7 @@
 /en/gallery/photo/the-long-path-evening-along-the-inn-embankment/
 /en/gallery/photo/the-long-span-oresund-bridge-reaching-for-denmark/
 /en/gallery/photo/the-meadow-and-the-peak-a-clear-autumn-day/
+/en/gallery/photo/the-mountain-listens-hiker-smoking-in-the-barren-swedish-fjall/
 /en/gallery/photo/the-old-jetty-clear-water-and-summer-clouds/
 /en/gallery/photo/the-pair-at-the-edge-mandarin-ducks-by-the-water/
 /en/gallery/photo/the-path-and-the-range-cycle-track-beside-the-inn/
@@ -2617,6 +2619,7 @@
 /images/gallery/the-long-path-evening-along-the-inn-embankment.jpg
 /images/gallery/the-long-span-oresund-bridge-reaching-for-denmark.jpg
 /images/gallery/the-meadow-and-the-peak-a-clear-autumn-day.jpg
+/images/gallery/the-mountain-listens-hiker-smoking-in-the-barren-swedish-fjall.jpg
 /images/gallery/the-old-jetty-clear-water-and-summer-clouds.jpg
 /images/gallery/the-pair-at-the-edge-mandarin-ducks-by-the-water.jpg
 /images/gallery/the-path-and-the-range-cycle-track-beside-the-inn.jpg
@@ -2932,6 +2935,7 @@
 /sv/gallery/photo/begravd-i-lila-ett-honungsbi-djupt-i-aubrietian/
 /sv/gallery/photo/belyst-fran-sidan-skogsbotten-pa-natten/
 /sv/gallery/photo/ber-om-uppmarksamhet-lamm-som-knuffar-pa-sin-mamma/
+/sv/gallery/photo/berget-lyssnar-vandrare-roker-pa-kalfjallet/
 /sv/gallery/photo/beslojad-by-blicken-ner-genom-morgondimman/
 /sv/gallery/photo/bjorken-och-forsen-sommarljus-pa-rorligt-vatten/
 /sv/gallery/photo/bla-ogon-sphynxkatt-i-en-fluffig-badd/

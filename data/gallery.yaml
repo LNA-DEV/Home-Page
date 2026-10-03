@@ -19094,6 +19094,43 @@ images:
   license: all-rights-reserved
   artist: Lukas Nagel
   model: markus-penninger
+- id: b70c76e1-1746-4fb8-8bd8-76a16147c778
+  src: _DSC5784_13289.jpg
+  category: portrait
+  section: general
+  title:
+    en: "The Mountain Listens - Hiker Smoking in the Barren Swedish Fjäll"
+    de: "Der Berg hört zu - Wanderer raucht im kargen Fjäll"
+    sv: "Berget lyssnar - vandrare röker på kalfjället"
+  alt:
+    en: "A hiker in a jacket and track pants, his hair in a top knot, smokes in the barren fjäll landscape. Behind him rises a stony mountainside with a few patches of snow. The sky is heavily overcast. The whole scene has a pensive, slightly depressing mood."
+    de: "Ein Wanderer mit Dutt, Jacke und Jogginghose raucht in der kargen Fjäll-Landschaft. Im Hintergrund ist eine Bergwand mit viel Gestein und ein bisschen Schnee. Der Himmel ist stark bewölkt. Das Ganze hat eine nachdenkliche, leicht depressive Atmosphäre."
+    sv: "En vandrare i jacka, träningsbyxor och hårknut röker i det karga fjällandskapet. I bakgrunden syns en stenig bergssluttning med lite snö. Himlen är mulen. Det hela har en eftertänksam, lite deprimerande stämning."
+  tags:
+    - photo
+    - photography
+    - portrait
+    - environmentalPortrait
+    - candid
+    - mountains
+    - sweden
+    - fjäll
+    - fjällen
+    - kalfjäll
+    - scandinavia
+    - swedishSummer
+    - summertimeSadness
+    - lonely
+    - solitude
+    - melancholy
+    - smoking
+    - landscapePhotography
+    - hiker
+    - hiking
+    - lichen
+    - friluftsliv
+  license: all-rights-reserved
+  artist: Lukas Nagel
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
