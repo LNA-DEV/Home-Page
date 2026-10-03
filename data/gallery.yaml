@@ -18827,6 +18827,36 @@ images:
   license: all-rights-reserved
   artist: Lukas Nagel
   model: markus-penninger
+- id: 482ce9e9-4a50-4e43-b834-313dceb1f56c
+  src: _DSC5776_13273.jpg
+  category: portrait
+  section: general
+  title:
+    en: "Photo from the Top - Hiker with a Camera by a Summit Cairn in the Swedish Fjäll"
+    de: "Foto vom Gipfel - Wanderer mit Kamera neben einem Steinmann im schwedischen Fjäll"
+    sv: "Foto från toppen - vandrare med kamera vid ett toppröse i svenska fjällen"
+  alt:
+    en: "A hooded man crouches among lichen-covered rocks in the foreground, aiming a small compact camera at the viewer. Behind him a cairn marks the summit, and beyond it the vast Swedish fjäll stretches out, with snow patches on the distant mountains."
+    de: "Im Vordergrund hockt ein Mann mit Kapuze zwischen flechtenbewachsenen Felsen und richtet eine kleine Kompaktkamera auf den Betrachter. Hinter ihm markiert ein Steinmann den Gipfel, im Hintergrund erstreckt sich die Weite des schwedischen Fjälls mit Schneefeldern auf den fernen Bergen."
+    sv: "I förgrunden sitter en man med uppdragen luva på huk bland lavklädda stenar och riktar en liten kompaktkamera mot betraktaren. Bakom honom markerar ett röse toppen, och i bakgrunden breder fjällens vida landskap ut sig, med snöfläckar på bergen längre bort."
+  tags: 
+    - photo
+    - photography
+    - mountains
+    - sweden
+    - fjäll
+    - environmentalPortrait
+    - portrait
+    - portraitPhotography
+    - cairn
+    - summit
+    - hiking
+    - fjällen
+    - swedishSummer
+    - outdoorPortrait
+  license: all-rights-reserved
+  artist: Lukas Nagel
+  model: markus-penninger
 projects:
 - slug: above-the-clouds
   title: Above the Clouds

@@ -405,6 +405,7 @@
 /de/gallery/photo/fluss-aus-wolken-nebel-fuellt-das-alpental/
 /de/gallery/photo/flussaufwaerts-geblickt-schaeumendes-wasser-unter-der-plattform/
 /de/gallery/photo/formation-zu-dritt-moewen-gestaffelt-vor-dem-himmel/
+/de/gallery/photo/foto-vom-gipfel-wanderer-mit-kamera-neben-einem-steinmann-im-schwedischen-fjaell/
 /de/gallery/photo/frech-junger-damhirsch-mit-herausgestreckter-zunge/
 /de/gallery/photo/freeclimbing-zauneidechse-erklimmt-das-insektenhotel/
 /de/gallery/photo/frische-furchen-stoerche-arbeiten-hinter-dem-pflug/
@@ -1559,6 +1560,7 @@
 /en/gallery/photo/patchwork-valley-fields-and-villages-below-the-range/
 /en/gallery/photo/peering-over-the-rock-a-sand-lizard-behind-the-stems/
 /en/gallery/photo/perfect-symmetry-gull-head-on-against-the-blue/
+/en/gallery/photo/photo-from-the-top-hiker-with-a-camera-by-a-summit-cairn-in-the-swedish-fjall/
 /en/gallery/photo/pines-over-turquoise-the-aegean-from-the-cliff/
 /en/gallery/photo/pink-against-old-wood-hollyhocks-by-the-vine/
 /en/gallery/photo/pink-at-the-edges-a-yellow-rose-in-full-bloom/
@@ -2433,6 +2435,7 @@
 /images/gallery/patchwork-valley-fields-and-villages-below-the-range.jpg
 /images/gallery/peering-over-the-rock-a-sand-lizard-behind-the-stems.jpg
 /images/gallery/perfect-symmetry-gull-head-on-against-the-blue.jpg
+/images/gallery/photo-from-the-top-hiker-with-a-camera-by-a-summit-cairn-in-the-swedish-fjall.jpg
 /images/gallery/pines-over-turquoise-the-aegean-from-the-cliff.jpg
 /images/gallery/pink-against-old-wood-hollyhocks-by-the-vine.jpg
 /images/gallery/pink-at-the-edges-a-yellow-rose-in-full-bloom.jpg
@@ -3042,6 +3045,7 @@
 /sv/gallery/photo/forsvunnen-i-gruset-vilande-grasand-i-perfekt-kamouflage/
 /sv/gallery/photo/fortfarande-blot-en-rosa-ros-efter-regnet/
 /sv/gallery/photo/fortfarande-droppande-knolsvan-pa-blatt-vatten/
+/sv/gallery/photo/foto-fran-toppen-vandrare-med-kamera-vid-ett-topprose-i-svenska-fjallen/
 /sv/gallery/photo/fotterna-over-floden-sittande-pa-den-gamla-stenmuren/
 /sv/gallery/photo/frack-ung-dovhjort-med-tungan-ute/
 /sv/gallery/photo/fran-den-svenska-sidan-klart-vatten-under-bron/
