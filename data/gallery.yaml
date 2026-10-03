@@ -19131,6 +19131,46 @@ images:
     - friluftsliv
   license: all-rights-reserved
   artist: Lukas Nagel
+  model: markus-penninger
+- id: 92237ec1-82a0-42c0-90d2-ab52e4e7f539
+  src: _DSC5992_13637.jpg
+  category: city
+  section: general
+  title:
+    en: "Reading Nook - A Window Full of Old Books in Copenhagen"
+    de: "Leseecke - Bücherfenster in Kopenhagen"
+    sv: "Läshörna - ett fönster fullt av gamla böcker i Köpenhamn"
+  alt:
+    en: "A woman with a bicycle walks past a blue-grey facade with a large window full of old books."
+    de: "An einer blaugrauen Fassade mit einem großen Fenster voller alter Bücher geht eine Frau mit Fahrrad vorbei."
+    sv: "En kvinna med cykel går förbi en blågrå fasad med ett stort fönster fullt av gamla böcker."
+  tags:
+    - photo
+    - photography
+    - copenhagen
+    - københavn
+    - denmark
+    - danmark
+    - scandinavia
+    - streetPhotography
+    - urbanPhotography
+    - cityPhotography
+    - travelPhotography
+    - architecture
+    - books
+    - oldBooks
+    - bookshelf
+    - bookLover
+    - window
+    - facade
+    - bike
+    - bicycle
+    - ivy
+    - summer
+    - sunlight
+    - candid
+  license: all-rights-reserved
+  artist: Lukas Nagel
 projects:
 - slug: above-the-clouds
   title: Above the Clouds

@@ -542,6 +542,7 @@
 /de/gallery/photo/lauter-kleine-helme-ein-helm-knabenkraut-aus-der-naehe/
 /de/gallery/photo/lens-flare-am-feldrand-pusteblumen-in-der-letzten-sonne/
 /de/gallery/photo/lens-flare-auf-dem-waldweg-abendsonne-durch-die-fichten/
+/de/gallery/photo/leseecke-buecherfenster-in-kopenhagen/
 /de/gallery/photo/letzte-farbe-an-den-seilen-daemmerung-an-der-seilbahn/
 /de/gallery/photo/letztes-licht-am-gipfel-ein-nebelmeer-darunter/
 /de/gallery/photo/letztes-licht-am-waldrand-reh-und-kitz-auf-der-wiese/
@@ -1597,6 +1598,7 @@
 /en/gallery/photo/quiet-water-a-bog-lake-under-the-summer-sky/
 /en/gallery/photo/racemes-in-the-light-bird-cherry-in-full-bloom/
 /en/gallery/photo/range-after-range-winter-ridges-toward-austria/
+/en/gallery/photo/reading-nook-a-window-full-of-old-books-in-copenhagen/
 /en/gallery/photo/ready-for-harvest-a-corn-cob-breaking-its-husk/
 /en/gallery/photo/red-boats-on-the-sand-a-swedish-lake-beach/
 /en/gallery/photo/red-ghost-sunset-flare-over-an-open-meadow/
@@ -2480,6 +2482,7 @@
 /images/gallery/quiet-water-a-bog-lake-under-the-summer-sky.jpg
 /images/gallery/racemes-in-the-light-bird-cherry-in-full-bloom.jpg
 /images/gallery/range-after-range-winter-ridges-toward-austria.jpg
+/images/gallery/reading-nook-a-window-full-of-old-books-in-copenhagen.jpg
 /images/gallery/ready-for-harvest-a-corn-cob-breaking-its-husk.jpg
 /images/gallery/red-boats-on-the-sand-a-swedish-lake-beach.jpg
 /images/gallery/red-ghost-sunset-flare-over-an-open-meadow.jpg
@@ -3226,6 +3229,7 @@
 /sv/gallery/photo/langsam-kurva-kopparodla-slingrar-over-vagen/
 /sv/gallery/photo/lapptacksdal-falt-och-byar-under-bergskedjan/
 /sv/gallery/photo/lar-sig-beta-lamm-med-huvudet-ner-pa-angen/
+/sv/gallery/photo/lashorna-ett-fonster-fullt-av-gamla-bocker-i-kopenhamn/
 /sv/gallery/photo/lax-och-guld-en-fullt-utslagen-ros/
 /sv/gallery/photo/leende-lamm-varlamm-som-solar-sig-i-eftermiddagssolen/
 /sv/gallery/photo/lens-flare-pa-skogsvagen-kvallssol-genom-granarna/
