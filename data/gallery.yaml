@@ -18988,6 +18988,41 @@ images:
   license: all-rights-reserved
   artist: Lukas Nagel
   model: markus-penninger
+- id: 9704dff0-5ee0-4213-974d-72affc60114e
+  src: _DSC5781_13283.jpg
+  category: portrait
+  section: general
+  title:
+    en: "Between Thoughts and Scree - Hiker Smoking in the Swedish Fjäll"
+    de: "Zwischen Gedanken und Geröll - Wanderer raucht im Fjäll"
+    sv: "Mellan grubbel och grus - vandrare röker i svenska fjällen"
+  alt:
+    en: "A man in a jacket and track pants, his hair in a top knot, sits alone smoking a few metres from a cairn in the Swedish fjäll. The landscape is made up of three stony mountain layers and a cloudy sky. It feels gloomy, pensive and a little depressing."
+    de: "Ein Mann mit Jacke, Jogginghose und Dutt sitzt einsam rauchend ein paar Meter neben einem Steinmann im schwedischen Fjäll. Die Landschaft besteht aus drei steinigen Bergebenen und einem bewölkten Himmel. Es wirkt düster, nachdenklich und ein wenig depressiv."
+    sv: "En man i jacka, träningsbyxor och hårknut sitter ensam och röker några meter från ett röse i svenska fjällen. Landskapet består av tre steniga nivåer av berg och en molnig himmel. Det känns dystert, eftertänksamt och lite deprimerande."
+  tags:
+    - photo
+    - photography
+    - mountains
+    - sweden
+    - fjäll
+    - fjällen
+    - scandinavia
+    - swedishSummer
+    - summertimeSadness
+    - lonely
+    - solitude
+    - melancholy
+    - smoking
+    - environmentalPortrait
+    - landscapePhotography
+    - hiker
+    - hiking
+    - cairn
+    - friluftsliv
+  license: all-rights-reserved
+  artist: Lukas Nagel
+  model: markus-penninger
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
