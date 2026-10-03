@@ -668,6 +668,7 @@
 /de/gallery/photo/sonntagsstaat-kuh-grast-im-bestickten-halsband/
 /de/gallery/photo/sonst-nichts-im-bild-eine-leuchtende-maske-im-dunkeln/
 /de/gallery/photo/spaetes-violett-ein-beet-voller-astern/
+/de/gallery/photo/spaziergang-durch-gamla-stan-mann-schlendert-durch-eine-gasse-in-stockholms-altstadt/
 /de/gallery/photo/stadtdiaet-moewe-frisst-verstreuten-muell/
 /de/gallery/photo/stadtrasen-weisswangengans-in-einem-stockholmer-park/
 /de/gallery/photo/station-am-gipfel-der-wendelstein-im-goldenen-licht/
@@ -1205,6 +1206,7 @@
 /en/gallery/photo/a-second-sun-holding-a-dandelion-against-the-light/
 /en/gallery/photo/a-small-rosette-succulent-in-the-gravel/
 /en/gallery/photo/a-thousand-sparks-sunlight-scattered-on-dark-water/
+/en/gallery/photo/a-walk-through-gamla-stan-man-strolling-a-cobbled-lane-in-stockholms-old-town/
 /en/gallery/photo/a-whole-tree-in-bloom-apple-blossom-against-blue/
 /en/gallery/photo/a-world-in-a-bubble-the-garden-reflected/
 /en/gallery/photo/about-to-fall-a-drop-on-the-leaf-edge/
@@ -2082,6 +2084,7 @@
 /images/gallery/a-second-sun-holding-a-dandelion-against-the-light.jpg
 /images/gallery/a-small-rosette-succulent-in-the-gravel.jpg
 /images/gallery/a-thousand-sparks-sunlight-scattered-on-dark-water.jpg
+/images/gallery/a-walk-through-gamla-stan-man-strolling-a-cobbled-lane-in-stockholms-old-town.jpg
 /images/gallery/a-whole-tree-in-bloom-apple-blossom-against-blue.jpg
 /images/gallery/a-world-in-a-bubble-the-garden-reflected.jpg
 /images/gallery/about-to-fall-a-drop-on-the-leaf-edge.jpg
@@ -3313,6 +3316,7 @@
 /sv/gallery/photo/pol-pa-hallen-stilla-vatten-ovanfor-viken/
 /sv/gallery/photo/post-vid-sjon-vit-anka-pa-strandangen/
 /sv/gallery/photo/posten-intagen-koltrast-haller-staketlinjen/
+/sv/gallery/photo/promenad-genom-gamla-stan-man-strosar-langs-en-kullerstensgrand-i-stockholm/
 /sv/gallery/photo/pyloner-i-diset-oresundsbron-pa-nara-hall/
 /sv/gallery/photo/rader-av-guld-toppen-pa-en-mogen-majskolv/
 /sv/gallery/photo/rader-av-slaget-gras-en-borg-mellan-de-grona-sluttningarna/

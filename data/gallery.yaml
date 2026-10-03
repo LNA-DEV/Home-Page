@@ -18924,6 +18924,37 @@ images:
   license: all-rights-reserved
   artist: Lukas Nagel
   model: markus-penninger
+- id: d70be9c3-1dc5-4ad3-8a0e-c41f4a977f27
+  src: _DSC5531_12783.jpg
+  category: portrait
+  section: general
+  title:
+    en: "A Walk Through Gamla Stan - Man Strolling a Cobbled Lane in Stockholm's Old Town"
+    de: "Spaziergang durch Gamla Stan - Mann schlendert durch eine Gasse in Stockholms Altstadt"
+    sv: "Promenad genom Gamla stan - man strosar längs en kullerstensgränd i Stockholm"
+  alt:
+    en: "A man with a top knot, seen from behind, walks down a narrow cobbled lane in Gamla stan, Stockholm's old town. He wears a white T-shirt printed with tadpoles, a black belt bag slung across his back and dark striped track pants. Ochre-yellow houses with green shutters and a barred window rise on both sides toward a thin strip of blue sky."
+    de: "Ein Mann mit Dutt, von hinten gesehen, spaziert durch eine schmale Kopfsteinpflastergasse in Gamla stan, der Altstadt Stockholms. Er trägt ein weißes Shirt mit Kaulquappen-Aufdruck, eine schwarze Bauchtasche quer über dem Rücken und eine dunkle Jogginghose mit Streifen. Zu beiden Seiten ragen ockergelbe Häuser mit grünen Fensterläden und einem vergitterten Fenster auf, darüber ein schmaler Streifen blauer Himmel."
+    sv: "En man med hårknut, sedd bakifrån, promenerar längs en smal kullerstensgränd i Gamla stan i Stockholm. Han bär en vit t-shirt med tryck av grodyngel, en svart magväska snett över ryggen och mörka randiga träningsbyxor. På båda sidor reser sig ockragula hus med gröna fönsterluckor och ett gallerförsett fönster mot en tunn strimma blå himmel."
+  tags:
+    - photo
+    - photography
+    - peoplePhotography
+    - streetPhotography
+    - stockholm
+    - gamlaStan
+    - oldTown
+    - sweden
+    - visitStockholm
+    - swedishSummer
+    - urbanPhotography
+    - travelPhotography
+    - scandinavia
+    - cobblestones
+    - alley
+  license: all-rights-reserved
+  artist: Lukas Nagel
+  model: markus-penninger
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
