@@ -120,7 +120,7 @@
    "name": {
     "en": "Myling Discovered"
    },
-   "percent": 20.8
+   "percent": 20.9
   },
   {
    "achieved": true,
@@ -146,7 +146,7 @@
    "name": {
     "en": "Oni Discovered"
    },
-   "percent": 21.6
+   "percent": 21.7
   },
   {
    "description": {
@@ -194,7 +194,7 @@
    "name": {
     "en": "Raiju Discovered"
    },
-   "percent": 20.4
+   "percent": 20.5
   },
   {
    "description": {
@@ -206,7 +206,7 @@
    "name": {
     "en": "Revenant Discovered"
    },
-   "percent": 22.3
+   "percent": 22.4
   },
   {
    "description": {
@@ -254,7 +254,7 @@
    "name": {
     "en": "The Mimic Discovered"
    },
-   "percent": 17.2
+   "percent": 17.3
   },
   {
    "description": {
@@ -354,7 +354,7 @@
    "name": {
     "en": "Professional"
    },
-   "percent": 15.6
+   "percent": 15.7
   },
   {
    "achieved": true,
@@ -392,7 +392,7 @@
    "name": {
     "en": "Fat Stack"
    },
-   "percent": 20.6
+   "percent": 20.7
   },
   {
    "description": {
@@ -449,7 +449,7 @@
    "name": {
     "en": "They're here"
    },
-   "percent": 24.4
+   "percent": 24.5
   },
   {
    "achieved": true,
@@ -459,7 +459,7 @@
    "name": {
     "en": "Work Experience"
    },
-   "percent": 59.6,
+   "percent": 59.7,
    "unlocked": "2023-11-19T20:11:24+01:00"
   },
   {
@@ -470,7 +470,7 @@
    "name": {
     "en": "The Bait"
    },
-   "percent": 18.3,
+   "percent": 18.4,
    "unlocked": "2025-10-10T21:09:36+02:00"
   },
   {
@@ -573,7 +573,7 @@
    "name": {
     "en": "Director"
    },
-   "percent": 11.9
+   "percent": 12.0
   },
   {
    "hidden": true,
@@ -594,7 +594,7 @@
    "name": {
     "en": "Dedicated"
    },
-   "percent": 14.1
+   "percent": 14.2
   },
   {
    "description": {

@@ -128,7 +128,7 @@
     "de": "UNIRDISCH",
     "en": "UNEARTHED"
    },
-   "percent": 15.4
+   "percent": 15.5
   },
   {
    "description": {
@@ -265,7 +265,7 @@
     "de": "HALBVERRÄTER",
     "en": "CREWPOSTOR"
    },
-   "percent": 27.8
+   "percent": 27.9
   },
   {
    "hidden": true,
@@ -287,7 +287,7 @@
    "name": {
     "en": "SHERLOCK"
    },
-   "percent": 43.7
+   "percent": 43.8
   },
   {
    "hidden": true,

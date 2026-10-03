@@ -13,7 +13,7 @@
     "de": "Donnernder Erfolg",
     "en": "Thundering success"
    },
-   "percent": 72.9,
+   "percent": 73.0,
    "unlocked": "2024-02-16T20:47:43+01:00"
   },
   {
@@ -44,7 +44,7 @@
     "de": "Bruchstücke der Vergangenheit",
     "en": "Pieces of the past"
    },
-   "percent": 16.6
+   "percent": 16.7
   },
   {
    "achieved": true,
@@ -122,7 +122,7 @@
     "de": "Geflügelter Sieg",
     "en": "Winged Victory"
    },
-   "percent": 27.4
+   "percent": 27.5
   },
   {
    "description": {
@@ -269,7 +269,7 @@
     "de": "Geheimniswahrer der Hochweiden",
     "en": "Springlands secret keeper"
    },
-   "percent": 40.9,
+   "percent": 41.0,
    "unlocked": "2024-02-23T22:53:13+01:00"
   },
   {
@@ -363,7 +363,7 @@
     "de": "Die Dinge fügen sich",
     "en": "Things come together"
    },
-   "percent": 48.5,
+   "percent": 48.6,
    "unlocked": "2024-11-22T21:14:44+01:00"
   },
   {
@@ -488,7 +488,7 @@
     "de": "Ödland-Sterngucker",
     "en": "Kindlewastes stargazer"
    },
-   "percent": 29.3
+   "percent": 29.4
   },
   {
    "achieved": true,
@@ -518,7 +518,7 @@
     "de": "Hochweiden-Gärtner",
     "en": "Springland weeding"
    },
-   "percent": 20.5
+   "percent": 20.6
   },
   {
    "description": {
@@ -574,7 +574,7 @@
     "de": "Monumentaler Aufstieg",
     "en": "Climbing to new heights"
    },
-   "percent": 13.0
+   "percent": 13.1
   },
   {
    "description": {
@@ -672,7 +672,7 @@
     "de": "König des Berges",
     "en": "King of the mountain"
    },
-   "percent": 8.4
+   "percent": 8.5
   },
   {
    "description": {
@@ -700,7 +700,7 @@
     "de": "Maulwurf des Wogschimmer-Grunds",
     "en": "Mole of the Veilwater Basin"
    },
-   "percent": 4.5
+   "percent": 4.6
   },
   {
    "description": {
@@ -714,7 +714,7 @@
     "de": "Geheimniswahrer des Wogschimmer-Grunds",
     "en": "Veilwater Basin secret keeper"
    },
-   "percent": 1.7
+   "percent": 1.8
   },
   {
    "description": {
@@ -756,7 +756,7 @@
     "de": "Wogschimmer-Grund-Sternengucker",
     "en": "Veilwater Basin stargazer"
    },
-   "percent": 8.6
+   "percent": 8.7
   },
   {
    "description": {

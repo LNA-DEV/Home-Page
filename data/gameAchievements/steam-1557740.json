@@ -89,7 +89,7 @@
     "de": "Kostspielige Neigungen",
     "en": "Expensive taste"
    },
-   "percent": 23.6,
+   "percent": 23.7,
    "unlocked": "2024-06-16T14:54:33+02:00"
   },
   {
@@ -134,7 +134,7 @@
     "de": "Hyperschall",
     "en": "Hypersonic"
    },
-   "percent": 43.7,
+   "percent": 43.8,
    "unlocked": "2024-10-18T20:56:56+02:00"
   },
   {
@@ -197,7 +197,7 @@
     "de": "Gewinner",
     "en": "Winner"
    },
-   "percent": 8.0
+   "percent": 8.1
   },
   {
    "achieved": true,
@@ -240,7 +240,7 @@
     "de": "Dämon",
     "en": "Demon"
    },
-   "percent": 11.9
+   "percent": 12.0
   },
   {
    "achieved": true,
@@ -282,7 +282,7 @@
    "name": {
     "en": "Star"
    },
-   "percent": 11.9
+   "percent": 12.0
   },
   {
    "description": {
@@ -296,7 +296,7 @@
     "de": "Lachnummer",
     "en": "Joker"
    },
-   "percent": 12.3
+   "percent": 12.4
   },
   {
    "description": {
@@ -340,7 +340,7 @@
     "de": "Auf die Barrikaden",
     "en": "Shield Up"
    },
-   "percent": 6.6
+   "percent": 6.7
   },
   {
    "description": {

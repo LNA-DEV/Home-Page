@@ -316,7 +316,7 @@
     "de": "Undurchdringliche Verteidigung",
     "en": "Impregnable Defense"
    },
-   "percent": 40.1
+   "percent": 40.2
   },
   {
    "description": {
@@ -518,7 +518,7 @@
     "de": "Fangexperte",
     "en": "Capture Pro"
    },
-   "percent": 26.4
+   "percent": 26.3
   },
   {
    "description": {
@@ -670,7 +670,7 @@
     "de": "Der Beginn einer neuen Expedition",
     "en": "The Beginning of a New Expedition"
    },
-   "percent": 37.0
+   "percent": 37.1
   },
   {
    "hidden": true,
@@ -690,7 +690,7 @@
     "de": "Der trügerische Drachenälteste",
     "en": "The Elusive Elder Dragon"
    },
-   "percent": 33.6
+   "percent": 33.7
   },
   {
    "hidden": true,
@@ -710,7 +710,7 @@
     "de": "Der Alte Allwyrm",
     "en": "The Old Everwyrm"
    },
-   "percent": 29.4
+   "percent": 29.5
   },
   {
    "hidden": true,
@@ -920,7 +920,7 @@
     "de": "Persönlicher Schatz",
     "en": "Personal Treasure"
    },
-   "percent": 34.6
+   "percent": 34.7
   },
   {
    "description": {
@@ -1018,7 +1018,7 @@
     "de": "Innenarchitekt",
     "en": "Interior Decorator"
    },
-   "percent": 23.2
+   "percent": 23.3
   },
   {
    "description": {
@@ -1046,7 +1046,7 @@
     "de": "Eifriger Ingenieur",
     "en": "Eager Engineer"
    },
-   "percent": 31.4
+   "percent": 31.5
   },
   {
    "description": {
@@ -1252,7 +1252,7 @@
     "de": "Kampf gegen das Unbekannte",
     "en": "Confronting the Unknown"
    },
-   "percent": 30.9
+   "percent": 31.0
   },
   {
    "hidden": true,
