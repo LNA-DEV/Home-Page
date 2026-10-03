@@ -335,6 +335,7 @@
 /de/gallery/photo/drei-masten-eine-tuerkische-gulet-im-goldenen-licht/
 /de/gallery/photo/dunkle-krone-bewaldeter-gipfel-ueber-der-ebene/
 /de/gallery/photo/durch-das-wiesengras-huetten-auf-der-lichtung/
+/de/gallery/photo/durch-die-blume-ein-mann-geniesst-die-ruhe-eines-stockholmer-parks/
 /de/gallery/photo/durch-die-fichten-abendsonne-hinter-dem-huegel/
 /de/gallery/photo/durch-die-luecke-sonnenstrahlen-brechen-ueber-dem-meer/
 /de/gallery/photo/durchs-gelb-ein-dorf-hinter-dem-bluehenden-feld/
@@ -1757,6 +1758,7 @@
 /en/gallery/photo/three-lines-stones-reeds-and-oland-on-the-horizon/
 /en/gallery/photo/three-masts-a-turkish-gulet-in-golden-light/
 /en/gallery/photo/three-wakes-ducks-crossing-the-still-lake-in-line/
+/en/gallery/photo/through-the-flowers-a-man-enjoying-the-quiet-of-a-stockholm-park/
 /en/gallery/photo/through-the-gap-sunrays-breaking-over-the-sea/
 /en/gallery/photo/through-the-meadow-grass-cabins-in-the-clearing/
 /en/gallery/photo/through-the-purple-insect-hotel-behind-the-lobelia/
@@ -2635,6 +2637,7 @@
 /images/gallery/three-lines-stones-reeds-and-oland-on-the-horizon.jpg
 /images/gallery/three-masts-a-turkish-gulet-in-golden-light.jpg
 /images/gallery/three-wakes-ducks-crossing-the-still-lake-in-line.jpg
+/images/gallery/through-the-flowers-a-man-enjoying-the-quiet-of-a-stockholm-park.jpg
 /images/gallery/through-the-gap-sunrays-breaking-over-the-sea.jpg
 /images/gallery/through-the-meadow-grass-cabins-in-the-clearing.jpg
 /images/gallery/through-the-purple-insect-hotel-behind-the-lobelia.jpg
@@ -3074,6 +3077,7 @@
 /sv/gallery/photo/gard-nedanfor-kammen-varkvall-i-dalen/
 /sv/gallery/photo/gardens-harskare-visent-framfor-tralogen/
 /sv/gallery/photo/genom-angsgraset-stugor-pa-glantan/
+/sv/gallery/photo/genom-blommorna-en-man-njuter-av-lugnet-i-en-park-i-stockholm/
 /sv/gallery/photo/genom-det-gula-en-by-bakom-det-blommande-faltet/
 /sv/gallery/photo/genom-det-lila-insektshotell-bakom-lobelian/
 /sv/gallery/photo/genom-gluggen-solstralar-bryter-fram-over-havet/

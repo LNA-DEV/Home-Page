@@ -18955,6 +18955,39 @@ images:
   license: all-rights-reserved
   artist: Lukas Nagel
   model: markus-penninger
+- id: be4ff910-7e69-4a8e-8a7f-2cf5a1022c66
+  src: _DSC5628_26735.jpg
+  category: portrait
+  section: general
+  title:
+    en: "Through the Flowers - A Man Enjoying the Quiet of a Stockholm Park"
+    de: "Durch die Blume - Ein Mann genießt die Ruhe eines Stockholmer Parks"
+    sv: "Genom blommorna - En man njuter av lugnet i en park i Stockholm"
+  alt:
+    en: "A man in a white T-shirt with glasses, a chain necklace and a top knot sits on an ornate cast-iron park bench in Stockholm, looking down at his lap. He is framed by the branches of a tree and the park's flowers in the foreground."
+    de: "Ein Mann mit weißem Shirt, Brille, Kette und Dutt sitzt auf einer verzierten gusseisernen Parkbank in Stockholm und blickt in seinen Schoß. Er wird von den Ästen eines Baumes und den Blumen des Parks am Boden eingerahmt."
+    sv: "En man i vit t-shirt med glasögon, halskedja och hårknut sitter på en utsmyckad parkbänk av gjutjärn i Stockholm och tittar ner i knät. Han ramas in av ett träds grenar och parkens blommor i förgrunden."
+  tags:
+  - photo
+  - photography
+  - portrait
+  - portraitPhotography
+  - environmentalPortrait
+  - outdoorPortrait
+  - peoplePhotography
+  - parkBench
+  - stockholm
+  - sweden
+  - visitStockholm
+  - swedishSummer
+  - scandinavia
+  - candid
+  - naturalFrame
+  - flowers
+  - cityPark
+  license: all-rights-reserved
+  artist: Lukas Nagel
+  model: markus-penninger
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
