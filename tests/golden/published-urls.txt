@@ -827,6 +827,7 @@
 /de/gallery/photo/zwischen-den-wolken-ein-verschneiter-gipfel-hinter-den-ruecken/
 /de/gallery/photo/zwischen-den-zweigen-verloren-ein-kleiner-vogel-in-der-kahlen-krone/
 /de/gallery/photo/zwischen-eisernen-farnen-eine-sommerpause-auf-einer-stockholmer-parkbank/
+/de/gallery/photo/zwischen-flechten-und-pasta-kochen-im-fjaell-camp/
 /de/gallery/photo/zwischen-gedanken-und-geroell-wanderer-raucht-im-fjaell/
 /de/gallery/photo/zwischen-schnee-und-gras-eine-alm-im-vorfruehling/
 /de/gallery/photo/zwischen-zwei-schultern-das-tal-im-letzten-licht/
@@ -1262,6 +1263,7 @@
 /en/gallery/photo/behind-the-oak-the-sun-leaving-the-field/
 /en/gallery/photo/bell-and-horns-cow-facing-the-camera/
 /en/gallery/photo/bent-in-the-mist-a-spruce-stand-on-a-foggy-day/
+/en/gallery/photo/between-lichen-and-pasta-camp-cooking-in-the-swedish-fjall/
 /en/gallery/photo/between-snow-and-grass-an-alpine-pasture-in-early-spring/
 /en/gallery/photo/between-the-banks-a-forest-lake-narrowing-to-a-river/
 /en/gallery/photo/between-the-cliffs-a-stockholm-channel-under-cloud/
@@ -2142,6 +2144,7 @@
 /images/gallery/behind-the-oak-the-sun-leaving-the-field.jpg
 /images/gallery/bell-and-horns-cow-facing-the-camera.jpg
 /images/gallery/bent-in-the-mist-a-spruce-stand-on-a-foggy-day.jpg
+/images/gallery/between-lichen-and-pasta-camp-cooking-in-the-swedish-fjall.jpg
 /images/gallery/between-snow-and-grass-an-alpine-pasture-in-early-spring.jpg
 /images/gallery/between-the-banks-a-forest-lake-narrowing-to-a-river.jpg
 /images/gallery/between-the-cliffs-a-stockholm-channel-under-cloud.jpg
@@ -3236,6 +3239,7 @@
 /sv/gallery/photo/mellan-dimslojorna-havsorn-pa-vild-jakt-i-diset/
 /sv/gallery/photo/mellan-grubbel-och-grus-vandrare-roker-i-svenska-fjallen/
 /sv/gallery/photo/mellan-klipporna-ett-stockholmssund-under-moln/
+/sv/gallery/photo/mellan-lav-och-pasta-matlagning-i-ett-taltlager-i-fjallen/
 /sv/gallery/photo/mellan-molnen-en-snoig-topp-bakom-ryggarna/
 /sv/gallery/photo/mellan-ryggarna-en-vinterdal-mot-topparna/
 /sv/gallery/photo/mellan-skotten-sandodla-i-rabatten/

@@ -19023,6 +19023,44 @@ images:
   license: all-rights-reserved
   artist: Lukas Nagel
   model: markus-penninger
+- id: 236d92fd-80e5-4cab-9d4b-ba0dea6a74d9
+  src: _DSC5706_13133.jpg
+  category: portrait
+  section: general
+  title:
+    en: "Between Lichen and Pasta - Camp Cooking in the Swedish Fjäll"
+    de: "Zwischen Flechten und Pasta - Kochen im Fjäll-Camp"
+    sv: "Mellan lav och pasta - matlagning i ett tältläger i fjällen"
+  alt:
+    en: "A man with glasses and a beard, wearing a hoodie and track pants, sits in front of a camping stove with a pot full of spaghetti. In the background, two tents blend nicely into the rocky fjäll landscape."
+    de: "Ein Mann mit Hoodie, Jogginghose, Brille und Bart sitzt vor einem Campingkocher mit einem Topf voller Spaghetti. Im Hintergrund sind zwei Zelte zu sehen, welche sich schön in die steinige Fjäll-Landschaft einfügen."
+    sv: "En man med glasögon och skägg, klädd i huvtröja och träningsbyxor, sitter framför ett campingkök med en kastrull full av spaghetti. I bakgrunden syns två tält som smälter fint in i det steniga fjällandskapet."
+  tags:
+    - photo
+    - photography
+    - portrait
+    - portraitPhotography
+    - environmentalPortrait
+    - outdoorPortrait
+    - candid
+    - sweden
+    - scandinavia
+    - fjäll
+    - fjällen
+    - swedishSummer
+    - mountains
+    - hiking
+    - friluftsliv
+    - camping
+    - wildCamping
+    - campCooking
+    - outdoorCooking
+    - spaghetti
+    - lichen
+    - backpacking
+  license: all-rights-reserved
+  artist: Lukas Nagel
+  model: markus-penninger
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
