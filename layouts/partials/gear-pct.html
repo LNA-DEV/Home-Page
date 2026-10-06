@@ -1,0 +1,10 @@
+{{- /*
+  gear-pct.html
+  A percentage for the gear page, localised (`9.6%`, `9,6 %`), with the decimal
+  dropped when it is zero — "19%" rather than "19.0%", "0%" rather than "0.0%".
+
+  Expects: a number in percent. Returns: a string.
+*/ -}}
+{{- $tenths := int (math.Round (mul (float .) 10)) -}}
+{{- $prec := cond (eq (mod $tenths 10) 0) 0 1 -}}
+{{- return lang.FormatPercent $prec (div (float $tenths) 10) -}}

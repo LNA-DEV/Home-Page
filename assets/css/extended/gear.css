@@ -1,0 +1,500 @@
+/* Gear — /gallery/gear/. docs/concepts/gallery-gear.md.
+   PaperMod's theme variables for everything but the data colours, which are one
+   blue ramp: an ordinal portfolio → gallery → archive set for the stacked bars
+   and a four-step ramp for the focal-length table. Both validated as ordinal
+   ramps (monotone lightness, visible steps, the faintest step ≥ 2:1 against the
+   card surface) for white and for PaperMod's dark --entry (#2e2e33). In dark
+   mode the order flips — the most important step is the lightest. */
+
+:root {
+  --gear-portfolio: #184f95;
+  --gear-gallery: #3987e5;
+  --gear-archive: #86b6ef;
+  --gear-heat-1: #86b6ef;
+  --gear-heat-2: #5598e7;
+  --gear-heat-3: #256abf;
+  --gear-heat-4: #104281;
+  --gear-heat-ink-1: #0b0b0b;
+  --gear-heat-ink-2: #0b0b0b;
+  --gear-heat-ink-3: #ffffff;
+  --gear-heat-ink-4: #ffffff;
+  --gear-dot: #2a78d6;
+}
+
+:root[data-theme="dark"] {
+  --gear-portfolio: #b7d3f6;
+  --gear-gallery: #5598e7;
+  --gear-archive: #256abf;
+  --gear-heat-1: #256abf;
+  --gear-heat-2: #3987e5;
+  --gear-heat-3: #6da7ec;
+  --gear-heat-4: #b7d3f6;
+  --gear-heat-ink-1: #ffffff;
+  --gear-heat-ink-2: #0b0b0b;
+  --gear-heat-ink-3: #0b0b0b;
+  --gear-heat-ink-4: #0b0b0b;
+  --gear-dot: #6da7ec;
+}
+
+.gear {
+  max-width: 1060px;
+  margin: 0 auto 3rem;
+}
+
+.gear .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- headline figures ------------------------------------------------------ */
+
+.gear-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0 0 2.5rem;
+}
+
+.gear-stat {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--entry);
+}
+
+.gear-stat dt {
+  color: var(--secondary);
+  font-size: 0.85rem;
+}
+
+.gear-stat dd {
+  margin: 0.15rem 0 0;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--primary);
+}
+
+@media (max-width: 640px) {
+  .gear-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* --- sections -------------------------------------------------------------- */
+
+.gear-section {
+  margin: 0 0 3rem;
+}
+
+.gear-section h2 {
+  font-size: 1.35rem;
+  margin: 0 0 0.35rem;
+}
+
+.gear-intro {
+  color: var(--secondary);
+  font-size: 0.92rem;
+  margin: 0 0 1rem;
+  max-width: 68ch;
+}
+
+.gear-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  list-style: none;
+  margin: 0 0 0.9rem;
+  padding: 0;
+  font-size: 0.85rem;
+  color: var(--secondary);
+}
+
+.gear-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.gear-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.gear-swatch--portfolio,
+.gear-seg--portfolio { background: var(--gear-portfolio); }
+.gear-swatch--gallery,
+.gear-seg--gallery { background: var(--gear-gallery); }
+.gear-swatch--archive,
+.gear-seg--archive { background: var(--gear-archive); }
+
+/* --- bar tables ------------------------------------------------------------ */
+
+/* PaperMod makes every table `display: block` (for horizontal scrolling of
+   wide content tables), which drops the table layout these charts rely on. */
+.gear table {
+  display: table;
+}
+
+.gear-compare {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+/* PaperMod styles every content table with borders and cell padding; these are
+   charts, so the rules are reset here rather than fought cell by cell. */
+.gear-compare th,
+.gear-compare td {
+  border: 0;
+  padding: 0.35rem 0;
+  vertical-align: middle;
+  text-align: left;
+  font-weight: normal;
+}
+
+.gear-compare thead th {
+  color: var(--secondary);
+  font-size: 0.8rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.gear-compare tbody th {
+  width: 22%;
+  padding-right: 1rem;
+  white-space: nowrap;
+}
+
+.gear-compare tbody td:first-of-type {
+  width: 48%;
+  padding-right: 1.5rem;
+}
+
+.gear-compare a,
+.gear-heat a,
+.gear-timeline a {
+  color: var(--primary);
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.gear-compare a:hover,
+.gear-heat a:hover,
+.gear-timeline a:hover {
+  text-decoration: underline;
+}
+
+.gear-hbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 18px;
+}
+
+.gear-hbar__value {
+  flex: none;
+  color: var(--secondary);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* A stack is a flex row of segments separated by a 2px gap in the surface
+   colour; only the data end is rounded. */
+.gear-stack {
+  display: flex;
+  gap: 2px;
+  height: 14px;
+  min-width: 3px;
+  border-radius: 0 4px 4px 0;
+  overflow: hidden;
+}
+
+.gear-seg {
+  flex-basis: 0;
+  min-width: 3px;
+}
+
+.gear-share,
+.gear-bodybar {
+  display: block;
+  height: 14px;
+  min-width: 3px;
+  border-radius: 0 4px 4px 0;
+  background: var(--gear-portfolio);
+}
+
+.gear-bodybar {
+  background: var(--gear-gallery);
+}
+
+.gear-compare__sub {
+  display: block;
+  color: var(--secondary);
+  font-size: 0.8rem;
+  white-space: normal;
+}
+
+.gear-compare--bodies tbody th {
+  width: 30%;
+}
+
+.gear-compare--bodies tbody td:first-of-type {
+  width: auto;
+}
+
+@media (max-width: 640px) {
+  .gear-compare tbody th {
+    width: 28%;
+    padding-right: 0.6rem;
+    white-space: normal;
+  }
+
+  .gear-compare tbody td:first-of-type {
+    width: 42%;
+    padding-right: 0.8rem;
+  }
+}
+
+/* --- focal-length and timeline tables -------------------------------------- */
+
+/* position: relative so the scroll box is the containing block of the
+   visually-hidden labels inside it — absolutely positioned, they would otherwise
+   escape the clipping and widen the whole page on a phone. */
+.gear-scroll {
+  position: relative;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gear-heat,
+.gear-timeline {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 3px;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.gear-heat th,
+.gear-heat td,
+.gear-timeline th,
+.gear-timeline td {
+  border: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+.gear-heat thead th,
+.gear-timeline thead th {
+  color: var(--secondary);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  text-align: center;
+  padding-bottom: 0.3rem;
+}
+
+/* The label column shrinks to its longest name; the data columns share the
+   rest, so the grid uses the full width at any screen size. */
+.gear-heat tbody th,
+.gear-timeline tbody th {
+  width: 1%;
+  text-align: left;
+  white-space: nowrap;
+  padding-right: 0.8rem;
+}
+
+.gear-heat__cell {
+  min-width: 52px;
+  height: 34px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 4px;
+  /* An empty cell is a hairline outline, not a grey block: "nothing here" must
+     not compete with the cells that hold data. */
+  box-shadow: inset 0 0 0 1px var(--border);
+  font-variant-numeric: tabular-nums;
+}
+
+.gear-heat__cell[class*="--"] { box-shadow: none; }
+.gear-heat__cell--1 { background: var(--gear-heat-1); color: var(--gear-heat-ink-1); }
+.gear-heat__cell--2 { background: var(--gear-heat-2); color: var(--gear-heat-ink-2); }
+.gear-heat__cell--3 { background: var(--gear-heat-3); color: var(--gear-heat-ink-3); }
+.gear-heat__cell--4 { background: var(--gear-heat-4); color: var(--gear-heat-ink-4); }
+
+.gear-timeline__cell {
+  min-width: 30px;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  /* A hairline row track, so a lone dot still reads as sitting on a line. */
+  background: linear-gradient(var(--border), var(--border)) center / 100% 1px no-repeat;
+}
+
+.gear-timeline__cell--year {
+  box-shadow: inset 1px 0 0 var(--tertiary);
+}
+
+.gear-dot {
+  display: inline-block;
+  width: var(--d);
+  height: var(--d);
+  border-radius: 50%;
+  background: var(--gear-dot);
+  box-shadow: 0 0 0 2px var(--theme);
+  vertical-align: middle;
+}
+
+/* --- lens cards ------------------------------------------------------------ */
+
+.gear-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: 1rem;
+}
+
+.gear-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.1rem 1.2rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--entry);
+  scroll-margin-top: 1.5rem;
+}
+
+.gear-card:target {
+  border-color: var(--gear-gallery);
+  box-shadow: 0 0 0 2px var(--gear-gallery);
+}
+
+.gear-card__name {
+  font-size: 1.05rem;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.gear-card__sub {
+  color: var(--secondary);
+  font-size: 0.85rem;
+  margin: 0.15rem 0 0;
+}
+
+.gear-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+}
+
+.gear-badges li {
+  font-size: 0.72rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--secondary);
+}
+
+.gear-card__note {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.gear-card__figures {
+  display: flex;
+  gap: 1.4rem;
+  margin: 0;
+}
+
+.gear-card__figures dt {
+  color: var(--secondary);
+  font-size: 0.78rem;
+}
+
+.gear-card__figures dd {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.gear-card__pct {
+  font-size: 0.85rem;
+  font-weight: normal;
+  color: var(--secondary);
+}
+
+.gear-stack--full {
+  width: 100%;
+  height: 10px;
+  border-radius: 4px;
+}
+
+.gear-card__facts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.25rem 0.9rem;
+  margin: 0;
+  font-size: 0.88rem;
+}
+
+.gear-card__facts > div {
+  display: contents;
+}
+
+.gear-card__facts dt {
+  color: var(--secondary);
+}
+
+.gear-card__facts dd {
+  margin: 0;
+}
+
+.gear-card__tc {
+  margin: -0.4rem 0 0;
+  font-size: 0.85rem;
+  color: var(--secondary);
+}
+
+.gear-card__photos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  list-style: none;
+  margin: auto 0 0;
+  padding: 0;
+}
+
+.gear-card__photos a {
+  display: block;
+  box-shadow: none;
+}
+
+.gear-card__photos img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 6px;
+  margin: 0;
+}
+
+/* --- footnote -------------------------------------------------------------- */
+
+.gear-footnote {
+  color: var(--secondary);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+  padding-top: 0.8rem;
+}

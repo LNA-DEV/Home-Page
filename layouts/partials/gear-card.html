@@ -1,0 +1,120 @@
+{{- /*
+  gear-card.html
+  One lens on /gallery/gear/ — or a drone / phone, which is its own lens. The
+  card's id is the slug, which is what the photo pages and the charts above
+  link to. docs/concepts/gallery-gear.md §3.
+
+  Expects: (dict "unit" <gear-index unit> "index" <gear-index> "photoBase" <photo URL prefix>)
+*/ -}}
+{{- $u := .unit -}}
+{{- $photoBase := .photoBase -}}
+{{- $lang := site.Language.Lang -}}
+{{- $gear := partialCached "gear-map.html" . -}}
+
+{{- $note := $u.record.note -}}
+{{- if reflect.IsMap $note }}{{ $note = or (index $note $lang) (index $note "en") "" }}{{ end -}}
+
+{{- $f := "" -}}
+{{- if gt $u.medianF 0.0 }}{{ $f = printf "f/%s" (strings.TrimSuffix ".0" (printf "%.1f" $u.medianF)) }}{{ end -}}
+{{- $typical := slice -}}
+{{- with $f }}{{ $typical = $typical | append . }}{{ end -}}
+{{- with $u.medianISO }}{{ $typical = $typical | append (printf "ISO %d" .) }}{{ end -}}
+
+<article class="gear-card" id="{{ $u.slug }}" data-count="{{ $u.count }}">
+  <header class="gear-card__head">
+    <h3 class="gear-card__name">{{ $u.name }}</h3>
+    <p class="gear-card__sub">
+      {{- if eq $u.kind "lens" -}}
+        {{- $names := slice -}}
+        {{- range $u.bodies }}{{ with index $gear.bodies . }}{{ $names = $names | append .name }}{{ end }}{{ end -}}
+        {{- i18n "gear_on" (dict "Body" (delimit $names ", ")) -}}
+      {{- else -}}
+        {{- i18n (printf "gear_kind_%s" $u.kind) -}}
+      {{- end -}}
+    </p>
+    {{- with $u.types }}
+    <ul class="gear-badges">
+      {{- range . }}<li>{{ i18n (printf "gear_type_%s" .) }}</li>{{ end }}
+    </ul>
+    {{- end }}
+  </header>
+
+  {{- with $note }}
+  <p class="gear-card__note">{{ . }}</p>
+  {{- end }}
+
+  <dl class="gear-card__figures">
+    <div>
+      <dt>{{ i18n "gear_card_photos" }}</dt>
+      <dd>{{ lang.FormatNumber 0 $u.count }}</dd>
+    </div>
+    <div>
+      <dt>{{ i18n "gear_card_portfolio" }}</dt>
+      <dd>{{ $u.portfolio }} <span class="gear-card__pct">{{ partial "gear-pct.html" $u.share }}</span></dd>
+    </div>
+    {{- if gt $u.species 0 }}
+    <div>
+      <dt>{{ i18n "gear_card_species" }}</dt>
+      <dd>{{ $u.species }}</dd>
+    </div>
+    {{- end }}
+  </dl>
+
+  <span class="gear-stack gear-stack--full" role="img"
+        aria-label="{{ i18n "gear_bar_label" (dict "Portfolio" $u.portfolio "Gallery" $u.gallery "Archive" $u.archive) }}">
+    {{- partial "gear-segments.html" $u -}}
+  </span>
+
+  <dl class="gear-card__facts">
+    {{- if $u.first }}
+    <div>
+      <dt>{{ i18n "gear_card_period" }}</dt>
+      <dd>
+        {{- $a := $u.first | time.Format "Jan 2006" }}
+        {{- $b := $u.last | time.Format "Jan 2006" }}
+        <time datetime="{{ $u.first | time.Format "2006-01" }}">{{ $a }}</time>
+        {{- if ne $a $b }} – <time datetime="{{ $u.last | time.Format "2006-01" }}">{{ $b }}</time>{{ end -}}
+      </dd>
+    </div>
+    {{- end }}
+    {{- with $typical }}
+    <div>
+      <dt>{{ i18n "gear_card_typical" }}</dt>
+      <dd>{{ delimit . " · " }}</dd>
+    </div>
+    {{- end }}
+    {{- with $u.topFocal }}
+    <div>
+      <dt>{{ i18n "gear_card_top_focal" }}</dt>
+      <dd>{{ . }} mm</dd>
+    </div>
+    {{- end }}
+    {{- with $u.categories }}
+    <div>
+      <dt>{{ i18n "gear_card_categories" }}</dt>
+      <dd>
+        {{- $parts := slice -}}
+        {{- range . }}{{ $parts = $parts | append (printf "%s %d" (i18n (printf "category_%s" .name) | default (.name | humanize)) .count) }}{{ end -}}
+        {{- delimit $parts " · " -}}
+      </dd>
+    </div>
+    {{- end }}
+  </dl>
+
+  {{- range $name, $n := $u.teleconverters }}
+  <p class="gear-card__tc">{{ i18n "gear_teleconverter" (dict "Count" $n "Name" $name) }}</p>
+  {{- end }}
+
+  {{- with $u.photos }}
+  <ul class="gear-card__photos">
+    {{- range . }}
+    {{- $t := .image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
+    <li>
+      <a href="{{ printf "%s%s/" $photoBase .Slug }}" title="{{ .Title }}">
+        <img loading="lazy" src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}" alt="{{ .Alt | default .Title }}" />
+      </a>
+    </li>
+    {{- end }}
+  </ul>
+  {{- end }}
+</article>

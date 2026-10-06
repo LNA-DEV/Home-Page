@@ -23,6 +23,11 @@
 {{- with site.GetPage "/gaming" -}}
     {{- $.Scratch.Add "index" (dict "title" .Title "content" (printf "%s. %s" .Title .Description) "permalink" .Permalink "summary" .Description) -}}
 {{- end -}}
+{{- /* /gallery/gear/ is a branch page like /travel, and reached from the gallery
+       home only through a small text link. */ -}}
+{{- with site.GetPage "/gallery/gear" -}}
+    {{- $.Scratch.Add "index" (dict "title" .Title "content" (printf "%s. %s" .Title .Description) "permalink" .Permalink "summary" .Description) -}}
+{{- end -}}
 {{- /* Only when a public record actually has photos -- the section is built from
        data/models.yaml and can legitimately be empty, and a search hit landing on
        an empty grid is the same mistake as a nav card onto one. */ -}}

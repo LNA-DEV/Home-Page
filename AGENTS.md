@@ -149,6 +149,32 @@ Running it again prints `Nothing to import` and changes nothing, which is the
 intended way to confirm the state. It refuses to run at all if `data/gallery.yaml`
 and the photo store are out of step, or if any licence value is unknown.
 
+### A photo from a new camera or lens
+
+`data/gear.yaml` is the register behind `/gallery/gear/` and the camera / lens
+rows on every photo page (`docs/concepts/gallery-gear.md`). The build stops on
+the first published photo whose EXIF `Model` or `LensModel` matches no record:
+
+```
+data/gear.yaml: photo "DSC_1234.jpg" was taken with the lens "NIKKOR Z 24-120mm f/4 S", which no lens record matches …
+```
+
+Add a record — `slug`, `name`, optional `short` for the chart rows, `type`
+(`zoom | prime | macro | telephoto | wide`) and the exact EXIF string under
+`match:` — or add the string to an existing record if it is another spelling
+of a lens already listed (a teleconverter appended to the lens name is
+`{text: …, teleconverter: <name>}`). A new body needs `match:` with its EXIF
+`Model`, a `crop:` factor, and `kind: drone | phone` when it is its own lens.
+`lens_default:` is only for a body that has never carried any other lens: it
+fills in the lens when the file names none (the Lumix G91 writes its lens only
+into the maker note, which Hugo cannot read).
+
+Gear that took no published photo needs no record — nothing is read from
+darktable. A photo with no camera EXIF at all is not an error: the gear page
+counts it in its "without camera data" footnote and nothing is guessed for it.
+Renaming a record's `name` changes the text on every photo page; its `slug` is
+an anchor that photo pages and lightboxes link to, so keep it.
+
 ## Adding books to the reading list
 
 The reading list lives in `data/reading.yaml` (one entry per book) with cover

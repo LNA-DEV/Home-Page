@@ -78,6 +78,13 @@
   text-decoration: underline;
 }
 
+.gallery-archive-link span {
+  color: var(--secondary);
+  font-size: 0.9rem;
+  opacity: 0.5;
+  margin: 0 0.4rem;
+}
+
 /* Gallery breadcrumb */
 .gallery-breadcrumb {
   text-align: center;

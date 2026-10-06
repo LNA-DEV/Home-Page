@@ -558,3 +558,102 @@
   translation: "Programmerare"
 - id: photo_credit
   translation: "Foto: {{ .Name }}"
+
+# Gear — /gallery/gear/ and the gear links on photo pages
+# (docs/concepts/gallery-gear.md)
+- id: gallery_gear
+  translation: "Utrustning"
+- id: gear_stat_photos
+  translation: "Foton"
+- id: gear_stat_cameras
+  translation: "Kameror"
+- id: gear_stat_lenses
+  translation: "Objektiv"
+- id: gear_stat_portfolio
+  translation: "I portfolion"
+- id: gear_portfolio_heading
+  translation: "In i portfolion"
+- id: gear_portfolio_intro
+  translation: "Publicerade foton per objektiv – och hur stor andel av dem som kom med i portfolion."
+- id: gear_col_lens
+  translation: "Objektiv"
+- id: gear_col_photos
+  translation: "Foton"
+- id: gear_col_share
+  translation: "Andel i portfolion"
+- id: gear_seg_portfolio
+  translation: "Portfolio"
+- id: gear_seg_gallery
+  translation: "Galleri"
+- id: gear_seg_archive
+  translation: "Arkiv"
+- id: gear_bar_label
+  translation: "{{ .Portfolio }} i portfolion, {{ .Gallery }} i galleriet, {{ .Archive }} i arkivet"
+- id: gear_focal_heading
+  translation: "Brännvidder"
+- id: gear_focal_intro
+  translation: "I millimeter, omräknat till småbildsformat så att alla kameror delar en axel. Ju starkare färg, desto större andel av objektivets foton."
+- id: gear_timeline_heading
+  translation: "Tidslinje"
+- id: gear_timeline_intro
+  translation: "Publicerade foton per kvartal, efter datum då de togs. Ju större punkt, desto fler foton."
+- id: gear_lenses_heading
+  translation: "Objektiv"
+- id: gear_cameras_heading
+  translation: "Kameror"
+- id: gear_on
+  translation: "på {{ .Body }}"
+- id: gear_kind_camera
+  translation: "Kamera"
+- id: gear_kind_drone
+  translation: "Drönare"
+- id: gear_kind_phone
+  translation: "Mobiltelefon"
+- id: gear_type_zoom
+  translation: "Zoom"
+- id: gear_type_prime
+  translation: "Fast brännvidd"
+- id: gear_type_macro
+  translation: "Makro"
+- id: gear_type_telephoto
+  translation: "Tele"
+- id: gear_type_wide
+  translation: "Vidvinkel"
+- id: gear_card_photos
+  translation: "Foton"
+- id: gear_card_portfolio
+  translation: "Portfolio"
+- id: gear_card_species
+  translation: "Arter i dexen"
+- id: gear_card_typical
+  translation: "Oftast"
+- id: gear_card_top_focal
+  translation: "Vanligast"
+- id: gear_card_period
+  translation: "Foton från"
+- id: gear_card_categories
+  translation: "Motiv"
+- id: gear_card_lenses
+  translation: "Objektiv"
+- id: gear_teleconverter
+  translation: "varav {{ .Count }} med {{ .Name }}"
+- id: gear_no_data
+  translation:
+    one: "1 foto saknar kameradata och räknas inte till något objektiv."
+    other: "{{ .Count }} foton saknar kameradata och räknas inte till något objektiv."
+- id: gear_no_lens
+  translation:
+    one: "1 foto anger en kamera men inget objektiv."
+    other: "{{ .Count }} foton anger en kamera men inget objektiv."
+- id: category_animals
+  translation: "Djur"
+- id: category_landscape
+  translation: "Landskap"
+- id: category_plants
+  translation: "Växter"
+- id: category_city
+  translation: "Stad"
+- id: category_portrait
+  translation: "Porträtt"
+- id: category_others
+  translation: "Övrigt"

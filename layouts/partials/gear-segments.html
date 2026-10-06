@@ -1,0 +1,14 @@
+{{- /*
+  gear-segments.html
+  The portfolio / gallery / archive segments of one gear-index unit, as flex
+  children whose widths are shares of the unit's own photos. The caller sizes the
+  container: full width on a card, scaled to the largest unit in the comparison.
+  An empty segment is left out, so no zero-width sliver draws a gap.
+
+  Expects: a gear-index.html unit.
+*/ -}}
+{{- range $seg := (slice (dict "k" "portfolio" "v" .portfolio) (dict "k" "gallery" "v" .gallery) (dict "k" "archive" "v" .archive)) -}}
+  {{- if gt $seg.v 0 -}}
+    <span class="gear-seg gear-seg--{{ $seg.k }}" style="flex-grow: {{ $seg.v }}" title="{{ i18n (printf "gear_seg_%s" $seg.k) }}: {{ $seg.v }}"></span>
+  {{- end -}}
+{{- end -}}
