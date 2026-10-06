@@ -169,6 +169,7 @@
 /de/gallery/dex/wood-sandpiper/
 /de/gallery/dex/yellow-legged-gull/
 /de/gallery/dex/yellowhammer/
+/de/gallery/gear/
 /de/gallery/general/
 /de/gallery/models/
 /de/gallery/models/lukas-nagel/
@@ -1194,6 +1195,7 @@
 /en/gallery/dex/wood-sandpiper/
 /en/gallery/dex/yellow-legged-gull/
 /en/gallery/dex/yellowhammer/
+/en/gallery/gear/
 /en/gallery/general/
 /en/gallery/models/
 /en/gallery/models/lukas-nagel/
@@ -2906,6 +2908,7 @@
 /sv/gallery/dex/wood-sandpiper/
 /sv/gallery/dex/yellow-legged-gull/
 /sv/gallery/dex/yellowhammer/
+/sv/gallery/gear/
 /sv/gallery/general/
 /sv/gallery/models/
 /sv/gallery/models/lukas-nagel/

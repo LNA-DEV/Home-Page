@@ -43,6 +43,10 @@
        terms and a site-relative url all differ between them. */ -}}
 {{- $licenseIndex := partialCached "license-index.html" . $lang -}}
 
+{{- /* Cameras and lenses: data/gear.yaml as lookup maps, so resolving a photo's
+       gear is one `index` per field (docs/concepts/gallery-gear.md §2). */ -}}
+{{- $gear := partialCached "gear-map.html" . -}}
+
 {{- range $image := $allImages -}}
   {{- $meta := index $lookup (path.Base $image.Name) -}}
   {{- if not $meta -}}
@@ -118,6 +122,12 @@
     {{- $cameraModel := "" -}}
     {{- $lensModel := "" -}}
     {{- $software := "" -}}
+    {{- /* Numbers for the gear page's aggregates; the strings above are for
+           display. 0 means "not in the file". */ -}}
+    {{- $fNumber := 0.0 -}}
+    {{- $isoValue := 0 -}}
+    {{- $focalMM := 0.0 -}}
+    {{- $focal35 := 0 -}}
 
     {{- with $image.Meta -}}
       {{- $date = .Date -}}
@@ -135,9 +145,13 @@
           {{- $parts := split $fStr "/" -}}
           {{- $num := float (index $parts 0) -}}
           {{- $den := float (index $parts 1) -}}
-          {{- $aperture = printf "f/%.1f" (div $num $den) -}}
+          {{- if gt $den 0.0 -}}
+            {{- $fNumber = div $num $den -}}
+            {{- $aperture = printf "f/%.1f" $fNumber -}}
+          {{- end -}}
         {{- else -}}
-          {{- $aperture = printf "f/%.1f" (float .) -}}
+          {{- $fNumber = float $fStr -}}
+          {{- $aperture = printf "f/%.1f" $fNumber -}}
         {{- end -}}
       {{- end -}}
       {{- with .Exif.ExposureTime -}}
@@ -157,6 +171,7 @@
       {{- end -}}
       {{- with .Exif.ISO -}}
         {{- $iso = printf "ISO %v" . -}}
+        {{- $isoValue = int . -}}
       {{- end -}}
       {{- with .Exif.FocalLength -}}
         {{- /* EXIF stores focal length as a rational, and it is not always
@@ -168,11 +183,17 @@
           {{- $parts := split $fl "/" -}}
           {{- $den := float (index $parts 1) -}}
           {{- if gt $den 0.0 -}}
-            {{- $focalLength = printf "%.1fmm" (div (float (index $parts 0)) $den) -}}
+            {{- $focalMM = div (float (index $parts 0)) $den -}}
+            {{- $focalLength = printf "%.1fmm" $focalMM -}}
           {{- end -}}
         {{- else -}}
+          {{- $focalMM = float $fl -}}
           {{- $focalLength = printf "%vmm" . -}}
         {{- end -}}
+      {{- end -}}
+      {{- /* 0 in the file means "unknown" (the phone writes that), not 0 mm. */ -}}
+      {{- with .Exif.FocalLengthIn35mmFormat -}}
+        {{- $focal35 = int . -}}
       {{- end -}}
       {{- with .Exif.Model -}}
         {{- $cameraModel = . -}}
@@ -190,6 +211,52 @@
         {{- if and $raw (not (findRE `(?i)^ver\.?\s*[0-9.]+$` $raw)) -}}
           {{- $software = $raw -}}
         {{- end -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- /* Gear: the EXIF strings resolved to data/gear.yaml records. The raw
+           strings stay available as CameraExif / LensExif — gear-index.html
+           stops the build on one that matches no record, once per language,
+           rather than this partial doing it on every call. A body known to
+           have only ever carried one lens (`lens_default`) supplies it when the
+           file names none: the Lumix G91 writes its lens only into the maker
+           note, which Hugo does not read. A photo with no camera EXIF at all
+           resolves to nothing, and nothing is guessed for it. */ -}}
+    {{- $cameraExif := $cameraModel -}}
+    {{- $lensExif := $lensModel -}}
+    {{- $bodySlug := "" -}}
+    {{- $lensSlug := "" -}}
+    {{- $teleconverter := "" -}}
+    {{- with $cameraModel -}}
+      {{- with index $gear.bodyByExif (lower (trim . " ")) -}}
+        {{- $bodySlug = . -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $body := cond (ne $bodySlug "") (index $gear.bodies $bodySlug) dict -}}
+    {{- with $lensModel -}}
+      {{- with index $gear.lensByExif (lower (trim . " ")) -}}
+        {{- $lensSlug = .slug -}}
+        {{- $teleconverter = .teleconverter -}}
+      {{- end -}}
+    {{- else -}}
+      {{- with $body.lens_default -}}
+        {{- $lensSlug = . -}}
+      {{- end -}}
+    {{- end -}}
+    {{- with $body.name -}}
+      {{- $cameraModel = . -}}
+    {{- end -}}
+    {{- with $lensSlug -}}
+      {{- $lensModel = (index $gear.lenses .).name -}}
+      {{- with $teleconverter -}}
+        {{- $lensModel = printf "%s + %s" $lensModel . -}}
+      {{- end -}}
+    {{- end -}}
+    {{- /* The 35 mm equivalent the gear page bins focal lengths by: the file's own
+           value, else focal length x the body's crop factor. */ -}}
+    {{- if and (eq $focal35 0) (gt $focalMM 0.0) -}}
+      {{- with $body.crop -}}
+        {{- $focal35 = int (math.Round (mul $focalMM (float .))) -}}
       {{- end -}}
     {{- end -}}
 
@@ -302,6 +369,15 @@
       "FocalLength" $focalLength
       "CameraModel" $cameraModel
       "LensModel" $lensModel
+      "CameraExif" $cameraExif
+      "LensExif" $lensExif
+      "BodySlug" $bodySlug
+      "LensSlug" $lensSlug
+      "Teleconverter" $teleconverter
+      "FNumber" $fNumber
+      "ISOValue" $isoValue
+      "FocalMM" $focalMM
+      "Focal35" $focal35
       "Software" $software
       "Copyright" $licenseText
       "Artist" $resolvedArtist

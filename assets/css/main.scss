@@ -267,6 +267,18 @@
   }
 }
 
+/* Camera and lens, linked to their entry on /gallery/gear/. Same treatment as
+   the species and model links. */
+.pswp-info-gear-link {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
+}
+
 /* The scientific name is secondary to the common name it follows. */
 .pswp-info-species-sci {
   font-weight: 400;

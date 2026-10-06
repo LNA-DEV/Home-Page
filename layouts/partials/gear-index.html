@@ -1,0 +1,332 @@
+{{- /*
+  gear-index.html
+  The whole of /gallery/gear/ as numbers: every published photo grouped by the
+  lens that took it. docs/concepts/gallery-gear.md §3–§4.
+
+  A "unit" is one card on the page: a lens, or a drone / phone body, which is
+  its own lens. Returns:
+
+    .units        unit dicts, most photos first
+    .bySlug       the same, keyed by slug
+    .bodies       bodies with at least one photo: {slug, name, kind, count}, most first
+    .total        every published photo, archive included
+    .portfolio    photos with portfolio: true
+    .noData       photos without camera EXIF — counted under no lens, never guessed
+    .noLens       photos from a known camera body that name no lens (none today)
+    .cameraCount  bodies with photos (drone and phone included)
+    .lensCount    units that are interchangeable lenses
+    .maxCount     the largest unit count, for bar scales
+    .maxShare     the largest portfolio share, in percent
+    .focalBins    35 mm-equivalent bins that hold at least one photo: {label, lo, hi}
+    .quarters     every quarter from the first dated photo to the last: {key, year, q}
+    .maxQuarter   the largest photo count of one unit in one quarter
+
+  Each unit:
+    slug name kind record types bodies
+    count portfolio archive gallery share
+    species      dex species among its photos (archive included, as the dex counts)
+    categories   top three {name, count}
+    medianF medianISO topFocal (mm, zooms only) teleconverters {name: count}
+    first last   time.Time of the oldest / newest dated photo
+    photos       up to three for the card: `cover` first, portfolio, newest
+    focal        counts per .focalBins entry, same order; focalTotal
+    quarters     map quarter key -> count
+
+  Archive photos are counted, as their own segment — the page describes the
+  body of work, as the dex does.
+
+  Also the one place that stops the build on an EXIF camera or lens string with
+  no record in data/gear.yaml: it sees every photo once per language, where
+  collect-images.html would see them once per call.
+
+    {{ $g := partialCached "gear-index.html" . site.Language.Lang }}
+*/ -}}
+{{- $c := partialCached "gallery-collected.html" . site.Language.Lang -}}
+{{- $gear := partialCached "gear-map.html" . -}}
+{{- $lang := site.Language.Lang -}}
+{{- $dex := partialCached "dex-lookup.html" (dict "lang" $lang) $lang -}}
+
+{{- /* 35 mm-equivalent bins, log-spaced so a 20 mm and a 600 mm lens both get
+       room. Empty bins at either end are trimmed below. */ -}}
+{{- $allBins := slice
+      (dict "lo" 0   "hi" 17     "label" "≤17")
+      (dict "lo" 18  "hi" 24     "label" "18–24")
+      (dict "lo" 25  "hi" 35     "label" "25–35")
+      (dict "lo" 36  "hi" 50     "label" "36–50")
+      (dict "lo" 51  "hi" 85     "label" "51–85")
+      (dict "lo" 86  "hi" 135    "label" "86–135")
+      (dict "lo" 136 "hi" 200    "label" "136–200")
+      (dict "lo" 201 "hi" 300    "label" "201–300")
+      (dict "lo" 301 "hi" 450    "label" "301–450")
+      (dict "lo" 451 "hi" 650    "label" "451–650")
+      (dict "lo" 651 "hi" 100000 "label" "651+")
+-}}
+
+{{- $groups := newScratch -}}
+{{- $bodyCount := newScratch -}}
+{{- $noData := 0 -}}
+{{- $noLens := 0 -}}
+{{- $portfolioTotal := 0 -}}
+{{- $minQ := 0 -}}
+{{- $maxQ := 0 -}}
+
+{{- range $p := $c.all -}}
+  {{- if $p.Portfolio }}{{ $portfolioTotal = add $portfolioTotal 1 }}{{ end -}}
+  {{- if and $p.CameraExif (not $p.BodySlug) -}}
+    {{- errorf "data/gear.yaml: photo %q was taken with the camera %q, which no body record matches — add it to `match:` of a body, or a new body" $p.Name $p.CameraExif -}}
+  {{- end -}}
+  {{- if and $p.LensExif (not $p.LensSlug) -}}
+    {{- errorf "data/gear.yaml: photo %q was taken with the lens %q, which no lens record matches — add it to `match:` of a lens, or a new lens" $p.Name $p.LensExif -}}
+  {{- end -}}
+  {{- with $p.DateTaken -}}
+    {{- $qi := add (mul $p.Date.Year 4) (div (sub (int ($p.Date.Format "1")) 1) 3) -}}
+    {{- if or (eq $minQ 0) (lt $qi $minQ) }}{{ $minQ = $qi }}{{ end -}}
+    {{- if gt $qi $maxQ }}{{ $maxQ = $qi }}{{ end -}}
+  {{- end -}}
+  {{- if not $p.BodySlug -}}
+    {{- if not $p.CameraExif }}{{ $noData = add $noData 1 }}{{ end -}}
+    {{- continue -}}
+  {{- end -}}
+  {{- $bodyCount.Add $p.BodySlug 1 -}}
+  {{- $body := index $gear.bodies $p.BodySlug -}}
+  {{- $key := "" -}}
+  {{- if $p.LensSlug -}}
+    {{- $key = $p.LensSlug -}}
+  {{- else if ne $body.kind "camera" -}}
+    {{- $key = $p.BodySlug -}}
+  {{- end -}}
+  {{- if $key -}}
+    {{- $groups.Add $key (slice $p) -}}
+  {{- else -}}
+    {{- $noLens = add $noLens 1 -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Every quarter between the first dated photo and the last, gaps included —
+       a gap on a timeline is information. */ -}}
+{{- $quarters := slice -}}
+{{- if gt $maxQ 0 -}}
+  {{- range $qi := seq $minQ $maxQ -}}
+    {{- $y := div $qi 4 -}}
+    {{- $q := add (mod $qi 4) 1 -}}
+    {{- $quarters = $quarters | append (dict "key" (printf "%d-Q%d" $y $q) "year" $y "q" $q) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Units in data order first (lenses, then drone / phone bodies), sorted by
+       count below; a stable sort keeps data order between equal counts. */ -}}
+{{- $candidates := slice -}}
+{{- range $gear.lensOrder }}{{ $candidates = $candidates | append (dict "slug" . "kind" "lens") }}{{ end -}}
+{{- range $gear.bodyOrder -}}
+  {{- $b := index $gear.bodies . -}}
+  {{- if ne $b.kind "camera" }}{{ $candidates = $candidates | append (dict "slug" . "kind" $b.kind) }}{{ end -}}
+{{- end -}}
+
+{{- $units := slice -}}
+{{- $focalTotals := newScratch -}}
+{{- $maxCount := 0 -}}
+{{- $maxShare := 0.0 -}}
+{{- $maxQuarter := 0 -}}
+
+{{- range $cand := $candidates -}}
+  {{- $photos := $groups.Get $cand.slug | default slice -}}
+  {{- if not $photos }}{{ continue }}{{ end -}}
+  {{- $record := cond (eq $cand.kind "lens") (index $gear.lenses $cand.slug) (index $gear.bodies $cand.slug) -}}
+
+  {{- $count := len $photos -}}
+  {{- $portfolio := 0 -}}
+  {{- $archive := 0 -}}
+  {{- $species := dict -}}
+  {{- $cats := newScratch -}}
+  {{- $fs := slice -}}
+  {{- $isos := slice -}}
+  {{- $focalMM := newScratch -}}
+  {{- $tcs := newScratch -}}
+  {{- $bodies := slice -}}
+  {{- $fbins := newScratch -}}
+  {{- $focalTotal := 0 -}}
+  {{- $qs := newScratch -}}
+  {{- $first := "" -}}
+  {{- $last := "" -}}
+  {{- $pf := slice -}}
+  {{- $rest := slice -}}
+  {{- $old := slice -}}
+
+  {{- range $p := $photos -}}
+    {{- if $p.Portfolio -}}
+      {{- $portfolio = add $portfolio 1 -}}
+    {{- else if eq $p.Section "archive" -}}
+      {{- $archive = add $archive 1 -}}
+    {{- end -}}
+    {{- if $p.Portfolio -}}
+      {{- $pf = $pf | append $p -}}
+    {{- else if eq $p.Section "archive" -}}
+      {{- $old = $old | append $p -}}
+    {{- else -}}
+      {{- $rest = $rest | append $p -}}
+    {{- end -}}
+    {{- with $p.Species -}}
+      {{- with index $dex (lower .) -}}
+        {{- $species = merge $species (dict .slug true) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- with $p.Category }}{{ $cats.Add . 1 }}{{ end -}}
+    {{- if gt $p.FNumber 0.0 }}{{ $fs = $fs | append $p.FNumber }}{{ end -}}
+    {{- if gt $p.ISOValue 0 }}{{ $isos = $isos | append $p.ISOValue }}{{ end -}}
+    {{- if gt $p.FocalMM 0.0 }}{{ $focalMM.Add (printf "%.0f" $p.FocalMM) 1 }}{{ end -}}
+    {{- with $p.Teleconverter }}{{ $tcs.Add . 1 }}{{ end -}}
+    {{- with $p.BodySlug -}}
+      {{- if not (in $bodies .) }}{{ $bodies = $bodies | append . }}{{ end -}}
+    {{- end -}}
+    {{- with $p.Focal35 -}}
+      {{- $f := . -}}
+      {{- range $i, $bin := $allBins -}}
+        {{- if and (ge $f $bin.lo) (le $f $bin.hi) -}}
+          {{- $fbins.Add (string $i) 1 -}}
+          {{- $focalTotals.Add (string $i) 1 -}}
+        {{- end -}}
+      {{- end -}}
+      {{- $focalTotal = add $focalTotal 1 -}}
+    {{- end -}}
+    {{- with $p.DateTaken -}}
+      {{- $qk := printf "%d-Q%d" $p.Date.Year (add (div (sub (int ($p.Date.Format "1")) 1) 3) 1) -}}
+      {{- $qs.Add $qk 1 -}}
+      {{- if gt ($qs.Get $qk) $maxQuarter }}{{ $maxQuarter = $qs.Get $qk }}{{ end -}}
+      {{- if or (not $first) ($p.Date.Before $first) }}{{ $first = $p.Date }}{{ end -}}
+      {{- if or (not $last) ($p.Date.After $last) }}{{ $last = $p.Date }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- /* Medians, lower-middle for an even count — a "typical" setting should be
+         one that was actually used, not the mean of two. */ -}}
+  {{- $medianF := 0.0 -}}
+  {{- with $fs }}{{ $s := sort . }}{{ $medianF = index $s (div (sub (len $s) 1) 2) }}{{ end -}}
+  {{- $medianISO := 0 -}}
+  {{- with $isos }}{{ $s := sort . }}{{ $medianISO = index $s (div (sub (len $s) 1) 2) }}{{ end -}}
+
+  {{- /* The focal length a zoom was used at most often, in real millimetres.
+         Ties go to the longer end, deterministically. */ -}}
+  {{- $topFocal := 0 -}}
+  {{- if in ($record.type | default slice) "zoom" -}}
+    {{- $best := 0 -}}
+    {{- range $mm, $n := $focalMM.Values -}}
+      {{- $v := int $mm -}}
+      {{- if or (gt $n $best) (and (eq $n $best) (gt $v $topFocal)) -}}
+        {{- $best = $n -}}
+        {{- $topFocal = $v -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $catList := slice -}}
+  {{- range $name, $n := $cats.Values }}{{ $catList = $catList | append (dict "name" $name "count" $n) }}{{ end -}}
+  {{- with $catList }}{{ $catList = first 3 (sort (sort . "name" "asc") "count" "desc") }}{{ end -}}
+
+  {{- /* The card's photos: `cover:` first if the record pins one, then the
+         portfolio, then the gallery, newest first in each; the archive only if
+         nothing else is left. */ -}}
+  {{- $ordered := slice -}}
+  {{- $taken := dict -}}
+  {{- with $record.cover -}}
+    {{- with index $c.byId . -}}
+      {{- $ordered = $ordered | append . -}}
+      {{- $taken = merge $taken (dict .Id true) -}}
+    {{- else -}}
+      {{- errorf "data/gear.yaml: %q has cover %q, which is not a gallery photo id" $cand.slug . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- range (slice $pf $rest $old) -}}
+    {{- with . -}}
+      {{- range sort . "Date" "desc" -}}
+        {{- if not (index $taken .Id) -}}
+          {{- $ordered = $ordered | append . -}}
+          {{- $taken = merge $taken (dict .Id true) -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $focal := slice -}}
+  {{- range $i, $bin := $allBins }}{{ $focal = $focal | append ($fbins.Get (string $i) | default 0) }}{{ end -}}
+
+  {{- $share := mul (div (float $portfolio) $count) 100 -}}
+  {{- if gt $count $maxCount }}{{ $maxCount = $count }}{{ end -}}
+  {{- if gt $share $maxShare }}{{ $maxShare = $share }}{{ end -}}
+
+  {{- $units = $units | append (dict
+        "slug" $cand.slug
+        "kind" $cand.kind
+        "name" $record.name
+        "record" $record
+        "types" ($record.type | default slice)
+        "bodies" $bodies
+        "count" $count
+        "portfolio" $portfolio
+        "archive" $archive
+        "gallery" (sub (sub $count $portfolio) $archive)
+        "share" $share
+        "species" (len $species)
+        "categories" $catList
+        "medianF" $medianF
+        "medianISO" $medianISO
+        "topFocal" $topFocal
+        "teleconverters" $tcs.Values
+        "first" $first
+        "last" $last
+        "photos" (first 3 $ordered)
+        "focal" $focal
+        "focalTotal" $focalTotal
+        "quarters" $qs.Values
+      ) -}}
+{{- end -}}
+{{- with $units }}{{ $units = sort . "count" "desc" }}{{ end -}}
+
+{{- /* Trim the empty bins at both ends; keep the ones in between. */ -}}
+{{- $lo := -1 -}}
+{{- $hi := -1 -}}
+{{- range $i, $bin := $allBins -}}
+  {{- if $focalTotals.Get (string $i) -}}
+    {{- if lt $lo 0 }}{{ $lo = $i }}{{ end -}}
+    {{- $hi = $i -}}
+  {{- end -}}
+{{- end -}}
+{{- $focalBins := slice -}}
+{{- if ge $lo 0 -}}
+  {{- range $i := seq $lo $hi -}}
+    {{- $focalBins = $focalBins | append (merge (index $allBins $i) (dict "index" $i)) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $bodies := slice -}}
+{{- range $slug := $gear.bodyOrder -}}
+  {{- $n := $bodyCount.Get $slug | default 0 -}}
+  {{- if gt $n 0 -}}
+    {{- $b := index $gear.bodies $slug -}}
+    {{- $bodies = $bodies | append (dict "slug" $slug "name" $b.name "kind" $b.kind "count" $n "record" $b) -}}
+  {{- end -}}
+{{- end -}}
+{{- with $bodies }}{{ $bodies = sort . "count" "desc" }}{{ end -}}
+
+{{- $bySlug := dict -}}
+{{- $lensCount := 0 -}}
+{{- range $units -}}
+  {{- $bySlug = merge $bySlug (dict .slug .) -}}
+  {{- if eq .kind "lens" }}{{ $lensCount = add $lensCount 1 }}{{ end -}}
+{{- end -}}
+
+{{- return (dict
+      "units" $units
+      "bySlug" $bySlug
+      "bodies" $bodies
+      "total" (len $c.all)
+      "portfolio" $portfolioTotal
+      "noData" $noData
+      "noLens" $noLens
+      "cameraCount" (len $bodies)
+      "lensCount" $lensCount
+      "maxCount" $maxCount
+      "maxShare" $maxShare
+      "focalBins" $focalBins
+      "quarters" $quarters
+      "maxQuarter" $maxQuarter
+    ) -}}

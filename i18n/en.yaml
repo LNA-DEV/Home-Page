@@ -557,3 +557,102 @@
   translation: "Software Engineer"
 - id: photo_credit
   translation: "Photo: {{ .Name }}"
+
+# Gear — /gallery/gear/ and the gear links on photo pages
+# (docs/concepts/gallery-gear.md)
+- id: gallery_gear
+  translation: "Gear"
+- id: gear_stat_photos
+  translation: "Photos"
+- id: gear_stat_cameras
+  translation: "Cameras"
+- id: gear_stat_lenses
+  translation: "Lenses"
+- id: gear_stat_portfolio
+  translation: "In the portfolio"
+- id: gear_portfolio_heading
+  translation: "Into the portfolio"
+- id: gear_portfolio_intro
+  translation: "Published photos per lens, and the share of them that made the portfolio."
+- id: gear_col_lens
+  translation: "Lens"
+- id: gear_col_photos
+  translation: "Photos"
+- id: gear_col_share
+  translation: "Portfolio share"
+- id: gear_seg_portfolio
+  translation: "Portfolio"
+- id: gear_seg_gallery
+  translation: "Gallery"
+- id: gear_seg_archive
+  translation: "Archive"
+- id: gear_bar_label
+  translation: "{{ .Portfolio }} portfolio, {{ .Gallery }} gallery, {{ .Archive }} archive"
+- id: gear_focal_heading
+  translation: "Focal lengths"
+- id: gear_focal_intro
+  translation: "In millimetres, converted to the 35 mm equivalent so every camera shares one axis. The stronger the colour, the larger the share of that lens's photos."
+- id: gear_timeline_heading
+  translation: "Timeline"
+- id: gear_timeline_intro
+  translation: "Published photos per quarter, by the date they were taken. The larger the dot, the more photos."
+- id: gear_lenses_heading
+  translation: "Lenses"
+- id: gear_cameras_heading
+  translation: "Cameras"
+- id: gear_on
+  translation: "on the {{ .Body }}"
+- id: gear_kind_camera
+  translation: "Camera"
+- id: gear_kind_drone
+  translation: "Drone"
+- id: gear_kind_phone
+  translation: "Smartphone"
+- id: gear_type_zoom
+  translation: "Zoom"
+- id: gear_type_prime
+  translation: "Prime"
+- id: gear_type_macro
+  translation: "Macro"
+- id: gear_type_telephoto
+  translation: "Telephoto"
+- id: gear_type_wide
+  translation: "Wide-angle"
+- id: gear_card_photos
+  translation: "Photos"
+- id: gear_card_portfolio
+  translation: "Portfolio"
+- id: gear_card_species
+  translation: "Dex species"
+- id: gear_card_typical
+  translation: "Typical"
+- id: gear_card_top_focal
+  translation: "Most used"
+- id: gear_card_period
+  translation: "Photos from"
+- id: gear_card_categories
+  translation: "Subjects"
+- id: gear_card_lenses
+  translation: "Lenses"
+- id: gear_teleconverter
+  translation: "of which {{ .Count }} with the {{ .Name }}"
+- id: gear_no_data
+  translation:
+    one: "1 photo carries no camera data and is counted under no lens."
+    other: "{{ .Count }} photos carry no camera data and are counted under no lens."
+- id: gear_no_lens
+  translation:
+    one: "1 photo names a camera but no lens."
+    other: "{{ .Count }} photos name a camera but no lens."
+- id: category_animals
+  translation: "Animals"
+- id: category_landscape
+  translation: "Landscape"
+- id: category_plants
+  translation: "Plants"
+- id: category_city
+  translation: "City"
+- id: category_portrait
+  translation: "Portrait"
+- id: category_others
+  translation: "Other"

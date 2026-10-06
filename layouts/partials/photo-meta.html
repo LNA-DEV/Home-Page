@@ -79,8 +79,16 @@
   <section>
     <h2>{{ i18n "photo_gear" }}</h2>
     <dl>
-      {{- with $photo.CameraModel }}<dt>{{ i18n "photo_camera" }}</dt><dd>{{ . }}</dd>{{ end }}
-      {{- with $photo.LensModel }}<dt>{{ i18n "photo_lens" }}</dt><dd>{{ . }}</dd>{{ end }}
+      {{- /* Both link to their entry on /gallery/gear/ when data/gear.yaml knows
+             them — the slug is the anchor there (docs/concepts/gallery-gear.md). */}}
+      {{- $gearUrl := "" }}
+      {{- with site.GetPage "/gallery/gear" }}{{ $gearUrl = .RelPermalink }}{{ end }}
+      {{- with $photo.CameraModel }}<dt>{{ i18n "photo_camera" }}</dt><dd>
+        {{- if and $gearUrl $photo.BodySlug }}<a href="{{ $gearUrl }}#{{ $photo.BodySlug }}">{{ . }}</a>{{ else }}{{ . }}{{ end -}}
+      </dd>{{ end }}
+      {{- with $photo.LensModel }}<dt>{{ i18n "photo_lens" }}</dt><dd>
+        {{- if and $gearUrl $photo.LensSlug }}<a href="{{ $gearUrl }}#{{ $photo.LensSlug }}">{{ . }}</a>{{ else }}{{ . }}{{ end -}}
+      </dd>{{ end }}
       {{- with $photo.Software }}<dt>{{ i18n "softwareLabel" }}</dt><dd>{{ . }}</dd>{{ end }}
       {{- with $photo.DateTaken }}<dt>{{ i18n "photo_date_taken" }}</dt><dd><time datetime="{{ . }}">{{ . }}</time></dd>{{ end }}
     </dl>

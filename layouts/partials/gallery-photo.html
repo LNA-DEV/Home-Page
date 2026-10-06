@@ -54,6 +54,9 @@
        published resolve at all — a `hidden` one yields nothing, and nothing is
        exactly what this page then prints about them. */ -}}
 {{- $modelLookup := partialCached "model-lookup.html" (dict "lang" $lang) $lang -}}
+{{- /* The gear page, for the camera / lens links in the info popup. */ -}}
+{{- $gearUrl := "" -}}
+{{- with site.GetPage "/gallery/gear" }}{{ $gearUrl = .RelPermalink }}{{ end -}}
 {{- $models := slice -}}
 {{- range $photo.Models -}}
   {{- with index $modelLookup . -}}{{- $models = $models | append . -}}{{- end -}}
@@ -104,8 +107,8 @@
         {{- end -}}
         {{- if or $photo.CameraModel $photo.LensModel }}
         <span class="caption-gear">
-          {{- with $photo.CameraModel }}<span class="gear-item" data-field="camera">{{ . }}</span>{{ end -}}
-          {{- with $photo.LensModel }}<span class="gear-item" data-field="lens">{{ . }}</span>{{ end -}}
+          {{- with $photo.CameraModel }}<span class="gear-item" data-field="camera"{{ if and $gearUrl $photo.BodySlug }} data-gear-url="{{ $gearUrl }}#{{ $photo.BodySlug }}"{{ end }}>{{ . }}</span>{{ end -}}
+          {{- with $photo.LensModel }}<span class="gear-item" data-field="lens"{{ if and $gearUrl $photo.LensSlug }} data-gear-url="{{ $gearUrl }}#{{ $photo.LensSlug }}"{{ end }}>{{ . }}</span>{{ end -}}
         </span>
         {{- end -}}
         {{- with $photo.Software }}<span class="caption-software">{{ . }}</span>{{ end -}}

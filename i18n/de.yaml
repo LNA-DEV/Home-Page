@@ -556,3 +556,102 @@
   translation: "Softwareentwickler"
 - id: photo_credit
   translation: "Foto: {{ .Name }}"
+
+# Gear — /gallery/gear/ and the gear links on photo pages
+# (docs/concepts/gallery-gear.md)
+- id: gallery_gear
+  translation: "Ausrüstung"
+- id: gear_stat_photos
+  translation: "Fotos"
+- id: gear_stat_cameras
+  translation: "Kameras"
+- id: gear_stat_lenses
+  translation: "Objektive"
+- id: gear_stat_portfolio
+  translation: "Im Portfolio"
+- id: gear_portfolio_heading
+  translation: "Ins Portfolio"
+- id: gear_portfolio_intro
+  translation: "Veröffentlichte Fotos je Objektiv – und welcher Anteil davon es ins Portfolio geschafft hat."
+- id: gear_col_lens
+  translation: "Objektiv"
+- id: gear_col_photos
+  translation: "Fotos"
+- id: gear_col_share
+  translation: "Portfolio-Anteil"
+- id: gear_seg_portfolio
+  translation: "Portfolio"
+- id: gear_seg_gallery
+  translation: "Galerie"
+- id: gear_seg_archive
+  translation: "Archiv"
+- id: gear_bar_label
+  translation: "{{ .Portfolio }} im Portfolio, {{ .Gallery }} in der Galerie, {{ .Archive }} im Archiv"
+- id: gear_focal_heading
+  translation: "Brennweiten"
+- id: gear_focal_intro
+  translation: "In Millimetern, umgerechnet auf Kleinbild, damit alle Kameras eine Achse teilen. Je kräftiger die Farbe, desto größer der Anteil an den Fotos dieses Objektivs."
+- id: gear_timeline_heading
+  translation: "Zeitleiste"
+- id: gear_timeline_intro
+  translation: "Veröffentlichte Fotos je Quartal, nach Aufnahmedatum. Je größer der Punkt, desto mehr Fotos."
+- id: gear_lenses_heading
+  translation: "Objektive"
+- id: gear_cameras_heading
+  translation: "Kameras"
+- id: gear_on
+  translation: "an der {{ .Body }}"
+- id: gear_kind_camera
+  translation: "Kamera"
+- id: gear_kind_drone
+  translation: "Drohne"
+- id: gear_kind_phone
+  translation: "Smartphone"
+- id: gear_type_zoom
+  translation: "Zoom"
+- id: gear_type_prime
+  translation: "Festbrennweite"
+- id: gear_type_macro
+  translation: "Makro"
+- id: gear_type_telephoto
+  translation: "Tele"
+- id: gear_type_wide
+  translation: "Weitwinkel"
+- id: gear_card_photos
+  translation: "Fotos"
+- id: gear_card_portfolio
+  translation: "Portfolio"
+- id: gear_card_species
+  translation: "Arten im Dex"
+- id: gear_card_typical
+  translation: "Meist"
+- id: gear_card_top_focal
+  translation: "Am häufigsten"
+- id: gear_card_period
+  translation: "Fotos von"
+- id: gear_card_categories
+  translation: "Motive"
+- id: gear_card_lenses
+  translation: "Objektive"
+- id: gear_teleconverter
+  translation: "davon {{ .Count }} mit dem {{ .Name }}"
+- id: gear_no_data
+  translation:
+    one: "1 Foto trägt keine Kameradaten und zählt zu keinem Objektiv."
+    other: "{{ .Count }} Fotos tragen keine Kameradaten und zählen zu keinem Objektiv."
+- id: gear_no_lens
+  translation:
+    one: "1 Foto nennt eine Kamera, aber kein Objektiv."
+    other: "{{ .Count }} Fotos nennen eine Kamera, aber kein Objektiv."
+- id: category_animals
+  translation: "Tiere"
+- id: category_landscape
+  translation: "Landschaft"
+- id: category_plants
+  translation: "Pflanzen"
+- id: category_city
+  translation: "Stadt"
+- id: category_portrait
+  translation: "Porträt"
+- id: category_others
+  translation: "Sonstiges"

@@ -1,0 +1,100 @@
+# Cameras and lenses — the register behind /gallery/gear/ and the camera / lens
+# rows on every photo page. See docs/concepts/gallery-gear.md.
+#
+# The EXIF strings are not the identity: the Lumix G91 never writes its lens into
+# standard EXIF (only into Panasonic's maker note, which Hugo does not read), a
+# teleconverter shows up as part of the lens name, and the bodies report their
+# model codes (`DC-G91`, `FC3411`). The slug is the identity, `name` is what the
+# site prints, and `match` lists the EXIF spellings that mean this record.
+#
+# Rules (gear-map.html / gear-index.html stop the build on a breach):
+#   - Every camera `Model` and every `LensModel` a published photo carries must
+#     match one record here, compared ignoring case. The first published photo
+#     from a new lens is the reminder to add it. Gear that took no published
+#     photo needs no record — nothing is read from darktable.
+#   - A photo with no camera EXIF at all is NOT an error: it is counted as
+#     "without camera data" and nothing is guessed for it.
+#   - Slugs are unique across bodies and lenses (they are anchors on one page);
+#     a `match` string belongs to one record only.
+#
+# Bodies
+#   slug, name, match   required
+#   short               optional short name for the chart rows (default: name)
+#   crop                crop factor, used for the 35 mm equivalent when a file
+#                       carries no FocalLengthIn35mmFormat
+#   kind                camera (default) | drone | phone — a drone or a phone is
+#                       its own lens and gets its own card
+#   lens_default        lens slug for a photo from this body with no LensModel —
+#                       for a body that has only ever had that one lens
+#   note                optional {en, de, sv} line on the card (string = English)
+#
+# Lenses
+#   slug, name          required
+#   short               optional short name for the chart rows (default: name)
+#   type                any of: zoom | prime | macro | telephoto | wide
+#   match               EXIF LensModel strings; an entry may be
+#                       `{text: …, teleconverter: <name>}` when the camera appends
+#                       a converter to the lens name — counted with the lens
+#   note                optional, as above
+#   cover               optional gallery photo UUID to lead the card's photos
+
+bodies:
+  - slug: nikon-z8
+    name: Nikon Z 8
+    match: [NIKON Z 8]
+    crop: 1.0
+
+  - slug: lumix-g91
+    name: Panasonic Lumix G91
+    match: [DC-G91]
+    crop: 2.0
+    # The G91 has only ever carried the 14-140 II, and it writes the lens only
+    # into its maker note (`LensType: LUMIX G VARIO 14-140/F3.5-5.6 II`).
+    lens_default: lumix-g-vario-14-140-ii
+
+  - slug: dji-air-2s
+    name: DJI Air 2S
+    short: Air 2S
+    match: [FC3411]
+    kind: drone
+
+  - slug: oneplus-9-pro
+    name: OnePlus 9 Pro
+    match: [OnePlus 9 Pro]
+    kind: phone
+
+lenses:
+  - slug: lumix-g-vario-14-140-ii
+    name: LUMIX G VARIO 14-140mm F3.5-5.6 II
+    short: 14-140mm
+    type: [zoom]
+    # No match: Hugo never sees a string for it. Reached through the G91's
+    # lens_default.
+    match: []
+
+  - slug: nikkor-z-mc-105
+    name: NIKKOR Z MC 105mm f/2.8 VR S
+    short: MC 105mm
+    type: [prime, macro]
+    match: [NIKKOR Z MC 105mm f/2.8 VR S]
+
+  - slug: nikkor-z-20
+    name: NIKKOR Z 20mm f/1.8 S
+    short: 20mm
+    type: [prime, wide]
+    match: [NIKKOR Z 20mm f/1.8 S]
+
+  - slug: nikkor-z-50
+    name: NIKKOR Z 50mm f/1.8 S
+    short: 50mm
+    type: [prime]
+    match: [NIKKOR Z 50mm f/1.8 S]
+
+  - slug: nikkor-z-180-600
+    name: NIKKOR Z 180-600mm f/5.6-6.3 VR
+    short: 180-600mm
+    type: [zoom, telephoto]
+    match:
+      - NIKKOR Z 180-600mm f/5.6-6.3 VR
+      - text: NIKKOR Z 180-600mm f/5.6-6.3 VR Z TC-1.4x
+        teleconverter: Z TC-1.4x

@@ -1,0 +1,220 @@
+{{- /*
+  gear-overview.html
+  /gallery/gear/: cameras and lenses, counted. docs/concepts/gallery-gear.md §3.
+
+  Every number comes from gear-index.html, so no two sections can disagree.
+  The charts are tables drawn with CSS — the data is fixed per build, so there
+  is nothing for a chart library to do, every value stays readable without
+  JavaScript and to a screen reader, and dark mode comes from the theme
+  variables (gear.css). Row labels link to the lens cards further down.
+*/ -}}
+{{- $g := partialCached "gear-index.html" . site.Language.Lang -}}
+{{- $photoBase := printf "%sgallery/photo/" site.Home.RelPermalink -}}
+{{- $units := $g.units -}}
+
+<div class="gear">
+
+  <dl class="gear-stats">
+    <div class="gear-stat">
+      <dt>{{ i18n "gear_stat_photos" }}</dt>
+      <dd>{{ lang.FormatNumber 0 $g.total }}</dd>
+    </div>
+    <div class="gear-stat">
+      <dt>{{ i18n "gear_stat_cameras" }}</dt>
+      <dd>{{ $g.cameraCount }}</dd>
+    </div>
+    <div class="gear-stat">
+      <dt>{{ i18n "gear_stat_lenses" }}</dt>
+      <dd>{{ $g.lensCount }}</dd>
+    </div>
+    <div class="gear-stat">
+      <dt>{{ i18n "gear_stat_portfolio" }}</dt>
+      <dd>{{ $g.portfolio }}</dd>
+    </div>
+  </dl>
+
+  {{- /* ── Into the portfolio ─────────────────────────────────────────── */}}
+  <section class="gear-section" aria-labelledby="gear-portfolio">
+    <h2 id="gear-portfolio">{{ i18n "gear_portfolio_heading" }}</h2>
+    <p class="gear-intro">{{ i18n "gear_portfolio_intro" }}</p>
+    <ul class="gear-legend">
+      <li><span class="gear-swatch gear-swatch--portfolio"></span>{{ i18n "gear_seg_portfolio" }}</li>
+      <li><span class="gear-swatch gear-swatch--gallery"></span>{{ i18n "gear_seg_gallery" }}</li>
+      <li><span class="gear-swatch gear-swatch--archive"></span>{{ i18n "gear_seg_archive" }}</li>
+    </ul>
+    <table class="gear-compare">
+      <thead>
+        <tr>
+          <th scope="col">{{ i18n "gear_col_lens" }}</th>
+          <th scope="col">{{ i18n "gear_col_photos" }}</th>
+          <th scope="col">{{ i18n "gear_col_share" }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{- range $units }}
+        <tr>
+          <th scope="row"><a href="#{{ .slug }}">{{ .record.short | default .name }}</a></th>
+          <td>
+            <span class="gear-hbar">
+              <span class="gear-stack" style="width: {{ printf "%.2f" (mul (div (float .count) $g.maxCount) 100) }}%"
+                    role="img" aria-label="{{ i18n "gear_bar_label" (dict "Portfolio" .portfolio "Gallery" .gallery "Archive" .archive) }}">
+                {{- partial "gear-segments.html" . -}}
+              </span>
+              <span class="gear-hbar__value">{{ lang.FormatNumber 0 .count }}</span>
+            </span>
+          </td>
+          <td>
+            <span class="gear-hbar">
+              {{- if gt .portfolio 0 }}
+              <span class="gear-share" style="width: {{ printf "%.2f" (mul (div .share $g.maxShare) 100) }}%"></span>
+              {{- end }}
+              <span class="gear-hbar__value">{{ partial "gear-pct.html" .share }}</span>
+            </span>
+          </td>
+        </tr>
+        {{- end }}
+      </tbody>
+    </table>
+  </section>
+
+  {{- /* ── Focal lengths ──────────────────────────────────────────────── */}}
+  {{- with $g.focalBins }}
+  {{- $bins := . }}
+  <section class="gear-section" aria-labelledby="gear-focal">
+    <h2 id="gear-focal">{{ i18n "gear_focal_heading" }}</h2>
+    <p class="gear-intro">{{ i18n "gear_focal_intro" }}</p>
+    <div class="gear-scroll">
+      <table class="gear-heat">
+        <thead>
+          <tr>
+            <th scope="col"><span class="visually-hidden">{{ i18n "gear_col_lens" }}</span></th>
+            {{- range $bins }}
+            <th scope="col">{{ .label }}</th>
+            {{- end }}
+          </tr>
+        </thead>
+        <tbody>
+          {{- range $u := $units }}
+          {{- if gt $u.focalTotal 0 }}
+          <tr>
+            <th scope="row"><a href="#{{ $u.slug }}">{{ $u.record.short | default $u.name }}</a></th>
+            {{- range $bins }}
+            {{- $n := index $u.focal .index }}
+            {{- if gt $n 0 }}
+            {{- $s := div (float $n) $u.focalTotal }}
+            {{- $level := cond (ge $s 0.5) 4 (cond (ge $s 0.25) 3 (cond (ge $s 0.1) 2 1)) }}
+            <td class="gear-heat__cell gear-heat__cell--{{ $level }}" title="{{ $u.record.short | default $u.name }} · {{ .label }} mm · {{ i18n "photoCount" $n }}">{{ $n }}</td>
+            {{- else }}
+            <td class="gear-heat__cell"></td>
+            {{- end }}
+            {{- end }}
+          </tr>
+          {{- end }}
+          {{- end }}
+        </tbody>
+      </table>
+    </div>
+  </section>
+  {{- end }}
+
+  {{- /* ── Timeline ───────────────────────────────────────────────────── */}}
+  {{- with $g.quarters }}
+  {{- $quarters := . }}
+  {{- /* Year header: one cell per year, spanning that year's quarters in range. */}}
+  {{- $years := slice }}
+  {{- $spans := newScratch }}
+  {{- range $quarters }}
+    {{- $k := string .year }}
+    {{- if not ($spans.Get $k) }}{{ $years = $years | append .year }}{{ end }}
+    {{- $spans.Add $k 1 }}
+  {{- end }}
+  <section class="gear-section" aria-labelledby="gear-timeline">
+    <h2 id="gear-timeline">{{ i18n "gear_timeline_heading" }}</h2>
+    <p class="gear-intro">{{ i18n "gear_timeline_intro" }}</p>
+    <div class="gear-scroll">
+      <table class="gear-timeline">
+        <thead>
+          <tr>
+            <th scope="col"><span class="visually-hidden">{{ i18n "gear_col_lens" }}</span></th>
+            {{- range $years }}
+            <th scope="colgroup" colspan="{{ $spans.Get (string .) }}">{{ . }}</th>
+            {{- end }}
+          </tr>
+        </thead>
+        <tbody>
+          {{- range $u := $units }}
+          <tr>
+            <th scope="row"><a href="#{{ $u.slug }}">{{ $u.record.short | default $u.name }}</a></th>
+            {{- range $quarters }}
+            {{- $n := index ($u.quarters | default dict) .key | default 0 }}
+            <td class="gear-timeline__cell{{ if eq .q 1 }} gear-timeline__cell--year{{ end }}">
+              {{- if gt $n 0 }}
+              {{- $d := add 6 (mul 18 (math.Sqrt (div (float $n) $g.maxQuarter))) }}
+              <span class="gear-dot" style="--d: {{ printf "%.1f" $d }}px" title="{{ $u.record.short | default $u.name }} · Q{{ .q }} {{ .year }} · {{ i18n "photoCount" $n }}"></span>
+              <span class="visually-hidden">Q{{ .q }} {{ .year }}: {{ i18n "photoCount" $n }}</span>
+              {{- end -}}
+            </td>
+            {{- end }}
+          </tr>
+          {{- end }}
+        </tbody>
+      </table>
+    </div>
+  </section>
+  {{- end }}
+
+  {{- /* ── Lens cards ─────────────────────────────────────────────────── */}}
+  <section class="gear-section" aria-labelledby="gear-lenses">
+    <h2 id="gear-lenses">{{ i18n "gear_lenses_heading" }}</h2>
+    <div class="gear-cards">
+      {{- range $units }}
+        {{- partial "gear-card.html" (dict "unit" . "index" $g "photoBase" $photoBase) }}
+      {{- end }}
+    </div>
+  </section>
+
+  {{- /* ── Cameras ────────────────────────────────────────────────────── */}}
+  {{- with $g.bodies }}
+  {{- $max := (index . 0).count }}
+  <section class="gear-section" aria-labelledby="gear-cameras">
+    <h2 id="gear-cameras">{{ i18n "gear_cameras_heading" }}</h2>
+    <table class="gear-compare gear-compare--bodies">
+      <tbody>
+        {{- range $b := . }}
+        {{- /* A drone or a phone already has its card under this slug; a second
+               element with the same id would make the anchor ambiguous. */}}
+        <tr{{ if eq $b.kind "camera" }} id="{{ $b.slug }}"{{ end }}>
+          <th scope="row">
+            {{- if eq $b.kind "camera" }}{{ $b.name }}{{ else }}<a href="#{{ $b.slug }}">{{ $b.name }}</a>{{ end }}
+            <span class="gear-compare__sub">
+              {{- if eq $b.kind "camera" }}
+                {{- $sep := "" }}
+                {{- range $units }}
+                  {{- if in .bodies $b.slug }}{{ $sep }}<a href="#{{ .slug }}">{{ .record.short | default .name }}</a>{{ $sep = ", " }}{{ end -}}
+                {{- end }}
+              {{- else }}
+                {{- i18n (printf "gear_kind_%s" $b.kind) }}
+              {{- end -}}
+            </span>
+          </th>
+          <td>
+            <span class="gear-hbar">
+              <span class="gear-bodybar" style="width: {{ printf "%.2f" (mul (div (float $b.count) $max) 100) }}%"></span>
+              <span class="gear-hbar__value">{{ lang.FormatNumber 0 $b.count }}</span>
+            </span>
+          </td>
+        </tr>
+        {{- end }}
+      </tbody>
+    </table>
+  </section>
+  {{- end }}
+
+  {{- if or $g.noData $g.noLens }}
+  <p class="gear-footnote" data-no-data="{{ $g.noData }}" data-no-lens="{{ $g.noLens }}">
+    {{- with $g.noData }}{{ i18n "gear_no_data" (dict "Count" .) }}{{ end }}
+    {{- with $g.noLens }} {{ i18n "gear_no_lens" (dict "Count" .) }}{{ end -}}
+  </p>
+  {{- end }}
+
+</div>

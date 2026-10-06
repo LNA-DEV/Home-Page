@@ -43,6 +43,10 @@
 </nav>
 <div class="gallery-archive-link">
   <a href="{{ .RelPermalink }}archive/">{{ i18n "gallery_archive" }}</a>
+  {{- /* A text link, not a fifth card: the gear page is statistics about the
+         gallery, not a way into its photos (docs/concepts/gallery-gear.md). */}}
+  <span aria-hidden="true">·</span>
+  <a href="{{ .RelPermalink }}gear/">{{ i18n "gallery_gear" }}</a>
 </div>
 </div>{{/* end gallery-home-center */}}
 
@@ -57,6 +61,18 @@
 </header>
 
 {{- partial "dex-overview.html" . }}
+
+{{- else if eq .Params.Theme "gear-home" }}
+
+<header class="page-header gallery-page-header">
+  {{- partial "gallery-breadcrumb.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}
+  <div class="post-description">{{ . }}</div>
+  {{- end }}
+</header>
+
+{{- partial "gear-overview.html" . }}
 
 {{- else if eq .Params.Theme "models-home" }}
 

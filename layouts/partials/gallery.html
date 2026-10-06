@@ -39,6 +39,9 @@
     {{- /* Hoisted out of the loop below: partialCached is a map lookup, but this
            range runs 648 times on the general grid. */ -}}
     {{- $modelLookup := partialCached "model-lookup.html" (dict "lang" $lang) $lang -}}
+    {{- /* The gear page, for the camera / lens links in the info popup. */ -}}
+    {{- $gearUrl := "" -}}
+    {{- with site.GetPage "/gallery/gear" }}{{ $gearUrl = .RelPermalink }}{{ end -}}
     {{- range sort $images (.Params.sort_by | default "Name") (.Params.sort_order | default "asc") -}}
       {{- $image := .image -}}
       {{- $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
@@ -80,8 +83,9 @@
           {{- end -}}
           {{- if or .CameraModel .LensModel }}
           <span class="caption-gear">
-            {{- with .CameraModel }}<span class="gear-item" data-field="camera">{{ . }}</span>{{ end -}}
-            {{- with .LensModel }}<span class="gear-item" data-field="lens">{{ . }}</span>{{ end -}}
+            {{- $bodySlug := .BodySlug }}{{ $lensSlug := .LensSlug -}}
+            {{- with .CameraModel }}<span class="gear-item" data-field="camera"{{ if and $gearUrl $bodySlug }} data-gear-url="{{ $gearUrl }}#{{ $bodySlug }}"{{ end }}>{{ . }}</span>{{ end -}}
+            {{- with .LensModel }}<span class="gear-item" data-field="lens"{{ if and $gearUrl $lensSlug }} data-gear-url="{{ $gearUrl }}#{{ $lensSlug }}"{{ end }}>{{ . }}</span>{{ end -}}
           </span>
           {{- end -}}
           {{- with .Software }}<span class="caption-software">{{ . }}</span>{{ end -}}

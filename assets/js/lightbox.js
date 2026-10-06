@@ -400,7 +400,13 @@ if (gallery) {
             const gearLabelByField = { camera: "Camera", lens: "Lens" };
             gearItems.forEach((item, i) => {
               const label = gearLabelByField[item.dataset.field] || gearLabels[i] || "";
-              content += `<div class="pswp-info-item"><span class="pswp-info-label">${label}</span><span class="pswp-info-value">${item.textContent}</span></div>`;
+              // Links to the camera's / lens's entry on the gear page when the
+              // template knew it (data/gear.yaml); plain text otherwise.
+              const url = item.dataset.gearUrl || "";
+              const value = url
+                ? `<a class="pswp-info-gear-link" href="${escapeHtml(url)}">${escapeHtml(item.textContent)}</a>`
+                : escapeHtml(item.textContent);
+              content += `<div class="pswp-info-item"><span class="pswp-info-label">${label}</span><span class="pswp-info-value">${value}</span></div>`;
             });
             content += '</div></div>';
           }

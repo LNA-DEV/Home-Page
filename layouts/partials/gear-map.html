@@ -1,0 +1,118 @@
+{{- /*
+  gear-map.html
+  data/gear.yaml, validated once and turned into lookup maps. Returns:
+
+    .bodies       slug -> body record (with `kind` defaulted to "camera")
+    .lenses       slug -> lens record
+    .bodyOrder    body slugs in file order
+    .lensOrder    lens slugs in file order
+    .bodyByExif   lowercased EXIF Model     -> body slug
+    .lensByExif   lowercased EXIF LensModel -> (dict "slug" … "teleconverter" …)
+
+  collect-images.html resolves every photo through the two *ByExif maps — it is
+  not cached at its call sites and runs once per dex species page, so the lookup
+  has to be one `index`, not a loop over the records. The check that every EXIF
+  string a photo carries matches a record lives in gear-index.html, which sees
+  the whole gallery once per language.
+
+  Call through partialCached:
+    {{ $gear := partialCached "gear-map.html" . }}
+
+  See docs/concepts/gallery-gear.md §2.
+*/ -}}
+{{- $data := hugo.Data.gear | default dict -}}
+{{- $bodies := dict -}}
+{{- $lenses := dict -}}
+{{- $bodyOrder := slice -}}
+{{- $lensOrder := slice -}}
+{{- $bodyByExif := dict -}}
+{{- $lensByExif := dict -}}
+{{- $seen := dict -}}
+{{- $kinds := slice "camera" "drone" "phone" -}}
+{{- $types := slice "zoom" "prime" "macro" "telephoto" "wide" -}}
+
+{{- range $rec := ($data.lenses | default slice) -}}
+  {{- $slug := printf "%v" ($rec.slug | default "") -}}
+  {{- if not $slug -}}
+    {{- errorf "data/gear.yaml: a lens has no `slug:`" -}}
+    {{- continue -}}
+  {{- end -}}
+  {{- if not $rec.name -}}
+    {{- errorf "data/gear.yaml: lens %q has no `name:`" $slug -}}
+  {{- end -}}
+  {{- with index $seen $slug -}}
+    {{- errorf "data/gear.yaml: the slug %q is used twice — slugs are anchors on one page and must be unique across bodies and lenses" $slug -}}
+  {{- end -}}
+  {{- $seen = merge $seen (dict $slug true) -}}
+  {{- range ($rec.type | default slice) -}}
+    {{- if not (in $types .) -}}
+      {{- errorf "data/gear.yaml: lens %q has type %q — one of zoom | prime | macro | telephoto | wide" $slug . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- range $m := ($rec.match | default slice) -}}
+    {{- $text := "" -}}
+    {{- $tc := "" -}}
+    {{- if reflect.IsMap $m -}}
+      {{- $text = printf "%v" ($m.text | default "") -}}
+      {{- $tc = printf "%v" ($m.teleconverter | default "") -}}
+    {{- else -}}
+      {{- $text = printf "%v" $m -}}
+    {{- end -}}
+    {{- $key := lower (trim $text " ") -}}
+    {{- if not $key -}}
+      {{- errorf "data/gear.yaml: lens %q has an empty `match` entry" $slug -}}
+      {{- continue -}}
+    {{- end -}}
+    {{- with index $lensByExif $key -}}
+      {{- errorf "data/gear.yaml: the lens string %q is claimed by both %q and %q" $text .slug $slug -}}
+    {{- end -}}
+    {{- $lensByExif = merge $lensByExif (dict $key (dict "slug" $slug "teleconverter" $tc)) -}}
+  {{- end -}}
+  {{- $lenses = merge $lenses (dict $slug $rec) -}}
+  {{- $lensOrder = $lensOrder | append $slug -}}
+{{- end -}}
+
+{{- range $rec := ($data.bodies | default slice) -}}
+  {{- $slug := printf "%v" ($rec.slug | default "") -}}
+  {{- if not $slug -}}
+    {{- errorf "data/gear.yaml: a body has no `slug:`" -}}
+    {{- continue -}}
+  {{- end -}}
+  {{- if not $rec.name -}}
+    {{- errorf "data/gear.yaml: body %q has no `name:`" $slug -}}
+  {{- end -}}
+  {{- with index $seen $slug -}}
+    {{- errorf "data/gear.yaml: the slug %q is used twice — slugs are anchors on one page and must be unique across bodies and lenses" $slug -}}
+  {{- end -}}
+  {{- $seen = merge $seen (dict $slug true) -}}
+  {{- $kind := $rec.kind | default "camera" -}}
+  {{- if not (in $kinds $kind) -}}
+    {{- errorf "data/gear.yaml: body %q has kind %q — one of camera | drone | phone" $slug $kind -}}
+  {{- end -}}
+  {{- with $rec.lens_default -}}
+    {{- if not (index $lenses .) -}}
+      {{- errorf "data/gear.yaml: body %q names lens_default %q, which is not a lens slug" $slug . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not $rec.match -}}
+    {{- errorf "data/gear.yaml: body %q has no `match:` — list the EXIF Model string(s) that mean it" $slug -}}
+  {{- end -}}
+  {{- range $m := ($rec.match | default slice) -}}
+    {{- $key := lower (trim (printf "%v" $m) " ") -}}
+    {{- with index $bodyByExif $key -}}
+      {{- errorf "data/gear.yaml: the camera string %q is claimed by both %q and %q" $m . $slug -}}
+    {{- end -}}
+    {{- $bodyByExif = merge $bodyByExif (dict $key $slug) -}}
+  {{- end -}}
+  {{- $bodies = merge $bodies (dict $slug (merge $rec (dict "kind" $kind))) -}}
+  {{- $bodyOrder = $bodyOrder | append $slug -}}
+{{- end -}}
+
+{{- return (dict
+      "bodies" $bodies
+      "lenses" $lenses
+      "bodyOrder" $bodyOrder
+      "lensOrder" $lensOrder
+      "bodyByExif" $bodyByExif
+      "lensByExif" $lensByExif
+    ) -}}
