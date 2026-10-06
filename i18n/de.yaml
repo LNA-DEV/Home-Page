@@ -360,7 +360,9 @@
 - id: dex_map_detailed
   translation: "Detailkarte"
 - id: dex_map_detailed_note
-  translation: "Lädt Kartenkacheln und Beobachtungsdaten von OpenStreetMap und GBIF."
+  translation: "Lädt die OpenStreetMap-Grundkarte und Beobachtungsdaten von GBIF über lna-dev.net."
+- id: basemap_no_webgl
+  translation: "Die Hintergrundkarte braucht WebGL, das in diesem Browser ausgeschaltet oder nicht verfügbar ist."
 - id: dex_map_credit
   translation: "Verbreitung: iNaturalist (CC BY 4.0) · Grundkarte: Natural Earth (gemeinfrei)"
 - id: dex_map_unavailable

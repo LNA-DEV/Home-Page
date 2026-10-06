@@ -38,7 +38,7 @@ När jag kom till Öresundsbron var det jättekul att köra över den och komma 
 
 Eftersom det tog lång tid att köra upp från norra Tyskland körde jag direkt till mitt hotell för de kommande dagarna. Jag hade valt ett hotell i Sorgenfri, [Malmö](https://malmo.se/), eftersom natten i tältet inte var bra. Jag hade ingen riktig kudde och jag tänkte också att campingplatser inte ligger nära centrum.
 
-{{< map coordinates="[{\"x\": 47.85, \"y\": 12.12}, {\"x\": 53.408508, \"y\": 10.595831}, {\"x\": 55.5980171, \"y\": 13.0220953 }]" >}}
+{{< map coordinates="[{\"x\": 47.85, \"y\": 12.12}, {\"x\": 53.408508, \"y\": 10.595831}, {\"x\": 55.5980171, \"y\": 13.0220953 }]" route="sverige-2024-chiemgau-malmo" >}}
 
 ## Malmö
 
@@ -110,7 +110,7 @@ Så jag körde till Ikea i Kalmar och köpte en väldigt fin kudde som är svart
 ![Min coola kudde jag köpte](./kudde.jpg)
 {{</collapse>}}
 
-{{< map coordinates="[{\"x\": 55.5980171, \"y\": 13.0220953 }, {\"x\": 57.174311, \"y\": 17.035819 }]" >}}
+{{< map coordinates="[{\"x\": 55.5980171, \"y\": 13.0220953 }, {\"x\": 57.174311, \"y\": 17.035819 }]" route="sverige-2024-malmo-oland" >}}
 
 På Öland letade jag efter en campingplats som tar emot personer under 23 år, men det var svårt. Efter ett tag trodde jag att jag hade hittat en och körde dit. Efter att jag checkat in och satt upp mitt tält märkte jag att också denna campingplats endast var för personer över 23 år. Men det var absolut inget problem, så jag tänkte att det inte skulle ha varit ett problem på de andra campingplatserna heller.
 
@@ -144,7 +144,7 @@ En annan dag körde jag runt hela Öland med bilen och stannade till här och d�
 
 Jag var inte länge i [Kalmar](https://kalmar.com/), men jag tänkte att jag åtminstone skulle besöka staden för en dag. Och det gjorde jag.
 
-{{< map coordinates="[{\"x\": 57.174311, \"y\": 17.035819 }, {\"x\": 56.671736, \"y\": 16.367111 }]" >}}
+{{< map coordinates="[{\"x\": 57.174311, \"y\": 17.035819 }, {\"x\": 56.671736, \"y\": 16.367111 }]" route="sverige-2024-oland-kalmar" >}}
 
 Jag körde ner till Kalmar och promenerade genom staden. Jag tog en titt på universitetet, hamnen och ett museum. Det var väldigt intressant. Museet, kallat [Kalmar Slott](https://kalmarslott.se/), var riktigt roligt att besöka. I slottet, som ligger vid kusten, fanns olika utställningar med information på både svenska och engelska. Jag använde båda språken så att jag inte behövde vänta. Det fanns även personer utklädda till prinsessor, hovdamer och riddare som agerade som om de verkligen levde på den tiden. Det var fint att se historien komma till liv och lära sig något om Kalmarunionen. När jag var där hade de även en [häxutställning](https://kalmarslott.se/nyheter/haxor-ny-utstallning/), vilket var min första introduktion till häxor i Sverige. Också väldigt spännande. Jag försökte läsa all information på svenska, men jag förstod inte riktigt allt till hundra procent.
 
@@ -166,7 +166,7 @@ Efteråt sov jag på ett litet vandrarhem som jag hade bokat helt på svenska. J
 
 Nästa morgon behövde jag stiga upp tidigt eftersom jag bara hade bokat en natt på vandrarhemmet och ville hinna duscha innan jag checkade ut. Jag ville inte heller missa frukosten 😉 Jag övervägde om jag skulle stanna längre i Kalmar eftersom jag hade träffat nya människor för första gången under resan, men jag bestämde att kvällen innan var en bra avslutning. Så jag körde vidare mot [Stockholm](https://www.visitstockholm.se/).
 
-{{< map coordinates="[{\"x\": 56.671736, \"y\": 16.367111 }, {\"x\": 59.302125, \"y\": 18.094136 }]" >}}
+{{< map coordinates="[{\"x\": 56.671736, \"y\": 16.367111 }, {\"x\": 59.302125, \"y\": 18.094136 }]" route="sverige-2024-kalmar-stockholm" >}}
 
 Det var faktiskt en ganska lång resa till Stockholm. Men jag körde det mesta av sträckan med bara en eller två pauser, så jag var framme efter några timmar. Jag hade valt ett hotell i Södra Hammarbyn som jag tänka är en god miljö.
 
@@ -210,7 +210,7 @@ Det var verkligen vackert där ute. Men skärgården är så stor att en båttur
 
 Nu kommer vi till den sista staden på min resa. Efter några dagar i Stockholm körde jag söderut mot [Göteborg](https://www.goteborg.com/). På vägen tog jag omvägar genom skogar och mindre vägar som verkade intressanta – något jag nu ångrar att jag inte gjorde oftare under resan. Efter nästan en hel dag bakom ratten nådde jag Göteborg.
 
-{{< map coordinates="[{\"x\": 59.302125, \"y\": 18.094136 }, {\"x\": 57.688636, \"y\": 11.987281 }]" >}}
+{{< map coordinates="[{\"x\": 59.302125, \"y\": 18.094136 }, {\"x\": 57.688636, \"y\": 11.987281 }]" route="sverige-2024-stockholm-goteborg" >}}
 
 Jag måste erkänna att jag var ganska trött när jag kom hit. Efter två veckors resande började energin ta slut och vädret var inte heller det bästa. Därför blev det färre aktiviteter här än i tidigare städer, vilket ändå kändes okej – jag behövde verkligen lite lugnare tempo.
 
@@ -232,7 +232,7 @@ Jag vet faktiskt inte riktigt vad jag ska säga om Göteborg. Kanske berodde det
 
 Efter några dagar i Göteborg var det dags att avsluta resan och köra hemåt. Första etappen tog mig tillbaka till Malmö, där jag köpte några souvenirer till mina nära och kära. Därefter körde jag vidare till Kolding i Danmark, där jag övernattade nära Koldingarenan. Nästa dag gick resan tillbaka genom Tyskland och till slut hem.
 
-{{< map coordinates="[{\"x\": 57.688636, \"y\": 11.987281 }, {\"x\": 55.464744, \"y\": 9.476542 }, {\"x\": 48.70354 , \"y\": 9.65209 }, {\"x\": 47.85, \"y\": 12.12}]" >}}
+{{< map coordinates="[{\"x\": 57.688636, \"y\": 11.987281 }, {\"x\": 55.464744, \"y\": 9.476542 }, {\"x\": 48.70354 , \"y\": 9.65209 }, {\"x\": 47.85, \"y\": 12.12}]" route="sverige-2024-goteborg-chiemgau" >}}
 
 ## Tack för att du läste
 

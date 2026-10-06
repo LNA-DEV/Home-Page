@@ -116,7 +116,9 @@ Two engine differences the tests have to respect. Playwright cannot grant clipbo
 | Filter bubbles | clicking a category hides every `.gallery-item` of another category; "all" restores |
 | Photo page | prev/next stay within general or archive; copy-link marks the button copied (clipboard content asserted in Chromium) |
 | Dex overview | search narrows, a group pill narrows, "photographed only" leaves only `data-caught="1"` cards, the empty state appears when nothing matches |
-| Dex map | **no request leaves localhost on load**; land, range and sightings render at the three longitude copies; "detailed map" requests `tile.openstreetmap.org` and `api.gbif.org` (mocked, asserted) and nothing else |
+| Dex map | **no request leaves localhost on load** and MapLibre is not even loaded; land, range and sightings render at the three longitude copies; "detailed map" asks the companion for the basemap TileJSON, its vector tiles and the GBIF density tiles (mocked, asserted) and nobody else; the ocean mask takes the flavor's water colour and follows a theme switch; a second click restores the drawn world |
+| Trip map | the companion's stored `transportIn.geometry` is drawn as given, a leg without one stays straight, no router is asked, the basemap comes from the companion and switches flavor with the theme, the routes credit `transitous.org/sources/` |
+| Route map (`{{< map >}}`) | all six maps of the Swedish post draw their committed route over the basemap, one TileJSON request for the page, no third party. The build half: a `route=` naming no file stops a fixture build (`tests/build/map-route.spec.ts`); statically, no built file names a third-party map host (`tests/static/maps.spec.ts`) |
 | Language switcher | from a translated page lands on the translation, from an untranslated page on the other language's home |
 | Feed | filter buttons hide the other kinds; a photo item's link jumps to the gallery and opens the lightbox on the right photo (the FNV hash contract in CLAUDE.md) |
 | Gaming | sort by playtime / recent / A–Z reorders the tiles; the platform row appears only with two or more platforms |

@@ -350,7 +350,9 @@
 - id: dex_map_detailed
   translation: "Detaljerad karta"
 - id: dex_map_detailed_note
-  translation: "Laddar kartrutor och observationsdata från OpenStreetMap och GBIF."
+  translation: "Laddar OpenStreetMap-bakgrundskartan och observationsdata från GBIF via lna-dev.net."
+- id: basemap_no_webgl
+  translation: "Bakgrundskartan behöver WebGL, som är avstängt eller saknas i den här webbläsaren."
 - id: dex_map_credit
   translation: "Utbredning: iNaturalist (CC BY 4.0) · Bakgrundskarta: Natural Earth (public domain)"
 - id: dex_map_unavailable

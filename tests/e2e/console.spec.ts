@@ -5,9 +5,9 @@
  * failure, and the fixture already excludes them. */
 
 import { test, expect } from "../support/fixtures";
-import { ALLOW_COMPANION, ALLOW_MAP_TILES, mockCompanion, mockDetailedMap } from "../support/network";
+import { ALLOW_COMPANION, mockCompanion, mockMapTiles } from "../support/network";
 
-test.use({ net: { allow: [...ALLOW_COMPANION, ...ALLOW_MAP_TILES] } });
+test.use({ net: { allow: ALLOW_COMPANION } });
 
 const PAGES: Record<string, string> = {
   home: "/en/",
@@ -17,6 +17,8 @@ const PAGES: Record<string, string> = {
   "gallery-projects": "/en/gallery/projects/",
   "dex-home": "/en/gallery/dex/",
   "dex-species": "/en/gallery/dex/red-fox/",
+  /* The {{< map >}} shortcode: six maps that draw the basemap on load. */
+  "route-map": "/sv/posts/resa/sverige/2024/",
   "models-home": "/en/gallery/models/",
   feed: "/en/feed/",
   gaming: "/en/gaming/",
@@ -28,7 +30,7 @@ const PAGES: Record<string, string> = {
 for (const [theme, url] of Object.entries(PAGES)) {
   test(`${theme} reports no console error and no failed request`, async ({ page, probe }) => {
     await mockCompanion(page);
-    await mockDetailedMap(page);
+    await mockMapTiles(page);
 
     const res = await page.goto(url);
     expect(res?.status(), url).toBeLessThan(400);

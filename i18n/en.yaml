@@ -361,7 +361,9 @@
 - id: dex_map_detailed
   translation: "Detailed map"
 - id: dex_map_detailed_note
-  translation: "Loads map tiles and observation data from OpenStreetMap and GBIF."
+  translation: "Loads the OpenStreetMap basemap and GBIF observation data from lna-dev.net."
+- id: basemap_no_webgl
+  translation: "The background map needs WebGL, which is turned off or unavailable in this browser."
 - id: dex_map_credit
   translation: "Range: iNaturalist (CC BY 4.0) · Base map: Natural Earth (public domain)"
 - id: dex_map_unavailable

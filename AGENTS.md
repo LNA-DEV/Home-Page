@@ -999,6 +999,32 @@ are a small closed set, so a miss is always a typo:
 Do **not** run `./deploy.sh` — deployment is a separate step the user authorizes
 explicitly.
 
+## A route map in a post
+
+`{{< map coordinates="…" route="<name>" >}}` draws a committed route over the
+site's own basemap; nothing is routed in the visitor's browser
+(`docs/concepts/self-hosted-maps.md` §7). The route is fetched once:
+
+```
+python3 scripts/map-route.py <name> <lat,lng> <lat,lng> [<lat,lng> …]
+python3 scripts/map-route.py <name> … --dry-run     # print the request only
+python3 scripts/map-route.py <name> … --force       # replace an existing route
+```
+
+- One OSRM request (driving, the public demo server) per run, then a one-second
+  pause, so a shell loop over several routes stays within its limit.
+- It writes `assets/data/maps/routes/<name>.geojson`: OSRM's full geometry,
+  thinned to `--tolerance` degrees (default 0.0005, ~50 m), rounded to 5
+  decimals. A 1,400 km drive comes out at ~1,200 points and ~25 KB, inlined into
+  the page.
+- `<name>` is lowercase-with-dashes; give the points in driving order, the same
+  ones the shortcode's `coordinates` lists.
+- Then add `route="<name>"` to the shortcode. A `route` with no file stops the
+  build; leaving `route` off draws straight lines.
+
+The script only writes the file; commit it yourself. Do **not** run
+`./deploy.sh` afterwards — that is a separate, explicitly authorised step.
+
 ## Testing
 
 One command, one report. `docs/concepts/testing.md` is the design; §11 of it is
@@ -1046,9 +1072,9 @@ test with Hugo's log attached and everything downstream is skipped.
   the same commit that adds its redirect — an alias on the page that replaced it,
   or an entry in that photo's `slugAliases:`.
 - **Nothing reaches the network.** Every request to a host other than localhost
-  is aborted; the companion API, listmonk and the map tiles are mocked, and the
-  analytics script is answered with an empty stub (blocking it makes Chromium log
-  a console error that Firefox does not). If a scenario needs a third party, it
+  is aborted; the companion API (map tiles included) and listmonk are mocked, and
+  the analytics script is answered with an empty stub (blocking it makes Chromium
+  log a console error that Firefox does not). If a scenario needs a third party, it
   asks for it by name with `test.use({ net: { allow: [...] } })`.
 - **Writing a lightbox scenario? Use `openLightbox()` from
   `tests/support/fixtures.ts`.** PhotoSwipe wires the keyboard and the close path

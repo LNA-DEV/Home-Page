@@ -1,0 +1,21 @@
+/* The note basemap.js puts inside a map when the basemap cannot be drawn for
+   want of WebGL. Above the map's panes, below Leaflet's controls (800), and it
+   takes no clicks, so the map underneath can still be dragged and zoomed. */
+.basemap-notice {
+    position: absolute;
+    z-index: 750;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: calc(100% - 96px);
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--entry);
+    color: var(--primary);
+    font-size: 0.8rem;
+    line-height: 1.35;
+    text-align: center;
+    pointer-events: none;
+}

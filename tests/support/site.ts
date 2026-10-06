@@ -148,6 +148,14 @@ const HEAVY = new Set(["images", "packages"]);
 
 export const htmlFiles = memo<string[]>(() => walk(SITE_DIR, { exts: [".html"], skipDirs: HEAVY }).sort());
 export const xmlFiles = memo<string[]>(() => walk(SITE_DIR, { exts: [".xml"], skipDirs: HEAVY }).sort());
+/* Every text file a browser might run or read, /packages/ included — the
+   vendored libraries are exactly where a third-party host would hide. */
+export const textFiles = memo<string[]>(() =>
+  walk(SITE_DIR, {
+    exts: [".html", ".js", ".mjs", ".css", ".json", ".geojson", ".xml", ".txt", ".webmanifest", ".map"],
+    skipDirs: new Set(["images"]),
+  }).sort(),
+);
 
 export function readSiteFile(rel: string): string {
   return fs.readFileSync(sitePath(rel), "utf8");

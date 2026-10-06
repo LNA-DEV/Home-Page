@@ -7,15 +7,22 @@
    and for a range map, continents are the useful level of detail anyway.
 
    Pressing "detailed map" is the explicit opt-in that swaps the drawn world for
-   OpenStreetMap tiles plus the GBIF occurrence-density overlay. The range stays
-   on top in both modes, since comparing the modelled range against the actual
-   observations is the interesting part.
+   the site's own OpenStreetMap basemap (basemap.js) plus the GBIF
+   occurrence-density overlay. Both come through the companion, so even this
+   mode sends the visitor to no third party (docs/concepts/self-hosted-maps.md);
+   it stays an opt-in because MapLibre is ~300 KB and the drawn world is the
+   right default for a range map. The range stays on top in both modes, since
+   comparing the modelled range against the actual observations is the
+   interesting part.
 
    Note on the antimeridian: a raster base layer repeats itself forever, but a
    GeoJSON world is drawn exactly once. So every vector layer here — land,
    borders and range alike — is drawn at three longitude offsets. Duplicating
    only the range (as this did originally) leaves its copies floating over empty
    ocean at the edges of a zoomed-out map. */
+import * as params from "@params";
+import { addBasemap, clearBasemapNotice, currentFlavor, waterColor, BASEMAP_ATTRIBUTION } from "./basemap.js";
+
 (function () {
   const container = document.querySelector("[data-dex-map]");
   if (!container || typeof L === "undefined") return;
@@ -103,18 +110,19 @@
   let rangeBounds = null;
   let detailed = false;
 
-  /* OpenStreetMap's own sea colour. The mask has to match whatever is beneath
-     it, so it changes with the mode. */
-  const OSM_SEA = "#aad3df";
+  /* The basemap handle once "detailed map" has drawn one (see below), else null.
+     The mask has to match whatever sea is beneath it: the drawn world's, or the
+     basemap flavor's. */
+  let base = null;
   /* The mask is a 110m coastline. That agrees exactly with the drawn world,
-     which is the same data — but over OSM tiles it drifts from the real
+     which is the same data — but over the basemap it drifts from the real
      coastline as you zoom, so past this point it fades out and you see the
      unmasked model over real geography. */
   const MASK_FULL_ZOOM = 5;
   const MASK_GONE_ZOOM = 7;
 
   function maskOpacity() {
-    if (!detailed) return 1;
+    if (!base) return 1;
     const zoom = map.getZoom();
     if (zoom <= MASK_FULL_ZOOM) return 1;
     if (zoom >= MASK_GONE_ZOOM) return 0;
@@ -126,7 +134,7 @@
     for (const layer of maskCopies) {
       layer.setStyle({
         stroke: false,
-        fillColor: detailed ? OSM_SEA : colors.water,
+        fillColor: base ? waterColor(base.flavor) : colors.water,
         fillOpacity,
       });
     }
@@ -143,7 +151,7 @@
        ocean  water repainted on top, which clips the range back to the coast
        lines  country borders last, so nothing hides them
 
-     All sit above tilePane, so the range still reads over OSM tiles. */
+     All sit above tilePane, so the range still reads over the basemap. */
   const PANES = { land: 410, range: 420, ocean: 430, lines: 440 };
   const renderers = {};
   for (const [name, zIndex] of Object.entries(PANES)) {
@@ -188,7 +196,7 @@
       color: colors.range,
       weight: overTiles ? 1.5 : 1,
       fillColor: colors.range,
-      // Lighter over OSM, so the map underneath stays readable.
+      // Lighter over the basemap, so the map underneath stays readable.
       fillOpacity: overTiles ? 0.18 : 0.35,
     };
   }
@@ -329,54 +337,67 @@
     }
   });
 
-  /* --- opt-in third-party layers ------------------------------------------ */
+  /* --- "detailed map" ---------------------------------------------------- */
   const detailButton = document.querySelector("[data-dex-map-detail]");
   if (!detailButton) return;
 
-  let tiles = null;
+  const TILEJSON = params.basemapTileJson || "";
+  const GBIF_TILES = (params.gbifTiles || "").replace(/\/$/, "");
+  /* Below the tile pane, so GBIF's density tiles always lie on top of it. */
+  map.createPane("dex-basemap").style.zIndex = 150;
+
   let density = null;
   let attribution = null;
+  /* Bumped on every click, so a basemap that finishes loading after the visitor
+     already switched back is thrown away instead of shown. */
+  let generation = 0;
   const taxonKey = container.dataset.gbifKey;
 
-  detailButton.addEventListener("click", () => {
+  detailButton.addEventListener("click", async () => {
+    const mine = ++generation;
     if (!detailed) {
+      detailed = true;
+      detailButton.classList.add("is-active");
       // The drawn world needs no attribution control (it is credited in the
-      // caption), but OSM and GBIF do, so one is created when they appear.
+      // caption), but the basemap and GBIF do, so one is created when they appear.
       attribution = L.control.attribution({ prefix: false }).addTo(map);
-      tiles = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 12,
-        attribution:
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      }).addTo(map);
-      if (taxonKey) {
-        density = L.tileLayer(
-          "https://api.gbif.org/v2/map/occurrence/density/{z}/{x}/{y}@1x.png" +
-            "?srs=EPSG%3A3857&style=classic.poly&bin=hex&hexPerTile=110&taxonKey=" +
-            encodeURIComponent(taxonKey),
-          {
-            opacity: 0.7,
-            maxZoom: 14,
-            attribution:
-              'Occurrences: <a href="https://www.gbif.org/species/' +
-              encodeURIComponent(taxonKey) +
-              '">GBIF</a>',
-          }
-        ).addTo(map);
+      if (taxonKey && GBIF_TILES) {
+        density = L.tileLayer(`${GBIF_TILES}/${encodeURIComponent(taxonKey)}/{z}/{x}/{y}.png`, {
+          opacity: 0.7,
+          maxZoom: 14,
+          attribution:
+            'Occurrences: <a href="https://www.gbif.org/species/' +
+            encodeURIComponent(taxonKey) +
+            '">GBIF</a>',
+        }).addTo(map);
       }
+      map.setMaxZoom(14);
+
+      /* MapLibre loads only now. Without WebGL2 this is null, the drawn
+         world simply stays under the GBIF overlay, and basemap.js says why
+         inside the map. */
+      const handle = await addBasemap(map, { tileJson: TILEJSON, pane: "dex-basemap" });
+      if (mine !== generation) {
+        if (handle) handle.remove();
+        // Switched back meanwhile: no late note about a basemap nobody wants.
+        if (!detailed) clearBasemapNotice(map);
+        return;
+      }
+      if (!handle) return;
+      base = handle;
+      attribution.addAttribution(BASEMAP_ATTRIBUTION);
       // Only the drawn world is swapped out — the range polygon and its ocean
       // mask both stay, so the range still means "on land" in this mode too.
       map.removeLayer(baseLayers);
       for (const layer of rangeCopies) layer.setStyle(rangeStyle(true));
-      map.setMaxZoom(14);
-      detailButton.classList.add("is-active");
-      detailed = true;
       applyMaskStyle();
     } else {
-      if (tiles) map.removeLayer(tiles);
+      if (base) base.remove();
+      clearBasemapNotice(map);
       if (density) map.removeLayer(density);
       if (attribution) map.removeControl(attribution);
-      tiles = density = attribution = null;
-      map.addLayer(baseLayers);
+      base = density = attribution = null;
+      if (!map.hasLayer(baseLayers)) map.addLayer(baseLayers);
       for (const layer of rangeCopies) layer.setStyle(rangeStyle(false));
       if (map.getZoom() > 7) map.setZoom(7);
       map.setMaxZoom(7);
@@ -385,4 +406,11 @@
       applyMaskStyle();
     }
   });
+
+  /* The basemap follows the site theme; its sea colour, and so the mask, with it. */
+  new MutationObserver((mutations) => {
+    if (!base || !mutations.some((m) => m.attributeName === "data-theme")) return;
+    base.setFlavor(currentFlavor());
+    applyMaskStyle();
+  }).observe(document.documentElement, { attributes: true });
 })();

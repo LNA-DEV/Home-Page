@@ -1,42 +1,27 @@
-{{- $coordinatesJson := .Get "coordinates" }}
-{{- $coordinates := $coordinatesJson | transform.Unmarshal }}
+{{- /* A route map in a post body: the site's own basemap, the waypoints as pins,
+       and the drive between them.
+
+         {{< map coordinates="[{\"x\": lat, \"y\": lng}, …]" route="<name>" >}}
+
+       `route` names assets/data/maps/routes/<name>.geojson, fetched once by
+       scripts/map-route.py. The line is inlined into the page, so the map asks
+       nobody for it; the old version had leaflet-routing-machine ask OSRM's demo
+       server on every view. Without `route` the waypoints are joined by straight
+       lines. A `route` that names no file stops the build. The Leaflet wiring is
+       assets/js/route-map.js, which head.html loads on any page using this
+       shortcode (docs/concepts/self-hosted-maps.md §7). */ -}}
+{{- $coordinates := .Get "coordinates" | transform.Unmarshal }}
+{{- $route := slice }}
+{{- with .Get "route" }}
+  {{- with resources.Get (printf "data/maps/routes/%s.geojson" .) }}
+    {{- $route = (.Content | transform.Unmarshal).geometry.coordinates }}
+  {{- else }}
+    {{- errorf "%s: map route %q has no file assets/data/maps/routes/%s.geojson — fetch it with scripts/map-route.py" $.Position . . }}
+  {{- end }}
+{{- end }}
 {{- /* The element id must be unique on the page and identical between two
        builds of the same tree: math.Rand made every build differ, which
        ruled out the determinism check in docs/concepts/testing.md. */}}
-{{ $id := printf "map%d" .Ordinal }}
-
-<div id="{{ $id }}" class="map"></div>
-<script src="/packages/leaflet/leaflet.js"></script>
-<script src="/packages/leaflet-routing-machine/leaflet-routing-machine.min.js"></script>
-
-<script>
-    function initializeMap(mapId, coordinates) {
-        var map = L.map(mapId).setView([0, 0], 13);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors'
-        }).addTo(map);
-
-        var waypoints = coordinates.map(function(coord) {
-            return L.latLng(coord.x, coord.y);
-        });
-
-        L.Routing.control({
-            show: false,
-            collapsible: true,
-            waypoints: waypoints,
-            routeWhileDragging: false
-        }).addTo(map);
-
-        map.fitBounds(waypoints);
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const coordinates = [
-            {{- range $coordinates }}
-                { x: {{ .x }}, y: {{ .y }} },
-            {{- end }}
-        ];
-        initializeMap('{{ $id }}', coordinates);
-    });
-</script>
+<div id="map{{ .Ordinal }}" class="map" data-route-map
+     data-points="{{ $coordinates | jsonify }}"
+     data-route="{{ $route | jsonify }}"></div>

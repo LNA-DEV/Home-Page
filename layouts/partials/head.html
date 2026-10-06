@@ -324,13 +324,19 @@
 <script src="{{ $js.RelPermalink }}" defer></script>
 {{- end }}
 
+{{- /* Trips and map tiles come from the companion API; dev (hugo server) hits the
+       local companion. Every map's basemap is the companion's TileJSON
+       (assets/js/basemap.js, docs/concepts/self-hosted-maps.md). */}}
+{{- $companion := cond hugo.IsProduction (site.Params.CompanionUrl | default "https://companion.lna-dev.net") "http://localhost:8080" }}
+{{- $basemapTileJson := printf "%s/api/tiles/basemap.json" $companion }}
+
 {{/*  Travel — trip map/feed on /travel/* and any post embedding the {{< trip >}} shortcode  */}}
 {{- if or (strings.Contains .Path "/travel") (.HasShortcode "trip") }}
 <script src="/packages/leaflet/leaflet.js" defer></script>
-{{- /* Trips come from the companion API; dev (hugo server) hits the local companion. */}}
-{{ $companion := cond hugo.IsProduction (site.Params.CompanionUrl | default "https://companion.lna-dev.net") "http://localhost:8080" }}
 {{ $tripParams := dict
 "tripsBaseUrl" (printf "%s/api/trips" $companion)
+"basemapTileJson" $basemapTileJson
+"basemapNoWebgl" (i18n "basemap_no_webgl")
 "badgeHere" (i18n "trip_badge_here")
 "badgeUpcoming" (i18n "trip_badge_upcoming")
 "photosPending" (i18n "trip_photos_pending")
@@ -357,14 +363,29 @@
 <script src="{{ $tripJs.RelPermalink }}" defer></script>
 {{- end }}
 
+{{/*  Route maps — the {{< map >}} shortcode in a post body  */}}
+{{- if .HasShortcode "map" }}
+{{- if not (or (strings.Contains .Path "/travel") (.HasShortcode "trip")) }}
+<script src="/packages/leaflet/leaflet.js" defer></script>
+{{- end }}
+{{ $routeMapJs := resources.Get "js/route-map.js" | js.Build (dict "minify" true "params" (dict "basemapTileJson" $basemapTileJson "basemapNoWebgl" (i18n "basemap_no_webgl"))) | resources.Fingerprint }}
+<script src="{{ $routeMapJs.RelPermalink }}" defer></script>
+{{- end }}
+
 {{/*  Photo dex — grid filtering on the overview, local-first range map on a species page  */}}
 {{- if eq .Params.Theme "dex-home" }}
 {{ $dexJs := resources.Get "js/dex.js" | js.Build (dict "minify" true) | resources.Fingerprint }}
 <script src="{{ $dexJs.RelPermalink }}" defer></script>
 {{- else if eq .Params.Theme "dex-species" }}
-{{- /* Both deferred, so Leaflet is guaranteed to have run before dex-map.js. */}}
+{{- /* Both deferred, so Leaflet is guaranteed to have run before dex-map.js.
+       MapLibre and the basemap load only after a click on "detailed map". */}}
 <script src="/packages/leaflet/leaflet.js" defer></script>
-{{ $dexMapJs := resources.Get "js/dex-map.js" | js.Build (dict "minify" true) | resources.Fingerprint }}
+{{ $dexMapParams := dict
+"basemapTileJson" $basemapTileJson
+"basemapNoWebgl" (i18n "basemap_no_webgl")
+"gbifTiles" (printf "%s/api/tiles/gbif" $companion)
+}}
+{{ $dexMapJs := resources.Get "js/dex-map.js" | js.Build (dict "minify" true "params" $dexMapParams) | resources.Fingerprint }}
 <script src="{{ $dexMapJs.RelPermalink }}" defer></script>
 {{- else if eq .Params.Theme "game" }}
 {{- /* A game page: the achievement filter/sort is small and always there. The

@@ -5,8 +5,10 @@
   Everything the first paint needs is served from this site: a Natural Earth
   world outline (public domain) as the base layer, plus the species' own
   simplified iNaturalist range polygon if scripts/dex-ranges.py fetched one.
-  No third-party request happens unless the visitor presses "detailed map",
-  which is what makes the page usable over the Tor onion build.
+  Nothing else is requested until the visitor presses "detailed map", which is
+  what makes the page usable over the Tor onion build — and even that mode asks
+  only the companion, for the site's own basemap and the GBIF overlay it proxies
+  (docs/concepts/self-hosted-maps.md).
 
   The actual Leaflet wiring lives in assets/js/dex-map.js; everything it needs
   arrives through data-* attributes so no template values end up inside a

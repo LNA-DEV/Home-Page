@@ -111,33 +111,49 @@ export async function mockListmonk(page: Page, opts: { fail?: boolean } = {}) {
   return { posted };
 }
 
-/** The two the "detailed map" button is allowed to reach, and nothing else. */
-export async function mockDetailedMap(page: Page) {
+/** A transparent 1×1 PNG: a raster tile layer only needs the request to succeed. */
+const PNG_1X1 = Buffer.from(
+  "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGNgYGBgAAAABQABpfZFQAAAAABJRU5ErkJggg==",
+  "base64",
+);
+
+/** The basemap version the TileJSON mock points at. */
+export const BASEMAP_VERSION = "20261005";
+
+/** Every map tile the site asks for comes from the companion
+ *  (docs/concepts/self-hosted-maps.md): the basemap's TileJSON and its vector
+ *  tiles, and GBIF's density overlay through the companion's proxy. `hit`
+ *  records each request, so a test can assert what a map actually used.
+ *
+ *  A vector tile is answered with an empty body — a valid, empty tile, which
+ *  MapLibre draws as nothing. Whether anything was *drawn* is not this mock's
+ *  question; that the page asked the companion, and nobody else, is. */
+export async function mockMapTiles(page: Page) {
   const hit: string[] = [];
-  await page.route(/tile\.openstreetmap\.org/, (route) => {
+  await page.route(`${COMPANION}/api/tiles/basemap.json`, (route) => {
     hit.push(route.request().url());
-    /* A 1×1 transparent PNG: Leaflet only needs the request to succeed. */
     return route.fulfill({
-      contentType: "image/png",
-      body: Buffer.from(
-        "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==",
-        "base64",
-      ),
+      json: {
+        tilejson: "3.0.0",
+        name: "Protomaps Basemap",
+        tiles: [`${COMPANION}/api/tiles/basemap/${BASEMAP_VERSION}/{z}/{x}/{y}.mvt`],
+        minzoom: 0,
+        maxzoom: 15,
+        bounds: [-180, -85.0511287, 180, 85.0511287],
+        vector_layers: [],
+      },
     });
   });
-  await page.route(/api\.gbif\.org/, (route) => {
+  await page.route(`${COMPANION}/api/tiles/basemap/**`, (route) => {
     hit.push(route.request().url());
-    return route.fulfill({
-      contentType: "image/png",
-      body: Buffer.from(
-        "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==",
-        "base64",
-      ),
-    });
+    return route.fulfill({ contentType: "application/x-protobuf", body: Buffer.alloc(0) });
+  });
+  await page.route(`${COMPANION}/api/tiles/gbif/**`, (route) => {
+    hit.push(route.request().url());
+    return route.fulfill({ contentType: "image/png", body: PNG_1X1 });
   });
   return { hit };
 }
 
 export const ALLOW_COMPANION = [/companion\.lna-dev\.net/];
 export const ALLOW_LISTMONK = [/listmonk\.lna-dev\.net/];
-export const ALLOW_MAP_TILES = [/tile\.openstreetmap\.org/, /api\.gbif\.org/];

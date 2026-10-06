@@ -1,22 +1,28 @@
 /* Trip map + itinerary feed.
    Renders every `.trip-app[data-trip-slug]` on the page: fetches the trip,
-   draws a Leaflet map with per-mode routing (real road/rail geometry via OSRM +
-   Transitous, falling back to straight lines), and a synced itinerary feed with a
+   draws a Leaflet map with each leg's route, and a synced itinerary feed with a
    photo lightbox. Used by the /travel/<slug>/ detail page and the {{< trip >}} shortcode.
 
    Data source: the companion API `${tripsBaseUrl}/<slug>` (e.g.
    https://companion.lna-dev.net/api/trips/<slug>). `tripsBaseUrl` is wired in
    head.html and points at the local companion in dev. Photo `src` values are
    server-relative (`/api/trips/media/...`) and are resolved against the API
-   origin (see `photoSrc`). Per-leg `transportIn.geometry`, if present, is used
-   as-is and skips routing; otherwise `transportIn.waypoints` (manual via-points)
-   are threaded into the route in order, so OSRM/rail routing — and the straight
-   fallback — follow A → via-points → B. Colors come from CSS variables so dark
-   mode recolors lines + tiles. */
+   origin (see `photoSrc`).
+
+   The browser routes nothing. The companion computes each leg's road or rail
+   geometry once, when the trip is saved, and delivers it as
+   `transportIn.geometry` ([[lat, lng], …]); a leg without one — a flight, or a
+   route not computed yet — is drawn straight through its manual via-points
+   (`transportIn.waypoints`), A → via-points → B. The basemap is the site's own
+   (basemap.js), so a trip page sends the visitor to no third party at all
+   (docs/concepts/self-hosted-maps.md). Colors come from CSS variables so dark
+   mode recolors the lines, and the basemap switches flavor with them. */
 
 import * as params from "@params";
+import { addBasemap, currentFlavor, BASEMAP_ATTRIBUTION } from "./basemap.js";
 
 const TRIPS_BASE = (params.tripsBaseUrl || "/api/trips").replace(/\/$/, "");
+const TILEJSON = params.basemapTileJson || "";
 
 /* Photos come back with server-relative URLs (/api/trips/media/...) served by the
    companion, which is a different origin than the site — resolve them to absolute. */
@@ -47,13 +53,14 @@ const T = {
   notFound: params.notFoundMsg || "Trip not found.",
 };
 
-/* Per-mode routing endpoints (community/demo servers — see transitous.org/api). */
-const OSRM = "https://router.project-osrm.org/route/v1";
-const TRANSITOUS = "https://api.transitous.org/api/v1/plan";
-const RAIL_MODES = "RAIL";
 const ICONS = { train: "🚆", flight: "✈", car: "🚗" };
 
-/* registry of rendered apps, so a theme toggle can recolor lines + swap tiles */
+/* The routes are the companion's (OSRM for roads, Transitous for rail), and
+   Transitous asks for a visible link to its sources. */
+const ATTRIBUTION = `${BASEMAP_ATTRIBUTION} · routes &copy; OSRM &amp; ` +
+  `<a href="https://transitous.org/sources/">Transitous</a>`;
+
+/* registry of rendered apps, so a theme toggle can recolor lines + the basemap */
 const apps = [];
 
 /* ---- helpers ---- */
@@ -68,14 +75,6 @@ function lineColors() {
     car: cssVar("--trip-car", "#185FA5"),
   };
 }
-function isDark() {
-  return document.documentElement.dataset.theme === "dark";
-}
-function tileUrl() {
-  return isDark()
-    ? "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-    : "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
-}
 function relTime(iso) {
   if (!iso) return "";
   const diff = new Date(iso).getTime() - Date.now();
@@ -86,93 +85,6 @@ function relTime(iso) {
   if (abs < hr) return rtf.format(Math.round(diff / min), "minute");
   if (abs < day) return rtf.format(Math.round(diff / hr), "hour");
   return rtf.format(Math.round(diff / day), "day");
-}
-
-/* a near-future weekday morning — we only need a date with live service to trace the
-   track geometry; it need not match the stop's display date */
-function railQueryTime() {
-  const d = new Date(Date.now() + 24 * 3600 * 1000);
-  d.setHours(9, 0, 0, 0);
-  return d.toISOString();
-}
-
-/* standard Google encoded-polyline decoder; factor = 10^precision (v1 = 7) */
-function decodePolyline(str, precision) {
-  const factor = Math.pow(10, precision || 7);
-  let index = 0, lat = 0, lng = 0;
-  const out = [];
-  while (index < str.length) {
-    let result = 0, shift = 0, b;
-    do { b = str.charCodeAt(index++) - 63; result |= (b & 0x1f) << shift; shift += 5; } while (b >= 0x20);
-    lat += (result & 1) ? ~(result >> 1) : (result >> 1);
-    result = 0; shift = 0;
-    do { b = str.charCodeAt(index++) - 63; result |= (b & 0x1f) << shift; shift += 5; } while (b >= 0x20);
-    lng += (result & 1) ? ~(result >> 1) : (result >> 1);
-    out.push([lat / factor, lng / factor]);
-  }
-  return out;
-}
-
-/* `points` is the ordered path [origin, ...via-points, destination]; OSRM
-   visits each coordinate in turn, so manual via-points bend the road route. */
-async function fetchOSRM(points) {
-  const coordStr = points.map((p) => `${p.lng},${p.lat}`).join(";");
-  const url = `${OSRM}/driving/${coordStr}?overview=full&geometries=geojson`;
-  try {
-    const res = await fetch(url);
-    if (!res.ok) return null;
-    const data = await res.json();
-    const coords = data.routes && data.routes[0] && data.routes[0].geometry.coordinates;
-    return coords ? coords.map((c) => [c[1], c[0]]) : null; // [lng,lat] → [lat,lng]
-  } catch (e) { return null; }
-}
-
-/* rail geometry for a single origin→destination segment */
-async function fetchTrainLeg(a, b) {
-  const qp = new URLSearchParams({
-    fromPlace: `${a.lat},${a.lng}`, toPlace: `${b.lat},${b.lng}`,
-    time: railQueryTime(), transitModes: RAIL_MODES, numItineraries: "1",
-  });
-  try {
-    const res = await fetch(`${TRANSITOUS}?${qp}`);
-    if (!res.ok) return null;
-    const data = await res.json();
-    const it = data.itineraries && data.itineraries[0];
-    if (!it || !it.legs) return null;
-    let pts = [];
-    for (const leg of it.legs) {
-      const g = leg.legGeometry;
-      if (g && g.points) {
-        const dec = decodePolyline(g.points, g.precision || 7);
-        if (pts.length && dec.length) dec.shift(); // drop duplicated junction point
-        pts = pts.concat(dec);
-      }
-    }
-    return pts.length > 1 ? pts : null;
-  } catch (e) { return null; }
-}
-
-/* Trace rail through the whole ordered path by planning each consecutive
-   segment and joining them. Bails to null if any segment has no rail
-   itinerary, so the caller can fall back to the road corridor. */
-async function fetchTrain(points) {
-  let pts = [];
-  for (let i = 1; i < points.length; i++) {
-    const seg = await fetchTrainLeg(points[i - 1], points[i]);
-    if (!seg) return null;
-    if (pts.length && seg.length) seg.shift(); // drop duplicated junction point
-    pts = pts.concat(seg);
-  }
-  return pts.length > 1 ? pts : null;
-}
-
-async function fetchRoute(mode, points) {
-  if (mode === "flight") return null;            // planes fly direct (straight through any via-points)
-  if (mode === "train") {
-    const rail = await fetchTrain(points);
-    return rail || fetchOSRM(points);             // rails, else road corridor
-  }
-  return fetchOSRM(points);                       // car
 }
 
 /* ---- shared lightbox (one per page, reused by every trip app) ---- */
@@ -284,16 +196,15 @@ function renderTrip(appEl, data, mode) {
   /* ---- map ---- */
   const C = lineColors();
   const embed = mode === "embed";
-  const map = L.map(mapEl, { scrollWheelZoom: !embed, zoomControl: true });
+  /* maxZoom is set here: it used to come from the raster tile layer, and the
+     basemap layer below is not a tile layer Leaflet could read it from. */
+  const map = L.map(mapEl, { scrollWheelZoom: !embed, zoomControl: true, maxZoom: 19 });
   if (embed) {
     // don't hijack page scroll inside a post — click the map to enable wheel-zoom, leave it to disable
     map.on("click", () => map.scrollWheelZoom.enable());
     map.on("mouseout", () => map.scrollWheelZoom.disable());
   }
-  const tiles = L.tileLayer(tileUrl(), {
-    attribution: "&copy; OpenStreetMap contributors &copy; CARTO · routes &copy; OSRM &amp; Transitous",
-    maxZoom: 19, subdomains: "abcd",
-  }).addTo(map);
+  map.attributionControl.addAttribution(ATTRIBUTION);
 
   const reg = {}; // id -> { marker, card, leg, polyline }
   const polylines = []; // { pl, mode, upcoming }
@@ -315,7 +226,7 @@ function renderTrip(appEl, data, mode) {
     const m = b.transportIn ? b.transportIn.mode : "train";
     const upcoming = b.status === "upcoming";
     /* Manual via-points (transportIn.waypoints) correct the drawn route: the
-       straight fallback, and any OSRM/rail query, run A → via-points → B. */
+       straight fallback here, and the companion's routing, run A → via-points → B. */
     const vias = (b.transportIn && Array.isArray(b.transportIn.waypoints) ? b.transportIn.waypoints : [])
       .filter((w) => w && (w.lat || w.lng));
     const path = [a, ...vias, b];
@@ -326,22 +237,27 @@ function renderTrip(appEl, data, mode) {
     reg[b.id].polyline = pl;
     polylines.push({ pl, mode: m, upcoming });
 
+    /* The companion's stored road/rail geometry. Without one the straight
+       line through the via-points stays, dashed for a flight. */
     const preset = b.transportIn && b.transportIn.geometry;
     if (preset && preset.length > 1) {
       pl.setLatLngs(preset);
       pl.setStyle({ dashArray: upcoming ? "7 7" : null });
-    } else if (m !== "flight") {
-      fetchRoute(m, path).then((latlngs) => {
-        if (latlngs && latlngs.length > 1) {
-          pl.setLatLngs(latlngs);
-          pl.setStyle({ dashArray: upcoming ? "7 7" : null });
-        }
-      });
     }
   }
 
   map.fitBounds(stops.map((s) => [s.lat, s.lng]), { padding: [45, 45] });
   setTimeout(() => map.invalidateSize(), 0);
+
+  /* After fitBounds: the layer reads the map's view the moment it is added.
+     Resolves to null without WebGL2, and the lines and pins stay on their own. */
+  const app = { map, base: null, polylines };
+  addBasemap(map, { tileJson: TILEJSON }).then((base) => {
+    if (!base) return;
+    // the view was torn down meanwhile
+    if (!apps.includes(app)) { try { base.remove(); } catch (e) {} return; }
+    app.base = base;
+  });
 
   /* legend (swatch colors come from CSS, so they recolor with the theme) */
   const legend = L.control({ position: "bottomright" });
@@ -432,7 +348,7 @@ function renderTrip(appEl, data, mode) {
     m.on("click", () => activate(s.id, { scroll: true }));
   });
 
-  apps.push({ map, tiles, polylines });
+  apps.push(app);
 }
 
 /* The API returns stats as an object { daysElapsed, daysTotal, cities, countries,
@@ -461,12 +377,12 @@ function buildStats(data) {
   return out;
 }
 
-/* recolor lines + swap tiles when the site theme toggles */
+/* recolor lines + switch the basemap's flavor when the site theme toggles */
 function refreshTheme() {
   const C = lineColors();
-  const url = tileUrl();
-  apps.forEach(({ tiles, polylines }) => {
-    tiles.setUrl(url);
+  const flavor = currentFlavor();
+  apps.forEach(({ base, polylines }) => {
+    if (base) base.setFlavor(flavor);
     polylines.forEach(({ pl, mode, upcoming }) => {
       pl.setStyle({ color: C[mode] || C.train, opacity: upcoming ? 0.45 : 0.9 });
     });
