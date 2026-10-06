@@ -24,12 +24,9 @@
     {{- $dexImg := partialCached "gallery-section-cover.html" "dex" "dex" site.Language.Lang -}}
     {{- $dexThumb := $dexImg.Filter (slice images.AutoOrient (images.Process "fill 600x400")) -}}
 
-    {{- /* NO Models card here, deliberately. /gallery/models/ is reachable from the
-           photos that show a person and through the site search, and that is as
-           much promotion as a page about someone else's face should get from the
-           gallery's front door. If it is ever linked from here, the card has to
-           stay conditional on model-index.html having a `listed` record — the
-           section is built from data/models.yaml and can legitimately be empty. */ -}}
+    {{- /* NO Models card here, deliberately: a page about someone else's face gets
+           a text link in the row below, not a photo card at the gallery's front
+           door. */ -}}
     <a href="{{ .RelPermalink }}projects/" class="gallery-nav-card" style="background-image: url('{{ $projectThumb.RelPermalink }}')">
       <span>{{ i18n "gallery_projects" }}</span>
     </a>
@@ -42,11 +39,22 @@
   {{- end -}}
 </nav>
 <div class="gallery-archive-link">
-  <a href="{{ .RelPermalink }}archive/">{{ i18n "gallery_archive" }}</a>
-  {{- /* A text link, not a fifth card: the gear page is statistics about the
-         gallery, not a way into its photos (docs/concepts/gallery-gear.md). */}}
+  {{- /* Text links, not more cards: the gear page is statistics about the
+         gallery, not a way into its photos (docs/concepts/gallery-gear.md).
+         Models only when model-index.html has a `listed` record — the section
+         is built from data/models.yaml and can legitimately be empty. The tag
+         index lives at /phototags in the content tree, hence the GetPage. */}}
+  {{- with site.GetPage "/phototags" }}
+  <a href="{{ .RelPermalink }}">{{ i18n "photo_tags" }}</a>
   <span aria-hidden="true">·</span>
+  {{- end }}
+  {{- if (partialCached "model-index.html" . site.Language.Lang).listed }}
+  <a href="{{ .RelPermalink }}models/">{{ i18n "gallery_models" }}</a>
+  <span aria-hidden="true">·</span>
+  {{- end }}
   <a href="{{ .RelPermalink }}gear/">{{ i18n "gallery_gear" }}</a>
+  <span aria-hidden="true">·</span>
+  <a href="{{ .RelPermalink }}archive/">{{ i18n "gallery_archive" }}</a>
 </div>
 </div>{{/* end gallery-home-center */}}
 
