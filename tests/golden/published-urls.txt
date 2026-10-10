@@ -765,6 +765,7 @@
 /de/gallery/photo/wache-am-rand-mandarinente-ueber-ihren-kueken/
 /de/gallery/photo/wald-zu-beiden-seiten-stilles-wasser-unter-sommerwolken/
 /de/gallery/photo/warnfarben-schwarz-gelbe-raupe-auf-stein/
+/de/gallery/photo/was-das-eis-zurueckliess-findlinge-auf-dem-fjaell-in-schwedisch-lappland/
 /de/gallery/photo/was-der-berg-sprach-wanderer-mit-notizbuch-im-schwedischen-fjaell/
 /de/gallery/photo/was-es-verschluckt-hat-sperlingsjunges-gestorben-an-plastik/
 /de/gallery/photo/wasser-unter-dem-grat-das-moor-und-das-tal-dahinter/
@@ -1833,6 +1834,7 @@
 /en/gallery/photo/watching-the-water-go-an-evening-at-the-rapids/
 /en/gallery/photo/water-below-the-ridge-the-moor-and-the-valley-beyond/
 /en/gallery/photo/what-it-swallowed-fledgling-sparrow-killed-by-plastic/
+/en/gallery/photo/what-the-ice-left-behind-glacial-boulders-on-the-fjall-swedish-lapland/
 /en/gallery/photo/what-the-mountain-said-a-hiker-with-his-notebook-in-the-swedish-fjall/
 /en/gallery/photo/wheel-and-flag-an-old-mill-house-in-switzerland/
 /en/gallery/photo/where-the-cloud-stops-ridgeline-at-the-edge-of-the-fog/
@@ -2718,6 +2720,7 @@
 /images/gallery/watching-the-water-go-an-evening-at-the-rapids.jpg
 /images/gallery/water-below-the-ridge-the-moor-and-the-valley-beyond.jpg
 /images/gallery/what-it-swallowed-fledgling-sparrow-killed-by-plastic.jpg
+/images/gallery/what-the-ice-left-behind-glacial-boulders-on-the-fjall-swedish-lapland.jpg
 /images/gallery/what-the-mountain-said-a-hiker-with-his-notebook-in-the-swedish-fjall.jpg
 /images/gallery/wheel-and-flag-an-old-mill-house-in-switzerland.jpg
 /images/gallery/where-the-cloud-stops-ridgeline-at-the-edge-of-the-fog.jpg
@@ -2995,6 +2998,7 @@
 /sv/gallery/photo/det-ar-alltid-mysigt-i-solen-varlamm-hopkrupet-pa-en-solbelyst-ang/
 /sv/gallery/photo/det-gra-bland-det-grona-doda-granar-i-ett-ungt-bestand/
 /sv/gallery/photo/det-grona-bladet-ett-falt-format-av-grustagets-vagar/
+/sv/gallery/photo/det-isen-lamnade-efter-sig-flyttblock-pa-fjallet-i-lappland/
 /sv/gallery/photo/det-langa-spannet-oresundsbron-stracker-sig-mot-danmark/
 /sv/gallery/photo/det-stora-molnet-eftermiddagsuppbyggnad-over-sjon/
 /sv/gallery/photo/dimma-i-sankan-vintermorgon-ovanfor-dalen/

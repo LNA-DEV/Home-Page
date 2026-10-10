@@ -19208,6 +19208,40 @@ images:
     - scandinavia
   license: all-rights-reserved
   artist: Lukas Nagel
+- id: 1dfa2ceb-4481-4c75-ac27-85ce776dd590
+  src: _DSC5681_13083.jpg
+  category: landscape
+  section: general
+  title:
+    en: "What the Ice Left Behind - Glacial Boulders on the Fjäll, Swedish Lapland"
+    de: "Was das Eis zurückließ - Findlinge auf dem Fjäll in Schwedisch-Lappland"
+    sv: "Det isen lämnade efter sig - flyttblock på fjället i Lappland"
+  alt:
+    en: "A green fjäll slope in Swedish Lapland, strewn with countless lichen-covered rocks that the glaciers left behind when they retreated. The sky is blue with fluffy white clouds."
+    de: "Ein grüner Fjällhang in Schwedisch-Lappland, übersät mit unzähligen flechtenbewachsenen Felsen, die die Gletscher bei ihrem Rückzug zurückgelassen haben. Der Himmel ist blau mit bauschigen weißen Wolken."
+    sv: "En grön fjällsluttning i Lappland, översållad med otaliga lavklädda stenar som glaciärerna lämnade efter sig när de drog sig tillbaka. Himlen är blå med fluffiga vita moln."
+  tags:
+    - photo
+    - photography
+    - naturePhotography
+    - landscapePhotography
+    - mountains
+    - boulders
+    - glacialLandscape
+    - geology
+    - hiking
+    - friluftsliv
+    - fjällen
+    - sweden
+    - swedishSummer
+    - vakkotavare
+    - swedishLapland
+    - lappland
+    - norrbotten
+    - arctic
+    - scandinavia
+  license: all-rights-reserved
+  artist: Lukas Nagel
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
