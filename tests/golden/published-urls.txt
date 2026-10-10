@@ -409,6 +409,7 @@
 /de/gallery/photo/fluegel-zum-trocknen-kormoran-auf-einem-felsen-mitten-im-fluss/
 /de/gallery/photo/fluss-aus-wolken-nebel-fuellt-das-alpental/
 /de/gallery/photo/flussaufwaerts-geblickt-schaeumendes-wasser-unter-der-plattform/
+/de/gallery/photo/folge-den-lichtern-sommernachmittag-in-gamla-stan-stockholm/
 /de/gallery/photo/formation-zu-dritt-moewen-gestaffelt-vor-dem-himmel/
 /de/gallery/photo/foto-vom-gipfel-wanderer-mit-kamera-neben-einem-steinmann-im-schwedischen-fjaell/
 /de/gallery/photo/frech-junger-damhirsch-mit-herausgestreckter-zunge/
@@ -1391,6 +1392,7 @@
 /en/gallery/photo/floating-on-green-a-field-scabious-in-the-meadow/
 /en/gallery/photo/fog-in-the-basin-winter-morning-above-the-valley/
 /en/gallery/photo/folded-in-the-middle-dusk-doubled-on-a-still-lake/
+/en/gallery/photo/follow-the-lights-summer-afternoon-in-gamla-stan-stockholm/
 /en/gallery/photo/followed-home-boat-and-gulls-at-last-light/
 /en/gallery/photo/following-the-plough-storks-behind-the-tractor/
 /en/gallery/photo/foreground-in-purple-orchid-before-the-kaiser-range/
@@ -2278,6 +2280,7 @@
 /images/gallery/floating-on-green-a-field-scabious-in-the-meadow.jpg
 /images/gallery/fog-in-the-basin-winter-morning-above-the-valley.jpg
 /images/gallery/folded-in-the-middle-dusk-doubled-on-a-still-lake.jpg
+/images/gallery/follow-the-lights-summer-afternoon-in-gamla-stan-stockholm.jpg
 /images/gallery/followed-home-boat-and-gulls-at-last-light.jpg
 /images/gallery/following-the-plough-storks-behind-the-tractor.jpg
 /images/gallery/foreground-in-purple-orchid-before-the-kaiser-range.jpg
@@ -3073,6 +3076,7 @@
 /sv/gallery/photo/flaggan-pa-skaret-sommarhus-i-skargarden/
 /sv/gallery/photo/flod-av-moln-dimma-fyller-alpdalen/
 /sv/gallery/photo/flytande-bastu-en-badhytt-pa-oppna-sjon/
+/sv/gallery/photo/folj-ljusen-sommareftermiddag-i-gamla-stan-stockholm/
 /sv/gallery/photo/foljd-hem-bat-och-masar-i-sista-ljuset/
 /sv/gallery/photo/fore-solen-gryning-over-den-snotackta-dalen/
 /sv/gallery/photo/forgrund-i-lila-orkide-framfor-kaisermassivet/

@@ -19275,6 +19275,37 @@ images:
     - germany
   license: all-rights-reserved
   artist: Lukas Nagel
+- id: ec178200-5f65-483f-88b3-aa615d39a5b2
+  src: _DSC5525_12771.jpg
+  category: city
+  section: general
+  title:
+    en: "Follow the Lights - Summer Afternoon in Gamla Stan, Stockholm"
+    de: "Folge den Lichtern - Sommernachmittag in Gamla Stan, Stockholm"
+    sv: "Följ ljusen - sommareftermiddag i Gamla stan, Stockholm"
+  alt:
+    en: "A narrow cobbled lane in Gamla stan, Stockholm's old town, on a summer afternoon. On the right, a row of glowing vintage light bulbs hangs beneath a red awning above a restaurant's dark front with trailing ivy, leading the eye down the street, while yellow and ochre houses line the left side. Pedestrians and a cyclist pushing a bike walk away toward pastel buildings under a blue sky with light clouds."
+    de: "Eine schmale Kopfsteinpflastergasse in Gamla stan, der Altstadt Stockholms, an einem Sommernachmittag. Rechts hängt unter einer roten Markise eine Reihe warm leuchtender Vintage-Glühbirnen über der dunklen Front eines Restaurants mit herabhängendem Efeu und führt den Blick die Gasse hinunter, links säumen gelbe und ockerfarbene Häuser die Gasse. Spaziergänger und jemand, der ein Fahrrad schiebt, gehen auf pastellfarbene Häuser unter einem blauen Himmel mit leichten Wolken zu."
+    sv: "En smal kullerstensgränd i Gamla stan i Stockholm en sommareftermiddag. Till höger hänger en rad lysande glödlampor i retrostil under en röd markis ovanför en restaurangs mörka fasad med hängande murgröna och leder blicken längs gränden, medan gula och ockrafärgade hus kantar vänster sida. Fotgängare och en cyklist som leder sin cykel går bort mot pastellfärgade hus under en blå himmel med lätta moln."
+  tags:
+    - photo
+    - photography
+    - streetPhotography
+    - cityPhotography
+    - urbanPhotography
+    - travelPhotography
+    - leadingLines
+    - stockholm
+    - gamlaStan
+    - oldTown
+    - visitStockholm
+    - sweden
+    - scandinavia
+    - swedishSummer
+    - cobblestones
+    - edisonBulbs
+  artist: Lukas Nagel
+  license: all-rights-reserved
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
