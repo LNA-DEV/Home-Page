@@ -362,6 +362,7 @@
 /de/gallery/photo/ein-strassenrand-voller-lupinen-schwedischer-hochsommer/
 /de/gallery/photo/eine-braune-linie-ein-weg-durch-die-jungen-nadelbaeume/
 /de/gallery/photo/eine-im-fokus-eine-traubenhyazinthe-zwischen-den-tulpen/
+/de/gallery/photo/eine-kapelle-am-rande-der-nacht-wendelsteinkircherl-in-der-daemmerung-bayerische-alpen/
 /de/gallery/photo/eine-kerze-eine-sonne-lupinen-an-einer-schwedischen-strasse/
 /de/gallery/photo/eine-kleine-rosette-sukkulente-im-kies/
 /de/gallery/photo/eine-kurve-im-weiss-eine-strasse-durch-den-schnee/
@@ -1203,6 +1204,7 @@
 /en/gallery/models/lukas-nagel/
 /en/gallery/models/markus-penninger/
 /en/gallery/photo/a-bed-of-primroses-purple-and-yellow-in-spring-sun/
+/en/gallery/photo/a-chapel-at-the-edge-of-night-wendelsteinkircherl-at-dusk-bavarian-alps/
 /en/gallery/photo/a-hole-beside-the-town-a-quarry-from-the-air/
 /en/gallery/photo/a-hole-in-the-clouds-gold-over-the-dark-valley/
 /en/gallery/photo/a-hundred-petals-a-pink-rose-in-the-garden/
@@ -2089,6 +2091,7 @@
 /en/tools/
 /en/travel/
 /images/gallery/a-bed-of-primroses-purple-and-yellow-in-spring-sun.jpg
+/images/gallery/a-chapel-at-the-edge-of-night-wendelsteinkircherl-at-dusk-bavarian-alps.jpg
 /images/gallery/a-hole-beside-the-town-a-quarry-from-the-air.jpg
 /images/gallery/a-hole-in-the-clouds-gold-over-the-dark-valley.jpg
 /images/gallery/a-hundred-petals-a-pink-rose-in-the-garden.jpg
@@ -3053,6 +3056,7 @@
 /sv/gallery/photo/ett-hal-intill-staden-ett-stenbrott-fran-luften/
 /sv/gallery/photo/ett-helt-trad-i-blom-appelblom-mot-blatt/
 /sv/gallery/photo/ett-horn-uppat-brun-ko-med-tungan-ute/
+/sv/gallery/photo/ett-kapell-pa-gransen-till-natten-wendelsteinkircherl-i-skymningen-bayern/
 /sv/gallery/photo/ett-oga-for-de-sma-tingen-man-fotograferar-en-kanga-som-blivit-blomkruka-pa-en-trottoar-i-lulea/
 /sv/gallery/photo/ett-segel-och-en-skyline-kopenhamn-tvars-over-oresund/
 /sv/gallery/photo/ett-spar-till-stugan-vintersol-over-dalen/

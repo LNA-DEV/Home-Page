@@ -19242,6 +19242,39 @@ images:
     - scandinavia
   license: all-rights-reserved
   artist: Lukas Nagel
+- id: 3643961d-d3cd-47c1-8422-a22db10dbe60
+  src: _DSC5341_12377.jpg
+  category: landscape
+  section: general
+  title:
+    en: "A Chapel at the Edge of Night - Wendelsteinkircherl at Dusk, Bavarian Alps"
+    de: "Eine Kapelle am Rande der Nacht - Wendelsteinkircherl in der Dämmerung, Bayerische Alpen"
+    sv: "Ett kapell på gränsen till natten - Wendelsteinkircherl i skymningen, Bayern"
+  alt:
+    en: "The rugged cliffs of the Wendelstein in the Bavarian Alps stand in dark silhouette against an evening sky fading from violet to pink and orange. Conifers line the ridge, the small Wendelsteinkircherl chapel with its bell turret and cross sits on top, and a railed walkway connects the cliff to a smaller rocky knoll. On the left, layers of blue mountain ridges fade into the haze."
+    de: "Die schroffen Felsen des Wendelsteins in den Bayerischen Alpen zeichnen sich als dunkle Silhouette vor einem Abendhimmel ab, der von Violett über Rosa in Orange übergeht. Nadelbäume säumen den Grat, ganz oben steht das kleine Wendelsteinkircherl mit Glockentürmchen und Kreuz, und ein Steg mit Geländer verbindet die Felswand mit einer kleineren Felskuppe. Links verlieren sich gestaffelte blaue Bergrücken im Dunst."
+    sv: "Wendelsteins branta klippor i de bayerska Alperna avtecknar sig som en mörk siluett mot en kvällshimmel som skiftar från violett över rosa till orange. Barrträd kantar kammen, högst upp står det lilla kapellet Wendelsteinkircherl med klocktorn och kors, och en gångbro med räcke förbinder klippan med en mindre bergknalle. Till vänster bleknar lager på lager av blå bergskammar bort i diset."
+  tags:
+    - photo
+    - photography
+    - naturePhotography
+    - landscapePhotography
+    - mountainPhotography
+    - mountains
+    - alps
+    - bavarianAlps
+    - silhouette
+    - sunset
+    - eveningSky
+    - chapel
+    - mountainChapel
+    - wendelstein
+    - wendelsteinkircherl
+    - bavaria
+    - oberbayern
+    - germany
+  license: all-rights-reserved
+  artist: Lukas Nagel
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
