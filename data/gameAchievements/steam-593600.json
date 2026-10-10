@@ -63,7 +63,7 @@
    "name": {
     "en": "First Partner"
    },
-   "percent": 37.5,
+   "percent": 37.4,
    "unlocked": "2018-04-06T20:33:36+02:00"
   },
   {
@@ -148,7 +148,7 @@
    "name": {
     "en": "Mummy King Hunter"
    },
-   "percent": 1.1
+   "percent": 1.0
   },
   {
    "description": {
@@ -160,7 +160,7 @@
    "name": {
     "en": "Ice Fairy Hunter"
    },
-   "percent": 6.1
+   "percent": 6.0
   },
   {
    "description": {
@@ -172,7 +172,7 @@
    "name": {
     "en": "Mediterranean Blueprint"
    },
-   "percent": 7.9
+   "percent": 7.8
   },
   {
    "description": {
@@ -208,7 +208,7 @@
    "name": {
     "en": "Weastern Blueprint"
    },
-   "percent": 12.2
+   "percent": 12.1
   },
   {
    "description": {
@@ -340,7 +340,7 @@
    "name": {
     "en": "Ocean Ruins"
    },
-   "percent": 0.7
+   "percent": 0.6
   },
   {
    "description": {
@@ -412,7 +412,7 @@
    "name": {
     "en": "Explorer:Dark"
    },
-   "percent": 24.0
+   "percent": 23.9
   },
   {
    "description": {
@@ -448,7 +448,7 @@
    "name": {
     "en": "Local Legend"
    },
-   "percent": 0.1
+   "percent": 0.2
   },
   {
    "description": {

@@ -40,7 +40,7 @@
     "de": "Der Midas-Touch",
     "en": "The Midas Touch"
    },
-   "percent": 3.9
+   "percent": 4.0
   },
   {
    "description": {
@@ -292,7 +292,7 @@
     "de": "Die Ruhe vor dem Sturm",
     "en": "Calm Before the Storm"
    },
-   "percent": 22.2
+   "percent": 22.3
   },
   {
    "achieved": true,
@@ -351,7 +351,7 @@
     "de": "Wir sehen uns",
     "en": "See Ya"
    },
-   "percent": 32.4,
+   "percent": 32.5,
    "unlocked": "2021-04-18T18:37:35+02:00"
   },
   {
@@ -366,7 +366,7 @@
     "de": "Home-Run-König",
     "en": "Home Run King"
    },
-   "percent": 8.2
+   "percent": 8.3
   },
   {
    "description": {
@@ -701,7 +701,7 @@
     "de": "Schau dir meine frischen Kicks an",
     "en": "Check Out My Fresh Kicks"
    },
-   "percent": 2.6
+   "percent": 2.7
   },
   {
    "description": {
@@ -757,7 +757,7 @@
     "de": "Du willst mir erzählen, dass der Himmel das geschmiedet hat?",
     "en": "You're Telling Me the Sky Forged This?"
    },
-   "percent": 2.8
+   "percent": 2.9
   },
   {
    "description": {
@@ -840,7 +840,7 @@
     "de": "Download abgeschlossen",
     "en": "Download Complete"
    },
-   "percent": 1.2
+   "percent": 1.3
   },
   {
    "description": {
@@ -896,7 +896,7 @@
     "de": "Kehre ALLE Beine",
     "en": "Sweep ALL the Legs"
    },
-   "percent": 0.3
+   "percent": 0.4
   },
   {
    "description": {

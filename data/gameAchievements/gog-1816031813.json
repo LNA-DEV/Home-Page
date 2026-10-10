@@ -46,7 +46,7 @@
    "name": {
     "en": "Duckwash!"
    },
-   "percent": 9.1
+   "percent": 9.0
   },
   {
    "description": {
@@ -214,7 +214,7 @@
    "name": {
     "en": "Btw your bullets kill you too…"
    },
-   "percent": 44.9
+   "percent": 45.0
   },
   {
    "description": {
@@ -226,7 +226,7 @@
    "name": {
     "en": "Watch the bullet!"
    },
-   "percent": 4.6
+   "percent": 4.7
   },
   {
    "description": {
@@ -322,7 +322,7 @@
    "name": {
     "en": "Quacksmasher"
    },
-   "percent": 13.8
+   "percent": 13.7
   },
   {
    "description": {
@@ -346,7 +346,7 @@
    "name": {
     "en": "Quacktastrophe"
    },
-   "percent": 4.0
+   "percent": 4.1
   },
   {
    "description": {
@@ -394,7 +394,7 @@
    "name": {
     "en": "Quickest Quack"
    },
-   "percent": 0.9
+   "percent": 1.0
   },
   {
    "description": {

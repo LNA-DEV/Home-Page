@@ -31,7 +31,7 @@
     "en": "Reached Level 20",
     "sv": "Kommit till nivå 20"
    },
-   "percent": 59.6,
+   "percent": 59.3,
    "unlocked": "2024-08-05T20:15:51+02:00"
   },
   {
@@ -49,7 +49,7 @@
     "en": "Reached Level 30",
     "sv": "Kommit till nivå 30"
    },
-   "percent": 51.9,
+   "percent": 51.7,
    "unlocked": "2024-08-17T20:09:28+02:00"
   },
   {
@@ -66,7 +66,7 @@
     "en": "Reached Level 50",
     "sv": "Kommit till nivå 50"
    },
-   "percent": 36.6
+   "percent": 36.4
   },
   {
    "achieved": true,
@@ -78,7 +78,7 @@
     "en": "Reached the Daunt",
     "sv": "Kommit till Modlösa"
    },
-   "percent": 80.7,
+   "percent": 80.6,
    "unlocked": "2024-07-26T22:48:40+02:00"
   },
   {
@@ -91,7 +91,7 @@
     "en": "Secured Passage to the Embassy",
     "sv": "Säkrat vägen till stämman"
    },
-   "percent": 74.9,
+   "percent": 74.7,
    "unlocked": "2024-07-28T13:31:40+02:00"
   },
   {
@@ -104,7 +104,7 @@
     "en": "Attended the Embassy",
     "sv": "Närvarat på stämman"
    },
-   "percent": 72.3,
+   "percent": 72.1,
    "unlocked": "2024-07-28T17:38:19+02:00"
   },
   {
@@ -117,7 +117,7 @@
     "en": "Established the Base",
     "sv": "Etablerat en bas"
    },
-   "percent": 62.6,
+   "percent": 62.4,
    "unlocked": "2024-08-04T19:20:29+02:00"
   },
   {
@@ -130,7 +130,7 @@
     "en": "Recovered AETHER",
     "sv": "Hämtat Aither"
    },
-   "percent": 54.6,
+   "percent": 54.3,
    "unlocked": "2024-08-15T00:15:13+02:00"
   },
   {
@@ -143,7 +143,7 @@
     "en": "Recovered POSEIDON",
     "sv": "Hämtat Poseidon"
    },
-   "percent": 52.7,
+   "percent": 52.5,
    "unlocked": "2024-08-16T23:44:51+02:00"
   },
   {
@@ -156,7 +156,7 @@
     "en": "Recovered DEMETER",
     "sv": "Hämtat Demeter"
    },
-   "percent": 50.1,
+   "percent": 49.9,
    "unlocked": "2024-08-17T22:53:17+02:00"
   },
   {
@@ -169,7 +169,7 @@
     "en": "Recovered Beta",
     "sv": "Hämtat Beta"
    },
-   "percent": 55.1,
+   "percent": 54.8,
    "unlocked": "2024-08-15T01:38:20+02:00"
   },
   {
@@ -182,7 +182,7 @@
     "en": "Discovered Faro's Fate",
     "sv": "Upptäckt Faros öde"
    },
-   "percent": 46.6,
+   "percent": 46.4,
    "unlocked": "2024-08-18T16:25:37+02:00"
   },
   {
@@ -194,7 +194,7 @@
     "en": "Flew on the Wings of the Ten",
     "sv": "Flugit på De tios vingar"
    },
-   "percent": 44.1
+   "percent": 44.0
   },
   {
    "hidden": true,
@@ -205,7 +205,7 @@
     "en": "Discovered Nemesis",
     "sv": "Upptäckt Nemesis"
    },
-   "percent": 40.4
+   "percent": 40.2
   },
   {
    "achieved": true,
@@ -217,7 +217,7 @@
     "en": "Chose a Desert Commander",
     "sv": "Valt en ökenbefälhavare"
    },
-   "percent": 37.2,
+   "percent": 37.1,
    "unlocked": "2024-08-16T21:10:19+02:00"
   },
   {
@@ -230,7 +230,7 @@
     "en": "Saved the Daunt",
     "sv": "Räddat Modlösa"
    },
-   "percent": 49.1,
+   "percent": 48.9,
    "unlocked": "2024-08-04T16:50:04+02:00"
   },
   {
@@ -242,7 +242,7 @@
     "en": "Aided Kotallo",
     "sv": "Hjälpt Kotallo"
    },
-   "percent": 35.9
+   "percent": 35.7
   },
   {
    "achieved": true,
@@ -254,7 +254,7 @@
     "en": "Healed the Land-gods",
     "sv": "Läkt landgudarna"
    },
-   "percent": 37.6,
+   "percent": 37.4,
    "unlocked": "2024-08-18T00:08:21+02:00"
   },
   {
@@ -266,7 +266,7 @@
     "en": "Recovered Alva's Data",
     "sv": "Hämtat Alvas data"
    },
-   "percent": 31.2
+   "percent": 31.1
   },
   {
    "achieved": true,
@@ -278,7 +278,7 @@
     "en": "First Tallneck Overridden",
     "sv": "Tagit kontroll över första långhalsen"
    },
-   "percent": 67.2,
+   "percent": 67.0,
    "unlocked": "2024-07-28T18:30:45+02:00"
   },
   {
@@ -290,7 +290,7 @@
     "en": "All Tallnecks Overridden",
     "sv": "Tagit kontroll över alla långhalsar"
    },
-   "percent": 33.6
+   "percent": 33.5
   },
   {
    "achieved": true,
@@ -302,7 +302,7 @@
     "en": "First Rebel Camp Completed",
     "sv": "Slutfört första rebellägret"
    },
-   "percent": 59.2,
+   "percent": 59.0,
    "unlocked": "2024-07-28T18:07:05+02:00"
   },
   {
@@ -314,7 +314,7 @@
     "en": "Defeated Asera",
     "sv": "Besegrat Asera"
    },
-   "percent": 26.1
+   "percent": 26.0
   },
   {
    "achieved": true,
@@ -326,7 +326,7 @@
     "en": "First Core Overridden",
     "sv": "Tagit kontroll över första kärnan"
    },
-   "percent": 55.0,
+   "percent": 54.8,
    "unlocked": "2024-08-04T11:10:58+02:00"
   },
   {
@@ -338,7 +338,7 @@
     "en": "All Cores Overridden",
     "sv": "Tagit kontroll över alla kärnor"
    },
-   "percent": 28.9
+   "percent": 28.7
   },
   {
    "hidden": true,
@@ -349,7 +349,7 @@
     "en": "Obtained 3 Stripes at a Hunting Ground",
     "sv": "Fått 3 galoner i en jaktmark"
    },
-   "percent": 33.8
+   "percent": 33.7
   },
   {
    "hidden": true,
@@ -376,7 +376,7 @@
     "en": "All Acquisition Machines Killed",
     "sv": "Dödat alla samlarmaskiner"
    },
-   "percent": 33.9
+   "percent": 33.7
   },
   {
    "achieved": true,
@@ -393,7 +393,7 @@
     "en": "All Recon Machines Killed",
     "sv": "Dödat alla spaningsmaskiner"
    },
-   "percent": 51.0,
+   "percent": 50.8,
    "unlocked": "2024-08-18T21:22:24+02:00"
   },
   {
@@ -410,7 +410,7 @@
     "en": "All Combat Machines Killed",
     "sv": "Dödat alla stridsmaskiner"
    },
-   "percent": 38.6
+   "percent": 38.4
   },
   {
    "achieved": true,
@@ -427,7 +427,7 @@
     "en": "All Transport Machines Killed",
     "sv": "Dödat alla transportmaskiner"
    },
-   "percent": 49.3,
+   "percent": 49.0,
    "unlocked": "2024-08-17T20:22:05+02:00"
   },
   {
@@ -439,7 +439,7 @@
     "en": "Rode All Regular Mounts",
     "sv": "Ridit på alla vanliga ridmaskiner"
    },
-   "percent": 28.9
+   "percent": 28.8
   },
   {
    "description": {
@@ -455,7 +455,7 @@
     "en": "All Machine Types Scanned",
     "sv": "Skannat alla maskintyper"
    },
-   "percent": 21.6
+   "percent": 21.5
   },
   {
    "hidden": true,
@@ -466,7 +466,7 @@
     "en": "Completed a Long Glide",
     "sv": "Glidit långt"
    },
-   "percent": 24.5
+   "percent": 24.4
   },
   {
    "hidden": true,
@@ -477,7 +477,7 @@
     "en": "Completed 2 Flying Mount Quests",
     "sv": "Slutfört 2 flyguppdrag"
    },
-   "percent": 25.5
+   "percent": 25.4
   },
   {
    "hidden": true,
@@ -488,7 +488,7 @@
     "en": "Won 2 Gauntlet Runs",
     "sv": "Vunnit 2 kapplopp"
    },
-   "percent": 17.5
+   "percent": 17.4
   },
   {
    "hidden": true,
@@ -499,7 +499,7 @@
     "en": "Completed a Set of Salvage Contracts",
     "sv": "Fullbordat en serie samlarkontrakt"
    },
-   "percent": 49.3
+   "percent": 49.1
   },
   {
    "achieved": true,
@@ -511,7 +511,7 @@
     "en": "Completed 4 Rebel Outposts",
     "sv": "Rensat 4 rebellutposter"
    },
-   "percent": 43.8,
+   "percent": 43.6,
    "unlocked": "2024-08-17T19:24:27+02:00"
   },
   {
@@ -523,7 +523,7 @@
     "en": "Completed 3 Relic Ruins",
     "sv": "Slutfört 3 relikruiner"
    },
-   "percent": 41.1
+   "percent": 40.9
   },
   {
    "hidden": true,
@@ -534,7 +534,7 @@
     "en": "Completed Arena Challenge Set",
     "sv": "Slutfört arenautmaningsserie"
    },
-   "percent": 26.6
+   "percent": 26.5
   },
   {
    "hidden": true,
@@ -545,7 +545,7 @@
     "en": "Defeated Machine Strike Challengers",
     "sv": "Vunnit i maskinknuff"
    },
-   "percent": 15.5
+   "percent": 15.4
   },
   {
    "description": {
@@ -561,7 +561,7 @@
     "en": "Obtained All Weapon Classes",
     "sv": "Fått alla vapenklasser"
    },
-   "percent": 37.6
+   "percent": 37.5
   },
   {
    "description": {
@@ -577,7 +577,7 @@
     "en": "Used all Elemental States",
     "sv": "Använt alla elementtillstånd"
    },
-   "percent": 50.0
+   "percent": 49.8
   },
   {
    "achieved": true,
@@ -594,7 +594,7 @@
     "en": "Performed 3 Melee Combos",
     "sv": "Fullbordat 3 närstridskombinationer"
    },
-   "percent": 48.3,
+   "percent": 48.1,
    "unlocked": "2024-08-07T20:23:38+02:00"
   },
   {
@@ -612,7 +612,7 @@
     "en": "Stealth Killed 10 Machines",
     "sv": "Smygdödat 10 maskiner"
    },
-   "percent": 74.4,
+   "percent": 74.2,
    "unlocked": "2024-07-27T22:47:16+02:00"
   },
   {
@@ -630,7 +630,7 @@
     "en": "Tore off 100 Components",
     "sv": "Slitit loss 100 komponenter"
    },
-   "percent": 61.8,
+   "percent": 61.6,
    "unlocked": "2024-08-02T18:22:44+02:00"
   },
   {
@@ -648,7 +648,7 @@
     "en": "Picked up 5 Heavy Weapons",
     "sv": "Plockat upp 5 tunga vapen"
    },
-   "percent": 46.8,
+   "percent": 46.6,
    "unlocked": "2024-08-18T15:27:40+02:00"
   },
   {
@@ -665,7 +665,7 @@
     "en": "10 Types of Machine Overridden",
     "sv": "Kontrollerat 10 maskintyper"
    },
-   "percent": 21.0
+   "percent": 20.9
   },
   {
    "hidden": true,
@@ -676,7 +676,7 @@
     "en": "Defeated the Enduring",
     "sv": "Besegrat den Orubbliga"
    },
-   "percent": 16.4
+   "percent": 16.3
   },
   {
    "hidden": true,
@@ -687,7 +687,7 @@
     "en": "Fully Upgraded a Valor Surge",
     "sv": "Uppgraderat ett energirus till max"
    },
-   "percent": 52.5
+   "percent": 52.3
   },
   {
    "description": {
@@ -703,7 +703,7 @@
     "en": "Upgraded 3 Weapons",
     "sv": "Uppgraderat 3 vapen"
    },
-   "percent": 57.8
+   "percent": 57.6
   },
   {
    "description": {
@@ -719,7 +719,7 @@
     "en": "Upgraded 3 Outfits",
     "sv": "Uppgraderat 3 klädesuppsättningar"
    },
-   "percent": 31.5
+   "percent": 31.4
   },
   {
    "description": {
@@ -735,7 +735,7 @@
     "en": "Upgraded Every Pouch Type",
     "sv": "Uppgraderat varje säcktyp"
    },
-   "percent": 36.6
+   "percent": 36.5
   },
   {
    "description": {
@@ -751,7 +751,7 @@
     "en": "Enhanced Weapon with Coils",
     "sv": "Förbättrat vapen med spolar"
    },
-   "percent": 48.4
+   "percent": 48.2
   },
   {
    "hidden": true,
@@ -762,7 +762,7 @@
     "en": "Unlocked 3 Weapon Techniques",
     "sv": "Låst upp 3 vapentekniker"
    },
-   "percent": 54.5
+   "percent": 54.3
   },
   {
    "description": {
@@ -778,7 +778,7 @@
     "en": "Skill Tree Learned",
     "sv": "Lärt in färdighetsträd"
    },
-   "percent": 32.8
+   "percent": 32.6
   },
   {
    "achieved": true,
@@ -790,7 +790,7 @@
     "en": "Recovered 5 Different Collectables",
     "sv": "Hittat 5 olika samlarobjekt"
    },
-   "percent": 40.5,
+   "percent": 40.3,
    "unlocked": "2024-08-07T21:45:07+02:00"
   },
   {
@@ -803,7 +803,7 @@
     "en": "Used Dye Flowers",
     "sv": "Använt färgblommor"
    },
-   "percent": 26.8,
+   "percent": 26.7,
    "unlocked": "2024-07-28T18:42:18+02:00"
   },
   {
@@ -836,7 +836,7 @@
     "en": "Completed Ultra Hard",
     "sv": "Klarade Ultrasvårt"
    },
-   "percent": 3.9
+   "percent": 3.8
   },
   {
    "description": {
@@ -874,7 +874,7 @@
     "en": "Discovered the Ascension",
     "sv": "Upptäckte uppstigningen"
    },
-   "percent": 29.0
+   "percent": 28.9
   },
   {
    "hidden": true,
@@ -896,7 +896,7 @@
     "en": "Aided the Quen",
     "sv": "Hjälpte quenerna"
    },
-   "percent": 18.1
+   "percent": 18.0
   },
   {
    "hidden": true,
@@ -907,7 +907,7 @@
     "en": "Defeated Londra and His Horus",
     "sv": "Besegrade Londra och hans Horus"
    },
-   "percent": 26.2
+   "percent": 26.1
   },
   {
    "hidden": true,
@@ -918,7 +918,7 @@
     "en": "All New Skills Learned",
     "sv": "Alla nya färdigheter inlärda"
    },
-   "percent": 9.9
+   "percent": 9.8
   },
   {
    "description": {
@@ -934,7 +934,7 @@
     "en": "Reached Level 60",
     "sv": "Kom till nivå 60"
    },
-   "percent": 27.7
+   "percent": 27.6
   },
   {
    "description": {
@@ -950,7 +950,7 @@
     "en": "Used Brimshine",
     "sv": "Använde surglans"
    },
-   "percent": 13.2
+   "percent": 13.1
   },
   {
    "description": {
@@ -966,7 +966,7 @@
     "en": "Equipped an Elite Coil or Weave",
     "sv": "Utrustade elitspole eller -väv"
    },
-   "percent": 24.7
+   "percent": 24.6
   },
   {
    "hidden": true,
@@ -977,7 +977,7 @@
     "en": "Specter Gauntlet Upgraded",
     "sv": "Gengångarhandske uppgraderad"
    },
-   "percent": 18.7
+   "percent": 18.6
   },
   {
    "hidden": true,
@@ -1004,7 +1004,7 @@
     "en": "All New Machines Scanned",
     "sv": "Alla nya maskiner skannade"
    },
-   "percent": 19.9
+   "percent": 19.8
   },
   {
    "hidden": true,
@@ -1058,7 +1058,7 @@
     "en": "Used Grapple Strike on Machines",
     "sv": "Använde krokkastarslag på maskiner"
    },
-   "percent": 28.1
+   "percent": 28.0
   },
   {
    "description": {

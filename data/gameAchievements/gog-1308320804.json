@@ -34,7 +34,7 @@
    "name": {
     "en": "Awakening"
    },
-   "percent": 23.0
+   "percent": 23.1
   },
   {
    "description": {
@@ -70,7 +70,7 @@
    "name": {
     "en": "Blessed"
    },
-   "percent": 14.1
+   "percent": 14.2
   },
   {
    "description": {
@@ -106,7 +106,7 @@
    "name": {
     "en": "Obsession"
    },
-   "percent": 24.5
+   "percent": 24.6
   },
   {
    "description": {
@@ -118,7 +118,7 @@
    "name": {
     "en": "Warrior"
    },
-   "percent": 30.9
+   "percent": 31.0
   },
   {
    "description": {
@@ -166,7 +166,7 @@
    "name": {
     "en": "Pure Completion"
    },
-   "percent": 2.3
+   "percent": 2.4
   },
   {
    "description": {
@@ -190,7 +190,7 @@
    "name": {
     "en": "Strength"
    },
-   "percent": 18.0
+   "percent": 18.1
   },
   {
    "description": {
@@ -202,7 +202,7 @@
    "name": {
     "en": "Mortality"
    },
-   "percent": 15.4
+   "percent": 15.5
   },
   {
    "description": {
@@ -310,7 +310,7 @@
    "name": {
     "en": "Grand Performance"
    },
-   "percent": 18.8
+   "percent": 18.9
   },
   {
    "description": {
@@ -334,7 +334,7 @@
    "name": {
     "en": "Test of Resolve"
    },
-   "percent": 52.2
+   "percent": 52.3
   },
   {
    "description": {
@@ -406,7 +406,7 @@
    "name": {
     "en": "Masked"
    },
-   "percent": 14.0
+   "percent": 14.1
   },
   {
    "description": {
@@ -430,7 +430,7 @@
    "name": {
     "en": "Solace"
    },
-   "percent": 13.8
+   "percent": 13.9
   },
   {
    "description": {
@@ -454,7 +454,7 @@
    "name": {
     "en": "Purity"
    },
-   "percent": 14.1
+   "percent": 14.2
   },
   {
    "description": {
@@ -502,7 +502,7 @@
    "name": {
     "en": "Brotherhood"
    },
-   "percent": 8.8
+   "percent": 8.9
   },
   {
    "description": {
@@ -538,7 +538,7 @@
    "name": {
     "en": "Soul & Shade"
    },
-   "percent": 3.6
+   "percent": 3.7
   },
   {
    "description": {
@@ -646,7 +646,7 @@
    "name": {
     "en": "Connection"
    },
-   "percent": 42.2
+   "percent": 42.3
   },
   {
    "description": {

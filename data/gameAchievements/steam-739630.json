@@ -22,7 +22,7 @@
    "name": {
     "en": "Banshee Discovered"
    },
-   "percent": 21.9
+   "percent": 22.0
   },
   {
    "description": {
@@ -70,7 +70,7 @@
    "name": {
     "en": "Hantu Discovered"
    },
-   "percent": 21.8
+   "percent": 21.9
   },
   {
    "achieved": true,
@@ -83,7 +83,7 @@
    "name": {
     "en": "Jinn Discovered"
    },
-   "percent": 20.0,
+   "percent": 20.1,
    "unlocked": "2023-11-19T20:24:26+01:00"
   },
   {
@@ -133,7 +133,7 @@
    "name": {
     "en": "Obake Discovered"
    },
-   "percent": 21.5,
+   "percent": 21.6,
    "unlocked": "2023-11-19T20:54:19+01:00"
   },
   {
@@ -230,7 +230,7 @@
    "name": {
     "en": "Spirit Discovered"
    },
-   "percent": 21.6
+   "percent": 21.7
   },
   {
    "description": {
@@ -266,7 +266,7 @@
    "name": {
     "en": "The Twins Discovered"
    },
-   "percent": 20.5
+   "percent": 20.6
   },
   {
    "achieved": true,
@@ -342,7 +342,7 @@
    "name": {
     "en": "Boss"
    },
-   "percent": 9.7
+   "percent": 9.8
   },
   {
    "description": {
@@ -367,7 +367,7 @@
    "name": {
     "en": "Rookie"
    },
-   "percent": 31.0,
+   "percent": 31.1,
    "unlocked": "2025-10-10T21:50:09+02:00"
   },
   {
@@ -428,7 +428,7 @@
    "name": {
     "en": "No More Training Wheels"
    },
-   "percent": 6.5
+   "percent": 6.6
   },
   {
    "description": {
@@ -440,7 +440,7 @@
    "name": {
     "en": "Extra Mile"
    },
-   "percent": 18.6
+   "percent": 18.7
   },
   {
    "hidden": true,
@@ -459,7 +459,7 @@
    "name": {
     "en": "Work Experience"
    },
-   "percent": 59.7,
+   "percent": 59.8,
    "unlocked": "2023-11-19T20:11:24+01:00"
   },
   {
@@ -561,7 +561,7 @@
    "name": {
     "en": "Flawless Execution"
    },
-   "percent": 15.8
+   "percent": 15.9
   },
   {
    "description": {
@@ -618,7 +618,7 @@
    "name": {
     "en": "Challenger Approaching"
    },
-   "percent": 11.2
+   "percent": 11.3
   },
   {
    "description": {

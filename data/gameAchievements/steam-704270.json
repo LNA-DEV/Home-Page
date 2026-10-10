@@ -73,7 +73,7 @@
    "name": {
     "en": "Splash Damage"
    },
-   "percent": 31.2,
+   "percent": 31.3,
    "unlocked": "2024-10-05T18:48:54+02:00"
   },
   {
@@ -89,7 +89,7 @@
     "de": "Revolverheld",
     "en": "Gunslinger"
    },
-   "percent": 54.4,
+   "percent": 54.3,
    "unlocked": "2023-10-14T21:19:23+02:00"
   },
   {
@@ -246,7 +246,7 @@
     "de": "Yippie ya-yay",
     "en": "Yippee-Ki-Yay"
    },
-   "percent": 10.3
+   "percent": 10.4
   },
   {
    "achieved": true,
@@ -354,7 +354,7 @@
     "de": "Kaffeekränzchen",
     "en": "Fika Club"
    },
-   "percent": 62.1,
+   "percent": 62.2,
    "unlocked": "2023-10-14T20:59:03+02:00"
   },
   {
@@ -565,7 +565,7 @@
    "name": {
     "en": "Modder"
    },
-   "percent": 74.2,
+   "percent": 74.1,
    "unlocked": "2023-10-14T20:22:36+02:00"
   },
   {

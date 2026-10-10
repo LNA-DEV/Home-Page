@@ -36,7 +36,7 @@
     "de": "Waffenspiel",
     "en": "Gun Game"
    },
-   "percent": 6.0
+   "percent": 5.9
   },
   {
    "hidden": true,
@@ -73,7 +73,7 @@
     "de": "Historiker",
     "en": "Historian"
    },
-   "percent": 12.5
+   "percent": 12.4
   },
   {
    "hidden": true,
@@ -83,7 +83,7 @@
     "de": "Flügelmann",
     "en": "Wingman"
    },
-   "percent": 13.5
+   "percent": 13.4
   },
   {
    "hidden": true,
@@ -93,7 +93,7 @@
     "de": "Doppeltes Risiko",
     "en": "Double Jeopardy"
    },
-   "percent": 13.4
+   "percent": 13.3
   },
   {
    "hidden": true,
@@ -127,7 +127,7 @@
     "de": "Bezwinger",
     "en": "Slayer"
    },
-   "percent": 21.0
+   "percent": 20.9
   },
   {
    "description": {
@@ -141,7 +141,7 @@
     "de": "Burgaufmischer",
     "en": "Castle Crasher"
    },
-   "percent": 18.6
+   "percent": 18.5
   },
   {
    "description": {
@@ -335,7 +335,7 @@
     "de": "Abwärts",
     "en": "Going Down"
    },
-   "percent": 21.1
+   "percent": 21.0
   },
   {
    "description": {
@@ -377,7 +377,7 @@
     "de": "Letzter Halt",
     "en": "Last Stop"
    },
-   "percent": 8.2
+   "percent": 8.1
   },
   {
    "description": {
@@ -429,7 +429,7 @@
     "de": "Nicht nur eine Kiste",
     "en": "Not Just A Box"
    },
-   "percent": 27.4
+   "percent": 27.3
   },
   {
    "description": {
@@ -443,7 +443,7 @@
     "de": "Sprengmeister",
     "en": "Demolition Man"
    },
-   "percent": 11.8
+   "percent": 11.7
   },
   {
    "achieved": true,
@@ -483,7 +483,7 @@
     "de": "Tagverpatzer",
     "en": "Day Ruiner"
    },
-   "percent": 21.0
+   "percent": 20.9
   },
   {
    "hidden": true,
@@ -493,7 +493,7 @@
     "de": "Löwensprung",
     "en": "Lion Leap"
    },
-   "percent": 16.8
+   "percent": 16.7
   },
   {
    "description": {
@@ -613,7 +613,7 @@
     "de": "Terminiert",
     "en": "Terminated"
    },
-   "percent": 8.7
+   "percent": 8.6
   },
   {
    "hidden": true,

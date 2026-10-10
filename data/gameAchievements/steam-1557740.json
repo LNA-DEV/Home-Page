@@ -29,7 +29,7 @@
     "de": "Drei auf einen Streich!",
     "en": "Three in a row!"
    },
-   "percent": 34.9,
+   "percent": 35.0,
    "unlocked": "2024-06-16T14:58:10+02:00"
   },
   {
@@ -118,7 +118,7 @@
     "de": "Heiler",
     "en": "Healer"
    },
-   "percent": 34.8,
+   "percent": 34.9,
    "unlocked": "2024-06-16T14:59:41+02:00"
   },
   {
@@ -150,7 +150,7 @@
     "de": "Schildmeister",
     "en": "Shieldmastery"
    },
-   "percent": 31.7,
+   "percent": 31.8,
    "unlocked": "2024-06-16T14:54:33+02:00"
   },
   {
@@ -166,7 +166,7 @@
     "de": "Sieg",
     "en": "Victory"
    },
-   "percent": 47.0,
+   "percent": 47.1,
    "unlocked": "2024-06-16T14:52:28+02:00"
   },
   {
@@ -182,7 +182,7 @@
     "de": "Zufällig gewonnen",
     "en": "Accidental Winner"
    },
-   "percent": 27.6,
+   "percent": 27.7,
    "unlocked": "2025-03-28T18:55:43+01:00"
   },
   {
@@ -255,7 +255,7 @@
     "de": "Unter Kontrolle",
     "en": "In Control"
    },
-   "percent": 14.7,
+   "percent": 14.8,
    "unlocked": "2025-04-04T21:43:39+02:00"
   },
   {
@@ -269,7 +269,7 @@
    "name": {
     "en": "Teleporter"
    },
-   "percent": 12.0
+   "percent": 12.1
   },
   {
    "description": {
@@ -310,7 +310,7 @@
     "de": "Strahlend",
     "en": "Radient"
    },
-   "percent": 11.7
+   "percent": 11.8
   },
   {
    "achieved": true,
@@ -325,7 +325,7 @@
     "de": "Phönix",
     "en": "Phoenix"
    },
-   "percent": 14.2,
+   "percent": 14.3,
    "unlocked": "2025-04-04T21:05:09+02:00"
   },
   {
@@ -354,7 +354,7 @@
     "de": "Scharf",
     "en": "Sharp"
    },
-   "percent": 12.5
+   "percent": 12.6
   }
  ],
  "id": "1557740",

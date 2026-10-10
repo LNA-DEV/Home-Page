@@ -45,7 +45,7 @@
     "de": "Zusammenbruch",
     "en": "Meltdown"
    },
-   "percent": 75.1,
+   "percent": 75.2,
    "unlocked": "2020-11-07T17:46:15+01:00"
   },
   {
@@ -255,7 +255,7 @@
     "de": "Meister der Ticket",
     "en": "Ticket Master"
    },
-   "percent": 9.1
+   "percent": 9.2
   },
   {
    "hidden": true,

@@ -12,7 +12,7 @@
     "de": "AUF DEN GESCHMACK KOMMEN",
     "en": "A TASTE FOR IT"
    },
-   "percent": 46.2
+   "percent": 46.3
   },
   {
    "description": {
@@ -39,7 +39,7 @@
     "de": "MÖRDER",
     "en": "ASSASSIN"
    },
-   "percent": 5.1
+   "percent": 5.2
   },
   {
    "hidden": true,
@@ -63,7 +63,7 @@
     "de": "PRAKTIKANT",
     "en": "INTERN"
    },
-   "percent": 44.7
+   "percent": 44.8
   },
   {
    "description": {
@@ -76,7 +76,7 @@
    "name": {
     "en": "MANAGER"
    },
-   "percent": 17.0
+   "percent": 17.1
   },
   {
    "hidden": true,
@@ -86,7 +86,7 @@
     "de": "PROJEKTLEITER",
     "en": "TASKMASTER"
    },
-   "percent": 3.4
+   "percent": 3.5
   },
   {
    "description": {
@@ -100,7 +100,7 @@
     "de": "VÖLLIG LOSGELÖST",
     "en": "A SHIP ADRIFT"
    },
-   "percent": 41.2
+   "percent": 41.3
   },
   {
    "description": {
@@ -152,7 +152,7 @@
     "de": "NIE GEAHNT",
     "en": "NEVER SUSPECT A THING"
    },
-   "percent": 25.6
+   "percent": 25.7
   },
   {
    "description": {
@@ -166,7 +166,7 @@
     "de": "GUT GESCHMIERT",
     "en": "A WELL-OILED MACHINE"
    },
-   "percent": 28.3
+   "percent": 28.4
   },
   {
    "description": {
@@ -193,7 +193,7 @@
     "de": "SCHLITZER",
     "en": "SLASHER"
    },
-   "percent": 33.6
+   "percent": 33.7
   },
   {
    "description": {
@@ -207,7 +207,7 @@
     "de": "ÜBERLEBENDER",
     "en": "SURVIVOR"
    },
-   "percent": 48.7
+   "percent": 48.8
   },
   {
    "description": {
@@ -221,7 +221,7 @@
     "de": "ÜBERREDUNGSKÜNSTLER",
     "en": "SMOOTH TALKER"
    },
-   "percent": 24.3
+   "percent": 24.4
   },
   {
    "hidden": true,
@@ -231,7 +231,7 @@
     "de": "UNMÖGLICHE AUFGABE",
     "en": "IMPOSSIBLE TASK"
    },
-   "percent": 40.4
+   "percent": 40.5
   },
   {
    "description": {
@@ -245,7 +245,7 @@
     "de": "LICHT AUS",
     "en": "LIGHTS OUT"
    },
-   "percent": 25.8
+   "percent": 25.9
   },
   {
    "hidden": true,
@@ -297,7 +297,7 @@
     "de": "SCHICHT IM SCHACHT",
     "en": "CIRCUMVENTER"
    },
-   "percent": 29.1
+   "percent": 29.2
   },
   {
    "description": {
@@ -367,7 +367,7 @@
     "de": "LASS MICH DEIN ENGEL SEIN",
     "en": "I CAN BE YOUR ANGLE"
    },
-   "percent": 9.4
+   "percent": 9.5
   },
   {
    "description": {

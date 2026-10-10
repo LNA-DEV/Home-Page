@@ -22,7 +22,7 @@
    "name": {
     "en": "Major Cannibalism"
    },
-   "percent": 12.1
+   "percent": 12.0
   },
   {
    "description": {
@@ -34,7 +34,7 @@
    "name": {
     "en": "Be Nice"
    },
-   "percent": 37.6
+   "percent": 37.5
   },
   {
    "description": {
@@ -46,7 +46,7 @@
    "name": {
     "en": "Be Extremely Nice"
    },
-   "percent": 16.3
+   "percent": 16.2
   },
   {
    "description": {
@@ -128,7 +128,7 @@
    "name": {
     "en": "5 Star Hotel"
    },
-   "percent": 27.6,
+   "percent": 27.5,
    "unlocked": "2021-05-16T21:26:29+02:00"
   },
   {
@@ -176,7 +176,7 @@
    "name": {
     "en": "You should be looking for Timmy"
    },
-   "percent": 15.1
+   "percent": 15.0
   },
   {
    "description": {
@@ -188,7 +188,7 @@
    "name": {
     "en": "Boy Scout"
    },
-   "percent": 33.4
+   "percent": 33.3
   },
   {
    "achieved": true,
@@ -283,7 +283,7 @@
    "name": {
     "en": "Daily Grind"
    },
-   "percent": 19.1
+   "percent": 19.0
   },
   {
    "hidden": true,
@@ -304,7 +304,7 @@
    "name": {
     "en": "Serial Killer"
    },
-   "percent": 24.5
+   "percent": 24.4
   },
   {
    "hidden": true,
@@ -409,7 +409,7 @@
    "name": {
     "en": "Survivalist"
    },
-   "percent": 55.0,
+   "percent": 54.9,
    "unlocked": "2021-05-24T21:49:47+02:00"
   },
   {
@@ -446,7 +446,7 @@
    "name": {
     "en": "Demolition Man"
    },
-   "percent": 21.3
+   "percent": 21.2
   },
   {
    "description": {
@@ -458,7 +458,7 @@
    "name": {
     "en": "Handyman"
    },
-   "percent": 9.4
+   "percent": 9.3
   },
   {
    "description": {
@@ -496,7 +496,7 @@
    "name": {
     "en": "Don't Save The Forest"
    },
-   "percent": 3.9
+   "percent": 3.8
   },
   {
    "achieved": true,

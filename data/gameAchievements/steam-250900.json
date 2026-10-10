@@ -10,7 +10,7 @@
    "name": {
     "en": "Magdalene"
    },
-   "percent": 60.2
+   "percent": 60.1
   },
   {
    "description": {
@@ -58,7 +58,7 @@
    "name": {
     "en": "The Harbingers"
    },
-   "percent": 65.8
+   "percent": 65.7
   },
   {
    "hidden": true,
@@ -67,7 +67,7 @@
    "name": {
     "en": "A Cube of Meat"
    },
-   "percent": 65.8
+   "percent": 65.7
   },
   {
    "hidden": true,
@@ -76,7 +76,7 @@
    "name": {
     "en": "The Book of Revelations"
    },
-   "percent": 59.2
+   "percent": 59.1
   },
   {
    "hidden": true,
@@ -85,7 +85,7 @@
    "name": {
     "en": "A Noose"
    },
-   "percent": 48.0
+   "percent": 47.9
   },
   {
    "hidden": true,
@@ -112,7 +112,7 @@
    "name": {
     "en": "A Fetus in a Jar"
    },
-   "percent": 40.4
+   "percent": 40.5
   },
   {
    "hidden": true,
@@ -121,7 +121,7 @@
    "name": {
     "en": "A Small Rock"
    },
-   "percent": 33.5
+   "percent": 33.6
   },
   {
    "achieved": true,
@@ -131,7 +131,7 @@
    "name": {
     "en": "Monstro's Tooth"
    },
-   "percent": 84.7,
+   "percent": 84.6,
    "unlocked": "2020-11-21T14:18:16+01:00"
   },
   {
@@ -162,7 +162,7 @@
    "name": {
     "en": "Something From The Future"
    },
-   "percent": 43.7
+   "percent": 43.6
   },
   {
    "description": {
@@ -186,7 +186,7 @@
    "name": {
     "en": "Something Sticky"
    },
-   "percent": 39.9
+   "percent": 40.0
   },
   {
    "hidden": true,
@@ -204,7 +204,7 @@
    "name": {
     "en": "A Cross"
    },
-   "percent": 24.8
+   "percent": 24.9
   },
   {
    "hidden": true,
@@ -213,7 +213,7 @@
    "name": {
     "en": "A Bag of Pennies"
    },
-   "percent": 27.0
+   "percent": 27.1
   },
   {
    "hidden": true,
@@ -231,7 +231,7 @@
    "name": {
     "en": "Little Gish"
    },
-   "percent": 33.6
+   "percent": 33.7
   },
   {
    "hidden": true,
@@ -258,7 +258,7 @@
    "name": {
     "en": "A Gamekid"
    },
-   "percent": 45.7
+   "percent": 45.6
   },
   {
    "hidden": true,
@@ -306,7 +306,7 @@
    "name": {
     "en": "The Parasite"
    },
-   "percent": 52.9
+   "percent": 52.8
   },
   {
    "hidden": true,
@@ -315,7 +315,7 @@
    "name": {
     "en": "???"
    },
-   "percent": 39.7
+   "percent": 39.8
   },
   {
    "description": {
@@ -405,7 +405,7 @@
    "name": {
     "en": "Mama's Boy"
    },
-   "percent": 32.5
+   "percent": 32.6
   },
   {
    "hidden": true,
@@ -414,7 +414,7 @@
    "name": {
     "en": "Golden God!"
    },
-   "percent": 30.6
+   "percent": 30.7
   },
   {
    "description": {
@@ -426,7 +426,7 @@
    "name": {
     "en": "Eve"
    },
-   "percent": 55.4
+   "percent": 55.3
   },
   {
    "hidden": true,
@@ -444,7 +444,7 @@
    "name": {
     "en": "The Razor"
    },
-   "percent": 20.7
+   "percent": 20.8
   },
   {
    "hidden": true,
@@ -462,7 +462,7 @@
    "name": {
     "en": "A Bag of Bombs"
    },
-   "percent": 27.8
+   "percent": 27.9
   },
   {
    "hidden": true,
@@ -471,7 +471,7 @@
    "name": {
     "en": "Demon Baby"
    },
-   "percent": 26.8
+   "percent": 26.9
   },
   {
    "hidden": true,
@@ -489,7 +489,7 @@
    "name": {
     "en": "The D20"
    },
-   "percent": 27.8
+   "percent": 27.9
   },
   {
    "hidden": true,
@@ -498,7 +498,7 @@
    "name": {
     "en": "Celtic Cross"
    },
-   "percent": 20.9
+   "percent": 21.0
   },
   {
    "hidden": true,
@@ -507,7 +507,7 @@
    "name": {
     "en": "Abel"
    },
-   "percent": 21.8
+   "percent": 21.9
   },
   {
    "hidden": true,
@@ -516,7 +516,7 @@
    "name": {
     "en": "Curved Horn"
    },
-   "percent": 20.0
+   "percent": 20.1
   },
   {
    "hidden": true,
@@ -525,7 +525,7 @@
    "name": {
     "en": "Sacrificial Dagger"
    },
-   "percent": 18.5
+   "percent": 18.6
   },
   {
    "hidden": true,
@@ -534,7 +534,7 @@
    "name": {
     "en": "Bloody Lust"
    },
-   "percent": 21.8
+   "percent": 21.9
   },
   {
    "hidden": true,
@@ -543,7 +543,7 @@
    "name": {
     "en": "Blood Penny"
    },
-   "percent": 18.3
+   "percent": 18.4
   },
   {
    "hidden": true,
@@ -561,7 +561,7 @@
    "name": {
     "en": "The Polaroid"
    },
-   "percent": 33.6
+   "percent": 33.7
   },
   {
    "hidden": true,
@@ -579,7 +579,7 @@
    "name": {
     "en": "Blue Candle"
    },
-   "percent": 20.4
+   "percent": 20.5
   },
   {
    "hidden": true,
@@ -597,7 +597,7 @@
    "name": {
     "en": "Lucky Toe"
    },
-   "percent": 48.0
+   "percent": 47.9
   },
   {
    "hidden": true,
@@ -606,7 +606,7 @@
    "name": {
     "en": "Epic Fetus"
    },
-   "percent": 17.7
+   "percent": 17.8
   },
   {
    "hidden": true,
@@ -615,7 +615,7 @@
    "name": {
     "en": "SMB Super Fan"
    },
-   "percent": 20.2
+   "percent": 20.3
   },
   {
    "hidden": true,
@@ -624,7 +624,7 @@
    "name": {
     "en": "Counterfeit Coin"
    },
-   "percent": 22.7
+   "percent": 22.8
   },
   {
    "hidden": true,
@@ -669,7 +669,7 @@
    "name": {
     "en": "Something Icky"
    },
-   "percent": 27.6
+   "percent": 27.7
   },
   {
    "hidden": true,
@@ -687,7 +687,7 @@
    "name": {
     "en": "Isaac's Head"
    },
-   "percent": 30.7
+   "percent": 30.8
   },
   {
    "hidden": true,
@@ -696,7 +696,7 @@
    "name": {
     "en": "Maggy's Faith"
    },
-   "percent": 20.8
+   "percent": 20.9
   },
   {
    "hidden": true,
@@ -714,7 +714,7 @@
    "name": {
     "en": "???'s Soul"
    },
-   "percent": 17.3
+   "percent": 17.4
   },
   {
    "hidden": true,
@@ -723,7 +723,7 @@
    "name": {
     "en": "Samson's Lock"
    },
-   "percent": 17.5
+   "percent": 17.6
   },
   {
    "hidden": true,
@@ -732,7 +732,7 @@
    "name": {
     "en": "Cain's Eye"
    },
-   "percent": 21.9
+   "percent": 22.0
   },
   {
    "hidden": true,
@@ -759,7 +759,7 @@
    "name": {
     "en": "The Negative"
    },
-   "percent": 33.6
+   "percent": 33.7
   },
   {
    "description": {
@@ -783,7 +783,7 @@
    "name": {
     "en": "Lazarus"
    },
-   "percent": 70.3
+   "percent": 70.2
   },
   {
    "description": {
@@ -804,7 +804,7 @@
    "name": {
     "en": "The Lost"
    },
-   "percent": 23.4
+   "percent": 23.5
   },
   {
    "hidden": true,
@@ -813,7 +813,7 @@
    "name": {
     "en": "Dead Boy"
    },
-   "percent": 26.7
+   "percent": 26.8
   },
   {
    "hidden": true,
@@ -903,7 +903,7 @@
    "name": {
     "en": "Rune of Ansuz"
    },
-   "percent": 24.4
+   "percent": 24.5
   },
   {
    "hidden": true,
@@ -993,7 +993,7 @@
    "name": {
     "en": "Death's Touch"
    },
-   "percent": 23.3
+   "percent": 23.4
   },
   {
    "hidden": true,
@@ -1029,7 +1029,7 @@
    "name": {
     "en": "Guillotine"
    },
-   "percent": 24.3
+   "percent": 24.4
   },
   {
    "hidden": true,
@@ -1047,7 +1047,7 @@
    "name": {
     "en": "Maggy's Bow"
    },
-   "percent": 20.9
+   "percent": 21.0
   },
   {
    "hidden": true,
@@ -1056,7 +1056,7 @@
    "name": {
     "en": "Cain's Other Eye"
    },
-   "percent": 23.4
+   "percent": 23.5
   },
   {
    "hidden": true,
@@ -1065,7 +1065,7 @@
    "name": {
     "en": "Black Lipstick"
    },
-   "percent": 17.3
+   "percent": 17.4
   },
   {
    "hidden": true,
@@ -1074,7 +1074,7 @@
    "name": {
     "en": "Eve's Mascara"
    },
-   "percent": 19.4
+   "percent": 19.5
   },
   {
    "hidden": true,
@@ -1083,7 +1083,7 @@
    "name": {
     "en": "Fate"
    },
-   "percent": 19.8
+   "percent": 19.9
   },
   {
    "hidden": true,
@@ -1092,7 +1092,7 @@
    "name": {
     "en": "???'s Only Friend"
    },
-   "percent": 18.7
+   "percent": 18.8
   },
   {
    "hidden": true,
@@ -1101,7 +1101,7 @@
    "name": {
     "en": "Samson's Chains"
    },
-   "percent": 19.6
+   "percent": 19.7
   },
   {
    "hidden": true,
@@ -1119,7 +1119,7 @@
    "name": {
     "en": "Broken Ankh"
    },
-   "percent": 22.7
+   "percent": 22.8
   },
   {
    "hidden": true,
@@ -1128,7 +1128,7 @@
    "name": {
     "en": "Store Credit"
    },
-   "percent": 18.7
+   "percent": 18.8
   },
   {
    "hidden": true,
@@ -1137,7 +1137,7 @@
    "name": {
     "en": "Pandora's Box"
    },
-   "percent": 18.2
+   "percent": 18.3
   },
   {
    "hidden": true,
@@ -1146,7 +1146,7 @@
    "name": {
     "en": "Suicide King"
    },
-   "percent": 17.0
+   "percent": 17.1
   },
   {
    "hidden": true,
@@ -1155,7 +1155,7 @@
    "name": {
     "en": "Blank Card"
    },
-   "percent": 23.9
+   "percent": 24.0
   },
   {
    "hidden": true,
@@ -1164,7 +1164,7 @@
    "name": {
     "en": "Book of Secrets"
    },
-   "percent": 23.1
+   "percent": 23.2
   },
   {
    "hidden": true,
@@ -1173,7 +1173,7 @@
    "name": {
     "en": "Mysterious Paper"
    },
-   "percent": 20.2
+   "percent": 20.3
   },
   {
    "hidden": true,
@@ -1182,7 +1182,7 @@
    "name": {
     "en": "Mystery Sack"
    },
-   "percent": 19.2
+   "percent": 19.3
   },
   {
    "hidden": true,
@@ -1191,7 +1191,7 @@
    "name": {
     "en": "Undefined"
    },
-   "percent": 20.8
+   "percent": 20.9
   },
   {
    "hidden": true,
@@ -1218,7 +1218,7 @@
    "name": {
     "en": "Abaddon"
    },
-   "percent": 24.9
+   "percent": 25.0
   },
   {
    "hidden": true,
@@ -1227,7 +1227,7 @@
    "name": {
     "en": "Isaac's Heart"
    },
-   "percent": 17.2
+   "percent": 17.4
   },
   {
    "hidden": true,
@@ -1236,7 +1236,7 @@
    "name": {
     "en": "The Mind"
    },
-   "percent": 17.1
+   "percent": 17.2
   },
   {
    "hidden": true,
@@ -1245,7 +1245,7 @@
    "name": {
     "en": "The Body"
    },
-   "percent": 16.8
+   "percent": 16.9
   },
   {
    "hidden": true,
@@ -1254,7 +1254,7 @@
    "name": {
     "en": "The Soul"
    },
-   "percent": 16.6
+   "percent": 16.8
   },
   {
    "hidden": true,
@@ -1263,7 +1263,7 @@
    "name": {
     "en": "Blue Map"
    },
-   "percent": 65.5
+   "percent": 65.4
   },
   {
    "hidden": true,
@@ -1290,7 +1290,7 @@
    "name": {
     "en": "Stop Watch"
    },
-   "percent": 19.4
+   "percent": 19.5
   },
   {
    "hidden": true,
@@ -1383,7 +1383,7 @@
    "name": {
     "en": "The D4"
    },
-   "percent": 29.5
+   "percent": 29.6
   },
   {
    "hidden": true,
@@ -1392,7 +1392,7 @@
    "name": {
     "en": "Missing Poster"
    },
-   "percent": 29.6
+   "percent": 29.7
   },
   {
    "hidden": true,
@@ -1437,7 +1437,7 @@
    "name": {
     "en": "Store Upgrade lv.4"
    },
-   "percent": 25.0
+   "percent": 25.1
   },
   {
    "hidden": true,
@@ -1455,7 +1455,7 @@
    "name": {
     "en": "Godhead"
    },
-   "percent": 13.3
+   "percent": 13.5
   },
   {
    "hidden": true,
@@ -1482,7 +1482,7 @@
    "name": {
     "en": "Solar System"
    },
-   "percent": 48.0
+   "percent": 47.9
   },
   {
    "hidden": true,
@@ -1527,7 +1527,7 @@
    "name": {
     "en": "Glass Cannon"
    },
-   "percent": 17.8
+   "percent": 17.9
   },
   {
    "hidden": true,
@@ -1545,7 +1545,7 @@
    "name": {
     "en": "Purist"
    },
-   "percent": 65.8
+   "percent": 65.7
   },
   {
    "hidden": true,
@@ -1554,7 +1554,7 @@
    "name": {
     "en": "The D100"
    },
-   "percent": 15.7
+   "percent": 15.9
   },
   {
    "hidden": true,
@@ -1563,7 +1563,7 @@
    "name": {
     "en": "Red Candle"
    },
-   "percent": 29.5
+   "percent": 29.6
   },
   {
    "hidden": true,
@@ -1572,7 +1572,7 @@
    "name": {
     "en": "Lost Baby"
    },
-   "percent": 34.4
+   "percent": 34.5
   },
   {
    "hidden": true,
@@ -1590,7 +1590,7 @@
    "name": {
     "en": "Crow Baby"
    },
-   "percent": 22.9
+   "percent": 23.0
   },
   {
    "hidden": true,
@@ -1599,7 +1599,7 @@
    "name": {
     "en": "Shadow Baby"
    },
-   "percent": 25.5
+   "percent": 25.6
   },
   {
    "hidden": true,
@@ -1608,7 +1608,7 @@
    "name": {
     "en": "Glass Baby"
    },
-   "percent": 28.9
+   "percent": 29.0
   },
   {
    "hidden": true,
@@ -1626,7 +1626,7 @@
    "name": {
     "en": "Begotten Baby"
    },
-   "percent": 32.9
+   "percent": 33.0
   },
   {
    "hidden": true,
@@ -1635,7 +1635,7 @@
    "name": {
     "en": "Dead Baby"
    },
-   "percent": 25.3
+   "percent": 25.4
   },
   {
    "hidden": true,
@@ -1644,7 +1644,7 @@
    "name": {
     "en": "-0- Baby"
    },
-   "percent": 18.1
+   "percent": 18.2
   },
   {
    "hidden": true,
@@ -1662,7 +1662,7 @@
    "name": {
     "en": "Fighting Baby"
    },
-   "percent": 23.6
+   "percent": 23.7
   },
   {
    "description": {
@@ -1686,7 +1686,7 @@
    "name": {
     "en": "Fart Baby"
    },
-   "percent": 25.9
+   "percent": 26.0
   },
   {
    "description": {
@@ -1698,7 +1698,7 @@
    "name": {
     "en": "Purity"
    },
-   "percent": 17.9
+   "percent": 18.0
   },
   {
    "description": {
@@ -1710,7 +1710,7 @@
    "name": {
     "en": "D12"
    },
-   "percent": 19.4
+   "percent": 19.5
   },
   {
    "description": {
@@ -1722,7 +1722,7 @@
    "name": {
     "en": "Betrayal"
    },
-   "percent": 18.4
+   "percent": 18.5
   },
   {
    "description": {
@@ -1734,7 +1734,7 @@
    "name": {
     "en": "Fate's Reward"
    },
-   "percent": 16.9
+   "percent": 17.0
   },
   {
    "description": {
@@ -1758,7 +1758,7 @@
    "name": {
     "en": "Blind Rage"
    },
-   "percent": 15.6
+   "percent": 15.7
   },
   {
    "description": {
@@ -1770,7 +1770,7 @@
    "name": {
     "en": "Maw of the Void"
    },
-   "percent": 25.8
+   "percent": 25.9
   },
   {
    "description": {
@@ -1782,7 +1782,7 @@
    "name": {
     "en": "Empty Vessel"
    },
-   "percent": 15.8
+   "percent": 15.9
   },
   {
    "description": {
@@ -1794,7 +1794,7 @@
    "name": {
     "en": "Eden's Blessing"
    },
-   "percent": 17.8
+   "percent": 17.9
   },
   {
    "description": {
@@ -1806,7 +1806,7 @@
    "name": {
     "en": "Sworn Protector"
    },
-   "percent": 15.5
+   "percent": 15.7
   },
   {
    "description": {
@@ -1818,7 +1818,7 @@
    "name": {
     "en": "Incubus"
    },
-   "percent": 16.4
+   "percent": 16.6
   },
   {
    "description": {
@@ -1830,7 +1830,7 @@
    "name": {
     "en": "Lil' Chest"
    },
-   "percent": 28.7
+   "percent": 28.8
   },
   {
    "description": {
@@ -1842,7 +1842,7 @@
    "name": {
     "en": "Censer"
    },
-   "percent": 21.9
+   "percent": 22.0
   },
   {
    "description": {
@@ -1854,7 +1854,7 @@
    "name": {
     "en": "Evil Eye"
    },
-   "percent": 24.7
+   "percent": 24.8
   },
   {
    "description": {
@@ -1866,7 +1866,7 @@
    "name": {
     "en": "My Shadow"
    },
-   "percent": 23.2
+   "percent": 23.3
   },
   {
    "description": {
@@ -1878,7 +1878,7 @@
    "name": {
     "en": "Cracked Dice"
    },
-   "percent": 17.7
+   "percent": 17.8
   },
   {
    "description": {
@@ -1890,7 +1890,7 @@
    "name": {
     "en": "Black Feather"
    },
-   "percent": 19.4
+   "percent": 19.5
   },
   {
    "description": {
@@ -1902,7 +1902,7 @@
    "name": {
     "en": "Lusty Blood"
    },
-   "percent": 20.9
+   "percent": 21.0
   },
   {
    "description": {
@@ -1914,7 +1914,7 @@
    "name": {
     "en": "Lilith"
    },
-   "percent": 36.7
+   "percent": 36.8
   },
   {
    "description": {
@@ -1926,7 +1926,7 @@
    "name": {
     "en": "Key Bum"
    },
-   "percent": 19.4
+   "percent": 19.5
   },
   {
    "description": {
@@ -1938,7 +1938,7 @@
    "name": {
     "en": "GB Bug"
    },
-   "percent": 20.6
+   "percent": 20.7
   },
   {
    "description": {
@@ -1950,7 +1950,7 @@
    "name": {
     "en": "Zodiac"
    },
-   "percent": 14.9
+   "percent": 15.1
   },
   {
    "description": {
@@ -1962,7 +1962,7 @@
    "name": {
     "en": "Box of Friends"
    },
-   "percent": 25.1
+   "percent": 25.2
   },
   {
    "description": {
@@ -1974,7 +1974,7 @@
    "name": {
     "en": "Rune Bag"
    },
-   "percent": 19.1
+   "percent": 19.2
   },
   {
    "description": {
@@ -1986,7 +1986,7 @@
    "name": {
     "en": "Cambion Conception"
    },
-   "percent": 16.6
+   "percent": 16.7
   },
   {
    "description": {
@@ -1998,7 +1998,7 @@
    "name": {
     "en": "Serpent's Kiss"
    },
-   "percent": 18.5
+   "percent": 18.7
   },
   {
    "description": {
@@ -2010,7 +2010,7 @@
    "name": {
     "en": "Succubus"
    },
-   "percent": 16.2
+   "percent": 16.3
   },
   {
    "description": {
@@ -2022,7 +2022,7 @@
    "name": {
     "en": "Immaculate Conception"
    },
-   "percent": 17.1
+   "percent": 17.2
   },
   {
    "description": {
@@ -2034,7 +2034,7 @@
    "name": {
     "en": "Gold Heart"
    },
-   "percent": 17.7
+   "percent": 17.8
   },
   {
    "description": {
@@ -2058,7 +2058,7 @@
    "name": {
     "en": "Gold Bomb"
    },
-   "percent": 17.7
+   "percent": 17.8
   },
   {
    "description": {
@@ -2070,7 +2070,7 @@
    "name": {
     "en": "2 new pills"
    },
-   "percent": 11.6
+   "percent": 11.7
   },
   {
    "description": {
@@ -2082,7 +2082,7 @@
    "name": {
     "en": "2 new pills"
    },
-   "percent": 14.0
+   "percent": 14.1
   },
   {
    "description": {
@@ -2142,7 +2142,7 @@
    "name": {
     "en": "Blank Rune"
    },
-   "percent": 15.7
+   "percent": 15.8
   },
   {
    "description": {
@@ -2166,7 +2166,7 @@
    "name": {
     "en": "Lucky Pennies"
    },
-   "percent": 36.0
+   "percent": 36.1
   },
   {
    "description": {
@@ -2178,7 +2178,7 @@
    "name": {
     "en": "Wooden Nickel"
    },
-   "percent": 31.7
+   "percent": 31.8
   },
   {
    "description": {
@@ -2190,7 +2190,7 @@
    "name": {
     "en": "Cain holds Paperclip"
    },
-   "percent": 30.0
+   "percent": 30.1
   },
   {
    "description": {
@@ -2238,7 +2238,7 @@
    "name": {
     "en": "PAY TO PLAY"
    },
-   "percent": 26.1
+   "percent": 26.2
   },
   {
    "description": {
@@ -2262,7 +2262,7 @@
    "name": {
     "en": "I RULE!"
    },
-   "percent": 29.1
+   "percent": 29.2
   },
   {
    "description": {
@@ -2322,7 +2322,7 @@
    "name": {
     "en": "Cry Baby"
    },
-   "percent": 24.3
+   "percent": 24.4
   },
   {
    "description": {
@@ -2334,7 +2334,7 @@
    "name": {
     "en": "Red Baby"
    },
-   "percent": 17.8
+   "percent": 18.0
   },
   {
    "description": {
@@ -2346,7 +2346,7 @@
    "name": {
     "en": "Green Baby"
    },
-   "percent": 18.5
+   "percent": 18.6
   },
   {
    "description": {
@@ -2358,7 +2358,7 @@
    "name": {
     "en": "Brown Baby"
    },
-   "percent": 17.0
+   "percent": 17.1
   },
   {
    "description": {
@@ -2394,7 +2394,7 @@
    "name": {
     "en": "Rage Baby"
    },
-   "percent": 14.8
+   "percent": 14.9
   },
   {
    "description": {
@@ -2406,7 +2406,7 @@
    "name": {
     "en": "Black Baby"
    },
-   "percent": 21.2
+   "percent": 21.3
   },
   {
    "description": {
@@ -2418,7 +2418,7 @@
    "name": {
     "en": "Long Baby"
    },
-   "percent": 15.1
+   "percent": 15.2
   },
   {
    "description": {
@@ -2430,7 +2430,7 @@
    "name": {
     "en": "Yellow Baby"
    },
-   "percent": 16.6
+   "percent": 16.7
   },
   {
    "description": {
@@ -2442,7 +2442,7 @@
    "name": {
     "en": "White Baby"
    },
-   "percent": 14.8
+   "percent": 14.9
   },
   {
    "description": {
@@ -2454,7 +2454,7 @@
    "name": {
     "en": "Big Baby"
    },
-   "percent": 14.9
+   "percent": 15.0
   },
   {
    "description": {
@@ -2466,7 +2466,7 @@
    "name": {
     "en": "Goat Head Baby"
    },
-   "percent": 21.0
+   "percent": 21.1
   },
   {
    "description": {
@@ -2490,7 +2490,7 @@
    "name": {
     "en": "Buddy Baby"
    },
-   "percent": 15.8
+   "percent": 15.9
   },
   {
    "description": {
@@ -2502,7 +2502,7 @@
    "name": {
     "en": "Colorful Baby"
    },
-   "percent": 12.2
+   "percent": 12.3
   },
   {
    "description": {
@@ -2562,7 +2562,7 @@
    "name": {
     "en": "Sucky Baby"
    },
-   "percent": 13.6
+   "percent": 13.7
   },
   {
    "description": {
@@ -2586,7 +2586,7 @@
    "name": {
     "en": "Picky Baby"
    },
-   "percent": 12.5
+   "percent": 12.6
   },
   {
    "description": {
@@ -2610,7 +2610,7 @@
    "name": {
     "en": "Belial Baby"
    },
-   "percent": 11.9
+   "percent": 12.0
   },
   {
    "description": {
@@ -2631,7 +2631,7 @@
    "name": {
     "en": "Generosity"
    },
-   "percent": 20.1
+   "percent": 20.2
   },
   {
    "description": {
@@ -2643,7 +2643,7 @@
    "name": {
     "en": "Everything is Terrible 2!!!"
    },
-   "percent": 28.4
+   "percent": 28.5
   },
   {
    "description": {
@@ -2655,7 +2655,7 @@
    "name": {
     "en": "Special Shopkeepers"
    },
-   "percent": 25.7
+   "percent": 25.8
   },
   {
    "description": {
@@ -2667,7 +2667,7 @@
    "name": {
     "en": "Eve now holds Razor Blade"
    },
-   "percent": 23.6
+   "percent": 23.7
   },
   {
    "description": {
@@ -2679,7 +2679,7 @@
    "name": {
     "en": "Store Key"
    },
-   "percent": 22.0
+   "percent": 22.1
   },
   {
    "description": {
@@ -2691,7 +2691,7 @@
    "name": {
     "en": "Lost holds Holy Mantle"
    },
-   "percent": 21.2
+   "percent": 21.3
   },
   {
    "description": {
@@ -2715,7 +2715,7 @@
    "name": {
     "en": "Keeper now holds... A Penny!"
    },
-   "percent": 13.3
+   "percent": 13.4
   },
   {
    "description": {
@@ -2727,7 +2727,7 @@
    "name": {
     "en": "Rib of Greed"
    },
-   "percent": 13.4
+   "percent": 13.5
   },
   {
    "description": {
@@ -2739,7 +2739,7 @@
    "name": {
     "en": "Noose Baby"
    },
-   "percent": 13.1
+   "percent": 13.2
   },
   {
    "description": {
@@ -2751,7 +2751,7 @@
    "name": {
     "en": "1001%"
    },
-   "percent": 17.8
+   "percent": 18.0
   },
   {
    "description": {
@@ -2763,7 +2763,7 @@
    "name": {
     "en": "Keeper holds Wooden Nickel"
    },
-   "percent": 14.6
+   "percent": 14.7
   },
   {
    "description": {
@@ -2775,7 +2775,7 @@
    "name": {
     "en": "Keeper holds Store Key"
    },
-   "percent": 13.5
+   "percent": 13.6
   },
   {
    "description": {
@@ -2787,7 +2787,7 @@
    "name": {
     "en": "Deep Pockets"
    },
-   "percent": 13.9
+   "percent": 14.0
   },
   {
    "description": {
@@ -2799,7 +2799,7 @@
    "name": {
     "en": "Karma"
    },
-   "percent": 13.1
+   "percent": 13.2
   },
   {
    "description": {
@@ -2811,7 +2811,7 @@
    "name": {
     "en": "Sticky Nickels"
    },
-   "percent": 13.1
+   "percent": 13.2
   },
   {
    "description": {
@@ -2823,7 +2823,7 @@
    "name": {
     "en": "Super Greed Baby"
    },
-   "percent": 15.0
+   "percent": 15.1
   },
   {
    "description": {
@@ -2835,7 +2835,7 @@
    "name": {
     "en": "Keeper"
    },
-   "percent": 20.0
+   "percent": 20.1
   },
   {
    "description": {
@@ -2847,7 +2847,7 @@
    "name": {
     "en": "Sale Baby"
    },
-   "percent": 9.9
+   "percent": 10.0
   },
   {
    "description": {
@@ -2859,7 +2859,7 @@
    "name": {
     "en": "Backasswards"
    },
-   "percent": 29.1
+   "percent": 29.2
   },
   {
    "description": {
@@ -2895,7 +2895,7 @@
    "name": {
     "en": "Ultra Hard"
    },
-   "percent": 28.7
+   "percent": 28.8
   },
   {
    "description": {
@@ -2907,7 +2907,7 @@
    "name": {
     "en": "PONG"
    },
-   "percent": 31.1
+   "percent": 31.2
   },
   {
    "description": {
@@ -2919,7 +2919,7 @@
    "name": {
     "en": "D Infinity"
    },
-   "percent": 24.0
+   "percent": 24.1
   },
   {
    "description": {
@@ -2931,7 +2931,7 @@
    "name": {
     "en": "Eucharist"
    },
-   "percent": 17.2
+   "percent": 17.4
   },
   {
    "description": {
@@ -2943,7 +2943,7 @@
    "name": {
     "en": "Silver Dollar"
    },
-   "percent": 18.0
+   "percent": 18.1
   },
   {
    "description": {
@@ -2955,7 +2955,7 @@
    "name": {
     "en": "Shade"
    },
-   "percent": 16.5
+   "percent": 16.6
   },
   {
    "description": {
@@ -2967,7 +2967,7 @@
    "name": {
     "en": "King Baby"
    },
-   "percent": 14.9
+   "percent": 15.0
   },
   {
    "description": {
@@ -2979,7 +2979,7 @@
    "name": {
     "en": "Bloody Crown"
    },
-   "percent": 14.2
+   "percent": 14.3
   },
   {
    "description": {
@@ -2991,7 +2991,7 @@
    "name": {
     "en": "Dull Razor"
    },
-   "percent": 14.3
+   "percent": 14.4
   },
   {
    "description": {
@@ -3003,7 +3003,7 @@
    "name": {
     "en": "Eden's Soul"
    },
-   "percent": 16.2
+   "percent": 16.3
   },
   {
    "description": {
@@ -3015,7 +3015,7 @@
    "name": {
     "en": "Dark Prince's Crown"
    },
-   "percent": 20.9
+   "percent": 21.0
   },
   {
    "description": {
@@ -3027,7 +3027,7 @@
    "name": {
     "en": "Compound Fracture"
    },
-   "percent": 14.9
+   "percent": 15.0
   },
   {
    "description": {
@@ -3039,7 +3039,7 @@
    "name": {
     "en": "Euthanasia"
    },
-   "percent": 14.8
+   "percent": 14.9
   },
   {
    "description": {
@@ -3051,7 +3051,7 @@
    "name": {
     "en": "Holy Card"
    },
-   "percent": 14.8
+   "percent": 15.0
   },
   {
    "description": {
@@ -3063,7 +3063,7 @@
    "name": {
     "en": "Crooked Penny"
    },
-   "percent": 12.7
+   "percent": 12.8
   },
   {
    "description": {
@@ -3075,7 +3075,7 @@
    "name": {
     "en": "Void"
    },
-   "percent": 14.1
+   "percent": 14.2
   },
   {
    "description": {
@@ -3087,7 +3087,7 @@
    "name": {
     "en": "D1"
    },
-   "percent": 18.0
+   "percent": 18.2
   },
   {
    "description": {
@@ -3099,7 +3099,7 @@
    "name": {
     "en": "Glyph of Balance"
    },
-   "percent": 14.3
+   "percent": 14.4
   },
   {
    "description": {
@@ -3111,7 +3111,7 @@
    "name": {
     "en": "Sack of Sacks"
    },
-   "percent": 15.2
+   "percent": 15.3
   },
   {
    "description": {
@@ -3123,7 +3123,7 @@
    "name": {
     "en": "Eye of Belial"
    },
-   "percent": 15.1
+   "percent": 15.2
   },
   {
    "description": {
@@ -3135,7 +3135,7 @@
    "name": {
     "en": "Meconium"
    },
-   "percent": 12.3
+   "percent": 12.4
   },
   {
    "description": {
@@ -3159,7 +3159,7 @@
    "name": {
     "en": "Crow Heart"
    },
-   "percent": 12.7
+   "percent": 12.8
   },
   {
    "description": {
@@ -3171,7 +3171,7 @@
    "name": {
     "en": "Metronome"
    },
-   "percent": 13.7
+   "percent": 13.8
   },
   {
    "description": {
@@ -3183,7 +3183,7 @@
    "name": {
     "en": "Bat Wing"
    },
-   "percent": 16.2
+   "percent": 16.3
   },
   {
    "description": {
@@ -3207,7 +3207,7 @@
    "name": {
     "en": "Duality"
    },
-   "percent": 15.6
+   "percent": 15.7
   },
   {
    "description": {
@@ -3219,7 +3219,7 @@
    "name": {
     "en": "Dad's Lost Coin"
    },
-   "percent": 13.5
+   "percent": 13.6
   },
   {
    "description": {
@@ -3231,7 +3231,7 @@
    "name": {
     "en": "Eye of Greed"
    },
-   "percent": 12.3
+   "percent": 12.4
   },
   {
    "description": {
@@ -3255,7 +3255,7 @@
    "name": {
     "en": "Locust of Wrath"
    },
-   "percent": 16.9
+   "percent": 17.0
   },
   {
    "description": {
@@ -3267,7 +3267,7 @@
    "name": {
     "en": "Locust of Pestilence"
    },
-   "percent": 15.7
+   "percent": 15.8
   },
   {
    "description": {
@@ -3279,7 +3279,7 @@
    "name": {
     "en": "Locust of Famine"
    },
-   "percent": 15.5
+   "percent": 15.6
   },
   {
    "description": {
@@ -3291,7 +3291,7 @@
    "name": {
     "en": "Locust of Death"
    },
-   "percent": 14.5
+   "percent": 14.6
   },
   {
    "description": {
@@ -3303,7 +3303,7 @@
    "name": {
     "en": "Locust of Conquest"
    },
-   "percent": 14.0
+   "percent": 14.1
   },
   {
    "description": {
@@ -3315,7 +3315,7 @@
    "name": {
     "en": "Hushy"
    },
-   "percent": 13.6
+   "percent": 13.7
   },
   {
    "description": {
@@ -3327,7 +3327,7 @@
    "name": {
     "en": "Brown Nugget"
    },
-   "percent": 15.4
+   "percent": 15.5
   },
   {
    "description": {
@@ -3339,7 +3339,7 @@
    "name": {
     "en": "Mort Baby"
    },
-   "percent": 13.8
+   "percent": 13.9
   },
   {
    "description": {
@@ -3351,7 +3351,7 @@
    "name": {
     "en": "Smelter"
    },
-   "percent": 18.1
+   "percent": 18.2
   },
   {
    "description": {
@@ -3363,7 +3363,7 @@
    "name": {
     "en": "Apollyon Baby"
    },
-   "percent": 9.3
+   "percent": 9.4
   },
   {
    "description": {
@@ -3375,7 +3375,7 @@
    "name": {
     "en": "New Area"
    },
-   "percent": 31.0
+   "percent": 31.1
   },
   {
    "description": {
@@ -3387,7 +3387,7 @@
    "name": {
     "en": "Once More with Feeling!"
    },
-   "percent": 16.6
+   "percent": 16.7
   },
   {
    "description": {
@@ -3399,7 +3399,7 @@
    "name": {
     "en": "Hat trick!"
    },
-   "percent": 25.1
+   "percent": 25.2
   },
   {
    "description": {
@@ -3471,7 +3471,7 @@
    "name": {
     "en": "Mr. Resetter!"
    },
-   "percent": 34.5
+   "percent": 34.6
   },
   {
    "description": {
@@ -3483,7 +3483,7 @@
    "name": {
     "en": "Living on the edge"
    },
-   "percent": 21.1
+   "percent": 21.2
   },
   {
    "description": {
@@ -3495,7 +3495,7 @@
    "name": {
     "en": "U Broke It!"
    },
-   "percent": 27.3
+   "percent": 27.4
   },
   {
    "description": {
@@ -3507,7 +3507,7 @@
    "name": {
     "en": "Laz Bleeds More!"
    },
-   "percent": 13.4
+   "percent": 13.5
   },
   {
    "description": {
@@ -3519,7 +3519,7 @@
    "name": {
     "en": "Maggy Now Holds a Pill!"
    },
-   "percent": 15.8
+   "percent": 15.9
   },
   {
    "description": {
@@ -3531,7 +3531,7 @@
    "name": {
     "en": "Charged Key"
    },
-   "percent": 11.9
+   "percent": 12.0
   },
   {
    "description": {
@@ -3555,7 +3555,7 @@
    "name": {
     "en": "Greed's Gullet"
    },
-   "percent": 13.9
+   "percent": 14.0
   },
   {
    "description": {
@@ -3588,7 +3588,7 @@
    "name": {
     "en": "Delirious"
    },
-   "percent": 28.8
+   "percent": 28.9
   },
   {
    "hidden": true,
@@ -3597,7 +3597,7 @@
    "name": {
     "en": "1000000%"
    },
-   "percent": 11.1
+   "percent": 11.2
   },
   {
    "description": {
@@ -3609,7 +3609,7 @@
    "name": {
     "en": "Apollyon"
    },
-   "percent": 28.8
+   "percent": 28.9
   },
   {
    "description": {
@@ -3621,7 +3621,7 @@
    "name": {
     "en": "Greedier!"
    },
-   "percent": 22.9
+   "percent": 23.1
   },
   {
    "description": {
@@ -3633,7 +3633,7 @@
    "name": {
     "en": "Burning Basement"
    },
-   "percent": 35.2
+   "percent": 35.3
   },
   {
    "description": {
@@ -3645,7 +3645,7 @@
    "name": {
     "en": "Flooded Caves"
    },
-   "percent": 33.0
+   "percent": 33.1
   },
   {
    "description": {
@@ -3657,7 +3657,7 @@
    "name": {
     "en": "Dank Depths"
    },
-   "percent": 31.1
+   "percent": 31.2
   },
   {
    "description": {
@@ -3669,7 +3669,7 @@
    "name": {
     "en": "Scarred Womb"
    },
-   "percent": 28.0
+   "percent": 28.1
   },
   {
    "description": {
@@ -3681,7 +3681,7 @@
    "name": {
     "en": "Something wicked this way comes!"
    },
-   "percent": 24.5
+   "percent": 24.6
   },
   {
    "description": {
@@ -3693,7 +3693,7 @@
    "name": {
     "en": "Something wicked this way comes+!"
    },
-   "percent": 20.2
+   "percent": 20.3
   },
   {
    "description": {
@@ -3705,7 +3705,7 @@
    "name": {
     "en": "The gate is open!"
    },
-   "percent": 32.8
+   "percent": 32.9
   },
   {
    "description": {
@@ -3717,7 +3717,7 @@
    "name": {
     "en": "Black Hole"
    },
-   "percent": 23.9
+   "percent": 24.1
   },
   {
    "description": {
@@ -3741,7 +3741,7 @@
    "name": {
     "en": "Sprinkler"
    },
-   "percent": 40.3
+   "percent": 40.4
   },
   {
    "description": {
@@ -3753,7 +3753,7 @@
    "name": {
     "en": "Angry Fly"
    },
-   "percent": 33.2
+   "percent": 33.3
   },
   {
    "description": {
@@ -3777,7 +3777,7 @@
    "name": {
     "en": "Broken Modem"
    },
-   "percent": 6.0
+   "percent": 6.1
   },
   {
    "description": {
@@ -3801,7 +3801,7 @@
    "name": {
     "en": "Fast Bombs"
    },
-   "percent": 26.5
+   "percent": 26.6
   },
   {
    "description": {
@@ -3813,7 +3813,7 @@
    "name": {
     "en": "Lil Delirium"
    },
-   "percent": 28.8
+   "percent": 28.9
   },
   {
    "description": {
@@ -3825,7 +3825,7 @@
    "name": {
     "en": "Hairpin"
    },
-   "percent": 37.5
+   "percent": 37.6
   },
   {
    "description": {
@@ -3837,7 +3837,7 @@
    "name": {
     "en": "Wooden Cross"
    },
-   "percent": 37.2
+   "percent": 37.3
   },
   {
    "description": {
@@ -3849,7 +3849,7 @@
    "name": {
     "en": "Butter"
    },
-   "percent": 12.8
+   "percent": 12.9
   },
   {
    "description": {
@@ -3861,7 +3861,7 @@
    "name": {
     "en": "Huge Growth"
    },
-   "percent": 11.0
+   "percent": 11.1
   },
   {
    "description": {
@@ -3885,7 +3885,7 @@
    "name": {
     "en": "Era Walk"
    },
-   "percent": 17.8
+   "percent": 17.9
   },
   {
    "description": {
@@ -3909,7 +3909,7 @@
    "name": {
     "en": "Telekinesis"
    },
-   "percent": 31.0
+   "percent": 31.1
   },
   {
    "description": {
@@ -3933,7 +3933,7 @@
    "name": {
     "en": "Jumper Cables"
    },
-   "percent": 30.6
+   "percent": 30.7
   },
   {
    "description": {
@@ -3945,7 +3945,7 @@
    "name": {
     "en": "Leprosy"
    },
-   "percent": 27.9
+   "percent": 28.0
   },
   {
    "description": {
@@ -3957,7 +3957,7 @@
    "name": {
     "en": "Technology Zero"
    },
-   "percent": 27.5
+   "percent": 27.6
   },
   {
    "description": {
@@ -3981,7 +3981,7 @@
    "name": {
     "en": "Mr. Me"
    },
-   "percent": 46.3
+   "percent": 46.4
   },
   {
    "description": {
@@ -3993,7 +3993,7 @@
    "name": {
     "en": "7 Seals"
    },
-   "percent": 35.0
+   "percent": 35.1
   },
   {
    "description": {
@@ -4005,7 +4005,7 @@
    "name": {
     "en": "Angelic Prism"
    },
-   "percent": 32.6
+   "percent": 32.7
   },
   {
    "description": {
@@ -4053,7 +4053,7 @@
    "name": {
     "en": "Haemolacria"
    },
-   "percent": 28.3
+   "percent": 28.4
   },
   {
    "description": {
@@ -4065,7 +4065,7 @@
    "name": {
     "en": "Lachryphagy"
    },
-   "percent": 25.7
+   "percent": 25.8
   },
   {
    "description": {
@@ -4077,7 +4077,7 @@
    "name": {
     "en": "Schoolbag"
    },
-   "percent": 42.9
+   "percent": 43.0
   },
   {
    "description": {
@@ -4089,7 +4089,7 @@
    "name": {
     "en": "Trisagion"
    },
-   "percent": 32.2
+   "percent": 32.3
   },
   {
    "description": {
@@ -4101,7 +4101,7 @@
    "name": {
     "en": "Extension Cord"
    },
-   "percent": 32.5
+   "percent": 32.6
   },
   {
    "description": {
@@ -4113,7 +4113,7 @@
    "name": {
     "en": "Sacrificial Altar"
    },
-   "percent": 35.7
+   "percent": 35.8
   },
   {
    "description": {
@@ -4125,7 +4125,7 @@
    "name": {
     "en": "Lil Spewer"
    },
-   "percent": 24.1
+   "percent": 24.2
   },
   {
    "description": {
@@ -4137,7 +4137,7 @@
    "name": {
     "en": "Blanket"
    },
-   "percent": 14.8
+   "percent": 14.9
   },
   {
    "description": {
@@ -4149,7 +4149,7 @@
    "name": {
     "en": "Marbles"
    },
-   "percent": 8.7
+   "percent": 8.8
   },
   {
    "description": {
@@ -4173,7 +4173,7 @@
    "name": {
     "en": "Baby-Bender"
    },
-   "percent": 29.0
+   "percent": 29.1
   },
   {
    "hidden": true,
@@ -4182,7 +4182,7 @@
    "name": {
     "en": "The Forgotten"
    },
-   "percent": 20.2
+   "percent": 20.3
   },
   {
    "hidden": true,
@@ -4191,7 +4191,7 @@
    "name": {
     "en": "Bone Heart"
    },
-   "percent": 20.2
+   "percent": 20.3
   },
   {
    "hidden": true,
@@ -4200,7 +4200,7 @@
    "name": {
     "en": "Marrow"
    },
-   "percent": 15.8
+   "percent": 16.0
   },
   {
    "hidden": true,
@@ -4209,7 +4209,7 @@
    "name": {
     "en": "Slipped Rib"
    },
-   "percent": 15.2
+   "percent": 15.3
   },
   {
    "hidden": true,
@@ -4218,7 +4218,7 @@
    "name": {
     "en": "Pointy Rib"
    },
-   "percent": 14.6
+   "percent": 14.7
   },
   {
    "hidden": true,
@@ -4227,7 +4227,7 @@
    "name": {
     "en": "Jaw Bone"
    },
-   "percent": 14.2
+   "percent": 14.3
   },
   {
    "hidden": true,
@@ -4236,7 +4236,7 @@
    "name": {
     "en": "Brittle Bones"
    },
-   "percent": 13.8
+   "percent": 13.9
   },
   {
    "hidden": true,
@@ -4245,7 +4245,7 @@
    "name": {
     "en": "Divorce Papers"
    },
-   "percent": 13.9
+   "percent": 14.0
   },
   {
    "hidden": true,
@@ -4254,7 +4254,7 @@
    "name": {
     "en": "Hallowed Ground"
    },
-   "percent": 13.6
+   "percent": 13.7
   },
   {
    "hidden": true,
@@ -4263,7 +4263,7 @@
    "name": {
     "en": "Finger Bone"
    },
-   "percent": 13.9
+   "percent": 14.0
   },
   {
    "hidden": true,
@@ -4272,7 +4272,7 @@
    "name": {
     "en": "Dad's Ring"
    },
-   "percent": 11.5
+   "percent": 11.6
   },
   {
    "hidden": true,
@@ -4281,7 +4281,7 @@
    "name": {
     "en": "Book of the Dead"
    },
-   "percent": 13.3
+   "percent": 13.4
   },
   {
    "hidden": true,
@@ -4290,7 +4290,7 @@
    "name": {
     "en": "Bone Baby"
    },
-   "percent": 9.4
+   "percent": 9.5
   },
   {
    "hidden": true,
@@ -4299,7 +4299,7 @@
    "name": {
     "en": "Bound Baby"
    },
-   "percent": 13.1
+   "percent": 13.2
   },
   {
    "description": {
@@ -4311,7 +4311,7 @@
    "name": {
     "en": "Flat Stone"
    },
-   "percent": 22.5
+   "percent": 22.6
   },
   {
    "description": {
@@ -4335,7 +4335,7 @@
    "name": {
     "en": "Bethany"
    },
-   "percent": 25.3
+   "percent": 25.4
   },
   {
    "description": {
@@ -4347,7 +4347,7 @@
    "name": {
     "en": "Jacob and Esau"
    },
-   "percent": 22.5
+   "percent": 22.7
   },
   {
    "description": {
@@ -4371,7 +4371,7 @@
    "name": {
     "en": "A Secret Exit"
    },
-   "percent": 26.2
+   "percent": 26.3
   },
   {
    "description": {
@@ -4383,7 +4383,7 @@
    "name": {
     "en": "Forgotten Lullaby"
    },
-   "percent": 16.8
+   "percent": 16.9
   },
   {
    "description": {
@@ -4395,7 +4395,7 @@
    "name": {
     "en": "Fruity Plum"
    },
-   "percent": 20.0
+   "percent": 20.2
   },
   {
    "description": {
@@ -4419,7 +4419,7 @@
    "name": {
     "en": "Rotten Heart"
    },
-   "percent": 23.0
+   "percent": 23.1
   },
   {
    "description": {
@@ -4431,7 +4431,7 @@
    "name": {
     "en": "Dross"
    },
-   "percent": 23.2
+   "percent": 23.3
   },
   {
    "description": {
@@ -4443,7 +4443,7 @@
    "name": {
     "en": "Ashpit"
    },
-   "percent": 19.2
+   "percent": 19.4
   },
   {
    "description": {
@@ -4455,7 +4455,7 @@
    "name": {
     "en": "Gehenna"
    },
-   "percent": 21.4
+   "percent": 21.6
   },
   {
    "description": {
@@ -4467,7 +4467,7 @@
    "name": {
     "en": "Red Key"
    },
-   "percent": 22.1
+   "percent": 22.2
   },
   {
    "description": {
@@ -4479,7 +4479,7 @@
    "name": {
     "en": "Wisp Baby"
    },
-   "percent": 18.1
+   "percent": 18.2
   },
   {
    "description": {
@@ -4491,7 +4491,7 @@
    "name": {
     "en": "Book of Virtues"
    },
-   "percent": 16.1
+   "percent": 16.2
   },
   {
    "description": {
@@ -4503,7 +4503,7 @@
    "name": {
     "en": "Urn of Souls"
    },
-   "percent": 14.5
+   "percent": 14.6
   },
   {
    "description": {
@@ -4515,7 +4515,7 @@
    "name": {
     "en": "Blessed Penny"
    },
-   "percent": 13.8
+   "percent": 13.9
   },
   {
    "description": {
@@ -4527,7 +4527,7 @@
    "name": {
     "en": "Alabaster Box"
    },
-   "percent": 13.0
+   "percent": 13.1
   },
   {
    "description": {
@@ -4539,7 +4539,7 @@
    "name": {
     "en": "Beth's Faith"
    },
-   "percent": 13.2
+   "percent": 13.3
   },
   {
    "description": {
@@ -4551,7 +4551,7 @@
    "name": {
     "en": "Soul Locket"
    },
-   "percent": 14.7
+   "percent": 14.8
   },
   {
    "description": {
@@ -4563,7 +4563,7 @@
    "name": {
     "en": "Divine Intervention"
    },
-   "percent": 12.5
+   "percent": 12.6
   },
   {
    "description": {
@@ -4575,7 +4575,7 @@
    "name": {
     "en": "Vade Retro"
    },
-   "percent": 11.1
+   "percent": 11.2
   },
   {
    "description": {
@@ -4587,7 +4587,7 @@
    "name": {
     "en": "Star of Bethlehem"
    },
-   "percent": 12.9
+   "percent": 13.0
   },
   {
    "description": {
@@ -4599,7 +4599,7 @@
    "name": {
     "en": "Hope Baby"
    },
-   "percent": 8.2
+   "percent": 8.3
   },
   {
    "description": {
@@ -4611,7 +4611,7 @@
    "name": {
     "en": "Glowing Baby"
    },
-   "percent": 13.1
+   "percent": 13.2
   },
   {
    "description": {
@@ -4623,7 +4623,7 @@
    "name": {
     "en": "Double Baby"
    },
-   "percent": 13.2
+   "percent": 13.3
   },
   {
    "description": {
@@ -4635,7 +4635,7 @@
    "name": {
     "en": "The Stairway"
    },
-   "percent": 13.1
+   "percent": 13.2
   },
   {
    "description": {
@@ -4647,7 +4647,7 @@
    "name": {
     "en": "Red Stew"
    },
-   "percent": 11.0
+   "percent": 11.1
   },
   {
    "description": {
@@ -4659,7 +4659,7 @@
    "name": {
     "en": "Birthright"
    },
-   "percent": 12.6
+   "percent": 12.7
   },
   {
    "description": {
@@ -4671,7 +4671,7 @@
    "name": {
     "en": "Damocles"
    },
-   "percent": 10.6
+   "percent": 10.8
   },
   {
    "description": {
@@ -4683,7 +4683,7 @@
    "name": {
     "en": "Rock Bottom"
    },
-   "percent": 13.0
+   "percent": 13.2
   },
   {
    "description": {
@@ -4695,7 +4695,7 @@
    "name": {
     "en": "Inner Child"
    },
-   "percent": 10.2
+   "percent": 10.3
   },
   {
    "description": {
@@ -4707,7 +4707,7 @@
    "name": {
     "en": "Vanishing Twin"
    },
-   "percent": 10.3
+   "percent": 10.4
   },
   {
    "description": {
@@ -4719,7 +4719,7 @@
    "name": {
     "en": "Genesis"
    },
-   "percent": 9.5
+   "percent": 9.6
   },
   {
    "description": {
@@ -4731,7 +4731,7 @@
    "name": {
     "en": "Suplex!"
    },
-   "percent": 10.6
+   "percent": 10.7
   },
   {
    "description": {
@@ -4743,7 +4743,7 @@
    "name": {
     "en": "Solomon's Baby"
    },
-   "percent": 7.4
+   "percent": 7.5
   },
   {
    "description": {
@@ -4755,7 +4755,7 @@
    "name": {
     "en": "Illusion Baby"
    },
-   "percent": 10.2
+   "percent": 10.3
   },
   {
    "description": {
@@ -4767,7 +4767,7 @@
    "name": {
     "en": "Meat Cleaver"
    },
-   "percent": 17.5
+   "percent": 17.6
   },
   {
    "description": {
@@ -4779,7 +4779,7 @@
    "name": {
     "en": "Options?"
    },
-   "percent": 18.0
+   "percent": 18.1
   },
   {
    "description": {
@@ -4791,7 +4791,7 @@
    "name": {
     "en": "Yuck Heart"
    },
-   "percent": 12.1
+   "percent": 12.2
   },
   {
    "description": {
@@ -4803,7 +4803,7 @@
    "name": {
     "en": "Candy Heart"
    },
-   "percent": 13.5
+   "percent": 13.7
   },
   {
    "description": {
@@ -4815,7 +4815,7 @@
    "name": {
     "en": "Guppy's Eye"
    },
-   "percent": 13.3
+   "percent": 13.4
   },
   {
    "description": {
@@ -4827,7 +4827,7 @@
    "name": {
     "en": "A Pound of Flesh"
    },
-   "percent": 14.7
+   "percent": 14.8
   },
   {
    "description": {
@@ -4839,7 +4839,7 @@
    "name": {
     "en": "Akeldama"
    },
-   "percent": 11.3
+   "percent": 11.4
   },
   {
    "description": {
@@ -4851,7 +4851,7 @@
    "name": {
     "en": "Redemption"
    },
-   "percent": 13.5
+   "percent": 13.6
   },
   {
    "description": {
@@ -4863,7 +4863,7 @@
    "name": {
     "en": "Eternal D6"
    },
-   "percent": 10.1
+   "percent": 10.2
   },
   {
    "description": {
@@ -4875,7 +4875,7 @@
    "name": {
     "en": "Montezuma's Revenge"
    },
-   "percent": 11.4
+   "percent": 11.5
   },
   {
    "description": {
@@ -4887,7 +4887,7 @@
    "name": {
     "en": "Bird Cage"
    },
-   "percent": 9.7
+   "percent": 9.8
   },
   {
    "description": {
@@ -4899,7 +4899,7 @@
    "name": {
     "en": "Cracked Orb"
    },
-   "percent": 11.5
+   "percent": 11.6
   },
   {
    "description": {
@@ -4911,7 +4911,7 @@
    "name": {
     "en": "Bloody Gust"
    },
-   "percent": 9.8
+   "percent": 9.9
   },
   {
    "description": {
@@ -4923,7 +4923,7 @@
    "name": {
     "en": "Empty Heart"
    },
-   "percent": 11.6
+   "percent": 11.7
   },
   {
    "description": {
@@ -4935,7 +4935,7 @@
    "name": {
     "en": "Devil's Crown"
    },
-   "percent": 15.8
+   "percent": 15.9
   },
   {
    "description": {
@@ -4947,7 +4947,7 @@
    "name": {
     "en": "Lil Abaddon"
    },
-   "percent": 15.1
+   "percent": 15.2
   },
   {
    "description": {
@@ -4971,7 +4971,7 @@
    "name": {
     "en": "Astral Projection"
    },
-   "percent": 11.3
+   "percent": 11.4
   },
   {
    "description": {
@@ -4983,7 +4983,7 @@
    "name": {
     "en": "'M"
    },
-   "percent": 11.0
+   "percent": 11.1
   },
   {
    "description": {
@@ -4995,7 +4995,7 @@
    "name": {
     "en": "Everything Jar"
    },
-   "percent": 12.6
+   "percent": 12.8
   },
   {
    "description": {
@@ -5007,7 +5007,7 @@
    "name": {
     "en": "Lost Soul"
    },
-   "percent": 11.9
+   "percent": 12.0
   },
   {
    "description": {
@@ -5019,7 +5019,7 @@
    "name": {
     "en": "Hungry Soul"
    },
-   "percent": 12.6
+   "percent": 12.8
   },
   {
    "description": {
@@ -5043,7 +5043,7 @@
    "name": {
     "en": "C Section"
    },
-   "percent": 14.6
+   "percent": 14.7
   },
   {
    "description": {
@@ -5055,7 +5055,7 @@
    "name": {
     "en": "Keeper's Sack"
    },
-   "percent": 9.4
+   "percent": 9.5
   },
   {
    "description": {
@@ -5067,7 +5067,7 @@
    "name": {
     "en": "Keeper's Box"
    },
-   "percent": 10.6
+   "percent": 10.8
   },
   {
    "description": {
@@ -5091,7 +5091,7 @@
    "name": {
     "en": "Worm Friend"
    },
-   "percent": 11.0
+   "percent": 11.1
   },
   {
    "description": {
@@ -5103,7 +5103,7 @@
    "name": {
     "en": "Bone Spurs"
    },
-   "percent": 9.9
+   "percent": 10.0
   },
   {
    "description": {
@@ -5115,7 +5115,7 @@
    "name": {
     "en": "Spirit Shackles"
    },
-   "percent": 11.2
+   "percent": 11.3
   },
   {
    "description": {
@@ -5127,7 +5127,7 @@
    "name": {
     "en": "Revelation"
    },
-   "percent": 10.9
+   "percent": 11.0
   },
   {
    "description": {
@@ -5139,7 +5139,7 @@
    "name": {
     "en": "Jar of Wisps"
    },
-   "percent": 11.2
+   "percent": 11.3
   },
   {
    "description": {
@@ -5151,7 +5151,7 @@
    "name": {
     "en": "Magic Skin"
    },
-   "percent": 8.5
+   "percent": 8.6
   },
   {
    "description": {
@@ -5163,7 +5163,7 @@
    "name": {
     "en": "Friend Finder"
    },
-   "percent": 9.4
+   "percent": 9.5
   },
   {
    "hidden": true,
@@ -5172,7 +5172,7 @@
    "name": {
     "en": "The Broken"
    },
-   "percent": 19.0
+   "percent": 19.2
   },
   {
    "hidden": true,
@@ -5181,7 +5181,7 @@
    "name": {
     "en": "The Dauntless"
    },
-   "percent": 14.9
+   "percent": 15.0
   },
   {
    "hidden": true,
@@ -5190,7 +5190,7 @@
    "name": {
     "en": "The Hoarder"
    },
-   "percent": 16.5
+   "percent": 16.6
   },
   {
    "hidden": true,
@@ -5199,7 +5199,7 @@
    "name": {
     "en": "The Deceiver"
    },
-   "percent": 15.3
+   "percent": 15.5
   },
   {
    "hidden": true,
@@ -5208,7 +5208,7 @@
    "name": {
     "en": "The Soiled"
    },
-   "percent": 12.4
+   "percent": 12.5
   },
   {
    "hidden": true,
@@ -5217,7 +5217,7 @@
    "name": {
     "en": "The Curdled"
    },
-   "percent": 13.1
+   "percent": 13.2
   },
   {
    "hidden": true,
@@ -5226,7 +5226,7 @@
    "name": {
     "en": "The Savage"
    },
-   "percent": 13.3
+   "percent": 13.4
   },
   {
    "hidden": true,
@@ -5235,7 +5235,7 @@
    "name": {
     "en": "The Benighted"
    },
-   "percent": 17.1
+   "percent": 17.2
   },
   {
    "hidden": true,
@@ -5244,7 +5244,7 @@
    "name": {
     "en": "The Enigma"
    },
-   "percent": 12.4
+   "percent": 12.5
   },
   {
    "hidden": true,
@@ -5253,7 +5253,7 @@
    "name": {
     "en": "The Capricious"
    },
-   "percent": 14.4
+   "percent": 14.5
   },
   {
    "hidden": true,
@@ -5262,7 +5262,7 @@
    "name": {
     "en": "The Baleful"
    },
-   "percent": 14.1
+   "percent": 14.2
   },
   {
    "hidden": true,
@@ -5271,7 +5271,7 @@
    "name": {
     "en": "The Harlot"
    },
-   "percent": 15.5
+   "percent": 15.6
   },
   {
    "hidden": true,
@@ -5280,7 +5280,7 @@
    "name": {
     "en": "The Miser"
    },
-   "percent": 12.9
+   "percent": 13.0
   },
   {
    "hidden": true,
@@ -5289,7 +5289,7 @@
    "name": {
     "en": "The Empty"
    },
-   "percent": 12.5
+   "percent": 12.6
   },
   {
    "hidden": true,
@@ -5298,7 +5298,7 @@
    "name": {
     "en": "The Fettered"
    },
-   "percent": 12.9
+   "percent": 13.0
   },
   {
    "hidden": true,
@@ -5307,7 +5307,7 @@
    "name": {
     "en": "The Zealot"
    },
-   "percent": 12.6
+   "percent": 12.7
   },
   {
    "hidden": true,
@@ -5316,7 +5316,7 @@
    "name": {
     "en": "The Deserter"
    },
-   "percent": 11.0
+   "percent": 11.1
   },
   {
    "hidden": true,
@@ -5325,7 +5325,7 @@
    "name": {
     "en": "Glitched Crown"
    },
-   "percent": 11.0
+   "percent": 11.1
   },
   {
    "hidden": true,
@@ -5334,7 +5334,7 @@
    "name": {
     "en": "Belly Jelly"
    },
-   "percent": 6.3
+   "percent": 6.4
   },
   {
    "hidden": true,
@@ -5343,7 +5343,7 @@
    "name": {
     "en": "Blue Key"
    },
-   "percent": 6.5
+   "percent": 6.6
   },
   {
    "hidden": true,
@@ -5352,7 +5352,7 @@
    "name": {
     "en": "Sanguine Bond"
    },
-   "percent": 7.2
+   "percent": 7.3
   },
   {
    "hidden": true,
@@ -5361,7 +5361,7 @@
    "name": {
     "en": "The Swarm"
    },
-   "percent": 5.2
+   "percent": 5.3
   },
   {
    "hidden": true,
@@ -5370,7 +5370,7 @@
    "name": {
     "en": "Heartbreak"
    },
-   "percent": 5.5
+   "percent": 5.6
   },
   {
    "hidden": true,
@@ -5379,7 +5379,7 @@
    "name": {
     "en": "Larynx"
    },
-   "percent": 6.1
+   "percent": 6.2
   },
   {
    "hidden": true,
@@ -5388,7 +5388,7 @@
    "name": {
     "en": "Azazel's Rage"
    },
-   "percent": 7.2
+   "percent": 7.3
   },
   {
    "hidden": true,
@@ -5415,7 +5415,7 @@
    "name": {
     "en": "Sacred Orb"
    },
-   "percent": 7.9
+   "percent": 8.0
   },
   {
    "hidden": true,
@@ -5424,7 +5424,7 @@
    "name": {
     "en": "Twisted Pair"
    },
-   "percent": 9.9
+   "percent": 10.0
   },
   {
    "hidden": true,
@@ -5433,7 +5433,7 @@
    "name": {
     "en": "Strawman"
    },
-   "percent": 7.0
+   "percent": 7.1
   },
   {
    "hidden": true,
@@ -5442,7 +5442,7 @@
    "name": {
     "en": "Echo Chamber"
    },
-   "percent": 6.5
+   "percent": 6.6
   },
   {
    "hidden": true,
@@ -5469,7 +5469,7 @@
    "name": {
     "en": "Esau Jr."
    },
-   "percent": 5.0
+   "percent": 5.1
   },
   {
    "description": {
@@ -5481,7 +5481,7 @@
    "name": {
     "en": "Bloody Mary"
    },
-   "percent": 21.8
+   "percent": 21.9
   },
   {
    "description": {
@@ -5493,7 +5493,7 @@
    "name": {
     "en": "Baptism by Fire"
    },
-   "percent": 12.5
+   "percent": 12.6
   },
   {
    "description": {
@@ -5505,7 +5505,7 @@
    "name": {
     "en": "Isaac's Awakening"
    },
-   "percent": 22.6
+   "percent": 22.7
   },
   {
    "description": {
@@ -5517,7 +5517,7 @@
    "name": {
     "en": "Seeing Double"
    },
-   "percent": 22.6
+   "percent": 22.7
   },
   {
    "description": {
@@ -5529,7 +5529,7 @@
    "name": {
     "en": "Pica Run"
    },
-   "percent": 8.5
+   "percent": 8.6
   },
   {
    "description": {
@@ -5541,7 +5541,7 @@
    "name": {
     "en": "Hot Potato"
    },
-   "percent": 13.0
+   "percent": 13.1
   },
   {
    "description": {
@@ -5553,7 +5553,7 @@
    "name": {
     "en": "Cantripped!"
    },
-   "percent": 16.5
+   "percent": 16.7
   },
   {
    "description": {
@@ -5565,7 +5565,7 @@
    "name": {
     "en": "Red Redemption"
    },
-   "percent": 11.1
+   "percent": 11.2
   },
   {
    "hidden": true,
@@ -5574,7 +5574,7 @@
    "name": {
     "en": "DELETE THIS"
    },
-   "percent": 14.4
+   "percent": 14.5
   },
   {
    "hidden": true,
@@ -5610,7 +5610,7 @@
    "name": {
     "en": "Spirit Sword"
    },
-   "percent": 12.5
+   "percent": 12.6
   },
   {
    "hidden": true,
@@ -5640,7 +5640,7 @@
    "name": {
     "en": "Charged Penny"
    },
-   "percent": 11.7
+   "percent": 11.8
   },
   {
    "hidden": true,
@@ -5649,7 +5649,7 @@
    "name": {
     "en": "The Fool"
    },
-   "percent": 7.2
+   "percent": 7.3
   },
   {
    "hidden": true,
@@ -5658,7 +5658,7 @@
    "name": {
     "en": "The Magician"
    },
-   "percent": 7.9
+   "percent": 8.0
   },
   {
    "hidden": true,
@@ -5676,7 +5676,7 @@
    "name": {
     "en": "The Empress"
    },
-   "percent": 5.9
+   "percent": 6.0
   },
   {
    "hidden": true,
@@ -5685,7 +5685,7 @@
    "name": {
     "en": "The Emperor"
    },
-   "percent": 5.8
+   "percent": 5.9
   },
   {
    "hidden": true,
@@ -5712,7 +5712,7 @@
    "name": {
     "en": "The Chariot"
    },
-   "percent": 6.1
+   "percent": 6.2
   },
   {
    "hidden": true,
@@ -5721,7 +5721,7 @@
    "name": {
     "en": "Justice"
    },
-   "percent": 8.7
+   "percent": 8.8
   },
   {
    "hidden": true,
@@ -5730,7 +5730,7 @@
    "name": {
     "en": "The Hermit"
    },
-   "percent": 6.3
+   "percent": 6.4
   },
   {
    "hidden": true,
@@ -5748,7 +5748,7 @@
    "name": {
     "en": "Strength"
    },
-   "percent": 6.7
+   "percent": 6.8
   },
   {
    "hidden": true,
@@ -5757,7 +5757,7 @@
    "name": {
     "en": "The Hanged Man"
    },
-   "percent": 8.2
+   "percent": 8.3
   },
   {
    "hidden": true,
@@ -5766,7 +5766,7 @@
    "name": {
     "en": "Death"
    },
-   "percent": 6.3
+   "percent": 6.4
   },
   {
    "hidden": true,
@@ -5784,7 +5784,7 @@
    "name": {
     "en": "The Devil"
    },
-   "percent": 7.9
+   "percent": 8.0
   },
   {
    "hidden": true,
@@ -5802,7 +5802,7 @@
    "name": {
     "en": "The Stars"
    },
-   "percent": 9.8
+   "percent": 9.9
   },
   {
    "hidden": true,
@@ -5811,7 +5811,7 @@
    "name": {
     "en": "The Sun and the Moon"
    },
-   "percent": 5.7
+   "percent": 5.8
   },
   {
    "hidden": true,
@@ -5829,7 +5829,7 @@
    "name": {
     "en": "The World"
    },
-   "percent": 6.2
+   "percent": 6.3
   },
   {
    "description": {
@@ -5841,7 +5841,7 @@
    "name": {
     "en": "Old Capacitor"
    },
-   "percent": 15.6
+   "percent": 15.7
   },
   {
    "description": {
@@ -5853,7 +5853,7 @@
    "name": {
     "en": "Brimstone Bombs"
    },
-   "percent": 22.9
+   "percent": 23.0
   },
   {
    "description": {
@@ -5874,7 +5874,7 @@
    "name": {
     "en": "Mom's Lock"
    },
-   "percent": 9.7
+   "percent": 9.8
   },
   {
    "hidden": true,
@@ -5883,7 +5883,7 @@
    "name": {
     "en": "Dice Bag"
    },
-   "percent": 8.7
+   "percent": 8.8
   },
   {
    "hidden": true,
@@ -5892,7 +5892,7 @@
    "name": {
     "en": "Holy Crown"
    },
-   "percent": 6.7
+   "percent": 6.8
   },
   {
    "hidden": true,
@@ -5910,7 +5910,7 @@
    "name": {
     "en": "Gilded Key"
    },
-   "percent": 6.9
+   "percent": 7.0
   },
   {
    "hidden": true,
@@ -5919,7 +5919,7 @@
    "name": {
     "en": "Lucky Sack"
    },
-   "percent": 6.4
+   "percent": 6.5
   },
   {
    "hidden": true,
@@ -5928,7 +5928,7 @@
    "name": {
     "en": "Your Soul"
    },
-   "percent": 7.7
+   "percent": 7.8
   },
   {
    "hidden": true,
@@ -5946,7 +5946,7 @@
    "name": {
     "en": "Dingle Berry"
    },
-   "percent": 5.3
+   "percent": 5.4
   },
   {
    "hidden": true,
@@ -5955,7 +5955,7 @@
    "name": {
     "en": "Ring Cap"
    },
-   "percent": 5.2
+   "percent": 5.3
   },
   {
    "hidden": true,
@@ -5973,7 +5973,7 @@
    "name": {
     "en": "Lil Clot"
    },
-   "percent": 5.5
+   "percent": 5.6
   },
   {
    "hidden": true,
@@ -5982,7 +5982,7 @@
    "name": {
     "en": "Temporary Tattoo"
    },
-   "percent": 6.6
+   "percent": 6.7
   },
   {
    "hidden": true,
@@ -6000,7 +6000,7 @@
    "name": {
     "en": "Wicked Crown"
    },
-   "percent": 7.7
+   "percent": 7.8
   },
   {
    "hidden": true,
@@ -6009,7 +6009,7 @@
    "name": {
     "en": "Azazel's Stump"
    },
-   "percent": 7.0
+   "percent": 7.1
   },
   {
    "hidden": true,
@@ -6018,7 +6018,7 @@
    "name": {
     "en": "Torn Pocket"
    },
-   "percent": 5.1
+   "percent": 5.2
   },
   {
    "hidden": true,
@@ -6027,7 +6027,7 @@
    "name": {
     "en": "Torn Card"
    },
-   "percent": 5.0
+   "percent": 5.1
   },
   {
    "hidden": true,
@@ -6054,7 +6054,7 @@
    "name": {
     "en": "Kid's Drawing"
    },
-   "percent": 7.2
+   "percent": 7.3
   },
   {
    "hidden": true,
@@ -6072,7 +6072,7 @@
    "name": {
     "en": "The Twins"
    },
-   "percent": 8.3
+   "percent": 8.4
   },
   {
    "hidden": true,
@@ -6081,7 +6081,7 @@
    "name": {
     "en": "Adoption Papers"
    },
-   "percent": 7.7
+   "percent": 7.8
   },
   {
    "hidden": true,
@@ -6117,7 +6117,7 @@
    "name": {
     "en": "Apollyon's Best Friend"
    },
-   "percent": 6.1
+   "percent": 6.2
   },
   {
    "hidden": true,
@@ -6153,7 +6153,7 @@
    "name": {
     "en": "Beth's Essence"
    },
-   "percent": 6.2
+   "percent": 6.3
   },
   {
    "hidden": true,
@@ -6171,7 +6171,7 @@
    "name": {
     "en": "Found Soul"
    },
-   "percent": 5.0
+   "percent": 5.1
   },
   {
    "description": {
@@ -6195,7 +6195,7 @@
    "name": {
     "en": "Golden Razor"
    },
-   "percent": 26.9
+   "percent": 27.0
   },
   {
    "hidden": true,
@@ -6204,7 +6204,7 @@
    "name": {
     "en": "Spindown Dice"
    },
-   "percent": 11.4
+   "percent": 11.5
   },
   {
    "hidden": true,
@@ -6222,7 +6222,7 @@
    "name": {
     "en": "Bag of Crafting"
    },
-   "percent": 7.7
+   "percent": 7.8
   },
   {
    "hidden": true,
@@ -6231,7 +6231,7 @@
    "name": {
     "en": "Dark Arts"
    },
-   "percent": 8.6
+   "percent": 8.7
   },
   {
    "hidden": true,
@@ -6249,7 +6249,7 @@
    "name": {
     "en": "Sumptorium"
    },
-   "percent": 6.4
+   "percent": 6.5
   },
   {
    "hidden": true,
@@ -6258,7 +6258,7 @@
    "name": {
     "en": "Berserk!"
    },
-   "percent": 7.5
+   "percent": 7.6
   },
   {
    "hidden": true,
@@ -6267,7 +6267,7 @@
    "name": {
     "en": "Hemoptysis"
    },
-   "percent": 8.7
+   "percent": 8.8
   },
   {
    "hidden": true,
@@ -6285,7 +6285,7 @@
    "name": {
     "en": "Corrupted Data"
    },
-   "percent": 6.4
+   "percent": 6.5
   },
   {
    "hidden": true,
@@ -6294,7 +6294,7 @@
    "name": {
     "en": "Ghost Bombs"
    },
-   "percent": 7.6
+   "percent": 7.7
   },
   {
    "hidden": true,
@@ -6303,7 +6303,7 @@
    "name": {
     "en": "Gello"
    },
-   "percent": 9.5
+   "percent": 9.6
   },
   {
    "hidden": true,
@@ -6312,7 +6312,7 @@
    "name": {
     "en": "Keeper's Kin"
    },
-   "percent": 8.2
+   "percent": 8.3
   },
   {
    "hidden": true,
@@ -6339,7 +6339,7 @@
    "name": {
     "en": "Lemegeton"
    },
-   "percent": 7.5
+   "percent": 7.6
   },
   {
    "hidden": true,
@@ -6357,7 +6357,7 @@
    "name": {
     "en": "Mega Chest"
    },
-   "percent": 10.5
+   "percent": 10.6
   },
   {
    "hidden": true,
@@ -6384,7 +6384,7 @@
    "name": {
     "en": "Black Sack"
    },
-   "percent": 8.5
+   "percent": 8.6
   },
   {
    "hidden": true,
@@ -6393,7 +6393,7 @@
    "name": {
     "en": "Charming Poop"
    },
-   "percent": 5.6
+   "percent": 5.7
   },
   {
    "hidden": true,
@@ -6402,7 +6402,7 @@
    "name": {
     "en": "Horse Pill"
    },
-   "percent": 6.4
+   "percent": 6.5
   },
   {
    "hidden": true,
@@ -6411,7 +6411,7 @@
    "name": {
     "en": "Crane Game"
    },
-   "percent": 8.0
+   "percent": 8.1
   },
   {
    "hidden": true,
@@ -6420,7 +6420,7 @@
    "name": {
     "en": "Hell Game"
    },
-   "percent": 8.5
+   "percent": 8.6
   },
   {
    "hidden": true,
@@ -6438,7 +6438,7 @@
    "name": {
     "en": "Wild Card"
    },
-   "percent": 6.6
+   "percent": 6.7
   },
   {
    "hidden": true,
@@ -6447,7 +6447,7 @@
    "name": {
     "en": "Haunted Chest"
    },
-   "percent": 7.4
+   "percent": 7.5
   },
   {
    "hidden": true,
@@ -6456,7 +6456,7 @@
    "name": {
     "en": "Fool's Gold"
    },
-   "percent": 9.3
+   "percent": 9.4
   },
   {
    "hidden": true,
@@ -6465,7 +6465,7 @@
    "name": {
     "en": "Golden Penny"
    },
-   "percent": 8.3
+   "percent": 8.4
   },
   {
    "hidden": true,
@@ -6474,7 +6474,7 @@
    "name": {
     "en": "Rotten Beggar"
    },
-   "percent": 7.0
+   "percent": 7.1
   },
   {
    "hidden": true,
@@ -6492,7 +6492,7 @@
    "name": {
     "en": "Confessional"
    },
-   "percent": 7.6
+   "percent": 7.7
   },
   {
    "hidden": true,
@@ -6501,7 +6501,7 @@
    "name": {
     "en": "Golden Trinket"
    },
-   "percent": 5.4
+   "percent": 5.5
   },
   {
    "hidden": true,
@@ -6510,7 +6510,7 @@
    "name": {
     "en": "Soul of Isaac"
    },
-   "percent": 10.3
+   "percent": 10.4
   },
   {
    "hidden": true,
@@ -6528,7 +6528,7 @@
    "name": {
     "en": "Soul of Cain"
    },
-   "percent": 6.5
+   "percent": 6.6
   },
   {
    "hidden": true,
@@ -6537,7 +6537,7 @@
    "name": {
     "en": "Soul of Judas"
    },
-   "percent": 8.0
+   "percent": 8.1
   },
   {
    "hidden": true,
@@ -6546,7 +6546,7 @@
    "name": {
     "en": "Soul of ???"
    },
-   "percent": 5.4
+   "percent": 5.5
   },
   {
    "hidden": true,
@@ -6600,7 +6600,7 @@
    "name": {
     "en": "Soul of the Lost"
    },
-   "percent": 7.8
+   "percent": 7.9
   },
   {
    "hidden": true,
@@ -6609,7 +6609,7 @@
    "name": {
     "en": "Soul of Lilith"
    },
-   "percent": 9.3
+   "percent": 9.4
   },
   {
    "hidden": true,
@@ -6618,7 +6618,7 @@
    "name": {
     "en": "Soul of the Keeper"
    },
-   "percent": 7.8
+   "percent": 7.9
   },
   {
    "hidden": true,
@@ -6627,7 +6627,7 @@
    "name": {
     "en": "Soul of Apollyon"
    },
-   "percent": 6.6
+   "percent": 6.7
   },
   {
    "hidden": true,
@@ -6645,7 +6645,7 @@
    "name": {
     "en": "Soul of Bethany"
    },
-   "percent": 7.0
+   "percent": 7.1
   },
   {
    "hidden": true,
@@ -6654,7 +6654,7 @@
    "name": {
     "en": "Soul of Jacob and Esau"
    },
-   "percent": 5.3
+   "percent": 5.4
   },
   {
    "description": {
@@ -6666,7 +6666,7 @@
    "name": {
     "en": "A Strange Door"
    },
-   "percent": 22.5
+   "percent": 22.7
   },
   {
    "hidden": true,
@@ -6675,7 +6675,7 @@
    "name": {
     "en": "Death Certificate"
    },
-   "percent": 4.3
+   "percent": 4.4
   },
   {
    "hidden": false,
@@ -6696,7 +6696,7 @@
    "name": {
     "en": "Play Online"
    },
-   "percent": 9.4
+   "percent": 9.5
   },
   {
    "description": {
@@ -6708,7 +6708,7 @@
    "name": {
     "en": "Win Online"
    },
-   "percent": 7.2
+   "percent": 7.3
   },
   {
    "description": {
@@ -6732,7 +6732,7 @@
    "name": {
     "en": "Item Descriptions"
    },
-   "percent": 23.3
+   "percent": 23.5
   }
  ],
  "id": "250900",

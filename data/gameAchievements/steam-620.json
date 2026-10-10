@@ -14,7 +14,7 @@
     "en": "Wake Up Call",
     "sv": "Väckarklocka"
    },
-   "percent": 74.1
+   "percent": 74.0
   },
   {
    "description": {
@@ -46,7 +46,7 @@
     "en": "Undiscouraged",
     "sv": "Oavskräckt"
    },
-   "percent": 62.7
+   "percent": 62.6
   },
   {
    "description": {
@@ -62,7 +62,7 @@
     "en": "Bridge Over Troubling Water",
     "sv": "Bro över mörka vatten"
    },
-   "percent": 53.3
+   "percent": 53.2
   },
   {
    "description": {
@@ -110,7 +110,7 @@
     "en": "Tater Tote",
     "sv": "Potatistransport"
    },
-   "percent": 41.0
+   "percent": 40.9
   },
   {
    "description": {
@@ -126,7 +126,7 @@
     "en": "Vertically Unchallenged",
     "sv": "Vertikalt överbegåvad"
    },
-   "percent": 42.9
+   "percent": 42.8
   },
   {
    "description": {
@@ -142,7 +142,7 @@
     "en": "Stranger Than Friction",
     "sv": "Friktionsfritt"
    },
-   "percent": 39.4
+   "percent": 39.3
   },
   {
    "description": {
@@ -158,7 +158,7 @@
     "en": "White Out",
     "sv": "Vitvaror"
    },
-   "percent": 38.3
+   "percent": 38.2
   },
   {
    "description": {
@@ -190,7 +190,7 @@
     "en": "Dual Pit Experiment",
     "sv": "Dubbelt stupexperiment"
    },
-   "percent": 37.0
+   "percent": 36.9
   },
   {
    "description": {
@@ -334,7 +334,7 @@
     "en": "Good Listener",
     "sv": "Bra lyssnare"
    },
-   "percent": 28.4
+   "percent": 28.3
   },
   {
    "description": {
@@ -590,7 +590,7 @@
     "en": "Gesticul-8",
     "sv": "Gestvänligt"
    },
-   "percent": 27.1
+   "percent": 27.0
   },
   {
    "description": {
@@ -638,7 +638,7 @@
     "en": "Party of Three",
     "sv": "3vligt sällskap"
    },
-   "percent": 3.6
+   "percent": 3.5
   },
   {
    "description": {
@@ -813,7 +813,7 @@
     "en": "Talent Show",
     "sv": "Talangshow"
    },
-   "percent": 2.7
+   "percent": 2.6
   }
  ],
  "id": "620",

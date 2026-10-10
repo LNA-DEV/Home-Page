@@ -15,7 +15,7 @@
     "en": "Gettin' the Hang of It",
     "sv": "Börjar få kläm på det"
    },
-   "percent": 51.2,
+   "percent": 51.1,
    "unlocked": "2021-02-27T16:05:17+01:00"
   },
   {
@@ -33,7 +33,7 @@
     "en": "Seasoned Vet",
     "sv": "Erfaren veteran"
    },
-   "percent": 22.3,
+   "percent": 22.2,
    "unlocked": "2021-03-29T22:34:28+02:00"
   },
   {
@@ -66,7 +66,7 @@
     "de": "Nerd",
     "en": "Techie"
    },
-   "percent": 45.4,
+   "percent": 45.3,
    "unlocked": "2021-02-27T16:05:17+01:00"
   },
   {
@@ -116,7 +116,7 @@
     "en": "Trappist",
     "sv": "Fäll-sättare"
    },
-   "percent": 18.8,
+   "percent": 18.7,
    "unlocked": "2021-10-10T14:04:12+02:00"
   },
   {
@@ -150,7 +150,7 @@
     "en": "Young Explorer",
     "sv": "Ung upptäckare"
    },
-   "percent": 62.1,
+   "percent": 62.0,
    "unlocked": "2021-02-27T15:37:21+01:00"
   },
   {
@@ -182,7 +182,7 @@
     "en": "A New Friend Appears",
     "sv": "En ny vän visar sig"
    },
-   "percent": 32.5,
+   "percent": 32.4,
    "unlocked": "2021-03-26T22:16:30+01:00"
   },
   {
@@ -216,7 +216,7 @@
     "en": "Gettin' Fancy",
     "sv": "Börjar bli utsmyckad"
    },
-   "percent": 52.8,
+   "percent": 52.7,
    "unlocked": "2021-02-27T15:15:13+01:00"
   },
   {
@@ -250,7 +250,7 @@
     "en": "Wilhelm Audition",
     "sv": "Wilhelm audition"
    },
-   "percent": 41.0,
+   "percent": 40.9,
    "unlocked": "2021-03-26T22:12:00+01:00"
   },
   {
@@ -318,7 +318,7 @@
     "en": "Not So Sharp",
     "sv": "Inte så vass"
    },
-   "percent": 63.3,
+   "percent": 63.2,
    "unlocked": "2021-03-21T21:36:31+01:00"
   },
   {
@@ -336,7 +336,7 @@
     "en": "Neat and Nimble",
     "sv": "Snygg och smidig"
    },
-   "percent": 28.2,
+   "percent": 28.1,
    "unlocked": "2021-03-29T21:04:18+02:00"
   },
   {
@@ -354,7 +354,7 @@
     "en": "Craftsperson",
     "sv": "Hantverkare"
    },
-   "percent": 77.0,
+   "percent": 76.9,
    "unlocked": "2021-02-27T15:28:53+01:00"
   },
   {
@@ -453,7 +453,7 @@
     "en": "Droppin' Bills",
     "sv": "Tappar räkningar"
    },
-   "percent": 36.1,
+   "percent": 36.0,
    "unlocked": "2021-03-29T21:05:06+02:00"
   },
   {
@@ -486,7 +486,7 @@
     "en": "Solo Master",
     "sv": "Solomästare"
    },
-   "percent": 4.6
+   "percent": 4.5
   },
   {
    "description": {
@@ -502,7 +502,7 @@
     "en": "Spaghetti Award",
     "sv": "Spaghettipris"
    },
-   "percent": 13.6
+   "percent": 13.5
   },
   {
    "achieved": true,

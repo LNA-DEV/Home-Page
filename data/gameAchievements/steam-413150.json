@@ -13,7 +13,7 @@
     "de": "Grünschnabel",
     "en": "Greenhorn"
    },
-   "percent": 62.8,
+   "percent": 62.6,
    "unlocked": "2020-02-24T15:41:02+01:00"
   },
   {
@@ -29,7 +29,7 @@
     "de": "Cowboy",
     "en": "Cowpoke"
    },
-   "percent": 55.5,
+   "percent": 55.3,
    "unlocked": "2020-06-06T13:41:25+02:00"
   },
   {
@@ -45,7 +45,7 @@
     "de": "Heimstätter",
     "en": "Homesteader"
    },
-   "percent": 44.4,
+   "percent": 44.3,
    "unlocked": "2020-06-24T21:33:29+02:00"
   },
   {
@@ -61,7 +61,7 @@
     "de": "Millionär",
     "en": "Millionaire"
    },
-   "percent": 32.4,
+   "percent": 32.3,
    "unlocked": "2020-12-23T23:56:48+01:00"
   },
   {
@@ -86,7 +86,7 @@
     "de": "Eine vollständige Sammlung",
     "en": "A Complete Collection"
    },
-   "percent": 7.3
+   "percent": 7.2
   },
   {
    "achieved": true,
@@ -101,7 +101,7 @@
     "de": "Ein neuer Freund",
     "en": "A New Friend"
    },
-   "percent": 40.5,
+   "percent": 40.3,
    "unlocked": "2020-06-14T21:26:04+02:00"
   },
   {
@@ -117,7 +117,7 @@
     "de": "Beste Freunde",
     "en": "Best Friends"
    },
-   "percent": 32.1,
+   "percent": 32.0,
    "unlocked": "2020-12-23T21:07:20+01:00"
   },
   {
@@ -132,7 +132,7 @@
     "de": "Der beliebte Bauer",
     "en": "The Beloved Farmer"
    },
-   "percent": 13.6
+   "percent": 13.5
   },
   {
    "achieved": true,
@@ -147,7 +147,7 @@
     "de": "Cliquen",
     "en": "Cliques"
    },
-   "percent": 28.9,
+   "percent": 28.7,
    "unlocked": "2020-06-25T20:33:26+02:00"
   },
   {
@@ -163,7 +163,7 @@
     "de": "Vernetzt",
     "en": "Networking"
    },
-   "percent": 22.5,
+   "percent": 22.4,
    "unlocked": "2020-07-31T21:46:47+02:00"
   },
   {
@@ -178,7 +178,7 @@
     "de": "Populär",
     "en": "Popular"
    },
-   "percent": 16.4
+   "percent": 16.3
   },
   {
    "description": {
@@ -235,7 +235,7 @@
     "de": "Ausbauen",
     "en": "Moving Up"
    },
-   "percent": 42.8,
+   "percent": 42.7,
    "unlocked": "2020-06-08T22:05:33+02:00"
   },
   {
@@ -251,7 +251,7 @@
     "de": "Das große Leben",
     "en": "Living Large"
    },
-   "percent": 27.0,
+   "percent": 26.9,
    "unlocked": "2021-11-26T12:15:35+01:00"
   },
   {
@@ -266,7 +266,7 @@
    "name": {
     "en": "D.I.Y."
    },
-   "percent": 37.7,
+   "percent": 37.6,
    "unlocked": "2020-06-29T21:08:59+02:00"
   },
   {
@@ -281,7 +281,7 @@
     "de": "Handwerker",
     "en": "Artisan"
    },
-   "percent": 22.8
+   "percent": 22.7
   },
   {
    "description": {
@@ -310,7 +310,7 @@
     "de": "Fischer",
     "en": "Fisherman"
    },
-   "percent": 57.7,
+   "percent": 57.6,
    "unlocked": "2020-02-23T10:20:53+01:00"
   },
   {
@@ -326,7 +326,7 @@
     "de": "Alter Seemann",
     "en": "Ol' Mariner"
    },
-   "percent": 42.9,
+   "percent": 42.7,
    "unlocked": "2020-06-08T20:53:51+02:00"
   },
   {
@@ -356,7 +356,7 @@
     "de": "Massiver Fang",
     "en": "Mother Catch"
    },
-   "percent": 49.6,
+   "percent": 49.4,
    "unlocked": "2020-02-24T20:00:12+01:00"
   },
   {
@@ -372,7 +372,7 @@
     "de": "Fundgrube",
     "en": "Treasure Trove"
    },
-   "percent": 44.4,
+   "percent": 44.2,
    "unlocked": "2020-06-14T21:30:23+02:00"
   },
   {
@@ -387,7 +387,7 @@
     "de": "Laufbursche",
     "en": "Gofer"
    },
-   "percent": 31.2
+   "percent": 31.0
   },
   {
    "description": {
@@ -401,7 +401,7 @@
     "de": "Große Hilfe",
     "en": "A Big Help"
    },
-   "percent": 11.7
+   "percent": 11.6
   },
   {
    "description": {
@@ -430,7 +430,7 @@
     "de": "Monokultur",
     "en": "Monoculture"
    },
-   "percent": 33.3,
+   "percent": 33.2,
    "unlocked": "2020-10-10T16:27:57+02:00"
   },
   {
@@ -474,7 +474,7 @@
     "de": "Das untere Ende",
     "en": "The Bottom"
    },
-   "percent": 43.2,
+   "percent": 43.0,
    "unlocked": "2020-06-14T20:17:20+02:00"
   },
   {
@@ -490,7 +490,7 @@
     "de": "Örtliche Legende",
     "en": "Local Legend"
    },
-   "percent": 22.8,
+   "percent": 22.7,
    "unlocked": "2020-07-31T20:58:32+02:00"
   },
   {
@@ -505,7 +505,7 @@
     "de": "Joja Co. Mitglied des Jahres",
     "en": "Joja Co. Member Of The Year"
    },
-   "percent": 6.9
+   "percent": 6.8
   },
   {
    "description": {
@@ -558,7 +558,7 @@
     "de": "Einzigartiges Talent",
     "en": "Singular Talent"
    },
-   "percent": 40.9,
+   "percent": 40.7,
    "unlocked": "2020-07-10T21:43:50+02:00"
   },
   {
@@ -573,7 +573,7 @@
     "de": "Meister der 5 Wege",
     "en": "Master Of The Five Ways"
    },
-   "percent": 18.1
+   "percent": 18.0
   },
   {
    "description": {
@@ -629,7 +629,7 @@
     "de": "Blaues Band",
     "en": "Blue Ribbon"
    },
-   "percent": 18.6
+   "percent": 18.5
   },
   {
    "description": {
@@ -699,7 +699,7 @@
     "de": "Perfektion",
     "en": "Perfection"
    },
-   "percent": 2.3
+   "percent": 2.2
   },
   {
    "description": {

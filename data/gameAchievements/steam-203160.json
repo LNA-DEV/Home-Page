@@ -13,7 +13,7 @@
     "de": "Bücherwurm",
     "en": "Bookworm"
    },
-   "percent": 54.6,
+   "percent": 54.5,
    "unlocked": "2021-04-23T18:21:55+02:00"
   },
   {
@@ -70,7 +70,7 @@
     "de": "Auf der Suche nach Ärger",
     "en": "Looking for Trouble"
    },
-   "percent": 32.6
+   "percent": 32.5
   },
   {
    "description": {
@@ -238,7 +238,7 @@
     "de": "Scharfschütze",
     "en": "Sharp Shooter"
    },
-   "percent": 53.7
+   "percent": 53.6
   },
   {
    "description": {
@@ -471,7 +471,7 @@
     "de": "Krabbenkrieg",
     "en": "Crab Cakes"
    },
-   "percent": 26.7
+   "percent": 26.6
   },
   {
    "hidden": true,

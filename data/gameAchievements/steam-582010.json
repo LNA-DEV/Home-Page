@@ -32,7 +32,7 @@
     "de": "Niemand hält die Kommission auf",
     "en": "Nothing Stops This Commission"
    },
-   "percent": 74.8
+   "percent": 74.7
   },
   {
    "hidden": true,
@@ -42,7 +42,7 @@
     "de": "Verteidiger von Astera",
     "en": "Defender of Astera"
    },
-   "percent": 66.5
+   "percent": 66.4
   },
   {
    "hidden": true,
@@ -52,7 +52,7 @@
     "de": "Mittendrin",
     "en": "Into the Deep"
    },
-   "percent": 58.5
+   "percent": 58.4
   },
   {
    "hidden": true,
@@ -62,7 +62,7 @@
     "de": "Tod erzeugt Leben",
     "en": "Death Begets Life"
    },
-   "percent": 54.3
+   "percent": 54.2
   },
   {
    "hidden": true,
@@ -72,7 +72,7 @@
     "de": "Die Königin des Hochlandes",
     "en": "The Empress of the Highlands"
    },
-   "percent": 49.7
+   "percent": 49.6
   },
   {
    "hidden": true,
@@ -120,7 +120,7 @@
     "de": "Eine neugierige Seele",
     "en": "An Inquisitive Mind"
    },
-   "percent": 50.1
+   "percent": 50.0
   },
   {
    "description": {
@@ -148,7 +148,7 @@
     "de": "Betritt die Arena",
     "en": "Step into the Arena"
    },
-   "percent": 28.1
+   "percent": 28.0
   },
   {
    "description": {
@@ -176,7 +176,7 @@
     "de": "Siedler der Neuen Welt",
     "en": "New World Settler"
    },
-   "percent": 47.9
+   "percent": 47.8
   },
   {
    "achieved": true,
@@ -206,7 +206,7 @@
     "de": "Der Wurm muss dem Fisch schmecken...",
     "en": "Angling for a Bite"
    },
-   "percent": 42.3
+   "percent": 42.2
   },
   {
    "description": {
@@ -254,7 +254,7 @@
     "de": "Ich werd wahnsinnig",
     "en": "Snuggles for All"
    },
-   "percent": 6.7
+   "percent": 6.6
   },
   {
    "hidden": true,
@@ -288,7 +288,7 @@
     "de": "Kommissionsarbeit",
     "en": "Commissioned Work"
    },
-   "percent": 32.0
+   "percent": 31.9
   },
   {
    "description": {
@@ -316,7 +316,7 @@
     "de": "Undurchdringliche Verteidigung",
     "en": "Impregnable Defense"
    },
-   "percent": 40.2
+   "percent": 40.1
   },
   {
    "description": {
@@ -330,7 +330,7 @@
     "de": "Haue regiert die Welt",
     "en": "Power is Everything"
    },
-   "percent": 32.3
+   "percent": 32.2
   },
   {
    "description": {
@@ -358,7 +358,7 @@
     "de": "Erste Freunde",
     "en": "First Friends"
    },
-   "percent": 66.4
+   "percent": 66.3
   },
   {
    "description": {
@@ -372,7 +372,7 @@
     "de": "Werkzeugmeister",
     "en": "Bosom Buddies"
    },
-   "percent": 48.8
+   "percent": 48.7
   },
   {
    "description": {
@@ -406,7 +406,7 @@
     "de": "Unbezwingbar",
     "en": "Indomitable"
    },
-   "percent": 18.4
+   "percent": 18.3
   },
   {
    "description": {
@@ -532,7 +532,7 @@
     "de": "Kein Respekt",
     "en": "Elderslayer"
    },
-   "percent": 23.7
+   "percent": 23.6
   },
   {
    "description": {
@@ -574,7 +574,7 @@
     "de": "HILFE!",
     "en": "HELP!"
    },
-   "percent": 51.0
+   "percent": 50.9
   },
   {
    "description": {
@@ -588,7 +588,7 @@
     "de": "Ich bin die Verstärkung",
     "en": "I Am the Reinforcements"
    },
-   "percent": 22.5
+   "percent": 22.4
   },
   {
    "achieved": true,
@@ -603,7 +603,7 @@
     "de": "Jagdgemeinschaft",
     "en": "Hunters United"
    },
-   "percent": 67.1,
+   "percent": 67.0,
    "unlocked": "2021-09-10T21:17:50+02:00"
   },
   {
@@ -670,7 +670,7 @@
     "de": "Der Beginn einer neuen Expedition",
     "en": "The Beginning of a New Expedition"
    },
-   "percent": 37.1
+   "percent": 37.0
   },
   {
    "hidden": true,
@@ -690,7 +690,7 @@
     "de": "Der trügerische Drachenälteste",
     "en": "The Elusive Elder Dragon"
    },
-   "percent": 33.7
+   "percent": 33.6
   },
   {
    "hidden": true,
@@ -710,7 +710,7 @@
     "de": "Der Alte Allwyrm",
     "en": "The Old Everwyrm"
    },
-   "percent": 29.5
+   "percent": 29.4
   },
   {
    "hidden": true,
@@ -720,7 +720,7 @@
     "de": "Ein Ende und ein Anfang",
     "en": "An End and a Beginning"
    },
-   "percent": 27.1
+   "percent": 27.0
   },
   {
    "hidden": true,
@@ -750,7 +750,7 @@
     "de": "Die Suche nach seltenen Materialien",
     "en": "In Search of Rare Materials"
    },
-   "percent": 12.3
+   "percent": 12.2
   },
   {
    "hidden": true,
@@ -1018,7 +1018,7 @@
     "de": "Innenarchitekt",
     "en": "Interior Decorator"
    },
-   "percent": 23.3
+   "percent": 23.2
   },
   {
    "description": {
@@ -1046,7 +1046,7 @@
     "de": "Eifriger Ingenieur",
     "en": "Eager Engineer"
    },
-   "percent": 31.5
+   "percent": 31.4
   },
   {
    "description": {
@@ -1214,7 +1214,7 @@
     "de": "Jäger-Wunderkind",
     "en": "Hunter Prodigy"
    },
-   "percent": 21.7
+   "percent": 21.6
   },
   {
    "description": {
@@ -1228,7 +1228,7 @@
     "de": "Meisterfänger",
     "en": "Master Capturer"
    },
-   "percent": 17.5
+   "percent": 17.4
   },
   {
    "description": {
@@ -1252,7 +1252,7 @@
     "de": "Kampf gegen das Unbekannte",
     "en": "Confronting the Unknown"
    },
-   "percent": 31.0
+   "percent": 30.9
   },
   {
    "hidden": true,

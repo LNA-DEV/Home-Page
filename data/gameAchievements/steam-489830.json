@@ -13,7 +13,7 @@
     "de": "Entfesselt",
     "en": "Unbound"
    },
-   "percent": 72.2,
+   "percent": 72.1,
    "unlocked": "2019-04-07T17:01:30+02:00"
   },
   {
@@ -29,7 +29,7 @@
     "de": "Ödsturzhügelgrab",
     "en": "Bleak Falls Barrow"
    },
-   "percent": 49.9,
+   "percent": 49.6,
    "unlocked": "2019-06-17T20:11:16+02:00"
   },
   {
@@ -45,7 +45,7 @@
     "de": "Der Weg der Stimme",
     "en": "The Way of the Voice"
    },
-   "percent": 37.4,
+   "percent": 37.1,
    "unlocked": "2019-06-17T21:26:26+02:00"
   },
   {
@@ -61,7 +61,7 @@
     "de": "Diplomatische Immunität",
     "en": "Diplomatic Immunity"
    },
-   "percent": 22.2,
+   "percent": 22.0,
    "unlocked": "2019-06-18T00:16:57+02:00"
   },
   {
@@ -77,7 +77,7 @@
     "de": "Alduins Mauer",
     "en": "Alduin's Wall"
    },
-   "percent": 18.4,
+   "percent": 18.2,
    "unlocked": "2019-06-18T22:51:27+02:00"
   },
   {
@@ -93,7 +93,7 @@
     "de": "Das Wissen der Alten",
     "en": "Elder Knowledge"
    },
-   "percent": 15.6,
+   "percent": 15.4,
    "unlocked": "2019-06-19T23:28:16+02:00"
   },
   {
@@ -109,7 +109,7 @@
     "de": "Der Gefallene",
     "en": "The Fallen"
    },
-   "percent": 13.2,
+   "percent": 13.0,
    "unlocked": "2019-06-20T22:58:55+02:00"
   },
   {
@@ -125,7 +125,7 @@
     "de": "Drachentöter",
     "en": "Dragonslayer"
    },
-   "percent": 12.6,
+   "percent": 12.5,
    "unlocked": "2019-06-20T23:56:53+02:00"
   },
   {
@@ -141,7 +141,7 @@
     "de": "Zu den Waffen",
     "en": "Take Up Arms"
    },
-   "percent": 28.6,
+   "percent": 28.4,
    "unlocked": "2019-04-07T17:53:55+02:00"
   },
   {
@@ -156,7 +156,7 @@
     "de": "Blutschwur",
     "en": "Blood Oath"
    },
-   "percent": 18.2
+   "percent": 18.1
   },
   {
    "description": {
@@ -170,7 +170,7 @@
     "de": "Zu Ehren der Toten",
     "en": "Glory of the Dead"
    },
-   "percent": 13.7
+   "percent": 13.6
   },
   {
    "achieved": true,
@@ -185,7 +185,7 @@
     "de": "Torwächter",
     "en": "Gatekeeper"
    },
-   "percent": 31.7,
+   "percent": 31.5,
    "unlocked": "2019-06-18T23:33:13+02:00"
   },
   {
@@ -200,7 +200,7 @@
     "de": "Enthüllung des Ungesehenen",
     "en": "Revealing the Unseen"
    },
-   "percent": 17.0
+   "percent": 16.8
   },
   {
    "description": {
@@ -214,7 +214,7 @@
     "de": "Das Auge von Magnus",
     "en": "The Eye of Magnus"
    },
-   "percent": 16.4
+   "percent": 16.2
   },
   {
    "description": {
@@ -228,7 +228,7 @@
     "de": "Geschäft ist Geschäft",
     "en": "Taking Care of Business"
    },
-   "percent": 22.7
+   "percent": 22.5
   },
   {
    "description": {
@@ -242,7 +242,7 @@
     "de": "Die Rückkehr der Finsternis",
     "en": "Darkness Returns"
    },
-   "percent": 11.8
+   "percent": 11.7
   },
   {
    "description": {
@@ -256,7 +256,7 @@
     "de": "Eins mit den Schatten",
     "en": "One with the Shadows"
    },
-   "percent": 5.4
+   "percent": 5.3
   },
   {
    "description": {
@@ -270,7 +270,7 @@
     "de": "Wer solche Freunde hat ...",
     "en": "With Friends Like These…"
    },
-   "percent": 16.2
+   "percent": 16.0
   },
   {
    "description": {
@@ -284,7 +284,7 @@
     "de": "Bis dass der Tod euch scheidet",
     "en": "Bound Until Death"
    },
-   "percent": 11.8
+   "percent": 11.7
   },
   {
    "description": {
@@ -298,7 +298,7 @@
     "de": "Heil Sithis!",
     "en": "Hail Sithis!"
    },
-   "percent": 10.8
+   "percent": 10.7
   },
   {
    "description": {
@@ -312,7 +312,7 @@
     "de": "Parteiisch",
     "en": "Taking Sides"
    },
-   "percent": 18.3
+   "percent": 18.1
   },
   {
    "description": {
@@ -326,7 +326,7 @@
     "de": "Kriegsheld",
     "en": "War Hero"
    },
-   "percent": 11.1
+   "percent": 11.0
   },
   {
    "description": {
@@ -340,7 +340,7 @@
     "de": "Held von Himmelsrand",
     "en": "Hero of Skyrim"
    },
-   "percent": 11.0
+   "percent": 10.9
   },
   {
    "description": {
@@ -354,7 +354,7 @@
     "de": "Auf Seitenwegen",
     "en": "Sideways"
    },
-   "percent": 14.7
+   "percent": 14.5
   },
   {
    "description": {
@@ -368,7 +368,7 @@
     "de": "Held des Volkes",
     "en": "Hero of the People"
    },
-   "percent": 21.4
+   "percent": 21.2
   },
   {
    "description": {
@@ -382,7 +382,7 @@
     "de": "Harte Arbeit",
     "en": "Hard Worker"
    },
-   "percent": 14.3
+   "percent": 14.1
   },
   {
    "description": {
@@ -396,7 +396,7 @@
     "de": "Langfinger",
     "en": "Thief"
    },
-   "percent": 7.9
+   "percent": 7.8
   },
   {
    "description": {
@@ -410,7 +410,7 @@
     "de": "Schlangenzunge",
     "en": "Snake Tongue"
    },
-   "percent": 23.0
+   "percent": 22.7
   },
   {
    "description": {
@@ -424,7 +424,7 @@
     "de": "Gesegnet",
     "en": "Blessed"
    },
-   "percent": 62.3
+   "percent": 62.1
   },
   {
    "description": {
@@ -438,7 +438,7 @@
     "de": "Findlinge",
     "en": "Standing Stones"
    },
-   "percent": 9.2
+   "percent": 9.1
   },
   {
    "description": {
@@ -452,7 +452,7 @@
     "de": "Bürger",
     "en": "Citizen"
    },
-   "percent": 31.4
+   "percent": 31.2
   },
   {
    "description": {
@@ -480,7 +480,7 @@
     "de": "Ab in die Flitterwochen",
     "en": "Married"
    },
-   "percent": 10.2
+   "percent": 10.1
   },
   {
    "description": {
@@ -494,7 +494,7 @@
     "de": "Kunst kommt von Können",
     "en": "Artificer"
    },
-   "percent": 26.3
+   "percent": 26.0
   },
   {
    "description": {
@@ -522,7 +522,7 @@
     "de": "Goldhamster",
     "en": "Golden Touch"
    },
-   "percent": 15.8
+   "percent": 15.7
   },
   {
    "description": {
@@ -536,7 +536,7 @@
     "de": "Höhlenforscher",
     "en": "Delver"
    },
-   "percent": 14.9
+   "percent": 14.8
   },
   {
    "description": {
@@ -550,7 +550,7 @@
     "de": "Meisterlich",
     "en": "Skill Master"
    },
-   "percent": 23.0
+   "percent": 22.8
   },
   {
    "description": {
@@ -564,7 +564,7 @@
     "de": "Weltenbummler",
     "en": "Explorer"
    },
-   "percent": 23.4
+   "percent": 23.1
   },
   {
    "description": {
@@ -578,7 +578,7 @@
     "de": "Leseratte",
     "en": "Reader"
    },
-   "percent": 10.7
+   "percent": 10.6
   },
   {
    "description": {
@@ -592,7 +592,7 @@
     "de": "Jäger und Sammler",
     "en": "Daedric Influence"
    },
-   "percent": 30.1
+   "percent": 29.9
   },
   {
    "description": {
@@ -621,7 +621,7 @@
     "de": "Drachenseele",
     "en": "Dragon Soul"
    },
-   "percent": 49.6,
+   "percent": 49.2,
    "unlocked": "2019-06-17T20:35:54+02:00"
   },
   {
@@ -636,7 +636,7 @@
     "de": "Drachenjäger",
     "en": "Dragon Hunter"
    },
-   "percent": 14.6
+   "percent": 14.5
   },
   {
    "achieved": true,
@@ -651,7 +651,7 @@
     "de": "Worte der Macht",
     "en": "Words of Power"
    },
-   "percent": 32.7,
+   "percent": 32.4,
    "unlocked": "2019-06-17T22:22:10+02:00"
   },
   {
@@ -681,7 +681,7 @@
     "de": "Lehrling",
     "en": "Apprentice"
    },
-   "percent": 52.5,
+   "percent": 52.2,
    "unlocked": "2019-06-16T23:30:05+02:00"
   },
   {
@@ -696,7 +696,7 @@
    "name": {
     "en": "Adept"
    },
-   "percent": 43.2,
+   "percent": 42.8,
    "unlocked": "2019-06-19T22:13:33+02:00"
   },
   {
@@ -711,7 +711,7 @@
     "de": "Experte",
     "en": "Expert"
    },
-   "percent": 28.7
+   "percent": 28.4
   },
   {
    "description": {
@@ -725,7 +725,7 @@
     "de": "Meister",
     "en": "Master"
    },
-   "percent": 12.7
+   "percent": 12.6
   },
   {
    "description": {
@@ -739,7 +739,7 @@
     "de": "Erwachen",
     "en": "Awakening"
    },
-   "percent": 19.7
+   "percent": 19.5
   },
   {
    "description": {
@@ -753,7 +753,7 @@
     "de": "Jenseits des Todes",
     "en": "Beyond Death"
    },
-   "percent": 14.1
+   "percent": 13.9
   },
   {
    "description": {
@@ -767,7 +767,7 @@
     "de": "Ein vertrautes Urteil",
     "en": "Kindred Judgement"
    },
-   "percent": 11.7
+   "percent": 11.6
   },
   {
    "description": {
@@ -781,7 +781,7 @@
     "de": "Verloren in der Vergangenheit",
     "en": "Lost to the Ages"
    },
-   "percent": 8.4
+   "percent": 8.3
   },
   {
    "description": {
@@ -795,7 +795,7 @@
     "de": "Seelenreißer",
     "en": "Soul Tear"
    },
-   "percent": 8.0
+   "percent": 7.9
   },
   {
    "description": {
@@ -851,7 +851,7 @@
     "de": "Ein neues Ich",
     "en": "A New You"
    },
-   "percent": 10.0
+   "percent": 9.9
   },
   {
    "description": {
@@ -865,7 +865,7 @@
     "de": "Legende",
     "en": "Legend"
    },
-   "percent": 5.2
+   "percent": 5.1
   },
   {
    "description": {
@@ -879,7 +879,7 @@
     "de": "Elterlicher Stolz",
     "en": "Proud Parent"
    },
-   "percent": 16.1
+   "percent": 15.9
   },
   {
    "description": {
@@ -893,7 +893,7 @@
     "de": "Landbesitzer",
     "en": "Landowner"
    },
-   "percent": 17.3
+   "percent": 17.2
   },
   {
    "description": {
@@ -907,7 +907,7 @@
     "de": "Architekt",
     "en": "Architect"
    },
-   "percent": 11.0
+   "percent": 10.9
   },
   {
    "description": {
@@ -949,7 +949,7 @@
     "de": "Fremdling",
     "en": "Outlander"
    },
-   "percent": 24.2
+   "percent": 24.0
   },
   {
    "description": {
@@ -963,7 +963,7 @@
     "de": "Der Tempel von Miraak",
     "en": "The Temple of Miraak"
    },
-   "percent": 15.8
+   "percent": 15.6
   },
   {
    "description": {
@@ -977,7 +977,7 @@
     "de": "Der Weg des Wissens",
     "en": "The Path of Knowledge"
    },
-   "percent": 12.8
+   "percent": 12.6
   },
   {
    "description": {
@@ -991,7 +991,7 @@
     "de": "Auf dem Gipfel von Apocrypha",
     "en": "At the Summit of Apocrypha"
    },
-   "percent": 11.4
+   "percent": 11.3
   },
   {
    "description": {
@@ -1005,7 +1005,7 @@
     "de": "Drachenform",
     "en": "Dragon Aspect"
    },
-   "percent": 8.2
+   "percent": 8.1
   },
   {
    "description": {
@@ -1061,7 +1061,7 @@
     "de": "Rabenfels-Eigentümer",
     "en": "Raven Rock Owner"
    },
-   "percent": 8.1
+   "percent": 8.0
   },
   {
    "description": {

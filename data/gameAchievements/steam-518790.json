@@ -26,7 +26,7 @@
     "de": "Die skandinavische Meile",
     "en": "The Scandinavian Mile"
    },
-   "percent": 56.7
+   "percent": 56.6
   },
   {
    "description": {
@@ -84,7 +84,7 @@
     "de": "Bhandari",
     "en": "Bhandari Arc"
    },
-   "percent": 1.3
+   "percent": 1.2
   },
   {
    "hidden": true,
@@ -134,7 +134,7 @@
     "de": "Vualez",
     "en": "Vualez Arc"
    },
-   "percent": 1.4
+   "percent": 1.3
   },
   {
    "hidden": true,
@@ -286,7 +286,7 @@
     "de": "Weiter aufs Ziel zu",
     "en": "Stay On Target"
    },
-   "percent": 49.0
+   "percent": 48.9
   },
   {
    "description": {
@@ -328,7 +328,7 @@
     "de": "Pirscher",
     "en": "Stalker"
    },
-   "percent": 22.0
+   "percent": 21.9
   },
   {
    "description": {
@@ -370,7 +370,7 @@
     "de": "Kein Tier wird zurückgelassen",
     "en": "Leave No Animal Behind"
    },
-   "percent": 83.0
+   "percent": 83.1
   },
   {
    "description": {
@@ -538,7 +538,7 @@
     "de": "Zumindest versucht",
     "en": "It's Something"
    },
-   "percent": 64.8
+   "percent": 64.7
   },
   {
    "description": {
@@ -580,7 +580,7 @@
     "de": "Nerven aus Stahl",
     "en": "Nerves Of Steel"
    },
-   "percent": 45.9
+   "percent": 45.8
   },
   {
    "description": {
@@ -594,7 +594,7 @@
     "de": "Althergebrachte Methoden",
     "en": "The Old Fashioned Way"
    },
-   "percent": 22.4
+   "percent": 22.3
   },
   {
    "description": {
@@ -1232,7 +1232,7 @@
     "de": "Vom Bären gebissen",
     "en": "Bear Bug"
    },
-   "percent": 2.7
+   "percent": 2.6
   },
   {
    "description": {
@@ -1288,7 +1288,7 @@
     "de": "Amor",
     "en": "Cupid"
    },
-   "percent": 1.2
+   "percent": 1.1
   },
   {
    "description": {
@@ -1330,7 +1330,7 @@
     "de": "Altmodisch",
     "en": "Old Fashioned"
    },
-   "percent": 0.6
+   "percent": 0.5
   },
   {
    "description": {
@@ -2000,7 +2000,7 @@
     "de": "Erntedank!",
     "en": "Thanksgiving!"
    },
-   "percent": 2.4
+   "percent": 2.3
   },
   {
    "description": {

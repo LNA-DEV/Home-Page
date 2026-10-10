@@ -11,7 +11,7 @@
    "name": {
     "en": "Player"
    },
-   "percent": 76.6,
+   "percent": 76.5,
    "unlocked": "2017-05-27T21:41:25+02:00"
   },
   {
@@ -24,7 +24,7 @@
    "name": {
     "en": "Committed"
    },
-   "percent": 54.4
+   "percent": 54.3
   },
   {
    "description": {
@@ -185,7 +185,7 @@
    "name": {
     "en": "XP Grabber"
    },
-   "percent": 69.8,
+   "percent": 69.7,
    "unlocked": "2020-05-23T21:47:44+02:00"
   },
   {
@@ -426,7 +426,7 @@
    "name": {
     "en": "Deathmatch Veteran"
    },
-   "percent": 28.6
+   "percent": 28.5
   },
   {
    "description": {
