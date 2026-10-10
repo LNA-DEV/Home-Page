@@ -784,6 +784,7 @@
 /de/gallery/photo/wind-ueber-dem-see-kites-vor-den-dunstigen-bergen/
 /de/gallery/photo/winterpause-eine-almhuette-unter-schnee/
 /de/gallery/photo/winterstadt-verschneite-daecher-unter-einem-wolkenband/
+/de/gallery/photo/wo-das-fjaell-auf-den-see-trifft-akkajaure-in-schwedisch-lappland/
 /de/gallery/photo/wo-der-weg-abbiegt-goldene-stunde-im-fichtenwald/
 /de/gallery/photo/wo-die-berge-enden-das-flachland-hinter-dem-hang/
 /de/gallery/photo/wo-die-strasse-nachgab-erdrutsch-ueber-dem-stausee/
@@ -1835,6 +1836,7 @@
 /en/gallery/photo/what-the-mountain-said-a-hiker-with-his-notebook-in-the-swedish-fjall/
 /en/gallery/photo/wheel-and-flag-an-old-mill-house-in-switzerland/
 /en/gallery/photo/where-the-cloud-stops-ridgeline-at-the-edge-of-the-fog/
+/en/gallery/photo/where-the-fjall-meets-the-lake-akkajaure-swedish-lapland/
 /en/gallery/photo/where-the-meadow-meets-the-rock-coastal-summer-in-sweden/
 /en/gallery/photo/where-the-mountains-stop-the-flatland-beyond-the-slope/
 /en/gallery/photo/where-the-path-turns-golden-hour-in-the-spruce-wood/
@@ -2719,6 +2721,7 @@
 /images/gallery/what-the-mountain-said-a-hiker-with-his-notebook-in-the-swedish-fjall.jpg
 /images/gallery/wheel-and-flag-an-old-mill-house-in-switzerland.jpg
 /images/gallery/where-the-cloud-stops-ridgeline-at-the-edge-of-the-fog.jpg
+/images/gallery/where-the-fjall-meets-the-lake-akkajaure-swedish-lapland.jpg
 /images/gallery/where-the-meadow-meets-the-rock-coastal-summer-in-sweden.jpg
 /images/gallery/where-the-mountains-stop-the-flatland-beyond-the-slope.jpg
 /images/gallery/where-the-path-turns-golden-hour-in-the-spruce-wood.jpg
@@ -2970,6 +2973,7 @@
 /sv/gallery/photo/damm-pa-alvaret-en-bil-korsar-olands-kalkslatt/
 /sv/gallery/photo/dar-angen-moter-klippan-kustsommar-i-sverige/
 /sv/gallery/photo/dar-bergen-tar-slut-slattlandet-bortom-sluttningen/
+/sv/gallery/photo/dar-fjallet-moter-sjon-akkajaure-i-lappland/
 /sv/gallery/photo/dar-molnet-slutar-kamlinje-vid-dimmans-kant/
 /sv/gallery/photo/dar-stigen-viker-av-gyllene-timme-i-granskogen/
 /sv/gallery/photo/dar-vagen-gav-vika-jordskred-ovanfor-dammsjon/

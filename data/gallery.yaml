@@ -19171,6 +19171,43 @@ images:
     - candid
   license: all-rights-reserved
   artist: Lukas Nagel
+- id: de3f07b7-d3e1-426e-9d19-850dd8fd15bf
+  src: _DSC5663_26740.jpg
+  category: landscape
+  section: general
+  title:
+    en: "Where the Fjäll Meets the Lake - Akkajaure, Swedish Lapland"
+    de: "Wo das Fjäll auf den See trifft - Akkajaure in Schwedisch-Lappland"
+    sv: "Där fjället möter sjön - Akkajaure i Lappland"
+  alt:
+    en: "Summer view over Lake Akkajaure in Swedish Lapland: a long, green mountain slope with grey scree and a few snow patches near its rocky summit runs down to deep blue water. A pale band of bare rock lines the shore, birch trees fill the foreground, and a wide plateau fades into blue haze in the distance under scattered clouds."
+    de: "Sommerlicher Blick über den Akkajaure in Schwedisch-Lappland: Ein langer, grüner Berghang mit grauen Geröllfeldern und einzelnen Schneeflecken nahe dem felsigen Gipfel fällt zum tiefblauen Wasser ab. Ein heller Streifen aus kahlem Fels säumt das Ufer, Birken füllen den Vordergrund, und in der Ferne verschwimmt eine weite Hochebene unter lockeren Wolken im blauen Dunst."
+    sv: "Sommarvy över Akkajaure i Lappland: en lång, grön fjällsluttning med partier av grå ur och några snöfläckar nära den steniga toppen sluttar ner mot det djupblå vattnet. Ett ljust band av kala klippor kantar stranden, björkar fyller förgrunden och i fjärran försvinner en vidsträckt fjällplatå i blått dis under spridda moln."
+  tags:
+    - photo
+    - photography
+    - nature
+    - naturePhotography
+    - landscape
+    - landscapePhotography
+    - mountains
+    - mountainPhotography
+    - lake
+    - lakePhotography
+    - clouds
+    - fjäll
+    - fjällen
+    - sweden
+    - swedishSummer
+    - akkajaure
+    - lapland
+    - swedishLapland
+    - lappland
+    - norrbotten
+    - northernSweden
+    - scandinavia
+  license: all-rights-reserved
+  artist: Lukas Nagel
 projects:
 - slug: above-the-clouds
   title: Above the Clouds
