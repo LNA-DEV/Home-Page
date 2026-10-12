@@ -2,17 +2,15 @@
 
        WHY IT IS A LINK AND NOT A BUTTON
 
-       A <dialog> that is never shown with showModal() stays invisible, so a
-       button here would be dead weight without JavaScript — and the Tor build is
-       exactly that case. Every other piece of this feature degrades gracefully
-       (the shortcode is a <details>, the form falls back to a plain cross-site
-       POST), and this must too.
+       Signing up needs JavaScript (newsletter.js solves Listmonk's ALTCHA), so
+       without it this CTA is not shown at all — newsletter.css hides it unless
+       head.html has put `js` on <html>. It used to be the Tor build's no-JS
+       path to Listmonk; that was given up for the captcha.
 
-       So the CTA is a real link to Listmonk's own subscription page. It works on
-       its own. newsletter.js then intercepts the click and opens the dialog
-       instead, which is the enhancement — not the baseline. No <noscript> block,
-       no button that silently does nothing, and nothing to remember when the JS
-       is blocked by an extension rather than switched off.
+       It is still a real link to Listmonk's own subscription page, so a middle
+       click or "open in new tab" lands on a page that works by itself, with its
+       own ALTCHA widget. newsletter.js intercepts the plain click and opens the
+       dialog instead.
 
        WHERE IT SITS
 

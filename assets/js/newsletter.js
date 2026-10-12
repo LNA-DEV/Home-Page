@@ -6,12 +6,20 @@
    intersection of the two rows — pick 🇩🇪 + 🇬🇧 and "Photography" and two lists
    go out.
 
-   Submission goes to Listmonk's public API (data/newsletter.yaml -> api, passed
-   down as data-api) rather than to the form action, so the visitor stays in the
-   open panel: on success the form is replaced by the confirmation panel, on
-   failure an inline error appears. Only JavaScript being off falls back to the
-   plain cross-site POST; a failed request reports itself rather than quietly
-   navigating away.
+   Submission goes to the form action — Listmonk's /subscription/form — with
+   fetch, so the visitor stays in the open panel: on success the form is
+   replaced by the confirmation panel, on failure an inline error appears.
+
+   Signing up needs JavaScript. The post carries the solution to Listmonk's
+   ALTCHA proof of work (solveCaptcha() below), computed here in the background,
+   so nobody sees a captcha. Without JavaScript nothing can solve it, and
+   newsletter.css hides every placement rather than offering a form that can
+   only fail.
+
+   It is /subscription/form and NOT /api/public/subscription, which this file
+   used to post to: Listmonk (v6.2.0) checks the captcha on the form endpoint
+   only, and the API takes a signup without one. Posting to the API would make
+   the captcha decorative — which is also why Caddy closes that route.
 
    Both messages are rendered server-side by the shortcode, so there is nothing
    to translate here — this file only toggles what is already on the page.
@@ -45,9 +53,58 @@
       window.plausible(name, { props: { source: source || "unknown", ...props } });
   }
 
-  /* The header CTA. It is a real link to Listmonk's own subscription page, so it
-     works with no JavaScript at all — that is the Tor build's path. Here we take
-     the click back and open the dialog instead.
+  /* The captcha: Listmonk's ALTCHA, a proof of work rather than a puzzle. The
+     challenge names a hash and the salt it was made from; finding the number
+     that, appended to the salt, gives that SHA-256 is the work — up to
+     maxNumber tries (300,000 by default), around a second on a desktop and a
+     cost per signup for a bot. The solution is the challenge sent back with the
+     number, as base64 JSON, in the `altcha` field.
+
+     Batches of 100 digests in parallel: one at a time is three times slower,
+     larger batches gain nothing (measured in Node against altcha-lib-go, the
+     library Listmonk verifies with).
+
+     A 404 for the challenge means ALTCHA is off in Listmonk. The form then
+     posts without a solution, which Listmonk accepts in exactly that state —
+     what lets the site deploy before the captcha is switched on, and keeps the
+     form working if it is ever switched off again. */
+  async function fetchCaptcha(url) {
+    const res = await fetch(url);
+    if (res.status === 404) return null;
+    if (!res.ok) throw new Error(`captcha challenge: HTTP ${res.status}`);
+    return solveCaptcha(await res.json());
+  }
+
+  async function solveCaptcha(task) {
+    if (task.algorithm !== "SHA-256") throw new Error(`captcha: ${task.algorithm}`);
+    const want = Uint8Array.from(task.challenge.match(/../g), (h) => parseInt(h, 16));
+    const matches = (buf) => {
+      const got = new Uint8Array(buf);
+      return want.every((b, i) => got[i] === b);
+    };
+    const utf8 = new TextEncoder();
+    for (let start = 0; start <= task.maxNumber; start += 100) {
+      const end = Math.min(start + 100, task.maxNumber + 1);
+      const tries = [];
+      for (let n = start; n < end; n++)
+        tries.push(crypto.subtle.digest("SHA-256", utf8.encode(task.salt + n)));
+      const hit = (await Promise.all(tries)).findIndex(matches);
+      if (hit !== -1)
+        return btoa(JSON.stringify({
+          algorithm: task.algorithm,
+          challenge: task.challenge,
+          number: start + hit,
+          salt: task.salt,
+          signature: task.signature,
+        }));
+    }
+    throw new Error("captcha: no solution");
+  }
+
+  /* The header CTA. A link to Listmonk's own subscription page, so a middle
+     click or "open in new tab" lands on a page that works by itself, with its
+     own ALTCHA widget. Here we take the plain click back and open the dialog
+     instead.
 
      showModal(), not the open attribute: only the modal form puts the dialog in
      the top layer and brings the focus trap, the ESC handler and ::backdrop with
@@ -183,8 +240,24 @@
       });
     }
 
-    const api = form.dataset.api;
-    if (api) form.addEventListener("submit", (event) => {
+    // Solved ahead, from the moment the visitor starts on the form, so the work
+    // is done while they type rather than after they click. The challenge
+    // expires after five minutes and a solution is good for one post, so one
+    // older than four minutes is replaced, and send() takes it and drops it.
+    const captchaUrl = form.dataset.captcha;
+    let captcha = null;   // { at, promise }
+    function prepareCaptcha() {
+      if (!captchaUrl) return Promise.resolve(null);
+      if (!captcha || Date.now() - captcha.at > 4 * 60 * 1000) {
+        captcha = { at: Date.now(), promise: fetchCaptcha(captchaUrl) };
+        // Reported when send() awaits it, not as an unhandled rejection now.
+        captcha.promise.catch(() => {});
+      }
+      return captcha.promise;
+    }
+    form.addEventListener("focusin", prepareCaptcha);
+
+    form.addEventListener("submit", (event) => {
       event.preventDefault();
       send();
     });
@@ -207,19 +280,27 @@
       showError(false);
       submit.disabled = true;
       try {
-        // Form-encoded, not JSON, and deliberately so: a urlencoded body is a
-        // "simple" CORS request, so the browser sends no OPTIONS preflight and
-        // the reverse proxy in front of Listmonk only has to add one response
-        // header. A JSON body would need the proxy to answer preflights too.
-        // Listmonk's public endpoint takes both; the form variant repeats `l`
-        // where the JSON one takes list_uuids. URLSearchParams sets the content
-        // type itself — setting it by hand here would break the simple request.
+        // Usually solved on focus already; awaited here in case the visitor was
+        // quicker, and started here if the form never had focus (a password
+        // manager filling it, say).
+        const pending = prepareCaptcha();
+        captcha = null;
+        const solution = await pending;
+
+        // Form-encoded, and it has to be: the form endpoint reads the captcha
+        // and the honeypot as form fields, so a JSON body would lose them. It
+        // is also what keeps this a "simple" CORS request, so the browser
+        // sends no OPTIONS preflight and Listmonk only has to add one response
+        // header (it does, for every origin under Settings -> Security ->
+        // Trusted URLs). URLSearchParams sets the content type itself —
+        // setting it by hand here would break the simple request.
         const body = new URLSearchParams();
         body.set("email", email.value);
         if (name) body.set("name", name.value);
         for (const uuid of lists) body.append("l", uuid);
+        if (solution) body.set("altcha", solution);
 
-        const res = await fetch(api, { method: "POST", body });
+        const res = await fetch(form.action, { method: "POST", body });
         if (res.ok) {
           track("Newsletter Signup", picked);
           // Hand the whole panel over to the confirmation — but only if there is
@@ -233,20 +314,23 @@
           }
           return;
         }
-        // Listmonk's own message is in Listmonk's language, not the visitor's,
-        // so it goes to the console and the visitor gets the translated one.
-        const answer = await res.json().catch(() => ({}));
-        console.warn("newsletter:", res.status, answer.message || res.statusText);
+        // Listmonk answers with an HTML page in Listmonk's language, not the
+        // visitor's, so only the status goes to the console and the visitor
+        // gets the translated message. 400 is also a rejected captcha.
+        console.warn("newsletter:", res.status, res.statusText);
         track("Newsletter Error", { reason: String(res.status) });
         showError(true);
       } catch (err) {
-        // Never reached Listmonk at all: missing CORS header, offline, blocked.
+        // Never reached Listmonk at all (missing CORS header, offline, blocked),
+        // or the captcha could not be fetched or solved.
         // Deliberately NOT falling back to form.submit() here. That would post
         // the old way and dump the visitor on a Listmonk page, which is
         // indistinguishable from the newsletter simply not working and hides the
         // actual cause. A visible error beats a silent redirect.
         console.warn("newsletter: request failed (CORS?)", err);
-        track("Newsletter Error", { reason: "network" });
+        // fetchCaptcha() and solveCaptcha() prefix their own errors.
+        const reason = /^captcha/.test(err && err.message) ? "captcha" : "network";
+        track("Newsletter Error", { reason });
         showError(true);
       } finally {
         sync();

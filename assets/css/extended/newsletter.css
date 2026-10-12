@@ -8,6 +8,17 @@
   margin: var(--content-gap) 0;
 }
 
+/* No JavaScript, no newsletter. Signing up needs the script -- it solves
+   Listmonk's ALTCHA proof of work before posting, and Listmonk rejects a post
+   without it -- so every placement is taken away rather than offered as a form
+   that can only fail: the shortcode, the post-footer card and the header CTA,
+   whose other styles live in navbar.css. `js` is put on <html> by an inline
+   script in head.html, before first paint, so nothing shifts when it is there. */
+html:not(.js) .newsletter,
+html:not(.js) .newsletter-cta {
+  display: none;
+}
+
 .newsletter-button {
   /* Right-aligned: block + fit-content keeps the pill hugging its text, and
      margin-left:auto pushes it over. Doing this with text-align on .newsletter
@@ -292,7 +303,7 @@
   line-height: 1;
 }
 
-/* --- no-JS fallback: the plain checkbox list --------------------------- */
+/* --- the plain checkbox list, until newsletter.js swaps in the pills ---- */
 
 .newsletter-group {
   display: flex;

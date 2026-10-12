@@ -9,6 +9,7 @@
  * this file wrote rather than whatever the real service is doing today. */
 
 import type { Page, Route, Request } from "@playwright/test";
+import { createHash } from "node:crypto";
 
 export const COMPANION = "https://companion.lna-dev.net";
 /* The analytics script sits in extend_head.html, unconditionally, so it is on
@@ -99,16 +100,43 @@ export async function mockCompanion(page: Page, opts: { likes?: number } = {}) {
   return { posted };
 }
 
-/** listmonk's public subscription endpoint. */
-export async function mockListmonk(page: Page, opts: { fail?: boolean } = {}) {
+/** The number the mocked ALTCHA challenge hides; small, so a test solves it fast. */
+export const ALTCHA_NUMBER = 1234;
+
+/** listmonk's subscription form and its ALTCHA challenge.
+ *
+ *  `captcha: false` (the default) answers the challenge with 404, which is what
+ *  listmonk does while ALTCHA is switched off. `captcha: true` serves a challenge
+ *  made the way altcha-lib-go makes it — the salt carries `expires` and ends in
+ *  `&`, the challenge is SHA-256(salt + number) in hex — with a fake signature,
+ *  since the test checks what the page sends back, not the HMAC. */
+export async function mockListmonk(page: Page, opts: { fail?: boolean; captcha?: boolean } = {}) {
   const posted: string[] = [];
-  await page.route(`${LISTMONK}/api/public/subscription*`, (route) => {
+  const challenges: string[] = [];
+  const expires = Math.floor(Date.now() / 1000) + 300;
+  const salt = `0123456789abcdef01234567?expires=${expires}&`;
+  const challenge = {
+    algorithm: "SHA-256",
+    challenge: createHash("sha256").update(salt + ALTCHA_NUMBER).digest("hex"),
+    maxNumber: 5000,
+    salt,
+    signature: "test-signature",
+  };
+
+  await page.route(`${LISTMONK}/api/public/captcha/altcha*`, (route) => {
+    challenges.push(route.request().url());
+    return opts.captcha
+      ? route.fulfill({ json: challenge })
+      : route.fulfill({ status: 404, json: { message: "captcha not enabled" } });
+  });
+  await page.route(`${LISTMONK}/subscription/form*`, (route) => {
+    if (route.request().method() !== "POST") return route.abort();
     posted.push(route.request().postData() ?? "");
     return opts.fail
-      ? route.fulfill({ status: 500, json: { message: "nope" } })
-      : route.fulfill({ json: { data: true } });
+      ? route.fulfill({ status: 500, contentType: "text/html", body: "<p>nope</p>" })
+      : route.fulfill({ contentType: "text/html", body: "<p>ok</p>" });
   });
-  return { posted };
+  return { posted, challenges, challenge };
 }
 
 /** A transparent 1×1 PNG: a raster tile layer only needs the request to succeed. */

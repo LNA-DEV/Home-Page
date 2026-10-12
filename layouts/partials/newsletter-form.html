@@ -32,12 +32,17 @@
        twelve checkboxes -- it shows a row of language pills and a row of topic
        bubbles, and ticks the intersection.
 
-       Progressive enhancement, because the pills are buttons and only JS can
-       compute the intersection: the real checkboxes are rendered as a plain list
-       and are what a plain POST would carry. assets/js/newsletter.js hides that
-       list, reveals the pills, and submits to Listmonk's public API so the
-       visitor stays in the panel. With JS off the form posts the old way and
-       still works -- which is what the Tor build falls back to.
+       The real checkboxes are rendered as a plain list and stay the source of
+       truth for what is posted. assets/js/newsletter.js hides that list, reveals
+       the pills, solves Listmonk's ALTCHA proof of work and posts to the form
+       action with fetch, so the visitor stays in the panel.
+
+       Signing up needs JavaScript: Listmonk rejects a post without the captcha
+       solution once ALTCHA is on, and only the script can compute it. So without
+       JavaScript the widget is not shown at all -- newsletter.css hides every
+       placement unless head.html has marked <html> with `js`. This used to be a
+       working no-JS form, the Tor build's path; that was given up for the
+       captcha on purpose.
 
        That script is loaded by head.html. The class names and the data-lang /
        data-topic / data-source attributes below are its contract -- renaming one
@@ -50,8 +55,8 @@
        just hidden pills and twelve raw checkboxes.
 
        Pre-selection: English plus the language of the page itself are checked
-       in the markup, so the no-JS form is useful and a visitor reading the German
-       post is not silently signed up for the English list only. The script then
+       in the markup, so a visitor reading the German post is not silently signed
+       up for the English list only. The script then
        adds the browser's own languages, which is the one thing a static build
        cannot know -- the page language, by contrast, it knows perfectly well, and
        it is passed down as data-page-lang rather than re-derived from the URL.
@@ -97,7 +102,7 @@
   <summary class="newsletter-button">{{ .title | default (i18n "newsletter_title") }}</summary>
 {{- end }}
 
-  <form class="newsletter-form" method="post" action="{{ $data.url }}" data-api="{{ $data.api }}">
+  <form class="newsletter-form" method="post" action="{{ $data.url }}" data-captcha="{{ $data.captcha }}">
     {{- /* honeypot -- left empty by humans, filled by bots */}}
     <input type="hidden" name="nonce" />
     <input type="hidden" name="next" value="{{ "" | absLangURL }}" />

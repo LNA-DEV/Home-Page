@@ -426,6 +426,13 @@
 {{- end }}{{ end }}
 {{- end }}
 
+{{- /* `js` on <html>: JavaScript runs. Inline and synchronous, so the class is
+       there before first paint -- the deferred newsletter.js comes too late for
+       that, and every newsletter placement would pop in after the page had
+       settled. newsletter.css hides them all without it: signing up needs the
+       script (it solves Listmonk's ALTCHA). */ -}}
+<script>document.documentElement.classList.add("js")</script>
+
 {{/*  Newsletter — pill picker on any page embedding the {{< newsletter >}} shortcode  */}}
 {{- /* Loaded unconditionally, and that is not laziness.
 

@@ -3,19 +3,25 @@
 # (Listmonk admin -> Lists -> public subscription page).
 #
 # Endpoints:
-#   url    — the classic form POST. Leaves the site, and is what the form falls
-#            back to with JavaScript off.
-#   api — Listmonk's public endpoint, where the fetch goes so the visitor stays
-#         in the panel. Cross-origin, so listmonk.lna-dev.net has to answer with
-#         an Access-Control-Allow-Origin header naming the site's origin — both
-#         https://lna-dev.net and http://localhost:1313 while developing.
-#         The request is sent form-encoded, which keeps it a "simple" CORS
-#         request: no OPTIONS preflight, so only the POST response needs the
-#         header. Sending JSON instead would require answering preflights too.
-# Both endpoints are gated by "Enable public subscription page" in Listmonk:
-# with it off, the form 404s and the API 400s.
+#   url     — Listmonk's subscription form. newsletter.js posts to it with fetch,
+#             so the visitor stays in the panel, and the header CTA links to it
+#             for a middle click. Cross-origin, so Listmonk has to answer with an
+#             Access-Control-Allow-Origin header naming the site's origin: it
+#             does for every origin under Settings -> Security -> Trusted URLs —
+#             https://lna-dev.net, and http://localhost:1313 while developing.
+#             The post is form-encoded, which keeps it a "simple" CORS request:
+#             no OPTIONS preflight, so only the response needs the header.
+#             Deliberately NOT /api/public/subscription: Listmonk (v6.2.0) checks
+#             the captcha on this endpoint only, and the API takes a signup
+#             without one — Caddy closes that route once ALTCHA is on.
+#   captcha — the ALTCHA challenge newsletter.js solves before it posts. Listmonk
+#             answers 404 while ALTCHA is off (Settings -> Security -> CAPTCHA),
+#             and the form then posts without a solution, which Listmonk accepts
+#             in that state.
+# Both are gated by "Enable public subscription page" in Listmonk: with it off,
+# the form 404s.
 url: https://listmonk.lna-dev.net/subscription/form
-api: https://listmonk.lna-dev.net/api/public/subscription
+captcha: https://listmonk.lna-dev.net/api/public/captcha/altcha
 
 # The twelve lists are a complete language x topic matrix, which is why they are
 # stored as one -- the UI lets the visitor pick languages and topics separately
