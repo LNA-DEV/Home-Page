@@ -372,6 +372,24 @@
 <script src="{{ $routeMapJs.RelPermalink }}" defer></script>
 {{- end }}
 
+{{/*  Project stories — the story/grid toggle, and the project map where the
+       front matter names areas (docs/concepts/gallery-project-stories.md)  */}}
+{{- if and (eq .Params.Theme "gallery-project") (in (slice "essay" "journal") (.Params.project_layout | default "")) }}
+{{ $storyJs := resources.Get "js/gallery-story.js" | js.Build (dict "minify" true) | resources.Fingerprint }}
+<script src="{{ $storyJs.RelPermalink }}" defer></script>
+{{- if .Params.areas }}
+{{- /* Both deferred, so Leaflet has run before the map script. MapLibre and
+       the basemap load only when a map nears the viewport. */}}
+<script src="/packages/leaflet/leaflet.js" defer></script>
+{{ $storyMapParams := dict
+"basemapTileJson" $basemapTileJson
+"basemapNoWebgl" (i18n "basemap_no_webgl")
+}}
+{{ $storyMapJs := resources.Get "js/gallery-story-map.js" | js.Build (dict "minify" true "params" $storyMapParams) | resources.Fingerprint }}
+<script src="{{ $storyMapJs.RelPermalink }}" defer></script>
+{{- end }}
+{{- end }}
+
 {{/*  Photo dex — grid filtering on the overview, local-first range map on a species page  */}}
 {{- if eq .Params.Theme "dex-home" }}
 {{ $dexJs := resources.Get "js/dex.js" | js.Build (dict "minify" true) | resources.Fingerprint }}

@@ -1,0 +1,53 @@
+# Areas a gallery project's map may draw (docs/concepts/gallery-project-stories.md §8).
+#
+# A project names the areas its map shows in its front matter (`areas: [slug, …]`),
+# and an essay chapter or a journal outing points at one of those with `area=`.
+# Nothing else on the site reads this file.
+#
+# THE RULE THIS FILE EXISTS FOR: nest sites of white-tailed eagles and ospreys must
+# not be readable. So an area is a coarse, named public place — a bog, a ridge, a
+# valley floor — and never a sighting:
+#
+#   * `lat` / `lng` have at most 2 decimal places (≈1.1 km north–south, ≈0.75 km
+#     east–west at 47°N). More is a build error.
+#   * `radius` is in metres and at least 1000. Less is a build error.
+#   * The centre is the middle of the named place, never a photo's GPS position
+#     and never "where the bird was". The served photos carry no GPS, and this
+#     file must not bring it back.
+#   * The label is free text, so the build cannot check it: it names the place,
+#     never the nest, the tree or the hide.
+#
+# The repository is public: a precise coordinate written here is published the
+# moment it is pushed, whether any page renders it or not. That is why the check
+# runs on this data, not on the HTML.
+#
+# Fields:
+#   slug     the identity, referenced from front matter and shortcodes
+#   label    a bare string (English) or {en, de, sv}; every read falls back to en
+#   lat/lng  decimal degrees, at most 2 decimals
+#   radius   metres, at least 1000
+areas:
+- slug: nicklheimer-filzen
+  label:
+    en: Nicklheimer Filzen
+    de: Nicklheimer Filzen
+    sv: Nicklheimer Filzen
+  lat: 47.79
+  lng: 12.06
+  radius: 2000
+- slug: riesenkopf
+  label:
+    en: Riesenkopf
+    de: Riesenkopf
+    sv: Riesenkopf
+  lat: 47.71
+  lng: 12.11
+  radius: 1500
+- slug: inn-valley-rosenheim
+  label:
+    en: Inn valley near Rosenheim
+    de: Inntal bei Rosenheim
+    sv: Inndalen vid Rosenheim
+  lat: 47.83
+  lng: 12.12
+  radius: 3000

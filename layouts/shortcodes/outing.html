@@ -1,0 +1,62 @@
+{{- /*
+  outing.html
+  Text for one capture day of a journal (docs/concepts/gallery-project-stories.md §4, §7).
+
+  Usage:
+    {{< outing date="2026-08-09" title="A morning at the bog" area="nicklheimer-filzen" >}}
+    Before sunrise, fog on the bog lake …
+    {{< /outing >}}
+
+  Params:
+    date    (required) YYYY-MM-DD, a day this project has photos from
+    title   the entry's heading; without it the day's dex species name the
+            entry, else its first photo's title
+    area    a slug from this project's `areas:` (data/galleryAreas.yaml); the
+            entry then gets a small map beside its text
+    lead    the UUID of the photo the entry opens with; default its first
+    size    full | medium | compact — overrides the size the day would get
+            from its text and photo count
+
+  It renders nothing where it stands: the journal is built from the photos,
+  one entry per capture day, and this only adds text to a day. It never makes
+  one. The text is stored in the page Store under its date and printed by
+  gallery-story-journal.html at the day's entry, so the page body that is left
+  is exactly the intro.
+*/ -}}
+{{- $data := partial "story/context.html" (dict "sc" . "name" "outing" "layouts" (slice "journal")) -}}
+{{- $inner := partial "story/inner.html" (dict "sc" . "inner" .Inner) -}}
+{{- if .Parent -}}
+  {{- errorf "%s: an outing cannot sit inside another shortcode" .Position -}}
+{{- end -}}
+{{- $date := .Get "date" | default "" -}}
+{{- $dateOk := findRE `^[0-9]{4}-[0-9]{2}-[0-9]{2}$` $date -}}
+{{- if not $dateOk -}}
+  {{- errorf "%s: outing date must be YYYY-MM-DD, got %q" .Position $date -}}
+{{- end -}}
+{{- $area := .Get "area" | default "" -}}
+{{- with $area -}}
+  {{- if not (in ($.Page.Params.areas | default slice) .) -}}
+    {{- errorf "%s: outing area %q is not in this project's `areas:` front matter" $.Position . -}}
+  {{- end -}}
+{{- end -}}
+{{- $size := .Get "size" | default "" | lower -}}
+{{- if and $size (not (in (slice "full" "medium" "compact") $size)) -}}
+  {{- errorf "%s: outing size must be full, medium or compact, got %q" .Position $size -}}
+{{- end -}}
+{{- $key := partial "story/key.html" . -}}
+{{- if and $data $dateOk -}}
+  {{- with index ($.Page.Store.Get "storyOutings" | default dict) $date -}}
+    {{- if ne .key $key -}}
+      {{- errorf "%s: a second outing for %s — one block per day, the first is at %s" $.Position $date .position -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $.Page.Store.SetInMap "storyOutings" $date (dict
+        "key" $key
+        "position" (printf "%v" $.Position)
+        "title" ($.Get "title" | default "")
+        "area" $area
+        "lead" ($.Get "lead" | default "")
+        "size" $size
+        "html" (trim $inner "\n ")
+      ) -}}
+{{- end -}}

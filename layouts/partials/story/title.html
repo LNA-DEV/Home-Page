@@ -1,0 +1,9 @@
+{{- /*
+  story/title.html
+  The short form of a photo title for a caption or a tile: the part before
+  " - ". Every title here is "Name - what it shows"; the photo page prints the
+  whole thing, a caption under the photo only needs the name.
+*/ -}}
+{{- $t := .Title | default "" -}}
+{{- $parts := split $t " - " -}}
+{{- return (index $parts 0 | default $t) -}}

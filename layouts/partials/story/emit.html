@@ -1,0 +1,26 @@
+{{- /*
+  story/emit.html
+  What a story shortcode writes into the page: its HTML, or — when it sits
+  inside another story shortcode — a token that stands for it.
+
+  The reason is Markdown. A paired shortcode (chapter, outing, storyPhoto with
+  text beside it) renders its inner Markdown with .Page.RenderString, and the
+  inner shortcodes have already rendered by then: their HTML is in .Inner. The
+  site's Goldmark runs without `unsafe`, so that HTML would come out as
+  "<!-- raw HTML omitted -->". A plain token survives Markdown, and the parent
+  swaps it back for the stored HTML afterwards (story/inner.html). At the top
+  level Hugo inserts shortcode output after Markdown, so there the HTML goes in
+  directly.
+
+  Only the story's own paired shortcodes know to swap a token back, so a
+  story shortcode inside anything else writes its HTML as usual.
+
+  Params: sc (the shortcode), html (string)
+*/ -}}
+{{- $out := .html -}}
+{{- if and .sc.Parent (in (slice "chapter" "outing" "storyPhoto") .sc.Parent.Name) -}}
+  {{- $k := partial "story/key.html" .sc -}}
+  {{- .sc.Page.Store.SetInMap "storyHtml" $k (printf "%s" .html) -}}
+  {{- $out = printf "XSTORYBLOCKX%sX" (replace $k "." "D") -}}
+{{- end -}}
+{{- return $out -}}

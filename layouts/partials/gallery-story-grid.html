@@ -1,0 +1,10 @@
+{{- /*
+  gallery-story-grid.html
+  Today's project grid, unchanged — gallery.html with its lightbox and like
+  counts — below the story. `#grid` is its anchor: with JavaScript the toggle
+  shows it in place of the story, without it simply follows the story.
+*/ -}}
+<section class="story-grid-view" id="grid" aria-labelledby="story-grid-heading">
+  <h2 id="story-grid-heading" class="story-sr">{{ i18n "story_grid_heading" }}</h2>
+  {{- partial "gallery.html" . }}
+</section>

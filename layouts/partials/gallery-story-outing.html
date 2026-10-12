@@ -1,0 +1,134 @@
+{{- /*
+  gallery-story-outing.html
+  One journal entry — one capture day (docs/concepts/gallery-project-stories.md §7).
+  Every photo of the day is in it exactly once: the size decides which are
+  shown large, and any left over follow as thumbnails.
+
+  Params: e (an entry from gallery-story-journal.html), card (bool: a compact
+  day inside a row of up to three)
+*/ -}}
+{{- $e := .e -}}
+{{- $day := $e.day -}}
+{{- $photos := $e.photos -}}
+{{- $date := "" -}}
+{{- if $day.undated -}}
+  {{- $date = printf `<span class="journal-date">%s</span>` (i18n "story_undated") -}}
+{{- else -}}
+  {{- $date = printf `<time class="journal-date" datetime="%s">%s</time>` $day.key (time.Format ":date_long" $day.time) -}}
+{{- end -}}
+{{- $heading := printf `<h2 class="journal-title">%s</h2>` (htmlEscape $e.title) -}}
+{{- $meta := printf `<p class="journal-meta">%s</p>` $e.meta -}}
+{{- $text := cond (ne $e.text "") (printf `<div class="story-body journal-text">%s</div>` $e.text) "" -}}
+{{- $mini := "" -}}
+{{- with $e.area }}{{ $mini = partial "story/mini.html" . }}{{ end -}}
+
+{{- /* How many photos the entry shows large; the rest become thumbnails. */ -}}
+{{- $large := 0 -}}
+{{- if eq $e.size "full" }}{{ $large = 1 }}{{ else if eq $e.size "medium" }}{{ $large = 2 }}{{ end -}}
+{{- $big := slice -}}
+{{- $rest := $photos -}}
+{{- if gt $large 0 -}}
+  {{- $big = first $large $photos -}}
+  {{- $rest = after $large $photos -}}
+{{- end -}}
+{{- /* The lead's ratio, for the photo column of an entry with the photo beside
+       its text: a portrait gets a narrower column instead of running far
+       below a short text. */ -}}
+{{- $ratio := 1.5 -}}
+{{- with index $photos 0 -}}
+  {{- $t := .image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
+  {{- $ratio = div (mul $t.Width 1.0) $t.Height -}}
+{{- end -}}
+
+{{- /* A full day whose lead is a portrait is laid out with the photo beside the
+       text, like a medium one: across the column, a portrait is a narrow strip
+       with the text a screen further down. So is a medium day with one photo
+       and an area. */ -}}
+{{- $side := or (and (eq $e.size "full") (lt $ratio 1.0)) (and (eq $e.size "medium") $e.area (eq (len $big) 1)) -}}
+
+{{- if and (eq $e.size "full") (not $side) }}
+<article class="journal-entry journal-full" id="{{ $e.anchor }}">
+  <header class="journal-entry-head">
+    <div>{{ $date | safeHTML }}{{ $heading | safeHTML }}</div>
+    {{ $meta | safeHTML }}
+  </header>
+  {{- range $big }}{{ partial "story/figure.html" (dict "item" . "class" "journal-lead" "sizes" "(max-width: 1108px) calc(100vw - 28px), 900px") }}{{ end }}
+  {{- if or $text $mini }}
+  <div class="journal-text-row">{{ $text | safeHTML }}{{ $mini }}</div>
+  {{- end }}
+  {{- with $rest }}
+  <h3 class="journal-more">{{ i18n "story_more_from_outing" }}</h3>
+  <div class="story-thumbs journal-thumbs">{{ range . }}{{ partial "story/thumb.html" (dict "item" . "noLabel" true) }}{{ end }}</div>
+  {{- end }}
+</article>
+
+{{- else if $side }}
+{{- /* The photo beside the text, the small map under the text, any other photos
+       of the day as thumbnails below. For a medium day with one photo and an
+       area: laid out like the entry with two (text and map, photos below), the
+       single photo sat half-width under a short text and left both columns
+       half empty. */}}
+{{- if eq $e.size "full" }}{{ $big = first 1 $photos }}{{ $rest = after 1 $photos }}{{ end }}
+<article class="journal-entry journal-medium journal-medium-one{{ if $e.flip }} journal-flip{{ end }}" id="{{ $e.anchor }}" style="--ratio: {{ printf "%.4f" $ratio }}">
+  <div class="journal-medium-media">
+    {{- range $big }}{{ partial "story/figure.html" (dict "item" . "sizes" "(max-width: 900px) calc(100vw - 28px), 440px") }}{{ end -}}
+  </div>
+  <div class="journal-medium-text">
+    {{ $date | safeHTML }}{{ $heading | safeHTML }}{{ $meta | safeHTML }}{{ $text | safeHTML }}{{ $mini }}
+  </div>
+  {{- with $rest }}
+  <div class="journal-medium-rest">
+    <h3 class="journal-more">{{ i18n "story_more_from_outing" }}</h3>
+    <div class="story-thumbs journal-thumbs">{{ range . }}{{ partial "story/thumb.html" (dict "item" . "noLabel" true) }}{{ end }}</div>
+  </div>
+  {{- end }}
+</article>
+
+{{- else if and (eq $e.size "medium") $e.area }}
+<article class="journal-entry journal-medium journal-medium-map" id="{{ $e.anchor }}">
+  <header class="journal-entry-head">
+    <div>{{ $date | safeHTML }}{{ $heading | safeHTML }}</div>
+    {{ $meta | safeHTML }}
+  </header>
+  <div class="journal-text-row">{{ $text | safeHTML }}{{ $mini }}</div>
+  <div class="story-row story-pair">
+    {{- range $big }}{{ partial "story/figure.html" (dict "item" . "sizes" "(max-width: 768px) 50vw, 450px") }}{{ end -}}
+  </div>
+  {{- with $rest }}
+  <h3 class="journal-more">{{ i18n "story_more_from_outing" }}</h3>
+  <div class="story-thumbs journal-thumbs">{{ range . }}{{ partial "story/thumb.html" (dict "item" . "noLabel" true) }}{{ end }}</div>
+  {{- end }}
+</article>
+
+{{- else if eq $e.size "medium" }}
+<article class="journal-entry journal-medium{{ if $e.flip }} journal-flip{{ end }}" id="{{ $e.anchor }}" style="--ratio: {{ printf "%.4f" $ratio }}">
+  <div class="journal-medium-media">
+    {{- range $big }}{{ partial "story/figure.html" (dict "item" . "sizes" "(max-width: 900px) calc(100vw - 28px), 440px") }}{{ end -}}
+  </div>
+  <div class="journal-medium-text">
+    {{ $date | safeHTML }}{{ $heading | safeHTML }}{{ $meta | safeHTML }}{{ $text | safeHTML }}
+  </div>
+  {{- with $rest }}
+  <div class="journal-medium-rest">
+    <h3 class="journal-more">{{ i18n "story_more_from_outing" }}</h3>
+    <div class="story-thumbs journal-thumbs">{{ range . }}{{ partial "story/thumb.html" (dict "item" . "noLabel" true) }}{{ end }}</div>
+  </div>
+  {{- end }}
+</article>
+
+{{- else if .card }}
+<article class="journal-entry journal-card" id="{{ $e.anchor }}">
+  {{ $date | safeHTML }}{{ $heading | safeHTML }}{{ $meta | safeHTML }}{{ $text | safeHTML }}
+  <div class="story-thumbs journal-card-thumbs">{{ range $photos }}{{ partial "story/thumb.html" (dict "item" . "noLabel" true) }}{{ end }}</div>
+</article>
+
+{{- else }}
+<article class="journal-entry journal-compact" id="{{ $e.anchor }}">
+  <div class="story-thumbs journal-compact-thumbs journal-n{{ cond (gt (len $photos) 4) 4 (len $photos) }}">
+    {{- range $photos }}{{ partial "story/thumb.html" (dict "item" . "noLabel" true) }}{{ end -}}
+  </div>
+  <div class="journal-compact-text">
+    {{ $date | safeHTML }}{{ $heading | safeHTML }}{{ $meta | safeHTML }}{{ $text | safeHTML }}
+  </div>
+</article>
+{{- end }}

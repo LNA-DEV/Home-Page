@@ -257,3 +257,68 @@ export function pageKind(file: string): string {
   if (/\/posts\/[^/]+\/[^/]+\//.test(u)) return "post";
   return "other";
 }
+
+/* ------------------------------------------------------- project stories */
+
+/* Every gallery project page, from its content file (docs/concepts/
+   gallery-project-stories.md): which layout it asked for, which project's photos
+   it shows, and where it is built. A story page is found by its layout, never by
+   name, so the tests keep working once the demo projects are deleted. */
+export type ProjectPage = {
+  dir: string;
+  lang: Lang;
+  /** "content/gallery/projects/<dir>/index.<lang>.md" */
+  source: string;
+  /** "/<lang>/gallery/projects/<dir>/" */
+  url: string;
+  /** "<lang>/gallery/projects/<dir>/index.html" */
+  file: string;
+  layout: string;
+  slug: string;
+  featured: string;
+  areas: string[];
+  weight: number;
+  /** false for an album with build.list: never — reachable, but in no list. */
+  listed: boolean;
+};
+
+export const projectPages = memo<ProjectPage[]>(() => {
+  const root = path.join(REPO, "content", "gallery", "projects");
+  const out: ProjectPage[] = [];
+  for (const entry of fs.readdirSync(root, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    for (const lang of LANGS) {
+      const source = path.join("content", "gallery", "projects", entry.name, `index.${lang}.md`);
+      if (!fs.existsSync(path.join(REPO, source))) continue;
+      const fm = frontMatter(source);
+      const params = fm.params ?? {};
+      if (params.theme !== "gallery-project") continue;
+      out.push({
+        dir: entry.name,
+        lang,
+        source,
+        url: `/${lang}/gallery/projects/${entry.name}/`,
+        file: path.join(lang, "gallery", "projects", entry.name, "index.html"),
+        layout: String(params.project_layout ?? "grid"),
+        slug: String(params.project_slug ?? ""),
+        featured: String(params.featured_image ?? ""),
+        areas: asList(params.areas),
+        weight: Number(fm.weight ?? 0),
+        listed: fm.build?.list !== "never",
+      });
+    }
+  }
+  return out.sort((a, b) => a.url.localeCompare(b.url));
+});
+
+/** The project pages whose project_layout is essay or journal. */
+export const storyPages = memo<ProjectPage[]>(() => projectPages().filter((p) => ["essay", "journal"].includes(p.layout)));
+
+/** The photos a project page shows: the grid's, archive excluded. */
+export function projectPhotoIds(slug: string): string[] {
+  return gallery()
+    .filter((e) => asList(e.project).includes(slug) && e.section !== "archive")
+    .map((e) => String(e.id));
+}
+
+export const galleryAreas = memo<any[]>(() => readYaml("data/galleryAreas.yaml")?.areas ?? []);

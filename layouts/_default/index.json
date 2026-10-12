@@ -11,7 +11,17 @@
 {{- $.Scratch.Add "index" slice -}}
 {{- range site.RegularPages -}}
     {{- if and (not .Params.searchHidden) (ne .Layout `archives`) (ne .Layout `search`) }}
-    {{- $.Scratch.Add "index" (dict "title" .Title "content" .Plain "permalink" .Permalink "summary" .Summary) -}}
+    {{- $content := .Plain -}}
+    {{- /* A journal's outing texts are held in the page Store and printed at
+           their day, not where they stand in the body, so .Plain holds only the
+           intro. .Plain has rendered the body by now, which is what filled the
+           Store (docs/concepts/gallery-project-stories.md §9). */ -}}
+    {{- if and (eq .Params.theme "gallery-project") (eq .Params.project_layout "journal") -}}
+      {{- range $date, $o := .Store.Get "storyOutings" | default dict -}}
+        {{- $content = printf "%s %s %s" $content ($o.title | default "") (plainify $o.html) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $.Scratch.Add "index" (dict "title" .Title "content" $content "permalink" .Permalink "summary" .Summary) -}}
     {{- end }}
 {{- end -}}
 {{- with site.GetPage "/travel" -}}

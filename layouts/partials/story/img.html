@@ -1,0 +1,40 @@
+{{- /*
+  story/img.html
+  One <img> of a story photo, from the ladder galleryImage already uses
+  (gallery-image-figure.html): AutoOrient first, then `fit W x 10W` at
+  480/720/1080/1440 — the same processing specs, so a photo inlined in a post
+  and in a story shares its files — never upscaled. `wide2048` adds one more
+  step, for the hero and `full` blocks only (§5.5).
+
+  Params:
+    item       collect-images item
+    sizes      the sizes attribute
+    wide2048   bool
+    eager      bool: the hero — loading eager, fetchpriority high
+    class      on the <img>
+  Returns HTML.
+*/ -}}
+{{- $item := .item -}}
+{{- $src := $item.image.Filter images.AutoOrient -}}
+{{- $steps := slice 480 720 1080 1440 -}}
+{{- if .wide2048 }}{{ $steps = $steps | append 2048 }}{{ end -}}
+{{- $variants := slice -}}
+{{- range $steps -}}
+  {{- if le . $src.Width -}}
+    {{- $variants = $variants | append ($src.Process (printf "fit %dx%d" . (mul . 10))) -}}
+  {{- end -}}
+{{- end -}}
+{{- /* A photo narrower than 480px: its one fit variant, never the original,
+       which carries the full-size file into the page. */ -}}
+{{- if not $variants -}}
+  {{- $variants = slice ($src.Process (printf "fit %dx%d" $src.Width (mul $src.Width 10))) -}}
+{{- end -}}
+{{- /* src for a client that ignores srcset: the largest step up to 1080. */ -}}
+{{- $primary := index $variants 0 -}}
+{{- range $variants }}{{ if le .Width 1080 }}{{ $primary = . }}{{ end }}{{ end -}}
+{{- $alt := $item.Alt | default $item.Title -}}
+<img{{ with .class }} class="{{ . }}"{{ end }} src="{{ $primary.RelPermalink }}"
+  srcset="{{ range $i, $v := $variants }}{{ if $i }}, {{ end }}{{ $v.RelPermalink }} {{ $v.Width }}w{{ end }}"
+  sizes="{{ .sizes }}" width="{{ $primary.Width }}" height="{{ $primary.Height }}"
+  alt="{{ $alt }}"{{ if .eager }} loading="eager" fetchpriority="high"{{ else }} loading="lazy"{{ end }} decoding="async">
+{{- /**/ -}}

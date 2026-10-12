@@ -1,0 +1,35 @@
+{{- /*
+  story/period.html
+  A span of capture dates as text, in the page language.
+
+  Params:
+    dates      slice of "2006-01-02" strings (empty ones are ignored)
+    precision  "year"  → "2022" / "2022 to 2026"
+               "month" → "August 2026" / "July 2022 to September 2026"
+               "auto"  → one day: "Aug 9, 2026"; more: as "year"
+  Returns a string, "" when there is no date.
+
+  Month and day names are Hugo's localised ones (time.Format), the same way the
+  game pages print their dates.
+*/ -}}
+{{- $dates := slice -}}
+{{- range .dates }}{{ with . }}{{ $dates = $dates | append . }}{{ end }}{{ end -}}
+{{- $out := "" -}}
+{{- if $dates -}}
+  {{- $dates = sort $dates -}}
+  {{- $first := time.AsTime (index $dates 0) -}}
+  {{- $last := time.AsTime (index $dates (sub (len $dates) 1)) -}}
+  {{- $p := .precision | default "year" -}}
+  {{- if and (eq $p "auto") (eq (index $dates 0) (index $dates (sub (len $dates) 1))) -}}
+    {{- $out = time.Format ":date_medium" $first -}}
+  {{- else if eq $p "month" -}}
+    {{- $a := time.Format "January 2006" $first -}}
+    {{- $b := time.Format "January 2006" $last -}}
+    {{- $out = cond (eq $a $b) $a (T "story_period" (dict "from" $a "to" $b)) -}}
+  {{- else -}}
+    {{- $a := string $first.Year -}}
+    {{- $b := string $last.Year -}}
+    {{- $out = cond (eq $a $b) $a (T "story_period" (dict "from" $a "to" $b)) -}}
+  {{- end -}}
+{{- end -}}
+{{- return $out -}}

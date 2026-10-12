@@ -1,0 +1,35 @@
+{{- /*
+  gallery-story-map.html
+  A project's overview map and the list of its areas
+  (docs/concepts/gallery-project-stories.md §8).
+
+  The list is always in the HTML: it is the map for a visitor without
+  JavaScript or without WebGL2, and the legend for everyone else.
+  gallery-story-map.js shows the map field only where it can draw one, and
+  builds the map — Leaflet, the site's own basemap through basemap.js, one
+  circle per area — when it nears the viewport.
+
+  What it draws is data/galleryAreas.yaml and nothing else: coarse circles,
+  never a photo's position. The data reaches the script through data-*, never
+  through an inline script.
+
+  Params:
+    entries  [{ slug, name, lat, lng, radius, badge, title, count, countLabel, href }]
+    class    extra class on the section
+*/ -}}
+<section class="story-map{{ with .class }} {{ . }}{{ end }}" id="map" aria-label="{{ i18n "story_map" }}">
+  <div class="story-map-canvas" data-story-map data-areas="{{ .entries | jsonify }}" hidden></div>
+  <ol class="story-area-list">
+    {{- range .entries }}
+    <li data-area="{{ .slug }}">
+      {{- $inner := printf `%s<span class="story-area-name">%s</span>%s%s`
+            (cond (ne .badge "") (printf `<span class="story-area-badge">%s</span>` .badge) "")
+            (htmlEscape .name)
+            (cond (and (ne .title "") (ne .title .name)) (printf `<span class="story-area-title">%s</span>` (htmlEscape .title)) "")
+            (cond (ne .countLabel "") (printf `<span class="story-area-count">%s</span>` .countLabel) "") -}}
+      {{- if .href }}<a href="{{ .href }}">{{ $inner | safeHTML }}</a>{{ else }}<span>{{ $inner | safeHTML }}</span>{{ end -}}
+    </li>
+    {{- end }}
+  </ol>
+  <p class="story-map-note">{{ i18n "story_map_note" }}</p>
+</section>

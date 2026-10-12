@@ -1,0 +1,13 @@
+{{- /*
+  story/exif.html
+  The EXIF line of a large story image: focal length, aperture, shutter, ISO,
+  as far as the file has them — the strings collect-images.html already
+  produces for the lightbox and the photo page, so the three cannot drift.
+  Returns a slice of strings.
+*/ -}}
+{{- $out := slice -}}
+{{- with .FocalLength }}{{ $out = $out | append . }}{{ end -}}
+{{- with .Aperture }}{{ $out = $out | append . }}{{ end -}}
+{{- with .ShutterSpeed }}{{ $out = $out | append . }}{{ end -}}
+{{- with .ISO }}{{ $out = $out | append . }}{{ end -}}
+{{- return $out -}}

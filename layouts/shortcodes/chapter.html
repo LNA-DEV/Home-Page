@@ -1,0 +1,112 @@
+{{- /*
+  chapter.html
+  A numbered chapter of an essay (docs/concepts/gallery-project-stories.md §4, §6).
+
+  Usage:
+    {{< chapter title="The bog at dawn" subtitle="White-tailed eagles in the fog" area="nicklheimer-filzen" >}}
+    Ordinary Markdown, with storyPhoto / storyPhotos / storySpecies blocks.
+    {{< /chapter >}}
+
+  Params:
+    title     (required) the h2; its anchor is `anchorize` of it, like every
+              heading on the site
+    subtitle  one line under the title
+    area      a slug from this project's `areas:` (data/galleryAreas.yaml);
+              the chapter then has its place on the project map
+
+  Everything else is counted, not written: the number (chapters are numbered in
+  source order), the date or period and the photo count in the head, and the
+  species chips at the end — all from the photos placed inside the chapter.
+  That works because Hugo renders nested shortcodes before their parent: by the
+  time this template runs, they have recorded themselves in the page Store
+  under this chapter's key (story/key.html).
+*/ -}}
+{{- $data := partial "story/context.html" (dict "sc" . "name" "chapter" "layouts" (slice "essay")) -}}
+{{- $inner := partial "story/inner.html" (dict "sc" . "inner" .Inner) -}}
+{{- if .Parent -}}
+  {{- errorf "%s: a chapter cannot sit inside another shortcode" .Position -}}
+{{- end -}}
+{{- $title := .Get "title" | default "" -}}
+{{- if not $title -}}
+  {{- errorf "%s: chapter needs a title" .Position -}}
+{{- end -}}
+{{- $key := partial "story/key.html" . -}}
+{{- $anchor := anchorize $title -}}
+
+{{- /* The area must be one the project's map draws. */ -}}
+{{- $area := .Get "area" | default "" -}}
+{{- with $area -}}
+  {{- if not (in ($.Page.Params.areas | default slice) .) -}}
+    {{- errorf "%s: chapter area %q is not in this project's `areas:` front matter" $.Position . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $html := "" -}}
+{{- with $data -}}
+  {{- /* Numbered by the chapters before it in source order. Counting keys
+         smaller than this one, never the map's size: under `hugo server` the
+         Store can still hold the chapters after this one from the last render. */ -}}
+  {{- $n := 1 -}}
+  {{- range $k, $c := $.Page.Store.Get "storyChapters" -}}
+    {{- if lt $k $key }}{{ $n = add $n 1 }}{{ end -}}
+    {{- if and (ne $k $key) (eq $c.anchor $anchor) -}}
+      {{- errorf "%s: two chapters have the anchor %q — give them different titles" $.Position $anchor -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- /* The photos placed inside this chapter. */ -}}
+  {{- $items := slice -}}
+  {{- range $k, $id := $.Page.Store.Get "storyPlaced" -}}
+    {{- if hasPrefix $k (printf "%s." $key) -}}
+      {{- with index $data.byId $id }}{{ $items = $items | append . }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $dates := slice -}}
+  {{- $species := newScratch -}}
+  {{- range $items -}}
+    {{- $dates = $dates | append .DateTaken -}}
+    {{- with .Species }}{{ $species.Add (lower .) 1 }}{{ end -}}
+  {{- end -}}
+  {{- $count := len $items -}}
+
+  {{- $.Page.Store.SetInMap "storyChapters" $key (dict
+        "number" $n
+        "title" $title
+        "anchor" $anchor
+        "area" $area
+        "count" $count
+      ) -}}
+
+  {{- $meta := slice -}}
+  {{- with partial "story/period.html" (dict "dates" $dates "precision" "auto") }}{{ $meta = $meta | append . }}{{ end -}}
+  {{- if $count }}{{ $meta = $meta | append (T "photoCount" $count) }}{{ end -}}
+
+  {{- $chips := slice -}}
+  {{- range $sci, $c := $species.Values -}}
+    {{- with index $data.bySpecies $sci -}}
+      {{- $chips = $chips | append (dict "name" .name "url" .url "count" $c) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $chips = sort (sort $chips "name") "count" "desc" -}}
+
+  {{- $head := printf `<header class="story-chapter-head"><div class="story-chapter-title"><span class="story-chapter-num" aria-hidden="true">%d</span><h2 id="%s">%s</h2></div>` $n $anchor (htmlEscape $title) -}}
+  {{- if or ($.Get "subtitle") $meta -}}
+    {{- $head = printf `%s<p class="story-chapter-sub"><span>%s</span><span class="story-chapter-meta">%s</span></p>` $head (htmlEscape ($.Get "subtitle" | default "")) (delimit $meta " · ") -}}
+  {{- end -}}
+  {{- $head = printf "%s</header>" $head -}}
+
+  {{- $foot := "" -}}
+  {{- with $chips -}}
+    {{- $foot = printf `<div class="story-chips story-chapter-species"><span class="story-chips-label">%s</span>` (T "story_species_in_chapter") -}}
+    {{- range . -}}
+      {{- $chip := printf `%s<span class="story-chip-count">%d</span>` (htmlEscape .name) .count -}}
+      {{- $foot = printf "%s%s" $foot (cond (ne .url "") (printf `<a class="story-chip" href="%s">%s</a>` .url $chip) (printf `<span class="story-chip">%s</span>` $chip)) -}}
+    {{- end -}}
+    {{- $foot = printf "%s</div>" $foot -}}
+  {{- end -}}
+
+  {{- /* The marker lets the page layout put the project map between the
+         intro and the first chapter (gallery-story-essay.html). */ -}}
+  {{- $html = printf `<!--story-chapter--><section class="story-chapter" data-chapter="%d"%s>%s<div class="story-chapter-body">%s</div>%s</section>` $n (cond (ne $area "") (printf ` data-area="%s"` $area) "") $head $inner $foot -}}
+{{- end -}}
+{{- $html | safeHTML -}}

@@ -658,3 +658,74 @@
   translation: "Portrait"
 - id: category_others
   translation: "Other"
+
+# Project stories — gallery projects with project_layout essay or journal
+# (docs/concepts/gallery-project-stories.md §5.8)
+- id: speciesCount
+  translation:
+    one: "1 species"
+    other: "{{ . }} species"
+- id: outingCount
+  translation:
+    one: "1 outing"
+    other: "{{ . }} outings"
+- id: story_view_story
+  translation: "Story"
+- id: story_view_journal
+  translation: "Journal"
+- id: story_view_grid
+  translation: "Grid"
+- id: story_toggle_label
+  translation: "View"
+- id: story_show_as_grid
+  translation: "Show as grid"
+- id: story_prefer_grid
+  translation: "Prefer to browse them without the story?"
+- id: journal_prefer_grid
+  translation: "Prefer to browse them without the journal?"
+- id: story_that_was_all
+  translation:
+    one: "That was the one photo."
+    other: "That was all {{ . }} photos."
+- id: story_more_from_project
+  translation: "More from this project"
+- id: story_more_from_outing
+  translation: "More from this outing"
+- id: story_species_in_project
+  translation: "Species in this project"
+- id: story_species_in_chapter
+  translation: "Species in this chapter"
+- id: story_species_in_dex
+  translation:
+    one: "1 photo in the Dex"
+    other: "{{ . }} photos in the Dex"
+- id: project_previous
+  translation: "Previous project"
+- id: project_next
+  translation: "Next project"
+- id: project_nav_label
+  translation: "More projects"
+- id: story_contents
+  translation: "Chapters"
+- id: story_grid_heading
+  translation: "All photos"
+- id: story_map
+  translation: "Map"
+- id: story_map_note
+  translation: "Areas are drawn loosely on purpose, so nesting birds of prey stay undisturbed."
+- id: story_map_show_area
+  translation: "Show {{ .area }} on the map"
+- id: story_undated
+  translation: "Undated"
+- id: story_period
+  translation: "{{ .from }} to {{ .to }}"
+- id: story_todo
+  translation: "To write:"
+- id: journal_summary
+  translation: "{{ .photos }} from {{ .outings }} and {{ .species }}"
+- id: journal_summary_nospecies
+  translation: "{{ .photos }} from {{ .outings }}"
+- id: journal_order_desc
+  translation: "Newest first."
+- id: journal_order_asc
+  translation: "Oldest first."

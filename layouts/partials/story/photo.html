@@ -1,0 +1,32 @@
+{{- /*
+  story/photo.html
+  Resolve a UUID a story shortcode names to one of the project's photos, and
+  record that it was placed. docs/concepts/gallery-project-stories.md §4.
+
+  An id that is in data/gallery.yaml but not in this project (foreign), and one
+  that is not there at all (unknown), stop the build here, with file:line. A
+  photo placed twice is found by the page layout, which sees every placement.
+
+  Params: sc, data (story data), id, slot ("" or "/n" for the n-th id of a
+  storyPhotos)
+  Returns the collect-images item, or "" after an error.
+*/ -}}
+{{- $id := trim (.id | default "") " " -}}
+{{- $out := "" -}}
+{{- if not $id -}}
+  {{- errorf "%s: no id given — use id=\"<uuid from data/gallery.yaml>\" (scripts/project-photos.py lists them)" .sc.Position -}}
+{{- else -}}
+  {{- with index .data.byId $id -}}
+    {{- $out = . -}}
+    {{- $key := printf "%s%s" (partial "story/key.html" $.sc) ($.slot | default "") -}}
+    {{- $.sc.Page.Store.SetInMap "storyPlaced" $key $id -}}
+  {{- else -}}
+    {{- $meta := index (partialCached "gallery-meta.html" .sc.Page).byId $id -}}
+    {{- if $meta -}}
+      {{- errorf "%s: photo %s (%s) is not in project %q — add the project to its `project:` in data/gallery.yaml, or pick another photo" .sc.Position $id $meta.src .data.slug -}}
+    {{- else -}}
+      {{- errorf "%s: no photo with id %q in data/gallery.yaml" .sc.Position $id -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $out -}}

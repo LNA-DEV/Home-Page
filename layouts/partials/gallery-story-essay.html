@@ -1,0 +1,140 @@
+{{- /*
+  gallery-story-essay.html
+  project_layout: essay — one continuous story, optionally in chapters, with
+  photo blocks between the paragraphs (docs/concepts/gallery-project-stories.md §6).
+
+  Top to bottom: breadcrumb and toggle; the hero (featured_image); title,
+  description and the counted meta line; chapter chips; the intro; the project
+  map; the chapters; "More from this project" for every photo the text did not
+  place; the end of the page; and the grid, as it always was.
+
+  Everything inside .story-part is the story view: gallery-story.js hides it
+  when the visitor switches to the grid, and shows #grid only then.
+
+  Params (from gallery-story.html): page, content, data, areas, seen
+*/ -}}
+{{- $page := .page -}}
+{{- $data := .data -}}
+{{- $content := printf "%s" .content -}}
+
+{{- /* The chapters, in source order — keys sort as the body reads. */ -}}
+{{- $chapters := slice -}}
+{{- range $key, $c := $page.Store.Get "storyChapters" | default dict -}}
+  {{- $chapters = $chapters | append $c -}}
+{{- end -}}
+
+{{- /* The intro is the body before the first chapter; the map goes after it. */ -}}
+{{- $intro := index (split $content "<!--story-chapter-->") 0 -}}
+{{- $rest := strings.TrimPrefix $intro $content -}}
+
+{{- /* Photos the text did not place. */ -}}
+{{- $unplaced := slice -}}
+{{- range $data.photos -}}
+  {{- if not (index $.seen .Id) }}{{ $unplaced = $unplaced | append . }}{{ end -}}
+{{- end -}}
+
+{{- /* One map entry per area: the chapters that name it, their photo count,
+       and the first of them as the target. An area no chapter names is still
+       drawn, with nothing to jump to. */ -}}
+{{- $entries := slice -}}
+{{- range .areas -}}
+  {{- $area := . -}}
+  {{- $numbers := slice -}}
+  {{- $titles := slice -}}
+  {{- $count := 0 -}}
+  {{- $href := "" -}}
+  {{- range $chapters -}}
+    {{- if eq .area $area.slug -}}
+      {{- $numbers = $numbers | append (string .number) -}}
+      {{- $titles = $titles | append .title -}}
+      {{- $count = add $count .count -}}
+      {{- if not $href }}{{ $href = printf "#%s" .anchor }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $title := "" -}}
+  {{- if eq (len $titles) 1 }}{{ $title = index $titles 0 }}{{ end -}}
+  {{- $entries = $entries | append (dict
+        "slug" $area.slug "name" $area.name "lat" $area.lat "lng" $area.lng "radius" $area.radius
+        "badge" (delimit $numbers ", ")
+        "title" $title
+        "count" $count
+        "countLabel" (cond (gt $count 0) (T "photoCount" $count) "")
+        "href" $href
+      ) -}}
+{{- end -}}
+
+{{- $dates := slice }}{{ range $data.photos }}{{ $dates = $dates | append .DateTaken }}{{ end -}}
+{{- $period := partial "story/period.html" (dict "dates" $dates "precision" "year") -}}
+
+<div class="story-page story-essay" data-story="essay">
+  {{- partial "gallery-story-bar.html" (dict "page" $page "view" "story") }}
+
+  {{- with $data.hero }}
+  {{- $url := partial "story/url.html" . }}
+  {{- $thumb := .image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
+  {{- /* The hero is a fixed box, so it crops. hero_position (front matter, a
+         CSS object-position such as "50% 20%") moves the crop to keep the
+         subject whole; the default is the centre. */}}
+  {{- $pos := $page.Params.hero_position | default "" }}
+  {{- if and $pos (not (findRE `^[a-z0-9.% -]+$` $pos)) }}
+  {{- errorf "%s: hero_position %q is not a CSS object-position (e.g. \"50%% 20%%\" or \"center top\")" $page.RelPermalink $pos }}
+  {{- $pos = "" }}
+  {{- end }}
+  <figure class="story-hero story-part" data-id="{{ .Id }}" style="background-color: {{ index $thumb.Colors 0 | default "transparent" }}{{ with $pos }}; --hero-position: {{ . }}{{ end }}">
+    {{- partial "story/img.html" (dict "item" . "sizes" "calc(100vw - 48px)" "wide2048" true "eager" true) }}
+    <figcaption class="story-hero-cap">
+      <a href="{{ $url }}">{{ partial "story/title.html" . }}</a>
+      {{- range partial "story/exif.html" . }}<span>{{ . }}</span>{{ end }}
+    </figcaption>
+  </figure>
+  {{- end }}
+
+  <header class="story-head">
+    <h1>{{ $page.Title }}</h1>
+    {{- with $page.Description }}
+    <p class="story-description">{{ . }}</p>
+    {{- end }}
+    <p class="story-meta">
+      <span>{{ T "photoCount" $data.count }}</span>
+      {{- with len $data.species }}<span>{{ T "speciesCount" . }}</span>{{ end }}
+      {{- with $period }}<span>{{ . }}</span>{{ end }}
+    </p>
+    {{- if $chapters }}
+    <nav class="story-chips story-toc story-part" aria-label="{{ i18n "story_contents" }}">
+      {{- range $chapters }}
+      <a class="story-chip story-chip-lg" href="#{{ .anchor }}"><span class="story-chip-num">{{ .number }}</span>{{ .title }}</a>
+      {{- end }}
+      {{- if $entries }}
+      <a class="story-chip story-chip-lg" href="#map">{{ i18n "story_map" }}</a>
+      {{- end }}
+    </nav>
+    {{- end }}
+  </header>
+
+  <div class="story story-part">
+    {{- with trim $intro " \n" }}
+    <div class="story-body">{{ . | safeHTML }}</div>
+    {{- end }}
+
+    {{- with $entries }}
+    {{- partial "gallery-story-map.html" (dict "entries" . "class" "story-map-essay") }}
+    {{- end }}
+
+    {{- with trim $rest " \n" }}
+    <div class="story-body">{{ . | safeHTML }}</div>
+    {{- end }}
+
+    {{- with $unplaced }}
+    <section class="story-more" aria-labelledby="story-more-heading">
+      <h2 id="story-more-heading">{{ i18n "story_more_from_project" }}</h2>
+      <div class="story-thumbs story-grid">
+        {{- range . }}{{ partial "story/thumb.html" (dict "item" .) }}{{ end }}
+      </div>
+    </section>
+    {{- end }}
+  </div>
+
+  {{- partial "gallery-story-end.html" (dict "count" $data.count "view" "story") }}
+  {{- partial "gallery-story-grid.html" $page }}
+  {{- partial "gallery-project-nav.html" $page }}
+</div>

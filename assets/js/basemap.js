@@ -57,7 +57,9 @@ function loadStylesheet(href) {
   document.head.appendChild(link);
 }
 
-function webgl2Available() {
+/* Exported for the project map, which draws nothing at all without the
+   basemap and so checks before it builds a map (gallery-story-map.js). */
+export function webgl2Available() {
   try {
     return !!document.createElement("canvas").getContext("webgl2");
   } catch (err) {

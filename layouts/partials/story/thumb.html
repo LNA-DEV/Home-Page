@@ -1,0 +1,20 @@
+{{- /*
+  story/thumb.html
+  A thumbnail tile: the grid's own `fit 600x600` variant (no new file),
+  cropped into its box with object-fit, the short title as a label inside it
+  and, for a sequence, a number. The whole tile links to the photo page.
+
+  Params: item, noLabel (bool), number (int, 0 = none),
+          suffix (text after the title in the label)
+  Returns HTML.
+*/ -}}
+{{- $item := .item -}}
+{{- $thumb := $item.image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
+{{- $color := index $thumb.Colors 0 | default "transparent" -}}
+{{- $title := partial "story/title.html" $item -}}
+<a class="story-thumb" href="{{ partial "story/url.html" $item }}" data-id="{{ $item.Id }}" title="{{ $item.Title }}" style="background-color: {{ $color }}">
+  <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="{{ $item.Alt | default $item.Title }}" loading="lazy" decoding="async">
+  {{- with .number }}<span class="story-thumb-num" aria-hidden="true">{{ . }}</span>{{ end }}
+  {{- if not .noLabel }}<span class="story-thumb-label">{{ $title }}{{ with .suffix }}, {{ . }}{{ end }}</span>{{ end }}
+</a>
+{{- /**/ -}}

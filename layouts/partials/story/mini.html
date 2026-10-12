@@ -1,0 +1,16 @@
+{{- /*
+  story/mini.html
+  The small map beside a journal entry's text: its area, nothing else
+  (docs/concepts/gallery-project-stories.md §8). A picture, not a tool — no
+  dragging, no zoom — so the whole box is one link to the overview map.
+
+  Until gallery-story-map.js builds it (near the viewport, WebGL2 only), and
+  for good without WebGL2, the box shows the area's name as a chip, which is
+  the same link.
+
+  Param: the area (gallery-areas.html entry). Returns HTML.
+*/ -}}
+<div class="journal-mini" data-mini-map data-area="{{ .slug }}" data-lat="{{ .lat }}" data-lng="{{ .lng }}" data-radius="{{ .radius }}">
+  <a class="journal-mini-link" href="#map" data-area="{{ .slug }}" aria-label="{{ T "story_map_show_area" (dict "area" .name) }}"><span class="journal-mini-chip">{{ .name }}</span></a>
+</div>
+{{- /**/ -}}

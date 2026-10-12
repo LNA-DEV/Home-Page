@@ -1,6 +1,7 @@
 # Concept: project pages that tell a story — "essay" and "journal"
 
-**Status:** concept, nothing implemented. Derived from an external brief (`SPEC.md` plus three static mockups, `essay-desktop.html`, `essay-mobile.html`, `journal-desktop.html`, handed over on 2026-10-06 and not in the repo). That brief was written from the rendered site only. This document is its translation onto the code: §1 answers the brief's "Phase 0" questions, and the *Deviations* table lists every place the brief and the repo disagree. The page-`Store` mechanics in §4 were checked on a scratch site with Hugo 0.166.0, `hugo` and `hugo server` both.
+**Status:** implemented 2026-10-12, build order §11 complete; where the code departs from this text, §13 says so. Derived from an external brief (`SPEC.md` plus three static mockups, `essay-desktop.html`, `essay-mobile.html`, `journal-desktop.html`, handed over on 2026-10-06; the three mockups lie in the gitignored `.inbox/`, not in git). That brief was written from the rendered site only. This document is its translation onto the code: §1 answers the brief's "Phase 0" questions, and the *Deviations* table lists every place the brief and the repo disagree. The page-`Store` mechanics in §4 were checked on a scratch site with Hugo 0.166.0, `hugo` and `hugo server` both.
+**Updated 2026-10-12:** decided by the owner: `grid` stays a third layout, unplaced photos, shortcode names, the map (the site's own basemap, with mini maps), the real projects stay `grid` and the feature is shown on unlisted demo projects (§3.1), and the three areas. §8 rewritten for that basemap (`self-hosted-maps.md`), which every map now draws from the companion. Implemented on the owner's "go" the same day; nothing committed or pushed.
 **Read against:** the working tree of 2026-10-06 (`c2eb7f8`), Hugo 0.166.0, 661 photos in the gallery manifest.
 
 A gallery project at `/<lang>/gallery/projects/<slug>/` is today a title, one sentence and the photo grid. The page body is not even rendered: the `gallery-project` branch in `page.html` / `single.html` prints breadcrumb, title and `gallery.html`, and nothing else. This concept lets a project opt into one of two layouts that carry the owner's own text and still show every photo of the project:
@@ -8,17 +9,17 @@ A gallery project at `/<lang>/gallery/projects/<slug>/` is today a title, one se
 - **Essay**: one continuous story, optionally in chapters, with photo blocks between the paragraphs. It suits a project with a theme (*Above the Clouds*).
 - **Journal**: a timeline of outings. Each outing is one capture day, built automatically from EXIF. There is text only where the owner writes some. It suits a project that grows over years (*The wildlife of the Inn-Valley*).
 
-A project without the switch looks exactly as it does today. Both layouts keep the grid one click away.
+Today's page stays a third choice: `project_layout: grid`, or no key at all, looks exactly as it does today. Both new layouts keep the grid one click away.
 
 ## Settled decisions
 
 | | |
 |---|---|
-| Switch | `params.project_layout: essay \| journal` in the project's front matter, per language file. Missing → today's grid, byte for byte. `theme` stays `gallery-project` (§3) |
+| Switch | `params.project_layout: grid \| essay \| journal` in the project's front matter, per language file. `grid` is today's page, byte for byte, and a missing key means `grid`, so no existing project needs an edit. Any other value is an `errorf`. `theme` stays `gallery-project` (owner, 2026-10-12; §3) |
 | Photo reference | The photo's **UUID** from `data/gallery.yaml`, as `galleryImage` does. Never a slug (§3) |
 | Completeness | Every project photo appears **exactly once** in the story view, the hero included. Recorded through `.Page.Store` with `SetInMap` keyed by shortcode ordinal (§4) |
 | Unknown, foreign or duplicate id | Hard build error (`errorf`), naming the page and the id |
-| Unplaced photo in an essay | Appended under "More from this project", and **`warnidf "project-unplaced-photos"`** naming them. Like every warning here, it stops the deploy unless that id is put in `ignoreLogs` (§4) |
+| Unplaced photo in an essay | Shown at the end under "More from this project", as a thumbnail grid. **No warning**: that block is where such photos are meant to go, so an essay that leaves some to it is not a mistake to stop a deploy over (owner, 2026-10-12; §4) |
 | Outings | One per **capture day** (`DateTaken`). Undated photos form a last group, "Undated". `{{< outing >}}` blocks only enrich a day, they never create one |
 | Journal order | The **existing `sort_order`** front-matter key, which every project already sets to `desc`: newest first. No new `order:` key |
 | Areas | A new `data/galleryAreas.yaml`, language-neutral, referenced by slug. **At most 2 decimal places and a radius of at least 1,000 m**, enforced by the build. Never a photo's GPS (§8) |
@@ -28,6 +29,8 @@ A project without the switch looks exactly as it does today. Both layouts keep t
 | Colours | PaperMod's variables, plus a new `--accent`: `#d8a657` dark, `#8a5a00` light |
 | Font | The site's own Cantarell. No serif in v1 |
 | Missing text | `{{< todo "…" >}}`: a visible placeholder under `hugo server`, a `warnf` in every production build (§5.7) |
+| Map | The site's own basemap from the companion, through `basemap.js`: one overview map per page plus a **mini map beside every outing with text and an area**. Each map is built when it nears the viewport, with no button. Only a few mini maps are alive at once; one leaving the viewport is removed again. Zoom capped at 13. The area list is the fallback without JS or WebGL2. No static SVG (owner, 2026-10-12; §8) |
+| Real projects | **Not switched.** Inn-Valley, *Above the Clouds* and the Nicklheim album stay `grid`. The feature is shown and tested on four unlisted demo projects that the owner deletes when done (owner, 2026-10-12; §3.1) |
 | URLs | None new. `#grid` and the chapter anchors are fragments, so `tests/golden/published-urls.txt` does not change |
 
 Some of these points I set myself rather than took from the brief. Each is a line to change:
@@ -38,15 +41,15 @@ Some of these points I set myself rather than took from the brief. Each is a lin
 - The `todo` shortcode.
 - One map marker per area in the journal, not one per outing (§8).
 - Only the hero and thumbnails are cropped (§5.5).
-- The shortcode names (§3).
+- The four demos and their text (§3.1).
+- The mini maps' limits: four alive, built within half a viewport, removed beyond two (§8).
+- The shortcode names (§3). The owner left them to me on 2026-10-12; a rename stays a search-and-replace.
 
 ## Decisions still open
 
 | | |
 |---|---|
-| Map technique | **A:** the dex pattern. Vendored Leaflet, a first paint drawn entirely from this site, and OSM tiles only after a click on a button. **B:** a static SVG per project. Either way the no-JS fallback is the area list as text. The sub-question for A is what the local first paint shows at valley scale (§8). The map can come last: neither first project needs one to ship |
-| Unplaced photos | Is `project-unplaced-photos` a deploy gate (the default here, like a missing title) or a note (the id goes into `ignoreLogs`)? |
-| Shortcode names | `storyPhoto` / `storyPhotos` / `storySpecies` / `chapter` / `outing` / `todo`. A search-and-replace before step 2 |
+| — | None. Implemented 2026-10-12 (§13); nothing committed or pushed by me |
 
 ## Deviations from the brief
 
@@ -56,14 +59,16 @@ Some of these points I set myself rather than took from the brief. Each is a lin
 | `id` is a slug or UUID, whichever is stable | UUID | The slug is **per language** and **moves when the English title is reworded**. A German essay would need German slugs. The brief's examples (`heavy-early-mornings`) are not even real slugs: the real one is `heavy-early-mornings-white-tailed-eagle-skimming-a-fog-covered-bog-lake` |
 | `areas:` in the front matter | `data/galleryAreas.yaml` | Coordinates are language-neutral and would be copied into three files. The bog belongs to two projects. Only one place can check the "coarse" rule. The repository is public, so the rule must hold for the data, not just for the HTML |
 | Duplicate or foreign id → warning | `errorf` | Both are always an editing mistake. Precedent: an unknown `galleryImage` id and an unknown `model:` slug are hard errors |
-| An essay with unplaced photos "builds anyway, with a warning" | It builds, and the warning stops the deploy | Every `WARN` fails the `build` test project, and `deploy.sh` builds with `--panicOnWarning`. `warnidf` makes the gate removable by id |
+| An essay with unplaced photos "builds anyway, with a warning" | It builds, with no warning | The photos are shown at the end anyway. Here a warning is not a note: every `WARN` fails the `build` test project, and `deploy.sh` builds with `--panicOnWarning` |
+| The map loads on click | It loads when it nears the viewport, with no button | The click was the opt-in to a third party's tiles. The tiles now come from the companion, and `{{< map >}}` and the trips load theirs without one. What is left to save is MapLibre's ~300 KB, and a map nobody scrolls to never loads it (§8) |
+| Dots on the map: one per outing (journal), loose ones for a chapter without an area (essay) | One circle per area, with a count. No area, no place on the map | A dot per outing needs a position per outing, which only the photos' GPS could give, and spreading dots by hand invents positions that read as real ones (§8, rules 1 and 4) |
 | `order: newest \| oldest` | `sort_order: desc \| asc` | It already exists on every project and means the same thing for the grid |
 | Text column 680px, wide 1040px | 720px / 1060px | `--main-width` and `navbar.css`'s `--nav-width`, so the essay lines up with every other page |
 | EXIF as `600 mm`, `1/1250 s` | The strings `collect-images.html` already produces | Lightbox and photo page print them. A second formatter would drift. Changing the spacing is a separate edit to the collector, for every surface at once |
 | The mockups load Source Serif 4 from Google Fonts | No third-party font | The Tor build and the dex map's zero-third-party rule. The site's font is self-hosted (`static/fonts/`). Note that the mockups load the serif without using it: every paragraph is set in the system sans |
 | A visible `TODO` in the Markdown | `{{< todo >}}` | A literal TODO would be deployed. The shortcode makes a missing text a deploy gate instead, which is how a missing photo title already works |
 | Journal outings as `h3` (mockup) | `h2` | The brief's own rule: one `h1`, chapters or outings `h2`, blocks inside them `h3` |
-| The essay mockup uses *Inn-Valley* with three chapters and two areas | *Inn-Valley* becomes the journal | As the brief proposes. So chapters and areas have **no real first user** in v1 (*Above the Clouds* has neither), and the tests in §10 are the only thing exercising them |
+| The essay mockup uses *Inn-Valley* with three chapters and two areas, the journal mockup too | Both become **demo projects** over Inn-Valley's photos (§3.1). No real project is switched | The owner's call: see the feature and test it without changing a published page. It also gives chapters and areas a first user, which neither real project would have had |
 | "Wait for an okay after every phase" | One build order (§11) | The concept is the Phase 0 report. The build order is executed end to end after "go", like every concept here |
 
 ---
@@ -110,8 +115,8 @@ Two more facts the brief could not see:
 Inn-Valley's days, newest first: 2026-09-12 (2), **2026-08-09 (12)**, 2026-06-13 (1), 2026-04-25 (1), 2025-06-08 (4), 2025-06-01 (3), 2025-05-31 (2), 2023-10-06 (1), 2022-07-27 (2). That is exactly the brief's "28 photos from 9 outings and 13 species, July 2022 to September 2026".
 
 What the numbers fix for the design:
-- A journal **with no `outing` block at all** is already a complete page of nine compact entries, so *Inn-Valley* can switch on day one with no text written. 8 of its 9 days have one to four photos, so most entries stay compact or medium even once text exists. Only the bog morning is a "full" entry.
-- *Above the Clouds* exercises the edge cases the brief names: three undated photos, so the period line covers only the dated ones ("2022"), and zero species, so the species count is **left out**, not printed as "0 species".
+- A journal **with no `outing` block at all** is already a complete page of nine compact entries, so a real project can be switched later without its text written first. 8 of its 9 days have one to four photos, so most entries stay compact or medium even once text exists. Only the bog morning is a "full" entry.
+- *Above the Clouds*' photos exercise the edge cases the brief names, which is why two demos use them (§3.1): three undated photos, so the period line covers only the dated ones ("2022"), and zero species, so the species count is **left out**, not printed as "0 species".
 - The 12 photos of 2026-08-09 are also the unlisted Nicklheim album. Nothing here changes that album.
 
 ## 3. Switching a project, and what the author writes
@@ -122,12 +127,12 @@ params:
   theme: gallery-project            # unchanged
   project_slug: above-the-clouds
   featured_image: 1cd410f4-…        # the hero, as today
-  project_layout: essay             # new; missing → the grid
+  project_layout: essay             # new: grid | essay | journal; missing → grid
   areas: [nicklheimer-filzen]       # optional; slugs into data/galleryAreas.yaml
 ```
 
-- **Per language file**, like everything else in a project's front matter. A language whose file lacks the key keeps the grid. That is what a translation looks like before its text exists, and the page body does **not** fall back to English: the shortcodes would print English prose on a German page, and posts do not fall back either.
-- The dispatch is one `if` inside the existing `gallery-project` branch of `page.html` and `single.html` → `layouts/partials/gallery-story.html`, which branches on `essay` / `journal`. An unknown value is an `errorf`.
+- **Per language file**, like everything else in a project's front matter. A language whose file says `grid`, or lacks the key, keeps the grid. That is what a translation looks like before its text exists, and the page body does **not** fall back to English: the shortcodes would print English prose on a German page, and posts do not fall back either.
+- The dispatch is one `if` inside the existing `gallery-project` branch of `page.html` and `single.html` → `layouts/partials/gallery-story.html`, which branches on `essay` / `journal`. `grid` and a missing key take today's path unchanged. An unknown value is an `errorf`.
 
 Shortcodes, all taking **UUIDs**:
 
@@ -153,6 +158,25 @@ UUIDs are unreadable when writing. The cheap fix is a stdlib `scripts/project-ph
   radius: 2000          # metres
 ```
 
+### 3.1 Demo projects
+
+The real projects are **not switched**. *The wildlife of the Inn-Valley*, *Above the Clouds* and the Nicklheim album stay `grid` (owner, 2026-10-12). The feature is shown and tested on four demo projects, which the owner deletes again when they have served their purpose.
+
+- **Ordinary project bundles**, `content/gallery/projects/demo-<name>/index.{en,de,sv}.md`, with `theme: gallery-project` and a `project_layout` like any project. No adapter, no switch in the build. Deleting a demo means deleting its folder.
+- **Their photos are the real projects'.** A demo sets `project_slug` to an existing project, so its photos are that project's, and `data/gallery.yaml` is not touched. Nothing looks a project page up by `project_slug`: the param is only ever a filter (`gallery.html`, `get-gallery.html`, `head.html`). "Appears in" on a photo page finds albums by path (`site.GetPage "/gallery/projects/<slug>"`), so a demo never shows up there, and `data-output.spec.ts` only checks that a photo's slug names a folder.
+- **Unlisted, so deleting them costs nothing.** `build: {list: never, render: always}` plus `robotsNoIndex: true`, the Nicklheim album's pattern. A demo is then in no list, sitemap, feed or search, and therefore never in `tests/golden/published-urls.txt`. A listed demo would enter that list, and removing it would then need a redirect. They are in every build, a deploy included: deployed before they are deleted, they are reachable by URL and nothing else. "Next project" on a demo page starts at the first listed project, because the demo itself is not in that list.
+- **No demo flag, no `todo`.** A demo is an ordinary project and nothing marks it as one (owner, 2026-10-12). So it carries no `todo` either: every `todo` warns in a production build, which would fail the build test and stop a deploy for as long as the demos exist. `todo` is checked by hand like the other warning paths (§10).
+- **Text.** Written by me in en/de/sv, from what the photos' titles and descriptions already say and nothing more.
+- **Areas** (confirmed by the owner, 2026-10-12): the Nicklheimer Filzen, the Riesenkopf and the Inn valley floor near Rosenheim, at 2 decimals, chosen as named public places and never from a photo's GPS. They stay in `data/galleryAreas.yaml` when the demos go.
+- **Cost.** The story-size variants of 36 photos join every build and pass through `gallery-embed-metadata.py` once. If that ever reaches the resource-cache ceiling (`duplicate-target-paths.md`), the build test reports it as `Duplicate target paths`.
+
+| Demo | Photos of | Shows |
+|---|---|---|
+| `demo-essay` | Inn-Valley (28) | The essay mockup: hero, three chapters, two areas, every block (`full`, `wide`, `left`, `right`, `pair`, `trio`, `grid`, `sequence`), a `storySpecies` card, chapter species chips, the overview map with chapter chips. A few photos are left out on purpose for "More from this project" |
+| `demo-journal` | Inn-Valley (28) | The journal mockup: intro, header map with counts, species index. `outing` text on seven of the nine days, five of them with an area, so scrolling reaches the limit of four live mini maps. Full and medium entries, each with and without an area, and two compact days |
+| `demo-essay-minimal` | *Above the Clouds* (8) | No chapters, no areas, no map. Three undated photos (period "2022"), zero species (no count), and most photos unplaced, so a large "More" block |
+| `demo-journal-minimal` | *Above the Clouds* (8) | No text at all: two days and the "Undated" group, with compact titles taken from the photo titles (no species) |
+
 ## 4. Completeness: how a page knows which photos it placed
 
 The rule "every photo exactly once" needs the layout to know, after the body has rendered, which photos the shortcodes placed. Hugo's page `Store` carries that information, but the obvious way of using it is broken. On the scratch site:
@@ -169,7 +193,7 @@ So:
 - A **chapter** reads its own children: nested shortcodes render before the parent's template runs (verified), so after `.Inner` the chapter sees the keys under its own prefix. From those it computes its photo count, its date or period, and its species chips. It numbers itself by counting the `chapters` entries with a smaller key (verified in source order).
 - A **duplicate** is two keys with the same id. A **foreign** id is a UUID in `data/gallery.yaml` whose `.projects` does not contain this project. An **unknown** id is in neither. All three are `errorf`.
 - **Unplaced** = project photos − hero − every recorded id.
-  - In an essay they go to the "More from this project" block and are listed by `warnidf "project-unplaced-photos"`.
+  - In an essay they go to the "More from this project" block at the end. No warning: that block is their intended place, not a fallback.
   - In a journal nothing is ever unplaced. The timeline is built from the photos, and the shortcodes only add text to days.
 - **Journal text**: an `outing` renders nothing inline. It stores `{title, area, lead, size, html}` under its date (`SetInMap`, idempotent). The body's remaining output is therefore exactly the intro. Two blocks for one date are an `errorf`, and a date with no photo is a `warnf`.
 
@@ -208,7 +232,7 @@ Everything a page counts comes from here, and nothing is maintained by hand.
 - The state lives in the hash: `#grid` shows the grid. A hash that is a **UUID** also switches to the grid, so the lightbox's `openFromHash` lands on a visible item.
 - **Without JS** the buttons render `hidden`, the pattern `game-achievements.html` uses so a no-JS visitor never meets a dead control. The grid then simply follows the story, with `id="grid"`, so "Show as grid" is a working anchor in both cases.
 - The grid's thumbnails are lazy. Hidden behind `display: none`, they are not fetched at all.
-- JS: `assets/js/gallery-story.js`, loaded from `head.html` only when `project_layout` is set. Lightbox and `main.scss` keep loading as they do now, because the theme is still `gallery-project`.
+- JS: `assets/js/gallery-story.js`, loaded from `head.html` only when `project_layout` is `essay` or `journal`. Lightbox and `main.scss` keep loading as they do now, because the theme is still `gallery-project`.
 
 ### 5.5 Images
 
@@ -241,7 +265,7 @@ The brief rightly says: invent nothing, mark the gap. A literal `TODO` in the Ma
 - `{{< todo "Why this project exists" >}}` renders a visible dashed placeholder when `hugo.IsDevelopment` (that is, under `hugo server`).
 - In every production build — the `build` test, `deploy.sh` — it renders nothing and `warnf`s with the page and the prompt.
 
-So switching a project to a story either lands together with its text, or it stops the deploy. This is the same reminder mechanism a photo without a title already uses. The mockups' bracketed prompts ("[What you were waiting for, and for how long.]") are exactly these placeholders. The mockups' draft prose is **not** copied in: it is a draft, and the owner writes the final text.
+So switching a real project to a story either lands together with its text, or it stops the deploy. This is the same reminder mechanism a photo without a title already uses. The mockups' bracketed prompts ("[What you were waiting for, and for how long.]") are exactly these placeholders. The mockups' draft prose is **not** copied in: it is a draft, and the owner writes the final text.
 
 ### 5.8 i18n
 
@@ -252,7 +276,7 @@ New keys go under a `# Project stories` block in all three files.
 | Counts | `speciesCount` and `outingCount`, both plural (`photoCount` exists) |
 | Toggle and end of page | `story_view_story`, `story_view_grid`, `story_toggle_label`, `story_show_as_grid`, `story_prefer_grid`, `story_that_was_all` (plural on the photo count) |
 | Section headings | `story_more_from_project`, `story_more_from_outing`, `story_species_in_project`, `story_species_in_chapter`, `story_species_in_dex` (plural) |
-| Navigation and map | `story_next_project`, `story_map`, `story_map_note` |
+| Navigation and map | `project_previous`, `project_next`, `project_nav_label`, `story_map`, `story_map_note` |
 | Dates | `story_undated`, `story_period` ("{{ .from }} to {{ .to }}" / "bis" / "till") |
 | Placeholder | `story_todo` |
 
@@ -270,10 +294,10 @@ Top to bottom:
 5. Intro: the body before the first chapter.
 6. Overview map, if the project has areas. A click on an area that a chapter names jumps to that chapter.
 7. The chapters, or without chapters simply the text with its blocks. A chapter head has a rule, the number in the accent colour at a light weight, an `h2` title, the subtitle, and on the right a computed "9 Aug 2026 · 13 photos". The chapter ends with its species chips. Anchors are `anchorize` of the title, like every heading on the site.
-8. "More from this project" (`h2`): the unplaced photos as thumbnails, only if there are any.
+8. "More from this project" (`h2`): the unplaced photos as a thumbnail grid, only if there are any.
 9. End of page: "That was all 8 photos.", "Show as grid" (`#grid`), and a **Next project** card. Its target is the next listed project by `weight`, wrapping around: `.CurrentSection.RegularPages.ByWeight`, which already leaves out the unlisted Nicklheim album (`build.list: never`). The card shows the project's cover and photo count. There is no card when the current project is the only one listed.
 
-*Above the Clouds* becomes the first essay: no chapters, no areas, `todo` placeholders where text belongs, in all three languages.
+`demo-essay` and `demo-essay-minimal` are the first essays (§3.1). The real projects stay `grid` until the owner switches one.
 
 ## 7. Journal
 
@@ -283,13 +307,13 @@ Top to bottom:
 
   | Size | When | Contents |
   |---|---|---|
-  | **full** | text and at least 3 photos | `h2` with date, title and "12 photos, 5 species". The lead photo across the column (`lead=` or the first photo). The text, with a mini map beside it when the outing has an area. Then the remaining photos as six-column thumbnails under "More from this outing" (`h3`) |
-  | **medium** | text and 1–2 photos | Photo (440px) and text side by side, alternating left and right from entry to entry. A second photo sits below as a pair |
+  | **full** | text and at least 3 photos | `h2` with date, title and "12 photos, 5 species". The lead photo across the column (`lead=` or the first photo). The text, with a mini map of the outing's area beside it (§8). Then the remaining photos as six-column thumbnails under "More from this outing" (`h3`) |
+  | **medium** | text and 1–2 photos | Photo (440px) and text side by side, alternating left and right from entry to entry. A second photo sits below as a pair. With an area, the mini map takes the photo's place beside the text and the photos sit below as a pair, as in the mockup's ibex entry |
   | **compact** | no text | Date, title and two-column thumbnails. The title is, in order: `title=`, then the dex names of the day's species, then the title of the day's first photo (*Above the Clouds* has no species). Consecutive compact entries of one year share a row of three |
 
 - Inside a day, photos are ordered by capture time, earliest first. A day is a sequence, whatever `sort_order` says about the order of the days.
 
-*The wildlife of the Inn-Valley* becomes the first journal. Without a single `outing` block it shows nine compact entries. That is the brief's acceptance criterion 4, and it can ship before any text is written.
+`demo-journal` and `demo-journal-minimal` are the first journals (§3.1). Without a single `outing` block, Inn-Valley's photos would make nine compact entries. That is the brief's acceptance criterion 4, so a real project can be switched before any text is written.
 
 ## 8. The map, and what it must never show
 
@@ -297,14 +321,24 @@ The rule comes first and does not depend on the technique: **nest sites of white
 1. **No photo position, ever.** The collector has no GPS field, and the served files have their GPS removed. The map draws only `data/galleryAreas.yaml`.
 2. **Coarse by construction.** `lat`/`lng` may have at most **2 decimal places** (≈1.1 km north–south, ≈0.75 km east–west at 47°N), and `radius` must be **at least 1,000 m**. Anything else is an `errorf` naming the area. The check is on the **data** because the repository is public: a precise coordinate in `data/` is published the moment it is pushed, rendered or not.
 3. **The centre is the area, not the sighting.** A bog, a ridge, a valley floor. The label is free text and must not name the nest either. That part is the author's job, and the header comment of the data file says so.
-4. **Circles, not pins.** In the journal, outings in one area share one marker with a count. Spreading them out would invent positions, and invented positions read as real ones.
+4. **Circles, not pins.** In the journal, outings in one area share one marker with a count. Spreading them out would invent positions, and invented positions read as real ones. The same goes for the mockups' loose dots: "each dot is one outing" in the journal header, and five dots for the essay's chapter without an area. A chapter or outing without an area is simply not on the map.
 
 For comparison: the dex's `sightings:` are exact pins by design. Today no species has one. If a raptor ever gets one, that would undo this rule from another page. This concept does not change the dex, but anyone adding a sighting should know.
 
-**Technique (open):**
-- **A, the dex pattern.** Vendored Leaflet and a first paint drawn from this site, so zero third-party requests and the page works over Tor. The "detailed map" button is the explicit opt-in for OSM tiles, which is exactly the brief's "load map on click". `dex-map.js`'s load-bearing parts are the `±360` world copies and the ocean mask, and neither is needed at valley zoom. A small `gallery-story-map.js` sharing the vendored package fits better than a mode switch inside `dex-map.js`. The catch: Natural Earth's world layers are useless at a scale where an area is 2 km across. The first paint would be circles on blank land until the visitor opts in, unless a regional base layer is added, and its source and licence have to be settled first.
-- **B, a static SVG** per project, with no JS and no requests, but also no interaction. It needs a base drawing from somewhere: hand-drawn, like the mockups, or derived from OSM data, which is ODbL and needs attribution.
-- **Both:** no JS → the areas as a plain list (label, linked chapter or outing count) under the map's heading. That is a meaningful fallback, and the brief asks for one.
+**Technique: A, on the site's own basemap (recommended, to confirm).** This section first weighed A (the dex pattern: a local first paint, OSM tiles after a click) against B (a static SVG). Since `self-hosted-maps.md`, every map on the site draws the Protomaps basemap that the companion serves (`basemap.js`), and that settles most of it:
+- **A's catch is gone.** The first paint was going to be circles on blank land, because Natural Earth means nothing at valley scale. The basemap goes to z15, has labels in en/de/sv and a light and a dark flavor, and shows what the mockups drew by hand: the river, the town, the lakes. No regional layer, no new source, no new licence: the attribution is `BASEMAP_ATTRIBUTION`, as on every map.
+- **B has no advantage left.** Its point was a map without JS and requests, but it needed a base drawing of its own, hand-drawn or made from OSM data, which is a second map pipeline next to the one the site now has. Without JS the area list stands in for the map, and that is all B would have given.
+- **No button.** The dex keeps its click because its drawn world is a useful view without one. Here there is nothing local worth showing, and the click's original job, opting in to a third party, is gone: the tiles come from the companion, and `{{< map >}}` and the trips load theirs without asking. The map is built when it nears the viewport (`IntersectionObserver`), so MapLibre's ~300 KB loads only for visitors who scroll there. As in `route-map.js`, the wheel zooms only after a click into the map, so scrolling through an essay is not caught by it.
+- **Several mini maps, few of them alive.** Every basemap is its own MapLibre instance with its own WebGL context, and browsers keep only a limited number alive (Chromium 16, dropping the oldest after that). A journal that grows for years with a mini map beside every outing would reach that limit, and each instance costs memory on a phone well before then. So a mini map exists only near the viewport:
+  - It is **created** when it comes within half a viewport height, and **removed** once it is more than two away. The gap between the two keeps fast scrolling from building and tearing down the same map.
+  - At most **four** mini maps live at once, the overview map not counted. A fifth evicts the one furthest from the viewport.
+  - Removing frees the context: `maplibre-gl-leaflet`'s `onRemove` calls MapLibre's `remove()`, which calls `WEBGL_lose_context` (checked in the vendored 6.12.0).
+  - MapLibre and the TileJSON load once per page (`basemap.js` already does that), and the tiles are immutable and stay in the browser cache, so building a map a second time costs almost nothing.
+  - A mini map is a picture, not a tool: no dragging, no zoom, no controls. It is framed on its circle (`fitBounds`, capped at 13 like the overview) and carries the compact attribution, since each one can be the only map in view. A click leads to the overview map, which highlights the area.
+  - Before it is built, and for good without WebGL2, its place shows the area's label as a chip leading to the overview map, the same fallback as the area list.
+- **WebGL2 is required, so the list is the fallback.** Without WebGL2, `addBasemap` resolves to null. The dex still has its drawn world and a trip its lines, but circles on an empty field say nothing. So the area list is always in the HTML: label, the chapter or outing it leads to, and the count. The script checks WebGL2 first and adds the map only when it can draw one; `basemap.js` exports its `webgl2Available()` for that, a one-line change. If loading fails after that, the map is removed again and the list stays. Tor Browser at its stricter levels probably has no WebGL (not checked yet, `self-hosted-maps.md` *Still open*), so those visitors get the list. The onion build reaches the clearnet companion through an exit node like every map (`self-hosted-maps.md` §9).
+- **Zoom capped at 13.** The old first paint was empty, but the basemap is detailed, and MapLibre draws z15 tiles sharp far beyond z15: the other maps allow 18 and 19. Zoomed into a 1 km circle, every stand of trees and every path in it is readable, which invites exactly the search this section exists to prevent. At z13 a 1,000 m radius is ≈ 150 px across at 47°N: a place in its landscape, not a target. Rule 2 keeps the data coarse; this keeps the drawing from inviting a closer look.
+- **Code:** `assets/js/gallery-story-map.js`, the size of `route-map.js`: a Leaflet map, `addBasemap`, one `L.circle` per area in `--accent` with a dashed edge and a chip (number, name, count, as in the mockups; a numbered badge below 768px, as in the mobile mockup) linking to its chapter or outing, the theme observer `route-map.js` already has, and the mini-map lifecycle above. Areas reach the script through `data-*`, as before. `head.html` loads Leaflet and the script only on a story page whose project has areas, and passes `basemapTileJson` like the other map scripts. Under the map sits `story_map_note`, the mockups' "Areas are drawn loosely on purpose, so nesting birds of prey stay undisturbed."
 
 Neither first project needs a map to ship, so the map is step 6.
 
@@ -316,9 +350,9 @@ Neither first project needs a map to ship, so the map is step 6.
 
 ## 10. Tests
 
-All tests run against `.test-site/`, as always.
+All tests run against `.test-site/`, as always. Until the owner switches a real project, the pages with an `essay` or `journal` layout are the four demos (§3.1). The tests find them by layout, not by name, so they keep working after the demos are deleted; with no such page left, the story tests skip instead of failing.
 
-**`tests/static/project-stories.spec.ts`**, for every project page with a `project_layout`, in every language:
+**`tests/static/project-stories.spec.ts`**, for every project page whose `project_layout` is `essay` or `journal`, in every language:
 - the multiset of `data-id`s inside `.story` equals the project's photos from `data/gallery.yaml`, each **exactly once**, the hero included (criterion 2);
 - every story `<img>` has `width`, `height` and a non-empty `alt` (criteria 8 and 9);
 - every story `<img>` except the hero has `loading="lazy"`;
@@ -326,29 +360,76 @@ All tests run against `.test-site/`, as always.
 - the toggle buttons carry `aria-pressed` and render `hidden`;
 - every coordinate in a map's `data-*` has at most 2 decimals and every radius is at least 1,000 (criterion 7).
 
-For a project **without** the key, there is no `.story` and the grid is the page's only content. That is criterion 1, and the unlisted album is the standing example.
+For a project with `project_layout: grid` or without the key, there is no `.story` and the grid is the page's only content. That is criterion 1, and in the test build it holds for all three real projects, the unlisted album included.
 
 **`tests/e2e/`**:
 - at 390px (`mobile-chrome`), `scrollWidth <= clientWidth` on both layouts in light and dark (criteria 5 and 6), and the trio is a scrollable strip;
-- the toggle can be reached with Tab and switched with Enter, after which `aria-pressed` flips and the hash reads `#grid` (criterion 8).
+- the toggle can be reached with Tab and switched with Enter, after which `aria-pressed` flips and the hash reads `#grid` (criterion 8);
+- the map, once there is a project with areas: with the companion's tiles mocked (`tests/support/network.ts`), it is drawn and asks the companion and nobody else; under `withoutWebGL2` (`tests/support/webgl.ts`) there is no map and the area list is visible; it cannot zoom past 13; scrolling through a journal from top to bottom never shows more than four live mini maps at once (counted by their `data-flavor` containers). `maps.spec.ts` already fails the build on any third-party tile host.
 
-**Not covered by a fixture:** the warning and error paths (unplaced, duplicate, foreign, coarse area). The `build` project already turns any `WARN` into a failure, and the suite has no fixture-site mechanism to provoke one on purpose. They are checked by hand on a scratch copy during step 2, with what was seen written down here.
+**Not covered by a fixture:** the warning and error paths (duplicate, foreign, coarse area, `todo`). The happy paths have their fixtures in the demos. The `build` project already turns any `WARN` into a failure, and the suite has no fixture-site mechanism to provoke one on purpose. They are checked by hand on a scratch copy during step 2, with what was seen written down here.
+
+**Checked by hand, 2026-10-12** — a throwaway project page and a temporarily coarsened `data/galleryAreas.yaml`, built into a scratch directory, both removed again. Every path below stopped the build (`ERROR`) or warned (`WARN`) as listed, naming the file and, for a shortcode, the line:
+
+| Provoked | Seen |
+|---|---|
+| a photo placed twice; the hero placed again | ERROR "appears twice in the story" (", once as the hero" for the second) |
+| a photo of another project | ERROR "is not in project …", with the file name |
+| an id not in `data/gallery.yaml` | ERROR "no photo with id …" |
+| `storyPhotos layout="pair"` with one id | ERROR "takes 2 photos, got 1" |
+| `chapter area=` not in the page's `areas:`; an area slug not in the data | ERROR, each |
+| `storySpecies` with an unknown dex slug | ERROR |
+| `outing` on an essay, `storyPhoto` on a journal | ERROR "works only on a gallery project with project_layout …" |
+| two outings for one date; a malformed date; `size="huge"` | ERROR, each |
+| an outing `lead` from another day | ERROR "is not a photo of project … taken on …" |
+| an outing for a day with no photo | WARN "is not shown" |
+| `project_layout: story` | ERROR "must be grid, essay or journal" |
+| `lat: 47.7085`; `radius: 500` | ERROR naming the area, each |
+| `{{< todo >}}`, top level and inside a chapter | production: WARN with file:line and the prompt; `-e development`: the dashed placeholder, in both places |
 
 ## 11. Build order
 
-1. **Data**: `gallery-story-data.html`; `data/galleryAreas.yaml` with its validation partial (coarse rule, label fallback); `scripts/project-photos.py`.
+1. **Data**: `gallery-story-data.html`; `data/galleryAreas.yaml` with the three areas and its validation partial (coarse rule, label fallback); `scripts/project-photos.py`.
 2. **Shortcodes**: `storyPhoto`, `storyPhotos`, `storySpecies`, `chapter`, `outing`, `todo`, with the Store recording of §4 and every error and warning path. `gallery-story.css` comes with them, mobile first, then desktop. Then provoke each failure once on a scratch copy.
 3. **Dispatch and chrome**: the `project_layout` branch in `page.html` **and** `single.html` → `gallery-story.html`; the toggle; `gallery-story.js` and its conditional load in `head.html`.
-4. **Essay**; switch *Above the Clouds* in en/de/sv, with `todo` placeholders.
-5. **Journal**; switch *The wildlife of the Inn-Valley* in en/de/sv, with no `outing` blocks yet.
-6. **Map**, after the decision.
+4. **Essay**; `demo-essay` and `demo-essay-minimal` in en/de/sv.
+5. **Journal**; `demo-journal` and `demo-journal-minimal` in en/de/sv.
+6. **Map** (§8): `gallery-story-map.js` on the site's basemap, overview map and mini maps with their lifecycle, the `webgl2Available` export in `basemap.js`, the area list and chips as the fallback.
 7. **i18n** for de/sv, the light theme, the `index.json` outing text, and the tests of §10.
-8. **Documentation**: a *Project stories* section in `CLAUDE.md` (switch, shortcodes, the Store rule, the areas rule) and the author workflow in `AGENTS.md`.
+8. **Documentation**: a *Project stories* section in `CLAUDE.md` (switch, shortcodes, the Store rule, the areas rule, the demos) and the author workflow in `AGENTS.md`.
 
 ## 12. Out of scope
 
 - **Multi-day outings.** A later `outing date="2026-08-09..2026-08-11"` would group a range. v1 groups by day only.
 - **PhotoSwipe in the story view.** It needs `lightbox.js` to handle more than one gallery root.
 - **A serif reading font.** If it ever comes, it is self-hosted under `static/fonts/` (OFL), next to Cantarell, and loaded only on story pages.
-- **Chapters or areas on *Above the Clouds*,** and any story for the unlisted Nicklheim album. Those are the owner's calls, not the feature's.
+- **Switching a real project** (Inn-Valley, *Above the Clouds*, the Nicklheim album) to a story. That is the owner's call once the text exists; the demos show what it would look like.
 - **The EXIF spacing** (`600 mm` vs `600mm`), a change to `collect-images.html` for the whole site.
+
+## 13. Implementation notes (2026-10-12)
+
+Built in the order of §11, end to end. Where the code departs from the text above:
+
+- **Nested shortcodes go through a token.** §4 assumed a chapter could print its inner Markdown and the blocks inside it. It cannot as written: a paired shortcode renders `.Inner` with `RenderString`, the nested shortcodes have already rendered into it, and the site's Goldmark runs without `unsafe` — their HTML came out as `<!-- raw HTML omitted -->` (checked on a scratch site). So a story shortcode inside `chapter`, `outing` or `storyPhoto` stores its HTML in the page Store under its key and writes a plain token; the parent puts the HTML back after Markdown (`layouts/partials/story/emit.html`, `inner.html`). The Store keys of §4 are unchanged and carry this too.
+- **`.Inner` is passed to the partial**, not read there: Hugo decides whether a shortcode may be closed by finding `.Inner` in the shortcode's own template text. A consequence for authors: `storyPhoto` can take text, so without text it must be self-closed, `{{< storyPhoto id="…" />}}`.
+- **A chapter or outing `area=` must be one of the page's `areas:`.** That keeps one declaration of what the map shows, catches a typo, and lets `head.html` decide from the front matter alone whether to load Leaflet and the map script.
+- **The essay's intro** is split from the chapters at a marker comment the chapter writes (`<!--story-chapter-->`), which is where the map goes.
+- **The area list stays visible** under every map, as its legend, instead of only standing in without WebGL2. The map chips sit beside their circle (anchored at its east edge, with room left on the right by `fitBounds`); below 768px they become numbered badges on the circle. A journal's chip shows its outing count. The map field's space is reserved as soon as the script knows WebGL2 is there, so nothing jumps when the map is built.
+- **Heights.** A photo keeps its ratio (§5.5), but a `full` or `wide` landscape frame 1,200px wide is taller than most screens. Both are capped where the photo alone would fill the screen's height (`100vh − 40px` × ratio); the same cap on both keeps a `full` photo from ever being narrower than a `wide` one, which an earlier 85% cap did on short laptop screens. A portrait beside text takes a column of its own width (`min(600px, 58%, 80vh × ratio)`), so a capped portrait does not leave a gap before the text; a journal's lead is capped at 80% and a single photo where a pair was laid out at 70% (and 60% of the width). `pair` and `trio` give each photo a share of the width proportional to its ratio, so a row has one height and nothing is cropped.
+- **Medium entries** with the photo beside the text stack one or two photos in that column; §7 left the second photo's place open. A day with **one photo and an area** is laid out the same way, with the small map under the text: as text-and-map with the photos below, a single photo sat half-width under a short text and left both columns half empty. Only a day with two photos and an area keeps the mockup's text-and-map row with the pair below. Entries with the photo beside the text alternate sides.
+- **`#grid` links and footer.html.** The site's footer smooth-scrolls every `a[href^="#"]` with `preventDefault` and `pushState`, which fires no `hashchange`, so "Show as grid" at the end of a story did nothing. `gallery-story.js` takes that one link in the capture phase, before the footer's handler. The grid itself takes the story's width (`--nav-width`), so in the grid view it lines up with the bar and the title.
+- **Rules** (chapter heads, the timeline, compact days) use `--tertiary` in the light theme: PaperMod's light `--border` all but disappears as a 1px line on white. Headings use `text-wrap: balance`.
+- **Captions and tiles print the short title**, the part before " - ", as the mockups do; the link's `title` and the image's alt carry the rest.
+- **i18n** gained, beyond §5.8: `story_view_journal` and `journal_prefer_grid` (the journal's own wording, as in the mockup), `story_contents`, `story_grid_heading` (a visually hidden heading over the grid), `story_map_show_area`, `journal_summary` / `journal_summary_nospecies` and `journal_order_desc` / `_asc`. German puts the journal sentence as a list ("28 Fotos, 9 Ausflüge und 13 Arten, …"), because "von 9 Ausflügen" needs a dative the shared `outingCount` cannot give.
+- **The three areas** are the Rosenheimer Stammbeckenmoore around Nicklheim (47.79, 12.06, r 2,000 m — the centre of the bog complex, from Wikipedia, not the eagle's lake), the Großer Riesenkopf (47.71, 12.11, r 1,500 m) and the Inn valley floor south of Rosenheim (47.83, 12.12, r 3,000 m).
+- **The demos** are as §3.1 lists them. `demo-journal` has text on seven days, five with an area (ibex and chamois on the Riesenkopf, the bog morning at the Filzen, the fox and the hawk moth on the valley floor), the sandpiper and the caravan without, and two compact days.
+- **Tests:** `tests/static/project-stories.spec.ts` and `tests/e2e/project-stories.spec.ts` as §10 describes, plus a check of `data/galleryAreas.yaml` itself, that a `grid` project carries no story markup, and that "Show as grid" switches the view. Story pages are found through `projectPages()` in `tests/support/site.ts`.
+
+### Second review in Chrome (2026-10-12, with the owner)
+
+- **The hero** was 1872 × 520 on the owner's ultrawide screen, a 3.6 : 1 strip. It is now a fixed 12 : 5 shape up to 1440px wide (about 520px tall at 1250px, as the mockup has it), never taller than 70% of the screen, and 3 : 2 below 768px. `full` blocks stop at 1440px too.
+- **`hero_position`** (front matter, a CSS `object-position` such as `"50% 22%"`) moves the hero's crop, so the subject stays whole: the centred crop cut off the eagle's raised wings on *Sunrise Patrol*. `demo-essay` sets `"50% 22%"`. Anything that is not an object-position is a build error.
+- **Text beside a portrait.** In an essay, photo and text are one unit, centred in the wide block: the text keeps a 520px measure, and a portrait is no taller than min(75vh, 640px). In a journal, the photo beside the text gets a column from its ratio (no taller than min(65vh, 520px)) and the text a 560px measure; a full day whose lead is a portrait is laid out with the photo beside the text, like a medium one.
+- **Previous / next project on all three layouts** (the owner's request): `gallery-project-nav.html` closes the grid page as well as the essay and the journal, after the grid. It replaces §6's wrapping "Next project" card: neighbours among the listed projects by weight, without wrapping — with two listed projects, wrapping offered the same project as previous and next. An unlisted page offers the first listed project. **The grid layout is therefore no longer today's page byte for byte**; it gained this one block. i18n: `story_next_project` became `project_next`, with `project_previous` and `project_nav_label`.
+- The project cards are at most 440px wide, each at the edge it leads to (half the page width left a lone card mostly empty), and their thumbnail fills its box: `main.scss`'s `.main img { height: auto }` had left it short, the same rule every cropped story image needs a second class against.
+- Smaller: Leaflet's zoom buttons and attribution follow the theme (they were white in the dark one), and a compact day with three photos shows them in one row.

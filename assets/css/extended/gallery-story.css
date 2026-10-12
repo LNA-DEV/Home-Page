@@ -1,0 +1,1595 @@
+/* Project stories: gallery projects with project_layout essay or journal
+   (docs/concepts/gallery-project-stories.md §5.6). Not project.css — that file
+   belongs to the SOFTWARE projects page.
+
+   PaperMod's variables only, plus one accent, used sparingly: chapter numbers,
+   timeline dates and dots, map areas, the sequence numbers. Every selector
+   starts at .story-page, partly to keep this file to those pages and partly
+   because main.scss (loaded after this bundle on /gallery pages) sets
+   `.main img { height: auto }`, which would otherwise win over a cropped tile.
+
+   Widths: the text column is --main-width (720px), wide blocks --nav-width
+   (1060px here, navbar.css), full blocks the viewport less a --gap either side.
+   A block wider than its column is centred with a negative margin computed from
+   its own width — galleryImageText's technique without the transform — and
+   capped at 100vw - 2 * --gap, because 100vw includes the scrollbar. */
+
+:root {
+  --accent: #8a5a00;              /* 5.93:1 on white, 5.44:1 on #f5f5f5 */
+  --story-surface: var(--code-bg);
+  /* PaperMod's light --border (#eee) all but disappears on white as a 1px
+     rule; its dark one (#333) is what the mockups draw. */
+  --story-rule: var(--tertiary);
+}
+
+:root[data-theme="dark"] {
+  --accent: #d8a657;              /* 7.56:1 on --theme, 6.12:1 on --entry */
+  --story-surface: var(--entry);
+  --story-rule: var(--border);
+}
+
+/* No JavaScript, dark system preference: head.html's <noscript> switches
+   PaperMod's colours without setting data-theme. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --accent: #d8a657;
+    --story-surface: rgb(46, 46, 51);
+    --story-rule: rgb(51, 51, 51);
+  }
+}
+
+.story-page {
+  --story-wide: min(var(--nav-width), calc(100vw - var(--gap) * 2));
+  /* "Full" stops at 1440px: edge to edge on an ultrawide screen is a strip,
+     not a picture. */
+  --story-full: min(1440px, calc(100vw - var(--gap) * 2));
+  --story-text: var(--main-width);
+}
+
+/* ---- the two views ------------------------------------------------------
+   gallery-story.js sets data-view. Without it (no JavaScript) both show: the
+   story, then the grid. */
+
+.story-page[data-view="story"] #grid,
+.story-page[data-view="grid"] .story-part {
+  display: none;
+}
+
+.story-page .story-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---- breakouts ----------------------------------------------------------
+   Before everything that sets a margin on the same elements: the figure reset
+   below must not undo a breakout's margin-left. */
+
+.story-page .story-figure {
+  margin: 0;
+}
+
+.story-page .story-bar,
+.story-page .story-split,
+.story-page .story-set,
+.story-page .story-map,
+.story-page .story-more,
+.story-page .story-end,
+.story-page .journal-head,
+.story-page .journal-species,
+.story-page .journal {
+  width: var(--story-wide);
+  margin-left: calc(50% - var(--story-wide) / 2);
+}
+
+.story-page .story-hero {
+  width: var(--story-full);
+  margin-left: calc(50% - var(--story-full) / 2);
+}
+
+/* A full or wide photo keeps its own ratio (§5.5), so its height follows its
+   width — and a landscape frame 1,200px wide is taller than most screens. The
+   width is capped where the photo alone would fill the screen's height. Both
+   use the same cap, so a full photo is never narrower than a wide one; a
+   portrait shrinks until it fits. --ratio is set on the figure by
+   story/figure.html. */
+.story-page .story-full {
+  --w: min(var(--story-full), calc((100vh - 40px) * var(--ratio, 1.5)));
+}
+
+.story-page .story-wide {
+  --w: min(var(--story-wide), calc((100vh - 40px) * var(--ratio, 1.5)));
+}
+
+.story-page .story-full,
+.story-page .story-wide {
+  width: var(--w);
+  margin-left: calc(50% - var(--w) / 2);
+}
+
+/* ---- bar: breadcrumb and toggle ---------------------------------------- */
+
+.story-page .story-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 48px;
+  margin-bottom: 16px;
+}
+
+.story-page .story-bar .gallery-breadcrumb {
+  margin: 0;
+  text-align: left;
+}
+
+.story-page .story-toggle {
+  display: flex;
+  flex-shrink: 0;
+  gap: 2px;
+  padding: 2px;
+  border-radius: 8px;
+  background: var(--story-surface);
+}
+
+.story-page .story-toggle[hidden] {
+  display: none;
+}
+
+.story-page .story-toggle button {
+  height: 40px;
+  min-width: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--secondary);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.story-page .story-toggle button[aria-pressed="true"] {
+  background: var(--tertiary);
+  color: var(--primary);
+}
+
+.story-page .story-toggle button:focus-visible,
+.story-page .story-button:focus-visible,
+.story-page .story-chip:focus-visible,
+.story-page a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---- hero --------------------------------------------------------------- */
+
+/* A fixed shape rather than a fixed height: 12:5 at any width up to 1440px
+   (520px tall at 1250px, as in the mockup), so a wide screen does not turn it
+   into a thin strip, and never taller than 70% of the screen. The crop is
+   centred unless the front matter's hero_position moves it. */
+.story-page .story-hero {
+  position: relative;
+  aspect-ratio: 12 / 5;
+  max-height: 70vh;
+  margin-top: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.story-page .story-hero img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--hero-position, 50% 50%);
+}
+
+.story-page .story-hero-cap {
+  position: absolute;
+  right: 24px;
+  bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  max-width: calc(100% - 48px);
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: rgba(18, 18, 20, 0.78);
+  color: #b4b4b6;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.story-page .story-hero-cap a {
+  color: #e4e4e5;
+}
+
+/* ---- title block -------------------------------------------------------- */
+
+.story-page .story-head {
+  max-width: var(--story-text);
+  margin: 0 auto;
+  padding: 56px 0 40px;
+}
+
+.story-page .story-head h1,
+.story-page .journal-head-text h1,
+.story-page .story-chapter h2,
+.story-page .journal-title {
+  text-wrap: balance;
+}
+
+.story-page .story-head h1 {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.story-page .story-description {
+  margin: 16px 0 0;
+  color: var(--secondary);
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.story-page .story-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin: 20px 0 0;
+  color: var(--secondary);
+  font-size: 14px;
+}
+
+/* ---- chips -------------------------------------------------------------- */
+
+.story-page .story-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.story-page .story-toc {
+  margin-top: 28px;
+  gap: 10px;
+}
+
+.story-page .story-chips-label {
+  margin: 0 4px 0 0;
+  color: var(--secondary);
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.story-page .story-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 16px;
+  background: var(--story-surface);
+  color: var(--primary);
+}
+
+.story-page a.story-chip:hover {
+  background: var(--tertiary);
+}
+
+.story-page .story-chip-count {
+  color: var(--secondary);
+}
+
+.story-page .story-chip-lg {
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid var(--tertiary);
+  border-radius: 22px;
+  background: transparent;
+  font-size: 14px;
+}
+
+.story-page .story-chip-num {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ---- running text ------------------------------------------------------- */
+
+.story-page .story-body {
+  max-width: var(--story-text);
+  margin: 0 auto;
+  color: var(--content);
+}
+
+.story-page .story-body p,
+.story-page .story-body li {
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.story-page .story-body p {
+  margin: 0 0 1.25em;
+}
+
+.story-page .story-body ul,
+.story-page .story-body ol {
+  margin: 0 0 1.25em;
+  padding-left: 1.25em;
+}
+
+.story-page .story-body h3 {
+  margin: 2em 0 0.6em;
+  font-size: 20px;
+}
+
+.story-page .story-body p a,
+.story-page .story-body li a {
+  box-shadow: 0 1px 0 var(--primary);
+}
+
+/* ---- photo blocks ------------------------------------------------------- */
+
+.story-page .story-figure-img {
+  display: block;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.story-page .story-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.story-page .story-figure-img:hover img {
+  opacity: 0.94;
+}
+
+.story-page .story-cap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 16px;
+  padding-top: 12px;
+  color: var(--secondary);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.story-page .story-cap-title a {
+  color: var(--primary);
+}
+
+.story-page .story-cap-title a:hover {
+  box-shadow: 0 1px 0 var(--primary);
+}
+
+.story-page .story-exif {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 12px;
+  white-space: nowrap;
+}
+
+.story-page .story-full,
+.story-page .story-wide {
+  margin-top: 40px;
+  margin-bottom: 56px;
+}
+
+.story-page .story-full .story-figure-img img,
+.story-page .story-wide .story-figure-img img {
+  border-radius: 4px;
+}
+
+/* Photo beside its text. */
+/* The photo's column is as wide as the photo: at most 600px or 58% of the
+   block, and no wider than a portrait may be without passing 80% of the
+   screen's height. --ratio is set on the block by storyPhoto.html. */
+/* Photo and text are one unit. The photo's column is as wide as the photo —
+   at most 600px or 58% of the block, and a portrait no taller than
+   min(75vh, 640px) — and the text keeps a reading measure (520px, about 60
+   characters). The pair is centred in the wide block, so a narrow portrait
+   does not push its text out to a long, lonely column at the far edge. */
+.story-page .story-split {
+  --photo: min(600px, 58%, calc(min(75vh, 640px) * var(--ratio, 1.5)));
+  display: grid;
+  grid-template-columns: var(--photo) minmax(0, 520px);
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  margin-top: 40px;
+  margin-bottom: 56px;
+}
+
+.story-page .story-split-right {
+  grid-template-columns: minmax(0, 520px) var(--photo);
+}
+
+.story-page .story-split-text > :last-child {
+  margin-bottom: 0;
+}
+
+.story-page .story-split-text p {
+  margin: 0 0 1em;
+}
+
+/* Several photos. */
+.story-page .story-set {
+  margin-top: 40px;
+  margin-bottom: 56px;
+}
+
+.story-page .story-set-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px 24px;
+  padding-bottom: 16px;
+}
+
+.story-page .story-set-head h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.story-page .story-set-head p {
+  margin: 0;
+  color: var(--secondary);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* A row of photos at one height and their own ratios: each takes a share of
+   the width proportional to its aspect ratio. Nothing is cropped. */
+.story-page .story-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.story-page .story-row > .story-figure {
+  flex: var(--ratio) 1 0;
+  min-width: 0;
+}
+
+/* One photo where a row of two was laid out (a journal day with one photo)
+   would otherwise take the whole width, and a portrait the height of three
+   screens. */
+.story-page .story-row > .story-figure:only-child {
+  flex: 0 1 auto;
+  width: min(60%, calc(70vh * var(--ratio, 1.5)));
+}
+
+/* Thumbnails: the only story images besides the hero that are cropped, since
+   their box is fixed. */
+.story-page .story-thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.story-page .story-thumb {
+  position: relative;
+  display: block;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.story-page .story-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.story-page .story-thumb:hover img {
+  transform: scale(1.02);
+}
+
+.story-page .story-thumb-label {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  max-width: calc(100% - 20px);
+  overflow: hidden;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: rgba(18, 18, 20, 0.8);
+  color: #e4e4e5;
+  font-size: 12px;
+  line-height: 1.4;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.story-page .story-thumb-num {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: var(--theme);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Species card. */
+.story-page .story-species {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 1.5em 0 0;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: var(--story-surface);
+  color: var(--primary);
+  box-shadow: none;
+}
+
+.story-page .story-species-names {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.story-page .story-species-name {
+  font-size: 15px;
+}
+
+.story-page .story-species-sci {
+  color: var(--secondary);
+  font-size: 13px;
+  font-style: italic;
+}
+
+.story-page .story-species-count {
+  color: var(--accent);
+  font-size: 13px;
+  text-align: right;
+}
+
+/* Placeholder for text still to write — hugo server only (§5.7). */
+.story-page .story-body .story-todo {
+  padding: 12px 16px;
+  border: 1px dashed var(--secondary);
+  border-radius: 6px;
+  color: var(--secondary);
+  font-size: 16px;
+  font-style: italic;
+}
+
+.story-page .story-todo-label {
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* ---- chapters ----------------------------------------------------------- */
+
+.story-page .story-chapter {
+  margin-top: 72px;
+}
+
+.story-page .story-chapter:first-child {
+  margin-top: 0;
+}
+
+.story-page .story-chapter-head {
+  margin-bottom: 36px;
+  padding-top: 32px;
+  border-top: 1px solid var(--story-rule);
+}
+
+.story-page .story-chapter-title {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.story-page .story-chapter-num {
+  flex-shrink: 0;
+  min-width: 24px;
+  color: var(--accent);
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.story-page .story-chapter h2 {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 700;
+  scroll-margin-top: 24px;
+}
+
+.story-page .story-chapter-sub {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 24px;
+  margin: 12px 0 0;
+  padding-left: 44px;
+  color: var(--secondary);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.story-page .story-chapter-meta {
+  white-space: nowrap;
+}
+
+/* As wide as the photo blocks above it, so the chips start at their edge. */
+.story-page .story-chapter-species {
+  width: var(--story-wide);
+  margin-top: 24px;
+  margin-left: calc(50% - var(--story-wide) / 2);
+}
+
+/* ---- the map ------------------------------------------------------------ */
+
+.story-page .story-map {
+  margin-top: 40px;
+  margin-bottom: 72px;
+  scroll-margin-top: 24px;
+}
+
+.story-page .story-map-canvas {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--story-surface);
+}
+
+.story-page .story-map-canvas[hidden] {
+  display: none;
+}
+
+/* Leaflet puts `leaflet-container` on the element it is handed, and with it
+   its own grey and its own font. */
+.story-page .story-map-canvas.leaflet-container {
+  background: var(--story-surface);
+  font: inherit;
+}
+
+/* leaflet.css loads after this bundle, so these need the extra class to win:
+   its white attribution box and zoom buttons glare in the dark theme. */
+.story-page .leaflet-container .leaflet-control-attribution {
+  background: color-mix(in srgb, var(--theme) 82%, transparent);
+  color: var(--secondary);
+}
+
+.story-page .leaflet-container .leaflet-control-attribution a {
+  color: var(--secondary);
+}
+
+.story-page .leaflet-container .leaflet-bar {
+  border-color: var(--story-rule);
+}
+
+.story-page .leaflet-container .leaflet-bar a {
+  border-bottom-color: var(--story-rule);
+  background-color: var(--theme);
+  color: var(--primary);
+}
+
+.story-page .leaflet-container .leaflet-bar a:hover {
+  background-color: var(--story-surface);
+}
+
+.story-page .story-area-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+
+.story-page .story-area-list > li > a,
+.story-page .story-area-list > li > span {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  min-height: 44px;
+  padding: 4px 14px;
+  border-radius: 22px;
+  background: var(--story-surface);
+  color: var(--primary);
+}
+
+.story-page .story-area-list > li.is-active > a,
+.story-page .story-area-list > li.is-active > span {
+  outline: 2px solid var(--accent);
+}
+
+.story-page .story-area-badge {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.story-page .story-area-title,
+.story-page .story-area-count {
+  color: var(--secondary);
+}
+
+.story-page .story-map-note {
+  margin: 12px 0 0;
+  color: var(--secondary);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Areas on the map: a dashed circle and a chip. Leaflet draws the circle; the
+   chip is a divIcon. */
+.story-page .story-area-marker {
+  background: none;
+  border: 0;
+}
+
+.story-page .story-area-chip {
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--tertiary);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--theme) 92%, transparent);
+  color: var(--primary);
+  font-size: 13px;
+  line-height: 1;
+  white-space: nowrap;
+  /* Anchored at the circle's east edge, the chip sits beside the circle and
+     does not hide it. */
+  transform: translate(6px, -50%);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.story-page a.story-area-chip:hover {
+  border-color: var(--accent);
+}
+
+.story-page .story-area-chip b {
+  color: var(--accent);
+}
+
+.story-page .story-area-chip-count {
+  color: var(--secondary);
+}
+
+/* ---- more, end, grid ---------------------------------------------------- */
+
+.story-page .story-more {
+  margin-top: 72px;
+}
+
+.story-page .story-more h2 {
+  margin: 0 0 16px;
+  font-size: 22px;
+}
+
+.story-page .story-end {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px 40px;
+  margin-top: 72px;
+  padding: 32px 0;
+  border-top: 1px solid var(--story-rule);
+}
+
+.story-page .story-end-text p {
+  margin: 0;
+}
+
+.story-page .story-end-all {
+  font-size: 18px;
+}
+
+.story-page .story-end-text .story-end-prefer {
+  margin-top: 10px;
+  color: var(--secondary);
+  font-size: 15px;
+}
+
+.story-page .story-button {
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  margin-top: 14px;
+  padding: 0 18px;
+  border-radius: 8px;
+  background: var(--story-surface);
+  color: var(--primary);
+  font-size: 14px;
+}
+
+.story-page .story-button:hover {
+  background: var(--tertiary);
+}
+
+/* The grid takes the story page's width, so in the grid view it lines up with
+   the bar and the title above it. gallery.html's own section brings padding and
+   a max-width for a page that has nothing else to align with. */
+.story-page .story-grid-view {
+  width: var(--story-wide);
+  margin-top: 48px;
+  margin-left: calc(50% - var(--story-wide) / 2);
+}
+
+.story-page .story-grid-view section.gallery {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.story-page[data-view="grid"] .story-grid-view {
+  margin-top: 0;
+}
+
+/* ---- journal ------------------------------------------------------------ */
+
+.story-page .journal-head {
+  padding: 32px 0 40px;
+}
+
+.story-page .journal-head.journal-head-map {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 440px;
+  align-items: start;
+  gap: 56px;
+}
+
+.story-page .journal-head-text h1 {
+  margin: 0;
+  font-size: 52px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.story-page .journal-head-text .story-description {
+  color: var(--content);
+  font-size: 19px;
+  line-height: 1.55;
+}
+
+.story-page .journal-summary {
+  margin: 16px 0 0;
+  color: var(--secondary);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.story-page .journal-intro {
+  max-width: none;
+  margin-top: 16px;
+}
+
+.story-page .journal-intro p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.story-page .story-map-journal {
+  width: auto;
+  margin: 0;
+}
+
+.story-page .story-map-journal .story-map-canvas {
+  height: 280px;
+}
+
+.story-page .journal-species {
+  margin-bottom: 56px;
+}
+
+.story-page .journal-species .story-chips-label {
+  display: block;
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+.story-page .journal-species .story-chip {
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 18px;
+  font-size: 14px;
+}
+
+.story-page .journal-timeline {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* The rule runs through the centre of the dot column: gutter 112 + 20. */
+.story-page .journal-timeline::before {
+  content: "";
+  position: absolute;
+  left: 131px;
+  top: 8px;
+  bottom: 0;
+  width: 1px;
+  background: var(--story-rule);
+}
+
+.story-page .journal-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 112px 40px minmax(0, 1fr);
+  margin: 0 0 48px;
+}
+
+.story-page .journal-gutter {
+  padding-top: 18px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.story-page .journal-dot {
+  justify-self: center;
+  width: 11px;
+  height: 11px;
+  margin-top: 26px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--theme);
+}
+
+.story-page .journal-entry {
+  scroll-margin-top: 24px;
+}
+
+.story-page .journal-entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 4px 24px;
+  padding-top: 14px;
+}
+
+.story-page .journal-date {
+  display: block;
+  color: var(--accent);
+  font-size: 14px;
+}
+
+.story-page .journal-title {
+  margin: 4px 0 0;
+  font-size: 26px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.story-page .journal-meta {
+  margin: 0;
+  color: var(--secondary);
+  font-size: 14px;
+}
+
+.story-page .journal-lead {
+  width: min(100%, calc(80vh * var(--ratio, 1.5)));
+  margin-top: 16px;
+}
+
+.story-page .journal-text-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.story-page .journal-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+}
+
+.story-page .journal-text p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.story-page .journal-text > :last-child {
+  margin-bottom: 0;
+}
+
+.story-page .journal-more {
+  margin: 28px 0 12px;
+  color: var(--secondary);
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.story-page .journal-thumbs {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+}
+
+/* The mini map: a picture of the area, one link to the overview map. */
+.story-page .journal-mini {
+  position: relative;
+  flex: 0 0 300px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--story-surface);
+}
+
+.story-page .journal-mini .leaflet-container {
+  position: absolute;
+  inset: 0;
+  background: var(--story-surface);
+  font: inherit;
+}
+
+.story-page .journal-mini .leaflet-control-attribution {
+  font-size: 9px;
+  line-height: 1.3;
+}
+
+.story-page .journal-mini-link {
+  position: absolute;
+  inset: 0;
+  z-index: 800;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+}
+
+.story-page .journal-mini-chip {
+  padding: 4px 10px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--theme) 90%, transparent);
+  color: var(--primary);
+  font-size: 13px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.story-page .journal-mini-link:hover .journal-mini-chip {
+  outline: 1px solid var(--accent);
+}
+
+/* Medium: photo and text side by side, alternating. */
+/* Medium: photo and text side by side, alternating. The photo's column is
+   440px for a landscape frame and narrower for a portrait, which would
+   otherwise run far below two lines of text: no photo taller than
+   min(65vh, 520px). The text keeps a reading measure. */
+.story-page .journal-medium:not(.journal-medium-map) {
+  --photo: min(440px, calc(min(65vh, 520px) * var(--ratio, 1.5)));
+  display: grid;
+  grid-template-columns: var(--photo) minmax(0, 560px);
+  align-items: start;
+  gap: 32px;
+}
+
+.story-page .journal-medium.journal-flip {
+  grid-template-columns: minmax(0, 560px) var(--photo);
+  justify-content: end;
+}
+
+.story-page .journal-flip .journal-medium-media {
+  order: 2;
+}
+
+.story-page .journal-medium-media {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.story-page .journal-medium-text {
+  padding-top: 10px;
+}
+
+.story-page .journal-medium-text .journal-meta {
+  margin-top: 6px;
+}
+
+.story-page .journal-medium-text .journal-text {
+  margin-top: 14px;
+}
+
+.story-page .journal-medium-text .journal-mini {
+  width: 100%;
+  max-width: 360px;
+  height: 160px;
+  margin-top: 20px;
+}
+
+.story-page .journal-medium-rest {
+  grid-column: 1 / -1;
+}
+
+.story-page .journal-medium-map .story-row {
+  margin-top: 24px;
+}
+
+/* Compact days. */
+.story-page .journal-compact,
+.story-page .journal-card {
+  padding-top: 12px;
+  border-top: 1px solid var(--story-rule);
+}
+
+.story-page .journal-compact {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.story-page .journal-compact .journal-title,
+.story-page .journal-card .journal-title {
+  font-size: 19px;
+  line-height: 1.3;
+}
+
+.story-page .journal-compact .journal-date,
+.story-page .journal-card .journal-date {
+  font-size: 13px;
+}
+
+.story-page .journal-compact .journal-meta,
+.story-page .journal-card .journal-meta {
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+.story-page .journal-compact .journal-text,
+.story-page .journal-card .journal-text {
+  margin-top: 8px;
+}
+
+.story-page .journal-compact .journal-text p,
+.story-page .journal-card .journal-text p {
+  color: var(--secondary);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.story-page .journal-compact-thumbs {
+  flex: 0 0 320px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.story-page .journal-compact-thumbs.journal-n1 {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+/* Three photos in one row rather than two and a lonely third. */
+.story-page .journal-compact-thumbs.journal-n3 {
+  flex-basis: 480px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.story-page .journal-compact-text {
+  min-width: 0;
+}
+
+.story-page .journal-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.story-page .journal-card-thumbs {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* ---- narrower screens --------------------------------------------------- */
+
+@media screen and (max-width: 1100px) {
+  .story-page .journal-head.journal-head-map {
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 32px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .story-page .story-split,
+  .story-page .story-split-right {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .story-page .journal-head.journal-head-map {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .story-page .journal-medium:not(.journal-medium-map),
+  .story-page .journal-medium.journal-flip {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .story-page .journal-medium-media {
+    max-width: min(100%, calc(70vh * var(--ratio, 1.5)));
+  }
+
+  .story-page .journal-flip .journal-medium-media {
+    order: 0;
+  }
+
+  .story-page .journal-thumbs {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .story-page .journal-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .story-page .story-bar {
+    font-size: 13px;
+  }
+
+  .story-page .story-toggle button {
+    padding: 0 14px;
+    font-size: 13px;
+  }
+
+  .story-page .story-hero {
+    aspect-ratio: 3 / 2;
+  }
+
+  .story-page .story-hero-cap {
+    right: 12px;
+    bottom: 12px;
+    max-width: calc(100% - 24px);
+  }
+
+  .story-page .story-hero-cap span {
+    display: none;
+  }
+
+  .story-page .story-head {
+    padding: 24px 0;
+  }
+
+  .story-page .story-head h1,
+  .story-page .journal-head-text h1 {
+    font-size: 32px;
+  }
+
+  .story-page .story-description,
+  .story-page .journal-head-text .story-description {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .story-page .story-body p,
+  .story-page .story-body li {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .story-page .story-full,
+  .story-page .story-wide,
+  .story-page .story-split,
+  .story-page .story-set {
+    margin-top: 24px;
+    margin-bottom: 32px;
+  }
+
+  .story-page .story-cap {
+    flex-direction: column;
+    padding-top: 10px;
+  }
+
+  .story-page .story-thumbs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .story-page .story-thumb-label {
+    left: 8px;
+    bottom: 8px;
+    max-width: calc(100% - 16px);
+    padding: 3px 6px;
+    font-size: 11px;
+  }
+
+  /* A trio becomes a strip to swipe through: no JavaScript, the browser's
+     own scroll snapping. */
+  .story-page .story-trio {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding-bottom: 6px;
+  }
+
+  .story-page .story-row > .story-figure:only-child {
+    width: min(100%, calc(70vh * var(--ratio, 1.5)));
+  }
+
+  .story-page .story-trio > .story-figure {
+    flex: 0 0 auto;
+    width: min(calc(200px * var(--ratio)), 80vw);
+    scroll-snap-align: start;
+  }
+
+  .story-page .story-chapter {
+    margin-top: 48px;
+  }
+
+  .story-page .story-chapter-head {
+    margin-bottom: 24px;
+    padding-top: 24px;
+  }
+
+  .story-page .story-chapter-title {
+    gap: 14px;
+  }
+
+  .story-page .story-chapter-num {
+    font-size: 34px;
+  }
+
+  .story-page .story-chapter h2 {
+    font-size: 28px;
+  }
+
+  .story-page .story-chapter-sub {
+    flex-direction: column;
+    padding-left: 0;
+    font-size: 15px;
+  }
+
+  .story-page .story-map-canvas {
+    height: 280px;
+  }
+
+  .story-page .story-area-chip .story-area-chip-text,
+  .story-page .story-area-chip .story-area-chip-count {
+    display: none;
+  }
+
+  .story-page .story-area-chip {
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--theme);
+  }
+
+  .story-page .story-area-chip b {
+    color: var(--theme);
+  }
+
+  .story-page .story-end {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* The timeline loses its gutter; the year becomes a line above its first
+     entry and the date a line above each. */
+  .story-page .journal-timeline::before,
+  .story-page .journal-dot {
+    display: none;
+  }
+
+  .story-page .journal-item {
+    grid-template-columns: minmax(0, 1fr);
+    margin-bottom: 36px;
+  }
+
+  .story-page .journal-gutter {
+    padding: 0;
+    text-align: left;
+  }
+
+  .story-page .journal-gutter:empty {
+    display: none;
+  }
+
+  .story-page .journal-item-year .journal-gutter {
+    margin-bottom: 8px;
+  }
+
+  .story-page .journal-title {
+    font-size: 22px;
+  }
+
+  .story-page .journal-text-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .story-page .journal-mini {
+    flex: none;
+    width: 100%;
+    height: 160px;
+  }
+
+  .story-page .journal-thumbs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .story-page .journal-compact {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .story-page .journal-compact-thumbs {
+    flex: none;
+    width: 100%;
+  }
+
+  .story-page .journal-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---- previous / next project ---------------------------------------------
+   gallery-project-nav.html, under every project page: grid, essay and journal
+   alike, so this part is not scoped to .story-page. */
+
+/* On a grid page the same box as gallery.html's section.gallery (max-width
+   1536px, 1.5rem either side from 640px), so its edges are the grid's. The rule
+   is a grid row of its own, so it spans the content and not the padding. */
+.project-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 1536px;
+  margin: 56px auto 0;
+}
+
+.project-nav::before {
+  content: "";
+  grid-column: 1 / -1;
+  margin-bottom: 16px;
+  border-top: 1px solid var(--story-rule);
+}
+
+@media (min-width: 640px) {
+  .project-nav {
+    padding: 0 1.5rem;
+  }
+}
+
+/* On a story page: the story's width, and no rule — the end of the story
+   already draws one above. */
+.story-page .project-nav {
+  width: var(--story-wide);
+  max-width: none;
+  margin-top: 40px;
+  margin-left: calc(50% - var(--story-wide) / 2);
+  padding: 0;
+}
+
+.story-page .project-nav::before {
+  content: none;
+}
+
+/* A card is as wide as a card needs, at the edge it leads to — half the page
+   width left most of a lone card empty. */
+.project-nav-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: min(100%, 440px);
+  min-width: 0;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--story-surface);
+  color: var(--primary);
+}
+
+.project-nav-card:hover {
+  background: var(--tertiary);
+}
+
+.project-nav-next {
+  grid-column: 2;
+  justify-self: end;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.project-nav-img {
+  flex-shrink: 0;
+  width: 132px;
+  height: 88px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/* Two classes: main.scss (loaded after this bundle on /gallery pages) sets
+   `.main img { height: auto }`, which left the thumbnail short of its box. */
+.project-nav .project-nav-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-nav-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.project-nav-label,
+.project-nav-count {
+  color: var(--secondary);
+  font-size: 13px;
+}
+
+.project-nav-label::before {
+  content: "← ";
+}
+
+.project-nav-next .project-nav-label::before {
+  content: none;
+}
+
+.project-nav-next .project-nav-label::after {
+  content: " →";
+}
+
+.project-nav-title {
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+@media screen and (max-width: 768px) {
+  .project-nav {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project-nav-card {
+    width: 100%;
+  }
+
+  .project-nav-next {
+    grid-column: 1;
+    justify-self: stretch;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .project-nav-img {
+    width: 96px;
+    height: 64px;
+  }
+}

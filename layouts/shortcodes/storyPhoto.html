@@ -1,0 +1,67 @@
+{{- /*
+  storyPhoto.html
+  One photo in an essay (docs/concepts/gallery-project-stories.md §3, §5).
+
+  Usage:
+    {{< storyPhoto id="989b3223-…" layout="full" />}}
+    {{< storyPhoto id="…" layout="wide" caption="white-tailed eagle over the bog" />}}
+    {{< storyPhoto id="…" layout="left" >}}
+    The paragraph beside the photo. Ordinary **Markdown**.
+    {{< /storyPhoto >}}
+
+  Self-close it (`/>`) when it has no text: Hugo requires that of a shortcode
+  that can take inner content.
+
+  Params:
+    id        (required) UUID from data/gallery.yaml; must be a photo of this
+              project. scripts/project-photos.py <slug> lists them.
+    layout    full  — across the page, a 24px gutter either side
+              wide  — the width of the site header (default)
+              left  — photo left, the inner text right
+              right — text left, photo right
+              Narrow screens stack left/right: photo first for left, text
+              first for right.
+    caption   text after the photo's title in the caption
+
+  Only on a gallery project with project_layout: essay. The alt text is always
+  the photo's own, from data/gallery.yaml in the page's language.
+*/ -}}
+{{- $data := partial "story/context.html" (dict "sc" . "name" "storyPhoto" "layouts" (slice "essay")) -}}
+{{- $layout := .Get "layout" | default "wide" | lower -}}
+{{- if not (in (slice "full" "wide" "left" "right") $layout) -}}
+  {{- errorf "%s: storyPhoto layout must be full, wide, left or right, got %q" .Position $layout -}}
+{{- end -}}
+{{- $split := in (slice "left" "right") $layout -}}
+{{- $text := "" -}}
+{{- if trim .Inner " \n\t" -}}
+  {{- if $split -}}
+    {{- $text = partial "story/inner.html" (dict "sc" . "inner" .Inner) -}}
+  {{- else -}}
+    {{- errorf "%s: storyPhoto with text inside needs layout=\"left\" or \"right\" — the text sits beside the photo" .Position -}}
+  {{- end -}}
+{{- else if $split -}}
+  {{- errorf "%s: storyPhoto layout=%q needs the text beside the photo inside it: {{< storyPhoto … >}}text{{< /storyPhoto >}}" .Position $layout -}}
+{{- end -}}
+
+{{- $html := "" -}}
+{{- with $data -}}
+  {{- $item := partial "story/photo.html" (dict "sc" $ "data" . "id" ($.Get "id")) -}}
+  {{- with $item -}}
+    {{- $caption := $.Get "caption" | default "" -}}
+    {{- if eq $layout "full" -}}
+      {{- $html = partial "story/figure.html" (dict "item" $item "class" "story-full" "sizes" "calc(100vw - 48px)" "wide2048" true "caption" $caption) -}}
+    {{- else if eq $layout "wide" -}}
+      {{- $html = partial "story/figure.html" (dict "item" $item "class" "story-wide" "sizes" "(max-width: 1108px) calc(100vw - 28px), 1060px" "caption" $caption) -}}
+    {{- else -}}
+      {{- $fig := partial "story/figure.html" (dict "item" $item "sizes" "(max-width: 900px) calc(100vw - 28px), 600px" "caption" $caption) -}}
+      {{- $body := printf `<div class="story-split-text">%s</div>` $text -}}
+      {{- /* The ratio on the block too: the photo's column is sized from it, so
+             a portrait that is capped to the screen's height takes a narrower
+             column instead of leaving a gap before the text. */ -}}
+      {{- $thumb := $item.image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
+      {{- $ratio := div (mul $thumb.Width 1.0) $thumb.Height -}}
+      {{- $html = printf `<div class="story-split story-split-%s" style="--ratio: %.4f">%s%s</div>` $layout $ratio (cond (eq $layout "left") $fig $body) (cond (eq $layout "left") $body $fig) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- partial "story/emit.html" (dict "sc" . "html" $html) | safeHTML -}}

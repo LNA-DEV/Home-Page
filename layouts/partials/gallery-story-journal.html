@@ -1,0 +1,213 @@
+{{- /*
+  gallery-story-journal.html
+  project_layout: journal — a timeline of outings, one per capture day, built
+  from the photos (docs/concepts/gallery-project-stories.md §7). An
+  {{< outing >}} block only adds text to a day; a journal with none at all is
+  already a complete page of compact entries, so nothing is ever unplaced.
+
+  Entry size, per day, unless the outing says `size=`:
+    full     text and at least 3 photos — lead photo, text (with a small map
+             of its area), the rest as thumbnails
+    medium   text and 1–2 photos — photo and text side by side, alternating;
+             with an area the map takes the photo's place and the photos
+             follow as a pair
+    compact  no text — date, title, thumbnails; consecutive compact days of
+             one year share a row of up to three
+
+  Days follow the page's sort_order (the key the grid sorts by); inside a day
+  the photos run in capture order. Undated photos are the last group.
+
+  Params (from gallery-story.html): page, content, data, areas, seen
+*/ -}}
+{{- $page := .page -}}
+{{- $data := .data -}}
+{{- $outings := $page.Store.Get "storyOutings" | default dict -}}
+{{- $areaIndex := dict -}}
+{{- range .areas }}{{ $areaIndex = merge $areaIndex (dict .slug .) }}{{ end -}}
+
+{{- /* An outing for a day without a photo cannot be shown. */ -}}
+{{- $dayKeys := slice }}{{ range $data.days }}{{ $dayKeys = $dayKeys | append .key }}{{ end -}}
+{{- range $date, $o := $outings -}}
+  {{- if not (in $dayKeys $date) -}}
+    {{- warnf "%s: outing %s is not shown — project %q has no photo from that day" $o.position $date $data.slug -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Pass 1: one entry per day. */ -}}
+{{- $entries := slice -}}
+{{- $flip := false -}}
+{{- range $day := $data.days -}}
+  {{- $o := index $outings $day.key | default dict -}}
+  {{- $text := $o.html | default "" -}}
+  {{- $n := len $day.photos -}}
+
+  {{- /* The lead first, the rest in capture order. */ -}}
+  {{- $photos := $day.photos -}}
+  {{- with $o.lead -}}
+    {{- $lead := "" -}}
+    {{- $others := slice -}}
+    {{- range $day.photos }}{{ if eq .Id $o.lead }}{{ $lead = . }}{{ else }}{{ $others = $others | append . }}{{ end }}{{ end -}}
+    {{- if $lead -}}
+      {{- $photos = slice $lead | append $others -}}
+    {{- else -}}
+      {{- errorf "%s: outing lead %s is not a photo of project %q taken on %s" $o.position . $data.slug $day.key -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $size := $o.size | default "" -}}
+  {{- if not $size -}}
+    {{- if and $text (ge $n 3) }}{{ $size = "full" }}{{ else if $text }}{{ $size = "medium" }}{{ else }}{{ $size = "compact" }}{{ end -}}
+  {{- end -}}
+
+  {{- /* Title: the outing's, else the dex names of the day's species, else
+         the first photo's. Never invented. */ -}}
+  {{- $title := $o.title | default "" -}}
+  {{- $names := slice -}}
+  {{- range $day.species -}}
+    {{- with index $data.bySpecies (lower .) }}{{ $names = $names | append .name }}{{ end -}}
+  {{- end -}}
+  {{- if not $title -}}
+    {{- if $names }}{{ $title = delimit $names ", " }}{{ else }}{{ $title = partial "story/title.html" (index $photos 0) }}{{ end -}}
+  {{- end -}}
+
+  {{- $meta := slice (T "photoCount" $n) -}}
+  {{- if eq (len $names) 1 }}{{ $meta = $meta | append (index $names 0) }}{{ else if $names }}{{ $meta = $meta | append (T "speciesCount" (len $names)) }}{{ end -}}
+
+  {{- $area := "" -}}
+  {{- with $o.area }}{{ $area = index $areaIndex . | default "" }}{{ end -}}
+
+  {{- /* Medium entries with the photo beside the text alternate sides: those
+         without an area, and those with one photo and an area. */ -}}
+  {{- $flipThis := false -}}
+  {{- if and (eq $size "medium") (or (not $area) (eq $n 1)) -}}
+    {{- $flipThis = $flip -}}
+    {{- $flip = not $flip -}}
+  {{- end -}}
+
+  {{- $entries = $entries | append (dict
+        "day" $day
+        "anchor" (printf "outing-%s" $day.key)
+        "photos" $photos
+        "text" $text
+        "size" $size
+        "title" $title
+        "meta" (delimit $meta " · ")
+        "area" $area
+        "flip" $flipThis
+        "year" $day.year
+      ) -}}
+{{- end -}}
+
+{{- /* Pass 2: timeline rows. A compact day joins the row before it when that
+       row is compact days of the same year with room left (three). */ -}}
+{{- $groups := slice -}}
+{{- $cur := slice -}}
+{{- range $e := $entries -}}
+  {{- $joins := and (eq $e.size "compact") (gt (len $cur) 0) (eq (index $cur 0).size "compact") (eq (index $cur 0).year $e.year) (lt (len $cur) 3) -}}
+  {{- if $joins -}}
+    {{- $cur = $cur | append $e -}}
+  {{- else -}}
+    {{- with $cur }}{{ $groups = $groups | append (dict "entries" .) }}{{ end -}}
+    {{- $cur = slice $e -}}
+  {{- end -}}
+{{- end -}}
+{{- with $cur }}{{ $groups = $groups | append (dict "entries" .) }}{{ end -}}
+
+{{- /* The map: one circle per area, labelled with the number of outings in it. */ -}}
+{{- $mapEntries := slice -}}
+{{- range .areas -}}
+  {{- $slug := .slug -}}
+  {{- $count := 0 -}}
+  {{- $href := "" -}}
+  {{- range $entries -}}
+    {{- if and .area (eq .area.slug $slug) -}}
+      {{- $count = add $count 1 -}}
+      {{- if not $href }}{{ $href = printf "#%s" .anchor }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $mapEntries = $mapEntries | append (dict
+        "slug" .slug "name" .name "lat" .lat "lng" .lng "radius" .radius
+        "badge" "" "title" "" "count" $count
+        "countLabel" (cond (gt $count 0) (T "outingCount" $count) "")
+        "href" $href
+      ) -}}
+{{- end -}}
+
+{{- /* The sentence under the title, assembled from plural parts: go-i18n allows
+       one plural count per message. */ -}}
+{{- $dates := slice }}{{ range $data.photos }}{{ $dates = $dates | append .DateTaken }}{{ end -}}
+{{- $period := partial "story/period.html" (dict "dates" $dates "precision" "month") -}}
+{{- $sentence := T "photoCount" $data.count -}}
+{{- if gt $data.dated 0 -}}
+  {{- $parts := dict "photos" (T "photoCount" $data.count) "outings" (T "outingCount" $data.dated) "species" (T "speciesCount" (len $data.species)) -}}
+  {{- $sentence = cond (gt (len $data.species) 0) (T "journal_summary" $parts) (T "journal_summary_nospecies" $parts) -}}
+{{- end -}}
+{{- with $period }}{{ $sentence = printf "%s, %s" $sentence . }}{{ end -}}
+{{- $sentence = printf "%s." $sentence -}}
+{{- if gt $data.dated 1 }}{{ $sentence = printf "%s %s" $sentence (i18n (printf "journal_order_%s" $data.order)) }}{{ end -}}
+
+<div class="story-page story-journal" data-story="journal">
+  {{- partial "gallery-story-bar.html" (dict "page" $page "view" "journal") }}
+
+  <header class="journal-head{{ if $mapEntries }} journal-head-map{{ end }}">
+    <div class="journal-head-text">
+      <h1>{{ $page.Title }}</h1>
+      {{- with $page.Description }}
+      <p class="story-description">{{ . }}</p>
+      {{- end }}
+      <p class="journal-summary">{{ $sentence }}</p>
+      {{- with trim (printf "%s" .content) " \n" }}
+      <div class="story-body journal-intro story-part">{{ . | safeHTML }}</div>
+      {{- end }}
+    </div>
+    {{- with $mapEntries }}
+    <div class="journal-head-aside story-part">
+      {{- partial "gallery-story-map.html" (dict "entries" . "class" "story-map-journal") }}
+    </div>
+    {{- end }}
+  </header>
+
+  {{- with $data.species }}
+  <section class="journal-species story-part" aria-labelledby="journal-species-heading">
+    <h2 id="journal-species-heading" class="story-chips-label">{{ i18n "story_species_in_project" }}</h2>
+    <div class="story-chips">
+      {{- range . }}
+      {{- if .url }}
+      <a class="story-chip" href="{{ .url }}">{{ .name }}<span class="story-chip-count">{{ .count }}</span></a>
+      {{- else }}
+      <span class="story-chip">{{ .name }}<span class="story-chip-count">{{ .count }}</span></span>
+      {{- end }}
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+
+  <div class="story journal story-part">
+    <ol class="journal-timeline">
+      {{- $prevYear := -1 }}
+      {{- range $groups }}
+      {{- $first := index .entries 0 }}
+      {{- $showYear := and (not $first.day.undated) (ne $first.year $prevYear) }}
+      {{- $prevYear = $first.year }}
+      {{- $row := gt (len .entries) 1 }}
+      <li class="journal-item{{ if $row }} journal-item-row{{ end }}{{ if $showYear }} journal-item-year{{ end }}">
+        <div class="journal-gutter">{{ if $showYear }}<span class="journal-year">{{ $first.year }}</span>{{ end }}</div>
+        <span class="journal-dot" aria-hidden="true"></span>
+        <div class="journal-body">
+          {{- if $row }}
+          <div class="journal-row">
+            {{- range .entries }}{{ partial "gallery-story-outing.html" (dict "e" . "card" true) }}{{ end }}
+          </div>
+          {{- else }}
+          {{- partial "gallery-story-outing.html" (dict "e" $first) }}
+          {{- end }}
+        </div>
+      </li>
+      {{- end }}
+    </ol>
+  </div>
+
+  {{- partial "gallery-story-end.html" (dict "count" $data.count "view" "journal") }}
+  {{- partial "gallery-story-grid.html" $page }}
+  {{- partial "gallery-project-nav.html" $page }}
+</div>

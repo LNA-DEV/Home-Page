@@ -1,0 +1,35 @@
+{{- /*
+  story/figure.html
+  One large story photo with its caption: the title linked to the photo page,
+  an optional caption after it, the EXIF on the right. The image links to the
+  photo page too — the grid's href, since the story view has no lightbox (§5.2).
+
+  No ImageObject microdata: the grid below the story already carries one for
+  every photo, and two entities for one image is the contradiction gallery.html
+  once had to remove.
+
+  Params:
+    item, sizes, wide2048, eager   as story/img.html
+    class      on the <figure>
+    caption    text after the title
+    noExif     bool: leave the EXIF out
+  Returns HTML.
+*/ -}}
+{{- $item := .item -}}
+{{- $url := partial "story/url.html" $item -}}
+{{- $thumb := $item.image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
+{{- $color := index $thumb.Colors 0 | default "transparent" -}}
+{{- $exif := slice -}}
+{{- if not .noExif }}{{ $exif = partial "story/exif.html" $item }}{{ end -}}
+<figure class="story-figure{{ with .class }} {{ . }}{{ end }}" data-id="{{ $item.Id }}" style="--ratio: {{ printf "%.4f" (div (mul $thumb.Width 1.0) $thumb.Height) }}">
+  <a class="story-figure-img" href="{{ $url }}" tabindex="-1" aria-hidden="true" style="background-color: {{ $color }}">
+    {{- partial "story/img.html" (dict "item" $item "sizes" .sizes "wide2048" .wide2048 "eager" .eager) -}}
+  </a>
+  <figcaption class="story-cap">
+    <span class="story-cap-title"><a href="{{ $url }}">{{ partial "story/title.html" $item }}</a>{{ with .caption }}, {{ . }}{{ end }}</span>
+    {{- with $exif }}
+    <span class="story-exif">{{ range . }}<span>{{ . }}</span>{{ end }}</span>
+    {{- end }}
+  </figcaption>
+</figure>
+{{- /**/ -}}

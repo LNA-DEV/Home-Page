@@ -1,0 +1,18 @@
+{{- /*
+  gallery-story-bar.html
+  The row above a story: the gallery breadcrumb, and the toggle between the
+  story and the grid (docs/concepts/gallery-project-stories.md §5.4).
+
+  The toggle renders `hidden`: gallery-story.js shows it. A visitor without
+  JavaScript never meets a dead control — they get the story and the grid
+  after it, and the "Show as grid" link at the end is a working anchor.
+
+  Params: page, view ("story" | "journal")
+*/ -}}
+<div class="story-bar">
+  {{- partial "gallery-breadcrumb.html" .page }}
+  <div class="story-toggle" role="group" aria-label="{{ i18n "story_toggle_label" }}" hidden>
+    <button type="button" data-view="story" aria-pressed="true">{{ i18n (printf "story_view_%s" .view) }}</button>
+    <button type="button" data-view="grid" aria-pressed="false">{{ i18n "story_view_grid" }}</button>
+  </div>
+</div>

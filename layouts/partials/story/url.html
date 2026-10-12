@@ -1,0 +1,5 @@
+{{- /*
+  story/url.html
+  A photo's own page in the current language — the grid's href (gallery.html).
+*/ -}}
+{{- return (printf "%sgallery/photo/%s/" site.Home.RelPermalink .Slug) -}}

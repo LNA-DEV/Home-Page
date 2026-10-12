@@ -1,0 +1,68 @@
+{{- /*
+  storyPhotos.html
+  Several photos of an essay as one block (docs/concepts/gallery-project-stories.md §3).
+
+  Usage:
+    {{< storyPhotos ids="576c11d6-…, e0a971e5-…" layout="pair" >}}
+    {{< storyPhotos ids="…, …, …" layout="trio" >}}
+    {{< storyPhotos ids="…, …, …, …" layout="grid" title="Also at the bog" note="Roe deer, mallards" >}}
+    {{< storyPhotos ids="…, …, …, …" layout="sequence" title="The caravan in the rose bush" >}}
+
+  Params:
+    ids       (required) comma-separated UUIDs, in the order shown; every one a
+              photo of this project
+    layout    pair     — two photos side by side, same height, uncropped
+              trio     — three in a row; a swipeable strip on a phone
+              grid     — thumbnails, four to a row (two on a phone)
+              sequence — like grid, numbered in the given order
+    title     a heading (h3) above the block
+    note      a line beside the title
+
+  Only on a gallery project with project_layout: essay.
+*/ -}}
+{{- $data := partial "story/context.html" (dict "sc" . "name" "storyPhotos" "layouts" (slice "essay")) -}}
+{{- $layout := .Get "layout" | default "grid" | lower -}}
+{{- $need := dict "pair" (slice 2 2) "trio" (slice 3 3) "grid" (slice 2 99) "sequence" (slice 2 99) -}}
+{{- if not (index $need $layout) -}}
+  {{- errorf "%s: storyPhotos layout must be pair, trio, grid or sequence, got %q" .Position $layout -}}
+{{- end -}}
+{{- $ids := slice -}}
+{{- range split (.Get "ids" | default "") "," -}}
+  {{- with trim . " \n\t" }}{{ $ids = $ids | append . }}{{ end -}}
+{{- end -}}
+{{- with index $need $layout -}}
+  {{- if or (lt (len $ids) (index . 0)) (gt (len $ids) (index . 1)) -}}
+    {{- errorf "%s: storyPhotos layout=%q takes %s photos, got %d" $.Position $layout (cond (eq (index . 0) (index . 1)) (string (index . 0)) (printf "at least %d" (index . 0))) (len $ids) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $html := "" -}}
+{{- with $data -}}
+  {{- $items := slice -}}
+  {{- range $i, $id := $ids -}}
+    {{- $item := partial "story/photo.html" (dict "sc" $ "data" $data "id" $id "slot" (printf "/%d" (add $i 1))) -}}
+    {{- with $item }}{{ $items = $items | append . }}{{ end -}}
+  {{- end -}}
+  {{- $body := "" -}}
+  {{- if in (slice "pair" "trio") $layout -}}
+    {{- $sizes := cond (eq $layout "pair") "(max-width: 768px) 50vw, 530px" "(max-width: 768px) 260px, 360px" -}}
+    {{- range $items -}}
+      {{- $body = printf "%s%s" $body (partial "story/figure.html" (dict "item" . "sizes" $sizes "noExif" (eq $layout "trio"))) -}}
+    {{- end -}}
+    {{- $body = printf `<div class="story-row story-%s">%s</div>` $layout $body -}}
+  {{- else -}}
+    {{- range $i, $item := $items -}}
+      {{- $n := cond (eq $layout "sequence") (add $i 1) 0 -}}
+      {{- $body = printf "%s%s" $body (partial "story/thumb.html" (dict "item" $item "number" $n)) -}}
+    {{- end -}}
+    {{- $body = printf `<div class="story-thumbs story-%s">%s</div>` $layout $body -}}
+  {{- end -}}
+  {{- $head := "" -}}
+  {{- if or ($.Get "title") ($.Get "note") -}}
+    {{- $head = printf `<div class="story-set-head">%s%s</div>`
+          (cond (ne ($.Get "title" | default "") "") (printf `<h3>%s</h3>` (htmlEscape ($.Get "title"))) "")
+          (cond (ne ($.Get "note" | default "") "") (printf `<p>%s</p>` (htmlEscape ($.Get "note"))) "") -}}
+  {{- end -}}
+  {{- $html = printf `<div class="story-set story-set-%s">%s%s</div>` $layout $head $body -}}
+{{- end -}}
+{{- partial "story/emit.html" (dict "sc" . "html" $html) | safeHTML -}}

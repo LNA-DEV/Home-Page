@@ -1,0 +1,143 @@
+{{- /*
+  gallery-story-data.html
+  Everything a story page (project_layout essay or journal) counts, computed
+  from the photos and nothing else — docs/concepts/gallery-project-stories.md
+  §5.1. No number on such a page is maintained by hand.
+
+  The project's photos are exactly the grid's: every photo whose `project:`
+  names this page's project_slug, archive excluded (gallery.html does not set
+  include_archive on a project). They come out of gallery-collected.html, which
+  already holds every photo with its EXIF and its prose resolved into this
+  language.
+
+  Returns:
+    .slug      the project slug
+    .photos    collect-images items, by capture time, earliest first
+    .byId      the same items keyed by UUID
+    .count     len .photos
+    .days      one entry per capture day, in the page's sort_order (the same
+               front-matter key the grid sorts by: desc = newest first), with
+               the undated photos as a last group:
+                 { key, date ("2026-08-09" or ""), time, year, undated,
+                   photos (earliest first), species (scientific names) }
+    .dated     the number of capture days, the undated group not counted
+    .species   [{ scientific, slug, name, url, count }], most photographed
+               first, then by name. A species the dex does not know keeps its
+               scientific name and no url (dex-lookup.html's rule)
+    .bySpecies the same entries keyed by lowercased scientific name
+    .first / .last   the earliest and latest capture date ("" when none)
+    .hero      the featured_image item, when it is one of these photos
+    .order     "asc" or "desc"
+
+  Call via partialCached, keyed on the page:
+    {{ $d := partialCached "gallery-story-data.html" . .RelPermalink }}
+*/ -}}
+
+{{- $slug := .Params.project_slug | default "" -}}
+{{- $lang := site.Language.Lang -}}
+{{- $order := .Params.sort_order | default "asc" | lower -}}
+{{- if not (in (slice "asc" "desc") $order) }}{{ $order = "asc" }}{{ end -}}
+
+{{- $c := partialCached "gallery-collected.html" . $lang -}}
+{{- $dex := partialCached "dex-lookup.html" (dict "lang" $lang) $lang -}}
+
+{{- $photos := slice -}}
+{{- range $c.all -}}
+  {{- if and (in .Projects $slug) (ne .Section "archive") -}}
+    {{- $photos = $photos | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- /* Hugo's sort is stable, so photos taken in the same second keep the
+       collector's order on every build. */ -}}
+{{- $photos = sort $photos "Date" "asc" -}}
+
+{{- $byId := dict -}}
+{{- $byDay := newScratch -}}
+{{- $speciesCount := newScratch -}}
+{{- $first := "" -}}
+{{- $last := "" -}}
+{{- range $photos -}}
+  {{- $byId = merge $byId (dict .Id .) -}}
+  {{- $day := .DateTaken | default "undated" -}}
+  {{- $byDay.Add $day (slice .) -}}
+  {{- with .Species -}}
+    {{- $speciesCount.Add (lower .) 1 -}}
+  {{- end -}}
+  {{- with .DateTaken -}}
+    {{- if or (not $first) (lt . $first) }}{{ $first = . }}{{ end -}}
+    {{- if or (not $last) (gt . $last) }}{{ $last = . }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Species, with the dex's name and page where it has one. */ -}}
+{{- $species := slice -}}
+{{- $bySpecies := dict -}}
+{{- range $key, $count := $speciesCount.Values -}}
+  {{- $sci := "" -}}
+  {{- range $photos }}{{ if and (not $sci) (eq (lower .Species) $key) }}{{ $sci = .Species }}{{ end }}{{ end -}}
+  {{- $entry := dict "scientific" $sci "slug" "" "name" $sci "url" "" "count" $count -}}
+  {{- with index $dex $key -}}
+    {{- $entry = merge $entry (dict "slug" .slug "name" .name "url" .url) -}}
+  {{- end -}}
+  {{- $species = $species | append $entry -}}
+  {{- $bySpecies = merge $bySpecies (dict $key $entry) -}}
+{{- end -}}
+{{- $species = sort (sort $species "name") "count" "desc" -}}
+
+{{- /* Capture days. A day is a sequence, earliest photo first, whatever the
+       page's sort_order says about the order of the days themselves. */ -}}
+{{- $keys := slice -}}
+{{- range $k, $v := $byDay.Values -}}
+  {{- if ne $k "undated" }}{{ $keys = $keys | append $k }}{{ end -}}
+{{- end -}}
+{{- $keys = sort $keys "value" $order -}}
+{{- $days := slice -}}
+{{- range $keys -}}
+  {{- $dayPhotos := $byDay.Get . -}}
+  {{- $sci := slice -}}
+  {{- range $dayPhotos }}{{ with .Species }}{{ $sci = $sci | append . }}{{ end }}{{ end -}}
+  {{- $t := time.AsTime . -}}
+  {{- $days = $days | append (dict
+        "key" .
+        "date" .
+        "time" $t
+        "year" $t.Year
+        "undated" false
+        "photos" $dayPhotos
+        "species" ($sci | uniq)
+      ) -}}
+{{- end -}}
+{{- $dated := len $days -}}
+{{- with $byDay.Get "undated" -}}
+  {{- $sci := slice -}}
+  {{- range . }}{{ with .Species }}{{ $sci = $sci | append . }}{{ end }}{{ end -}}
+  {{- $days = $days | append (dict
+        "key" "undated"
+        "date" ""
+        "time" ""
+        "year" 0
+        "undated" true
+        "photos" .
+        "species" ($sci | uniq)
+      ) -}}
+{{- end -}}
+
+{{- $hero := "" -}}
+{{- with .Params.featured_image -}}
+  {{- with index $byId . }}{{ $hero = . }}{{ end -}}
+{{- end -}}
+
+{{- return (dict
+      "slug"      $slug
+      "photos"    $photos
+      "byId"      $byId
+      "count"     (len $photos)
+      "days"      $days
+      "dated"     $dated
+      "species"   $species
+      "bySpecies" $bySpecies
+      "first"     $first
+      "last"      $last
+      "hero"      $hero
+      "order"     $order
+    ) -}}

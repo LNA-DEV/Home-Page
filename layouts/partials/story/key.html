@@ -1,0 +1,17 @@
+{{- /*
+  story/key.html
+  A story shortcode's position in the page body, as a key for the page Store:
+  "004" at the top level, "004.002" for the third shortcode inside the fifth.
+  docs/concepts/gallery-project-stories.md §4.
+
+  .Ordinal counts within the parent, hence the parent's key as a prefix.
+  .Position cannot serve: for a nested shortcode it reports 1:1. Keys sort in
+  source order as plain strings, which is what numbers the chapters.
+
+  The page Store survives a template-only edit under `hugo server` while the
+  content is not recreated, so everything recorded under these keys must be
+  idempotent: SetInMap with the same key and value, never Add.
+*/ -}}
+{{- $k := printf "%03d" .Ordinal -}}
+{{- with .Parent }}{{ $k = printf "%s.%s" (partial "story/key.html" .) $k }}{{ end -}}
+{{- return $k -}}

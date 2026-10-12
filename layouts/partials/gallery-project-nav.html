@@ -1,0 +1,48 @@
+{{- /*
+  gallery-project-nav.html
+  "Previous project" / "Next project" under every gallery project page, the
+  same on all three layouts: grid, essay and journal.
+
+  Neighbours are the LISTED projects by weight, the order of the projects index
+  (.CurrentSection.RegularPages leaves out an album with build.list: never). No
+  wrapping: the first has no previous, the last no next — with two projects,
+  wrapping would offer the same one twice. A page outside the list (an unlisted
+  album, a demo) offers the first listed project as its next.
+
+  Param: the project page. Renders nothing when there is nowhere to go.
+*/ -}}
+{{- $page := . -}}
+{{- $list := slice -}}
+{{- with $page.CurrentSection }}{{ $list = .RegularPages.ByWeight }}{{ end -}}
+{{- $idx := -1 -}}
+{{- range $i, $p := $list }}{{ if eq $p $page }}{{ $idx = $i }}{{ end }}{{ end -}}
+{{- $prev := "" -}}
+{{- $next := "" -}}
+{{- if ge $idx 0 -}}
+  {{- if gt $idx 0 }}{{ $prev = index $list (sub $idx 1) }}{{ end -}}
+  {{- if lt (add $idx 1) (len $list) }}{{ $next = index $list (add $idx 1) }}{{ end -}}
+{{- else -}}
+  {{- with $list }}{{ $next = index . 0 }}{{ end -}}
+{{- end -}}
+{{- if or $prev $next }}
+<nav class="project-nav" aria-label="{{ i18n "project_nav_label" }}">
+  {{- /* A slice, not a dict: ranging over a map goes in key order, which
+         would put "next" before "prev". */}}
+  {{- range slice (dict "dir" "prev" "page" $prev) (dict "dir" "next" "page" $next) }}
+  {{- $dir := .dir }}
+  {{- with .page }}
+  {{- $g := partial "get-gallery.html" . }}
+  <a class="project-nav-card project-nav-{{ $dir }}" href="{{ .RelPermalink }}" rel="{{ $dir }}">
+    {{- with $g }}
+    <span class="project-nav-img" style="background-color: {{ .color }}"><img src="{{ .thumbnail.RelPermalink }}" width="{{ .thumbnail.Width }}" height="{{ .thumbnail.Height }}" alt="" loading="lazy" decoding="async"></span>
+    {{- end }}
+    <span class="project-nav-text">
+      <span class="project-nav-label">{{ i18n (cond (eq $dir "prev") "project_previous" "project_next") }}</span>
+      <span class="project-nav-title">{{ .Title }}</span>
+      {{- with $g }}<span class="project-nav-count">{{ T "photoCount" .imageCount }}</span>{{ end }}
+    </span>
+  </a>
+  {{- end }}
+  {{- end }}
+</nav>
+{{- end -}}

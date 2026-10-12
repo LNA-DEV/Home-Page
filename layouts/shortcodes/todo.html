@@ -1,0 +1,21 @@
+{{- /*
+  todo.html
+  Text the owner has not written yet (docs/concepts/gallery-project-stories.md §5.7).
+
+  Usage:
+    {{< todo "Why this project exists" >}}
+
+  Under `hugo server` it shows a dashed placeholder with the prompt. In every
+  production build — the `build` test, deploy.sh — it renders nothing and
+  WARNS, which stops the deploy: a page cannot ship with a gap in its text,
+  the same way a photo without a title cannot. A literal "TODO" in the
+  Markdown would simply have been published.
+*/ -}}
+{{- $prompt := cond .IsNamedParams (.Get "prompt") (.Get 0) | default "" -}}
+{{- $html := "" -}}
+{{- if hugo.IsDevelopment -}}
+  {{- $html = printf `<p class="story-todo"><span class="story-todo-label">%s</span> %s</p>` (T "story_todo") (htmlEscape $prompt) -}}
+{{- else -}}
+  {{- warnf "%s: text still to write on %s — %q (remove the {{< todo >}} once it is written)" .Position .Page.RelPermalink $prompt -}}
+{{- end -}}
+{{- partial "story/emit.html" (dict "sc" . "html" $html) | safeHTML -}}

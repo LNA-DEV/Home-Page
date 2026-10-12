@@ -21,9 +21,22 @@
 {{- else if eq .Params.Theme "game" }}
 {{- partial "game-detail.html" . }}
 {{- else if eq .Params.Theme "gallery-project" }}
+{{- /* project_layout (docs/concepts/gallery-project-stories.md): `grid`, or no
+       key at all, is the page every project has always had — breadcrumb, title,
+       grid. essay and journal tell a story above the same grid. All three end
+       with the neighbouring projects (gallery-project-nav.html). */}}
+{{- $projectLayout := .Params.project_layout | default "grid" }}
+{{- if in (slice "essay" "journal") $projectLayout }}
+{{- partial "gallery-story.html" . }}
+{{- else }}
+{{- if ne $projectLayout "grid" }}
+{{- errorf "%s: project_layout must be grid, essay or journal, got %q" .RelPermalink $projectLayout }}
+{{- end }}
 {{- partial "gallery-breadcrumb.html" . }}
 {{- partial "title.html" . }}
 {{- partial "gallery.html" . }}
+{{- partial "gallery-project-nav.html" . }}
+{{- end }}
 {{- else }}
 <article class="post-single">
     <header class="post-header">

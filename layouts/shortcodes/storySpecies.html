@@ -1,0 +1,31 @@
+{{- /*
+  storySpecies.html
+  A species card linking to its dex page, with how many photos of it the dex
+  holds (docs/concepts/gallery-project-stories.md §5.3).
+
+  Usage:
+    {{< storySpecies id="osprey" >}}
+
+  Params:
+    id   (required) the dex SLUG — the dex's own identity, as in its URLs
+
+  The count is the dex's: every photo of the species, archive included, like
+  the dex page itself. Works in essays and in journal outings.
+*/ -}}
+{{- $data := partial "story/context.html" (dict "sc" . "name" "storySpecies" "layouts" (slice "essay" "journal")) -}}
+{{- $slug := cond .IsNamedParams (.Get "id") (.Get 0) | default "" -}}
+{{- $html := "" -}}
+{{- with $data -}}
+  {{- $index := partialCached "dex-index.html" $.Page -}}
+  {{- with index $index.bySlug $slug -}}
+    {{- $name := partial "dex-text.html" (dict "field" .species.names "lang" site.Language.Lang) | default .scientific -}}
+    {{- $url := "" -}}
+    {{- with site.GetPage (printf "/gallery/dex/%s" .slug) }}{{ $url = .RelPermalink }}{{ end -}}
+    {{- $count := len .photos -}}
+    {{- $html = printf `<a class="story-species" href="%s"><span class="story-species-names"><span class="story-species-name">%s</span><span class="story-species-sci">%s</span></span><span class="story-species-count">%s</span></a>`
+          $url (htmlEscape $name) (htmlEscape .scientific) (T "story_species_in_dex" $count) -}}
+  {{- else -}}
+    {{- errorf "%s: storySpecies id %q is not a slug in data/dex.yaml" $.Position $slug -}}
+  {{- end -}}
+{{- end -}}
+{{- partial "story/emit.html" (dict "sc" . "html" $html) | safeHTML -}}

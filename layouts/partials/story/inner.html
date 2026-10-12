@@ -1,0 +1,21 @@
+{{- /*
+  story/inner.html
+  A paired story shortcode's inner Markdown, rendered, with the tokens its own
+  inner story shortcodes left (story/emit.html) replaced by their HTML.
+
+  Params: sc (the shortcode), inner (its .Inner — passed in rather than read
+  here, because Hugo decides whether a shortcode may be closed by looking for
+  .Inner in the shortcode's own template)
+*/ -}}
+{{- $k := partial "story/key.html" .sc -}}
+{{- $html := printf "%s" (.sc.Page.RenderString (dict "display" "block") (trim .inner "\n")) -}}
+{{- range $key, $v := .sc.Page.Store.Get "storyHtml" -}}
+  {{- if hasPrefix $key (printf "%s." $k) -}}
+    {{- $tok := printf "XSTORYBLOCKX%sX" (replace $key "." "D") -}}
+    {{- /* A token alone in its paragraph loses the <p> around it; one the
+           author wrote into a sentence is replaced where it stands. */ -}}
+    {{- $html = replace $html (printf "<p>%s</p>" $tok) $v -}}
+    {{- $html = replace $html $tok $v -}}
+  {{- end -}}
+{{- end -}}
+{{- return $html -}}

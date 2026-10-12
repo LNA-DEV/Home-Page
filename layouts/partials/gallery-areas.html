@@ -1,0 +1,80 @@
+{{- /*
+  gallery-areas.html
+  data/galleryAreas.yaml, validated, as a lookup keyed by slug — the only source
+  of anything a project map draws (docs/concepts/gallery-project-stories.md §8).
+
+    { "nicklheimer-filzen": { slug, name, lat, lng, radius } }
+
+  `name` is the label in the current language, English fallback, like every
+  other per-language field on the site.
+
+  The coarse rule is checked here, on the DATA, because the repository is
+  public: a precise coordinate in data/ is published the moment it is pushed,
+  rendered or not. At most 2 decimal places, a radius of at least 1,000 m.
+  Anything else stops the build, naming the area.
+
+  Call via partialCached with the language as the variant:
+    {{ partialCached "gallery-areas.html" . site.Language.Lang }}
+*/ -}}
+
+{{- $lang := site.Language.Lang -}}
+{{- $out := dict -}}
+{{- $coarse := `^-?[0-9]{1,3}(\.[0-9]{1,2})?$` -}}
+
+{{- range $i, $a := hugo.Data.galleryAreas.areas | default slice -}}
+  {{- $slug := $a.slug | default "" -}}
+  {{- if not $slug -}}
+    {{- errorf "data/galleryAreas.yaml: area #%d has no slug" (add $i 1) -}}
+    {{- continue -}}
+  {{- end -}}
+  {{- if not (findRE `^[a-z0-9]+(-[a-z0-9]+)*$` $slug) -}}
+    {{- errorf "data/galleryAreas.yaml: slug %q is not lowercase-with-hyphens" $slug -}}
+  {{- end -}}
+  {{- if index $out $slug -}}
+    {{- errorf "data/galleryAreas.yaml: slug %q appears twice" $slug -}}
+    {{- continue -}}
+  {{- end -}}
+
+  {{- /* Numbers, and coarse ones. printf "%v" prints a float the shortest way
+         that round-trips, so 47.9 stays "47.9" and 47.123 stays "47.123". */ -}}
+  {{- $ok := true -}}
+  {{- range $field := slice "lat" "lng" -}}
+    {{- $v := index $a $field -}}
+    {{- if eq $v nil -}}
+      {{- errorf "data/galleryAreas.yaml: area %q has no %s" $slug $field -}}
+      {{- $ok = false -}}
+    {{- else if not (findRE $coarse (printf "%v" $v)) -}}
+      {{- errorf "data/galleryAreas.yaml: area %q has %s %v — at most 2 decimal places, so no area can point at a nest (docs/concepts/gallery-project-stories.md §8)" $slug $field $v -}}
+      {{- $ok = false -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $radius := $a.radius | default 0 -}}
+  {{- if lt (float $radius) 1000.0 -}}
+    {{- errorf "data/galleryAreas.yaml: area %q has radius %v — at least 1000 (metres), so no area can point at a nest (docs/concepts/gallery-project-stories.md §8)" $slug $radius -}}
+    {{- $ok = false -}}
+  {{- end -}}
+  {{- if not $ok }}{{ continue }}{{ end -}}
+
+  {{- /* The label: a bare string means English. */ -}}
+  {{- $label := $a.label | default "" -}}
+  {{- $name := "" -}}
+  {{- if reflect.IsMap $label -}}
+    {{- $name = index $label $lang | default (index $label "en") | default "" -}}
+  {{- else -}}
+    {{- $name = $label -}}
+  {{- end -}}
+  {{- if not $name -}}
+    {{- errorf "data/galleryAreas.yaml: area %q has no label in %s or English" $slug $lang -}}
+    {{- $name = $slug -}}
+  {{- end -}}
+
+  {{- $out = merge $out (dict $slug (dict
+        "slug"   $slug
+        "name"   $name
+        "lat"    (float (index $a "lat"))
+        "lng"    (float (index $a "lng"))
+        "radius" (int $radius)
+      )) -}}
+{{- end -}}
+
+{{- return $out -}}

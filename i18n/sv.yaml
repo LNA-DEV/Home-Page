@@ -657,3 +657,74 @@
   translation: "Porträtt"
 - id: category_others
   translation: "Övrigt"
+
+# Projektberättelser — galleriprojekt med project_layout essay eller journal
+# (docs/concepts/gallery-project-stories.md §5.8)
+- id: speciesCount
+  translation:
+    one: "1 art"
+    other: "{{ . }} arter"
+- id: outingCount
+  translation:
+    one: "1 utflykt"
+    other: "{{ . }} utflykter"
+- id: story_view_story
+  translation: "Berättelse"
+- id: story_view_journal
+  translation: "Dagbok"
+- id: story_view_grid
+  translation: "Rutnät"
+- id: story_toggle_label
+  translation: "Visning"
+- id: story_show_as_grid
+  translation: "Visa som rutnät"
+- id: story_prefer_grid
+  translation: "Vill du hellre bläddra utan berättelsen?"
+- id: journal_prefer_grid
+  translation: "Vill du hellre bläddra utan dagboken?"
+- id: story_that_was_all
+  translation:
+    one: "Det var det enda fotot."
+    other: "Det var alla {{ . }} foton."
+- id: story_more_from_project
+  translation: "Mer från det här projektet"
+- id: story_more_from_outing
+  translation: "Mer från den här utflykten"
+- id: story_species_in_project
+  translation: "Arter i det här projektet"
+- id: story_species_in_chapter
+  translation: "Arter i det här kapitlet"
+- id: story_species_in_dex
+  translation:
+    one: "1 foto i Fotodex"
+    other: "{{ . }} foton i Fotodex"
+- id: project_previous
+  translation: "Föregående projekt"
+- id: project_next
+  translation: "Nästa projekt"
+- id: project_nav_label
+  translation: "Fler projekt"
+- id: story_contents
+  translation: "Kapitel"
+- id: story_grid_heading
+  translation: "Alla foton"
+- id: story_map
+  translation: "Karta"
+- id: story_map_note
+  translation: "Områdena är medvetet grovt ritade, så att häckande rovfåglar får vara ostörda."
+- id: story_map_show_area
+  translation: "Visa {{ .area }} på kartan"
+- id: story_undated
+  translation: "Odaterade"
+- id: story_period
+  translation: "{{ .from }} till {{ .to }}"
+- id: story_todo
+  translation: "Att skriva:"
+- id: journal_summary
+  translation: "{{ .photos }} från {{ .outings }} och {{ .species }}"
+- id: journal_summary_nospecies
+  translation: "{{ .photos }} från {{ .outings }}"
+- id: journal_order_desc
+  translation: "Nyast först."
+- id: journal_order_asc
+  translation: "Äldst först."

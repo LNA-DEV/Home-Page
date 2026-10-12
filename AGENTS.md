@@ -1025,6 +1025,51 @@ are a small closed set, so a miss is always a typo:
 Do **not** run `./deploy.sh` — deployment is a separate step the user authorizes
 explicitly.
 
+## Writing a project story (essay or journal)
+
+Design: `docs/concepts/gallery-project-stories.md`. A gallery project page is a
+grid until its front matter says otherwise.
+
+1. **List the photos.** `python3 scripts/project-photos.py <project_slug>
+   [--lang de]` prints them by capture day, newest first, with UUID, title and
+   species (the dex slug for `storySpecies`), and an empty `{{< outing >}}` per
+   day. The capture days come from the last build's
+   `<lang>/gallery-metadata.json`; without a build they are "date unknown". It
+   writes nothing.
+2. **Switch the page**, per language file: `params.project_layout: essay` or
+   `journal`. Keep `theme: gallery-project`. `sort_order` (already on every
+   project) orders a journal's days. A language you have not written yet keeps
+   `grid` — there is no fallback to the English text.
+3. **Areas, if any.** Name them in `params.areas: [slug, …]` (records in
+   `data/galleryAreas.yaml`: a named public place, at most 2 decimals, radius ≥
+   1,000 m, never a photo's position — the build stops otherwise). A chapter or
+   outing can only point at one of the page's own areas.
+4. **Write.** Essay: Markdown with `{{< chapter >}}`, `{{< storyPhoto >}}`,
+   `{{< storyPhotos >}}`, `{{< storySpecies >}}` between the paragraphs. Every
+   project photo appears exactly once: the hero is the `featured_image`, and a
+   photo the text does not place lands in "More from this project" by itself.
+   Journal: the body is the intro; each `{{< outing date="…" >}}` adds text to
+   one capture day. Days without one are compact entries already.
+   `{{< storyPhoto … />}}` must be self-closed when it has no text beside it.
+5. **Check the hero.** The `featured_image` is shown in a wide, cropped box. If
+   the crop cuts the subject, set `params.hero_position` to a CSS
+   object-position — `"50% 22%"` moves the window towards the top of the
+   photo. Look at it on a wide screen and on a phone.
+6. **Mark what is missing** with `{{< todo "what goes here" >}}`, never a literal
+   TODO: it shows under `hugo server` and warns in a production build, which
+   stops a deploy until the text is written.
+7. **Check** under `hugo server` (or a `hugo -d` build): a photo placed twice, a
+   photo of another project, an unknown id, a malformed outing date or a lead
+   photo from another day are build errors naming the file and line; an outing
+   for a day without photos is a warning.
+
+Nothing here touches URLs: `#grid` and the chapter anchors are fragments, so
+`tests/golden/published-urls.txt` does not change when a project switches.
+
+The four `demo-*` projects under `content/gallery/projects/` exist only to show
+the layouts. They are unlisted; delete their folders when they are no longer
+needed — nothing else refers to them.
+
 ## A route map in a post
 
 `{{< map coordinates="…" route="<name>" >}}` draws a committed route over the

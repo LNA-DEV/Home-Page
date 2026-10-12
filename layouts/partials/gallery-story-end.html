@@ -1,0 +1,15 @@
+{{- /*
+  gallery-story-end.html
+  The end of a story: "That was all 28 photos." and the way to the grid
+  (docs/concepts/gallery-project-stories.md §6). The neighbouring projects follow
+  after the grid, in gallery-project-nav.html, the same on every layout.
+
+  Params: count, view ("story" | "journal")
+*/ -}}
+<footer class="story-end story-part">
+  <div class="story-end-text">
+    <p class="story-end-all">{{ T "story_that_was_all" .count }}</p>
+    <p class="story-end-prefer">{{ i18n (printf "%s_prefer_grid" .view) }}</p>
+    <a class="story-button" href="#grid">{{ i18n "story_show_as_grid" }}</a>
+  </div>
+</footer>

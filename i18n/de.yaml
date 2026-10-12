@@ -657,3 +657,74 @@
   translation: "Porträt"
 - id: category_others
   translation: "Sonstiges"
+
+# Projektgeschichten — Galerieprojekte mit project_layout essay oder journal
+# (docs/concepts/gallery-project-stories.md §5.8)
+- id: speciesCount
+  translation:
+    one: "1 Art"
+    other: "{{ . }} Arten"
+- id: outingCount
+  translation:
+    one: "1 Ausflug"
+    other: "{{ . }} Ausflüge"
+- id: story_view_story
+  translation: "Geschichte"
+- id: story_view_journal
+  translation: "Tagebuch"
+- id: story_view_grid
+  translation: "Raster"
+- id: story_toggle_label
+  translation: "Ansicht"
+- id: story_show_as_grid
+  translation: "Als Raster zeigen"
+- id: story_prefer_grid
+  translation: "Lieber ohne die Geschichte durchblättern?"
+- id: journal_prefer_grid
+  translation: "Lieber ohne das Tagebuch durchblättern?"
+- id: story_that_was_all
+  translation:
+    one: "Das war das eine Foto."
+    other: "Das waren alle {{ . }} Fotos."
+- id: story_more_from_project
+  translation: "Mehr aus diesem Projekt"
+- id: story_more_from_outing
+  translation: "Mehr von diesem Ausflug"
+- id: story_species_in_project
+  translation: "Arten in diesem Projekt"
+- id: story_species_in_chapter
+  translation: "Arten in diesem Kapitel"
+- id: story_species_in_dex
+  translation:
+    one: "1 Foto im Foto-Dex"
+    other: "{{ . }} Fotos im Foto-Dex"
+- id: project_previous
+  translation: "Vorheriges Projekt"
+- id: project_next
+  translation: "Nächstes Projekt"
+- id: project_nav_label
+  translation: "Weitere Projekte"
+- id: story_contents
+  translation: "Kapitel"
+- id: story_grid_heading
+  translation: "Alle Fotos"
+- id: story_map
+  translation: "Karte"
+- id: story_map_note
+  translation: "Die Gebiete sind absichtlich grob gezeichnet, damit brütende Greifvögel ungestört bleiben."
+- id: story_map_show_area
+  translation: "{{ .area }} auf der Karte zeigen"
+- id: story_undated
+  translation: "Undatiert"
+- id: story_period
+  translation: "{{ .from }} bis {{ .to }}"
+- id: story_todo
+  translation: "Noch zu schreiben:"
+- id: journal_summary
+  translation: "{{ .photos }}, {{ .outings }} und {{ .species }}"
+- id: journal_summary_nospecies
+  translation: "{{ .photos }}, {{ .outings }}"
+- id: journal_order_desc
+  translation: "Neueste zuerst."
+- id: journal_order_asc
+  translation: "Älteste zuerst."

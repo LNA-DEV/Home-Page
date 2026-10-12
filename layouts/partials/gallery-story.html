@@ -1,0 +1,62 @@
+{{- /*
+  gallery-story.html
+  A gallery project whose front matter sets project_layout: essay or journal
+  (docs/concepts/gallery-project-stories.md). Dispatched from the
+  gallery-project branch of page.html and single.html; `grid` and a missing key
+  never get here and render exactly the page they always had.
+
+  .Content is rendered FIRST, into a variable: the story shortcodes record what
+  they placed in the page Store while it renders, and everything below reads
+  that record (§4). Then the checks that need the whole page — a photo placed
+  twice, a hero that is not the project's — and the layout.
+*/ -}}
+{{- $content := .Content -}}
+{{- $data := partialCached "gallery-story-data.html" . .RelPermalink -}}
+{{- $layout := .Params.project_layout -}}
+{{- $file := .RelPermalink -}}
+{{- with .File }}{{ $file = printf "content/%s" .Path }}{{ end -}}
+
+{{- if not $data.slug -}}
+  {{- errorf "%s: project_layout %s needs params.project_slug" $file $layout -}}
+{{- end -}}
+
+{{- /* The hero is the featured_image, and it counts as placed. */ -}}
+{{- with .Params.featured_image -}}
+  {{- if not $data.hero -}}
+    {{- errorf "%s: featured_image %s is not a photo of project %q — a story's hero is one of its own photos" $file . $data.slug -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* The areas the map draws: the front matter's list, every slug a record
+       in data/galleryAreas.yaml. */ -}}
+{{- $areaIndex := partialCached "gallery-areas.html" . site.Language.Lang -}}
+{{- $areas := slice -}}
+{{- range .Params.areas | default slice -}}
+  {{- with index $areaIndex . -}}
+    {{- $areas = $areas | append . -}}
+  {{- else -}}
+    {{- errorf "%s: area %q is not a slug in data/galleryAreas.yaml" $file . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Every photo at most once: two placements of one id, or a placement of
+       the hero, is an editing mistake. A photo placed nowhere is not — an
+       essay leaves it to "More from this project". */ -}}
+{{- $seen := dict -}}
+{{- with $data.hero }}{{ $seen = dict .Id 1 }}{{ end -}}
+{{- range $key, $id := .Store.Get "storyPlaced" | default dict -}}
+  {{- $n := add (index $seen $id | default 0) 1 -}}
+  {{- if eq $n 2 -}}
+    {{- $title := "" -}}
+    {{- with index $data.byId $id }}{{ $title = .Title }}{{ end -}}
+    {{- errorf "%s: photo %s (%q) appears twice in the story%s — every photo is shown exactly once" $file $id $title (cond (and $data.hero (eq $id $data.hero.Id)) ", once as the hero (featured_image)" "") -}}
+  {{- end -}}
+  {{- $seen = merge $seen (dict $id $n) -}}
+{{- end -}}
+
+{{- $ctx := dict "page" . "content" $content "data" $data "areas" $areas "seen" $seen -}}
+{{- if eq $layout "essay" -}}
+  {{- partial "gallery-story-essay.html" $ctx -}}
+{{- else -}}
+  {{- partial "gallery-story-journal.html" $ctx -}}
+{{- end -}}
