@@ -13,7 +13,7 @@ import { test, expect } from "@playwright/test";
 import fs from "node:fs";
 import path from "node:path";
 import {
-  REPO, LANGS, asList, gallery, models, sitePath, readSiteFile, eachHtml, jsonLdBlocks,
+  REPO, LANGS, SITE_BASE, asList, gallery, models, sitePath, readSiteFile, eachHtml, jsonLdBlocks, xmlFiles,
 } from "../support/site";
 
 const VISIBILITIES = ["public", "unlisted", "hidden"];
@@ -234,5 +234,112 @@ test.describe("the model page itself", () => {
       const feed = sitePath(lang, "gallery", "models", "index.xml");
       expect(fs.existsSync(feed), `${lang}/gallery/models/index.xml should not exist — the stub sets outputs: [HTML]`).toBe(false);
     }
+  });
+});
+
+test.describe("the gallery feed", () => {
+  /* The feed hands the autouploader in HomePageCompanion the people in each
+     photo, so it can tag them. The contract is that repo's
+     docs/concepts/autouploader-model-tags.md: only `public` people, always the
+     name, the page and every profile, and `autotag` spelled out as "true" or
+     "false". A wrong entry here is a person tagged without having agreed to it,
+     or named in a listing they were kept out of. */
+
+  const NS = 'xmlns:lna="https://lna-dev.net/ns/gallery/1"';
+
+  const decode = (s: string) =>
+    s
+      .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+      .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(Number(d)))
+      .replace(/&quot;/g, '"').replace(/&apos;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
+      .replace(/&amp;/g, "&");
+  /* html/template percent-encodes URL attributes; compare the decoded form. */
+  const url = (u: string) => {
+    try { return decodeURI(u); } catch { return u; }
+  };
+  const attrs = (tag: string) => {
+    const out: Record<string, string> = {};
+    for (const m of tag.matchAll(/([\w:-]+)="([^"]*)"/g)) out[m[1]] = decode(m[2]);
+    return out;
+  };
+
+  test("every item names exactly the public people in the photo, as data/models.yaml has them", () => {
+    const records = new Map((models() as any[]).map((m) => [m.slug, m]));
+    const photos = new Map(gallery().map((e) => [e.id, e]));
+    const bad: string[] = [];
+    let named = 0;
+
+    for (const lang of LANGS) {
+      const file = path.join(lang, "gallery", "index.xml");
+      const xml = readSiteFile(file);
+      if (!xml.includes(NS)) bad.push(`${file}: does not declare ${NS} — gofeed files the elements under the declared prefix`);
+
+      const seen = new Set<string>();
+      for (const [, item] of xml.matchAll(/<item>([\s\S]*?)<\/item>/g)) {
+        const id = item.match(/<guid[^>]*>([^<]+)<\/guid>/)?.[1]?.trim() ?? "";
+        const photo = photos.get(id);
+        if (!photo) continue;
+        seen.add(id);
+
+        const expected = [...new Set(asList(photo.model))]
+          .map((s) => records.get(s))
+          .filter((m) => m?.visibility === "public")
+          .map((m) => ({
+            slug: m.slug,
+            name: m.name,
+            url: `${SITE_BASE}/${lang}/gallery/models/${m.slug}/`,
+            autotag: m.autotag === true ? "true" : "false",
+            profiles: (m.links ?? []).map((l: any) => ({ platform: String(l.name).toLowerCase(), url: url(String(l.url).trim()) })),
+          }));
+
+        const actual = [...item.matchAll(/<lna:model\b([^>]*?)(?:\/>|>([\s\S]*?)<\/lna:model>)/g)].map((m) => {
+          const a = attrs(m[1]);
+          return {
+            slug: a.slug, name: a.name, url: url(a.url ?? ""), autotag: a.autotag,
+            profiles: [...(m[2] ?? "").matchAll(/<lna:profile\b([^>]*?)\/>/g)].map((p) => {
+              const pa = attrs(p[1]);
+              return { platform: pa.platform, url: url(pa.url ?? "") };
+            }),
+          };
+        });
+        const credits = [...item.matchAll(/<media:credit role="performer">([^<]*)<\/media:credit>/g)].map((m) => decode(m[1]));
+
+        named += actual.length;
+        try {
+          expect(actual).toEqual(expected);
+          expect(credits).toEqual(expected.map((e) => e.name));
+        } catch {
+          bad.push(`${file} ${id} (${photo.src}):\n    expected ${JSON.stringify(expected)}\n    got      ${JSON.stringify(actual)} credits ${JSON.stringify(credits)}`);
+        }
+      }
+
+      /* Every current photo of a public person has to be in the feed at all,
+         or the equality above is checked on nothing. */
+      for (const e of gallery()) {
+        if (e.section === "archive") continue;
+        if (!asList(e.model).some((s) => records.get(s)?.visibility === "public")) continue;
+        if (!seen.has(e.id)) bad.push(`${file}: no item for ${e.src}, which shows a public person`);
+      }
+    }
+    expect(bad.slice(0, 10), `${bad.length} problem(s)\n${bad.slice(0, 10).join("\n")}`).toEqual([]);
+
+    const shown = gallery().some(
+      (e) => e.section !== "archive" && asList(e.model).some((s) => records.get(s)?.visibility === "public"),
+    );
+    if (shown) expect(named, "the data has public people on current photos, but no feed names any of them").toBeGreaterThan(0);
+  });
+
+  test("a hidden record appears in no XML file", () => {
+    /* The HTML check above does not read feeds or sitemaps. */
+    const hidden = byVisibility("hidden");
+    test.skip(hidden.length === 0, "no record is hidden today — the check is written for when one is");
+
+    const needles = hidden.flatMap((m) => [m.slug, m.name].filter(Boolean) as string[]);
+    const hits: string[] = [];
+    for (const f of xmlFiles()) {
+      const xml = readSiteFile(f);
+      for (const n of needles) if (xml.includes(n)) hits.push(`${f}: contains ${JSON.stringify(n)}`);
+    }
+    expect(hits.slice(0, 20), `${hits.length} occurrence(s)\n${hits.slice(0, 20).join("\n")}`).toEqual([]);
   });
 });

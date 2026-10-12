@@ -183,6 +183,27 @@
     {{- if and (ne $vis "hidden") (not $record.name) -}}
       {{- errorf "data/models.yaml: model %q has no `name:` — the display name lives here and nowhere else (only a `hidden` record may omit it)" $mslug -}}
     {{- end -}}
+    {{- /* `autotag:` is consent to being tagged by the autouploader, which reads
+           it from the gallery feed. A bool and nothing else: `autotag: "true"`
+           or `yes` is a typo of a decision, and model-lookup.html reads anything
+           that is not a literal true as no consent. */ -}}
+    {{- if and (isset $record "autotag") (ne (printf "%T" $record.autotag) "bool") -}}
+      {{- errorf "data/models.yaml: model %q has `autotag: %#v` — it is true or false, unquoted, nothing else" $mslug $record.autotag -}}
+    {{- end -}}
+    {{- /* The feed hands the links to the autouploader as {platform, url}, and
+           the companion takes the platform from the icon key and the handle from
+           the URL — so both have to be there, and the URL absolute. */ -}}
+    {{- if ne $vis "hidden" -}}
+      {{- range $l := ($record.links | default slice) -}}
+        {{- $u := trim (printf "%v" ($l.url | default "")) " " -}}
+        {{- if not $l.name -}}
+          {{- errorf "data/models.yaml: model %q has a link without `name:` (the icon key, e.g. instagram) — url %q" $mslug $u -}}
+        {{- end -}}
+        {{- if not (or (hasPrefix $u "https://") (hasPrefix $u "http://")) -}}
+          {{- errorf "data/models.yaml: model %q has a link whose `url:` is not an absolute http(s) URL (got %q)" $mslug $u -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
     {{- $modelSlugs = merge $modelSlugs (dict $mslug true) -}}
 
     {{- /* The spellings a tag naming this person would take — the slug and the

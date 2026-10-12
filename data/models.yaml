@@ -37,6 +37,16 @@
 #                         …; unknown keys fall back to a chain-link glyph).
 #   cover       optional  A gallery photo UUID to use as the hero. Falls back to
 #                         the first portfolio photo, then the newest.
+#   autotag     optional  true | false (default false). Consent to being tagged
+#                         by the autouploader (HomePageCompanion) when it posts
+#                         a photo of this person. A bool and nothing else.
+#
+# THE GALLERY FEED
+#   For every `public` person in a photo, the gallery RSS carries the name, the
+#   page URL, `autotag` and every link as a profile - whatever `autotag` says;
+#   the uploader tags only on `autotag: true`. `unlisted` and `hidden` people
+#   never appear in it. Contract: HomePageCompanion's
+#   docs/concepts/autouploader-model-tags.md.
 #
 # TWO THINGS THAT MUST NOT GO IN THIS FILE
 #   - Contact details of any kind. This repository is public, so everything here

@@ -45,7 +45,7 @@
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 {{- if eq .Section "gallery" }}
 
-<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:lna="https://lna-dev.net/ns/gallery/1">
   <channel>
     <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
     <link>{{ .Permalink }}</link>
@@ -71,8 +71,27 @@
            UUID and the link its anchor on the gallery page, and both have to stay
            stable or every reader re-shows the whole feed. */ -}}
     {{- $c := partialCached "gallery-collected.html" . site.Language.Lang -}}
+    {{- $modelLookup := partialCached "model-lookup.html" (dict "lang" site.Language.Lang) site.Language.Lang -}}
     {{- range $c.all -}}
     {{- if ne .Section "archive" -}}
+    {{- /* The people in the photo, for the autouploader in HomePageCompanion,
+           which tags them on the target platform when `autotag` is true. The
+           contract is HomePageCompanion's docs/concepts/autouploader-model-tags.md;
+           change it in both repos or not at all. gofeed files the elements under
+           the prefix this feed declares, so `lna` is part of it.
+
+           `public` ONLY, as an allowlist: model-lookup.html also returns
+           `unlisted` people, whose name the photo pages show — but a feed is a
+           listing, and feed readers keep every item they have seen. The name and
+           the profiles are always given; `autotag` alone says whether to tag. */ -}}
+    {{- $people := slice -}}
+    {{- range .Models -}}
+      {{- with index $modelLookup . -}}
+        {{- if eq .visibility "public" -}}
+          {{- $people = $people | append . -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
 
     <item>
       <title>{{ .Title }}</title>
@@ -84,6 +103,16 @@
       <guid isPermaLink="false">{{ .Id }}</guid>
       {{ $full := .image.Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) }}
       <media:content url="{{ $full.Permalink }}" type="image/jpeg"/>
+      {{- range $people }}
+      <media:credit role="performer">{{ .name }}</media:credit>
+      {{- end }}
+      {{- range $people }}
+      <lna:model slug="{{ .slug }}" name="{{ .name }}" url="{{ .permalink }}" autotag="{{ cond (eq .autotag true) "true" "false" }}">
+        {{- range .profiles }}
+        <lna:profile platform="{{ .platform }}" url="{{ .url }}"/>
+        {{- end }}
+      </lna:model>
+      {{- end }}
       <description>
         <img src="{{ $full.Permalink }}" alt="{{ .Alt }}"/>
         {{- if and .Description (ne .Description .Alt) }}

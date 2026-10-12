@@ -180,7 +180,7 @@ The two meet at its embedding step, where metadata is written into every file un
 
 - **No per-model licence handling.** The rights sentence is text; enforcing `all rights reserved` on model photos would be a rule in `collect-images.html` and is the open decision, not part of the build.
 - **No model release storage.** `consent:` is a date, not a document. Signed releases live wherever the author keeps contracts, not in a public repository.
-- **No changes to the feed or the RSS.** Adapter pages are not `posts`, so the activity feed never sees them; the section RSS at `/gallery/models/index.xml` will list public model pages by default, which is harmless and can be turned off with `outputs` on the section stub if unwanted.
+- **No changes to the feed or the RSS.** Adapter pages are not `posts`, so the activity feed never sees them; the section RSS at `/gallery/models/index.xml` will list public model pages by default, which is harmless and can be turned off with `outputs` on the section stub if unwanted. *(Later, 2026-10-12: the gallery RSS now names the `public` people in each photo, with their profiles and an `autotag` consent flag, for the autouploader in HomePageCompanion — see CLAUDE.md, Models, and that repo's `docs/concepts/autouploader-model-tags.md`.)*
 - **No photographer profiles.** `artist:` stays a string. A page per *photographer* is a different feature with the same shape and could reuse everything here, but the request was about the people in front of the lens.
 
 ## 9. Cost

@@ -4,7 +4,19 @@
 
   Returns a dict keyed by slug:
 
-    { "jane-doe": { "name": "Jane Doe", "url": "/de/gallery/models/jane-doe/" } }
+    { "jane-doe": { "slug": "jane-doe", "name": "Jane Doe",
+                    "url": "/de/gallery/models/jane-doe/",
+                    "permalink": "https://lna-dev.net/de/gallery/models/jane-doe/",
+                    "visibility": "public", "autotag": false,
+                    "profiles": [{"platform": "instagram", "url": "https://…"}] } }
+
+  `url`, `name` and `visibility` are what a caption needs. `permalink`,
+  `autotag` and `profiles` exist for the gallery feed (rss.xml), which hands the
+  autouploader in HomePageCompanion everything it needs to tag a person — and
+  which filters to `public` itself, because a feed is a listing. `autotag` is a
+  bool and true ONLY for a literal YAML `autotag: true`: anything else, a string
+  "true" included, reads as no consent (gallery-meta.html stops the build on a
+  non-bool). `profiles` is `links:` with the icon key lowercased into `platform`.
 
   Deliberately NOT model-index.html: that partial joins every record against
   every gallery photo, and a caption needs a name and a URL. gallery.html renders
@@ -38,10 +50,24 @@
          publish a name on every photo caption the moment `visibility:` is
          misspelled, and errorf does not stop the build from writing those files. */ -}}
   {{- if and $record.slug $record.name (in (slice "public" "unlisted") ($record.visibility | default "")) -}}
+    {{- $autotag := and (eq (printf "%T" $record.autotag) "bool") $record.autotag -}}
+    {{- $profiles := slice -}}
+    {{- range $l := ($record.links | default slice) -}}
+      {{- $platform := lower (printf "%v" ($l.name | default "")) -}}
+      {{- $u := trim (printf "%v" ($l.url | default "")) " " -}}
+      {{- if and $platform $u -}}
+        {{- $profiles = $profiles | append (dict "platform" $platform "url" $u) -}}
+      {{- end -}}
+    {{- end -}}
     {{- with site.GetPage (printf "/gallery/models/%s" $record.slug) -}}
       {{- $out.SetInMap "m" $record.slug (dict
-            "name" $record.name
-            "url"  .RelPermalink
+            "slug"       $record.slug
+            "name"       $record.name
+            "url"        .RelPermalink
+            "permalink"  .Permalink
+            "visibility" $record.visibility
+            "autotag"    $autotag
+            "profiles"   $profiles
           ) -}}
     {{- end -}}
   {{- end -}}
