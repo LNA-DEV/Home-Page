@@ -61,8 +61,18 @@
        cannot know -- the page language, by contrast, it knows perfectly well, and
        it is passed down as data-page-lang rather than re-derived from the URL.
 
-       `nonce` is the honeypot field from Listmonk's own generated form: it must
-       stay empty (a filled one is treated as a bot). Keep it as Listmonk ships it.
+       `nonce` is Listmonk's honeypot: its form handler answers a post with a
+       non-empty `nonce` with 502 and subscribes nobody, before it even looks at
+       the captcha (v6.2.0). The NAME is Listmonk's and must stay. The field is
+       not shipped the way Listmonk ships it: its generated form makes it
+       type="hidden", and a form-filling bot leaves a hidden field alone -- it
+       fills the fields it can see -- so as shipped it caught nothing. Here it is
+       a text field moved off-screen by CSS (.newsletter-hp; not display:none,
+       which bots check for as well), out of the tab order, without autofill and
+       hidden from screen readers, so no person ever puts anything in it.
+       newsletter.js posts it along with the rest and leaves the verdict to
+       Listmonk, which is also who sees it when a bot submits the form without
+       running the script.
 
        Checkboxes wrap their label instead of using id/for, so two instances on
        one page cannot collide on duplicate ids. */ -}}
@@ -103,8 +113,10 @@
 {{- end }}
 
   <form class="newsletter-form" method="post" action="{{ $data.url }}" data-captcha="{{ $data.captcha }}">
-    {{- /* honeypot -- left empty by humans, filled by bots */}}
-    <input type="hidden" name="nonce" />
+    {{- /* honeypot -- left empty by humans, filled by bots; see the top */}}
+    <div class="newsletter-hp" aria-hidden="true">
+      <input type="text" name="nonce" value="" tabindex="-1" autocomplete="off" />
+    </div>
     <input type="hidden" name="next" value="{{ "" | absLangURL }}" />
 
     <p class="newsletter-text">{{ .text | default (i18n "newsletter_text") }}</p>

@@ -53,6 +53,18 @@ html:not(.js) .newsletter-cta {
   background: var(--entry);
 }
 
+/* The honeypot (newsletter-form.html). Moved off-screen, not display:none and
+   not type="hidden": a bot skips both, and catching a bot that fills it in is
+   the field's only job. Out of flow, so the form's layout does not see it; to
+   the left, where overflow never makes a scrollbar. */
+.newsletter-hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .newsletter-text {
   margin: 0 0 12px;
   color: var(--secondary);

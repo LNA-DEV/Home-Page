@@ -35,6 +35,8 @@ test("a successful subscription renders the done state", async ({ page, probe })
   expect(listmonk.posted[0]).toContain("example.invalid");
   /* ALTCHA is off (the challenge 404s), so there is nothing to send. */
   expect(new URLSearchParams(listmonk.posted[0]).has("altcha")).toBe(false);
+  /* The honeypot goes along, empty: listmonk is the one that checks it. */
+  expect(new URLSearchParams(listmonk.posted[0]).get("nonce")).toBe("");
 
   /* And nothing else left the machine. */
   const stray = probe.network.blocked.filter((u) => !/muninn\.lna-dev\.net/.test(u));
@@ -70,6 +72,30 @@ test("a failing subscription renders the inline error", async ({ page, probe }) 
 
   await expect(page.locator("dialog.newsletter-modal .newsletter-status").first()).toBeVisible();
   await expect(page.locator("dialog.newsletter-modal .newsletter-done").first()).toBeHidden();
+});
+
+test("the honeypot is out of reach and a filled one reaches listmonk", async ({ page, probe }) => {
+  void probe;
+  const listmonk = await mockListmonk(page);
+  const form = await openForm(page);
+  const honeypot = form.locator('input[name="nonce"]');
+
+  /* A text field a bot fills in, which no person sees, tabs into or gets
+     autofilled. type="hidden", as listmonk ships it, is what bots skip. */
+  await expect(honeypot).toHaveAttribute("type", "text");
+  await expect(honeypot).toHaveAttribute("tabindex", "-1");
+  await expect(honeypot).toHaveAttribute("autocomplete", "off");
+  await expect(honeypot).not.toBeInViewport();
+
+  /* A bot fills every field it finds. The script posts the honeypot as it is,
+     listmonk answers 502, and the form shows its error, not the done state. */
+  await honeypot.evaluate((el: HTMLInputElement) => (el.value = "https://spam.example"));
+  await fillAndSubmit(page);
+
+  await expect(page.locator("dialog.newsletter-modal .newsletter-status").first()).toBeVisible();
+  await expect(page.locator("dialog.newsletter-modal .newsletter-done").first()).toBeHidden();
+  expect(listmonk.posted.length, "the form did not post").toBe(1);
+  expect(new URLSearchParams(listmonk.posted[0]).get("nonce")).toBe("https://spam.example");
 });
 
 test("without JavaScript the newsletter is not offered", async ({ browser }) => {

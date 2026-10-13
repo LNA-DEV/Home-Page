@@ -109,7 +109,10 @@ export const ALTCHA_NUMBER = 1234;
  *  listmonk does while ALTCHA is switched off. `captcha: true` serves a challenge
  *  made the way altcha-lib-go makes it — the salt carries `expires` and ends in
  *  `&`, the challenge is SHA-256(salt + number) in hex — with a fake signature,
- *  since the test checks what the page sends back, not the HMAC. */
+ *  since the test checks what the page sends back, not the HMAC.
+ *
+ *  A post with a non-empty `nonce` (the honeypot) is answered with 502, before
+ *  anything else, which is what listmonk's form handler does (v6.2.0). */
 export async function mockListmonk(page: Page, opts: { fail?: boolean; captcha?: boolean } = {}) {
   const posted: string[] = [];
   const challenges: string[] = [];
@@ -131,7 +134,10 @@ export async function mockListmonk(page: Page, opts: { fail?: boolean; captcha?:
   });
   await page.route(`${LISTMONK}/subscription/form*`, (route) => {
     if (route.request().method() !== "POST") return route.abort();
-    posted.push(route.request().postData() ?? "");
+    const body = route.request().postData() ?? "";
+    posted.push(body);
+    if (new URLSearchParams(body).get("nonce"))
+      return route.fulfill({ status: 502, contentType: "text/html", body: "<p>invalid</p>" });
     return opts.fail
       ? route.fulfill({ status: 500, contentType: "text/html", body: "<p>nope</p>" })
       : route.fulfill({ contentType: "text/html", body: "<p>ok</p>" });

@@ -263,9 +263,11 @@
     });
 
     async function send() {
+      // Listmonk's honeypot (newsletter-form.html). Posted whatever it holds and
+      // judged by Listmonk, not here: a filled one comes back as 502 and shows
+      // the inline error, where returning quietly would leave a person whose
+      // browser filled it waiting on a form that does nothing.
       const honeypot = form.querySelector('input[name="nonce"]');
-      if (honeypot && honeypot.value) return; // a bot filled it in
-
       const email = form.querySelector('input[name="email"]');
       const name = form.querySelector('input[name="name"]');
       const lists = checkedLists();
@@ -297,6 +299,7 @@
         const body = new URLSearchParams();
         body.set("email", email.value);
         if (name) body.set("name", name.value);
+        if (honeypot) body.set("nonce", honeypot.value);
         for (const uuid of lists) body.append("l", uuid);
         if (solution) body.set("altcha", solution);
 
@@ -316,7 +319,8 @@
         }
         // Listmonk answers with an HTML page in Listmonk's language, not the
         // visitor's, so only the status goes to the console and the visitor
-        // gets the translated message. 400 is also a rejected captcha.
+        // gets the translated message. 400 is also a rejected captcha, 502 a
+        // filled honeypot.
         console.warn("newsletter:", res.status, res.statusText);
         track("Newsletter Error", { reason: String(res.status) });
         showError(true);
