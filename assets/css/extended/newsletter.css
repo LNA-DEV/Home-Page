@@ -169,6 +169,17 @@ html:not(.js) .newsletter-cta {
   background: rgba(0, 0, 0, 0.55);
 }
 
+/* A modal dialog makes the page inert but does not stop it scrolling: a wheel
+   or swipe over the backdrop still moves the page underneath. Taking the
+   overflow away from the root while the dialog is open locks it, with no JS
+   to keep in step with every way the dialog can close (X, ESC, backdrop).
+   The gutter is kept so a classic scrollbar vanishing does not shift the
+   header sideways. */
+html:has(.newsletter-modal:modal) {
+  overflow: hidden;
+  scrollbar-gutter: stable;
+}
+
 /* Inside the modal the card styling would be a box within a box: the dialog
    already IS the frame. Only the padding is kept. */
 .newsletter-modal .newsletter--open {
