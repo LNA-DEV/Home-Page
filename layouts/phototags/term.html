@@ -59,7 +59,7 @@
 <section class="photo-related photo-tag-grid">
   <ul>
     {{- range $i, $it := $items }}
-    {{- $t := $it.photo.image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
+    {{- $t := partial "image-variant.html" (dict "image" $it.photo.image "spec" "fit 600x600") }}
     <li>
       <a href="{{ $it.url }}">
         <img {{ if ge $i 8 }}loading="lazy" {{ end }}src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}" alt="{{ $it.photo.Alt }}" />

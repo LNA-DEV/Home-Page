@@ -71,7 +71,7 @@
 
   {{- with $data.hero }}
   {{- $url := partial "story/url.html" . }}
-  {{- $thumb := .image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
+  {{- $thumb := partial "image-variant.html" (dict "image" .image "spec" "fit 600x600") }}
   {{- /* The hero is a fixed box, so it crops. hero_position (front matter, a
          CSS object-position such as "50% 20%") moves the crop to keep the
          subject whole; the default is the centre. */}}

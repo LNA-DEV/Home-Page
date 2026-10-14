@@ -11,7 +11,7 @@
 {{- $id := "" -}}{{- with $meta }}{{ $id = .id }}{{ end -}}
 {{- $galleryPage := site.GetPage "/gallery/general" -}}
 {{- $link := printf "%s#%s" $galleryPage.Permalink $id -}}
-{{- $image := .Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
+{{- $image := partial "image-variant.html" (dict "image" . "spec" "fit 600x600") -}}
 {{- $alt := "" -}}
 {{- with index $collected.byId $id }}{{ $alt = .Alt }}{{ end -}}
 <div class="responsive">

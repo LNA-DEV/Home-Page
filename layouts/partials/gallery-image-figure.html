@@ -37,20 +37,24 @@
 {{- end -}}
 {{- $item := index $matches 0 -}}
 
-{{- /* AutoOrient first, always — EXIF rotation is not applied otherwise. */ -}}
-{{- $src := $item.image.Filter images.AutoOrient -}}
-
 {{- /* Width-constrained variants. The height cap is deliberately 10x the width so
        `fit` bounds the width alone; a tall portrait then stays full-width instead
-       of being shrunk to a square the way the gallery grid's `fit 600x600` does. */ -}}
+       of being shrunk to a square the way the gallery grid's `fit 600x600` does.
+       One chain per variant (image-variant.html), AutoOrient included — the
+       former two-step `(.Filter AutoOrient).Process` re-encoded an intermediate
+       JPEG and could not share a name with anything else. */ -}}
+{{- $full := partial "image-variant.html" (dict "image" $item.image "spec" "fit 4000x4000") -}}
+{{- $width := (partial "gallery-oriented-size.html" (dict "image" $item.image "full" $full)).w -}}
 {{- $variants := slice -}}
 {{- range slice 480 720 1080 1440 -}}
-  {{- if le . $src.Width -}}
-    {{- $variants = $variants | append ($src.Process (printf "fit %dx%d" . (mul . 10))) -}}
+  {{- if le . $width -}}
+    {{- $variants = $variants | append (partial "image-variant.html" (dict "image" $item.image "spec" (printf "fit %dx%d" . (mul . 10)))) -}}
   {{- end -}}
 {{- end -}}
+{{- /* A photo narrower than 480px: its one fit variant at its own width, never
+       the original, which would carry the full-size file into the page. */ -}}
 {{- if not $variants -}}
-  {{- $variants = slice $src -}}
+  {{- $variants = slice (partial "image-variant.html" (dict "image" $item.image "spec" (printf "fit %dx%d" $width (mul $width 10)))) -}}
 {{- end -}}
 
 {{- /* src points at the 720px variant where it exists, so a client that ignores
@@ -104,8 +108,7 @@
     width="{{ $primary.Width }}" height="{{ $primary.Height }}"
     alt="{{ $alt }}"
     loading="{{ if eq (.loading | default "lazy") "eager" }}eager{{ else }}lazy{{ end }}"
-    decoding="async"
-    itemprop="contentUrl" />
+    decoding="async" />
   {{- if $href }}</a>{{ end }}
   {{- if or $caption $exif }}
   <figcaption>
@@ -113,6 +116,9 @@
     {{- with $exif }}<span class="gallery-image-exif">{{ delimit . " · " }}</span>{{ end }}
   </figcaption>
   {{- end }}
+  {{- /* The photo's one contentUrl, the 4000px variant — the same URL its photo
+         page, the grids and the image sitemap name (stable-image-urls.md §3). */}}
+  <meta itemprop="contentUrl" content="{{ $full.Permalink }}" />
   {{- with $item.Title }}<meta itemprop="name" content="{{ . }}" />{{ end }}
   {{- with $alt }}<meta itemprop="description" content="{{ . }}" />{{ end }}
   {{- with $item.DateTaken }}<meta itemprop="dateCreated" content="{{ . }}" />{{ end }}

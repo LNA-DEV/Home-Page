@@ -58,7 +58,7 @@
       {{- /* The ratio on the block too: the photo's column is sized from it, so
              a portrait that is capped to the screen's height takes a narrower
              column instead of leaving a gap before the text. */ -}}
-      {{- $thumb := $item.image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
+      {{- $thumb := partial "image-variant.html" (dict "image" $item.image "spec" "fit 600x600") -}}
       {{- $ratio := div (mul $thumb.Width 1.0) $thumb.Height -}}
       {{- $html = printf `<div class="story-split story-split-%s" style="--ratio: %.4f">%s%s</div>` $layout $ratio (cond (eq $layout "left") $fig $body) (cond (eq $layout "left") $body $fig) -}}
     {{- end -}}

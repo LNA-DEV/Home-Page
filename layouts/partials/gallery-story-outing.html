@@ -36,7 +36,7 @@
        below a short text. */ -}}
 {{- $ratio := 1.5 -}}
 {{- with index $photos 0 -}}
-  {{- $t := .image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
+  {{- $t := partial "image-variant.html" (dict "image" .image "spec" "fit 600x600") -}}
   {{- $ratio = div (mul $t.Width 1.0) $t.Height -}}
 {{- end -}}
 

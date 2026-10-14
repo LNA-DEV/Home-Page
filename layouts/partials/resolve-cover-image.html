@@ -7,8 +7,9 @@
        Returns a dict:
          raw    the resource as it sits on disk, or false when the cover is an
                 external URL / a path with no matching resource
-         image  the same resource with EXIF rotation applied, or false when the
-                format is not processable (svg, …) — callers resize this one
+         image  the same resource when its format is processable, else false
+                (svg, …) — callers hand THIS one to image-variant.html (or
+                image-variants.html), which applies EXIF rotation itself
 
        The global lookup only runs when the page bundle has no match: it globs
        every image asset on the site, and with the gallery mounted that is 600+
@@ -31,8 +32,7 @@
     {{- $formats = $formats | append "webp" -}}
   {{- end -}}
   {{- if in $formats .MediaType.SubType -}}
-    {{- /* AutoOrient first, always — EXIF rotation is not applied otherwise. */ -}}
-    {{- $image = .Filter images.AutoOrient -}}
+    {{- $image = . -}}
   {{- end -}}
 {{- end -}}
 

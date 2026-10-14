@@ -14,7 +14,7 @@
 <a class="model-card" href="{{ $href }}">
   <div class="model-card__frame">
     {{- with $entry.cover -}}
-      {{- $thumb := .image.Filter (slice images.AutoOrient (images.Process "fill 480x480 Center")) -}}
+      {{- $thumb := partial "image-variant.html" (dict "image" .image "spec" "fill 480x480 Center") -}}
       <img class="model-card__image" src="{{ $thumb.RelPermalink }}"
            width="{{ $thumb.Width }}" height="{{ $thumb.Height }}"
            alt="{{ .Alt | default $entry.name }}" loading="lazy" decoding="async">

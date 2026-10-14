@@ -41,8 +41,8 @@
     {{- end -}}
 
     {{- if in $formats .MediaType.SubType -}}
-      {{- /* AutoOrient first, always — EXIF rotation is not applied otherwise. */ -}}
-      {{- $set := partial "image-variants.html" (dict "image" (.Filter images.AutoOrient)) -}}
+      {{- /* The raw resource: image-variant.html applies AutoOrient itself. */ -}}
+      {{- $set := partial "image-variants.html" (dict "image" . "page" $page) -}}
       {{- $list := slice -}}
       {{- range $set.variants -}}
         {{- $list = $list | append (printf "%s %dw" .RelPermalink .Width) -}}

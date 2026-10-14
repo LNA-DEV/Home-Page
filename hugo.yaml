@@ -91,6 +91,18 @@ outputFormats:
     path: ../_nginx
     isPlainText: true
     notAlternative: true
+  # The nginx redirect map for the OLD processed-image URLs, rendered from
+  # layouts/_default/home.nginxvariantmap.map out of the frozen history in
+  # data/legacyImageVariants.yaml: every `<dir>/_hu_<hash>` the site published
+  # before variants got stable names -> the variant's path now
+  # (docs/concepts/stable-image-urls.md §5). Same placement and the same rules as
+  # nginxmap: domain root, English only, no baseURL inside.
+  nginxvariantmap:
+    mediaType: text/x-nginx-conf
+    baseName: image-variant-redirects
+    path: ../_nginx
+    isPlainText: true
+    notAlternative: true
 
 mediaTypes:
   text/x-nginx-conf:
@@ -123,6 +135,7 @@ languages:
         # to be restated here or English alone would emit no manifest.
         - gallerymeta
         - nginxmap
+        - nginxvariantmap
     params:
       description: I'm Lukas Nagel (LNA-DEV), sharing insights on development, tech, photography, and more on this page which serves as my digital hub.
       homeInfoParams:

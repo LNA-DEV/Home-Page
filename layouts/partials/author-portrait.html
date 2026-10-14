@@ -8,7 +8,7 @@
 
       { resource, image, credit }
 
-  `image` is a fit 1200x1200 variant (AutoOrient first), shared by the Person's
+  `image` is the fit 1200x1200 variant (image-variant.html), shared by the Person's
   JSON-LD `image` and the About page's og:image, so both point at one file.
   `credit` is resource-credit.html's result. Cache per language — each language's
   About page is its own bundle:
@@ -17,11 +17,12 @@
 */ -}}
 {{- $out := dict -}}
 {{- with site.GetPage site.Params.author.page -}}
+  {{- $page := . -}}
   {{- range .Resources.ByType "image" -}}
     {{- if and .Params.portrait (not $out) -}}
       {{- $out = dict
             "resource" .
-            "image" (.Filter (slice images.AutoOrient (images.Process "fit 1200x1200")))
+            "image" (partial "image-variant.html" (dict "image" . "spec" "fit 1200x1200" "page" $page))
             "credit" (partial "resource-credit.html" .)
       -}}
     {{- end -}}

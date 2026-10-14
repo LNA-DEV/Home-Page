@@ -28,7 +28,12 @@ file's name, tags from the file, drone altitude, a phone's unedited frame
 
 The build publishes each photo under its English slug, not the store filename
 (same concept, §5), so a served file is mapped back to its photo through the
-manifest's `file` field, and to its source through `src`.
+manifest's `file` field, and to its source through `src`. A variant carries the
+same name as its original, one spec directory down
+(images/gallery/fit-600x600/<file>; docs/concepts/stable-image-urls.md §4), so
+WHERE a file sits says whether it is a variant, and anything this pass cannot
+place -- a deeper directory, a Hugo `_hu_` name, a name no photo has -- aborts
+the run before a single file is written.
 
 Two modes:
 
@@ -55,8 +60,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from gallery_common import (  # noqa: E402
     PHOTOS_SETUP_HINT,
     photos_dir_from_hugo_mounts,
-    published_base,
     repo_root,
+    served_gallery_files,
 )
 
 # Where the gallery lives inside the build output, and how a manifest is named.
@@ -392,19 +397,15 @@ def photo_args(record, languages, target, source, year, copy_exif, is_variant,
     return args
 
 
-def is_variant(record, target):
-    """True for a rendered variant, False for the published original.
-
-    The original is published under the photo's `file` name; every variant is
-    that name with Hugo's `_hu_<hash>` marker.
-    """
-    return target.name != record[DEFAULT_LANG]["file"]
-
-
 def build_argfile(jobs, languages, years, copyable, original_copyable=frozenset()):
-    """The whole run as one exiftool argument file, commands split by -execute."""
+    """The whole run as one exiftool argument file, commands split by -execute.
+
+    `jobs` is a list of (record, target, source, is_variant). Whether a file is a
+    variant is decided once, by where it sits (served_gallery_files), and never
+    again from its name: a variant is named exactly like its original.
+    """
     lines = []
-    for record, target, source in jobs:
+    for record, target, source, variant in jobs:
         # No build-year fallback: an unknown year means no year in the notice.
         year = years.get(source.name) or record[DEFAULT_LANG].get("dateTaken", "")[:4]
         lines.append("-overwrite_original")
@@ -414,7 +415,7 @@ def build_argfile(jobs, languages, years, copyable, original_copyable=frozenset(
         lines.append("-charset")
         lines.append("filename=UTF8")
         lines.extend(photo_args(record, languages, target, source, year,
-                                source.name in copyable, is_variant(record, target),
+                                source.name in copyable, variant,
                                 source.name in original_copyable))
         lines.append("-execute")
     return "\n".join(lines) + "\n"
@@ -582,32 +583,38 @@ def scan_digest(path, limit=SCAN_PREFIX):
             fh.seek(length - 2, 1)
 
 
+def shown(target):
+    """A served file as a report names it: "fit-600x600/<file>" for a variant —
+    the bare name is the same for an original and all of its variants."""
+    return target.name if target.parent.name == "gallery" else f"{target.parent.name}/{target.name}"
+
+
 def do_check(exiftool, jobs, languages):
     """Read every served file back; compare it with the manifest. 0 = all good."""
     started = time.monotonic()
-    got = read_back(exiftool, [t for _, t, _ in jobs])
+    got = read_back(exiftool, [t for _, t, _, _ in jobs])
     bad = []
-    for record, target, _ in jobs:
+    for record, target, _, variant in jobs:
         rec = got.get(str(target))
         if rec is None:
-            bad.append((target.name, ["exiftool could not read it"]))
+            bad.append((shown(target), ["exiftool could not read it"]))
             continue
-        problems = check_file(rec, record, languages, is_variant(record, target))
+        problems = check_file(rec, record, languages, variant)
         if problems:
-            bad.append((target.name, problems))
+            bad.append((shown(target), problems))
     read_s = time.monotonic() - started
 
     # The one check that does not go through the name mapping: a published
     # original must carry exactly the pixels of the store file it claims to come
     # from. After the rename to slugs (§5), this is what proves every original
-    # sits under the right photo. Variants are right by construction — Hugo names
-    # each one after the resource it rendered.
+    # sits under the right photo. Variants are right by construction —
+    # image-variant.html names each one after the resource it rendered.
     started = time.monotonic()
-    originals = [(t, s) for r, t, s in jobs if not is_variant(r, t)]
+    originals = [(t, s) for _, t, s, variant in jobs if not variant]
     for target, source in originals:
         a, b = scan_digest(target), scan_digest(source)
         if not a or a != b:
-            bad.append((target.name, [f"pixels differ from the store file {source.name}"]))
+            bad.append((shown(target), [f"pixels differ from the store file {source.name}"]))
     hash_s = time.monotonic() - started
 
     if bad:
@@ -656,22 +663,32 @@ def main(argv=None):
     # Map every published file to its photo. An unmapped file aborts the run:
     # nothing goes online untagged, and a file the manifest does not know about
     # means the build and this pass disagree about what the gallery contains.
+    # So does a file that sits where no original or variant belongs — the walk
+    # is recursive because the variants live one spec directory down, and a
+    # walk of the top level alone would ship every one of them untagged.
+    files, misplaced = served_gallery_files(gallery)
+    if misplaced:
+        for problem in misplaced[:20]:
+            print(f"ERROR: cannot place published file: {problem}", file=sys.stderr)
+        more = len(misplaced) - 20
+        if more > 0:
+            print(f"       … and {more} more", file=sys.stderr)
+        die(f"{len(misplaced)} published path(s) are neither an original nor a variant "
+            "— nothing was written")
     jobs = []
     unmapped = []
     missing_sources = set()
-    for entry in sorted(os.scandir(gallery), key=lambda e: e.name):
-        if not entry.is_file():
-            continue
-        record = by_file.get(published_base(entry.name))
+    for path, variant in files:
+        record = by_file.get(path.name)
         if record is None:
-            unmapped.append(entry.name)
+            unmapped.append(shown(path))
             continue
         src = record[DEFAULT_LANG]["src"]
         source = args.photos / src
         if not source.is_file():
             missing_sources.add(src)
             continue
-        jobs.append((record, Path(entry.path), source))
+        jobs.append((record, path, source, variant))
 
     if unmapped:
         for name in unmapped[:20]:
@@ -692,7 +709,7 @@ def main(argv=None):
         return do_check(args.exiftool, jobs, languages)
 
     years, copyable, original_copyable = read_sources(
-        sorted({source for _, _, source in jobs}), args.exiftool)
+        sorted({source for _, _, source, _ in jobs}), args.exiftool)
     text = build_argfile(jobs, languages, years, copyable, original_copyable)
 
     # Never inside public/: an interrupted run would leave it there to be rsynced.
@@ -702,7 +719,7 @@ def main(argv=None):
     if args.dry_run:
         print(f"Would tag {len(jobs)} file(s) for {len(by_id)} photo(s) "
               f"in {len(languages)} language(s): {', '.join(languages)}")
-        sources = {s for _, _, s in jobs}
+        sources = {s for _, _, s, _ in jobs}
         from_manifest = sum(
             1 for r in by_id.values()
             if r[DEFAULT_LANG].get("dateTaken") and r[DEFAULT_LANG]["src"] not in years

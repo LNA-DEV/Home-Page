@@ -476,8 +476,9 @@ test("the build is not empty", () => {
 test.describe("link previews", () => {
   const LOGO = /Ping%C3%BCino|Pingüino/;
   const ogImage = (html: string) => html.match(/<meta property="og:image" content="([^"]+)"/)?.[1] ?? "";
-  /** "…/Photo%20Name_hu_abc.jpg" → "Photo Name": the source photo behind a variant. */
-  const stem = (u: string) => decodeURIComponent(u.split("/").pop() ?? "").split("_hu_")[0].replace(/\.[^.]+$/, "");
+  /** "…/fill-600x400/photo-name.jpg" → "photo-name": the source photo behind a
+      variant — every variant carries its source's name, whatever its spec. */
+  const stem = (u: string) => decodeURIComponent(u.split("/").pop() ?? "").replace(/\.[^.]+$/, "");
 
   test("the gallery sections, the models and every photographed species preview a photo", () => {
     const bad: string[] = [];

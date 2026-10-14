@@ -17,7 +17,7 @@
 */ -}}
 {{- $item := .item -}}
 {{- $url := partial "story/url.html" $item -}}
-{{- $thumb := $item.image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
+{{- $thumb := partial "image-variant.html" (dict "image" $item.image "spec" "fit 600x600") -}}
 {{- $color := index $thumb.Colors 0 | default "transparent" -}}
 {{- $exif := slice -}}
 {{- if not .noExif }}{{ $exif = partial "story/exif.html" $item }}{{ end -}}

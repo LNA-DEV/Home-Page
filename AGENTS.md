@@ -137,6 +137,44 @@ nothing to do.
   publishing under slug names: it hardlinked the 5,819 cached variants
   `<store stem>_hu_<hash>.<ext>` to `<file slug>_hu_<hash>.<ext>` (the hash does not
   depend on the name), so the switch reprocessed nothing. It only ever adds links.
+  The hash does depend on the Hugo release and the `imaging:` block, though, so
+  since 2026-10-14 no URL carries it: every variant is published as
+  `<spec>/<file slug>.<ext>` (next section).
+
+### `scripts/legacy-image-variants.py` — done, do not re-run on its own
+
+The one-time history behind `data/legacyImageVariants.yaml`
+(`docs/concepts/stable-image-urls.md` §5): which stable variant each old
+`<dir>/_hu_<hash>` URL was, for the nginx variant map. Run on 2026-10-14 against
+the first build with stable names and the image cache. The file is **frozen**,
+like `slugAliases`: never edit it by hand, never regenerate it. A rerun only adds
+lines, and only makes sense right after a build on **Hugo's raw output** — the
+embedding pass rewrites every gallery file, and after that no variant has its
+cache file's bytes:
+
+```
+hugo -e production -d .test-site --cleanDestinationDir     # raw output
+python3 scripts/legacy-image-variants.py --dry-run          # read the report first
+```
+
+It writes a line only on proof (equal bytes, or the one variant of the source with
+that pixel size and format), prints every ambiguous case, and leaves the rest a 404.
+
+### Processing an image in a template
+
+Only through `layouts/partials/image-variant.html` — pass the **raw** resource and
+the spec, plus `page` for a page resource:
+
+```
+{{ $t := partial "image-variant.html" (dict "image" .image "spec" "fit 600x600") }}
+```
+
+It publishes the variant as `<dir>/<spec dir>/<name>.<ext>` (`fit-600x600/…`), a
+name a Hugo release cannot move. `.Resize`/`.Fit`/`.Fill`/`.Process`/`.Filter`
+anywhere else in `layouts/` fails `tests/static/image-urls.spec.ts`, and so does
+any `_hu_` file in the build. A new spec on a gallery photo is a new published URL:
+`npm run golden:update`. Changing an existing spec moves URLs — design the redirect
+first (`stable-image-urls.md` §2.4).
 
 ### A reworded English title
 

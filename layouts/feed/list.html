@@ -276,7 +276,7 @@
                 <div class="activity-honor activity-honor--award">
                 {{- end }}
                   {{- with .image }}
-                  {{- $thumb := .Filter (slice images.AutoOrient (images.Process "fill 120x120")) }}
+                  {{- $thumb := partial "image-variant.html" (dict "image" . "spec" "fill 120x120") }}
                   <img class="activity-honor-thumb" src="{{ $thumb.RelPermalink }}" alt="" loading="lazy">
                   {{- end }}
                   <div class="activity-honor-body">
@@ -308,7 +308,7 @@
                 <div class="activity-honor activity-honor--publication">
                 {{- end }}
                   {{- with .image }}
-                  {{- $thumb := .Filter (slice images.AutoOrient (images.Process "fill 120x120")) }}
+                  {{- $thumb := partial "image-variant.html" (dict "image" . "spec" "fill 120x120") }}
                   <img class="activity-honor-thumb" src="{{ $thumb.RelPermalink }}" alt="" loading="lazy">
                   {{- end }}
                   <div class="activity-honor-body">
@@ -335,7 +335,7 @@
               {{- $photosToShow := first $maxPhotosPerMonth $photos }}
               {{- $remainingPhotos := sub (len $photos) $maxPhotosPerMonth }}
               {{- range $photosToShow }}
-                {{- $thumb := .image.Filter (slice images.AutoOrient (images.Process "fill 120x120")) }}
+                {{- $thumb := partial "image-variant.html" (dict "image" .image "spec" "fill 120x120") }}
                 <a href="{{ .permalink }}" class="activity-photo" title="{{ .title }}">
                   <img src="{{ $thumb.RelPermalink }}" alt="{{ .title }}" loading="lazy">
                 </a>

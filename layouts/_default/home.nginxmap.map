@@ -5,9 +5,13 @@
   (docs/concepts/gallery-metadata-yaml-only.md §5, "The nginx side").
 
   One line per old file stem -> the photo's current file slug. Keys are STEMS, not
-  URLs: nginx splits `/images/gallery/<stem>(_hu_<hash>)?.<ext>` and carries the
-  hash over, because `_hu_<hash>` depends on the pixels and the spec, never on the
-  name — so one line covers the published original and every variant.
+  URLs: nginx splits `/images/gallery/(<spec>/)?<stem>.<ext>` and carries the spec
+  directory over, because a variant is published under the same name as its
+  original, one spec directory down (layouts/partials/image-variant.html) — so one
+  line covers the published original and every variant. An old `_hu_<hash>` name
+  never reaches this map: it is a Hugo cache key, not a stem, and nginx sends it
+  through the variant map (home.nginxvariantmap.map) first, whose targets are
+  already current (docs/concepts/stable-image-urls.md §5).
 
   Two kinds of key:
     - the store filename's stem (`DSC_2632`): what every image URL was until the

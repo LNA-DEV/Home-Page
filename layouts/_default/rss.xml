@@ -101,7 +101,7 @@
       {{- end }}{{- end }}
       {{- with $authorEmail }}<author>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</author>{{ end }}
       <guid isPermaLink="false">{{ .Id }}</guid>
-      {{ $full := .image.Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) }}
+      {{ $full := partial "image-variant.html" (dict "image" .image "spec" "fit 1600x1600") }}
       <media:content url="{{ $full.Permalink }}" type="image/jpeg"/>
       {{- range $people }}
       <media:credit role="performer">{{ .name }}</media:credit>

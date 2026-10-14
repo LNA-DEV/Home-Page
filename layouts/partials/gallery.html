@@ -44,8 +44,8 @@
     {{- with site.GetPage "/gallery/gear" }}{{ $gearUrl = .RelPermalink }}{{ end -}}
     {{- range sort $images (.Params.sort_by | default "Name") (.Params.sort_order | default "asc") -}}
       {{- $image := .image -}}
-      {{- $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
-      {{- $full := $image.Filter (slice images.AutoOrient (images.Process "fit 4000x4000")) -}}
+      {{- $thumbnail := partial "image-variant.html" (dict "image" $image "spec" "fit 600x600") -}}
+      {{- $full := partial "image-variant.html" (dict "image" $image "spec" "fit 4000x4000") -}}
       {{- $color := index $thumbnail.Colors 0 | default "transparent" -}}
       {{- $ratio := div (mul $thumbnail.Width 1.0) $thumbnail.Height -}}
       {{- /* The download ladder, the licence key and the finished filename, all
@@ -113,7 +113,11 @@
           {{- with .Artist }}<span class="caption-artist">{{ . }}</span>{{ end -}}
           {{- with .Keywords }}<span class="caption-keywords">{{ . }}</span>{{ end -}}
         </span>
-        <meta itemprop="contentUrl" content="{{ $image.Permalink }}" />
+        {{- /* The stable 4000px variant, not the original: one contentUrl per
+               photo everywhere it is described (grids, photo page, JSON-LD, image
+               sitemap), and every one is under 4 MB where 142 originals exceed
+               the 15 MB crawlers fetch (docs/concepts/stable-image-urls.md §3). */}}
+        <meta itemprop="contentUrl" content="{{ $full.Permalink }}" />
         {{- with .LicenseUrl }}
         <link itemprop="license" href="{{ . }}" />
         {{- end -}}

@@ -278,14 +278,23 @@ function unescapeHtml(s: string): string {
 
 test.describe("the served image files", () => {
   test("every file is named after its photo's English slug, never the store filename", () => {
+    /* The original at images/gallery/<file>, each variant one spec directory down
+       under the same name (docs/concepts/stable-image-urls.md §2). */
     const photos = (manifests().en as any).photos as any[];
     const slugs = new Set(photos.map((p) => stemOf(p.file)));
-    const bad = fs.readdirSync(sitePath("images", "gallery")).filter((f) => {
-      const m = /^(.+?)(_hu_[0-9a-f]+)?\.[a-z]+$/.exec(f);
-      return !m || !slugs.has(m[1]);
-    });
+    const bad: string[] = [];
+    for (const e of fs.readdirSync(sitePath("images", "gallery"), { withFileTypes: true })) {
+      const names = e.isDirectory()
+        ? fs.readdirSync(sitePath("images", "gallery", e.name)).map((f) => `${e.name}/${f}`)
+        : [e.name];
+      for (const n of names) {
+        const m = /^(?:[a-z0-9-]+\/)?([^/]+?)\.[a-z]+$/.exec(n);
+        if (!m || !slugs.has(m[1])) bad.push(n);
+      }
+    }
     expect(bad, `published under a name that is no photo's file slug — a template published a raw ` +
-      `resource instead of the copy from gallery-images.html:\n${bad.slice(0, 20).join("\n")}`).toEqual([]);
+      `resource instead of the copy from gallery-images.html, or processed an image outside ` +
+      `image-variant.html:\n${bad.slice(0, 20).join("\n")}`).toEqual([]);
   });
 
   test("every photo's original is published under its file name", () => {

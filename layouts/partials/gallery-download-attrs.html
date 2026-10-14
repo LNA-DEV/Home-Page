@@ -33,26 +33,20 @@
 
 {{- $small := .small -}}
 {{- if not $small -}}
-  {{- $small = $img.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
+  {{- $small = partial "image-variant.html" (dict "image" $img "spec" "fit 600x600") -}}
 {{- end -}}
-{{- $mid := $img.Filter (slice images.AutoOrient (images.Process "fit 1200x1200")) -}}
+{{- $mid := partial "image-variant.html" (dict "image" $img "spec" "fit 1200x1200") -}}
 {{- $full := .full -}}
 {{- if not $full -}}
-  {{- $full = $img.Filter (slice images.AutoOrient (images.Process "fit 4000x4000")) -}}
+  {{- $full = partial "image-variant.html" (dict "image" $img "spec" "fit 4000x4000") -}}
 {{- end -}}
 
 {{- /* The published original's dimensions AFTER EXIF rotation, without paying for
        an AutoOrient render of it (that would be a fourth variant for all 648
-       photos). .Width/.Height are the stored pair; AutoOrient only ever rotates
-       by a multiple of 90°, so the oriented pair is that same pair, possibly
-       swapped. The 4000 variant is already oriented, so its landscape/portrait
-       sense says which of the two it is. Square images make both branches equal. */ -}}
-{{- $ow := $img.Width -}}
-{{- $oh := $img.Height -}}
-{{- if ne (lt $ow $oh) (lt $full.Width $full.Height) -}}
-  {{- $ow = $img.Height -}}
-  {{- $oh = $img.Width -}}
-{{- end -}}
+       photos). */ -}}
+{{- $oriented := partial "gallery-oriented-size.html" (dict "image" $img "full" $full) -}}
+{{- $ow := $oriented.w -}}
+{{- $oh := $oriented.h -}}
 
 {{- /* Ascending by construction: each fit is into a larger box, and `fit` never
        upscales, so the original is always the largest (or equal). */ -}}

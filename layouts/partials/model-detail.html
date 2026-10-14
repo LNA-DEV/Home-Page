@@ -47,7 +47,7 @@
   <header class="model-hero">
     <div class="model-hero__media">
       {{- with $entry.cover -}}
-        {{- $img := .image.Filter (slice images.AutoOrient (images.Process "fill 900x900 Center")) -}}
+        {{- $img := partial "image-variant.html" (dict "image" .image "spec" "fill 900x900 Center") -}}
         <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}"
              alt="{{ .Alt | default $name }}">
       {{- end -}}

@@ -1,9 +1,12 @@
 {{- /* Builds the responsive variant ladder shared by post covers and inline post
        images, so both agree on widths, the cap and the `src` fallback.
 
-       in:  image       an image resource — the caller applies images.AutoOrient
-                        first, since only the caller knows whether it has to
-                        read .Width off the corrected image
+       in:  image       the UNPROCESSED image resource. Every variant is made by
+                        image-variant.html, which applies AutoOrient itself, so
+                        the caller must not: a pre-filtered resource would be a
+                        second chain under the same published name
+            page        the page the image belongs to — required for a page
+                        resource, which is published under that page's URL
             maxWidth    hard cap, default 1500: the post column is 720px
                         (--main-width), so 1500 already covers a 2x display
             primaryMax  width the non-srcset `src` should aim at, default 720
@@ -28,15 +31,21 @@
        already lossy, and re-encoding buys far less than it risks. */ -}}
 
 {{- $img := .image -}}
+{{- $page := .page -}}
 {{- $maxWidth := .maxWidth | default 1500 -}}
 {{- $primaryMax := .primaryMax | default 720 -}}
 {{- $format := .format -}}
 {{- if not $format -}}
   {{- $format = cond (eq $img.MediaType.SubType "png") "webp q85" "" -}}
 {{- end -}}
-{{- $spec := cond (eq $format "") "%dx" (printf "%%dx %s" $format) -}}
+{{- $spec := cond (eq $format "") "resize %dx" (printf "resize %%dx %s" $format) -}}
 
-{{- $cap := cond (gt $img.Width $maxWidth) $maxWidth $img.Width -}}
+{{- /* The width AFTER EXIF rotation caps the ladder, so it is read off an
+       AutoOrient'ed copy. That renders a cache entry and publishes nothing — the
+       one image filter outside image-variant.html, allowlisted by name in
+       tests/static/image-urls.spec.ts. */ -}}
+{{- $width := ($img.Filter images.AutoOrient).Width -}}
+{{- $cap := cond (gt $width $maxWidth) $maxWidth $width -}}
 {{- $widths := slice -}}
 {{- range (slice 360 480 720 1080 1500) -}}
   {{- if lt . $cap -}}{{- $widths = $widths | append . -}}{{- end -}}
@@ -45,7 +54,7 @@
 
 {{- $variants := slice -}}
 {{- range $widths -}}
-  {{- $variants = $variants | append ($img.Resize (printf $spec .)) -}}
+  {{- $variants = $variants | append (partial "image-variant.html" (dict "image" $img "spec" (printf $spec .) "page" $page)) -}}
 {{- end -}}
 
 {{- $primary := index $variants 0 -}}

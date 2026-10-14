@@ -14,11 +14,10 @@
 {{- with .Params.cover.image -}}
   {{- $resolved := partial "resolve-cover-image.html" $ -}}
   {{- with $resolved.image -}}
-    {{- $img := . -}}
-    {{- if or (gt $img.Width 1200) (gt $img.Height 1200) -}}
-      {{- $img = $img.Fit "1200x1200" -}}
-    {{- end -}}
-    {{- $url = $img.Permalink -}}
+    {{- /* Always the fit variant, also for a cover already under 1200px: `fit`
+           never upscales, and one name per spec is what keeps the URL stable
+           (image-variant.html). */ -}}
+    {{- $url = (partial "image-variant.html" (dict "image" . "spec" "fit 1200x1200" "page" $)).Permalink -}}
   {{- else -}}
     {{- with $resolved.raw -}}
       {{- $url = .Permalink -}}

@@ -2,8 +2,8 @@
 
 Standard library only, like every other script in this folder. What lives here is
 the handful of facts more than one gallery script needs to agree on: where the
-repo is, where this machine keeps the photo store, and how Hugo names the derived
-image variants it writes into public/.
+repo is, where this machine keeps the photo store, and where the build puts the
+derived image variants it writes into public/.
 """
 
 import re
@@ -13,13 +13,23 @@ from pathlib import Path
 # config/_default/module.yaml by reading that file rather than duplicating the path.
 GALLERY_MOUNT_TARGET = "assets/images/gallery"
 
-# Hugo names a processed image "<stem>_hu_<hash><ext>" next to the published
-# original "<stem><ext>". Stripping the marker therefore maps any file under
-# public/images/gallery/ back to the name its photo is published under -- the
-# `file` field of the gallery manifest (the English slug; see
-# docs/concepts/gallery-metadata-yaml-only.md §5), the original included, which
-# matches with no substitution at all.
-VARIANT_RE = re.compile(r"_hu_[0-9a-f]+(\.[^.]+)$")
+# Where the build puts a gallery photo's files (layouts/partials/image-variant.html,
+# docs/concepts/stable-image-urls.md §2):
+#
+#   images/gallery/<file>          the published original
+#   images/gallery/<spec>/<file>   a processed variant, one directory per spec
+#
+# `<file>` is the photo's published name in both -- the manifest's `file`, the
+# English slug (docs/concepts/gallery-metadata-yaml-only.md §5) -- so a served
+# file maps to its photo by its name alone, and whether it is a variant is a
+# matter of where it sits, never of how it is called. `<spec>` is the Hugo
+# processing spec lowercased, whitespace -> "-": fit-600x600, fill-480x480-center.
+SPEC_DIR_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+
+# Hugo's own cache-key name, "<stem>_hu_<hash>.<ext>". The build no longer
+# publishes one; one under images/gallery/ means a template processed an image
+# outside image-variant.html.
+HUGO_HASH_RE = re.compile(r"_hu_[0-9a-f]+\.[^./]+$")
 
 
 def repo_root():
@@ -64,14 +74,38 @@ PHOTOS_SETUP_HINT = (
 )
 
 
-def published_base(published_name):
-    """Map a file under public/images/gallery/ to its photo's published name.
+def served_gallery_files(gallery):
+    """Every file under public/images/gallery/, classified by where it sits.
 
-    That is the manifest's `file` (`three-masts-….jpg`), not the store filename:
-    the build publishes under the slug, and the manifest's `src` says which store
-    file it came from.
+    Returns (files, problems). `files` is a sorted list of (path, is_variant):
+    a file directly in `gallery` is a published original, a file one spec
+    directory below it is a variant. `problems` names everything that is
+    neither -- deeper nesting, a directory that is not a spec, a Hugo `_hu_`
+    name -- each of which the caller must treat as fatal, because a file this
+    function cannot place is a file nothing would tag.
     """
-    return VARIANT_RE.sub(r"\1", published_name)
+    gallery = Path(gallery)
+    files, problems = [], []
+    for entry in sorted(gallery.iterdir(), key=lambda p: p.name):
+        if entry.is_file():
+            files.append((entry, False))
+        elif entry.is_dir():
+            if not SPEC_DIR_RE.match(entry.name):
+                problems.append(f"{entry.name}/: not a spec directory")
+                continue
+            for sub in sorted(entry.iterdir(), key=lambda p: p.name):
+                if sub.is_file():
+                    files.append((sub, True))
+                else:
+                    problems.append(f"{entry.name}/{sub.name}: nested deeper than one spec directory")
+        else:
+            problems.append(f"{entry.name}: neither a file nor a directory")
+    for path, _ in files:
+        if HUGO_HASH_RE.search(path.name):
+            problems.append(f"{path.relative_to(gallery)}: a Hugo `_hu_` name — a template "
+                            "processed an image outside image-variant.html")
+    files = [(p, v) for p, v in files if not HUGO_HASH_RE.search(p.name)]
+    return files, problems
 
 
 # --- data/licenseMap.yaml ----------------------------------------------------

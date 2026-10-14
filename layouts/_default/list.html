@@ -18,11 +18,11 @@
            dex_cover in this page's front matter pin it; otherwise the first
            photo that fits the section. */ -}}
     {{- $projectImg := partialCached "gallery-section-cover.html" "projects" "projects" site.Language.Lang -}}
-    {{- $projectThumb := $projectImg.Filter (slice images.AutoOrient (images.Process "fill 600x400")) -}}
+    {{- $projectThumb := partial "image-variant.html" (dict "image" $projectImg "spec" "fill 600x400") -}}
     {{- $generalImg := partialCached "gallery-section-cover.html" "general" "general" site.Language.Lang -}}
-    {{- $generalThumb := $generalImg.Filter (slice images.AutoOrient (images.Process "fill 600x400")) -}}
+    {{- $generalThumb := partial "image-variant.html" (dict "image" $generalImg "spec" "fill 600x400") -}}
     {{- $dexImg := partialCached "gallery-section-cover.html" "dex" "dex" site.Language.Lang -}}
-    {{- $dexThumb := $dexImg.Filter (slice images.AutoOrient (images.Process "fill 600x400")) -}}
+    {{- $dexThumb := partial "image-variant.html" (dict "image" $dexImg "spec" "fill 600x400") -}}
 
     {{- /* NO Models card here, deliberately: a page about someone else's face gets
            a text link in the row below, not a photo card at the gallery's front

@@ -11,6 +11,8 @@ This proposes one rule and the changes that make it true. **The file supplies pi
 
 ## As built — what differs from the plan below
 
+- **Superseded for variant names (2026-10-14): `docs/concepts/stable-image-urls.md`.** §5 below names variants `<fileSlug>_hu_<hash>.jpg` and the nginx map carries the hash over, on the claim that `_hu_<hash>` "depends on pixels and spec". It also depends on the Hugo release and the raw `imaging:` block — Hugo 0.166.0 moved every variant on 2026-09-10 — so variants are now `/images/gallery/<spec>/<fileSlug>.jpg`, made by `layouts/partials/image-variant.html`, the stem map carries the spec directory instead of a hash, and old `_hu_` URLs go through a second, frozen map. What §5 says about the originals, `fileSlug` and the stem map's keys still holds.
+
 - **§5 needed no lookup changes.** `resources.Copy` changes a resource's published path but **not its `.Name`**, which keeps returning the store filename (verified on 0.166.0). Every `bySrc` lookup by `path.Base .Name` and every `GetMatch "images/gallery/<src>"` kept working untouched, so the five lookup edits and the `byFile` map §5 lists were not built. The copy lives in `gallery-images.html` alone; appending to an empty `resources.Match` keeps the result a typed `resource.Resources`.
 - **nginx needed `map_hash_bucket_size 256`.** With the real map (keys up to 73 bytes) nginx refused the config: `could not build map_hash, you should increase map_hash_bucket_size: 64`. The first spike had used a five-line map and could not see it. On the server this would have failed the reload after the first deploy and stopped the container at its next restart. A static test now holds every key under 200 bytes.
 - **nginx also refuses `/<lang>/gallery-metadata.json`.** The manifest is a build artefact for the embedding step, and its `src` field lists the store filenames this concept takes off the site.
@@ -184,6 +186,8 @@ Something has to connect an entry to its file. The alternatives lose:
 *Automatic rename detection* was measured and left out. `DateTimeOriginal` + `SubSecTimeOriginal` + `Model` + `SerialNumber` is unique for only 548 of 650 photos. The 87 placeholder dates are the main hole, and a few frames were exported twice. A pairing that is wrong one time in six must not be applied automatically. It could at most *suggest*, and that is not worth building before a real bulk rename comes up.
 
 ### Decision 2: the served file URLs
+
+> **Variant names superseded** by `stable-image-urls.md` (2026-10-14): a variant is `<spec>/<fileSlug>.<ext>`, not `<fileSlug>_hu_<hash>.<ext>`. The originals are as described here.
 
 **Where a camera name is visible today**, checked on the photo page for `DSC_2632.jpg` (`/de/gallery/photo/drei-masten-eine-tuerkische-gulet-im-goldenen-licht/`):
 

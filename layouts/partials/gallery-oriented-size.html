@@ -1,0 +1,25 @@
+{{- /*
+  gallery-oriented-size.html — a gallery photo's pixel size AFTER EXIF rotation,
+  without rendering anything new.
+
+  in:   image  the gallery resource (a collect-images item's .image)
+        full   optional: its `fit 4000x4000` variant, when the caller has it
+  out:  { w, h }
+
+  .Width/.Height are the stored pair; AutoOrient only ever rotates by a multiple
+  of 90°, so the oriented pair is that same pair, possibly swapped. The 4000
+  variant is already oriented — and rendered for every photo, since every photo
+  has a page — so its landscape/portrait sense says which of the two it is.
+  Square images make both branches equal. Reading .Width off an AutoOrient'ed
+  copy instead would be a processing chain outside image-variant.html
+  (docs/concepts/stable-image-urls.md §2.2).
+*/ -}}
+{{- $img := .image -}}
+{{- $full := .full | default (partial "image-variant.html" (dict "image" $img "spec" "fit 4000x4000")) -}}
+{{- $w := $img.Width -}}
+{{- $h := $img.Height -}}
+{{- if ne (lt $w $h) (lt $full.Width $full.Height) -}}
+  {{- $w = $img.Height -}}
+  {{- $h = $img.Width -}}
+{{- end -}}
+{{- return dict "w" $w "h" $h -}}

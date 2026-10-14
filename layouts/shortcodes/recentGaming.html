@@ -37,7 +37,7 @@
         {{ with .cover }}
           {{ $img := resources.Get . }}
           {{ with $img }}
-            {{ $t := .Fill "300x450" }}
+            {{ $t := partial "image-variant.html" (dict "image" . "spec" "fill 300x450") }}
             <img src="{{ $t.RelPermalink }}" alt="{{ i18n "coverAlt" $game.title }}" loading="lazy">
           {{ end }}
         {{ else }}

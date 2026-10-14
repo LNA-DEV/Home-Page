@@ -30,7 +30,7 @@
     {{- $imgdl := (.Params.cover.image) | absURL }}
 
     {{- if $src }}
-        {{- $set := partial "image-variants.html" (dict "image" $src) }}
+        {{- $set := partial "image-variants.html" (dict "image" $src "page" .) }}
         {{- $variants := $set.variants }}
         {{- $primary := $set.primary }}
         {{- $imgdl = (index $variants (sub (len $variants) 1)).Permalink }}

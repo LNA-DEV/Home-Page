@@ -50,7 +50,7 @@
     <div class="dex-top__rail">
     <div class="dex-hero__media">
       {{- with $entry.cover -}}
-        {{- $img := .image.Filter (slice images.AutoOrient (images.Process "fill 900x900 Center")) -}}
+        {{- $img := partial "image-variant.html" (dict "image" .image "spec" "fill 900x900 Center") -}}
         <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}"
              alt="{{ .Alt | default $name }}">
       {{- else -}}
@@ -73,7 +73,7 @@
                  leaves those honestly soft rather than stretched. */ -}}
           {{- $side := math.Min .Width .Height -}}
           {{- $target := int (math.Min 900 $side) -}}
-          {{- $img := .Filter (slice images.AutoOrient (images.Process (printf "fill %dx%d Center" $target $target))) -}}
+          {{- $img := partial "image-variant.html" (dict "image" . "spec" (printf "fill %dx%d Center" $target $target)) -}}
           {{- /* Same schema.org ImageObject microdata gallery.html emits for the
                  owner's own photos — a caught species inherits it from the photo
                  strip, but an uncaught one had no image metadata at all, on the

@@ -10,7 +10,7 @@
 # embedded thumbnail of the uncropped frame. The step fixes both ends, reading
 # the values Hugo resolved into public/<lang>/gallery-metadata.json.
 #
-# Cost: ~3m40s per build for 4,161 files / 7.6 GB, so ~7m30s per deploy. It is
+# Cost: ~4m per build for 4,279 files / 7.8 GB, so ~8m per deploy. It is
 # deterministic — a second run leaves every file byte-identical — so rsync has
 # nothing extra to transfer because of it. `--check` then reads every served file
 # back and refuses to ship if any of them is missing its photo's UUID.
@@ -71,6 +71,16 @@ hugo --cleanDestinationDir --panicOnWarning --printI18nWarnings --printPathWarni
 SITE_DIR=public SITE_BASE=https://lna-dev.net npx playwright test --project static
 
 publish /mnt/homepage/homepage-site-data homepage homepage
+
+# The live check (docs/concepts/stable-image-urls.md §7.3). The tests never
+# reach the network, and the two failures that sat unnoticed for weeks were both
+# on the server: a redirect ending in a 404, and an nginx change that was not
+# loaded. A deterministic sample of what was just shipped — variants, both
+# redirect maps, the underscore photo URLs, made-up hashes — asked of the live
+# clearnet site with HEAD. The site is already live, so this cannot prevent a
+# broken deploy; it reports one within seconds, and `set -e` keeps the Tor build
+# from being published on top of it.
+python3 scripts/check-live-urls.py public
 
 # The Tor build has to come out of hugo and be reachable; that is the whole
 # requirement. No second test pass, no clearnet-leak policy. Cleaned for the same

@@ -23,7 +23,7 @@
    data-search="{{ lower (printf "%s %s %s" $name ($species.scientific | default "") $entry.slug) }}">
   <div class="dex-card__frame">
     {{- with $entry.cover -}}
-      {{- $thumb := .image.Filter (slice images.AutoOrient (images.Process "fill 480x480 Center")) -}}
+      {{- $thumb := partial "image-variant.html" (dict "image" .image "spec" "fill 480x480 Center") -}}
       <img class="dex-card__image" src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}"
            alt="{{ .Alt | default $name }}" loading="lazy" decoding="async">
     {{- else -}}

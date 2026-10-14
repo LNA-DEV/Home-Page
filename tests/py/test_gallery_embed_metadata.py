@@ -186,13 +186,13 @@ class PhotoArgs(unittest.TestCase):
         self.assertEqual(args_for()[-1], "/out/red-fox.jpg")
 
 
-class IsVariant(unittest.TestCase):
-    def test_the_published_original_is_the_file_name(self):
-        rec = {"en": record()}
-        self.assertFalse(m.is_variant(rec, Path("/out/red-fox.jpg")))
-        self.assertTrue(m.is_variant(rec, Path("/out/red-fox_hu_1f1561eb0ac2d2ce.jpg")))
-        # The store filename is not what is served.
-        self.assertTrue(m.is_variant(rec, Path("/out/Red Fox.jpg")))
+class Shown(unittest.TestCase):
+    def test_a_variant_is_named_with_its_spec_directory(self):
+        # Original and variants share one file name, so the bare name would not
+        # say which file a report means.
+        self.assertEqual(m.shown(Path("/out/images/gallery/red-fox.jpg")), "red-fox.jpg")
+        self.assertEqual(m.shown(Path("/out/images/gallery/fit-600x600/red-fox.jpg")),
+                         "fit-600x600/red-fox.jpg")
 
 
 def good_readback(rec=None, languages=("en",), extra=None, variant=False):
@@ -269,8 +269,8 @@ class Check(unittest.TestCase):
 
 
 class BuildArgfile(unittest.TestCase):
-    def jobs(self):
-        return [({"en": record()}, Path("/out/Red Fox.jpg"), Path("/src/Red Fox.jpg"))]
+    def jobs(self, variant=False):
+        return [({"en": record()}, Path("/out/red-fox.jpg"), Path("/src/Red Fox.jpg"), variant)]
 
     def test_the_same_jobs_produce_the_same_bytes(self):
         # The whole pass is deterministic, which is what makes it idempotent and
@@ -288,10 +288,19 @@ class BuildArgfile(unittest.TestCase):
         self.assertIn("© 2025 Lukas Nagel", text)
 
     def test_a_photo_with_no_date_at_all_gets_no_year(self):
-        jobs = [({"en": record(dateTaken="")}, Path("/out/a.jpg"), Path("/src/a.jpg"))]
+        jobs = [({"en": record(dateTaken="")}, Path("/out/a.jpg"), Path("/src/a.jpg"), False)]
         text = m.build_argfile(jobs, ["en"], {}, set())
         self.assertIn("© Lukas Nagel", text)
         self.assertNotIn("© 2", text)
+
+    def test_the_variant_flag_decides_orientation_not_the_name(self):
+        # Original and variant have the SAME name now; only the flag the walk set
+        # from the path can keep Orientation off a variant (22 rotated photos
+        # would otherwise display rotated twice).
+        original = m.build_argfile(self.jobs(), ["en"], {}, {"Red Fox.jpg"}, {"Red Fox.jpg"})
+        variant = m.build_argfile(self.jobs(variant=True), ["en"], {}, {"Red Fox.jpg"}, {"Red Fox.jpg"})
+        self.assertIn("-Orientation", original)
+        self.assertNotIn("-Orientation", variant)
 
     def test_a_source_that_carries_no_camera_data_skips_the_copy_block(self):
         text = m.build_argfile(self.jobs(), ["en"], {}, set())

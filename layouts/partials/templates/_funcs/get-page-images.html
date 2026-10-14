@@ -21,7 +21,7 @@
       {{- $featured = index $allImages 0 }}
     {{- end }}
     {{- with $featured }}
-      {{- $processed := .Filter (slice images.AutoOrient (images.Process "fit 1200x630")) }}
+      {{- $processed := partial "image-variant.html" (dict "image" . "spec" "fit 1200x630") }}
       {{- $imgs = $imgs | append (dict
         "Image" $processed
         "RelPermalink" $processed.RelPermalink
@@ -41,7 +41,7 @@
       {{- with index (partial "collect-portfolio.html" .) 0 }}{{ $hero = .image }}{{ end }}
     {{- end }}
     {{- with $hero }}
-      {{- $processed := .Filter (slice images.AutoOrient (images.Process "fit 1200x630")) }}
+      {{- $processed := partial "image-variant.html" (dict "image" . "spec" "fit 1200x630") }}
       {{- $imgs = $imgs | append (dict
         "Image" $processed
         "RelPermalink" $processed.RelPermalink
@@ -55,7 +55,7 @@
 {{- if and (not $imgParams) (not $imgs) }}
   {{- with index (dict "gallery-projects-list" "projects" "gallery-general-home" "general" "dex-home" "dex") (.Params.Theme | default "") }}
     {{- with partialCached "gallery-section-cover.html" . . site.Language.Lang }}
-      {{- $processed := .Filter (slice images.AutoOrient (images.Process "fit 1200x630")) }}
+      {{- $processed := partial "image-variant.html" (dict "image" . "spec" "fit 1200x630") }}
       {{- $imgs = $imgs | append (dict
         "Image" $processed
         "RelPermalink" $processed.RelPermalink
@@ -80,7 +80,7 @@
     {{- with (partialCached "model-index.html" . site.Language.Lang).listed }}{{ $cover = (index . 0).cover }}{{ end }}
   {{- end }}
   {{- with $cover }}
-    {{- $processed := .image.Filter (slice images.AutoOrient (images.Process "fit 1200x630")) }}
+    {{- $processed := partial "image-variant.html" (dict "image" .image "spec" "fit 1200x630") }}
     {{- $imgs = $imgs | append (dict
       "Image" $processed
       "RelPermalink" $processed.RelPermalink
@@ -97,7 +97,7 @@
 {{- if and (not $imgParams) (not $imgs) (eq .Params.Theme "gallery-photo") }}
   {{- $c := partialCached "gallery-collected.html" . site.Language.Lang }}
   {{- with index $c.byId .Params.photo_id }}
-    {{- $processed := .image.Filter (slice images.AutoOrient (images.Process "fit 1200x630")) }}
+    {{- $processed := partial "image-variant.html" (dict "image" .image "spec" "fit 1200x630") }}
     {{- $imgs = $imgs | append (dict
       "Image" $processed
       "RelPermalink" $processed.RelPermalink

@@ -72,7 +72,7 @@
     {{- if eq .Params.Theme "gallery-photo" }}
     {{- $c := partialCached "gallery-collected.html" . .Language.Lang }}
     {{- with index $c.byId .Params.photo_id }}
-    {{- $full := .image.Filter (slice images.AutoOrient (images.Process "fit 4000x4000")) }}
+    {{- $full := partial "image-variant.html" (dict "image" .image "spec" "fit 4000x4000") }}
     <image:image>
       <image:loc>{{ $full.Permalink }}</image:loc>
       {{- with .Alt }}

@@ -2123,7 +2123,7 @@ images:
   license: cc-by-sa-4.0
   artist: Lukas Nagel
 - id: 09a12e61-a28d-4a5b-a6ff-ac9ab2dde7be
-  slugAliases: [dji-0875]
+  slugAliases: [dji-0875, dji_0875]
   src: DJI_0875.jpg
   category: animals
   species: Bos taurus
@@ -2309,7 +2309,7 @@ images:
   license: cc-by-sa-4.0
   artist: Lukas Nagel
 - id: e67b2f79-6cc7-4fdf-9416-2a2b7d4dfeba
-  slugAliases: [dsc-0362]
+  slugAliases: [dsc-0362, dsc_0362]
   src: DSC_0362.jpg
   category: animals
   species: Bombus terrestris
@@ -2345,7 +2345,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 043986e9-9c28-47d0-9795-dc166f9e5bb2
-  slugAliases: [dsc-0363]
+  slugAliases: [dsc-0363, dsc_0363]
   src: DSC_0363.jpg
   category: animals
   species: Bombus terrestris
@@ -2381,7 +2381,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: b58439c8-8f51-417c-b1b8-ffbd44fbedce
-  slugAliases: [dsc-0517]
+  slugAliases: [dsc-0517, dsc_0517]
   src: DSC_0517.jpg
   category: animals
   species: Passer domesticus
@@ -2412,7 +2412,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 8a95d800-3d6c-4066-8454-f85699fb73c6
-  slugAliases: [dsc-0600]
+  slugAliases: [dsc-0600, dsc_0600]
   src: DSC_0600.jpg
   category: animals
   species: Lacerta agilis
@@ -2445,7 +2445,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: dabee4cb-a7d7-480d-b753-6a53104a5e4b
-  slugAliases: [dsc-0668]
+  slugAliases: [dsc-0668, dsc_0668]
   src: DSC_0668.jpg
   category: animals
   species: Passer domesticus
@@ -2474,7 +2474,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 56b67eae-42fa-41e8-bceb-9ee2c8726444
-  slugAliases: [dsc-0673]
+  slugAliases: [dsc-0673, dsc_0673]
   src: DSC_0673.jpg
   category: animals
   species: Anguis fragilis
@@ -2506,7 +2506,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 9f6bb756-4e62-49a8-9d88-88a8c3a9bc51
-  slugAliases: [dsc-0679]
+  slugAliases: [dsc-0679, dsc_0679]
   src: DSC_0679.jpg
   category: animals
   species: Anguis fragilis
@@ -2538,7 +2538,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 291af310-b6e7-48a6-b942-3746aaed69a7
-  slugAliases: [dsc-0720]
+  slugAliases: [dsc-0720, dsc_0720]
   src: DSC_0720.jpg
   category: animals
   species: Laothoe populi
@@ -2570,7 +2570,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 8dbb83fa-d297-436f-9a52-b8e77969874c
-  slugAliases: [dsc-0728]
+  slugAliases: [dsc-0728, dsc_0728]
   src: DSC_0728.jpg
   category: animals
   species: Laothoe populi
@@ -2604,7 +2604,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 6f00d9ed-cc0c-4ef9-920e-e79888f84955
-  slugAliases: [dsc-0729]
+  slugAliases: [dsc-0729, dsc_0729]
   src: DSC_0729.jpg
   category: animals
   species: Laothoe populi
@@ -2636,7 +2636,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 3a80c8b6-b91e-43b6-9cb5-78018d9b26aa
-  slugAliases: [dsc-1004]
+  slugAliases: [dsc-1004, dsc_1004]
   src: DSC_1004.jpg
   category: animals
   species: Parus major
@@ -2673,7 +2673,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 91a35a6a-faca-4da0-83a5-c500e7573ec2
-  slugAliases: [dsc-1087]
+  slugAliases: [dsc-1087, dsc_1087]
   src: DSC_1087.jpg
   category: animals
   species: Parus major
@@ -2710,7 +2710,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 3fbdb966-0176-4101-a4da-ba5d2ad33e95
-  slugAliases: [dsc-1211]
+  slugAliases: [dsc-1211, dsc_1211]
   src: DSC_1211.jpg
   category: animals
   species: Parus major
@@ -2747,7 +2747,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: b66886e2-32fb-439f-b683-354ef01c3a0f
-  slugAliases: [dsc-1277]
+  slugAliases: [dsc-1277, dsc_1277]
   src: DSC_1277.jpg
   category: animals
   species: Parus major
@@ -2784,7 +2784,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 5165e8e6-acae-45bb-9e31-a9ad08da3bc8
-  slugAliases: [dsc-2007]
+  slugAliases: [dsc-2007, dsc_2007]
   src: DSC_2007.jpg
   category: animals
   species: Bombus terrestris
@@ -2817,7 +2817,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 00eadda6-ce15-4640-ba34-321f1e6e2ba0
-  slugAliases: [dsc-2055]
+  slugAliases: [dsc-2055, dsc_2055]
   src: DSC_2055.jpg
   category: animals
   species: Bos taurus
@@ -2853,7 +2853,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 08f83fea-9b27-489a-bee4-86c1e536124d
-  slugAliases: [dsc-2055-01]
+  slugAliases: [dsc-2055-01, dsc_2055_01]
   src: DSC_2055_01.jpg
   category: animals
   species: Bos taurus
@@ -2889,7 +2889,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 3d7806f3-6a7e-44ed-8644-93700614e926
-  slugAliases: [dsc-2055-02]
+  slugAliases: [dsc-2055-02, dsc_2055_02]
   src: DSC_2055_02.jpg
   category: animals
   species: Bos taurus
@@ -2925,7 +2925,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: bfe4fb13-e973-45d1-af0e-9cd67186de8e
-  slugAliases: [dsc-2057]
+  slugAliases: [dsc-2057, dsc_2057]
   src: DSC_2057.jpg
   category: animals
   species: Bos taurus
@@ -2961,7 +2961,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 862302bf-2fac-4714-ad6a-30341bb95aed
-  slugAliases: [dsc-2189]
+  slugAliases: [dsc-2189, dsc_2189]
   src: DSC_2189.jpg
   category: animals
   species: Bombus pascuorum
@@ -2992,7 +2992,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 5aef18e1-a69c-4adc-89e8-0be483e4b7f0
-  slugAliases: [dsc-2196]
+  slugAliases: [dsc-2196, dsc_2196]
   src: DSC_2196.jpg
   category: animals
   species: Bombus pascuorum
@@ -3023,7 +3023,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 5062b4a3-0252-49e7-aec5-d0ae3b87be84
-  slugAliases: [dsc-2200]
+  slugAliases: [dsc-2200, dsc_2200]
   src: DSC_2200.jpg
   category: animals
   species: Bombus pascuorum
@@ -3054,7 +3054,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 888042ea-41bd-4bf9-9e0a-9f431485fb6d
-  slugAliases: [dsc-2253]
+  slugAliases: [dsc-2253, dsc_2253]
   src: DSC_2253.jpg
   category: animals
   species: Mergus merganser
@@ -3093,7 +3093,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 1bbf71f8-934e-417e-bd11-54d28be46fc9
-  slugAliases: [dsc-2484]
+  slugAliases: [dsc-2484, dsc_2484]
   src: DSC_2484.jpg
   category: animals
   species: Bison bonasus
@@ -3124,7 +3124,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 6900da18-5a14-4e93-80c9-874955a6e531
-  slugAliases: [dsc-2487]
+  slugAliases: [dsc-2487, dsc_2487]
   src: DSC_2487.jpg
   category: animals
   species: Bison bonasus
@@ -3157,7 +3157,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: a123a846-cd53-44c5-ab37-80b5e4056082
-  slugAliases: [dsc-2532]
+  slugAliases: [dsc-2532, dsc_2532]
   src: DSC_2532.jpg
   category: animals
   species: Bison bonasus
@@ -3191,7 +3191,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 1574a520-adf7-4376-8bd9-9829517997de
-  slugAliases: [dsc-2537]
+  slugAliases: [dsc-2537, dsc_2537]
   src: DSC_2537.jpg
   category: animals
   species: Bison bonasus
@@ -3224,7 +3224,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 67627b7b-04f7-457f-8582-5bc3dd104d47
-  slugAliases: [dsc-2538]
+  slugAliases: [dsc-2538, dsc_2538]
   src: DSC_2538.jpg
   category: animals
   species: Bison bonasus
@@ -3257,7 +3257,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 44354a3b-8367-4072-8371-e4495924a067
-  slugAliases: [dsc-2542]
+  slugAliases: [dsc-2542, dsc_2542]
   src: DSC_2542.jpg
   category: animals
   species: Bison bonasus
@@ -6317,7 +6317,7 @@ images:
   license: cc-by-sa-4.0
   artist: Lukas Nagel
 - id: 1cd410f4-95c9-454d-acc8-5ff009f5825b
-  slugAliases: [dji-0915]
+  slugAliases: [dji-0915, dji_0915]
   src: DJI_0915.jpg
   category: landscape
   section: general
@@ -6346,7 +6346,7 @@ images:
   license: cc-by-sa-4.0
   artist: Lukas Nagel
 - id: 696d1979-fa71-4068-afee-97d9d4d3894b
-  slugAliases: [dji-0916]
+  slugAliases: [dji-0916, dji_0916]
   src: DJI_0916.jpg
   category: landscape
   section: general
@@ -6375,7 +6375,7 @@ images:
   license: cc-by-sa-4.0
   artist: Lukas Nagel
 - id: bc068332-0999-4a94-aa76-816c25fa5360
-  slugAliases: [dji-0918]
+  slugAliases: [dji-0918, dji_0918]
   src: DJI_0918.jpg
   category: landscape
   section: general
@@ -6404,7 +6404,7 @@ images:
   license: cc-by-sa-4.0
   artist: Lukas Nagel
 - id: d96e1583-cb5c-4a08-a5cf-8c3a56fff6a6
-  slugAliases: [dji-0876]
+  slugAliases: [dji-0876, dji_0876]
   src: DJI_0876.jpg
   category: landscape
   section: general
@@ -6432,7 +6432,7 @@ images:
   license: cc-by-sa-4.0
   artist: Lukas Nagel
 - id: a706615d-0224-4ea9-b260-020af89d72d4
-  slugAliases: [dji-0903]
+  slugAliases: [dji-0903, dji_0903]
   src: DJI_0903.jpg
   category: landscape
   section: general
@@ -6461,7 +6461,7 @@ images:
   license: cc-by-sa-4.0
   artist: Lukas Nagel
 - id: df0849e0-c0be-4788-ad68-9956482564aa
-  slugAliases: [dji-0906]
+  slugAliases: [dji-0906, dji_0906]
   src: DJI_0906.jpg
   category: landscape
   section: general
@@ -6493,7 +6493,7 @@ images:
   license: cc-by-sa-4.0
   artist: Lukas Nagel
 - id: 99ff772c-0bf1-4664-914b-e4b5b1dd2881
-  slugAliases: [dji-0901]
+  slugAliases: [dji-0901, dji_0901]
   src: DJI_0901.jpg
   category: landscape
   section: general
@@ -6522,7 +6522,7 @@ images:
   license: cc-by-sa-4.0
   artist: Lukas Nagel
 - id: c3dcfec0-89ce-4852-881a-cf1b5941ea1f
-  slugAliases: [dji-0862]
+  slugAliases: [dji-0862, dji_0862]
   src: DJI_0862.jpg
   category: landscape
   section: general
@@ -6551,7 +6551,7 @@ images:
   license: cc-by-sa-4.0
   artist: Lukas Nagel
 - id: c1bc252c-23c0-4934-b99b-adaa0564677d
-  slugAliases: [dji-0863]
+  slugAliases: [dji-0863, dji_0863]
   src: DJI_0863.jpg
   category: landscape
   section: general
@@ -6580,7 +6580,7 @@ images:
   license: cc-by-sa-4.0
   artist: Lukas Nagel
 - id: 8687e4e8-2456-41e2-ac96-bc2a8e6432b9
-  slugAliases: [dji-0865]
+  slugAliases: [dji-0865, dji_0865]
   src: DJI_0865.jpg
   category: landscape
   section: general
@@ -6609,7 +6609,7 @@ images:
   license: cc-by-sa-4.0
   artist: Lukas Nagel
 - id: 0dfeab77-5cc3-4138-bbf7-7c8f27d746c2
-  slugAliases: [dji-0909]
+  slugAliases: [dji-0909, dji_0909]
   src: DJI_0909.jpg
   category: landscape
   section: general
@@ -6699,7 +6699,7 @@ images:
   license: cc-by-sa-4.0
   artist: Lukas Nagel
 - id: 4899fa27-64c7-4c53-964a-8bcb1d020780
-  slugAliases: [dji-0967]
+  slugAliases: [dji-0967, dji_0967]
   src: DJI_0967.jpg
   category: landscape
   section: general
@@ -6953,7 +6953,7 @@ images:
   license: cc-by-sa-4.0
   artist: Lukas Nagel
 - id: 6c0f605b-def6-4dea-b20f-a9202e213948
-  slugAliases: [dsc-0325]
+  slugAliases: [dsc-0325, dsc_0325]
   src: DSC_0325.jpg
   category: landscape
   section: general
@@ -6990,7 +6990,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 054bd283-879d-4b06-b7e1-5d4abf9d9a80
-  slugAliases: [dsc-0453]
+  slugAliases: [dsc-0453, dsc_0453]
   src: DSC_0453.jpg
   category: landscape
   section: general
@@ -7017,7 +7017,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: dc24519e-d1e7-4d2d-8f11-8571e78c5c4a
-  slugAliases: [dsc-0460]
+  slugAliases: [dsc-0460, dsc_0460]
   src: DSC_0460.jpg
   category: landscape
   section: general
@@ -7044,7 +7044,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: f7a0b486-d23b-4a3b-8efe-4ab01add8093
-  slugAliases: [dsc-0463]
+  slugAliases: [dsc-0463, dsc_0463]
   src: DSC_0463.jpg
   category: landscape
   section: general
@@ -7075,7 +7075,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: b4b1e8bf-a3a6-4ec9-9ad3-ebb962f900ea
-  slugAliases: [dsc-0516]
+  slugAliases: [dsc-0516, dsc_0516]
   src: DSC_0516.jpg
   category: landscape
   section: general
@@ -7104,7 +7104,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 453dfacc-70c5-4867-bf4e-c93ace6e79b7
-  slugAliases: [dsc-0526]
+  slugAliases: [dsc-0526, dsc_0526]
   src: DSC_0526.jpg
   category: landscape
   section: general
@@ -7139,7 +7139,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 37249d5d-b5cc-4bb1-aaa6-ecaef27f242c
-  slugAliases: [dsc-0534]
+  slugAliases: [dsc-0534, dsc_0534]
   src: DSC_0534.jpg
   category: landscape
   section: general
@@ -7174,7 +7174,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: c913b166-34cc-48c0-ab45-50fd9c7845a1
-  slugAliases: [dsc-0535]
+  slugAliases: [dsc-0535, dsc_0535]
   src: DSC_0535.jpg
   category: landscape
   section: general
@@ -7207,7 +7207,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 7a03107d-17ef-484e-af3a-ddcbe1f7afe0
-  slugAliases: [dsc-0634]
+  slugAliases: [dsc-0634, dsc_0634]
   src: DSC_0634.jpg
   category: landscape
   section: general
@@ -7243,7 +7243,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: e9b8ba6e-4a06-4c55-ae3f-efb889218f0f
-  slugAliases: [dsc-0639]
+  slugAliases: [dsc-0639, dsc_0639]
   src: DSC_0639.jpg
   category: landscape
   section: general
@@ -7279,7 +7279,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 5f926eb3-3496-4fe2-82ff-3a719cfa6e6f
-  slugAliases: [dsc-0641]
+  slugAliases: [dsc-0641, dsc_0641]
   src: DSC_0641.jpg
   category: landscape
   section: general
@@ -7315,7 +7315,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 030edb25-1f0e-42e6-9ca6-59758a85e5a2
-  slugAliases: [dsc-0643]
+  slugAliases: [dsc-0643, dsc_0643]
   src: DSC_0643.jpg
   category: landscape
   section: general
@@ -7351,7 +7351,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: daf3c17c-c319-41fb-bac4-9d1bd11af7ae
-  slugAliases: [dsc-0651]
+  slugAliases: [dsc-0651, dsc_0651]
   src: DSC_0651.jpg
   category: landscape
   section: general
@@ -7387,7 +7387,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: c8197ccd-963a-4021-8d31-629b68766442
-  slugAliases: [dsc-2019]
+  slugAliases: [dsc-2019, dsc_2019]
   src: DSC_2019.jpg
   category: landscape
   section: general
@@ -7417,7 +7417,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 5b614d83-9573-47b1-be19-fe4d5150ceb7
-  slugAliases: [dsc-2023]
+  slugAliases: [dsc-2023, dsc_2023]
   src: DSC_2023.jpg
   category: landscape
   section: general
@@ -7449,7 +7449,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 7d7f52ea-c386-428e-a107-55b0aeb596d5
-  slugAliases: [dsc-2024]
+  slugAliases: [dsc-2024, dsc_2024]
   src: DSC_2024.jpg
   category: landscape
   section: general
@@ -7480,7 +7480,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: af29b836-189a-49c1-8d8d-1e901c6a6c06
-  slugAliases: [dsc-2027]
+  slugAliases: [dsc-2027, dsc_2027]
   src: DSC_2027.jpg
   category: landscape
   section: general
@@ -7512,7 +7512,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: cfe57356-2b40-4a1c-8874-eb846b01bc13
-  slugAliases: [dsc-2045]
+  slugAliases: [dsc-2045, dsc_2045]
   src: DSC_2045.jpg
   category: landscape
   section: general
@@ -7542,7 +7542,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 48b09fc5-c491-4b13-96bd-0389a379b56c
-  slugAliases: [dsc-2046]
+  slugAliases: [dsc-2046, dsc_2046]
   src: DSC_2046.jpg
   category: landscape
   section: general
@@ -7574,7 +7574,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 9268873b-7eef-4c22-852c-62146a0ba659
-  slugAliases: [dsc-2049]
+  slugAliases: [dsc-2049, dsc_2049]
   src: DSC_2049.jpg
   category: landscape
   section: general
@@ -7604,7 +7604,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: d1979816-613d-4b17-bcd4-91117a34bc72
-  slugAliases: [dsc-2062]
+  slugAliases: [dsc-2062, dsc_2062]
   src: DSC_2062.jpg
   category: landscape
   section: general
@@ -7637,7 +7637,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 1db29a0e-78d3-4c9b-99e2-864b1b617092
-  slugAliases: [dsc-2063]
+  slugAliases: [dsc-2063, dsc_2063]
   src: DSC_2063.jpg
   category: landscape
   section: general
@@ -7670,7 +7670,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 1f0e6517-6afe-4ff0-ac7a-7715691b920c
-  slugAliases: [dsc-2125]
+  slugAliases: [dsc-2125, dsc_2125]
   src: DSC_2125.jpg
   category: landscape
   section: general
@@ -7706,7 +7706,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 758b8528-fb21-488e-9745-226311ce6592
-  slugAliases: [dsc-2127]
+  slugAliases: [dsc-2127, dsc_2127]
   src: DSC_2127.jpg
   category: landscape
   section: general
@@ -7741,7 +7741,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 0d6c5546-b8ed-40c3-9d56-2f64aebd63a0
-  slugAliases: [dsc-2129]
+  slugAliases: [dsc-2129, dsc_2129]
   src: DSC_2129.jpg
   category: landscape
   section: general
@@ -7772,7 +7772,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 5f3fdc39-ca0a-409c-aeab-c67bd67e5e70
-  slugAliases: [dsc-2138]
+  slugAliases: [dsc-2138, dsc_2138]
   src: DSC_2138.jpg
   category: landscape
   section: general
@@ -7807,7 +7807,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 663fe14b-b214-49fa-b82f-b4ee2da7b03e
-  slugAliases: [dsc-2151]
+  slugAliases: [dsc-2151, dsc_2151]
   src: DSC_2151.jpg
   category: landscape
   section: general
@@ -7842,7 +7842,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 468d09a2-d91f-4480-a0e7-70dfac196d24
-  slugAliases: [dsc-2153]
+  slugAliases: [dsc-2153, dsc_2153]
   src: DSC_2153.jpg
   category: landscape
   section: general
@@ -7876,7 +7876,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 9bbdb4a4-e661-4611-870e-cee1fc5cb22d
-  slugAliases: [dsc-2155]
+  slugAliases: [dsc-2155, dsc_2155]
   src: DSC_2155.jpg
   category: landscape
   section: general
@@ -7909,7 +7909,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 770ad578-e8ec-4228-b152-6ad8b3fcc76f
-  slugAliases: [dsc-2251]
+  slugAliases: [dsc-2251, dsc_2251]
   src: DSC_2251.jpg
   category: landscape
   section: general
@@ -7941,7 +7941,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 7e7f1b54-cb3c-490d-a95a-a875a4101840
-  slugAliases: [dsc-2259]
+  slugAliases: [dsc-2259, dsc_2259]
   src: DSC_2259.jpg
   category: landscape
   section: general
@@ -7975,7 +7975,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: c4ed6b26-e111-43d4-b45c-041c0ddf054a
-  slugAliases: [dsc-2264]
+  slugAliases: [dsc-2264, dsc_2264]
   src: DSC_2264.jpg
   category: landscape
   section: general
@@ -8009,7 +8009,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 71334ee9-b702-4dc9-a010-a661160008e8
-  slugAliases: [dsc-2266]
+  slugAliases: [dsc-2266, dsc_2266]
   src: DSC_2266.jpg
   category: landscape
   section: general
@@ -8044,7 +8044,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 0bea0c4f-f718-4c8e-89d9-94a519a75c46
-  slugAliases: [dsc-2273]
+  slugAliases: [dsc-2273, dsc_2273]
   src: DSC_2273.jpg
   category: landscape
   section: general
@@ -8077,7 +8077,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 44d6de7e-0968-45fe-8ce7-661e638dae9e
-  slugAliases: [dsc-2275]
+  slugAliases: [dsc-2275, dsc_2275]
   src: DSC_2275.jpg
   category: landscape
   section: general
@@ -8114,7 +8114,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 38f351ae-19b2-4787-b36d-f20967a53cb8
-  slugAliases: [dsc-2279]
+  slugAliases: [dsc-2279, dsc_2279]
   src: DSC_2279.jpg
   category: landscape
   section: general
@@ -8148,7 +8148,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 2767a4ca-b5e4-45f3-ba71-23ac123aa0e7
-  slugAliases: [dsc-2284]
+  slugAliases: [dsc-2284, dsc_2284]
   src: DSC_2284.jpg
   category: landscape
   section: general
@@ -8181,7 +8181,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 9ea6fbd6-91d1-4a9d-8e8a-c64dd57f6946
-  slugAliases: [dsc-2305]
+  slugAliases: [dsc-2305, dsc_2305]
   src: DSC_2305.jpg
   category: landscape
   section: general
@@ -8215,7 +8215,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 5e64db5d-d53f-4931-b84a-72383860d1b5
-  slugAliases: [dsc-2326]
+  slugAliases: [dsc-2326, dsc_2326]
   src: DSC_2326.jpg
   category: landscape
   section: general
@@ -8250,7 +8250,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: fdbc536f-2a6f-476d-b7e1-fd7481d93e9d
-  slugAliases: [dsc-2333]
+  slugAliases: [dsc-2333, dsc_2333]
   src: DSC_2333.jpg
   category: landscape
   section: general
@@ -8285,7 +8285,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 60149ece-534a-411a-a3f0-d0c0d6c4ce20
-  slugAliases: [dsc-2337]
+  slugAliases: [dsc-2337, dsc_2337]
   src: DSC_2337.jpg
   category: landscape
   section: general
@@ -8320,7 +8320,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: fe9ac660-e815-4a4d-a242-395d61c04d42
-  slugAliases: [dsc-2343]
+  slugAliases: [dsc-2343, dsc_2343]
   src: DSC_2343.jpg
   category: landscape
   section: general
@@ -8355,7 +8355,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 31466fa5-952b-465f-8d02-b83666a336da
-  slugAliases: [dsc-2345]
+  slugAliases: [dsc-2345, dsc_2345]
   src: DSC_2345.jpg
   category: landscape
   section: general
@@ -8389,7 +8389,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 615901cb-cc42-4acb-87be-919e940ecb6f
-  slugAliases: [dsc-2345-02]
+  slugAliases: [dsc-2345-02, dsc_2345_02]
   src: DSC_2345_02.jpg
   category: landscape
   section: general
@@ -8423,7 +8423,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: b5f190e7-5a68-448b-8afb-0ed7aafbbd22
-  slugAliases: [dsc-2354]
+  slugAliases: [dsc-2354, dsc_2354]
   src: DSC_2354.jpg
   category: landscape
   section: general
@@ -8459,7 +8459,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: c70118f1-0efe-4890-a186-f9c7ad4b2da4
-  slugAliases: [dsc-2365]
+  slugAliases: [dsc-2365, dsc_2365]
   src: DSC_2365.jpg
   category: landscape
   section: general
@@ -8495,7 +8495,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 6f23cc6a-47fd-40f7-9fa1-9ab22f1dfade
-  slugAliases: [dsc-2410]
+  slugAliases: [dsc-2410, dsc_2410]
   src: DSC_2410.jpg
   category: landscape
   section: general
@@ -8529,7 +8529,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 163fa870-5e0e-4ddf-a558-9d509fe42445
-  slugAliases: [dsc-2414]
+  slugAliases: [dsc-2414, dsc_2414]
   src: DSC_2414.jpg
   category: landscape
   section: general
@@ -8563,7 +8563,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: e46b79a7-75e1-46c4-a729-68a42f935c6e
-  slugAliases: [dsc-2426]
+  slugAliases: [dsc-2426, dsc_2426]
   src: DSC_2426.jpg
   category: landscape
   section: general
@@ -8597,7 +8597,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 50966f66-4afa-4c19-bae9-a886b657f62f
-  slugAliases: [dsc-2439]
+  slugAliases: [dsc-2439, dsc_2439]
   src: DSC_2439.jpg
   category: landscape
   section: archive
@@ -8630,7 +8630,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 5190259c-65d1-497b-9539-0fb902325927
-  slugAliases: [dsc-2575]
+  slugAliases: [dsc-2575, dsc_2575]
   src: DSC_2575.jpg
   category: landscape
   section: general
@@ -8662,7 +8662,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: b103f403-ddba-4a4b-819a-a4bb1f3114af
-  slugAliases: [dsc-2579]
+  slugAliases: [dsc-2579, dsc_2579]
   src: DSC_2579.jpg
   category: landscape
   section: general
@@ -8692,7 +8692,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 03495dc6-97ab-4d9d-abbf-7ec64fc9c0cf
-  slugAliases: [dsc-2607]
+  slugAliases: [dsc-2607, dsc_2607]
   src: DSC_2607.jpg
   category: landscape
   section: general
@@ -8722,7 +8722,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: d8191493-3904-4bd2-a3bb-81c0fe76fcd7
-  slugAliases: [dsc-2630]
+  slugAliases: [dsc-2630, dsc_2630]
   src: DSC_2630.jpg
   category: landscape
   section: general
@@ -8755,7 +8755,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 1e906df2-ade2-462c-a8ce-000ccd62a4db
-  slugAliases: [dsc-2631]
+  slugAliases: [dsc-2631, dsc_2631]
   src: DSC_2631.jpg
   category: landscape
   section: general
@@ -8789,7 +8789,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 74fc7e2c-9173-41af-a117-8ac60e8580a3
-  slugAliases: [dsc-2632]
+  slugAliases: [dsc-2632, dsc_2632]
   src: DSC_2632.jpg
   category: landscape
   section: general
@@ -8823,7 +8823,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 7c2cd9b3-d5db-458b-9736-0e581a17cd2c
-  slugAliases: [dsc-2650]
+  slugAliases: [dsc-2650, dsc_2650]
   src: DSC_2650.jpg
   category: landscape
   section: general
@@ -8859,7 +8859,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 88ab39e9-3f6d-484e-9924-306d7502c26e
-  slugAliases: [dsc-2673]
+  slugAliases: [dsc-2673, dsc_2673]
   src: DSC_2673.jpg
   category: landscape
   section: general
@@ -8889,7 +8889,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 4502c4bc-4ba7-4db4-bdc7-e80f0801a25c
-  slugAliases: [dsc-2676]
+  slugAliases: [dsc-2676, dsc_2676]
   src: DSC_2676.jpg
   category: landscape
   section: general
@@ -8922,7 +8922,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 995db2a5-2c57-40dc-b2e2-d520acc71aeb
-  slugAliases: [dsc-2678]
+  slugAliases: [dsc-2678, dsc_2678]
   src: DSC_2678.jpg
   category: landscape
   section: general
@@ -9994,7 +9994,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: b758975c-a7df-48ba-b68e-5ff2ced8614e
-  slugAliases: [p1016635-black-and-white]
+  slugAliases: [p1016635-black-and-white, p1016635_black_and_white]
   src: P1016635_black_and_white.jpg
   category: landscape
   section: general
@@ -10024,7 +10024,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: fd351c2a-e278-4f42-9056-96017f6148d9
-  slugAliases: [p1016635-normal]
+  slugAliases: [p1016635-normal, p1016635_normal]
   src: P1016635_normal.jpg
   category: landscape
   section: general
@@ -10224,7 +10224,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: a8ae6f92-8c46-404d-9567-f7b3ec299b28
-  slugAliases: [dsc2784]
+  slugAliases: [dsc2784, _dsc2784]
   src: _DSC2784.jpg
   category: landscape
   section: general
@@ -10262,7 +10262,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 6f043475-93c6-48df-84a1-1d5c22666367
-  slugAliases: [dsc2785]
+  slugAliases: [dsc2785, _dsc2785]
   src: _DSC2785.jpg
   category: landscape
   section: general
@@ -10297,7 +10297,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 89977178-6be1-4046-88d6-372f6a625995
-  slugAliases: [dsc2787]
+  slugAliases: [dsc2787, _dsc2787]
   src: _DSC2787.jpg
   category: landscape
   section: general
@@ -10339,7 +10339,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 0598ea85-1088-465b-9986-095588a3dee8
-  slugAliases: [dsc2800]
+  slugAliases: [dsc2800, _dsc2800]
   src: _DSC2800.jpg
   category: landscape
   section: general
@@ -10382,7 +10382,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: b428c1bc-e4ef-4624-9a3d-baaf5d87cbe1
-  slugAliases: [dsc2801]
+  slugAliases: [dsc2801, _dsc2801]
   src: _DSC2801.jpg
   category: landscape
   section: general
@@ -10420,7 +10420,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 03962f0e-5aac-4903-8873-cd2b8b84f2f0
-  slugAliases: [dsc2803]
+  slugAliases: [dsc2803, _dsc2803]
   src: _DSC2803.jpg
   category: landscape
   section: general
@@ -10464,7 +10464,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: be14e8cc-d0ad-4fd1-b696-69804dcb29b9
-  slugAliases: [dsc2804]
+  slugAliases: [dsc2804, _dsc2804]
   src: _DSC2804.jpg
   category: landscape
   section: general
@@ -10505,7 +10505,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 97223323-37b5-41f5-8ad4-90bba94c7625
-  slugAliases: [dsc2805]
+  slugAliases: [dsc2805, _dsc2805]
   src: _DSC2805.jpg
   category: landscape
   section: general
@@ -10546,7 +10546,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 86f8c745-d4e2-4364-b081-9ff1af8aaec2
-  slugAliases: [dsc2806]
+  slugAliases: [dsc2806, _dsc2806]
   src: _DSC2806.jpg
   category: landscape
   section: general
@@ -10582,7 +10582,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 681d73ef-728d-4d88-9c8f-2c770d3793ca
-  slugAliases: [dsc2807]
+  slugAliases: [dsc2807, _dsc2807]
   src: _DSC2807.jpg
   category: landscape
   section: general
@@ -10626,7 +10626,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: f7ced4ff-80e8-40df-8810-dad1f1995030
-  slugAliases: [dsc2807-01]
+  slugAliases: [dsc2807-01, _dsc2807_01]
   src: _DSC2807_01.jpg
   category: landscape
   section: general
@@ -10670,7 +10670,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 9dc0c066-7f7e-478b-9903-74198ce9b98f
-  slugAliases: [dsc2808]
+  slugAliases: [dsc2808, _dsc2808]
   src: _DSC2808.jpg
   category: landscape
   section: general
@@ -10714,7 +10714,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: f82c3a7f-38df-44d7-963c-af39edfa979e
-  slugAliases: [dsc2809]
+  slugAliases: [dsc2809, _dsc2809]
   src: _DSC2809.jpg
   category: landscape
   section: general
@@ -10758,7 +10758,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 8b82810f-b87c-46b7-aefd-a635c7f129a0
-  slugAliases: [dsc2815]
+  slugAliases: [dsc2815, _dsc2815]
   src: _DSC2815.jpg
   category: landscape
   section: general
@@ -10799,7 +10799,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 5da1cf04-f0fd-46f6-93a8-3bdd1d8a0538
-  slugAliases: [dsc2816]
+  slugAliases: [dsc2816, _dsc2816]
   src: _DSC2816.jpg
   category: landscape
   section: general
@@ -10843,7 +10843,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: bcb74b00-4911-40ca-8c53-0e772c721fe5
-  slugAliases: [dsc2820]
+  slugAliases: [dsc2820, _dsc2820]
   src: _DSC2820.jpg
   category: landscape
   section: general
@@ -10889,7 +10889,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: b26755c0-d178-41d8-b0df-2208b564e5a8
-  slugAliases: [dsc2824]
+  slugAliases: [dsc2824, _dsc2824]
   src: _DSC2824.jpg
   category: landscape
   section: general
@@ -10934,7 +10934,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: bdb11afd-ab1d-4f6c-8637-b5a27391ab85
-  slugAliases: [dsc2831]
+  slugAliases: [dsc2831, _dsc2831]
   src: _DSC2831.jpg
   category: landscape
   section: general
@@ -10976,7 +10976,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 6fa9cc38-1575-4865-893e-aaff510a93d7
-  slugAliases: [dsc2845]
+  slugAliases: [dsc2845, _dsc2845]
   src: _DSC2845.jpg
   category: landscape
   section: general
@@ -11020,7 +11020,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: b3dab237-95b3-4ca4-82fc-cf4995710fce
-  slugAliases: [dsc2853]
+  slugAliases: [dsc2853, _dsc2853]
   src: _DSC2853.jpg
   category: landscape
   section: general
@@ -11064,7 +11064,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: bf17dc7e-feef-4d41-925f-d783f19eb17a
-  slugAliases: [dsc2857]
+  slugAliases: [dsc2857, _dsc2857]
   src: _DSC2857.jpg
   category: landscape
   section: general
@@ -11467,7 +11467,7 @@ images:
   license: cc-by-sa-4.0
   artist: Lukas Nagel
 - id: 73060f09-55fc-4d4c-b8ed-2f0c8f19cf8a
-  slugAliases: [dsc-1997]
+  slugAliases: [dsc-1997, dsc_1997]
   src: DSC_1997.jpg
   category: city
   section: general
@@ -11500,7 +11500,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 6937972b-1c4d-40d1-a21f-0f64b964e4eb
-  slugAliases: [dsc-2009]
+  slugAliases: [dsc-2009, dsc_2009]
   src: DSC_2009.jpg
   category: city
   section: general
@@ -11534,7 +11534,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 6828f9f7-cbd4-4f8b-9790-cd2e14f8fa47
-  slugAliases: [dsc-2072]
+  slugAliases: [dsc-2072, dsc_2072]
   src: DSC_2072.jpg
   category: city
   section: general
@@ -11571,7 +11571,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: cd52c036-c3e0-402c-a88e-1f640b517c03
-  slugAliases: [dsc-2168]
+  slugAliases: [dsc-2168, dsc_2168]
   src: DSC_2168.jpg
   category: city
   section: general
@@ -11606,7 +11606,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 135efc54-4956-4cd5-83ce-6e41a4abb06b
-  slugAliases: [dsc-2177]
+  slugAliases: [dsc-2177, dsc_2177]
   src: DSC_2177.jpg
   category: city
   section: general
@@ -11640,7 +11640,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 05a859f3-f6d4-46f4-af9a-c44c2b86788b
-  slugAliases: [dsc-2208]
+  slugAliases: [dsc-2208, dsc_2208]
   src: DSC_2208.jpg
   category: city
   section: general
@@ -11674,7 +11674,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 3ff2edea-d02b-4d8a-8744-79db3800ffd9
-  slugAliases: [dsc-2211]
+  slugAliases: [dsc-2211, dsc_2211]
   src: DSC_2211.jpg
   category: city
   section: general
@@ -11708,7 +11708,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 942f8196-7a61-4f2b-a0bc-2e3aac14a81c
-  slugAliases: [dsc-2229]
+  slugAliases: [dsc-2229, dsc_2229]
   src: DSC_2229.jpg
   category: city
   section: general
@@ -11740,7 +11740,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: e6d3f557-2706-41b1-a902-12627b41f15a
-  slugAliases: [dsc-2232]
+  slugAliases: [dsc-2232, dsc_2232]
   src: DSC_2232.jpg
   category: city
   section: general
@@ -11772,7 +11772,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: c11fd620-6c4d-4f5f-b621-8c4fe3011286
-  slugAliases: [dsc-2269]
+  slugAliases: [dsc-2269, dsc_2269]
   src: DSC_2269.jpg
   category: city
   section: general
@@ -11806,7 +11806,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: d71ca5b1-5698-4490-95a0-e3ca897f34be
-  slugAliases: [dsc-2399]
+  slugAliases: [dsc-2399, dsc_2399]
   src: DSC_2399.jpg
   category: city
   section: general
@@ -11839,7 +11839,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 186e9984-31a3-48e4-8256-b19f3d33e383
-  slugAliases: [dsc-2404]
+  slugAliases: [dsc-2404, dsc_2404]
   src: DSC_2404.jpg
   category: city
   section: general
@@ -11877,7 +11877,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 7e8119a6-ced0-498c-8f4f-62df7373cdc4
-  slugAliases: [dsc-2406]
+  slugAliases: [dsc-2406, dsc_2406]
   src: DSC_2406.jpg
   category: city
   section: general
@@ -11909,7 +11909,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: cc610e7e-df62-40eb-ae35-f4b48408f3ae
-  slugAliases: [dsc-2462]
+  slugAliases: [dsc-2462, dsc_2462]
   src: DSC_2462.jpg
   category: city
   section: general
@@ -11943,7 +11943,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 260e1087-a3f2-4296-8580-28b26fa2d4a3
-  slugAliases: [dsc-2470]
+  slugAliases: [dsc-2470, dsc_2470]
   src: DSC_2470.jpg
   category: city
   section: general
@@ -11977,7 +11977,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 3d9ba39f-991e-4fdc-9bda-97876ac36b09
-  slugAliases: [dsc-2474]
+  slugAliases: [dsc-2474, dsc_2474]
   src: DSC_2474.jpg
   category: city
   section: general
@@ -12011,7 +12011,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 31f4cd6c-8162-48d6-89c4-df68d7cbf663
-  slugAliases: [dsc-2625]
+  slugAliases: [dsc-2625, dsc_2625]
   src: DSC_2625.jpg
   category: city
   section: general
@@ -12047,7 +12047,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 64c7d2a1-ae31-41f2-949d-1df3b54c7435
-  slugAliases: [dsc-2626]
+  slugAliases: [dsc-2626, dsc_2626]
   src: DSC_2626.jpg
   category: city
   section: general
@@ -12080,7 +12080,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: c987c552-8484-4f47-a73d-3684f50371b7
-  slugAliases: [dsc-2709]
+  slugAliases: [dsc-2709, dsc_2709]
   src: DSC_2709.jpg
   category: city
   section: general
@@ -15077,7 +15077,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 6055df43-80b7-497a-bd2f-b3386e255bc5
-  slugAliases: [dsc-0345]
+  slugAliases: [dsc-0345, dsc_0345]
   src: DSC_0345.jpg
   category: plants
   section: general
@@ -15107,7 +15107,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 63edc521-1e8d-45aa-8a76-c636404620cc
-  slugAliases: [dsc-0359]
+  slugAliases: [dsc-0359, dsc_0359]
   src: DSC_0359.jpg
   category: plants
   section: general
@@ -15137,7 +15137,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: aaf8fd42-9721-412e-a9c9-54cfeff1be5a
-  slugAliases: [dsc-0413]
+  slugAliases: [dsc-0413, dsc_0413]
   src: DSC_0413.jpg
   category: plants
   section: general
@@ -15167,7 +15167,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 55c3fb26-72ac-4bb2-8326-b031b5b48f44
-  slugAliases: [dsc-0468]
+  slugAliases: [dsc-0468, dsc_0468]
   src: DSC_0468.jpg
   category: plants
   section: general
@@ -15197,7 +15197,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 106ab6c3-dfe5-4495-8234-4915ef59b99d
-  slugAliases: [dsc-0481]
+  slugAliases: [dsc-0481, dsc_0481]
   src: DSC_0481.jpg
   category: plants
   section: general
@@ -15225,7 +15225,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: bddf56ba-245a-4e16-aed5-4f15c9e9638e
-  slugAliases: [dsc-0492]
+  slugAliases: [dsc-0492, dsc_0492]
   src: DSC_0492.jpg
   category: plants
   section: general
@@ -15252,7 +15252,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 4d0eaf8d-f207-41b6-a20a-b863c1008484
-  slugAliases: [dsc-0601]
+  slugAliases: [dsc-0601, dsc_0601]
   src: DSC_0601.jpg
   category: plants
   section: general
@@ -15283,7 +15283,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 87d4cf20-a1c1-4d95-95ee-283c4f9ea742
-  slugAliases: [dsc-0602]
+  slugAliases: [dsc-0602, dsc_0602]
   src: DSC_0602.jpg
   category: plants
   section: general
@@ -15314,7 +15314,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: a544beb8-4cde-4409-805b-5c2742cd9389
-  slugAliases: [dsc-0753]
+  slugAliases: [dsc-0753, dsc_0753]
   src: DSC_0753.jpg
   category: plants
   section: general
@@ -15344,7 +15344,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: d5299f4f-03c6-4ccd-b1cf-30fde54862b4
-  slugAliases: [dsc-2006]
+  slugAliases: [dsc-2006, dsc_2006]
   src: DSC_2006.jpg
   category: plants
   section: general
@@ -15372,7 +15372,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: b6584cce-7a52-4d6e-8d64-cf9108595157
-  slugAliases: [dsc-2304]
+  slugAliases: [dsc-2304, dsc_2304]
   src: DSC_2304.jpg
   category: plants
   section: general
@@ -15407,7 +15407,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 18c4baf1-f618-4562-b1d6-7f52d2881e84
-  slugAliases: [dsc-2362]
+  slugAliases: [dsc-2362, dsc_2362]
   src: DSC_2362.jpg
   category: plants
   section: general
@@ -15443,7 +15443,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: fa8a2cf7-d3ac-4011-8098-9e64fd83f5ac
-  slugAliases: [dsc-2375]
+  slugAliases: [dsc-2375, dsc_2375]
   src: DSC_2375.jpg
   category: plants
   section: general
@@ -15473,7 +15473,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 78a97e47-f06f-49a6-b4f7-84caca1b1e2a
-  slugAliases: [dsc-2721]
+  slugAliases: [dsc-2721, dsc_2721]
   src: DSC_2721.jpg
   category: plants
   section: general
@@ -15500,7 +15500,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: b2f2fb0b-8f6f-4b74-9cc4-8ff02f95ca90
-  slugAliases: [dsc-2722]
+  slugAliases: [dsc-2722, dsc_2722]
   src: DSC_2722.jpg
   category: plants
   section: general
@@ -16242,7 +16242,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 0c16ee6e-67b6-4cb0-9812-162da7df7922
-  slugAliases: [dsc-2340]
+  slugAliases: [dsc-2340, dsc_2340]
   src: DSC_2340.jpg
   category: portrait
   model: lukas-nagel
@@ -16277,7 +16277,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 86315a8f-52de-4c7f-bbb9-dd98018aab4f
-  slugAliases: [dsc-2342]
+  slugAliases: [dsc-2342, dsc_2342]
   src: DSC_2342.jpg
   category: portrait
   model: lukas-nagel
@@ -16312,7 +16312,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 7d83f828-fa21-42c1-9e07-aafc01495c93
-  slugAliases: [dsc-2345-01]
+  slugAliases: [dsc-2345-01, dsc_2345_01]
   src: DSC_2345_01.jpg
   category: portrait
   model: lukas-nagel
@@ -16347,7 +16347,7 @@ images:
   license: cc-by-sa-4.0
   artist: ""
 - id: 5ebb463e-be05-4bc3-ac88-affdd385e382
-  slugAliases: [dsc-2347]
+  slugAliases: [dsc-2347, dsc_2347]
   src: DSC_2347.jpg
   category: portrait
   model: lukas-nagel

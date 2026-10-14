@@ -172,7 +172,7 @@
     {{- end }}
     "name": {{ .name }}
     {{- with .cover }},
-    {{- $img := .image.Filter (slice images.AutoOrient (images.Process "fill 900x900 Center")) }}
+    {{- $img := partial "image-variant.html" (dict "image" .image "spec" "fill 900x900 Center") }}
     "image": {{ $img.Permalink | safeHTML }}
     {{- end }}
     {{- with .record.links }},
@@ -202,7 +202,7 @@
        this costs one map lookup rather than another walk over the gallery. */ -}}
 {{- $c := partialCached "gallery-collected.html" . site.Language.Lang -}}
 {{- with index $c.byId .Params.photo_id -}}
-{{- $full := .image.Filter (slice images.AutoOrient (images.Process "fit 4000x4000")) -}}
+{{- $full := partial "image-variant.html" (dict "image" .image "spec" "fit 4000x4000") -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

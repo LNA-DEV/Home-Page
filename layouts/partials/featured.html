@@ -17,7 +17,7 @@
     {{- end -}}
   {{- end -}}
   {{- with $coverImg -}}
-    {{- $thumbnail := .Filter (slice images.AutoOrient (images.Process "fit 1200x630")) -}}
+    {{- $thumbnail := partial "image-variant.html" (dict "image" . "spec" "fit 1200x630") -}}
     <section class="featured">
       <a class="featured-card" href="{{ $portfolioPage.RelPermalink }}"
          style="background-image: url('{{ $thumbnail.RelPermalink }}')"

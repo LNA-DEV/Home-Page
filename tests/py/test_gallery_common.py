@@ -1,10 +1,11 @@
-"""The quoting rule, the variant-name rule and the two small readers.
+"""The quoting rule, the variant-path rule and the two small readers.
 
 These are the functions that decide what ends up in data/gallery.yaml as text.
 A bug in yaml_scalar is a data file that no longer parses, or — worse — one that
 parses into something other than what was written.
 """
 
+import shutil
 import tempfile
 import unittest
 from pathlib import Path
@@ -67,23 +68,56 @@ class YamlScalar(unittest.TestCase):
                 self.assert_roundtrip(value)
 
 
-class PublishedBase(unittest.TestCase):
-    # A served file maps to its photo's published name — the manifest's `file`,
-    # the English slug — not to the store filename (gallery-metadata-yaml-only §5).
-    def test_a_hugo_variant_maps_back_to_its_published_original(self):
-        self.assertEqual(gc.published_base("red-fox-in-the-snow_hu_1f1561eb0ac2d2ce.jpg"),
-                         "red-fox-in-the-snow.jpg")
+class ServedGalleryFiles(unittest.TestCase):
+    # images/gallery/<file> is an original, images/gallery/<spec>/<file> a variant
+    # of it under the SAME name (docs/concepts/stable-image-urls.md §4). Where a
+    # file sits is the only thing that tells them apart, and a path that is
+    # neither must surface as a problem, never be skipped.
+    def tree(self, *paths):
+        root = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, root)
+        for p in paths:
+            (root / p).parent.mkdir(parents=True, exist_ok=True)
+            (root / p).write_bytes(b"x")
+        return root
 
-    def test_a_published_original_is_returned_unchanged(self):
-        self.assertEqual(gc.published_base("red-fox-in-the-snow.jpg"), "red-fox-in-the-snow.jpg")
+    def test_an_original_and_its_variants_share_a_name(self):
+        root = self.tree("red-fox.jpg", "fit-600x600/red-fox.jpg", "fill-480x480-center/red-fox.jpg")
+        files, problems = gc.served_gallery_files(root)
+        self.assertEqual(problems, [])
+        self.assertEqual(
+            sorted((str(p.relative_to(root)), v) for p, v in files),
+            [("fill-480x480-center/red-fox.jpg", True), ("fit-600x600/red-fox.jpg", True),
+             ("red-fox.jpg", False)])
+        self.assertEqual({p.name for p, _ in files}, {"red-fox.jpg"})
 
-    def test_only_a_hex_hash_is_stripped(self):
-        # The hash is hex, so "_hu_b" IS a variant marker and "_hu_z" is not.
-        self.assertEqual(gc.published_base("a_hu_b.jpg"), "a.jpg")
-        self.assertEqual(gc.published_base("a_hu_z.jpg"), "a_hu_z.jpg")
+    def test_the_variants_are_found_at_all(self):
+        # os.scandir over the top level skipped directories without a word; every
+        # variant would then have shipped untagged and gone unchecked.
+        files, _ = gc.served_gallery_files(self.tree("fit-4000x4000/a.jpg"))
+        self.assertEqual([v for _, v in files], [True])
 
-    def test_the_extension_is_kept_as_published(self):
-        self.assertEqual(gc.published_base("alpaca_hu_deadbeef01234567.JPG"), "alpaca.JPG")
+    def test_a_hugo_hash_name_is_a_problem_wherever_it_sits(self):
+        root = self.tree("a.jpg", "a_hu_1f1561eb0ac2d2ce.jpg", "fit-600x600/a_hu_b.jpg")
+        files, problems = gc.served_gallery_files(root)
+        self.assertEqual([str(p.relative_to(root)) for p, _ in files], ["a.jpg"])
+        self.assertEqual(len(problems), 2, problems)
+        self.assertTrue(all("_hu_" in p for p in problems), problems)
+
+    def test_only_a_hex_hash_counts_as_hugo_s(self):
+        files, problems = gc.served_gallery_files(self.tree("a_hu_z.jpg"))
+        self.assertEqual(problems, [])
+        self.assertEqual(len(files), 1)
+
+    def test_deeper_nesting_is_a_problem(self):
+        _, problems = gc.served_gallery_files(self.tree("fit-600x600/deeper/a.jpg"))
+        self.assertTrue(any("deeper" in p for p in problems), problems)
+
+    def test_a_directory_that_is_not_a_spec_is_a_problem(self):
+        for name in ("Fit 600x600", "thumbs_", "-fit"):
+            with self.subTest(name=name):
+                _, problems = gc.served_gallery_files(self.tree(f"{name}/a.jpg"))
+                self.assertTrue(any("not a spec directory" in p for p in problems), problems)
 
 
 class PhotosDirFromHugoMounts(unittest.TestCase):

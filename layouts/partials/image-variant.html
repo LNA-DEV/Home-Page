@@ -1,0 +1,106 @@
+{{- /*
+  image-variant.html — the ONE place a processed image is made, site-wide.
+  docs/concepts/stable-image-urls.md §2.
+
+      {{ $v := partial "image-variant.html" (dict "image" $res "spec" "fit 600x600") }}
+      {{ $v := partial "image-variant.html" (dict "image" $res "spec" "resize 720x" "page" .Page) }}
+
+  in:   image  the UNPROCESSED resource: a gallery photo (the copy from
+               gallery-images.html, or a raw store resource), another global
+               asset (resources.Get), or a page resource
+        spec   a Hugo processing spec — "fit 600x600", "fill 480x480 Center",
+               "resize 720x webp q85"
+        page   the page a page resource belongs to; required for one, ignored
+               otherwise
+  out:  the processed resource, published ONLY under
+
+          images/gallery/<dir>/<fileSlug>.<ext>    a gallery photo
+          <asset dir>/<dir>/<stem>.<ext>           another global asset
+          <page URL><dir>/<sub-path/stem>.<ext>    a page resource
+
+        where <dir> is the spec, lowercased, whitespace → "-"
+        ("fill 480x480 Center" → fill-480x480-center), and <ext> is the output
+        format's extension, lowercased.
+
+  Why. Hugo publishes a processed image under its cache key,
+  `<name>_hu_<hash>.<ext>`, and the hash is Hugo's: besides the pixels and the
+  spec it covers the raw `imaging:` block and Hugo-internal version numbers.
+  Hugo 0.166.0 changed those for every `images.Filter` chain on 2026-09-10 and
+  every variant URL on the site went dead with byte-identical files behind it.
+  A name built from the source's name and the spec moves only when we move it.
+
+  ONE CHAIN, always: `Filter (AutoOrient, Process spec)`. That is load-bearing.
+  `resources.Copy` to a path that is already taken silently returns the FIRST
+  resource and `--printPathWarnings` says nothing, so two different chains for
+  one spec would make the served bytes depend on render order. That is also why
+  no template may process an image anywhere else (tests/static/image-urls.spec.ts
+  checks the source). AutoOrient is a no-op on a file without an Orientation tag
+  (verified: a cover's `fill 300x450` comes out byte-identical with and without).
+
+  Only the copy is published: nothing here touches the source's .RelPermalink,
+  so a source that is never referenced (a game screenshot) stays unpublished.
+*/ -}}
+{{- $img := .image -}}
+{{- $spec := .spec -}}
+{{- $page := .page -}}
+
+{{- $dir := replaceRE `\s+` "-" (lower (trim $spec " ")) -}}
+{{- if not (findRE `^[a-z0-9]+(-[a-z0-9]+)*$` $dir) -}}
+  {{- errorf "image-variant: the spec %q of %s does not reduce to a directory name of [a-z0-9-] — extend the naming scheme on purpose first (docs/concepts/stable-image-urls.md §2.1)" $spec $img.Name -}}
+{{- end -}}
+
+{{- $v := $img.Filter (slice images.AutoOrient (images.Process $spec)) -}}
+{{- $ext := lower $v.MediaType.FirstSuffix.Suffix -}}
+
+{{- $name := $img.Name -}}
+{{- $target := "" -}}
+{{- $gallery := false -}}
+{{- if strings.HasPrefix $name "/images/gallery/" -}}
+  {{- with index (partialCached "gallery-meta.html" .).bySrc (path.Base $name) -}}
+    {{- $target = printf "images/gallery/%s/%s.%s" $dir .fileSlug $ext -}}
+    {{- $gallery = true -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if not $gallery -}}
+  {{- $file := path.Base $name -}}
+  {{- $stem := strings.TrimSuffix (path.Ext $file) $file -}}
+  {{- $scope := "" -}}
+  {{- $siblings := slice -}}
+  {{- if strings.HasPrefix $name "/" -}}
+    {{- /* A global asset: next to where it is (or would be) published. */ -}}
+    {{- $scope = strings.TrimPrefix "/" (path.Dir $name) -}}
+    {{- $target = printf "%s/%s/%s.%s" $scope $dir $stem $ext -}}
+    {{- $siblings = resources.Match (printf "%s/*" $scope) -}}
+  {{- else -}}
+    {{- /* A page resource: under the page's own URL, one copy per language as
+           before. `.Name` is bundle-relative and keeps its sub-path. The URL is
+           decoded, because a copy target is a file path, not a URL. */ -}}
+    {{- if not $page -}}
+      {{- errorf "image-variant: %q is a page resource and needs `page` to know where to publish its %s variant" $name $spec -}}
+    {{- end -}}
+    {{- $scope = strings.TrimPrefix "/" (urls.Parse $page.RelPermalink).Path -}}
+    {{- $sub := path.Dir $name -}}
+    {{- $sub = cond (eq $sub ".") "" (printf "%s/" $sub) -}}
+    {{- $target = printf "%s%s/%s%s.%s" $scope $dir $sub $stem $ext -}}
+    {{- range $page.Resources.ByType "image" -}}
+      {{- if eq (path.Dir .Name) (path.Dir $name) }}{{ $siblings = $siblings | append . }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- /* Two sources whose name differs only in what this scheme drops — the
+         extension, its case — would claim one target, and the second would
+         silently get the first one's bytes (see ONE CHAIN above). The gallery
+         cannot hit this: gallery-meta.html already stops the build on two photos
+         with one file name. */ -}}
+  {{- if ne (path.Base $target) $file -}}
+    {{- range $siblings -}}
+      {{- $other := path.Base .Name -}}
+      {{- if and (ne $other $file) (ne .MediaType.SubType "svg") (eq (lower (strings.TrimSuffix (path.Ext $other) $other)) (lower $stem)) -}}
+        {{- errorf "image-variant: %q and %q would both be published as %q — rename one of them" $name .Name (path.Base $target) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return ($v | resources.Copy $target) -}}

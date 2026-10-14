@@ -200,15 +200,17 @@ test.describe("the pages", () => {
   });
 
   test("no screenshot original is published", () => {
-    /* Only processed variants (_hu_) — the original is never referenced, so
-       Hugo never writes it. Vacuous until the first screenshot exists. */
+    /* Only processed variants, each in its spec directory (fit-640x640-jpg/,
+       fit-1920x1920-jpg/; layouts/partials/image-variant.html) — the original is
+       never referenced, so Hugo never writes it. Vacuous on a machine without
+       the screenshot mount. */
     const dir = sitePath("images", "games", "screenshots");
     const originals: string[] = [];
     const walk = (d: string) => {
       for (const e of fs.existsSync(d) ? fs.readdirSync(d, { withFileTypes: true }) : []) {
         const full = path.join(d, e.name);
         if (e.isDirectory()) walk(full);
-        else if (!e.name.includes("_hu_")) originals.push(path.relative(dir, full));
+        else if (!/^(?:resize|fit|fill|crop)-[a-z0-9-]+$/.test(path.basename(d))) originals.push(path.relative(dir, full));
       }
     };
     walk(dir);

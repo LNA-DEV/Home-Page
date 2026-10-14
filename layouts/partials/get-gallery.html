@@ -32,7 +32,7 @@
   {{- end -}}
 
   {{- if $featured -}}
-    {{- $thumbnail := $featured.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
+    {{- $thumbnail := partial "image-variant.html" (dict "image" $featured "spec" "fit 600x600") -}}
     {{- $color := index $thumbnail.Colors 0 | default "transparent" -}}
     {{- $gallery = dict
       "page" $

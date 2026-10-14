@@ -29,7 +29,7 @@
   <div class="game-hero">
     <div class="game-hero__cover">
       {{- with $game.cover }}{{ with resources.Get . }}
-      {{- $t := .Fill "300x450" }}
+      {{- $t := partial "image-variant.html" (dict "image" . "spec" "fill 300x450") }}
       <img src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}" alt="{{ i18n "coverAlt" $game.title }}">
       {{- end }}{{ else }}
       <div class="game-card__placeholder"><span>{{ $game.title }}</span></div>
@@ -131,9 +131,8 @@
     <div class="game-shots" data-game-shots>
       {{- $count := len . }}
       {{- range $i, $img := . }}
-      {{- $o := $img.Filter images.AutoOrient }}
-      {{- $thumb := $o.Process "fit 640x640 jpg" }}
-      {{- $large := $o.Process "fit 1920x1920 jpg" }}
+      {{- $thumb := partial "image-variant.html" (dict "image" $img "spec" "fit 640x640 jpg") }}
+      {{- $large := partial "image-variant.html" (dict "image" $img "spec" "fit 1920x1920 jpg") }}
       <a class="game-shot" href="{{ $large.RelPermalink }}" data-pswp-width="{{ $large.Width }}" data-pswp-height="{{ $large.Height }}">
         <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" loading="lazy"
              alt="{{ i18n "game_screenshot_alt" (dict "n" (add $i 1) "total" $count "title" $game.title) }}">

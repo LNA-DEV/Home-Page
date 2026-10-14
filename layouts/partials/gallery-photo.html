@@ -30,9 +30,9 @@
        the lightbox, so adding 1200 costs one render per photo rather than three.
        The hero never displays wider than the content column, so 600w/1200w
        covers 1x and 2x; 4000 stays the lightbox and download target. */ -}}
-{{- $small := $img.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
-{{- $mid   := $img.Filter (slice images.AutoOrient (images.Process "fit 1200x1200")) -}}
-{{- $full  := $img.Filter (slice images.AutoOrient (images.Process "fit 4000x4000")) -}}
+{{- $small := partial "image-variant.html" (dict "image" $img "spec" "fit 600x600") -}}
+{{- $mid   := partial "image-variant.html" (dict "image" $img "spec" "fit 1200x1200") -}}
+{{- $full  := partial "image-variant.html" (dict "image" $img "spec" "fit 4000x4000") -}}
 
 {{- /* Section base derived from this page's own URL rather than from .Parent:
        the section carries `render: never`, so its RelPermalink is not usable.
@@ -89,7 +89,7 @@
            srcset="{{ $small.RelPermalink }} {{ $small.Width }}w, {{ $mid.RelPermalink }} {{ $mid.Width }}w"
            sizes="(max-width: 1060px) 100vw, 1060px"
            width="{{ $mid.Width }}" height="{{ $mid.Height }}"
-           alt="{{ $photo.Alt }}" itemprop="contentUrl" />
+           alt="{{ $photo.Alt }}" />
       <div class="like-count" aria-label="Likes"></div>
       <span class="pswp-caption-content">
         {{- with $photo.Title }}<span class="caption-title">{{ . }}</span>{{ end -}}
@@ -198,7 +198,7 @@
     <h2>{{ i18n "photo_related" }}</h2>
     <ul>
       {{- range . }}
-      {{- $t := .image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
+      {{- $t := partial "image-variant.html" (dict "image" .image "spec" "fit 600x600") }}
       <li>
         <a href="{{ printf "%s%s/" $base .Slug }}">
           <img loading="lazy" src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}" alt="{{ .Alt }}" />
@@ -225,6 +225,10 @@
   </nav>
   {{- end }}
 
+  {{- /* contentUrl is the 4000px variant, the one the JSON-LD, the image sitemap
+         and the grids name too — not the hero's `src`, which is the 1200px one
+         (docs/concepts/stable-image-urls.md §3). */}}
+  <meta itemprop="contentUrl" content="{{ $full.Permalink }}" />
   <meta itemprop="creditText" content="{{ $photo.ResolvedArtist }}" />
   <meta itemprop="copyrightNotice" content="© {{ $photo.ResolvedArtist }}" />
 </article>

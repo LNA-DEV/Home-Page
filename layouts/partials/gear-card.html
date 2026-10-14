@@ -108,7 +108,7 @@
   {{- with $u.photos }}
   <ul class="gear-card__photos">
     {{- range . }}
-    {{- $t := .image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
+    {{- $t := partial "image-variant.html" (dict "image" .image "spec" "fit 600x600") }}
     <li>
       <a href="{{ printf "%s%s/" $photoBase .Slug }}" title="{{ .Title }}">
         <img loading="lazy" src="{{ $t.RelPermalink }}" width="{{ $t.Width }}" height="{{ $t.Height }}" alt="{{ .Alt | default .Title }}" />

@@ -56,7 +56,7 @@
         {{ with $book.cover }}
           {{ $img := resources.Get . }}
           {{ with $img }}
-            {{ $resized := .Fit "200x300" }}
+            {{ $resized := partial "image-variant.html" (dict "image" . "spec" "fit 200x300") }}
             <img src="{{ $resized.RelPermalink }}" alt="{{ i18n "coverAlt" $book.title }}" loading="lazy">
           {{ end }}
         {{ end }}

@@ -1,9 +1,9 @@
 {{- /*
   story/img.html
   One <img> of a story photo, from the ladder galleryImage already uses
-  (gallery-image-figure.html): AutoOrient first, then `fit W x 10W` at
-  480/720/1080/1440 — the same processing specs, so a photo inlined in a post
-  and in a story shares its files — never upscaled. `wide2048` adds one more
+  (gallery-image-figure.html): `fit W x 10W` at 480/720/1080/1440 through
+  image-variant.html — the same specs and the same chain, so a photo inlined in
+  a post and in a story shares its files — never upscaled. `wide2048` adds one more
   step, for the hero and `full` blocks only (§5.5).
 
   Params:
@@ -15,19 +15,19 @@
   Returns HTML.
 */ -}}
 {{- $item := .item -}}
-{{- $src := $item.image.Filter images.AutoOrient -}}
+{{- $width := (partial "gallery-oriented-size.html" (dict "image" $item.image)).w -}}
 {{- $steps := slice 480 720 1080 1440 -}}
 {{- if .wide2048 }}{{ $steps = $steps | append 2048 }}{{ end -}}
 {{- $variants := slice -}}
 {{- range $steps -}}
-  {{- if le . $src.Width -}}
-    {{- $variants = $variants | append ($src.Process (printf "fit %dx%d" . (mul . 10))) -}}
+  {{- if le . $width -}}
+    {{- $variants = $variants | append (partial "image-variant.html" (dict "image" $item.image "spec" (printf "fit %dx%d" . (mul . 10)))) -}}
   {{- end -}}
 {{- end -}}
 {{- /* A photo narrower than 480px: its one fit variant, never the original,
        which carries the full-size file into the page. */ -}}
 {{- if not $variants -}}
-  {{- $variants = slice ($src.Process (printf "fit %dx%d" $src.Width (mul $src.Width 10))) -}}
+  {{- $variants = slice (partial "image-variant.html" (dict "image" $item.image "spec" (printf "fit %dx%d" $width (mul $width 10)))) -}}
 {{- end -}}
 {{- /* src for a client that ignores srcset: the largest step up to 1080. */ -}}
 {{- $primary := index $variants 0 -}}

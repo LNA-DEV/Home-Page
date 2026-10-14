@@ -9,7 +9,7 @@
   Returns HTML.
 */ -}}
 {{- $item := .item -}}
-{{- $thumb := $item.image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) -}}
+{{- $thumb := partial "image-variant.html" (dict "image" $item.image "spec" "fit 600x600") -}}
 {{- $color := index $thumb.Colors 0 | default "transparent" -}}
 {{- $title := partial "story/title.html" $item -}}
 <a class="story-thumb" href="{{ partial "story/url.html" $item }}" data-id="{{ $item.Id }}" title="{{ $item.Title }}" style="background-color: {{ $color }}">

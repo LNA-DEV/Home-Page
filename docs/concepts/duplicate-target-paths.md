@@ -35,7 +35,7 @@ Measured while building the game pages; the details are in `gaming-game-pages.md
   - The build test (`tests/build/hugo.spec.ts`) fails on every `WARN`.
   - `deploy.sh` runs both of its `hugo` builds with `--panicOnWarning`.
 - **It cannot be silenced selectively.** Hugo logs it with `Warnln` (hugolib/hugo_sites_build.go), without an id, so `ignoreLogs` cannot target it. And one line carries every path, harmless and real alike.
-- **Where the ceiling is.** The site sends ~1,200 files through that partition today: 650 gallery photos, 156 game covers, 153 dex data files, 108 dex images, 69 book covers, CSS/JS.
+- **Where the ceiling is.** On 2026-09-28 the site sent ~1,200 files through that partition: 650 gallery photos, 156 game covers, 153 dex data files, 108 dex images, 69 book covers, CSS/JS. **Since 2026-10-14 it is past the ceiling on its own:** the stable image names (`stable-image-urls.md` §2) publish every processed image as a `resources.Copy`, ~4,250 more entries, and the warning comes back intermittently — the first build after the switch listed 235 paths (book and game covers, a few post images and gallery variants, each written once per language), the next build none. That made this task the next one: until it is done, a build that hits it fails the build test and stops `deploy.sh`.
 
   | Extra `resources.Get` icons | Duplicates reported |
   |---:|---|
@@ -56,7 +56,7 @@ Measured while building the game pages; the details are in `gaming-game-pages.md
 1. **No file at P under a `static` mount.** A static file and a generated or asset file on one path is a real conflict — the `security.txt` case `CLAUDE.md` warns about — even if the bytes happen to match.
 2. **The built file equals exactly one source, byte for byte:**
    - a file at P in an **asset mount**: `assets/`, the gallery store mounted at `images/gallery/`, the screenshot store at `images/games/screenshots/`. Read the mounts from `hugo config mounts`, never hard-code them, because `module.yaml` is machine-specific;
-   - for a processed variant (`…_hu_<hash>.<ext>`): the file at P under `resources/_gen/images/`, which mirrors the published paths (checked: `resources/_gen/images/images/…`, `…/en/…`);
+   - for a processed variant: since `stable-image-urls.md` (2026-10-14) **no** variant is published under its `…_hu_<hash>.<ext>` cache name any more. Each one is a `resources.Copy` to `<dir>/<spec>/<name>.<ext>` (`layouts/partials/image-variant.html`), so it is matched **by bytes** against the `_hu_` files in its source's cache directory: `<dir>` under `resources/_gen/images/`, which mirrors the published paths (checked: `resources/_gen/images/images/…`, `…/en/…`). For a gallery photo that directory is `images/gallery/` and the cache file carries the photo's file slug as its stem (`<fileSlug>_hu_<hash>.<ext>`), so the candidates are the `<name>_hu_*` files there; for a page resource, `<page dir>/<stem>_hu_*`;
    - for a **copied** resource published under another name (the gallery originals: store `DSC_2632.jpg`, published as `<english-slug>.jpg`, via `resources.Copy`): any asset-mount file with the same bytes. To stay fast, build a size index with `stat` and hash only same-size candidates. Never hash the whole 7.6 GB store.
 3. Anything else — an HTML page, a feed, an alias, a JSON manifest, bytes that match nothing — is a **failure**.
 
