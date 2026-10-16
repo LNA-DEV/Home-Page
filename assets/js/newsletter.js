@@ -108,10 +108,10 @@
 
      showModal(), not the open attribute: only the modal form puts the dialog in
      the top layer and brings the focus trap, the ESC handler and ::backdrop with
-     it. Everything below is the one thing it does NOT give us — dismissing on a
-     click outside. The check works because the backdrop is painted by the dialog
-     element itself, so a click on it reports the dialog as its target, while a
-     click on any real content reports a descendant. */
+     it. The last handler below is the one thing it does NOT give us — dismissing
+     on a click outside. The check works because the backdrop is painted by the
+     dialog element itself, so a click on it reports the dialog as its target,
+     while a click on any real content reports a descendant. */
   function initCta() {
     const link = document.querySelector("[data-newsletter-open]");
     const modal = document.querySelector(".newsletter-modal");
@@ -140,6 +140,16 @@
       openTracked = true;
       trackEvent(source, "Newsletter Open");
     });
+
+    /* The × is a plain button closed here. It used to be a <form
+       method="dialog">, which closes without JS, but Plausible's form-submission
+       tracking counts every submitted form: each dismissal arrived as "Form:
+       Submission" and read like a signup that never reached Listmonk
+       (2026-10-16). command="close" would also do it without JS, but only in
+       browsers from 2025 on; the dialog only ever opens from this file, so a
+       click handler costs no visitor anything. */
+    const dismiss = modal.querySelector(".newsletter-modal__dismiss button");
+    if (dismiss) dismiss.addEventListener("click", () => modal.close());
 
     modal.addEventListener("click", (event) => {
       if (event.target === modal) modal.close();

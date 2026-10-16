@@ -39,9 +39,11 @@
 </a>
 
 <dialog class="newsletter-modal" aria-label="{{ i18n "newsletter_cta_aria" }}">
-  {{- /* method="dialog" closes the dialog with no JS of its own. */}}
-  <form method="dialog" class="newsletter-modal__dismiss">
-    <button type="submit" aria-label="{{ i18n "newsletter_close" }}" title="{{ i18n "newsletter_close" }}">&times;</button>
-  </form>
+  {{- /* A plain button that newsletter.js closes, not <form method="dialog">:
+         Plausible counts every submitted form as "Form: Submission", the
+         dismissal included. See initCta() there. */}}
+  <div class="newsletter-modal__dismiss">
+    <button type="button" aria-label="{{ i18n "newsletter_close" }}" title="{{ i18n "newsletter_close" }}">&times;</button>
+  </div>
   {{- partial "newsletter-form.html" (dict "ctx" . "source" "header" "variant" "open") }}
 </dialog>

@@ -197,7 +197,7 @@ html:has(.newsletter-modal:modal) {
 }
 
 /* The close button sits on the SAME line as the heading, which is the one thing
-   the flow order cannot give us: the dismiss form is a sibling of the whole
+   the flow order cannot give us: the dismiss wrapper is a sibling of the whole
    card, so in flow it can only be a row of its own above the heading -- and a
    lone X floating over an empty strip reads as a mistake.
 
