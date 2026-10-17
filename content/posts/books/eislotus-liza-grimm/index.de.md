@@ -1,12 +1,12 @@
 ---
-title: "Bookreview Eislotus"
-date: 2024-07-29T21:34:00+02:00
-draft: false
-tags: ["Privacy", "Home Server", "NAS", "Open Source", "Selfhosting", "Home-Server Project"]
-categories: ["Privacy", "Projects"]
+title: "Eislotus von Liza Grimm - meine Gedanken zum Buch"
+date: 2026-10-17T22:00:00+02:00
+draft: true
+tags: ["Bücher", "Rezension", "Fantasy", "Liza Grimm", "Eislotus"]
+categories: ["Bücher"]
 showToc: true
 TocOpen: false
-description: ""
+description: "Meine Gedanken zu Eislotus von Liza Grimm: Welt, Magiesystem, Charaktere und Handlung."
 disableShare: true
 disableHLJS: false
 searchHidden: false
@@ -72,4 +72,4 @@ Für mich fühlt es sich so an als wäre alles auf einem guten Weg. Abgesehen vi
 
 Ich bin jetzt auf jeden Fall sehr hooked und freu mich darauf das mich mal mindestens noch drei weitere Bücher erwarten. Ich hoffe das meie kleine Zusammenfassung und Meinung interessant war und werde auf jeden Fall direkt mit den weiteren Büchern anfangen.
 
-[^spoiler] und leider dazu neige durch unvorsichtiges Besuchen von Wiki Seiten dann doch auf Spoiler treffe
+[^spoiler]: und leider dazu neige durch unvorsichtiges Besuchen von Wiki Seiten dann doch auf Spoiler treffe
