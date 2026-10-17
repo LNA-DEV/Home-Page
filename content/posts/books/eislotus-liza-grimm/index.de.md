@@ -14,7 +14,7 @@ sitemap:
   priority: 0.8
 ---
 
-Als ich mit meiner letzten Serie ACOTAR / Das Reich der Sieben Höfe fertig war und auf das neueste Buch warten musste, habe ich nach etwas zur Überbrückung gesucht. Hier kam mir relativ schnell die deutsche Autorin Liza Grimm in den Sinn. Ich hatte sie seit einiger Zeit auf dem Schirm, da ich durch Zufall gesehen habe, wie sie bei Horde einem Pen and Paper mit unter anderem Gronkh den Dungeon Master gemacht hat und auch die Story geschrieben hat. Sie ist mir durch ihre herzliche Art aufgefallen und mir in Erinnerung geblieben. 
+Als ich mit meiner letzten Serie ACOTAR / Das Reich der sieben Höfe fertig war und auf das neueste Buch warten musste, habe ich nach etwas zur Überbrückung gesucht. Hier kam mir relativ schnell die deutsche Autorin Liza Grimm in den Sinn. Ich hatte sie seit einiger Zeit auf dem Schirm, da ich durch Zufall gesehen habe, wie sie bei Horde einem Pen and Paper mit unter anderem Gronkh den Dungeon Master gemacht hat und auch die Story geschrieben hat. Sie ist mir durch ihre herzliche Art aufgefallen und mir in Erinnerung geblieben. 
 
 Zwischendurch habe ich ihren Twitch-Kanal ein wenig verfolgt, wo ich immer wieder Infos zu ihrer Bücher-der-Macht-Serie gesehen habe, zu der auch Eislotus als Eröffnung gehört. Durch mein Interesse am Norden habe ich aber zuerst ein älteres Buch von Liza Grimm gelesen. Die Götter von Asgard war eine schöne Geschichte, die ich zwar sehr genossen habe, die mich allerdings nicht unendlich aus den Socken gehauen hat. Danach entschied ich mich endlich, mich mit Eislotus, einem ihrer neuesten Bücher, auseinanderzusetzen. Und giiirl, war das worth it...
 
@@ -33,7 +33,7 @@ Die wertvollste Ressource in dieser Welt sind die Buchbinder, denn durch sie kö
 
 Dies findet in der Akademie auf der zentralen Insel Lort statt. Diese Insel gehört nicht zu einer der Regionen, sondern ist so etwas wie die neutrale Hauptstadt eines losen Föderalstaates. Dort wird Priorität darauf gelegt, alles gerecht zu mischen. Hier stehen die klassischen Häuser verschiedener Regionen Wand an Wand. Auch die Ungebundenen, die ihre Seele an kein Buch gebunden haben oder können, sind hier gleichwertig vertreten, während sie in anderen Regionen eher als Abschaum behandelt werden.
 
-Die Akademie soll den Gesandten aus den Regionen die Möglichkeit bieten, zu lernen, sowohl im Kampf als auch mit ihrem Element besser zu werden, um dann schließlich im Ritual des Lichts final zu entscheiden, zu wem die Buchbinder für den nächsten Zyklus in die Stadt kommen. Dies ist dadurch für die Städte von höchster Wichtigkeit, jemanden zur Akademie zu schicken, der gewinnt. Die Auswahl muss ausdrücklich nicht tödlich verlaufen, kann das aber sehr wohl. 
+Die Akademie soll den Gesandten aus den Regionen die Möglichkeit bieten, zu lernen, sowohl im Kampf als auch mit ihrem Element besser zu werden, um dann schließlich im Ritual des Lichts final zu entscheiden, welches Element die Buchbinder für den nächsten Zyklus erhält. Dies ist dadurch für die Städte von höchster Wichtigkeit, jemanden zur Akademie zu schicken, der gewinnt. Die Auswahl muss ausdrücklich nicht tödlich verlaufen, kann das aber sehr wohl. 
 
 Generell, finde ich, erinnert das Grundsetting ein wenig an eine Mischung aus Hunger Games meets Magie mit einem Element an Vertrauenslosigkeit. Denn während der ganzen Geschichte hat man das Gefühl, dass man auf keinen außer den Hauptcharakteren so richtig zählen kann. Sowohl Akademie als auch Gegner wirken zwar teils vertrauenswürdig, aber irgendetwas passiert, das nicht zu dieser shiny Oberfläche passt.
 
@@ -41,24 +41,24 @@ Generell, finde ich, erinnert das Grundsetting ein wenig an eine Mischung aus Hu
 
 ### Nara
 
-Nara ist eine Wassergebundene und lebt im Norden im Eis. Was interessant ist, ist, dass sie mit dem Mond und nicht der Sonne leben. Nara ist sehr pflichtbewusst und gilt als Beschützerin Koris. Zu der Ehre, Beschützerin ihrer Stadt zu sein, ist sie durch den frühen Tod ihrer Eltern gekommen, nachdem sich ihr großer Bruder einzig ins Aufklären dieses mysteriösen Unglücks verbissen hat. Sie wirkt sehr freundlich, offen und herzlich. Generell erinnert die Kultur ein wenig an die nordische Region unserer Welt.
+Nara ist eine Mondgebundene (Wasser) und lebt im Norden im Eis. Was interessant ist, ist, dass sie mit dem Mond und nicht der Sonne leben. Nara ist sehr pflichtbewusst und gilt als Beschützerin Koris. Zu der Ehre, Beschützerin ihrer Stadt zu sein, ist sie durch den frühen Tod ihrer Eltern gekommen, nachdem sich ihr großer Bruder einzig ins Aufklären dieses mysteriösen Unglücks verbissen hat. Sie wirkt sehr freundlich, offen und herzlich. Generell erinnert die Kultur ein wenig an die nordische Region unserer Welt.
 
 ### Katso
 
-Katso dagegen ist ein Sonnengebundener und nicht ein Held seiner Heimat wie Nara. Er muss eher darum kämpfen, um sich über Wasser halten zu können. Im Vergleich zu Nara ist er deutlich mehr morally grey, hat aber sein Herz definitiv am rechten Fleck. Die Kultur in Sas, seiner Heimatstadt, ist eher formell und höflich und auf Kampf und Ehre getrimmt. Auf Außenstehende wirkt das ein wenig verkrampft.
+Katso dagegen ist ein Sonnengebundener und nicht ein Held seiner Heimat wie Nara. Er muss eher darum kämpfen, um sich über Wasser halten zu können. Im Vergleich zu Nara ist er deutlich mehr morally grey, hat aber sein Herz definitiv am rechten Fleck. Die Kultur in Sa, seiner Heimatstadt, ist eher formell und höflich und auf Kampf und Ehre getrimmt. Auf Außenstehende wirkt das ein wenig verkrampft.
 
 Natürlich gibt es noch einige weitere Charaktere, die relevant sind, aber aus diesen zwei Perspektiven ist die Geschichte geschrieben. 
 
 **Pulta** wäre zum Beispiel noch ein Kandidat. Sie ist eine Erdgebundene und fühlt sich für mich nach einer dritten Hauptperson an. Sie sticht durch erstaunlich ausgeprägte Ehrlichkeit heraus.
 
-<!-- Ehrlichkeitszitat einfügen: Ist die beste Rüstung weil es die einzige Fehlerlose ist. Oder so ähnlich -->
-
+> »Ehrlichkeit ist die beste Rüstung, denn sie ist die einzige ohne Fehler.«
+> - Pulta
 
 ## Handlung
 
 Die Geschichte beginnt kurz vor der Abreise der zwei Hauptpersonen in ihrer Heimatstadt. Wir erfahren zunächst ein wenig Background zu ihnen und begeben uns dann auf die Reise Richtung Lort. Auf Lort treffen dann recht schnell Nara, Katso und Pulta aufeinander. Die drei retten zusammen nämlich ein Kind aus einem brennenden Haus. Nara und Katso merken beide hier schon, dass sie eine besondere Connection zueinander haben. Und... Trommelwirbel... natürlich verleugnen sie es erstmal beide. Wobei Katso hier schon fast nach einem Date gefragt hätte. Aber eben nur fast... Naja, irgendwo muss die Spannung ja auch herkommen, was? Nun ja, danach geht's an die Akademie, wo gelernt und gestorben wird, da sowohl im Stillen als auch öffentlich Elementgebundene sterben. Das alles ist ein wenig merkwürdig und auch die Vertrauenswürdigkeit von sowohl Akademie als auch der Lehrerinnen ist fraglich.
 
-Die Spannung gipfelt dann in dem Moment, in dem Naras Seelenbuch geklaut wird und Katso zufällig die einzige Person ist, die es mitbekommt. Da Katso von Nara ja recht angetan ist, hilft er ihr natürlich sofort. Auf der Suche nach ihrem Seelenbuch treffen sie dann auf eine Gruppierung von Menschen mit seltsamen Masken, die Nara entführen. Katso verschwendet keinen Gedanken daran, zu fliehen, als er die Möglichkeit hat, sondern eilt sofort Nara zu Hilfe. In dem Versteck der Masken muss Katso dann direkt gegen eine Übermacht von ihnen antreten. Dies ist nur möglich, da sie keine Magie anwenden. Man begleitet hier Katso bei den ersten Menschen, die er getötet hat, was ihn spürbar trifft. Er schafft es jedoch, bis zu Nara vorzudringen, wo er jedoch dann schlussendlich übermannt und gefangen genommen wird. 
+Die Spannung gipfelt dann in dem Moment, in dem Nara merkt, dass ihr Seelenbuch geklaut wurde, und Katso direkt neben ihr steht. Da Katso von Nara ja recht angetan ist, hilft er ihr natürlich sofort. Auf der Suche nach ihrem Seelenbuch treffen sie dann auf eine Gruppierung von Menschen mit seltsamen Masken, die Nara entführen. Katso verschwendet keinen Gedanken daran, zu fliehen, als er die Möglichkeit hat, sondern eilt sofort Nara zu Hilfe. In dem Versteck der Masken muss Katso dann direkt gegen eine Übermacht von ihnen antreten. Dies ist nur möglich, da sie keine Magie anwenden. Man begleitet hier Katso bei den ersten Menschen, die er getötet hat, was ihn spürbar trifft. Er schafft es jedoch, bis zu Nara vorzudringen, wo er jedoch dann schlussendlich übermannt und gefangen genommen wird. 
 
 Nara wacht nach einiger Zeit auf und schafft es, mit einer Scherbe sich zu befreien und zu fliehen. Anders als Katso möchte sie nur entkommen und hofft, dass er einfach in der Akademie ist...
 
