@@ -1,22 +1,30 @@
 ---
-title: "Eislotus von Liza Grimm - meine Gedanken zum Buch"
+title: "Eislotus von Liza Grimm – Rezension zu Band 1 der Bücher der Macht"
 date: 2026-10-17T22:00:00+02:00
 draft: true
 tags: ["Bücher", "Rezension", "Fantasy", "Liza Grimm", "Eislotus"]
 categories: ["Bücher"]
 showToc: true
 TocOpen: false
-description: "Meine Gedanken zu Eislotus von Liza Grimm: Welt, Magiesystem, Charaktere und Handlung."
+description: "Meine Rezension zu Eislotus, Band 1 der Reihe „Die Bücher der Macht“ von Liza Grimm: erst ein spoilerfreies Fazit, dann Welt, Magiesystem, Charaktere und Handlung."
 disableShare: true
 disableHLJS: false
 searchHidden: false
 sitemap:
   priority: 0.8
+cover:
+  image: eislotus.jpg
+  alt: "Ausschnitt aus dem Buchcover von Eislotus: Der Name Liza Grimm und der Titel Eislotus in silbernen Lettern, umrahmt von goldenen Ornamenten und Wasserspritzern auf dunkelblauem Grund."
+  relative: true
+  hidden: false
+  hiddenInList: false
 ---
 
 Als ich mit meiner letzten Serie ACOTAR / Das Reich der sieben Höfe fertig war und auf das neueste Buch warten musste, habe ich nach etwas zur Überbrückung gesucht. Hier kam mir relativ schnell die deutsche Autorin Liza Grimm in den Sinn. Ich hatte sie seit einiger Zeit auf dem Schirm, da ich durch Zufall gesehen habe, wie sie bei Horde einem Pen and Paper mit unter anderem Gronkh den Dungeon Master gemacht hat und auch die Story geschrieben hat. Sie ist mir durch ihre herzliche Art aufgefallen und mir in Erinnerung geblieben. 
 
-Zwischendurch habe ich ihren Twitch-Kanal ein wenig verfolgt, wo ich immer wieder Infos zu ihrer Bücher-der-Macht-Serie gesehen habe, zu der auch Eislotus als Eröffnung gehört. Durch mein Interesse am Norden habe ich aber zuerst ein älteres Buch von Liza Grimm gelesen. Die Götter von Asgard war eine schöne Geschichte, die ich zwar sehr genossen habe, die mich allerdings nicht unendlich aus den Socken gehauen hat. Danach entschied ich mich endlich, mich mit Eislotus, einem ihrer neuesten Bücher, auseinanderzusetzen. Und giiirl, war das worth it...
+Zwischendurch habe ich ihren Twitch-Kanal ein wenig verfolgt, wo ich immer wieder Infos zu ihrer Bücher-der-Macht-Serie gesehen habe, zu der auch Eislotus als Eröffnung gehört. Durch mein Interesse am Norden habe ich aber zuerst ein älteres Buch von Liza Grimm gelesen. [Die Götter von Asgard](/de/reading-list/) war eine schöne Geschichte, die ich zwar sehr genossen habe, die mich allerdings nicht unendlich aus den Socken gehauen hat. Danach entschied ich mich endlich, mich mit Eislotus, einem ihrer neuesten Bücher, auseinanderzusetzen. Und giiirl, war das worth it...
+
+Für alle, die das Buch noch lesen wollen: Wenn du Die Tribute von Panem magst und etwas mit Magie anfangen kannst, kann ich dir Eislotus nur wärmstens empfehlen. Ich hatte sehr viel Spaß beim Lesen, und der gemütliche Einstieg endete in einem sehr fesselnden Finale. Gib dem Buch also auf jeden Fall mal bis zur Hälfte!
 
 In diesem Blogpost möchte ich meine Gedanken zu dem Buch ein wenig sammeln. Da ich selber von Spoilern immer ein wenig genervt bin[^spoiler], sei hier gewarnt: Spoiler voraus!
 Ich werde meine Gedanken zu dem gesamten Buch hier offenlegen und deswegen wird es zwangsläufig zu Spoilern kommen.
@@ -47,12 +55,24 @@ Nara ist eine Mondgebundene (Wasser) und lebt im Norden im Eis. Was interessant 
 
 Katso dagegen ist ein Sonnengebundener und nicht ein Held seiner Heimat wie Nara. Er muss eher darum kämpfen, um sich über Wasser halten zu können. Im Vergleich zu Nara ist er deutlich mehr morally grey, hat aber sein Herz definitiv am rechten Fleck. Die Kultur in Sa, seiner Heimatstadt, ist eher formell und höflich und auf Kampf und Ehre getrimmt. Auf Außenstehende wirkt das ein wenig verkrampft.
 
+### Andere
+
 Natürlich gibt es noch einige weitere Charaktere, die relevant sind, aber aus diesen zwei Perspektiven ist die Geschichte geschrieben. 
 
-**Pulta** wäre zum Beispiel noch ein Kandidat. Sie ist eine Erdgebundene und fühlt sich für mich nach einer dritten Hauptperson an. Sie sticht durch erstaunlich ausgeprägte Ehrlichkeit heraus.
+#### Pulta
+
+Pulta ist eine Erdgebundene und fühlt sich für mich nach einer dritten Hauptperson an. Sie sticht durch erstaunlich ausgeprägte Ehrlichkeit heraus.
 
 > »Ehrlichkeit ist die beste Rüstung, denn sie ist die einzige ohne Fehler.«
-> - Pulta
+> — Pulta
+
+#### Zerdaya
+
+Zerdaya ist seit dem ersten Tag in der Akademie eine Freundin oder Verbündete von Nara. Meiner Meinung nach haben sich aber schon verhältnismäßig schnell Red Flags in ihrem Verhalten bemerkbar gemacht. Spätestens als Zerdaya im Geschichtsraum weird wurde, Pal gegenüber plötzlich schnippisch war und so schnell wie möglich weg wollte, haben sich diese stark verhärtet. Dass sie Pal von früher kennt, hat sie Nara übrigens nie erzählt.
+
+#### Kaya 
+
+Kaya ist ein alter Freund von Katso, bei welchem allerdings der Kontakt abgebrochen ist. Er wirkt anfangs wie ein wirklich guter Typ, aber gegen Ende verliert er sowohl an Rückgrat als auch an Bedeutung.
 
 ## Handlung
 
@@ -71,5 +91,7 @@ Ich empfand anfangs eher neutrale Gefühle gegenüber der Geschichte, da das Kon
 Für mich fühlt es sich so an, als wäre alles auf einem guten Weg. Abgesehen vielleicht davon, dass Pulta noch ein wenig außen vor gelassen wirkt und Nara jetzt mit ihr zusammenarbeiten muss, um Katso zu retten. Aber ich hoffe sehr, dass die zwei dadurch zueinander finden.
 
 Ich bin jetzt auf jeden Fall sehr hooked und freu mich darauf, dass mich mal mindestens noch drei weitere Bücher erwarten. Ich hoffe, dass meine kleine Zusammenfassung und Meinung interessant waren, und werde auf jeden Fall direkt mit den weiteren Büchern anfangen.
+
+Falls dich meine [Leseliste](/de/reading-list/) interessiert, kannst du dort durch die Bücher stöbern, die ich so lese.
 
 [^spoiler]: Und leider dazu neige, durch unvorsichtiges Besuchen von Wiki-Seiten dann doch auf Spoiler zu treffen.
