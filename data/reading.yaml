@@ -1,7 +1,8 @@
 # Optional field per entry: dateRead: "YYYY-MM-DD"
 # Used by the `recentReading` shortcode to sort books by most recently finished.
 # Use month/year granularity by padding: "2024-11-01" for a month, "2020-01-01" for a year.
-# If no entry has a dateRead, the shortcode falls back to the tail of this list.
+# Dated entries come first; the rest of the row is filled from the tail of this
+# list (undated entries only, newest-added first).
 - title: The Hunger Games
   series: Hunger Games
   author: "Suzanne Collins"

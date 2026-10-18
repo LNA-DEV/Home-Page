@@ -1164,7 +1164,7 @@
 /de/lukas-nagel/
 /de/payroll/
 /de/posts/
-/de/posts/books/eislotus-liza-grimm/
+/de/posts/books/eislotus-liza-grimm-rezension/
 /de/posts/media/fediverse/
 /de/posts/photography/seeadler-fischadler-nicklheimer-filzen/
 /de/posts/projects/fipvnacheinemjahr/
