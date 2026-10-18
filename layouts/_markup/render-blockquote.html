@@ -1,0 +1,38 @@
+{{- /* Blockquotes, and GitHub's alert syntax on top of them.
+
+       > [!WARNING]
+       > Ab hier werden die Spoiler größer!
+
+       Hugo parses the `[!TYPE]` marker on its own but has no built-in output
+       for it: without this hook the marker is printed as text inside an
+       ordinary quote. An alert is not a quotation, so it becomes a
+       `<div role="note">`, labelled from i18n (`alert_<type>`) unless the
+       marker line names its own title (`> [!TIP] Kurz gesagt`).
+
+       Only GitHub's five types. Hugo also accepts any Obsidian callout word,
+       so a typo (`[!WARNNG]`) would otherwise render as a box with an empty
+       label; it is an error naming the page and the line instead. Obsidian's
+       fold sign (`[!WARNING]-`) is an error too: it would not fold here, and
+       a spoiler that was meant to be collapsed must not ship open.
+
+       The label is a <strong> inside a <p> so it still reads as a label where
+       the stylesheet does not reach: in a feed reader, in the RSS body.
+
+       A regular blockquote is written exactly as Goldmark writes it without a
+       hook, so no existing quote changes by a byte. */ -}}
+{{- if eq .Type "alert" -}}
+{{- $types := slice "note" "tip" "important" "warning" "caution" -}}
+{{- if not (in $types .AlertType) -}}
+{{- errorf "unknown alert type [!%s] in %s (one of: %s)" (upper .AlertType) .Position (delimit $types ", ") -}}
+{{- end -}}
+{{- with .AlertSign -}}
+{{- errorf "foldable alert [!%s]%s in %s: alerts do not fold on this site" (upper $.AlertType) . $.Position -}}
+{{- end -}}
+<div class="alert alert-{{ .AlertType }}" role="note">
+<p class="alert-title"><strong>{{ with .AlertTitle }}{{ . }}{{ else }}{{ i18n (printf "alert_%s" .AlertType) }}{{ end }}</strong></p>
+{{ .Text }}
+</div>
+{{ else -}}
+<blockquote>
+{{ .Text }}</blockquote>
+{{ end -}}

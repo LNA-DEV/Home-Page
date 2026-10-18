@@ -1,7 +1,8 @@
 # Optional field per entry: dateRead: "YYYY-MM-DD"
 # Used by the `recentReading` shortcode to sort books by most recently finished.
 # Use month/year granularity by padding: "2024-11-01" for a month, "2020-01-01" for a year.
-# If no entry has a dateRead, the shortcode falls back to the tail of this list.
+# Dated entries come first; the rest of the row is filled from the tail of this
+# list (undated entries only, newest-added first).
 - title: The Hunger Games
   series: Hunger Games
   author: "Suzanne Collins"
@@ -841,6 +842,20 @@
   cover: "images/books/covers/Die Götter von Asgard.jpg"
   pages: 304
   rating: 3
+  originalLanguage: de
+  languagesRead:
+    - de
+
+- title: "Eislotus"
+  series: Die Bücher der Macht
+  author: "Liza Grimm"
+  genres: ["fantasy"]
+  year: 2025
+  link: "https://www.goodreads.com/book/show/221039882-eislotus"
+  cover: "images/books/covers/Eislotus.jpg"
+  pages: 400
+  rating: 4
+  dateRead: "2026-10-17"
   originalLanguage: de
   languagesRead:
     - de

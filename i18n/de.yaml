@@ -728,3 +728,16 @@
   translation: "Neueste zuerst."
 - id: journal_order_asc
   translation: "Älteste zuerst."
+
+# Alerts — `> [!WARNING]` and the other GitHub alert types in a post
+# (layouts/_markup/render-blockquote.html)
+- id: alert_note
+  translation: "Hinweis"
+- id: alert_tip
+  translation: "Tipp"
+- id: alert_important
+  translation: "Wichtig"
+- id: alert_warning
+  translation: "Achtung"
+- id: alert_caution
+  translation: "Vorsicht"

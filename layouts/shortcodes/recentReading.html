@@ -1,24 +1,26 @@
 {{/*
   Renders a one-row preview of the most recently read books.
-  If any entries in data/reading.yaml have a `dateRead` field, those are shown
-  sorted by dateRead descending. Otherwise falls back to the tail of the list
-  in reverse (newest-added first). The trailing tile links to the reading list.
+  Entries in data/reading.yaml with a `dateRead` field come first, sorted by
+  dateRead descending. The remaining slots are filled from the tail of the
+  undated entries in reverse (newest-added first). The trailing tile links to
+  the reading list.
 */}}
 {{ $lang := .Page.Site.Language.Lang }}
 {{ $readingListUrl := printf "/%s/reading-list/" $lang }}
 
 {{ $dated := slice }}
+{{ $undated := slice }}
 {{ range hugo.Data.reading }}
   {{ if .dateRead }}
     {{ $dated = $dated | append . }}
+  {{ else }}
+    {{ $undated = $undated | append . }}
   {{ end }}
 {{ end }}
 
-{{ $books := slice }}
-{{ if gt (len $dated) 0 }}
-  {{ $books = first 6 (sort $dated "dateRead" "desc") }}
-{{ else }}
-  {{ $books = collections.Reverse (last 6 hugo.Data.reading) }}
+{{ $books := first 6 (sort $dated "dateRead" "desc") }}
+{{ with sub 6 (len $books) }}
+  {{ $books = $books | append (collections.Reverse (last . $undated)) }}
 {{ end }}
 
 <div class="recent-reading">

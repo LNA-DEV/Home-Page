@@ -7,6 +7,7 @@
 # in the same commit as the redirect that keeps the old URL alive.
 /de/
 /de/categories/
+/de/categories/bücher/
 /de/categories/fotografie/
 /de/categories/medien/
 /de/categories/privacy/
@@ -1163,6 +1164,7 @@
 /de/lukas-nagel/
 /de/payroll/
 /de/posts/
+/de/posts/books/eislotus-liza-grimm-rezension/
 /de/posts/media/fediverse/
 /de/posts/photography/seeadler-fischadler-nicklheimer-filzen/
 /de/posts/projects/fipvnacheinemjahr/
@@ -1174,19 +1176,24 @@
 /de/tags/
 /de/tags/activitypub/
 /de/tags/bayern/
+/de/tags/bücher/
 /de/tags/coding/
+/de/tags/eislotus/
 /de/tags/fachinformatiker-prüfungsvorbereitung/
 /de/tags/fachinformatiker/
+/de/tags/fantasy/
 /de/tags/fediverse/
 /de/tags/fedodo/
 /de/tags/fischadler/
 /de/tags/fotografie/
 /de/tags/hugo/
+/de/tags/liza-grimm/
 /de/tags/medien/
 /de/tags/nicklheimer-filzen/
 /de/tags/open-source/
 /de/tags/privacy/
 /de/tags/projekte/
+/de/tags/rezension/
 /de/tags/seeadler/
 /de/tags/social-media/
 /de/tags/stats/

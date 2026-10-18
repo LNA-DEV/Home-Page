@@ -338,9 +338,52 @@
     {{- $post = merge $post (dict "image" .Permalink) -}}
   {{- end -}}
 {{- end -}}
+{{- /* A post about a book: `book:` is the book's exact title in data/reading.yaml,
+       so author, series and rating are typed once, in the reading list. The post
+       gets the Book as `about`. With `review: true` as well, a separate Review
+       carries the reading list's rating — the shape Google's review snippet
+       reads. Google wants a marked-up rating visible on the page, so a review
+       post should say its rating in the text. No `image`: a cover is publisher
+       art, the same reason game pages keep the site logo. */ -}}
+{{- $review := false -}}
+{{- with .Params.book -}}
+  {{- $matches := where hugo.Data.reading "title" . -}}
+  {{- if ne (len $matches) 1 -}}
+    {{- errorf "%s: book %q matches %d entries in data/reading.yaml; it must be the exact title of one" $.File.Path . (len $matches) -}}
+  {{- else -}}
+    {{- $b := index $matches 0 -}}
+    {{- $book := dict "@type" "Book" "name" $b.title "author" (dict "@type" "Person" "name" $b.author) -}}
+    {{- with $b.series }}{{ $book = merge $book (dict "isPartOf" (dict "@type" "BookSeries" "name" .)) }}{{ end -}}
+    {{- with $b.originalLanguage }}{{ $book = merge $book (dict "inLanguage" .) }}{{ end -}}
+    {{- with $b.pages }}{{ $book = merge $book (dict "numberOfPages" .) }}{{ end -}}
+    {{- with $b.link }}{{ if hasPrefix . "http" }}{{ $book = merge $book (dict "sameAs" .) }}{{ end }}{{ end -}}
+    {{- $post = merge $post (dict "about" $book) -}}
+    {{- if $.Params.review -}}
+      {{- $review = dict
+            "@context" "https://schema.org"
+            "@type" "Review"
+            "name" ($.Title | plainify)
+            "url" $.Permalink
+            "inLanguage" $.Language.Lang
+            "datePublished" $.PublishDate
+            "author" $personRef
+            "publisher" $personRef
+            "itemReviewed" $book
+      -}}
+      {{- with $b.rating }}{{ $review = merge $review (dict "reviewRating" (dict "@type" "Rating" "ratingValue" . "bestRating" 5 "worstRating" 1)) }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+{{- else -}}
+  {{- if .Params.review }}{{ errorf "%s: review: true needs book:, the title of the reviewed book in data/reading.yaml" .File.Path }}{{ end -}}
+{{- end -}}
 <script type="application/ld+json">
 {{ $post }}
 </script>
+{{- with $review }}
+<script type="application/ld+json">
+{{ . }}
+</script>
+{{- end }}
 {{- else }}
 {{- /* Everything else — links, identity, licensing, projects, the reading list,
        gaming, search, an undated post: a plain WebPage, with a date only when
