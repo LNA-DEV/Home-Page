@@ -844,3 +844,17 @@
   originalLanguage: de
   languagesRead:
     - de
+
+- title: "Eislotus"
+  series: Die Bücher der Macht
+  author: "Liza Grimm"
+  genres: ["fantasy"]
+  year: 2025
+  link: "https://www.goodreads.com/book/show/221039882-eislotus"
+  cover: "images/books/covers/Eislotus.jpg"
+  pages: 400
+  rating: 4
+  dateRead: "2026-10-17"
+  originalLanguage: de
+  languagesRead:
+    - de

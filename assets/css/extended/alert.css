@@ -1,0 +1,62 @@
+/* Alerts: `> [!WARNING]` and the other GitHub alert types in a post body,
+   rendered by layouts/_markup/render-blockquote.html.
+
+   One colour per type, GitHub's own, except warning, which is the site's
+   --accent (gallery-story.css): GitHub's #9a6700 falls to 4.40:1 on the tinted
+   box. The tint is 6% of that colour over --theme, and every title colour stays
+   at 4.5:1 or more on it in both themes (lowest: important light, 4.65;
+   caution dark, 4.68). Body text keeps PaperMod's --content. */
+
+:root {
+  --alert-note: #0969da;
+  --alert-tip: #1a7f37;
+  --alert-important: #8250df;
+  --alert-warning: #8a5a00;
+  --alert-caution: #d1242f;
+}
+
+:root[data-theme="dark"] {
+  --alert-note: #4493f8;
+  --alert-tip: #3fb950;
+  --alert-important: #ab7df8;
+  --alert-warning: #d8a657;
+  --alert-caution: #f85149;
+}
+
+/* No JavaScript, dark system preference: head.html's <noscript> switches
+   PaperMod's colours without setting data-theme. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --alert-note: #4493f8;
+    --alert-tip: #3fb950;
+    --alert-important: #ab7df8;
+    --alert-warning: #d8a657;
+    --alert-caution: #f85149;
+  }
+}
+
+.alert-note { --alert-color: var(--alert-note); }
+.alert-tip { --alert-color: var(--alert-tip); }
+.alert-important { --alert-color: var(--alert-important); }
+.alert-warning { --alert-color: var(--alert-warning); }
+.alert-caution { --alert-color: var(--alert-caution); }
+
+/* Same outer margin as PaperMod's blockquote, so an alert sits in the text
+   where a quote would. */
+.post-content .alert {
+  margin: 20px 0;
+  padding: 12px 16px;
+  border-inline-start: 4px solid var(--alert-color);
+  border-start-end-radius: var(--radius);
+  border-end-end-radius: var(--radius);
+  background: color-mix(in srgb, var(--alert-color) 6%, var(--theme));
+}
+
+.post-content .alert .alert-title {
+  margin-bottom: 6px;
+  color: var(--alert-color);
+}
+
+.post-content .alert > :last-child {
+  margin-bottom: 0;
+}
