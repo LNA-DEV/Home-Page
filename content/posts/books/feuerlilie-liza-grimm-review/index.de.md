@@ -1,6 +1,6 @@
 ---
 title: "Feuerlilie von Liza Grimm: Rezension & Zusammenfassung"
-date: 2026-11-04T19:00:00+02:00
+date: 2026-11-04T21:50:00+01:00
 slug: "feuerlilie-liza-grimm-rezension"
 draft: false
 tags: ["Bücher", "Rezension", "Fantasy", "Liza Grimm", "Feuerlilie"]
@@ -23,7 +23,7 @@ cover:
   hiddenInList: false
 ---
 
-In meinem letzten Post habe ich darüber geschrieben, wie mir das Buch [Eislotus](../eislotus-liza-grimm-rezension/) gefallen hat, und es zusammengefasst. In diesem Post soll es um das Nachfolgebuch zu Eislotus gehen, nämlich Feuerlilie. Anders als beim ersten Buch werde ich hier nicht zu sehr ins spoilerfreie Detail gehen. Falls dir der erste Teil gefallen hat, empfehle ich dir den nächsten natürlich auch. In diesem Post möchte ich vielmehr ein paar meiner Gedanken festhalten und eine kleine Zusammenfassung des Buches geben.
+Feuerlilie ist Band 2 der „Bücher der Macht“-Reihe von Liza Grimm und die direkte Fortsetzung von Eislotus. In meinem letzten Post habe ich darüber geschrieben, wie mir [Eislotus](../eislotus-liza-grimm-rezension/) gefallen hat, und es zusammengefasst. In diesem Post soll es jetzt um Feuerlilie gehen. Anders als beim ersten Buch werde ich hier nicht zu sehr ins spoilerfreie Detail gehen. Falls dir der erste Teil gefallen hat, empfehle ich dir den nächsten natürlich auch. In diesem Post möchte ich vielmehr ein paar meiner Gedanken festhalten und eine kleine Zusammenfassung des Buches geben.
 
 Kurz gesagt, ohne Spoiler: Mir persönlich hat Feuerlilie besser gefallen als Eislotus, und es hat sich auch deutlich schneller gelesen. Das liegt sicher auch daran, dass ich generell Zeit brauche, um mich an neue Welten zu gewöhnen – gerade das Magiekonzept war in Eislotus anfangs ja etwas ungewohnt für mich, wie ich schon im vorherigen Review gesagt habe. In Feuerlilie war ich schon richtig drin in der Welt und habe mich mit dem Magiesystem rund um die Seelenbücher angefreundet. Die Zeit ist nur so verflogen, und es war durchweg spannend, mit ein paar wirklich rührenden Momenten zwischendurch. Auch die Charaktere haben mich überzeugt – allen voran Pulta und eine neue Figur, aber auch viele andere. Generell bekommen die Nebenfiguren deutlich mehr Raum als im ersten Teil. Der Fokus liegt diesmal stärker auf Katso, und weil die Geschichte weiterhin aus zwei Perspektiven erzählt wird, bleibt es sehr abwechslungsreich: Ständig wollte ich bei einer der beiden Figuren weiterlesen, weil es gerade dort so spannend war.
 
@@ -98,6 +98,6 @@ Oh, und eine wilde Theorie habe ich zum Schluss hier auch noch: Zwischendrin wur
 
 ## Fazit
 
-Um das Ganze hier noch mal kurz zusammenzufassen: Ich fand Feuerlilie eine mehr als gelungene Fortsetzung von Eislotus und kann die Reihe weiterhin jedem nur ans Herz legen. Ich persönlich freue mich schon sehr darauf, mit dem nächsten Teil, Steingladiole, weiterzumachen und der spannenden „Bücher der Macht“-Reihe weiter zu folgen. Falls dir das Ganze hier gefallen hat und du mehr davon lesen möchtest, kannst du dich gern noch in meinem Blog umschauen oder unten den Newsletter abonnieren, um nichts mehr zu verpassen.
+Um das Ganze hier noch mal kurz zusammenzufassen: Ich fand Feuerlilie eine mehr als gelungene Fortsetzung von Eislotus und kann die Reihe weiterhin jedem nur ans Herz legen. Von mir bekommt Feuerlilie **4 von 5 Sternen**. Ich persönlich freue mich schon sehr darauf, mit dem nächsten Teil, Steingladiole, weiterzumachen und der spannenden „Bücher der Macht“-Reihe weiter zu folgen. Falls dir das Ganze hier gefallen hat und du mehr davon lesen möchtest, kannst du dich gern noch in meinem Blog umschauen oder unten den Newsletter abonnieren, um nichts mehr zu verpassen.
 
 [^peoplePleasing]: Was ich persönlich sogar für eine Eigenschaft halte, die ich sehr schätze. Für die Person selbst ist es natürlich meist suboptimal, und Nara hat es teils sogar ein wenig übertrieben. Aber ein bisschen mehr People Pleaser zu sein, schadet vielen Menschen heutzutage nicht.

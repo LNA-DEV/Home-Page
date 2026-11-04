@@ -110,7 +110,7 @@ Für mich fühlt es sich so an, als wäre die Beziehung der Hauptpersonen auf ei
 
 Ich bin jetzt auf jeden Fall sehr hooked und freu mich darauf, dass mich mal mindestens noch drei weitere Bücher erwarten. In der Leseliste habe ich mal vier von fünf Sternen vergeben. Ich tu mir allerdings sehr schwer mit Buch-Ratings, da es im direkten Vergleich mit anderen Büchern oft dann doch ganz anders ausschaut. Relevant ist, dass ich bei der Geschichte sehr viel Spaß hatte und ich sie auf jeden Fall weiterempfehlen kann. 
 
-Ich hoffe, dass meine kleine Zusammenfassung und Meinung interessant waren, und werde direkt mit den weiteren Büchern anfangen, als Erstes mit Band 2, „Feuerlilie“.
+Ich hoffe, dass meine kleine Zusammenfassung und Meinung interessant waren, und werde direkt mit den weiteren Büchern anfangen, als Erstes mit Band 2, „[Feuerlilie](../feuerlilie-liza-grimm-rezension/)“.
 
 Falls dich meine [Leseliste](/de/reading-list/) interessiert, kannst du dort durch die Bücher stöbern, die ich so lese. Wenn du auf dem Laufenden gehalten werden möchtest, kannst du hier unten auch gleich den Newsletter abonnieren.
 

@@ -261,7 +261,7 @@
 
 {{/*  Photos  */}}
 {{- if strings.Contains .Path "/gallery"}}
-{{ $css := resources.Get "/css/main.scss" | toCSS | minify | fingerprint }}
+{{ $css := resources.Get "/css/main.scss" | css.Sass (dict "transpiler" "dartsass") | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
 {{- /* Licensing page for the current language — linked from the info popup's copyright section */ -}}
 {{ $licensingUrl := "" }}
