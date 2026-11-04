@@ -1,9 +1,81 @@
-{{/*  ANALYTICS  */}}
+{{/*  ANALYTICS
+      A pageview is sent only once the visitor shows a sign of life: a pointer,
+      key, wheel or touch event the browser raised itself (isTrusted), or
+      leaving the page (hidden, pagehide) after it was visible. Crawlers that
+      render the page in a real browser and kill it once the network is idle do
+      neither and are never counted. In October/November 2026 one on Chinese
+      home connections was more than half of the visitors of lna-dev.net; its
+      clean headers got past every filter in front of Plausible
+      (../Web-Services, caddy/Caddyfile, muninn.lna-dev.net). A real visitor
+      leaves the page at some point, and Plausible's engagement event needs the
+      same: in the logs over 99 % of real pageviews had one and the crawler's
+      had none.
+      Scroll is no sign of life: a deep link to an anchor scrolls on load. Nor
+      is a pointermove without movement: after that scroll, and whenever the
+      layout shifts under the cursor, Chrome raises one itself, isTrusted and
+      with movementX/Y 0, also in a crawler nobody steers (tried with
+      Playwright on #download, headless and headed).
+      Costs: the realtime view shows a visitor on the first interaction rather
+      than on load. Time on page starts at the pageview, so the seconds before
+      the first interaction are missing.
+      A visitor counted only on leaving gets no time on page at all. The
+      tracker (v33) starts its clock when the pageview is sent, and only then
+      adds the visibilitychange/blur listeners that send the engagement event.
+      A listener added while visibilitychange is being dispatched does not run
+      for that event, and its clock would read about 0 anyway.
+      transformRequest never sees the engagement event, so the time measured
+      here cannot be handed over.
+      A possible fix, not done: send our own engagement event after the
+      pageview, with the visible time measured here. It copies the tracker's
+      private payload (n, sd, e, v: 33), which an update can break silently.
+      Both requests also leave while the page closes, so the engagement event
+      may reach Plausible before its pageview and be dropped; that needs trying
+      against the server. Measure first: after this change, real pageviews
+      without an engagement event are exactly this group, since the crawler is
+      no longer counted at all. muninn's request_body in the access log shows
+      them.
+      A page restored from the back/forward cache counts again, as
+      Plausible's own capture does. autoCapturePageviews loses nothing else:
+      every pushState on the site (lightbox, story/grid, footer) changes only
+      the hash, which Plausible ignores.
+      Events raised before the pageview are held and sent after it, or a crawler
+      would start a visit with them: lightbox.js reports "Image View" when a
+      deep link opens a photo on load. The tracker logs each held one as
+      "Ignoring Event: transformRequest".  */}}
 <!-- Privacy-friendly analytics by Plausible -->
 <script async src="https://muninn.lna-dev.net/js/pa-70CdHIPGZpOLV42UIIosB.js"></script>
 <script>
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-  plausible.init()
+  (function () {
+    var counted = false, seen = document.visibilityState === "visible", held = [];
+    function count() {
+      if (counted) return;
+      counted = true;
+      plausible("pageview");
+      held.splice(0).forEach(function (e) { plausible(e[0], e[1]); });
+    }
+    plausible.init({
+      autoCapturePageviews: false,
+      transformRequest: function (e) {
+        if (counted || e.n === "pageview" || e.n === "engagement") return e;
+        held.push([e.n, { u: e.u, props: e.p, interactive: e.i, revenue: e.$ }]);
+        return null;
+      }
+    });
+    ["pointermove", "pointerdown", "keydown", "wheel", "touchstart"].forEach(function (type) {
+      window.addEventListener(type, function (e) {
+        if (e.isTrusted && (type !== "pointermove" || e.movementX || e.movementY)) count();
+      }, { capture: true, passive: true });
+    });
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState === "visible") seen = true;
+      else if (seen) count();
+    });
+    window.addEventListener("pagehide", function () { if (seen) count(); });
+    window.addEventListener("pageshow", function (e) {
+      if (e.persisted) { counted = false; seen = document.visibilityState === "visible"; }
+    });
+  })();
 </script>
 
 
