@@ -9,7 +9,7 @@ book: "Feuerlilie"
 review: true
 showToc: true
 TocOpen: false
-description: "Meine Meinung zu Feuerlilie, Band 2 der „Bücher der Macht“-Reihe von Liza Grimm. Inklusive spoilerfreiem Fazit vorab und Zusammenfassung bis zum Ende."
+description: "Meine Meinung zu Feuerlilie, Band 2 der „Bücher der Macht“-Reihe von Liza Grimm. Mit ausführlicher Zusammenfassung bis zum Ende – Achtung, Spoiler!"
 disableShare: true
 disableHLJS: false
 searchHidden: false
@@ -17,13 +17,16 @@ sitemap:
   priority: 0.8
 cover:
   image: feuerlilie.jpg
-  alt: "TODO"
+  alt: "Ausschnitt aus dem Buchcover von Feuerlilie: Der Name Liza Grimm in goldenen und der Titel Feuerlilie in roten Lettern, umrahmt von goldenen Ornamenten und Flammen auf dunkelbraunem Grund."
   relative: true
   hidden: false
   hiddenInList: false
 ---
 
 In meinem letzten Post habe ich darüber geschrieben, wie mir das Buch Eislotus gefallen hat, und es zusammengefasst. In diesem Post soll es um das Nachfolgebuch zu Eislotus gehen, nämlich Feuerlilie. Anders als beim ersten Buch werde ich hier nicht zu sehr ins spoilerfreie Detail gehen. Falls dir der erste Teil gefallen hat, empfehle ich dir den nächsten natürlich auch. Mir persönlich hat Feuerlilie besser gefallen als Eislotus. Das hat aber auch damit zu tun, dass ich generell Zeit brauche, um mich an neue Welten zu gewöhnen. Gerade bei Eislotus war das Magiekonzept anfangs ja etwas ungewohnt für mich, wie ich schon im vorherigen Review gesagt habe. In diesem Post möchte ich vielmehr ein paar meiner Gedanken festhalten und eine kleine Zusammenfassung des Buches geben.
+
+> [!WARNING]
+> Ab hier gibt es Spoiler zu Feuerlilie – bis einschließlich zum Ende!
 
 ## Zusammenfassung
 
