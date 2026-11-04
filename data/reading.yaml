@@ -859,3 +859,17 @@
   originalLanguage: de
   languagesRead:
     - de
+
+- title: "Feuerlilie"
+  series: Die Bücher der Macht
+  author: "Liza Grimm"
+  genres: ["fantasy"]
+  year: 2025
+  link: "https://www.goodreads.com/book/show/231241280-feuerlilie"
+  cover: "images/books/covers/Feuerlilie.jpg"
+  pages: 400
+  rating: 4
+  dateRead: "2026-11-03"
+  originalLanguage: de
+  languagesRead:
+    - de

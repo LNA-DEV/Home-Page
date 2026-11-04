@@ -1,7 +1,7 @@
 // @import "normalize";
 // @import "colors";
-@import "styles";
-@import "photoswipe/photoswipe";
+@use "styles";
+@use "photoswipe/photoswipe";
 
 // Like count display in PhotoSwipe lightbox
 .pswp__like-count {

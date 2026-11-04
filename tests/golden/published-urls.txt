@@ -1165,6 +1165,7 @@
 /de/payroll/
 /de/posts/
 /de/posts/books/eislotus-liza-grimm-rezension/
+/de/posts/books/feuerlilie-liza-grimm-rezension/
 /de/posts/media/fediverse/
 /de/posts/photography/seeadler-fischadler-nicklheimer-filzen/
 /de/posts/projects/fipvnacheinemjahr/
@@ -1184,6 +1185,7 @@
 /de/tags/fantasy/
 /de/tags/fediverse/
 /de/tags/fedodo/
+/de/tags/feuerlilie/
 /de/tags/fischadler/
 /de/tags/fotografie/
 /de/tags/hugo/
