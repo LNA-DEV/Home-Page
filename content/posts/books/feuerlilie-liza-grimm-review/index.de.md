@@ -25,6 +25,8 @@ cover:
 
 In meinem letzten Post habe ich darüber geschrieben, wie mir das Buch Eislotus gefallen hat, und es zusammengefasst. In diesem Post soll es um das Nachfolgebuch zu Eislotus gehen, nämlich Feuerlilie. Anders als beim ersten Buch werde ich hier nicht zu sehr ins spoilerfreie Detail gehen. Falls dir der erste Teil gefallen hat, empfehle ich dir den nächsten natürlich auch. Mir persönlich hat Feuerlilie besser gefallen als Eislotus. Das hat aber auch damit zu tun, dass ich generell Zeit brauche, um mich an neue Welten zu gewöhnen. Gerade bei Eislotus war das Magiekonzept anfangs ja etwas ungewohnt für mich, wie ich schon im vorherigen Review gesagt habe. In diesem Post möchte ich vielmehr ein paar meiner Gedanken festhalten und eine kleine Zusammenfassung des Buches geben.
 
+Kurz gesagt, ohne Spoiler: Feuerlilie hat sich deutlich schneller gelesen als Eislotus. Ich war schon richtig drin in der Welt und habe mich inzwischen auch mit dem Magiesystem rund um die Seelenbücher angefreundet. Die Zeit ist nur so verflogen, und es war durchweg spannend, mit ein paar wirklich rührenden Momenten zwischendurch. Auch die Charaktere haben mich überzeugt – allen voran Pulta und eine neue Figur, aber auch viele andere. Generell bekommen die Nebenfiguren deutlich mehr Raum als im ersten Teil. Der Fokus liegt diesmal stärker auf Katso, und weil die Geschichte weiterhin aus zwei Perspektiven erzählt wird, bleibt es sehr abwechslungsreich: Ständig wollte ich bei einer der beiden Figuren weiterlesen, weil es gerade dort so spannend war.
+
 > [!WARNING]
 > Ab hier gibt es Spoiler zu Feuerlilie – bis einschließlich zum Ende!
 
