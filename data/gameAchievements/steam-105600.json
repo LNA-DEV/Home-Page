@@ -39,7 +39,7 @@
    "name": {
     "en": "Stop! Hammer Time!"
    },
-   "percent": 66.3,
+   "percent": 66.2,
    "unlocked": "2020-04-03T21:36:13+02:00"
   },
   {
@@ -81,7 +81,7 @@
    "name": {
     "en": "Heavy Metal"
    },
-   "percent": 54.0,
+   "percent": 53.9,
    "unlocked": "2020-04-03T21:58:32+02:00"
   },
   {
@@ -165,7 +165,7 @@
    "name": {
     "en": "Worm Fodder"
    },
-   "percent": 35.2,
+   "percent": 35.1,
    "unlocked": "2020-04-22T20:13:23+02:00"
   },
   {
@@ -360,7 +360,7 @@
    "name": {
     "en": "Buckets of Bolts"
    },
-   "percent": 30.8
+   "percent": 30.9
   },
   {
    "description": {
@@ -432,7 +432,7 @@
    "name": {
     "en": "Lihzahrdian Idol"
    },
-   "percent": 28.5
+   "percent": 28.6
   },
   {
    "description": {
@@ -697,7 +697,7 @@
    "name": {
     "en": "Into Orbit"
    },
-   "percent": 41.9,
+   "percent": 41.8,
    "unlocked": "2020-04-06T21:14:35+02:00"
   },
   {
@@ -749,7 +749,7 @@
    "name": {
     "en": "Fashion Statement"
    },
-   "percent": 47.9,
+   "percent": 48.1,
    "unlocked": "2020-04-18T19:49:26+02:00"
   },
   {
@@ -845,7 +845,7 @@
    "name": {
     "en": "Throwing Lines"
    },
-   "percent": 46.0,
+   "percent": 45.9,
    "unlocked": "2020-04-04T23:14:17+02:00"
   },
   {
@@ -949,7 +949,7 @@
    "name": {
     "en": "Pretty in Pink"
    },
-   "percent": 49.6,
+   "percent": 49.5,
    "unlocked": "2020-04-10T20:30:12+02:00"
   },
   {
@@ -998,7 +998,7 @@
    "name": {
     "en": "It Can Talk?!"
    },
-   "percent": 20.4
+   "percent": 20.3
   },
   {
    "achieved": true,
@@ -1135,7 +1135,7 @@
    "name": {
     "en": "You Can Do It!"
    },
-   "percent": 77.5,
+   "percent": 77.4,
    "unlocked": "2020-04-03T20:27:30+02:00"
   },
   {
@@ -1188,7 +1188,7 @@
    "name": {
     "en": "Just Desserts"
    },
-   "percent": 21.6
+   "percent": 21.7
   },
   {
    "description": {
@@ -1261,7 +1261,7 @@
    "name": {
     "en": "Quiet Neighborhood"
    },
-   "percent": 41.4,
+   "percent": 41.5,
    "unlocked": "2021-09-25T20:27:05+02:00"
   },
   {
@@ -1287,7 +1287,7 @@
    "name": {
     "en": "Heliophobia"
    },
-   "percent": 28.2,
+   "percent": 28.3,
    "unlocked": "2021-12-11T14:09:57+01:00"
   },
   {
@@ -1300,7 +1300,7 @@
    "name": {
     "en": "Leading Landlord"
    },
-   "percent": 19.1
+   "percent": 19.2
   },
   {
    "description": {
@@ -1312,7 +1312,7 @@
    "name": {
     "en": "Feeling Petty"
    },
-   "percent": 32.5
+   "percent": 32.6
   },
   {
    "achieved": true,
@@ -1350,7 +1350,7 @@
    "name": {
     "en": "Dead Men Tell No Tales"
    },
-   "percent": 29.9
+   "percent": 30.0
   },
   {
    "description": {
@@ -1362,7 +1362,7 @@
    "name": {
     "en": "An Eye For An Eye"
    },
-   "percent": 15.8
+   "percent": 15.9
   },
   {
    "description": {
@@ -1458,7 +1458,7 @@
    "name": {
     "en": "A Shimmer In The Dark"
    },
-   "percent": 20.0
+   "percent": 20.2
   },
   {
    "description": {
@@ -1590,7 +1590,7 @@
    "name": {
     "en": "Spicy Licks"
    },
-   "percent": 4.0
+   "percent": 4.1
   },
   {
    "description": {
@@ -1602,7 +1602,7 @@
    "name": {
     "en": "Organized Chaos"
    },
-   "percent": 2.3
+   "percent": 2.4
   },
   {
    "description": {
@@ -1614,7 +1614,7 @@
    "name": {
     "en": "On Fleek"
    },
-   "percent": 1.2
+   "percent": 1.3
   },
   {
    "description": {
@@ -1626,7 +1626,7 @@
    "name": {
     "en": "Fortune Favors the Bould"
    },
-   "percent": 7.4
+   "percent": 7.8
   },
   {
    "description": {
@@ -1638,7 +1638,7 @@
    "name": {
     "en": "Training Day"
    },
-   "percent": 2.9
+   "percent": 3.0
   },
   {
    "description": {
@@ -1674,7 +1674,7 @@
    "name": {
     "en": "New Digs"
    },
-   "percent": 3.7
+   "percent": 3.8
   },
   {
    "description": {
@@ -1686,7 +1686,7 @@
    "name": {
     "en": "My People Need Me"
    },
-   "percent": 0.8
+   "percent": 0.9
   },
   {
    "description": {
@@ -1698,7 +1698,7 @@
    "name": {
     "en": "Going Oldschool"
    },
-   "percent": 10.5
+   "percent": 10.9
   },
   {
    "description": {
@@ -1710,7 +1710,7 @@
    "name": {
     "en": "Sea You Later"
    },
-   "percent": 2.2
+   "percent": 2.3
   },
   {
    "description": {
@@ -1722,7 +1722,7 @@
    "name": {
     "en": "Trash Compactor"
    },
-   "percent": 0.5
+   "percent": 0.6
   },
   {
    "description": {
@@ -1734,7 +1734,7 @@
    "name": {
     "en": "Conservationist"
    },
-   "percent": 3.1
+   "percent": 3.3
   },
   {
    "description": {

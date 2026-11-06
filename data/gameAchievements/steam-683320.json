@@ -98,7 +98,7 @@
     "de": "Akzeptanz",
     "en": "Acceptance"
    },
-   "percent": 25.4,
+   "percent": 25.5,
    "unlocked": "2023-09-30T13:24:02+02:00"
   },
   {
@@ -114,7 +114,7 @@
     "de": "Ende",
     "en": "The End"
    },
-   "percent": 38.0,
+   "percent": 38.1,
    "unlocked": "2023-09-30T13:33:27+02:00"
   },
   {
@@ -159,7 +159,7 @@
     "de": "Äpfel",
     "en": "Apples"
    },
-   "percent": 12.6
+   "percent": 12.7
   },
   {
    "achieved": true,

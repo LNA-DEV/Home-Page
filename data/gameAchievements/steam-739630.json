@@ -22,7 +22,7 @@
    "name": {
     "en": "Banshee Discovered"
    },
-   "percent": 22.0
+   "percent": 22.1
   },
   {
    "description": {
@@ -34,7 +34,7 @@
    "name": {
     "en": "Demon Discovered"
    },
-   "percent": 18.4
+   "percent": 18.5
   },
   {
    "description": {
@@ -46,7 +46,7 @@
    "name": {
     "en": "Deogen Discovered"
    },
-   "percent": 16.8
+   "percent": 16.9
   },
   {
    "description": {
@@ -58,7 +58,7 @@
    "name": {
     "en": "Goryo Discovered"
    },
-   "percent": 18.9
+   "percent": 19.0
   },
   {
    "description": {
@@ -70,7 +70,7 @@
    "name": {
     "en": "Hantu Discovered"
    },
-   "percent": 21.9
+   "percent": 22.0
   },
   {
    "achieved": true,
@@ -83,7 +83,7 @@
    "name": {
     "en": "Jinn Discovered"
    },
-   "percent": 20.1,
+   "percent": 20.2,
    "unlocked": "2023-11-19T20:24:26+01:00"
   },
   {
@@ -96,7 +96,7 @@
    "name": {
     "en": "Mare Discovered"
    },
-   "percent": 20.6
+   "percent": 20.7
   },
   {
    "description": {
@@ -108,7 +108,7 @@
    "name": {
     "en": "Moroi Discovered"
    },
-   "percent": 19.7
+   "percent": 19.8
   },
   {
    "description": {
@@ -120,7 +120,7 @@
    "name": {
     "en": "Myling Discovered"
    },
-   "percent": 20.9
+   "percent": 21.0
   },
   {
    "achieved": true,
@@ -133,7 +133,7 @@
    "name": {
     "en": "Obake Discovered"
    },
-   "percent": 21.6,
+   "percent": 21.7,
    "unlocked": "2023-11-19T20:54:19+01:00"
   },
   {
@@ -146,7 +146,7 @@
    "name": {
     "en": "Oni Discovered"
    },
-   "percent": 21.7
+   "percent": 21.8
   },
   {
    "description": {
@@ -158,7 +158,7 @@
    "name": {
     "en": "Onryo Discovered"
    },
-   "percent": 19.5
+   "percent": 19.6
   },
   {
    "description": {
@@ -170,7 +170,7 @@
    "name": {
     "en": "Phantom Discovered"
    },
-   "percent": 20.7
+   "percent": 20.8
   },
   {
    "description": {
@@ -182,7 +182,7 @@
    "name": {
     "en": "Poltergeist Discovered"
    },
-   "percent": 20.9
+   "percent": 21.0
   },
   {
    "description": {
@@ -194,7 +194,7 @@
    "name": {
     "en": "Raiju Discovered"
    },
-   "percent": 20.5
+   "percent": 20.6
   },
   {
    "description": {
@@ -206,7 +206,7 @@
    "name": {
     "en": "Revenant Discovered"
    },
-   "percent": 22.4
+   "percent": 22.5
   },
   {
    "description": {
@@ -218,7 +218,7 @@
    "name": {
     "en": "Shade Discovered"
    },
-   "percent": 22.5
+   "percent": 22.6
   },
   {
    "description": {
@@ -230,7 +230,7 @@
    "name": {
     "en": "Spirit Discovered"
    },
-   "percent": 21.7
+   "percent": 21.8
   },
   {
    "description": {
@@ -242,7 +242,7 @@
    "name": {
     "en": "Thaye Discovered"
    },
-   "percent": 21.1
+   "percent": 21.2
   },
   {
    "description": {
@@ -266,7 +266,7 @@
    "name": {
     "en": "The Twins Discovered"
    },
-   "percent": 20.6
+   "percent": 20.7
   },
   {
    "achieved": true,
@@ -279,7 +279,7 @@
    "name": {
     "en": "Wraith Discovered"
    },
-   "percent": 21.7,
+   "percent": 21.8,
    "unlocked": "2023-11-19T20:10:57+01:00"
   },
   {
@@ -292,7 +292,7 @@
    "name": {
     "en": "Yokai Discovered"
    },
-   "percent": 20.1
+   "percent": 20.2
   },
   {
    "description": {
@@ -304,7 +304,7 @@
    "name": {
     "en": "Yurei Discovered"
    },
-   "percent": 21.2
+   "percent": 21.4
   },
   {
    "achieved": true,
@@ -367,7 +367,7 @@
    "name": {
     "en": "Rookie"
    },
-   "percent": 31.1,
+   "percent": 31.2,
    "unlocked": "2025-10-10T21:50:09+02:00"
   },
   {
@@ -380,7 +380,7 @@
    "name": {
     "en": "Chump Change"
    },
-   "percent": 41.5
+   "percent": 41.7
   },
   {
    "description": {
@@ -392,7 +392,7 @@
    "name": {
     "en": "Fat Stack"
    },
-   "percent": 20.7
+   "percent": 20.8
   },
   {
    "description": {
@@ -404,7 +404,7 @@
    "name": {
     "en": "Cash Cow"
    },
-   "percent": 13.5
+   "percent": 13.7
   },
   {
    "description": {
@@ -416,7 +416,7 @@
    "name": {
     "en": "Break The Bank"
    },
-   "percent": 9.6
+   "percent": 9.7
   },
   {
    "description": {
@@ -440,7 +440,7 @@
    "name": {
     "en": "Extra Mile"
    },
-   "percent": 18.7
+   "percent": 18.8
   },
   {
    "hidden": true,
@@ -449,7 +449,7 @@
    "name": {
     "en": "They're here"
    },
-   "percent": 24.5
+   "percent": 24.6
   },
   {
    "achieved": true,
@@ -459,7 +459,7 @@
    "name": {
     "en": "Work Experience"
    },
-   "percent": 59.8,
+   "percent": 60.2,
    "unlocked": "2023-11-19T20:11:24+01:00"
   },
   {
@@ -470,7 +470,7 @@
    "name": {
     "en": "The Bait"
    },
-   "percent": 18.4,
+   "percent": 18.5,
    "unlocked": "2025-10-10T21:09:36+02:00"
   },
   {
@@ -480,7 +480,7 @@
    "name": {
     "en": "Doom Slayed"
    },
-   "percent": 2.0
+   "percent": 2.1
   },
   {
    "description": {
@@ -528,7 +528,7 @@
    "name": {
     "en": "Bare Essentials"
    },
-   "percent": 25.9
+   "percent": 26.1
   },
   {
    "description": {
@@ -540,7 +540,7 @@
    "name": {
     "en": "Tools of the Trade"
    },
-   "percent": 8.5
+   "percent": 8.6
   },
   {
    "description": {
@@ -582,7 +582,7 @@
    "name": {
     "en": "Escape Artist"
    },
-   "percent": 7.8
+   "percent": 7.9
   },
   {
    "description": {
@@ -594,7 +594,7 @@
    "name": {
     "en": "Dedicated"
    },
-   "percent": 14.2
+   "percent": 14.3
   },
   {
    "description": {
@@ -606,7 +606,7 @@
    "name": {
     "en": "Devoted"
    },
-   "percent": 4.8
+   "percent": 4.9
   },
   {
    "description": {
@@ -630,7 +630,7 @@
    "name": {
     "en": "Rise to the Challenge"
    },
-   "percent": 3.4
+   "percent": 3.5
   },
   {
    "description": {

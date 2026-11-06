@@ -61,7 +61,7 @@
     "de": "Du bist der Gewinner",
     "en": "You Are The Winner"
    },
-   "percent": 46.6,
+   "percent": 46.7,
    "unlocked": "2020-12-02T21:01:39+01:00"
   },
   {
@@ -106,7 +106,7 @@
     "de": "Hattrick",
     "en": "The Trifecta"
    },
-   "percent": 11.1
+   "percent": 11.2
   },
   {
    "description": {
@@ -207,7 +207,7 @@
     "de": "Elementar",
     "en": "Elementfull"
    },
-   "percent": 37.7,
+   "percent": 37.8,
    "unlocked": "2021-01-30T19:13:42+01:00"
   },
   {
@@ -222,7 +222,7 @@
     "de": "Blitzableiter",
     "en": "Lightning Rod"
    },
-   "percent": 20.3
+   "percent": 20.4
   },
   {
    "description": {
@@ -324,7 +324,7 @@
     "de": "Sternenmann",
     "en": "Starman"
    },
-   "percent": 48.2
+   "percent": 48.1
   },
   {
    "achieved": true,
@@ -369,7 +369,7 @@
     "de": "Der Boden ist Lava",
     "en": "Floor is Lava"
    },
-   "percent": 14.2,
+   "percent": 14.1,
    "unlocked": "2026-03-14T19:33:38+01:00"
   },
   {
@@ -385,7 +385,7 @@
     "de": "Hamsterer",
     "en": "Hoarder"
    },
-   "percent": 44.0,
+   "percent": 43.9,
    "unlocked": "2020-12-02T20:29:11+01:00"
   },
   {
@@ -458,7 +458,7 @@
     "de": "Keine Diamanten",
     "en": "No Diamonds"
    },
-   "percent": 6.3
+   "percent": 6.4
   }
  ],
  "id": "880940",

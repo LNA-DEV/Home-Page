@@ -99,7 +99,7 @@
     "de": "Dein erster Tag...",
     "en": "Your first day..."
    },
-   "percent": 63.9,
+   "percent": 64.0,
    "unlocked": "2025-12-29T23:11:41+01:00"
   },
   {
@@ -131,7 +131,7 @@
     "de": "Dein erster Ritt...",
     "en": "Your first Ride..."
    },
-   "percent": 70.3,
+   "percent": 70.4,
    "unlocked": "2025-12-29T21:20:29+01:00"
   },
   {
@@ -146,7 +146,7 @@
     "de": "Maximaler Überlebender",
     "en": "Maximum Survivor"
    },
-   "percent": 3.4
+   "percent": 3.3
   },
   {
    "description": {
@@ -220,7 +220,7 @@
     "de": "Höchster Gipfel",
     "en": "Highest Peak"
    },
-   "percent": 17.3
+   "percent": 17.2
   },
   {
    "achieved": true,
@@ -235,7 +235,7 @@
     "de": "Tiefste Tiefe",
     "en": "Lowest Depth"
    },
-   "percent": 18.2,
+   "percent": 18.1,
    "unlocked": "2026-01-05T22:42:47+01:00"
   },
   {
@@ -250,7 +250,7 @@
     "de": "Allheilmittel",
     "en": "Cure-All"
    },
-   "percent": 7.5
+   "percent": 7.4
   },
   {
    "description": {
@@ -307,7 +307,7 @@
     "de": "Entdecker Anfänger",
     "en": "Beginner Explorer"
    },
-   "percent": 16.6,
+   "percent": 16.5,
    "unlocked": "2026-01-24T21:10:24+01:00"
   },
   {

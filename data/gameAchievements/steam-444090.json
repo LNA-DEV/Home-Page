@@ -70,7 +70,7 @@
     "de": "Double-Kills – Diamant",
     "en": "Double Kills Diamond"
    },
-   "percent": 4.4
+   "percent": 4.5
   },
   {
    "achieved": true,
@@ -310,7 +310,7 @@
     "de": "Freunde für immer – Diamant",
     "en": "Friends Forever Diamond"
    },
-   "percent": 2.7
+   "percent": 2.8
   },
   {
    "achieved": true,
@@ -325,7 +325,7 @@
     "de": "Teamarbeit – Bronze",
     "en": "Teamed Up Bronze"
    },
-   "percent": 49.0,
+   "percent": 48.9,
    "unlocked": "2020-09-25T20:45:14+02:00"
   },
   {
@@ -341,7 +341,7 @@
     "de": "Teamarbeit – Silber",
     "en": "Teamed Up Silver"
    },
-   "percent": 32.7,
+   "percent": 32.6,
    "unlocked": "2020-09-27T21:15:42+02:00"
   },
   {
@@ -356,7 +356,7 @@
     "de": "Teamarbeit – Gold",
     "en": "Teamed Up Gold"
    },
-   "percent": 24.7
+   "percent": 24.6
   },
   {
    "description": {
@@ -413,7 +413,7 @@
     "de": "Unbezwingbar",
     "en": "Untouched"
    },
-   "percent": 68.6,
+   "percent": 68.5,
    "unlocked": "2020-09-20T18:47:57+02:00"
   },
   {
@@ -746,7 +746,7 @@
     "de": "Unaufhaltbar",
     "en": "Unstoppable"
    },
-   "percent": 38.6,
+   "percent": 38.5,
    "unlocked": "2020-09-20T19:16:44+02:00"
   },
   {

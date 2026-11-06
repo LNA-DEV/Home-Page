@@ -13,7 +13,7 @@
     "de": "Donnernder Erfolg",
     "en": "Thundering success"
    },
-   "percent": 73.0,
+   "percent": 73.4,
    "unlocked": "2024-02-16T20:47:43+01:00"
   },
   {
@@ -29,7 +29,7 @@
     "de": "Entthront",
     "en": "Dethroned"
    },
-   "percent": 37.8,
+   "percent": 38.0,
    "unlocked": "2024-12-06T22:06:42+01:00"
   },
   {
@@ -44,7 +44,7 @@
     "de": "Bruchstücke der Vergangenheit",
     "en": "Pieces of the past"
    },
-   "percent": 16.7
+   "percent": 16.9
   },
   {
    "achieved": true,
@@ -59,7 +59,7 @@
     "de": "Ein wahres Zuhause",
     "en": "A place to call home"
    },
-   "percent": 84.8,
+   "percent": 85.3,
    "unlocked": "2024-02-12T20:35:31+01:00"
   },
   {
@@ -75,7 +75,7 @@
     "de": "Freier Fall",
     "en": "Freefall"
    },
-   "percent": 76.5,
+   "percent": 77.0,
    "unlocked": "2024-02-12T20:49:38+01:00"
   },
   {
@@ -91,7 +91,7 @@
     "de": "Abkürzung",
     "en": "Shortcut"
    },
-   "percent": 77.8,
+   "percent": 78.3,
    "unlocked": "2024-02-12T21:15:29+01:00"
   },
   {
@@ -107,7 +107,7 @@
     "de": "Und so beginnt es",
     "en": "Thus it begins"
    },
-   "percent": 90.8,
+   "percent": 91.0,
    "unlocked": "2024-02-12T20:43:46+01:00"
   },
   {
@@ -122,7 +122,7 @@
     "de": "Geflügelter Sieg",
     "en": "Winged Victory"
    },
-   "percent": 27.5
+   "percent": 27.8
   },
   {
    "description": {
@@ -193,7 +193,7 @@
     "de": "Maulwurf der Hochweiden",
     "en": "Mole of the Springlands"
    },
-   "percent": 71.6,
+   "percent": 72.1,
    "unlocked": "2024-02-16T22:11:22+01:00"
   },
   {
@@ -209,7 +209,7 @@
     "de": "Maulwurf des Düsterdickichts",
     "en": "Mole of the Revelwoods"
    },
-   "percent": 41.5,
+   "percent": 41.8,
    "unlocked": "2024-03-22T22:00:30+01:00"
   },
   {
@@ -238,7 +238,7 @@
     "de": "Maulwurf des Ödlandes",
     "en": "Mole of the Kindlewastes"
    },
-   "percent": 26.3
+   "percent": 26.4
   },
   {
    "achieved": true,
@@ -253,7 +253,7 @@
     "de": "Setze ein Zeichen",
     "en": "Leave a mark"
    },
-   "percent": 83.9,
+   "percent": 84.0,
    "unlocked": "2024-02-16T22:21:01+01:00"
   },
   {
@@ -269,7 +269,7 @@
     "de": "Geheimniswahrer der Hochweiden",
     "en": "Springlands secret keeper"
    },
-   "percent": 41.0,
+   "percent": 41.9,
    "unlocked": "2024-02-23T22:53:13+01:00"
   },
   {
@@ -285,7 +285,7 @@
     "de": "Geheimniswahrer des Düsterdickichts",
     "en": "Revelwoods secret keeper"
    },
-   "percent": 23.5,
+   "percent": 23.8,
    "unlocked": "2025-05-18T12:10:09+02:00"
   },
   {
@@ -301,7 +301,7 @@
     "de": "Geheimniswahrer der Nomaden-Anhöhen",
     "en": "Nomad Highlands secret keeper"
    },
-   "percent": 21.1,
+   "percent": 21.2,
    "unlocked": "2024-12-07T21:40:41+01:00"
   },
   {
@@ -316,7 +316,7 @@
     "de": "Geheimniswahrer des Ödlandes",
     "en": "Kindlewastes secret keeper"
    },
-   "percent": 13.0
+   "percent": 13.1
   },
   {
    "achieved": true,
@@ -347,7 +347,7 @@
     "de": "Auf dem Weg",
     "en": "On the way"
    },
-   "percent": 64.4,
+   "percent": 65.5,
    "unlocked": "2024-02-17T21:18:17+01:00"
   },
   {
@@ -363,7 +363,7 @@
     "de": "Die Dinge fügen sich",
     "en": "Things come together"
    },
-   "percent": 48.6,
+   "percent": 49.0,
    "unlocked": "2024-11-22T21:14:44+01:00"
   },
   {
@@ -379,7 +379,7 @@
     "de": "Man gewöhnt sich daran",
     "en": "Getting a feel for it"
    },
-   "percent": 39.5,
+   "percent": 39.7,
    "unlocked": "2024-12-07T21:40:41+01:00"
   },
   {
@@ -410,7 +410,7 @@
     "de": "Beeindruckende Reise",
     "en": "Impressive journey"
    },
-   "percent": 25.3
+   "percent": 25.4
   },
   {
    "achieved": true,
@@ -425,13 +425,13 @@
     "de": "Gelehrter",
     "en": "Erudite"
    },
-   "percent": 87.6,
+   "percent": 88.0,
    "unlocked": "2024-02-16T21:04:05+01:00"
   },
   {
    "achieved": true,
    "description": {
-    "de": "Die Warte in den Hochweiden erreicht.",
+    "de": "Erklimm die Warte in den Hochweiden.",
     "en": "Reached an ancient spire in the Springlands."
    },
    "hidden": false,
@@ -447,7 +447,7 @@
   {
    "achieved": true,
    "description": {
-    "de": "Die Warte im Düsterdickicht erreicht.",
+    "de": "Erklimm die Warte im Düsterdickicht.",
     "en": "Reached the ancient spire in the Revelwoods."
    },
    "hidden": false,
@@ -457,13 +457,13 @@
     "de": "Düsterdickicht-Sterngucker",
     "en": "Revelwoods stargazer"
    },
-   "percent": 50.9,
+   "percent": 50.7,
    "unlocked": "2024-02-17T21:19:57+01:00"
   },
   {
    "achieved": true,
    "description": {
-    "de": "Die Warte auf den Nomaden-Anhöhen erreicht.",
+    "de": "Erklimm die Warte in den Nomaden-Anhöhen.",
     "en": "Reached the ancient spire in the Nomad Highlands."
    },
    "hidden": false,
@@ -473,12 +473,12 @@
     "de": "Nomaden-Anhöhen-Sterngucker",
     "en": "Nomad Highlands stargazer"
    },
-   "percent": 36.0,
+   "percent": 35.6,
    "unlocked": "2024-12-07T20:54:31+01:00"
   },
   {
    "description": {
-    "de": "Die Warte im Ödland erreicht.",
+    "de": "Erklimm die Warte im Ödland.",
     "en": "Reached the ancient spire in the Kindlewastes."
    },
    "hidden": false,
@@ -488,7 +488,7 @@
     "de": "Ödland-Sterngucker",
     "en": "Kindlewastes stargazer"
    },
-   "percent": 29.4
+   "percent": 29.0
   },
   {
    "achieved": true,
@@ -503,7 +503,7 @@
     "de": "Gut gemacht!",
     "en": "Well done!"
    },
-   "percent": 72.9,
+   "percent": 73.4,
    "unlocked": "2024-02-16T20:48:09+01:00"
   },
   {
@@ -518,7 +518,7 @@
     "de": "Hochweiden-Gärtner",
     "en": "Springland weeding"
    },
-   "percent": 20.6
+   "percent": 20.3
   },
   {
    "description": {
@@ -546,7 +546,7 @@
     "de": "Nomaden-Anhöhen-Gärtner",
     "en": "Nomad Highlands weeding"
    },
-   "percent": 9.6
+   "percent": 9.8
   },
   {
    "description": {
@@ -560,7 +560,7 @@
     "de": "Ödland-Gärtner",
     "en": "Kindlewastes weeding"
    },
-   "percent": 7.4
+   "percent": 7.5
   },
   {
    "description": {
@@ -574,7 +574,7 @@
     "de": "Monumentaler Aufstieg",
     "en": "Climbing to new heights"
    },
-   "percent": 13.1
+   "percent": 13.8
   },
   {
    "description": {
@@ -588,7 +588,7 @@
     "de": "Auf dem Gipfel",
     "en": "Reaching the top"
    },
-   "percent": 8.9
+   "percent": 9.5
   },
   {
    "description": {
@@ -602,11 +602,11 @@
     "de": "Gipfel-Gärtner",
     "en": "Albaneve Summits weeding"
    },
-   "percent": 2.2
+   "percent": 2.4
   },
   {
    "description": {
-    "de": "Die Warte in den Albapracht-Gipfeln erreicht.",
+    "de": "Erklimm die Warte in den Albapracht-Gifpeln.",
     "en": "Reached the ancient spire in the Albaneve Summits."
    },
    "hidden": false,
@@ -616,7 +616,7 @@
     "de": "Albapracht-Gipfel Sterngucker",
     "en": "Albaneve Summits stargazer"
    },
-   "percent": 16.4
+   "percent": 16.6
   },
   {
    "description": {
@@ -630,7 +630,7 @@
     "de": "Maulwurf der Albapracht-Gipfel",
     "en": "Mole of the Albaneve Summits"
    },
-   "percent": 13.5
+   "percent": 14.2
   },
   {
    "description": {
@@ -644,7 +644,7 @@
     "de": "Geheimniswahrer der Albapracht-Gipfel",
     "en": "Albaneve Summits secret keeper"
    },
-   "percent": 3.4
+   "percent": 3.6
   },
   {
    "description": {
@@ -672,7 +672,7 @@
     "de": "König des Berges",
     "en": "King of the mountain"
    },
-   "percent": 8.5
+   "percent": 9.2
   },
   {
    "description": {
@@ -700,7 +700,7 @@
     "de": "Maulwurf des Wogschimmer-Grunds",
     "en": "Mole of the Veilwater Basin"
    },
-   "percent": 4.6
+   "percent": 5.6
   },
   {
    "description": {
@@ -714,7 +714,7 @@
     "de": "Geheimniswahrer des Wogschimmer-Grunds",
     "en": "Veilwater Basin secret keeper"
    },
-   "percent": 1.8
+   "percent": 2.0
   },
   {
    "description": {
@@ -728,7 +728,7 @@
     "de": "Bereit für neue Länder",
     "en": "Ready for new lands"
    },
-   "percent": 3.9
+   "percent": 4.8
   },
   {
    "description": {
@@ -742,11 +742,11 @@
     "de": "Auf zu neuen Horizonten",
     "en": "Onto new horizons"
    },
-   "percent": 2.3
+   "percent": 3.0
   },
   {
    "description": {
-    "de": "Die Warte im Wogschimmer-Grund erreicht.",
+    "de": "Erklimm die Warte im Wogschimmer-Grund.",
     "en": "Reached the ancient spire in the Veilwater Basin."
    },
    "hidden": false,
@@ -756,7 +756,7 @@
     "de": "Wogschimmer-Grund-Sternengucker",
     "en": "Veilwater Basin stargazer"
    },
-   "percent": 8.7
+   "percent": 9.3
   },
   {
    "description": {
@@ -769,6 +769,86 @@
    "name": {
     "de": "Wogschimmer-Gärtner",
     "en": "Veilwater Basin weeding"
+   },
+   "percent": 1.1
+  },
+  {
+   "description": {
+    "de": "Erklimm die Warte im Glimmkessel.",
+    "en": "Scaled the ancient spire in the Cinder's Cradle."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/2a886727aed7f75280c8aa4c956d4a8d0a36bc15.jpg",
+   "key": "ACHI_104f73f4-64ab-4f2c-b8a6-cc09f705cbe9",
+   "name": {
+    "de": "Glimmkessel-Sterngucker",
+    "en": "Cinder's Cradle stargazer"
+   },
+   "percent": 0.8
+  },
+  {
+   "description": {
+    "de": "Baue jedes wertvolle Material im Glimmkessel ab.",
+    "en": "Mine every valuable material in the Cinder's Cradle."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/95d874f9e435ac522ba9ccffc74aedd7e1c3a7ef.jpg",
+   "key": "ACHI_00868842-0b5c-4fa5-a0d3-7734afee2bd9",
+   "name": {
+    "de": "Maulwurf des Glimmkessels",
+    "en": "Mole of the Cinder's Cradle"
+   },
+   "percent": 1.4
+  },
+  {
+   "description": {
+    "de": "Untersuche alle Obelisken im Glimmkessel.",
+    "en": "Read all obelisks in the Cinder's Cradle."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/86741631e28fbe3bf0ce2d7f66801417666cb3c4.jpg",
+   "key": "ACHI_f7e79f95-4502-4307-a52e-403f8c514055",
+   "name": {
+    "de": "Geheimniswahrer des Glimmkessels",
+    "en": "Cinder's Cradle secret keeper"
+   },
+   "percent": 0.6
+  },
+  {
+   "description": {
+    "de": "Beseitige alle Miasmawurzeln im Glimmkessel.",
+    "en": "Clear the Cinder's Cradle of all shroud roots."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/4b08e7d5f7511ae67952ee6fed479a6826a1546f.jpg",
+   "key": "ACHI_367fad06-6502-4bd4-bc63-60423e6bc7d1",
+   "name": {
+    "de": "Glimmkessel-Unkraut",
+    "en": "Cinder's Cradle Weeding"
+   },
+   "percent": 0.2
+  },
+  {
+   "description": {
+    "de": "Erreiche Stufe 50.",
+    "en": "Reach level 50."
+   },
+   "hidden": false,
+   "icon": "images/games/achievements/steam/1203620/35982a3a1d0bdf72f112e42d36fb212f4f6d6f0d.jpg",
+   "key": "ACHI_acd451ea-579a-442f-8b49-eccfee01d4ec",
+   "name": {
+    "de": "Über den Wolken",
+    "en": "Above the clouds"
+   },
+   "percent": 0.9
+  },
+  {
+   "hidden": true,
+   "icon": "images/games/achievements/steam/1203620/8f0290488dc7ecd675f771094f0a204e9e0f3312.jpg",
+   "key": "ACHI_b2b2cc0e-bbba-415c-8080-ff0cae4c606b",
+   "name": {
+    "de": "Ein neuer Nordstern",
+    "en": "A new North Star"
    },
    "percent": 0.9
   }

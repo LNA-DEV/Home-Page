@@ -13,7 +13,7 @@
     "de": "Bücherwurm",
     "en": "Bookworm"
    },
-   "percent": 54.5,
+   "percent": 54.4,
    "unlocked": "2021-04-23T18:21:55+02:00"
   },
   {
@@ -28,7 +28,7 @@
     "de": "Historiker",
     "en": "Historian"
    },
-   "percent": 22.0
+   "percent": 21.9
   },
   {
    "description": {
@@ -42,7 +42,7 @@
     "de": "Reliquienjäger",
     "en": "Relic Hunter"
    },
-   "percent": 44.0
+   "percent": 43.8
   },
   {
    "description": {
@@ -56,7 +56,7 @@
     "de": "Archäologe",
     "en": "Archaeologist"
    },
-   "percent": 16.9
+   "percent": 16.8
   },
   {
    "description": {
@@ -70,7 +70,7 @@
     "de": "Auf der Suche nach Ärger",
     "en": "Looking for Trouble"
    },
-   "percent": 32.5
+   "percent": 32.3
   },
   {
    "description": {
@@ -84,7 +84,7 @@
     "de": "Die Taschen voller Caches",
     "en": "Bag Full O' Cache"
    },
-   "percent": 12.9
+   "percent": 12.8
   },
   {
    "description": {
@@ -112,7 +112,7 @@
     "de": "Langfinger",
     "en": "Scrounger"
    },
-   "percent": 44.4
+   "percent": 44.2
   },
   {
    "description": {
@@ -126,7 +126,7 @@
     "de": "Wählerisch",
     "en": "Picky"
    },
-   "percent": 43.9
+   "percent": 43.7
   },
   {
    "description": {
@@ -140,7 +140,7 @@
     "de": "Kluges Mädchen",
     "en": "Clever Girl"
    },
-   "percent": 35.4
+   "percent": 35.2
   },
   {
    "description": {
@@ -154,7 +154,7 @@
     "de": "Tödlich",
     "en": "Lethal"
    },
-   "percent": 12.5
+   "percent": 12.4
   },
   {
    "description": {
@@ -168,7 +168,7 @@
     "de": "Jetzt wird's ernst",
     "en": "Now We're Getting Serious"
    },
-   "percent": 23.2
+   "percent": 23.1
   },
   {
    "description": {
@@ -196,7 +196,7 @@
     "de": "Großwildjäger",
     "en": "Big Game Hunter"
    },
-   "percent": 43.1
+   "percent": 42.9
   },
   {
    "description": {
@@ -210,7 +210,7 @@
     "de": "Schmeckt wie Hühnchen!",
     "en": "Tastes Like Chicken!"
    },
-   "percent": 20.9
+   "percent": 20.8
   },
   {
    "description": {
@@ -238,7 +238,7 @@
     "de": "Scharfschütze",
     "en": "Sharp Shooter"
    },
-   "percent": 53.6
+   "percent": 53.5
   },
   {
    "description": {
@@ -252,7 +252,7 @@
     "de": "Raubtier",
     "en": "Predator"
    },
-   "percent": 54.7
+   "percent": 54.5
   },
   {
    "description": {
@@ -266,7 +266,7 @@
     "de": "Harmonisierung",
     "en": "Equalizer"
    },
-   "percent": 32.4
+   "percent": 32.2
   },
   {
    "description": {
@@ -280,7 +280,7 @@
     "de": "Schwarze Witwe",
     "en": "Widowmaker"
    },
-   "percent": 19.9
+   "percent": 19.8
   },
   {
    "achieved": true,
@@ -295,7 +295,7 @@
     "de": "Revolverheld",
     "en": "Gunslinger"
    },
-   "percent": 49.0,
+   "percent": 48.9,
    "unlocked": "2021-04-23T18:30:18+02:00"
   },
   {
@@ -310,7 +310,7 @@
     "de": "Epische Fehlleistung",
     "en": "Epic Fumble"
    },
-   "percent": 42.5
+   "percent": 42.4
   },
   {
    "description": {
@@ -337,7 +337,7 @@
    "name": {
     "en": "Opportunist"
    },
-   "percent": 51.3
+   "percent": 51.2
   },
   {
    "description": {
@@ -351,7 +351,7 @@
     "de": "Skrupellos",
     "en": "Down and Dirty"
    },
-   "percent": 36.2
+   "percent": 36.0
   },
   {
    "description": {
@@ -394,7 +394,7 @@
     "de": "Kluges Köpfchen",
     "en": "One Smart Cookie"
    },
-   "percent": 56.7,
+   "percent": 56.6,
    "unlocked": "2021-02-16T16:58:01+01:00"
   },
   {
@@ -409,7 +409,7 @@
     "de": "Schlauer Fuchs",
     "en": "Intellectually Superior"
    },
-   "percent": 15.1
+   "percent": 15.0
   },
   {
    "description": {
@@ -423,7 +423,7 @@
     "de": "Unerledigte Geschäfte",
     "en": "Unfinished Business"
    },
-   "percent": 26.2
+   "percent": 26.1
   },
   {
    "description": {
@@ -437,7 +437,7 @@
     "de": "Unfassbar!",
     "en": "Inconceivable!"
    },
-   "percent": 6.6
+   "percent": 6.5
   },
   {
    "description": {
@@ -451,7 +451,7 @@
     "de": "Überlebenskünstler",
     "en": "A Survivor Is Born"
    },
-   "percent": 42.2
+   "percent": 42.0
   },
   {
    "hidden": true,
@@ -471,7 +471,7 @@
     "de": "Krabbenkrieg",
     "en": "Crab Cakes"
    },
-   "percent": 26.6
+   "percent": 26.5
   },
   {
    "hidden": true,
@@ -481,7 +481,7 @@
     "de": "Quasselstrippe",
     "en": "Chatterbox"
    },
-   "percent": 2.2
+   "percent": 2.1
   },
   {
    "description": {
@@ -537,7 +537,7 @@
     "de": "Gefangen",
     "en": "Entrapment"
    },
-   "percent": 4.0
+   "percent": 3.9
   },
   {
    "description": {

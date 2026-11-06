@@ -134,7 +134,7 @@
     "de": "Ein weiser Jäger",
     "en": "The Franchise Hunter"
    },
-   "percent": 19.1
+   "percent": 19.0
   },
   {
    "description": {
@@ -288,7 +288,7 @@
     "de": "Kommissionsarbeit",
     "en": "Commissioned Work"
    },
-   "percent": 31.9
+   "percent": 32.0
   },
   {
    "description": {
@@ -330,7 +330,7 @@
     "de": "Haue regiert die Welt",
     "en": "Power is Everything"
    },
-   "percent": 32.2
+   "percent": 32.3
   },
   {
    "description": {
@@ -344,7 +344,7 @@
     "de": "Luxuswohnung",
     "en": "Movin On Up"
    },
-   "percent": 38.5
+   "percent": 38.4
   },
   {
    "description": {
@@ -462,7 +462,7 @@
     "de": "Große Krone",
     "en": "Giant Crown"
    },
-   "percent": 57.0
+   "percent": 56.9
   },
   {
    "description": {
@@ -504,7 +504,7 @@
     "de": "Fanganfänger",
     "en": "Capture Novice"
    },
-   "percent": 55.8
+   "percent": 55.7
   },
   {
    "description": {
@@ -670,7 +670,7 @@
     "de": "Der Beginn einer neuen Expedition",
     "en": "The Beginning of a New Expedition"
    },
-   "percent": 37.0
+   "percent": 37.1
   },
   {
    "hidden": true,
@@ -690,7 +690,7 @@
     "de": "Der trügerische Drachenälteste",
     "en": "The Elusive Elder Dragon"
    },
-   "percent": 33.6
+   "percent": 33.7
   },
   {
    "hidden": true,
@@ -710,7 +710,7 @@
     "de": "Der Alte Allwyrm",
     "en": "The Old Everwyrm"
    },
-   "percent": 29.4
+   "percent": 29.5
   },
   {
    "hidden": true,
@@ -720,7 +720,7 @@
     "de": "Ein Ende und ein Anfang",
     "en": "An End and a Beginning"
    },
-   "percent": 27.0
+   "percent": 27.1
   },
   {
    "hidden": true,
@@ -1046,7 +1046,7 @@
     "de": "Eifriger Ingenieur",
     "en": "Eager Engineer"
    },
-   "percent": 31.4
+   "percent": 31.5
   },
   {
    "description": {
@@ -1214,7 +1214,7 @@
     "de": "Jäger-Wunderkind",
     "en": "Hunter Prodigy"
    },
-   "percent": 21.6
+   "percent": 21.7
   },
   {
    "description": {
@@ -1252,7 +1252,7 @@
     "de": "Kampf gegen das Unbekannte",
     "en": "Confronting the Unknown"
    },
-   "percent": 30.9
+   "percent": 31.0
   },
   {
    "hidden": true,

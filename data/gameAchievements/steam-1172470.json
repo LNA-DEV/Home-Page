@@ -43,7 +43,7 @@
     "de": "Teamspieler",
     "en": "Team Player"
    },
-   "percent": 39.9,
+   "percent": 40.0,
    "unlocked": "2021-05-10T21:51:24+02:00"
   },
   {
@@ -101,7 +101,7 @@
     "de": "Kill-Spitzenreiter",
     "en": "Kill Leader"
    },
-   "percent": 41.3
+   "percent": 41.4
   },
   {
    "description": {
@@ -143,7 +143,7 @@
     "de": "Apex-Unterstützung",
     "en": "Apex Support"
    },
-   "percent": 27.8
+   "percent": 27.9
   },
   {
    "achieved": true,

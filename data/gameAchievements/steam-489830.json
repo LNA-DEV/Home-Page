@@ -29,7 +29,7 @@
     "de": "Ödsturzhügelgrab",
     "en": "Bleak Falls Barrow"
    },
-   "percent": 49.6,
+   "percent": 49.5,
    "unlocked": "2019-06-17T20:11:16+02:00"
   },
   {
@@ -45,7 +45,7 @@
     "de": "Der Weg der Stimme",
     "en": "The Way of the Voice"
    },
-   "percent": 37.1,
+   "percent": 37.0,
    "unlocked": "2019-06-17T21:26:26+02:00"
   },
   {
@@ -61,7 +61,7 @@
     "de": "Diplomatische Immunität",
     "en": "Diplomatic Immunity"
    },
-   "percent": 22.0,
+   "percent": 21.9,
    "unlocked": "2019-06-18T00:16:57+02:00"
   },
   {
@@ -141,7 +141,7 @@
     "de": "Zu den Waffen",
     "en": "Take Up Arms"
    },
-   "percent": 28.4,
+   "percent": 28.3,
    "unlocked": "2019-04-07T17:53:55+02:00"
   },
   {
@@ -156,7 +156,7 @@
     "de": "Blutschwur",
     "en": "Blood Oath"
    },
-   "percent": 18.1
+   "percent": 18.0
   },
   {
    "description": {
@@ -170,7 +170,7 @@
     "de": "Zu Ehren der Toten",
     "en": "Glory of the Dead"
    },
-   "percent": 13.6
+   "percent": 13.5
   },
   {
    "achieved": true,
@@ -185,7 +185,7 @@
     "de": "Torwächter",
     "en": "Gatekeeper"
    },
-   "percent": 31.5,
+   "percent": 31.4,
    "unlocked": "2019-06-18T23:33:13+02:00"
   },
   {
@@ -214,7 +214,7 @@
     "de": "Das Auge von Magnus",
     "en": "The Eye of Magnus"
    },
-   "percent": 16.2
+   "percent": 16.1
   },
   {
    "description": {
@@ -228,7 +228,7 @@
     "de": "Geschäft ist Geschäft",
     "en": "Taking Care of Business"
    },
-   "percent": 22.5
+   "percent": 22.4
   },
   {
    "description": {
@@ -242,7 +242,7 @@
     "de": "Die Rückkehr der Finsternis",
     "en": "Darkness Returns"
    },
-   "percent": 11.7
+   "percent": 11.6
   },
   {
    "description": {
@@ -312,7 +312,7 @@
     "de": "Parteiisch",
     "en": "Taking Sides"
    },
-   "percent": 18.1
+   "percent": 18.0
   },
   {
    "description": {
@@ -326,7 +326,7 @@
     "de": "Kriegsheld",
     "en": "War Hero"
    },
-   "percent": 11.0
+   "percent": 10.9
   },
   {
    "description": {
@@ -340,7 +340,7 @@
     "de": "Held von Himmelsrand",
     "en": "Hero of Skyrim"
    },
-   "percent": 10.9
+   "percent": 10.8
   },
   {
    "description": {
@@ -452,7 +452,7 @@
     "de": "Bürger",
     "en": "Citizen"
    },
-   "percent": 31.2
+   "percent": 31.1
   },
   {
    "description": {
@@ -466,7 +466,7 @@
     "de": "Steckbrieflich gesucht",
     "en": "Wanted"
    },
-   "percent": 8.9
+   "percent": 8.8
   },
   {
    "description": {
@@ -522,7 +522,7 @@
     "de": "Goldhamster",
     "en": "Golden Touch"
    },
-   "percent": 15.7
+   "percent": 15.6
   },
   {
    "description": {
@@ -536,7 +536,7 @@
     "de": "Höhlenforscher",
     "en": "Delver"
    },
-   "percent": 14.8
+   "percent": 14.7
   },
   {
    "description": {
@@ -550,7 +550,7 @@
     "de": "Meisterlich",
     "en": "Skill Master"
    },
-   "percent": 22.8
+   "percent": 22.7
   },
   {
    "description": {
@@ -578,7 +578,7 @@
     "de": "Leseratte",
     "en": "Reader"
    },
-   "percent": 10.6
+   "percent": 10.5
   },
   {
    "description": {
@@ -592,7 +592,7 @@
     "de": "Jäger und Sammler",
     "en": "Daedric Influence"
    },
-   "percent": 29.9
+   "percent": 29.8
   },
   {
    "description": {
@@ -636,7 +636,7 @@
     "de": "Drachenjäger",
     "en": "Dragon Hunter"
    },
-   "percent": 14.5
+   "percent": 14.4
   },
   {
    "achieved": true,
@@ -651,7 +651,7 @@
     "de": "Worte der Macht",
     "en": "Words of Power"
    },
-   "percent": 32.4,
+   "percent": 32.3,
    "unlocked": "2019-06-17T22:22:10+02:00"
   },
   {
@@ -666,7 +666,7 @@
     "de": "Meister des Thu'um",
     "en": "Thu'um Master"
    },
-   "percent": 9.8
+   "percent": 9.7
   },
   {
    "achieved": true,
@@ -681,7 +681,7 @@
     "de": "Lehrling",
     "en": "Apprentice"
    },
-   "percent": 52.2,
+   "percent": 52.1,
    "unlocked": "2019-06-16T23:30:05+02:00"
   },
   {
@@ -711,7 +711,7 @@
     "de": "Experte",
     "en": "Expert"
    },
-   "percent": 28.4
+   "percent": 28.3
   },
   {
    "description": {
@@ -725,7 +725,7 @@
     "de": "Meister",
     "en": "Master"
    },
-   "percent": 12.6
+   "percent": 12.5
   },
   {
    "description": {
@@ -739,7 +739,7 @@
     "de": "Erwachen",
     "en": "Awakening"
    },
-   "percent": 19.5
+   "percent": 19.4
   },
   {
    "description": {
@@ -893,7 +893,7 @@
     "de": "Landbesitzer",
     "en": "Landowner"
    },
-   "percent": 17.2
+   "percent": 17.1
   },
   {
    "description": {
@@ -921,7 +921,7 @@
     "de": "Großgrundbesitzer",
     "en": "Land Baron"
    },
-   "percent": 5.0
+   "percent": 4.9
   },
   {
    "description": {
@@ -935,7 +935,7 @@
     "de": "Meisterarchitekt",
     "en": "Master Architect"
    },
-   "percent": 3.3
+   "percent": 3.2
   },
   {
    "description": {
@@ -1019,7 +1019,7 @@
     "de": "Verborgenes Wissen",
     "en": "Hidden Knowledge"
    },
-   "percent": 6.6
+   "percent": 6.5
   },
   {
    "description": {
@@ -1075,7 +1075,7 @@
     "de": "Solstheim-Entdecker",
     "en": "Solstheim Explorer"
    },
-   "percent": 7.6
+   "percent": 7.5
   }
  ],
  "id": "489830",

@@ -22,7 +22,7 @@
    "name": {
     "en": "Attunement"
    },
-   "percent": 31.8
+   "percent": 31.9
   },
   {
    "description": {
@@ -334,7 +334,7 @@
    "name": {
     "en": "Test of Resolve"
    },
-   "percent": 52.3
+   "percent": 52.2
   },
   {
    "description": {
@@ -346,7 +346,7 @@
    "name": {
     "en": "Proof of Resolve"
    },
-   "percent": 31.6
+   "percent": 31.7
   },
   {
    "description": {
@@ -514,7 +514,7 @@
    "name": {
     "en": "Inspiration"
    },
-   "percent": 8.0
+   "percent": 8.1
   },
   {
    "description": {
@@ -562,7 +562,7 @@
    "name": {
     "en": "Witness"
    },
-   "percent": 17.6
+   "percent": 17.7
   },
   {
    "description": {
@@ -610,7 +610,7 @@
    "name": {
     "en": "Speedrun 2"
    },
-   "percent": 1.8
+   "percent": 1.9
   },
   {
    "description": {
@@ -622,7 +622,7 @@
    "name": {
     "en": "Speed Completion"
    },
-   "percent": 2.0
+   "percent": 2.1
   },
   {
    "description": {
@@ -682,7 +682,7 @@
    "name": {
     "en": "Teacher"
    },
-   "percent": 31.0
+   "percent": 31.1
   },
   {
    "description": {
@@ -742,7 +742,7 @@
    "name": {
     "en": "Worldsoul"
    },
-   "percent": 19.7
+   "percent": 19.8
   },
   {
    "description": {

@@ -97,7 +97,7 @@
     "de": "Schmied",
     "en": "Blacksmith"
    },
-   "percent": 38.0
+   "percent": 37.9
   },
   {
    "description": {
@@ -222,7 +222,7 @@
     "de": "Noch nicht genug?",
     "en": "Had Enough Yet"
    },
-   "percent": 14.2
+   "percent": 14.1
   },
   {
    "description": {
@@ -347,7 +347,7 @@
     "de": "Meisterstratege",
     "en": "Master Tactician"
    },
-   "percent": 13.6
+   "percent": 13.5
   },
   {
    "description": {
@@ -444,7 +444,7 @@
     "de": "Nichts verschwenden",
     "en": "Nothing Wasted"
    },
-   "percent": 14.8
+   "percent": 14.7
   },
   {
    "description": {
@@ -500,7 +500,7 @@
     "de": "Bereit für die Schlacht",
     "en": "Ready For Battle"
    },
-   "percent": 12.5
+   "percent": 12.4
   },
   {
    "description": {

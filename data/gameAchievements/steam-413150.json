@@ -29,7 +29,7 @@
     "de": "Cowboy",
     "en": "Cowpoke"
    },
-   "percent": 55.3,
+   "percent": 55.4,
    "unlocked": "2020-06-06T13:41:25+02:00"
   },
   {
@@ -61,7 +61,7 @@
     "de": "Millionär",
     "en": "Millionaire"
    },
-   "percent": 32.3,
+   "percent": 32.4,
    "unlocked": "2020-12-23T23:56:48+01:00"
   },
   {
@@ -86,7 +86,7 @@
     "de": "Eine vollständige Sammlung",
     "en": "A Complete Collection"
    },
-   "percent": 7.2
+   "percent": 7.3
   },
   {
    "achieved": true,
@@ -101,7 +101,7 @@
     "de": "Ein neuer Freund",
     "en": "A New Friend"
    },
-   "percent": 40.3,
+   "percent": 40.4,
    "unlocked": "2020-06-14T21:26:04+02:00"
   },
   {
@@ -132,7 +132,7 @@
     "de": "Der beliebte Bauer",
     "en": "The Beloved Farmer"
    },
-   "percent": 13.5
+   "percent": 13.6
   },
   {
    "achieved": true,
@@ -147,7 +147,7 @@
     "de": "Cliquen",
     "en": "Cliques"
    },
-   "percent": 28.7,
+   "percent": 28.8,
    "unlocked": "2020-06-25T20:33:26+02:00"
   },
   {
@@ -220,7 +220,7 @@
     "de": "Gourmetkoch",
     "en": "Gourmet Chef"
    },
-   "percent": 3.2
+   "percent": 3.3
   },
   {
    "achieved": true,
@@ -326,7 +326,7 @@
     "de": "Alter Seemann",
     "en": "Ol' Mariner"
    },
-   "percent": 42.7,
+   "percent": 42.8,
    "unlocked": "2020-06-08T20:53:51+02:00"
   },
   {
@@ -356,7 +356,7 @@
     "de": "Massiver Fang",
     "en": "Mother Catch"
    },
-   "percent": 49.4,
+   "percent": 49.5,
    "unlocked": "2020-02-24T20:00:12+01:00"
   },
   {
@@ -372,7 +372,7 @@
     "de": "Fundgrube",
     "en": "Treasure Trove"
    },
-   "percent": 44.2,
+   "percent": 44.3,
    "unlocked": "2020-06-14T21:30:23+02:00"
   },
   {
@@ -387,7 +387,7 @@
     "de": "Laufbursche",
     "en": "Gofer"
    },
-   "percent": 31.0
+   "percent": 31.1
   },
   {
    "description": {
@@ -401,7 +401,7 @@
     "de": "Große Hilfe",
     "en": "A Big Help"
    },
-   "percent": 11.6
+   "percent": 11.7
   },
   {
    "description": {
@@ -430,7 +430,7 @@
     "de": "Monokultur",
     "en": "Monoculture"
    },
-   "percent": 33.2,
+   "percent": 33.3,
    "unlocked": "2020-10-10T16:27:57+02:00"
   },
   {
@@ -474,7 +474,7 @@
     "de": "Das untere Ende",
     "en": "The Bottom"
    },
-   "percent": 43.0,
+   "percent": 43.1,
    "unlocked": "2020-06-14T20:17:20+02:00"
   },
   {
@@ -505,7 +505,7 @@
     "de": "Joja Co. Mitglied des Jahres",
     "en": "Joja Co. Member Of The Year"
    },
-   "percent": 6.8
+   "percent": 6.9
   },
   {
    "description": {
@@ -558,7 +558,7 @@
     "de": "Einzigartiges Talent",
     "en": "Singular Talent"
    },
-   "percent": 40.7,
+   "percent": 40.8,
    "unlocked": "2020-07-10T21:43:50+02:00"
   },
   {
@@ -573,7 +573,7 @@
     "de": "Meister der 5 Wege",
     "en": "Master Of The Five Ways"
    },
-   "percent": 18.0
+   "percent": 18.1
   },
   {
    "description": {
@@ -615,7 +615,7 @@
     "de": "Zwei Daumen hoch",
     "en": "Two Thumbs Up"
    },
-   "percent": 9.6
+   "percent": 9.7
   },
   {
    "description": {
@@ -629,7 +629,7 @@
     "de": "Blaues Band",
     "en": "Blue Ribbon"
    },
-   "percent": 18.5
+   "percent": 18.7
   },
   {
    "description": {
@@ -643,7 +643,7 @@
     "de": "Eine unvergessliche Suppe",
     "en": "An Unforgettable Soup"
    },
-   "percent": 12.8
+   "percent": 12.9
   },
   {
    "description": {
@@ -657,7 +657,7 @@
     "de": "Gute Nachbarn",
     "en": "Good Neighbors"
    },
-   "percent": 4.2
+   "percent": 4.3
   },
   {
    "description": {
@@ -699,7 +699,7 @@
     "de": "Perfektion",
     "en": "Perfection"
    },
-   "percent": 2.2
+   "percent": 2.3
   },
   {
    "description": {
@@ -713,7 +713,7 @@
     "de": "Ein fernes Ufer",
     "en": "A Distant Shore"
    },
-   "percent": 17.3
+   "percent": 17.4
   }
  ],
  "id": "413150",

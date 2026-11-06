@@ -678,8 +678,8 @@
   slug: the-witcher-3-wild-hunt-complete-edition
   platform: steam
   appid: 292030
-  playtimeMinutes: 6732
-  lastPlayed: "2026-10-03"
+  playtimeMinutes: 6926
+  lastPlayed: "2026-10-25"
   achievementsUnlocked: 36
   achievementsTotal: 78
   cover: "images/games/covers/The Witcher 3: Wild Hunt — Remastered.jpg"
@@ -906,7 +906,7 @@
   playtimeMinutes: 1889
   lastPlayed: "2021-04-08"
   achievementsUnlocked: 3
-  achievementsTotal: 50
+  achievementsTotal: 51
   cover: images/games/covers/PixARK.jpg
   link: "https://store.steampowered.com/app/593600/"
 
@@ -1060,7 +1060,7 @@
   playtimeMinutes: 3232
   lastPlayed: "2026-02-26"
   achievementsUnlocked: 22
-  achievementsTotal: 52
+  achievementsTotal: 58
   cover: images/games/covers/Enshrouded.jpg
   link: "https://store.steampowered.com/app/1203620/"
 
@@ -1123,8 +1123,8 @@
   slug: core-keeper
   platform: steam
   appid: 1621690
-  playtimeMinutes: 1751
-  lastPlayed: "2026-10-09"
+  playtimeMinutes: 1757
+  lastPlayed: "2026-10-11"
   achievementsUnlocked: 12
   achievementsTotal: 59
   cover: images/games/covers/Core Keeper.jpg
@@ -1145,8 +1145,8 @@
   slug: subnautica-2
   platform: steam
   appid: 1962700
-  playtimeMinutes: 261
-  lastPlayed: "2026-06-12"
+  playtimeMinutes: 266
+  lastPlayed: "2026-10-23"
   cover: images/games/covers/Subnautica 2.jpg
   link: "https://store.steampowered.com/app/1962700/"
 
@@ -1154,8 +1154,8 @@
   slug: ark-survival-ascended
   platform: steam
   appid: 2399830
-  playtimeMinutes: 3837
-  lastPlayed: "2026-07-18"
+  playtimeMinutes: 3995
+  lastPlayed: "2026-11-06"
   achievementsUnlocked: 9
   achievementsTotal: 32
   cover: "images/games/covers/ARK: Survival Ascended.jpg"
@@ -1176,8 +1176,8 @@
   slug: geoguessr-steam-edition
   platform: steam
   appid: 3478870
-  playtimeMinutes: 4605
-  lastPlayed: "2026-09-24"
+  playtimeMinutes: 4787
+  lastPlayed: "2026-10-25"
   achievementsUnlocked: 16
   achievementsTotal: 45
   link: "https://store.steampowered.com/app/3478870/"

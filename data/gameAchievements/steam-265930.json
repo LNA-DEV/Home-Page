@@ -12,7 +12,7 @@
     "de": "Todesbrocken",
     "en": "Boulder of Death"
    },
-   "percent": 31.4
+   "percent": 31.3
   },
   {
    "description": {
@@ -26,7 +26,7 @@
     "de": "Passant",
     "en": "Pedestrian"
    },
-   "percent": 29.2
+   "percent": 29.1
   },
   {
    "description": {
@@ -205,7 +205,7 @@
    "name": {
     "en": "Rymdskepp i Rymden"
    },
-   "percent": 17.6
+   "percent": 17.5
   },
   {
    "description": {
@@ -246,7 +246,7 @@
     "de": "Ziegenkönigin",
     "en": "Goat Queen"
    },
-   "percent": 49.6
+   "percent": 49.5
   },
   {
    "description": {
@@ -312,7 +312,7 @@
    "name": {
     "en": "Maximum MLG Big Plays"
    },
-   "percent": 35.2,
+   "percent": 35.1,
    "unlocked": "2019-04-17T17:38:20+02:00"
   },
   {
@@ -342,7 +342,7 @@
     "de": "Demoziege",
     "en": "Demogoat"
    },
-   "percent": 48.5,
+   "percent": 48.4,
    "unlocked": "2019-04-17T17:46:25+02:00"
   },
   {
@@ -357,7 +357,7 @@
     "de": "Jetzt kommt Jonny!",
     "en": "Here's Johnny!"
    },
-   "percent": 16.5
+   "percent": 16.4
   },
   {
    "description": {
@@ -705,7 +705,7 @@
     "de": "Steves Quest",
     "en": "Steve's Quest"
    },
-   "percent": 18.4
+   "percent": 18.3
   },
   {
    "description": {
@@ -897,7 +897,7 @@
     "de": "Ein Mann, zwei Schüsse und eine Religion",
     "en": "One man, two shots and a religion"
    },
-   "percent": 8.0
+   "percent": 7.9
   },
   {
    "description": {
@@ -952,7 +952,7 @@
    "name": {
     "en": "Malleus Maleficarum"
    },
-   "percent": 11.4
+   "percent": 11.3
   },
   {
    "description": {
@@ -1532,7 +1532,7 @@
    "name": {
     "en": "Gather $1000000"
    },
-   "percent": 1.8
+   "percent": 1.9
   },
   {
    "description": {
