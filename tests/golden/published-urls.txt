@@ -173,6 +173,7 @@
 /de/gallery/gear/
 /de/gallery/general/
 /de/gallery/models/
+/de/gallery/models/julia-hemberger/
 /de/gallery/models/lukas-nagel/
 /de/gallery/models/markus-penninger/
 /de/gallery/photo/_dsc2784/
@@ -724,6 +725,7 @@
 /de/gallery/photo/maul-voll-jungrind-laeuft-durchs-gras/
 /de/gallery/photo/metall-und-blatt-blaufluegel-prachtlibelle-rastet-auf-einer-weide/
 /de/gallery/photo/mittagsfahrt-weisse-ente-auf-dem-klaren-fluss/
+/de/gallery/photo/mitten-im-gedanken-frau-auf-einer-fensterbank-vor-den-lichtern-der-stadt/
 /de/gallery/photo/mitten-im-meckern-ziege-ruft-ueber-die-weide/
 /de/gallery/photo/morgen-in-der-wildnis-wanderer-putzt-sich-die-zaehne-im-schwedischen-fjaell/
 /de/gallery/photo/morgen-ueber-dem-nebelmeer-wiese-grat-und-wolke/
@@ -853,6 +855,7 @@
 /de/gallery/photo/stellung-gehalten-stockenten-erpel-auf-den-kieseln/
 /de/gallery/photo/still-genug-zum-verdoppeln-abendhimmel-spiegelt-sich-im-see/
 /de/gallery/photo/stille-aufmerksamkeit-reh-im-ersten-licht/
+/de/gallery/photo/stilles-leuchten-fotografin-sichtet-aufnahmen-an-einem-fenster-zur-stadt/
 /de/gallery/photo/stilles-wasser-ein-moorsee-unter-dem-sommerhimmel/
 /de/gallery/photo/strandpause-rinder-ruhen-an-der-granitkueste/
 /de/gallery/photo/strandvaegen-vom-wasser-aus-stockholms-praechtige-uferstrasse/
@@ -1374,6 +1377,7 @@
 /en/gallery/gear/
 /en/gallery/general/
 /en/gallery/models/
+/en/gallery/models/julia-hemberger/
 /en/gallery/models/lukas-nagel/
 /en/gallery/models/markus-penninger/
 /en/gallery/photo/_dsc2784/
@@ -1776,6 +1780,7 @@
 /en/gallery/photo/grey-trunks-orange-wall-an-autumn-forest-inside/
 /en/gallery/photo/grey-valley-a-village-through-the-fog-in-black-and-white/
 /en/gallery/photo/grounded-bumblebee-resting-in-the-grass/
+/en/gallery/photo/half-a-thought-woman-on-a-windowsill-against-city-lights/
 /en/gallery/photo/half-open-a-pink-rose-catching-the-last-sun/
 /en/gallery/photo/hanging-on-grasshopper-gripping-a-blade-of-grass/
 /en/gallery/photo/hanging-under-carder-bee-below-the-clover/
@@ -1938,6 +1943,7 @@
 /en/gallery/photo/pushing-through-the-moss-a-young-fly-agaric/
 /en/gallery/photo/pylons-in-the-haze-the-oresund-bridge-close-up/
 /en/gallery/photo/quiet-attention-roe-deer-at-first-light/
+/en/gallery/photo/quiet-glow-female-photographer-reviewing-shots-by-a-city-window/
 /en/gallery/photo/quiet-water-a-bog-lake-under-the-summer-sky/
 /en/gallery/photo/racemes-in-the-light-bird-cherry-in-full-bloom/
 /en/gallery/photo/range-after-range-winter-ridges-toward-austria/
@@ -2687,6 +2693,7 @@
 /images/gallery/fill-120x120/grey-and-white-a-snowbound-valley-under-heavy-cloud.jpg
 /images/gallery/fill-120x120/grey-valley-a-village-through-the-fog-in-black-and-white.jpg
 /images/gallery/fill-120x120/grounded-bumblebee-resting-in-the-grass.jpg
+/images/gallery/fill-120x120/half-a-thought-woman-on-a-windowsill-against-city-lights.jpg
 /images/gallery/fill-120x120/half-open-a-pink-rose-catching-the-last-sun.jpg
 /images/gallery/fill-120x120/hanging-underneath-a-bee-below-the-scabious.jpg
 /images/gallery/fill-120x120/harbour-brood-greylag-family-grazing-by-the-moorings.jpg
@@ -2747,6 +2754,7 @@
 /images/gallery/fill-120x120/pink-on-blue-viburnum-in-the-early-spring-sun.jpg
 /images/gallery/fill-120x120/pushing-through-the-moss-a-young-fly-agaric.jpg
 /images/gallery/fill-120x120/quiet-attention-roe-deer-at-first-light.jpg
+/images/gallery/fill-120x120/quiet-glow-female-photographer-reviewing-shots-by-a-city-window.jpg
 /images/gallery/fill-120x120/quiet-water-a-bog-lake-under-the-summer-sky.jpg
 /images/gallery/fill-120x120/range-after-range-winter-ridges-toward-austria.jpg
 /images/gallery/fill-120x120/reading-nook-a-window-full-of-old-books-in-copenhagen.jpg
@@ -2875,6 +2883,7 @@
 /images/gallery/fill-480x480-center/orange-on-clover-a-fritillary-in-the-summer-meadow.jpg
 /images/gallery/fill-480x480-center/post-position-blackbird-holding-the-fence-line.jpg
 /images/gallery/fill-480x480-center/quiet-attention-roe-deer-at-first-light.jpg
+/images/gallery/fill-480x480-center/quiet-glow-female-photographer-reviewing-shots-by-a-city-window.jpg
 /images/gallery/fill-480x480-center/room-to-roam-wisent-in-the-summer-enclosure.jpg
 /images/gallery/fill-480x480-center/shared-table-bumblebee-and-beetle-on-the-same-umbel.jpg
 /images/gallery/fill-480x480-center/slow-ascent-a-roman-snail-climbing-a-trunk.jpg
@@ -2928,6 +2937,7 @@
 /images/gallery/fill-900x900-center/orange-on-clover-a-fritillary-in-the-summer-meadow.jpg
 /images/gallery/fill-900x900-center/post-position-blackbird-holding-the-fence-line.jpg
 /images/gallery/fill-900x900-center/quiet-attention-roe-deer-at-first-light.jpg
+/images/gallery/fill-900x900-center/quiet-glow-female-photographer-reviewing-shots-by-a-city-window.jpg
 /images/gallery/fill-900x900-center/room-to-roam-wisent-in-the-summer-enclosure.jpg
 /images/gallery/fill-900x900-center/shared-table-bumblebee-and-beetle-on-the-same-umbel.jpg
 /images/gallery/fill-900x900-center/slow-ascent-a-roman-snail-climbing-a-trunk.jpg
@@ -3199,6 +3209,7 @@
 /images/gallery/fit-1200x1200/grey-trunks-orange-wall-an-autumn-forest-inside.jpg
 /images/gallery/fit-1200x1200/grey-valley-a-village-through-the-fog-in-black-and-white.jpg
 /images/gallery/fit-1200x1200/grounded-bumblebee-resting-in-the-grass.jpg
+/images/gallery/fit-1200x1200/half-a-thought-woman-on-a-windowsill-against-city-lights.jpg
 /images/gallery/fit-1200x1200/half-open-a-pink-rose-catching-the-last-sun.jpg
 /images/gallery/fit-1200x1200/hanging-on-grasshopper-gripping-a-blade-of-grass.jpg
 /images/gallery/fit-1200x1200/hanging-under-carder-bee-below-the-clover.jpg
@@ -3359,6 +3370,7 @@
 /images/gallery/fit-1200x1200/pushing-through-the-moss-a-young-fly-agaric.jpg
 /images/gallery/fit-1200x1200/pylons-in-the-haze-the-oresund-bridge-close-up.jpg
 /images/gallery/fit-1200x1200/quiet-attention-roe-deer-at-first-light.jpg
+/images/gallery/fit-1200x1200/quiet-glow-female-photographer-reviewing-shots-by-a-city-window.jpg
 /images/gallery/fit-1200x1200/quiet-water-a-bog-lake-under-the-summer-sky.jpg
 /images/gallery/fit-1200x1200/racemes-in-the-light-bird-cherry-in-full-bloom.jpg
 /images/gallery/fit-1200x1200/range-after-range-winter-ridges-toward-austria.jpg
@@ -3864,6 +3876,7 @@
 /images/gallery/fit-1200x630/grey-trunks-orange-wall-an-autumn-forest-inside.jpg
 /images/gallery/fit-1200x630/grey-valley-a-village-through-the-fog-in-black-and-white.jpg
 /images/gallery/fit-1200x630/grounded-bumblebee-resting-in-the-grass.jpg
+/images/gallery/fit-1200x630/half-a-thought-woman-on-a-windowsill-against-city-lights.jpg
 /images/gallery/fit-1200x630/half-open-a-pink-rose-catching-the-last-sun.jpg
 /images/gallery/fit-1200x630/hanging-on-grasshopper-gripping-a-blade-of-grass.jpg
 /images/gallery/fit-1200x630/hanging-under-carder-bee-below-the-clover.jpg
@@ -4024,6 +4037,7 @@
 /images/gallery/fit-1200x630/pushing-through-the-moss-a-young-fly-agaric.jpg
 /images/gallery/fit-1200x630/pylons-in-the-haze-the-oresund-bridge-close-up.jpg
 /images/gallery/fit-1200x630/quiet-attention-roe-deer-at-first-light.jpg
+/images/gallery/fit-1200x630/quiet-glow-female-photographer-reviewing-shots-by-a-city-window.jpg
 /images/gallery/fit-1200x630/quiet-water-a-bog-lake-under-the-summer-sky.jpg
 /images/gallery/fit-1200x630/racemes-in-the-light-bird-cherry-in-full-bloom.jpg
 /images/gallery/fit-1200x630/range-after-range-winter-ridges-toward-austria.jpg
@@ -4505,6 +4519,7 @@
 /images/gallery/fit-1600x1600/grey-giant-wild-boar-working-an-old-stump.jpg
 /images/gallery/fit-1600x1600/grey-valley-a-village-through-the-fog-in-black-and-white.jpg
 /images/gallery/fit-1600x1600/grounded-bumblebee-resting-in-the-grass.jpg
+/images/gallery/fit-1600x1600/half-a-thought-woman-on-a-windowsill-against-city-lights.jpg
 /images/gallery/fit-1600x1600/half-open-a-pink-rose-catching-the-last-sun.jpg
 /images/gallery/fit-1600x1600/hanging-on-grasshopper-gripping-a-blade-of-grass.jpg
 /images/gallery/fit-1600x1600/hanging-under-carder-bee-below-the-clover.jpg
@@ -4643,6 +4658,7 @@
 /images/gallery/fit-1600x1600/pushing-through-the-moss-a-young-fly-agaric.jpg
 /images/gallery/fit-1600x1600/pylons-in-the-haze-the-oresund-bridge-close-up.jpg
 /images/gallery/fit-1600x1600/quiet-attention-roe-deer-at-first-light.jpg
+/images/gallery/fit-1600x1600/quiet-glow-female-photographer-reviewing-shots-by-a-city-window.jpg
 /images/gallery/fit-1600x1600/quiet-water-a-bog-lake-under-the-summer-sky.jpg
 /images/gallery/fit-1600x1600/racemes-in-the-light-bird-cherry-in-full-bloom.jpg
 /images/gallery/fit-1600x1600/range-after-range-winter-ridges-toward-austria.jpg
@@ -5122,6 +5138,7 @@
 /images/gallery/fit-4000x4000/grey-trunks-orange-wall-an-autumn-forest-inside.jpg
 /images/gallery/fit-4000x4000/grey-valley-a-village-through-the-fog-in-black-and-white.jpg
 /images/gallery/fit-4000x4000/grounded-bumblebee-resting-in-the-grass.jpg
+/images/gallery/fit-4000x4000/half-a-thought-woman-on-a-windowsill-against-city-lights.jpg
 /images/gallery/fit-4000x4000/half-open-a-pink-rose-catching-the-last-sun.jpg
 /images/gallery/fit-4000x4000/hanging-on-grasshopper-gripping-a-blade-of-grass.jpg
 /images/gallery/fit-4000x4000/hanging-under-carder-bee-below-the-clover.jpg
@@ -5282,6 +5299,7 @@
 /images/gallery/fit-4000x4000/pushing-through-the-moss-a-young-fly-agaric.jpg
 /images/gallery/fit-4000x4000/pylons-in-the-haze-the-oresund-bridge-close-up.jpg
 /images/gallery/fit-4000x4000/quiet-attention-roe-deer-at-first-light.jpg
+/images/gallery/fit-4000x4000/quiet-glow-female-photographer-reviewing-shots-by-a-city-window.jpg
 /images/gallery/fit-4000x4000/quiet-water-a-bog-lake-under-the-summer-sky.jpg
 /images/gallery/fit-4000x4000/racemes-in-the-light-bird-cherry-in-full-bloom.jpg
 /images/gallery/fit-4000x4000/range-after-range-winter-ridges-toward-austria.jpg
@@ -5791,6 +5809,7 @@
 /images/gallery/fit-600x600/grey-trunks-orange-wall-an-autumn-forest-inside.jpg
 /images/gallery/fit-600x600/grey-valley-a-village-through-the-fog-in-black-and-white.jpg
 /images/gallery/fit-600x600/grounded-bumblebee-resting-in-the-grass.jpg
+/images/gallery/fit-600x600/half-a-thought-woman-on-a-windowsill-against-city-lights.jpg
 /images/gallery/fit-600x600/half-open-a-pink-rose-catching-the-last-sun.jpg
 /images/gallery/fit-600x600/hanging-on-grasshopper-gripping-a-blade-of-grass.jpg
 /images/gallery/fit-600x600/hanging-under-carder-bee-below-the-clover.jpg
@@ -5951,6 +5970,7 @@
 /images/gallery/fit-600x600/pushing-through-the-moss-a-young-fly-agaric.jpg
 /images/gallery/fit-600x600/pylons-in-the-haze-the-oresund-bridge-close-up.jpg
 /images/gallery/fit-600x600/quiet-attention-roe-deer-at-first-light.jpg
+/images/gallery/fit-600x600/quiet-glow-female-photographer-reviewing-shots-by-a-city-window.jpg
 /images/gallery/fit-600x600/quiet-water-a-bog-lake-under-the-summer-sky.jpg
 /images/gallery/fit-600x600/racemes-in-the-light-bird-cherry-in-full-bloom.jpg
 /images/gallery/fit-600x600/range-after-range-winter-ridges-toward-austria.jpg
@@ -6280,6 +6300,7 @@
 /images/gallery/grey-trunks-orange-wall-an-autumn-forest-inside.jpg
 /images/gallery/grey-valley-a-village-through-the-fog-in-black-and-white.jpg
 /images/gallery/grounded-bumblebee-resting-in-the-grass.jpg
+/images/gallery/half-a-thought-woman-on-a-windowsill-against-city-lights.jpg
 /images/gallery/half-open-a-pink-rose-catching-the-last-sun.jpg
 /images/gallery/hanging-on-grasshopper-gripping-a-blade-of-grass.jpg
 /images/gallery/hanging-under-carder-bee-below-the-clover.jpg
@@ -6440,6 +6461,7 @@
 /images/gallery/pushing-through-the-moss-a-young-fly-agaric.jpg
 /images/gallery/pylons-in-the-haze-the-oresund-bridge-close-up.jpg
 /images/gallery/quiet-attention-roe-deer-at-first-light.jpg
+/images/gallery/quiet-glow-female-photographer-reviewing-shots-by-a-city-window.jpg
 /images/gallery/quiet-water-a-bog-lake-under-the-summer-sky.jpg
 /images/gallery/racemes-in-the-light-bird-cherry-in-full-bloom.jpg
 /images/gallery/range-after-range-winter-ridges-toward-austria.jpg
@@ -6872,6 +6894,7 @@
 /sv/gallery/gear/
 /sv/gallery/general/
 /sv/gallery/models/
+/sv/gallery/models/julia-hemberger/
 /sv/gallery/models/lukas-nagel/
 /sv/gallery/models/markus-penninger/
 /sv/gallery/photo/_dsc2784/
@@ -6942,6 +6965,7 @@
 /sv/gallery/photo/bojd-i-dimman-en-granskog-en-dimmig-dag/
 /sv/gallery/photo/bojda-under-snon-en-skogsvag-i-djup-vinter/
 /sv/gallery/photo/bondernas-kung-grahager-som-gor-ansprak-pa-den-hogsta-grenen/
+/sv/gallery/photo/borta-i-tankarna-kvinna-pa-en-fonsterbrada-framfor-stadens-ljus/
 /sv/gallery/photo/bortvand-betande-ko-pa-bergsangen/
 /sv/gallery/photo/bransle-pa-vattnet-en-flytande-bensinstation-i-skargarden/
 /sv/gallery/photo/bron-fran-vagbrytaren-oresund-pa-sommaren/
@@ -7581,6 +7605,7 @@
 /sv/gallery/photo/stenens-kant-ung-odla-pa-en-granithall/
 /sv/gallery/photo/stenhus-vid-turkost-ett-torn-ovanfor-en-schweizisk-sjo/
 /sv/gallery/photo/stigen-och-kedjan-cykelvagen-langs-inn/
+/sv/gallery/photo/stilla-glod-kvinnlig-fotograf-granskar-bilder-vid-ett-fonster-mot-staden/
 /sv/gallery/photo/stilla-nog-att-dubbleras-kvallshimlen-speglad-i-sjon/
 /sv/gallery/photo/stilla-vatten-en-mossjo-under-sommarhimlen/
 /sv/gallery/photo/stjarten-i-vadret-grasand-som-betar-upp-och-ner-i-sjon/

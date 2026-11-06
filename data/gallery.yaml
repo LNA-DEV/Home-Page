@@ -19306,6 +19306,76 @@ images:
     - edisonBulbs
   artist: Lukas Nagel
   license: all-rights-reserved
+- id: afe15916-0eb0-46aa-a3a7-1ecca8d2e623
+  src: _DSC3871_26883.jpg
+  category: portrait
+  section: general
+  title:
+    en: "Half a Thought - Woman on a Windowsill Against City Lights"
+    de: "Mitten im Gedanken - Frau auf einer Fensterbank vor den Lichtern der Stadt"
+    sv: "Borta i tankarna - kvinna på en fönsterbräda framför stadens ljus"
+  alt:
+    en: "A woman with wavy hair fading from dark blond to light blond and a septum piercing sits on a windowsill at night and looks off to the side, lips slightly parted as if in mid-sentence. Both hands hold a silver camera with a lit screen, in front of a dark blue sleeveless top with a yellow print of two boxers in silhouette. Outside, the city lights dissolve into orange, green and white bokeh."
+    de: "Eine Frau mit welligem, von Dunkelblond nach Hellblond verlaufendem Haar und Septum-Piercing sitzt bei Nacht auf einer Fensterbank und blickt zur Seite, die Lippen leicht geöffnet, wie mitten im Satz. Beide Hände halten eine silberne Kamera mit leuchtendem Display, dahinter ein dunkelblaues ärmelloses Top mit gelbem Aufdruck, der zwei Boxer als Silhouetten zeigt. Draußen lösen sich die Lichter der Stadt in orangefarbenes, grünes und weißes Bokeh auf."
+    sv: "En kvinna med vågigt hår som går från mörkblont till ljusblont och en septumpiercing sitter på en fönsterbräda på kvällen och tittar åt sidan, med läpparna lätt särade som mitt i en mening. Båda händerna håller en silverfärgad kamera med tänd skärm, framför ett mörkblått ärmlöst linne med ett gult tryck med två boxare i siluett. Utanför löses stadens ljus upp i orange, grön och vit bokeh."
+  tags:
+    - photo
+    - photography
+    - portrait
+    - portraitPhotography
+    - environmentalPortrait
+    - urbanPortrait
+    - nightPortrait
+    - candid
+    - rosenheim
+    - germany
+    - nightPhotography
+    - cityLights
+    - bokeh
+    - availableLight
+    - moody
+    - windowsill
+    - photographer
+    - lostInThought
+  license: all-rights-reserved
+  artist: Lukas Nagel
+  model: julia-hemberger
+- id: 22009014-30e7-47a6-b1ce-9357d8fbe61d
+  src: _DSC3872_26777.jpg
+  category: portrait
+  section: general
+  title:
+    en: "Quiet Glow - Female Photographer Reviewing Shots by a City Window"
+    de: "Stilles Leuchten - Fotografin sichtet Aufnahmen an einem Fenster zur Stadt"
+    sv: "Stilla glöd - kvinnlig fotograf granskar bilder vid ett fönster mot staden"
+  alt:
+    en: "A woman with wavy hair fading from dark blond to light blond sits on a windowsill at night with one knee drawn up, head bowed over the silver camera in both hands as if checking the shots on its screen. A dark blue sleeveless top with a yellow print shows behind the camera. Outside, the city lights dissolve into orange, green and white bokeh."
+    de: "Eine Frau mit welligem, von Dunkelblond nach Hellblond verlaufendem Haar sitzt bei Nacht mit angezogenem Knie auf einer Fensterbank, den Kopf über die silberne Kamera in beiden Händen gesenkt, wohl beim Durchsehen der Bilder auf dem Display. Hinter der Kamera ist ein dunkelblaues ärmelloses Top mit gelbem Aufdruck zu sehen. Draußen lösen sich die Lichter der Stadt in orangefarbenes, grünes und weißes Bokeh auf."
+    sv: "En kvinna med vågigt hår som går från mörkblont till ljusblont sitter på en fönsterbräda på kvällen med ena knät uppdraget, med huvudet böjt över den silverfärgade kameran i händerna, och verkar granska bilderna på skärmen. Bakom kameran syns ett mörkblått ärmlöst linne med gult tryck. Utanför löses stadens ljus upp i orange, grön och vit bokeh."
+  tags:
+    - photo
+    - photography
+    - portrait
+    - portraitPhotography
+    - environmentalPortrait
+    - urbanPortrait
+    - nightPortrait
+    - candid
+    - rosenheim
+    - germany
+    - nightPhotography
+    - cityLights
+    - bokeh
+    - availableLight
+    - moody
+    - windowsill
+    - photographer
+    - photographerAtWork
+    - femalePhotographer
+    - womenInPhotography
+  license: all-rights-reserved
+  artist: Lukas Nagel
+  model: julia-hemberger
 projects:
 - slug: above-the-clouds
   title: Above the Clouds

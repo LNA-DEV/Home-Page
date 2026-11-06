@@ -92,3 +92,12 @@ models:
       en: Markus and I have been friends since high school. Most of these photos were taken spontaneously, in the moment like during our holiday together in northern Sweden.
       de: Markus und ich sind seit der Schulzeit befreundet. Die meisten Bilder sind spontan entstanden, einfach aus der Situation heraus. Zum Beispiel während unseres gemeinsamen Urlaubs in Nordschweden.
       sv: Markus och jag har varit vänner sedan skoltiden. De flesta bilderna är tagna spontant, i stunden. Till exempel under vår gemensamma semester i norra Sverige.
+  - slug: julia-hemberger
+    name: Julia Hemberger
+    visibility: public
+    consent: "2026-10-18"
+    cover: 22009014-30e7-47a6-b1ce-9357d8fbe61d
+    bio:
+      en: Julia and I have been good friends for a couple of years now. Most of the photos were taken in the moment because of this.
+      de: Julia und ich sind jetzt schon seit einiger Zeit gut befreundet. Die meisten Fotos sind deswegen aus dem Moment heraus entstanden.
+      sv: Julia och jag har varit bra vänner i några år nu. Därför är de flesta fotografierna tagna spontant och i stunden.
