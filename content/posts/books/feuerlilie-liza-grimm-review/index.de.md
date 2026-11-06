@@ -9,7 +9,7 @@ book: "Feuerlilie"
 review: true
 showToc: true
 TocOpen: false
-description: "Meine Meinung zu Feuerlilie, Band 2 der „Bücher der Macht“-Reihe von Liza Grimm. Mit ausführlicher Zusammenfassung bis zum Ende – Achtung, Spoiler!"
+description: "Meine Meinung zu Feuerlilie, Band 2 der Bücher der Macht Reihe von Liza Grimm. Mit ausführlicher Zusammenfassung bis zum Ende."
 disableShare: true
 disableHLJS: false
 searchHidden: false
