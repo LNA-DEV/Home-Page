@@ -37,8 +37,9 @@
      name field: only which languages and topics were picked, which is exactly
      the aggregate worth knowing and carries nothing personal.
 
-     `source` — "shortcode" | "header" | "post-footer" — rides along on every
-     event. Several instances on one page are expected, so an event that does not
+     `source` — "shortcode" | "header" | "post-footer" | "link" — rides along on
+     every event; "link" is the header dialog opened by a #newsletter deep link
+     (initCta()). Several instances on one page are expected, so an event that does not
      say which one fired cannot answer the only question worth asking of this
      data: whether a placement earns its space. It lives out here rather than
      inside init() because the header's open event is raised from initCta(),
@@ -130,15 +131,46 @@
        written out here, so this cannot drift from what newsletter-cta.html
        actually passed to the partial. */
     const instance = modal.querySelector(".newsletter");
-    const source = instance && instance.dataset.source;
     let openTracked = false;
 
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
+    const open = () => {
       modal.showModal();
       if (openTracked) return;
       openTracked = true;
-      trackEvent(source, "Newsletter Open");
+      trackEvent(instance && instance.dataset.source, "Newsletter Open");
+    };
+
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      open();
+    });
+
+    /* The deep link: any page with #newsletter opens the dialog on load, so a
+       link from outside (the GitHub profile README) can point at the open form.
+       The root page keeps the hash, and the query, on its jump to a language
+       home (home.rootpicker.html), so https://lna-dev.net/#newsletter works too.
+
+       Such an open reports as "link", not "header": the form's data-source is
+       switched before anything is tracked, and init() reads it at event time,
+       so the open event and a signup both say where the visitor came from. For
+       the rest of the page view it stays "link" — the open is counted once,
+       and the signup should match it.
+
+       Closing takes the hash off again (replaceState, so no new history entry
+       and no hashchange), or a reload or a copied URL would open the dialog
+       once more. The query stays: the pageview is sent later, on the first
+       sign of life (extend_head.html), and Plausible reads ?ref= off it.
+
+       A Plausible event raised here, before the pageview, is held until it,
+       like the lightbox's "Image View" on a photo deep link. */
+    if (location.hash === "#newsletter") {
+      if (instance) instance.dataset.source = "link";
+      open();
+    }
+
+    modal.addEventListener("close", () => {
+      if (location.hash === "#newsletter")
+        history.replaceState(history.state, "", location.pathname + location.search);
     });
 
     /* The × is a plain button closed here. It used to be a <form
@@ -184,8 +216,9 @@
 
     // Which placement this instance is: "shortcode" | "header" | "post-footer",
     // set by newsletter-form.html. See trackEvent() for why every event carries it.
-    const source = root.dataset.source;
-    const track = (name, props) => trackEvent(source, name, props);
+    // Read at event time, not here: initCta() turns the header's into "link"
+    // when a #newsletter deep link opened the dialog.
+    const track = (name, props) => trackEvent(root.dataset.source, name, props);
 
     function sync() {
       const langs = selected(langPills, "lang");

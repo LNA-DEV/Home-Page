@@ -115,3 +115,61 @@ test("without JavaScript the newsletter is not offered", async ({ browser }) => 
   for (const placement of await placements.all()) await expect(placement).toBeHidden();
   await context.close();
 });
+
+/* The deep link: #newsletter opens the header dialog on load, which is what the
+   GitHub profile README links to. The tracker is an empty stub here, so the
+   events are read off its queue, as in analytics.spec.ts. */
+function newsletterEvents(page: import("@playwright/test").Page) {
+  return page.evaluate(() =>
+    ((window as any).plausible.q ?? [])
+      .map((args: IArguments) => Array.from(args))
+      .filter((c: unknown[]) => /^Newsletter /.test(String(c[0])))
+      .map((c: any[]) => [c[0], c[1]?.props?.source]),
+  ) as Promise<[string, string][]>;
+}
+
+test("a click on the header CTA reports as header", async ({ page, probe }) => {
+  void probe;
+  await openForm(page);
+  expect(await newsletterEvents(page)).toEqual([["Newsletter Open", "header"]]);
+});
+
+test("#newsletter opens the dialog, and the open and the signup report as link", async ({ page, probe }) => {
+  void probe;
+  const listmonk = await mockListmonk(page);
+  await page.goto("/en/#newsletter");
+  await expect(page.locator("dialog.newsletter-modal")).toBeVisible();
+
+  await fillAndSubmit(page);
+  await expect(page.locator("dialog.newsletter-modal .newsletter-done").first()).toBeVisible();
+  expect(listmonk.posted.length, "the form did not post").toBe(1);
+  expect(await newsletterEvents(page)).toEqual([
+    ["Newsletter Open", "link"],
+    ["Newsletter Signup", "link"],
+  ]);
+});
+
+test("closing the deep-linked dialog drops the hash and keeps the query", async ({ page, probe }) => {
+  void probe;
+  await page.goto("/en/?ref=github#newsletter");
+  const dialog = page.locator("dialog.newsletter-modal");
+  await expect(dialog).toBeVisible();
+
+  await dialog.locator(".newsletter-modal__dismiss button").click();
+  await expect(dialog).toBeHidden();
+  await expect(page).toHaveURL(/\/en\/\?ref=github$/);
+
+  /* So a reload, or the URL copied from the address bar, opens nothing. */
+  await page.reload();
+  await expect(page.locator(".newsletter-cta")).toBeVisible();
+  await expect(dialog).toBeHidden();
+});
+
+test("the root page keeps the query and the hash on its jump to a language home", async ({ page, probe }) => {
+  void probe;
+  await page.goto("/?ref=github#newsletter");
+  /* Whichever language the browser of the run asks for: the jump itself is
+     multilingual-home.spec.ts's business. */
+  await expect(page).toHaveURL(/\/(en|de|sv)\/\?ref=github#newsletter$/);
+  await expect(page.locator("dialog.newsletter-modal")).toBeVisible();
+});

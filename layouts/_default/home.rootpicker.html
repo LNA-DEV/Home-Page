@@ -14,6 +14,9 @@
 
        The jump is root-relative, so it works in the clearnet and the onion build
        alike; the fallbacks use .Permalink, which carries each build's baseURL.
+       It carries the query and the hash along: ?ref= and utm_* are what
+       Plausible attributes the visit by (the referrer is this page after the
+       jump), and #newsletter opens the newsletter dialog (newsletter.js).
        Keep the language list in step with hugo.yaml's `languages`. */ -}}
 <html lang="{{ .Lang }}">
 <head>
@@ -22,7 +25,7 @@
   <title>{{ site.Params.ShortTitle | default site.Title }}</title>
   <link rel="canonical" href="{{ .Permalink }}">
   <meta name="robots" content="noindex">
-  <script>(function(){var s=["en","de","sv"],l=null;try{l=localStorage.getItem("lang-choice")}catch(e){}if(s.indexOf(l)<0){l="en";(navigator.languages||[navigator.language||""]).some(function(x){x=String(x).slice(0,2).toLowerCase();if(s.indexOf(x)>-1){l=x;return true}})}location.replace("/"+l+"/")})()</script>
+  <script>(function(){var s=["en","de","sv"],l=null;try{l=localStorage.getItem("lang-choice")}catch(e){}if(s.indexOf(l)<0){l="en";(navigator.languages||[navigator.language||""]).some(function(x){x=String(x).slice(0,2).toLowerCase();if(s.indexOf(x)>-1){l=x;return true}})}location.replace("/"+l+"/"+location.search+location.hash)})()</script>
   <noscript><meta http-equiv="refresh" content="0; url={{ .Permalink }}"></noscript>
 </head>
 <body>
