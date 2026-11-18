@@ -1,6 +1,6 @@
 # Concept: one design system — colour, spacing, edges, type
 
-**Status:** proposal, 2026-11-18. Nothing built. Written up from a discussion with the owner the same day: the direction is agreed, the questions under *Open* are the owner's and block step 2 of §11.
+**Status:** proposal, 2026-11-18. Nothing built. Written up from a discussion with the owner the same day: the direction is agreed, and six of the seven open questions were answered the same day (*Decisions*). The one left, which colour the accent is, is chosen on the decision aid (§8) and blocks step 2 of §11.
 **Read against:** the working tree of 2026-11-18 (`24d9c58`), PaperMod at `v0.0.0-20260125152547-3bb0ca281fd1`. Every count below comes from `grep` over `assets/css/` (30 files in `extended/`, `core/theme-vars.css`, `main.scss`, `_styles.scss`). The edge distances in §5.1 are computed from the CSS, not measured in a browser; step 0 measures them.
 
 The site looks assembled rather than designed. The dex is green, the project stories amber, gear blue, the software projects Tailwind. The reading list is written for a dark page that light mode does not have. A photo grid on a phone sits 38px from the screen edge, while the logo above it sits at 14px. None of this is a single mistake. PaperMod ships greys and nothing else: no accent, no spacing scale, no widths beyond the text column and the header. So every feature concept since has had to invent its own, and most did it carefully: gear's ramp is validated, the story accent documents its contrast ratios. Each decision is sound locally. Nothing holds them together, so every new feature adds another.
@@ -34,17 +34,20 @@ It unifies; it does not redesign. No page changes its structure. The only delibe
 | Reference | An unlisted styleguide page that shows every token and component in both themes (§8) |
 | Migration | Foundations first (tokens, then layout), then one pass per area that covers every category at once (§11) |
 
+### Settled by the owner (2026-11-18)
+
+| | |
+|---|---|
+| Accent | **One accent, site-wide.** No colour per area. Colour that carries meaning stays a data colour (§3.3). Rejected: a colour per area with matched lightness and chroma |
+| Density | **Medium:** `--section-gap` 48px, `--photo-gap` 24px (§4.2). Rejected: airy (64 / 24) and compact (48 / 16) |
+| Gallery width | **Wide, 1060px**, the header's width, so every grid edge lines up with logo and menu. Full width (1440px) only for story blocks and the travel page (§5.2). At a 1440px viewport the grid gets slightly wider than today (1060 vs 984px), at 1920px narrower (1060 vs 1344px). Rejected: full width for grids |
+| Photos on a phone | **Grids keep the gutter** (16px), like text and header. Only the story hero and the lightbox go edge to edge (§5.2). Rejected: everything edge to edge, and a gutter around the story hero too |
+| Third-party brand colours | **Brought into the palette.** Rating stars and achievement bars take the accent; Steam blue and IMDb yellow go |
+| IUCN badges | **Official Red List colours**, as filled badges, each with whichever text colour reaches 4.5:1 on its fill: yellow and yellow-green fail as text on white (§3.3). Rejected: the site's status colours |
+
 ### Open: the owner's
 
-| # | Question | Options | Recommendation |
-|---|---|---|---|
-| 1 | One accent, or one colour per area? | **A:** one accent site-wide. **B:** colour coding per area (dex green, gallery amber, gear blue), with the same lightness and chroma and only the hue differing | **A.** On a photo site, the photos carry the colour |
-| 2 | Which accent? | The stories' amber (`#8a5a00` / `#d8a657`, already contrast-checked, already named `--accent`), the dex green, or something new | Amber. Consequence: the warning alert uses the same two values today and has to move (§3.2) |
-| 3 | Third-party brand colours | Keep Steam blue (achievement bars) and IMDb yellow (stars) as recognisable references, or bring them into the palette | Bring them in: stars and bars use the accent |
-| 4 | Density | Airy: sections 64px apart, photo-grid gap 24px. Compact: 48px and 16px | In between: sections 48px, photo grid 24px. Either way it is one line each (§4.2) |
-| 5 | Gallery width on large screens | **Wide:** 1060px, the header's width, so every edge lines up. **Full:** 1440px, more photos per row, but the grid is wider than the header | Wide for grids; full stays for story blocks and the travel page. At 1440px viewport that is slightly *wider* than today's grid (1060 vs 984), at 1920px narrower (1060 vs 1344) |
-| 6 | Photos on a phone | Edge to edge, or with the same gutter as text and header | Gutter for grids, so tiles stay separated and line up with the logo. Edge to edge only for the story hero and the lightbox |
-| 7 | IUCN badges | The official Red List colours, or the site's status colours | Official colours: an external convention readers know, and a data colour by §3.3 |
+**Which colour the accent is.** Settled: there is one. Which one is chosen on the decision aid (§8), where candidates are shown in both themes, on the components that use them (owner, 2026-11-18: "see proposals first"). Candidates include the stories' amber (`#8a5a00` / `#d8a657`, already contrast-checked, already named `--accent`; consequence: the warning alert, which uses the same two values today, has to move, §3.2) and the dex green (`#2f7d5b` / `#6ecfa0`). Whichever wins is also checked against the data colours (§3.3): it must not share a hue with a trip mode or an IUCN step.
 
 ---
 
@@ -143,7 +146,7 @@ Rules:
 
 - The accent marks **state and emphasis**. It is never decoration for a section.
 - Every pair reaches **4.5:1** in both themes, and a test checks it (§9): `--accent` on `--theme`, on `--entry` and on `--code-bg`; `--on-accent` on `--accent`; each status colour on its surface.
-- If the accent is amber (open decision 2), `--status-warn` must not equal it. Today the warning alert and the story accent share both values, so warn moves towards orange.
+- If the accent is amber (still open, §8), `--status-warn` must not equal it. Today the warning alert and the story accent share both values, so warn moves towards orange.
 - GitHub alerts have five kinds. "Important" (purple) either maps to `--accent` or keeps an alert-only token; to be decided in the build.
 
 ### 3.3 Data colours
@@ -154,6 +157,10 @@ Colour that **encodes something** is not UI colour, and it may come in many shad
 - Each group's comment says what it encodes and whether it is ordinal or categorical, and it is checked for that. An ordinal ramp must be monotone in lightness. Categorical colours must stay distinguishable, including for the common colour-vision deficiencies.
 - **A data colour never uses the accent's hue for a meaning the accent does not have.** For example, if the accent is amber, the "flight" line moves away from amber.
 - The maps share one palette. The dex map, the trip map and the route map use the same land, water and line tokens instead of three sets.
+- **IUCN status uses the official Red List colours** (settled): CR `#d81e05`, EN `#fc7f3f`, VU `#f9e814`, NT `#cce226`, LC `#60c659`, DD `#d1d1c6`. These are the values in common use; verify them against the IUCN's own sheet in the build. The dex uses LC, NT, VU, EN and DD today; CR is defined for the first species that needs it.
+  - The badges become **filled**, each with whichever text colour reaches 4.5:1 on its fill. Yellow and yellow-green fail as text on white, which is how today's outlined badges would show them.
+  - Today LC and DD carry no colour at all; with the Red List scale every step has one.
+  - The difficulty badges (easy, moderate, challenging) use `--status-ok` / `-warn` / `-danger`.
 - JavaScript reads tokens through one helper, **with no hard-coded fallback**: a fallback is a second copy, and it drifts (§1).
   - Caveat: with `light-dark()` (§3.4), `getPropertyValue("--x")` returns the unresolved text `light-dark(…)`, not a colour, and Leaflet cannot use that.
   - So the helper resolves through a probe element (set `el.style.color = "var(--x)"`, then read `getComputedStyle(el).color`) and reads again after a theme switch. To be verified in the build.
@@ -210,11 +217,11 @@ Steps alone would bring the drift back: one area picks `--space-3`, the next `--
 | `--space-heading` | `--space-3` | Heading → its content |
 | `--card-pad` | `--space-4` | Inside a card |
 | `--grid-gap` | `--space-4` | Between cards |
-| `--photo-gap` | `--space-5` | Between photos (open decision 4) |
-| `--section-gap` | `--space-7` | Between sections of a page (open decision 4) |
+| `--photo-gap` | `--space-5` (24px) | Between photos |
+| `--section-gap` | `--space-7` (48px) | Between sections of a page |
 | `--content-gap` | PaperMod's, re-pointed to the scale | Inside PaperMod's own templates |
 
-The density question (open decision 4) then comes down to two lines in one file.
+Density is settled as medium: 48px between sections, 24px between photos. Should it ever change, that is two lines in one file.
 
 Computed geometry stays out of the system on purpose: `--pull` of the floating `galleryImage`, the story widths derived from an aspect ratio, and `calc()` against `100vw`. That is layout arithmetic, not spacing.
 
@@ -270,7 +277,7 @@ What that does:
   | `--width-narrow` | 560px | Dialogs, forms |
 
   Each width is capped at `100vw - 2 × --gutter`.
-- **Edge to edge** is a fifth, explicit case, `bleed` (open decision 6).
+- **Edge to edge** is a fifth, explicit case, `bleed`, used only for the story hero and the lightbox (settled). Photo grids on a phone keep the gutter.
 - **`max-width: 75%` goes.**
 
 ### 5.3 Built once, chosen by page type
@@ -325,7 +332,7 @@ Tokens come first. Shared components come only where the markup is already alike
 - It reads the token list from the stylesheet at runtime (the `:root` rules in the CSSOM), so it cannot fall behind the file.
 - It must load everything a gallery page loads: one more reason to decouple layout from `main.scss` first.
 
-**A throw-away decision aid** comes before step 2. It puts today's colours next to two or three proposed palettes in both themes, and shows one card and one section in their current dex, gear and models versions next to the proposal. That way the open decisions get answered on a page rather than in hex codes.
+**A throw-away decision aid** comes before step 2. It puts today's colours next to two or three proposed palettes in both themes, and shows one card and one section in their current dex, gear and models versions next to the proposal. That way the accent gets chosen on a page rather than in hex codes.
 
 ## 9. Tests: drift fails the build
 
@@ -363,7 +370,7 @@ As with everything else, `npm test` runs these tests and `deploy.sh` stops on th
    - Fix the reading list's light mode now: it is a bug, not a design question, and needs no decision.
    - Record screenshots of every area (light and dark, 375 and 1440px).
    - Measure the edge table of §5.1 in a browser.
-1. **Decisions.** Build the decision aid (§8); then the owner answers *Open*.
+1. **Decisions.** Six of seven were settled on 2026-11-18. The accent colour is picked on the decision aid (§8).
 2. **Foundations, with nothing visible changing.**
    - The tokens file, holding every value as it is today and aliasing the existing feature tokens.
    - `color-scheme` plus `light-dark()`.
