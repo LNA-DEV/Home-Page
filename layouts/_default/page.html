@@ -20,6 +20,8 @@
 {{- partial "model-detail.html" . }}
 {{- else if eq .Params.Theme "game" }}
 {{- partial "game-detail.html" . }}
+{{- else if eq .Params.Theme "styleguide" }}
+{{- partial "styleguide.html" . }}
 {{- else if eq .Params.Theme "gallery-project" }}
 {{- /* project_layout (docs/concepts/gallery-project-stories.md): `grid`, or no
        key at all, is the page every project has always had — breadcrumb, title,

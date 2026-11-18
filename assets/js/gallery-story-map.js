@@ -24,6 +24,7 @@
 
 import * as params from "@params";
 import { addBasemap, currentFlavor, BASEMAP_ATTRIBUTION, webgl2Available } from "./basemap.js";
+import { tokenColor } from "./token-color.js";
 
 const TILEJSON = params.basemapTileJson || "";
 const MAX_ZOOM = 13;
@@ -39,8 +40,10 @@ const escapeHtml = (value) =>
     (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c],
   );
 
+/* The areas' colour: a data colour, --map-area — the accent is never drawn on
+   a map (docs/concepts/design-system.md §3.2). Resolved for the current theme. */
 function accent() {
-  return getComputedStyle(document.documentElement).getPropertyValue("--accent").trim() || "#d8a657";
+  return tokenColor("--map-area");
 }
 
 function circleStyle(strong) {
@@ -385,7 +388,7 @@ function init() {
   });
 
   /* PaperMod sets data-theme on <html>: switch every live basemap's flavor and
-     recolour the circles, whose accent changes with the theme. */
+     recolour the circles, whose colour changes with the theme. */
   new MutationObserver((mutations) => {
     if (!mutations.some((m) => m.attributeName === "data-theme")) return;
     const flavor = currentFlavor();

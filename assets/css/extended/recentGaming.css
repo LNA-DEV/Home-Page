@@ -2,8 +2,8 @@
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
-  gap: 1rem;
-  margin: 1rem 0 2rem;
+  gap: var(--space-4);
+  margin: var(--space-4) 0 var(--space-6);
   overflow: hidden;
 }
 
@@ -32,8 +32,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-cover);
   display: block;
   margin: 0;
 }
@@ -44,26 +44,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
+  padding: var(--space-2);
   text-align: center;
-  font-size: 0.8rem;
+  font-size: var(--text-xs);
   font-weight: 600;
   color: var(--secondary);
   background: var(--tertiary);
-  border-radius: 6px;
+  border-radius: var(--radius);
 }
 
 .recent-gaming__meta {
   display: flex;
   flex-direction: column;
-  gap: 0.15rem;
-  margin-top: 0.75rem;
+  gap: 2px;
+  margin-top: var(--space-3);
   min-width: 0;
   min-height: 2.2em;
 }
 
 .recent-gaming__title {
-  font-size: 0.95rem;
+  font-size: var(--text-md);
   font-weight: 600;
   color: var(--primary);
   white-space: nowrap;
@@ -85,7 +85,7 @@
   align-items: center;
   justify-content: center;
   border: 1px dashed var(--tertiary);
-  border-radius: 6px;
+  border-radius: var(--radius);
   color: var(--secondary);
   transition: color 0.15s ease, border-color 0.15s ease;
 }
@@ -103,7 +103,7 @@
 }
 
 .recent-gaming__more-label {
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
   font-weight: 600;
   color: var(--secondary);
   text-align: center;
@@ -120,25 +120,25 @@
   Responsive: shed game tiles that don't fit, keep the "More games" tile visible.
   Breakpoints mirror assets/css/extended/recentReading.css.
 */
-@media (max-width: 999px) {
+@media (width < 900px) {
   .recent-gaming > .recent-gaming__tile:nth-child(n+5):not(.recent-gaming__more) {
     display: none;
   }
 }
 
-@media (max-width: 699px) {
+@media (width < 768px) {
   .recent-gaming > .recent-gaming__tile:nth-child(n+4):not(.recent-gaming__more) {
     display: none;
   }
 }
 
-@media (max-width: 499px) {
+@media (width < 640px) {
   .recent-gaming > .recent-gaming__tile:nth-child(n+3):not(.recent-gaming__more) {
     display: none;
   }
 }
 
-@media (max-width: 399px) {
+@media (width < 480px) {
   .recent-gaming > .recent-gaming__tile:nth-child(n+2):not(.recent-gaming__more) {
     display: none;
   }

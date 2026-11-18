@@ -3,30 +3,8 @@
    second palette. The only dex-specific tokens are the map colours, which the
    Leaflet layers read back out of :root in dex-map.js. */
 
-:root {
-  --dex-accent: #2f7d5b;
-  --dex-accent-soft: rgba(47, 125, 91, 0.12);
-  --dex-map-water: #dbe6ec;
-  --dex-map-land: #e8e4d8;
-  --dex-map-land-edge: #b9b2a1;
-  --dex-map-border: #c0b9a8;
-  --dex-map-range: #2f7d5b;
-  --dex-map-sighting: #d97706;
-}
-
-/* PaperMod switches themes with data-theme on <html>, and dex-map.js reads
-   these back off document.documentElement — so they must be declared here,
-   not on a body class. */
-:root[data-theme="dark"] {
-  --dex-accent: #6ecfa0;
-  --dex-accent-soft: rgba(110, 207, 160, 0.16);
-  --dex-map-water: #1f2426;
-  --dex-map-land: #33383a;
-  --dex-map-land-edge: #4c5254;
-  --dex-map-border: #565c5e;
-  --dex-map-range: #6ecfa0;
-  --dex-map-sighting: #f5a524;
-}
+/* Colours: the accent, status and IUCN tokens, and the map palette (--map-*),
+   all in assets/css/core/theme-vars.css. */
 
 .visually-hidden {
   position: absolute;
@@ -45,36 +23,36 @@
 .dex-progress {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
-  margin: 0 0 1.4rem;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-5);
 }
 
 .dex-progress__stats {
   display: flex;
   align-items: baseline;
-  gap: 0.5rem;
+  gap: var(--space-2);
   flex-wrap: wrap;
 }
 
 .dex-progress__count {
-  font-size: 1.6rem;
+  font-size: var(--text-2xl);
   line-height: 1;
   color: var(--primary);
 }
 
 .dex-progress__count strong {
-  color: var(--dex-accent);
+  color: var(--accent);
 }
 
 .dex-progress__label {
   color: var(--secondary);
-  font-size: 0.95rem;
+  font-size: var(--text-md);
 }
 
 .dex-progress__bar {
   position: relative;
   height: 8px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: var(--tertiary);
   overflow: hidden;
 }
@@ -82,8 +60,8 @@
 .dex-progress__bar > span {
   display: block;
   height: 100%;
-  border-radius: 999px;
-  background: var(--dex-accent);
+  border-radius: var(--radius-pill);
+  background: var(--accent);
 }
 
 /* --- filters ------------------------------------------------------------- */
@@ -91,17 +69,17 @@
 .dex-filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem 1.2rem;
+  gap: var(--space-3) var(--space-4);
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1.4rem;
+  margin-bottom: var(--space-5);
 }
 
 .dex-filters__groups,
 .dex-filters__tools {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: var(--space-2);
   align-items: center;
 }
 
@@ -109,39 +87,39 @@
   border: 1px solid var(--border);
   background: var(--entry);
   color: var(--secondary);
-  border-radius: 999px;
-  padding: 0.32rem 0.85rem;
-  font-size: 0.86rem;
+  border-radius: var(--radius-pill);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-sm);
   cursor: pointer;
   transition: color 0.15s, border-color 0.15s, background 0.15s;
 }
 
 .dex-pill:hover {
   color: var(--primary);
-  border-color: var(--dex-accent);
+  border-color: var(--accent);
 }
 
 .dex-pill.is-active {
-  background: var(--dex-accent-soft);
-  border-color: var(--dex-accent);
-  color: var(--primary);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
 }
 
 .dex-search input {
   border: 1px solid var(--border);
   background: var(--entry);
   color: var(--primary);
-  border-radius: 999px;
-  padding: 0.35rem 0.9rem;
-  font-size: 0.86rem;
+  border-radius: var(--radius-pill);
+  padding: var(--space-1) var(--space-4);
+  font-size: var(--text-sm);
   min-width: 12rem;
 }
 
 .dex-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.86rem;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
   color: var(--secondary);
   cursor: pointer;
 }
@@ -151,16 +129,16 @@
 .dex-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 0.9rem;
+  gap: var(--tile-gap);
 }
 
 .dex-card {
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
-  padding: 0.5rem;
+  gap: var(--space-2);
+  padding: var(--space-2);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: var(--radius-l);
   background: var(--entry);
   text-decoration: none;
   color: var(--primary);
@@ -175,14 +153,14 @@
 
 .dex-card:hover {
   transform: translateY(-2px);
-  border-color: var(--dex-accent);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-2);
 }
 
 .dex-card__frame {
   position: relative;
   aspect-ratio: 1 / 1;
-  border-radius: 8px;
+  border-radius: var(--radius);
   overflow: hidden;
   background: var(--tertiary);
   display: flex;
@@ -209,12 +187,12 @@
 .dex-card__count {
   position: absolute;
   top: 0.35rem;
-  font-size: 0.68rem;
+  font-size: var(--text-xs);
   font-variant-numeric: tabular-nums;
-  padding: 0.1rem 0.4rem;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.55);
-  color: #fff;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-pill);
+  background: var(--scrim);
+  color: var(--on-image);
   line-height: 1.5;
 }
 
@@ -224,8 +202,8 @@
 .dex-card__body {
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
-  padding: 0 0.15rem 0.15rem;
+  gap: 2px;
+  padding: 0 2px 2px;
   /* Room for a two-line name, so a long species does not make its whole grid
      row taller than the rest and knock the thumbnails out of alignment. */
   min-height: 3.5rem;
@@ -233,13 +211,13 @@
 
 .dex-card__name {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
   line-height: 1.25;
 }
 
 .dex-card__scientific {
   margin: 0;
-  font-size: 0.75rem;
+  font-size: var(--text-xs);
   font-style: italic;
   color: var(--secondary);
 }
@@ -255,7 +233,7 @@
 }
 
 .dex-empty {
-  margin-top: 1.5rem;
+  margin-top: var(--space-5);
   text-align: center;
   color: var(--secondary);
 }
@@ -265,12 +243,7 @@
 .dex-single {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  /* `main > section` in assets/css/_styles.scss gives every gallery page 1.5rem
-     of side padding. This is an <article>, so that rule misses it and the
-     species page would sit 24px wider on each side than the dex overview and
-     the photo grids. Opt in explicitly to line them up. */
-  padding-inline: 1.5rem;
+  gap: var(--section-gap);
 }
 
 /* Narrow first: photo, name, facts, map in a single column. The wide layout
@@ -278,7 +251,7 @@
 .dex-top {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: var(--space-5);
 }
 
 /* The markup nests the name and the map together, but they belong in different
@@ -296,7 +269,7 @@
 .dex-hero__media {
   position: relative;
   aspect-ratio: 1 / 1;
-  border-radius: 14px;
+  border-radius: var(--radius-l);
   overflow: hidden;
   background: var(--tertiary);
   display: flex;
@@ -327,74 +300,90 @@
   inset-inline: 0;
   bottom: 0;
   margin: 0;
-  padding: 0.35rem 0.6rem;
-  font-size: 0.7rem;
-  background: rgba(0, 0, 0, 0.6);
-  color: #f2f2f2;
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--text-xs);
+  background: var(--scrim);
+  color: var(--on-image-muted);
 }
 
-.dex-hero__credit a { color: #fff; }
+.dex-hero__credit a { color: var(--on-image); }
 
 .dex-hero__number {
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   font-variant-numeric: tabular-nums;
   color: var(--secondary);
 }
 
 .dex-hero__name {
-  margin: 0.1rem 0 0.15rem;
-  font-size: 2rem;
+  margin: 2px 0 2px;
+  font-size: var(--text-3xl);
   line-height: 1.15;
 }
 
 .dex-hero__scientific {
-  margin: 0 0 0.8rem;
+  margin: 0 0 var(--space-3);
   font-style: italic;
   color: var(--secondary);
 }
 
 .dex-hero__meta {
-  margin: 0.8rem 0 0;
-  font-size: 0.85rem;
+  margin: var(--space-3) 0 0;
+  font-size: var(--text-sm);
   color: var(--secondary);
 }
 
 .dex-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: var(--space-2);
 }
 
 .dex-badge {
-  font-size: 0.75rem;
-  padding: 0.18rem 0.6rem;
-  border-radius: 999px;
+  font-size: var(--text-xs);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-pill);
   border: 1px solid var(--border);
   color: var(--secondary);
 }
 
-.dex-badge--easy { border-color: #4c9a6a; color: #4c9a6a; }
-.dex-badge--moderate { border-color: #c98a2e; color: #c98a2e; }
-.dex-badge--challenging { border-color: #c2553f; color: #c2553f; }
+.dex-badge--easy { border-color: var(--status-ok); color: var(--status-ok); }
+.dex-badge--moderate { border-color: var(--status-warn); color: var(--status-warn); }
+.dex-badge--challenging { border-color: var(--status-danger); color: var(--status-danger); }
 
+/* The tint is decoration (1.17:1 / 1.37:1 against the card); the border and
+   the tick carry the state — docs/concepts/design-system.md §3.2. */
 .dex-badge--caught {
-  background: var(--dex-accent-soft);
-  border-color: var(--dex-accent);
+  background: var(--accent-soft);
+  border-color: var(--accent);
   color: var(--primary);
+}
+
+.dex-badge--caught::before {
+  content: "✓ ";
+  color: var(--accent);
+  font-weight: 700;
 }
 
 .dex-badge--pending { border-style: dashed; }
 
-.dex-badge--iucn-cr,
-.dex-badge--iucn-en { border-color: #c2553f; color: #c2553f; }
-.dex-badge--iucn-vu,
-.dex-badge--iucn-nt { border-color: #c98a2e; color: #c98a2e; }
+/* IUCN Red List categories: the official colours, filled, in both themes. */
+.dex-badge--iucn {
+  border-color: transparent;
+  color: var(--iucn-ink);
+  font-weight: 700;
+}
+.dex-badge--iucn-cr { background: var(--iucn-cr); color: var(--iucn-ink-cr); }
+.dex-badge--iucn-en { background: var(--iucn-en); }
+.dex-badge--iucn-vu { background: var(--iucn-vu); }
+.dex-badge--iucn-nt { background: var(--iucn-nt); }
+.dex-badge--iucn-lc { background: var(--iucn-lc); }
+.dex-badge--iucn-dd { background: var(--iucn-dd); }
 
 
 
 .dex-section-title {
-  margin: 0 0 0.8rem;
-  font-size: 1.05rem;
+  margin: 0 0 var(--space-heading);
+  font-size: var(--text-md);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--secondary);
@@ -405,28 +394,28 @@
   /* Capped track width: the facts row is full-page wide now, and 1fr tracks
      would blow two facts up into two enormous tiles. */
   grid-template-columns: repeat(auto-fit, minmax(140px, 210px));
-  gap: 0.7rem;
+  gap: var(--space-3);
   margin: 0;
 }
 
 .dex-stat {
   border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 0.55rem 0.7rem;
+  border-radius: var(--radius-l);
+  padding: var(--space-2) var(--space-3);
   background: var(--entry);
 }
 
 .dex-stat dt {
   margin: 0;
-  font-size: 0.7rem;
+  font-size: var(--text-xs);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--secondary);
 }
 
 .dex-stat dd {
-  margin: 0.15rem 0 0;
-  font-size: 0.95rem;
+  margin: 2px 0 0;
+  font-size: var(--text-md);
 }
 
 /* Which dimension a size refers to (shoulder / length / wingspan / shell).
@@ -442,13 +431,13 @@
   max-width: 68ch;
 }
 
-.dex-description p { margin: 0 0 0.8rem; }
+.dex-description p { margin: 0 0 var(--space-3); }
 
 .dex-source,
 .dex-map__attribution,
 .dex-map__detail-note,
 .dex-map__missing {
-  font-size: 0.75rem;
+  font-size: var(--text-xs);
   color: var(--secondary);
 }
 
@@ -456,7 +445,7 @@
 
 .dex-map {
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: var(--radius-l);
   overflow: hidden;
   background: var(--code-bg);
 }
@@ -475,16 +464,16 @@
    descendant one. Without it the ocean keeps Leaflet's built-in grey. */
 .dex-map__canvas.leaflet-container,
 .dex-map .leaflet-container {
-  background: var(--dex-map-water);
+  background: var(--map-water);
   font: inherit;
 }
 
 .dex-map__legend {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.9rem;
-  margin: 0.6rem 0 0.3rem;
-  font-size: 0.78rem;
+  gap: var(--space-4);
+  margin: var(--space-2) 0 var(--space-1);
+  font-size: var(--text-xs);
   color: var(--secondary);
 }
 
@@ -493,35 +482,35 @@
   display: inline-block;
   width: 0.7rem;
   height: 0.7rem;
-  margin-right: 0.35rem;
-  border-radius: 3px;
+  margin-right: var(--space-1);
+  border-radius: var(--radius-s);
   vertical-align: -1px;
 }
 
-.dex-map__key--range::before { background: var(--dex-map-range); opacity: 0.6; }
-.dex-map__key--sighting::before { background: var(--dex-map-sighting); border-radius: 50%; }
+.dex-map__key--range::before { background: var(--map-range); opacity: 0.6; }
+.dex-map__key--sighting::before { background: var(--map-sighting); border-radius: 50%; }
 
 .dex-map__detail {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem;
-  margin: 0.5rem 0 0.3rem;
+  gap: var(--space-2);
+  margin: var(--space-2) 0 var(--space-1);
 }
 
 .dex-map__detail-btn {
   border: 1px solid var(--border);
   background: var(--entry);
   color: var(--secondary);
-  border-radius: 999px;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.78rem;
+  border-radius: var(--radius-pill);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-xs);
   cursor: pointer;
 }
 
 .dex-map__detail-btn:hover,
 .dex-map__detail-btn.is-active {
-  border-color: var(--dex-accent);
+  border-color: var(--accent);
   color: var(--primary);
 }
 
@@ -530,9 +519,9 @@
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: var(--dex-map-sighting);
-  border: 2px solid #fff;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35);
+  background: var(--map-sighting);
+  border: 2px solid var(--map-casing);
+  box-shadow: 0 0 0 1px var(--map-pin-ring);
 }
 
 /* --- field notes -------------------------------------------------------- */
@@ -540,33 +529,33 @@
 .dex-fieldnotes__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
+  gap: var(--space-4);
 }
 
 .dex-fieldnote {
   border: 1px solid var(--border);
-  border-left: 3px solid var(--dex-accent);
-  border-radius: 10px;
-  padding: 0.8rem 1rem;
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-l);
+  padding: var(--space-3) var(--space-4);
   background: var(--entry);
 }
 
 .dex-fieldnote h3 {
-  margin: 0 0 0.35rem;
-  font-size: 0.85rem;
+  margin: 0 0 var(--space-1);
+  font-size: var(--text-sm);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--secondary);
 }
 
-.dex-fieldnote p { margin: 0; font-size: 0.92rem; }
+.dex-fieldnote p { margin: 0; font-size: var(--text-sm); }
 
 /* --- responsive --------------------------------------------------------- */
 
 /* Wide layout: the map becomes a third column sitting to the right of both the
    photo and the name block, at a fixed width so it stays a compact reference
    rather than stretching with the page. Facts run underneath, full width. */
-@media (min-width: 1150px) {
+@media (width >= 1100px) {
   .dex-top {
     display: grid;
     /* `fit-content` keeps the name column only as wide as the name needs, so
@@ -574,7 +563,7 @@
        The floor stops it collapsing just above the breakpoint. */
     grid-template-columns: minmax(0, 300px) fit-content(420px) minmax(340px, 1fr);
     grid-template-rows: max-content auto;
-    gap: 1.5rem;
+    gap: var(--space-5);
     align-items: start;
   }
 
@@ -612,14 +601,14 @@
 }
 
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .dex-hero__media {
     max-width: 320px;
   }
 
   .dex-grid {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 0.6rem;
+    gap: var(--space-2);
   }
 
   .dex-filters {

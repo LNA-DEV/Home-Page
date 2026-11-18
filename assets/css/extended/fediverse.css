@@ -3,7 +3,7 @@
   margin: auto;
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (width >= 480px) {
   .img-right {
     width: 25%;
     float: right;

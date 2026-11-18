@@ -1,0 +1,20 @@
+/* Where the accent goes, site-wide — docs/concepts/design-system.md §3.2.
+
+   The accent (Schiefer) marks state and emphasis: active filters (in each
+   component's own file), stars, progress bars, and the two roles below. It
+   carries almost no colour, so it is never the only cue — a link keeps its
+   underline, a state its border or marker. */
+
+/* Links in running text: the accent, with PaperMod's underline (box-shadow
+   in currentColor), which must stay — against body text a Schiefer link
+   differs by only 1.22:1 in dark mode. Only a bare link inside a text block:
+   a link with a class is a component (a card, a button) and styles itself. */
+.post-content :is(p, li, dd, td, blockquote, figcaption) > a:not([class]) {
+    color: var(--accent);
+}
+
+/* The focus ring, wherever a component has not drawn its own. */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}

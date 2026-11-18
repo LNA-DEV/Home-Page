@@ -22,6 +22,10 @@ traps: *Working with the tests* below. The short version:
 - **No test reaches the network**: the companion API (map tiles included) and
   listmonk are mocked; everything else off localhost is aborted, which is itself
   the assertion every map rests on.
+- **A literal colour, spacing length, font size, radius, shadow or off-set
+  breakpoint fails the suite.** `tests/static/design-tokens.spec.ts` counts them
+  per file against `tests/golden/css-literals.json` (at zero); see
+  `docs/design-system.md` and `npm run tokens:ratchet`.
 
 ## Working with the tests
 

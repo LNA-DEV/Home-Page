@@ -1,9 +1,9 @@
 .home-header {
-  font-size: 28px;
+  font-size: var(--text-2xl);
   line-height: 1.3;
-  margin-bottom: 16px;
+  margin-bottom: var(--space-4);
 }
 
 #latest-posts {
-  margin-top: 25px;
+  margin-top: var(--space-5);
 }

@@ -130,6 +130,7 @@ Swedish content files, `i18n/{de,sv}.yaml`, and the `de`/`sv` values in `data/`.
 | tests, the golden URL list, checking a page by hand | `docs/testing.md` |
 | URLs, indexing, structured data, link previews, Search Console | `docs/seo.md` |
 | Hugo templates in general, content adapters, Markdown links | `docs/conventions.md` |
+| CSS and styling: colours, spacing, type, widths, breakpoints, the styleguide | `docs/design-system.md` |
 | `data/gallery.yaml`, gallery templates, adding or renaming photos, licences | `docs/gallery/overview.md` |
 | image processing, served file names, embedded metadata, image redirects | `docs/gallery/images.md` |
 | photo pages and their URLs | `docs/gallery/photo-pages.md` |

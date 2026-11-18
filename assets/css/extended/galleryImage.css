@@ -2,7 +2,7 @@
    Theme variables only, so it follows light/dark like the rest of the site. */
 
 .post-content figure.gallery-image {
-  margin: 1.5rem 0;
+  margin: var(--space-5) 0;
 }
 
 .post-content figure.gallery-image img {
@@ -10,7 +10,7 @@
   width: 100%;
   height: auto;
   margin: 0;
-  border-radius: 4px;
+  border-radius: var(--radius-s);
 }
 
 .post-content figure.gallery-image .gallery-image-link {
@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
-  margin: 8px 0 0;
+  margin: var(--space-2) 0 0;
   text-align: center;
 }
 
@@ -44,13 +44,13 @@
 
 .post-content figure.gallery-image .gallery-image-caption {
   color: var(--primary);
-  font-size: clamp(12px, calc(9.455px + var(--img-width, 720px) * 0.00909), 16px);
+  font-size: clamp(var(--text-xs), calc(var(--text-xs) + var(--img-width, var(--width-text)) * 0.00909), var(--text-md));
   font-weight: bold;
 }
 
 .post-content figure.gallery-image .gallery-image-exif {
   color: var(--secondary);
-  font-size: clamp(11px, calc(9.091px + var(--img-width, 720px) * 0.00682), 14px);
+  font-size: clamp(var(--text-xs), calc(var(--text-xs) + var(--img-width, var(--width-text)) * 0.00682), var(--text-sm));
   font-weight: normal;
 }
 
@@ -62,15 +62,13 @@
    `word-break: break-word` split German compounds mid-word. At 1060px the same
    split measures 466px of photo and 570px of text, about 63 characters.
 
-   `margin-left: 50%` + `translateX(-50%)` centres an element wider than its parent.
-   The width is capped at `100vw - 2*gap` rather than a bare 100vw: 100vw includes
-   the scrollbar, and the gap (48px desktop / 28px mobile) is comfortably wider than
-   any scrollbar, so the block never causes horizontal overflow. */
+   The breakout itself is the l-wide class on the block (assets/css/extended/
+   00-layout.css): --width-wide capped at the viewport less a gutter either side,
+   centred on the column with negative margins. */
 
 .post-content .gallery-image-text {
-  width: min(var(--nav-width), calc(100vw - var(--gap) * 2));
-  margin: 2rem 0 2rem 50%;
-  transform: translateX(-50%);
+  /* Width and centring: the l-wide class (assets/css/extended/00-layout.css). */
+  margin-block: var(--space-6);
   display: grid;
   grid-template-columns: 45fr 55fr;
   gap: var(--gap);
@@ -110,11 +108,11 @@
 
 /* Stacked below 900px, not at the theme's 768px breakpoint: at 768px the 55% text
    track is ~44 characters, still too narrow. 900px is where it clears ~52. */
-@media screen and (max-width: 900px) {
+@media screen and (width <= 900px) {
   .post-content .gallery-image-text,
   .post-content .gallery-image-text.align-right {
     width: auto;
-    margin: 1.5rem 0;
+    margin: var(--space-5) 0;
     transform: none;
     grid-template-columns: 1fr;
   }
@@ -159,12 +157,12 @@
 
 .post-content .gallery-image-float.align-left {
   float: left;
-  margin: 0.4rem var(--gap) 1rem var(--pull);
+  margin: var(--space-2) var(--gap) var(--space-4) var(--pull);
 }
 
 .post-content .gallery-image-float.align-right {
   float: right;
-  margin: 0.4rem var(--pull) 1rem var(--gap);
+  margin: var(--space-2) var(--pull) var(--space-4) var(--gap);
 }
 
 /* Headings deliberately do NOT clear floats: a heading sets beside a photo exactly
@@ -192,21 +190,21 @@
    the same caption sizes. The font size is normally derived from --img-width, which
    is an inline style and therefore cannot be overridden by a rule; setting the two
    font sizes directly is both simpler and immune to that. */
-@media screen and (max-width: 900px) {
+@media screen and (width <= 900px) {
   .post-content .gallery-image-float.align-left,
   .post-content .gallery-image-float.align-right,
   .post-content .gallery-image-sized {
     float: none;
     width: auto;
-    margin: 1.5rem 0;
+    margin: var(--space-5) 0;
   }
 
   .post-content figure.gallery-image .gallery-image-caption {
-    font-size: 16px;
+    font-size: var(--text-md);
   }
 
   .post-content figure.gallery-image .gallery-image-exif {
-    font-size: 14px;
+    font-size: var(--text-sm);
   }
 }
 

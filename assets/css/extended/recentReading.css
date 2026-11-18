@@ -2,8 +2,8 @@
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
-  gap: 1rem;
-  margin: 1rem 0 2rem;
+  gap: var(--space-4);
+  margin: var(--space-4) 0 var(--space-6);
   overflow: hidden;
 }
 
@@ -32,8 +32,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-cover);
   display: block;
   margin: 0;
 }
@@ -41,16 +41,16 @@
 .recent-reading__meta {
   display: flex;
   flex-direction: column;
-  gap: 0.15rem;
-  margin-top: 0.75rem;
+  gap: 2px;
+  margin-top: var(--space-3);
   min-width: 0;
   min-height: 2.7em;
 }
 
 .recent-reading__title {
-  font-size: 0.95rem;
+  font-size: var(--text-md);
   font-weight: 600;
-  color: #fff;
+  color: var(--primary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -66,8 +66,8 @@
 }
 
 .recent-reading__author {
-  font-size: 0.85rem;
-  color: #aaa;
+  font-size: var(--text-sm);
+  color: var(--secondary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -77,9 +77,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px dashed #666;
-  border-radius: 6px;
-  color: #aaa;
+  border: 1px dashed var(--secondary);
+  border-radius: var(--radius);
+  color: var(--secondary);
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
@@ -91,14 +91,14 @@
 }
 
 .recent-reading__more:hover .recent-reading__more-icon {
-  color: #fff;
-  border-color: #fff;
+  color: var(--primary);
+  border-color: var(--primary);
 }
 
 .recent-reading__more-label {
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
   font-weight: 600;
-  color: #aaa;
+  color: var(--secondary);
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
@@ -106,32 +106,32 @@
 }
 
 .recent-reading__more:hover .recent-reading__more-label {
-  color: #fff;
+  color: var(--primary);
 }
 
 /*
   Responsive: shed book tiles that don't fit, keep the "More books" tile visible.
   Breakpoints mirror assets/css/extended/readingList.css.
 */
-@media (max-width: 999px) {
+@media (width < 900px) {
   .recent-reading > .recent-reading__tile:nth-child(n+5):not(.recent-reading__more) {
     display: none;
   }
 }
 
-@media (max-width: 699px) {
+@media (width < 768px) {
   .recent-reading > .recent-reading__tile:nth-child(n+4):not(.recent-reading__more) {
     display: none;
   }
 }
 
-@media (max-width: 499px) {
+@media (width < 640px) {
   .recent-reading > .recent-reading__tile:nth-child(n+3):not(.recent-reading__more) {
     display: none;
   }
 }
 
-@media (max-width: 399px) {
+@media (width < 480px) {
   .recent-reading > .recent-reading__tile:nth-child(n+2):not(.recent-reading__more) {
     display: none;
   }

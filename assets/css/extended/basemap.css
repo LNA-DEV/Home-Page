@@ -9,12 +9,12 @@
     transform: translateX(-50%);
     width: max-content;
     max-width: calc(100% - 96px);
-    padding: 6px 10px;
+    padding: var(--space-2) var(--space-3);
     border: 1px solid var(--border);
-    border-radius: 6px;
+    border-radius: var(--radius);
     background: var(--entry);
     color: var(--primary);
-    font-size: 0.8rem;
+    font-size: var(--text-xs);
     line-height: 1.35;
     text-align: center;
     pointer-events: none;

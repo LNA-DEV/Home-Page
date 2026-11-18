@@ -1,27 +1,27 @@
 /* Activity Timeline */
 .activity-timeline {
-  margin-top: 1.5rem;
+  margin-top: var(--space-5);
 }
 
 .activity-year {
-  font-size: 1.8rem;
+  font-size: var(--text-3xl);
   font-weight: 700;
-  margin: 2rem 0 1rem 0;
+  margin: var(--space-6) 0 var(--space-4) 0;
 }
 
 .activity-year-count {
-  font-size: 1rem;
+  font-size: var(--text-md);
   font-weight: 400;
   color: var(--secondary);
   vertical-align: super;
-  margin-left: 0.3rem;
+  margin-left: var(--space-1);
 }
 
 .activity-month {
   display: flex;
-  gap: 1.5rem;
+  gap: var(--space-5);
   border-top: 1px solid var(--border);
-  padding: 1rem 0;
+  padding: var(--space-4) 0;
 }
 
 .activity-month-label {
@@ -30,11 +30,11 @@
 }
 
 .activity-month-count {
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   font-weight: 400;
   color: var(--secondary);
   vertical-align: super;
-  margin-left: 0.2rem;
+  margin-left: var(--space-1);
 }
 
 .activity-month-content {
@@ -45,16 +45,16 @@
 .activity-posts {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  margin-bottom: 0.5rem;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
 }
 
 .activity-post {
   display: block;
   text-decoration: none;
   color: inherit;
-  padding: 0.8rem 1rem;
-  border-radius: 8px;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius);
   background: var(--code-bg);
   border-left: 3px solid var(--primary);
   transition: background 0.2s, transform 0.2s;
@@ -66,29 +66,29 @@
 }
 
 .activity-post-title {
-  font-size: 1.1rem;
+  font-size: var(--text-lg);
   font-weight: 600;
   margin: 0;
 }
 
 .activity-post-meta {
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   color: var(--secondary);
-  margin-top: 0.3rem;
+  margin-top: var(--space-1);
 }
 
 /* Photos */
 .activity-photos {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.8rem;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
 }
 
 .activity-photo {
   width: 60px;
   height: 60px;
-  border-radius: 4px;
+  border-radius: var(--radius-s);
   overflow: hidden;
   position: relative;
 }
@@ -107,12 +107,12 @@
 .activity-photos-more {
   width: 60px;
   height: 60px;
-  border-radius: 4px;
+  border-radius: var(--radius-s);
   background: var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   color: var(--secondary);
   text-decoration: none;
 }
@@ -124,19 +124,19 @@
 /* Filter buttons */
 .activity-filters {
   display: flex;
-  gap: 0.5rem;
+  gap: var(--space-2);
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4);
 }
 
 .activity-filter {
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-pill);
   border: 1px solid var(--border);
   background: transparent;
   color: var(--secondary);
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
   transition: all 0.2s;
   text-decoration: none;
 }
@@ -147,27 +147,27 @@
 }
 
 .activity-filter.active {
-  background: var(--primary);
-  border-color: var(--primary);
-  color: var(--theme);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
 }
 
 /* Talks */
 .activity-talks {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  margin-bottom: 0.5rem;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
 }
 
 .activity-talk {
   display: block;
   text-decoration: none;
   color: inherit;
-  padding: 0.8rem 1rem;
-  border-radius: 8px;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius);
   background: var(--code-bg);
-  border-left: 3px solid #e67e22;
+  border-left: 3px solid var(--feed-talk);
   transition: background 0.2s, transform 0.2s;
 }
 
@@ -177,27 +177,27 @@ a.activity-talk:hover {
 }
 
 .activity-talk-title {
-  font-size: 1.1rem;
+  font-size: var(--text-lg);
   font-weight: 600;
   margin: 0;
 }
 
 .activity-talk-meta {
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   color: var(--secondary);
-  margin-top: 0.3rem;
+  margin-top: var(--space-1);
 }
 
 .activity-talk-event {
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   color: var(--secondary);
   font-style: italic;
 }
 
 .activity-talk-description {
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   color: var(--secondary);
-  margin-top: 0.4rem;
+  margin-top: var(--space-2);
 }
 
 /* Awards & Publications (honors) */
@@ -205,25 +205,25 @@ a.activity-talk:hover {
 .activity-publications {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  margin-bottom: 0.5rem;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
 }
 
 .activity-honor {
   display: flex;
-  gap: 0.8rem;
+  gap: var(--space-3);
   align-items: center;
   text-decoration: none;
   color: inherit;
-  padding: 0.8rem 1rem;
-  border-radius: 8px;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius);
   background: var(--code-bg);
-  border-left: 3px solid #f1c40f;
+  border-left: 3px solid var(--feed-honor);
   transition: background 0.2s, transform 0.2s;
 }
 
 .activity-honor--publication {
-  border-left-color: #3498db;
+  border-left-color: var(--feed-publication);
 }
 
 a.activity-honor:hover {
@@ -234,7 +234,7 @@ a.activity-honor:hover {
 .activity-honor-thumb {
   width: 56px;
   height: 56px;
-  border-radius: 4px;
+  border-radius: var(--radius-s);
   object-fit: cover;
   flex-shrink: 0;
 }
@@ -245,28 +245,28 @@ a.activity-honor:hover {
 }
 
 .activity-honor-title {
-  font-size: 1.1rem;
+  font-size: var(--text-lg);
   font-weight: 600;
   margin: 0;
 }
 
 .activity-honor-meta {
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   color: var(--secondary);
-  margin-top: 0.3rem;
+  margin-top: var(--space-1);
 }
 
 .activity-honor-sub {
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   color: var(--secondary);
   font-style: italic;
-  margin-top: 0.2rem;
+  margin-top: var(--space-1);
 }
 
 .activity-honor-description {
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   color: var(--secondary);
-  margin-top: 0.4rem;
+  margin-top: var(--space-2);
 }
 
 /* Hide filtered content */
@@ -299,10 +299,10 @@ a.activity-honor:hover {
 }
 
 /* Mobile responsive */
-@media (max-width: 600px) {
+@media (width <= 640px) {
   .activity-month {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: var(--space-2);
   }
 
   .activity-month-label {

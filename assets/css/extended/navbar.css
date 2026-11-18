@@ -1,6 +1,5 @@
-/* This is needed for fucking Windows... */
+/* --nav-width is a token (--width-wide, assets/css/core/theme-vars.css). */
 :root{
-    --nav-width: 1060px;
     /* The centred header track: the theme puts exactly this on .nav's max-width
        (--nav-width plus a --gap either side). Named here because the header grid
        has to reserve a column of precisely that size. */
@@ -40,6 +39,12 @@
     /* A grid item defaults to min-width:auto and would refuse to shrink below
        the menu's own width, pushing the CTA off the right edge on a phone. */
     min-width: 0;
+    /* Fill the track. PaperMod centres .nav with auto inline margins, which on
+       a grid item shrink it to its content's width: the logo then sat ~20px
+       inside the track, by an amount that depends on how long the menu is in
+       each language, instead of on the content edge of a wide page
+       (docs/concepts/design-system.md §5). */
+    margin-inline: 0;
 }
 
 /* Pinned to the FIRST row of the header, not to the header's centre.
@@ -68,14 +73,14 @@
     margin-block-start: calc((var(--header-height) - var(--cta-height)) / 2);
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: var(--space-2);
     height: var(--cta-height);
     margin-inline-end: var(--gap);
-    padding: 0 14px;
+    padding: 0 var(--space-4);
     border-radius: var(--radius);
     background: var(--tertiary);
     color: var(--primary);
-    font-size: 15px;
+    font-size: var(--text-md);
     font-weight: 500;
     line-height: 1.4;
     white-space: nowrap;
@@ -87,7 +92,7 @@
 }
 
 .newsletter-cta__icon {
-    font-size: 1.05rem;
+    font-size: var(--text-md);
     line-height: 1;
 }
 
@@ -112,7 +117,7 @@
    468px against German's 646px. Add a menu item in any language and the wrap
    comes earlier, which is safe; the margin to watch is a Swedish menu getting
    ~30px SHORTER, which would put a single-row header inside this query. */
-@media screen and (max-width: 768px) {
+@media screen and (width <= 768px) {
     .header {
         /* Back to a plain block. The three columns have nothing to do here --
            there is no room to centre anything in, .nav wants the full width for
@@ -153,13 +158,13 @@
 
    The accessible name lives in aria-label rather than in this span, precisely
    so that hiding it costs a screen reader nothing. */
-@media screen and (max-width: 480px) {
+@media screen and (width <= 480px) {
     .newsletter-cta__label {
         display: none;
     }
 
     .newsletter-cta {
-        padding: 0 10px;
+        padding: 0 var(--space-3);
     }
 
     /* The CTA is out of flow at this width, so nothing keeps row one clear of it
@@ -168,6 +173,6 @@
        the gap, rounded up for emoji fonts that render wider) restores the wrap
        for row one only -- row two, the menu, stays free to run under it. */
     .logo {
-        padding-inline-end: 60px;
+        padding-inline-end: var(--space-8);
     }
 }

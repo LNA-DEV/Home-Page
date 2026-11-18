@@ -1,0 +1,140 @@
+{{- /*
+  styleguide.html — every design token and the shared components, in both
+  themes side by side. docs/concepts/design-system.md §8.
+
+  Every colour token is light-dark(), so a panel with `color-scheme: dark`
+  shows the dark values whatever the page's own theme is: both themes are on
+  the page at once, which is what tests/e2e/design-system.spec.ts reads.
+
+  [data-contrast="4.5"] / ="3" marks an element whose text (or, with
+  data-contrast-of="border", whose border) the contrast test holds against the
+  first opaque background behind it. The colour-token swatches are filled in by
+  assets/js/styleguide.js from the stylesheet itself, so they cannot fall behind
+  assets/css/core/theme-vars.css.
+*/ -}}
+<article class="sg">
+  <header class="sg-head">
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+  </header>
+
+  <div class="sg-themes">
+    {{- range slice "light" "dark" }}
+    <section class="sg-theme" data-scheme="{{ . }}" style="color-scheme: {{ . }}" aria-label="{{ . | title }} theme">
+      <h2 class="sg-theme-name">{{ . | title }}</h2>
+
+      <h3>Text on surfaces</h3>
+      {{- /* Only the pairs the site uses: secondary text sits on --theme and
+             --entry, never on --code-bg (PaperMod's dark pair is 4.27:1) or on
+             the accent tint. */}}
+      <div class="sg-surfaces">
+        {{- range slice "theme" "entry" "code-bg" "accent-soft" }}
+        <div class="sg-surface" style="background: var(--{{ . }})">
+          <span class="sg-label">--{{ . }}</span>
+          <span style="color: var(--primary)" data-contrast="4.5">Primary heading</span>
+          <span style="color: var(--content)" data-contrast="4.5">Running text</span>
+          {{- if in (slice "theme" "entry") . }}
+          <span style="color: var(--secondary)" data-contrast="4.5">Secondary meta</span>
+          {{- end }}
+          <span style="color: var(--accent)" data-contrast="4.5">Accent link</span>
+        </div>
+        {{- end }}
+      </div>
+
+      <h3>Accent and status</h3>
+      <div class="sg-row">
+        <span class="sg-fill" style="background: var(--accent); color: var(--on-accent)" data-contrast="4.5">On accent</span>
+        {{- range slice "ok" "warn" "danger" "info" }}
+        <span class="sg-status" style="color: var(--status-{{ . }})" data-contrast="4.5">{{ . }}</span>
+        {{- end }}
+        <span class="sg-ring" style="border-color: var(--accent)" data-contrast="3" data-contrast-of="border">Focus ring</span>
+      </div>
+
+      <h3>Data colours</h3>
+      <div class="sg-row sg-map" style="background: var(--map-land)">
+        <span class="sg-label">on --map-land</span>
+        {{- range slice "map-range" "map-sighting" }}
+        <span class="sg-chip" style="border-color: var(--{{ . }})" data-contrast="3" data-contrast-of="border">--{{ . }}</span>
+        {{- end }}
+      </div>
+      <div class="sg-row" style="background: var(--code-bg)">
+        <span class="sg-label">on --code-bg</span>
+        {{- range slice "feed-talk" "feed-honor" "feed-publication" }}
+        <span class="sg-chip" style="border-color: var(--{{ . }})" data-contrast="3" data-contrast-of="border">--{{ . }}</span>
+        {{- end }}
+      </div>
+      <div class="sg-row">
+        {{- range slice "lc" "nt" "vu" "en" }}
+        <span class="sg-iucn" style="background: var(--iucn-{{ . }}); color: var(--iucn-ink)" data-contrast="4.5">{{ . | upper }}</span>
+        {{- end }}
+        <span class="sg-iucn" style="background: var(--iucn-cr); color: var(--iucn-ink-cr)" data-contrast="4.5">CR</span>
+        <span class="sg-iucn" style="background: var(--iucn-dd); color: var(--iucn-ink)" data-contrast="4.5">DD</span>
+      </div>
+
+      <h3>Components</h3>
+      <div class="sg-components post-content">
+        <p class="sg-text">Running text with <a href="#">a link in the accent</a>, which keeps its underline.</p>
+        <div class="sg-row">
+          <button class="filter-pill active" type="button">Active filter</button>
+          <button class="filter-pill" type="button">Filter</button>
+        </div>
+        <div class="sg-row">
+          <span class="dex-badge dex-badge--caught">Photographed</span>
+          <span class="dex-badge dex-badge--easy">Easy</span>
+          <span class="dex-badge dex-badge--moderate">Moderate</span>
+          <span class="dex-badge dex-badge--challenging">Challenging</span>
+          <span class="dex-badge dex-badge--pending">Not yet</span>
+        </div>
+        <div class="alert alert-note"><p class="alert-title">Note</p><p>An alert box.</p></div>
+        <div class="alert alert-warning"><p class="alert-title">Warning</p><p>An alert box.</p></div>
+        <div class="book-rating" aria-label="4 of 5"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star">★</span></div>
+        <div class="sg-bar"><span style="width: 46%"></span></div>
+      </div>
+
+      <h3>Colour tokens</h3>
+      <div class="sg-swatches" data-swatches></div>
+    </section>
+    {{- end }}
+  </div>
+
+  <section class="sg-block">
+    <h2>Spacing</h2>
+    <div class="sg-scale">
+      {{- range seq 8 }}
+      <div class="sg-space"><code>--space-{{ . }}</code><span style="width: var(--space-{{ . }})"></span></div>
+      {{- end }}
+    </div>
+    <p class="sg-note">Roles: <code>--space-inline</code>, <code>--space-heading</code>, <code>--card-pad</code>, <code>--grid-gap</code>, <code>--section-gap</code>; the image grids keep their own gaps, <code>--photo-gap</code> (8px), <code>--tile-gap</code> (14px) and <code>--thumb-gap</code> (6px). The page edge is <code>--gutter</code>: 16px up to 768px, 24px above.</p>
+  </section>
+
+  <section class="sg-block">
+    <h2>Widths</h2>
+    <div class="sg-widths">
+      {{- range slice (slice "narrow" "38.9%") (slice "text" "50%") (slice "wide" "73.6%") (slice "full" "100%") }}
+      <div class="sg-width" style="width: {{ index . 1 | safeCSS }}"><code>--width-{{ index . 0 }}</code></div>
+      {{- end }}
+    </div>
+    <p class="sg-note">Drawn to scale against <code>--width-full</code>. Layout classes: <code>l-text</code>, <code>l-wide</code>, <code>l-full</code>, <code>l-bleed</code>. Breakpoints: 480, 640, 768, 900, 1100 (700 for PhotoSwipe only), in range syntax.</p>
+  </section>
+
+  <section class="sg-block">
+    <h2>Type</h2>
+    {{- range slice "5xl" "4xl" "3xl" "2xl" "xl" "lg" "md" "sm" "xs" }}
+    <p class="sg-type" style="font-size: var(--text-{{ . }})"><code>--text-{{ . }}</code> The Inn valley at dawn</p>
+    {{- end }}
+  </section>
+
+  <section class="sg-block">
+    <h2>Radius and shadow</h2>
+    <div class="sg-row">
+      {{- range slice "radius-s" "radius" "radius-l" "radius-pill" }}
+      <div class="sg-tile" style="border-radius: var(--{{ . }})"><code>--{{ . }}</code></div>
+      {{- end }}
+    </div>
+    <div class="sg-row">
+      {{- range slice "shadow-1" "shadow-2" "shadow-3" "shadow-cover" }}
+      <div class="sg-tile" style="box-shadow: var(--{{ . }})"><code>--{{ . }}</code></div>
+      {{- end }}
+    </div>
+  </section>
+</article>
