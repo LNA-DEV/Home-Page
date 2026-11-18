@@ -88,6 +88,92 @@ function chipHtml(a, journal) {
   );
 }
 
+/* Where each chip goes. Areas sit close together (five of Inn-Valley's within
+   8 km), and at the zoom that shows them all there is no room for every name.
+   So, in priority order, each chip takes the first side of its circle that is
+   clear of the chips already placed and of every other circle: east, west,
+   south, north. A chip with no such side shrinks to a badge on its circle,
+   which shows the name on hover.
+
+   The layout depends on the zoom alone, never on where the map is panned to:
+   panning moves every chip and circle alike, so nothing changes and nothing
+   jumps when an area is dragged to the edge and back. Only the starting view
+   (`framed`) also keeps every chip inside the map and off its controls, so the
+   page does not open on a cut-off name; after a zoom a chip may run past the
+   edge like any map label, and the starting zoom gets the starting layout
+   back (`sides`). Returns the side chosen for each chip. */
+const CHIP_GAP = 6;
+const CHIP_SIDES = ["e", "w", "s", "n"];
+const CHIP_CLASSES = ["is-e", "is-w", "is-s", "is-n", "is-badge"];
+
+function placeChips(map, chips, { framed = false, sides = null } = {}) {
+  const size = map.getSize();
+  const blocked = [];
+  if (framed) {
+    const box = map.getContainer().getBoundingClientRect();
+    map
+      .getContainer()
+      .querySelectorAll(".leaflet-control-zoom, .leaflet-control-attribution")
+      .forEach((el) => {
+        const r = el.getBoundingClientRect();
+        blocked.push({ x0: r.left - box.left, y0: r.top - box.top, x1: r.right - box.left, y1: r.bottom - box.top });
+      });
+  }
+
+  const geo = chips.map(({ a }) => {
+    const c = map.latLngToContainerPoint([a.lat, a.lng]);
+    const r = map.latLngToContainerPoint([a.lat, areaBounds(a.lat, a.lng, a.radius).getEast()]).x - c.x;
+    return { c, r };
+  });
+  const overlaps = (p, q) => p.x0 < q.x1 && q.x0 < p.x1 && p.y0 < q.y1 && q.y0 < p.y1;
+  /* A chip against a circle itself, not its bounding box: the box's corners
+     would turn chips into badges that had room. */
+  const hitsCircle = (p, g) => {
+    const x = Math.max(p.x0, Math.min(g.c.x, p.x1));
+    const y = Math.max(p.y0, Math.min(g.c.y, p.y1));
+    return (x - g.c.x) ** 2 + (y - g.c.y) ** 2 < g.r ** 2;
+  };
+  const inside = (p) => !framed || (p.x0 >= 4 && p.y0 >= 4 && p.x1 <= size.x - 4 && p.y1 <= size.y - 4);
+
+  return chips.map(({ chip }, i) => {
+    const el = chip.getElement()?.firstElementChild;
+    if (!el) return "badge";
+    const { c, r } = geo[i];
+    el.style.setProperty("--r", `${Math.max(r, 0).toFixed(1)}px`);
+    let side = sides ? sides[i] : "";
+    if (!side) {
+      /* Measure the full chip: the badge state hides its text. */
+      el.classList.remove(...CHIP_CLASSES);
+      el.classList.add("is-e");
+      const w = el.offsetWidth;
+      const h = el.offsetHeight;
+      const others = geo.filter((_, j) => j !== i);
+      const rect = {
+        e: { x0: c.x + r + CHIP_GAP, y0: c.y - h / 2 },
+        w: { x0: c.x - r - CHIP_GAP - w, y0: c.y - h / 2 },
+        s: { x0: c.x - w / 2, y0: c.y + r + CHIP_GAP },
+        n: { x0: c.x - w / 2, y0: c.y - r - CHIP_GAP - h },
+      };
+      side = "badge";
+      for (const s of CHIP_SIDES) {
+        const p = { ...rect[s], x1: rect[s].x0 + w, y1: rect[s].y0 + h };
+        if (inside(p) && !blocked.some((q) => overlaps(p, q)) && !others.some((g) => hitsCircle(p, g))) {
+          side = s;
+          blocked.push(p);
+          break;
+        }
+      }
+    }
+    el.classList.remove(...CHIP_CLASSES);
+    el.classList.add(`is-${side}`);
+    if (side === "badge") {
+      const half = el.offsetWidth / 2;
+      blocked.push({ x0: c.x - half, y0: c.y - half, x1: c.x + half, y1: c.y + half });
+    }
+    return side;
+  });
+}
+
 /* ---- overview ------------------------------------------------------------ */
 
 async function buildOverview(canvas) {
@@ -97,27 +183,38 @@ async function buildOverview(canvas) {
 
   /* The wheel zooms only after a click into the map, so scrolling through an
      essay is not caught by it — as the route maps do. */
-  const map = L.map(canvas, { scrollWheelZoom: false, maxZoom: MAX_ZOOM, zoomSnap: 0.5 });
+  /* Leaflet draws a path only inside the view plus `padding` (default 0.1 of
+     its size on each side) and redraws on moveend, so a circle dragged in from
+     further out popped up on release. A handful of circles costs nothing to
+     draw, so the drawn area reaches two map sizes past every edge. */
+  const map = L.map(canvas, {
+    scrollWheelZoom: false,
+    maxZoom: MAX_ZOOM,
+    zoomSnap: 0.5,
+    renderer: L.svg({ padding: 2 }),
+  });
   map.on("click", () => map.scrollWheelZoom.enable());
   map.on("mouseout", () => map.scrollWheelZoom.disable());
   map.attributionControl.addAttribution(BASEMAP_ATTRIBUTION);
 
   const circles = new Map();
+  const chips = [];
   const bounds = L.latLngBounds([]);
-  for (const a of areas) {
+  areas.forEach((a, order) => {
     const circle = L.circle([a.lat, a.lng], { radius: a.radius, interactive: Boolean(a.href), ...circleStyle(false) });
     circle.addTo(map);
     circles.set(a.slug, { circle, bounds: areaBounds(a.lat, a.lng, a.radius) });
     bounds.extend(areaBounds(a.lat, a.lng, a.radius));
-    /* The chip is anchored at the circle's east edge; on a phone, where it
-       shrinks to a numbered badge, CSS centres it on the circle instead. */
-    const east = areaBounds(a.lat, a.lng, a.radius).getEast();
-    const chip = L.marker([a.lat, phone() ? a.lng : east], {
+    /* The chip is anchored at the circle's centre; placeChips() decides on
+       which side of the circle it sits, or shrinks it to a badge on it. */
+    const chip = L.marker([a.lat, a.lng], {
       icon: L.divIcon({ className: "story-area-marker", html: chipHtml(a, journal), iconSize: null }),
       keyboard: false,
       interactive: Boolean(a.href),
       title: a.name,
+      riseOnHover: true,
     }).addTo(map);
+    chips.push({ a, chip, order });
     if (a.href) {
       const go = () => {
         window.location.hash = a.href.slice(1);
@@ -125,13 +222,17 @@ async function buildOverview(canvas) {
       circle.on("click", go);
       chip.on("click", go);
     }
-  }
-  /* Room on the right for the chips, which hang off each circle's east edge;
-     on a phone they are badges on the circle itself. */
+  });
+  /* Room on the right for the chips, which prefer each circle's east side. */
   const fit = phone()
     ? { padding: [40, 40] }
     : { paddingTopLeft: [40, 40], paddingBottomRight: [journal ? 170 : 200, 40] };
   map.fitBounds(bounds, { ...fit, maxZoom: MAX_ZOOM });
+  /* Busiest areas get their name first; ties keep the list's order. */
+  chips.sort((x, y) => (y.a.count || 0) - (x.a.count || 0) || x.order - y.order);
+  const startZoom = map.getZoom();
+  const startSides = placeChips(map, chips, { framed: true });
+  map.on("zoomend", () => placeChips(map, chips, map.getZoom() === startZoom ? { sides: startSides } : {}));
 
   overview = { map, base: null, circles };
   const base = await addBasemap(map, { tileJson: TILEJSON });

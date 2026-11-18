@@ -10,8 +10,10 @@
 
   The coarse rule is checked here, on the DATA, because the repository is
   public: a precise coordinate in data/ is published the moment it is pushed,
-  rendered or not. At most 2 decimal places, a radius of at least 1,000 m.
-  Anything else stops the build, naming the area.
+  rendered or not. At most params.galleryAreas.maxDecimals decimal places
+  (hugo.yaml; 2 without the key), and a radius of at least
+  params.galleryAreas.minRadius metres (1000 without the key, 0 for no
+  minimum). Anything else stops the build, naming the area.
 
   Call via partialCached with the language as the variant:
     {{ partialCached "gallery-areas.html" . site.Language.Lang }}
@@ -19,7 +21,16 @@
 
 {{- $lang := site.Language.Lang -}}
 {{- $out := dict -}}
-{{- $coarse := `^-?[0-9]{1,3}(\.[0-9]{1,2})?$` -}}
+{{- /* Read with isset: `default` treats 0 as empty and would bring the
+       defaults back. */ -}}
+{{- $minRadius := 1000.0 -}}
+{{- $maxDecimals := 2 -}}
+{{- with site.Params.galleryareas -}}
+  {{- if isset . "minradius" }}{{ $minRadius = float (index . "minradius") }}{{ end -}}
+  {{- if isset . "maxdecimals" }}{{ $maxDecimals = int (index . "maxdecimals") }}{{ end -}}
+{{- end -}}
+{{- $coarse := `^-?[0-9]{1,3}$` -}}
+{{- if gt $maxDecimals 0 }}{{ $coarse = printf `^-?[0-9]{1,3}(\.[0-9]{1,%d})?$` $maxDecimals }}{{ end -}}
 
 {{- range $i, $a := hugo.Data.galleryAreas.areas | default slice -}}
   {{- $slug := $a.slug | default "" -}}
@@ -44,13 +55,16 @@
       {{- errorf "data/galleryAreas.yaml: area %q has no %s" $slug $field -}}
       {{- $ok = false -}}
     {{- else if not (findRE $coarse (printf "%v" $v)) -}}
-      {{- errorf "data/galleryAreas.yaml: area %q has %s %v — at most 2 decimal places, so no area can point at a nest (docs/concepts/gallery-project-stories.md §8)" $slug $field $v -}}
+      {{- errorf "data/galleryAreas.yaml: area %q has %s %v — at most %d decimal places (params.galleryAreas.maxDecimals in hugo.yaml), so no area can point at a nest (docs/concepts/gallery-project-stories.md §8)" $slug $field $v $maxDecimals -}}
       {{- $ok = false -}}
     {{- end -}}
   {{- end -}}
   {{- $radius := $a.radius | default 0 -}}
-  {{- if lt (float $radius) 1000.0 -}}
-    {{- errorf "data/galleryAreas.yaml: area %q has radius %v — at least 1000 (metres), so no area can point at a nest (docs/concepts/gallery-project-stories.md §8)" $slug $radius -}}
+  {{- if le (float $radius) 0.0 -}}
+    {{- errorf "data/galleryAreas.yaml: area %q has no radius (metres, more than 0)" $slug -}}
+    {{- $ok = false -}}
+  {{- else if lt (float $radius) $minRadius -}}
+    {{- errorf "data/galleryAreas.yaml: area %q has radius %v — at least %v (metres, params.galleryAreas.minRadius in hugo.yaml), so no area can point at a nest (docs/concepts/gallery-project-stories.md §8)" $slug $radius $minRadius -}}
     {{- $ok = false -}}
   {{- end -}}
   {{- if not $ok }}{{ continue }}{{ end -}}

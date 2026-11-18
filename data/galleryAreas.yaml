@@ -8,9 +8,13 @@
 # not be readable. So an area is a coarse, named public place — a bog, a ridge, a
 # valley floor — and never a sighting:
 #
-#   * `lat` / `lng` have at most 2 decimal places (≈1.1 km north–south, ≈0.75 km
-#     east–west at 47°N). More is a build error.
-#   * `radius` is in metres and at least 1000. Less is a build error.
+#   * `lat` / `lng` have at most `params.galleryAreas.maxDecimals` decimal places
+#     in hugo.yaml (2 without the key: ≈1.1 km north–south, ≈0.75 km east–west
+#     at 47°N; 3 is ≈110 m, 4 ≈11 m). More is a build error.
+#   * `radius` is in metres, at least `params.galleryAreas.minRadius` in hugo.yaml
+#     (1000 without the key, 0 = no minimum). Less is a build error. With no
+#     minimum the size is the author's call: a nest's area stays 1000 or more,
+#     and keeps 2 decimals.
 #   * The centre is the middle of the named place, never a photo's GPS position
 #     and never "where the bird was". The served photos carry no GPS, and this
 #     file must not bring it back.
@@ -24,8 +28,8 @@
 # Fields:
 #   slug     the identity, referenced from front matter and shortcodes
 #   label    a bare string (English) or {en, de, sv}; every read falls back to en
-#   lat/lng  decimal degrees, at most 2 decimals
-#   radius   metres, at least 1000
+#   lat/lng  decimal degrees, at most params.galleryAreas.maxDecimals
+#   radius   metres, at least params.galleryAreas.minRadius
 areas:
 - slug: nicklheimer-filzen
   label:
@@ -43,6 +47,38 @@ areas:
   lat: 47.71
   lng: 12.11
   radius: 1500
+- slug: bruennstein
+  label:
+    en: Brünnstein
+    de: Brünnstein
+    sv: Brünnstein
+  lat: 47.65
+  lng: 12.10
+  radius: 1500
+- slug: sudelfeld
+  label:
+    en: Sudelfeld
+    de: Sudelfeld
+    sv: Sudelfeld
+  lat: 47.67
+  lng: 12.05
+  radius: 2000
+- slug: flintsbach
+  label:
+    en: Flintsbach am Inn
+    de: Flintsbach am Inn
+    sv: Flintsbach am Inn
+  lat: 47.72
+  lng: 12.13
+  radius: 1000
+- slug: kirnsteiner-see
+  label:
+    en: Kirnsteiner See
+    de: Kirnsteiner See
+    sv: Kirnsteiner See
+  lat: 47.6925
+  lng: 12.1608
+  radius: 320
 - slug: inn-valley-rosenheim
   label:
     en: Inn valley near Rosenheim

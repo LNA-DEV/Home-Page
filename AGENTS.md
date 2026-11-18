@@ -1079,8 +1079,9 @@ grid until its front matter says otherwise.
    project) orders a journal's days. A language you have not written yet keeps
    `grid` — there is no fallback to the English text.
 3. **Areas, if any.** Name them in `params.areas: [slug, …]` (records in
-   `data/galleryAreas.yaml`: a named public place, at most 2 decimals, radius ≥
-   1,000 m, never a photo's position — the build stops otherwise). A chapter or
+   `data/galleryAreas.yaml`: a named public place, at most
+   `params.galleryAreas.maxDecimals` decimals, radius ≥ `params.galleryAreas.minRadius`
+   (hugo.yaml; a raptor's area still 2 decimals and ≥ 1,000 m), never a photo's position — the build stops otherwise). A chapter or
    outing can only point at one of the page's own areas.
 4. **Write.** Essay: Markdown with `{{< chapter >}}`, `{{< storyPhoto >}}`,
    `{{< storyPhotos >}}`, `{{< storySpecies >}}` between the paragraphs. Every

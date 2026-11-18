@@ -279,6 +279,16 @@ params:
   # Language-RELATIVE on purpose: the licensing page exists in all three
   # languages. Every consumer resolves it with absLangURL / relLangURL.
   licensingPage: "/licensing/"
+  # Project maps (docs/concepts/gallery-project-stories.md §8), the two limits
+  # of an area in data/galleryAreas.yaml. minRadius: the smallest radius in
+  # metres, 0 = no minimum (1000 without the key). maxDecimals: the most decimal
+  # places of lat/lng (2 without the key, ≈1.1 km; 3 is ≈110 m, 4 ≈11 m). The defaults
+  # keep any circle from pointing at a nest; relaxed, each area's size and
+  # precision are the author's call — a white-tailed eagle's or an osprey's area
+  # still wants 2 decimals and 1000 m or more.
+  galleryAreas:
+    minRadius: 0
+    maxDecimals: 4
   # The site owner as ONE schema.org Person (layouts/partials/schema-person*.html).
   # `page` is the About page: the Person's `url`, the page that renders as a
   # ProfilePage, and the bundle holding the `portrait: true` image. `modelSlug` is

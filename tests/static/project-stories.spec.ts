@@ -11,7 +11,7 @@
 
 import { test, expect } from "@playwright/test";
 import {
-  projectPages, storyPages, projectPhotoIds, galleryAreas, readSiteFile,
+  projectPages, storyPages, projectPhotoIds, galleryAreas, readSiteFile, hugoConfig,
 } from "../support/site";
 
 /* Enough of HTML's entities for an attribute Hugo wrote: data-areas is JSON
@@ -33,17 +33,24 @@ function storyPart(html: string): string {
   return start < 0 ? "" : html.slice(start, end < 0 ? undefined : end);
 }
 
-/* At most two decimals, the rule of data/galleryAreas.yaml (§8). */
-const COARSE = /^-?\d{1,3}(\.\d{1,2})?$/;
+/* The rule of data/galleryAreas.yaml (§8), as gallery-areas.html reads it from
+   hugo.yaml: at most params.galleryAreas.maxDecimals decimals (2 without the
+   key), a radius of at least params.galleryAreas.minRadius (1000 without the
+   key, 0 for no minimum). Any radius is above 0. */
+const AREA_LIMITS = hugoConfig()?.params?.galleryAreas ?? {};
+const MAX_DECIMALS = Number(AREA_LIMITS.maxDecimals ?? 2);
+const COARSE = MAX_DECIMALS > 0 ? new RegExp(`^-?\\d{1,3}(\\.\\d{1,${MAX_DECIMALS}})?$`) : /^-?\d{1,3}$/;
+const MIN_RADIUS = Number(AREA_LIMITS.minRadius ?? 1000);
+const radiusOk = (r: unknown) => Number(r) > 0 && Number(r) >= MIN_RADIUS;
 
 test.describe("data/galleryAreas.yaml", () => {
-  test("every area is coarse: 2 decimals at most, a radius of 1,000 m at least", () => {
+  test("every area is coarse: params.galleryAreas.maxDecimals at most, a radius of params.galleryAreas.minRadius at least", () => {
     const bad: string[] = [];
     for (const a of galleryAreas()) {
       for (const k of ["lat", "lng"]) {
         if (!COARSE.test(String(a[k]))) bad.push(`${a.slug}: ${k} ${a[k]}`);
       }
-      if (!(Number(a.radius) >= 1000)) bad.push(`${a.slug}: radius ${a.radius}`);
+      if (!radiusOk(a.radius)) bad.push(`${a.slug}: radius ${a.radius}`);
     }
     expect(bad, `a precise area could point at a nest\n${bad.join("\n")}`).toEqual([]);
   });
@@ -155,12 +162,12 @@ for (const p of storyPages()) {
       for (const m of story.matchAll(/data-areas="([^"]*)"/g)) {
         for (const a of JSON.parse(decodeEntities(m[1])) as any[]) {
           if (!COARSE.test(String(a.lat)) || !COARSE.test(String(a.lng))) bad.push(`${a.slug}: ${a.lat}, ${a.lng}`);
-          if (!(a.radius >= 1000)) bad.push(`${a.slug}: radius ${a.radius}`);
+          if (!radiusOk(a.radius)) bad.push(`${a.slug}: radius ${a.radius}`);
         }
       }
       for (const m of story.matchAll(/data-lat="([^"]*)" data-lng="([^"]*)" data-radius="([^"]*)"/g)) {
         if (!COARSE.test(m[1]) || !COARSE.test(m[2])) bad.push(`mini map: ${m[1]}, ${m[2]}`);
-        if (!(Number(m[3]) >= 1000)) bad.push(`mini map: radius ${m[3]}`);
+        if (!radiusOk(m[3])) bad.push(`mini map: radius ${m[3]}`);
       }
       expect(bad, bad.join("\n")).toEqual([]);
       if (p.areas.length) expect(story, "a project with areas lists them for a browser without a map").toContain('class="story-area-list"');

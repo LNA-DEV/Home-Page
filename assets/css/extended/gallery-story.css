@@ -764,10 +764,54 @@
   font-size: 13px;
   line-height: 1;
   white-space: nowrap;
-  /* Anchored at the circle's east edge, the chip sits beside the circle and
-     does not hide it. */
-  transform: translate(6px, -50%);
+  /* Anchored at the circle's centre; gallery-story-map.js picks the side
+     (is-e/w/s/n) and sets --r, the circle's radius in pixels, so the chip sits
+     beside the circle and does not hide it. */
+  transform: translate(calc(var(--r, 0px) + 6px), -50%);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.story-page .story-area-chip.is-w {
+  transform: translate(calc(-100% - var(--r, 0px) - 6px), -50%);
+}
+
+.story-page .story-area-chip.is-s {
+  transform: translate(-50%, calc(var(--r, 0px) + 6px));
+}
+
+.story-page .story-area-chip.is-n {
+  transform: translate(-50%, calc(-100% - var(--r, 0px) - 6px));
+}
+
+/* No side had room: a badge on the circle, with the name on hover. */
+.story-page .story-area-chip.is-badge {
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  min-width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 15px;
+  background: var(--accent);
+  color: var(--theme);
+}
+
+.story-page .story-area-chip.is-badge b {
+  color: var(--theme);
+}
+
+.story-page .story-area-chip.is-badge .story-area-chip-text,
+.story-page .story-area-chip.is-badge .story-area-chip-count {
+  display: none;
+}
+
+.story-page .story-area-marker:hover .story-area-chip.is-badge {
+  padding: 0 12px;
+}
+
+.story-page .story-area-marker:hover .story-area-chip.is-badge .story-area-chip-text,
+.story-page .story-area-marker:hover .story-area-chip.is-badge .story-area-chip-count {
+  display: inline;
 }
 
 .story-page a.story-area-chip:hover {
@@ -1370,27 +1414,6 @@
 
   .story-page .story-map-canvas {
     height: 280px;
-  }
-
-  .story-page .story-area-chip .story-area-chip-text,
-  .story-page .story-area-chip .story-area-chip-count {
-    display: none;
-  }
-
-  .story-page .story-area-chip {
-    transform: translate(-50%, -50%);
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    padding: 0;
-    border: 0;
-    border-radius: 50%;
-    background: var(--accent);
-    color: var(--theme);
-  }
-
-  .story-page .story-area-chip b {
-    color: var(--theme);
   }
 
   .story-page .story-end {

@@ -22,7 +22,7 @@ Today's page stays a third choice: `project_layout: grid`, or no key at all, loo
 | Unplaced photo in an essay | Shown at the end under "More from this project", as a thumbnail grid. **No warning**: that block is where such photos are meant to go, so an essay that leaves some to it is not a mistake to stop a deploy over (owner, 2026-10-12; §4) |
 | Outings | One per **capture day** (`DateTaken`). Undated photos form a last group, "Undated". `{{< outing >}}` blocks only enrich a day, they never create one |
 | Journal order | The **existing `sort_order`** front-matter key, which every project already sets to `desc`: newest first. No new `order:` key |
-| Areas | A new `data/galleryAreas.yaml`, language-neutral, referenced by slug. **At most 2 decimal places and a radius of at least 1,000 m**, enforced by the build. Never a photo's GPS (§8) |
+| Areas | A new `data/galleryAreas.yaml`, language-neutral, referenced by slug. **At most `params.galleryAreas.maxDecimals` decimal places and a radius of at least `params.galleryAreas.minRadius`** (hugo.yaml; 2 and 1000 without the keys; set to 4 and 0 on 2026-11-17, see §8 rule 2), enforced by the build. Never a photo's GPS (§8) |
 | Grid view | The existing `gallery.html`, unchanged, lightbox and like counts included |
 | Story images | Link to the photo page, like the grid's `href`. **No PhotoSwipe in the story view** in v1: `lightbox.js` is bound to one `#gallery` |
 | Widths | Text column `--main-width` (720px), wide blocks `--nav-width` (1060px). Not the brief's 680 / 1040 |
@@ -319,7 +319,8 @@ Top to bottom:
 
 The rule comes first and does not depend on the technique: **nest sites of white-tailed eagles and ospreys must not be readable.** The rule holds four ways:
 1. **No photo position, ever.** The collector has no GPS field, and the served files have their GPS removed. The map draws only `data/galleryAreas.yaml`.
-2. **Coarse by construction.** `lat`/`lng` may have at most **2 decimal places** (≈1.1 km north–south, ≈0.75 km east–west at 47°N), and `radius` must be **at least 1,000 m**. Anything else is an `errorf` naming the area. The check is on the **data** because the repository is public: a precise coordinate in `data/` is published the moment it is pushed, rendered or not.
+2. **Coarse by construction.** `lat`/`lng` may have at most **2 decimal places** (≈1.1 km north–south, ≈0.75 km east–west at 47°N), and `radius` must be **at least 1,000 m**. Anything else is an `errorf` naming the area.
+   **Changed 2026-11-17 (owner):** both limits are settings in `hugo.yaml`, `params.galleryAreas.minRadius` (1000 without the key) and `params.galleryAreas.maxDecimals` (2 without the key), set to **0, no minimum,** and **4 decimals (≈11 m)**, so a small public place — the Kirnsteiner See, 385 × 205 m — can be drawn at its size and on its spot; at 2 decimals its centre was 250 m off the lake, and 3 cannot centre it either (its middle, 47.69251, lies halfway between two steps). Size and precision of each area are now the author's call: an area that holds a white-tailed eagle's or an osprey's photos stays at 2 decimals and 1,000 m or more. The check is on the **data** because the repository is public: a precise coordinate in `data/` is published the moment it is pushed, rendered or not.
 3. **The centre is the area, not the sighting.** A bog, a ridge, a valley floor. The label is free text and must not name the nest either. That part is the author's job, and the header comment of the data file says so.
 4. **Circles, not pins.** In the journal, outings in one area share one marker with a count. Spreading them out would invent positions, and invented positions read as real ones. The same goes for the mockups' loose dots: "each dot is one outing" in the journal header, and five dots for the essay's chapter without an area. A chapter or outing without an area is simply not on the map.
 
@@ -358,7 +359,7 @@ All tests run against `.test-site/`, as always. Until the owner switches a real 
 - every story `<img>` except the hero has `loading="lazy"`;
 - one `h1`;
 - the toggle buttons carry `aria-pressed` and render `hidden`;
-- every coordinate in a map's `data-*` has at most 2 decimals and every radius is at least 1,000 (criterion 7).
+- every coordinate in a map's `data-*` has at most `params.galleryAreas.maxDecimals` decimals and every radius is above 0 and at least `params.galleryAreas.minRadius` (criterion 7).
 
 For a project with `project_layout: grid` or without the key, there is no `.story` and the grid is the page's only content. That is criterion 1, and in the test build it holds for all three real projects, the unlisted album included.
 
