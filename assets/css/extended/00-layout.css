@@ -1,0 +1,11 @@
+/* Page edge and layout widths — docs/concepts/design-system.md §5.
+
+   The gutter: 16px up to 768px, 24px above (the token's default). It is set
+   here and not in core/theme-vars.css because PaperMod's core/zmedia.css is
+   concatenated after theme-vars.css and sets --gap: 14px at the same width;
+   the extended bundle loads after the core one, so this wins. */
+@media (width <= 768px) {
+    :root {
+        --gap: var(--space-4);
+    }
+}

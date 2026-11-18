@@ -14,29 +14,10 @@
    its own width — galleryImageText's technique without the transform — and
    capped at 100vw - 2 * --gap, because 100vw includes the scrollbar. */
 
-:root {
-  --accent: #8a5a00;              /* 5.93:1 on white, 5.44:1 on #f5f5f5 */
-  --story-surface: var(--code-bg);
-  /* PaperMod's light --border (#eee) all but disappears on white as a 1px
-     rule; its dark one (#333) is what the mockups draw. */
-  --story-rule: var(--tertiary);
-}
-
-:root[data-theme="dark"] {
-  --accent: #d8a657;              /* 7.56:1 on --theme, 6.12:1 on --entry */
-  --story-surface: var(--entry);
-  --story-rule: var(--border);
-}
-
-/* No JavaScript, dark system preference: head.html's <noscript> switches
-   PaperMod's colours without setting data-theme. */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    --accent: #d8a657;
-    --story-surface: rgb(46, 46, 51);
-    --story-rule: rgb(51, 51, 51);
-  }
-}
+/* Colours come from assets/css/core/theme-vars.css: --accent (chapter
+   numbers, timeline dates and dots, map areas, sequence numbers, focus), --panel
+   for the quiet surfaces and --rule for the 1px rules (docs/concepts/
+   design-system.md). */
 
 .story-page {
   --story-wide: min(var(--nav-width), calc(100vw - var(--gap) * 2));
@@ -132,7 +113,7 @@
   gap: 2px;
   padding: 2px;
   border-radius: 8px;
-  background: var(--story-surface);
+  background: var(--panel);
 }
 
 .story-page .story-toggle[hidden] {
@@ -276,7 +257,7 @@
   min-height: 32px;
   padding: 0 12px;
   border-radius: 16px;
-  background: var(--story-surface);
+  background: var(--panel);
   color: var(--primary);
 }
 
@@ -542,7 +523,7 @@
   margin: 1.5em 0 0;
   padding: 14px 16px;
   border-radius: 8px;
-  background: var(--story-surface);
+  background: var(--panel);
   color: var(--primary);
   box-shadow: none;
 }
@@ -597,7 +578,7 @@
 .story-page .story-chapter-head {
   margin-bottom: 36px;
   padding-top: 32px;
-  border-top: 1px solid var(--story-rule);
+  border-top: 1px solid var(--rule);
 }
 
 .story-page .story-chapter-title {
@@ -659,7 +640,7 @@
   height: 400px;
   overflow: hidden;
   border-radius: 8px;
-  background: var(--story-surface);
+  background: var(--panel);
 }
 
 .story-page .story-map-canvas[hidden] {
@@ -669,7 +650,7 @@
 /* Leaflet puts `leaflet-container` on the element it is handed, and with it
    its own grey and its own font. */
 .story-page .story-map-canvas.leaflet-container {
-  background: var(--story-surface);
+  background: var(--panel);
   font: inherit;
 }
 
@@ -685,17 +666,17 @@
 }
 
 .story-page .leaflet-container .leaflet-bar {
-  border-color: var(--story-rule);
+  border-color: var(--rule);
 }
 
 .story-page .leaflet-container .leaflet-bar a {
-  border-bottom-color: var(--story-rule);
+  border-bottom-color: var(--rule);
   background-color: var(--theme);
   color: var(--primary);
 }
 
 .story-page .leaflet-container .leaflet-bar a:hover {
-  background-color: var(--story-surface);
+  background-color: var(--panel);
 }
 
 .story-page .story-area-list {
@@ -717,7 +698,7 @@
   min-height: 44px;
   padding: 4px 14px;
   border-radius: 22px;
-  background: var(--story-surface);
+  background: var(--panel);
   color: var(--primary);
 }
 
@@ -801,7 +782,7 @@
   gap: 24px 40px;
   margin-top: 72px;
   padding: 32px 0;
-  border-top: 1px solid var(--story-rule);
+  border-top: 1px solid var(--rule);
 }
 
 .story-page .story-end-text p {
@@ -825,7 +806,7 @@
   margin-top: 14px;
   padding: 0 18px;
   border-radius: 8px;
-  background: var(--story-surface);
+  background: var(--panel);
   color: var(--primary);
   font-size: 14px;
 }
@@ -937,7 +918,7 @@
   top: 8px;
   bottom: 0;
   width: 1px;
-  background: var(--story-rule);
+  background: var(--rule);
 }
 
 .story-page .journal-item {
@@ -1043,13 +1024,13 @@
   height: 150px;
   overflow: hidden;
   border-radius: 6px;
-  background: var(--story-surface);
+  background: var(--panel);
 }
 
 .story-page .journal-mini .leaflet-container {
   position: absolute;
   inset: 0;
-  background: var(--story-surface);
+  background: var(--panel);
   font: inherit;
 }
 
@@ -1139,7 +1120,7 @@
 .story-page .journal-compact,
 .story-page .journal-card {
   padding-top: 12px;
-  border-top: 1px solid var(--story-rule);
+  border-top: 1px solid var(--rule);
 }
 
 .story-page .journal-compact {
@@ -1477,7 +1458,7 @@
   content: "";
   grid-column: 1 / -1;
   margin-bottom: 16px;
-  border-top: 1px solid var(--story-rule);
+  border-top: 1px solid var(--rule);
 }
 
 @media (min-width: 640px) {
@@ -1510,7 +1491,7 @@
   min-width: 0;
   padding: 12px;
   border-radius: 8px;
-  background: var(--story-surface);
+  background: var(--panel);
   color: var(--primary);
 }
 

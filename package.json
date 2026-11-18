@@ -9,7 +9,8 @@
     "test:quick": "playwright test --project build --project python --project static --grep-invert @slow",
     "test:e2e": "playwright test --project firefox",
     "report": "playwright show-report",
-    "golden:update": "node tests/golden/update.mjs"
+    "golden:update": "node tests/golden/update.mjs",
+    "tokens:ratchet": "node tests/golden/update-css-literals.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",

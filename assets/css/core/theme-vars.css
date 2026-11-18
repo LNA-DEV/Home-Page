@@ -1,41 +1,188 @@
+/* ==========================================================================
+   Design tokens — the one place colours, spacing, widths, type, radii and
+   shadows are defined. docs/concepts/design-system.md.
+
+   Every stylesheet reads these; a literal value anywhere else fails the
+   ratchet in tests/static/design-tokens.spec.ts. This file overrides
+   PaperMod's own core/theme-vars.css, which its head.html concatenates first,
+   so the tokens exist on every page and in every bundle (main.scss included).
+
+   Colour: each token is written ONCE, as light-dark(<light>, <dark>), and
+   follows `color-scheme` on the root:
+     - no data-theme (JavaScript off): the OS preference, both ways;
+     - data-theme set by PaperMod's toggle script: pinned to that theme.
+   A script that needs a concrete colour resolves a token through
+   assets/js/token-color.js — getPropertyValue() returns light-dark() unresolved.
+   ========================================================================== */
+
+:root { color-scheme: light dark; }
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }
+
 :root {
-    --gap: 24px;
-    --content-gap: 20px;
-    --nav-width: 1024px;
-    --main-width: 720px;
+    /* ---- neutrals: PaperMod's names, PaperMod's values ---------------------- */
+    --theme: light-dark(rgb(255, 255, 255), rgb(29, 30, 32));          /* page background */
+    --entry: light-dark(rgb(255, 255, 255), rgb(46, 46, 51));          /* cards, entries */
+    --primary: light-dark(rgb(30, 30, 30), rgb(218, 218, 219));        /* headings, strong text */
+    --secondary: light-dark(rgb(108, 108, 108), rgb(155, 156, 157));   /* meta text, labels */
+    --tertiary: light-dark(rgb(214, 214, 214), rgb(65, 66, 68));       /* quiet fills, tracks */
+    --content: light-dark(rgb(31, 31, 31), rgb(196, 196, 197));        /* running text */
+    --code-block-bg: light-dark(rgb(28, 29, 33), rgb(46, 46, 51));     /* code blocks */
+    --code-bg: light-dark(rgb(245, 245, 245), rgb(55, 56, 62));        /* inline code, quiet panels */
+    --border: light-dark(rgb(238, 238, 238), rgb(51, 51, 51));         /* card and control borders */
+    --card: light-dark(rgb(255, 255, 255), rgb(34, 34, 36));           /* raised card on a list page */
+    --rule: light-dark(rgb(214, 214, 214), rgb(51, 51, 51));           /* a 1px rule that stays visible on white */
+    --panel: light-dark(rgb(245, 245, 245), rgb(46, 46, 51));          /* a quiet panel inside a page */
+    --list-bg: light-dark(rgb(245, 245, 245), rgb(29, 30, 32));        /* list pages' background (PaperMod .list) */
+
+    /* ---- accent: Schiefer (slate). Never the only cue — §3.2 --------------- */
+    --accent: light-dark(#5b6b7d, #a1b4c8);                            /* links, active state, focus, stars, bars */
+    --accent-soft: light-dark(#ebedef, #40434b);                       /* tint behind accent content (decoration only) */
+    --on-accent: light-dark(#ffffff, rgb(29, 30, 32));                 /* text on an accent fill */
+
+    /* ---- status ------------------------------------------------------------ */
+    --status-ok: light-dark(#1a7f37, #3fb950);                         /* success, tips, "easy" */
+    --status-warn: light-dark(#8a5a00, #d8a657);                       /* warnings, "moderate" */
+    --status-danger: light-dark(#d1242f, #f85149);                     /* errors, cautions, "challenging" */
+    --status-info: light-dark(#0969da, #4493f8);                       /* notes */
+    --like: #ef4444;                                                   /* the like heart, both themes */
+
+    /* ---- on photos: text and overlays above an image, both themes ---------- */
+    --on-image: #ffffff;                                               /* text over a photo */
+    --on-image-muted: rgba(255, 255, 255, 0.78);                       /* secondary text over a photo */
+    --scrim: rgba(0, 0, 0, 0.55);                                      /* flat overlay under text on a photo */
+    --scrim-strong: rgba(0, 0, 0, 0.8);                                /* dense end of a gradient, tooltips */
+
+    /* ---- viewer: lightbox, info popup, download dialog — always dark ------- */
+    --viewer-bg: #1a1a1a;                                              /* panel background */
+    --viewer-text: #ffffff;                                            /* primary text */
+    --viewer-text-2: rgba(255, 255, 255, 0.75);                        /* secondary text */
+    --viewer-text-3: rgba(255, 255, 255, 0.5);                         /* labels, hints */
+    --viewer-line: rgba(255, 255, 255, 0.15);                          /* borders, rules */
+    --viewer-line-strong: rgba(255, 255, 255, 0.4);                    /* hovered border, underline */
+    --viewer-fill: rgba(255, 255, 255, 0.08);                          /* quiet button fill */
+    --viewer-fill-strong: rgba(255, 255, 255, 0.18);                   /* hovered button fill */
+    --viewer-scrim: rgba(0, 0, 0, 0.85);                               /* backdrop, tooltip */
+
+    /* ---- data colours — encode something; §3.3 ------------------------------ */
+    /* maps (dex range map, route and trip maps): one palette */
+    --map-water: light-dark(#dbe6ec, #1f2426);                         /* sea */
+    --map-land: light-dark(#e8e4d8, #33383a);                          /* land */
+    --map-land-edge: light-dark(#b9b2a1, #4c5254);                     /* coastline */
+    --map-border: light-dark(#c0b9a8, #565c5e);                        /* country borders */
+    --map-range: light-dark(#2f7d5b, #6ecfa0);                         /* a species' range */
+    --map-sighting: light-dark(#b45309, #f5a524);                      /* the owner's own sighting */
+    --map-here: light-dark(#d85a30, #f0743f);                          /* trip: "you are here" */
+    --map-casing: #ffffff;                                             /* white casing under a route line */
+    /* trip modes — categorical */
+    --trip-train: light-dark(#1d9e75, #3fbf94);
+    --trip-train-ink: light-dark(#0f6e56, #5fd3ac);                    /* train label text */
+    --trip-flight: light-dark(#ba7517, #e0962f);
+    --trip-car: light-dark(#185fa5, #4a90d9);
+    --trip-here-ink: light-dark(#712b13, #f0743f);                     /* "here" label text */
+    --trip-here-bg: light-dark(#faece7, rgba(240, 116, 63, 0.18));     /* "here" badge fill */
+    /* gear charts — ordinal blue ramp, more = darker (light) / lighter (dark) */
+    --gear-portfolio: light-dark(#184f95, #b7d3f6);
+    --gear-gallery: light-dark(#3987e5, #5598e7);
+    --gear-archive: light-dark(#86b6ef, #256abf);
+    --gear-heat-1: light-dark(#86b6ef, #256abf);
+    --gear-heat-2: light-dark(#5598e7, #3987e5);
+    --gear-heat-3: light-dark(#256abf, #6da7ec);
+    --gear-heat-4: light-dark(#104281, #b7d3f6);
+    --gear-heat-ink-1: light-dark(#0b0b0b, #ffffff);
+    --gear-heat-ink-2: #0b0b0b;
+    --gear-heat-ink-3: light-dark(#ffffff, #0b0b0b);
+    --gear-heat-ink-4: light-dark(#ffffff, #0b0b0b);
+    --gear-dot: light-dark(#2a78d6, #6da7ec);
+    /* IUCN Red List categories — the official colours, both themes, filled */
+    --iucn-cr: #d81e05;
+    --iucn-en: #fc7f3f;
+    --iucn-vu: #f9e814;
+    --iucn-nt: #cce226;
+    --iucn-lc: #60c659;
+    --iucn-dd: #d1d1c6;
+    --iucn-ink: #1e1e1e;                                               /* text on every fill but CR */
+    --iucn-ink-cr: #ffffff;                                            /* text on CR */
+    /* activity feed item kinds — categorical, a 3px edge on a --code-bg card */
+    --feed-talk: light-dark(#c25e0c, #e8914a);
+    --feed-honor: light-dark(#9a7b00, #e0c048);
+    --feed-publication: light-dark(#1f6fb2, #5aa2e0);
+
+    /* ---- spacing: a 4px scale in rem (16px root) ---------------------------- */
+    --space-1: 0.25rem;                                                /* 4px */
+    --space-2: 0.5rem;                                                 /* 8px */
+    --space-3: 0.75rem;                                                /* 12px */
+    --space-4: 1rem;                                                   /* 16px */
+    --space-5: 1.5rem;                                                 /* 24px */
+    --space-6: 2rem;                                                   /* 32px */
+    --space-7: 3rem;                                                   /* 48px */
+    --space-8: 4rem;                                                   /* 64px */
+    /* roles — features use these, so density is one line each */
+    --space-inline: var(--space-2);                                    /* icon ↔ label, inside a badge */
+    --space-heading: var(--space-3);                                   /* heading → its content */
+    --card-pad: var(--space-4);                                        /* inside a card */
+    --grid-gap: var(--space-4);                                        /* between cards */
+    --photo-gap: var(--space-5);                                       /* between photos */
+    --section-gap: var(--space-7);                                     /* between sections of a page */
+
+    /* ---- page edge and widths — §5 ----------------------------------------- */
+    --gap: var(--space-5);                                             /* PaperMod's gutter; 16px below 768px (00-layout.css) */
+    --gutter: var(--gap);                                              /* the one page edge */
+    --content-gap: var(--space-5);                                     /* PaperMod's block gap inside content */
+    --width-narrow: 560px;                                             /* dialogs, forms */
+    --width-text: 720px;                                               /* running text */
+    --width-wide: 1060px;                                              /* grids; the header's width */
+    --width-full: 1440px;                                              /* story blocks, trip page */
+    --main-width: var(--width-text);                                   /* PaperMod's name */
+    --nav-width: var(--width-wide);                                    /* PaperMod's name */
     --header-height: 60px;
     --footer-height: 60px;
-    --radius: 8px;
-    --theme: rgb(255, 255, 255);
-    --entry: rgb(255, 255, 255);
-    --primary: rgb(30, 30, 30);
-    --secondary: rgb(108, 108, 108);
-    --tertiary: rgb(214, 214, 214);
-    --content: rgb(31, 31, 31);
-    --code-block-bg: rgb(28, 29, 33);
-    --code-bg: rgb(245, 245, 245);
-    --border: rgb(238, 238, 238);
-    --card: rgb(255, 255, 255);
+
+    /* ---- type: contains PaperMod's own steps (14, 16, 18, 24, 32, 40px) ---- */
+    --text-xs: 0.75rem;                                                /* 12px */
+    --text-sm: 0.875rem;                                               /* 14px */
+    --text-md: 1rem;                                                   /* 16px */
+    --text-lg: 1.125rem;                                               /* 18px */
+    --text-xl: 1.25rem;                                                /* 20px */
+    --text-2xl: 1.5rem;                                                /* 24px */
+    --text-3xl: 2rem;                                                  /* 32px */
+    --text-4xl: 2.5rem;                                                /* 40px */
+    --leading-tight: 1.25;                                             /* headings, tiles */
+    --leading-normal: 1.5;                                             /* UI text */
+    --leading-loose: 1.7;                                              /* running text */
+
+    /* ---- radius ------------------------------------------------------------- */
+    --radius-s: 4px;                                                   /* chips, small controls */
+    --radius: 8px;                                                     /* PaperMod's; buttons, photos */
+    --radius-l: 12px;                                                  /* cards */
+    --radius-pill: 999px;                                              /* pills, badges, bars */
+
+    /* ---- shadow ------------------------------------------------------------- */
+    --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.12);                         /* resting */
+    --shadow-2: 0 6px 18px rgba(0, 0, 0, 0.14);                        /* raised, hovered */
+    --shadow-3: 0 20px 60px rgba(0, 0, 0, 0.5);                        /* dialogs */
+    --shadow-cover: 0 2px 8px rgba(0, 0, 0, 0.2);                      /* book and game covers */
 }
 
-:root[data-theme="dark"] {
-    --theme: rgb(29, 30, 32);
-    --entry: rgb(46, 46, 51);
-    --primary: rgb(218, 218, 219);
-    --secondary: rgb(155, 156, 157);
-    --tertiary: rgb(65, 66, 68);
-    --content: rgb(196, 196, 197);
-    --code-block-bg: rgb(46, 46, 51);
-    --code-bg: rgb(55, 56, 62);
-    --border: rgb(51, 51, 51);
-    --card: #222224;
-    color-scheme: dark;
+/* Browsers without light-dark() (before 2024) drop every colour token above.
+   They keep the neutrals and the accent from here, and follow the toggle only. */
+@supports not (color: light-dark(#000, #fff)) {
+    :root {
+        --theme: rgb(255, 255, 255); --entry: rgb(255, 255, 255); --primary: rgb(30, 30, 30);
+        --secondary: rgb(108, 108, 108); --tertiary: rgb(214, 214, 214); --content: rgb(31, 31, 31);
+        --code-block-bg: rgb(28, 29, 33); --code-bg: rgb(245, 245, 245); --border: rgb(238, 238, 238);
+        --card: rgb(255, 255, 255); --rule: rgb(214, 214, 214); --list-bg: rgb(245, 245, 245); --panel: rgb(245, 245, 245);
+        --accent: #5b6b7d; --accent-soft: #ebedef; --on-accent: #ffffff;
+    }
+    :root[data-theme="dark"] {
+        --theme: rgb(29, 30, 32); --entry: rgb(46, 46, 51); --primary: rgb(218, 218, 219);
+        --secondary: rgb(155, 156, 157); --tertiary: rgb(65, 66, 68); --content: rgb(196, 196, 197);
+        --code-block-bg: rgb(46, 46, 51); --code-bg: rgb(55, 56, 62); --border: rgb(51, 51, 51);
+        --card: rgb(34, 34, 36); --rule: rgb(51, 51, 51); --list-bg: rgb(29, 30, 32); --panel: rgb(46, 46, 51);
+        --accent: #a1b4c8; --accent-soft: #40434b; --on-accent: rgb(29, 30, 32);
+    }
 }
 
 .list {
-    background: var(--code-bg);
-}
-
-[data-theme="dark"] .list {
-    background: var(--theme);
+    background: var(--list-bg);
 }
