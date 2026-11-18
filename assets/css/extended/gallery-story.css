@@ -8,11 +8,12 @@
    because main.scss (loaded after this bundle on /gallery pages) sets
    `.main img { height: auto }`, which would otherwise win over a cropped tile.
 
-   Widths: the text column is --main-width (720px), wide blocks --nav-width
-   (1060px here, navbar.css), full blocks the viewport less a --gap either side.
-   A block wider than its column is centred with a negative margin computed from
-   its own width — galleryImageText's technique without the transform — and
-   capped at 100vw - 2 * --gap, because 100vw includes the scrollbar. */
+   Widths: the text column is --width-text (720px), wide blocks --bleed-wide
+   and full blocks --bleed-full (assets/css/extended/00-layout.css: the width
+   token capped at the viewport less a gutter either side). A block wider than
+   its column is centred with a negative margin computed from its own width,
+   like the l-* classes — kept here rather than using them because a full or
+   wide photo also caps its width at the screen's height (--w below). */
 
 /* Colours come from assets/css/core/theme-vars.css: --accent (chapter
    numbers, timeline dates and dots, map areas, sequence numbers, focus), --panel
@@ -20,10 +21,10 @@
    design-system.md). */
 
 .story-page {
-  --story-wide: min(var(--nav-width), calc(100vw - var(--gap) * 2));
+  --story-wide: var(--bleed-wide);
   /* "Full" stops at 1440px: edge to edge on an ultrawide screen is a strip,
      not a picture. */
-  --story-full: min(1440px, calc(100vw - var(--gap) * 2));
+  --story-full: var(--bleed-full);
   --story-text: var(--main-width);
 }
 
@@ -1459,12 +1460,6 @@
   grid-column: 1 / -1;
   margin-bottom: 16px;
   border-top: 1px solid var(--rule);
-}
-
-@media (min-width: 640px) {
-  .project-nav {
-    padding: 0 1.5rem;
-  }
 }
 
 /* On a story page: the story's width, and no rule — the end of the story

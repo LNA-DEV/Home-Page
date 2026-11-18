@@ -1,6 +1,5 @@
-/* This is needed for fucking Windows... */
+/* --nav-width is a token (--width-wide, assets/css/core/theme-vars.css). */
 :root{
-    --nav-width: 1060px;
     /* The centred header track: the theme puts exactly this on .nav's max-width
        (--nav-width plus a --gap either side). Named here because the header grid
        has to reserve a column of precisely that size. */
@@ -40,6 +39,12 @@
     /* A grid item defaults to min-width:auto and would refuse to shrink below
        the menu's own width, pushing the CTA off the right edge on a phone. */
     min-width: 0;
+    /* Fill the track. PaperMod centres .nav with auto inline margins, which on
+       a grid item shrink it to its content's width: the logo then sat ~20px
+       inside the track, by an amount that depends on how long the menu is in
+       each language, instead of on the content edge of a wide page
+       (docs/concepts/design-system.md §5). */
+    margin-inline: 0;
 }
 
 /* Pinned to the FIRST row of the header, not to the header's centre.

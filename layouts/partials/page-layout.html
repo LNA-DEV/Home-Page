@@ -1,0 +1,34 @@
+{{- /*
+  page-layout.html — which width a page's <main> takes, from its page type.
+  docs/concepts/design-system.md §5.3.
+
+  Returns "wide" (--width-wide, the header's width, so every grid edge lines up
+  with the logo) or "text" (--width-text, PaperMod's column). baseof.html writes
+  it onto <main data-layout>, and assets/css/extended/00-layout.css sizes <main>
+  from it. Decided by page type, never by URL: the photo tag pages live under
+  /gallery/tags/ but their .Path is /phototags/…, and laying out by path left
+  them in the text column while every other photo grid was wider.
+
+  Blocks inside a text page break out with the classes l-wide / l-full /
+  l-bleed instead (galleryImageText, the trip page, the story blocks).
+*/ -}}
+{{- $wide := slice
+  "gallery-home" "gallery-general-home" "gallery-general" "gallery-archive"
+  "gallery-portfolio" "gallery-projects-list" "gallery-page" "gallery-page-hidden"
+  "gallery-photo" "dex-home" "dex-species" "gear-home" "models-home" "model"
+  "styleguide"
+-}}
+{{- $layout := "text" -}}
+{{- $theme := .Params.Theme | default "" -}}
+{{- if in $wide $theme -}}
+  {{- $layout = "wide" -}}
+{{- else if eq $theme "gallery-project" -}}
+  {{- /* A story (essay, journal) is a text column with wide and full blocks;
+         the plain project page is a photo grid. */ -}}
+  {{- if not (in (slice "essay" "journal") (.Params.project_layout | default "grid")) -}}
+    {{- $layout = "wide" -}}
+  {{- end -}}
+{{- else if and (eq .Type "phototags") (in (slice "taxonomy" "term") .Kind) -}}
+  {{- $layout = "wide" -}}
+{{- end -}}
+{{- return $layout -}}

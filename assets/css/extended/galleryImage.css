@@ -62,15 +62,13 @@
    `word-break: break-word` split German compounds mid-word. At 1060px the same
    split measures 466px of photo and 570px of text, about 63 characters.
 
-   `margin-left: 50%` + `translateX(-50%)` centres an element wider than its parent.
-   The width is capped at `100vw - 2*gap` rather than a bare 100vw: 100vw includes
-   the scrollbar, and the gap (48px desktop / 28px mobile) is comfortably wider than
-   any scrollbar, so the block never causes horizontal overflow. */
+   The breakout itself is the l-wide class on the block (assets/css/extended/
+   00-layout.css): --width-wide capped at the viewport less a gutter either side,
+   centred on the column with negative margins. */
 
 .post-content .gallery-image-text {
-  width: min(var(--nav-width), calc(100vw - var(--gap) * 2));
-  margin: 2rem 0 2rem 50%;
-  transform: translateX(-50%);
+  /* Width and centring: the l-wide class (assets/css/extended/00-layout.css). */
+  margin-block: 2rem;
   display: grid;
   grid-template-columns: 45fr 55fr;
   gap: var(--gap);

@@ -465,7 +465,7 @@ function renderDetail(host, slug, onTitle) {
       if (onTitle) onTitle(data.title || "");           // fill the "/ <trip>" path + title
       host.innerHTML = "";
       const appEl = document.createElement("div");
-      appEl.className = "trip-app trip-mode-page";
+      appEl.className = "trip-app trip-mode-page l-full";
       host.appendChild(appEl);
       renderTrip(appEl, data, "page");
     })

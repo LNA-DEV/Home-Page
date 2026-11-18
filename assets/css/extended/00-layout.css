@@ -1,11 +1,56 @@
 /* Page edge and layout widths — docs/concepts/design-system.md §5.
 
-   The gutter: 16px up to 768px, 24px above (the token's default). It is set
-   here and not in core/theme-vars.css because PaperMod's core/zmedia.css is
-   concatenated after theme-vars.css and sets --gap: 14px at the same width;
-   the extended bundle loads after the core one, so this wins. */
+   One gutter, applied once, at the outermost container: PaperMod's .main,
+   .nav and .footer pad themselves with --gap, and nothing inside adds a
+   second one. */
+
+/* The gutter: 16px up to 768px, 24px above (the token's default). Set here and
+   not in core/theme-vars.css because PaperMod's core/zmedia.css is concatenated
+   after theme-vars.css and sets --gap: 14px at the same width; the extended
+   bundle loads after the core one, so this wins. */
 @media (width <= 768px) {
     :root {
         --gap: var(--space-4);
+    }
+}
+
+/* Breakout widths, capped at the viewport less a gutter either side — 100vw
+   includes the scrollbar, and the gutter is wider than any scrollbar, so a
+   block never causes sideways scrolling. Used by the l-* classes below and by
+   the story blocks, which add a height cap of their own. */
+:root {
+    --bleed-wide: min(var(--width-wide), calc(100vw - var(--gutter) * 2));
+    --bleed-full: min(var(--width-full), calc(100vw - var(--gutter) * 2));
+}
+
+/* The page's own width, from layouts/partials/page-layout.html. "text" is
+   PaperMod's default .main and needs no rule. */
+.main[data-layout="wide"] {
+    max-width: calc(var(--width-wide) + var(--gutter) * 2);
+}
+
+/* A block that leaves the text column, centred on it. */
+.l-wide,
+.l-full,
+.l-bleed {
+    width: var(--l-w);
+    margin-left: calc(50% - var(--l-w) / 2);
+    margin-right: calc(50% - var(--l-w) / 2);
+}
+
+.l-wide {
+    --l-w: var(--bleed-wide);
+}
+
+.l-full,
+.l-bleed {
+    --l-w: var(--bleed-full);
+}
+
+/* Edge to edge only on a phone: there is no scrollbar there for 100vw to
+   include, and on a larger screen a photo to the very edge is a strip. */
+@media (width < 768px) {
+    .l-bleed {
+        --l-w: 100vw;
     }
 }

@@ -1,11 +1,11 @@
 {
   "assets/css/_styles.scss": {
     "colour": 12,
-    "spacing": 47,
+    "spacing": 37,
     "fontSize": 13,
     "radius": 7,
     "shadow": 3,
-    "breakpoint": 10
+    "breakpoint": 8
   },
   "assets/css/extended/activity.css": {
     "colour": 3,
@@ -25,7 +25,7 @@
   },
   "assets/css/extended/dex.css": {
     "colour": 34,
-    "spacing": 54,
+    "spacing": 53,
     "fontSize": 21,
     "radius": 14,
     "shadow": 2,
@@ -40,7 +40,7 @@
   },
   "assets/css/extended/gallery-nav.css": {
     "colour": 2,
-    "spacing": 18,
+    "spacing": 17,
     "fontSize": 5,
     "radius": 2,
     "breakpoint": 1
@@ -53,11 +53,11 @@
   },
   "assets/css/extended/gallery-story.css": {
     "colour": 7,
-    "spacing": 149,
+    "spacing": 148,
     "fontSize": 59,
     "radius": 22,
     "shadow": 2,
-    "breakpoint": 5
+    "breakpoint": 4
   },
   "assets/css/extended/gallery-tags.css": {
     "spacing": 6,
@@ -65,7 +65,7 @@
     "radius": 1
   },
   "assets/css/extended/galleryImage.css": {
-    "spacing": 10,
+    "spacing": 9,
     "fontSize": 10,
     "radius": 1,
     "breakpoint": 2

@@ -1,17 +1,12 @@
+/* The page edge is the gutter on .main, nothing else; the width comes from
+   <main data-layout> (assets/css/extended/00-layout.css). This file used to add
+   a second 1.5rem edge to every section and set .main to 75% of the window. */
 main > section {
   margin: 3rem auto 4rem;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
 }
 
-.main{
-    @media (min-width: 1040px) {
-    max-width: 75%;
-    margin: 0 auto;
-    }
-    img{
-        height: auto;
-    }
+.main img {
+  height: auto;
 }
 
 hgroup {
@@ -20,8 +15,6 @@ hgroup {
   align-items: center;
   gap: 1.5rem;
   margin: 3rem auto 4rem;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
   max-width: 1024px;
   text-align: center;
 
@@ -81,15 +74,7 @@ section.galleries {
 }
 
 section.gallery {
-  padding-right: 0;
-  padding-left: 0;
-  max-width: 1536px;
   margin-top: 0;
-
-  @media (min-width: 640px) {
-    padding-right: 1.5rem /* 24px */;
-    padding-left: 1.5rem /* 24px */;
-  }
 }
 
 .prose {
@@ -360,14 +345,10 @@ section.social-icons {
   gap: 1.5rem;
   justify-content: center;
   margin-top: 2rem;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
 }
 
 section.featured {
   margin: 0 auto 1rem;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
   max-width: 800px;
   color: rgb(218, 218, 219);
 }
