@@ -41,7 +41,7 @@
 */ -}}
 {{- $images := resources.Match "images/gallery/*" -}}
 {{- if not $images -}}
-  {{- warnf "no gallery images found under assets/images/gallery — is the mount source in config/_default/module.yaml missing or wrong? (copy config/_default/module.yaml.example; see CLAUDE.md \"Build / Deploy\")" -}}
+  {{- warnf "no gallery images found under assets/images/gallery — is the mount source in config/_default/module.yaml missing or wrong? (copy config/_default/module.yaml.example; see docs/build-deploy.md)" -}}
 {{- end -}}
 {{- $meta := partialCached "gallery-meta.html" . -}}
 {{- $out := resources.Match "images/gallery/.no-such-file" -}}

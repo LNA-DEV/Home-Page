@@ -63,7 +63,7 @@ names / description / habitat / tips, and falls back to `en` when a language is
 missing.
 
 Maintained by scripts/dex-import.py, scripts/dex-enrich.py,
-scripts/dex-ranges.py and scripts/dex-covers.py — see AGENTS.md."""
+scripts/dex-ranges.py and scripts/dex-covers.py — see docs/gallery/dex.md."""
 
 DIET_MAP = {
     "omnivore": "omnivore",

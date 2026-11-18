@@ -1,6 +1,6 @@
 /* L2 — URL stability.
  *
- * CLAUDE.md states the rule twice — the gallery overhaul "preserves RSS URL
+ * The docs state the rule twice — the gallery overhaul "preserves RSS URL
  * stability", a renamed photo keeps its id "because deep links use it" — and
  * nothing could check it. This is the check: a committed list of every URL the
  * site has ever published, and the assertion that each still resolves to a page

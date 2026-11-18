@@ -9,7 +9,7 @@ theme:
   - github.com/adityatelange/hugo-PaperMod
 # Gallery photos live outside the repo (Nextcloud) and are mounted in. The mount is
 # NOT declared here: its source is an absolute, machine-specific path, so it lives in
-# the gitignored `config/_default/module.yaml` instead (see CLAUDE.md "Build / Deploy").
+# the gitignored `config/_default/module.yaml` instead (see docs/build-deploy.md).
 # Do not re-add a `module.mounts` block here — `mounts` is replace-not-merge, so a list
 # in this file would be silently discarded whole by that local override.
 enableEmoji: true

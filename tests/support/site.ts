@@ -97,7 +97,7 @@ export const i18nIds = memo<Record<Lang, Set<string>>>(() => {
 
 /* `project:` and `model:` are string-or-list in the YAML and normalised to a
    slice by gallery-meta.html. Every consumer here reads the normalised form, for
-   the reason CLAUDE.md gives: `in` on the raw string matches substrings, so
+   the reason docs/gallery/overview.md gives: `in` on the raw string matches substrings, so
    `eagles` would match `eagles-2026`. */
 export function asList(v: string | string[] | undefined | null): string[] {
   if (!v) return [];

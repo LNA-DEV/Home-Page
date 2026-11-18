@@ -104,7 +104,7 @@ FILLABLE = [
 #     the regional category for these two bees in the same P141 slot as a global
 #     one, behind a qualifier this script does not read.
 #
-# See AGENTS.md, "Fill in the facts".
+# See docs/gallery/dex.md, "Fill in the facts".
 PROTECTED = {
     "honeybee": {"iucn"},
     "common-carder-bee": {"iucn"},

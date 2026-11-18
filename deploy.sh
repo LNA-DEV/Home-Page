@@ -15,7 +15,7 @@
 # nothing extra to transfer because of it. `--check` then reads every served file
 # back and refuses to ship if any of them is missing its photo's UUID.
 #
-# Nothing here writes to the photo store. See CLAUDE.md "Build / Deploy" and
+# Nothing here writes to the photo store. See docs/build-deploy.md and
 # docs/concepts/gallery-metadata-single-source.md.
 
 set -euo pipefail

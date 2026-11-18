@@ -38,7 +38,7 @@ game is synced. A new Epic game whose slug a Steam or Switch copy already uses
 joins that game's page (scripts/gaming_common.py).
 
 Achievements are intentionally omitted — Epic closed the achievement-progress API
-in Jan 2025 and nothing usable is available (see the plan / AGENTS.md).
+in Jan 2025 and nothing usable is available (see the plan / docs/gaming/syncs.md).
 
 The YAML is edited as raw text — no YAML dependency, matching sync-steam.py /
 add-book.py. Standard library only.

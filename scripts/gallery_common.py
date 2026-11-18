@@ -70,7 +70,7 @@ def photos_dir_from_hugo_mounts(root=None):
 
 PHOTOS_SETUP_HINT = (
     "       (cp config/_default/module.yaml.example config/_default/module.yaml\n"
-    "        and set the gallery mount `source` — see CLAUDE.md \"Build / Deploy\")"
+    "        and set the gallery mount `source` — see docs/build-deploy.md)"
 )
 
 

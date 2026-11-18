@@ -11,7 +11,7 @@
 # missing.
 #
 # Maintained by scripts/dex-import.py, scripts/dex-enrich.py,
-# scripts/dex-ranges.py and scripts/dex-covers.py — see AGENTS.md.
+# scripts/dex-ranges.py and scripts/dex-covers.py — see docs/gallery/dex.md.
 
 species:
 - slug: red-fox

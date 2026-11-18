@@ -53,7 +53,7 @@ Measured while building the game pages; the details are in `gaming-game-pages.md
 
 **A duplicated path P is harmless only if all of this holds:**
 
-1. **No file at P under a `static` mount.** A static file and a generated or asset file on one path is a real conflict — the `security.txt` case `CLAUDE.md` warns about — even if the bytes happen to match.
+1. **No file at P under a `static` mount.** A static file and a generated or asset file on one path is a real conflict — the `security.txt` case `docs/site.md` warns about — even if the bytes happen to match.
 2. **The built file equals exactly one source, byte for byte:**
    - a file at P in an **asset mount**: `assets/`, the gallery store mounted at `images/gallery/`, the screenshot store at `images/games/screenshots/`. Read the mounts from `hugo config mounts`, never hard-code them, because `module.yaml` is machine-specific;
    - for a processed variant: since `stable-image-urls.md` (2026-10-14) **no** variant is published under its `…_hu_<hash>.<ext>` cache name any more. Each one is a `resources.Copy` to `<dir>/<spec>/<name>.<ext>` (`layouts/partials/image-variant.html`), so it is matched **by bytes** against the `_hu_` files in its source's cache directory: `<dir>` under `resources/_gen/images/`, which mirrors the published paths (checked: `resources/_gen/images/images/…`, `…/en/…`). For a gallery photo that directory is `images/gallery/` and the cache file carries the photo's file slug as its stem (`<fileSlug>_hu_<hash>.<ext>`), so the candidates are the `<name>_hu_*` files there; for a page resource, `<page dir>/<stem>_hu_*`;
@@ -86,8 +86,8 @@ Once the classifier is in, the workaround goes:
   - rewrite the comment.
 - **`tests/static/gaming.spec.ts`:** `ICON_DIR` and the ref computation back to `assets/`.
 - **Docs:**
-  - `CLAUDE.md`: the *Gaming* paragraph "Static, not `assets/`, on purpose" becomes a pointer to this document and to the classifier;
-  - `AGENTS.md`: the icon paths;
+  - `docs/gaming/overview.md`: the *Achievements* paragraph "Static, not `assets/`, on purpose" becomes a pointer to this document and to the classifier;
+  - `docs/gaming/syncs.md`: the icon paths;
   - `gaming-game-pages.md`: an *As built* note that the workaround is gone;
   - the docstrings of `sync-steam.py` / `sync-gog.py`;
   - the memory note `reference_hugo_template_traps.md`.
@@ -120,7 +120,7 @@ Plus the end-to-end proof: the build test with the icons in `assets/` reproduces
 ## 7. Files touched
 
 **New:** `scripts/hugo-warnings.py`, `tests/py/test_hugo_warnings.py`.
-**Modified:** `tests/build/hugo.spec.ts`, `deploy.sh`, `scripts/gaming_common.py`, `layouts/partials/game-achievements.html`, `tests/static/gaming.spec.ts`, `CLAUDE.md`, `AGENTS.md`, `docs/concepts/gaming-game-pages.md`, `scripts/sync-steam.py`, `scripts/sync-gog.py`.
+**Modified:** `tests/build/hugo.spec.ts`, `deploy.sh`, `scripts/gaming_common.py`, `layouts/partials/game-achievements.html`, `tests/static/gaming.spec.ts`, `docs/gaming/overview.md`, `docs/gaming/syncs.md`, `docs/concepts/gaming-game-pages.md`, `scripts/sync-steam.py`, `scripts/sync-gog.py`.
 **Moved:** `static/images/games/achievements/` → `assets/images/games/achievements/`.
 
 ## 8. Out of scope
