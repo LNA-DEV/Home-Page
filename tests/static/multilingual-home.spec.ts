@@ -278,7 +278,7 @@ test.describe("the root page (§5)", () => {
     expect(html).toContain(`<link rel="canonical" href="${SITE_BASE}/en/">`);
     expect(html).toContain(`<noscript><meta http-equiv="refresh" content="0; url=${SITE_BASE}/en/"></noscript>`);
     for (const l of LANGS) expect(html, `no link to the ${l} home`).toContain(`href="${SITE_BASE}/${l}/" hreflang="${l}"`);
-    expect(html).toContain('location.replace("/"+l+"/")');
+    expect(html).toContain('location.replace("/"+l+"/"+location.search+location.hash)');
   });
 
   test("every /<lang>/page/1/ still redirects to its own home", () => {

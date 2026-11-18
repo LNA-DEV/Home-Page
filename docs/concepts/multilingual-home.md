@@ -210,6 +210,7 @@ languages:
 ```
 
 - The script jumps to a root-relative `/de/`, so it works the same in the clearnet and the onion build. The fallbacks use `.Permalink`, which carries the right `baseURL` in each build.
+- The jump carries the query and the hash along (`"/" + l + "/" + location.search + location.hash`, added with the newsletter deep link): `?ref=` and `utm_*` are what Plausible attributes the visit by, and `#newsletter` opens the newsletter dialog. The snippet above predates that.
 - Without JavaScript and for crawlers the result is the same as today: `/en/`, `noindex`, canonical `/en/`. `x-default` stays `/en/`. A redirecting home page is the case `x-default` was introduced for, and that cluster does not change.
 - The root uses the same stored choice as §4. Someone who picked English in the switcher keeps getting English from `/`, even in a German browser.
 - `alias.html` stays untouched, and so do all the `/<lang>/page/1/` redirects.
