@@ -50,7 +50,7 @@
 .recent-reading__title {
   font-size: 0.95rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--primary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -67,7 +67,7 @@
 
 .recent-reading__author {
   font-size: 0.85rem;
-  color: #aaa;
+  color: var(--secondary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -77,9 +77,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px dashed #666;
+  border: 1px dashed var(--secondary);
   border-radius: 6px;
-  color: #aaa;
+  color: var(--secondary);
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
@@ -91,14 +91,14 @@
 }
 
 .recent-reading__more:hover .recent-reading__more-icon {
-  color: #fff;
-  border-color: #fff;
+  color: var(--primary);
+  border-color: var(--primary);
 }
 
 .recent-reading__more-label {
   font-size: 0.9rem;
   font-weight: 600;
-  color: #aaa;
+  color: var(--secondary);
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
@@ -106,7 +106,7 @@
 }
 
 .recent-reading__more:hover .recent-reading__more-label {
-  color: #fff;
+  color: var(--primary);
 }
 
 /*

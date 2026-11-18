@@ -40,8 +40,8 @@
   margin: 0;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #fff;
-  border-bottom: 1px solid #444;
+  color: var(--primary);
+  border-bottom: 1px solid var(--tertiary);
   padding-bottom: 0.2rem;
   margin-bottom: 0.3rem;
 }
@@ -56,29 +56,29 @@
 
 .book-meta {
   font-size: 0.95rem;
-  color: #aaa;
+  color: var(--secondary);
   margin-bottom: 0.7rem;
 }
 
 .book-notes {
   font-size: 1rem;
   margin-top: 0.5rem;
-  color: #ddd;
+  color: var(--content);
 }
 
 .book-details p {
   margin: 0.3rem 0;
   font-size: 0.95rem;
-  color: #ccc;
+  color: var(--content);
 }
 
 .book-details strong {
-  color: #eee;
+  color: var(--primary);
 }
 
 .book-details em {
   font-style: italic;
-  color: #bbb;
+  color: var(--secondary);
 }
 
 .book-details p strong::after {
@@ -98,7 +98,7 @@
 
 .book-rating .star {
   font-size: 1rem;
-  color: #444;
+  color: var(--tertiary);
 }
 
 .book-rating .star.filled {
