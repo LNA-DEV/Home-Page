@@ -741,3 +741,36 @@
   translation: "Achtung"
 - id: alert_caution
   translation: "Vorsicht"
+
+# Andere Sprachen — der Block mit Beiträgen, die es nur in einer anderen Sprache
+# gibt, auf den Startseiten und /posts/ (layouts/partials/lang-more.html,
+# docs/concepts/multilingual-home.md §3). Überschriften in der Sprache der Seite,
+# nur die Titel in der anderen. Eine Sprache nennt sich nie selbst: Die *_de-Schlüssel
+# unten werden auf einer deutschen Seite nie benutzt; sie stehen da, weil jeder
+# Schlüssel in allen drei Dateien steht.
+- id: all_posts
+  translation: "Alle Beiträge"
+- id: lang_more_title
+  translation: "Mehr in anderen Sprachen"
+- id: lang_more_intro
+  translation: "Ich schreibe in jeder Sprache andere Beiträge. Diese gibt es nicht auf Deutsch."
+- id: lang_more_only_de
+  translation: "Nur auf Deutsch"
+- id: lang_more_only_en
+  translation: "Nur auf Englisch"
+- id: lang_more_only_sv
+  translation: "Nur auf Schwedisch"
+- id: lang_more_all_de
+  translation:
+    one: "1 Beitrag auf Deutsch →"
+    other: "Alle {{ .Count }} Beiträge auf Deutsch →"
+- id: lang_more_all_en
+  translation:
+    one: "1 Beitrag auf Englisch →"
+    other: "Alle {{ .Count }} Beiträge auf Englisch →"
+- id: lang_more_all_sv
+  translation:
+    one: "1 Beitrag auf Schwedisch →"
+    other: "Alle {{ .Count }} Beiträge auf Schwedisch →"
+- id: lang_more_feed
+  translation: "Alles in allen Sprachen, in einer Zeitleiste: Feed →"

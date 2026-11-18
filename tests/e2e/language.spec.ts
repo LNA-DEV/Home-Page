@@ -1,15 +1,13 @@
 /* The language switcher.
  *
- * NOTE, 2026-09-20: docs/concepts/testing.md §2 expects "from a translated page
- * it lands on the translation, from an untranslated page on the other
- * language's home". The shipped behaviour is the second half only — the
- * switcher points at the language home from EVERY page, including pages that
- * are fully translated: a post, a dex species, a model, and all 648 photo pages,
- * which carry a translationKey and a real translation with its own slug.
- *
- * These tests assert what the site does, not what the concept assumed, and say
- * so out loud. If the switcher is ever taught to follow .Translations, the last
- * test here is the one to turn around. */
+ * docs/concepts/testing.md §2 expects "from a translated page it lands on the
+ * translation, from an untranslated page on the other language's home". Until
+ * 2026-11-18 the switcher pointed at the language home from every page; since
+ * docs/concepts/multilingual-home.md §6a it follows .Translations — a post, a
+ * dex species, a model, and every photo page, which carries a translationKey
+ * and a real translation with its own slug. tests/static/multilingual-home.spec.ts
+ * holds that for every page of the build; these scenarios walk it once in a
+ * browser. */
 
 import { test, expect } from "../support/fixtures";
 
@@ -45,11 +43,10 @@ test("the three language homes are each in their own language", async ({ page, p
   }
 });
 
-test("a translated page's translation is reachable, even if the switcher does not go there", async ({ page, probe }) => {
+test("on a translated page the switcher goes to the translation", async ({ page, probe }) => {
   void probe;
-  /* The link that does exist is the hreflang alternate in the head. A photo page
-     is the sharpest case: the three languages have three different slugs, so
-     nothing but the alternate can find the sibling. */
+  /* A photo page is the sharpest case: the three languages have three different
+     slugs, so the switcher has to follow the translation, not guess a path. */
   await page.goto("/en/gallery/general/");
   const href = await page.locator(".gallery-item[href]").first().getAttribute("href");
   await page.goto(href!);
@@ -61,11 +58,18 @@ test("a translated page's translation is reachable, even if the switcher does no
   expect(alternate, "no German alternate on a photo page").toBeTruthy();
   expect(alternate).toMatch(/\/de\/gallery\/photo\/[^/]+\/$/);
 
-  await page.goto(alternate!);
+  const switcher = await page.locator('.lang-switch a[hreflang="de"]').getAttribute("href");
+  expect(switcher).toBe(alternate);
+
+  await page.locator('.lang-switch a[hreflang="de"]').click();
+  await expect(page).toHaveURL(alternate!);
   await expect(page.locator("html")).toHaveAttribute("lang", "de");
   await expect(page.locator(".photo-hero img")).toBeVisible();
+});
 
-  /* The switcher, on that same page, points at the language home instead. */
-  const switcher = await page.locator('.lang-switch a[href*="/en/"]').first().getAttribute("href");
-  expect(switcher).toMatch(/\/en\/$/);
+test("on a page with no translation the switcher goes to that language's home", async ({ page, probe }) => {
+  void probe;
+  await page.goto("/en/posts/photography/my-workflow/");
+  const switcher = await page.locator('.lang-switch a[hreflang="de"]').getAttribute("href");
+  expect(switcher).toMatch(/\/de\/$/);
 });

@@ -260,11 +260,18 @@
     {{- /* Language-correct and absolute: a bare "posts" is relative, so on
            /en/page/2/ it resolved to /en/page/2/posts. */}}
     <a class="next" href="{{ with site.GetPage "/posts" }}{{ .RelPermalink }}{{ else }}{{ "/posts/" | relLangURL }}{{ end }}">
-        All posts »
+        {{- i18n "all_posts" }}&nbsp;»
     </a>
     {{- end }}
   </nav>
 </footer>
+{{- end }}
+
+{{- /* "All posts »" on a home leads here, so the posts list carries the same
+       block of the other languages' posts as the homes, on its first page:
+       docs/concepts/multilingual-home.md §3. */}}
+{{- if and (eq .Kind "section") (eq .Section "posts") (eq $paginator.PageNumber 1) }}
+{{- partial "lang-more.html" . }}
 {{- end }}
 
 {{- end }}

@@ -15,6 +15,12 @@ theme:
 enableEmoji: true
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: true
+# Hugo would write /index.html itself, as a meta refresh to /en/. The `rootpicker`
+# output format below writes it instead and sends a visitor to the home in their
+# browser's language (docs/concepts/multilingual-home.md §5). Not a branch in
+# layouts/alias.html: Hugo writes the /<lang>/page/1/ redirects through that same
+# template with the same context, so a branch there would rewrite them too.
+disableDefaultLanguageRedirect: true
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
@@ -104,6 +110,19 @@ outputFormats:
     isPlainText: true
     notAlternative: true
 
+  # The domain root, /index.html, rendered from layouts/_default/home.rootpicker.html:
+  # a noindex page that jumps to /en/, /de/ or /sv/ by the language the visitor
+  # picked in the switcher or, failing that, their browser's, and to /en/ without
+  # JavaScript. `path` is relative to the language directory, like securitytxt's;
+  # English only, or all three languages would write the same file.
+  rootpicker:
+    mediaType: text/html
+    baseName: index
+    path: ".."
+    isHTML: true
+    notAlternative: true
+    permalinkable: false
+
 mediaTypes:
   text/x-nginx-conf:
     suffixes:
@@ -136,7 +155,19 @@ languages:
         - gallerymeta
         - nginxmap
         - nginxvariantmap
+        - rootpicker
     params:
+      # The "this page is also in en" bar, shown on the OTHER languages' pages to a
+      # visitor whose browser prefers this language (layouts/partials/lang-hint.html,
+      # docs/concepts/multilingual-home.md §4). It lives here rather than in i18n
+      # because it is read from another language's build, through the
+      # translation's .Site.Params; i18n only reaches the page's own language.
+      langHint:
+        home: "This page is also available in English."
+        homeLink: "Go to the English page →"
+        page: "This page is also available in English:"
+        pageLink: "Read in English →"
+        close: "Hide this hint"
       description: I'm Lukas Nagel (LNA-DEV), sharing insights on development, tech, photography, and more on this page which serves as my digital hub.
       homeInfoParams:
         Title: Hello World 👋
@@ -180,6 +211,17 @@ languages:
     locale: de-DE
     weight: 2
     params: 
+      # The "this page is also in de" bar, shown on the OTHER languages' pages to a
+      # visitor whose browser prefers this language (layouts/partials/lang-hint.html,
+      # docs/concepts/multilingual-home.md §4). It lives here rather than in i18n
+      # because it is read from another language's build, through the
+      # translation's .Site.Params; i18n only reaches the page's own language.
+      langHint:
+        home: "Diese Seite gibt es auch auf Deutsch."
+        homeLink: "Zur deutschen Seite →"
+        page: "Diese Seite gibt es auch auf Deutsch:"
+        pageLink: "Auf Deutsch lesen →"
+        close: "Hinweis ausblenden"
       description: Ich bin Lukas Nagel (LNA-DEV) und teile hier Einblicke in die Software-Entwicklung, IT im Allgemeinen, Fotografie und mehr.
       homeInfoParams:
         Title: Hallo Welt 👋
@@ -222,6 +264,17 @@ languages:
     locale: sv-SE
     weight: 3
     params: 
+      # The "this page is also in sv" bar, shown on the OTHER languages' pages to a
+      # visitor whose browser prefers this language (layouts/partials/lang-hint.html,
+      # docs/concepts/multilingual-home.md §4). It lives here rather than in i18n
+      # because it is read from another language's build, through the
+      # translation's .Site.Params; i18n only reaches the page's own language.
+      langHint:
+        home: "Den här sidan finns också på svenska."
+        homeLink: "Till den svenska sidan →"
+        page: "Den här sidan finns också på svenska:"
+        pageLink: "Läs på svenska →"
+        close: "Dölj tipset"
       description: Jag är Lukas Nagel (LNA-DEV) och delar insikter om programutveckling, teknik, fotografi och mer på denna sida, som fungerar som mitt digitala nav.
       homeInfoParams:
         Title: Hallå värld 👋

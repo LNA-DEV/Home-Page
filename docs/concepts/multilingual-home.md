@@ -1,6 +1,6 @@
 # Concept: the other languages' posts on every home page
 
-**Status:** proposal, 2026-11-17; revised 2026-11-18 after review. Nothing is built. The revision corrects §5 (the first plan would also have rewritten the `/<lang>/page/1/` redirects), fixes the reordering in §4 (groups would have jumped above their heading), and adds the SEO conditions in §8. The open decisions are listed at the end.
+**Status:** **implemented 2026-11-18**, all three layers and §6a/§6d; §6b (search across languages) and §6c (the intro sentences) are left for later. Proposal of 2026-11-17, revised 2026-11-18 after review: the revision corrected §5 (the first plan would also have rewritten the `/<lang>/page/1/` redirects), fixed the reordering in §4 (groups would have jumped above their heading) and added the SEO conditions in §8. The decisions were taken as recommended (table at the end). Where the build departs from the text, §12 says so.
 **Read against:** the working tree of 2026-11-17 (`24d9c58`), 22 post files. The Hugo techniques in §3–§5 were checked on a scratch site with Hugo 0.166.0 (the *Verified* paragraphs). The full site was not built: this container has no photo store and no Dart Sass.
 
 Each language home lists only posts in its own language. The site writes **different posts in different languages**: 18 of 20 posts exist in one language only. So each home hides most of the site, and the home a visitor lands on can look abandoned while another language is active. The only hint today is one hand-written sentence in each home's intro.
@@ -314,6 +314,7 @@ A build that breaks one of these does not ship. Each one has a test in §9.
   - `layouts/partials/lang-hint.html`
   - `layouts/_default/home.rootpicker.html`
   - `assets/css/extended/lang-more.css`
+  - `assets/js/lang-hint.js` (stores the switcher's choice and the ✕; on every page)
   - `tests/static/multilingual-home.spec.ts`
   - `tests/e2e/multilingual-home.spec.ts`
 - **Changed:**
@@ -322,9 +323,25 @@ A build that breaks one of these does not ship. Each one has a test in §9.
   - `layouts/partials/header.html` (the hint bar, and §6a);
   - `hugo.yaml` (`disableDefaultLanguageRedirect`, the `rootpicker` output format, `languages.en.outputs.home`, and `langHint` under each `languages.<lang>.params`);
   - `i18n/{en,de,sv}.yaml`;
+  - `tests/e2e/language.spec.ts` (its last scenario asserted the old switcher);
   - `CLAUDE.md` and `AGENTS.md`.
 
-## Open decisions
+## 12. As built
+
+Built and tested on a full local build with placeholder photos (the photo store is not in this container) and Hugo 0.166.0: `tests/static/multilingual-home.spec.ts` (38 tests) and `tests/e2e/multilingual-home.spec.ts` + the turned-around `language.spec.ts` (22 runs across the `chromium` and `mobile-chrome` projects), all green. Firefox was not run here (not installed); nothing in the scripts is engine-specific, and the layout-shift test skips itself outside Chromium.
+
+- **The bar's strings** are five, not three: `langHint.home`, `homeLink`, `page`, `pageLink`, `close`. A home's bar names no title and says *"Zur deutschen Seite →"*; any other page's names the translation (*"Diese Seite gibt es auch auf Deutsch: Was ist das Fediverse?"*, *"Auf Deutsch lesen →"*).
+- **The whole sentence is the link.** On a wide screen its last part is drawn as the site's filled button; below 600 px the button goes, the sentence is underlined and clamped to three lines. On a Pixel 7 the bar is 64 px tall.
+- **✕ moves focus to `<main>`**, since the button disappears with its bar.
+- **Layout shift**: every page already shifts its header by 0.001–0.01 while Cantarell swaps in, bar or no bar (measured on the home and a post, `en-US` and `de-DE`: the same shift, sourced at `nav` and the newsletter button). The e2e test therefore blocks the web fonts and then requires **zero** shifts with the bar showing; it got zero in every run. The font swap itself is not this feature's and is left alone.
+- **i18n parity**: the `lang_more_only_<lang>` / `lang_more_all_<lang>` keys exist in all three files, the page's own language included, although a page never names its own language; the suite's key-parity test requires every key everywhere.
+- **"All posts »"** was hard-coded English in `home.html` and `list.html`; both now use the `all_posts` key (§6d).
+- Hugo adds its `generator` meta to the root page, as to every HTML output. Harmless.
+- **Not verifiable from here**, and therefore step 0 of §10 stays a deploy check: whether nginx sends a `Content-Security-Policy` that needs hashes for the two inline scripts, and whether nginx answers `/` itself before the new page is ever served.
+
+## Decisions
+
+All taken as recommended on 2026-11-18, except where the last column says otherwise.
 
 | | Question | Recommendation |
 |---|---|---|
@@ -333,8 +350,8 @@ A build that breaks one of these does not ship. Each one has a test in §9.
 | D3 | Which pages get the hint bar: homes only, homes and posts, or every page with a translation (photos, dex, models, games too)? | Every page with a translation. It is one partial in the header, and a photo page in the visitor's language is just as useful as a post |
 | D4 | `/`: client-side in this repo, nginx, or leave it? | Client-side (§5) |
 | D5 | Send Swedish browsers from `/` to `/sv/`? | Yes, consistently. With §3, `/sv/` shows everything |
-| D6 | Search across languages (§6b)? | Later |
-| D7 | Keep the hand-written intro sentence? | Shorten it once §3 is in |
+| D6 | Search across languages (§6b)? | Later — not built |
+| D7 | Keep the hand-written intro sentence? | Shorten it once §3 is in — **left to the owner**: it is the owner's own text, in three languages |
 
 ## Sources
 

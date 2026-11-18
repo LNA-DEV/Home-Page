@@ -741,3 +741,36 @@
   translation: "Varning"
 - id: alert_caution
   translation: "Se upp"
+
+# Andra språk — blocket med inlägg som bara finns på ett annat språk, på
+# startsidorna och /posts/ (layouts/partials/lang-more.html,
+# docs/concepts/multilingual-home.md §3). Rubrikerna är på sidans språk, bara
+# titlarna på det andra. Ett språk nämner aldrig sig självt: *_sv-nycklarna
+# nedan används aldrig på en svensk sida; de finns för att varje nyckel står i
+# alla tre filerna.
+- id: all_posts
+  translation: "Alla inlägg"
+- id: lang_more_title
+  translation: "Mer på andra språk"
+- id: lang_more_intro
+  translation: "Jag skriver olika inlägg på olika språk. De här finns inte på svenska."
+- id: lang_more_only_sv
+  translation: "Bara på svenska"
+- id: lang_more_only_en
+  translation: "Bara på engelska"
+- id: lang_more_only_de
+  translation: "Bara på tyska"
+- id: lang_more_all_sv
+  translation:
+    one: "1 inlägg på svenska →"
+    other: "Alla {{ .Count }} inlägg på svenska →"
+- id: lang_more_all_en
+  translation:
+    one: "1 inlägg på engelska →"
+    other: "Alla {{ .Count }} inlägg på engelska →"
+- id: lang_more_all_de
+  translation:
+    one: "1 inlägg på tyska →"
+    other: "Alla {{ .Count }} inlägg på tyska →"
+- id: lang_more_feed
+  translation: "Allt på alla språk i en tidslinje: Flöde →"
