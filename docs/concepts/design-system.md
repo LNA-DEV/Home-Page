@@ -1,6 +1,6 @@
 # Concept: one design system — colour, spacing, edges, type
 
-**Status:** proposal, 2026-11-18. Nothing built. Written up from a discussion with the owner the same day: the direction is agreed, and six of the seven open questions were answered the same day (*Decisions*). The one left, which colour the accent is, is chosen on the decision aid (§8) and blocks step 2 of §11.
+**Status:** proposal, 2026-11-18. Nothing built. Written up from a discussion with the owner the same day: the direction is agreed, and all seven open questions were answered the same day (*Decisions*). The accent is **Schiefer** (slate), chosen on the decision aid (§8). Next is step 2 of §11.
 **Read against:** the working tree of 2026-11-18 (`24d9c58`), PaperMod at `v0.0.0-20260125152547-3bb0ca281fd1`. Every count below comes from `grep` over `assets/css/` (30 files in `extended/`, `core/theme-vars.css`, `main.scss`, `_styles.scss`). The edge distances in §5.1 are computed from the CSS, not measured in a browser; step 0 measures them.
 
 The site looks assembled rather than designed. The dex is green, the project stories amber, gear blue, the software projects Tailwind. The reading list is written for a dark page that light mode does not have. A photo grid on a phone sits 38px from the screen edge, while the logo above it sits at 14px. None of this is a single mistake. PaperMod ships greys and nothing else: no accent, no spacing scale, no widths beyond the text column and the header. So every feature concept since has had to invent its own, and most did it carefully: gear's ramp is validated, the story accent documents its contrast ratios. Each decision is sound locally. Nothing holds them together, so every new feature adds another.
@@ -44,10 +44,9 @@ It unifies; it does not redesign. No page changes its structure. The only delibe
 | Photos on a phone | **Grids keep the gutter** (16px), like text and header. Only the story hero and the lightbox go edge to edge (§5.2). Rejected: everything edge to edge, and a gutter around the story hero too |
 | Third-party brand colours | **Brought into the palette.** Rating stars and achievement bars take the accent; Steam blue and IMDb yellow go |
 | IUCN badges | **Official Red List colours**, as filled badges, each with whichever text colour reaches 4.5:1 on its fill: yellow and yellow-green fail as text on white (§3.3). Rejected: the site's status colours |
+| Accent colour | **Schiefer (slate): `#5b6b7d` light, `#a1b4c8` dark**, a blue-grey of very low chroma (OKLCH C ≈ 0.035). The photos carry the colour; the interface stays almost grey. Chosen on the decision aid (§8) from eleven candidates, then four finalists (Gletscher, Flieder, Heide, Schiefer) shown on eight page types. Its consequences are in §3.2. Rejected: Alpenrose, Rost, Bernstein, Moos, Waldgrün, Gletscher, Petrol, Enzian, Flieder, Heide. Rost, Moos and Waldgrün were ruled out anyway, because their hue sits on a fixed IUCN colour |
 
-### Open: the owner's
-
-**Which colour the accent is.** Settled: there is one. Which one is chosen on the decision aid (§8), where candidates are shown in both themes, on the components that use them (owner, 2026-11-18: "see proposals first"). Candidates include the stories' amber (`#8a5a00` / `#d8a657`, already contrast-checked, already named `--accent`; consequence: the warning alert, which uses the same two values today, has to move, §3.2) and the dex green (`#2f7d5b` / `#6ecfa0`). Whichever wins is also checked against the data colours (§3.3): it must not share a hue with a trip mode or an IUCN step.
+No decisions are open.
 
 ---
 
@@ -146,8 +145,14 @@ Rules:
 
 - The accent marks **state and emphasis**. It is never decoration for a section.
 - Every pair reaches **4.5:1** in both themes, and a test checks it (§9): `--accent` on `--theme`, on `--entry` and on `--code-bg`; `--on-accent` on `--accent`; each status colour on its surface.
-- If the accent is amber (still open, §8), `--status-warn` must not equal it. Today the warning alert and the story accent share both values, so warn moves towards orange.
 - GitHub alerts have five kinds. "Important" (purple) either maps to `--accent` or keeps an alert-only token; to be decided in the build.
+
+**The accent is Schiefer** (`#5b6b7d` / `#a1b4c8`). It reaches 5.46 / 5.01:1 on the light surfaces (`--theme`, `--code-bg`) and 7.85 / 6.35 / 5.49:1 on the dark ones (`--theme`, `--entry`, `--code-bg`); text on an accent fill reaches 5.46:1 (white, light) and 7.85:1 (`--theme`, dark). Because it carries almost no colour, three rules follow. The decision aid made each of them visible:
+
+- **In-text links keep their underline, always.** Against the body text (`--content`), a Schiefer link differs by only 3.02:1 in light mode and **1.22:1** in dark mode. Colour alone does not mark it as a link (WCAG 1.4.1 asks for 3:1 when colour is the only cue). PaperMod's `box-shadow` underline already does the work, in the accent colour; it must never be removed for a "cleaner" look.
+- **No state is carried by the tint alone.** `--accent-soft` (12% light / 16% dark over `--entry`) differs from the card by only 1.17:1 / 1.37:1, so it is decoration, not a signal. "Fotografiert" keeps its accent border and gains a marker (a ✓, or a filled dot) so that it still reads as a state; the same applies to any other selected or active state that would otherwise rely on a tinted background.
+- **The accent is not drawn on maps.** A Schiefer range over the land of the dex map stands out by only 1.54:1 (light) and 1.94:1 (dark). So the dex range, the sighting pin and the trip map's "you are here" keep data colours of their own (§3.3), and do not take the accent, as the decision aid had tried.
+- `--status-warn` keeps the amber the warning alert uses today (`#8a5a00` / `#d8a657`). With a slate accent it no longer collides with anything, so nothing has to move. The project stories' amber `--accent` becomes Schiefer.
 
 ### 3.3 Data colours
 
@@ -155,7 +160,8 @@ Colour that **encodes something** is not UI colour, and it may come in many shad
 
 - They are defined in the tokens file, in a *data* section, one group per feature (`--gear-*`, `--trip-*`, `--map-*`, `--iucn-*`), with light and dark values like every other token.
 - Each group's comment says what it encodes and whether it is ordinal or categorical, and it is checked for that. An ordinal ramp must be monotone in lightness. Categorical colours must stay distinguishable, including for the common colour-vision deficiencies.
-- **A data colour never uses the accent's hue for a meaning the accent does not have.** For example, if the accent is amber, the "flight" line moves away from amber.
+- **A data colour never uses the accent's hue for a meaning the accent does not have.** With a slate accent this holds trivially: a hue at chroma 0.035 is no hue. The rule stays for the day the accent changes.
+- **Maps keep their own colours** (§3.2): the dex range, the sighting pin and the trip map's "you are here" are data colours. Today's dex range green and the trip map's "here" orange are the starting point. Each must stand out at least 3:1 against the map's land in both themes, which is checked like any other data palette.
 - The maps share one palette. The dex map, the trip map and the route map use the same land, water and line tokens instead of three sets.
 - **IUCN status uses the official Red List colours** (settled): CR `#d81e05`, EN `#fc7f3f`, VU `#f9e814`, NT `#cce226`, LC `#60c659`, DD `#d1d1c6`. These are the values in common use; verify them against the IUCN's own sheet in the build. The dex uses LC, NT, VU, EN and DD today; CR is defined for the first species that needs it.
   - The badges become **filled**, each with whichever text colour reaches 4.5:1 on its fill. Yellow and yellow-green fail as text on white, which is how today's outlined badges would show them.
@@ -332,7 +338,12 @@ Tokens come first. Shared components come only where the markup is already alike
 - It reads the token list from the stylesheet at runtime (the `:root` rules in the CSSOM), so it cannot fall behind the file.
 - It must load everything a gallery page loads: one more reason to decouple layout from `main.scss` first.
 
-**A throw-away decision aid** comes before step 2. It puts today's colours next to two or three proposed palettes in both themes, and shows one card and one section in their current dex, gear and models versions next to the proposal. That way the accent gets chosen on a page rather than in hex codes.
+**A throw-away decision aid** was built on 2026-11-18, outside the repository, to choose the accent on a page rather than in hex codes. It came in two parts:
+
+- eleven candidates around the hue wheel, each tuned to reach 4.5:1 in both themes and checked for hue collisions with the data and status colours, with today's state beside them;
+- four finalists rendered on eight page types: post, gallery, photo page, dex species, game page, reading list, project story, trip map.
+
+The outcome is Schiefer (*Decisions*). The aid also produced the three rules in §3.2.
 
 ## 9. Tests: drift fails the build
 
@@ -370,7 +381,7 @@ As with everything else, `npm test` runs these tests and `deploy.sh` stops on th
    - Fix the reading list's light mode now: it is a bug, not a design question, and needs no decision.
    - Record screenshots of every area (light and dark, 375 and 1440px).
    - Measure the edge table of §5.1 in a browser.
-1. **Decisions.** Six of seven were settled on 2026-11-18. The accent colour is picked on the decision aid (§8).
+1. **Decisions.** All seven were settled on 2026-11-18; the accent is Schiefer.
 2. **Foundations, with nothing visible changing.**
    - The tokens file, holding every value as it is today and aliasing the existing feature tokens.
    - `color-scheme` plus `light-dark()`.
