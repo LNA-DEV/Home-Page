@@ -3,17 +3,17 @@
    work; the badge, bar and star colours are the grid's (gamingList.css). */
 
 .game-single h2 {
-  font-size: 1.25rem;
-  margin: 2rem 0 0.8rem;
+  font-size: var(--text-xl);
+  margin: var(--space-6) 0 var(--space-3);
 }
 
 /* --- Head: cover beside title, platforms, facts, store links --- */
 .game-hero {
   display: grid;
   grid-template-columns: 200px 1fr;
-  gap: 1.5rem;
+  gap: var(--space-5);
   align-items: start;
-  margin-top: 0.5rem;
+  margin-top: var(--space-2);
 }
 
 .game-hero__cover {
@@ -21,7 +21,7 @@
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--tertiary);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-cover);
 }
 
 .game-hero__cover img {
@@ -33,29 +33,29 @@
 }
 
 .game-hero__info .post-title {
-  margin: 0 0 0.6rem;
+  margin: 0 0 var(--space-2);
 }
 
 .game-platforms,
 .game-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: var(--space-2);
   list-style: none;
   padding: 0;
-  margin: 0 0 0.8rem;
+  margin: 0 0 var(--space-3);
 }
 
 .game-platform {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  padding: 0.25rem 0.65rem;
-  border-radius: 999px;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
   /* --entry is the page colour in the light theme; the border keeps the chip. */
   border: 1px solid var(--border);
   background: var(--entry);
-  font-size: 0.82rem;
+  font-size: var(--text-sm);
   color: var(--secondary);
 }
 
@@ -68,20 +68,20 @@
 
 .game-hero__rating {
   display: block;
-  margin-bottom: 0.8rem;
+  margin-bottom: var(--space-3);
 }
 
 .game-facts {
   display: grid;
-  gap: 0.35rem;
-  margin: 0 0 1rem;
-  font-size: 0.9rem;
+  gap: var(--space-1);
+  margin: 0 0 var(--space-4);
+  font-size: var(--text-sm);
 }
 
 .game-facts > div {
   display: grid;
   grid-template-columns: 8.5rem 1fr;
-  gap: 0.6rem;
+  gap: var(--space-2);
 }
 
 .game-facts dt {
@@ -94,10 +94,10 @@
 
 .game-links a {
   display: inline-block;
-  padding: 0.3rem 0.8rem;
+  padding: var(--space-1) var(--space-3);
   border: 1px solid var(--tertiary);
-  border-radius: 999px;
-  font-size: 0.85rem;
+  border-radius: var(--radius-pill);
+  font-size: var(--text-sm);
   color: var(--secondary);
   text-decoration: none;
 }
@@ -110,38 +110,38 @@
 /* --- Playtime --- */
 .game-playtime__total {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: var(--text-md);
 }
 
 .game-playtime__total strong {
-  font-size: 1.4rem;
+  font-size: var(--text-2xl);
 }
 
 .game-playtime__last {
   color: var(--secondary);
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
 }
 
 .game-playtime__copies {
   list-style: none;
   padding: 0;
-  margin: 0.6rem 0 0;
+  margin: var(--space-2) 0 0;
   display: grid;
-  gap: 0.25rem;
+  gap: var(--space-1);
   max-width: 22rem;
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
 }
 
 .game-playtime__copies li {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  gap: var(--space-4);
 }
 
 .game-playtime__store {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: var(--space-2);
   color: var(--secondary);
 }
 
@@ -151,16 +151,16 @@
 }
 
 .game-source {
-  font-size: 0.8rem;
+  font-size: var(--text-xs);
   color: var(--secondary);
-  margin-top: 0.4rem;
+  margin-top: var(--space-2);
 }
 
 /* --- Screenshots --- */
 .game-shots {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 0.6rem;
+  gap: var(--space-2);
 }
 
 .game-shot {
@@ -188,19 +188,19 @@
 .game-achv-summary {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  margin-bottom: 0.9rem;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
 }
 
 .game-achv-summary__count strong {
-  font-size: 1.3rem;
+  font-size: var(--text-xl);
 }
 
 .game-achv-summary__track,
 .game-achv__pct-track {
   flex: 1;
   height: 6px;
-  border-radius: 3px;
+  border-radius: var(--radius-s);
   background: var(--tertiary);
   overflow: hidden;
 }
@@ -213,16 +213,16 @@
 .game-achv__pct-track span {
   display: block;
   height: 100%;
-  background: #66c0f4; /* Steam-blue, as on the grid card */
+  background: var(--accent);
 }
 
 .game-achv-summary__pct {
   color: var(--secondary);
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
 }
 
 .game-achv-controls {
-  margin-bottom: 0.9rem;
+  margin-bottom: var(--space-4);
 }
 
 /* `hidden` is the no-JavaScript state of the controls and the filtered-out state
@@ -237,15 +237,15 @@
   padding: 0;
   margin: 0;
   display: grid;
-  gap: 0.45rem;
+  gap: var(--space-2);
 }
 
 .game-achv {
   display: grid;
   grid-template-columns: 48px 1fr auto;
-  gap: 0.8rem;
+  gap: var(--space-3);
   align-items: center;
-  padding: 0.5rem 0.7rem;
+  padding: var(--space-2) var(--space-3);
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: var(--entry);
@@ -258,7 +258,7 @@
 .game-achv__icon {
   width: 48px;
   height: 48px;
-  border-radius: 6px;
+  border-radius: var(--radius);
   overflow: hidden;
   background: var(--tertiary);
 }
@@ -278,7 +278,7 @@
 .game-achv__text {
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
+  gap: 2px;
   min-width: 0;
 }
 
@@ -292,7 +292,7 @@
 }
 
 .game-achv__desc {
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   color: var(--secondary);
   line-height: 1.35;
 }
@@ -305,8 +305,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 0.25rem;
-  font-size: 0.78rem;
+  gap: var(--space-1);
+  font-size: var(--text-xs);
   color: var(--secondary);
   white-space: nowrap;
 }
@@ -314,7 +314,7 @@
 .game-achv__pct {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: var(--space-2);
 }
 
 .game-achv__pct-track {
@@ -322,10 +322,10 @@
   flex: none;
 }
 
-@media (max-width: 600px) {
+@media (width <= 640px) {
   .game-hero {
     grid-template-columns: 120px 1fr;
-    gap: 1rem;
+    gap: var(--space-4);
   }
 
   .game-facts > div {

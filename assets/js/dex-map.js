@@ -22,6 +22,7 @@
    ocean at the edges of a zoomed-out map. */
 import * as params from "@params";
 import { addBasemap, clearBasemapNotice, currentFlavor, waterColor, BASEMAP_ATTRIBUTION } from "./basemap.js";
+import { tokenColor } from "./token-color.js";
 
 (function () {
   const container = document.querySelector("[data-dex-map]");
@@ -30,20 +31,15 @@ import { addBasemap, clearBasemapNotice, currentFlavor, waterColor, BASEMAP_ATTR
   const canvas = container.querySelector("[data-dex-map-canvas]");
   if (!canvas) return;
 
-  const cssVar = (name, fallback) => {
-    const value = getComputedStyle(document.documentElement)
-      .getPropertyValue(name)
-      .trim();
-    return value || fallback;
-  };
-
+  /* The map palette, from assets/css/core/theme-vars.css (docs/concepts/
+     design-system.md §3.3) — resolved for the current theme. */
   const colors = {
-    land: cssVar("--dex-map-land", "#d9d4c7"),
-    landEdge: cssVar("--dex-map-land-edge", "#b4ad9c"),
-    border: cssVar("--dex-map-border", "#a8a091"),
-    range: cssVar("--dex-map-range", "#2f7d5b"),
-    water: cssVar("--dex-map-water", "#dbe6ec"),
-    sighting: cssVar("--dex-map-sighting", "#d97706"),
+    land: tokenColor("--map-land"),
+    landEdge: tokenColor("--map-land-edge"),
+    border: tokenColor("--map-border"),
+    range: tokenColor("--map-range"),
+    water: tokenColor("--map-water"),
+    sighting: tokenColor("--map-sighting"),
   };
 
   /* Longitude offsets every vector layer is drawn at. Content therefore spans

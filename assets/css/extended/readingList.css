@@ -1,13 +1,13 @@
 .reading-list {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: var(--space-6);
 }
 
 .book-entry {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: var(--space-5);
   align-items: flex-start;
 }
 
@@ -15,17 +15,17 @@
   width: 150px;
   height: auto;
   object-fit: cover;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-cover);
 }
 
-@media (max-width: 600px) {
+@media (width <= 640px) {
   .book-cover img {
     width: 100px;
   }
 }
 
-@media (max-width: 400px) {
+@media (width <= 480px) {
   .book-cover img {
     width: 50px;
   }
@@ -38,12 +38,12 @@
 
 .book-title {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: var(--text-2xl);
   font-weight: 600;
   color: var(--primary);
   border-bottom: 1px solid var(--tertiary);
-  padding-bottom: 0.2rem;
-  margin-bottom: 0.3rem;
+  padding-bottom: var(--space-1);
+  margin-bottom: var(--space-1);
 }
 
 .book-title a{
@@ -55,20 +55,20 @@
 }
 
 .book-meta {
-  font-size: 0.95rem;
+  font-size: var(--text-md);
   color: var(--secondary);
-  margin-bottom: 0.7rem;
+  margin-bottom: var(--space-3);
 }
 
 .book-notes {
-  font-size: 1rem;
-  margin-top: 0.5rem;
+  font-size: var(--text-md);
+  margin-top: var(--space-2);
   color: var(--content);
 }
 
 .book-details p {
-  margin: 0.3rem 0;
-  font-size: 0.95rem;
+  margin: var(--space-1) 0;
+  font-size: var(--text-md);
   color: var(--content);
 }
 
@@ -86,21 +86,21 @@
 }
 
 .book-details p span {
-  margin-right: 0.3rem;
-  font-size: 1.1rem;
+  margin-right: var(--space-1);
+  font-size: var(--text-lg);
 }
 
 .book-rating {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: var(--space-1);
 }
 
 .book-rating .star {
-  font-size: 1rem;
+  font-size: var(--text-md);
   color: var(--tertiary);
 }
 
 .book-rating .star.filled {
-  color: #f5c518;
+  color: var(--accent);
 }

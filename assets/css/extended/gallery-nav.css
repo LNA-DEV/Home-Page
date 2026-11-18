@@ -16,12 +16,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: var(--space-4);
   max-width: 800px;
   margin: 0 auto;
 }
 
-@media (min-width: 640px) {
+@media (width >= 640px) {
   .gallery-nav {
     flex-direction: row;
     flex-wrap: wrap;
@@ -41,33 +41,33 @@
   aspect-ratio: 3 / 2;
   display: flex;
   align-items: flex-end;
-  border-radius: 0.75rem;
+  border-radius: var(--radius-l);
   background-size: cover;
   background-position: center;
   overflow: hidden;
   text-decoration: none;
-  color: rgb(218, 218, 219);
+  color: var(--on-image);
 }
 
 .gallery-nav-card span {
   display: block;
   width: 100%;
-  padding: 0.75rem 1rem;
-  font-size: 1.1rem;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-lg);
   font-weight: 600;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+  background: linear-gradient(to top, var(--scrim-strong) 0%, transparent 100%);
 }
 
 /* Archive link — subtle, below the main cards */
 .gallery-archive-link {
   text-align: center;
-  margin: 0.75rem 0 0;
+  margin: var(--space-3) 0 0;
 }
 
 .gallery-archive-link a {
   color: var(--secondary);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
   opacity: 0.7;
   transition: opacity 0.2s;
 }
@@ -79,16 +79,16 @@
 
 .gallery-archive-link span {
   color: var(--secondary);
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
   opacity: 0.5;
-  margin: 0 0.4rem;
+  margin: 0 var(--space-2);
 }
 
 /* Gallery breadcrumb */
 .gallery-breadcrumb {
   text-align: center;
-  font-size: 0.85rem;
-  margin-bottom: 0.5rem;
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-2);
 }
 
 .gallery-breadcrumb a {
@@ -110,23 +110,23 @@
 /* Gallery page header — centered */
 .gallery-page-header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-6);
 }
 
 /* Tighter gap when filter pills follow the header */
 .gallery-page-header + .gallery-filters {
-  margin-top: -1.25rem;
+  margin-top: calc(var(--space-5) * -1);
 }
 
 /* Tighten hgroup spacing on gallery pages */
 .gallery-breadcrumb + hgroup {
-  margin: 0 auto 2rem;
-  gap: 0.5rem;
+  margin: 0 auto var(--space-6);
+  gap: var(--space-2);
 }
 
 /* Tighten gallery page header spacing */
 .gallery-page-header h1 {
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--space-1);
 }
 
 .gallery-filters {
@@ -136,20 +136,20 @@
 /* Filter Bubbles */
 .gallery-filters {
   display: flex;
-  gap: 0.5rem;
+  gap: var(--space-2);
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-6);
 }
 
 .filter-pill {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: var(--space-2) var(--space-4);
   border: 1px solid var(--border);
-  border-radius: 20px;
+  border-radius: var(--radius-pill);
   background: transparent;
   color: var(--secondary);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
   cursor: pointer;
   font-family: inherit;
   /* 0.12s -- see .newsletter-pill in newsletter.css for why a state toggle
@@ -164,9 +164,9 @@
    category is active -- but the stuck highlight still lies about which filter is
    applied. Same fix, same shape as .reading-btn / .dex-pill / .activity-filter. */
 .filter-pill.active {
-  background: var(--primary);
-  color: var(--theme);
-  border-color: var(--primary);
+  background: var(--accent);
+  color: var(--on-accent);
+  border-color: var(--accent);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -183,6 +183,6 @@
 /* Bigger tap target on a coarse pointer -- 0.5rem padding leaves 34px. */
 @media (pointer: coarse) {
   .filter-pill {
-    padding: 0.65rem 1.1rem;
+    padding: var(--space-3) var(--space-4);
   }
 }

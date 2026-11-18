@@ -8,27 +8,27 @@
    and nothing on it needs the lightbox. Everything used is bundled site-wide. */
 
 .photo-tag-grid {
-  margin-top: 12px;
+  margin-top: var(--space-3);
 }
 
 /* The index: every tag as a pill with its count, the "Appears in" pill of the
    photo page with a count badge. */
 .phototags-index {
   list-style: none;
-  margin: 12px 0 0;
+  margin: var(--space-3) 0 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: var(--space-2);
 }
 
 .phototags-index a {
   display: inline-flex;
   align-items: baseline;
-  gap: 6px;
-  font-size: 14px;
-  padding: 4px 12px;
-  border-radius: 999px;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
   border: 1px solid var(--border);
 }
 
@@ -37,6 +37,6 @@
 }
 
 .phototags-index__count {
-  font-size: 12px;
+  font-size: var(--text-xs);
   color: var(--secondary);
 }

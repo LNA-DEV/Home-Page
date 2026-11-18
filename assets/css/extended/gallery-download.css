@@ -19,7 +19,7 @@
 
 .photo-download h3 {
   margin: 0;
-  font-size: 12px;
+  font-size: var(--text-xs);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--secondary);
@@ -30,23 +30,23 @@
 .photo-download__deed {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 14px var(--gap);
-  margin-top: 16px;
+  gap: var(--space-4) var(--gap);
+  margin-top: var(--space-4);
 }
 
 .photo-download__deed ul {
   list-style: none;
-  margin: 8px 0 0;
+  margin: var(--space-2) 0 0;
   padding: 0;
   display: grid;
-  gap: 5px;
-  font-size: 14px;
+  gap: var(--space-1);
+  font-size: var(--text-sm);
   line-height: 1.45;
 }
 
 .photo-download__deed li {
   position: relative;
-  padding-left: 20px;
+  padding-left: var(--space-5);
 }
 
 .photo-download__deed li::before {
@@ -72,14 +72,14 @@
 /* ---- the credit line ---------------------------------------------------- */
 
 .photo-download__credit {
-  margin-top: 16px;
+  margin-top: var(--space-4);
 }
 
 .photo-download__credit-row {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
-  margin-top: 8px;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
 }
 
 /* pre-wrap is load-bearing: the credit line is two lines separated by a real
@@ -90,9 +90,9 @@
   display: block;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
-  font-size: 12px;
+  font-size: var(--text-xs);
   line-height: 1.5;
-  padding: 9px 11px;
+  padding: var(--space-2) var(--space-3);
   border-radius: var(--radius);
   background: var(--tertiary);
   color: var(--content);
@@ -101,12 +101,12 @@
 /* ---- the all-rights-reserved notice ------------------------------------- */
 
 .photo-download__notice {
-  margin-top: 16px;
-  padding: 12px 14px;
+  margin-top: var(--space-4);
+  padding: var(--space-3) var(--space-4);
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: var(--tertiary);
-  font-size: 14px;
+  font-size: var(--text-sm);
   line-height: 1.55;
 }
 
@@ -115,31 +115,31 @@
 }
 
 .photo-download__notice-links {
-  margin-top: 8px !important;
+  margin-top: var(--space-2) !important;
   display: flex;
-  gap: 8px;
+  gap: var(--space-2);
   flex-wrap: wrap;
 }
 
 /* ---- the size ladder ---------------------------------------------------- */
 
 .photo-download__sizes-heading {
-  margin-top: 18px !important;
+  margin-top: var(--space-4) !important;
 }
 
 .photo-download__sizes {
   list-style: none;
-  margin: 10px 0 0;
+  margin: var(--space-3) 0 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 8px;
+  gap: var(--space-2);
 }
 
 .photo-download__size {
   display: grid;
   gap: 2px;
-  padding: 10px 12px;
+  padding: var(--space-3) var(--space-3);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   transition: background-color 150ms, border-color 150ms;
@@ -151,14 +151,14 @@
 }
 
 .photo-download__tier {
-  font-size: 14px;
+  font-size: var(--text-sm);
   font-weight: 600;
   color: var(--primary);
 }
 
 .photo-download__dims,
 .photo-download__hint {
-  font-size: 12px;
+  font-size: var(--text-xs);
   color: var(--secondary);
 }
 
@@ -171,9 +171,9 @@
 .photo-download__gate {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 12px;
-  font-size: 14px;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
   cursor: pointer;
 }
 

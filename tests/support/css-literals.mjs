@@ -46,8 +46,8 @@ export function sourceFiles(repo) {
 }
 
 const NAMED = "white|black|red|green|blue|gray|grey|silver|orange|yellow|purple|pink|brown|navy|teal|maroon|olive|lime|aqua|fuchsia|gold|crimson|tomato|coral";
-const COLOUR_PROPS = /^(color|background(-color)?|border(-(top|right|bottom|left|block|inline)(-(start|end))?)?(-color)?|outline(-color)?|fill|stroke|text-decoration(-color)?|caret-color|accent-color|column-rule(-color)?|box-shadow|text-shadow|filter|stop-color|flood-color)$/;
-const HEX = /#[0-9a-fA-F]{3,8}\b/g;
+const COLOUR_PROPS = /^(color|background(-color|-image)?|border(-(top|right|bottom|left|block|inline)(-(start|end))?)?(-color)?|outline(-color)?|fill|stroke|text-decoration(-color)?|caret-color|accent-color|column-rule(-color)?|box-shadow|text-shadow|filter|stop-color|flood-color)$/;
+const HEX = /(?<!&)#[0-9a-fA-F]{3,8}\b/g; // not an HTML entity like &#8249;
 const FUNC = /\b(?:rgba?|hsla?)\(/g;
 const NAMED_RE = new RegExp(`(^|[\\s,(])(${NAMED})(?=$|[\\s,)!;])`, "gi");
 const LENGTH = /(^|[\s(,*/+-])(-?\d*\.?\d+)(px|rem|em)\b/g;
@@ -92,7 +92,7 @@ function countCss(src, scss) {
     }
   }
 
-  for (const m of s.matchAll(/(?:^|[;{\s])(-{0,2}[a-z][a-z-]*)\s*:\s*([^;{}]+?)\s*(?=[;}])/g)) {
+  for (const m of s.matchAll(/(?:^|[;{\s])(-{0,2}[a-z][a-z0-9-]*)\s*:\s*([^;{}]+?)\s*(?=[;}])/g)) {
     const prop = m[1].toLowerCase();
     const value = m[2];
     if (prop.startsWith("--")) {

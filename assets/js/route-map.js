@@ -11,6 +11,7 @@
 
 import * as params from "@params";
 import { addBasemap, currentFlavor, BASEMAP_ATTRIBUTION } from "./basemap.js";
+import { tokenColor } from "./token-color.js";
 
 const TILEJSON = params.basemapTileJson || "";
 const ROUTE_ATTRIBUTION = `${BASEMAP_ATTRIBUTION} · route &copy; OSRM`;
@@ -44,8 +45,8 @@ function render(el) {
   map.attributionControl.addAttribution(route.length > 1 ? ROUTE_ATTRIBUTION : BASEMAP_ATTRIBUTION);
 
   /* A white casing under the line keeps it readable on either flavor. */
-  L.polyline(line, { color: "#fff", weight: 7, opacity: 0.8, lineCap: "round", lineJoin: "round" }).addTo(map);
-  L.polyline(line, { color: "#185FA5", weight: 4, opacity: 0.95, lineCap: "round", lineJoin: "round" }).addTo(map);
+  L.polyline(line, { color: tokenColor("--map-casing"), weight: 7, opacity: 0.8, lineCap: "round", lineJoin: "round" }).addTo(map);
+  L.polyline(line, { color: tokenColor("--map-route"), weight: 4, opacity: 0.95, lineCap: "round", lineJoin: "round" }).addTo(map);
   for (const p of points) L.marker(p, { keyboard: false }).addTo(map);
   map.fitBounds(L.latLngBounds(line), { padding: [30, 30] });
 

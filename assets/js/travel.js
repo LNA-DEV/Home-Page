@@ -20,6 +20,7 @@
 
 import * as params from "@params";
 import { addBasemap, currentFlavor, BASEMAP_ATTRIBUTION } from "./basemap.js";
+import { tokenColor } from "./token-color.js";
 
 const TRIPS_BASE = (params.tripsBaseUrl || "/api/trips").replace(/\/$/, "");
 const TILEJSON = params.basemapTileJson || "";
@@ -64,15 +65,13 @@ const ATTRIBUTION = `${BASEMAP_ATTRIBUTION} · routes &copy; OSRM &amp; ` +
 const apps = [];
 
 /* ---- helpers ---- */
-function cssVar(name, fallback) {
-  const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
-  return v || fallback;
-}
+/* Line colours: data colours from assets/css/core/theme-vars.css, resolved for
+   the current theme (called again after a theme switch). */
 function lineColors() {
   return {
-    train: cssVar("--trip-train", "#1D9E75"),
-    flight: cssVar("--trip-flight", "#BA7517"),
-    car: cssVar("--trip-car", "#185FA5"),
+    train: tokenColor("--trip-train"),
+    flight: tokenColor("--trip-flight"),
+    car: tokenColor("--trip-car"),
   };
 }
 function relTime(iso) {
@@ -109,8 +108,8 @@ function ensureLightbox() {
   function render() {
     const ph = state.photos; if (!ph.length) return;
     const p = ph[state.i];
-    if (p.src) { img.style.background = "#000"; img.innerHTML = `<img src="${photoSrc(p)}" alt="${p.cap || ""}">`; }
-    else { img.style.background = p.tint || "#000"; img.style.color = "#5b574f"; img.innerHTML = `<span>${p.cap || ""}</span>`; }
+    if (p.src) { img.style.background = "var(--viewer-bg)"; img.innerHTML = `<img src="${photoSrc(p)}" alt="${p.cap || ""}">`; }
+    else { img.style.background = p.tint || "var(--viewer-bg)"; img.style.color = "var(--secondary)"; img.innerHTML = `<span>${p.cap || ""}</span>`; }
     cap.textContent = p.cap || "";
     count.textContent = `${state.i + 1} / ${ph.length}`;
   }

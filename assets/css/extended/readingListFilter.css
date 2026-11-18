@@ -11,16 +11,16 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.6rem 1rem;
-  margin-bottom: 1.6rem;
+  gap: var(--space-2) var(--space-4);
+  margin-bottom: var(--space-5);
 }
 
 .reading-search,
 .reading-genre,
 .reading-rating {
   font: inherit;
-  font-size: 0.9rem;
-  padding: 0.4rem 0.7rem;
+  font-size: var(--text-sm);
+  padding: var(--space-2) var(--space-3);
   border: 1px solid var(--tertiary);
   border-radius: var(--radius);
   background: var(--entry);
@@ -42,17 +42,17 @@
 .reading-sort {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: var(--space-2);
 }
 
 .reading-sort .reading-btn {
   font: inherit;
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   line-height: 1;
   cursor: pointer;
-  padding: 0.4rem 0.85rem;
+  padding: var(--space-2) var(--space-3);
   border: 1px solid var(--tertiary);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   background: transparent;
   color: var(--secondary);
   transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
@@ -64,28 +64,28 @@
 }
 
 .reading-sort .reading-btn.is-active {
-  background: var(--primary);
-  color: var(--theme);
-  border-color: var(--primary);
+  background: var(--accent);
+  color: var(--on-accent);
+  border-color: var(--accent);
 }
 
 .reading-count {
   margin: 0 0 0 auto; /* push to the far right of the controls row */
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   color: var(--secondary);
   white-space: nowrap;
   text-align: right;
 }
 
 .reading-empty {
-  margin: 1.5rem 0;
-  font-size: 1rem;
+  margin: var(--space-5) 0;
+  font-size: var(--text-md);
   color: var(--secondary);
 }
 
-@media (max-width: 500px) {
+@media (width <= 480px) {
   .reading-list-wrap.js-ready .reading-controls {
-    gap: 0.5rem;
+    gap: var(--space-2);
   }
 
   .reading-search {

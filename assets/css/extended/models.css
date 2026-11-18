@@ -20,17 +20,17 @@
      auto-fit + 1fr; with a fixed track size it only collapses the empties. */
   grid-template-columns: repeat(auto-fit, 190px);
   justify-content: center;
-  gap: 1.25rem;
+  gap: var(--grid-gap);
   /* Same spine as .photo-single — capped at the header width and centred in the
      75%-wide main column. */
   width: min(100%, var(--nav-width, 1060px));
-  margin: 0 auto 2rem;
+  margin: 0 auto var(--section-gap);
 }
 
 .model-card {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: var(--space-2);
   text-decoration: none;
   color: var(--primary);
 }
@@ -38,7 +38,7 @@
 .model-card__frame {
   position: relative;
   aspect-ratio: 1 / 1;
-  border-radius: 0.75rem;
+  border-radius: var(--radius-l);
   overflow: hidden;
   background: var(--tertiary);
 }
@@ -56,31 +56,31 @@
   right: 0.5rem;
   bottom: 0.5rem;
   min-width: 1.6rem;
-  padding: 0.1rem 0.45rem;
-  border-radius: 999px;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-pill);
   text-align: center;
-  font-size: 0.8rem;
+  font-size: var(--text-xs);
   line-height: 1.5;
-  color: rgb(235, 235, 236);
-  background: rgba(0, 0, 0, 0.55);
+  color: var(--on-image);
+  background: var(--scrim);
   backdrop-filter: blur(2px);
 }
 
 .model-card__body {
   display: flex;
   flex-direction: column;
-  gap: 0.15rem;
+  gap: 2px;
 }
 
 .model-card__name {
   margin: 0;
-  font-size: 1rem;
+  font-size: var(--text-md);
   line-height: 1.3;
 }
 
 .model-card__meta {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   color: var(--secondary);
 }
 
@@ -93,7 +93,7 @@
 .model-empty {
   color: var(--secondary);
   text-align: center;
-  margin: 2rem 0;
+  margin: var(--space-6) 0;
 }
 
 /* --- a single model ------------------------------------------------------ */
@@ -110,9 +110,9 @@
 
 .model-hero {
   display: flex;
-  gap: 1.75rem;
+  gap: var(--space-6);
   align-items: flex-start;
-  margin: 0 0 2.5rem;
+  margin: 0 0 var(--section-gap);
 }
 
 .model-hero__media {
@@ -124,7 +124,7 @@
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 0.9rem;
+  border-radius: var(--radius-l);
 }
 
 .model-hero__info {
@@ -133,19 +133,19 @@
 }
 
 .model-hero__name {
-  margin: 0 0 0.3rem;
-  font-size: 2rem;
+  margin: 0 0 var(--space-1);
+  font-size: var(--text-3xl);
   line-height: 1.15;
 }
 
 .model-hero__meta {
-  margin: 0 0 1rem;
+  margin: 0 0 var(--space-4);
   color: var(--secondary);
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
 }
 
 .model-hero__bio {
-  margin: 0 0 1.1rem;
+  margin: 0 0 var(--space-4);
   /* Prose stops at a readable measure even when the page is wide — the same cap
      .photo-description and .dex-description use. */
   max-width: 68ch;
@@ -158,7 +158,7 @@
 .model-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.65rem;
+  gap: var(--space-3);
 }
 
 .model-links a {
@@ -188,31 +188,31 @@
 }
 
 .model-section-title {
-  font-size: 1.15rem;
-  margin: 0 0 1rem;
+  font-size: var(--text-lg);
+  margin: 0 0 var(--space-heading);
 }
 
 .model-photos {
-  margin: 0 0 2rem;
+  margin: 0 0 var(--section-gap);
 }
 
 /* The model row on a photo page, mirroring .photo-species. */
 .photo-model {
-  margin: 0.2rem 0 1rem;
+  margin: var(--space-1) 0 var(--space-4);
 }
 
 .photo-model__sep {
   color: var(--secondary);
   opacity: 0.6;
-  margin: 0 0.15rem;
+  margin: 0 2px;
 }
 
 /* Stacks at the same 900px the galleryImageText shortcode uses: below it the
    text track beside a 300px portrait is down to ~40 characters. */
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .model-hero {
     flex-direction: column;
-    gap: 1.25rem;
+    gap: var(--space-5);
   }
 
   .model-hero__media {
@@ -222,6 +222,6 @@
   }
 
   .model-hero__name {
-    font-size: 1.6rem;
+    font-size: var(--text-2xl);
   }
 }

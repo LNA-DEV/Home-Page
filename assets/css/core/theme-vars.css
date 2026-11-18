@@ -60,8 +60,8 @@
     --viewer-text-3: rgba(255, 255, 255, 0.5);                         /* labels, hints */
     --viewer-line: rgba(255, 255, 255, 0.15);                          /* borders, rules */
     --viewer-line-strong: rgba(255, 255, 255, 0.4);                    /* hovered border, underline */
-    --viewer-fill: rgba(255, 255, 255, 0.08);                          /* quiet button fill */
-    --viewer-fill-strong: rgba(255, 255, 255, 0.18);                   /* hovered button fill */
+    --viewer-fill: rgba(255, 255, 255, 0.1);                           /* quiet button fill */
+    --viewer-fill-strong: rgba(255, 255, 255, 0.22);                   /* hovered button fill */
     --viewer-scrim: rgba(0, 0, 0, 0.85);                               /* backdrop, tooltip */
 
     /* ---- data colours — encode something; §3.3 ------------------------------ */
@@ -73,7 +73,11 @@
     --map-range: light-dark(#2f7d5b, #6ecfa0);                         /* a species' range */
     --map-sighting: light-dark(#b45309, #f5a524);                      /* the owner's own sighting */
     --map-here: light-dark(#d85a30, #f0743f);                          /* trip: "you are here" */
-    --map-casing: #ffffff;                                             /* white casing under a route line */
+    --map-route: light-dark(#185fa5, #4a90d9);                         /* a post's route line ({{< map route= >}}) */
+    --map-area: light-dark(#8a5a00, #d8a657);                          /* a project story's areas */
+    --map-casing: #ffffff;                                             /* white casing under a route line, a pin's border */
+    --map-pin-ring: rgba(0, 0, 0, 0.3);                                /* thin dark ring around a pin */
+    --map-ink: #333333;                                                /* text on Leaflet's white controls */
     /* trip modes — categorical */
     --trip-train: light-dark(#1d9e75, #3fbf94);
     --trip-train-ink: light-dark(#0f6e56, #5fd3ac);                    /* train label text */
@@ -147,6 +151,7 @@
     --text-2xl: 1.5rem;                                                /* 24px */
     --text-3xl: 2rem;                                                  /* 32px */
     --text-4xl: 2.5rem;                                                /* 40px */
+    --text-5xl: 3rem;                                                  /* 48px: a story's display title */
     --leading-tight: 1.25;                                             /* headings, tiles */
     --leading-normal: 1.5;                                             /* UI text */
     --leading-loose: 1.7;                                              /* running text */

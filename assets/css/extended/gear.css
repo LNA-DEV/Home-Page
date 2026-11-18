@@ -6,39 +6,11 @@
    card surface) for white and for PaperMod's dark --entry (#2e2e33). In dark
    mode the order flips — the most important step is the lightest. */
 
-:root {
-  --gear-portfolio: #184f95;
-  --gear-gallery: #3987e5;
-  --gear-archive: #86b6ef;
-  --gear-heat-1: #86b6ef;
-  --gear-heat-2: #5598e7;
-  --gear-heat-3: #256abf;
-  --gear-heat-4: #104281;
-  --gear-heat-ink-1: #0b0b0b;
-  --gear-heat-ink-2: #0b0b0b;
-  --gear-heat-ink-3: #ffffff;
-  --gear-heat-ink-4: #ffffff;
-  --gear-dot: #2a78d6;
-}
-
-:root[data-theme="dark"] {
-  --gear-portfolio: #b7d3f6;
-  --gear-gallery: #5598e7;
-  --gear-archive: #256abf;
-  --gear-heat-1: #256abf;
-  --gear-heat-2: #3987e5;
-  --gear-heat-3: #6da7ec;
-  --gear-heat-4: #b7d3f6;
-  --gear-heat-ink-1: #ffffff;
-  --gear-heat-ink-2: #0b0b0b;
-  --gear-heat-ink-3: #0b0b0b;
-  --gear-heat-ink-4: #0b0b0b;
-  --gear-dot: #6da7ec;
-}
+/* The ramp is defined in assets/css/core/theme-vars.css (--gear-*). */
 
 .gear {
-  max-width: 1060px;
-  margin: 0 auto 3rem;
+  max-width: var(--width-wide);
+  margin: 0 auto var(--space-7);
 }
 
 .gear .visually-hidden {
@@ -58,31 +30,31 @@
 .gear-stats {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.75rem;
-  margin: 0 0 2.5rem;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-7);
 }
 
 .gear-stat {
-  padding: 1rem 1.1rem;
+  padding: var(--space-4) var(--space-4);
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: var(--radius-l);
   background: var(--entry);
 }
 
 .gear-stat dt {
   color: var(--secondary);
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
 }
 
 .gear-stat dd {
-  margin: 0.15rem 0 0;
-  font-size: 2rem;
+  margin: 2px 0 0;
+  font-size: var(--text-3xl);
   font-weight: 600;
   line-height: 1.15;
   color: var(--primary);
 }
 
-@media (max-width: 640px) {
+@media (width <= 640px) {
   .gear-stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -91,42 +63,42 @@
 /* --- sections -------------------------------------------------------------- */
 
 .gear-section {
-  margin: 0 0 3rem;
+  margin: 0 0 var(--section-gap);
 }
 
 .gear-section h2 {
-  font-size: 1.35rem;
-  margin: 0 0 0.35rem;
+  font-size: var(--text-xl);
+  margin: 0 0 var(--space-heading);
 }
 
 .gear-intro {
   color: var(--secondary);
-  font-size: 0.92rem;
-  margin: 0 0 1rem;
+  font-size: var(--text-sm);
+  margin: 0 0 var(--space-4);
   max-width: 68ch;
 }
 
 .gear-legend {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem 1.1rem;
+  gap: var(--space-2) var(--space-4);
   list-style: none;
-  margin: 0 0 0.9rem;
+  margin: 0 0 var(--space-4);
   padding: 0;
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   color: var(--secondary);
 }
 
 .gear-legend li {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: var(--space-2);
 }
 
 .gear-swatch {
   width: 12px;
   height: 12px;
-  border-radius: 3px;
+  border-radius: var(--radius-s);
 }
 
 .gear-swatch--portfolio,
@@ -147,7 +119,7 @@
 .gear-compare {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.92rem;
+  font-size: var(--text-sm);
 }
 
 /* PaperMod styles every content table with borders and cell padding; these are
@@ -155,7 +127,7 @@
 .gear-compare th,
 .gear-compare td {
   border: 0;
-  padding: 0.35rem 0;
+  padding: var(--space-1) 0;
   vertical-align: middle;
   text-align: left;
   font-weight: normal;
@@ -163,20 +135,20 @@
 
 .gear-compare thead th {
   color: var(--secondary);
-  font-size: 0.8rem;
-  padding-bottom: 0.5rem;
+  font-size: var(--text-xs);
+  padding-bottom: var(--space-2);
   border-bottom: 1px solid var(--border);
 }
 
 .gear-compare tbody th {
   width: 22%;
-  padding-right: 1rem;
+  padding-right: var(--space-4);
   white-space: nowrap;
 }
 
 .gear-compare tbody td:first-of-type {
   width: 48%;
-  padding-right: 1.5rem;
+  padding-right: var(--space-5);
 }
 
 .gear-compare a,
@@ -196,14 +168,14 @@
 .gear-hbar {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--space-2);
   min-height: 18px;
 }
 
 .gear-hbar__value {
   flex: none;
   color: var(--secondary);
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   font-variant-numeric: tabular-nums;
 }
 
@@ -214,7 +186,7 @@
   gap: 2px;
   height: 14px;
   min-width: 3px;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 var(--radius-s) var(--radius-s) 0;
   overflow: hidden;
 }
 
@@ -228,7 +200,7 @@
   display: block;
   height: 14px;
   min-width: 3px;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 var(--radius-s) var(--radius-s) 0;
   background: var(--gear-portfolio);
 }
 
@@ -239,7 +211,7 @@
 .gear-compare__sub {
   display: block;
   color: var(--secondary);
-  font-size: 0.8rem;
+  font-size: var(--text-xs);
   white-space: normal;
 }
 
@@ -251,16 +223,16 @@
   width: auto;
 }
 
-@media (max-width: 640px) {
+@media (width <= 640px) {
   .gear-compare tbody th {
     width: 28%;
-    padding-right: 0.6rem;
+    padding-right: var(--space-2);
     white-space: normal;
   }
 
   .gear-compare tbody td:first-of-type {
     width: 42%;
-    padding-right: 0.8rem;
+    padding-right: var(--space-3);
   }
 }
 
@@ -280,7 +252,7 @@
   width: 100%;
   border-collapse: separate;
   border-spacing: 3px;
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   margin: 0;
 }
 
@@ -296,10 +268,10 @@
 .gear-heat thead th,
 .gear-timeline thead th {
   color: var(--secondary);
-  font-size: 0.75rem;
+  font-size: var(--text-xs);
   white-space: nowrap;
   text-align: center;
-  padding-bottom: 0.3rem;
+  padding-bottom: var(--space-1);
 }
 
 /* The label column shrinks to its longest name; the data columns share the
@@ -309,7 +281,7 @@
   width: 1%;
   text-align: left;
   white-space: nowrap;
-  padding-right: 0.8rem;
+  padding-right: var(--space-3);
 }
 
 .gear-heat__cell {
@@ -317,7 +289,7 @@
   height: 34px;
   text-align: center;
   vertical-align: middle;
-  border-radius: 4px;
+  border-radius: var(--radius-s);
   /* An empty cell is a hairline outline, not a grey block: "nothing here" must
      not compete with the cells that hold data. */
   box-shadow: inset 0 0 0 1px var(--border);
@@ -358,16 +330,16 @@
 .gear-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
-  gap: 1rem;
+  gap: var(--grid-gap);
 }
 
 .gear-card {
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
-  padding: 1.1rem 1.2rem 1.2rem;
+  gap: var(--space-3);
+  padding: var(--card-pad);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: var(--radius-l);
   background: var(--entry);
   scroll-margin-top: 1.5rem;
 }
@@ -378,59 +350,59 @@
 }
 
 .gear-card__name {
-  font-size: 1.05rem;
+  font-size: var(--text-md);
   line-height: 1.3;
   margin: 0;
 }
 
 .gear-card__sub {
   color: var(--secondary);
-  font-size: 0.85rem;
-  margin: 0.15rem 0 0;
+  font-size: var(--text-sm);
+  margin: 2px 0 0;
 }
 
 .gear-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.3rem;
+  gap: var(--space-1);
   list-style: none;
-  margin: 0.5rem 0 0;
+  margin: var(--space-2) 0 0;
   padding: 0;
 }
 
 .gear-badges li {
-  font-size: 0.72rem;
-  padding: 0.1rem 0.5rem;
-  border-radius: 999px;
+  font-size: var(--text-xs);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-pill);
   border: 1px solid var(--border);
   color: var(--secondary);
 }
 
 .gear-card__note {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
 }
 
 .gear-card__figures {
   display: flex;
-  gap: 1.4rem;
+  gap: var(--space-5);
   margin: 0;
 }
 
 .gear-card__figures dt {
   color: var(--secondary);
-  font-size: 0.78rem;
+  font-size: var(--text-xs);
 }
 
 .gear-card__figures dd {
   margin: 0;
-  font-size: 1.45rem;
+  font-size: var(--text-2xl);
   font-weight: 600;
   line-height: 1.2;
 }
 
 .gear-card__pct {
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   font-weight: normal;
   color: var(--secondary);
 }
@@ -438,15 +410,15 @@
 .gear-stack--full {
   width: 100%;
   height: 10px;
-  border-radius: 4px;
+  border-radius: var(--radius-s);
 }
 
 .gear-card__facts {
   display: grid;
   grid-template-columns: max-content 1fr;
-  gap: 0.25rem 0.9rem;
+  gap: var(--space-1) var(--space-4);
   margin: 0;
-  font-size: 0.88rem;
+  font-size: var(--text-sm);
 }
 
 .gear-card__facts > div {
@@ -462,15 +434,15 @@
 }
 
 .gear-card__tc {
-  margin: -0.4rem 0 0;
-  font-size: 0.85rem;
+  margin: calc(var(--space-2) * -1) 0 0;
+  font-size: var(--text-sm);
   color: var(--secondary);
 }
 
 .gear-card__photos {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 6px;
+  gap: var(--space-2);
   list-style: none;
   margin: auto 0 0;
   padding: 0;
@@ -486,7 +458,7 @@
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: var(--radius);
   margin: 0;
 }
 
@@ -494,7 +466,7 @@
 
 .gear-footnote {
   color: var(--secondary);
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   border-top: 1px solid var(--border);
-  padding-top: 0.8rem;
+  padding-top: var(--space-3);
 }
