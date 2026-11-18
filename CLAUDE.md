@@ -34,6 +34,9 @@ matching doc before touching its area (table at the end).
 - A commit message is one short lowercase English line in the style of the
   history (`model pages`, `fix photo page slug`): no body, no Claude or
   `Co-Authored-By` attribution.
+- `.claude/settings.json` turns Claude Code's commit and PR attribution off, and
+  `.claude/hooks/check-commit-msg.py` blocks any `git commit` that is not a
+  single short lowercase `-m` line.
 
 ### SEO is part of every change
 
