@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{{- /* The domain root, /index.html: docs/concepts/multilingual-home.md §5.
+
+       Rendered from the English home through the `rootpicker` output format in
+       hugo.yaml, which replaces Hugo's own root redirect
+       (disableDefaultLanguageRedirect). It sends a visitor to /en/, /de/ or /sv/:
+       the language picked in the switcher if there is one (lang-hint.js stores
+       it), else the first site language the browser lists, else English.
+
+       For a crawler and without JavaScript nothing changes from Hugo's page: a
+       noindex meta refresh to /en/ with /en/ as canonical, and /en/ stays the
+       x-default of the home cluster. Only this URL ever picks a language; no
+       content URL redirects by the visitor's language (§2, rule 2).
+
+       The jump is root-relative, so it works in the clearnet and the onion build
+       alike; the fallbacks use .Permalink, which carries each build's baseURL.
+       Keep the language list in step with hugo.yaml's `languages`. */ -}}
+<html lang="{{ .Lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.Params.ShortTitle | default site.Title }}</title>
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta name="robots" content="noindex">
+  <script>(function(){var s=["en","de","sv"],l=null;try{l=localStorage.getItem("lang-choice")}catch(e){}if(s.indexOf(l)<0){l="en";(navigator.languages||[navigator.language||""]).some(function(x){x=String(x).slice(0,2).toLowerCase();if(s.indexOf(x)>-1){l=x;return true}})}location.replace("/"+l+"/")})()</script>
+  <noscript><meta http-equiv="refresh" content="0; url={{ .Permalink }}"></noscript>
+</head>
+<body>
+  <ul>
+    {{- range .AllTranslations }}
+    <li><a href="{{ .Permalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.Label }}</a></li>
+    {{- end }}
+  </ul>
+</body>
+</html>

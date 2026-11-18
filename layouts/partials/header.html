@@ -59,8 +59,15 @@
                         {{- if $separator }}<li>|</li>{{ end }}
                         {{- range . -}}
                         {{- if ne $lang .Lang }}
+                        {{- /* The page's own translation where it has one, else that
+                               language's home (docs/concepts/multilingual-home.md
+                               §6a). data-lang-choice: lang-hint.js stores the click,
+                               and from then on that language counts instead of the
+                               browser's, for the hint bar and the root page. */}}
+                        {{- $target := . }}
+                        {{- with where $.Translations "Lang" .Lang }}{{ $target = index . 0 }}{{ end }}
                         <li>
-                            <a href="{{- .Permalink -}}" title="{{ .Language.Params.languageAltTitle | default (.Language.Label | emojify) | default (.Lang | title) }}"
+                            <a href="{{- $target.Permalink -}}" hreflang="{{ .Lang }}" data-lang-choice="{{ .Lang }}" title="{{ .Language.Params.languageAltTitle | default (.Language.Label | emojify) | default (.Lang | title) }}"
                                 aria-label="{{ .Language.Label | default (.Lang | title) }}">
                                 {{- if (and site.Params.displayFullLangName (.Language.Label)) }}
                                 {{- .Language.Label | emojify -}}
@@ -108,3 +115,7 @@
            newsletter-cta.html and navbar.css. */}}
     {{- partial "newsletter-cta.html" . }}
 </header>
+{{- /* After the header, not inside it: the header is a three-column grid, and the
+       bar belongs to the page flow under it (docs/concepts/multilingual-home.md
+       §4, §8). */}}
+{{- partial "lang-hint.html" . }}

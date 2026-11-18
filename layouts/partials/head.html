@@ -416,6 +416,18 @@
        script (it solves Listmonk's ALTCHA). */ -}}
 <script>document.documentElement.classList.add("js")</script>
 
+{{- /* The visitor's languages, on <html> before first paint
+       (docs/concepts/multilingual-home.md §4). data-reads: the site languages the
+       browser lists, in its order; data-top: the language picked in the switcher
+       (lang-hint.js stores it), else the first of data-reads. lang-more.css does
+       the rest -- the visitor's group in the "other languages" block comes first,
+       and the "this page is also in …" bar in data-top shows. Inline and
+       synchronous for the same reason as the `js` class: set any later, the bar
+       would push the page down after it was painted (§8). Storage is read in its
+       own try, so a browser that blocks it still gets its languages. Keep the
+       language list in step with hugo.yaml's `languages`. */ -}}
+<script>(function(){var s=["en","de","sv"],r=[],d=document.documentElement,c=null,x=false;(navigator.languages||[navigator.language||""]).forEach(function(l){l=String(l).slice(0,2).toLowerCase();if(s.indexOf(l)>-1&&r.indexOf(l)<0)r.push(l)});try{c=localStorage.getItem("lang-choice");x=!!localStorage.getItem("lang-hint-dismissed")}catch(e){}if(s.indexOf(c)<0)c=null;d.dataset.reads=r.join(" ");d.dataset.top=c||r[0]||"";if(x)d.dataset.hintDismissed=""})()</script>
+
 {{/*  Newsletter — pill picker on any page embedding the {{< newsletter >}} shortcode  */}}
 {{- /* Loaded unconditionally, and that is not laziness.
 
@@ -441,3 +453,9 @@
        script only toggles what is already there. */ -}}
 {{ $newsletterJs := resources.Get "js/newsletter.js" | js.Build (dict "minify" true) | resources.Fingerprint }}
 <script src="{{ $newsletterJs.RelPermalink }}" defer></script>
+
+{{- /* The language switcher and the hint bar are in the header of every page, so
+       is their script: it stores the language a visitor picks and the dismissal
+       of the bar (docs/concepts/multilingual-home.md §4, §6a). */ -}}
+{{ $langHintJs := resources.Get "js/lang-hint.js" | js.Build (dict "minify" true) | resources.Fingerprint }}
+<script src="{{ $langHintJs.RelPermalink }}" defer></script>

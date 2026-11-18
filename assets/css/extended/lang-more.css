@@ -1,0 +1,219 @@
+/* The other languages: the block of posts that exist only in another language
+   (layouts/partials/lang-more.html) and the "this page is also in …" bar
+   (layouts/partials/lang-hint.html). docs/concepts/multilingual-home.md §3–§4.
+
+   Everything the visitor's browser language changes is decided HERE, from two
+   attributes the inline script in head.html puts on <html> before first paint:
+   data-reads (the site languages the browser lists) and data-top (the first of
+   them, or the language picked in the switcher). The HTML is the same for every
+   visitor and every crawler; nothing below may need a script after paint, or the
+   page would shift (§8). */
+
+/* ---------------------------------------------------------------- the block */
+
+.lang-more {
+    margin: var(--section-gap) 0;
+}
+
+.lang-more .home-header {
+    margin-bottom: 0;
+}
+
+.lang-more-intro {
+    margin: var(--space-2) 0 var(--space-4);
+    font-size: var(--text-md);
+    line-height: 1.5;
+    color: var(--secondary);
+}
+
+/* The groups have a container of their own: `order` works among siblings, and
+   the visitor's group must move up among the groups, not above the heading. */
+.lang-more-groups {
+    display: flex;
+    flex-direction: column;
+    gap: var(--grid-gap);
+}
+
+.lang-more-group {
+    padding: var(--space-4) var(--gap) var(--space-2);
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.lang-more-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-1) var(--space-3);
+    margin-bottom: var(--space-2);
+}
+
+.lang-more-head h3 {
+    margin: 0;
+    font-size: var(--text-lg);
+    line-height: 1.3;
+}
+
+.lang-more-all {
+    font-size: var(--text-sm);
+    color: var(--secondary);
+}
+
+.lang-more-all:hover {
+    color: var(--primary);
+}
+
+.lang-more-group ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.lang-more-group li {
+    padding: var(--space-3) 0;
+    border-top: 1px solid var(--border);
+}
+
+.lang-more-title {
+    font-size: var(--text-md);
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.lang-more-meta {
+    margin-top: 2px;
+    font-size: var(--text-sm);
+    color: var(--secondary);
+}
+
+.lang-more-feed {
+    display: inline-block;
+    margin-top: var(--space-4);
+    font-size: var(--text-md);
+    color: var(--secondary);
+    box-shadow: 0 1px 0;
+}
+
+.lang-more-feed:hover {
+    color: var(--primary);
+}
+
+/* The groups the visitor reads come first, with the site's one form of
+   emphasis: the primary colour itself. The border grows by 1px, the padding
+   shrinks by 1px, so the box keeps its size either way. */
+html[data-reads~="en"] .lang-more-group[data-lang="en"],
+html[data-reads~="de"] .lang-more-group[data-lang="de"],
+html[data-reads~="sv"] .lang-more-group[data-lang="sv"] {
+    order: -1;
+    padding: calc(var(--space-4) - 1px) calc(var(--gap) - 1px) calc(var(--space-2) - 1px);
+    border: 2px solid var(--primary);
+}
+
+/* ------------------------------------------------------------ the hint bar */
+
+/* In the page flow, directly under the header and as wide as the reading
+   column, never fixed, sticky or over the content: an overlay would be an
+   intrusive interstitial (§8). Without data-top, or once dismissed, every bar is
+   display: none and the wrapper has no height at all. */
+.lang-hints {
+    max-width: calc(var(--main-width) + var(--gap) * 2);
+    margin: 0 auto;
+    padding: 0 var(--gap);
+}
+
+.lang-hint {
+    display: none;
+    align-items: center;
+    gap: var(--space-2) var(--space-4);
+    margin-top: var(--space-4);
+    padding: var(--space-2) var(--space-2) var(--space-2) var(--space-4);
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: var(--text-md);
+    line-height: 1.4;
+}
+
+/* List pages put white cards on a grey ground; the bar is a card there. */
+.list .lang-hint {
+    background: var(--entry);
+}
+
+html[data-top="en"]:not([data-hint-dismissed]) .lang-hint[data-lang="en"],
+html[data-top="de"]:not([data-hint-dismissed]) .lang-hint[data-lang="de"],
+html[data-top="sv"]:not([data-hint-dismissed]) .lang-hint[data-lang="sv"] {
+    display: flex;
+}
+
+.lang-hint__flag {
+    flex: none;
+    font-size: var(--text-2xl);
+    line-height: 1;
+}
+
+/* The whole sentence is the link; on a wide screen its last part is drawn as
+   the site's filled button. */
+.lang-hint__link {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2) var(--space-4);
+    min-width: 0;
+    padding: var(--space-1) 0;
+}
+
+.lang-hint__text cite {
+    font-style: italic;
+}
+
+.lang-hint__cta {
+    flex: none;
+    padding: 0 var(--space-4);
+    border-radius: var(--radius-pill);
+    background: var(--primary);
+    color: var(--theme);
+    font-size: var(--text-sm);
+    line-height: 36px;
+    white-space: nowrap;
+}
+
+.lang-hint__link:hover .lang-hint__cta {
+    opacity: 0.85;
+}
+
+.lang-hint__close {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius);
+    color: var(--secondary);
+    cursor: pointer;
+}
+
+.lang-hint__close:hover {
+    color: var(--primary);
+}
+
+/* A phone: the sentence alone is the link, underlined, at most three lines, so
+   the bar stays small and the page's own heading stays in the first screen. */
+@media screen and (width < 640px) {
+    .lang-hint__cta {
+        display: none;
+    }
+
+    .lang-hint__text {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+}

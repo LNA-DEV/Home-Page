@@ -146,6 +146,6 @@ Swedish content files, `i18n/{de,sv}.yaml`, and the `de`/`sv` values in `data/`.
 | maps, the basemap, route maps | `docs/maps.md` |
 | `/travel/` and trips | `docs/travel.md` |
 | the newsletter | `docs/newsletter.md` |
-| software projects page, activity feed, RSS, `security.txt`, i18n | `docs/site.md` |
-| writing, reviewing or proofreading a post | `docs/posts.md` |
+| software projects page, activity feed, RSS, `security.txt`, i18n, the other-languages block and the root page | `docs/site.md` |
+| writing, reviewing or proofreading a post, posts in more than one language | `docs/posts.md` |
 | why something is built the way it is | `docs/concepts/<topic>.md` — design records; their status lines can lag behind the code |

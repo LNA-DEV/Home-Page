@@ -1,0 +1,79 @@
+{{- /* "Also on this site in other languages": the newest posts that exist ONLY in
+       the other languages. docs/concepts/multilingual-home.md §3.
+
+       Called with the page (a language home, or the posts section), on page 1 of
+       its list only. Every visitor and every crawler gets the same HTML: the
+       browser-language layer (§4) only reorders and highlights the groups with
+       CSS, keyed on data-lang, so this markup must not depend on the visitor.
+
+       Three rules keep the page's own language the page's language (§2, §8):
+       the headings and labels come from this page's i18n, only the titles are in
+       the other language, and no foreign description is printed. Each title
+       carries `lang` (screen readers, translation) and `hreflang` (the target's
+       language); the date and reading time are this page's language, so they
+       sit outside the `lang` element.
+
+       Membership mirrors home.html's own list: the mainSections pages of that
+       language, minus `hiddenInHomeList`. A post with a translation in this
+       page's language is left out, since the page already lists that
+       translation. The count link counts the whole posts list it points at,
+       translated posts included, so the number matches what the reader finds. */ -}}
+{{- $page := . -}}
+{{- $lang := .Lang -}}
+{{- $max := 3 -}}
+{{- $flags := dict "en" "🇬🇧" "de" "🇩🇪" "sv" "🇸🇪" -}}
+{{- $groups := slice -}}
+{{- range site.Home.Translations -}}
+  {{- $other := . -}}
+  {{- $posts := where .Site.RegularPages "Type" "in" site.Params.mainSections -}}
+  {{- $posts = where $posts "Params.hiddenInHomeList" "!=" "true" -}}
+  {{- $only := slice -}}
+  {{- range $posts.ByDate.Reverse -}}
+    {{- if not (where .Translations "Lang" $lang) -}}
+      {{- $only = $only | append . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with $only -}}
+    {{- $list := $other.Site.GetPage "/posts" -}}
+    {{- $groups = $groups | append (dict
+        "lang" $other.Lang
+        "flag" (index $flags $other.Lang | default "")
+        "posts" (first $max .)
+        "list" $list
+        "count" (cond (ne $list nil) (len (union $list.RegularPages $list.Sections)) 0)) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- with $groups }}
+<section class="lang-more" aria-labelledby="lang-more-title">
+  <h2 id="lang-more-title" class="home-header">{{ i18n "lang_more_title" }}</h2>
+  <p class="lang-more-intro">{{ i18n "lang_more_intro" }}</p>
+  <div class="lang-more-groups">
+    {{- range . }}
+    {{- $g := . }}
+    <div class="lang-more-group" data-lang="{{ $g.lang }}">
+      <div class="lang-more-head">
+        <h3>{{ with $g.flag }}<span aria-hidden="true">{{ . }}</span> {{ end }}{{ i18n (printf "lang_more_only_%s" $g.lang) }}</h3>
+        {{- with $g.list }}
+        <a class="lang-more-all" href="{{ .Permalink }}" hreflang="{{ $g.lang }}">{{ i18n (printf "lang_more_all_%s" $g.lang) $g.count }}</a>
+        {{- end }}
+      </div>
+      <ul>
+        {{- range $g.posts }}
+        <li>
+          <a class="lang-more-title" href="{{ .Permalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Title }}</a>
+          <div class="lang-more-meta">
+            {{- if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format (default ":date_long" site.Params.DateFormat) }}</time>{{ end }}
+            {{- if $page.Param "ShowReadingTime" }}&nbsp;·&nbsp;{{ i18n "read_time" .ReadingTime | default (printf "%d min" .ReadingTime) }}{{ end -}}
+          </div>
+        </li>
+        {{- end }}
+      </ul>
+    </div>
+    {{- end }}
+  </div>
+  {{- with site.GetPage "/feed" }}
+  <a class="lang-more-feed" href="{{ .Permalink }}">📰 {{ i18n "lang_more_feed" }}</a>
+  {{- end }}
+</section>
+{{- end }}

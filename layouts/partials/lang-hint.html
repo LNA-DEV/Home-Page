@@ -1,0 +1,46 @@
+{{- /* "This page is also in <language>": one bar per translation of this page,
+       each written in ITS language. docs/concepts/multilingual-home.md §4.
+
+       Rendered for every visitor and hidden by default; lang-more.css shows the
+       one whose data-lang equals data-top on <html>, which the inline script in
+       head.html sets before first paint from the visitor's languages (or the
+       language they picked in the switcher). The page's own language never has a
+       bar, so no further condition is needed. Nothing here may depend on the
+       visitor: crawlers get this exact markup (§2, rule 4).
+
+       The strings come from the TRANSLATION's site params (`langHint` under
+       languages.<lang>.params in hugo.yaml): a page's i18n reaches only its own
+       language, and the bar must speak the visitor's. A home names no title; any
+       other page names the translation's, which on a photo page is the only way
+       to know it is the same photo. */ -}}
+{{- $flags := dict "en" "🇬🇧" "de" "🇩🇪" "sv" "🇸🇪" -}}
+{{- with .Translations }}
+<div class="lang-hints">
+  {{- range . }}
+  {{- $h := .Site.Params.langHint }}
+  {{- if $h }}
+  <div class="lang-hint" data-lang="{{ .Lang }}" lang="{{ .Lang }}">
+    <span class="lang-hint__flag" aria-hidden="true">{{ index $flags .Lang | default "" }}</span>
+    <a class="lang-hint__link" href="{{ .Permalink }}" hreflang="{{ .Lang }}" data-lang-choice="{{ .Lang }}">
+      {{- if .IsHome }}
+      <span class="lang-hint__text">{{ $h.home }}</span>
+      <span class="lang-hint__cta">{{ $h.homeLink }}</span>
+      {{- else }}
+      <span class="lang-hint__text">{{ $h.page }} <cite>{{ .Title }}</cite></span>
+      <span class="lang-hint__cta">{{ $h.pageLink }}</span>
+      {{- end }}
+    </a>
+    <button type="button" class="lang-hint__close" aria-label="{{ $h.close }}" title="{{ $h.close }}">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M18 6 6 18"></path>
+        <path d="m6 6 12 12"></path>
+      </svg>
+    </button>
+  </div>
+  {{- else }}
+  {{- errorf "lang-hint.html: languages.%s.params.langHint is missing in hugo.yaml" .Lang }}
+  {{- end }}
+  {{- end }}
+</div>
+{{- end }}
