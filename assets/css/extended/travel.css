@@ -264,13 +264,13 @@
 /* thumbnails */
 .trip-thumbs {
   display: flex;
-  gap: var(--space-2);
+  gap: var(--thumb-gap);
   margin-top: var(--space-3);
   flex-wrap: wrap;
 }
 .trip-thumbs.compact {
   margin-top: 0;
-  gap: var(--space-2);
+  gap: var(--thumb-gap);
 }
 .trip-thumbs.compact .trip-thumb {
   width: 42px;

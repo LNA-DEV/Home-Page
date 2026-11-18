@@ -336,7 +336,7 @@
      190px the sixth tile orphaned onto a second row; at phone width it was a
      single 380px column, i.e. six full-bleed photos to scroll past. */
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: var(--space-4);
+  gap: var(--tile-gap);
 }
 
 .photo-related a {

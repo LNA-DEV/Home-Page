@@ -126,7 +126,10 @@
     --space-heading: var(--space-3);                                   /* heading → its content */
     --card-pad: var(--space-4);                                        /* inside a card */
     --grid-gap: var(--space-4);                                        /* between cards */
-    --photo-gap: var(--space-5);                                       /* between photos */
+    /* image grids keep the gaps they had before the design system (owner, 2026-11-18) */
+    --photo-gap: var(--space-2);                                       /* 8px: the justified photo grid (#gallery) */
+    --tile-gap: 0.875rem;                                              /* 14px: photo tiles (dex grid, related photos, tag pages) */
+    --thumb-gap: 6px;                                                  /* a row of small thumbnails (gear cards, trips) */
     --section-gap: var(--space-7);                                     /* between sections of a page */
 
     /* ---- page edge and widths — §5 ----------------------------------------- */

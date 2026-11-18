@@ -39,7 +39,7 @@ It unifies; it does not redesign. No page changes its structure. The only delibe
 | | |
 |---|---|
 | Accent | **One accent, site-wide.** No colour per area. Colour that carries meaning stays a data colour (§3.3). Rejected: a colour per area with matched lightness and chroma |
-| Density | **Medium:** `--section-gap` 48px, `--photo-gap` 24px (§4.2). Rejected: airy (64 / 24) and compact (48 / 16) |
+| Density | **Medium:** `--section-gap` 48px (§4.2). Rejected: airy (64 / 24) and compact (48 / 16). The photo grid's 24px from this decision was **reverted by the owner** after seeing it built (2026-11-18, "viel zu groß"): every image grid keeps the gap it had before — `--photo-gap` 8px, `--tile-gap` 14px, `--thumb-gap` 6px (§12) |
 | Gallery width | **Wide, 1060px**, the header's width, so every grid edge lines up with logo and menu. Full width (1440px) only for story blocks and the travel page (§5.2). At a 1440px viewport the grid gets slightly wider than today (1060 vs 984px), at 1920px narrower (1060 vs 1344px). Rejected: full width for grids |
 | Photos on a phone | **Grids keep the gutter** (16px), like text and header. Only the story hero and the lightbox go edge to edge (§5.2). Rejected: everything edge to edge, and a gutter around the story hero too |
 | Third-party brand colours | **Brought into the palette.** Rating stars and achievement bars take the accent; Steam blue and IMDb yellow go |
@@ -223,11 +223,13 @@ Steps alone would bring the drift back: one area picks `--space-3`, the next `--
 | `--space-heading` | `--space-3` | Heading → its content |
 | `--card-pad` | `--space-4` | Inside a card |
 | `--grid-gap` | `--space-4` | Between cards |
-| `--photo-gap` | `--space-5` (24px) | Between photos |
+| `--photo-gap` | `--space-2` (8px) | Between photos in the justified grid — reverted from 24px, §12 |
+| `--tile-gap` | 14px | Between photo tiles: the dex grid, related photos, tag pages |
+| `--thumb-gap` | 6px | A row of small thumbnails: gear cards, trips |
 | `--section-gap` | `--space-7` (48px) | Between sections of a page |
 | `--content-gap` | PaperMod's, re-pointed to the scale | Inside PaperMod's own templates |
 
-Density is settled as medium: 48px between sections, 24px between photos. Should it ever change, that is two lines in one file.
+Density is settled as medium: 48px between sections. The image grids keep their old gaps (§12). Should either change, that is one line in one file.
 
 Computed geometry stays out of the system on purpose: `--pull` of the floating `galleryImage`, the story widths derived from an aspect ratio, and `calc()` against `100vw`. That is layout arithmetic, not spacing.
 
@@ -420,5 +422,6 @@ Built and checked on 2026-11-18 against a container build with a placeholder pho
 - **The header.** `.nav` now fills its grid track (`margin-inline: 0`): PaperMod's auto margins shrank it to the menu's width and put the logo ~20px inside the track, by an amount that depended on the language. Between ~769 and ~1418px the header's track narrows to make room for the newsletter button (`navbar.css` explains why), so there the logo sits inside a wide page's edge; `tests/e2e/layout.spec.ts` measures at 375, 768, 1440 and 1920px, where they align.
 - **The story blocks** keep their own centring formula, because they also cap their width at the screen's height; they take their widths from `--bleed-wide` / `--bleed-full`, so the arithmetic exists once. `galleryImageText` and the trip page use the `l-*` classes (`l-full` is set by `travel.js`).
 - **Components** were unified by tokens, not by a shared class: one card radius (`--radius-l`) and padding (`--card-pad`) for the text cards (gear, software projects, project nav), one card-grid gap, one section gap, one heading gap; every active filter (gallery, dex, reading list, gaming and achievements, activity, newsletter) takes the accent fill. The dex tiles keep their tight 8px frame: they are photo tiles, not text cards.
+- **Image grids keep their old gaps** (owner, 2026-11-18, after seeing the build): the justified photo grid at 8px instead of decision 4's 24px, which was "viel zu groß", and every other image grid at the gap it had before the snap — photo tiles 14px (`--tile-gap`, the dex grid's 0.9rem and the related photos' 14px), thumbnail rows 6px (`--thumb-gap`, gear cards 6px and trips 6–7px). `--tile-gap` and `--thumb-gap` are off the 4px scale on purpose: they are what the grids had. Grids whose snapped gap came out a little smaller (the dex grid on a phone, the game screenshots) stay as they are.
 - **The contrast samples** on the styleguide test only the pairs the site uses. PaperMod's own dark `--secondary` on `--code-bg` is 4.27:1 and secondary text on the accent tint is below 4.5:1 too; neither pairing occurs on the site, so neither is sampled.
 
