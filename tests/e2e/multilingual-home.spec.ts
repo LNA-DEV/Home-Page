@@ -151,7 +151,12 @@ test.describe("the SEO conditions (§8)", () => {
       /* Only Chromium reports layout-shift entries; elsewhere the observer would
          see nothing and the test would pass without measuring anything. */
       test.skip(browserName !== "chromium", "layout-shift entries are Chromium-only");
-      await page.route(/\.(woff2?|otf|ttf)(\?.*)?$/, (route) => route.abort());
+      /* Cantarell's swap shifts the header a little on every page, bar or no
+         bar, so the font's @font-face is served empty. Blocking only the font
+         file is not enough where Cantarell is installed system-wide
+         (Fedora/GNOME): Chrome then swaps to the local font once the web font
+         fails. */
+      await page.route(/\/css\/cantarell\.css$/, (route) => route.fulfill({ contentType: "text/css", body: "" }));
       await page.addInitScript(() => {
         (window as any).__shifts = [];
         new PerformanceObserver((list) => {
