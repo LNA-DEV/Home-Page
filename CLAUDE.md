@@ -77,7 +77,9 @@ Swedish content files, `i18n/{de,sv}.yaml`, and the `de`/`sv` values in `data/`.
   and no notes are kept anywhere else outside it either.
 - What is worth keeping goes into the repo, where it belongs: how to work here and
   the hard rules → this file; how something works or how to do X →
-  `docs/<topic>.md`; why something is built this way → `docs/concepts/`.
+  `docs/<topic>.md`; why something is built this way → `docs/concepts/`; a
+  repeatable workflow → `.claude/skills/<name>/SKILL.md`, which points to the
+  matching `docs/` page instead of repeating it.
 - When a correction, a lesson or a measurement comes up, propose the exact line
   and its file at the end of the answer; it is written with the go, like any
   other change. Documentation that belongs to a change is part of that change.

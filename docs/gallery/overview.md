@@ -84,6 +84,9 @@ the suggestions are reviewed, not a sign the owner will type the tags in. Then
 update the golden list: `npx playwright test --project build` and
 `npm run golden:update` (the full suite only when asked).
 
+The step by step and the style rules: the `photo-metadata` skill
+(`.claude/skills/photo-metadata/SKILL.md`).
+
 ### `scripts/gallery-import-xmp.py` — done, do not re-run
 
 The one-time migration that made "the YAML is the truth" literally true. It is
