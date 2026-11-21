@@ -29,6 +29,7 @@
 /de/gallery/dex/bearded-vulture/
 /de/gallery/dex/beautiful-demoiselle/
 /de/gallery/dex/beluga-whale/
+/de/gallery/dex/black-redstart/
 /de/gallery/dex/black-stork/
 /de/gallery/dex/blue-whale/
 /de/gallery/dex/bottlenose-dolphin/
@@ -807,6 +808,7 @@
 /de/gallery/photo/ruhe-im-sand-wisent-lagert-bei-der-scheune/
 /de/gallery/photo/ruhend-auf-einem-ahorn-eine-baenderschnecke-im-herbstbaum/
 /de/gallery/photo/samtrot-eine-rose-im-gruen/
+/de/gallery/photo/sanfte-landung-hausrotschwanz-setzt-auf-einem-kalksteinblock-auf/
 /de/gallery/photo/schatten-auf-dem-moos-tiefe-sonne-im-fichtenwald/
 /de/gallery/photo/schatten-von-der-sonne-ein-solar-carport-ueber-der-aegaeis/
 /de/gallery/photo/scheinwerfer-auf-die-schafgarbe-eine-weisse-dolde-im-gras/
@@ -1233,6 +1235,7 @@
 /en/gallery/dex/bearded-vulture/
 /en/gallery/dex/beautiful-demoiselle/
 /en/gallery/dex/beluga-whale/
+/en/gallery/dex/black-redstart/
 /en/gallery/dex/black-stork/
 /en/gallery/dex/blue-whale/
 /en/gallery/dex/bottlenose-dolphin/
@@ -2127,6 +2130,7 @@
 /en/gallery/photo/tisdagsholmen-two-red-cottages-on-the-rock/
 /en/gallery/photo/to-the-outlook-a-white-tailed-eagle-over-bavarian-pines/
 /en/gallery/photo/top-of-the-lamp-a-crow-against-a-grey-sky/
+/en/gallery/photo/touchdown-black-redstart-landing-on-a-limestone-boulder/
 /en/gallery/photo/touching-the-horizon-sunset-from-the-mountain-pasture/
 /en/gallery/photo/touching-the-shore-sun-setting-behind-the-headland/
 /en/gallery/photo/towers-of-purple-lupins-in-the-summer-garden/
@@ -2819,6 +2823,7 @@
 /images/gallery/fill-120x120/time-for-a-beer-german-man-standing-before-a-beer-sign-in-gamla-stan.jpg
 /images/gallery/fill-120x120/tisdagsholmen-two-red-cottages-on-the-rock.jpg
 /images/gallery/fill-120x120/to-the-outlook-a-white-tailed-eagle-over-bavarian-pines.jpg
+/images/gallery/fill-120x120/touchdown-black-redstart-landing-on-a-limestone-boulder.jpg
 /images/gallery/fill-120x120/touching-the-horizon-sunset-from-the-mountain-pasture.jpg
 /images/gallery/fill-120x120/towers-of-purple-lupins-in-the-summer-garden.jpg
 /images/gallery/fill-120x120/tree-cover-alpaca-peeking-out-from-behind-a-trunk.jpg
@@ -2893,6 +2898,7 @@
 /images/gallery/fill-480x480-center/still-dripping-mute-swan-on-blue-water.jpg
 /images/gallery/fill-480x480-center/straight-ahead-mallard-coming-through-the-reeds.jpg
 /images/gallery/fill-480x480-center/top-of-the-lamp-a-crow-against-a-grey-sky.jpg
+/images/gallery/fill-480x480-center/touchdown-black-redstart-landing-on-a-limestone-boulder.jpg
 /images/gallery/fill-480x480-center/tree-cover-alpaca-peeking-out-from-behind-a-trunk.jpg
 /images/gallery/fill-480x480-center/twice-over-single-canada-goose-and-its-reflection.jpg
 /images/gallery/fill-480x480-center/watch-on-the-rim-mandarin-duck-above-her-ducklings.jpg
@@ -2904,6 +2910,7 @@
 /images/gallery/fill-480x480-center/yellow-on-black-a-fire-salamander-in-the-moss.jpg
 /images/gallery/fill-600x400/falu-red-and-lupins-a-farmhouse-in-the-evening-sun.jpg
 /images/gallery/fill-600x400/the-valley-has-vanished-autumn-ridge-above-the-fog.jpg
+/images/gallery/fill-600x400/touchdown-black-redstart-landing-on-a-limestone-boulder.jpg
 /images/gallery/fill-600x400/tree-cover-alpaca-peeking-out-from-behind-a-trunk.jpg
 /images/gallery/fill-900x900-center/banded-shell-grove-snail-crossing-the-granite.jpg
 /images/gallery/fill-900x900-center/beachtime-wood-sandpiper-passing-through-the-bog-shore.jpg
@@ -2947,6 +2954,7 @@
 /images/gallery/fill-900x900-center/still-dripping-mute-swan-on-blue-water.jpg
 /images/gallery/fill-900x900-center/straight-ahead-mallard-coming-through-the-reeds.jpg
 /images/gallery/fill-900x900-center/top-of-the-lamp-a-crow-against-a-grey-sky.jpg
+/images/gallery/fill-900x900-center/touchdown-black-redstart-landing-on-a-limestone-boulder.jpg
 /images/gallery/fill-900x900-center/tree-cover-alpaca-peeking-out-from-behind-a-trunk.jpg
 /images/gallery/fill-900x900-center/twice-over-single-canada-goose-and-its-reflection.jpg
 /images/gallery/fill-900x900-center/watch-on-the-rim-mandarin-duck-above-her-ducklings.jpg
@@ -3554,6 +3562,7 @@
 /images/gallery/fit-1200x1200/tisdagsholmen-two-red-cottages-on-the-rock.jpg
 /images/gallery/fit-1200x1200/to-the-outlook-a-white-tailed-eagle-over-bavarian-pines.jpg
 /images/gallery/fit-1200x1200/top-of-the-lamp-a-crow-against-a-grey-sky.jpg
+/images/gallery/fit-1200x1200/touchdown-black-redstart-landing-on-a-limestone-boulder.jpg
 /images/gallery/fit-1200x1200/touching-the-horizon-sunset-from-the-mountain-pasture.jpg
 /images/gallery/fit-1200x1200/touching-the-shore-sun-setting-behind-the-headland.jpg
 /images/gallery/fit-1200x1200/towers-of-purple-lupins-in-the-summer-garden.jpg
@@ -4221,6 +4230,7 @@
 /images/gallery/fit-1200x630/tisdagsholmen-two-red-cottages-on-the-rock.jpg
 /images/gallery/fit-1200x630/to-the-outlook-a-white-tailed-eagle-over-bavarian-pines.jpg
 /images/gallery/fit-1200x630/top-of-the-lamp-a-crow-against-a-grey-sky.jpg
+/images/gallery/fit-1200x630/touchdown-black-redstart-landing-on-a-limestone-boulder.jpg
 /images/gallery/fit-1200x630/touching-the-horizon-sunset-from-the-mountain-pasture.jpg
 /images/gallery/fit-1200x630/touching-the-shore-sun-setting-behind-the-headland.jpg
 /images/gallery/fit-1200x630/towers-of-purple-lupins-in-the-summer-garden.jpg
@@ -4824,6 +4834,7 @@
 /images/gallery/fit-1600x1600/time-for-a-beer-german-man-standing-before-a-beer-sign-in-gamla-stan.jpg
 /images/gallery/fit-1600x1600/tisdagsholmen-two-red-cottages-on-the-rock.jpg
 /images/gallery/fit-1600x1600/to-the-outlook-a-white-tailed-eagle-over-bavarian-pines.jpg
+/images/gallery/fit-1600x1600/touchdown-black-redstart-landing-on-a-limestone-boulder.jpg
 /images/gallery/fit-1600x1600/touching-the-horizon-sunset-from-the-mountain-pasture.jpg
 /images/gallery/fit-1600x1600/touching-the-shore-sun-setting-behind-the-headland.jpg
 /images/gallery/fit-1600x1600/towers-of-purple-lupins-in-the-summer-garden.jpg
@@ -5483,6 +5494,7 @@
 /images/gallery/fit-4000x4000/tisdagsholmen-two-red-cottages-on-the-rock.jpg
 /images/gallery/fit-4000x4000/to-the-outlook-a-white-tailed-eagle-over-bavarian-pines.jpg
 /images/gallery/fit-4000x4000/top-of-the-lamp-a-crow-against-a-grey-sky.jpg
+/images/gallery/fit-4000x4000/touchdown-black-redstart-landing-on-a-limestone-boulder.jpg
 /images/gallery/fit-4000x4000/touching-the-horizon-sunset-from-the-mountain-pasture.jpg
 /images/gallery/fit-4000x4000/touching-the-shore-sun-setting-behind-the-headland.jpg
 /images/gallery/fit-4000x4000/towers-of-purple-lupins-in-the-summer-garden.jpg
@@ -6154,6 +6166,7 @@
 /images/gallery/fit-600x600/tisdagsholmen-two-red-cottages-on-the-rock.jpg
 /images/gallery/fit-600x600/to-the-outlook-a-white-tailed-eagle-over-bavarian-pines.jpg
 /images/gallery/fit-600x600/top-of-the-lamp-a-crow-against-a-grey-sky.jpg
+/images/gallery/fit-600x600/touchdown-black-redstart-landing-on-a-limestone-boulder.jpg
 /images/gallery/fit-600x600/touching-the-horizon-sunset-from-the-mountain-pasture.jpg
 /images/gallery/fit-600x600/touching-the-shore-sun-setting-behind-the-headland.jpg
 /images/gallery/fit-600x600/towers-of-purple-lupins-in-the-summer-garden.jpg
@@ -6645,6 +6658,7 @@
 /images/gallery/tisdagsholmen-two-red-cottages-on-the-rock.jpg
 /images/gallery/to-the-outlook-a-white-tailed-eagle-over-bavarian-pines.jpg
 /images/gallery/top-of-the-lamp-a-crow-against-a-grey-sky.jpg
+/images/gallery/touchdown-black-redstart-landing-on-a-limestone-boulder.jpg
 /images/gallery/touching-the-horizon-sunset-from-the-mountain-pasture.jpg
 /images/gallery/touching-the-shore-sun-setting-behind-the-headland.jpg
 /images/gallery/towers-of-purple-lupins-in-the-summer-garden.jpg
@@ -6750,6 +6764,7 @@
 /sv/gallery/dex/bearded-vulture/
 /sv/gallery/dex/beautiful-demoiselle/
 /sv/gallery/dex/beluga-whale/
+/sv/gallery/dex/black-redstart/
 /sv/gallery/dex/black-stork/
 /sv/gallery/dex/blue-whale/
 /sv/gallery/dex/bottlenose-dolphin/
@@ -7419,6 +7434,7 @@
 /sv/gallery/photo/mitt-i-steget-grasandshane-pa-grusstranden/
 /sv/gallery/photo/mjolke-och-stal-en-blomma-framfor-oresundsbron/
 /sv/gallery/photo/mjuk-horisont-ett-ensamt-stenblock-i-det-lugna-havet/
+/sv/gallery/photo/mjuklandning-svart-rodstjart-landar-pa-ett-kalkstensblock/
 /sv/gallery/photo/moln-i-ogonhojd-dalen-fran-bergsaxeln/
 /sv/gallery/photo/moln-over-fargerna-dimma-rullar-over-hostsluttningen/
 /sv/gallery/photo/moln-pa-kaiser-gron-ang-under-varhimmel/

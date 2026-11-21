@@ -32,6 +32,7 @@ species:
   habitat:
     en: Forests, Tundra, Urban
     de: "Wälder, Tundra, Städtisch"
+    sv: "Skogar, tundra, stadsmiljö"
   reference:
     credit: ClaudiaTen, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Portrait_of_a_red_fox_in_Rautas_fj%C3%A4llurskog.jpg"
@@ -66,6 +67,7 @@ species:
   habitat:
     en: Forests, Tundra, Grasslands
     de: "Wälder, Tundra, Grasland"
+    sv: "Skogar, tundra, gräsmarker"
   reference:
     credit: "User:Mas3cf, CC BY-SA 4.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Eurasian_wolf_2.jpg"
@@ -104,6 +106,7 @@ species:
   habitat:
     en: Farmland, Grasslands, Woodland edges
     de: "Ackerland, Grasland, Waldränder"
+    sv: "Jordbruksmark, gräsmarker, skogsbryn"
   reference:
     credit: "User:Alun Williams333, CC BY-SA 4.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Tyto_alba_tylluan_wen_detail.jpg"
@@ -142,6 +145,7 @@ species:
   habitat:
     en: Gardens, Hedgerows, Woodland edges
     de: "Gärten, Hecken, Waldränder"
+    sv: "Trädgårdar, häckar, skogsbryn"
   reference:
     credit: "Michael Gäbler, CC BY-SA 3.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Erinaceus_europaeus_%28Linnaeus%2C_1758%29.jpg"
@@ -181,6 +185,7 @@ species:
   habitat:
     en: Coastal cliffs, Open ocean
     de: "Küstenklippen, Offenes Meer"
+    sv: "Kustklippor, öppet hav"
   reference:
     credit: Charles J. Sharp, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Puffin_%28Fratercula_arctica%29.jpg"
@@ -219,6 +224,7 @@ species:
   habitat:
     en: Forests, Moorland, Grasslands
     de: "Wälder, Heide, Grasland"
+    sv: "Skogar, hedar, gräsmarker"
   reference:
     credit: Lviatour, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Cervus_elaphus_Luc_Viatour_6.jpg"
@@ -257,6 +263,7 @@ species:
   habitat:
     en: Arctic tundra, River valleys, Grasslands
     de: "Arktische Tundra, Flusstäler, Grasland"
+    sv: "Arktisk tundra, floddalar, gräsmarker"
   reference:
     credit: Quartl, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Ovibos_moschatus_qtl3.jpg"
@@ -295,6 +302,7 @@ species:
   habitat:
     en: Deciduous woodland, Pastureland, Hedgerows, Suburban
     de: "Laubwälder, Weideland, Hecken, Vorstädte"
+    sv: "Lövskog, betesmark, häckar, förorter"
   reference:
     credit: Charles J. Sharp, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:European_badger_%28Meles_meles_taxus%29_Drenthe.jpg"
@@ -333,6 +341,7 @@ species:
   habitat:
     en: Boreal forests, Mixed woodland, Rocky mountains
     de: "Boreale Wälder, Mischwälder, Felsige Gebirge"
+    sv: Boreala skogar, blandskog, klippiga berg
   reference:
     credit: "Bernard Landgraf ( User:Baerni ), CC BY-SA 3.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Lynx_lynx_poing.jpg"
@@ -371,6 +380,7 @@ species:
   habitat:
     en: Forests, Mountains, Tundra
     de: "Wälder, Gebirge, Tundra"
+    sv: Skogar, bergstrakter, tundra
   reference:
     credit: Robert F. Tobler, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Kamchatka_Brown_Bear_near_Dvuhyurtochnoe_on_2015-07-23.jpg"
@@ -409,6 +419,7 @@ species:
   habitat:
     en: Deciduous forests, Wetlands, Farmland
     de: "Laubwälder, Feuchtgebiete, Agrarland"
+    sv: "Lövskogar, våtmarker, jordbruksmark"
   reference:
     credit: "DataBase Center for Life Science (DBCLS), CC BY 4.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:202310_Wild_boar.svg"
@@ -443,6 +454,7 @@ species:
   habitat:
     en: Woodland, Farmland, Scrub
     de: "Wälder, Agrarland, Gebüsch"
+    sv: Skog, jordbruksmark, buskmark
   reference:
     credit: Jerzystrzelecki, CC BY 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Capreolus_(js)11.jpg"
@@ -477,6 +489,7 @@ species:
   habitat:
     en: Lowland forests, Mountain forests, Meadows
     de: "Tieflandwälder, Bergwälder, Wiesen"
+    sv: "Låglandsskogar, bergsskogar, ängar"
   reference:
     credit: Charles J. Sharp, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:European_bison_(Bison_bonasus)_male_Białowieza.jpg"
@@ -511,6 +524,7 @@ species:
   habitat:
     en: Alpine meadows, Rocky cliffs, High mountains
     de: "Alpine Matten, Felswände, Hochgebirge"
+    sv: "Alpängar, klippväggar, högfjäll"
   reference:
     credit: Ibex73, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Bouquetin_en_Vanoise%2C_%C3%A9t%C3%A9_2023_03.jpg"
@@ -549,6 +563,7 @@ species:
   habitat:
     en: Alpine meadows, Rocky slopes, Mountain forests
     de: "Almwiesen, Felshänge, Bergwälder"
+    sv: "Alpängar, steniga sluttningar, bergsskogar"
   reference:
     credit: Giles Laurent, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:064_Wild_Chamois_Parc_régional_Chasseral_Photo_by_Giles_Laurent.jpg"
@@ -583,6 +598,7 @@ species:
   habitat:
     en: Rivers, Lakes, Coastal waters
     de: "Flüsse, Seen, Küstengewässer"
+    sv: "Floder, sjöar, kustvatten"
   reference:
     credit: "김진환, Korean National Institute of Biological Resources, KOGL Type 1, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Otter.png"
@@ -621,6 +637,7 @@ species:
   habitat:
     en: Boreal forests, Wetlands, Mixed woodland
     de: "Boreale Wälder, Feuchtgebiete, Mischwälder"
+    sv: "Boreala skogar, våtmarker, blandskog"
   reference:
     credit: Badzil, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Elk-telemark.jpg"
@@ -659,6 +676,7 @@ species:
   habitat:
     en: Arctic tundra, Sea ice, Coastal areas
     de: "Arktische Tundra, Meereis, Küstengebiete"
+    sv: "Arktisk tundra, havsis, kustområden"
   reference:
     credit: "Hobboto4ek (Ольга Яковлевна Куликова / Olga Y. Kulikova), CC BY-SA 4.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%BC%D0%BA%D0%B0_%D0%BF%D0%B5%D1%81%D1%86%D0%B0_%D1%81%D0%BE_%D1%81%D0%BF%D1%83%D1%82%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D1%8B%D0%BC_%D0%BF%D1%80%D0%B5%D0%B4%D0%B0%D1%82%D1%87%D0%B8%D0%BA%D0%BE%D0%BC.jpg"
@@ -697,6 +715,7 @@ species:
   habitat:
     en: Arctic tundra, Taiga, Mountain plateaus
     de: Arktische Tundra, Taiga, Hochplateaus
+    sv: "Arktisk tundra, tajga, högplatåer"
   reference:
     credit: "Dean Biggins (U.S. Fish and Wildlife Service), Public domain, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Caribou.jpg"
@@ -734,6 +753,7 @@ species:
   habitat:
     en: Coniferous forests, Mixed woodland, Rocky scrub
     de: "Nadelwälder, Mischwälder, Felsiges Gebüsch"
+    sv: Barrskogar, blandskog, stenig buskmark
   reference:
     credit: Charles J. Sharp, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:European_pine_marten_%28Martes_martes%29_Drenthe_2.jpg"
@@ -772,6 +792,7 @@ species:
   habitat:
     en: Coniferous forests, Mixed woodland, Parks
     de: "Nadelwälder, Mischwälder, Parks"
+    sv: Barrskogar, blandskog, parker
   reference:
     credit: Peter Trimming, CC BY 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Squirrel_posing.jpg"
@@ -810,6 +831,7 @@ species:
   habitat:
     en: Alpine tundra, Moorland, Boreal forests
     de: "Alpine Tundra, Moorlandschaft, Boreale Wälder"
+    sv: Alpin tundra, hedar, boreala skogar
   reference:
     credit: "Правительство Волгоградской области, CC BY-SA 3.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Lepus_timidus_in_Volgograd_Oblast.jpg"
@@ -848,6 +870,7 @@ species:
   habitat:
     en: Mountains, Alpine meadows, Open tundra
     de: Gebirge, Almwiesen, Offene Tundra
+    sv: "Bergstrakter, alpängar, öppen tundra"
   reference:
     credit: "Jarkko Järvinen, CC BY-SA 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Maakotka_%28Aquila_chrysaetos%29_by_Jarkko_J%C3%A4rvinen.jpg"
@@ -886,6 +909,7 @@ species:
   habitat:
     en: Wet meadows, Farmland, Villages
     de: "Feuchtwiesen, Ackerland, Dörfer"
+    sv: "Fuktängar, jordbruksmark, byar"
   reference:
     credit: Krzysztof Kin, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Ciconia_ciconia.jpg"
@@ -924,6 +948,7 @@ species:
   habitat:
     en: Rocky cliffs, Forest edges, Quarries
     de: "Felswände, Waldränder, Steinbrüche"
+    sv: "Klippväggar, skogsbryn, stenbrott"
   reference:
     credit: Marton Berntsen, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Hubro_%28Bubo_bubo%29.JPG"
@@ -962,6 +987,7 @@ species:
   habitat:
     en: Woodland, Hedgerows, Gardens
     de: "Wälder, Hecken, Gärten"
+    sv: "Skog, häckar, trädgårdar"
   reference:
     credit: Francis C. Franklin, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Erithacus_rubecula_with_cocked_head.jpg"
@@ -1000,6 +1026,7 @@ species:
   habitat:
     en: Rivers, Lakes, Wooded streams
     de: "Flüsse, Seen, Bachläufe"
+    sv: "Floder, sjöar, skogsbäckar"
   reference:
     credit: Artemy Voikhansky, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Alcedo_Atthis.jpg"
@@ -1038,6 +1065,7 @@ species:
   habitat:
     en: High mountains, Cliffs, Alpine pastures
     de: "Hochgebirge, Felswände, Almen"
+    sv: "Högfjäll, klippor, alpbeten"
   reference:
     credit: "Francesco Veronesi from Italy, CC BY-SA 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Bearded_Vulture_-_Catalan_Pyrenees_-_Spain_%2825098398432%29.jpg"
@@ -1076,6 +1104,7 @@ species:
   habitat:
     en: Open woodland, Orchards, Grasslands
     de: "Offene Wälder, Streuobstwiesen, Grasland"
+    sv: "Gles skog, fruktträdgårdar, gräsmarker"
   reference:
     credit: Keta, CC BY-SA 2.5, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Upupa_epops_Madrid_02.jpg"
@@ -1114,6 +1143,7 @@ species:
   habitat:
     en: Coastal lagoons, Salt pans, Mudflats
     de: "Küstenlagunen, Salinen, Schlickflächen"
+    sv: Kustlaguner, saltdammar, slambottnar
   reference:
     credit: El Golli Mohamed, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Flamant_rose_Thyna009.jpg"
@@ -1152,6 +1182,7 @@ species:
   habitat:
     en: Coasts, Large lakes, River valleys
     de: "Küsten, Große Seen, Flusstäler"
+    sv: "Kuster, stora sjöar, floddalar"
   reference:
     credit: "Original: Andreas Weith. This edit: MPF., CC BY-SA 4.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Adult_White-tailed_Eagle_defending_prey,_Rezerwat_Gostynin-Wloclawek,_Poland.jpg"
@@ -1186,6 +1217,7 @@ species:
   habitat:
     en: Cliffs, Open country, Cities
     de: "Felsklippen, Offenes Land, Städte"
+    sv: "Klippor, öppet landskap, städer"
   reference:
     credit: "Georges Lignier (georges.lignier@wanadoo.fr), CC BY-SA 3.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Faucon_pelerin_7_mai.jpg"
@@ -1224,6 +1256,7 @@ species:
   habitat:
     en: Deciduous forests, Hill streams, Damp woodland
     de: "Laubwälder, Waldbäche, Feuchte Wälder"
+    sv: "Lövskogar, bergsbäckar, fuktig skog"
   reference:
     credit: Michael Linnenbach, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Feuersalamander_portrait.jpg"
@@ -1259,6 +1292,7 @@ species:
   habitat:
     en: Rocky coasts, Sandy beaches, Coastal seas
     de: "Felsküsten, Sandstrände, Küstenmeere"
+    sv: "Klippkuster, sandstränder, kusthav"
   reference:
     credit: Lucc77, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Two_seals_in_the_water.jpg"
@@ -1297,6 +1331,7 @@ species:
   habitat:
     en: Open country, River banks, Farmland
     de: Offenes Land, Flussufer, Agrarland
+    sv: "Öppet landskap, flodstränder, jordbruksmark"
   reference:
     credit: Pierre Dalous, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Merops_apiaster_04.jpg"
@@ -1335,6 +1370,7 @@ species:
   habitat:
     en: Savanna, Woodland, Wetlands
     de: Savanne, Waldland, Feuchtgebiete
+    sv: "Savann, skog, våtmarker"
   reference:
     credit: Giles Laurent, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg"
@@ -1373,6 +1409,7 @@ species:
   habitat:
     en: Savannah, Open woodland, Semi-desert
     de: "Savanne, Offene Wälder, Halbwüste"
+    sv: "Savann, gles skog, halvöken"
   reference:
     credit: Thomas Fuhrmann, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Rothschild%27s_giraffe_%28Giraffa_camelopardalis_rothschildi%29_-_Murchison_Falls_National_Park.jpg"
@@ -1411,6 +1448,7 @@ species:
   habitat:
     en: Grassland, Savannah woodland, Open plains
     de: Grasland, Savannenwald, Offene Ebenen
+    sv: "Gräsmark, trädsavann, öppna slätter"
   reference:
     credit: Muhammad Mahdi Karim, GFDL 1.2, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Plains_Zebra_Equus_quagga.jpg"
@@ -1450,6 +1488,7 @@ species:
   habitat:
     en: Sea ice, Arctic coasts, Tundra
     de: "Meereis, Arktische Küsten, Tundra"
+    sv: Havsis, arktiska kuster, tundra
   reference:
     credit: Alan Wilson, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Polar_Bear_-_Alaska_%28cropped%29.jpg"
@@ -1488,6 +1527,7 @@ species:
   habitat:
     en: Gallery forest, Savanna, Woodland
     de: "Galeriewald, Savanne, Lichte Wälder"
+    sv: Galleriskog, savann, skog
   reference:
     credit: Giles Laurent, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:006_Toco_toucan_in_Encontro_das_%C3%81guas_State_Park_Photo_by_Giles_Laurent.jpg"
@@ -1526,6 +1566,7 @@ species:
   habitat:
     en: Wetlands, Riverbanks, Savannas
     de: Feuchtgebiete, Flussufer, Savannen
+    sv: "Våtmarker, flodstränder, savanner"
   reference:
     credit: Bernard DUPONT from FRANCE, CC BY-SA 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Capybaras_%28Hydrochoerus_hydrachaeris%29_female_and_young_suckling_..._%2848427191032%29.jpg"
@@ -1564,6 +1605,7 @@ species:
   habitat:
     en: Boreal forests, Tundra, Alpine
     de: "Boreale Wälder, Tundra, Hochgebirge"
+    sv: "Boreala skogar, tundra, högfjäll"
   reference:
     credit: Zefram, CC BY 2.5, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Gulo_gulo_2.jpg"
@@ -1602,6 +1644,7 @@ species:
   habitat:
     en: Arctic tundra, Coastal grassland, Open farmland
     de: "Arktische Tundra, Küstengrasland, Offenes Agrarland"
+    sv: "Arktisk tundra, kustnära gräsmarker, öppen jordbruksmark"
   reference:
     credit: "Bill Bouton from San Luis Obispo, CA, USA, CC BY-SA 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Bubo_scandiacus_male_Muskegon.jpg"
@@ -1641,6 +1684,7 @@ species:
   habitat:
     en: Arctic seas, Pack ice, Fjords
     de: Arktische Meere, Packeis, Fjorde
+    sv: Arktiska hav, packis, fjordar
   reference:
     credit: "пресс-служба ПАО \"Газпром нефть\", CC BY-SA 4.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B0%D1%80%D0%B2%D0%B0%D0%BB_%D0%B2_%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B9_%D0%90%D1%80%D0%BA%D1%82%D0%B8%D0%BA%D0%B5.jpg"
@@ -1680,6 +1724,7 @@ species:
   habitat:
     en: Kelp forests, Rocky coasts, Coastal waters
     de: "Kelpwälder, Felsküsten, Küstengewässer"
+    sv: Tareskogar, klippkuster, kustvatten
   reference:
     credit: Mike Baird from Morro Bay, USA, CC BY 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Sea_otter_cropped.jpg"
@@ -1719,6 +1764,7 @@ species:
   habitat:
     en: "Seagrass meadows, Coral reefs, Coastal lagoons, Nesting beaches"
     de: "Seegraswiesen, Korallenriffe, Küstenlagunen, Sandstrände"
+    sv: "Sjögräsängar, korallrev, kustlaguner, häckningsstränder"
   reference:
     credit: Charles J. Sharp, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_%28Chelonia_mydas%29_Moorea.jpg"
@@ -1757,6 +1803,7 @@ species:
   habitat:
     en: Deserts, Grasslands, Scrubland
     de: "Wüsten, Grasland, Buschland"
+    sv: "Öknar, gräsmarker, buskmark"
   reference:
     credit: "fir0002 flagstaffotos [at] gmail.com Canon 20D + Canon 70-200mm f/2.8 L, GFDL 1.2, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Red_kangaroo_-_melbourne_zoo.jpg"
@@ -1793,6 +1840,7 @@ species:
   habitat:
     en: Eucalyptus forests, Open woodland, Riparian zones
     de: "Eukalyptuswälder, Offene Wälder, Uferzonen"
+    sv: Eukalyptusskogar, gles skog, strandzoner
   reference:
     credit: Diliff, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Koala_climbing_tree.jpg"
@@ -1831,6 +1879,7 @@ species:
   habitat:
     en: Rivers, Streams, Freshwater lakes
     de: "Flüsse, Bäche, Süßwasserseen"
+    sv: "Floder, bäckar, sötvattensjöar"
   reference:
     credit: Charles J. Sharp, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Duck-billed_platypus_%28Ornithorhynchus_anatinus%29_Scottsdale.jpg"
@@ -1869,6 +1918,7 @@ species:
   habitat:
     en: Forests, Heathland, Mountain slopes
     de: "Wälder, Heideland, Berghänge"
+    sv: Skogar, hedmark, bergssluttningar
   reference:
     credit: "JJ Harrison ( jjharrison89@facebook.com ), CC BY-SA 3.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Vombatus_ursinus_-Maria_Island_National_Park.jpg"
@@ -1907,6 +1957,7 @@ species:
   habitat:
     en: Native forest, Scrub, Pine plantations
     de: Naturwald, Buschland, Kiefernplantagen
+    sv: Naturskog, buskmark, tallplanteringar
   reference:
     credit: The.Rohit, CC BY 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Apteryx_mantelli_-Rotorua%2C_North_Island%2C_New_Zealand-8a.jpg"
@@ -1946,6 +1997,7 @@ species:
   habitat:
     en: Open ocean, Continental shelf waters, Polar feeding grounds
     de: "Offener Ozean, Schelfgewässer, Polare Nahrungsgebiete"
+    sv: "Öppet hav, vatten över kontinentalsockeln, polara födosöksområden"
   reference:
     credit: Dr. Louis M. Herman., Public domain, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Humpback_whales_in_singing_position.jpg"
@@ -1984,6 +2036,7 @@ species:
   habitat:
     en: Open ocean, Coastal waters, Polar seas
     de: "Offener Ozean, Küstengewässer, Polarmeere"
+    sv: "Öppet hav, kustvatten, polarhav"
   reference:
     credit: Robert Pittman, Public domain, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Killerwhales_jumping.jpg"
@@ -2022,6 +2075,7 @@ species:
   habitat:
     en: Coastal waters, Open ocean, Estuaries
     de: "Küstengewässer, Offener Ozean, Flussmündungen"
+    sv: "Kustvatten, öppet hav, flodmynningar"
   reference:
     credit: NASA, Public domain, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01-cropped.jpg"
@@ -2057,6 +2111,7 @@ species:
   habitat:
     en: Open ocean, Polar feeding grounds, Tropical breeding grounds
     de: "Offener Ozean, Polare Nahrungsgebiete, Tropische Fortpflanzungsgebiete"
+    sv: "Öppet hav, polara födosöksområden, tropiska fortplantningsområden"
   reference:
     credit: NOAA Photo Library, Public domain, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Anim1755_-_Flickr_-_NOAA_Photo_Library.jpg"
@@ -2095,6 +2150,7 @@ species:
   habitat:
     en: Pack ice, Arctic shelf seas, Coastal haul-outs
     de: "Packeis, Arktische Schelfmeere, Küstenliegeplätze"
+    sv: Packis, arktiska shelfhav, liggplatser vid kusten
   reference:
     credit: Nixette, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Walrus_in_the_Russian_Arctic_National_Park%2C_Novaya_Zemlya_2015-2.jpg"
@@ -2134,6 +2190,7 @@ species:
   habitat:
     en: Antarctic sea ice, Ice shelves, Open ocean
     de: Antarktisches Meereis, Schelfeis, Offener Ozean
+    sv: "Antarktisk havsis, isshelfer, öppet hav"
   reference:
     credit: Ian Duffy from UK, CC BY 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg"
@@ -2173,6 +2230,7 @@ species:
   habitat:
     en: Subantarctic islands, Beaches, Open ocean
     de: "Subantarktische Inseln, Strände, Offener Ozean"
+    sv: "Subantarktiska öar, stränder, öppet hav"
   reference:
     credit: Liam Quinn from Canada, CC BY-SA 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:King_Penguins_on_Saunders_Island_%285586254113%29.jpg"
@@ -2212,6 +2270,7 @@ species:
   habitat:
     en: Open ocean, Coastal waters, Nesting beaches
     de: "Offener Ozean, Küstengewässer, Sandstrände"
+    sv: "Öppet hav, kustvatten, häckningsstränder"
   reference:
     credit: Julien Renoult, CC BY 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Dermochelys_coriacea_-_Julien_Renoult_-_12981952.jpeg"
@@ -2251,6 +2310,7 @@ species:
   habitat:
     en: Arctic seas, Estuaries, Pack ice edge
     de: "Arktische Meere, Flussmündungen, Packeisrand"
+    sv: Arktiska hav, flodmynningar, packisens kant
   reference:
     credit: "Carquinyol from Badalona, Catalunya, CC BY-SA 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Beluga_oceanografic.jpg"
@@ -2290,6 +2350,7 @@ species:
   habitat:
     en: Coastal waters, Sandbanks, Rocky shores
     de: "Küstengewässer, Sandbänke, Felsküsten"
+    sv: "Kustvatten, sandbankar, klippstränder"
   reference:
     credit: Andreas Trepte, CC BY-SA 2.5, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Common_Seal_Phoca_vitulina.jpg"
@@ -2327,6 +2388,7 @@ species:
   habitat:
     en: Meadows, Gardens, Farmland, Woodland
     de: "Wiesen, Gärten, Agrarland, Wälder"
+    sv: "Ängar, trädgårdar, jordbruksmark, skog"
   reference:
     credit: Didier Descouens, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:(MHNT)_Apis_mellifera_(female)_-_on_viburnum_tinus_flowers.jpg"
@@ -2361,6 +2423,7 @@ species:
   habitat:
     en: Alpine meadows, Rocky slopes, High pastures
     de: "Almwiesen, Felshänge, Hochweiden"
+    sv: "Alpängar, steniga sluttningar, högt belägna betesmarker"
   reference:
     credit: "François Trazzi ., CC BY-SA 3.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Marmota_marmota_Alpes2.jpg"
@@ -2399,6 +2462,7 @@ species:
   habitat:
     en: Deciduous woodland, Hedgerows, Scrub
     de: "Laubwälder, Hecken, Gebüsch"
+    sv: "Lövskog, häckar, buskmark"
   reference:
     credit: Danielle Schwarz, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Haselmaus.jpg"
@@ -2437,6 +2501,7 @@ species:
   habitat:
     en: Rivers, Lakes, Wetlands
     de: "Flüsse, Seen, Feuchtgebiete"
+    sv: "Floder, sjöar, våtmarker"
   reference:
     credit: Per Harald Olsen, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Beaver_pho34.jpg"
@@ -2474,6 +2539,7 @@ species:
   habitat:
     en: Woodland, Parks, Gardens, Tree hollows
     de: "Wälder, Parks, Gärten, Baumhöhlen"
+    sv: "Skog, parker, trädgårdar, trädhål"
   reference:
     credit: PiccoloNamek, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Hornet-vespa.jpg"
@@ -2512,6 +2578,7 @@ species:
   habitat:
     en: Farmland, Grassland, Open country
     de: "Ackerland, Grasland, Offenes Gelände"
+    sv: "Jordbruksmark, gräsmark, öppet landskap"
   reference:
     credit: caroline legg, CC BY 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:European_Brown_Hare_%2850341079472%29.jpg"
@@ -2550,6 +2617,7 @@ species:
   habitat:
     en: Open woodland, Pastures, Caves, Attics
     de: "Lichte Wälder, Weiden, Höhlen, Dachböden"
+    sv: Gles skog, betesmarker, grottor, vindar
   reference:
     credit: "Urheber: Manuel Werner, Germany, Wikipedia-Kontakt: http://de.wikipedia.org/wiki/Benutzer:Werner,_Deutschland, CC BY-SA 3.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Myotis.jpg"
@@ -2587,6 +2655,7 @@ species:
   habitat:
     en: Mountain slopes, Deciduous forest, Dry heath
     de: "Berghänge, Laubwälder, Trockenheiden"
+    sv: "Bergssluttningar, lövskog, torr hed"
   reference:
     credit: "Unknown author Unknown author, CC BY-SA 2.0 de, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Mufflon-02.jpg"
@@ -2623,6 +2692,7 @@ species:
   habitat:
     en: Woodland edges, Farmland, Wetlands
     de: "Waldränder, Ackerland, Feuchtgebiete"
+    sv: "Skogsbryn, jordbruksmark, våtmarker"
   reference:
     credit: Peter Trimming, CC BY 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Storm_the_polecat.jpg"
@@ -2658,6 +2728,7 @@ species:
   habitat:
     en: Coastal marshes, Wetlands, Pastures
     de: "Küstenmarschen, Feuchtgebiete, Weiden"
+    sv: "Kustnära kärr, våtmarker, betesmarker"
   reference:
     credit: "Mikel Ortega from Errenteria, Basque Country, Spain, with a retouche by Richard Bartz . See the original file here., CC BY-SA 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Biandintz_eta_zaldiak_-_modified2.jpg"
@@ -2696,6 +2767,7 @@ species:
   habitat:
     en: Scrubland, Woodland edges, Hedgerows, Embankments
     de: "Buschland, Waldränder, Hecken, Bahndämme"
+    sv: "Buskmark, skogsbryn, häckar, banvallar"
   reference:
     credit: Uoaei1, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Lacerta_viridis_-_male_01.JPG"
@@ -2734,6 +2806,7 @@ species:
   habitat:
     en: Deciduous woodland, Mixed forest, Parks
     de: "Laubwälder, Mischwälder, Parks"
+    sv: "Lövskog, blandskog, parker"
   reference:
     credit: Luc Viatour, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Garrulus_glandarius_1_Luc_Viatour.jpg"
@@ -2772,6 +2845,7 @@ species:
   habitat:
     en: Open woodland, Parkland, Orchards, Grassland
     de: "Lichte Wälder, Parklandschaften, Streuobstwiesen, Grasland"
+    sv: "Gles skog, parklandskap, fruktträdgårdar, gräsmark"
   reference:
     credit: Alexis Lours, CC BY 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Green_woodpecker_Franconville_2022_01_21_2.jpg"
@@ -2810,6 +2884,7 @@ species:
   habitat:
     en: Deciduous woodland, Scrub, Hedgerows, Gardens
     de: "Laubwälder, Gebüsch, Hecken, Gärten"
+    sv: "Lövskog, buskmark, häckar, trädgårdar"
   reference:
     credit: Rhododendrites, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Long-tailed_tit_%2874940%29.jpg"
@@ -2848,6 +2923,7 @@ species:
   habitat:
     en: Sea cliffs, Rocky coasts, Caves, Urban
     de: "Meeresklippen, Felsküsten, Höhlen, Städtisch"
+    sv: "Havsklippor, klippkuster, grottor, stadsmiljö"
   reference:
     credit: william_stephens, CC BY 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Columba_livia_%28Rock_Dove%2C_wild%29%2C_Duncansby_Head%2C_Caithness%2C_Scotland_1.jpg"
@@ -2886,6 +2962,7 @@ species:
   habitat:
     en: Vineyards, Hedgerows, Scrubby farmland
     de: Weinberge, Hecken, Kulturland
+    sv: "Vingårdar, häckar, buskig jordbruksmark"
   reference:
     credit: "Paco Gómez from Castellón, Spain, CC BY-SA 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Emberiza_cirlus_-Valencian_Community%2C_Spain_-male-8.jpg"
@@ -2924,6 +3001,7 @@ species:
   habitat:
     en: Farmland, Hedgerows, Scrub
     de: "Kulturland, Hecken, Gebüsch"
+    sv: "Jordbruksmark, häckar, buskmark"
   reference:
     credit: "Ómar Runólfsson, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Emberiza_citrinella_-Midtjylland%2C_Denmark_-male-8.jpg"
@@ -2962,6 +3040,7 @@ species:
   habitat:
     en: Deciduous woodland, Parks, Orchards
     de: "Laubwälder, Parks, Obstgärten"
+    sv: "Lövskog, parker, fruktträdgårdar"
   reference:
     credit: Charles J. Sharp, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Short-toed_treecreeper_%28Certhia_brachydactyla_brachydactyla%29.jpg"
@@ -3000,6 +3079,7 @@ species:
   habitat:
     en: Woodland, Gardens, Parks
     de: "Wälder, Gärten, Parks"
+    sv: "Skog, trädgårdar, parker"
   reference:
     credit: Kahvilokki, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:20190722_Turdus_Merula_02.jpg"
@@ -3034,6 +3114,7 @@ species:
   habitat:
     en: Conifer stands, Forest edges, Open farmland
     de: "Nadelwälder, Waldränder, Offenes Kulturland"
+    sv: "Barrskogsbestånd, skogsbryn, öppen jordbruksmark"
   reference:
     credit: Luis nunes alberto, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Asio_otus11.JPG"
@@ -3072,6 +3153,7 @@ species:
   habitat:
     en: Open farmland, Orchards, Ruins
     de: "Offenes Kulturland, Obstgärten, Ruinen"
+    sv: "Öppen jordbruksmark, fruktträdgårdar, ruiner"
   reference:
     credit: "Frank Vassen from Brussels, Belgium, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Athene_noctua%2C_Ambula%2C_Montenegro_2.jpg"
@@ -3110,6 +3192,7 @@ species:
   habitat:
     en: Boreal forest, Montane conifer forest, Clearings
     de: "Boreale Wälder, Bergnadelwälder, Lichtungen"
+    sv: "Boreal skog, bergsbarrskog, gläntor"
   reference:
     credit: Charles J. Sharp, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Eurasian_pygmy_owl_%28Glaucidium_passerinum%29_Bia%C5%82owieza.jpg"
@@ -3148,6 +3231,7 @@ species:
   habitat:
     en: Deciduous woodland, Parks, Gardens
     de: "Laubwälder, Parks, Gärten"
+    sv: "Lövskog, parker, trädgårdar"
   reference:
     credit: Chrumps, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Strix_aluco_aluco.jpg"
@@ -3186,6 +3270,7 @@ species:
   habitat:
     en: Taiga, Mature mixed forest, Forest clearings
     de: "Taiga, Alte Mischwälder, Waldlichtungen"
+    sv: "Tajga, gammal blandskog, skogsgläntor"
   reference:
     credit: "Tatiana Bulyonkova from Novosibirsk, Russia, CC BY-SA 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:2012-11-01_Ural_Owl%2C_Novosibirsk_Oblast%2C_Russia.jpg"
@@ -3224,6 +3309,7 @@ species:
   habitat:
     en: Wooded rivers, Lakes, Ponds
     de: "Bewaldete Flüsse, Seen, Teiche"
+    sv: "Skogkantade floder, sjöar, dammar"
   reference:
     credit: "星外之神, CC BY-SA 4.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Mandarin_ducks_by_the_Weiming_Lake_of_Peking_University_16.jpg"
@@ -3258,6 +3344,7 @@ species:
   habitat:
     en: Lakes, Rivers, Ponds, Marshes
     de: "Seen, Flüsse, Teiche, Sümpfe"
+    sv: "Sjöar, floder, dammar, kärr"
   reference:
     credit: Commonists, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Anas_platyrhynchos_(Male)_on_the_ground.jpg"
@@ -3292,6 +3379,7 @@ species:
   habitat:
     en: Lakes, Marshes, Grassland
     de: "Seen, Sümpfe, Grasland"
+    sv: "Sjöar, kärr, gräsmark"
   reference:
     credit: W. Bulach, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:00_3688_Graugans_(Anser_anser).jpg"
@@ -3326,6 +3414,7 @@ species:
   habitat:
     en: Arctic tundra, Coastal mudflats, Estuaries
     de: "Arktische Tundra, Wattflächen, Flussmündungen"
+    sv: Arktisk tundra, slambottnar vid kusten, flodmynningar
   reference:
     credit: Kev Chapman, CC BY 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Branta_bernicla_bernicla_Norfolk_1.jpg"
@@ -3364,6 +3453,7 @@ species:
   habitat:
     en: Lakes, Rivers, Marshes, Urban parks
     de: "Seen, Flüsse, Sümpfe, Stadtparks"
+    sv: "Sjöar, floder, kärr, stadsparker"
   reference:
     credit: "Laurent Bélanger, CC BY-SA 4.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Bernache_du_Canada,_à_l'Île_Paton_(2).jpg"
@@ -3398,6 +3488,7 @@ species:
   habitat:
     en: Lakes, Slow rivers, Coastal lagoons
     de: "Seen, Langsame Flüsse, Küstenlagunen"
+    sv: "Sjöar, lugnflytande floder, kustlaguner"
   reference:
     credit: Geni, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Mute_Swan_Emsworth2.JPG"
@@ -3432,6 +3523,7 @@ species:
   habitat:
     en: Shallow lakes, Marshes, Wet grassland
     de: "Flache Seen, Sümpfe, Feuchtwiesen"
+    sv: "Grunda sjöar, kärr, fuktiga gräsmarker"
   reference:
     credit: Andreas Trepte, CC BY-SA 2.5, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Gadwall-Anas-strepera.jpg"
@@ -3470,6 +3562,7 @@ species:
   habitat:
     en: Open farmland, Heathland, Woodland edges
     de: "Offene Feldflur, Heiden, Waldränder"
+    sv: "Öppen jordbruksmark, hedmark, skogsbryn"
   reference:
     credit: "Mike Prince from Bangalore, India, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Eurasian_Hobby_%2814574008925%29_%28cropped%29.jpg"
@@ -3508,6 +3601,7 @@ species:
   habitat:
     en: Farmland, Grassland, Heathland, Urban
     de: "Feldflur, Grasland, Heiden, Städtisch"
+    sv: "Jordbruksmark, gräsmark, hedmark, stadsmiljö"
   reference:
     credit: Andreas Trepte, CC BY-SA 2.5, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Common_kestrel_falco_tinnunculus.jpg"
@@ -3546,6 +3640,7 @@ species:
   habitat:
     en: Farmland, Hedgerows, Grassland
     de: Feldflur, Hecken, Grasland
+    sv: "Jordbruksmark, häckar, gräsmark"
   reference:
     credit: K.Pitk, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Nurmkana_%28cropped%29.jpg"
@@ -3584,6 +3679,7 @@ species:
   habitat:
     en: Conifer forests, Taiga, Bogs
     de: "Nadelwälder, Taiga, Moore"
+    sv: Barrskogar, tajga, mossar
   reference:
     credit: Simon Bailey, CC BY 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Tetrao_urogallus%2C_Glenfeshie%2C_Scotland_1.jpg"
@@ -3622,6 +3718,7 @@ species:
   habitat:
     en: Gardens, Hedgerows, Wasteland
     de: "Gärten, Hecken, Brachflächen"
+    sv: "Trädgårdar, häckar, ödetomter"
   reference:
     credit: Pierre Dalous, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Carduelis_carduelis_%282012%29.jpg"
@@ -3660,6 +3757,7 @@ species:
   habitat:
     en: Gardens, Woodland edges, Farmland hedges
     de: "Gärten, Waldränder, Feldhecken"
+    sv: "Trädgårdar, skogsbryn, åkerhäckar"
   reference:
     credit: Martin Kunz, CC BY 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Chloris_chloris_%28profile%29.jpg"
@@ -3698,6 +3796,7 @@ species:
   habitat:
     en: Woodlands, Hedgerows, Gardens
     de: "Wälder, Hecken, Gärten"
+    sv: "Skogar, häckar, trädgårdar"
   reference:
     credit: "Gilles San Martin from Namur, Belgium, CC BY-SA 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_%285577610542%29.jpg"
@@ -3736,6 +3835,7 @@ species:
   habitat:
     en: Dense scrub, Coppice woodland, Thickets
     de: "Dichtes Gebüsch, Niederwald, Dickichte"
+    sv: "Tät buskmark, skottskog, snår"
   reference:
     credit: Warrieboy, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Luscinia_megarhynchos_-_Common_nightingale_-_Nachtegaal.jpg"
@@ -3774,6 +3874,7 @@ species:
   habitat:
     en: Coniferous forests, Mixed woodland, Parks
     de: "Nadelwälder, Mischwald, Parks"
+    sv: Barrskogar, blandskog, parker
   reference:
     credit: Francis C. Franklin, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Goldcrest_1.jpg"
@@ -3812,6 +3913,7 @@ species:
   habitat:
     en: Forests, Woodland edges, Urban parks
     de: "Wälder, Waldränder, Stadtparks"
+    sv: Skogar, skogsbryn, stadsparker
   reference:
     commons_file: Northern Goshawk ad M2.jpg
     file: northern-goshawk.jpg
@@ -3850,6 +3952,7 @@ species:
   habitat:
     en: Woodland, Farmland, Gardens
     de: "Wälder, Agrarland, Gärten"
+    sv: "Skog, jordbruksmark, trädgårdar"
   reference:
     credit: Hajotthu, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Sperber_%28Accipiter_nisus%29_male_-20200308_%282%29.JPG"
@@ -3888,6 +3991,7 @@ species:
   habitat:
     en: Woodland edges, Farmland, Grassland
     de: "Waldränder, Agrarland, Grasland"
+    sv: "Skogsbryn, jordbruksmark, gräsmark"
   reference:
     credit: caroline legg, CC BY 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Common_Buzzard_by_caroline_legg_%28cropped%29.jpg"
@@ -3926,6 +4030,7 @@ species:
   habitat:
     en: Coasts, Estuaries, Lakes, Rivers
     de: "Küsten, Flussmündungen, Seen, Flüsse"
+    sv: "Kuster, flodmynningar, sjöar, floder"
   reference:
     credit: MPF, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:2021-05-05_Phalacrocorax_carbo_carbo,_Killingworth_Lake,_Northumberland_1-2.jpg"
@@ -3960,6 +4065,7 @@ species:
   habitat:
     en: Deciduous woodland, Parks, Gardens
     de: "Laubwälder, Parks, Gärten"
+    sv: "Lövskog, parker, trädgårdar"
   reference:
     credit: Maximilian Dorsch, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:ParusCaeruleus.jpg"
@@ -3998,6 +4104,7 @@ species:
   habitat:
     en: Deciduous woodland, Mixed forest, Gardens
     de: "Laubwälder, Mischwald, Gärten"
+    sv: "Lövskog, blandskog, trädgårdar"
   reference:
     credit: "Frank Vassen from Brussels, Belgium, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Great_tit_(Parus_major),_Parc_de_Woluwé,_Brussels_(13042792905).jpg"
@@ -4032,6 +4139,7 @@ species:
   habitat:
     en: Coasts, Harbours, Urban rooftops
     de: "Küsten, Häfen, Stadtdächer"
+    sv: Kuster, hamnar, stadens hustak
   reference:
     credit: Rhododendrites, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:European_herring_gull_vocalizing_%2800170%29.jpg"
@@ -4070,6 +4178,7 @@ species:
   habitat:
     en: Rocky coasts, Islands, Harbours
     de: "Felsküsten, Inseln, Häfen"
+    sv: "Klippkuster, öar, hamnar"
   reference:
     credit: "Cinty Ionescu from Bucharest, Romania, this edit MPF, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Larus_michahellis_atlantis,_Lagoa_do_Fogo,_Azores_1a.jpg"
@@ -4104,6 +4213,7 @@ species:
   habitat:
     en: Farmland, Coastal cliffs, Urban
     de: "Agrarland, Küstenklippen, Städtisch"
+    sv: "Jordbruksmark, kustklippor, stadsmiljö"
   reference:
     credit: "Donald Hobern from Copenhagen, Denmark, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Corvus_cornix_%2833515567265%29.jpg"
@@ -4142,6 +4252,7 @@ species:
   habitat:
     en: Farmland, Woodland, Urban
     de: "Agrarland, Wälder, Städtisch"
+    sv: "Jordbruksmark, skog, stadsmiljö"
   reference:
     credit: Alexis Lours, CC BY 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Carrion_crow_2022_04_05_05_02.jpg"
@@ -4176,6 +4287,7 @@ species:
   habitat:
     en: Farmland, Pasture, Tall trees, Villages
     de: "Agrarland, Weiden, Hohe Bäume, Dörfer"
+    sv: "Jordbruksmark, betesmark, höga träd, byar"
   reference:
     credit: "Brian Snelson from Hockley, Essex, England, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Corvus_frugilegus_-Dartmoor%2C_Devon%2C_England-8.jpg"
@@ -4214,6 +4326,7 @@ species:
   habitat:
     en: Farmland, Parkland, Coastal cliffs, Towns
     de: "Agrarland, Parklandschaft, Küstenklippen, Städte"
+    sv: "Jordbruksmark, parklandskap, kustklippor, tätorter"
   reference:
     credit: "Karl Jonsson from Göteborg, Sweden, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Coloeus_monedula_-Munkedal%2C_Vastra_Gotaland%2C_Sweden-8.jpg"
@@ -4252,6 +4365,7 @@ species:
   habitat:
     en: Open countryside, Farmland, Parks, Gardens
     de: "Offenes Kulturland, Agrarland, Parks, Gärten"
+    sv: "Öppet kulturlandskap, jordbruksmark, parker, trädgårdar"
   reference:
     credit: Rhododendrites, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Eurasian_magpie_%2810860%29.jpg"
@@ -4290,6 +4404,7 @@ species:
   habitat:
     en: High mountains, Alpine meadows, Cliffs, Ski resorts
     de: "Hochgebirge, Alpine Matten, Felswände, Skigebiete"
+    sv: "Högfjäll, alpängar, klippor, skidorter"
   reference:
     credit: Jim Higham from UK, CC BY 2.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Alpine_Chough_by_Jim_Higham.jpg"
@@ -4329,6 +4444,7 @@ species:
   habitat:
     en: Open ocean, Coastal moorland, Rocky islands
     de: "Offener Ozean, Küstenmoore, Felsinseln"
+    sv: "Öppet hav, kusthedar, klippöar"
   reference:
     credit: "Psychofox at English Wikipedia, Public domain, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:GreatSkuaInWater.jpg"
@@ -4366,6 +4482,7 @@ species:
   habitat:
     en: Sandy beaches, Shingle shores, Mudflats, Tundra
     de: "Sandstrände, Kiesstrände, Watt, Tundra"
+    sv: "Sandstränder, klapperstensstränder, slambottnar, tundra"
   reference:
     commons_file: Charadrius hiaticula 3 breeding.jpg
     file: common-ringed-plover.jpg
@@ -4404,6 +4521,7 @@ species:
   habitat:
     en: Lakes, Rivers, Marshes, Coasts
     de: "Seen, Flüsse, Sümpfe, Küsten"
+    sv: "Sjöar, floder, kärr, kuster"
   reference:
     credit: "Bengt Nyman from Vaxholm, Sweden, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Ardea_cinerea_EM1A2714_%2827349354381%29.jpg"
@@ -4442,6 +4560,7 @@ species:
   habitat:
     en: Towns, Villages, Farmland, Cliffs
     de: "Städte, Dörfer, Agrarland, Felswände"
+    sv: "Tätorter, byar, jordbruksmark, klippor"
   reference:
     credit: MPF, CC BY 2.5, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Delichon_urbica.jpg"
@@ -4480,6 +4599,7 @@ species:
   habitat:
     en: Farmland, Meadows, Barns, Wetlands
     de: "Agrarland, Wiesen, Ställe, Feuchtgebiete"
+    sv: "Jordbruksmark, ängar, ladugårdar, våtmarker"
   reference:
     credit: Andreas Trepte, CC BY-SA 2.5, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Rauchschwalbe_Hirundo_rustica.jpg"
@@ -4518,6 +4638,7 @@ species:
   habitat:
     en: Woodland, Mixed forests, Parks, Gardens
     de: "Wälder, Mischwälder, Parks, Gärten"
+    sv: "Skog, blandskogar, parker, trädgårdar"
   reference:
     credit: "Bengt Nyman from Vaxholm, Sweden, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:Dendrocopos_major_EM1B2679_(35219263071).jpg"
@@ -4552,6 +4673,7 @@ species:
   habitat:
     en: Towns, Villages, Farmyards, Gardens
     de: "Städte, Dörfer, Bauernhöfe, Gärten"
+    sv: "Tätorter, byar, gårdsplaner, trädgårdar"
   reference:
     credit: Rhododendrites, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:House_sparrow_male_in_Prospect_Park_(53532).jpg"
@@ -4586,6 +4708,7 @@ species:
   habitat:
     en: Farmland, Hedgerows, Open woodland, Villages
     de: "Agrarland, Hecken, Offene Wälder, Dörfer"
+    sv: "Jordbruksmark, häckar, gles skog, byar"
   reference:
     credit: Andreas Trepte, CC BY-SA 2.5, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Tree-Sparrow-2009-16-02.jpg"
@@ -4624,6 +4747,7 @@ species:
   habitat:
     en: Farmland, Grassland, Towns, Reedbeds
     de: "Agrarland, Grasland, Städte, Schilfgebiete"
+    sv: "Jordbruksmark, gräsmark, tätorter, vassar"
   reference:
     credit: PierreSelim, CC BY-SA 3.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Toulouse_-_Sturnus_vulgaris_-_2012-02-26_-_2.jpg"
@@ -4662,6 +4786,7 @@ species:
   habitat:
     en: Riverbanks, Farmland, Urban
     de: "Flussufer, Kulturland, Städtisch"
+    sv: "Flodstränder, jordbruksmark, stadsmiljö"
   reference:
     credit: "Jac. Janssen from BAARLO LB, NL, CC BY 2.0, Wikimedia Commons"
     credit_url: "https://commons.wikimedia.org/wiki/File:20180415_015_Winterswijk_Witte_kwikstaart_%2840785272624%29.jpg"
@@ -4700,6 +4825,7 @@ species:
   habitat:
     en: Woodlands, Farmland, Parks, Urban
     de: "Wälder, Kulturland, Parks, Städtisch"
+    sv: "Skogar, jordbruksmark, parker, stadsmiljö"
   reference:
     credit: Don Loarie, CC BY 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Columba_palumbus_ssp._palumbus.jpg"
@@ -4738,6 +4864,7 @@ species:
   habitat:
     en: Open woodland, Hedgerows, Farmland
     de: "Lichte Wälder, Hecken, Kulturland"
+    sv: "Gles skog, häckar, jordbruksmark"
   reference:
     credit: MPF, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:2015-05-21_Streptopelia_turtur%2C_Sutton_Bank%2C_Yorkshire_06.jpg"
@@ -4776,6 +4903,7 @@ species:
   habitat:
     en: Fast-flowing streams, Mountain rivers
     de: "Schnellfließende Bäche, Gebirgsflüsse"
+    sv: "Strömmande bäckar, bergsälvar"
   reference:
     credit: Alun Williams333, CC BY-SA 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Cinclus_cinclus_bronwen_y_dwr.jpg"
@@ -4814,6 +4942,7 @@ species:
   habitat:
     en: Woodland undergrowth, Hedgerows, Gardens
     de: "Waldunterholz, Hecken, Gärten"
+    sv: "Undervegetation i skog, häckar, trädgårdar"
   reference:
     credit: Alexis Lours, CC BY 4.0, Wikimedia Commons
     credit_url: "https://commons.wikimedia.org/wiki/File:Eurasian_wren_%28Troglodytes_troglodytes%29.jpg"
@@ -4851,6 +4980,7 @@ species:
   habitat:
     en: Andean highlands, Pastures, Farms
     de: "Andenhochland, Weiden, Bauernhöfe"
+    sv: "Andernas högland, betesmarker, bondgårdar"
   reference:
     commons_file: Alpacas.JPG
   names:
@@ -4878,6 +5008,7 @@ species:
   habitat:
     en: Pastures, Farmland, Uplands
     de: Weiden, Ackerland, Hochland
+    sv: "Betesmarker, jordbruksmark, högland"
   reference:
     commons_file: Flock of sheep.jpg
   names:
@@ -4909,6 +5040,7 @@ species:
   habitat:
     en: Pastures, Farmland, Meadows
     de: Weiden, Ackerland, Wiesen
+    sv: "Betesmarker, jordbruksmark, ängar"
   reference:
     commons_file: Bulgarian gray cattle.jpg
   names:
@@ -4940,6 +5072,7 @@ species:
   habitat:
     en: Pastures, Farmland, Rocky slopes
     de: "Weiden, Ackerland, Felshänge"
+    sv: Betesmarker, jordbruksmark, steniga sluttningar
   reference:
     commons_file: Billy goat.jpg
   names:
@@ -4971,6 +5104,7 @@ species:
   habitat:
     en: Homes, Urban, Farmland
     de: "Wohnhäuser, Städtisch, Ackerland"
+    sv: "Bostadshus, stadsmiljö, jordbruksmark"
   reference:
     commons_file: Cat grooming.jpg
   names:
@@ -5002,6 +5136,7 @@ species:
   habitat:
     en: Homes, Urban, Farmland
     de: "Wohnhäuser, Städtisch, Ackerland"
+    sv: "Bostadshus, stadsmiljö, jordbruksmark"
   reference:
     commons_file: Greenland 467 (35130903436) (cropped).jpg
   names:
@@ -5033,6 +5168,7 @@ species:
   habitat:
     en: Farmyards, Villages, Gardens
     de: "Bauernhöfe, Dörfer, Gärten"
+    sv: "Gårdsplaner, byar, trädgårdar"
   reference:
     commons_file: Red jungle fowl.png
   names:
@@ -5060,6 +5196,7 @@ species:
   habitat:
     en: Farm ponds, Wetlands, Villages
     de: "Hofteiche, Feuchtgebiete, Dörfer"
+    sv: "Gårdsdammar, våtmarker, byar"
   reference:
     commons_file: Male mallard3.jpg
   names:
@@ -5090,6 +5227,7 @@ species:
   habitat:
     en: Heathland, Sand dunes, Dry grassland, Sunny slopes
     de: "Heiden, Sanddünen, Trockenrasen, Sonnige Hänge"
+    sv: "Hedmark, sanddyner, torra gräsmarker, soliga sluttningar"
   reference:
     commons_file: Lacerta agilis male 2.JPG
   names:
@@ -5122,6 +5260,7 @@ species:
   habitat:
     en: Woodland edges, Grassland, Heathland, Gardens
     de: "Waldränder, Wiesen, Heiden, Gärten"
+    sv: "Skogsbryn, gräsmark, hedmark, trädgårdar"
   reference:
     commons_file: Anguidae.jpg
   names:
@@ -5154,6 +5293,7 @@ species:
   habitat:
     en: Deciduous woodland, Hedgerows, Vineyards, Gardens
     de: "Laubwälder, Hecken, Weinberge, Gärten"
+    sv: "Lövskog, häckar, vingårdar, trädgårdar"
   reference:
     commons_file: Helix pomatia 89a.jpg
   names:
@@ -5185,6 +5325,7 @@ species:
   habitat:
     en: Woodland edges, Hedgerows, Dunes, Gardens
     de: "Waldränder, Hecken, Dünen, Gärten"
+    sv: "Skogsbryn, häckar, dyner, trädgårdar"
   reference:
     commons_file: Cepaea nemoralis edit.jpg
   names:
@@ -5216,6 +5357,7 @@ species:
   habitat:
     en: Meadows, Gardens, Farmland, Woodland edges
     de: "Wiesen, Gärten, Agrarland, Waldränder"
+    sv: "Ängar, trädgårdar, jordbruksmark, skogsbryn"
   reference:
     commons_file: Bumblebee October 2007-3a.jpg
   names:
@@ -5246,6 +5388,7 @@ species:
   habitat:
     en: Meadows, Hedgerows, Gardens, Woodland edges
     de: "Wiesen, Hecken, Gärten, Waldränder"
+    sv: "Ängar, häckar, trädgårdar, skogsbryn"
   reference:
     commons_file: Bombus pascuorum female 2 (aka).jpg
   names:
@@ -5276,6 +5419,7 @@ species:
   habitat:
     en: Riverside woodland, Parks, Gardens
     de: "Auwälder, Parks, Gärten"
+    sv: "Svämskog, parker, trädgårdar"
   reference:
     commons_file: "Laothoe populi MHNT CUT 2010 0 359 Mont Pelvoux, France - female.jpg"
   names:
@@ -5306,6 +5450,7 @@ species:
   habitat:
     en: Woodland, Hedgerows, Gardens
     de: "Wälder, Hecken, Gärten"
+    sv: "Skog, häckar, trädgårdar"
   reference:
     commons_file: "Sphinx ligustri - Ligusterschwärmer (1).jpg"
   names:
@@ -5336,6 +5481,7 @@ species:
   habitat:
     en: Deciduous woodland, Woodland clearings, Forest tracks
     de: "Laubwälder, Waldlichtungen, Waldwege"
+    sv: "Lövskog, skogsgläntor, skogsvägar"
   reference:
     commons_file: Argynnis paphia MHNT CUT 2013 3 24 PONT GERENDOINE Male.jpg
   names:
@@ -5367,6 +5513,7 @@ species:
   habitat:
     en: Fast-flowing streams, Rivers, Wooded banks
     de: "Schnellfließende Bäche, Flüsse, Bewaldete Ufer"
+    sv: "Strömmande bäckar, floder, skogbevuxna stränder"
   reference:
     commons_file: Beautiful Demoiselle Calopteryx virgo.jpg
   names:
@@ -5399,6 +5546,7 @@ species:
   habitat:
     en: Arctic tundra, Coastal grassland, Saltmarsh
     de: "Arktische Tundra, Küstengrasland, Salzwiesen"
+    sv: "Arktisk tundra, kustnära gräsmarker, strandängar"
   reference:
     commons_file: Branta leucopsis -standing in a field-8.jpg
   names:
@@ -5431,6 +5579,7 @@ species:
   habitat:
     en: Old-growth forest, Wooded wetlands, Streams
     de: "Altwälder, Waldsümpfe, Bäche"
+    sv: "Gammelskog, sumpskog, bäckar"
   reference:
     commons_file: Ciconia nigra -Kruger National Park-8.jpg
   names:
@@ -5463,6 +5612,7 @@ species:
   habitat:
     en: Deciduous woodland, Parkland, Farmland
     de: "Laubwälder, Parklandschaft, Ackerland"
+    sv: "Lövskog, parklandskap, jordbruksmark"
   reference:
     commons_file: Fallow deer in field.jpg
   names:
@@ -5495,6 +5645,7 @@ species:
   habitat:
     en: Rivers, Lakes, Forested waterways
     de: "Flüsse, Seen, Waldgewässer"
+    sv: "Floder, sjöar, vattendrag i skog"
   reference:
     commons_file: Mergus merganser -Sandwell -England -male-8.jpg
   names:
@@ -5527,6 +5678,7 @@ species:
   habitat:
     en: Meadows, Farmland, Grassland
     de: Wiesen, Ackerland, Grasland
+    sv: "Ängar, jordbruksmark, gräsmark"
   reference:
     commons_file: Feldmaus Microtus arvalis.jpg
   names:
@@ -5559,6 +5711,7 @@ species:
   habitat:
     en: Lakes, Rivers, Coasts
     de: "Seen, Flüsse, Küsten"
+    sv: "Sjöar, floder, kuster"
   reference:
     commons_file: Balbuzard pecheur Lac de Tunis.jpg
   names:
@@ -5591,6 +5744,7 @@ species:
   habitat:
     en: Bogs, Marshes, Wet meadows, Taiga
     de: "Moore, Sümpfe, Feuchtwiesen, Taiga"
+    sv: "Mossar, kärr, fuktängar, tajga"
   reference:
     commons_file: Wood Sandpiper (50206067826), crop.jpg
   names:
@@ -5605,3 +5759,35 @@ species:
     en: "https://en.wikipedia.org/wiki/Wood_sandpiper"
     de: "https://de.wikipedia.org/wiki/Bruchwasserl%C3%A4ufer"
     sv: "https://sv.wikipedia.org/wiki/Gr%C3%B6nbena"
+- slug: black-redstart
+  number: "155"
+  scientific: Phoenicurus ochruros
+  family: Muscicapidae
+  group: birds
+  difficulty: easy
+  iucn: LC
+  gbif_taxon_key: 5739315
+  inat_taxon_id: 13000
+  wikidata_id: Q26755
+  height: "13–14.5 cm"
+  height_measure: length
+  body_weight: "12–20 g"
+  diet: insectivore
+  habitat:
+    en: Rocky slopes, Cliffs, Towns
+    de: "Felshänge, Klippen, Städte"
+    sv: "Steniga sluttningar, klippor, tätorter"
+  reference:
+    commons_file: Hausrotschwanz Brutpflege 2006-05-21-05.jpg
+  names:
+    en: Black Redstart
+    de: Hausrotschwanz
+    sv: "Svart rödstjärt"
+  description:
+    en: "The black redstart is a small passerine bird in the Old World flycatcher family. It is a widespread breeder in rocky habitats across Eurasia and North Africa, from the British Isles south to Morocco and east to central China. It is resident in the milder parts of its range, but northern and eastern birds migrate."
+    de: "Der Hausrotschwanz ist eine Singvogelart aus der Familie der Fliegenschnäpper (Muscicapidae). Er ist etwas kleiner als der Haussperling und vor allem an seinem rostorangen Schwanz und dem ansonsten dunklen Gefieder zu erkennen."
+    sv: "Svart rödstjärt är en fågel som tillhör släktet Phoenicurus inom familjen flugsnappare."
+  description_source:
+    en: "https://en.wikipedia.org/wiki/Black_redstart"
+    de: "https://de.wikipedia.org/wiki/Hausrotschwanz"
+    sv: "https://sv.wikipedia.org/wiki/Svart_r%C3%B6dstj%C3%A4rt"

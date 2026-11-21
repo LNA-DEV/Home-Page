@@ -19376,6 +19376,41 @@ images:
   license: all-rights-reserved
   artist: Lukas Nagel
   model: julia-hemberger
+- id: 56a105eb-410d-45d7-a17f-f47dee7fa76b
+  src: _DSC0768_23839.jpg
+  category: animals
+  species: Phoenicurus ochruros
+  section: general
+  title:
+    en: Touchdown - Black Redstart Landing on a Limestone Boulder
+    de: Sanfte Landung - Hausrotschwanz setzt auf einem Kalksteinblock auf
+    sv: Mjuklandning - svart rödstjärt landar på ett kalkstensblock
+  alt:
+    en: A black redstart with sooty grey plumage and a rust-orange tail comes in to land on a cracked, pale grey limestone rock, its feet just above the stone. Behind it, a slope of green and straw-coloured grass with more rocks blurs out of focus in soft afternoon light.
+    de: Ein Hausrotschwanz mit rußgrauem Gefieder und rostorangem Schwanz setzt zur Landung auf einem rissigen, hellgrauen Kalksteinfelsen an, die Füße knapp über dem Stein. Dahinter liegt unscharf ein Hang mit grünem und strohgelbem Gras und weiteren Felsen in weichem Nachmittagslicht.
+    sv: En svart rödstjärt med sotgrå fjäderdräkt och rostorange stjärtfjädrar är på väg att landa på ett sprucket, ljusgrått kalkstensblock, med fötterna strax ovanför stenen. Bakom den suddas en sluttning med grönt och halmgult gräs och fler stenar ut i mjukt eftermiddagsljus.
+  tags:
+  - alpineWildlife
+  - alps
+  - bavarianAlps
+  - bird
+  - birdPhotography
+  - birdwatching
+  - blackRedstart
+  - europeanWildlife
+  - mountainWildlife
+  - nature
+  - naturePhotography
+  - outdoors
+  - phoenicurusOchruros
+  - photo
+  - photography
+  - songbird
+  - wildlife
+  - wildlifeOfTheAlps
+  - wildlifePhotography
+  license: cc-by-sa-4.0
+  artist: Lukas Nagel
 projects:
 - slug: above-the-clouds
   title: Above the Clouds

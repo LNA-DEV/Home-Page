@@ -42,15 +42,15 @@ lives; most of it is documented next to the feature it belongs to.
 
 ## Search Console findings (2026-10-14)
 
-- The image-metadata report swinging between ~580 and ~15 items is **one page**:
-  `/<lang>/gallery/general/` carries ~589 `ImageObject`s, every other page 76 at
-  most. The swings follow that page entering and leaving Google's index, not
+- The image-metadata report swinging between hundreds and a handful of items is **one page**:
+  `/<lang>/gallery/general/` carries an `ImageObject` for every photo, every other
+  page a small fraction of that. The swings follow that page entering and leaving Google's index, not
   hundreds of broken photos; structured data on a page that is not indexed is not
   counted. When the report drops again, check the indexing status of the general
   pages before suspecting the image names.
-- That page is ~1.91 MB (en) / 1.93 MB (de). **Googlebot reads only the first
-  2 MB**, headers included, so roughly 50 more photos and the tail of the grid goes
-  unseen. Weigh that cap before adding markup to the gallery grid.
+- On 2026-11-21 that page was 1.92 MB (en) / 1.94 MB (de) with 592 photos.
+  **Googlebot reads only the first 2 MB**, headers included, so then roughly 50
+  more photos and the tail of the grid went unseen. Weigh that cap before adding markup to the gallery grid.
 - On 2026-09-10 every `_hu_` variant hash changed with byte-identical output (Hugo
   0.166.0, commit `d19e0a4b`), and the filename-era photo URLs (live
   2026-09-14…18) kept underscores that Googlebot still requested. Both are fixed —

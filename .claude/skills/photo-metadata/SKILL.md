@@ -1,6 +1,6 @@
 ---
 name: photo-metadata
-description: Suggest titles, alt texts and tags (social-media hashtags) for the newly added photos in data/gallery.yaml, i.e. the entries in its uncommitted diff. Use when the owner asks for metadata, a title, alt text or hashtags for new gallery photos.
+description: Suggest titles, alt texts, tags (social-media hashtags), category and species for the newly added photos in data/gallery.yaml, i.e. the entries in its uncommitted diff. Use when the owner asks for metadata, a title, alt text or hashtags for new gallery photos.
 ---
 
 # Metadata for new gallery photos
@@ -58,7 +58,7 @@ and `docs/gallery/photo-pages.md` (the English title is the URL).
   platform tags (`catsOfInstagram`).
 - A species: its common name, and the scientific name where it helps
   (`whiteTailedEagle`, `haliaeetusAlbicilla`).
-- Lagom: the 30 newest entries carry 10–24 tags, most of them 14–19. Fewer for a
+- Lagom: 10–24 tags, most often 14–19 (the 30 newest entries on 2026-11-21). Fewer for a
   simple photo.
 - Reuse an existing spelling (`grep -ic -- "- <tag>$" data/gallery.yaml`). Every
   tag gets its own page, and two spellings split it.
@@ -70,12 +70,16 @@ and `docs/gallery/photo-pages.md` (the English title is the URL).
 ## 5. The proposal, per photo
 
 File and `id`, the title options, the alt text in three languages, the tag change
-list. Also point out, without filling anything in: `category: others` left from the
-stub, or an empty `species:` when a species is visible (`docs/gallery/dex.md`).
+list. Also propose `category:` and `species:` whenever they are not right
+(`category: others` left from the stub, an empty or wrong `species:` when a species
+is visible); they are filled in, never only pointed out. A species not yet in
+`data/dex.yaml` gets its dex record in the same go, or the build warns
+(`docs/gallery/dex.md`, *Adding a species you just photographed*).
 
 ## 6. After the go
 
-- Write every agreed change into `data/gallery.yaml`: title, alt and tags.
+- Write every agreed change into `data/gallery.yaml`: title, alt, tags, category
+  and species; a new species gets its dex record first.
 - Once the title is set, update the golden list:
   `npx playwright test --project build`, then `npm run golden:update`.
 - Commit only when asked.

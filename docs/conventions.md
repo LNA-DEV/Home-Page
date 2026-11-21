@@ -15,7 +15,7 @@
   shape as `aliases` and `build`. Inside `params` Hugo ignores it and pairs
   translations by path instead, which silently works wherever the slug is
   language-neutral (the dex, the models) and silently fails where it is not: it
-  left all 648 photo pages in all three languages with no hreflang cluster at all.
+  left every photo page in all three languages with no hreflang cluster at all.
 - Content adapters live in `content/**/_content.<lang>.gotmpl`, one per language,
   because Hugo scopes an adapter to the language of its filename.
 - **Single-page theme dispatch lives in both `layouts/_default/page.html` and

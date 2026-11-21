@@ -73,6 +73,9 @@ Swedish content files, `i18n/{de,sv}.yaml`, and the `de`/`sv` values in `data/`.
 
 ### Knowledge lives in the repo
 
+- Docs state no counts that change with the data (species, photos, files,
+  sizes). A number that is a measurement carries its date.
+
 - No local memory: auto memory is off for this repo (`.claude/settings.json`),
   and no notes are kept anywhere else outside it either.
 - What is worth keeping goes into the repo, where it belongs: how to work here and
@@ -97,7 +100,7 @@ Swedish content files, `i18n/{de,sv}.yaml`, and the `de`/`sv` values in `data/`.
 ## Hard rules
 
 - **Never render into RAM** — no `hugo --renderToMemory`, no plain `hugo server`
-  (which renders to memory by default). The site is far too large for it (~7.8 GB
+  (which renders to memory by default). The site is far too large for it (gigabytes
   of gallery output); it has crashed every machine it ran on, more than once.
   Build to disk: `hugo -d <scratch dir>`, or `npm test`. A PreToolUse hook in
   `.claude/settings.json` (`.claude/hooks/block-hugo-memory.py`) blocks both; do

@@ -65,7 +65,7 @@ test with Hugo's log attached and everything downstream is skipped.
   else's problem is Hugo's `ignoreLogs` in `hugo.yaml`, keyed by the warning id,
   so an ignore is visible and reviewable — never a loosened test.
 - **`.test-site/` is the build under test, never `public/`.** `public/` is
-  written only by `deploy.sh`. Both are gitignored; `.test-site/` is another 8 GB.
+  written only by `deploy.sh`. Both are gitignored; `.test-site/` is another full build of several GB.
 - **A new i18n key lands in all three files or the suite fails** — in L0 as a
   Hugo warning and in L2 as a key-parity failure. That is the point.
 - **A new page means `npm run golden:update`.** The golden list is append-only by
