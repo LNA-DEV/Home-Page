@@ -2910,7 +2910,6 @@
 /images/gallery/fill-480x480-center/yellow-on-black-a-fire-salamander-in-the-moss.jpg
 /images/gallery/fill-600x400/falu-red-and-lupins-a-farmhouse-in-the-evening-sun.jpg
 /images/gallery/fill-600x400/the-valley-has-vanished-autumn-ridge-above-the-fog.jpg
-/images/gallery/fill-600x400/touchdown-black-redstart-landing-on-a-limestone-boulder.jpg
 /images/gallery/fill-600x400/tree-cover-alpaca-peeking-out-from-behind-a-trunk.jpg
 /images/gallery/fill-900x900-center/banded-shell-grove-snail-crossing-the-granite.jpg
 /images/gallery/fill-900x900-center/beachtime-wood-sandpiper-passing-through-the-bog-shore.jpg

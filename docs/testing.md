@@ -73,6 +73,10 @@ test with Hugo's log attached and everything downstream is skipped.
   never drops a line. A URL may only *leave* `tests/golden/published-urls.txt` in
   the same commit that adds its redirect — an alias on the page that replaced it,
   or an entry in that photo's `slugAliases:`.
+- **Run `npm run golden:update` only on an otherwise green build.** It records
+  whatever the build publishes, so a URL that exists only because of the bug that
+  is failing the suite lands in the list, and getting it out again is a manual
+  edit and the owner's call.
 - **Nothing reaches the network.** Every request to a host other than localhost
   is aborted; the companion API (map tiles included) and listmonk are mocked, and
   the analytics script is answered with an empty stub (blocking it makes Chromium
