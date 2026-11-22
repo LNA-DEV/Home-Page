@@ -58,8 +58,8 @@ and `docs/gallery/photo-pages.md` (the English title is the URL).
   platform tags (`catsOfInstagram`).
 - A species: its common name, and the scientific name where it helps
   (`whiteTailedEagle`, `haliaeetusAlbicilla`).
-- Lagom: 10–24 tags, most often 14–19 (the 30 newest entries on 2026-11-21). Fewer for a
-  simple photo.
+- Lagom: 10–24 tags, most often 14–19 (the 30 newest entries on 2026-11-21).
+  Fewer for a simple photo.
 - Reuse an existing spelling (`grep -ic -- "- <tag>$" data/gallery.yaml`). Every
   tag gets its own page, and two spellings split it.
 - Never a person's name: the build stops on a model's slug or name. People are

@@ -5,4 +5,5 @@ params:
   theme: gallery-home
   projects_cover: "1cd410f4-95c9-454d-acc8-5ff009f5825b"
   general_cover: "7e8119a6-ced0-498c-8f4f-62df7373cdc4"
+  dex_cover: "6885f633-8371-4989-8dbc-877910730c16"
 ---

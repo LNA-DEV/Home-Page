@@ -75,7 +75,6 @@ Swedish content files, `i18n/{de,sv}.yaml`, and the `de`/`sv` values in `data/`.
 
 - Docs state no counts that change with the data (species, photos, files,
   sizes). A number that is a measurement carries its date.
-
 - No local memory: auto memory is off for this repo (`.claude/settings.json`),
   and no notes are kept anywhere else outside it either.
 - What is worth keeping goes into the repo, where it belongs: how to work here and
