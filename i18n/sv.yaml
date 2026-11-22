@@ -729,6 +729,17 @@
 - id: journal_order_asc
   translation: "Äldst först."
 
+# Porträttsidan (docs/gallery/portraits.md): det streckade kortet efter
+# personerna (storyModels invite=…) och e-postknappen i storyContact
+- id: portraits_invite_title
+  translation: "Du?"
+- id: portraits_invite_note
+  translation: "Här kan din fotografering synas"
+- id: portraits_invite_cta
+  translation: "Skriv till mig"
+- id: contact_email
+  translation: "Skicka ett mejl"
+
 # Alerts — `> [!WARNING]` and the other GitHub alert types in a post
 # (layouts/_markup/render-blockquote.html)
 - id: alert_note

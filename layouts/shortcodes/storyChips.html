@@ -1,0 +1,35 @@
+{{- /*
+  storyChips.html
+  A short list of names as chips — places, say (docs/gallery/portraits.md).
+  Plain text, no links: the chips of a chapter's species are links because a
+  species has a dex page; a place here has none.
+
+  Usage:
+    {{< storyChips "Rosenheim, Am Inn, Moore im Inntal, Chiemsee" >}}
+    {{< storyChips items="…" label="Orte" >}}
+
+  Params:
+    items (or the first positional) comma-separated
+    label optional, printed before the chips and naming the list for a screen
+          reader
+
+  Only where the essay shortcodes work (story/context.html).
+*/ -}}
+{{- $data := partial "story/context.html" (dict "sc" . "name" "storyChips" "layouts" (slice "essay")) -}}
+{{- $raw := cond .IsNamedParams (.Get "items") (.Get 0) | default "" -}}
+{{- $label := cond .IsNamedParams (.Get "label") "" | default "" -}}
+{{- $items := slice -}}
+{{- range split $raw "," }}{{ with trim . " \n\t" }}{{ $items = $items | append . }}{{ end }}{{ end -}}
+{{- if not $items -}}
+  {{- errorf "%s: storyChips needs a comma-separated list" .Position -}}
+{{- end -}}
+{{- $html := "" -}}
+{{- with $data -}}
+  {{- $chips := "" -}}
+  {{- range $items }}{{ $chips = printf `%s<li class="story-chip">%s</li>` $chips (htmlEscape .) }}{{ end -}}
+  {{- $html = printf `<div class="story-chips story-chip-list">%s<ul%s>%s</ul></div>`
+        (cond (ne $label "") (printf `<span class="story-chips-label">%s</span>` (htmlEscape $label)) "")
+        (cond (ne $label "") (printf ` aria-label="%s"` (htmlEscape $label)) "")
+        $chips -}}
+{{- end -}}
+{{- partial "story/emit.html" (dict "sc" . "html" $html) | safeHTML -}}

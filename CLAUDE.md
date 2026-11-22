@@ -145,6 +145,7 @@ Swedish content files, `i18n/{de,sv}.yaml`, and the `de`/`sv` values in `data/`.
 | photo tags, taxonomy and term pages | `docs/gallery/tags.md` |
 | `galleryImage` / `galleryImageText` in a post | `docs/gallery/in-posts.md` |
 | project essays and journals, `data/galleryAreas.yaml` | `docs/gallery/project-stories.md` |
+| the portraits / TFP page and its story shortcodes | `docs/gallery/portraits.md` |
 | the photo dex, `data/dex.yaml`, the dex scripts | `docs/gallery/dex.md` |
 | models, `data/models.yaml` | `docs/gallery/models.md` |
 | cameras and lenses, `data/gear.yaml` | `docs/gallery/gear.md` |

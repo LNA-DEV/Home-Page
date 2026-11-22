@@ -12,8 +12,9 @@
       "Permalink" .Permalink) }}
   {{- end }}
 {{- end }}
-{{/* Gallery page fallback: pick a representative image from global gallery resources. */}}
-{{- if and (not $imgParams) (not $imgs) (or (eq .Params.Theme "gallery-page") (eq .Params.Theme "gallery-page-hidden") (eq .Params.Theme "gallery-general") (eq .Params.Theme "gallery-archive") (eq .Params.Theme "gallery-project")) }}
+{{/* Gallery page fallback: pick a representative image from global gallery resources.
+     The portraits page is here for its featured_image, the hero it opens with. */}}
+{{- if and (not $imgParams) (not $imgs) (or (eq .Params.Theme "gallery-page") (eq .Params.Theme "gallery-page-hidden") (eq .Params.Theme "gallery-general") (eq .Params.Theme "gallery-archive") (eq .Params.Theme "gallery-project") (eq .Params.Theme "gallery-portraits")) }}
   {{- $allImages := partialCached "gallery-images.html" . }}
   {{- if $allImages }}
     {{- $featured := partial "resolve-featured-image.html" (dict "page" . "bundleImages" $allImages) }}

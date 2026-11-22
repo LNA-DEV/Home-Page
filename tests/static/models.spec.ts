@@ -156,6 +156,36 @@ test.describe("visibility, in the built site", () => {
     expect(bad, bad.join("\n")).toEqual([]);
   });
 
+  test("the portraits page shows and names only public people", () => {
+    /* /gallery/portraits/ (docs/gallery/portraits.md) is a showcase, i.e. a
+       listing: every photo on it shows only `public` people, and every model
+       page it links is a `public` record. It exists in some languages only. */
+    const visibility = new Map((models() as any[]).map((m) => [m.slug, m.visibility]));
+    const byId = new Map(gallery().map((e: any) => [e.id, e]));
+    const pages = LANGS.map((lang) => path.join(lang, "gallery", "portraits", "index.html"))
+      .filter((rel) => fs.existsSync(sitePath(rel)));
+    test.skip(pages.length === 0, "no portraits page in this build");
+
+    const bad: string[] = [];
+    for (const rel of pages) {
+      const html = readSiteFile(rel);
+      const start = html.indexOf('class="story-page');
+      const story = start < 0 ? "" : html.slice(start, html.indexOf("</main>", start));
+      if (!story) bad.push(`${rel}: no story markup`);
+      for (const [, id] of story.matchAll(/data-id="([^"]+)"/g)) {
+        const e = byId.get(id);
+        if (!e) { bad.push(`${rel}: unknown photo ${id}`); continue; }
+        const people = asList(e.model);
+        if (people.length === 0) bad.push(`${rel}: ${id} shows nobody`);
+        for (const s of people) if (visibility.get(s) !== "public") bad.push(`${rel}: ${id} shows ${s} (${visibility.get(s)})`);
+      }
+      for (const [, slug] of story.matchAll(/href="[^"]*\/gallery\/models\/([^/"]+)\/"/g)) {
+        if (visibility.get(slug) !== "public") bad.push(`${rel}: links ${slug} (${visibility.get(slug)})`);
+      }
+    }
+    expect(bad, bad.join("\n")).toEqual([]);
+  });
+
   test("a record whose photos are all archived renders no page", () => {
     const bad: string[] = [];
     for (const m of models() as any[]) {

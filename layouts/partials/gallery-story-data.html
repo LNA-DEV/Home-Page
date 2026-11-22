@@ -10,8 +10,15 @@
   already holds every photo with its EXIF and its prose resolved into this
   language.
 
+  The portraits page (theme gallery-portraits, docs/gallery/portraits.md) is
+  the one story page that is not a project. Its photos are every non-archive
+  photo that shows people, all of them `public` in data/models.yaml: the page is
+  a showcase, i.e. a listing, and an `unlisted` person is by definition in no
+  listing — a `hidden` one on no page at all.
+
   Returns:
-    .slug      the project slug
+    .pool      "project", or "portraits" on the portraits page
+    .slug      the project slug ("" on the portraits page)
     .photos    collect-images items, by capture time, earliest first
     .byId      the same items keyed by UUID
     .count     len .photos
@@ -41,10 +48,27 @@
 {{- $c := partialCached "gallery-collected.html" . $lang -}}
 {{- $dex := partialCached "dex-lookup.html" (dict "lang" $lang) $lang -}}
 
+{{- $pool := cond (eq .Params.theme "gallery-portraits") "portraits" "project" -}}
+{{- $people := dict -}}
+{{- if eq $pool "portraits" -}}
+  {{- $people = partialCached "model-lookup.html" (dict "lang" $lang) $lang -}}
+{{- end -}}
+
 {{- $photos := slice -}}
 {{- range $c.all -}}
-  {{- if and (in .Projects $slug) (ne .Section "archive") -}}
-    {{- $photos = $photos | append . -}}
+  {{- if ne .Section "archive" -}}
+    {{- if eq $pool "portraits" -}}
+      {{- /* ALLOWLIST, like every visibility gate: a slug the lookup does not
+             know, or knows as anything but public, keeps the photo out. */ -}}
+      {{- $ok := gt (len (.Models | default slice)) 0 -}}
+      {{- range .Models | default slice -}}
+        {{- $p := index $people . -}}
+        {{- if not (and $p (eq $p.visibility "public")) }}{{ $ok = false }}{{ end -}}
+      {{- end -}}
+      {{- if $ok }}{{ $photos = $photos | append . }}{{ end -}}
+    {{- else if in .Projects $slug -}}
+      {{- $photos = $photos | append . -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 {{- /* Hugo's sort is stable, so photos taken in the same second keep the
@@ -128,6 +152,7 @@
 {{- end -}}
 
 {{- return (dict
+      "pool"      $pool
       "slug"      $slug
       "photos"    $photos
       "byId"      $byId

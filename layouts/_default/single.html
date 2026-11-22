@@ -22,6 +22,10 @@
 {{- partial "game-detail.html" . }}
 {{- else if eq .Params.Theme "styleguide" }}
 {{- partial "styleguide.html" . }}
+{{- else if eq .Params.Theme "gallery-portraits" }}
+{{- /* The portraits page: an essay over the photos of public models, without a
+       project (docs/gallery/portraits.md). */}}
+{{- partial "gallery-portraits.html" . }}
 {{- else if eq .Params.Theme "gallery-project" }}
 {{- /* project_layout (docs/concepts/gallery-project-stories.md): `grid`, or no
        key at all, is the page every project has always had — breadcrumb, title,

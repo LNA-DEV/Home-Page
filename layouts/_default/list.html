@@ -52,6 +52,12 @@
   <a href="{{ .RelPermalink }}models/">{{ i18n "gallery_models" }}</a>
   <span aria-hidden="true">·</span>
   {{- end }}
+  {{- /* The portraits page (docs/gallery/portraits.md) exists in some languages
+         only: GetPage finds it in this one or not at all. */}}
+  {{- with site.GetPage "/gallery/portraits" }}
+  <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+  <span aria-hidden="true">·</span>
+  {{- end }}
   <a href="{{ .RelPermalink }}gear/">{{ i18n "gallery_gear" }}</a>
   <span aria-hidden="true">·</span>
   <a href="{{ .RelPermalink }}archive/">{{ i18n "gallery_archive" }}</a>
@@ -107,6 +113,25 @@
 </div>
 {{- else }}
 <p class="model-empty">{{ i18n "models_empty" }}</p>
+{{- end }}
+
+{{- /* Below the grid, the way in for someone who would like to be in it: the
+       portraits page's teaser (docs/gallery/portraits.md). Its words live in that
+       page's front matter, so the box appears exactly in the languages the page
+       is written in — GetPage finds it in this one or not at all. */}}
+{{- with site.GetPage "/gallery/portraits" }}
+{{- $portraits := . }}
+{{- with .Params.teaser }}
+<aside class="model-teaser">
+  <div class="model-teaser__text">
+    <p class="model-teaser__title">{{ .title }}</p>
+    {{- with .text }}
+    <p>{{ . }}</p>
+    {{- end }}
+  </div>
+  <a class="model-teaser__link" href="{{ $portraits.RelPermalink }}">{{ $portraits.LinkTitle }} <span aria-hidden="true">→</span></a>
+</aside>
+{{- end }}
 {{- end }}
 
 {{- else if eq .Params.Theme "gallery-general-home" }}

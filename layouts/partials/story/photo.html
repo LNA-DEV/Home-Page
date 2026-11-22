@@ -22,7 +22,9 @@
     {{- $.sc.Page.Store.SetInMap "storyPlaced" $key $id -}}
   {{- else -}}
     {{- $meta := index (partialCached "gallery-meta.html" .sc.Page).byId $id -}}
-    {{- if $meta -}}
+    {{- if and $meta (eq .data.pool "portraits") -}}
+      {{- errorf "%s: photo %s (%s) is not one the portraits page may show — it needs a `model:` in data/gallery.yaml, every person in it `public` in data/models.yaml, and no `section: archive`" .sc.Position $id $meta.src -}}
+    {{- else if $meta -}}
       {{- errorf "%s: photo %s (%s) is not in project %q — add the project to its `project:` in data/gallery.yaml, or pick another photo" .sc.Position $id $meta.src .data.slug -}}
     {{- else -}}
       {{- errorf "%s: no photo with id %q in data/gallery.yaml" .sc.Position $id -}}

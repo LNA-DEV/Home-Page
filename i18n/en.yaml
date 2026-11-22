@@ -730,6 +730,17 @@
 - id: journal_order_asc
   translation: "Oldest first."
 
+# The portraits page (docs/gallery/portraits.md): the dashed card after the
+# people (storyModels invite=…) and the e-mail button of storyContact
+- id: portraits_invite_title
+  translation: "You?"
+- id: portraits_invite_note
+  translation: "Your shoot could be next"
+- id: portraits_invite_cta
+  translation: "Write to me"
+- id: contact_email
+  translation: "Send an e-mail"
+
 # Alerts — `> [!WARNING]` and the other GitHub alert types in a post
 # (layouts/_markup/render-blockquote.html)
 - id: alert_note

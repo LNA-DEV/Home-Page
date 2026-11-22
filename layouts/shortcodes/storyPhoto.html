@@ -23,7 +23,8 @@
               first for right.
     caption   text after the photo's title in the caption
 
-  Only on a gallery project with project_layout: essay. The alt text is always
+  Only on a gallery project with project_layout: essay, or on the portraits
+  page (docs/gallery/portraits.md). The alt text is always
   the photo's own, from data/gallery.yaml in the page's language.
 */ -}}
 {{- $data := partial "story/context.html" (dict "sc" . "name" "storyPhoto" "layouts" (slice "essay")) -}}
@@ -43,17 +44,19 @@
   {{- errorf "%s: storyPhoto layout=%q needs the text beside the photo inside it: {{< storyPhoto … >}}text{{< /storyPhoto >}}" .Position $layout -}}
 {{- end -}}
 
+{{- /* On the portraits page a caption names the people instead of the EXIF. */ -}}
+{{- $people := eq .Page.Params.theme "gallery-portraits" -}}
 {{- $html := "" -}}
 {{- with $data -}}
   {{- $item := partial "story/photo.html" (dict "sc" $ "data" . "id" ($.Get "id")) -}}
   {{- with $item -}}
     {{- $caption := $.Get "caption" | default "" -}}
     {{- if eq $layout "full" -}}
-      {{- $html = partial "story/figure.html" (dict "item" $item "class" "story-full" "sizes" "calc(100vw - 48px)" "wide2048" true "caption" $caption) -}}
+      {{- $html = partial "story/figure.html" (dict "item" $item "class" "story-full" "sizes" "calc(100vw - 48px)" "wide2048" true "caption" $caption "people" $people) -}}
     {{- else if eq $layout "wide" -}}
-      {{- $html = partial "story/figure.html" (dict "item" $item "class" "story-wide" "sizes" "(max-width: 1108px) calc(100vw - 28px), 1060px" "caption" $caption) -}}
+      {{- $html = partial "story/figure.html" (dict "item" $item "class" "story-wide" "sizes" "(max-width: 1108px) calc(100vw - 28px), 1060px" "caption" $caption "people" $people) -}}
     {{- else -}}
-      {{- $fig := partial "story/figure.html" (dict "item" $item "sizes" "(max-width: 900px) calc(100vw - 28px), 600px" "caption" $caption) -}}
+      {{- $fig := partial "story/figure.html" (dict "item" $item "sizes" "(max-width: 900px) calc(100vw - 28px), 600px" "caption" $caption "people" $people) -}}
       {{- $body := printf `<div class="story-split-text">%s</div>` $text -}}
       {{- /* The ratio on the block too: the photo's column is sized from it, so
              a portrait that is capped to the screen's height takes a narrower

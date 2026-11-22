@@ -1,0 +1,65 @@
+{{- /*
+  storyAuthor.html
+  The site owner's portrait beside a paragraph about the owner — the About page's
+  `portrait: true` image (author-portrait.html), not a gallery photo, because
+  the one photo of the photographer is somebody else's and lives in that page
+  bundle with its credit (docs/gallery/portraits.md).
+
+  Usage:
+    {{< storyAuthor layout="left" caption="Ich, auf dem Bohlenweg im Moor" alt="…" >}}
+    The paragraph beside the portrait. Ordinary **Markdown**.
+    {{< /storyAuthor >}}
+
+  Params:
+    layout    left (default) — portrait left, text right; right — the reverse
+    caption   the line under the portrait; the photographer's credit
+              (photo_credit) is printed after it from the resource metadata
+    alt       (required) the alt text, in the page's language — the bundle
+              stores none, the About page writes its own in its body
+
+  The image goes through responsive-image.html with the About page as its
+  page, so it is the same set of files the About page already publishes.
+  Only where the essay shortcodes work (story/context.html).
+*/ -}}
+{{- $data := partial "story/context.html" (dict "sc" . "name" "storyAuthor" "layouts" (slice "essay")) -}}
+{{- $layout := .Get "layout" | default "left" | lower -}}
+{{- if not (in (slice "left" "right") $layout) -}}
+  {{- errorf "%s: storyAuthor layout must be left or right, got %q" .Position $layout -}}
+{{- end -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- if not $alt -}}
+  {{- errorf "%s: storyAuthor needs alt=\"…\" — the portrait's description in this page's language" .Position -}}
+{{- end -}}
+{{- if not (trim .Inner " \n\t") -}}
+  {{- errorf "%s: storyAuthor needs the text beside the portrait inside it: {{< storyAuthor … >}}text{{< /storyAuthor >}}" .Position -}}
+{{- end -}}
+{{- $text := partial "story/inner.html" (dict "sc" . "inner" .Inner) -}}
+
+{{- $html := "" -}}
+{{- with $data -}}
+  {{- $portrait := partialCached "author-portrait.html" $.Page site.Language.Lang -}}
+  {{- $about := site.GetPage (site.Params.author.page | default "") -}}
+  {{- if not (and $portrait $about) -}}
+    {{- errorf "%s: storyAuthor found no `portrait: true` image on the About page (params.author.page) in this language" $.Position -}}
+  {{- else -}}
+    {{- $img := partial "responsive-image.html" (dict "page" $about "src" $portrait.resource.Name "sizes" "(max-width: 900px) calc(100vw - 28px), 600px") -}}
+    {{- $ratio := 0.75 -}}
+    {{- with $img.width }}{{ with $img.height }}{{ $ratio = div (float $img.width) (float .) }}{{ end }}{{ end -}}
+    {{- $credit := "" -}}
+    {{- with $portrait.credit }}{{ $credit = i18n "photo_credit" (dict "Name" .credit) }}{{ end -}}
+    {{- $cap := "" -}}
+    {{- if or ($.Get "caption") $credit -}}
+      {{- $cap = printf `<figcaption class="story-cap"><span class="story-cap-title">%s</span>%s</figcaption>`
+            (htmlEscape ($.Get "caption" | default ""))
+            (cond (ne $credit "") (printf `<span class="story-exif"><span>%s</span></span>` (htmlEscape $credit)) "") -}}
+    {{- end -}}
+    {{- /* Not a link, unlike a gallery photo: it has no photo page, and an
+           image link is what story/figure.html hides from assistive tech —
+           here the alt text is the only description there is. */ -}}
+    {{- $fig := printf `<figure class="story-figure story-author"><div class="story-figure-img"><img src="%s" srcset="%s" sizes="%s" width="%s" height="%s" alt="%s" loading="lazy" decoding="async"></div>%s</figure>`
+          $img.src $img.srcset $img.sizes $img.width $img.height (htmlEscape $alt) $cap -}}
+    {{- $body := printf `<div class="story-split-text">%s</div>` $text -}}
+    {{- $html = printf `<div class="story-split story-split-%s" style="--ratio: %.4f">%s%s</div>` $layout $ratio (cond (eq $layout "left") $fig $body) (cond (eq $layout "left") $body $fig) -}}
+  {{- end -}}
+{{- end -}}
+{{- partial "story/emit.html" (dict "sc" . "html" $html) | safeHTML -}}

@@ -50,7 +50,7 @@ Ich beschäftige mich mehr und mehr mit dem Indie Web. Ich bin hier definitiv am
 
 Ein weiteres Hobby von mir ist Fotografie. Dafür habe ich eine weitere Unterseite: [Fotografie](https://lna-dev.net/en/gallery). Falls du interessiert bist, schau doch mal vorbei. Meine Bilder sind unter einer Creative Commons Lizenz veröffentlicht. Genauere Informationen findest du in den Metadaten der Bilder.
 
-Ich nehme Fotos in verschiedenen Kategorien auf (zum Beispiel Landschaft, Tiere und Pflanzen). Aber ich möchte mich auch in ein paar weiteren Kategorien wie der Porträtfotografie ausprobieren.
+Ich nehme Fotos in verschiedenen Kategorien auf (zum Beispiel Landschaft, Tiere und Pflanzen). Seit einiger Zeit fotografiere ich auch Menschen. Wenn du aus der Gegend um Rosenheim kommst und Lust auf ein Shooting hast, schau bei [Porträts & TFP](../gallery/portraits/) vorbei.
 
 Editieren tue ich meine Fotografie in [Darktable](https://www.darktable.org/), einem FOSS-Tool zur Fotobearbeitung und Management. Es ähnelt Lightroom, ist aber komplett frei.
 

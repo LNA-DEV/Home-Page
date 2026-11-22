@@ -1,0 +1,119 @@
+{{- /*
+  gallery-portraits.html
+  The portraits page — portrait photography and TFP shoots, the one page that
+  asks people to be photographed (docs/gallery/portraits.md). Dispatched for
+  theme gallery-portraits from page.html and single.html.
+
+  An essay without a project: the same shortcodes, the same .story-page styles,
+  over its own pool of photos — every non-archive photo whose people are all
+  `public` (gallery-story-data.html). What an essay has and this page does not:
+  the story/grid toggle, "More from this project", the grid, the neighbouring
+  projects and the counted meta line. It is a hand-picked page, not an album,
+  and the albums of the people in it are their model pages.
+
+  .Content is rendered FIRST, as in gallery-story.html: the shortcodes record
+  what they placed in the page Store while it renders.
+
+  Front matter (params):
+    featured_image  the hero, a photo of the pool (UUID)
+    hero_position   CSS object-position for the hero's crop
+    kicker          a line above the heading, inside the h1
+    heading         the visible h1 (default: the title, which stays the <title>)
+    facts           short facts under the description, one span each
+    teaser          {title, text}: what /gallery/models/ shows to link here
+    invite          the line each model page shows to link here
+*/ -}}
+{{- $content := .Content -}}
+{{- $data := partialCached "gallery-story-data.html" . .RelPermalink -}}
+{{- $page := . -}}
+{{- $file := .RelPermalink -}}
+{{- with .File }}{{ $file = printf "content/%s" .Path }}{{ end -}}
+
+{{- with .Params.featured_image -}}
+  {{- if not $data.hero -}}
+    {{- errorf "%s: featured_image %s is not a photo the portraits page may show (a `model:`, every person `public`, not archived)" $file . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Every photo at most once, the hero included — the rule of the essays. */ -}}
+{{- $seen := dict -}}
+{{- with $data.hero }}{{ $seen = dict .Id 1 }}{{ end -}}
+{{- range $key, $id := .Store.Get "storyPlaced" | default dict -}}
+  {{- $n := add (index $seen $id | default 0) 1 -}}
+  {{- if eq $n 2 -}}
+    {{- errorf "%s: photo %s appears twice on the page%s — every photo is shown once" $file $id (cond (and $data.hero (eq $id $data.hero.Id)) ", once as the hero (featured_image)" "") -}}
+  {{- end -}}
+  {{- $seen = merge $seen (dict $id $n) -}}
+{{- end -}}
+
+{{- $chapters := slice -}}
+{{- range $key, $c := .Store.Get "storyChapters" | default dict -}}
+  {{- $chapters = $chapters | append $c -}}
+{{- end -}}
+
+{{- $gallery := site.GetPage "/gallery" -}}
+{{- $models := site.GetPage "/gallery/models" -}}
+
+<div class="story-page story-portraits">
+  <div class="story-bar">
+    <nav class="gallery-breadcrumb" aria-label="Breadcrumb">
+      {{- with $gallery }}
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <span>/</span>
+      {{- end }}
+      <span>{{ .LinkTitle }}</span>
+    </nav>
+  </div>
+
+  {{- with $data.hero }}
+  {{- $url := partial "story/url.html" . }}
+  {{- $thumb := partial "image-variant.html" (dict "image" .image "spec" "fit 600x600") }}
+  {{- $pos := $page.Params.hero_position | default "" }}
+  {{- if and $pos (not (findRE `^[a-z0-9.% -]+$` $pos)) }}
+  {{- errorf "%s: hero_position %q is not a CSS object-position (e.g. \"50%% 20%%\" or \"center top\")" $file $pos }}
+  {{- $pos = "" }}
+  {{- end }}
+  <figure class="story-hero" data-id="{{ .Id }}" style="background-color: {{ index $thumb.Colors 0 | default "transparent" }}{{ with $pos }}; --hero-position: {{ . }}{{ end }}">
+    {{- partial "story/img.html" (dict "item" . "sizes" "calc(100vw - 48px)" "wide2048" true "eager" true) }}
+    <figcaption class="story-hero-cap">
+      <a href="{{ $url }}">{{ partial "story/title.html" . }}</a>
+      {{- range partial "story/people.html" . }}<span>{{ . }}</span>{{ end }}
+    </figcaption>
+  </figure>
+  {{- end }}
+
+  <header class="story-head">
+    <h1>
+      {{- with .Params.kicker }}<span class="story-kicker">{{ . }}<span class="story-sr">: </span></span>{{ end -}}
+      {{ .Params.heading | default .Title -}}
+    </h1>
+    {{- with .Description }}
+    <p class="story-description">{{ . }}</p>
+    {{- end }}
+    {{- with .Params.facts }}
+    <p class="story-meta">
+      {{- range . }}<span>{{ . }}</span>{{ end }}
+    </p>
+    {{- end }}
+    {{- with $chapters }}
+    <nav class="story-chips story-toc" aria-label="{{ i18n "story_contents" }}">
+      {{- range . }}
+      <a class="story-chip story-chip-lg" href="#{{ .anchor }}"><span class="story-chip-num">{{ .number }}</span>{{ .title }}</a>
+      {{- end }}
+    </nav>
+    {{- end }}
+  </header>
+
+  <div class="story">
+    <div class="story-body">{{ $content }}</div>
+  </div>
+
+  <div class="story-portraits-end">
+    {{- with $models }}
+    <a href="{{ .RelPermalink }}"><span aria-hidden="true">←</span> {{ .Title }}</a>
+    {{- end }}
+    {{- with $gallery }}
+    <a href="{{ .RelPermalink }}">{{ .Title }} <span aria-hidden="true">→</span></a>
+    {{- end }}
+  </div>
+</div>

@@ -13,6 +13,8 @@
     class      on the <figure>
     caption    text after the title
     noExif     bool: leave the EXIF out
+    people     bool: the names of the people in the photo instead of the EXIF
+               (the portraits page; story/people.html)
   Returns HTML.
 */ -}}
 {{- $item := .item -}}
@@ -20,7 +22,9 @@
 {{- $thumb := partial "image-variant.html" (dict "image" $item.image "spec" "fit 600x600") -}}
 {{- $color := index $thumb.Colors 0 | default "transparent" -}}
 {{- $exif := slice -}}
-{{- if not .noExif }}{{ $exif = partial "story/exif.html" $item }}{{ end -}}
+{{- if not .noExif -}}
+  {{- $exif = cond (.people | default false) (partial "story/people.html" $item) (partial "story/exif.html" $item) -}}
+{{- end -}}
 <figure class="story-figure{{ with .class }} {{ . }}{{ end }}" data-id="{{ $item.Id }}" style="--ratio: {{ printf "%.4f" (div (mul $thumb.Width 1.0) $thumb.Height) }}">
   <a class="story-figure-img" href="{{ $url }}" tabindex="-1" aria-hidden="true" style="background-color: {{ $color }}">
     {{- partial "story/img.html" (dict "item" $item "sizes" .sizes "wide2048" .wide2048 "eager" .eager) -}}

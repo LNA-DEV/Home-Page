@@ -729,6 +729,17 @@
 - id: journal_order_asc
   translation: "Älteste zuerst."
 
+# Die Porträt-Seite (docs/gallery/portraits.md): die gestrichelte Karte nach den
+# Menschen (storyModels invite=…) und der E-Mail-Knopf von storyContact
+- id: portraits_invite_title
+  translation: "Du?"
+- id: portraits_invite_note
+  translation: "Hier könnte dein Shooting stehen"
+- id: portraits_invite_cta
+  translation: "Schreib mir"
+- id: contact_email
+  translation: "E-Mail schreiben"
+
 # Alerts — `> [!WARNING]` and the other GitHub alert types in a post
 # (layouts/_markup/render-blockquote.html)
 - id: alert_note

@@ -1,0 +1,65 @@
+{{- /*
+  storyContact.html
+  A closing call to action: a heading, a line of text and one button per way
+  to reach the site owner (docs/gallery/portraits.md).
+
+  Usage:
+    {{< storyContact channels="email, instagram, matrix" id="kontakt" >}}
+    ## Lust auf ein Shooting?
+    Schreib mir ein paar Sätze über dich.
+    {{< /storyContact >}}
+
+  Params:
+    channels  (required) comma-separated, in the order shown; the first is the
+              filled button. Each is looked up where the site already declares
+              the owner's addresses, and nowhere else: the `name` of an entry
+              in params.socialIcons (email, matrix, …), else the profile in
+              params.schema.sameAs whose host contains it (instagram). One that
+              is in neither is a build error — this shortcode never takes a URL,
+              so a contact link cannot drift from the identity the site
+              publishes everywhere else.
+    id        the block's anchor (default "contact"), for links such as
+              storyModels' invite card
+
+  Labels: email is i18n contact_email, the rest the channel's own name. Icons
+  come from svg.html. Only where the essay shortcodes work (story/context.html).
+*/ -}}
+{{- $data := partial "story/context.html" (dict "sc" . "name" "storyContact" "layouts" (slice "essay")) -}}
+{{- $inner := partial "story/inner.html" (dict "sc" . "inner" .Inner) -}}
+{{- $id := .Get "id" | default "contact" -}}
+{{- if not (findRE `^[a-z0-9-]+$` $id) -}}
+  {{- errorf "%s: storyContact id %q must be lower-case letters, digits and hyphens" .Position $id -}}
+{{- end -}}
+{{- $channels := slice -}}
+{{- range split (.Get "channels" | default "") "," }}{{ with trim . " \n\t" | lower }}{{ $channels = $channels | append . }}{{ end }}{{ end -}}
+{{- if not $channels -}}
+  {{- errorf "%s: storyContact needs channels=\"email, …\"" .Position -}}
+{{- end -}}
+
+{{- $html := "" -}}
+{{- with $data -}}
+  {{- $buttons := "" -}}
+  {{- range $i, $ch := $channels -}}
+    {{- $url := "" -}}
+    {{- range site.Params.socialIcons | default slice -}}
+      {{- if and (not $url) (eq (lower (.name | default "")) $ch) }}{{ $url = .url | default "" }}{{ end -}}
+    {{- end -}}
+    {{- if not $url -}}
+      {{- range site.Params.schema.sameAs | default slice -}}
+        {{- if and (not $url) (strings.Contains (urls.Parse .).Host $ch) }}{{ $url = . }}{{ end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if not $url -}}
+      {{- errorf "%s: storyContact channel %q is neither a params.socialIcons name nor in params.schema.sameAs" $.Position $ch -}}
+    {{- else -}}
+      {{- $label := cond (eq $ch "email") (i18n "contact_email") (title $ch) -}}
+      {{- $external := hasPrefix $url "http" -}}
+      {{- $buttons = printf `%s<a class="story-button%s" href="%s"%s>%s<span>%s</span></a>`
+            $buttons (cond (eq $i 0) " story-button-primary" "") $url
+            (cond $external ` rel="noopener"` "")
+            (partial "svg.html" (dict "name" $ch)) (htmlEscape $label) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $html = printf `<section class="story-contact" id="%s"><div class="story-contact-text">%s</div><div class="story-contact-buttons">%s</div></section>` $id $inner $buttons -}}
+{{- end -}}
+{{- partial "story/emit.html" (dict "sc" . "html" $html) | safeHTML -}}

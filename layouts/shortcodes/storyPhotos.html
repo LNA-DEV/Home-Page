@@ -18,7 +18,9 @@
     title     a heading (h3) above the block
     note      a line beside the title
 
-  Only on a gallery project with project_layout: essay.
+  Only on a gallery project with project_layout: essay, or on the portraits
+  page (docs/gallery/portraits.md), where a pair's captions name the people
+  instead of the EXIF.
 */ -}}
 {{- $data := partial "story/context.html" (dict "sc" . "name" "storyPhotos" "layouts" (slice "essay")) -}}
 {{- $layout := .Get "layout" | default "grid" | lower -}}
@@ -36,6 +38,7 @@
   {{- end -}}
 {{- end -}}
 
+{{- $people := eq .Page.Params.theme "gallery-portraits" -}}
 {{- $html := "" -}}
 {{- with $data -}}
   {{- $items := slice -}}
@@ -47,7 +50,7 @@
   {{- if in (slice "pair" "trio") $layout -}}
     {{- $sizes := cond (eq $layout "pair") "(max-width: 768px) 50vw, 530px" "(max-width: 768px) 260px, 360px" -}}
     {{- range $items -}}
-      {{- $body = printf "%s%s" $body (partial "story/figure.html" (dict "item" . "sizes" $sizes "noExif" (eq $layout "trio"))) -}}
+      {{- $body = printf "%s%s" $body (partial "story/figure.html" (dict "item" . "sizes" $sizes "noExif" (eq $layout "trio") "people" $people)) -}}
     {{- end -}}
     {{- $body = printf `<div class="story-row story-%s">%s</div>` $layout $body -}}
   {{- else -}}

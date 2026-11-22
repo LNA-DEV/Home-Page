@@ -1,0 +1,46 @@
+{{- /*
+  storyFaq.html
+  Questions and answers, each answer folded under its question
+  (docs/gallery/portraits.md).
+
+  Usage:
+    {{< storyFaq >}}
+    ### Kostet mich das etwas?
+    Nein. Bei TFP zahlt niemand etwas.
+    ### Ich habe noch nie gemodelt. Geht das trotzdem?
+    Ja, sehr gut sogar.
+    {{< /storyFaq >}}
+
+  The inner Markdown is cut at each h3, as storyCards does: the h3 is the
+  question, what follows it the answer. Each pair is a <details> whose
+  <summary> holds the h3 — a heading is allowed there — so the questions stay
+  headings for a screen reader and the answers stay in the HTML (closed, not
+  absent), with no script.
+
+  No FAQPage structured data: Google shows that rich result only for
+  well-known government and health sites since 2023, and the schema would say
+  nothing the page does not.
+
+  Only where the essay shortcodes work (story/context.html).
+*/ -}}
+{{- $data := partial "story/context.html" (dict "sc" . "name" "storyFaq" "layouts" (slice "essay")) -}}
+{{- $inner := partial "story/inner.html" (dict "sc" . "inner" .Inner) -}}
+{{- $parts := split $inner "<h3" -}}
+{{- if trim (index $parts 0) " \n\t" -}}
+  {{- errorf "%s: storyFaq: text before the first ### question" .Position -}}
+{{- end -}}
+{{- $parts = after 1 $parts -}}
+{{- if not $parts -}}
+  {{- errorf "%s: storyFaq needs ### questions, each followed by its answer" .Position -}}
+{{- end -}}
+{{- $html := "" -}}
+{{- with $data -}}
+  {{- $items := "" -}}
+  {{- range $parts -}}
+    {{- $q := index (split . "</h3>") 0 -}}
+    {{- $a := trim (strings.TrimPrefix (printf "%s</h3>" $q) .) " \n\t" -}}
+    {{- $items = printf `%s<details class="story-faq-item"><summary><h3%s</h3><span class="story-faq-mark" aria-hidden="true"></span></summary><div class="story-faq-answer">%s</div></details>` $items $q $a -}}
+  {{- end -}}
+  {{- $html = printf `<div class="story-faq">%s</div>` $items -}}
+{{- end -}}
+{{- partial "story/emit.html" (dict "sc" . "html" $html) | safeHTML -}}

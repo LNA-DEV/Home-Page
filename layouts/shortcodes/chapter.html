@@ -77,9 +77,14 @@
         "count" $count
       ) -}}
 
+  {{- /* The portraits page is no record of a period: its chapters are about
+         how a shoot works, and a date range over friends' holiday photos would
+         read as the history of a business. */ -}}
   {{- $meta := slice -}}
-  {{- with partial "story/period.html" (dict "dates" $dates "precision" "auto") }}{{ $meta = $meta | append . }}{{ end -}}
-  {{- if $count }}{{ $meta = $meta | append (T "photoCount" $count) }}{{ end -}}
+  {{- if ne $.Page.Params.theme "gallery-portraits" -}}
+    {{- with partial "story/period.html" (dict "dates" $dates "precision" "auto") }}{{ $meta = $meta | append . }}{{ end -}}
+    {{- if $count }}{{ $meta = $meta | append (T "photoCount" $count) }}{{ end -}}
+  {{- end -}}
 
   {{- $chips := slice -}}
   {{- range $sci, $c := $species.Values -}}

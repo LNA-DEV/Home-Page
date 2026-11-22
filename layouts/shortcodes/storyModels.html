@@ -1,0 +1,68 @@
+{{- /*
+  storyModels.html
+  A row of cards, one per person, each linking to their model page — the
+  dex's storySpecies card with the nouns swapped (docs/gallery/portraits.md).
+
+  Usage:
+    {{< storyModels ids="markus-penninger, julia-hemberger" notes="Seit der Schulzeit befreundet | Seit ein paar Jahren befreundet" invite="#kontakt" >}}
+
+  Params:
+    ids     (required) comma-separated model slugs from data/models.yaml, in
+            the order shown
+    notes   optional, one line per card, separated by `|`, in the order of ids
+    invite  optional: an href (usually the contact block's anchor) for a last,
+            dashed card that asks the reader to be next; its text is i18n
+            (portraits_invite_*)
+
+  ONLY `public` records. This is a listing of people, and `unlisted` means in no
+  listing; a `hidden` record, or one without a page, would be a dead link at
+  best and a published name at worst. Anything else is a build error, never a
+  silently skipped card, because a missing card is a person losing a credit
+  they agreed to.
+
+  The thumbnail is the `fill 480x480 Center` variant the /gallery/models/ grid
+  already publishes for every cover (model-card.html), so the cards add no
+  image file. The count is model-index.html's: non-archive photos.
+*/ -}}
+{{- $data := partial "story/context.html" (dict "sc" . "name" "storyModels" "layouts" (slice "essay")) -}}
+{{- $ids := slice -}}
+{{- range split (.Get "ids" | default "") "," -}}
+  {{- with trim . " \n\t" }}{{ $ids = $ids | append . }}{{ end -}}
+{{- end -}}
+{{- if not $ids -}}
+  {{- errorf "%s: storyModels needs ids=\"<slug>, <slug>\" from data/models.yaml" .Position -}}
+{{- end -}}
+{{- $notes := slice -}}
+{{- range split (.Get "notes" | default "") "|" }}{{ $notes = $notes | append (trim . " \n\t") }}{{ end -}}
+{{- $invite := .Get "invite" | default "" -}}
+
+{{- $html := "" -}}
+{{- with $data -}}
+  {{- $lang := site.Language.Lang -}}
+  {{- $index := partialCached "model-index.html" $.Page $lang -}}
+  {{- $people := partialCached "model-lookup.html" (dict "lang" $lang) $lang -}}
+  {{- $cards := "" -}}
+  {{- range $i, $slug := $ids -}}
+    {{- $p := index $people $slug -}}
+    {{- $e := index $index.bySlug $slug -}}
+    {{- if not (and $p $e (eq $p.visibility "public")) -}}
+      {{- errorf "%s: storyModels: %q is not a `public` record with a page in data/models.yaml — only public people may be listed" $.Position $slug -}}
+    {{- else -}}
+      {{- $img := `<span class="story-model-img" aria-hidden="true"></span>` -}}
+      {{- with $e.cover -}}
+        {{- $thumb := partial "image-variant.html" (dict "image" .image "spec" "fill 480x480 Center") -}}
+        {{- $img = printf `<span class="story-model-img"><img src="%s" width="%d" height="%d" alt="" loading="lazy" decoding="async"></span>` $thumb.RelPermalink $thumb.Width $thumb.Height -}}
+      {{- end -}}
+      {{- $note := "" -}}
+      {{- if lt $i (len $notes) }}{{ with index $notes $i }}{{ $note = printf `<span class="story-model-note">%s</span>` (htmlEscape .) }}{{ end }}{{ end -}}
+      {{- $cards = printf `%s<a class="story-model" href="%s">%s<span class="story-model-names"><span class="story-model-name">%s</span>%s</span><span class="story-model-count">%s <span aria-hidden="true">→</span></span></a>`
+            $cards $p.url $img (htmlEscape $p.name) $note (T "photoCount" $e.count) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with $invite -}}
+    {{- $cards = printf `%s<a class="story-model story-model-invite" href="%s"><span class="story-model-img" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span><span class="story-model-names"><span class="story-model-name">%s</span><span class="story-model-note">%s</span></span><span class="story-model-count">%s <span aria-hidden="true">→</span></span></a>`
+          $cards (htmlEscape .) (i18n "portraits_invite_title") (i18n "portraits_invite_note") (i18n "portraits_invite_cta") -}}
+  {{- end -}}
+  {{- $html = printf `<div class="story-models">%s</div>` $cards -}}
+{{- end -}}
+{{- partial "story/emit.html" (dict "sc" . "html" $html) | safeHTML -}}

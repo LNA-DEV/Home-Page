@@ -1009,6 +1009,7 @@
 /de/gallery/photo/zwischen-schnee-und-gras-eine-alm-im-vorfruehling/
 /de/gallery/photo/zwischen-zwei-schultern-das-tal-im-letzten-licht/
 /de/gallery/portfolio/
+/de/gallery/portraits/
 /de/gallery/projects/
 /de/gallery/projects/above-the-clouds/
 /de/gallery/projects/wildlife-of-inn-valley/

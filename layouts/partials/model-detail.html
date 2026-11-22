@@ -92,4 +92,17 @@
     {{- partial "gallery.html" . }}
   </section>
 
+  {{- /* A line for the reader who would like to be photographed too: the
+         portraits page's `invite`, in the languages that page is written in
+         (docs/gallery/portraits.md). Not on the site owner's own page, where
+         it would invite the photographer to their own shoot. */}}
+  {{- if ne $slug site.Params.author.modelSlug }}
+  {{- with site.GetPage "/gallery/portraits" }}
+  {{- $portraits := . }}
+  {{- with .Params.invite }}
+  <p class="model-invite">{{ . }} <a href="{{ $portraits.RelPermalink }}">{{ $portraits.LinkTitle }}</a></p>
+  {{- end }}
+  {{- end }}
+  {{- end }}
+
 </article>

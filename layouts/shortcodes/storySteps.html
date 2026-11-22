@@ -1,0 +1,31 @@
+{{- /*
+  storySteps.html
+  A numbered sequence of steps — how something goes, one step after the other
+  (docs/gallery/portraits.md).
+
+  Usage:
+    {{< storySteps >}}
+    1. ### Du schreibst mir
+       Ein paar Sätze reichen.
+    2. ### Wir planen zusammen
+       Ort, Uhrzeit, Kleidung.
+       {{< storyChips "Rosenheim, Am Inn, Chiemsee" >}}
+    {{< /storySteps >}}
+
+  The inner Markdown is an ordered list; each item opens with an h3, its title.
+  The numbers and the line that joins them are CSS (a counter on the list), so
+  the list stays a list for a screen reader and in the search index. Story
+  shortcodes inside an item (storyChips, todo) work.
+
+  Only where the essay shortcodes work (story/context.html).
+*/ -}}
+{{- $data := partial "story/context.html" (dict "sc" . "name" "storySteps" "layouts" (slice "essay")) -}}
+{{- $inner := partial "story/inner.html" (dict "sc" . "inner" .Inner) -}}
+{{- if not (findRE `<ol[ >]` $inner 1) -}}
+  {{- errorf "%s: storySteps needs a numbered Markdown list inside it (1. ### Title …)" .Position -}}
+{{- end -}}
+{{- $html := "" -}}
+{{- with $data -}}
+  {{- $html = printf `<div class="story-steps">%s</div>` $inner -}}
+{{- end -}}
+{{- partial "story/emit.html" (dict "sc" . "html" $html) | safeHTML -}}

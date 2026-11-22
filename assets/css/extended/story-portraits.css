@@ -1,0 +1,445 @@
+/* The portraits page (docs/gallery/portraits.md) and the story blocks it
+   brought: storyAuthor, storyModels, storySteps, storyChips, storyCards,
+   storyFaq and storyContact, plus the page's own title line and end links.
+
+   An essay without a project, so everything else — hero, title block, chapters,
+   photo blocks, the split of a photo beside its text — is gallery-story.css.
+   Every selector starts at .story-page, like that file's. This one is named
+   story-* so it is concatenated AFTER it (head.html bundles css/extended/* in
+   name order), and the rules that override a story-body default (paragraph and
+   list margins, h2/h3 sizes) carry .story-body in their selector as well, so
+   they win on specificity and not only on order.
+
+   Colours, spacing, type and radii are design tokens
+   (assets/css/core/theme-vars.css). The accent marks the step numbers, the
+   photo counts and the FAQ's open/closed mark, never alone: each is also text
+   or a shape. */
+
+/* ---- title -------------------------------------------------------------- */
+
+/* The kicker sits inside the h1, as a line above the heading: it carries the
+   search terms (TFP, the region), which belong in the h1, without making the
+   display heading a sentence. */
+.story-page .story-kicker {
+  display: block;
+  margin-bottom: var(--space-4);
+  color: var(--secondary);
+  font-size: var(--text-sm);
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  line-height: var(--leading-normal);
+  text-transform: uppercase;
+}
+
+/* ---- wide blocks -------------------------------------------------------- */
+
+.story-page .story-models,
+.story-page .story-contact,
+.story-page .story-portraits-end {
+  width: var(--story-wide);
+  margin-left: calc(50% - var(--story-wide) / 2);
+}
+
+/* ---- storyModels: one card per person ----------------------------------- */
+
+.story-page .story-models {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--grid-gap);
+  margin-top: var(--space-7);
+  margin-bottom: var(--space-8);
+}
+
+.story-page .story-model {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--card-pad);
+  border-radius: var(--radius-l);
+  background: var(--panel);
+  color: var(--primary);
+}
+
+.story-page a.story-model:hover {
+  background: var(--tertiary);
+}
+
+.story-page .story-model-img {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--tertiary);
+}
+
+.story-page .story-model-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story-page .story-model-names {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 2px;
+  min-width: 0;
+}
+
+.story-page .story-model-name {
+  font-size: var(--text-md);
+  font-weight: 700;
+}
+
+.story-page .story-model-note {
+  color: var(--secondary);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+
+.story-page .story-model-count {
+  flex-shrink: 0;
+  color: var(--accent);
+  font-size: var(--text-sm);
+  white-space: nowrap;
+}
+
+/* The last card asks the reader to be next: dashed, unfilled, a plus. */
+.story-page .story-model-invite {
+  border: 1px dashed var(--secondary);
+  background: transparent;
+}
+
+.story-page .story-model-invite .story-model-img {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.story-page .story-model-invite svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* ---- storySteps: a numbered list with a line between the numbers -------- */
+
+.story-page .story-body .story-steps > ol {
+  margin: var(--space-6) 0 var(--space-7);
+  padding: 0;
+  list-style: none;
+  counter-reset: story-step;
+}
+
+.story-page .story-body .story-steps > ol > li {
+  position: relative;
+  padding: 0 0 var(--space-6) var(--space-7);
+  counter-increment: story-step;
+}
+
+.story-page .story-body .story-steps > ol > li:last-child {
+  padding-bottom: 0;
+}
+
+.story-page .story-body .story-steps > ol > li::before {
+  content: counter(story-step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.story-page .story-body .story-steps > ol > li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 40px;
+  bottom: var(--space-2);
+  width: 2px;
+  background: var(--rule);
+}
+
+.story-page .story-body .story-steps h3 {
+  margin: var(--space-1) 0 var(--space-2);
+  font-size: var(--text-xl);
+}
+
+.story-page .story-body .story-steps li > :last-child {
+  margin-bottom: 0;
+}
+
+/* ---- storyChips: plain chips, no links ---------------------------------- */
+
+.story-page .story-chip-list {
+  margin: var(--space-4) 0 0;
+}
+
+.story-page .story-chip-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.story-page .story-body .story-chip-list li.story-chip {
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+
+/* ---- storyCards --------------------------------------------------------- */
+
+.story-page .story-cards-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+.story-page .story-cards-n3 .story-cards-row {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.story-page .story-card {
+  padding: var(--space-5);
+  border-radius: var(--radius-l);
+  background: var(--panel);
+}
+
+.story-page .story-cards-outline .story-card {
+  border: 1px solid var(--tertiary);
+  background: transparent;
+}
+
+.story-page .story-body .story-card h3 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-3);
+  color: var(--primary);
+  font-size: var(--text-xl);
+}
+
+.story-page .story-card-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+}
+
+.story-page .story-body .story-card p,
+.story-page .story-body .story-card li {
+  font-size: var(--text-md);
+  line-height: 1.6;
+}
+
+.story-page .story-body .story-card ul {
+  margin: 0;
+  padding-left: var(--space-5);
+}
+
+.story-page .story-body .story-card > :last-child {
+  margin-bottom: 0;
+}
+
+/* ---- storyFaq ----------------------------------------------------------- */
+
+.story-page .story-faq {
+  margin: var(--space-5) 0 var(--space-7);
+  border-top: 1px solid var(--rule);
+}
+
+.story-page .story-faq-item {
+  border-bottom: 1px solid var(--rule);
+}
+
+.story-page .story-faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: 56px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.story-page .story-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.story-page .story-faq-item summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.story-page .story-body .story-faq-item summary h3 {
+  margin: 0;
+  padding: var(--space-3) 0;
+  color: var(--primary);
+  font-size: var(--text-lg);
+  font-weight: normal;
+}
+
+/* A plus that turns into a minus: two bars, the upright one rotated away. */
+.story-page .story-faq-mark {
+  position: relative;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.story-page .story-faq-mark::before,
+.story-page .story-faq-mark::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 16px;
+  height: 2px;
+  background: var(--accent);
+  transition: transform 0.2s ease;
+}
+
+.story-page .story-faq-mark::after {
+  transform: rotate(90deg);
+}
+
+.story-page .story-faq-item[open] .story-faq-mark::after {
+  transform: rotate(0deg);
+}
+
+.story-page .story-faq-answer {
+  padding-bottom: var(--space-4);
+}
+
+.story-page .story-body .story-faq-answer > :last-child {
+  margin-bottom: 0;
+}
+
+/* ---- storyContact ------------------------------------------------------- */
+
+.story-page .story-contact {
+  box-sizing: border-box;
+  margin-top: var(--space-7);
+  margin-bottom: var(--space-7);
+  padding: var(--space-7) var(--space-5);
+  border-radius: var(--radius-l);
+  background: var(--panel);
+  text-align: center;
+  scroll-margin-top: var(--space-5);
+}
+
+.story-page .story-body .story-contact h2 {
+  margin: 0 0 var(--space-3);
+  font-size: var(--text-3xl);
+  line-height: 1.2;
+}
+
+.story-page .story-body .story-contact-text p {
+  max-width: 520px;
+  margin: 0 auto var(--space-6);
+}
+
+.story-page .story-contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.story-page .story-contact .story-button {
+  gap: var(--space-2);
+  height: 48px;
+  margin-top: 0;
+  padding: 0 var(--space-5);
+  border: 1px solid var(--tertiary);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  font-size: var(--text-md);
+}
+
+.story-page .story-contact .story-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.story-page .story-contact .story-button:hover {
+  background: var(--tertiary);
+}
+
+.story-page .story-contact .story-button-primary,
+.story-page .story-contact .story-button-primary:hover {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 700;
+}
+
+.story-page .story-contact .story-button-primary:hover {
+  opacity: 0.9;
+}
+
+.story-page .story-contact .story-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---- the end of the page ------------------------------------------------ */
+
+.story-page .story-portraits-end {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-top: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--rule);
+  font-size: var(--text-md);
+}
+
+/* ---- narrow screens ----------------------------------------------------- */
+
+@media screen and (width <= 900px) {
+  .story-page .story-models,
+  .story-page .story-cards-n3 .story-cards-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media screen and (width <= 768px) {
+  .story-page .story-cards-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .story-page .story-models {
+    margin-top: var(--space-5);
+    margin-bottom: var(--space-6);
+  }
+
+  .story-page .story-contact {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .story-page .story-body .story-contact h2 {
+    font-size: var(--text-2xl);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .story-page .story-faq-mark::before,
+  .story-page .story-faq-mark::after {
+    transition: none;
+  }
+}

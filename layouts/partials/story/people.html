@@ -1,0 +1,19 @@
+{{- /*
+  story/people.html
+  The names of the people in a story photo, for its caption on the portraits
+  page (docs/gallery/portraits.md), where they take the place of the EXIF line.
+
+  Names come from model-lookup.html and nowhere else, so its rule holds here
+  too: a slug it has no entry for prints nothing, and the name is never derived
+  from the slug. On the portraits page every photo's people are `public` by
+  construction (gallery-story-data.html).
+
+  Context: a collect-images item. Returns a slice of strings.
+*/ -}}
+{{- $lang := site.Language.Lang -}}
+{{- $people := partialCached "model-lookup.html" (dict "lang" $lang) $lang -}}
+{{- $out := slice -}}
+{{- range .Models | default slice -}}
+  {{- with index $people . }}{{ $out = $out | append .name }}{{ end -}}
+{{- end -}}
+{{- return $out -}}

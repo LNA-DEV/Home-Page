@@ -2,17 +2,21 @@
   story/context.html
   The guard every story shortcode starts with: it works only in the body of a
   gallery project whose project_layout is one it belongs to, because it needs
-  the project to check its photos against. Anywhere else is a build error.
+  the project to check its photos against. The portraits page (theme
+  gallery-portraits, docs/gallery/portraits.md) is an essay too, over its own
+  pool of photos, so every essay shortcode works there. Anywhere else is a
+  build error.
 
   Params: sc (the shortcode), name (for the message), layouts (slice)
   Returns the page's story data (gallery-story-data.html), or "" after an error.
 */ -}}
 {{- $page := .sc.Page -}}
 {{- $layout := $page.Params.project_layout | default "" -}}
+{{- $theme := $page.Params.theme | default "" -}}
 {{- $out := "" -}}
-{{- if and (eq $page.Params.theme "gallery-project") (in .layouts $layout) -}}
+{{- if or (and (eq $theme "gallery-project") (in .layouts $layout)) (and (eq $theme "gallery-portraits") (in .layouts "essay")) -}}
   {{- $out = partialCached "gallery-story-data.html" $page $page.RelPermalink -}}
 {{- else -}}
-  {{- errorf "%s: {{< %s >}} works only on a gallery project with project_layout %s" .sc.Position .name (delimit .layouts " or ") -}}
+  {{- errorf "%s: {{< %s >}} works only on a gallery project with project_layout %s%s" .sc.Position .name (delimit .layouts " or ") (cond (in .layouts "essay") ", or on the portraits page" "") -}}
 {{- end -}}
 {{- return $out -}}

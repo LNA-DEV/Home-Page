@@ -1,0 +1,82 @@
+{{- /*
+  storyCards.html
+  Two or three short texts side by side as cards — "what you get / what I
+  get", the three visibility settings (docs/gallery/portraits.md).
+
+  Usage:
+    {{< storyCards >}}
+    ### Du bekommst
+    - …
+    ### Ich bekomme
+    - …
+    {{< /storyCards >}}
+
+    {{< storyCards title="Wie sichtbar du sein möchtest" note="…" style="outline" icons="eye, link, eye-off" >}}
+    ### Öffentlich
+    …
+    {{< /storyCards >}}
+
+  The inner Markdown is cut at each h3: every h3 opens a card, and what follows
+  it, up to the next one, is the card's body. Text before the first h3 is a
+  build error rather than silently dropped.
+
+  Params:
+    title   a heading (h3) above the cards, like storyPhotos' title
+    note    a line beside it
+    style   panel (default: a filled card) | outline (a bordered one)
+    icons   optional, comma-separated, one per card in order: eye, link,
+            eye-off — a small stroke icon before the card's title
+
+  Two cards sit two to a row, three or more three to a row; one column on a
+  phone. Only where the essay shortcodes work (story/context.html).
+*/ -}}
+{{- $data := partial "story/context.html" (dict "sc" . "name" "storyCards" "layouts" (slice "essay")) -}}
+{{- $inner := partial "story/inner.html" (dict "sc" . "inner" .Inner) -}}
+{{- $style := .Get "style" | default "panel" | lower -}}
+{{- if not (in (slice "panel" "outline") $style) -}}
+  {{- errorf "%s: storyCards style must be panel or outline, got %q" .Position $style -}}
+{{- end -}}
+{{- $icons := slice -}}
+{{- range split (.Get "icons" | default "") "," }}{{ with trim . " \n\t" }}{{ $icons = $icons | append . }}{{ end }}{{ end -}}
+{{- $svg := dict
+      "eye" `<path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>`
+      "link" `<path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/>`
+      "eye-off" `<path d="M9.9 4.2A10 10 0 0 1 12 4c6.4 0 10 8 10 8a17 17 0 0 1-2.2 3.2"/><path d="M6.6 6.6C3.6 8.4 2 12 2 12s3.6 8 10 8a9.7 9.7 0 0 0 5.4-1.6"/><path d="M2 2l20 20"/>`
+-}}
+{{- range $icons -}}
+  {{- if not (index $svg .) -}}
+    {{- errorf "%s: storyCards icon %q is not one of eye, link, eye-off" $.Position . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $parts := split $inner "<h3" -}}
+{{- if trim (index $parts 0) " \n\t" -}}
+  {{- errorf "%s: storyCards: text before the first ### heading — every card starts with one" .Position -}}
+{{- end -}}
+{{- $parts = after 1 $parts -}}
+{{- if lt (len $parts) 2 -}}
+  {{- errorf "%s: storyCards needs at least two ### headings, one per card" .Position -}}
+{{- end -}}
+
+{{- $html := "" -}}
+{{- with $data -}}
+  {{- $cards := "" -}}
+  {{- range $i, $part := $parts -}}
+    {{- $icon := "" -}}
+    {{- if lt $i (len $icons) -}}
+      {{- $icon = printf `<svg class="story-card-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">%s</svg>` (index $svg (index $icons $i)) -}}
+    {{- end -}}
+    {{- /* The heading keeps its attributes (the anchor id Goldmark gave it);
+           the icon goes inside it, before the text. */ -}}
+    {{- $h := replaceRE `^([^>]*>)` (printf "<h3${1}%s" $icon) $part 1 -}}
+    {{- $cards = printf `%s<div class="story-card">%s</div>` $cards $h -}}
+  {{- end -}}
+  {{- $head := "" -}}
+  {{- if or ($.Get "title") ($.Get "note") -}}
+    {{- $head = printf `<div class="story-set-head">%s%s</div>`
+          (cond (ne ($.Get "title" | default "") "") (printf `<h3>%s</h3>` (htmlEscape ($.Get "title"))) "")
+          (cond (ne ($.Get "note" | default "") "") (printf `<p>%s</p>` (htmlEscape ($.Get "note"))) "") -}}
+  {{- end -}}
+  {{- $html = printf `<div class="story-set story-cards story-cards-%s story-cards-n%d">%s<div class="story-cards-row">%s</div></div>` $style (cond (gt (len $parts) 2) 3 2) $head $cards -}}
+{{- end -}}
+{{- partial "story/emit.html" (dict "sc" . "html" $html) | safeHTML -}}
