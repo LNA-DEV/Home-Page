@@ -873,3 +873,17 @@
   originalLanguage: de
   languagesRead:
     - de
+
+- title: "Steingladiole"
+  series: Die Bücher der Macht
+  author: "Liza Grimm"
+  genres: ["fantasy"]
+  year: 2026
+  link: "https://www.goodreads.com/book/show/243602972-steingladiole"
+  cover: "images/books/covers/Steingladiole.jpg"
+  pages: 400
+  rating: 4
+  dateRead: "2026-11-12"
+  originalLanguage: de
+  languagesRead:
+    - de
