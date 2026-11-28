@@ -99,7 +99,7 @@
    "name": {
     "en": "Last call"
    },
-   "percent": 50.0,
+   "percent": 49.9,
    "unlocked": "2020-12-04T23:34:33+01:00"
   },
   {
@@ -136,7 +136,7 @@
    "name": {
     "en": "Diffusal"
    },
-   "percent": 68.3
+   "percent": 68.2
   },
   {
    "description": {
@@ -172,7 +172,7 @@
    "name": {
     "en": "Long shot"
    },
-   "percent": 6.8
+   "percent": 6.7
   },
   {
    "description": {
@@ -292,7 +292,7 @@
    "name": {
     "en": "Scrub"
    },
-   "percent": 6.7
+   "percent": 6.6
   },
   {
    "description": {
@@ -340,7 +340,7 @@
    "name": {
     "en": "Jan Itor"
    },
-   "percent": 26.3
+   "percent": 26.2
   },
   {
    "description": {
@@ -364,7 +364,7 @@
    "name": {
     "en": "Ninja"
    },
-   "percent": 23.0
+   "percent": 22.9
   },
   {
    "achieved": true,
@@ -391,7 +391,7 @@
    "name": {
     "en": "Stairway"
    },
-   "percent": 52.9,
+   "percent": 52.8,
    "unlocked": "2020-09-26T18:25:50+02:00"
   },
   {
@@ -404,7 +404,7 @@
    "name": {
     "en": "That Covers It"
    },
-   "percent": 9.4
+   "percent": 9.3
   },
   {
    "description": {
@@ -440,7 +440,7 @@
    "name": {
     "en": "Almost There"
    },
-   "percent": 2.3
+   "percent": 2.2
   },
   {
    "description": {
@@ -452,7 +452,7 @@
    "name": {
     "en": "Daredevil"
    },
-   "percent": 15.4
+   "percent": 15.3
   },
   {
    "description": {
@@ -634,7 +634,7 @@
    "name": {
     "en": "Laser Digging"
    },
-   "percent": 25.4
+   "percent": 25.3
   },
   {
    "description": {
@@ -706,7 +706,7 @@
    "name": {
     "en": "Futurama Theorem"
    },
-   "percent": 3.5
+   "percent": 3.4
   },
   {
    "description": {

@@ -9,7 +9,7 @@
     "de": "Eine schleimige Begegnung",
     "en": "A Slimey Encounter"
    },
-   "percent": 64.4,
+   "percent": 64.6,
    "unlocked": "2026-07-24T22:03:27+02:00"
   },
   {
@@ -21,7 +21,7 @@
     "de": "Davongekrabbelt",
     "en": "Bugging Out"
    },
-   "percent": 53.2,
+   "percent": 53.4,
    "unlocked": "2026-07-26T20:40:08+02:00"
   },
   {
@@ -32,7 +32,7 @@
     "de": "Pass auf, wohin du trittst",
     "en": "Watch Your Step"
    },
-   "percent": 43.3
+   "percent": 43.5
   },
   {
    "achieved": true,
@@ -43,7 +43,7 @@
     "de": "Vom Himmel herab!",
     "en": "From the Skies!"
    },
-   "percent": 37.3,
+   "percent": 37.5,
    "unlocked": "2026-08-07T22:13:38+02:00"
   },
   {
@@ -55,7 +55,7 @@
     "de": "Du bist ein Zauberer",
     "en": "You're a Wizard"
    },
-   "percent": 44.3,
+   "percent": 44.5,
    "unlocked": "2026-07-26T21:55:19+02:00"
   },
   {
@@ -66,7 +66,7 @@
     "de": "Toxischer Charakter",
     "en": "Toxic Personality"
    },
-   "percent": 28.9
+   "percent": 29.1
   },
   {
    "hidden": true,
@@ -76,7 +76,7 @@
     "de": "Aus der Tiefe!",
     "en": "From the Depths!"
    },
-   "percent": 28.7
+   "percent": 29.0
   },
   {
    "achieved": true,
@@ -87,7 +87,7 @@
     "de": "Vorsicht, Rutschgefahr",
     "en": "Slippery When Wet"
    },
-   "percent": 23.3,
+   "percent": 23.5,
    "unlocked": "2026-09-18T21:33:52+02:00"
   },
   {
@@ -98,7 +98,7 @@
     "de": "Stinknormale Wüste",
     "en": "Just Deserts"
    },
-   "percent": 25.1
+   "percent": 25.3
   },
   {
    "hidden": true,
@@ -108,7 +108,7 @@
     "de": "Durchgebrannt",
     "en": "Burning Through"
    },
-   "percent": 18.0
+   "percent": 18.2
   },
   {
    "achieved": true,
@@ -119,7 +119,7 @@
     "de": "Schlüpfriger Shinobi",
     "en": "Slippery Shinobi"
    },
-   "percent": 34.3,
+   "percent": 34.5,
    "unlocked": "2026-07-25T21:46:52+02:00"
   },
   {
@@ -134,7 +134,7 @@
     "de": "Wer andern eine Grube gräbt",
     "en": "Diggy Diggy Hole"
    },
-   "percent": 7.4
+   "percent": 7.5
   },
   {
    "description": {
@@ -162,7 +162,7 @@
     "de": "An Schicksals Haken",
     "en": "Completely Hooked"
    },
-   "percent": 9.2
+   "percent": 9.3
   },
   {
    "description": {
@@ -176,7 +176,7 @@
     "de": "Natur-Nanny",
     "en": "Nature Nurturer"
    },
-   "percent": 15.0
+   "percent": 15.1
   },
   {
    "description": {
@@ -190,7 +190,7 @@
     "de": "... Stich wie eine Biene",
     "en": "...Sting like a bee"
    },
-   "percent": 8.3
+   "percent": 8.4
   },
   {
    "description": {
@@ -217,7 +217,7 @@
     "de": "Gesundheitsbewusst",
     "en": "Health Conscious"
    },
-   "percent": 7.9
+   "percent": 8.0
   },
   {
    "description": {
@@ -231,7 +231,7 @@
     "de": "Tanze wie ein Schmetterling ...",
     "en": "Float like a butterfly..."
    },
-   "percent": 8.9
+   "percent": 9.0
   },
   {
    "description": {
@@ -255,7 +255,7 @@
     "de": "Das Herz der Karten",
     "en": "The Heart of the Cards"
    },
-   "percent": 4.9
+   "percent": 5.0
   },
   {
    "hidden": true,
@@ -265,7 +265,7 @@
     "de": "Das Runenlied",
     "en": "The Rune Song"
    },
-   "percent": 14.6
+   "percent": 14.8
   },
   {
    "hidden": true,
@@ -275,7 +275,7 @@
     "de": "Der Phantomfunke",
     "en": "The Phantom Spark"
    },
-   "percent": 12.6
+   "percent": 12.7
   },
   {
    "hidden": true,
@@ -285,7 +285,7 @@
     "de": "Der Seelensucher",
     "en": "The Soul Seeker"
    },
-   "percent": 9.3
+   "percent": 9.4
   },
   {
    "description": {
@@ -309,7 +309,7 @@
     "de": "Legendäres Fossil",
     "en": "Legendary Fossil"
    },
-   "percent": 10.3
+   "percent": 10.4
   },
   {
    "hidden": true,
@@ -347,7 +347,7 @@
    "name": {
     "en": "Farmer Midas"
    },
-   "percent": 28.3,
+   "percent": 28.7,
    "unlocked": "2026-07-25T21:02:11+02:00"
   },
   {
@@ -375,7 +375,7 @@
     "de": "Fels und Stein!",
     "en": "Rock and Stone!"
    },
-   "percent": 38.9,
+   "percent": 39.0,
    "unlocked": "2026-07-26T21:42:46+02:00"
   },
   {
@@ -414,7 +414,7 @@
     "de": "Ein seltsames Lied",
     "en": "A Strange Song"
    },
-   "percent": 4.0
+   "percent": 4.1
   },
   {
    "achieved": true,
@@ -429,7 +429,7 @@
     "de": "Dein Allererstes",
     "en": "Your Very First"
    },
-   "percent": 52.3,
+   "percent": 52.5,
    "unlocked": "2026-07-24T22:37:00+02:00"
   },
   {
@@ -440,7 +440,7 @@
     "de": "Thalassophobie",
     "en": "Thalassophobia"
    },
-   "percent": 14.4
+   "percent": 14.6
   },
   {
    "description": {
@@ -454,7 +454,7 @@
     "de": "Ich will sie alle haben!",
     "en": "I want ’em all!"
    },
-   "percent": 5.0
+   "percent": 5.1
   },
   {
    "description": {
@@ -468,7 +468,7 @@
     "de": "Ein gutes Leben",
     "en": "A Good Life"
    },
-   "percent": 30.2
+   "percent": 30.4
   },
   {
    "description": {
@@ -482,7 +482,7 @@
     "de": "Na-Tier-Talent",
     "en": "Pet Prodigy"
    },
-   "percent": 26.6
+   "percent": 26.8
   },
   {
    "description": {
@@ -510,7 +510,7 @@
     "de": "Komm' nicht in die Nähe des Mediums!",
     "en": "Stay Away From The Summoner!"
    },
-   "percent": 3.7
+   "percent": 3.8
   },
   {
    "hidden": true,
@@ -520,7 +520,7 @@
     "de": "Das Lied des Waldes",
     "en": "Song of the Woods"
    },
-   "percent": 18.6
+   "percent": 18.8
   },
   {
    "hidden": true,
@@ -530,7 +530,7 @@
     "de": "Das Heulen des Meeres",
     "en": "Howl of the Sea"
    },
-   "percent": 17.5
+   "percent": 17.8
   },
   {
    "hidden": true,
@@ -540,7 +540,7 @@
     "de": "Das Brüllen der Flammen",
     "en": "Roar of the Flames"
    },
-   "percent": 17.1
+   "percent": 17.4
   },
   {
    "hidden": true,
@@ -550,7 +550,7 @@
     "de": "Abgesandter einer sterbenden Welt",
     "en": "Visitor From A Dying World"
    },
-   "percent": 15.4
+   "percent": 15.7
   },
   {
    "hidden": true,
@@ -560,7 +560,7 @@
     "de": "Kambrisches Ungetüm",
     "en": "Cambrian Behemoth"
    },
-   "percent": 10.4
+   "percent": 10.6
   },
   {
    "description": {
@@ -574,7 +574,7 @@
     "de": "Legionskommandant",
     "en": "Legion Commander"
    },
-   "percent": 4.8
+   "percent": 5.0
   },
   {
    "hidden": true,
@@ -584,7 +584,7 @@
     "de": "Im Besitz von Legenden",
     "en": "Wielder of Legends"
    },
-   "percent": 10.1
+   "percent": 10.3
   },
   {
    "achieved": true,
@@ -599,7 +599,7 @@
     "de": "Beam mich hoch",
     "en": "Beam Me Up"
    },
-   "percent": 38.6,
+   "percent": 39.0,
    "unlocked": "2026-07-25T21:00:31+02:00"
   },
   {
@@ -614,7 +614,7 @@
     "de": "Explosions-Meisterung",
     "en": "Explosion Mastery"
    },
-   "percent": 2.4
+   "percent": 2.5
   },
   {
    "hidden": true,
@@ -624,7 +624,7 @@
     "de": "Verstummte Sinfonie",
     "en": "Silence the Symphony"
    },
-   "percent": 8.8
+   "percent": 9.0
   },
   {
    "hidden": true,
@@ -634,7 +634,7 @@
     "de": "Flüstern des Nihil",
     "en": "Whisper of the Void"
    },
-   "percent": 3.7
+   "percent": 3.9
   },
   {
    "hidden": true,
@@ -644,7 +644,7 @@
     "de": "Kalkulierte Prophezeiung",
     "en": "Calculated Prophecy"
    },
-   "percent": 4.3
+   "percent": 4.5
   },
   {
    "hidden": true,
@@ -654,7 +654,7 @@
     "de": "Die Kredenz des Ruins",
     "en": "The Credence of Ruin"
    },
-   "percent": 1.9
+   "percent": 2.0
   },
   {
    "hidden": true,
@@ -664,7 +664,7 @@
     "de": "Der Titanen-Atem",
     "en": "The Titan Breath"
    },
-   "percent": 3.5
+   "percent": 3.7
   },
   {
    "description": {
@@ -678,7 +678,7 @@
     "de": "Glück und Glorie",
     "en": "Fortune and Glory"
    },
-   "percent": 0.2
+   "percent": 0.3
   },
   {
    "achieved": true,
@@ -693,7 +693,7 @@
     "de": "Hü-hott",
     "en": "Giddy Up"
    },
-   "percent": 2.4,
+   "percent": 2.8,
    "unlocked": "2026-10-09T20:52:05+02:00"
   },
   {
@@ -704,7 +704,7 @@
     "de": "Das Schleierkreuz",
     "en": "The Veil Crux"
    },
-   "percent": 0.8
+   "percent": 1.0
   },
   {
    "description": {
@@ -718,7 +718,7 @@
     "de": "Renngarage",
     "en": "Racer's Garage"
    },
-   "percent": 0.4
+   "percent": 0.5
   }
  ],
  "id": "1621690",

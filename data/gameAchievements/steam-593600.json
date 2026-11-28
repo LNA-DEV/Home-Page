@@ -11,7 +11,7 @@
    "name": {
     "en": "Explorer"
    },
-   "percent": 25.2,
+   "percent": 25.5,
    "unlocked": "2018-03-30T20:58:13+02:00"
   },
   {
@@ -36,7 +36,7 @@
    "name": {
     "en": "Fashion"
    },
-   "percent": 17.5
+   "percent": 17.6
   },
   {
    "achieved": true,
@@ -49,7 +49,7 @@
    "name": {
     "en": "First Show"
    },
-   "percent": 42.8,
+   "percent": 43.4,
    "unlocked": "2018-04-06T20:41:56+02:00"
   },
   {
@@ -63,7 +63,7 @@
    "name": {
     "en": "First Partner"
    },
-   "percent": 37.3,
+   "percent": 37.9,
    "unlocked": "2018-04-06T20:33:36+02:00"
   },
   {
@@ -112,7 +112,7 @@
    "name": {
     "en": "Strong Man"
    },
-   "percent": 8.4
+   "percent": 8.6
   },
   {
    "description": {
@@ -160,7 +160,7 @@
    "name": {
     "en": "Ice Fairy Hunter"
    },
-   "percent": 6.0
+   "percent": 6.1
   },
   {
    "description": {
@@ -172,7 +172,7 @@
    "name": {
     "en": "Mediterranean Blueprint"
    },
-   "percent": 7.8
+   "percent": 7.9
   },
   {
    "description": {
@@ -196,7 +196,7 @@
    "name": {
     "en": "MagicAcademy Blueprint"
    },
-   "percent": 4.8
+   "percent": 4.9
   },
   {
    "description": {
@@ -208,7 +208,7 @@
    "name": {
     "en": "Weastern Blueprint"
    },
-   "percent": 12.1
+   "percent": 12.2
   },
   {
    "description": {
@@ -268,7 +268,7 @@
    "name": {
     "en": "FlashStick"
    },
-   "percent": 3.2
+   "percent": 3.3
   },
   {
    "description": {
@@ -376,7 +376,7 @@
    "name": {
     "en": "BabyTreant"
    },
-   "percent": 1.6
+   "percent": 1.7
   },
   {
    "description": {
@@ -388,7 +388,7 @@
    "name": {
     "en": "SupplyCrate"
    },
-   "percent": 16.5
+   "percent": 16.8
   },
   {
    "description": {
@@ -412,7 +412,7 @@
    "name": {
     "en": "Explorer:Dark"
    },
-   "percent": 23.9
+   "percent": 24.2
   },
   {
    "description": {
@@ -424,7 +424,7 @@
    "name": {
     "en": "Explorer:Forzen"
    },
-   "percent": 20.3
+   "percent": 20.6
   },
   {
    "description": {
@@ -436,7 +436,7 @@
    "name": {
     "en": "Fusible Crystal Collector"
    },
-   "percent": 0.1
+   "percent": 0.2
   },
   {
    "description": {
@@ -460,7 +460,7 @@
    "name": {
     "en": "Shatter Core Collector"
    },
-   "percent": 0.0
+   "percent": 0.1
   },
   {
    "description": {
@@ -496,7 +496,7 @@
    "name": {
     "en": "Venom Recycler"
    },
-   "percent": 0.0
+   "percent": 0.1
   },
   {
    "description": {

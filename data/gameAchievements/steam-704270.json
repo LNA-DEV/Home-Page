@@ -59,7 +59,7 @@
     "de": "Sirenengesang",
     "en": "Siren Call"
    },
-   "percent": 20.7
+   "percent": 20.8
   },
   {
    "achieved": true,
@@ -104,7 +104,7 @@
    "name": {
     "en": "Operator"
    },
-   "percent": 24.6,
+   "percent": 24.7,
    "unlocked": "2025-08-08T21:26:54+02:00"
   },
   {
@@ -199,7 +199,7 @@
     "de": "Hasta la vista, baby!",
     "en": "Hasta La Vista Baby"
    },
-   "percent": 19.4,
+   "percent": 19.5,
    "unlocked": "2024-10-03T17:43:42+02:00"
   },
   {
@@ -215,7 +215,7 @@
     "de": "Ich hab nur leider keinen Kaugummi",
     "en": "All Out Of Bubblegum"
    },
-   "percent": 41.9,
+   "percent": 42.0,
    "unlocked": "2023-10-20T21:57:10+02:00"
   },
   {
@@ -261,7 +261,7 @@
     "de": "Auf euch wartet meine kleine Freundin",
     "en": "Say Hello To My Little Friend"
    },
-   "percent": 14.1,
+   "percent": 14.2,
    "unlocked": "2024-10-13T15:15:48+02:00"
   },
   {
@@ -550,7 +550,7 @@
     "de": "Ersatzteile",
     "en": "Spare Parts"
    },
-   "percent": 45.5,
+   "percent": 45.6,
    "unlocked": "2023-10-14T21:11:18+02:00"
   },
   {
@@ -661,7 +661,7 @@
     "de": "Der Phoenix steigt auf",
     "en": "Rise Of The Phoenix"
    },
-   "percent": 7.6,
+   "percent": 7.7,
    "unlocked": "2024-10-05T19:02:38+02:00"
   },
   {
@@ -738,7 +738,7 @@
     "de": "Zweiter Spieler",
     "en": "Player Two"
    },
-   "percent": 20.4,
+   "percent": 20.5,
    "unlocked": "2023-10-14T17:38:22+02:00"
   },
   {
@@ -924,7 +924,7 @@
     "de": "Er ist irgendwo da draußen",
     "en": "He's Out There"
    },
-   "percent": 10.5,
+   "percent": 10.6,
    "unlocked": "2024-12-13T20:36:54+01:00"
   },
   {
@@ -1005,7 +1005,7 @@
     "de": "Versuch und Irrtum",
     "en": "Trial and Error"
    },
-   "percent": 2.4
+   "percent": 2.5
   },
   {
    "description": {

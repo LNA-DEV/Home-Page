@@ -165,7 +165,7 @@
    "name": {
     "en": "Worm Fodder"
    },
-   "percent": 35.1,
+   "percent": 35.2,
    "unlocked": "2020-04-22T20:13:23+02:00"
   },
   {
@@ -372,7 +372,7 @@
    "name": {
     "en": "Drax Attax"
    },
-   "percent": 22.8
+   "percent": 22.9
   },
   {
    "description": {
@@ -384,7 +384,7 @@
    "name": {
     "en": "Photosynthesis"
    },
-   "percent": 28.8
+   "percent": 28.9
   },
   {
    "description": {
@@ -396,7 +396,7 @@
    "name": {
     "en": "Get a Life"
    },
-   "percent": 32.4
+   "percent": 32.5
   },
   {
    "description": {
@@ -408,7 +408,7 @@
    "name": {
     "en": "The Great Southern Plantkill"
    },
-   "percent": 29.5
+   "percent": 29.6
   },
   {
    "description": {
@@ -456,7 +456,7 @@
    "name": {
     "en": "Big Booty"
    },
-   "percent": 21.5
+   "percent": 21.6
   },
   {
    "description": {
@@ -468,7 +468,7 @@
    "name": {
     "en": "Fish Out of Water"
    },
-   "percent": 22.4
+   "percent": 22.5
   },
   {
    "description": {
@@ -584,7 +584,7 @@
    "name": {
     "en": "Do You Want to Slay a Snowman?"
    },
-   "percent": 13.7
+   "percent": 13.6
   },
   {
    "description": {
@@ -596,7 +596,7 @@
    "name": {
     "en": "Tin-Foil Hatter"
    },
-   "percent": 24.6
+   "percent": 24.7
   },
   {
    "description": {
@@ -608,7 +608,7 @@
    "name": {
     "en": "Baleful Harvest"
    },
-   "percent": 19.7
+   "percent": 19.8
   },
   {
    "description": {
@@ -749,7 +749,7 @@
    "name": {
     "en": "Fashion Statement"
    },
-   "percent": 48.1,
+   "percent": 48.0,
    "unlocked": "2020-04-18T19:49:26+02:00"
   },
   {
@@ -949,7 +949,7 @@
    "name": {
     "en": "Pretty in Pink"
    },
-   "percent": 49.5,
+   "percent": 49.6,
    "unlocked": "2020-04-10T20:30:12+02:00"
   },
   {
@@ -1011,7 +1011,7 @@
    "name": {
     "en": "Watch Your Step!"
    },
-   "percent": 58.9,
+   "percent": 59.0,
    "unlocked": "2020-04-04T21:25:25+02:00"
   },
   {
@@ -1163,7 +1163,7 @@
    "name": {
     "en": "Benched"
    },
-   "percent": 63.6,
+   "percent": 63.7,
    "unlocked": "2020-05-18T21:41:12+02:00"
   },
   {
@@ -1176,7 +1176,7 @@
    "name": {
     "en": "Fae Flayer"
    },
-   "percent": 15.5
+   "percent": 15.6
   },
   {
    "description": {
@@ -1188,7 +1188,7 @@
    "name": {
     "en": "Just Desserts"
    },
-   "percent": 21.7
+   "percent": 21.8
   },
   {
    "description": {
@@ -1224,7 +1224,7 @@
    "name": {
     "en": "Infinity +1 Sword"
    },
-   "percent": 17.7
+   "percent": 17.8
   },
   {
    "description": {
@@ -1236,7 +1236,7 @@
    "name": {
     "en": "Boots of the Hero"
    },
-   "percent": 18.5
+   "percent": 18.6
   },
   {
    "description": {
@@ -1261,7 +1261,7 @@
    "name": {
     "en": "Quiet Neighborhood"
    },
-   "percent": 41.5,
+   "percent": 41.6,
    "unlocked": "2021-09-25T20:27:05+02:00"
   },
   {
@@ -1274,7 +1274,7 @@
    "name": {
     "en": "Hot Reels!"
    },
-   "percent": 9.0
+   "percent": 9.1
   },
   {
    "achieved": true,
@@ -1312,7 +1312,7 @@
    "name": {
     "en": "Feeling Petty"
    },
-   "percent": 32.6
+   "percent": 32.7
   },
   {
    "achieved": true,
@@ -1325,7 +1325,7 @@
    "name": {
     "en": "Hey! Listen!"
    },
-   "percent": 45.7,
+   "percent": 45.8,
    "unlocked": "2021-02-06T22:26:12+01:00"
   },
   {
@@ -1362,7 +1362,7 @@
    "name": {
     "en": "An Eye For An Eye"
    },
-   "percent": 15.9
+   "percent": 16.0
   },
   {
    "description": {
@@ -1398,7 +1398,7 @@
    "name": {
     "en": "Black Mirror"
    },
-   "percent": 10.1
+   "percent": 10.2
   },
   {
    "description": {
@@ -1410,7 +1410,7 @@
    "name": {
     "en": "Ankhumulation Complete"
    },
-   "percent": 11.8
+   "percent": 11.9
   },
   {
    "description": {
@@ -1434,7 +1434,7 @@
    "name": {
     "en": "A Rare Realm"
    },
-   "percent": 12.6
+   "percent": 12.7
   },
   {
    "description": {
@@ -1458,7 +1458,7 @@
    "name": {
     "en": "A Shimmer In The Dark"
    },
-   "percent": 20.2
+   "percent": 20.3
   },
   {
    "description": {
@@ -1494,7 +1494,7 @@
    "name": {
     "en": "Book Worm"
    },
-   "percent": 1.1
+   "percent": 1.2
   },
   {
    "description": {
@@ -1506,7 +1506,7 @@
    "name": {
     "en": "Boulder Lord"
    },
-   "percent": 0.6
+   "percent": 0.7
   },
   {
    "description": {
@@ -1518,7 +1518,7 @@
    "name": {
     "en": "Queen Machine"
    },
-   "percent": 0.8
+   "percent": 0.9
   },
   {
    "description": {
@@ -1542,7 +1542,7 @@
    "name": {
     "en": "Fear The Sun"
    },
-   "percent": 0.5
+   "percent": 0.6
   },
   {
    "description": {
@@ -1578,7 +1578,7 @@
    "name": {
     "en": "Grave Mistake"
    },
-   "percent": 1.2
+   "percent": 1.3
   },
   {
    "description": {
@@ -1590,7 +1590,7 @@
    "name": {
     "en": "Spicy Licks"
    },
-   "percent": 4.1
+   "percent": 4.3
   },
   {
    "description": {
@@ -1602,7 +1602,7 @@
    "name": {
     "en": "Organized Chaos"
    },
-   "percent": 2.4
+   "percent": 2.5
   },
   {
    "description": {
@@ -1626,7 +1626,7 @@
    "name": {
     "en": "Fortune Favors the Bould"
    },
-   "percent": 7.8
+   "percent": 8.0
   },
   {
    "description": {
@@ -1662,7 +1662,7 @@
    "name": {
     "en": "Terrarist"
    },
-   "percent": 1.1
+   "percent": 1.2
   },
   {
    "description": {
@@ -1674,7 +1674,7 @@
    "name": {
     "en": "New Digs"
    },
-   "percent": 3.8
+   "percent": 3.9
   },
   {
    "description": {
@@ -1698,7 +1698,7 @@
    "name": {
     "en": "Going Oldschool"
    },
-   "percent": 10.9
+   "percent": 11.1
   },
   {
    "description": {
@@ -1734,7 +1734,7 @@
    "name": {
     "en": "Conservationist"
    },
-   "percent": 3.3
+   "percent": 3.4
   },
   {
    "description": {

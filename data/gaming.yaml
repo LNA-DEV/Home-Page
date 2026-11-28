@@ -678,8 +678,8 @@
   slug: the-witcher-3-wild-hunt-complete-edition
   platform: steam
   appid: 292030
-  playtimeMinutes: 6926
-  lastPlayed: "2026-10-25"
+  playtimeMinutes: 7035
+  lastPlayed: "2026-11-20"
   achievementsUnlocked: 36
   achievementsTotal: 78
   cover: "images/games/covers/The Witcher 3: Wild Hunt — Remastered.jpg"
@@ -1112,8 +1112,8 @@
   slug: rounds
   platform: steam
   appid: 1557740
-  playtimeMinutes: 1510
-  lastPlayed: "2026-05-16"
+  playtimeMinutes: 1551
+  lastPlayed: "2026-11-10"
   achievementsUnlocked: 12
   achievementsTotal: 24
   cover: images/games/covers/ROUNDS.jpg
@@ -1123,8 +1123,8 @@
   slug: core-keeper
   platform: steam
   appid: 1621690
-  playtimeMinutes: 1757
-  lastPlayed: "2026-10-11"
+  playtimeMinutes: 1786
+  lastPlayed: "2026-11-07"
   achievementsUnlocked: 12
   achievementsTotal: 59
   cover: images/games/covers/Core Keeper.jpg
@@ -1154,9 +1154,9 @@
   slug: ark-survival-ascended
   platform: steam
   appid: 2399830
-  playtimeMinutes: 3995
-  lastPlayed: "2026-11-06"
-  achievementsUnlocked: 9
+  playtimeMinutes: 4968
+  lastPlayed: "2026-11-27"
+  achievementsUnlocked: 10
   achievementsTotal: 32
   cover: "images/games/covers/ARK: Survival Ascended.jpg"
   link: "https://store.steampowered.com/app/2399830/"
@@ -1176,8 +1176,8 @@
   slug: geoguessr-steam-edition
   platform: steam
   appid: 3478870
-  playtimeMinutes: 4787
-  lastPlayed: "2026-10-25"
+  playtimeMinutes: 4909
+  lastPlayed: "2026-11-15"
   achievementsUnlocked: 16
   achievementsTotal: 45
   link: "https://store.steampowered.com/app/3478870/"
@@ -1276,8 +1276,8 @@
   slug: satisfactory
   platform: epic
   appName: CrabEA
-  playtimeMinutes: 2744
-  lastPlayed: "2026-10-03"
+  playtimeMinutes: 2774
+  lastPlayed: "2026-11-21"
   cover: images/games/covers/Satisfactory.jpg
   link: "https://www.epicgames.com/store/product/satisfactory"
 

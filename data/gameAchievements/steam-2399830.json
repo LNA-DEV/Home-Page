@@ -42,9 +42,10 @@
     "de": "Artefakt Archäologe",
     "en": "Artifact Archaeologist"
    },
-   "percent": 3.8
+   "percent": 3.9
   },
   {
+   "achieved": true,
    "description": {
     "de": "Du hast ARKs zweiten Wächter besiegt!",
     "en": "You defeated ARK's second Guardian!"
@@ -56,7 +57,8 @@
     "de": "Überlebensexperte",
     "en": "Expert Survivor"
    },
-   "percent": 14.4
+   "percent": 14.4,
+   "unlocked": "2026-11-07T20:36:00+01:00"
   },
   {
    "description": {
@@ -70,7 +72,7 @@
     "de": "Überlebensmeister",
     "en": "Master Survivor"
    },
-   "percent": 11.6
+   "percent": 11.7
   },
   {
    "description": {
@@ -115,7 +117,7 @@
     "de": "Dein erster Dino...",
     "en": "Your first Dino..."
    },
-   "percent": 73.5,
+   "percent": 73.6,
    "unlocked": "2025-12-29T20:11:51+01:00"
   },
   {
@@ -160,7 +162,7 @@
     "de": "Maximaler Dinosaurier",
     "en": "Maximum Dinosaur"
    },
-   "percent": 17.0
+   "percent": 17.1
   },
   {
    "achieved": true,
@@ -175,7 +177,7 @@
     "de": "Rex Reiter",
     "en": "Rex Rider"
    },
-   "percent": 34.9,
+   "percent": 35.0,
    "unlocked": "2026-03-22T18:48:04+01:00"
   },
   {
@@ -190,7 +192,7 @@
     "de": "Giga Reiter",
     "en": "Giga Rider"
    },
-   "percent": 18.3
+   "percent": 18.5
   },
   {
    "achieved": true,
@@ -205,7 +207,7 @@
     "de": "Kartograf",
     "en": "Map Maker"
    },
-   "percent": 33.6,
+   "percent": 33.7,
    "unlocked": "2026-01-17T16:27:27+01:00"
   },
   {
@@ -292,7 +294,7 @@
     "de": "Alpha Aufstieg",
     "en": "Alpha Ascension"
    },
-   "percent": 7.9
+   "percent": 8.0
   },
   {
    "achieved": true,

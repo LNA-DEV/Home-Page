@@ -494,7 +494,7 @@
     "de": "Kunst kommt von Können",
     "en": "Artificer"
    },
-   "percent": 26.0
+   "percent": 25.9
   },
   {
    "description": {
@@ -696,7 +696,7 @@
    "name": {
     "en": "Adept"
    },
-   "percent": 42.8,
+   "percent": 42.7,
    "unlocked": "2019-06-19T22:13:33+02:00"
   },
   {
@@ -851,7 +851,7 @@
     "de": "Ein neues Ich",
     "en": "A New You"
    },
-   "percent": 9.9
+   "percent": 9.8
   },
   {
    "description": {

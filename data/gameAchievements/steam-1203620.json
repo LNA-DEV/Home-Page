@@ -13,7 +13,7 @@
     "de": "Donnernder Erfolg",
     "en": "Thundering success"
    },
-   "percent": 73.4,
+   "percent": 73.6,
    "unlocked": "2024-02-16T20:47:43+01:00"
   },
   {
@@ -29,7 +29,7 @@
     "de": "Entthront",
     "en": "Dethroned"
    },
-   "percent": 38.0,
+   "percent": 38.6,
    "unlocked": "2024-12-06T22:06:42+01:00"
   },
   {
@@ -44,7 +44,7 @@
     "de": "Bruchstücke der Vergangenheit",
     "en": "Pieces of the past"
    },
-   "percent": 16.9
+   "percent": 17.3
   },
   {
    "achieved": true,
@@ -59,7 +59,7 @@
     "de": "Ein wahres Zuhause",
     "en": "A place to call home"
    },
-   "percent": 85.3,
+   "percent": 85.4,
    "unlocked": "2024-02-12T20:35:31+01:00"
   },
   {
@@ -75,7 +75,7 @@
     "de": "Freier Fall",
     "en": "Freefall"
    },
-   "percent": 77.0,
+   "percent": 77.1,
    "unlocked": "2024-02-12T20:49:38+01:00"
   },
   {
@@ -91,7 +91,7 @@
     "de": "Abkürzung",
     "en": "Shortcut"
    },
-   "percent": 78.3,
+   "percent": 78.5,
    "unlocked": "2024-02-12T21:15:29+01:00"
   },
   {
@@ -107,7 +107,7 @@
     "de": "Und so beginnt es",
     "en": "Thus it begins"
    },
-   "percent": 91.0,
+   "percent": 91.1,
    "unlocked": "2024-02-12T20:43:46+01:00"
   },
   {
@@ -122,7 +122,7 @@
     "de": "Geflügelter Sieg",
     "en": "Winged Victory"
    },
-   "percent": 27.8
+   "percent": 28.5
   },
   {
    "description": {
@@ -136,7 +136,7 @@
     "de": "Funken der Hochweiden",
     "en": "Spark of the Springlands"
    },
-   "percent": 2.4
+   "percent": 2.5
   },
   {
    "description": {
@@ -150,7 +150,7 @@
     "de": "Funken des Düsterdickichts",
     "en": "Spark of the Revelwoods"
    },
-   "percent": 1.7
+   "percent": 1.8
   },
   {
    "description": {
@@ -164,7 +164,7 @@
     "de": "Funken der Nomaden-Anhöhen",
     "en": "Spark of the Nomad Highlands"
    },
-   "percent": 1.3
+   "percent": 1.4
   },
   {
    "description": {
@@ -178,7 +178,7 @@
     "de": "Funken des Ödlandes",
     "en": "Spark of the Kindlewastes"
    },
-   "percent": 1.5
+   "percent": 1.6
   },
   {
    "achieved": true,
@@ -193,7 +193,7 @@
     "de": "Maulwurf der Hochweiden",
     "en": "Mole of the Springlands"
    },
-   "percent": 72.1,
+   "percent": 72.3,
    "unlocked": "2024-02-16T22:11:22+01:00"
   },
   {
@@ -209,7 +209,7 @@
     "de": "Maulwurf des Düsterdickichts",
     "en": "Mole of the Revelwoods"
    },
-   "percent": 41.8,
+   "percent": 42.3,
    "unlocked": "2024-03-22T22:00:30+01:00"
   },
   {
@@ -224,7 +224,7 @@
     "de": "Maulwurf der Nomaden-Anhöhen",
     "en": "Mole of the Nomad Highlands"
    },
-   "percent": 30.0
+   "percent": 30.7
   },
   {
    "description": {
@@ -238,7 +238,7 @@
     "de": "Maulwurf des Ödlandes",
     "en": "Mole of the Kindlewastes"
    },
-   "percent": 26.4
+   "percent": 27.1
   },
   {
    "achieved": true,
@@ -253,7 +253,7 @@
     "de": "Setze ein Zeichen",
     "en": "Leave a mark"
    },
-   "percent": 84.0,
+   "percent": 84.1,
    "unlocked": "2024-02-16T22:21:01+01:00"
   },
   {
@@ -269,7 +269,7 @@
     "de": "Geheimniswahrer der Hochweiden",
     "en": "Springlands secret keeper"
    },
-   "percent": 41.9,
+   "percent": 42.5,
    "unlocked": "2024-02-23T22:53:13+01:00"
   },
   {
@@ -285,7 +285,7 @@
     "de": "Geheimniswahrer des Düsterdickichts",
     "en": "Revelwoods secret keeper"
    },
-   "percent": 23.8,
+   "percent": 24.3,
    "unlocked": "2025-05-18T12:10:09+02:00"
   },
   {
@@ -301,7 +301,7 @@
     "de": "Geheimniswahrer der Nomaden-Anhöhen",
     "en": "Nomad Highlands secret keeper"
    },
-   "percent": 21.2,
+   "percent": 21.8,
    "unlocked": "2024-12-07T21:40:41+01:00"
   },
   {
@@ -316,7 +316,7 @@
     "de": "Geheimniswahrer des Ödlandes",
     "en": "Kindlewastes secret keeper"
    },
-   "percent": 13.1
+   "percent": 13.5
   },
   {
    "achieved": true,
@@ -347,7 +347,7 @@
     "de": "Auf dem Weg",
     "en": "On the way"
    },
-   "percent": 65.5,
+   "percent": 65.9,
    "unlocked": "2024-02-17T21:18:17+01:00"
   },
   {
@@ -363,7 +363,7 @@
     "de": "Die Dinge fügen sich",
     "en": "Things come together"
    },
-   "percent": 49.0,
+   "percent": 49.5,
    "unlocked": "2024-11-22T21:14:44+01:00"
   },
   {
@@ -379,7 +379,7 @@
     "de": "Man gewöhnt sich daran",
     "en": "Getting a feel for it"
    },
-   "percent": 39.7,
+   "percent": 40.3,
    "unlocked": "2024-12-07T21:40:41+01:00"
   },
   {
@@ -395,7 +395,7 @@
     "de": "Wir sind weit gekommen",
     "en": "How far we have come"
    },
-   "percent": 32.2,
+   "percent": 32.9,
    "unlocked": "2025-05-18T20:46:02+02:00"
   },
   {
@@ -410,7 +410,7 @@
     "de": "Beeindruckende Reise",
     "en": "Impressive journey"
    },
-   "percent": 25.4
+   "percent": 26.1
   },
   {
    "achieved": true,
@@ -425,7 +425,7 @@
     "de": "Gelehrter",
     "en": "Erudite"
    },
-   "percent": 88.0,
+   "percent": 88.1,
    "unlocked": "2024-02-16T21:04:05+01:00"
   },
   {
@@ -441,7 +441,7 @@
     "de": "Hochweiden-Sterngucker",
     "en": "Springlands stargazer"
    },
-   "percent": 74.2,
+   "percent": 74.4,
    "unlocked": "2024-02-16T21:21:43+01:00"
   },
   {
@@ -457,7 +457,7 @@
     "de": "Düsterdickicht-Sterngucker",
     "en": "Revelwoods stargazer"
    },
-   "percent": 50.7,
+   "percent": 51.0,
    "unlocked": "2024-02-17T21:19:57+01:00"
   },
   {
@@ -473,7 +473,7 @@
     "de": "Nomaden-Anhöhen-Sterngucker",
     "en": "Nomad Highlands stargazer"
    },
-   "percent": 35.6,
+   "percent": 36.0,
    "unlocked": "2024-12-07T20:54:31+01:00"
   },
   {
@@ -488,7 +488,7 @@
     "de": "Ödland-Sterngucker",
     "en": "Kindlewastes stargazer"
    },
-   "percent": 29.0
+   "percent": 29.5
   },
   {
    "achieved": true,
@@ -503,7 +503,7 @@
     "de": "Gut gemacht!",
     "en": "Well done!"
    },
-   "percent": 73.4,
+   "percent": 73.6,
    "unlocked": "2024-02-16T20:48:09+01:00"
   },
   {
@@ -518,7 +518,7 @@
     "de": "Hochweiden-Gärtner",
     "en": "Springland weeding"
    },
-   "percent": 20.3
+   "percent": 20.5
   },
   {
    "description": {
@@ -532,7 +532,7 @@
     "de": "Düsterdickicht-Gärtner",
     "en": "Revelwood weeding"
    },
-   "percent": 13.9
+   "percent": 14.3
   },
   {
    "description": {
@@ -546,7 +546,7 @@
     "de": "Nomaden-Anhöhen-Gärtner",
     "en": "Nomad Highlands weeding"
    },
-   "percent": 9.8
+   "percent": 10.2
   },
   {
    "description": {
@@ -560,7 +560,7 @@
     "de": "Ödland-Gärtner",
     "en": "Kindlewastes weeding"
    },
-   "percent": 7.5
+   "percent": 7.8
   },
   {
    "description": {
@@ -574,7 +574,7 @@
     "de": "Monumentaler Aufstieg",
     "en": "Climbing to new heights"
    },
-   "percent": 13.8
+   "percent": 14.6
   },
   {
    "description": {
@@ -588,7 +588,7 @@
     "de": "Auf dem Gipfel",
     "en": "Reaching the top"
    },
-   "percent": 9.5
+   "percent": 10.3
   },
   {
    "description": {
@@ -602,7 +602,7 @@
     "de": "Gipfel-Gärtner",
     "en": "Albaneve Summits weeding"
    },
-   "percent": 2.4
+   "percent": 2.6
   },
   {
    "description": {
@@ -616,7 +616,7 @@
     "de": "Albapracht-Gipfel Sterngucker",
     "en": "Albaneve Summits stargazer"
    },
-   "percent": 16.6
+   "percent": 17.3
   },
   {
    "description": {
@@ -630,7 +630,7 @@
     "de": "Maulwurf der Albapracht-Gipfel",
     "en": "Mole of the Albaneve Summits"
    },
-   "percent": 14.2
+   "percent": 15.0
   },
   {
    "description": {
@@ -644,7 +644,7 @@
     "de": "Geheimniswahrer der Albapracht-Gipfel",
     "en": "Albaneve Summits secret keeper"
    },
-   "percent": 3.6
+   "percent": 3.8
   },
   {
    "description": {
@@ -658,7 +658,7 @@
     "de": "Funke der Albapracht-Gipfel",
     "en": "Spark of the Albaneve Summits"
    },
-   "percent": 0.9
+   "percent": 1.0
   },
   {
    "description": {
@@ -672,7 +672,7 @@
     "de": "König des Berges",
     "en": "King of the mountain"
    },
-   "percent": 9.2
+   "percent": 10.0
   },
   {
    "description": {
@@ -686,7 +686,7 @@
     "de": "Funken des Wogschimmer-Grunds",
     "en": "Spark of the Veilwater Basin"
    },
-   "percent": 0.4
+   "percent": 0.5
   },
   {
    "description": {
@@ -700,7 +700,7 @@
     "de": "Maulwurf des Wogschimmer-Grunds",
     "en": "Mole of the Veilwater Basin"
    },
-   "percent": 5.6
+   "percent": 6.4
   },
   {
    "description": {
@@ -714,7 +714,7 @@
     "de": "Geheimniswahrer des Wogschimmer-Grunds",
     "en": "Veilwater Basin secret keeper"
    },
-   "percent": 2.0
+   "percent": 2.2
   },
   {
    "description": {
@@ -728,7 +728,7 @@
     "de": "Bereit für neue Länder",
     "en": "Ready for new lands"
    },
-   "percent": 4.8
+   "percent": 5.5
   },
   {
    "description": {
@@ -742,7 +742,7 @@
     "de": "Auf zu neuen Horizonten",
     "en": "Onto new horizons"
    },
-   "percent": 3.0
+   "percent": 3.6
   },
   {
    "description": {
@@ -756,7 +756,7 @@
     "de": "Wogschimmer-Grund-Sternengucker",
     "en": "Veilwater Basin stargazer"
    },
-   "percent": 9.3
+   "percent": 10.0
   },
   {
    "description": {
@@ -770,7 +770,7 @@
     "de": "Wogschimmer-Gärtner",
     "en": "Veilwater Basin weeding"
    },
-   "percent": 1.1
+   "percent": 1.3
   },
   {
    "description": {
@@ -784,7 +784,7 @@
     "de": "Glimmkessel-Sterngucker",
     "en": "Cinder's Cradle stargazer"
    },
-   "percent": 0.8
+   "percent": 1.4
   },
   {
    "description": {
@@ -798,7 +798,7 @@
     "de": "Maulwurf des Glimmkessels",
     "en": "Mole of the Cinder's Cradle"
    },
-   "percent": 1.4
+   "percent": 2.3
   },
   {
    "description": {
@@ -812,7 +812,7 @@
     "de": "Geheimniswahrer des Glimmkessels",
     "en": "Cinder's Cradle secret keeper"
    },
-   "percent": 0.6
+   "percent": 1.1
   },
   {
    "description": {
@@ -826,7 +826,7 @@
     "de": "Glimmkessel-Unkraut",
     "en": "Cinder's Cradle Weeding"
    },
-   "percent": 0.2
+   "percent": 0.5
   },
   {
    "description": {
@@ -840,7 +840,7 @@
     "de": "Über den Wolken",
     "en": "Above the clouds"
    },
-   "percent": 0.9
+   "percent": 1.4
   },
   {
    "hidden": true,
@@ -850,7 +850,7 @@
     "de": "Ein neuer Nordstern",
     "en": "A new North Star"
    },
-   "percent": 0.9
+   "percent": 1.6
   }
  ],
  "id": "1203620",
